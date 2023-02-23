@@ -27,7 +27,7 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
     private final String sandboxUrl = "wss://ws-sandbox.coinapi.io/v1/";
     private final String noSandboxUrl = "wss://ws.coinapi.io/v1/";
 
-    private Boolean isSandbox;
+    private String url;
     private DslJson<Object> json = new DslJson<>();
 
     private static CountDownLatch latch;
@@ -48,11 +48,12 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
 
     /**
      *
-     * @param isSandbox
+     * @param isSandbox if isSandbox is true the sandboxUrl will be used
+     * @param url if null, one of the default urls will be used
      */
-    public CoinAPIWebSocketImpl(Boolean isSandbox) {
+    public CoinAPIWebSocketImpl(Boolean isSandbox, String url) {
+        this.url = isSandbox ? sandboxUrl : url != null ? url : noSandboxUrl;
 
-        this.isSandbox = isSandbox;
         client = ClientManager.createClient();
         client.getProperties().put(ClientProperties.RECONNECT_HANDLER, new WebsocketReconnectHandler());
 
@@ -141,7 +142,8 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
                 }
             };
 
-            connection = Optional.ofNullable(client.connectToServer(endpoint, cec, new URI(isSandbox ? sandboxUrl : noSandboxUrl)));
+            connection = Optional.ofNullable(client.connectToServer(endpoint, cec, new URI(url)));
+
             latch.await(100, TimeUnit.SECONDS);
         } catch (Exception e) {
             e.printStackTrace();
@@ -217,8 +219,8 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
      * @param function
      */
     @Override
-    public void setErrorInvoke(InvokeFunction function) { 
-        this.errorInvoke = function; 
+    public void setErrorInvoke(InvokeFunction function) {
+        this.errorInvoke = function;
     }
 
     /**
@@ -226,8 +228,8 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
      * @param function
      */
     @Override
-    public void setReconnectInvoke(InvokeFunction function) { 
-        this.reconnectInvoke = function; 
+    public void setReconnectInvoke(InvokeFunction function) {
+        this.reconnectInvoke = function;
     }
 
     private void handle(String message, Class deserializeClass, InvokeFunction invokeFunction) throws IOException, NotImplementedException {
