@@ -21,7 +21,7 @@ namespace CoinAPI.WebSocket.V1.Tests
                 subscribe_filter_exchange_id = new string[] { "COINBASE" }
             };
 
-            using(var wsClient = new CoinApiWsClient(true))
+            using(var wsClient = new CoinApiWsClient())
             {
                 var mre_bs = new ManualResetEvent(false);
                 var mre_cb = new ManualResetEvent(false);

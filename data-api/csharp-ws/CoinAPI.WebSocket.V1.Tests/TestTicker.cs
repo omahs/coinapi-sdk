@@ -21,7 +21,7 @@ namespace CoinAPI.WebSocket.V1.Tests
                 subscribe_data_type = new string[] { "ticker" }
             };
 
-            using(var wsClient = new CoinApiWsClient(true))
+            using(var wsClient = new CoinApiWsClient())
             {
                 var mre = new ManualResetEvent(false);
                 wsClient.TickerEvent += (s, i) =>

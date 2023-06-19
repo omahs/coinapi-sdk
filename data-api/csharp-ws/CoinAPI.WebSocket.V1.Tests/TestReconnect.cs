@@ -131,7 +131,7 @@ namespace CoinAPI.WebSocket.V1.Tests
                 subscribe_filter_exchange_id = new string[] { "EXCHANGETHATDOESNOTEXISTS" }
             };
 
-            using (var wsClient = new CoinApiWsClient(false))
+            using (var wsClient = new CoinApiWsClient())
             {
                 var mre = new ManualResetEvent(false);
                 wsClient.TradeEvent += (s, i) =>

@@ -22,7 +22,7 @@ namespace CoinAPI.WebSocket.V1.Tests
                 subscribe_filter_symbol_id = new string[] { "BITSTAMP_SPOT_BTC_USD", "GEMINI_SPOT_BTC_USD", "COINBASE_SPOT_BTC_USD" }
             };
 
-            using(var wsClient = new CoinApiWsClient(true))
+            using(var wsClient = new CoinApiWsClient())
             {
                 var mre = new ManualResetEvent(false);
                 wsClient.QuoteEvent += (s, i) =>
