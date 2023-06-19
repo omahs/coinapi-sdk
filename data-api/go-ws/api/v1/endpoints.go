@@ -7,8 +7,6 @@ import t "go-ws/api/types"
 const (
 	ProductionEncrypted = "wss://ws.coinapi.io/v1/"
 	ProductionInsecure  = "ws://ws.coinapi.io/v1/"
-	SandboxEncrypted    = "wss://ws-sandbox.coinapi.io/v1/"
-	SandboxInsecure     = "ws://ws-sandbox.coinapi.io/v1/"
 )
 
 func getUrl(env t.EnvironmentType) (url string) {
@@ -17,10 +15,6 @@ func getUrl(env t.EnvironmentType) (url string) {
 		return ProductionEncrypted
 	case t.ProdInsecure:
 		return ProductionInsecure
-	case t.TestEncrypted:
-		return SandboxEncrypted
-	case t.TestInsecure:
-		return SandboxInsecure
 	default:
 		return SandboxEncrypted
 	}
