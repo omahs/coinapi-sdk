@@ -10,7 +10,7 @@ namespace CoinAPI.WebSocket.V1.Testing
 {
     public class CoinApiWsClientReconnect : CoinApiWsClient
     {
-        public CoinApiWsClientReconnect(bool isSandbox = false) : base(isSandbox)
+        public CoinApiWsClientReconnect() : base()
         {
         }
 

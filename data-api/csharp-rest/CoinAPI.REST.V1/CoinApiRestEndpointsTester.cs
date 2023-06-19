@@ -13,9 +13,9 @@ namespace CoinAPI.REST.V1
 
         public Action<string> Log { get; set; }
 
-        public CoinApiRestEndpointsTester(string apikey, bool sandbox = false)
+        public CoinApiRestEndpointsTester(string apikey)
         {
-            _coinApi = new CoinApiRestClient(apikey, sandbox);
+            _coinApi = new CoinApiRestClient(apikey);
         }
 
         public CoinApiRestEndpointsTester(string apikey, string url)

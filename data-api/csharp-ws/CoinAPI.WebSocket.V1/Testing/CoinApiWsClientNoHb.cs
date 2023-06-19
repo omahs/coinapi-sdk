@@ -6,7 +6,7 @@ namespace CoinAPI.WebSocket.V1.Testing
 {
     public class CoinApiWsClientNoHb : CoinApiWsClient
     {
-        public CoinApiWsClientNoHb(bool isSandbox = false) : base(isSandbox)
+        public CoinApiWsClientNoHb() : base()
         {
             ForceOverrideHeartbeat = false;
         }

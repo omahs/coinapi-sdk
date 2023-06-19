@@ -1,6 +1,6 @@
 {
 	"[custom]-new-env-3": {
-		"url": "wss://ws-sandbox.coinapi.io/v1/",
+		"url": "wss://ws.coinapi.io/v1/",
 		"provider": "websocket",
 		"order": 1,
 		"methods": [

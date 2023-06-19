@@ -24,7 +24,6 @@ import java.util.concurrent.TimeUnit;
 
 public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
 
-    private final String sandboxUrl = "wss://ws-sandbox.coinapi.io/v1/";
     private final String noSandboxUrl = "wss://ws.coinapi.io/v1/";
 
     private String url;
@@ -48,11 +47,10 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
 
     /**
      *
-     * @param isSandbox if isSandbox is true the sandboxUrl will be used
      * @param url if null, one of the default urls will be used
      */
-    public CoinAPIWebSocketImpl(Boolean isSandbox, String url) {
-        this.url = isSandbox ? sandboxUrl : url != null ? url : noSandboxUrl;
+    public CoinAPIWebSocketImpl(String url) {
+        this.url = url != null ? url : noSandboxUrl;
 
         client = ClientManager.createClient();
         client.getProperties().put(ClientProperties.RECONNECT_HANDLER, new WebsocketReconnectHandler());

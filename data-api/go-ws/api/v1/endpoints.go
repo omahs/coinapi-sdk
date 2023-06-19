@@ -16,7 +16,7 @@ func getUrl(env t.EnvironmentType) (url string) {
 	case t.ProdInsecure:
 		return ProductionInsecure
 	default:
-		return SandboxEncrypted
+		return ProductionEncrypted
 	}
 
 }
