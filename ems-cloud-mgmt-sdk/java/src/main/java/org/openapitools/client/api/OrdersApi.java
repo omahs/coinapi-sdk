@@ -1,6 +1,6 @@
 /*
  * EMS - REST API
- * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. <br/> This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       <br/><br/> Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Managed Cloud</td>       <td>Sandbox</td>       <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Sandbox</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  <br/><br/> If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: <br/><br/> `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this:  <br/><br/> `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
+ * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>        Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints  <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
  *
  * The version of the OpenAPI document: v1
  * Contact: support@coinapi.io
@@ -471,7 +471,7 @@ public class OrdersApi {
         return localVarCall;
     }
     /**
-     * Build call for v1OrdersHistoryTimeStartTimeEndGet
+     * Build call for v1OrdersHistoryGet
      * @param timeStart Start date (required)
      * @param timeEnd End date (required)
      * @param _callback Callback for upload/download progress
@@ -484,7 +484,7 @@ public class OrdersApi {
         <tr><td> 400 </td><td> Orders log is not configured. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call v1OrdersHistoryTimeStartTimeEndGetCall(String timeStart, String timeEnd, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call v1OrdersHistoryGetCall(String timeStart, String timeEnd, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -501,15 +501,21 @@ public class OrdersApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/v1/orders/history/{time_start}/{time_end}"
-            .replace("{" + "time_start" + "}", localVarApiClient.escapeString(timeStart.toString()))
-            .replace("{" + "time_end" + "}", localVarApiClient.escapeString(timeEnd.toString()));
+        String localVarPath = "/v1/orders/history";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (timeStart != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("time_start", timeStart));
+        }
+
+        if (timeEnd != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("time_end", timeEnd));
+        }
 
         final String[] localVarAccepts = {
             "application/json"
@@ -531,18 +537,18 @@ public class OrdersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call v1OrdersHistoryTimeStartTimeEndGetValidateBeforeCall(String timeStart, String timeEnd, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call v1OrdersHistoryGetValidateBeforeCall(String timeStart, String timeEnd, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'timeStart' is set
         if (timeStart == null) {
-            throw new ApiException("Missing the required parameter 'timeStart' when calling v1OrdersHistoryTimeStartTimeEndGet(Async)");
+            throw new ApiException("Missing the required parameter 'timeStart' when calling v1OrdersHistoryGet(Async)");
         }
 
         // verify the required parameter 'timeEnd' is set
         if (timeEnd == null) {
-            throw new ApiException("Missing the required parameter 'timeEnd' when calling v1OrdersHistoryTimeStartTimeEndGet(Async)");
+            throw new ApiException("Missing the required parameter 'timeEnd' when calling v1OrdersHistoryGet(Async)");
         }
 
-        return v1OrdersHistoryTimeStartTimeEndGetCall(timeStart, timeEnd, _callback);
+        return v1OrdersHistoryGetCall(timeStart, timeEnd, _callback);
 
     }
 
@@ -560,8 +566,8 @@ public class OrdersApi {
         <tr><td> 400 </td><td> Orders log is not configured. </td><td>  -  </td></tr>
      </table>
      */
-    public List<OrderHistory> v1OrdersHistoryTimeStartTimeEndGet(String timeStart, String timeEnd) throws ApiException {
-        ApiResponse<List<OrderHistory>> localVarResp = v1OrdersHistoryTimeStartTimeEndGetWithHttpInfo(timeStart, timeEnd);
+    public List<OrderHistory> v1OrdersHistoryGet(String timeStart, String timeEnd) throws ApiException {
+        ApiResponse<List<OrderHistory>> localVarResp = v1OrdersHistoryGetWithHttpInfo(timeStart, timeEnd);
         return localVarResp.getData();
     }
 
@@ -579,8 +585,8 @@ public class OrdersApi {
         <tr><td> 400 </td><td> Orders log is not configured. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<OrderHistory>> v1OrdersHistoryTimeStartTimeEndGetWithHttpInfo(String timeStart, String timeEnd) throws ApiException {
-        okhttp3.Call localVarCall = v1OrdersHistoryTimeStartTimeEndGetValidateBeforeCall(timeStart, timeEnd, null);
+    public ApiResponse<List<OrderHistory>> v1OrdersHistoryGetWithHttpInfo(String timeStart, String timeEnd) throws ApiException {
+        okhttp3.Call localVarCall = v1OrdersHistoryGetValidateBeforeCall(timeStart, timeEnd, null);
         Type localVarReturnType = new TypeToken<List<OrderHistory>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -600,9 +606,9 @@ public class OrdersApi {
         <tr><td> 400 </td><td> Orders log is not configured. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call v1OrdersHistoryTimeStartTimeEndGetAsync(String timeStart, String timeEnd, final ApiCallback<List<OrderHistory>> _callback) throws ApiException {
+    public okhttp3.Call v1OrdersHistoryGetAsync(String timeStart, String timeEnd, final ApiCallback<List<OrderHistory>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = v1OrdersHistoryTimeStartTimeEndGetValidateBeforeCall(timeStart, timeEnd, _callback);
+        okhttp3.Call localVarCall = v1OrdersHistoryGetValidateBeforeCall(timeStart, timeEnd, _callback);
         Type localVarReturnType = new TypeToken<List<OrderHistory>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

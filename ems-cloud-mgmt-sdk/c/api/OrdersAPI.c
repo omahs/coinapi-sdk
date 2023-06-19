@@ -293,9 +293,9 @@ end:
 // Based on the date range, all changes registered in the orderbook.
 //
 list_t*
-OrdersAPI_v1OrdersHistoryTimeStartTimeEndGet(apiClient_t *apiClient, char * time_start , char * time_end )
+OrdersAPI_v1OrdersHistoryGet(apiClient_t *apiClient, char * time_start , char * time_end )
 {
-    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
     list_t *localVarHeaderType = list_createList();
@@ -303,32 +303,36 @@ OrdersAPI_v1OrdersHistoryTimeStartTimeEndGet(apiClient_t *apiClient, char * time
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/v1/orders/history/{time_start}/{time_end}")+1;
+    long sizeOfPath = strlen("/v1/orders/history")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/v1/orders/history/{time_start}/{time_end}");
+    snprintf(localVarPath, sizeOfPath, "/v1/orders/history");
 
 
-    // Path Params
-    long sizeOfPathParams_time_start = strlen(time_start)+3 + strlen(time_end)+3 + strlen("{ time_start }");
-    if(time_start == NULL) {
-        goto end;
+
+
+    // query parameters
+    char *keyQuery_time_start = NULL;
+    char * valueQuery_time_start = NULL;
+    keyValuePair_t *keyPairQuery_time_start = 0;
+    if (time_start)
+    {
+        keyQuery_time_start = strdup("time_start");
+        valueQuery_time_start = strdup((time_start));
+        keyPairQuery_time_start = keyValuePair_create(keyQuery_time_start, valueQuery_time_start);
+        list_addElement(localVarQueryParameters,keyPairQuery_time_start);
     }
-    char* localVarToReplace_time_start = malloc(sizeOfPathParams_time_start);
-    sprintf(localVarToReplace_time_start, "{%s}", "time_start");
 
-    localVarPath = strReplace(localVarPath, localVarToReplace_time_start, time_start);
-
-    // Path Params
-    long sizeOfPathParams_time_end = strlen(time_start)+3 + strlen(time_end)+3 + strlen("{ time_end }");
-    if(time_end == NULL) {
-        goto end;
+    // query parameters
+    char *keyQuery_time_end = NULL;
+    char * valueQuery_time_end = NULL;
+    keyValuePair_t *keyPairQuery_time_end = 0;
+    if (time_end)
+    {
+        keyQuery_time_end = strdup("time_end");
+        valueQuery_time_end = strdup((time_end));
+        keyPairQuery_time_end = keyValuePair_create(keyQuery_time_end, valueQuery_time_end);
+        list_addElement(localVarQueryParameters,keyPairQuery_time_end);
     }
-    char* localVarToReplace_time_end = malloc(sizeOfPathParams_time_end);
-    sprintf(localVarToReplace_time_end, "{%s}", "time_end");
-
-    localVarPath = strReplace(localVarPath, localVarToReplace_time_end, time_end);
-
-
     list_addElement(localVarHeaderType,"application/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
@@ -372,14 +376,36 @@ OrdersAPI_v1OrdersHistoryTimeStartTimeEndGet(apiClient_t *apiClient, char * time
         apiClient->dataReceived = NULL;
         apiClient->dataReceivedLen = 0;
     }
-    
+    list_freeList(localVarQueryParameters);
     
     
     list_freeList(localVarHeaderType);
     
     free(localVarPath);
-    free(localVarToReplace_time_start);
-    free(localVarToReplace_time_end);
+    if(keyQuery_time_start){
+        free(keyQuery_time_start);
+        keyQuery_time_start = NULL;
+    }
+    if(valueQuery_time_start){
+        free(valueQuery_time_start);
+        valueQuery_time_start = NULL;
+    }
+    if(keyPairQuery_time_start){
+        keyValuePair_free(keyPairQuery_time_start);
+        keyPairQuery_time_start = NULL;
+    }
+    if(keyQuery_time_end){
+        free(keyQuery_time_end);
+        keyQuery_time_end = NULL;
+    }
+    if(valueQuery_time_end){
+        free(valueQuery_time_end);
+        valueQuery_time_end = NULL;
+    }
+    if(keyPairQuery_time_end){
+        keyValuePair_free(keyPairQuery_time_end);
+        keyPairQuery_time_end = NULL;
+    }
     return elementToReturn;
 end:
     free(localVarPath);

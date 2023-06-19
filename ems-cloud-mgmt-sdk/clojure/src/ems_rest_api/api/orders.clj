@@ -101,25 +101,25 @@
         res))))
 
 
-(defn-spec v1-orders-history-time-start-time-end-get-with-http-info any?
+(defn-spec v1-orders-history-get-with-http-info any?
   "History of order changes
   Based on the date range, all changes registered in the orderbook."
   [time_start string?, time_end string?]
   (check-required-params time_start time_end)
-  (call-api "/v1/orders/history/{time_start}/{time_end}" :get
-            {:path-params   {"time_start" time_start "time_end" time_end }
+  (call-api "/v1/orders/history" :get
+            {:path-params   {}
              :header-params {}
-             :query-params  {}
+             :query-params  {"time_start" time_start "time_end" time_end }
              :form-params   {}
              :content-types []
              :accepts       ["application/json"]
              :auth-names    []}))
 
-(defn-spec v1-orders-history-time-start-time-end-get (s/coll-of order-history-spec)
+(defn-spec v1-orders-history-get (s/coll-of order-history-spec)
   "History of order changes
   Based on the date range, all changes registered in the orderbook."
   [time_start string?, time_end string?]
-  (let [res (:data (v1-orders-history-time-start-time-end-get-with-http-info time_start time_end))]
+  (let [res (:data (v1-orders-history-get-with-http-info time_start time_end))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of order-history-spec) res st/string-transformer)
        res)))

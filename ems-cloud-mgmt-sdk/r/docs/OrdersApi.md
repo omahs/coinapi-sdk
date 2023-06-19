@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**V1OrdersCancelAllPost**](OrdersApi.md#V1OrdersCancelAllPost) | **POST** /v1/orders/cancel/all | Cancel all orders request
 [**V1OrdersCancelPost**](OrdersApi.md#V1OrdersCancelPost) | **POST** /v1/orders/cancel | Cancel order request
 [**V1OrdersGet**](OrdersApi.md#V1OrdersGet) | **GET** /v1/orders | Get open orders
-[**V1OrdersHistoryTimeStartTimeEndGet**](OrdersApi.md#V1OrdersHistoryTimeStartTimeEndGet) | **GET** /v1/orders/history/{time_start}/{time_end} | History of order changes
+[**V1OrdersHistoryGet**](OrdersApi.md#V1OrdersHistoryGet) | **GET** /v1/orders/history | History of order changes
 [**V1OrdersPost**](OrdersApi.md#V1OrdersPost) | **POST** /v1/orders | Send new order
 [**V1OrdersStatusClientOrderIdGet**](OrdersApi.md#V1OrdersStatusClientOrderIdGet) | **GET** /v1/orders/status/{client_order_id} | Get order execution report
 
@@ -158,8 +158,8 @@ No authorization required
 | **200** | Collection of order execution reports. |  -  |
 | **490** | Filtered exchange is unreachable. |  -  |
 
-# **V1OrdersHistoryTimeStartTimeEndGet**
-> array[OrderHistory] V1OrdersHistoryTimeStartTimeEndGet(time_start, time_end)
+# **V1OrdersHistoryGet**
+> array[OrderHistory] V1OrdersHistoryGet(time_start, time_end)
 
 History of order changes
 
@@ -177,8 +177,8 @@ var_time_end <- "2022-05-01T12:00:00" # character | End date
 
 api_instance <- OrdersApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$V1OrdersHistoryTimeStartTimeEndGet(var_time_start, var_time_enddata_file = "result.txt")
-result <- api_instance$V1OrdersHistoryTimeStartTimeEndGet(var_time_start, var_time_end)
+# result <- api_instance$V1OrdersHistoryGet(var_time_start, var_time_enddata_file = "result.txt")
+result <- api_instance$V1OrdersHistoryGet(var_time_start, var_time_end)
 dput(result)
 ```
 

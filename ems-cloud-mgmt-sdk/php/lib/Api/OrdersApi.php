@@ -12,12 +12,12 @@
 /**
  * EMS - REST API
  *
- * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. <br/> This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       <br/><br/> Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Managed Cloud</td>       <td>Sandbox</td>       <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Sandbox</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  <br/><br/> If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: <br/><br/> `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this:  <br/><br/> `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside>
+ * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>        Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints  <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside>
  *
  * The version of the OpenAPI document: v1
  * Contact: support@coinapi.io
  * Generated by: https://openapi-generator.tech
- * OpenAPI Generator version: 6.2.1
+ * OpenAPI Generator version: 6.6.0
  */
 
 /**
@@ -81,7 +81,7 @@ class OrdersApi
         'v1OrdersGet' => [
             'application/json',
         ],
-        'v1OrdersHistoryTimeStartTimeEndGet' => [
+        'v1OrdersHistoryGet' => [
             'application/json',
         ],
         'v1OrdersPost' => [
@@ -416,7 +416,7 @@ class OrdersApi
         if (isset($order_cancel_all_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($order_cancel_all_request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($order_cancel_all_request));
             } else {
                 $httpBody = $order_cancel_all_request;
             }
@@ -437,7 +437,7 @@ class OrdersApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -744,7 +744,7 @@ class OrdersApi
         if (isset($order_cancel_single_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($order_cancel_single_request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($order_cancel_single_request));
             } else {
                 $httpBody = $order_cancel_single_request;
             }
@@ -765,7 +765,7 @@ class OrdersApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -1066,7 +1066,7 @@ class OrdersApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -1096,40 +1096,40 @@ class OrdersApi
     }
 
     /**
-     * Operation v1OrdersHistoryTimeStartTimeEndGet
+     * Operation v1OrdersHistoryGet
      *
      * History of order changes
      *
      * @param  string $time_start Start date (required)
      * @param  string $time_end End date (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1OrdersHistoryTimeStartTimeEndGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1OrdersHistoryGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\OrderHistory[]|\OpenAPI\Client\Model\MessageError
      */
-    public function v1OrdersHistoryTimeStartTimeEndGet($time_start, $time_end, string $contentType = self::contentTypes['v1OrdersHistoryTimeStartTimeEndGet'][0])
+    public function v1OrdersHistoryGet($time_start, $time_end, string $contentType = self::contentTypes['v1OrdersHistoryGet'][0])
     {
-        list($response) = $this->v1OrdersHistoryTimeStartTimeEndGetWithHttpInfo($time_start, $time_end, $contentType);
+        list($response) = $this->v1OrdersHistoryGetWithHttpInfo($time_start, $time_end, $contentType);
         return $response;
     }
 
     /**
-     * Operation v1OrdersHistoryTimeStartTimeEndGetWithHttpInfo
+     * Operation v1OrdersHistoryGetWithHttpInfo
      *
      * History of order changes
      *
      * @param  string $time_start Start date (required)
      * @param  string $time_end End date (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1OrdersHistoryTimeStartTimeEndGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1OrdersHistoryGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\OrderHistory[]|\OpenAPI\Client\Model\MessageError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1OrdersHistoryTimeStartTimeEndGetWithHttpInfo($time_start, $time_end, string $contentType = self::contentTypes['v1OrdersHistoryTimeStartTimeEndGet'][0])
+    public function v1OrdersHistoryGetWithHttpInfo($time_start, $time_end, string $contentType = self::contentTypes['v1OrdersHistoryGet'][0])
     {
-        $request = $this->v1OrdersHistoryTimeStartTimeEndGetRequest($time_start, $time_end, $contentType);
+        $request = $this->v1OrdersHistoryGetRequest($time_start, $time_end, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1239,20 +1239,20 @@ class OrdersApi
     }
 
     /**
-     * Operation v1OrdersHistoryTimeStartTimeEndGetAsync
+     * Operation v1OrdersHistoryGetAsync
      *
      * History of order changes
      *
      * @param  string $time_start Start date (required)
      * @param  string $time_end End date (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1OrdersHistoryTimeStartTimeEndGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1OrdersHistoryGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1OrdersHistoryTimeStartTimeEndGetAsync($time_start, $time_end, string $contentType = self::contentTypes['v1OrdersHistoryTimeStartTimeEndGet'][0])
+    public function v1OrdersHistoryGetAsync($time_start, $time_end, string $contentType = self::contentTypes['v1OrdersHistoryGet'][0])
     {
-        return $this->v1OrdersHistoryTimeStartTimeEndGetAsyncWithHttpInfo($time_start, $time_end, $contentType)
+        return $this->v1OrdersHistoryGetAsyncWithHttpInfo($time_start, $time_end, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1261,21 +1261,21 @@ class OrdersApi
     }
 
     /**
-     * Operation v1OrdersHistoryTimeStartTimeEndGetAsyncWithHttpInfo
+     * Operation v1OrdersHistoryGetAsyncWithHttpInfo
      *
      * History of order changes
      *
      * @param  string $time_start Start date (required)
      * @param  string $time_end End date (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1OrdersHistoryTimeStartTimeEndGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1OrdersHistoryGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1OrdersHistoryTimeStartTimeEndGetAsyncWithHttpInfo($time_start, $time_end, string $contentType = self::contentTypes['v1OrdersHistoryTimeStartTimeEndGet'][0])
+    public function v1OrdersHistoryGetAsyncWithHttpInfo($time_start, $time_end, string $contentType = self::contentTypes['v1OrdersHistoryGet'][0])
     {
         $returnType = '\OpenAPI\Client\Model\OrderHistory[]';
-        $request = $this->v1OrdersHistoryTimeStartTimeEndGetRequest($time_start, $time_end, $contentType);
+        $request = $this->v1OrdersHistoryGetRequest($time_start, $time_end, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1314,58 +1314,60 @@ class OrdersApi
     }
 
     /**
-     * Create request for operation 'v1OrdersHistoryTimeStartTimeEndGet'
+     * Create request for operation 'v1OrdersHistoryGet'
      *
      * @param  string $time_start Start date (required)
      * @param  string $time_end End date (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1OrdersHistoryTimeStartTimeEndGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1OrdersHistoryGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1OrdersHistoryTimeStartTimeEndGetRequest($time_start, $time_end, string $contentType = self::contentTypes['v1OrdersHistoryTimeStartTimeEndGet'][0])
+    public function v1OrdersHistoryGetRequest($time_start, $time_end, string $contentType = self::contentTypes['v1OrdersHistoryGet'][0])
     {
 
         // verify the required parameter 'time_start' is set
         if ($time_start === null || (is_array($time_start) && count($time_start) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $time_start when calling v1OrdersHistoryTimeStartTimeEndGet'
+                'Missing the required parameter $time_start when calling v1OrdersHistoryGet'
             );
         }
 
         // verify the required parameter 'time_end' is set
         if ($time_end === null || (is_array($time_end) && count($time_end) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $time_end when calling v1OrdersHistoryTimeStartTimeEndGet'
+                'Missing the required parameter $time_end when calling v1OrdersHistoryGet'
             );
         }
 
 
-        $resourcePath = '/v1/orders/history/{time_start}/{time_end}';
+        $resourcePath = '/v1/orders/history';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $time_start,
+            'time_start', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $time_end,
+            'time_end', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
 
 
-        // path params
-        if ($time_start !== null) {
-            $resourcePath = str_replace(
-                '{' . 'time_start' . '}',
-                ObjectSerializer::toPathValue($time_start),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($time_end !== null) {
-            $resourcePath = str_replace(
-                '{' . 'time_end' . '}',
-                ObjectSerializer::toPathValue($time_end),
-                $resourcePath
-            );
-        }
 
 
         $headers = $this->headerSelector->selectHeaders(
@@ -1392,7 +1394,7 @@ class OrdersApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -1722,7 +1724,7 @@ class OrdersApi
         if (isset($order_new_single_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($order_new_single_request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($order_new_single_request));
             } else {
                 $httpBody = $order_new_single_request;
             }
@@ -1743,7 +1745,7 @@ class OrdersApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -2049,7 +2051,7 @@ class OrdersApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);

@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**V1OrdersCancelAllPost**](OrdersApi.md#v1orderscancelallpost) | **POST** /v1/orders/cancel/all | Cancel all orders request
 [**V1OrdersCancelPost**](OrdersApi.md#v1orderscancelpost) | **POST** /v1/orders/cancel | Cancel order request
 [**V1OrdersGet**](OrdersApi.md#v1ordersget) | **GET** /v1/orders | Get open orders
-[**V1OrdersHistoryTimeStartTimeEndGet**](OrdersApi.md#v1ordershistorytimestarttimeendget) | **GET** /v1/orders/history/{time_start}/{time_end} | History of order changes
+[**V1OrdersHistoryGet**](OrdersApi.md#v1ordershistoryget) | **GET** /v1/orders/history | History of order changes
 [**V1OrdersPost**](OrdersApi.md#v1orderspost) | **POST** /v1/orders | Send new order
 [**V1OrdersStatusClientOrderIdGet**](OrdersApi.md#v1ordersstatusclientorderidget) | **GET** /v1/orders/status/{client_order_id} | Get order execution report
 
@@ -246,9 +246,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## V1OrdersHistoryTimeStartTimeEndGet
+## V1OrdersHistoryGet
 
-> List&lt;OrderHistory&gt; V1OrdersHistoryTimeStartTimeEndGet (string timeStart, string timeEnd)
+> List&lt;OrderHistory&gt; V1OrdersHistoryGet (string timeStart, string timeEnd)
 
 History of order changes
 
@@ -265,7 +265,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class V1OrdersHistoryTimeStartTimeEndGetExample
+    public class V1OrdersHistoryGetExample
     {
         public static void Main()
         {
@@ -277,12 +277,12 @@ namespace Example
             try
             {
                 // History of order changes
-                List<OrderHistory> result = apiInstance.V1OrdersHistoryTimeStartTimeEndGet(timeStart, timeEnd);
+                List<OrderHistory> result = apiInstance.V1OrdersHistoryGet(timeStart, timeEnd);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling OrdersApi.V1OrdersHistoryTimeStartTimeEndGet: " + e.Message );
+                Debug.Print("Exception when calling OrdersApi.V1OrdersHistoryGet: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }

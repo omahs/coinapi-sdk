@@ -69,7 +69,7 @@ Category | Method | HTTP request | Description
 *OrdersAPI* | [**OrdersAPI_v1OrdersCancelAllPost**](docs/OrdersAPI.md#OrdersAPI_v1OrdersCancelAllPost) | **POST** /v1/orders/cancel/all | Cancel all orders request
 *OrdersAPI* | [**OrdersAPI_v1OrdersCancelPost**](docs/OrdersAPI.md#OrdersAPI_v1OrdersCancelPost) | **POST** /v1/orders/cancel | Cancel order request
 *OrdersAPI* | [**OrdersAPI_v1OrdersGet**](docs/OrdersAPI.md#OrdersAPI_v1OrdersGet) | **GET** /v1/orders | Get open orders
-*OrdersAPI* | [**OrdersAPI_v1OrdersHistoryTimeStartTimeEndGet**](docs/OrdersAPI.md#OrdersAPI_v1OrdersHistoryTimeStartTimeEndGet) | **GET** /v1/orders/history/{time_start}/{time_end} | History of order changes
+*OrdersAPI* | [**OrdersAPI_v1OrdersHistoryGet**](docs/OrdersAPI.md#OrdersAPI_v1OrdersHistoryGet) | **GET** /v1/orders/history | History of order changes
 *OrdersAPI* | [**OrdersAPI_v1OrdersPost**](docs/OrdersAPI.md#OrdersAPI_v1OrdersPost) | **POST** /v1/orders | Send new order
 *OrdersAPI* | [**OrdersAPI_v1OrdersStatusClientOrderIdGet**](docs/OrdersAPI.md#OrdersAPI_v1OrdersStatusClientOrderIdGet) | **GET** /v1/orders/status/{client_order_id} | Get order execution report
 *PositionsAPI* | [**PositionsAPI_v1PositionsGet**](docs/PositionsAPI.md#PositionsAPI_v1PositionsGet) | **GET** /v1/positions | Get open positions
@@ -100,7 +100,8 @@ Category | Method | HTTP request | Description
 
 ## Documentation for Authorization
 
-All endpoints do not require authorization.
+Endpoints do not require authorization.
+
 
 ## Author
 

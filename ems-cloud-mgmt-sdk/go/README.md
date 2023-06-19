@@ -1,9 +1,8 @@
 # Go API client for openapi
 
 This section will provide necessary information about the `CoinAPI EMS REST API` protocol.
-<br/>
 This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>      
-<br/><br/>
+
 Implemented Standards:
 
   * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)
@@ -11,6 +10,7 @@ Implemented Standards:
   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)
    
 ### Endpoints
+
 <table>
   <thead>
     <tr>
@@ -26,18 +26,8 @@ Implemented Standards:
       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>
     </tr>
     <tr>
-      <td>Managed Cloud</td>
-      <td>Sandbox</td>
-      <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>
-    </tr>
-    <tr>
       <td>Self Hosted</td>
       <td>Production</td>
-      <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>
-    </tr>
-    <tr>
-      <td>Self Hosted</td>
-      <td>Sandbox</td>
       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>
     </tr>
   </tbody>
@@ -45,7 +35,6 @@ Implemented Standards:
 
 ### Authentication
 If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls. 
-<br/><br/>
 If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:
 
  1. Custom authorization header named `X-CoinAPI-Key` with the API Key
@@ -54,15 +43,11 @@ If the software is deployed in our `Managed Cloud`, there are 2 methods for auth
 
 #### Custom authorization header
 You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value.
-Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like:
-<br/><br/>
-`X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY`
+Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY`
 <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside>
 #### Query string authorization parameter
 You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request.
-Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: 
-<br/><br/>
-`GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY`
+Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY`
 <aside class=\"notice\">Query string method may be more practical for development activities.</aside>
 
 
@@ -80,7 +65,6 @@ Install the following dependencies:
 
 ```shell
 go get github.com/stretchr/testify/assert
-go get golang.org/x/oauth2
 go get golang.org/x/net/context
 ```
 
@@ -147,7 +131,7 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**V1OrdersCancelAllPost**](docs/OrdersApi.md#v1orderscancelallpost) | **Post** /v1/orders/cancel/all | Cancel all orders request
 *OrdersApi* | [**V1OrdersCancelPost**](docs/OrdersApi.md#v1orderscancelpost) | **Post** /v1/orders/cancel | Cancel order request
 *OrdersApi* | [**V1OrdersGet**](docs/OrdersApi.md#v1ordersget) | **Get** /v1/orders | Get open orders
-*OrdersApi* | [**V1OrdersHistoryTimeStartTimeEndGet**](docs/OrdersApi.md#v1ordershistorytimestarttimeendget) | **Get** /v1/orders/history/{time_start}/{time_end} | History of order changes
+*OrdersApi* | [**V1OrdersHistoryGet**](docs/OrdersApi.md#v1ordershistoryget) | **Get** /v1/orders/history | History of order changes
 *OrdersApi* | [**V1OrdersPost**](docs/OrdersApi.md#v1orderspost) | **Post** /v1/orders | Send new order
 *OrdersApi* | [**V1OrdersStatusClientOrderIdGet**](docs/OrdersApi.md#v1ordersstatusclientorderidget) | **Get** /v1/orders/status/{client_order_id} | Get order execution report
 *PositionsApi* | [**V1PositionsGet**](docs/PositionsApi.md#v1positionsget) | **Get** /v1/positions | Get open positions
@@ -178,7 +162,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
- Endpoints do not require authorization.
+Endpoints do not require authorization.
 
 
 ## Documentation for Utility Methods

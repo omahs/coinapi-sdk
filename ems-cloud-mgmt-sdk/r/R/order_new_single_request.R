@@ -73,14 +73,23 @@ OrderNewSingleRequest <- R6::R6Class(
         self$`price` <- `price`
       }
       if (!missing(`side`)) {
+        if (!(`side` %in% c())) {
+          stop(paste("Error! \"", `side`, "\" cannot be assigned to `side`. Must be .", sep = ""))
+        }
         stopifnot(R6::is.R6(`side`))
         self$`side` <- `side`
       }
       if (!missing(`order_type`)) {
+        if (!(`order_type` %in% c())) {
+          stop(paste("Error! \"", `order_type`, "\" cannot be assigned to `order_type`. Must be .", sep = ""))
+        }
         stopifnot(R6::is.R6(`order_type`))
         self$`order_type` <- `order_type`
       }
       if (!missing(`time_in_force`)) {
+        if (!(`time_in_force` %in% c())) {
+          stop(paste("Error! \"", `time_in_force`, "\" cannot be assigned to `time_in_force`. Must be .", sep = ""))
+        }
         stopifnot(R6::is.R6(`time_in_force`))
         self$`time_in_force` <- `time_in_force`
       }
@@ -189,19 +198,19 @@ OrderNewSingleRequest <- R6::R6Class(
         self$`price` <- this_object$`price`
       }
       if (!is.null(this_object$`side`)) {
-        side_object <- OrdSide$new()
-        side_object$fromJSON(jsonlite::toJSON(this_object$side, auto_unbox = TRUE, digits = NA))
-        self$`side` <- side_object
+        `side_object` <- OrdSide$new()
+        `side_object`$fromJSON(jsonlite::toJSON(this_object$`side`, auto_unbox = TRUE, digits = NA))
+        self$`side` <- `side_object`
       }
       if (!is.null(this_object$`order_type`)) {
-        order_type_object <- OrdType$new()
-        order_type_object$fromJSON(jsonlite::toJSON(this_object$order_type, auto_unbox = TRUE, digits = NA))
-        self$`order_type` <- order_type_object
+        `order_type_object` <- OrdType$new()
+        `order_type_object`$fromJSON(jsonlite::toJSON(this_object$`order_type`, auto_unbox = TRUE, digits = NA))
+        self$`order_type` <- `order_type_object`
       }
       if (!is.null(this_object$`time_in_force`)) {
-        time_in_force_object <- TimeInForce$new()
-        time_in_force_object$fromJSON(jsonlite::toJSON(this_object$time_in_force, auto_unbox = TRUE, digits = NA))
-        self$`time_in_force` <- time_in_force_object
+        `time_in_force_object` <- TimeInForce$new()
+        `time_in_force_object`$fromJSON(jsonlite::toJSON(this_object$`time_in_force`, auto_unbox = TRUE, digits = NA))
+        self$`time_in_force` <- `time_in_force_object`
       }
       if (!is.null(this_object$`expire_time`)) {
         self$`expire_time` <- this_object$`expire_time`
@@ -328,9 +337,9 @@ OrderNewSingleRequest <- R6::R6Class(
       self$`symbol_id_coinapi` <- this_object$`symbol_id_coinapi`
       self$`amount_order` <- this_object$`amount_order`
       self$`price` <- this_object$`price`
-      self$`side` <- OrdSide$new()$fromJSON(jsonlite::toJSON(this_object$side, auto_unbox = TRUE, digits = NA))
-      self$`order_type` <- OrdType$new()$fromJSON(jsonlite::toJSON(this_object$order_type, auto_unbox = TRUE, digits = NA))
-      self$`time_in_force` <- TimeInForce$new()$fromJSON(jsonlite::toJSON(this_object$time_in_force, auto_unbox = TRUE, digits = NA))
+      self$`side` <- OrdSide$new()$fromJSON(jsonlite::toJSON(this_object$`side`, auto_unbox = TRUE, digits = NA))
+      self$`order_type` <- OrdType$new()$fromJSON(jsonlite::toJSON(this_object$`order_type`, auto_unbox = TRUE, digits = NA))
+      self$`time_in_force` <- TimeInForce$new()$fromJSON(jsonlite::toJSON(this_object$`time_in_force`, auto_unbox = TRUE, digits = NA))
       self$`expire_time` <- this_object$`expire_time`
       self$`exec_inst` <- ApiClient$new()$deserializeObj(this_object$`exec_inst`, "array[character]", loadNamespace("openapi"))
       self
@@ -507,7 +516,7 @@ OrderNewSingleRequest <- R6::R6Class(
 ## Uncomment below to unlock the class to allow modifications of the method or field
 # OrderNewSingleRequest$unlock()
 #
-## Below is an example to define the print fnuction
+## Below is an example to define the print function
 # OrderNewSingleRequest$set("public", "print", function(...) {
 #   print(jsonlite::prettify(self$toJSONString()))
 #   invisible(self)

@@ -121,7 +121,7 @@ bool v1OrdersGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool v1OrdersHistoryTimeStartTimeEndGetSync(char * accessToken,
+bool v1OrdersHistoryGetSync(char * accessToken,
 	std::string timeStart, std::string timeEnd, 
 	void(* handler)(std::list<OrderHistory>, Error, void* )
 	, void* userData);
@@ -135,7 +135,7 @@ bool v1OrdersHistoryTimeStartTimeEndGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool v1OrdersHistoryTimeStartTimeEndGetAsync(char * accessToken,
+bool v1OrdersHistoryGetAsync(char * accessToken,
 	std::string timeStart, std::string timeEnd, 
 	void(* handler)(std::list<OrderHistory>, Error, void* )
 	, void* userData);

@@ -30,39 +30,41 @@ from openapi_client.model.message_error import MessageError
 
 from . import path
 
-# Path params
+# Query params
 TimeStartSchema = schemas.StrSchema
 TimeEndSchema = schemas.StrSchema
-RequestRequiredPathParams = typing_extensions.TypedDict(
-    'RequestRequiredPathParams',
+RequestRequiredQueryParams = typing_extensions.TypedDict(
+    'RequestRequiredQueryParams',
     {
         'time_start': typing.Union[TimeStartSchema, str, ],
         'time_end': typing.Union[TimeEndSchema, str, ],
     }
 )
-RequestOptionalPathParams = typing_extensions.TypedDict(
-    'RequestOptionalPathParams',
+RequestOptionalQueryParams = typing_extensions.TypedDict(
+    'RequestOptionalQueryParams',
     {
     },
     total=False
 )
 
 
-class RequestPathParams(RequestRequiredPathParams, RequestOptionalPathParams):
+class RequestQueryParams(RequestRequiredQueryParams, RequestOptionalQueryParams):
     pass
 
 
-request_path_time_start = api_client.PathParameter(
+request_query_time_start = api_client.QueryParameter(
     name="time_start",
-    style=api_client.ParameterStyle.SIMPLE,
+    style=api_client.ParameterStyle.FORM,
     schema=TimeStartSchema,
     required=True,
+    explode=True,
 )
-request_path_time_end = api_client.PathParameter(
+request_query_time_end = api_client.QueryParameter(
     name="time_end",
-    style=api_client.ParameterStyle.SIMPLE,
+    style=api_client.ParameterStyle.FORM,
     schema=TimeEndSchema,
     required=True,
+    explode=True,
 )
 SchemaFor200ResponseBodyApplicationJson = OrderHistoryArray
 
@@ -113,9 +115,9 @@ _all_accept_content_types = (
 
 class BaseApi(api_client.Api):
     @typing.overload
-    def _v1_orders_history_time_start_time_end_get_oapg(
+    def _v1_orders_history_get_oapg(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -125,19 +127,19 @@ class BaseApi(api_client.Api):
     ]: ...
 
     @typing.overload
-    def _v1_orders_history_time_start_time_end_get_oapg(
+    def _v1_orders_history_get_oapg(
         self,
         skip_deserialization: typing_extensions.Literal[True],
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def _v1_orders_history_time_start_time_end_get_oapg(
+    def _v1_orders_history_get_oapg(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -147,9 +149,9 @@ class BaseApi(api_client.Api):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def _v1_orders_history_time_start_time_end_get_oapg(
+    def _v1_orders_history_get_oapg(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -161,22 +163,22 @@ class BaseApi(api_client.Api):
             api_response.body and api_response.headers will not be deserialized into schema
             class instances
         """
-        self._verify_typed_dict_inputs_oapg(RequestPathParams, path_params)
+        self._verify_typed_dict_inputs_oapg(RequestQueryParams, query_params)
         used_path = path.value
 
-        _path_params = {}
+        prefix_separator_iterator = None
         for parameter in (
-            request_path_time_start,
-            request_path_time_end,
+            request_query_time_start,
+            request_query_time_end,
         ):
-            parameter_data = path_params.get(parameter.name, schemas.unset)
+            parameter_data = query_params.get(parameter.name, schemas.unset)
             if parameter_data is schemas.unset:
                 continue
-            serialized_data = parameter.serialize(parameter_data)
-            _path_params.update(serialized_data)
-
-        for k, v in _path_params.items():
-            used_path = used_path.replace('{%s}' % k, v)
+            if prefix_separator_iterator is None:
+                prefix_separator_iterator = parameter.get_prefix_separator_iterator()
+            serialized_data = parameter.serialize(parameter_data, prefix_separator_iterator)
+            for serialized_value in serialized_data.values():
+                used_path += serialized_value
 
         _headers = HTTPHeaderDict()
         # TODO add cookie handling
@@ -202,18 +204,22 @@ class BaseApi(api_client.Api):
                 api_response = api_client.ApiResponseWithoutDeserialization(response=response)
 
         if not 200 <= response.status <= 299:
-            raise exceptions.ApiException(api_response=api_response)
+            raise exceptions.ApiException(
+                status=response.status,
+                reason=response.reason,
+                api_response=api_response
+            )
 
         return api_response
 
 
-class V1OrdersHistoryTimeStartTimeEndGet(BaseApi):
+class V1OrdersHistoryGet(BaseApi):
     # this class is used by api classes that refer to endpoints with operationId fn names
 
     @typing.overload
-    def v1_orders_history_time_start_time_end_get(
+    def v1_orders_history_get(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -223,19 +229,19 @@ class V1OrdersHistoryTimeStartTimeEndGet(BaseApi):
     ]: ...
 
     @typing.overload
-    def v1_orders_history_time_start_time_end_get(
+    def v1_orders_history_get(
         self,
         skip_deserialization: typing_extensions.Literal[True],
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def v1_orders_history_time_start_time_end_get(
+    def v1_orders_history_get(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -245,16 +251,16 @@ class V1OrdersHistoryTimeStartTimeEndGet(BaseApi):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def v1_orders_history_time_start_time_end_get(
+    def v1_orders_history_get(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._v1_orders_history_time_start_time_end_get_oapg(
-            path_params=path_params,
+        return self._v1_orders_history_get_oapg(
+            query_params=query_params,
             accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,
@@ -268,7 +274,7 @@ class ApiForget(BaseApi):
     @typing.overload
     def get(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -281,7 +287,7 @@ class ApiForget(BaseApi):
     def get(
         self,
         skip_deserialization: typing_extensions.Literal[True],
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -290,7 +296,7 @@ class ApiForget(BaseApi):
     @typing.overload
     def get(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -302,14 +308,14 @@ class ApiForget(BaseApi):
 
     def get(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._v1_orders_history_time_start_time_end_get_oapg(
-            path_params=path_params,
+        return self._v1_orders_history_get_oapg(
+            query_params=query_params,
             accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,

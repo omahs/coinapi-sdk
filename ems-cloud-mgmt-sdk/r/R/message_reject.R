@@ -43,6 +43,9 @@ MessageReject <- R6::R6Class(
         self$`type` <- `type`
       }
       if (!is.null(`reject_reason`)) {
+        if (!(`reject_reason` %in% c())) {
+          stop(paste("Error! \"", `reject_reason`, "\" cannot be assigned to `reject_reason`. Must be .", sep = ""))
+        }
         stopifnot(R6::is.R6(`reject_reason`))
         self$`reject_reason` <- `reject_reason`
       }
@@ -110,9 +113,9 @@ MessageReject <- R6::R6Class(
         self$`type` <- this_object$`type`
       }
       if (!is.null(this_object$`reject_reason`)) {
-        reject_reason_object <- RejectReason$new()
-        reject_reason_object$fromJSON(jsonlite::toJSON(this_object$reject_reason, auto_unbox = TRUE, digits = NA))
-        self$`reject_reason` <- reject_reason_object
+        `reject_reason_object` <- RejectReason$new()
+        `reject_reason_object`$fromJSON(jsonlite::toJSON(this_object$`reject_reason`, auto_unbox = TRUE, digits = NA))
+        self$`reject_reason` <- `reject_reason_object`
       }
       if (!is.null(this_object$`exchange_id`)) {
         self$`exchange_id` <- this_object$`exchange_id`
@@ -189,7 +192,7 @@ MessageReject <- R6::R6Class(
     fromJSONString = function(input_json) {
       this_object <- jsonlite::fromJSON(input_json)
       self$`type` <- this_object$`type`
-      self$`reject_reason` <- RejectReason$new()$fromJSON(jsonlite::toJSON(this_object$reject_reason, auto_unbox = TRUE, digits = NA))
+      self$`reject_reason` <- RejectReason$new()$fromJSON(jsonlite::toJSON(this_object$`reject_reason`, auto_unbox = TRUE, digits = NA))
       self$`exchange_id` <- this_object$`exchange_id`
       self$`message` <- this_object$`message`
       self$`rejected_message` <- this_object$`rejected_message`
@@ -253,7 +256,7 @@ MessageReject <- R6::R6Class(
 ## Uncomment below to unlock the class to allow modifications of the method or field
 # MessageReject$unlock()
 #
-## Below is an example to define the print fnuction
+## Below is an example to define the print function
 # MessageReject$set("public", "print", function(...) {
 #   print(jsonlite::prettify(self$toJSONString()))
 #   invisible(self)

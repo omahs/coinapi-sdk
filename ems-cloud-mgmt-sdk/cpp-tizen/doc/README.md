@@ -55,8 +55,8 @@ Method | HTTP request | Description
 *v1OrdersCancelPostASync* | *POST* /v1/orders/cancel | Cancel order request.
 *v1OrdersGetSync* | *GET* /v1/orders | Get open orders.
 *v1OrdersGetASync* | *GET* /v1/orders | Get open orders.
-*v1OrdersHistoryTimeStartTimeEndGetSync* | *GET* /v1/orders/history/{time_start}/{time_end} | History of order changes.
-*v1OrdersHistoryTimeStartTimeEndGetASync* | *GET* /v1/orders/history/{time_start}/{time_end} | History of order changes.
+*v1OrdersHistoryGetSync* | *GET* /v1/orders/history | History of order changes.
+*v1OrdersHistoryGetASync* | *GET* /v1/orders/history | History of order changes.
 *v1OrdersPostSync* | *POST* /v1/orders | Send new order.
 *v1OrdersPostASync* | *POST* /v1/orders | Send new order.
 *v1OrdersStatusClientOrderIdGetSync* | *GET* /v1/orders/status/{client_order_id} | Get order execution report.

@@ -44,7 +44,7 @@ OrdersAPI_v1OrdersGet(apiClient_t *apiClient, char * exchange_id );
 // Based on the date range, all changes registered in the orderbook.
 //
 list_t*
-OrdersAPI_v1OrdersHistoryTimeStartTimeEndGet(apiClient_t *apiClient, char * time_start , char * time_end );
+OrdersAPI_v1OrdersHistoryGet(apiClient_t *apiClient, char * time_start , char * time_end );
 
 
 // Send new order

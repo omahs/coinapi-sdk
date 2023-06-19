@@ -1,11 +1,11 @@
 /**
  * EMS - REST API
- * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. <br/> This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       <br/><br/> Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Managed Cloud</td>       <td>Sandbox</td>       <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Sandbox</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  <br/><br/> If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: <br/><br/> `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this:  <br/><br/> `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
+ * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>        Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints  <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
  *
  * The version of the OpenAPI document: v1
  * Contact: support@coinapi.io
  *
- * NOTE: This class is auto generated by OpenAPI-Generator 6.2.1.
+ * NOTE: This class is auto generated by OpenAPI-Generator 6.6.0.
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
@@ -48,7 +48,7 @@ pplx::task<std::shared_ptr<MessageReject>> OrdersApi::v1OrdersCancelAllPost(std:
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
     utility::string_t localVarPath = utility::conversions::to_string_t("/v1/orders/cancel/all");
-    
+
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
     std::map<utility::string_t, utility::string_t> localVarFormParams;
@@ -194,7 +194,7 @@ pplx::task<std::shared_ptr<OrderExecutionReport>> OrdersApi::v1OrdersCancelPost(
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
     utility::string_t localVarPath = utility::conversions::to_string_t("/v1/orders/cancel");
-    
+
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
     std::map<utility::string_t, utility::string_t> localVarFormParams;
@@ -334,7 +334,7 @@ pplx::task<std::vector<std::shared_ptr<OrderExecutionReport>>> OrdersApi::v1Orde
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
     utility::string_t localVarPath = utility::conversions::to_string_t("/v1/orders");
-    
+
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
     std::map<utility::string_t, utility::string_t> localVarFormParams;
@@ -459,14 +459,12 @@ pplx::task<std::vector<std::shared_ptr<OrderExecutionReport>>> OrdersApi::v1Orde
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<OrderHistory>>> OrdersApi::v1OrdersHistoryTimeStartTimeEndGet(utility::string_t timeStart, utility::string_t timeEnd) const
+pplx::task<std::vector<std::shared_ptr<OrderHistory>>> OrdersApi::v1OrdersHistoryGet(utility::string_t timeStart, utility::string_t timeEnd) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/orders/history/{time_start}/{time_end}");
-    boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("time_start") + utility::conversions::to_string_t("}"), ApiClient::parameterToString(timeStart));
-boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("time_end") + utility::conversions::to_string_t("}"), ApiClient::parameterToString(timeEnd));
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/orders/history");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -495,13 +493,19 @@ boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utilit
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("OrdersApi->v1OrdersHistoryTimeStartTimeEndGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("OrdersApi->v1OrdersHistoryGet does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("time_start")] = ApiClient::parameterToString(timeStart);
+    }
+    {
+        localVarQueryParams[utility::conversions::to_string_t("time_end")] = ApiClient::parameterToString(timeEnd);
+    }
 
     std::shared_ptr<IHttpBody> localVarHttpBody;
     utility::string_t localVarRequestHttpContentType;
@@ -522,7 +526,7 @@ boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utilit
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("OrdersApi->v1OrdersHistoryTimeStartTimeEndGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("OrdersApi->v1OrdersHistoryGet does not consume any supported media type"));
     }
 
 
@@ -542,7 +546,7 @@ boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utilit
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling v1OrdersHistoryTimeStartTimeEndGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling v1OrdersHistoryGet: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -553,7 +557,7 @@ boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utilit
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling v1OrdersHistoryTimeStartTimeEndGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling v1OrdersHistoryGet: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -581,7 +585,7 @@ boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utilit
         else
         {
             throw ApiException(500
-                , utility::conversions::to_string_t("error calling v1OrdersHistoryTimeStartTimeEndGet: unsupported response type"));
+                , utility::conversions::to_string_t("error calling v1OrdersHistoryGet: unsupported response type"));
         }
 
         return localVarResult;
@@ -599,7 +603,7 @@ pplx::task<std::shared_ptr<OrderExecutionReport>> OrdersApi::v1OrdersPost(std::s
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
     utility::string_t localVarPath = utility::conversions::to_string_t("/v1/orders");
-    
+
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
     std::map<utility::string_t, utility::string_t> localVarFormParams;
@@ -739,7 +743,7 @@ pplx::task<std::shared_ptr<OrderExecutionReport>> OrdersApi::v1OrdersStatusClien
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
     utility::string_t localVarPath = utility::conversions::to_string_t("/v1/orders/status/{client_order_id}");
-    boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("client_order_id") + utility::conversions::to_string_t("}"), ApiClient::parameterToString(clientOrderId));
+    boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("client_order_id") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(clientOrderId)));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
