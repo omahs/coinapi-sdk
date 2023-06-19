@@ -38,13 +38,13 @@ namespace CoinAPI.WebSocket.V1
         protected bool? ForceOverrideHeartbeat { get; set; } = true;
 
 
-        public CoinApiWsClient(double hbTimeoutSecs, double reconnectIntervalSecs) : base(UrlProduction)
+        public CoinApiWsClient(double hbTimeoutSecs, double reconnectIntervalSecs) : this(UrlProduction)
         {
             _hbTimeout = TimeSpan.FromSeconds(hbTimeoutSecs);
             _reconnectInterval = TimeSpan.FromSeconds(reconnectIntervalSecs);
         }
 
-        public CoinApiWsClient() : base(UrlProduction)
+        public CoinApiWsClient() : this(UrlProduction)
         {
         }
 
