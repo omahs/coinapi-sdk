@@ -1,0 +1,77 @@
+-module(openapi_dex_trade_dto).
+
+-export([encode/1]).
+
+-export_type([openapi_dex_trade_dto/0]).
+
+-type openapi_dex_trade_dto() ::
+    #{ 'entry_time' => openapi_date_time:openapi_date_time(),
+       'recv_time' => openapi_date_time:openapi_date_time(),
+       'block_number' => integer(),
+       'id' => binary(),
+       'order' => binary(),
+       'owner' => binary(),
+       'sell_volume' => binary(),
+       'buy_volume' => binary(),
+       'trade_batch_id' => binary(),
+       'trade_epoch' => binary(),
+       'buy_token' => binary(),
+       'sell_token' => binary(),
+       'create_epoch' => binary(),
+       'revert_epoch' => binary(),
+       'tx_hash' => binary(),
+       'tx_log_index' => binary(),
+       'vid' => integer(),
+       'pool_id' => binary(),
+       'transaction_id' => binary(),
+       'evaluated_price' => float(),
+       'evaluated_amount' => float(),
+       'evaluated_aggressor' => openapi_transactions_e_trade_aggressive_side:openapi_transactions_e_trade_aggressive_side()
+     }.
+
+encode(#{ 'entry_time' := EntryTime,
+          'recv_time' := RecvTime,
+          'block_number' := BlockNumber,
+          'id' := Id,
+          'order' := Order,
+          'owner' := Owner,
+          'sell_volume' := SellVolume,
+          'buy_volume' := BuyVolume,
+          'trade_batch_id' := TradeBatchId,
+          'trade_epoch' := TradeEpoch,
+          'buy_token' := BuyToken,
+          'sell_token' := SellToken,
+          'create_epoch' := CreateEpoch,
+          'revert_epoch' := RevertEpoch,
+          'tx_hash' := TxHash,
+          'tx_log_index' := TxLogIndex,
+          'vid' := Vid,
+          'pool_id' := PoolId,
+          'transaction_id' := TransactionId,
+          'evaluated_price' := EvaluatedPrice,
+          'evaluated_amount' := EvaluatedAmount,
+          'evaluated_aggressor' := EvaluatedAggressor
+        }) ->
+    #{ 'entry_time' => EntryTime,
+       'recv_time' => RecvTime,
+       'block_number' => BlockNumber,
+       'id' => Id,
+       'order' => Order,
+       'owner' => Owner,
+       'sell_volume' => SellVolume,
+       'buy_volume' => BuyVolume,
+       'trade_batch_id' => TradeBatchId,
+       'trade_epoch' => TradeEpoch,
+       'buy_token' => BuyToken,
+       'sell_token' => SellToken,
+       'create_epoch' => CreateEpoch,
+       'revert_epoch' => RevertEpoch,
+       'tx_hash' => TxHash,
+       'tx_log_index' => TxLogIndex,
+       'vid' => Vid,
+       'pool_id' => PoolId,
+       'transaction_id' => TransactionId,
+       'evaluated_price' => EvaluatedPrice,
+       'evaluated_amount' => EvaluatedAmount,
+       'evaluated_aggressor' => EvaluatedAggressor
+     }.

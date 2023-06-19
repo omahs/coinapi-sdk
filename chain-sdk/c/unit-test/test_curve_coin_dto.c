@@ -1,0 +1,86 @@
+#ifndef curve_coin_dto_TEST
+#define curve_coin_dto_TEST
+
+// the following is to include only the main from the first c file
+#ifndef TEST_MAIN
+#define TEST_MAIN
+#define curve_coin_dto_MAIN
+#endif // TEST_MAIN
+
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include "../external/cJSON.h"
+
+#include "../model/curve_coin_dto.h"
+curve_coin_dto_t* instantiate_curve_coin_dto(int include_optional);
+
+
+
+curve_coin_dto_t* instantiate_curve_coin_dto(int include_optional) {
+  curve_coin_dto_t* curve_coin_dto = NULL;
+  if (include_optional) {
+    curve_coin_dto = curve_coin_dto_create(
+      "2013-10-20T19:20:30+01:00",
+      "2013-10-20T19:20:30+01:00",
+      56,
+      "0",
+      56,
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      56,
+      "0"
+    );
+  } else {
+    curve_coin_dto = curve_coin_dto_create(
+      "2013-10-20T19:20:30+01:00",
+      "2013-10-20T19:20:30+01:00",
+      56,
+      "0",
+      56,
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      56,
+      "0"
+    );
+  }
+
+  return curve_coin_dto;
+}
+
+
+#ifdef curve_coin_dto_MAIN
+
+void test_curve_coin_dto(int include_optional) {
+    curve_coin_dto_t* curve_coin_dto_1 = instantiate_curve_coin_dto(include_optional);
+
+	cJSON* jsoncurve_coin_dto_1 = curve_coin_dto_convertToJSON(curve_coin_dto_1);
+	printf("curve_coin_dto :\n%s\n", cJSON_Print(jsoncurve_coin_dto_1));
+	curve_coin_dto_t* curve_coin_dto_2 = curve_coin_dto_parseFromJSON(jsoncurve_coin_dto_1);
+	cJSON* jsoncurve_coin_dto_2 = curve_coin_dto_convertToJSON(curve_coin_dto_2);
+	printf("repeating curve_coin_dto:\n%s\n", cJSON_Print(jsoncurve_coin_dto_2));
+}
+
+int main() {
+  test_curve_coin_dto(1);
+  test_curve_coin_dto(0);
+
+  printf("Hello world \n");
+  return 0;
+}
+
+#endif // curve_coin_dto_MAIN
+#endif // curve_coin_dto_TEST
