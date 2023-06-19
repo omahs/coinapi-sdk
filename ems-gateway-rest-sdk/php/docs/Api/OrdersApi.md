@@ -7,7 +7,7 @@ All URIs are relative to https://ems-gateway-aws-eu-central-1-dev.coinapi.io, ex
 | [**v1OrdersCancelAllPost()**](OrdersApi.md#v1OrdersCancelAllPost) | **POST** /v1/orders/cancel/all | Cancel all orders request |
 | [**v1OrdersCancelPost()**](OrdersApi.md#v1OrdersCancelPost) | **POST** /v1/orders/cancel | Cancel order request |
 | [**v1OrdersGet()**](OrdersApi.md#v1OrdersGet) | **GET** /v1/orders | Get open orders |
-| [**v1OrdersHistoryTimeStartTimeEndGet()**](OrdersApi.md#v1OrdersHistoryTimeStartTimeEndGet) | **GET** /v1/orders/history/{time_start}/{time_end} | History of order changes |
+| [**v1OrdersHistoryGet()**](OrdersApi.md#v1OrdersHistoryGet) | **GET** /v1/orders/history | History of order changes |
 | [**v1OrdersPost()**](OrdersApi.md#v1OrdersPost) | **POST** /v1/orders | Send new order |
 | [**v1OrdersStatusClientOrderIdGet()**](OrdersApi.md#v1OrdersStatusClientOrderIdGet) | **GET** /v1/orders/status/{client_order_id} | Get order execution report |
 
@@ -180,10 +180,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `v1OrdersHistoryTimeStartTimeEndGet()`
+## `v1OrdersHistoryGet()`
 
 ```php
-v1OrdersHistoryTimeStartTimeEndGet($time_start, $time_end): \OpenAPI\Client\Model\OrderHistory[]
+v1OrdersHistoryGet($time_start, $time_end): \OpenAPI\Client\Model\OrderHistory[]
 ```
 
 History of order changes
@@ -207,10 +207,10 @@ $time_start = 2022-05-01T00:00:00; // string | Start date
 $time_end = 2022-05-01T12:00:00; // string | End date
 
 try {
-    $result = $apiInstance->v1OrdersHistoryTimeStartTimeEndGet($time_start, $time_end);
+    $result = $apiInstance->v1OrdersHistoryGet($time_start, $time_end);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrdersApi->v1OrdersHistoryTimeStartTimeEndGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrdersApi->v1OrdersHistoryGet: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

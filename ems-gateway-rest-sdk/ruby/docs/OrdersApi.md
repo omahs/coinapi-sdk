@@ -7,7 +7,7 @@ All URIs are relative to *https://ems-gateway-aws-eu-central-1-dev.coinapi.io*
 | [**v1_orders_cancel_all_post**](OrdersApi.md#v1_orders_cancel_all_post) | **POST** /v1/orders/cancel/all | Cancel all orders request |
 | [**v1_orders_cancel_post**](OrdersApi.md#v1_orders_cancel_post) | **POST** /v1/orders/cancel | Cancel order request |
 | [**v1_orders_get**](OrdersApi.md#v1_orders_get) | **GET** /v1/orders | Get open orders |
-| [**v1_orders_history_time_start_time_end_get**](OrdersApi.md#v1_orders_history_time_start_time_end_get) | **GET** /v1/orders/history/{time_start}/{time_end} | History of order changes |
+| [**v1_orders_history_get**](OrdersApi.md#v1_orders_history_get) | **GET** /v1/orders/history | History of order changes |
 | [**v1_orders_post**](OrdersApi.md#v1_orders_post) | **POST** /v1/orders | Send new order |
 | [**v1_orders_status_client_order_id_get**](OrdersApi.md#v1_orders_status_client_order_id_get) | **GET** /v1/orders/status/{client_order_id} | Get order execution report |
 
@@ -206,9 +206,9 @@ No authorization required
 - **Accept**: application/json, appliction/json
 
 
-## v1_orders_history_time_start_time_end_get
+## v1_orders_history_get
 
-> <Array<OrderHistory>> v1_orders_history_time_start_time_end_get(time_start, time_end)
+> <Array<OrderHistory>> v1_orders_history_get(time_start, time_end)
 
 History of order changes
 
@@ -226,28 +226,28 @@ time_end = '2022-05-01T12:00:00' # String | End date
 
 begin
   # History of order changes
-  result = api_instance.v1_orders_history_time_start_time_end_get(time_start, time_end)
+  result = api_instance.v1_orders_history_get(time_start, time_end)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling OrdersApi->v1_orders_history_time_start_time_end_get: #{e}"
+  puts "Error when calling OrdersApi->v1_orders_history_get: #{e}"
 end
 ```
 
-#### Using the v1_orders_history_time_start_time_end_get_with_http_info variant
+#### Using the v1_orders_history_get_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<OrderHistory>>, Integer, Hash)> v1_orders_history_time_start_time_end_get_with_http_info(time_start, time_end)
+> <Array(<Array<OrderHistory>>, Integer, Hash)> v1_orders_history_get_with_http_info(time_start, time_end)
 
 ```ruby
 begin
   # History of order changes
-  data, status_code, headers = api_instance.v1_orders_history_time_start_time_end_get_with_http_info(time_start, time_end)
+  data, status_code, headers = api_instance.v1_orders_history_get_with_http_info(time_start, time_end)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<OrderHistory>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling OrdersApi->v1_orders_history_time_start_time_end_get_with_http_info: #{e}"
+  puts "Error when calling OrdersApi->v1_orders_history_get_with_http_info: #{e}"
 end
 ```
 

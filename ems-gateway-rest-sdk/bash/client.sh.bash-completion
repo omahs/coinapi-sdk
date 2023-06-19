@@ -72,7 +72,7 @@ _()
     operations["v1OrdersCancelAllPost"]=1
     operations["v1OrdersCancelPost"]=1
     operations["v1OrdersGet"]=1
-    operations["v1OrdersHistoryTimeStartTimeEndGet"]=1
+    operations["v1OrdersHistoryGet"]=1
     operations["v1OrdersPost"]=1
     operations["v1OrdersStatusClientOrderIdGet"]=1
     operations["v1PositionsGet"]=1
@@ -84,7 +84,7 @@ _()
     operation_parameters["v1OrdersCancelAllPost"]=""
     operation_parameters["v1OrdersCancelPost"]=""
     operation_parameters["v1OrdersGet"]="exchange_id= "
-    operation_parameters["v1OrdersHistoryTimeStartTimeEndGet"]="time_start= time_end= "
+    operation_parameters["v1OrdersHistoryGet"]="time_start= time_end= "
     operation_parameters["v1OrdersPost"]=""
     operation_parameters["v1OrdersStatusClientOrderIdGet"]="client_order_id= "
     operation_parameters["v1PositionsGet"]="exchange_id= "

@@ -13,12 +13,12 @@
 /**
  * EMS - REST API
  *
- * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. <br/> This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       <br/><br/> Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Managed Cloud</td>       <td>Sandbox</td>       <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Sandbox</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  <br/><br/> If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: <br/><br/> `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this:  <br/><br/> `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside>
+ * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>        Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints  <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside>
  *
  * The version of the OpenAPI document: v1
  * Contact: support@coinapi.io
  * Generated by: https://openapi-generator.tech
- * OpenAPI Generator version: 6.2.1
+ * OpenAPI Generator version: 6.6.0
  */
 
 /**
@@ -493,11 +493,9 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setExchangeId($exchange_id)
     {
-
         if (is_null($exchange_id)) {
             throw new \InvalidArgumentException('non-nullable exchange_id cannot be null');
         }
-
         $this->container['exchange_id'] = $exchange_id;
 
         return $this;
@@ -522,11 +520,9 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setClientOrderId($client_order_id)
     {
-
         if (is_null($client_order_id)) {
             throw new \InvalidArgumentException('non-nullable client_order_id cannot be null');
         }
-
         $this->container['client_order_id'] = $client_order_id;
 
         return $this;
@@ -551,11 +547,9 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setSymbolIdExchange($symbol_id_exchange)
     {
-
         if (is_null($symbol_id_exchange)) {
             throw new \InvalidArgumentException('non-nullable symbol_id_exchange cannot be null');
         }
-
         $this->container['symbol_id_exchange'] = $symbol_id_exchange;
 
         return $this;
@@ -580,11 +574,9 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setSymbolIdCoinapi($symbol_id_coinapi)
     {
-
         if (is_null($symbol_id_coinapi)) {
             throw new \InvalidArgumentException('non-nullable symbol_id_coinapi cannot be null');
         }
-
         $this->container['symbol_id_coinapi'] = $symbol_id_coinapi;
 
         return $this;
@@ -609,11 +601,9 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setAmountOrder($amount_order)
     {
-
         if (is_null($amount_order)) {
             throw new \InvalidArgumentException('non-nullable amount_order cannot be null');
         }
-
         $this->container['amount_order'] = $amount_order;
 
         return $this;
@@ -638,11 +628,9 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setPrice($price)
     {
-
         if (is_null($price)) {
             throw new \InvalidArgumentException('non-nullable price cannot be null');
         }
-
         $this->container['price'] = $price;
 
         return $this;
@@ -667,11 +655,9 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setSide($side)
     {
-
         if (is_null($side)) {
             throw new \InvalidArgumentException('non-nullable side cannot be null');
         }
-
         $this->container['side'] = $side;
 
         return $this;
@@ -696,11 +682,9 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setOrderType($order_type)
     {
-
         if (is_null($order_type)) {
             throw new \InvalidArgumentException('non-nullable order_type cannot be null');
         }
-
         $this->container['order_type'] = $order_type;
 
         return $this;
@@ -725,11 +709,9 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setTimeInForce($time_in_force)
     {
-
         if (is_null($time_in_force)) {
             throw new \InvalidArgumentException('non-nullable time_in_force cannot be null');
         }
-
         $this->container['time_in_force'] = $time_in_force;
 
         return $this;
@@ -754,11 +736,9 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setExpireTime($expire_time)
     {
-
         if (is_null($expire_time)) {
             throw new \InvalidArgumentException('non-nullable expire_time cannot be null');
         }
-
         $this->container['expire_time'] = $expire_time;
 
         return $this;
@@ -783,8 +763,11 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setExecInst($exec_inst)
     {
+        if (is_null($exec_inst)) {
+            throw new \InvalidArgumentException('non-nullable exec_inst cannot be null');
+        }
         $allowedValues = $this->getExecInstAllowableValues();
-        if (!is_null($exec_inst) && array_diff($exec_inst, $allowedValues)) {
+        if (array_diff($exec_inst, $allowedValues)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value for 'exec_inst', must be one of '%s'",
@@ -792,11 +775,6 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
                 )
             );
         }
-
-        if (is_null($exec_inst)) {
-            throw new \InvalidArgumentException('non-nullable exec_inst cannot be null');
-        }
-
         $this->container['exec_inst'] = $exec_inst;
 
         return $this;
@@ -821,11 +799,9 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setClientOrderIdFormatExchange($client_order_id_format_exchange)
     {
-
         if (is_null($client_order_id_format_exchange)) {
             throw new \InvalidArgumentException('non-nullable client_order_id_format_exchange cannot be null');
         }
-
         $this->container['client_order_id_format_exchange'] = $client_order_id_format_exchange;
 
         return $this;
@@ -850,11 +826,9 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setExchangeOrderId($exchange_order_id)
     {
-
         if (is_null($exchange_order_id)) {
             throw new \InvalidArgumentException('non-nullable exchange_order_id cannot be null');
         }
-
         $this->container['exchange_order_id'] = $exchange_order_id;
 
         return $this;
@@ -879,11 +853,9 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setAmountOpen($amount_open)
     {
-
         if (is_null($amount_open)) {
             throw new \InvalidArgumentException('non-nullable amount_open cannot be null');
         }
-
         $this->container['amount_open'] = $amount_open;
 
         return $this;
@@ -908,11 +880,9 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setAmountFilled($amount_filled)
     {
-
         if (is_null($amount_filled)) {
             throw new \InvalidArgumentException('non-nullable amount_filled cannot be null');
         }
-
         $this->container['amount_filled'] = $amount_filled;
 
         return $this;
@@ -937,11 +907,9 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setAvgPx($avg_px)
     {
-
         if (is_null($avg_px)) {
             throw new \InvalidArgumentException('non-nullable avg_px cannot be null');
         }
-
         $this->container['avg_px'] = $avg_px;
 
         return $this;
@@ -966,11 +934,9 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setStatus($status)
     {
-
         if (is_null($status)) {
             throw new \InvalidArgumentException('non-nullable status cannot be null');
         }
-
         $this->container['status'] = $status;
 
         return $this;
@@ -995,11 +961,9 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setStatusHistory($status_history)
     {
-
         if (is_null($status_history)) {
             throw new \InvalidArgumentException('non-nullable status_history cannot be null');
         }
-
         $this->container['status_history'] = $status_history;
 
         return $this;
@@ -1024,11 +988,9 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setErrorMessage($error_message)
     {
-
         if (is_null($error_message)) {
             throw new \InvalidArgumentException('non-nullable error_message cannot be null');
         }
-
         $this->container['error_message'] = $error_message;
 
         return $this;
@@ -1053,11 +1015,9 @@ class OrderExecutionReport implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function setFills($fills)
     {
-
         if (is_null($fills)) {
             throw new \InvalidArgumentException('non-nullable fills cannot be null');
         }
-
         $this->container['fills'] = $fills;
 
         return $this;

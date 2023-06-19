@@ -210,11 +210,9 @@ class OrdersApi {
   ///
   /// * [String] timeEnd (required):
   ///   End date
-  Future<Response> v1OrdersHistoryTimeStartTimeEndGetWithHttpInfo(String timeStart, String timeEnd,) async {
+  Future<Response> v1OrdersHistoryGetWithHttpInfo(String timeStart, String timeEnd,) async {
     // ignore: prefer_const_declarations
-    final path = r'/v1/orders/history/{time_start}/{time_end}'
-      .replaceAll('{time_start}', timeStart)
-      .replaceAll('{time_end}', timeEnd);
+    final path = r'/v1/orders/history';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -222,6 +220,9 @@ class OrdersApi {
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
+
+      queryParams.addAll(_queryParams('', 'time_start', timeStart));
+      queryParams.addAll(_queryParams('', 'time_end', timeEnd));
 
     const contentTypes = <String>[];
 
@@ -248,8 +249,8 @@ class OrdersApi {
   ///
   /// * [String] timeEnd (required):
   ///   End date
-  Future<List<OrderHistory>?> v1OrdersHistoryTimeStartTimeEndGet(String timeStart, String timeEnd,) async {
-    final response = await v1OrdersHistoryTimeStartTimeEndGetWithHttpInfo(timeStart, timeEnd,);
+  Future<List<OrderHistory>?> v1OrdersHistoryGet(String timeStart, String timeEnd,) async {
+    final response = await v1OrdersHistoryGetWithHttpInfo(timeStart, timeEnd,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

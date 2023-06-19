@@ -7,11 +7,11 @@ All URIs are relative to *https://ems-gateway-aws-eu-central-1-dev.coinapi.io*
 | [**V1OrdersCancelAllPost**](OrdersApi.md#v1orderscancelallpost) | **POST** /v1/orders/cancel/all | Cancel all orders request |
 | [**V1OrdersCancelPost**](OrdersApi.md#v1orderscancelpost) | **POST** /v1/orders/cancel | Cancel order request |
 | [**V1OrdersGet**](OrdersApi.md#v1ordersget) | **GET** /v1/orders | Get open orders |
-| [**V1OrdersHistoryTimeStartTimeEndGet**](OrdersApi.md#v1ordershistorytimestarttimeendget) | **GET** /v1/orders/history/{time_start}/{time_end} | History of order changes |
+| [**V1OrdersHistoryGet**](OrdersApi.md#v1ordershistoryget) | **GET** /v1/orders/history | History of order changes |
 | [**V1OrdersPost**](OrdersApi.md#v1orderspost) | **POST** /v1/orders | Send new order |
 | [**V1OrdersStatusClientOrderIdGet**](OrdersApi.md#v1ordersstatusclientorderidget) | **GET** /v1/orders/status/{client_order_id} | Get order execution report |
 
-<a name="v1orderscancelallpost"></a>
+<a id="v1orderscancelallpost"></a>
 # **V1OrdersCancelAllPost**
 > MessageReject V1OrdersCancelAllPost (OrderCancelAllRequest orderCancelAllRequest)
 
@@ -104,7 +104,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="v1orderscancelpost"></a>
+<a id="v1orderscancelpost"></a>
 # **V1OrdersCancelPost**
 > OrderExecutionReport V1OrdersCancelPost (OrderCancelSingleRequest orderCancelSingleRequest)
 
@@ -197,7 +197,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="v1ordersget"></a>
+<a id="v1ordersget"></a>
 # **V1OrdersGet**
 > List&lt;OrderExecutionReport&gt; V1OrdersGet (string exchangeId = null)
 
@@ -289,9 +289,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="v1ordershistorytimestarttimeendget"></a>
-# **V1OrdersHistoryTimeStartTimeEndGet**
-> List&lt;OrderHistory&gt; V1OrdersHistoryTimeStartTimeEndGet (string timeStart, string timeEnd)
+<a id="v1ordershistoryget"></a>
+# **V1OrdersHistoryGet**
+> List&lt;OrderHistory&gt; V1OrdersHistoryGet (string timeStart, string timeEnd)
 
 History of order changes
 
@@ -307,7 +307,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class V1OrdersHistoryTimeStartTimeEndGetExample
+    public class V1OrdersHistoryGetExample
     {
         public static void Main()
         {
@@ -320,12 +320,12 @@ namespace Example
             try
             {
                 // History of order changes
-                List<OrderHistory> result = apiInstance.V1OrdersHistoryTimeStartTimeEndGet(timeStart, timeEnd);
+                List<OrderHistory> result = apiInstance.V1OrdersHistoryGet(timeStart, timeEnd);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OrdersApi.V1OrdersHistoryTimeStartTimeEndGet: " + e.Message);
+                Debug.Print("Exception when calling OrdersApi.V1OrdersHistoryGet: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -334,21 +334,21 @@ namespace Example
 }
 ```
 
-#### Using the V1OrdersHistoryTimeStartTimeEndGetWithHttpInfo variant
+#### Using the V1OrdersHistoryGetWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // History of order changes
-    ApiResponse<List<OrderHistory>> response = apiInstance.V1OrdersHistoryTimeStartTimeEndGetWithHttpInfo(timeStart, timeEnd);
+    ApiResponse<List<OrderHistory>> response = apiInstance.V1OrdersHistoryGetWithHttpInfo(timeStart, timeEnd);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OrdersApi.V1OrdersHistoryTimeStartTimeEndGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OrdersApi.V1OrdersHistoryGetWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -383,7 +383,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="v1orderspost"></a>
+<a id="v1orderspost"></a>
 # **V1OrdersPost**
 > OrderExecutionReport V1OrdersPost (OrderNewSingleRequest orderNewSingleRequest)
 
@@ -477,7 +477,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="v1ordersstatusclientorderidget"></a>
+<a id="v1ordersstatusclientorderidget"></a>
 # **V1OrdersStatusClientOrderIdGet**
 > OrderExecutionReport V1OrdersStatusClientOrderIdGet (string clientOrderId)
 

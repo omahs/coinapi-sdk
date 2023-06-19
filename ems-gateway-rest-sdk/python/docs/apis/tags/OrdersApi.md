@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # openapi_client.apis.tags.orders_api.OrdersApi
 
 All URIs are relative to *https://ems-gateway-aws-eu-central-1-dev.coinapi.io*
@@ -8,12 +8,12 @@ Method | HTTP request | Description
 [**v1_orders_cancel_all_post**](#v1_orders_cancel_all_post) | **post** /v1/orders/cancel/all | Cancel all orders request
 [**v1_orders_cancel_post**](#v1_orders_cancel_post) | **post** /v1/orders/cancel | Cancel order request
 [**v1_orders_get**](#v1_orders_get) | **get** /v1/orders | Get open orders
-[**v1_orders_history_time_start_time_end_get**](#v1_orders_history_time_start_time_end_get) | **get** /v1/orders/history/{time_start}/{time_end} | History of order changes
+[**v1_orders_history_get**](#v1_orders_history_get) | **get** /v1/orders/history | History of order changes
 [**v1_orders_post**](#v1_orders_post) | **post** /v1/orders | Send new order
 [**v1_orders_status_client_order_id_get**](#v1_orders_status_client_order_id_get) | **get** /v1/orders/status/{client_order_id} | Get order execution report
 
 # **v1_orders_cancel_all_post**
-<a name="v1_orders_cancel_all_post"></a>
+<a id="v1_orders_cancel_all_post"></a>
 > MessageReject v1_orders_cancel_all_post(order_cancel_all_request)
 
 Cancel all orders request
@@ -127,7 +127,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **v1_orders_cancel_post**
-<a name="v1_orders_cancel_post"></a>
+<a id="v1_orders_cancel_post"></a>
 > OrderExecutionReport v1_orders_cancel_post(order_cancel_single_request)
 
 Cancel order request
@@ -244,7 +244,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **v1_orders_get**
-<a name="v1_orders_get"></a>
+<a id="v1_orders_get"></a>
 > OrderExecutionReports v1_orders_get()
 
 Get open orders
@@ -348,9 +348,9 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **v1_orders_history_time_start_time_end_get**
-<a name="v1_orders_history_time_start_time_end_get"></a>
-> OrderHistoryArray v1_orders_history_time_start_time_end_get(time_starttime_end)
+# **v1_orders_history_get**
+<a id="v1_orders_history_get"></a>
+> OrderHistoryArray v1_orders_history_get(time_starttime_end)
 
 History of order changes
 
@@ -376,36 +376,37 @@ with openapi_client.ApiClient(configuration) as api_client:
     api_instance = orders_api.OrdersApi(api_client)
 
     # example passing only required values which don't have defaults set
-    path_params = {
+    query_params = {
         'time_start': "2022-05-01T00:00:00",
         'time_end': "2022-05-01T12:00:00",
     }
     try:
         # History of order changes
-        api_response = api_instance.v1_orders_history_time_start_time_end_get(
-            path_params=path_params,
+        api_response = api_instance.v1_orders_history_get(
+            query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling OrdersApi->v1_orders_history_time_start_time_end_get: %s\n" % e)
+        print("Exception when calling OrdersApi->v1_orders_history_get: %s\n" % e)
 ```
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-path_params | RequestPathParams | |
+query_params | RequestQueryParams | |
 accept_content_types | typing.Tuple[str] | default is ('application/json', ) | Tells the server the content type(s) that are accepted by the client
 stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
 timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
 skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
 
-### path_params
-#### RequestPathParams
+### query_params
+#### RequestQueryParams
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 time_start | TimeStartSchema | | 
 time_end | TimeEndSchema | | 
+
 
 # TimeStartSchema
 
@@ -426,10 +427,10 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#v1_orders_history_time_start_time_end_get.ApiResponseFor200) | The last execution report of the requested order.
-400 | [ApiResponseFor400](#v1_orders_history_time_start_time_end_get.ApiResponseFor400) | Orders log is not configured.
+200 | [ApiResponseFor200](#v1_orders_history_get.ApiResponseFor200) | The last execution report of the requested order.
+400 | [ApiResponseFor400](#v1_orders_history_get.ApiResponseFor400) | Orders log is not configured.
 
-#### v1_orders_history_time_start_time_end_get.ApiResponseFor200
+#### v1_orders_history_get.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -442,7 +443,7 @@ Type | Description  | Notes
 [**OrderHistoryArray**](../../models/OrderHistoryArray.md) |  | 
 
 
-#### v1_orders_history_time_start_time_end_get.ApiResponseFor400
+#### v1_orders_history_get.ApiResponseFor400
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -462,7 +463,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **v1_orders_post**
-<a name="v1_orders_post"></a>
+<a id="v1_orders_post"></a>
 > OrderExecutionReport v1_orders_post(order_new_single_request)
 
 Send new order
@@ -601,7 +602,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **v1_orders_status_client_order_id_get**
-<a name="v1_orders_status_client_order_id_get"></a>
+<a id="v1_orders_status_client_order_id_get"></a>
 > OrderExecutionReport v1_orders_status_client_order_id_get(client_order_id)
 
 Get order execution report

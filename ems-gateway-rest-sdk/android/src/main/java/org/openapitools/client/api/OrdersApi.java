@@ -1,6 +1,6 @@
 /**
  * EMS - REST API
- * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. <br/> This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       <br/><br/> Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Managed Cloud</td>       <td>Sandbox</td>       <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Sandbox</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  <br/><br/> If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: <br/><br/> `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this:  <br/><br/> `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
+ * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>        Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints  <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
  *
  * The version of the OpenAPI document: v1
  * Contact: support@coinapi.io
@@ -444,21 +444,21 @@ public class OrdersApi {
    * @param timeEnd End date
    * @return List<OrderHistory>
   */
-  public List<OrderHistory> v1OrdersHistoryTimeStartTimeEndGet (String timeStart, String timeEnd) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<OrderHistory> v1OrdersHistoryGet (String timeStart, String timeEnd) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'timeStart' is set
     if (timeStart == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'timeStart' when calling v1OrdersHistoryTimeStartTimeEndGet",
-        new ApiException(400, "Missing the required parameter 'timeStart' when calling v1OrdersHistoryTimeStartTimeEndGet"));
+      VolleyError error = new VolleyError("Missing the required parameter 'timeStart' when calling v1OrdersHistoryGet",
+        new ApiException(400, "Missing the required parameter 'timeStart' when calling v1OrdersHistoryGet"));
     }
     // verify the required parameter 'timeEnd' is set
     if (timeEnd == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'timeEnd' when calling v1OrdersHistoryTimeStartTimeEndGet",
-        new ApiException(400, "Missing the required parameter 'timeEnd' when calling v1OrdersHistoryTimeStartTimeEndGet"));
+      VolleyError error = new VolleyError("Missing the required parameter 'timeEnd' when calling v1OrdersHistoryGet",
+        new ApiException(400, "Missing the required parameter 'timeEnd' when calling v1OrdersHistoryGet"));
     }
 
     // create path and map variables
-    String path = "/v1/orders/history/{time_start}/{time_end}".replaceAll("\\{" + "time_start" + "\\}", apiInvoker.escapeString(timeStart.toString())).replaceAll("\\{" + "time_end" + "\\}", apiInvoker.escapeString(timeEnd.toString()));
+    String path = "/v1/orders/history";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -466,6 +466,8 @@ public class OrdersApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_start", timeStart));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_end", timeEnd));
     String[] contentTypes = {
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
@@ -510,22 +512,22 @@ public class OrdersApi {
    * Based on the date range, all changes registered in the orderbook.
    * @param timeStart Start date   * @param timeEnd End date
   */
-  public void v1OrdersHistoryTimeStartTimeEndGet (String timeStart, String timeEnd, final Response.Listener<List<OrderHistory>> responseListener, final Response.ErrorListener errorListener) {
+  public void v1OrdersHistoryGet (String timeStart, String timeEnd, final Response.Listener<List<OrderHistory>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'timeStart' is set
     if (timeStart == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'timeStart' when calling v1OrdersHistoryTimeStartTimeEndGet",
-        new ApiException(400, "Missing the required parameter 'timeStart' when calling v1OrdersHistoryTimeStartTimeEndGet"));
+      VolleyError error = new VolleyError("Missing the required parameter 'timeStart' when calling v1OrdersHistoryGet",
+        new ApiException(400, "Missing the required parameter 'timeStart' when calling v1OrdersHistoryGet"));
     }
     // verify the required parameter 'timeEnd' is set
     if (timeEnd == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'timeEnd' when calling v1OrdersHistoryTimeStartTimeEndGet",
-        new ApiException(400, "Missing the required parameter 'timeEnd' when calling v1OrdersHistoryTimeStartTimeEndGet"));
+      VolleyError error = new VolleyError("Missing the required parameter 'timeEnd' when calling v1OrdersHistoryGet",
+        new ApiException(400, "Missing the required parameter 'timeEnd' when calling v1OrdersHistoryGet"));
     }
 
     // create path and map variables
-    String path = "/v1/orders/history/{time_start}/{time_end}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "time_start" + "\\}", apiInvoker.escapeString(timeStart.toString())).replaceAll("\\{" + "time_end" + "\\}", apiInvoker.escapeString(timeEnd.toString()));
+    String path = "/v1/orders/history".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -534,6 +536,8 @@ public class OrdersApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_start", timeStart));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_end", timeEnd));
 
 
     String[] contentTypes = {

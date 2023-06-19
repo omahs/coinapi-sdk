@@ -7,12 +7,12 @@ Method | HTTP request | Description
 [**Invoke-V1OrdersCancelAllPost**](OrdersApi.md#Invoke-V1OrdersCancelAllPost) | **POST** /v1/orders/cancel/all | Cancel all orders request
 [**Invoke-V1OrdersCancelPost**](OrdersApi.md#Invoke-V1OrdersCancelPost) | **POST** /v1/orders/cancel | Cancel order request
 [**Invoke-V1OrdersGet**](OrdersApi.md#Invoke-V1OrdersGet) | **GET** /v1/orders | Get open orders
-[**Invoke-V1OrdersHistoryTimeStartTimeEndGet**](OrdersApi.md#Invoke-V1OrdersHistoryTimeStartTimeEndGet) | **GET** /v1/orders/history/{time_start}/{time_end} | History of order changes
+[**Invoke-V1OrdersHistoryGet**](OrdersApi.md#Invoke-V1OrdersHistoryGet) | **GET** /v1/orders/history | History of order changes
 [**Invoke-V1OrdersPost**](OrdersApi.md#Invoke-V1OrdersPost) | **POST** /v1/orders | Send new order
 [**Invoke-V1OrdersStatusClientOrderIdGet**](OrdersApi.md#Invoke-V1OrdersStatusClientOrderIdGet) | **GET** /v1/orders/status/{client_order_id} | Get order execution report
 
 
-<a name="Invoke-V1OrdersCancelAllPost"></a>
+<a id="Invoke-V1OrdersCancelAllPost"></a>
 # **Invoke-V1OrdersCancelAllPost**
 > MessageReject Invoke-V1OrdersCancelAllPost<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-OrderCancelAllRequest] <PSCustomObject><br>
@@ -55,7 +55,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-V1OrdersCancelPost"></a>
+<a id="Invoke-V1OrdersCancelPost"></a>
 # **Invoke-V1OrdersCancelPost**
 > OrderExecutionReport Invoke-V1OrdersCancelPost<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-OrderCancelSingleRequest] <PSCustomObject><br>
@@ -98,7 +98,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-V1OrdersGet"></a>
+<a id="Invoke-V1OrdersGet"></a>
 # **Invoke-V1OrdersGet**
 > OrderExecutionReport[] Invoke-V1OrdersGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ExchangeId] <String><br>
@@ -141,9 +141,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-V1OrdersHistoryTimeStartTimeEndGet"></a>
-# **Invoke-V1OrdersHistoryTimeStartTimeEndGet**
-> OrderHistory[] Invoke-V1OrdersHistoryTimeStartTimeEndGet<br>
+<a id="Invoke-V1OrdersHistoryGet"></a>
+# **Invoke-V1OrdersHistoryGet**
+> OrderHistory[] Invoke-V1OrdersHistoryGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TimeStart] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TimeEnd] <String><br>
 
@@ -158,9 +158,9 @@ $TimeEnd = "2022-05-01T12:00:00" # String | End date
 
 # History of order changes
 try {
-    $Result = Invoke-V1OrdersHistoryTimeStartTimeEndGet -TimeStart $TimeStart -TimeEnd $TimeEnd
+    $Result = Invoke-V1OrdersHistoryGet -TimeStart $TimeStart -TimeEnd $TimeEnd
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-V1OrdersHistoryTimeStartTimeEndGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-V1OrdersHistoryGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -187,7 +187,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-V1OrdersPost"></a>
+<a id="Invoke-V1OrdersPost"></a>
 # **Invoke-V1OrdersPost**
 > OrderExecutionReport Invoke-V1OrdersPost<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-OrderNewSingleRequest] <PSCustomObject><br>
@@ -230,7 +230,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-V1OrdersStatusClientOrderIdGet"></a>
+<a id="Invoke-V1OrdersStatusClientOrderIdGet"></a>
 # **Invoke-V1OrdersStatusClientOrderIdGet**
 > OrderExecutionReport Invoke-V1OrdersStatusClientOrderIdGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ClientOrderId] <String><br>

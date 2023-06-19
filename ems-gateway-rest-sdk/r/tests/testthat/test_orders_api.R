@@ -41,8 +41,8 @@ test_that("V1OrdersGet", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("V1OrdersHistoryTimeStartTimeEndGet", {
-  # tests for V1OrdersHistoryTimeStartTimeEndGet
+test_that("V1OrdersHistoryGet", {
+  # tests for V1OrdersHistoryGet
   # base path: https://ems-gateway-aws-eu-central-1-dev.coinapi.io
   # History of order changes
   # Based on the date range, all changes registered in the orderbook.

@@ -70,6 +70,9 @@ PositionDataInner <- R6::R6Class(
         self$`quantity` <- `quantity`
       }
       if (!is.null(`side`)) {
+        if (!(`side` %in% c())) {
+          stop(paste("Error! \"", `side`, "\" cannot be assigned to `side`. Must be .", sep = ""))
+        }
         stopifnot(R6::is.R6(`side`))
         self$`side` <- `side`
       }
@@ -166,9 +169,9 @@ PositionDataInner <- R6::R6Class(
         self$`quantity` <- this_object$`quantity`
       }
       if (!is.null(this_object$`side`)) {
-        side_object <- OrdSide$new()
-        side_object$fromJSON(jsonlite::toJSON(this_object$side, auto_unbox = TRUE, digits = NA))
-        self$`side` <- side_object
+        `side_object` <- OrdSide$new()
+        `side_object`$fromJSON(jsonlite::toJSON(this_object$`side`, auto_unbox = TRUE, digits = NA))
+        self$`side` <- `side_object`
       }
       if (!is.null(this_object$`unrealized_pnl`)) {
         self$`unrealized_pnl` <- this_object$`unrealized_pnl`
@@ -294,7 +297,7 @@ PositionDataInner <- R6::R6Class(
       self$`symbol_id_coinapi` <- this_object$`symbol_id_coinapi`
       self$`avg_entry_price` <- this_object$`avg_entry_price`
       self$`quantity` <- this_object$`quantity`
-      self$`side` <- OrdSide$new()$fromJSON(jsonlite::toJSON(this_object$side, auto_unbox = TRUE, digits = NA))
+      self$`side` <- OrdSide$new()$fromJSON(jsonlite::toJSON(this_object$`side`, auto_unbox = TRUE, digits = NA))
       self$`unrealized_pnl` <- this_object$`unrealized_pnl`
       self$`leverage` <- this_object$`leverage`
       self$`cross_margin` <- this_object$`cross_margin`
@@ -360,7 +363,7 @@ PositionDataInner <- R6::R6Class(
 ## Uncomment below to unlock the class to allow modifications of the method or field
 # PositionDataInner$unlock()
 #
-## Below is an example to define the print fnuction
+## Below is an example to define the print function
 # PositionDataInner$set("public", "print", function(...) {
 #   print(jsonlite::prettify(self$toJSONString()))
 #   invisible(self)

@@ -1,7 +1,7 @@
 /*
 EMS - REST API
 
-This section will provide necessary information about the `CoinAPI EMS REST API` protocol. <br/> This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       <br/><br/> Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Managed Cloud</td>       <td>Sandbox</td>       <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Sandbox</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  <br/><br/> If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: <br/><br/> `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this:  <br/><br/> `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
+This section will provide necessary information about the `CoinAPI EMS REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>        Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints  <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
 
 API version: v1
 Contact: support@coinapi.io
@@ -14,6 +14,9 @@ package openapi
 import (
 	"encoding/json"
 )
+
+// checks if the OrderHistory type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &OrderHistory{}
 
 // OrderHistory struct for OrderHistory
 type OrderHistory struct {
@@ -92,7 +95,7 @@ func NewOrderHistoryWithDefaults() *OrderHistory {
 
 // GetApikey returns the Apikey field value if set, zero value otherwise.
 func (o *OrderHistory) GetApikey() string {
-	if o == nil || isNil(o.Apikey) {
+	if o == nil || IsNil(o.Apikey) {
 		var ret string
 		return ret
 	}
@@ -102,15 +105,15 @@ func (o *OrderHistory) GetApikey() string {
 // GetApikeyOk returns a tuple with the Apikey field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetApikeyOk() (*string, bool) {
-	if o == nil || isNil(o.Apikey) {
-    return nil, false
+	if o == nil || IsNil(o.Apikey) {
+		return nil, false
 	}
 	return o.Apikey, true
 }
 
 // HasApikey returns a boolean if a field has been set.
 func (o *OrderHistory) HasApikey() bool {
-	if o != nil && !isNil(o.Apikey) {
+	if o != nil && !IsNil(o.Apikey) {
 		return true
 	}
 
@@ -124,7 +127,7 @@ func (o *OrderHistory) SetApikey(v string) {
 
 // GetExchangeId returns the ExchangeId field value if set, zero value otherwise.
 func (o *OrderHistory) GetExchangeId() string {
-	if o == nil || isNil(o.ExchangeId) {
+	if o == nil || IsNil(o.ExchangeId) {
 		var ret string
 		return ret
 	}
@@ -134,15 +137,15 @@ func (o *OrderHistory) GetExchangeId() string {
 // GetExchangeIdOk returns a tuple with the ExchangeId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetExchangeIdOk() (*string, bool) {
-	if o == nil || isNil(o.ExchangeId) {
-    return nil, false
+	if o == nil || IsNil(o.ExchangeId) {
+		return nil, false
 	}
 	return o.ExchangeId, true
 }
 
 // HasExchangeId returns a boolean if a field has been set.
 func (o *OrderHistory) HasExchangeId() bool {
-	if o != nil && !isNil(o.ExchangeId) {
+	if o != nil && !IsNil(o.ExchangeId) {
 		return true
 	}
 
@@ -156,7 +159,7 @@ func (o *OrderHistory) SetExchangeId(v string) {
 
 // GetClientOrderId returns the ClientOrderId field value if set, zero value otherwise.
 func (o *OrderHistory) GetClientOrderId() string {
-	if o == nil || isNil(o.ClientOrderId) {
+	if o == nil || IsNil(o.ClientOrderId) {
 		var ret string
 		return ret
 	}
@@ -166,15 +169,15 @@ func (o *OrderHistory) GetClientOrderId() string {
 // GetClientOrderIdOk returns a tuple with the ClientOrderId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetClientOrderIdOk() (*string, bool) {
-	if o == nil || isNil(o.ClientOrderId) {
-    return nil, false
+	if o == nil || IsNil(o.ClientOrderId) {
+		return nil, false
 	}
 	return o.ClientOrderId, true
 }
 
 // HasClientOrderId returns a boolean if a field has been set.
 func (o *OrderHistory) HasClientOrderId() bool {
-	if o != nil && !isNil(o.ClientOrderId) {
+	if o != nil && !IsNil(o.ClientOrderId) {
 		return true
 	}
 
@@ -188,7 +191,7 @@ func (o *OrderHistory) SetClientOrderId(v string) {
 
 // GetSymbolIdExchange returns the SymbolIdExchange field value if set, zero value otherwise.
 func (o *OrderHistory) GetSymbolIdExchange() string {
-	if o == nil || isNil(o.SymbolIdExchange) {
+	if o == nil || IsNil(o.SymbolIdExchange) {
 		var ret string
 		return ret
 	}
@@ -198,15 +201,15 @@ func (o *OrderHistory) GetSymbolIdExchange() string {
 // GetSymbolIdExchangeOk returns a tuple with the SymbolIdExchange field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetSymbolIdExchangeOk() (*string, bool) {
-	if o == nil || isNil(o.SymbolIdExchange) {
-    return nil, false
+	if o == nil || IsNil(o.SymbolIdExchange) {
+		return nil, false
 	}
 	return o.SymbolIdExchange, true
 }
 
 // HasSymbolIdExchange returns a boolean if a field has been set.
 func (o *OrderHistory) HasSymbolIdExchange() bool {
-	if o != nil && !isNil(o.SymbolIdExchange) {
+	if o != nil && !IsNil(o.SymbolIdExchange) {
 		return true
 	}
 
@@ -220,7 +223,7 @@ func (o *OrderHistory) SetSymbolIdExchange(v string) {
 
 // GetSymbolIdCoinapi returns the SymbolIdCoinapi field value if set, zero value otherwise.
 func (o *OrderHistory) GetSymbolIdCoinapi() string {
-	if o == nil || isNil(o.SymbolIdCoinapi) {
+	if o == nil || IsNil(o.SymbolIdCoinapi) {
 		var ret string
 		return ret
 	}
@@ -230,15 +233,15 @@ func (o *OrderHistory) GetSymbolIdCoinapi() string {
 // GetSymbolIdCoinapiOk returns a tuple with the SymbolIdCoinapi field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetSymbolIdCoinapiOk() (*string, bool) {
-	if o == nil || isNil(o.SymbolIdCoinapi) {
-    return nil, false
+	if o == nil || IsNil(o.SymbolIdCoinapi) {
+		return nil, false
 	}
 	return o.SymbolIdCoinapi, true
 }
 
 // HasSymbolIdCoinapi returns a boolean if a field has been set.
 func (o *OrderHistory) HasSymbolIdCoinapi() bool {
-	if o != nil && !isNil(o.SymbolIdCoinapi) {
+	if o != nil && !IsNil(o.SymbolIdCoinapi) {
 		return true
 	}
 
@@ -252,7 +255,7 @@ func (o *OrderHistory) SetSymbolIdCoinapi(v string) {
 
 // GetAmountOrder returns the AmountOrder field value if set, zero value otherwise.
 func (o *OrderHistory) GetAmountOrder() float32 {
-	if o == nil || isNil(o.AmountOrder) {
+	if o == nil || IsNil(o.AmountOrder) {
 		var ret float32
 		return ret
 	}
@@ -262,15 +265,15 @@ func (o *OrderHistory) GetAmountOrder() float32 {
 // GetAmountOrderOk returns a tuple with the AmountOrder field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetAmountOrderOk() (*float32, bool) {
-	if o == nil || isNil(o.AmountOrder) {
-    return nil, false
+	if o == nil || IsNil(o.AmountOrder) {
+		return nil, false
 	}
 	return o.AmountOrder, true
 }
 
 // HasAmountOrder returns a boolean if a field has been set.
 func (o *OrderHistory) HasAmountOrder() bool {
-	if o != nil && !isNil(o.AmountOrder) {
+	if o != nil && !IsNil(o.AmountOrder) {
 		return true
 	}
 
@@ -284,7 +287,7 @@ func (o *OrderHistory) SetAmountOrder(v float32) {
 
 // GetPrice returns the Price field value if set, zero value otherwise.
 func (o *OrderHistory) GetPrice() float32 {
-	if o == nil || isNil(o.Price) {
+	if o == nil || IsNil(o.Price) {
 		var ret float32
 		return ret
 	}
@@ -294,15 +297,15 @@ func (o *OrderHistory) GetPrice() float32 {
 // GetPriceOk returns a tuple with the Price field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetPriceOk() (*float32, bool) {
-	if o == nil || isNil(o.Price) {
-    return nil, false
+	if o == nil || IsNil(o.Price) {
+		return nil, false
 	}
 	return o.Price, true
 }
 
 // HasPrice returns a boolean if a field has been set.
 func (o *OrderHistory) HasPrice() bool {
-	if o != nil && !isNil(o.Price) {
+	if o != nil && !IsNil(o.Price) {
 		return true
 	}
 
@@ -316,7 +319,7 @@ func (o *OrderHistory) SetPrice(v float32) {
 
 // GetSide returns the Side field value if set, zero value otherwise.
 func (o *OrderHistory) GetSide() float32 {
-	if o == nil || isNil(o.Side) {
+	if o == nil || IsNil(o.Side) {
 		var ret float32
 		return ret
 	}
@@ -326,15 +329,15 @@ func (o *OrderHistory) GetSide() float32 {
 // GetSideOk returns a tuple with the Side field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetSideOk() (*float32, bool) {
-	if o == nil || isNil(o.Side) {
-    return nil, false
+	if o == nil || IsNil(o.Side) {
+		return nil, false
 	}
 	return o.Side, true
 }
 
 // HasSide returns a boolean if a field has been set.
 func (o *OrderHistory) HasSide() bool {
-	if o != nil && !isNil(o.Side) {
+	if o != nil && !IsNil(o.Side) {
 		return true
 	}
 
@@ -348,7 +351,7 @@ func (o *OrderHistory) SetSide(v float32) {
 
 // GetOrderType returns the OrderType field value if set, zero value otherwise.
 func (o *OrderHistory) GetOrderType() string {
-	if o == nil || isNil(o.OrderType) {
+	if o == nil || IsNil(o.OrderType) {
 		var ret string
 		return ret
 	}
@@ -358,15 +361,15 @@ func (o *OrderHistory) GetOrderType() string {
 // GetOrderTypeOk returns a tuple with the OrderType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetOrderTypeOk() (*string, bool) {
-	if o == nil || isNil(o.OrderType) {
-    return nil, false
+	if o == nil || IsNil(o.OrderType) {
+		return nil, false
 	}
 	return o.OrderType, true
 }
 
 // HasOrderType returns a boolean if a field has been set.
 func (o *OrderHistory) HasOrderType() bool {
-	if o != nil && !isNil(o.OrderType) {
+	if o != nil && !IsNil(o.OrderType) {
 		return true
 	}
 
@@ -380,7 +383,7 @@ func (o *OrderHistory) SetOrderType(v string) {
 
 // GetTimeInForce returns the TimeInForce field value if set, zero value otherwise.
 func (o *OrderHistory) GetTimeInForce() string {
-	if o == nil || isNil(o.TimeInForce) {
+	if o == nil || IsNil(o.TimeInForce) {
 		var ret string
 		return ret
 	}
@@ -390,15 +393,15 @@ func (o *OrderHistory) GetTimeInForce() string {
 // GetTimeInForceOk returns a tuple with the TimeInForce field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetTimeInForceOk() (*string, bool) {
-	if o == nil || isNil(o.TimeInForce) {
-    return nil, false
+	if o == nil || IsNil(o.TimeInForce) {
+		return nil, false
 	}
 	return o.TimeInForce, true
 }
 
 // HasTimeInForce returns a boolean if a field has been set.
 func (o *OrderHistory) HasTimeInForce() bool {
-	if o != nil && !isNil(o.TimeInForce) {
+	if o != nil && !IsNil(o.TimeInForce) {
 		return true
 	}
 
@@ -412,7 +415,7 @@ func (o *OrderHistory) SetTimeInForce(v string) {
 
 // GetExpireTime returns the ExpireTime field value if set, zero value otherwise.
 func (o *OrderHistory) GetExpireTime() string {
-	if o == nil || isNil(o.ExpireTime) {
+	if o == nil || IsNil(o.ExpireTime) {
 		var ret string
 		return ret
 	}
@@ -422,15 +425,15 @@ func (o *OrderHistory) GetExpireTime() string {
 // GetExpireTimeOk returns a tuple with the ExpireTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetExpireTimeOk() (*string, bool) {
-	if o == nil || isNil(o.ExpireTime) {
-    return nil, false
+	if o == nil || IsNil(o.ExpireTime) {
+		return nil, false
 	}
 	return o.ExpireTime, true
 }
 
 // HasExpireTime returns a boolean if a field has been set.
 func (o *OrderHistory) HasExpireTime() bool {
-	if o != nil && !isNil(o.ExpireTime) {
+	if o != nil && !IsNil(o.ExpireTime) {
 		return true
 	}
 
@@ -444,7 +447,7 @@ func (o *OrderHistory) SetExpireTime(v string) {
 
 // GetExecInst returns the ExecInst field value if set, zero value otherwise.
 func (o *OrderHistory) GetExecInst() []string {
-	if o == nil || isNil(o.ExecInst) {
+	if o == nil || IsNil(o.ExecInst) {
 		var ret []string
 		return ret
 	}
@@ -454,15 +457,15 @@ func (o *OrderHistory) GetExecInst() []string {
 // GetExecInstOk returns a tuple with the ExecInst field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetExecInstOk() ([]string, bool) {
-	if o == nil || isNil(o.ExecInst) {
-    return nil, false
+	if o == nil || IsNil(o.ExecInst) {
+		return nil, false
 	}
 	return o.ExecInst, true
 }
 
 // HasExecInst returns a boolean if a field has been set.
 func (o *OrderHistory) HasExecInst() bool {
-	if o != nil && !isNil(o.ExecInst) {
+	if o != nil && !IsNil(o.ExecInst) {
 		return true
 	}
 
@@ -476,7 +479,7 @@ func (o *OrderHistory) SetExecInst(v []string) {
 
 // GetClientOrderIdFormatExchange returns the ClientOrderIdFormatExchange field value if set, zero value otherwise.
 func (o *OrderHistory) GetClientOrderIdFormatExchange() string {
-	if o == nil || isNil(o.ClientOrderIdFormatExchange) {
+	if o == nil || IsNil(o.ClientOrderIdFormatExchange) {
 		var ret string
 		return ret
 	}
@@ -486,15 +489,15 @@ func (o *OrderHistory) GetClientOrderIdFormatExchange() string {
 // GetClientOrderIdFormatExchangeOk returns a tuple with the ClientOrderIdFormatExchange field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetClientOrderIdFormatExchangeOk() (*string, bool) {
-	if o == nil || isNil(o.ClientOrderIdFormatExchange) {
-    return nil, false
+	if o == nil || IsNil(o.ClientOrderIdFormatExchange) {
+		return nil, false
 	}
 	return o.ClientOrderIdFormatExchange, true
 }
 
 // HasClientOrderIdFormatExchange returns a boolean if a field has been set.
 func (o *OrderHistory) HasClientOrderIdFormatExchange() bool {
-	if o != nil && !isNil(o.ClientOrderIdFormatExchange) {
+	if o != nil && !IsNil(o.ClientOrderIdFormatExchange) {
 		return true
 	}
 
@@ -508,7 +511,7 @@ func (o *OrderHistory) SetClientOrderIdFormatExchange(v string) {
 
 // GetExchangeOrderId returns the ExchangeOrderId field value if set, zero value otherwise.
 func (o *OrderHistory) GetExchangeOrderId() string {
-	if o == nil || isNil(o.ExchangeOrderId) {
+	if o == nil || IsNil(o.ExchangeOrderId) {
 		var ret string
 		return ret
 	}
@@ -518,15 +521,15 @@ func (o *OrderHistory) GetExchangeOrderId() string {
 // GetExchangeOrderIdOk returns a tuple with the ExchangeOrderId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetExchangeOrderIdOk() (*string, bool) {
-	if o == nil || isNil(o.ExchangeOrderId) {
-    return nil, false
+	if o == nil || IsNil(o.ExchangeOrderId) {
+		return nil, false
 	}
 	return o.ExchangeOrderId, true
 }
 
 // HasExchangeOrderId returns a boolean if a field has been set.
 func (o *OrderHistory) HasExchangeOrderId() bool {
-	if o != nil && !isNil(o.ExchangeOrderId) {
+	if o != nil && !IsNil(o.ExchangeOrderId) {
 		return true
 	}
 
@@ -540,7 +543,7 @@ func (o *OrderHistory) SetExchangeOrderId(v string) {
 
 // GetAmountOpen returns the AmountOpen field value if set, zero value otherwise.
 func (o *OrderHistory) GetAmountOpen() float32 {
-	if o == nil || isNil(o.AmountOpen) {
+	if o == nil || IsNil(o.AmountOpen) {
 		var ret float32
 		return ret
 	}
@@ -550,15 +553,15 @@ func (o *OrderHistory) GetAmountOpen() float32 {
 // GetAmountOpenOk returns a tuple with the AmountOpen field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetAmountOpenOk() (*float32, bool) {
-	if o == nil || isNil(o.AmountOpen) {
-    return nil, false
+	if o == nil || IsNil(o.AmountOpen) {
+		return nil, false
 	}
 	return o.AmountOpen, true
 }
 
 // HasAmountOpen returns a boolean if a field has been set.
 func (o *OrderHistory) HasAmountOpen() bool {
-	if o != nil && !isNil(o.AmountOpen) {
+	if o != nil && !IsNil(o.AmountOpen) {
 		return true
 	}
 
@@ -572,7 +575,7 @@ func (o *OrderHistory) SetAmountOpen(v float32) {
 
 // GetAmountFilled returns the AmountFilled field value if set, zero value otherwise.
 func (o *OrderHistory) GetAmountFilled() float32 {
-	if o == nil || isNil(o.AmountFilled) {
+	if o == nil || IsNil(o.AmountFilled) {
 		var ret float32
 		return ret
 	}
@@ -582,15 +585,15 @@ func (o *OrderHistory) GetAmountFilled() float32 {
 // GetAmountFilledOk returns a tuple with the AmountFilled field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetAmountFilledOk() (*float32, bool) {
-	if o == nil || isNil(o.AmountFilled) {
-    return nil, false
+	if o == nil || IsNil(o.AmountFilled) {
+		return nil, false
 	}
 	return o.AmountFilled, true
 }
 
 // HasAmountFilled returns a boolean if a field has been set.
 func (o *OrderHistory) HasAmountFilled() bool {
-	if o != nil && !isNil(o.AmountFilled) {
+	if o != nil && !IsNil(o.AmountFilled) {
 		return true
 	}
 
@@ -604,7 +607,7 @@ func (o *OrderHistory) SetAmountFilled(v float32) {
 
 // GetAvgPx returns the AvgPx field value if set, zero value otherwise.
 func (o *OrderHistory) GetAvgPx() float32 {
-	if o == nil || isNil(o.AvgPx) {
+	if o == nil || IsNil(o.AvgPx) {
 		var ret float32
 		return ret
 	}
@@ -614,15 +617,15 @@ func (o *OrderHistory) GetAvgPx() float32 {
 // GetAvgPxOk returns a tuple with the AvgPx field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetAvgPxOk() (*float32, bool) {
-	if o == nil || isNil(o.AvgPx) {
-    return nil, false
+	if o == nil || IsNil(o.AvgPx) {
+		return nil, false
 	}
 	return o.AvgPx, true
 }
 
 // HasAvgPx returns a boolean if a field has been set.
 func (o *OrderHistory) HasAvgPx() bool {
-	if o != nil && !isNil(o.AvgPx) {
+	if o != nil && !IsNil(o.AvgPx) {
 		return true
 	}
 
@@ -636,7 +639,7 @@ func (o *OrderHistory) SetAvgPx(v float32) {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *OrderHistory) GetStatus() string {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		var ret string
 		return ret
 	}
@@ -646,15 +649,15 @@ func (o *OrderHistory) GetStatus() string {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetStatusOk() (*string, bool) {
-	if o == nil || isNil(o.Status) {
-    return nil, false
+	if o == nil || IsNil(o.Status) {
+		return nil, false
 	}
 	return o.Status, true
 }
 
 // HasStatus returns a boolean if a field has been set.
 func (o *OrderHistory) HasStatus() bool {
-	if o != nil && !isNil(o.Status) {
+	if o != nil && !IsNil(o.Status) {
 		return true
 	}
 
@@ -668,7 +671,7 @@ func (o *OrderHistory) SetStatus(v string) {
 
 // GetStatusHistoryStatus returns the StatusHistoryStatus field value if set, zero value otherwise.
 func (o *OrderHistory) GetStatusHistoryStatus() []string {
-	if o == nil || isNil(o.StatusHistoryStatus) {
+	if o == nil || IsNil(o.StatusHistoryStatus) {
 		var ret []string
 		return ret
 	}
@@ -678,15 +681,15 @@ func (o *OrderHistory) GetStatusHistoryStatus() []string {
 // GetStatusHistoryStatusOk returns a tuple with the StatusHistoryStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetStatusHistoryStatusOk() ([]string, bool) {
-	if o == nil || isNil(o.StatusHistoryStatus) {
-    return nil, false
+	if o == nil || IsNil(o.StatusHistoryStatus) {
+		return nil, false
 	}
 	return o.StatusHistoryStatus, true
 }
 
 // HasStatusHistoryStatus returns a boolean if a field has been set.
 func (o *OrderHistory) HasStatusHistoryStatus() bool {
-	if o != nil && !isNil(o.StatusHistoryStatus) {
+	if o != nil && !IsNil(o.StatusHistoryStatus) {
 		return true
 	}
 
@@ -700,7 +703,7 @@ func (o *OrderHistory) SetStatusHistoryStatus(v []string) {
 
 // GetStatusHistoryTime returns the StatusHistoryTime field value if set, zero value otherwise.
 func (o *OrderHistory) GetStatusHistoryTime() []string {
-	if o == nil || isNil(o.StatusHistoryTime) {
+	if o == nil || IsNil(o.StatusHistoryTime) {
 		var ret []string
 		return ret
 	}
@@ -710,15 +713,15 @@ func (o *OrderHistory) GetStatusHistoryTime() []string {
 // GetStatusHistoryTimeOk returns a tuple with the StatusHistoryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetStatusHistoryTimeOk() ([]string, bool) {
-	if o == nil || isNil(o.StatusHistoryTime) {
-    return nil, false
+	if o == nil || IsNil(o.StatusHistoryTime) {
+		return nil, false
 	}
 	return o.StatusHistoryTime, true
 }
 
 // HasStatusHistoryTime returns a boolean if a field has been set.
 func (o *OrderHistory) HasStatusHistoryTime() bool {
-	if o != nil && !isNil(o.StatusHistoryTime) {
+	if o != nil && !IsNil(o.StatusHistoryTime) {
 		return true
 	}
 
@@ -732,7 +735,7 @@ func (o *OrderHistory) SetStatusHistoryTime(v []string) {
 
 // GetErrorMessageResult returns the ErrorMessageResult field value if set, zero value otherwise.
 func (o *OrderHistory) GetErrorMessageResult() string {
-	if o == nil || isNil(o.ErrorMessageResult) {
+	if o == nil || IsNil(o.ErrorMessageResult) {
 		var ret string
 		return ret
 	}
@@ -742,15 +745,15 @@ func (o *OrderHistory) GetErrorMessageResult() string {
 // GetErrorMessageResultOk returns a tuple with the ErrorMessageResult field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetErrorMessageResultOk() (*string, bool) {
-	if o == nil || isNil(o.ErrorMessageResult) {
-    return nil, false
+	if o == nil || IsNil(o.ErrorMessageResult) {
+		return nil, false
 	}
 	return o.ErrorMessageResult, true
 }
 
 // HasErrorMessageResult returns a boolean if a field has been set.
 func (o *OrderHistory) HasErrorMessageResult() bool {
-	if o != nil && !isNil(o.ErrorMessageResult) {
+	if o != nil && !IsNil(o.ErrorMessageResult) {
 		return true
 	}
 
@@ -764,7 +767,7 @@ func (o *OrderHistory) SetErrorMessageResult(v string) {
 
 // GetErrorMessageReason returns the ErrorMessageReason field value if set, zero value otherwise.
 func (o *OrderHistory) GetErrorMessageReason() string {
-	if o == nil || isNil(o.ErrorMessageReason) {
+	if o == nil || IsNil(o.ErrorMessageReason) {
 		var ret string
 		return ret
 	}
@@ -774,15 +777,15 @@ func (o *OrderHistory) GetErrorMessageReason() string {
 // GetErrorMessageReasonOk returns a tuple with the ErrorMessageReason field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetErrorMessageReasonOk() (*string, bool) {
-	if o == nil || isNil(o.ErrorMessageReason) {
-    return nil, false
+	if o == nil || IsNil(o.ErrorMessageReason) {
+		return nil, false
 	}
 	return o.ErrorMessageReason, true
 }
 
 // HasErrorMessageReason returns a boolean if a field has been set.
 func (o *OrderHistory) HasErrorMessageReason() bool {
-	if o != nil && !isNil(o.ErrorMessageReason) {
+	if o != nil && !IsNil(o.ErrorMessageReason) {
 		return true
 	}
 
@@ -796,7 +799,7 @@ func (o *OrderHistory) SetErrorMessageReason(v string) {
 
 // GetErrorMessageMessage returns the ErrorMessageMessage field value if set, zero value otherwise.
 func (o *OrderHistory) GetErrorMessageMessage() string {
-	if o == nil || isNil(o.ErrorMessageMessage) {
+	if o == nil || IsNil(o.ErrorMessageMessage) {
 		var ret string
 		return ret
 	}
@@ -806,15 +809,15 @@ func (o *OrderHistory) GetErrorMessageMessage() string {
 // GetErrorMessageMessageOk returns a tuple with the ErrorMessageMessage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetErrorMessageMessageOk() (*string, bool) {
-	if o == nil || isNil(o.ErrorMessageMessage) {
-    return nil, false
+	if o == nil || IsNil(o.ErrorMessageMessage) {
+		return nil, false
 	}
 	return o.ErrorMessageMessage, true
 }
 
 // HasErrorMessageMessage returns a boolean if a field has been set.
 func (o *OrderHistory) HasErrorMessageMessage() bool {
-	if o != nil && !isNil(o.ErrorMessageMessage) {
+	if o != nil && !IsNil(o.ErrorMessageMessage) {
 		return true
 	}
 
@@ -828,7 +831,7 @@ func (o *OrderHistory) SetErrorMessageMessage(v string) {
 
 // GetFillsTime returns the FillsTime field value if set, zero value otherwise.
 func (o *OrderHistory) GetFillsTime() []string {
-	if o == nil || isNil(o.FillsTime) {
+	if o == nil || IsNil(o.FillsTime) {
 		var ret []string
 		return ret
 	}
@@ -838,15 +841,15 @@ func (o *OrderHistory) GetFillsTime() []string {
 // GetFillsTimeOk returns a tuple with the FillsTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetFillsTimeOk() ([]string, bool) {
-	if o == nil || isNil(o.FillsTime) {
-    return nil, false
+	if o == nil || IsNil(o.FillsTime) {
+		return nil, false
 	}
 	return o.FillsTime, true
 }
 
 // HasFillsTime returns a boolean if a field has been set.
 func (o *OrderHistory) HasFillsTime() bool {
-	if o != nil && !isNil(o.FillsTime) {
+	if o != nil && !IsNil(o.FillsTime) {
 		return true
 	}
 
@@ -860,7 +863,7 @@ func (o *OrderHistory) SetFillsTime(v []string) {
 
 // GetFillsPrice returns the FillsPrice field value if set, zero value otherwise.
 func (o *OrderHistory) GetFillsPrice() []float32 {
-	if o == nil || isNil(o.FillsPrice) {
+	if o == nil || IsNil(o.FillsPrice) {
 		var ret []float32
 		return ret
 	}
@@ -870,15 +873,15 @@ func (o *OrderHistory) GetFillsPrice() []float32 {
 // GetFillsPriceOk returns a tuple with the FillsPrice field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetFillsPriceOk() ([]float32, bool) {
-	if o == nil || isNil(o.FillsPrice) {
-    return nil, false
+	if o == nil || IsNil(o.FillsPrice) {
+		return nil, false
 	}
 	return o.FillsPrice, true
 }
 
 // HasFillsPrice returns a boolean if a field has been set.
 func (o *OrderHistory) HasFillsPrice() bool {
-	if o != nil && !isNil(o.FillsPrice) {
+	if o != nil && !IsNil(o.FillsPrice) {
 		return true
 	}
 
@@ -892,7 +895,7 @@ func (o *OrderHistory) SetFillsPrice(v []float32) {
 
 // GetFillsAmount returns the FillsAmount field value if set, zero value otherwise.
 func (o *OrderHistory) GetFillsAmount() []float32 {
-	if o == nil || isNil(o.FillsAmount) {
+	if o == nil || IsNil(o.FillsAmount) {
 		var ret []float32
 		return ret
 	}
@@ -902,15 +905,15 @@ func (o *OrderHistory) GetFillsAmount() []float32 {
 // GetFillsAmountOk returns a tuple with the FillsAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetFillsAmountOk() ([]float32, bool) {
-	if o == nil || isNil(o.FillsAmount) {
-    return nil, false
+	if o == nil || IsNil(o.FillsAmount) {
+		return nil, false
 	}
 	return o.FillsAmount, true
 }
 
 // HasFillsAmount returns a boolean if a field has been set.
 func (o *OrderHistory) HasFillsAmount() bool {
-	if o != nil && !isNil(o.FillsAmount) {
+	if o != nil && !IsNil(o.FillsAmount) {
 		return true
 	}
 
@@ -924,7 +927,7 @@ func (o *OrderHistory) SetFillsAmount(v []float32) {
 
 // GetCreatedTime returns the CreatedTime field value if set, zero value otherwise.
 func (o *OrderHistory) GetCreatedTime() string {
-	if o == nil || isNil(o.CreatedTime) {
+	if o == nil || IsNil(o.CreatedTime) {
 		var ret string
 		return ret
 	}
@@ -934,15 +937,15 @@ func (o *OrderHistory) GetCreatedTime() string {
 // GetCreatedTimeOk returns a tuple with the CreatedTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetCreatedTimeOk() (*string, bool) {
-	if o == nil || isNil(o.CreatedTime) {
-    return nil, false
+	if o == nil || IsNil(o.CreatedTime) {
+		return nil, false
 	}
 	return o.CreatedTime, true
 }
 
 // HasCreatedTime returns a boolean if a field has been set.
 func (o *OrderHistory) HasCreatedTime() bool {
-	if o != nil && !isNil(o.CreatedTime) {
+	if o != nil && !IsNil(o.CreatedTime) {
 		return true
 	}
 
@@ -955,89 +958,97 @@ func (o *OrderHistory) SetCreatedTime(v string) {
 }
 
 func (o OrderHistory) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.Apikey) {
-		toSerialize["apikey"] = o.Apikey
-	}
-	if !isNil(o.ExchangeId) {
-		toSerialize["exchangeId"] = o.ExchangeId
-	}
-	if !isNil(o.ClientOrderId) {
-		toSerialize["clientOrderId"] = o.ClientOrderId
-	}
-	if !isNil(o.SymbolIdExchange) {
-		toSerialize["symbolIdExchange"] = o.SymbolIdExchange
-	}
-	if !isNil(o.SymbolIdCoinapi) {
-		toSerialize["symbolIdCoinapi"] = o.SymbolIdCoinapi
-	}
-	if !isNil(o.AmountOrder) {
-		toSerialize["amountOrder"] = o.AmountOrder
-	}
-	if !isNil(o.Price) {
-		toSerialize["price"] = o.Price
-	}
-	if !isNil(o.Side) {
-		toSerialize["side"] = o.Side
-	}
-	if !isNil(o.OrderType) {
-		toSerialize["orderType"] = o.OrderType
-	}
-	if !isNil(o.TimeInForce) {
-		toSerialize["timeInForce"] = o.TimeInForce
-	}
-	if !isNil(o.ExpireTime) {
-		toSerialize["expireTime"] = o.ExpireTime
-	}
-	if !isNil(o.ExecInst) {
-		toSerialize["execInst"] = o.ExecInst
-	}
-	if !isNil(o.ClientOrderIdFormatExchange) {
-		toSerialize["clientOrderIdFormatExchange"] = o.ClientOrderIdFormatExchange
-	}
-	if !isNil(o.ExchangeOrderId) {
-		toSerialize["exchangeOrderId"] = o.ExchangeOrderId
-	}
-	if !isNil(o.AmountOpen) {
-		toSerialize["amountOpen"] = o.AmountOpen
-	}
-	if !isNil(o.AmountFilled) {
-		toSerialize["amountFilled"] = o.AmountFilled
-	}
-	if !isNil(o.AvgPx) {
-		toSerialize["avgPx"] = o.AvgPx
-	}
-	if !isNil(o.Status) {
-		toSerialize["status"] = o.Status
-	}
-	if !isNil(o.StatusHistoryStatus) {
-		toSerialize["statusHistoryStatus"] = o.StatusHistoryStatus
-	}
-	if !isNil(o.StatusHistoryTime) {
-		toSerialize["statusHistoryTime"] = o.StatusHistoryTime
-	}
-	if !isNil(o.ErrorMessageResult) {
-		toSerialize["errorMessageResult"] = o.ErrorMessageResult
-	}
-	if !isNil(o.ErrorMessageReason) {
-		toSerialize["errorMessageReason"] = o.ErrorMessageReason
-	}
-	if !isNil(o.ErrorMessageMessage) {
-		toSerialize["errorMessageMessage"] = o.ErrorMessageMessage
-	}
-	if !isNil(o.FillsTime) {
-		toSerialize["fillsTime"] = o.FillsTime
-	}
-	if !isNil(o.FillsPrice) {
-		toSerialize["fillsPrice"] = o.FillsPrice
-	}
-	if !isNil(o.FillsAmount) {
-		toSerialize["fillsAmount"] = o.FillsAmount
-	}
-	if !isNil(o.CreatedTime) {
-		toSerialize["createdTime"] = o.CreatedTime
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o OrderHistory) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Apikey) {
+		toSerialize["apikey"] = o.Apikey
+	}
+	if !IsNil(o.ExchangeId) {
+		toSerialize["exchangeId"] = o.ExchangeId
+	}
+	if !IsNil(o.ClientOrderId) {
+		toSerialize["clientOrderId"] = o.ClientOrderId
+	}
+	if !IsNil(o.SymbolIdExchange) {
+		toSerialize["symbolIdExchange"] = o.SymbolIdExchange
+	}
+	if !IsNil(o.SymbolIdCoinapi) {
+		toSerialize["symbolIdCoinapi"] = o.SymbolIdCoinapi
+	}
+	if !IsNil(o.AmountOrder) {
+		toSerialize["amountOrder"] = o.AmountOrder
+	}
+	if !IsNil(o.Price) {
+		toSerialize["price"] = o.Price
+	}
+	if !IsNil(o.Side) {
+		toSerialize["side"] = o.Side
+	}
+	if !IsNil(o.OrderType) {
+		toSerialize["orderType"] = o.OrderType
+	}
+	if !IsNil(o.TimeInForce) {
+		toSerialize["timeInForce"] = o.TimeInForce
+	}
+	if !IsNil(o.ExpireTime) {
+		toSerialize["expireTime"] = o.ExpireTime
+	}
+	if !IsNil(o.ExecInst) {
+		toSerialize["execInst"] = o.ExecInst
+	}
+	if !IsNil(o.ClientOrderIdFormatExchange) {
+		toSerialize["clientOrderIdFormatExchange"] = o.ClientOrderIdFormatExchange
+	}
+	if !IsNil(o.ExchangeOrderId) {
+		toSerialize["exchangeOrderId"] = o.ExchangeOrderId
+	}
+	if !IsNil(o.AmountOpen) {
+		toSerialize["amountOpen"] = o.AmountOpen
+	}
+	if !IsNil(o.AmountFilled) {
+		toSerialize["amountFilled"] = o.AmountFilled
+	}
+	if !IsNil(o.AvgPx) {
+		toSerialize["avgPx"] = o.AvgPx
+	}
+	if !IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
+	if !IsNil(o.StatusHistoryStatus) {
+		toSerialize["statusHistoryStatus"] = o.StatusHistoryStatus
+	}
+	if !IsNil(o.StatusHistoryTime) {
+		toSerialize["statusHistoryTime"] = o.StatusHistoryTime
+	}
+	if !IsNil(o.ErrorMessageResult) {
+		toSerialize["errorMessageResult"] = o.ErrorMessageResult
+	}
+	if !IsNil(o.ErrorMessageReason) {
+		toSerialize["errorMessageReason"] = o.ErrorMessageReason
+	}
+	if !IsNil(o.ErrorMessageMessage) {
+		toSerialize["errorMessageMessage"] = o.ErrorMessageMessage
+	}
+	if !IsNil(o.FillsTime) {
+		toSerialize["fillsTime"] = o.FillsTime
+	}
+	if !IsNil(o.FillsPrice) {
+		toSerialize["fillsPrice"] = o.FillsPrice
+	}
+	if !IsNil(o.FillsAmount) {
+		toSerialize["fillsAmount"] = o.FillsAmount
+	}
+	if !IsNil(o.CreatedTime) {
+		toSerialize["createdTime"] = o.CreatedTime
+	}
+	return toSerialize, nil
 }
 
 type NullableOrderHistory struct {

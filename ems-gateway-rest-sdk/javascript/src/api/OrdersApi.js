@@ -1,6 +1,6 @@
 /**
  * EMS - REST API
- * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. <br/> This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       <br/><br/> Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Managed Cloud</td>       <td>Sandbox</td>       <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Sandbox</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  <br/><br/> If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: <br/><br/> `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this:  <br/><br/> `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
+ * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>        Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints  <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
  *
  * The version of the OpenAPI document: v1
  * Contact: support@coinapi.io
@@ -137,7 +137,7 @@ export default class OrdersApi {
      * Get open orders
      * Get last execution reports for open orders across all or single exchange.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.exchangeId Filter the open orders to the specific exchange.
+     * @param {String} [exchangeId] Filter the open orders to the specific exchange.
      * @param {module:api/OrdersApi~v1OrdersGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/OrderExecutionReport>}
      */
@@ -167,8 +167,8 @@ export default class OrdersApi {
     }
 
     /**
-     * Callback function to receive the result of the v1OrdersHistoryTimeStartTimeEndGet operation.
-     * @callback module:api/OrdersApi~v1OrdersHistoryTimeStartTimeEndGetCallback
+     * Callback function to receive the result of the v1OrdersHistoryGet operation.
+     * @callback module:api/OrdersApi~v1OrdersHistoryGetCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/OrderHistory>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -179,25 +179,25 @@ export default class OrdersApi {
      * Based on the date range, all changes registered in the orderbook.
      * @param {String} timeStart Start date
      * @param {String} timeEnd End date
-     * @param {module:api/OrdersApi~v1OrdersHistoryTimeStartTimeEndGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OrdersApi~v1OrdersHistoryGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/OrderHistory>}
      */
-    v1OrdersHistoryTimeStartTimeEndGet(timeStart, timeEnd, callback) {
+    v1OrdersHistoryGet(timeStart, timeEnd, callback) {
       let postBody = null;
       // verify the required parameter 'timeStart' is set
       if (timeStart === undefined || timeStart === null) {
-        throw new Error("Missing the required parameter 'timeStart' when calling v1OrdersHistoryTimeStartTimeEndGet");
+        throw new Error("Missing the required parameter 'timeStart' when calling v1OrdersHistoryGet");
       }
       // verify the required parameter 'timeEnd' is set
       if (timeEnd === undefined || timeEnd === null) {
-        throw new Error("Missing the required parameter 'timeEnd' when calling v1OrdersHistoryTimeStartTimeEndGet");
+        throw new Error("Missing the required parameter 'timeEnd' when calling v1OrdersHistoryGet");
       }
 
       let pathParams = {
-        'time_start': timeStart,
-        'time_end': timeEnd
       };
       let queryParams = {
+        'time_start': timeStart,
+        'time_end': timeEnd
       };
       let headerParams = {
       };
@@ -209,7 +209,7 @@ export default class OrdersApi {
       let accepts = ['application/json'];
       let returnType = [OrderHistory];
       return this.apiClient.callApi(
-        '/v1/orders/history/{time_start}/{time_end}', 'GET',
+        '/v1/orders/history', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

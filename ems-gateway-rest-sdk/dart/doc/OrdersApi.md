@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**v1OrdersCancelAllPost**](OrdersApi.md#v1orderscancelallpost) | **POST** /v1/orders/cancel/all | Cancel all orders request
 [**v1OrdersCancelPost**](OrdersApi.md#v1orderscancelpost) | **POST** /v1/orders/cancel | Cancel order request
 [**v1OrdersGet**](OrdersApi.md#v1ordersget) | **GET** /v1/orders | Get open orders
-[**v1OrdersHistoryTimeStartTimeEndGet**](OrdersApi.md#v1ordershistorytimestarttimeendget) | **GET** /v1/orders/history/{time_start}/{time_end} | History of order changes
+[**v1OrdersHistoryGet**](OrdersApi.md#v1ordershistoryget) | **GET** /v1/orders/history | History of order changes
 [**v1OrdersPost**](OrdersApi.md#v1orderspost) | **POST** /v1/orders | Send new order
 [**v1OrdersStatusClientOrderIdGet**](OrdersApi.md#v1ordersstatusclientorderidget) | **GET** /v1/orders/status/{client_order_id} | Get order execution report
 
@@ -146,8 +146,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1OrdersHistoryTimeStartTimeEndGet**
-> List<OrderHistory> v1OrdersHistoryTimeStartTimeEndGet(timeStart, timeEnd)
+# **v1OrdersHistoryGet**
+> List<OrderHistory> v1OrdersHistoryGet(timeStart, timeEnd)
 
 History of order changes
 
@@ -162,10 +162,10 @@ final timeStart = 2022-05-01T00:00:00; // String | Start date
 final timeEnd = 2022-05-01T12:00:00; // String | End date
 
 try {
-    final result = api_instance.v1OrdersHistoryTimeStartTimeEndGet(timeStart, timeEnd);
+    final result = api_instance.v1OrdersHistoryGet(timeStart, timeEnd);
     print(result);
 } catch (e) {
-    print('Exception when calling OrdersApi->v1OrdersHistoryTimeStartTimeEndGet: $e\n');
+    print('Exception when calling OrdersApi->v1OrdersHistoryGet: $e\n');
 }
 ```
 

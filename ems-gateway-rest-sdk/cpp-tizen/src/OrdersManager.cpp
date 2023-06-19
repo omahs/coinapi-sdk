@@ -531,7 +531,7 @@ bool OrdersManager::v1OrdersGetSync(char * accessToken,
 	handler, userData, false);
 }
 
-static bool v1OrdersHistoryTimeStartTimeEndGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool v1OrdersHistoryGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<OrderHistory>, Error, void* )
@@ -578,7 +578,7 @@ static bool v1OrdersHistoryTimeStartTimeEndGetProcessor(MemoryStruct_s p_chunk, 
 			}
 }
 
-static bool v1OrdersHistoryTimeStartTimeEndGetHelper(char * accessToken,
+static bool v1OrdersHistoryGetHelper(char * accessToken,
 	std::string timeStart, std::string timeEnd, 
 	void(* handler)(std::list<OrderHistory>, Error, void* )
 	, void* userData, bool isAsync)
@@ -596,25 +596,21 @@ static bool v1OrdersHistoryTimeStartTimeEndGetHelper(char * accessToken,
 	map <string, string> queryParams;
 	string itemAtq;
 	
+
+	itemAtq = stringify(&timeStart, "std::string");
+	queryParams.insert(pair<string, string>("time_start", itemAtq));
+
+
+	itemAtq = stringify(&timeEnd, "std::string");
+	queryParams.insert(pair<string, string>("time_end", itemAtq));
+
 	string mBody = "";
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/v1/orders/history/{time_start}/{time_end}");
+	string url("/v1/orders/history");
 	int pos;
 
-	string s_timeStart("{");
-	s_timeStart.append("time_start");
-	s_timeStart.append("}");
-	pos = url.find(s_timeStart);
-	url.erase(pos, s_timeStart.length());
-	url.insert(pos, stringify(&timeStart, "std::string"));
-	string s_timeEnd("{");
-	s_timeEnd.append("time_end");
-	s_timeEnd.append("}");
-	pos = url.find(s_timeEnd);
-	url.erase(pos, s_timeEnd.length());
-	url.insert(pos, stringify(&timeEnd, "std::string"));
 
 	//TODO: free memory of errormsg, memorystruct
 	MemoryStruct_s* p_chunk = new MemoryStruct_s();
@@ -631,7 +627,7 @@ static bool v1OrdersHistoryTimeStartTimeEndGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(OrdersManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = v1OrdersHistoryTimeStartTimeEndGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = v1OrdersHistoryGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -649,7 +645,7 @@ static bool v1OrdersHistoryTimeStartTimeEndGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (OrdersManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), v1OrdersHistoryTimeStartTimeEndGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), v1OrdersHistoryGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -661,22 +657,22 @@ static bool v1OrdersHistoryTimeStartTimeEndGetHelper(char * accessToken,
 
 
 
-bool OrdersManager::v1OrdersHistoryTimeStartTimeEndGetAsync(char * accessToken,
+bool OrdersManager::v1OrdersHistoryGetAsync(char * accessToken,
 	std::string timeStart, std::string timeEnd, 
 	void(* handler)(std::list<OrderHistory>, Error, void* )
 	, void* userData)
 {
-	return v1OrdersHistoryTimeStartTimeEndGetHelper(accessToken,
+	return v1OrdersHistoryGetHelper(accessToken,
 	timeStart, timeEnd, 
 	handler, userData, true);
 }
 
-bool OrdersManager::v1OrdersHistoryTimeStartTimeEndGetSync(char * accessToken,
+bool OrdersManager::v1OrdersHistoryGetSync(char * accessToken,
 	std::string timeStart, std::string timeEnd, 
 	void(* handler)(std::list<OrderHistory>, Error, void* )
 	, void* userData)
 {
-	return v1OrdersHistoryTimeStartTimeEndGetHelper(accessToken,
+	return v1OrdersHistoryGetHelper(accessToken,
 	timeStart, timeEnd, 
 	handler, userData, false);
 }

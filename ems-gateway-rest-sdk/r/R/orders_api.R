@@ -1,6 +1,6 @@
 #' EMS - REST API
 #'
-#' This section will provide necessary information about the `CoinAPI EMS REST API` protocol. <br/> This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       <br/><br/> Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Managed Cloud</td>       <td>Sandbox</td>       <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Sandbox</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  <br/><br/> If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: <br/><br/> `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this:  <br/><br/> `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
+#' This section will provide necessary information about the `CoinAPI EMS REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>        Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints  <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
 #'
 #' The version of the OpenAPI document: v1
 #' Contact: support@coinapi.io
@@ -100,7 +100,7 @@
 #' }
 #' }
 #'
-#' \strong{ V1OrdersHistoryTimeStartTimeEndGet } \emph{ History of order changes }
+#' \strong{ V1OrdersHistoryGet } \emph{ History of order changes }
 #' Based on the date range, all changes registered in the orderbook.
 #'
 #' \itemize{
@@ -234,7 +234,7 @@
 #' dput(result)
 #'
 #'
-#' ####################  V1OrdersHistoryTimeStartTimeEndGet  ####################
+#' ####################  V1OrdersHistoryGet  ####################
 #'
 #' library(openapi)
 #' var_time_start <- "2022-05-01T00:00:00" # character | Start date
@@ -244,8 +244,8 @@
 #' api_instance <- OrdersApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$V1OrdersHistoryTimeStartTimeEndGet(var_time_start, var_time_enddata_file = "result.txt")
-#' result <- api_instance$V1OrdersHistoryTimeStartTimeEndGet(var_time_start, var_time_end)
+#' # result <- api_instance$V1OrdersHistoryGet(var_time_start, var_time_enddata_file = "result.txt")
+#' result <- api_instance$V1OrdersHistoryGet(var_time_start, var_time_end)
 #' dput(result)
 #'
 #'
@@ -599,8 +599,8 @@ OrdersApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return array[OrderHistory]
     #' @export
-    V1OrdersHistoryTimeStartTimeEndGet = function(time_start, time_end, data_file = NULL, ...) {
-      local_var_response <- self$V1OrdersHistoryTimeStartTimeEndGetWithHttpInfo(time_start, time_end, data_file = data_file, ...)
+    V1OrdersHistoryGet = function(time_start, time_end, data_file = NULL, ...) {
+      local_var_response <- self$V1OrdersHistoryGetWithHttpInfo(time_start, time_end, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -622,7 +622,7 @@ OrdersApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return API response (array[OrderHistory]) with additional information such as HTTP status code, headers
     #' @export
-    V1OrdersHistoryTimeStartTimeEndGetWithHttpInfo = function(time_start, time_end, data_file = NULL, ...) {
+    V1OrdersHistoryGetWithHttpInfo = function(time_start, time_end, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -642,15 +642,11 @@ OrdersApi <- R6::R6Class(
 
 
 
-      local_var_url_path <- "/v1/orders/history/{time_start}/{time_end}"
-      if (!missing(`time_start`)) {
-        local_var_url_path <- gsub("\\{time_start\\}", URLencode(as.character(`time_start`), reserved = TRUE), local_var_url_path)
-      }
+      query_params[["time_start"]] <- `time_start`
 
-      if (!missing(`time_end`)) {
-        local_var_url_path <- gsub("\\{time_end\\}", URLencode(as.character(`time_end`), reserved = TRUE), local_var_url_path)
-      }
+      query_params[["time_end"]] <- `time_end`
 
+      local_var_url_path <- "/v1/orders/history"
 
       # The Accept request HTTP header
       local_var_accepts <- list("application/json")

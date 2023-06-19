@@ -13,12 +13,12 @@
 /**
  * EMS - REST API
  *
- * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. <br/> This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       <br/><br/> Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Managed Cloud</td>       <td>Sandbox</td>       <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Sandbox</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  <br/><br/> If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: <br/><br/> `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this:  <br/><br/> `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside>
+ * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>        Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints  <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside>
  *
  * The version of the OpenAPI document: v1
  * Contact: support@coinapi.io
  * Generated by: https://openapi-generator.tech
- * OpenAPI Generator version: 6.2.1
+ * OpenAPI Generator version: 6.6.0
  */
 
 /**
@@ -384,11 +384,9 @@ class BalanceDataInner implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function setAssetIdExchange($asset_id_exchange)
     {
-
         if (is_null($asset_id_exchange)) {
             throw new \InvalidArgumentException('non-nullable asset_id_exchange cannot be null');
         }
-
         $this->container['asset_id_exchange'] = $asset_id_exchange;
 
         return $this;
@@ -413,11 +411,9 @@ class BalanceDataInner implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function setAssetIdCoinapi($asset_id_coinapi)
     {
-
         if (is_null($asset_id_coinapi)) {
             throw new \InvalidArgumentException('non-nullable asset_id_coinapi cannot be null');
         }
-
         $this->container['asset_id_coinapi'] = $asset_id_coinapi;
 
         return $this;
@@ -442,11 +438,9 @@ class BalanceDataInner implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function setBalance($balance)
     {
-
         if (is_null($balance)) {
             throw new \InvalidArgumentException('non-nullable balance cannot be null');
         }
-
         $this->container['balance'] = $balance;
 
         return $this;
@@ -471,11 +465,9 @@ class BalanceDataInner implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function setAvailable($available)
     {
-
         if (is_null($available)) {
             throw new \InvalidArgumentException('non-nullable available cannot be null');
         }
-
         $this->container['available'] = $available;
 
         return $this;
@@ -500,11 +492,9 @@ class BalanceDataInner implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function setLocked($locked)
     {
-
         if (is_null($locked)) {
             throw new \InvalidArgumentException('non-nullable locked cannot be null');
         }
-
         $this->container['locked'] = $locked;
 
         return $this;
@@ -529,8 +519,11 @@ class BalanceDataInner implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function setLastUpdatedBy($last_updated_by)
     {
+        if (is_null($last_updated_by)) {
+            throw new \InvalidArgumentException('non-nullable last_updated_by cannot be null');
+        }
         $allowedValues = $this->getLastUpdatedByAllowableValues();
-        if (!is_null($last_updated_by) && !in_array($last_updated_by, $allowedValues, true)) {
+        if (!in_array($last_updated_by, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value '%s' for 'last_updated_by', must be one of '%s'",
@@ -539,11 +532,6 @@ class BalanceDataInner implements ModelInterface, ArrayAccess, \JsonSerializable
                 )
             );
         }
-
-        if (is_null($last_updated_by)) {
-            throw new \InvalidArgumentException('non-nullable last_updated_by cannot be null');
-        }
-
         $this->container['last_updated_by'] = $last_updated_by;
 
         return $this;
@@ -568,11 +556,9 @@ class BalanceDataInner implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function setRateUsd($rate_usd)
     {
-
         if (is_null($rate_usd)) {
             throw new \InvalidArgumentException('non-nullable rate_usd cannot be null');
         }
-
         $this->container['rate_usd'] = $rate_usd;
 
         return $this;
@@ -597,11 +583,9 @@ class BalanceDataInner implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function setTraded($traded)
     {
-
         if (is_null($traded)) {
             throw new \InvalidArgumentException('non-nullable traded cannot be null');
         }
-
         $this->container['traded'] = $traded;
 
         return $this;

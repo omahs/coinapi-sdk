@@ -57,7 +57,7 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_v1_orders_history_time_start_time_end_get
+    test_v1_orders_history_get
             -- History of order changes
             --
             -- Based on the date range, all changes registered in the orderbook.
@@ -70,7 +70,7 @@ feature -- Test routines
             -- l_time_start
             -- l_time_end
 
-            -- l_response := api.v1_orders_history_time_start_time_end_get(l_time_start, l_time_end)
+            -- l_response := api.v1_orders_history_get(l_time_start, l_time_end)
             assert ("not_implemented", False)
         end
 

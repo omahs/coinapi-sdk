@@ -1,7 +1,7 @@
 /*
 EMS - REST API
 
-This section will provide necessary information about the `CoinAPI EMS REST API` protocol. <br/> This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       <br/><br/> Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Managed Cloud</td>       <td>Sandbox</td>       <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Sandbox</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  <br/><br/> If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: <br/><br/> `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this:  <br/><br/> `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
+This section will provide necessary information about the `CoinAPI EMS REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>        Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints  <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
 
 API version: v1
 Contact: support@coinapi.io
@@ -14,7 +14,7 @@ package openapi
 import (
 	"bytes"
 	"context"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 	"strings"
@@ -108,9 +108,9 @@ func (a *OrdersApiService) V1OrdersCancelAllPostExecute(r ApiV1OrdersCancelAllPo
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -127,8 +127,8 @@ func (a *OrdersApiService) V1OrdersCancelAllPostExecute(r ApiV1OrdersCancelAllPo
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 490 {
@@ -138,8 +138,8 @@ func (a *OrdersApiService) V1OrdersCancelAllPostExecute(r ApiV1OrdersCancelAllPo
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -240,9 +240,9 @@ func (a *OrdersApiService) V1OrdersCancelPostExecute(r ApiV1OrdersCancelPostRequ
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -259,8 +259,8 @@ func (a *OrdersApiService) V1OrdersCancelPostExecute(r ApiV1OrdersCancelPostRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 490 {
@@ -270,8 +270,8 @@ func (a *OrdersApiService) V1OrdersCancelPostExecute(r ApiV1OrdersCancelPostRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -341,7 +341,7 @@ func (a *OrdersApiService) V1OrdersGetExecute(r ApiV1OrdersGetRequest) ([]OrderE
 	localVarFormParams := url.Values{}
 
 	if r.exchangeId != nil {
-		localVarQueryParams.Add("exchange_id", parameterToString(*r.exchangeId, ""))
+		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange_id", r.exchangeId, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -370,9 +370,9 @@ func (a *OrdersApiService) V1OrdersGetExecute(r ApiV1OrdersGetRequest) ([]OrderE
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -389,8 +389,8 @@ func (a *OrdersApiService) V1OrdersGetExecute(r ApiV1OrdersGetRequest) ([]OrderE
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -407,39 +407,47 @@ func (a *OrdersApiService) V1OrdersGetExecute(r ApiV1OrdersGetRequest) ([]OrderE
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiV1OrdersHistoryTimeStartTimeEndGetRequest struct {
+type ApiV1OrdersHistoryGetRequest struct {
 	ctx context.Context
 	ApiService *OrdersApiService
-	timeStart string
-	timeEnd string
+	timeStart *string
+	timeEnd *string
 }
 
-func (r ApiV1OrdersHistoryTimeStartTimeEndGetRequest) Execute() ([]OrderHistory, *http.Response, error) {
-	return r.ApiService.V1OrdersHistoryTimeStartTimeEndGetExecute(r)
+// Start date
+func (r ApiV1OrdersHistoryGetRequest) TimeStart(timeStart string) ApiV1OrdersHistoryGetRequest {
+	r.timeStart = &timeStart
+	return r
+}
+
+// End date
+func (r ApiV1OrdersHistoryGetRequest) TimeEnd(timeEnd string) ApiV1OrdersHistoryGetRequest {
+	r.timeEnd = &timeEnd
+	return r
+}
+
+func (r ApiV1OrdersHistoryGetRequest) Execute() ([]OrderHistory, *http.Response, error) {
+	return r.ApiService.V1OrdersHistoryGetExecute(r)
 }
 
 /*
-V1OrdersHistoryTimeStartTimeEndGet History of order changes
+V1OrdersHistoryGet History of order changes
 
 Based on the date range, all changes registered in the orderbook.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param timeStart Start date
- @param timeEnd End date
- @return ApiV1OrdersHistoryTimeStartTimeEndGetRequest
+ @return ApiV1OrdersHistoryGetRequest
 */
-func (a *OrdersApiService) V1OrdersHistoryTimeStartTimeEndGet(ctx context.Context, timeStart string, timeEnd string) ApiV1OrdersHistoryTimeStartTimeEndGetRequest {
-	return ApiV1OrdersHistoryTimeStartTimeEndGetRequest{
+func (a *OrdersApiService) V1OrdersHistoryGet(ctx context.Context) ApiV1OrdersHistoryGetRequest {
+	return ApiV1OrdersHistoryGetRequest{
 		ApiService: a,
 		ctx: ctx,
-		timeStart: timeStart,
-		timeEnd: timeEnd,
 	}
 }
 
 // Execute executes the request
 //  @return []OrderHistory
-func (a *OrdersApiService) V1OrdersHistoryTimeStartTimeEndGetExecute(r ApiV1OrdersHistoryTimeStartTimeEndGetRequest) ([]OrderHistory, *http.Response, error) {
+func (a *OrdersApiService) V1OrdersHistoryGetExecute(r ApiV1OrdersHistoryGetRequest) ([]OrderHistory, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -447,19 +455,25 @@ func (a *OrdersApiService) V1OrdersHistoryTimeStartTimeEndGetExecute(r ApiV1Orde
 		localVarReturnValue  []OrderHistory
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "OrdersApiService.V1OrdersHistoryTimeStartTimeEndGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "OrdersApiService.V1OrdersHistoryGet")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/v1/orders/history/{time_start}/{time_end}"
-	localVarPath = strings.Replace(localVarPath, "{"+"time_start"+"}", url.PathEscape(parameterToString(r.timeStart, "")), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"time_end"+"}", url.PathEscape(parameterToString(r.timeEnd, "")), -1)
+	localVarPath := localBasePath + "/v1/orders/history"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
+	if r.timeStart == nil {
+		return localVarReturnValue, nil, reportError("timeStart is required and must be specified")
+	}
+	if r.timeEnd == nil {
+		return localVarReturnValue, nil, reportError("timeEnd is required and must be specified")
+	}
 
+	parameterAddToHeaderOrQuery(localVarQueryParams, "time_start", r.timeStart, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "time_end", r.timeEnd, "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -487,9 +501,9 @@ func (a *OrdersApiService) V1OrdersHistoryTimeStartTimeEndGetExecute(r ApiV1Orde
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -506,8 +520,8 @@ func (a *OrdersApiService) V1OrdersHistoryTimeStartTimeEndGetExecute(r ApiV1Orde
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -608,9 +622,9 @@ func (a *OrdersApiService) V1OrdersPostExecute(r ApiV1OrdersPostRequest) (*Order
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -627,8 +641,8 @@ func (a *OrdersApiService) V1OrdersPostExecute(r ApiV1OrdersPostRequest) (*Order
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 490 {
@@ -638,8 +652,8 @@ func (a *OrdersApiService) V1OrdersPostExecute(r ApiV1OrdersPostRequest) (*Order
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 504 {
@@ -649,8 +663,8 @@ func (a *OrdersApiService) V1OrdersPostExecute(r ApiV1OrdersPostRequest) (*Order
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -710,7 +724,7 @@ func (a *OrdersApiService) V1OrdersStatusClientOrderIdGetExecute(r ApiV1OrdersSt
 	}
 
 	localVarPath := localBasePath + "/v1/orders/status/{client_order_id}"
-	localVarPath = strings.Replace(localVarPath, "{"+"client_order_id"+"}", url.PathEscape(parameterToString(r.clientOrderId, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"client_order_id"+"}", url.PathEscape(parameterValueToString(r.clientOrderId, "clientOrderId")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -743,9 +757,9 @@ func (a *OrdersApiService) V1OrdersStatusClientOrderIdGetExecute(r ApiV1OrdersSt
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -762,8 +776,8 @@ func (a *OrdersApiService) V1OrdersStatusClientOrderIdGetExecute(r ApiV1OrdersSt
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

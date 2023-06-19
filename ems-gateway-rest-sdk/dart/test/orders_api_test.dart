@@ -48,8 +48,8 @@ void main() {
     //
     // Based on the date range, all changes registered in the orderbook.
     //
-    //Future<List<OrderHistory>> v1OrdersHistoryTimeStartTimeEndGet(String timeStart, String timeEnd) async
-    test('test v1OrdersHistoryTimeStartTimeEndGet', () async {
+    //Future<List<OrderHistory>> v1OrdersHistoryGet(String timeStart, String timeEnd) async
+    test('test v1OrdersHistoryGet', () async {
       // TODO
     });
 

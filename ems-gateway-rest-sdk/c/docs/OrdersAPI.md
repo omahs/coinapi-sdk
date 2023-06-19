@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**OrdersAPI_v1OrdersCancelAllPost**](OrdersAPI.md#OrdersAPI_v1OrdersCancelAllPost) | **POST** /v1/orders/cancel/all | Cancel all orders request
 [**OrdersAPI_v1OrdersCancelPost**](OrdersAPI.md#OrdersAPI_v1OrdersCancelPost) | **POST** /v1/orders/cancel | Cancel order request
 [**OrdersAPI_v1OrdersGet**](OrdersAPI.md#OrdersAPI_v1OrdersGet) | **GET** /v1/orders | Get open orders
-[**OrdersAPI_v1OrdersHistoryTimeStartTimeEndGet**](OrdersAPI.md#OrdersAPI_v1OrdersHistoryTimeStartTimeEndGet) | **GET** /v1/orders/history/{time_start}/{time_end} | History of order changes
+[**OrdersAPI_v1OrdersHistoryGet**](OrdersAPI.md#OrdersAPI_v1OrdersHistoryGet) | **GET** /v1/orders/history | History of order changes
 [**OrdersAPI_v1OrdersPost**](OrdersAPI.md#OrdersAPI_v1OrdersPost) | **POST** /v1/orders | Send new order
 [**OrdersAPI_v1OrdersStatusClientOrderIdGet**](OrdersAPI.md#OrdersAPI_v1OrdersStatusClientOrderIdGet) | **GET** /v1/orders/status/{client_order_id} | Get order execution report
 
@@ -105,13 +105,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **OrdersAPI_v1OrdersHistoryTimeStartTimeEndGet**
+# **OrdersAPI_v1OrdersHistoryGet**
 ```c
 // History of order changes
 //
 // Based on the date range, all changes registered in the orderbook.
 //
-list_t* OrdersAPI_v1OrdersHistoryTimeStartTimeEndGet(apiClient_t *apiClient, char * time_start, char * time_end);
+list_t* OrdersAPI_v1OrdersHistoryGet(apiClient_t *apiClient, char * time_start, char * time_end);
 ```
 
 ### Parameters

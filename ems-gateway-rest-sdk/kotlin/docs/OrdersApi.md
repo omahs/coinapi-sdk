@@ -7,12 +7,12 @@ Method | HTTP request | Description
 [**v1OrdersCancelAllPost**](OrdersApi.md#v1OrdersCancelAllPost) | **POST** /v1/orders/cancel/all | Cancel all orders request
 [**v1OrdersCancelPost**](OrdersApi.md#v1OrdersCancelPost) | **POST** /v1/orders/cancel | Cancel order request
 [**v1OrdersGet**](OrdersApi.md#v1OrdersGet) | **GET** /v1/orders | Get open orders
-[**v1OrdersHistoryTimeStartTimeEndGet**](OrdersApi.md#v1OrdersHistoryTimeStartTimeEndGet) | **GET** /v1/orders/history/{time_start}/{time_end} | History of order changes
+[**v1OrdersHistoryGet**](OrdersApi.md#v1OrdersHistoryGet) | **GET** /v1/orders/history | History of order changes
 [**v1OrdersPost**](OrdersApi.md#v1OrdersPost) | **POST** /v1/orders | Send new order
 [**v1OrdersStatusClientOrderIdGet**](OrdersApi.md#v1OrdersStatusClientOrderIdGet) | **GET** /v1/orders/status/{client_order_id} | Get order execution report
 
 
-<a name="v1OrdersCancelAllPost"></a>
+<a id="v1OrdersCancelAllPost"></a>
 # **v1OrdersCancelAllPost**
 > MessageReject v1OrdersCancelAllPost(orderCancelAllRequest)
 
@@ -59,7 +59,7 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="v1OrdersCancelPost"></a>
+<a id="v1OrdersCancelPost"></a>
 # **v1OrdersCancelPost**
 > OrderExecutionReport v1OrdersCancelPost(orderCancelSingleRequest)
 
@@ -106,7 +106,7 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="v1OrdersGet"></a>
+<a id="v1OrdersGet"></a>
 # **v1OrdersGet**
 > kotlin.collections.List&lt;OrderExecutionReport&gt; v1OrdersGet(exchangeId)
 
@@ -153,9 +153,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="v1OrdersHistoryTimeStartTimeEndGet"></a>
-# **v1OrdersHistoryTimeStartTimeEndGet**
-> kotlin.collections.List&lt;OrderHistory&gt; v1OrdersHistoryTimeStartTimeEndGet(timeStart, timeEnd)
+<a id="v1OrdersHistoryGet"></a>
+# **v1OrdersHistoryGet**
+> kotlin.collections.List&lt;OrderHistory&gt; v1OrdersHistoryGet(timeStart, timeEnd)
 
 History of order changes
 
@@ -171,13 +171,13 @@ val apiInstance = OrdersApi()
 val timeStart : kotlin.String = 2022-05-01T00:00:00 // kotlin.String | Start date
 val timeEnd : kotlin.String = 2022-05-01T12:00:00 // kotlin.String | End date
 try {
-    val result : kotlin.collections.List<OrderHistory> = apiInstance.v1OrdersHistoryTimeStartTimeEndGet(timeStart, timeEnd)
+    val result : kotlin.collections.List<OrderHistory> = apiInstance.v1OrdersHistoryGet(timeStart, timeEnd)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling OrdersApi#v1OrdersHistoryTimeStartTimeEndGet")
+    println("4xx response calling OrdersApi#v1OrdersHistoryGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling OrdersApi#v1OrdersHistoryTimeStartTimeEndGet")
+    println("5xx response calling OrdersApi#v1OrdersHistoryGet")
     e.printStackTrace()
 }
 ```
@@ -202,7 +202,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="v1OrdersPost"></a>
+<a id="v1OrdersPost"></a>
 # **v1OrdersPost**
 > OrderExecutionReport v1OrdersPost(orderNewSingleRequest)
 
@@ -249,7 +249,7 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="v1OrdersStatusClientOrderIdGet"></a>
+<a id="v1OrdersStatusClientOrderIdGet"></a>
 # **v1OrdersStatusClientOrderIdGet**
 > OrderExecutionReport v1OrdersStatusClientOrderIdGet(clientOrderId)
 

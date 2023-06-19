@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**v1OrdersCancelAllPost**](OrdersApi.md#v1OrdersCancelAllPost) | **POST** /v1/orders/cancel/all | Cancel all orders request
 [**v1OrdersCancelPost**](OrdersApi.md#v1OrdersCancelPost) | **POST** /v1/orders/cancel | Cancel order request
 [**v1OrdersGet**](OrdersApi.md#v1OrdersGet) | **GET** /v1/orders | Get open orders
-[**v1OrdersHistoryTimeStartTimeEndGet**](OrdersApi.md#v1OrdersHistoryTimeStartTimeEndGet) | **GET** /v1/orders/history/{time_start}/{time_end} | History of order changes
+[**v1OrdersHistoryGet**](OrdersApi.md#v1OrdersHistoryGet) | **GET** /v1/orders/history | History of order changes
 [**v1OrdersPost**](OrdersApi.md#v1OrdersPost) | **POST** /v1/orders | Send new order
 [**v1OrdersStatusClientOrderIdGet**](OrdersApi.md#v1OrdersStatusClientOrderIdGet) | **GET** /v1/orders/status/{client_order_id} | Get order execution report
 
@@ -150,9 +150,9 @@ No authorization required
 - **Accept**: application/json, appliction/json
 
 
-## v1OrdersHistoryTimeStartTimeEndGet
+## v1OrdersHistoryGet
 
-> [OrderHistory] v1OrdersHistoryTimeStartTimeEndGet(timeStart, timeEnd)
+> [OrderHistory] v1OrdersHistoryGet(timeStart, timeEnd)
 
 History of order changes
 
@@ -166,7 +166,7 @@ import EmsRestApi from 'ems_rest_api';
 let apiInstance = new EmsRestApi.OrdersApi();
 let timeStart = 2022-05-01T00:00:00; // String | Start date
 let timeEnd = 2022-05-01T12:00:00; // String | End date
-apiInstance.v1OrdersHistoryTimeStartTimeEndGet(timeStart, timeEnd, (error, data, response) => {
+apiInstance.v1OrdersHistoryGet(timeStart, timeEnd, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

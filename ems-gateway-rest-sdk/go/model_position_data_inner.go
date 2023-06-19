@@ -1,7 +1,7 @@
 /*
 EMS - REST API
 
-This section will provide necessary information about the `CoinAPI EMS REST API` protocol. <br/> This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       <br/><br/> Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Managed Cloud</td>       <td>Sandbox</td>       <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Sandbox</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  <br/><br/> If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: <br/><br/> `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this:  <br/><br/> `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
+This section will provide necessary information about the `CoinAPI EMS REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>        Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints  <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
 
 API version: v1
 Contact: support@coinapi.io
@@ -14,6 +14,9 @@ package openapi
 import (
 	"encoding/json"
 )
+
+// checks if the PositionDataInner type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &PositionDataInner{}
 
 // PositionDataInner The Position object.
 type PositionDataInner struct {
@@ -56,7 +59,7 @@ func NewPositionDataInnerWithDefaults() *PositionDataInner {
 
 // GetSymbolIdExchange returns the SymbolIdExchange field value if set, zero value otherwise.
 func (o *PositionDataInner) GetSymbolIdExchange() string {
-	if o == nil || isNil(o.SymbolIdExchange) {
+	if o == nil || IsNil(o.SymbolIdExchange) {
 		var ret string
 		return ret
 	}
@@ -66,15 +69,15 @@ func (o *PositionDataInner) GetSymbolIdExchange() string {
 // GetSymbolIdExchangeOk returns a tuple with the SymbolIdExchange field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetSymbolIdExchangeOk() (*string, bool) {
-	if o == nil || isNil(o.SymbolIdExchange) {
-    return nil, false
+	if o == nil || IsNil(o.SymbolIdExchange) {
+		return nil, false
 	}
 	return o.SymbolIdExchange, true
 }
 
 // HasSymbolIdExchange returns a boolean if a field has been set.
 func (o *PositionDataInner) HasSymbolIdExchange() bool {
-	if o != nil && !isNil(o.SymbolIdExchange) {
+	if o != nil && !IsNil(o.SymbolIdExchange) {
 		return true
 	}
 
@@ -88,7 +91,7 @@ func (o *PositionDataInner) SetSymbolIdExchange(v string) {
 
 // GetSymbolIdCoinapi returns the SymbolIdCoinapi field value if set, zero value otherwise.
 func (o *PositionDataInner) GetSymbolIdCoinapi() string {
-	if o == nil || isNil(o.SymbolIdCoinapi) {
+	if o == nil || IsNil(o.SymbolIdCoinapi) {
 		var ret string
 		return ret
 	}
@@ -98,15 +101,15 @@ func (o *PositionDataInner) GetSymbolIdCoinapi() string {
 // GetSymbolIdCoinapiOk returns a tuple with the SymbolIdCoinapi field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetSymbolIdCoinapiOk() (*string, bool) {
-	if o == nil || isNil(o.SymbolIdCoinapi) {
-    return nil, false
+	if o == nil || IsNil(o.SymbolIdCoinapi) {
+		return nil, false
 	}
 	return o.SymbolIdCoinapi, true
 }
 
 // HasSymbolIdCoinapi returns a boolean if a field has been set.
 func (o *PositionDataInner) HasSymbolIdCoinapi() bool {
-	if o != nil && !isNil(o.SymbolIdCoinapi) {
+	if o != nil && !IsNil(o.SymbolIdCoinapi) {
 		return true
 	}
 
@@ -120,7 +123,7 @@ func (o *PositionDataInner) SetSymbolIdCoinapi(v string) {
 
 // GetAvgEntryPrice returns the AvgEntryPrice field value if set, zero value otherwise.
 func (o *PositionDataInner) GetAvgEntryPrice() float32 {
-	if o == nil || isNil(o.AvgEntryPrice) {
+	if o == nil || IsNil(o.AvgEntryPrice) {
 		var ret float32
 		return ret
 	}
@@ -130,15 +133,15 @@ func (o *PositionDataInner) GetAvgEntryPrice() float32 {
 // GetAvgEntryPriceOk returns a tuple with the AvgEntryPrice field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetAvgEntryPriceOk() (*float32, bool) {
-	if o == nil || isNil(o.AvgEntryPrice) {
-    return nil, false
+	if o == nil || IsNil(o.AvgEntryPrice) {
+		return nil, false
 	}
 	return o.AvgEntryPrice, true
 }
 
 // HasAvgEntryPrice returns a boolean if a field has been set.
 func (o *PositionDataInner) HasAvgEntryPrice() bool {
-	if o != nil && !isNil(o.AvgEntryPrice) {
+	if o != nil && !IsNil(o.AvgEntryPrice) {
 		return true
 	}
 
@@ -152,7 +155,7 @@ func (o *PositionDataInner) SetAvgEntryPrice(v float32) {
 
 // GetQuantity returns the Quantity field value if set, zero value otherwise.
 func (o *PositionDataInner) GetQuantity() float32 {
-	if o == nil || isNil(o.Quantity) {
+	if o == nil || IsNil(o.Quantity) {
 		var ret float32
 		return ret
 	}
@@ -162,15 +165,15 @@ func (o *PositionDataInner) GetQuantity() float32 {
 // GetQuantityOk returns a tuple with the Quantity field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetQuantityOk() (*float32, bool) {
-	if o == nil || isNil(o.Quantity) {
-    return nil, false
+	if o == nil || IsNil(o.Quantity) {
+		return nil, false
 	}
 	return o.Quantity, true
 }
 
 // HasQuantity returns a boolean if a field has been set.
 func (o *PositionDataInner) HasQuantity() bool {
-	if o != nil && !isNil(o.Quantity) {
+	if o != nil && !IsNil(o.Quantity) {
 		return true
 	}
 
@@ -184,7 +187,7 @@ func (o *PositionDataInner) SetQuantity(v float32) {
 
 // GetSide returns the Side field value if set, zero value otherwise.
 func (o *PositionDataInner) GetSide() OrdSide {
-	if o == nil || isNil(o.Side) {
+	if o == nil || IsNil(o.Side) {
 		var ret OrdSide
 		return ret
 	}
@@ -194,15 +197,15 @@ func (o *PositionDataInner) GetSide() OrdSide {
 // GetSideOk returns a tuple with the Side field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetSideOk() (*OrdSide, bool) {
-	if o == nil || isNil(o.Side) {
-    return nil, false
+	if o == nil || IsNil(o.Side) {
+		return nil, false
 	}
 	return o.Side, true
 }
 
 // HasSide returns a boolean if a field has been set.
 func (o *PositionDataInner) HasSide() bool {
-	if o != nil && !isNil(o.Side) {
+	if o != nil && !IsNil(o.Side) {
 		return true
 	}
 
@@ -216,7 +219,7 @@ func (o *PositionDataInner) SetSide(v OrdSide) {
 
 // GetUnrealizedPnl returns the UnrealizedPnl field value if set, zero value otherwise.
 func (o *PositionDataInner) GetUnrealizedPnl() float32 {
-	if o == nil || isNil(o.UnrealizedPnl) {
+	if o == nil || IsNil(o.UnrealizedPnl) {
 		var ret float32
 		return ret
 	}
@@ -226,15 +229,15 @@ func (o *PositionDataInner) GetUnrealizedPnl() float32 {
 // GetUnrealizedPnlOk returns a tuple with the UnrealizedPnl field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetUnrealizedPnlOk() (*float32, bool) {
-	if o == nil || isNil(o.UnrealizedPnl) {
-    return nil, false
+	if o == nil || IsNil(o.UnrealizedPnl) {
+		return nil, false
 	}
 	return o.UnrealizedPnl, true
 }
 
 // HasUnrealizedPnl returns a boolean if a field has been set.
 func (o *PositionDataInner) HasUnrealizedPnl() bool {
-	if o != nil && !isNil(o.UnrealizedPnl) {
+	if o != nil && !IsNil(o.UnrealizedPnl) {
 		return true
 	}
 
@@ -248,7 +251,7 @@ func (o *PositionDataInner) SetUnrealizedPnl(v float32) {
 
 // GetLeverage returns the Leverage field value if set, zero value otherwise.
 func (o *PositionDataInner) GetLeverage() float32 {
-	if o == nil || isNil(o.Leverage) {
+	if o == nil || IsNil(o.Leverage) {
 		var ret float32
 		return ret
 	}
@@ -258,15 +261,15 @@ func (o *PositionDataInner) GetLeverage() float32 {
 // GetLeverageOk returns a tuple with the Leverage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetLeverageOk() (*float32, bool) {
-	if o == nil || isNil(o.Leverage) {
-    return nil, false
+	if o == nil || IsNil(o.Leverage) {
+		return nil, false
 	}
 	return o.Leverage, true
 }
 
 // HasLeverage returns a boolean if a field has been set.
 func (o *PositionDataInner) HasLeverage() bool {
-	if o != nil && !isNil(o.Leverage) {
+	if o != nil && !IsNil(o.Leverage) {
 		return true
 	}
 
@@ -280,7 +283,7 @@ func (o *PositionDataInner) SetLeverage(v float32) {
 
 // GetCrossMargin returns the CrossMargin field value if set, zero value otherwise.
 func (o *PositionDataInner) GetCrossMargin() bool {
-	if o == nil || isNil(o.CrossMargin) {
+	if o == nil || IsNil(o.CrossMargin) {
 		var ret bool
 		return ret
 	}
@@ -290,15 +293,15 @@ func (o *PositionDataInner) GetCrossMargin() bool {
 // GetCrossMarginOk returns a tuple with the CrossMargin field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetCrossMarginOk() (*bool, bool) {
-	if o == nil || isNil(o.CrossMargin) {
-    return nil, false
+	if o == nil || IsNil(o.CrossMargin) {
+		return nil, false
 	}
 	return o.CrossMargin, true
 }
 
 // HasCrossMargin returns a boolean if a field has been set.
 func (o *PositionDataInner) HasCrossMargin() bool {
-	if o != nil && !isNil(o.CrossMargin) {
+	if o != nil && !IsNil(o.CrossMargin) {
 		return true
 	}
 
@@ -312,7 +315,7 @@ func (o *PositionDataInner) SetCrossMargin(v bool) {
 
 // GetLiquidationPrice returns the LiquidationPrice field value if set, zero value otherwise.
 func (o *PositionDataInner) GetLiquidationPrice() float32 {
-	if o == nil || isNil(o.LiquidationPrice) {
+	if o == nil || IsNil(o.LiquidationPrice) {
 		var ret float32
 		return ret
 	}
@@ -322,15 +325,15 @@ func (o *PositionDataInner) GetLiquidationPrice() float32 {
 // GetLiquidationPriceOk returns a tuple with the LiquidationPrice field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetLiquidationPriceOk() (*float32, bool) {
-	if o == nil || isNil(o.LiquidationPrice) {
-    return nil, false
+	if o == nil || IsNil(o.LiquidationPrice) {
+		return nil, false
 	}
 	return o.LiquidationPrice, true
 }
 
 // HasLiquidationPrice returns a boolean if a field has been set.
 func (o *PositionDataInner) HasLiquidationPrice() bool {
-	if o != nil && !isNil(o.LiquidationPrice) {
+	if o != nil && !IsNil(o.LiquidationPrice) {
 		return true
 	}
 
@@ -344,7 +347,7 @@ func (o *PositionDataInner) SetLiquidationPrice(v float32) {
 
 // GetRawData returns the RawData field value if set, zero value otherwise.
 func (o *PositionDataInner) GetRawData() map[string]interface{} {
-	if o == nil || isNil(o.RawData) {
+	if o == nil || IsNil(o.RawData) {
 		var ret map[string]interface{}
 		return ret
 	}
@@ -354,15 +357,15 @@ func (o *PositionDataInner) GetRawData() map[string]interface{} {
 // GetRawDataOk returns a tuple with the RawData field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetRawDataOk() (map[string]interface{}, bool) {
-	if o == nil || isNil(o.RawData) {
-    return map[string]interface{}{}, false
+	if o == nil || IsNil(o.RawData) {
+		return map[string]interface{}{}, false
 	}
 	return o.RawData, true
 }
 
 // HasRawData returns a boolean if a field has been set.
 func (o *PositionDataInner) HasRawData() bool {
-	if o != nil && !isNil(o.RawData) {
+	if o != nil && !IsNil(o.RawData) {
 		return true
 	}
 
@@ -375,38 +378,46 @@ func (o *PositionDataInner) SetRawData(v map[string]interface{}) {
 }
 
 func (o PositionDataInner) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.SymbolIdExchange) {
-		toSerialize["symbol_id_exchange"] = o.SymbolIdExchange
-	}
-	if !isNil(o.SymbolIdCoinapi) {
-		toSerialize["symbol_id_coinapi"] = o.SymbolIdCoinapi
-	}
-	if !isNil(o.AvgEntryPrice) {
-		toSerialize["avg_entry_price"] = o.AvgEntryPrice
-	}
-	if !isNil(o.Quantity) {
-		toSerialize["quantity"] = o.Quantity
-	}
-	if !isNil(o.Side) {
-		toSerialize["side"] = o.Side
-	}
-	if !isNil(o.UnrealizedPnl) {
-		toSerialize["unrealized_pnl"] = o.UnrealizedPnl
-	}
-	if !isNil(o.Leverage) {
-		toSerialize["leverage"] = o.Leverage
-	}
-	if !isNil(o.CrossMargin) {
-		toSerialize["cross_margin"] = o.CrossMargin
-	}
-	if !isNil(o.LiquidationPrice) {
-		toSerialize["liquidation_price"] = o.LiquidationPrice
-	}
-	if !isNil(o.RawData) {
-		toSerialize["raw_data"] = o.RawData
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o PositionDataInner) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.SymbolIdExchange) {
+		toSerialize["symbol_id_exchange"] = o.SymbolIdExchange
+	}
+	if !IsNil(o.SymbolIdCoinapi) {
+		toSerialize["symbol_id_coinapi"] = o.SymbolIdCoinapi
+	}
+	if !IsNil(o.AvgEntryPrice) {
+		toSerialize["avg_entry_price"] = o.AvgEntryPrice
+	}
+	if !IsNil(o.Quantity) {
+		toSerialize["quantity"] = o.Quantity
+	}
+	if !IsNil(o.Side) {
+		toSerialize["side"] = o.Side
+	}
+	if !IsNil(o.UnrealizedPnl) {
+		toSerialize["unrealized_pnl"] = o.UnrealizedPnl
+	}
+	if !IsNil(o.Leverage) {
+		toSerialize["leverage"] = o.Leverage
+	}
+	if !IsNil(o.CrossMargin) {
+		toSerialize["cross_margin"] = o.CrossMargin
+	}
+	if !IsNil(o.LiquidationPrice) {
+		toSerialize["liquidation_price"] = o.LiquidationPrice
+	}
+	if !IsNil(o.RawData) {
+		toSerialize["raw_data"] = o.RawData
+	}
+	return toSerialize, nil
 }
 
 type NullablePositionDataInner struct {

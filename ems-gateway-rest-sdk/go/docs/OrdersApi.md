@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**V1OrdersCancelAllPost**](OrdersApi.md#V1OrdersCancelAllPost) | **Post** /v1/orders/cancel/all | Cancel all orders request
 [**V1OrdersCancelPost**](OrdersApi.md#V1OrdersCancelPost) | **Post** /v1/orders/cancel | Cancel order request
 [**V1OrdersGet**](OrdersApi.md#V1OrdersGet) | **Get** /v1/orders | Get open orders
-[**V1OrdersHistoryTimeStartTimeEndGet**](OrdersApi.md#V1OrdersHistoryTimeStartTimeEndGet) | **Get** /v1/orders/history/{time_start}/{time_end} | History of order changes
+[**V1OrdersHistoryGet**](OrdersApi.md#V1OrdersHistoryGet) | **Get** /v1/orders/history | History of order changes
 [**V1OrdersPost**](OrdersApi.md#V1OrdersPost) | **Post** /v1/orders | Send new order
 [**V1OrdersStatusClientOrderIdGet**](OrdersApi.md#V1OrdersStatusClientOrderIdGet) | **Get** /v1/orders/status/{client_order_id} | Get order execution report
 
@@ -30,7 +30,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -96,7 +96,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -162,7 +162,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -211,9 +211,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## V1OrdersHistoryTimeStartTimeEndGet
+## V1OrdersHistoryGet
 
-> []OrderHistory V1OrdersHistoryTimeStartTimeEndGet(ctx, timeStart, timeEnd).Execute()
+> []OrderHistory V1OrdersHistoryGet(ctx).TimeStart(timeStart).TimeEnd(timeEnd).Execute()
 
 History of order changes
 
@@ -228,7 +228,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -237,34 +237,29 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.OrdersApi.V1OrdersHistoryTimeStartTimeEndGet(context.Background(), timeStart, timeEnd).Execute()
+    resp, r, err := apiClient.OrdersApi.V1OrdersHistoryGet(context.Background()).TimeStart(timeStart).TimeEnd(timeEnd).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `OrdersApi.V1OrdersHistoryTimeStartTimeEndGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `OrdersApi.V1OrdersHistoryGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `V1OrdersHistoryTimeStartTimeEndGet`: []OrderHistory
-    fmt.Fprintf(os.Stdout, "Response from `OrdersApi.V1OrdersHistoryTimeStartTimeEndGet`: %v\n", resp)
+    // response from `V1OrdersHistoryGet`: []OrderHistory
+    fmt.Fprintf(os.Stdout, "Response from `OrdersApi.V1OrdersHistoryGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**timeStart** | **string** | Start date | 
-**timeEnd** | **string** | End date | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiV1OrdersHistoryTimeStartTimeEndGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiV1OrdersHistoryGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
-
+ **timeStart** | **string** | Start date | 
+ **timeEnd** | **string** | End date | 
 
 ### Return type
 
@@ -301,7 +296,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -367,7 +362,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {

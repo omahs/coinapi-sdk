@@ -75,9 +75,10 @@ class OrdersApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -89,22 +90,23 @@ class OrdersApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    MessageReject _responseData;
+    MessageReject? _responseData;
 
     try {
-      const _responseType = FullType(MessageReject);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(MessageReject),
       ) as MessageReject;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<MessageReject>(
@@ -168,9 +170,10 @@ class OrdersApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -182,22 +185,23 @@ class OrdersApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    OrderExecutionReport _responseData;
+    OrderExecutionReport? _responseData;
 
     try {
-      const _responseType = FullType(OrderExecutionReport);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(OrderExecutionReport),
       ) as OrderExecutionReport;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<OrderExecutionReport>(
@@ -261,22 +265,23 @@ class OrdersApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<OrderExecutionReport> _responseData;
+    BuiltList<OrderExecutionReport>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(OrderExecutionReport)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(OrderExecutionReport)]),
       ) as BuiltList<OrderExecutionReport>;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<BuiltList<OrderExecutionReport>>(
@@ -306,7 +311,7 @@ class OrdersApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<OrderHistory>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<OrderHistory>>> v1OrdersHistoryTimeStartTimeEndGet({ 
+  Future<Response<BuiltList<OrderHistory>>> v1OrdersHistoryGet({ 
     required String timeStart,
     required String timeEnd,
     CancelToken? cancelToken,
@@ -316,7 +321,7 @@ class OrdersApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/v1/orders/history/{time_start}/{time_end}'.replaceAll('{' r'time_start' '}', timeStart.toString()).replaceAll('{' r'time_end' '}', timeEnd.toString());
+    final _path = r'/v1/orders/history';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -329,30 +334,37 @@ class OrdersApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      r'time_start': encodeQueryParameter(_serializers, timeStart, const FullType(String)),
+      r'time_end': encodeQueryParameter(_serializers, timeEnd, const FullType(String)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<OrderHistory> _responseData;
+    BuiltList<OrderHistory>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(OrderHistory)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(OrderHistory)]),
       ) as BuiltList<OrderHistory>;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<BuiltList<OrderHistory>>(
@@ -416,9 +428,10 @@ class OrdersApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -430,22 +443,23 @@ class OrdersApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    OrderExecutionReport _responseData;
+    OrderExecutionReport? _responseData;
 
     try {
-      const _responseType = FullType(OrderExecutionReport);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(OrderExecutionReport),
       ) as OrderExecutionReport;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<OrderExecutionReport>(
@@ -504,22 +518,23 @@ class OrdersApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    OrderExecutionReport _responseData;
+    OrderExecutionReport? _responseData;
 
     try {
-      const _responseType = FullType(OrderExecutionReport);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(OrderExecutionReport),
       ) as OrderExecutionReport;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<OrderExecutionReport>(

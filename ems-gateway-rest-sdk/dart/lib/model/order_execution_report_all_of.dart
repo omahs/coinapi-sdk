@@ -154,18 +154,18 @@ class OrderExecutionReportAllOf {
             : num.parse(json[r'avg_px'].toString()),
         status: OrdStatus.fromJson(json[r'status'])!,
         statusHistory: json[r'status_history'] is List
-          ? (json[r'status_history'] as List).map(
-              (e) => e == null ? null : (e as List).cast<String>()
+          ? (json[r'status_history'] as List).map((e) =>
+              e == null ? const  <String>[] : (e as List).cast<String>()
             ).toList()
-          : null,
+          :  const [],
         errorMessage: mapValueOfType<String>(json, r'error_message'),
-        fills: Fills.listFromJson(json[r'fills']) ?? const [],
+        fills: Fills.listFromJson(json[r'fills']),
       );
     }
     return null;
   }
 
-  static List<OrderExecutionReportAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<OrderExecutionReportAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <OrderExecutionReportAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -196,12 +196,10 @@ class OrderExecutionReportAllOf {
   static Map<String, List<OrderExecutionReportAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<OrderExecutionReportAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = OrderExecutionReportAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = OrderExecutionReportAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

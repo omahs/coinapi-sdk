@@ -99,8 +99,8 @@ operation_parameters_minimum_occurrences["v1BalancesGet:::exchange_id"]=0
 operation_parameters_minimum_occurrences["v1OrdersCancelAllPost:::OrderCancelAllRequest"]=1
 operation_parameters_minimum_occurrences["v1OrdersCancelPost:::OrderCancelSingleRequest"]=1
 operation_parameters_minimum_occurrences["v1OrdersGet:::exchange_id"]=0
-operation_parameters_minimum_occurrences["v1OrdersHistoryTimeStartTimeEndGet:::time_start"]=1
-operation_parameters_minimum_occurrences["v1OrdersHistoryTimeStartTimeEndGet:::time_end"]=1
+operation_parameters_minimum_occurrences["v1OrdersHistoryGet:::time_start"]=1
+operation_parameters_minimum_occurrences["v1OrdersHistoryGet:::time_end"]=1
 operation_parameters_minimum_occurrences["v1OrdersPost:::OrderNewSingleRequest"]=1
 operation_parameters_minimum_occurrences["v1OrdersStatusClientOrderIdGet:::client_order_id"]=1
 operation_parameters_minimum_occurrences["v1PositionsGet:::exchange_id"]=0
@@ -116,8 +116,8 @@ operation_parameters_maximum_occurrences["v1BalancesGet:::exchange_id"]=0
 operation_parameters_maximum_occurrences["v1OrdersCancelAllPost:::OrderCancelAllRequest"]=0
 operation_parameters_maximum_occurrences["v1OrdersCancelPost:::OrderCancelSingleRequest"]=0
 operation_parameters_maximum_occurrences["v1OrdersGet:::exchange_id"]=0
-operation_parameters_maximum_occurrences["v1OrdersHistoryTimeStartTimeEndGet:::time_start"]=0
-operation_parameters_maximum_occurrences["v1OrdersHistoryTimeStartTimeEndGet:::time_end"]=0
+operation_parameters_maximum_occurrences["v1OrdersHistoryGet:::time_start"]=0
+operation_parameters_maximum_occurrences["v1OrdersHistoryGet:::time_end"]=0
 operation_parameters_maximum_occurrences["v1OrdersPost:::OrderNewSingleRequest"]=0
 operation_parameters_maximum_occurrences["v1OrdersStatusClientOrderIdGet:::client_order_id"]=0
 operation_parameters_maximum_occurrences["v1PositionsGet:::exchange_id"]=0
@@ -130,8 +130,8 @@ operation_parameters_collection_type["v1BalancesGet:::exchange_id"]=""
 operation_parameters_collection_type["v1OrdersCancelAllPost:::OrderCancelAllRequest"]=""
 operation_parameters_collection_type["v1OrdersCancelPost:::OrderCancelSingleRequest"]=""
 operation_parameters_collection_type["v1OrdersGet:::exchange_id"]=""
-operation_parameters_collection_type["v1OrdersHistoryTimeStartTimeEndGet:::time_start"]=""
-operation_parameters_collection_type["v1OrdersHistoryTimeStartTimeEndGet:::time_end"]=""
+operation_parameters_collection_type["v1OrdersHistoryGet:::time_start"]=""
+operation_parameters_collection_type["v1OrdersHistoryGet:::time_end"]=""
 operation_parameters_collection_type["v1OrdersPost:::OrderNewSingleRequest"]=""
 operation_parameters_collection_type["v1OrdersStatusClientOrderIdGet:::client_order_id"]=""
 operation_parameters_collection_type["v1PositionsGet:::exchange_id"]=""
@@ -528,7 +528,7 @@ read -r -d '' ops <<EOF
   ${CYAN}v1OrdersCancelAllPost${OFF};Cancel all orders request
   ${CYAN}v1OrdersCancelPost${OFF};Cancel order request
   ${CYAN}v1OrdersGet${OFF};Get open orders
-  ${CYAN}v1OrdersHistoryTimeStartTimeEndGet${OFF};History of order changes
+  ${CYAN}v1OrdersHistoryGet${OFF};History of order changes
   ${CYAN}v1OrdersPost${OFF};Send new order
   ${CYAN}v1OrdersStatusClientOrderIdGet${OFF};Get order execution report
 EOF
@@ -574,9 +574,8 @@ print_about() {
 read -r -d '' appdescription <<EOF
 
 This section will provide necessary information about the 'CoinAPI EMS REST API' protocol.
-<br/>
 This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>      
-<br/><br/>
+
 Implemented Standards:
 
   * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)
@@ -584,6 +583,7 @@ Implemented Standards:
   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)
    
 ### Endpoints
+
 <table>
   <thead>
     <tr>
@@ -599,18 +599,8 @@ Implemented Standards:
       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>
     </tr>
     <tr>
-      <td>Managed Cloud</td>
-      <td>Sandbox</td>
-      <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>
-    </tr>
-    <tr>
       <td>Self Hosted</td>
       <td>Production</td>
-      <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>
-    </tr>
-    <tr>
-      <td>Self Hosted</td>
-      <td>Sandbox</td>
       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>
     </tr>
   </tbody>
@@ -618,7 +608,6 @@ Implemented Standards:
 
 ### Authentication
 If the software is deployed as 'Self-Hosted' then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls. 
-<br/><br/>
 If the software is deployed in our 'Managed Cloud', there are 2 methods for authenticating with us, you only need to use one:
 
  1. Custom authorization header named 'X-CoinAPI-Key' with the API Key
@@ -627,15 +616,11 @@ If the software is deployed in our 'Managed Cloud', there are 2 methods for auth
 
 #### Custom authorization header
 You can authorize by providing additional custom header named 'X-CoinAPI-Key' and API key as its value.
-Assuming that your API key is '73034021-THIS-IS-SAMPLE-KEY', then the authorization header you should send to us will look like:
-<br/><br/>
-'X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY'
+Assuming that your API key is '73034021-THIS-IS-SAMPLE-KEY', then the authorization header you should send to us will look like: 'X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY'
 <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside>
 #### Query string authorization parameter
 You can authorize by providing an additional parameter named 'apikey' with a value equal to your API key in the query string of your HTTP request.
-Assuming that your API key is '73034021-THIS-IS-SAMPLE-KEY' and that you want to request all balances, then your query string should look like this: 
-<br/><br/>
-'GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY'
+Assuming that your API key is '73034021-THIS-IS-SAMPLE-KEY' and that you want to request all balances, then your query string should look like this: 'GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY'
 <aside class=\"notice\">Query string method may be more practical for development activities.</aside>
 EOF
 echo "$appdescription" | paste -sd' ' | fold -sw 80
@@ -743,18 +728,20 @@ print_v1OrdersGet_help() {
 }
 ##############################################################################
 #
-# Print help for v1OrdersHistoryTimeStartTimeEndGet operation
+# Print help for v1OrdersHistoryGet operation
 #
 ##############################################################################
-print_v1OrdersHistoryTimeStartTimeEndGet_help() {
+print_v1OrdersHistoryGet_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}v1OrdersHistoryTimeStartTimeEndGet - History of order changes${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}v1OrdersHistoryGet - History of order changes${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Based on the date range, all changes registered in the orderbook." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}time_start${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Start date ${YELLOW}Specify as: time_start=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}time_end${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - End date ${YELLOW}Specify as: time_end=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}time_start${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Start date${YELLOW} Specify as: time_start=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}time_end${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - End date${YELLOW} Specify as: time_end=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -1060,19 +1047,19 @@ call_v1OrdersGet() {
 
 ##############################################################################
 #
-# Call v1OrdersHistoryTimeStartTimeEndGet operation
+# Call v1OrdersHistoryGet operation
 #
 ##############################################################################
-call_v1OrdersHistoryTimeStartTimeEndGet() {
+call_v1OrdersHistoryGet() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local path_parameter_names=(time_start time_end)
+    local path_parameter_names=()
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=()
+    local query_parameter_names=(time_start time_end)
     local path
 
-    if ! path=$(build_request_path "/v1/orders/history/{time_start}/{time_end}" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/orders/history" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1353,8 +1340,8 @@ case $key in
     v1OrdersGet)
     operation="v1OrdersGet"
     ;;
-    v1OrdersHistoryTimeStartTimeEndGet)
-    operation="v1OrdersHistoryTimeStartTimeEndGet"
+    v1OrdersHistoryGet)
+    operation="v1OrdersHistoryGet"
     ;;
     v1OrdersPost)
     operation="v1OrdersPost"
@@ -1454,8 +1441,8 @@ case $operation in
     v1OrdersGet)
     call_v1OrdersGet
     ;;
-    v1OrdersHistoryTimeStartTimeEndGet)
-    call_v1OrdersHistoryTimeStartTimeEndGet
+    v1OrdersHistoryGet)
+    call_v1OrdersHistoryGet
     ;;
     v1OrdersPost)
     call_v1OrdersPost

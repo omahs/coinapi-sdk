@@ -10,8 +10,8 @@ Method | HTTP request | Description
 [**v1OrdersCancelPostWithHttpInfo**](OrdersApi.md#v1OrdersCancelPostWithHttpInfo) | **POST** /v1/orders/cancel | Cancel order request
 [**v1OrdersGet**](OrdersApi.md#v1OrdersGet) | **GET** /v1/orders | Get open orders
 [**v1OrdersGetWithHttpInfo**](OrdersApi.md#v1OrdersGetWithHttpInfo) | **GET** /v1/orders | Get open orders
-[**v1OrdersHistoryTimeStartTimeEndGet**](OrdersApi.md#v1OrdersHistoryTimeStartTimeEndGet) | **GET** /v1/orders/history/{time_start}/{time_end} | History of order changes
-[**v1OrdersHistoryTimeStartTimeEndGetWithHttpInfo**](OrdersApi.md#v1OrdersHistoryTimeStartTimeEndGetWithHttpInfo) | **GET** /v1/orders/history/{time_start}/{time_end} | History of order changes
+[**v1OrdersHistoryGet**](OrdersApi.md#v1OrdersHistoryGet) | **GET** /v1/orders/history | History of order changes
+[**v1OrdersHistoryGetWithHttpInfo**](OrdersApi.md#v1OrdersHistoryGetWithHttpInfo) | **GET** /v1/orders/history | History of order changes
 [**v1OrdersPost**](OrdersApi.md#v1OrdersPost) | **POST** /v1/orders | Send new order
 [**v1OrdersPostWithHttpInfo**](OrdersApi.md#v1OrdersPostWithHttpInfo) | **POST** /v1/orders | Send new order
 [**v1OrdersStatusClientOrderIdGet**](OrdersApi.md#v1OrdersStatusClientOrderIdGet) | **GET** /v1/orders/status/{client_order_id} | Get order execution report
@@ -270,9 +270,9 @@ No authorization required
 | **490** | Filtered exchange is unreachable. |  -  |
 
 
-## v1OrdersHistoryTimeStartTimeEndGet
+## v1OrdersHistoryGet
 
-> v1OrdersHistoryTimeStartTimeEndGet(v1OrdersHistoryTimeStartTimeEndGetRequest): ApiRequest[Seq[OrderHistory]]
+> v1OrdersHistoryGet(v1OrdersHistoryGetRequest): ApiRequest[Seq[OrderHistory]]
 
 History of order changes
 
@@ -303,7 +303,7 @@ object Example extends App {
 
     val timeEnd: String = 2022-05-01T12:00:00 // String | End date
     
-    val request = apiInstance.v1OrdersHistoryTimeStartTimeEndGet(timeStart, timeEnd)
+    val request = apiInstance.v1OrdersHistoryGet(timeStart, timeEnd)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -313,14 +313,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling OrdersApi#v1OrdersHistoryTimeStartTimeEndGet")
+            System.err.println("Exception when calling OrdersApi#v1OrdersHistoryGet")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling OrdersApi#v1OrdersHistoryTimeStartTimeEndGet")
+            System.err.println("Exception when calling OrdersApi#v1OrdersHistoryGet")
             exception.printStackTrace();
     }
 }

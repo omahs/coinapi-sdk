@@ -1,7 +1,7 @@
 /*
 EMS - REST API
 
-This section will provide necessary information about the `CoinAPI EMS REST API` protocol. <br/> This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       <br/><br/> Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Managed Cloud</td>       <td>Sandbox</td>       <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Sandbox</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  <br/><br/> If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: <br/><br/> `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this:  <br/><br/> `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
+This section will provide necessary information about the `CoinAPI EMS REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>        Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints  <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
 
 API version: v1
 Contact: support@coinapi.io
@@ -14,6 +14,9 @@ package openapi
 import (
 	"encoding/json"
 )
+
+// checks if the OrderExecutionReportAllOf type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &OrderExecutionReportAllOf{}
 
 // OrderExecutionReportAllOf The order execution report message.
 type OrderExecutionReportAllOf struct {
@@ -71,7 +74,7 @@ func (o *OrderExecutionReportAllOf) GetClientOrderIdFormatExchange() string {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReportAllOf) GetClientOrderIdFormatExchangeOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.ClientOrderIdFormatExchange, true
 }
@@ -83,7 +86,7 @@ func (o *OrderExecutionReportAllOf) SetClientOrderIdFormatExchange(v string) {
 
 // GetExchangeOrderId returns the ExchangeOrderId field value if set, zero value otherwise.
 func (o *OrderExecutionReportAllOf) GetExchangeOrderId() string {
-	if o == nil || isNil(o.ExchangeOrderId) {
+	if o == nil || IsNil(o.ExchangeOrderId) {
 		var ret string
 		return ret
 	}
@@ -93,15 +96,15 @@ func (o *OrderExecutionReportAllOf) GetExchangeOrderId() string {
 // GetExchangeOrderIdOk returns a tuple with the ExchangeOrderId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReportAllOf) GetExchangeOrderIdOk() (*string, bool) {
-	if o == nil || isNil(o.ExchangeOrderId) {
-    return nil, false
+	if o == nil || IsNil(o.ExchangeOrderId) {
+		return nil, false
 	}
 	return o.ExchangeOrderId, true
 }
 
 // HasExchangeOrderId returns a boolean if a field has been set.
 func (o *OrderExecutionReportAllOf) HasExchangeOrderId() bool {
-	if o != nil && !isNil(o.ExchangeOrderId) {
+	if o != nil && !IsNil(o.ExchangeOrderId) {
 		return true
 	}
 
@@ -127,7 +130,7 @@ func (o *OrderExecutionReportAllOf) GetAmountOpen() float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReportAllOf) GetAmountOpenOk() (*float32, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.AmountOpen, true
 }
@@ -151,7 +154,7 @@ func (o *OrderExecutionReportAllOf) GetAmountFilled() float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReportAllOf) GetAmountFilledOk() (*float32, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.AmountFilled, true
 }
@@ -163,7 +166,7 @@ func (o *OrderExecutionReportAllOf) SetAmountFilled(v float32) {
 
 // GetAvgPx returns the AvgPx field value if set, zero value otherwise.
 func (o *OrderExecutionReportAllOf) GetAvgPx() float32 {
-	if o == nil || isNil(o.AvgPx) {
+	if o == nil || IsNil(o.AvgPx) {
 		var ret float32
 		return ret
 	}
@@ -173,15 +176,15 @@ func (o *OrderExecutionReportAllOf) GetAvgPx() float32 {
 // GetAvgPxOk returns a tuple with the AvgPx field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReportAllOf) GetAvgPxOk() (*float32, bool) {
-	if o == nil || isNil(o.AvgPx) {
-    return nil, false
+	if o == nil || IsNil(o.AvgPx) {
+		return nil, false
 	}
 	return o.AvgPx, true
 }
 
 // HasAvgPx returns a boolean if a field has been set.
 func (o *OrderExecutionReportAllOf) HasAvgPx() bool {
-	if o != nil && !isNil(o.AvgPx) {
+	if o != nil && !IsNil(o.AvgPx) {
 		return true
 	}
 
@@ -207,7 +210,7 @@ func (o *OrderExecutionReportAllOf) GetStatus() OrdStatus {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReportAllOf) GetStatusOk() (*OrdStatus, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.Status, true
 }
@@ -219,7 +222,7 @@ func (o *OrderExecutionReportAllOf) SetStatus(v OrdStatus) {
 
 // GetStatusHistory returns the StatusHistory field value if set, zero value otherwise.
 func (o *OrderExecutionReportAllOf) GetStatusHistory() [][]string {
-	if o == nil || isNil(o.StatusHistory) {
+	if o == nil || IsNil(o.StatusHistory) {
 		var ret [][]string
 		return ret
 	}
@@ -229,15 +232,15 @@ func (o *OrderExecutionReportAllOf) GetStatusHistory() [][]string {
 // GetStatusHistoryOk returns a tuple with the StatusHistory field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReportAllOf) GetStatusHistoryOk() ([][]string, bool) {
-	if o == nil || isNil(o.StatusHistory) {
-    return nil, false
+	if o == nil || IsNil(o.StatusHistory) {
+		return nil, false
 	}
 	return o.StatusHistory, true
 }
 
 // HasStatusHistory returns a boolean if a field has been set.
 func (o *OrderExecutionReportAllOf) HasStatusHistory() bool {
-	if o != nil && !isNil(o.StatusHistory) {
+	if o != nil && !IsNil(o.StatusHistory) {
 		return true
 	}
 
@@ -251,7 +254,7 @@ func (o *OrderExecutionReportAllOf) SetStatusHistory(v [][]string) {
 
 // GetErrorMessage returns the ErrorMessage field value if set, zero value otherwise.
 func (o *OrderExecutionReportAllOf) GetErrorMessage() string {
-	if o == nil || isNil(o.ErrorMessage) {
+	if o == nil || IsNil(o.ErrorMessage) {
 		var ret string
 		return ret
 	}
@@ -261,15 +264,15 @@ func (o *OrderExecutionReportAllOf) GetErrorMessage() string {
 // GetErrorMessageOk returns a tuple with the ErrorMessage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReportAllOf) GetErrorMessageOk() (*string, bool) {
-	if o == nil || isNil(o.ErrorMessage) {
-    return nil, false
+	if o == nil || IsNil(o.ErrorMessage) {
+		return nil, false
 	}
 	return o.ErrorMessage, true
 }
 
 // HasErrorMessage returns a boolean if a field has been set.
 func (o *OrderExecutionReportAllOf) HasErrorMessage() bool {
-	if o != nil && !isNil(o.ErrorMessage) {
+	if o != nil && !IsNil(o.ErrorMessage) {
 		return true
 	}
 
@@ -283,7 +286,7 @@ func (o *OrderExecutionReportAllOf) SetErrorMessage(v string) {
 
 // GetFills returns the Fills field value if set, zero value otherwise.
 func (o *OrderExecutionReportAllOf) GetFills() []Fills {
-	if o == nil || isNil(o.Fills) {
+	if o == nil || IsNil(o.Fills) {
 		var ret []Fills
 		return ret
 	}
@@ -293,15 +296,15 @@ func (o *OrderExecutionReportAllOf) GetFills() []Fills {
 // GetFillsOk returns a tuple with the Fills field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReportAllOf) GetFillsOk() ([]Fills, bool) {
-	if o == nil || isNil(o.Fills) {
-    return nil, false
+	if o == nil || IsNil(o.Fills) {
+		return nil, false
 	}
 	return o.Fills, true
 }
 
 // HasFills returns a boolean if a field has been set.
 func (o *OrderExecutionReportAllOf) HasFills() bool {
-	if o != nil && !isNil(o.Fills) {
+	if o != nil && !IsNil(o.Fills) {
 		return true
 	}
 
@@ -314,35 +317,35 @@ func (o *OrderExecutionReportAllOf) SetFills(v []Fills) {
 }
 
 func (o OrderExecutionReportAllOf) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if true {
-		toSerialize["client_order_id_format_exchange"] = o.ClientOrderIdFormatExchange
-	}
-	if !isNil(o.ExchangeOrderId) {
-		toSerialize["exchange_order_id"] = o.ExchangeOrderId
-	}
-	if true {
-		toSerialize["amount_open"] = o.AmountOpen
-	}
-	if true {
-		toSerialize["amount_filled"] = o.AmountFilled
-	}
-	if !isNil(o.AvgPx) {
-		toSerialize["avg_px"] = o.AvgPx
-	}
-	if true {
-		toSerialize["status"] = o.Status
-	}
-	if !isNil(o.StatusHistory) {
-		toSerialize["status_history"] = o.StatusHistory
-	}
-	if !isNil(o.ErrorMessage) {
-		toSerialize["error_message"] = o.ErrorMessage
-	}
-	if !isNil(o.Fills) {
-		toSerialize["fills"] = o.Fills
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o OrderExecutionReportAllOf) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	toSerialize["client_order_id_format_exchange"] = o.ClientOrderIdFormatExchange
+	if !IsNil(o.ExchangeOrderId) {
+		toSerialize["exchange_order_id"] = o.ExchangeOrderId
+	}
+	toSerialize["amount_open"] = o.AmountOpen
+	toSerialize["amount_filled"] = o.AmountFilled
+	if !IsNil(o.AvgPx) {
+		toSerialize["avg_px"] = o.AvgPx
+	}
+	toSerialize["status"] = o.Status
+	if !IsNil(o.StatusHistory) {
+		toSerialize["status_history"] = o.StatusHistory
+	}
+	if !IsNil(o.ErrorMessage) {
+		toSerialize["error_message"] = o.ErrorMessage
+	}
+	if !IsNil(o.Fills) {
+		toSerialize["fills"] = o.Fills
+	}
+	return toSerialize, nil
 }
 
 type NullableOrderExecutionReportAllOf struct {

@@ -90,8 +90,8 @@ class OrdersApi {
 
     }
 
-    def v1OrdersHistoryTimeStartTimeEndGet ( String timeStart, String timeEnd, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/v1/orders/history/${time_start}/${time_end}"
+    def v1OrdersHistoryGet ( String timeStart, String timeEnd, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/v1/orders/history"
 
         // params
         def queryParams = [:]
@@ -108,6 +108,12 @@ class OrdersApi {
             throw new RuntimeException("missing required params timeEnd")
         }
 
+        if (timeStart != null) {
+            queryParams.put("time_start", timeStart)
+        }
+        if (timeEnd != null) {
+            queryParams.put("time_end", timeEnd)
+        }
 
 
 

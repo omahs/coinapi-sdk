@@ -12,15 +12,15 @@ from unittest.mock import patch
 import urllib3
 
 import openapi_client
-from openapi_client.paths.v1_orders_history_time_start_time_end import get  # noqa: E501
+from openapi_client.paths.v1_orders_history import get  # noqa: E501
 from openapi_client import configuration, schemas, api_client
 
 from .. import ApiTestMixin
 
 
-class TestV1OrdersHistoryTimeStartTimeEnd(ApiTestMixin, unittest.TestCase):
+class TestV1OrdersHistory(ApiTestMixin, unittest.TestCase):
     """
-    V1OrdersHistoryTimeStartTimeEnd unit test stubs
+    V1OrdersHistory unit test stubs
         History of order changes  # noqa: E501
     """
     _configuration = configuration.Configuration()
