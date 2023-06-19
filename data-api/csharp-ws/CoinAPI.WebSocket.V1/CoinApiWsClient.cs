@@ -12,10 +12,9 @@ namespace CoinAPI.WebSocket.V1
     public class CoinApiWsClient : ICoinApiWsClient, IDisposable
     {
         private static readonly int ReceiveBufferSize = 8192;
-        private const string UrlSandbox = "wss://ws-sandbox.coinapi.io/";
         private const string UrlProduction = "wss://ws.coinapi.io/";
 
-        private readonly string _url;
+        private readonly string _url = UrlProduction;
         
         private readonly CancellationTokenSource _cts = new CancellationTokenSource();
         private readonly QueueThread<MessageData> _queueThread = null;
@@ -39,13 +38,13 @@ namespace CoinAPI.WebSocket.V1
         protected bool? ForceOverrideHeartbeat { get; set; } = true;
 
 
-        public CoinApiWsClient(bool isSandbox, double hbTimeoutSecs, double reconnectIntervalSecs) : this(isSandbox)
+        public CoinApiWsClient(double hbTimeoutSecs, double reconnectIntervalSecs) : base(UrlProduction)
         {
             _hbTimeout = TimeSpan.FromSeconds(hbTimeoutSecs);
             _reconnectInterval = TimeSpan.FromSeconds(reconnectIntervalSecs);
         }
 
-        public CoinApiWsClient(bool isSandbox = false) : this(isSandbox ? UrlSandbox : UrlProduction)
+        public CoinApiWsClient() : base(UrlProduction)
         {
         }
 
