@@ -1,0 +1,32 @@
+/*
+ * transactions_e_trade_aggressive_side.h
+ *
+ * 
+ */
+
+#ifndef _transactions_e_trade_aggressive_side_H_
+#define _transactions_e_trade_aggressive_side_H_
+
+#include <string.h>
+#include "../external/cJSON.h"
+#include "../include/list.h"
+#include "../include/keyValuePair.h"
+#include "../include/binary.h"
+
+typedef struct transactions_e_trade_aggressive_side_t transactions_e_trade_aggressive_side_t;
+
+
+// Enum  for transactions_e_trade_aggressive_side
+
+typedef enum { on_chain_dapps___rest_api_transactions_e_trade_aggressive_side__NULL = 0, on_chain_dapps___rest_api_transactions_e_trade_aggressive_side__Buy, on_chain_dapps___rest_api_transactions_e_trade_aggressive_side__Sell, on_chain_dapps___rest_api_transactions_e_trade_aggressive_side__EstimatedBuy, on_chain_dapps___rest_api_transactions_e_trade_aggressive_side__EstimatedSell, on_chain_dapps___rest_api_transactions_e_trade_aggressive_side__Unknown } on_chain_dapps___rest_api_transactions_e_trade_aggressive_side__e;
+
+char* transactions_e_trade_aggressive_side_transactions_e_trade_aggressive_side_ToString(on_chain_dapps___rest_api_transactions_e_trade_aggressive_side__e transactions_e_trade_aggressive_side);
+
+on_chain_dapps___rest_api_transactions_e_trade_aggressive_side__e transactions_e_trade_aggressive_side_transactions_e_trade_aggressive_side_FromString(char* transactions_e_trade_aggressive_side);
+
+//cJSON *transactions_e_trade_aggressive_side_transactions_e_trade_aggressive_side_convertToJSON(on_chain_dapps___rest_api_transactions_e_trade_aggressive_side__e transactions_e_trade_aggressive_side);
+
+//on_chain_dapps___rest_api_transactions_e_trade_aggressive_side__e transactions_e_trade_aggressive_side_transactions_e_trade_aggressive_side_parseFromJSON(cJSON *transactions_e_trade_aggressive_sideJSON);
+
+#endif /* _transactions_e_trade_aggressive_side_H_ */
+

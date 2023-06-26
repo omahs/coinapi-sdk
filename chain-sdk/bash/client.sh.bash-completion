@@ -1,0 +1,666 @@
+#  completion                               -*- shell-script -*-
+
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# !
+# ! Note:
+# !
+# ! THIS SCRIPT HAS BEEN AUTOMATICALLY GENERATED USING
+# ! openapi-generator (https://openapi-generator.tech)
+# ! FROM OPENAPI SPECIFICATION IN JSON.
+# !
+# !
+# !
+# ! System wide installation:
+# !
+# ! $ sudo cp .bash-completion /etc/bash-completion.d/
+# !
+# !
+# ! User home installation (add this line to .bash_profile):
+# !
+# ! [ -r ~/.bash-completion ] && source ~/.bash-completion
+# !
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+declare -A mime_type_abbreviations
+# text/*
+mime_type_abbreviations["text"]="text/plain"
+mime_type_abbreviations["html"]="text/html"
+mime_type_abbreviations["md"]="text/x-markdown"
+mime_type_abbreviations["csv"]="text/csv"
+mime_type_abbreviations["css"]="text/css"
+mime_type_abbreviations["rtf"]="text/rtf"
+# application/*
+mime_type_abbreviations["json"]="application/json"
+mime_type_abbreviations["xml"]="application/xml"
+mime_type_abbreviations["yaml"]="application/yaml"
+mime_type_abbreviations["js"]="application/javascript"
+mime_type_abbreviations["bin"]="application/octet-stream"
+mime_type_abbreviations["rdf"]="application/rdf+xml"
+# image/*
+mime_type_abbreviations["jpg"]="image/jpeg"
+mime_type_abbreviations["png"]="image/png"
+mime_type_abbreviations["gif"]="image/gif"
+mime_type_abbreviations["bmp"]="image/bmp"
+mime_type_abbreviations["tiff"]="image/tiff"
+
+
+#
+# Check if this is OSX, if so defined custom init_completion
+#
+if [[ `uname` =~ "Darwin" ]]; then
+    __osx_init_completion()
+    {
+        COMPREPLY=()
+        _get_comp_words_by_ref cur prev words cword
+    }
+fi
+
+_()
+{
+    local cur
+    local prev
+    local words
+    local cword
+
+    # The reference of currently selected REST operation
+    local operation=""
+
+    # The list of available operation in the REST service
+    # It's modelled as an associative array for efficient key lookup
+    declare -A operations
+    operations["cRYPTOPUNKSBidsCurrent"]=1
+    operations["cRYPTOPUNKSCollectionDailySnapshotsCurrent"]=1
+    operations["cRYPTOPUNKSCollectionsCurrent"]=1
+    operations["cRYPTOPUNKSDataSourcesCurrent"]=1
+    operations["cRYPTOPUNKSGetBidsHistorical"]=1
+    operations["cRYPTOPUNKSGetCollectionDailySnapshotsHistorical"]=1
+    operations["cRYPTOPUNKSGetCollectionsHistorical"]=1
+    operations["cRYPTOPUNKSGetDataSourcesHistorical"]=1
+    operations["cRYPTOPUNKSGetItemsHistorical"]=1
+    operations["cRYPTOPUNKSGetMarketPlacesHistorical"]=1
+    operations["cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical"]=1
+    operations["cRYPTOPUNKSGetTradesHistorical"]=1
+    operations["cRYPTOPUNKSGetUsersHistorical"]=1
+    operations["cRYPTOPUNKSItemsCurrent"]=1
+    operations["cRYPTOPUNKSMarketPlacesCurrent"]=1
+    operations["cRYPTOPUNKSMarketplaceDailySnapshotsCurrent"]=1
+    operations["cRYPTOPUNKSTradesCurrent"]=1
+    operations["cRYPTOPUNKSUsersCurrent"]=1
+    operations["cowGetOrdersHistorical"]=1
+    operations["cowGetSettlementsHistorical"]=1
+    operations["cowGetTokensHistorical"]=1
+    operations["cowGetTradesHistorical"]=1
+    operations["cowGetUsersHistorical"]=1
+    operations["cowOrdersCurrent"]=1
+    operations["cowSettlementsCurrent"]=1
+    operations["cowTokensCurrent"]=1
+    operations["cowTradesCurrent"]=1
+    operations["cowUsersCurrent"]=1
+    operations["curveAccountsCurrent"]=1
+    operations["curveAddLiquidityEventsCurrent"]=1
+    operations["curveAdminFeeChangeLogsCurrent"]=1
+    operations["curveAmplificationCoeffChangeLogsCurrent"]=1
+    operations["curveCoinsCurrent"]=1
+    operations["curveContractVersionsCurrent"]=1
+    operations["curveContractsCurrent"]=1
+    operations["curveDailyVolumesCurrent"]=1
+    operations["curveExchangesCurrent"]=1
+    operations["curveFeeChangeLogsCurrent"]=1
+    operations["curveGaugeDepositsCurrent"]=1
+    operations["curveGaugeLiquiditiesCurrent"]=1
+    operations["curveGaugeTotalWeightsCurrent"]=1
+    operations["curveGaugeTypeWeightsCurrent"]=1
+    operations["curveGaugeTypesCurrent"]=1
+    operations["curveGaugeWeightVotesCurrent"]=1
+    operations["curveGaugeWeightsCurrent"]=1
+    operations["curveGaugeWithdrawsCurrent"]=1
+    operations["curveGaugesCurrent"]=1
+    operations["curveGetAccountsHistorical"]=1
+    operations["curveGetAddLiquidityEventsHistorical"]=1
+    operations["curveGetAdminFeeChangeLogsHistorical"]=1
+    operations["curveGetAmplificationCoeffChangeLogsHistorical"]=1
+    operations["curveGetCoinsHistorical"]=1
+    operations["curveGetContractVersionsHistorical"]=1
+    operations["curveGetContractsHistorical"]=1
+    operations["curveGetDailyVolumesHistorical"]=1
+    operations["curveGetExchangesHistorical"]=1
+    operations["curveGetFeeChangeLogsHistorical"]=1
+    operations["curveGetGaugeDepositsHistorical"]=1
+    operations["curveGetGaugeLiquiditiesHistorical"]=1
+    operations["curveGetGaugeTotalWeightsHistorical"]=1
+    operations["curveGetGaugeTypeWeightsHistorical"]=1
+    operations["curveGetGaugeTypesHistorical"]=1
+    operations["curveGetGaugeWeightVotesHistorical"]=1
+    operations["curveGetGaugeWeightsHistorical"]=1
+    operations["curveGetGaugeWithdrawsHistorical"]=1
+    operations["curveGetGaugesHistorical"]=1
+    operations["curveGetHourlyVolumesHistorical"]=1
+    operations["curveGetLpTokensHistorical"]=1
+    operations["curveGetPoolsHistorical"]=1
+    operations["curveGetProposalVotesHistorical"]=1
+    operations["curveGetProposalsHistorical"]=1
+    operations["curveGetRemoveLiquidityEventsHistorical"]=1
+    operations["curveGetRemoveLiquidityOneEventsHistorical"]=1
+    operations["curveGetSystemStatesHistorical"]=1
+    operations["curveGetTokensHistorical"]=1
+    operations["curveGetTransferOwnershipEventsHistorical"]=1
+    operations["curveGetUnderlyingCoinsHistorical"]=1
+    operations["curveGetVotingAppsHistorical"]=1
+    operations["curveGetWeeklyVolumesHistorical"]=1
+    operations["curveHourlyVolumesCurrent"]=1
+    operations["curveLpTokensCurrent"]=1
+    operations["curvePoolsCurrent"]=1
+    operations["curveProposalVotesCurrent"]=1
+    operations["curveProposalsCurrent"]=1
+    operations["curveRemoveLiquidityEventsCurrent"]=1
+    operations["curveRemoveLiquidityOneEventsCurrent"]=1
+    operations["curveSystemStatesCurrent"]=1
+    operations["curveTokensCurrent"]=1
+    operations["curveTransferOwnershipEventsCurrent"]=1
+    operations["curveUnderlyingCoinsCurrent"]=1
+    operations["curveVotingAppsCurrent"]=1
+    operations["curveWeeklyVolumesCurrent"]=1
+    operations["dexBatchesCurrent"]=1
+    operations["dexDepositsCurrent"]=1
+    operations["dexGetBatchesHistorical"]=1
+    operations["dexGetDepositsHistorical"]=1
+    operations["dexGetOrdersHistorical"]=1
+    operations["dexGetPricesHistorical"]=1
+    operations["dexGetSolutionsHistorical"]=1
+    operations["dexGetStatsHistorical"]=1
+    operations["dexGetTokensHistorical"]=1
+    operations["dexGetTradesHistorical"]=1
+    operations["dexGetUsersHistorical"]=1
+    operations["dexGetWithdrawRequestsHistorical"]=1
+    operations["dexGetWithdrawsHistorical"]=1
+    operations["dexOrdersCurrent"]=1
+    operations["dexPricesCurrent"]=1
+    operations["dexSolutionsCurrent"]=1
+    operations["dexStatsCurrent"]=1
+    operations["dexTokensCurrent"]=1
+    operations["dexTradesCurrent"]=1
+    operations["dexUsersCurrent"]=1
+    operations["dexWithdrawRequestsCurrent"]=1
+    operations["dexWithdrawsCurrent"]=1
+    operations["metadataChainsGet"]=1
+    operations["metadataDappsDappNameGet"]=1
+    operations["metadataDappsGet"]=1
+    operations["sushiswapBundlesCurrent"]=1
+    operations["sushiswapBurnsCurrent"]=1
+    operations["sushiswapDayDataCurrent"]=1
+    operations["sushiswapFactoriesCurrent"]=1
+    operations["sushiswapGetBundlesHistorical"]=1
+    operations["sushiswapGetBurnsHistorical"]=1
+    operations["sushiswapGetDayDataHistorical"]=1
+    operations["sushiswapGetFactoriesHistorical"]=1
+    operations["sushiswapGetHourDataHistorical"]=1
+    operations["sushiswapGetLiquidityPositionSnapshotsHistorical"]=1
+    operations["sushiswapGetLiquidityPositionsHistorical"]=1
+    operations["sushiswapGetMintsHistorical"]=1
+    operations["sushiswapGetPairDayDataHistorical"]=1
+    operations["sushiswapGetPairHourDataHistorical"]=1
+    operations["sushiswapGetPairsHistorical"]=1
+    operations["sushiswapGetSwapsHistorical"]=1
+    operations["sushiswapGetTokenDayDataHistorical"]=1
+    operations["sushiswapGetTokensHistorical"]=1
+    operations["sushiswapGetTransactionsHistorical"]=1
+    operations["sushiswapGetUsersHistorical"]=1
+    operations["sushiswapHourDataCurrent"]=1
+    operations["sushiswapLiquidityPositionSnapshotsCurrent"]=1
+    operations["sushiswapLiquidityPositionsCurrent"]=1
+    operations["sushiswapMintsCurrent"]=1
+    operations["sushiswapPairDayDataCurrent"]=1
+    operations["sushiswapPairHourDataCurrent"]=1
+    operations["sushiswapPairsCurrent"]=1
+    operations["sushiswapSwapsCurrent"]=1
+    operations["sushiswapTokenDayDataCurrent"]=1
+    operations["sushiswapTokensCurrent"]=1
+    operations["sushiswapTransactionsCurrent"]=1
+    operations["sushiswapUsersCurrent"]=1
+    operations["uniswapV2BundlesCurrent"]=1
+    operations["uniswapV2BurnsCurrent"]=1
+    operations["uniswapV2GetBundlesHistorical"]=1
+    operations["uniswapV2GetBurnsHistorical"]=1
+    operations["uniswapV2GetLiquidityPositionSnapshotsHistorical"]=1
+    operations["uniswapV2GetLiquidityPositionsHistorical"]=1
+    operations["uniswapV2GetMintsHistorical"]=1
+    operations["uniswapV2GetPairDayDataHistorical"]=1
+    operations["uniswapV2GetPairHourDataHistorical"]=1
+    operations["uniswapV2GetPairsHistorical"]=1
+    operations["uniswapV2GetSwapsHistorical"]=1
+    operations["uniswapV2GetTokenDayDataHistorical"]=1
+    operations["uniswapV2GetTokensHistorical"]=1
+    operations["uniswapV2GetTransactionsHistorical"]=1
+    operations["uniswapV2GetUniswapDayDataHistorical"]=1
+    operations["uniswapV2GetUniswapFactoriesHistorical"]=1
+    operations["uniswapV2GetUsersHistorical"]=1
+    operations["uniswapV2LiquidityPositionSnapshotsCurrent"]=1
+    operations["uniswapV2LiquidityPositionsCurrent"]=1
+    operations["uniswapV2MintsCurrent"]=1
+    operations["uniswapV2PairDayDataCurrent"]=1
+    operations["uniswapV2PairHourDataCurrent"]=1
+    operations["uniswapV2PairsCurrent"]=1
+    operations["uniswapV2SwapsCurrent"]=1
+    operations["uniswapV2TokenDayDataCurrent"]=1
+    operations["uniswapV2TokensCurrent"]=1
+    operations["uniswapV2TransactionsCurrent"]=1
+    operations["uniswapV2UniswapDayDataCurrent"]=1
+    operations["uniswapV2UniswapFactoriesCurrent"]=1
+    operations["uniswapV2UsersCurrent"]=1
+    operations["uniswapV3BundlesCurrent"]=1
+    operations["uniswapV3BurnsCurrent"]=1
+    operations["uniswapV3FactoriesCurrent"]=1
+    operations["uniswapV3GetBundlesHistorical"]=1
+    operations["uniswapV3GetBurnsHistorical"]=1
+    operations["uniswapV3GetFactoriesHistorical"]=1
+    operations["uniswapV3GetMintsHistorical"]=1
+    operations["uniswapV3GetPoolDayDataHistorical"]=1
+    operations["uniswapV3GetPoolHourDataHistorical"]=1
+    operations["uniswapV3GetPoolsHistorical"]=1
+    operations["uniswapV3GetPositionSnapshotsHistorical"]=1
+    operations["uniswapV3GetPositionsHistorical"]=1
+    operations["uniswapV3GetSwapsHistorical"]=1
+    operations["uniswapV3GetTickDayDataHistorical"]=1
+    operations["uniswapV3GetTicksHistorical"]=1
+    operations["uniswapV3GetTokenHourDataHistorical"]=1
+    operations["uniswapV3GetTokenV3DayDataHistorical"]=1
+    operations["uniswapV3GetTokensHistorical"]=1
+    operations["uniswapV3GetTransactionsHistorical"]=1
+    operations["uniswapV3GetUniswapDayDataHistorical"]=1
+    operations["uniswapV3MintsCurrent"]=1
+    operations["uniswapV3PoolDayDataCurrent"]=1
+    operations["uniswapV3PoolHourDataCurrent"]=1
+    operations["uniswapV3PoolsCurrent"]=1
+    operations["uniswapV3PositionSnapshotsCurrent"]=1
+    operations["uniswapV3PositionsCurrent"]=1
+    operations["uniswapV3SwapsCurrent"]=1
+    operations["uniswapV3TickDayDataCurrent"]=1
+    operations["uniswapV3TicksCurrent"]=1
+    operations["uniswapV3TokenHourDataCurrent"]=1
+    operations["uniswapV3TokenV3DayDataCurrent"]=1
+    operations["uniswapV3TokensCurrent"]=1
+    operations["uniswapV3TransactionsCurrent"]=1
+    operations["uniswapV3UniswapDayDataCurrent"]=1
+
+    # An associative array of operations to their parameters
+    # Only include path, query and header parameters
+    declare -A operation_parameters
+    operation_parameters["cRYPTOPUNKSBidsCurrent"]=""
+    operation_parameters["cRYPTOPUNKSCollectionDailySnapshotsCurrent"]=""
+    operation_parameters["cRYPTOPUNKSCollectionsCurrent"]=""
+    operation_parameters["cRYPTOPUNKSDataSourcesCurrent"]=""
+    operation_parameters["cRYPTOPUNKSGetBidsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["cRYPTOPUNKSGetCollectionDailySnapshotsHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["cRYPTOPUNKSGetCollectionsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["cRYPTOPUNKSGetDataSourcesHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["cRYPTOPUNKSGetItemsHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["cRYPTOPUNKSGetMarketPlacesHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["cRYPTOPUNKSGetTradesHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["cRYPTOPUNKSGetUsersHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["cRYPTOPUNKSItemsCurrent"]=""
+    operation_parameters["cRYPTOPUNKSMarketPlacesCurrent"]=""
+    operation_parameters["cRYPTOPUNKSMarketplaceDailySnapshotsCurrent"]=""
+    operation_parameters["cRYPTOPUNKSTradesCurrent"]=""
+    operation_parameters["cRYPTOPUNKSUsersCurrent"]=""
+    operation_parameters["cowGetOrdersHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["cowGetSettlementsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["cowGetTokensHistorical"]="startBlock= endBlock= startDate= endDate= id= address= name= symbol= "
+    operation_parameters["cowGetTradesHistorical"]="startBlock= endBlock= startDate= endDate= id= sell_token= buy_token= "
+    operation_parameters["cowGetUsersHistorical"]="startBlock= endBlock= startDate= endDate= id= address= "
+    operation_parameters["cowOrdersCurrent"]=""
+    operation_parameters["cowSettlementsCurrent"]=""
+    operation_parameters["cowTokensCurrent"]=""
+    operation_parameters["cowTradesCurrent"]=""
+    operation_parameters["cowUsersCurrent"]=""
+    operation_parameters["curveAccountsCurrent"]=""
+    operation_parameters["curveAddLiquidityEventsCurrent"]=""
+    operation_parameters["curveAdminFeeChangeLogsCurrent"]=""
+    operation_parameters["curveAmplificationCoeffChangeLogsCurrent"]=""
+    operation_parameters["curveCoinsCurrent"]=""
+    operation_parameters["curveContractVersionsCurrent"]=""
+    operation_parameters["curveContractsCurrent"]=""
+    operation_parameters["curveDailyVolumesCurrent"]=""
+    operation_parameters["curveExchangesCurrent"]="pool= "
+    operation_parameters["curveFeeChangeLogsCurrent"]=""
+    operation_parameters["curveGaugeDepositsCurrent"]=""
+    operation_parameters["curveGaugeLiquiditiesCurrent"]=""
+    operation_parameters["curveGaugeTotalWeightsCurrent"]=""
+    operation_parameters["curveGaugeTypeWeightsCurrent"]=""
+    operation_parameters["curveGaugeTypesCurrent"]=""
+    operation_parameters["curveGaugeWeightVotesCurrent"]=""
+    operation_parameters["curveGaugeWeightsCurrent"]=""
+    operation_parameters["curveGaugeWithdrawsCurrent"]=""
+    operation_parameters["curveGaugesCurrent"]=""
+    operation_parameters["curveGetAccountsHistorical"]="startBlock= endBlock= startDate= endDate= id= address= "
+    operation_parameters["curveGetAddLiquidityEventsHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= "
+    operation_parameters["curveGetAdminFeeChangeLogsHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= "
+    operation_parameters["curveGetAmplificationCoeffChangeLogsHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= "
+    operation_parameters["curveGetCoinsHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= "
+    operation_parameters["curveGetContractVersionsHistorical"]="startBlock= endBlock= startDate= endDate= id= address= "
+    operation_parameters["curveGetContractsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["curveGetDailyVolumesHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= "
+    operation_parameters["curveGetExchangesHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= "
+    operation_parameters["curveGetFeeChangeLogsHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= "
+    operation_parameters["curveGetGaugeDepositsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["curveGetGaugeLiquiditiesHistorical"]="startBlock= endBlock= startDate= endDate= id= user= "
+    operation_parameters["curveGetGaugeTotalWeightsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["curveGetGaugeTypeWeightsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["curveGetGaugeTypesHistorical"]="startBlock= endBlock= startDate= endDate= id= name= "
+    operation_parameters["curveGetGaugeWeightVotesHistorical"]="startBlock= endBlock= startDate= endDate= id= user= "
+    operation_parameters["curveGetGaugeWeightsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["curveGetGaugeWithdrawsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["curveGetGaugesHistorical"]="startBlock= endBlock= startDate= endDate= id= address= pool= "
+    operation_parameters["curveGetHourlyVolumesHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= "
+    operation_parameters["curveGetLpTokensHistorical"]="startBlock= endBlock= startDate= endDate= id= address= name= symbol= pool= "
+    operation_parameters["curveGetPoolsHistorical"]="startBlock= endBlock= startDate= endDate= id= name= "
+    operation_parameters["curveGetProposalVotesHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["curveGetProposalsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["curveGetRemoveLiquidityEventsHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= "
+    operation_parameters["curveGetRemoveLiquidityOneEventsHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= "
+    operation_parameters["curveGetSystemStatesHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["curveGetTokensHistorical"]="startBlock= endBlock= startDate= endDate= id= address= name= symbol= "
+    operation_parameters["curveGetTransferOwnershipEventsHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= "
+    operation_parameters["curveGetUnderlyingCoinsHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= "
+    operation_parameters["curveGetVotingAppsHistorical"]="startBlock= endBlock= startDate= endDate= id= address= "
+    operation_parameters["curveGetWeeklyVolumesHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= "
+    operation_parameters["curveHourlyVolumesCurrent"]=""
+    operation_parameters["curveLpTokensCurrent"]=""
+    operation_parameters["curvePoolsCurrent"]="id= "
+    operation_parameters["curveProposalVotesCurrent"]=""
+    operation_parameters["curveProposalsCurrent"]=""
+    operation_parameters["curveRemoveLiquidityEventsCurrent"]=""
+    operation_parameters["curveRemoveLiquidityOneEventsCurrent"]=""
+    operation_parameters["curveSystemStatesCurrent"]=""
+    operation_parameters["curveTokensCurrent"]=""
+    operation_parameters["curveTransferOwnershipEventsCurrent"]=""
+    operation_parameters["curveUnderlyingCoinsCurrent"]=""
+    operation_parameters["curveVotingAppsCurrent"]=""
+    operation_parameters["curveWeeklyVolumesCurrent"]=""
+    operation_parameters["dexBatchesCurrent"]=""
+    operation_parameters["dexDepositsCurrent"]=""
+    operation_parameters["dexGetBatchesHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["dexGetDepositsHistorical"]="startBlock= endBlock= startDate= endDate= id= user= "
+    operation_parameters["dexGetOrdersHistorical"]="startBlock= endBlock= startDate= endDate= id= buy_token= sell_token= "
+    operation_parameters["dexGetPricesHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["dexGetSolutionsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["dexGetStatsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["dexGetTokensHistorical"]="startBlock= endBlock= startDate= endDate= id= address= symbol= name= "
+    operation_parameters["dexGetTradesHistorical"]="startBlock= endBlock= startDate= endDate= id= buy_token= sell_token= "
+    operation_parameters["dexGetUsersHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["dexGetWithdrawRequestsHistorical"]="startBlock= endBlock= startDate= endDate= id= user= "
+    operation_parameters["dexGetWithdrawsHistorical"]="startBlock= endBlock= startDate= endDate= id= user= "
+    operation_parameters["dexOrdersCurrent"]=""
+    operation_parameters["dexPricesCurrent"]=""
+    operation_parameters["dexSolutionsCurrent"]=""
+    operation_parameters["dexStatsCurrent"]=""
+    operation_parameters["dexTokensCurrent"]=""
+    operation_parameters["dexTradesCurrent"]=""
+    operation_parameters["dexUsersCurrent"]=""
+    operation_parameters["dexWithdrawRequestsCurrent"]=""
+    operation_parameters["dexWithdrawsCurrent"]=""
+    operation_parameters["metadataChainsGet"]=""
+    operation_parameters["metadataDappsDappNameGet"]="dappName= "
+    operation_parameters["metadataDappsGet"]=""
+    operation_parameters["sushiswapBundlesCurrent"]=""
+    operation_parameters["sushiswapBurnsCurrent"]=""
+    operation_parameters["sushiswapDayDataCurrent"]=""
+    operation_parameters["sushiswapFactoriesCurrent"]=""
+    operation_parameters["sushiswapGetBundlesHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["sushiswapGetBurnsHistorical"]="startBlock= endBlock= startDate= endDate= id= pair= "
+    operation_parameters["sushiswapGetDayDataHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["sushiswapGetFactoriesHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["sushiswapGetHourDataHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["sushiswapGetLiquidityPositionSnapshotsHistorical"]="startBlock= endBlock= startDate= endDate= id= user= pair= "
+    operation_parameters["sushiswapGetLiquidityPositionsHistorical"]="startBlock= endBlock= startDate= endDate= id= user= pair= "
+    operation_parameters["sushiswapGetMintsHistorical"]="startBlock= endBlock= startDate= endDate= id= pair= "
+    operation_parameters["sushiswapGetPairDayDataHistorical"]="startBlock= endBlock= startDate= endDate= id= pair= token_0= token_1= "
+    operation_parameters["sushiswapGetPairHourDataHistorical"]="startBlock= endBlock= startDate= endDate= id= pair= "
+    operation_parameters["sushiswapGetPairsHistorical"]="startBlock= endBlock= startDate= endDate= id= name= token_0= token_1= "
+    operation_parameters["sushiswapGetSwapsHistorical"]="startBlock= endBlock= startDate= endDate= id= pair= "
+    operation_parameters["sushiswapGetTokenDayDataHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["sushiswapGetTokensHistorical"]="startBlock= endBlock= startDate= endDate= id= symbol= name= "
+    operation_parameters["sushiswapGetTransactionsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["sushiswapGetUsersHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["sushiswapHourDataCurrent"]=""
+    operation_parameters["sushiswapLiquidityPositionSnapshotsCurrent"]=""
+    operation_parameters["sushiswapLiquidityPositionsCurrent"]=""
+    operation_parameters["sushiswapMintsCurrent"]=""
+    operation_parameters["sushiswapPairDayDataCurrent"]=""
+    operation_parameters["sushiswapPairHourDataCurrent"]=""
+    operation_parameters["sushiswapPairsCurrent"]="id= "
+    operation_parameters["sushiswapSwapsCurrent"]="pair= "
+    operation_parameters["sushiswapTokenDayDataCurrent"]=""
+    operation_parameters["sushiswapTokensCurrent"]=""
+    operation_parameters["sushiswapTransactionsCurrent"]=""
+    operation_parameters["sushiswapUsersCurrent"]=""
+    operation_parameters["uniswapV2BundlesCurrent"]=""
+    operation_parameters["uniswapV2BurnsCurrent"]=""
+    operation_parameters["uniswapV2GetBundlesHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["uniswapV2GetBurnsHistorical"]="startBlock= endBlock= startDate= endDate= id= pair= "
+    operation_parameters["uniswapV2GetLiquidityPositionSnapshotsHistorical"]="startBlock= endBlock= startDate= endDate= id= user= pair= "
+    operation_parameters["uniswapV2GetLiquidityPositionsHistorical"]="startBlock= endBlock= startDate= endDate= id= user= pair= "
+    operation_parameters["uniswapV2GetMintsHistorical"]="startBlock= endBlock= startDate= endDate= id= pair= "
+    operation_parameters["uniswapV2GetPairDayDataHistorical"]="startBlock= endBlock= startDate= endDate= id= token_0= token_1= "
+    operation_parameters["uniswapV2GetPairHourDataHistorical"]="startBlock= endBlock= startDate= endDate= id= pair= "
+    operation_parameters["uniswapV2GetPairsHistorical"]="startBlock= endBlock= startDate= endDate= id= token_0= token_1= "
+    operation_parameters["uniswapV2GetSwapsHistorical"]="startBlock= endBlock= startDate= endDate= id= pair= "
+    operation_parameters["uniswapV2GetTokenDayDataHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["uniswapV2GetTokensHistorical"]="startBlock= endBlock= startDate= endDate= id= symbol= name= "
+    operation_parameters["uniswapV2GetTransactionsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["uniswapV2GetUniswapDayDataHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["uniswapV2GetUniswapFactoriesHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["uniswapV2GetUsersHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["uniswapV2LiquidityPositionSnapshotsCurrent"]=""
+    operation_parameters["uniswapV2LiquidityPositionsCurrent"]=""
+    operation_parameters["uniswapV2MintsCurrent"]=""
+    operation_parameters["uniswapV2PairDayDataCurrent"]=""
+    operation_parameters["uniswapV2PairHourDataCurrent"]=""
+    operation_parameters["uniswapV2PairsCurrent"]="id= "
+    operation_parameters["uniswapV2SwapsCurrent"]="pair= "
+    operation_parameters["uniswapV2TokenDayDataCurrent"]=""
+    operation_parameters["uniswapV2TokensCurrent"]=""
+    operation_parameters["uniswapV2TransactionsCurrent"]=""
+    operation_parameters["uniswapV2UniswapDayDataCurrent"]=""
+    operation_parameters["uniswapV2UniswapFactoriesCurrent"]=""
+    operation_parameters["uniswapV2UsersCurrent"]=""
+    operation_parameters["uniswapV3BundlesCurrent"]=""
+    operation_parameters["uniswapV3BurnsCurrent"]=""
+    operation_parameters["uniswapV3FactoriesCurrent"]=""
+    operation_parameters["uniswapV3GetBundlesHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["uniswapV3GetBurnsHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= token_0= token_1= "
+    operation_parameters["uniswapV3GetFactoriesHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["uniswapV3GetMintsHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= token_0= token_1= "
+    operation_parameters["uniswapV3GetPoolDayDataHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= "
+    operation_parameters["uniswapV3GetPoolHourDataHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= "
+    operation_parameters["uniswapV3GetPoolsHistorical"]="startBlock= endBlock= startDate= endDate= id= token_0= token_1= "
+    operation_parameters["uniswapV3GetPositionSnapshotsHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= "
+    operation_parameters["uniswapV3GetPositionsHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= token_0= token_1= "
+    operation_parameters["uniswapV3GetSwapsHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= token_0= token_1= "
+    operation_parameters["uniswapV3GetTickDayDataHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= "
+    operation_parameters["uniswapV3GetTicksHistorical"]="startBlock= endBlock= startDate= endDate= id= pool= "
+    operation_parameters["uniswapV3GetTokenHourDataHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["uniswapV3GetTokenV3DayDataHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["uniswapV3GetTokensHistorical"]="startBlock= endBlock= startDate= endDate= id= symbol= name= "
+    operation_parameters["uniswapV3GetTransactionsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["uniswapV3GetUniswapDayDataHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["uniswapV3MintsCurrent"]=""
+    operation_parameters["uniswapV3PoolDayDataCurrent"]=""
+    operation_parameters["uniswapV3PoolHourDataCurrent"]=""
+    operation_parameters["uniswapV3PoolsCurrent"]="id= "
+    operation_parameters["uniswapV3PositionSnapshotsCurrent"]=""
+    operation_parameters["uniswapV3PositionsCurrent"]=""
+    operation_parameters["uniswapV3SwapsCurrent"]="pool= "
+    operation_parameters["uniswapV3TickDayDataCurrent"]=""
+    operation_parameters["uniswapV3TicksCurrent"]=""
+    operation_parameters["uniswapV3TokenHourDataCurrent"]=""
+    operation_parameters["uniswapV3TokenV3DayDataCurrent"]=""
+    operation_parameters["uniswapV3TokensCurrent"]=""
+    operation_parameters["uniswapV3TransactionsCurrent"]=""
+    operation_parameters["uniswapV3UniswapDayDataCurrent"]=""
+
+    # An associative array of possible values for enum parameters
+    declare -A operation_parameters_enum_values
+
+    #
+    # Check if this is OSX and use special __osx_init_completion function
+    #
+    if [[ `uname` =~ "Darwin" ]]; then
+        __osx_init_completion || return
+    else
+        _init_completion -s || return
+    fi
+
+
+    # Check if operation is already in the command line provided
+    for word in "${words[@]}"; do
+        if [[ -n $word && ${operations[$word]} ]]; then
+            operation="${word}"
+        fi
+    done
+
+    if [[ -z $operation ]]; then
+        case $prev in
+            --ciphers|--connect-timeout|-C|--continue-at|-F|--form|--form-string|\
+            --ftp-account|--ftp-alternative-to-user|-P|--ftp-port|-H|--header|-h|\
+            --help|--hostpubmd5|--keepalive-time|--krb|--limit-rate|--local-port|\
+            --mail-from|--mail-rcpt|--max-filesize|--max-redirs|-m|--max-time|\
+            --pass|--proto|--proto-redir|--proxy-user|--proxy1.0|-Q|--quote|-r|\
+            --range|-X|--request|--retry|--retry-delay|--retry-max-time|\
+            --socks5-gssapi-service|-t|--telnet-option|--tftp-blksize|-z|\
+            --time-cond|--url|-u|--user|-A|--user-agent|-V|--version|-w|\
+            --write-out|--resolve|--tlsuser|--tlspassword|--about)
+                return
+                ;;
+            -K|--config|-b|--cookie|-c|--cookie-jar|-D|--dump-header|--egd-file|\
+            --key|--libcurl|-o|--output|--random-file|-T|--upload-file|--trace|\
+            --trace-ascii|--netrc-file)
+                _filedir
+                return
+                ;;
+            --cacert|-E|--cert)
+                _filedir '@(c?(e)rt|cer|pem|der)'
+                return
+                ;;
+            --capath)
+                _filedir -d
+                return
+                ;;
+            --cert-type|--key-type)
+                COMPREPLY=( $( compgen -W 'DER PEM ENG' -- "$cur" ) )
+                return
+                ;;
+            --crlfile)
+                _filedir crl
+                return
+                ;;
+            -d|--data|--data-ascii|--data-binary|--data-urlencode)
+                if [[ $cur == \@* ]]; then
+                    cur=${cur:1}
+                    _filedir
+                    COMPREPLY=( "${COMPREPLY[@]/#/@}" )
+                fi
+                return
+                ;;
+            --delegation)
+                COMPREPLY=( $( compgen -W 'none policy always' -- "$cur" ) )
+                return
+                ;;
+            --engine)
+                COMPREPLY=( $( compgen -W 'list' -- "$cur" ) )
+                return
+                ;;
+            --ftp-method)
+                COMPREPLY=( $( compgen -W 'multicwd nocwd singlecwd' -- "$cur" ) )
+                return
+                ;;
+            --ftp-ssl-ccc-mode)
+                COMPREPLY=( $( compgen -W 'active passive' -- "$cur" ) )
+                return
+                ;;
+            --interface)
+                _available_interfaces -a
+                return
+                ;;
+            -x|--proxy|--socks4|--socks4a|--socks5|--socks5-hostname)
+                _known_hosts_real
+                return
+                ;;
+            --pubkey)
+                _filedir pub
+                return
+                ;;
+            --stderr)
+                COMPREPLY=( $( compgen -W '-' -- "$cur" ) )
+                _filedir
+                return
+                ;;
+            --tlsauthtype)
+                COMPREPLY=( $( compgen -W 'SRP' -- "$cur" ) )
+                return
+                ;;
+            --host)
+                COMPREPLY=( $( compgen -W 'http:// https://' -- "$cur" ) )
+                return
+                ;;
+            -ct|--content-type|-ac|--accept)
+                COMPREPLY=( $( compgen -W '${!mime_type_abbreviations[*]}' -- "$cur" ) )
+                return
+                ;;
+        esac
+    fi
+
+    #
+    # Complete the server address based on ~/.ssh/known_hosts
+    # and ~/.ssh/config
+    #
+    local prefix=${COMP_WORDS[COMP_CWORD-2]}
+    local colon=${COMP_WORDS[COMP_CWORD-1]}
+    if [[ "$colon" == ":" && ( $prefix == "https" || $prefix == "http" ) ]]; then
+        COMPREPLY=()
+        local comp_ssh_hosts=`[[ -f ~/.ssh/known_hosts ]] && \
+                              ( cat ~/.ssh/known_hosts | \
+                              grep '^[a-zA-Z0-9]' | \
+                              cut -f 1 -d ' ' | \
+                              sed -e s/,.*//g | \
+                              grep -v ^# | \
+                              uniq | \
+                              grep -v "\[" ) ;
+                              [[ -f ~/.ssh/config ]] && \
+                              ( cat ~/.ssh/config | \
+                              grep "^Host " | \
+                              awk '{print $2}' )`
+        COMPREPLY=( $( compgen -P '//' -W '${comp_ssh_hosts}' -- "${cur:2}") )
+        return
+    fi
+
+    #
+    # Complete the  and cURL's arguments
+    #
+    if [[ $cur == -* ]]; then
+        COMPREPLY=( $( compgen -W '$(_parse_help curl) $(_parse_help $1)' -- "$cur" ) )
+        return
+    fi
+
+    #
+    # If the argument starts with a letter this could be either an operation
+    # or an operation parameter
+    # When $cur is empty, suggest the list of operations by default
+    #
+    if [[ $cur =~ ^[A-Za-z_0-9]* ]]; then
+        # If operation has not been yet selected, suggest the list of operations
+        # otherwise suggest arguments of this operation as declared in the
+        # OpenAPI specification
+        if [[ -z $operation ]]; then
+            COMPREPLY=( $(compgen -W '${!operations[*]}' -- ${cur}) )
+        else
+            COMPREPLY=( $(compgen -W '${operation_parameters[$operation]}' -- ${cur}) )
+            compopt -o nospace
+        fi
+        return
+    fi
+
+} &&
+complete -F _ 
+
+# ex: ts=4 sw=4 et filetype=sh

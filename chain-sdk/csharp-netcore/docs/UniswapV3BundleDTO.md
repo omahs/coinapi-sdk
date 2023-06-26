@@ -1,0 +1,16 @@
+# CoinAPI.EMS.REST.V1.Model.UniswapV3BundleDTO
+The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**EntryTime** | **DateTime** |  | [optional] 
+**RecvTime** | **DateTime** |  | [optional] 
+**BlockNumber** | **long** | Number of block in which entity was recorded. | [optional] 
+**Id** | **string** |  | [optional] 
+**EthPriceUsd** | **string** | Price of ETH in usd. | [optional] 
+**Vid** | **long** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
