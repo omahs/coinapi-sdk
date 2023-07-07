@@ -865,6 +865,16 @@ paths:
           schema:
             type: string
             format: date-time
+        - name: time_format
+          in: query
+          description: The time format.
+          schema:
+            type: string
+        - name: period_id
+          in: query
+          description: Time period
+          schema:
+            type: string
         - name: limit
           in: query
           description: The limit of returned data.
@@ -942,6 +952,11 @@ paths:
         - name: time_format
           in: query
           description: The time format.
+          schema:
+            type: string
+        - name: period_id
+          in: query
+          description: Time period
           schema:
             type: string
         - name: limit
