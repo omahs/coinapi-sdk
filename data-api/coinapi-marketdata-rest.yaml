@@ -2121,6 +2121,36 @@ components:
           type: integer
           description: Gets or sets a value indicating whether the asset is a cryptocurrency.
           format: int32
+        data_quote_start:
+          type: string
+          description: Gets or sets the start date of quote data.
+          format: date-time
+          nullable: true
+        data_quote_end:
+          type: string
+          description: Gets or sets the end date of quote data.
+          format: date-time
+          nullable: true
+        data_orderbook_start:
+          type: string
+          description: Gets or sets the start date of order book data.
+          format: date-time
+          nullable: true
+        data_orderbook_end:
+          type: string
+          description: Gets or sets the end date of order book data.
+          format: date-time
+          nullable: true
+        data_trade_start:
+          type: string
+          description: Gets or sets the start date of trade data.
+          format: date-time
+          nullable: true
+        data_trade_end:
+          type: string
+          description: Gets or sets the end date of trade data.
+          format: date-time
+          nullable: true
         data_symbols_count:
           type: integer
           description: Gets or sets the number of symbols.
@@ -2174,14 +2204,12 @@ components:
           nullable: true
         data_start:
           type: string
-          description: Time of data starting.
-          format: date-time
           nullable: true
+          readOnly: true
         data_end:
           type: string
-          description: Time of data ending.
-          format: date-time
           nullable: true
+          readOnly: true
       additionalProperties: false
       description: Represents an asset.
     v1.Exchange:
@@ -2198,6 +2226,49 @@ components:
         name:
           type: string
           description: Gets or sets the name of the exchange.
+          nullable: true
+        data_start:
+          type: string
+          nullable: true
+          readOnly: true
+        data_end:
+          type: string
+          nullable: true
+          readOnly: true
+        data_quote_start:
+          type: string
+          description: Gets or sets the start date of quote data.
+          format: date-time
+          nullable: true
+        data_quote_end:
+          type: string
+          description: Gets or sets the end date of quote data.
+          format: date-time
+          nullable: true
+        data_orderbook_start:
+          type: string
+          description: Gets or sets the start date of order book data.
+          format: date-time
+          nullable: true
+        data_orderbook_end:
+          type: string
+          description: Gets or sets the end date of order book data.
+          format: date-time
+          nullable: true
+        data_trade_start:
+          type: string
+          description: Gets or sets the start date of trade data.
+          format: date-time
+          nullable: true
+        data_trade_end:
+          type: string
+          description: Gets or sets the end date of trade data.
+          format: date-time
+          nullable: true
+        data_trade_count:
+          type: integer
+          description: Gets or sets the number of trades.
+          format: int64
           nullable: true
         data_symbols_count:
           type: integer
@@ -2232,16 +2303,6 @@ components:
           description: Gets or sets the list of icons for the exchange.
           nullable: true
           readOnly: true
-        data_start:
-          type: string
-          description: Time of data starting.
-          format: date-time
-          nullable: true
-        data_end:
-          type: string
-          description: Time of data ending.
-          format: date-time
-          nullable: true
       additionalProperties: false
       description: Represents an exchange.
     v1.ExchangeRate:
@@ -2719,6 +2780,14 @@ components:
           type: string
           description: The display description of the contract.
           nullable: true
+        data_start:
+          type: string
+          nullable: true
+          readOnly: true
+        data_end:
+          type: string
+          nullable: true
+          readOnly: true
         data_quote_start:
           type: string
           description: The start date of quote data.
@@ -2823,16 +2892,6 @@ components:
           items:
             type: string
           description: The list of metric identifiers.
-          nullable: true
-        data_start:
-          type: string
-          description: Time when the data starting.
-          format: date-time
-          nullable: true
-        data_end:
-          type: string
-          description: Time where the data ending.
-          format: date-time
           nullable: true
       additionalProperties: false
       description: Represents a symbol data model.
