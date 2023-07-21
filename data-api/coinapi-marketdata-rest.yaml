@@ -654,6 +654,13 @@ paths:
       responses:
         '200':
           description: Success
+  /v1/throw:
+    get:
+      tags:
+        - Http500
+      responses:
+        '200':
+          description: Success
   /:
     get:
       tags:
