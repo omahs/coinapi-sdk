@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * A user entity is created for any address that provides liquidity to a pool on Uniswap. This entity can be used to track open positions for users.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-21T14:40:48.713889Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-21T14:52:47.651565Z[Etc/UTC]")
 public class UniswapV2UserDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
