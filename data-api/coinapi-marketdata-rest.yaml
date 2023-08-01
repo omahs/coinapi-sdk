@@ -697,35 +697,6 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/v1.Metric'
-  /v1/metrics/snapshot:
-    get:
-      tags:
-        - Metrics
-      summary: Get all metrics.
-      responses:
-        '200':
-          description: successful operation
-          content:
-            text/plain:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.GeneralData'
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.GeneralData'
-            text/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.GeneralData'
-            application/x-msgpack:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.GeneralData'
   '/v1/metrics/exchange/{exchange_id}/current':
     get:
       tags:
