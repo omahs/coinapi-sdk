@@ -10,6 +10,8 @@ export * from './metadataApi';
 import { MetadataApi } from './metadataApi';
 export * from './sushiswapApi';
 import { SushiswapApi } from './sushiswapApi';
+export * from './uNISWAPV3ETHEREUMApi';
+import { UNISWAPV3ETHEREUMApi } from './uNISWAPV3ETHEREUMApi';
 export * from './uniswapV2Api';
 import { UniswapV2Api } from './uniswapV2Api';
 export * from './uniswapV3Api';
@@ -25,4 +27,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [CRYPTOPUNKSApi, CowApi, CurveApi, DexApi, MetadataApi, SushiswapApi, UniswapV2Api, UniswapV3Api];
+export const APIS = [CRYPTOPUNKSApi, CowApi, CurveApi, DexApi, MetadataApi, SushiswapApi, UNISWAPV3ETHEREUMApi, UniswapV2Api, UniswapV3Api];

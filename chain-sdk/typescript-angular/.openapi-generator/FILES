@@ -9,6 +9,7 @@ api/curve.service.ts
 api/dex.service.ts
 api/metadata.service.ts
 api/sushiswap.service.ts
+api/uNISWAPV3ETHEREUM.service.ts
 api/uniswapV2.service.ts
 api/uniswapV3.service.ts
 configuration.ts
@@ -91,6 +92,9 @@ model/sushiswapTokenDayDataDTO.ts
 model/sushiswapTransactionDTO.ts
 model/sushiswapUserDTO.ts
 model/transactionsETradeAggressiveSide.ts
+model/uNISWAPV3ETHEREUMAccountDTO.ts
+model/uNISWAPV3ETHEREUMSwapDTO.ts
+model/uNISWAPV3ETHEREUMTokenDTO.ts
 model/uniswapV2BundleDTO.ts
 model/uniswapV2BurnDTO.ts
 model/uniswapV2LiquidityPositionDTO.ts

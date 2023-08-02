@@ -48,56 +48,6 @@
   }
 
   describe('CowApi', function() {
-    describe('cowGetOrdersHistorical', function() {
-      it('should call cowGetOrdersHistorical successfully', function(done) {
-        //uncomment below and update the code to test cowGetOrdersHistorical
-        //instance.cowGetOrdersHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('cowGetSettlementsHistorical', function() {
-      it('should call cowGetSettlementsHistorical successfully', function(done) {
-        //uncomment below and update the code to test cowGetSettlementsHistorical
-        //instance.cowGetSettlementsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('cowGetTokensHistorical', function() {
-      it('should call cowGetTokensHistorical successfully', function(done) {
-        //uncomment below and update the code to test cowGetTokensHistorical
-        //instance.cowGetTokensHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('cowGetTradesHistorical', function() {
-      it('should call cowGetTradesHistorical successfully', function(done) {
-        //uncomment below and update the code to test cowGetTradesHistorical
-        //instance.cowGetTradesHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('cowGetUsersHistorical', function() {
-      it('should call cowGetUsersHistorical successfully', function(done) {
-        //uncomment below and update the code to test cowGetUsersHistorical
-        //instance.cowGetUsersHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('cowOrdersCurrent', function() {
       it('should call cowOrdersCurrent successfully', function(done) {
         //uncomment below and update the code to test cowOrdersCurrent

@@ -23,6 +23,7 @@
             [on-chain-dapps-rest-api.specs.curve/transfer-ownership-event-dto :refer :all]
             [on-chain-dapps-rest-api.specs.sushiswap/day-data-dto :refer :all]
             [on-chain-dapps-rest-api.specs.curve/proposal-vote-dto :refer :all]
+            [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/token-dto :refer :all]
             [on-chain-dapps-rest-api.specs.curve/coin-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v2/transaction-dto :refer :all]
             [on-chain-dapps-rest-api.specs.cryptopunks/item-dto :refer :all]
@@ -62,6 +63,7 @@
             [on-chain-dapps-rest-api.specs.uniswap-v3/token-hour-data-dto :refer :all]
             [on-chain-dapps-rest-api.specs.dex/order-dto :refer :all]
             [on-chain-dapps-rest-api.specs.curve/token-dto :refer :all]
+            [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/account-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v2/user-dto :refer :all]
             [on-chain-dapps-rest-api.specs.cow/user-dto :refer :all]
             [on-chain-dapps-rest-api.specs.dex/user-dto :refer :all]
@@ -90,6 +92,7 @@
             [on-chain-dapps-rest-api.specs.uniswap-v3/uniswap-day-data-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v2/uniswap-day-data-dto :refer :all]
             [on-chain-dapps-rest-api.specs.curve/fee-change-log-dto :refer :all]
+            [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/swap-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3/bundle-dto :refer :all]
             [on-chain-dapps-rest-api.specs.curve/weekly-volume-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3/pool-hour-data-dto :refer :all]
@@ -204,231 +207,6 @@
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of cryptopunks/data-sources-dto-spec) res st/string-transformer)
        res)))
-
-
-(defn-spec c-ryptopunks-get-bids-historical-with-http-info any?
-  "Bids (historical)
-  Gets bids."
-  ([] (c-ryptopunks-get-bids-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/cryptopunks/bids/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec c-ryptopunks-get-bids-historical (s/coll-of cryptopunks/bid-dto-spec)
-  "Bids (historical)
-  Gets bids."
-  ([] (c-ryptopunks-get-bids-historical nil))
-  ([optional-params any?]
-   (let [res (:data (c-ryptopunks-get-bids-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of cryptopunks/bid-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec c-ryptopunks-get-collection-daily-snapshots-historical-with-http-info any?
-  "CollectionDailySnapshots (historical)
-  Gets collectionDailySnapshots."
-  ([] (c-ryptopunks-get-collection-daily-snapshots-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
-   (call-api "/dapps/cryptopunks/collectionDailySnapshots/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec c-ryptopunks-get-collection-daily-snapshots-historical (s/coll-of cryptopunks/collection-daily-snapshot-dto-spec)
-  "CollectionDailySnapshots (historical)
-  Gets collectionDailySnapshots."
-  ([] (c-ryptopunks-get-collection-daily-snapshots-historical nil))
-  ([optional-params any?]
-   (let [res (:data (c-ryptopunks-get-collection-daily-snapshots-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of cryptopunks/collection-daily-snapshot-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec c-ryptopunks-get-collections-historical-with-http-info any?
-  "Collections (historical)
-  Gets collections."
-  ([] (c-ryptopunks-get-collections-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/cryptopunks/collections/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec c-ryptopunks-get-collections-historical (s/coll-of cryptopunks/collection-dto-spec)
-  "Collections (historical)
-  Gets collections."
-  ([] (c-ryptopunks-get-collections-historical nil))
-  ([optional-params any?]
-   (let [res (:data (c-ryptopunks-get-collections-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of cryptopunks/collection-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec c-ryptopunks-get-data-sources-historical-with-http-info any?
-  "DataSources (historical)
-  Gets dataSources."
-  ([] (c-ryptopunks-get-data-sources-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/cryptopunks/dataSources/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec c-ryptopunks-get-data-sources-historical (s/coll-of cryptopunks/data-sources-dto-spec)
-  "DataSources (historical)
-  Gets dataSources."
-  ([] (c-ryptopunks-get-data-sources-historical nil))
-  ([optional-params any?]
-   (let [res (:data (c-ryptopunks-get-data-sources-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of cryptopunks/data-sources-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec c-ryptopunks-get-items-historical-with-http-info any?
-  "Items (historical)
-  Gets items."
-  ([] (c-ryptopunks-get-items-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
-   (call-api "/dapps/cryptopunks/items/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec c-ryptopunks-get-items-historical (s/coll-of cryptopunks/item-dto-spec)
-  "Items (historical)
-  Gets items."
-  ([] (c-ryptopunks-get-items-historical nil))
-  ([optional-params any?]
-   (let [res (:data (c-ryptopunks-get-items-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of cryptopunks/item-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec c-ryptopunks-get-market-places-historical-with-http-info any?
-  "MarketPlaces (historical)
-  Gets marketPlaces."
-  ([] (c-ryptopunks-get-market-places-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/cryptopunks/marketPlaces/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec c-ryptopunks-get-market-places-historical (s/coll-of cryptopunks/market-place-dto-spec)
-  "MarketPlaces (historical)
-  Gets marketPlaces."
-  ([] (c-ryptopunks-get-market-places-historical nil))
-  ([optional-params any?]
-   (let [res (:data (c-ryptopunks-get-market-places-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of cryptopunks/market-place-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec c-ryptopunks-get-marketplace-daily-snapshots-historical-with-http-info any?
-  "MarketplaceDailySnapshots (historical)
-  Gets marketplaceDailySnapshots."
-  ([] (c-ryptopunks-get-marketplace-daily-snapshots-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/cryptopunks/marketplaceDailySnapshots/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec c-ryptopunks-get-marketplace-daily-snapshots-historical (s/coll-of cryptopunks/marketplace-daily-snapshot-dto-spec)
-  "MarketplaceDailySnapshots (historical)
-  Gets marketplaceDailySnapshots."
-  ([] (c-ryptopunks-get-marketplace-daily-snapshots-historical nil))
-  ([optional-params any?]
-   (let [res (:data (c-ryptopunks-get-marketplace-daily-snapshots-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of cryptopunks/marketplace-daily-snapshot-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec c-ryptopunks-get-trades-historical-with-http-info any?
-  "Trades (historical)
-  Gets trades."
-  ([] (c-ryptopunks-get-trades-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/cryptopunks/trades/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec c-ryptopunks-get-trades-historical (s/coll-of cryptopunks/trade-dto-spec)
-  "Trades (historical)
-  Gets trades."
-  ([] (c-ryptopunks-get-trades-historical nil))
-  ([optional-params any?]
-   (let [res (:data (c-ryptopunks-get-trades-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of cryptopunks/trade-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec c-ryptopunks-get-users-historical-with-http-info any?
-  "Users (historical)
-  Gets users."
-  ([] (c-ryptopunks-get-users-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/cryptopunks/users/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec c-ryptopunks-get-users-historical (s/coll-of cryptopunks/user-dto-spec)
-  "Users (historical)
-  Gets users."
-  ([] (c-ryptopunks-get-users-historical nil))
-  ([optional-params any?]
-   (let [res (:data (c-ryptopunks-get-users-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of cryptopunks/user-dto-spec) res st/string-transformer)
-        res))))
 
 
 (defn-spec c-ryptopunks-items-current-with-http-info any?

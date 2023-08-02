@@ -9,6 +9,7 @@ src/on_chain_dapps_rest_api/api/dex.clj
 src/on_chain_dapps_rest_api/api/metadata.clj
 src/on_chain_dapps_rest_api/api/sushiswap.clj
 src/on_chain_dapps_rest_api/api/uniswap_v_.clj
+src/on_chain_dapps_rest_api/api/uniswap_v_ethereum.clj
 src/on_chain_dapps_rest_api/core.clj
 src/on_chain_dapps_rest_api/specs/cow/order_dto.clj
 src/on_chain_dapps_rest_api/specs/cow/settlement_dto.clj
@@ -117,3 +118,6 @@ src/on_chain_dapps_rest_api/specs/uniswap_v3/token_hour_data_dto.clj
 src/on_chain_dapps_rest_api/specs/uniswap_v3/token_v3_day_data_dto.clj
 src/on_chain_dapps_rest_api/specs/uniswap_v3/transaction_dto.clj
 src/on_chain_dapps_rest_api/specs/uniswap_v3/uniswap_day_data_dto.clj
+src/on_chain_dapps_rest_api/specs/uniswap_v3_ethereum/account_dto.clj
+src/on_chain_dapps_rest_api/specs/uniswap_v3_ethereum/swap_dto.clj
+src/on_chain_dapps_rest_api/specs/uniswap_v3_ethereum/token_dto.clj

@@ -88,6 +88,9 @@ import SushiswapTokenDayDataDTO from './model/SushiswapTokenDayDataDTO';
 import SushiswapTransactionDTO from './model/SushiswapTransactionDTO';
 import SushiswapUserDTO from './model/SushiswapUserDTO';
 import TransactionsETradeAggressiveSide from './model/TransactionsETradeAggressiveSide';
+import UNISWAPV3ETHEREUMAccountDTO from './model/UNISWAPV3ETHEREUMAccountDTO';
+import UNISWAPV3ETHEREUMSwapDTO from './model/UNISWAPV3ETHEREUMSwapDTO';
+import UNISWAPV3ETHEREUMTokenDTO from './model/UNISWAPV3ETHEREUMTokenDTO';
 import UniswapV2BundleDTO from './model/UniswapV2BundleDTO';
 import UniswapV2BurnDTO from './model/UniswapV2BurnDTO';
 import UniswapV2LiquidityPositionDTO from './model/UniswapV2LiquidityPositionDTO';
@@ -126,6 +129,7 @@ import CurveApi from './api/CurveApi';
 import DexApi from './api/DexApi';
 import MetadataApi from './api/MetadataApi';
 import SushiswapApi from './api/SushiswapApi';
+import UNISWAPV3ETHEREUMApi from './api/UNISWAPV3ETHEREUMApi';
 import UniswapV2Api from './api/UniswapV2Api';
 import UniswapV3Api from './api/UniswapV3Api';
 
@@ -619,6 +623,24 @@ export {
     TransactionsETradeAggressiveSide,
 
     /**
+     * The UNISWAPV3ETHEREUMAccountDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMAccountDTO}
+     */
+    UNISWAPV3ETHEREUMAccountDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMSwapDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMSwapDTO}
+     */
+    UNISWAPV3ETHEREUMSwapDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMTokenDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMTokenDTO}
+     */
+    UNISWAPV3ETHEREUMTokenDTO,
+
+    /**
      * The UniswapV2BundleDTO model constructor.
      * @property {module:model/UniswapV2BundleDTO}
      */
@@ -845,6 +867,12 @@ export {
     * @property {module:api/SushiswapApi}
     */
     SushiswapApi,
+
+    /**
+    * The UNISWAPV3ETHEREUMApi service constructor.
+    * @property {module:api/UNISWAPV3ETHEREUMApi}
+    */
+    UNISWAPV3ETHEREUMApi,
 
     /**
     * The UniswapV2Api service constructor.

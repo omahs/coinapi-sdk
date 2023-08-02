@@ -15,6 +15,7 @@ export 'package:openapi/src/api/curve_api.dart';
 export 'package:openapi/src/api/dex_api.dart';
 export 'package:openapi/src/api/metadata_api.dart';
 export 'package:openapi/src/api/sushiswap_api.dart';
+export 'package:openapi/src/api/uniswapv3_ethereum_api.dart';
 export 'package:openapi/src/api/uniswap_v2_api.dart';
 export 'package:openapi/src/api/uniswap_v3_api.dart';
 
@@ -93,6 +94,9 @@ export 'package:openapi/src/model/sushiswap_token_day_data_dto.dart';
 export 'package:openapi/src/model/sushiswap_transaction_dto.dart';
 export 'package:openapi/src/model/sushiswap_user_dto.dart';
 export 'package:openapi/src/model/transactions_e_trade_aggressive_side.dart';
+export 'package:openapi/src/model/uniswapv3_ethereum_account_dto.dart';
+export 'package:openapi/src/model/uniswapv3_ethereum_swap_dto.dart';
+export 'package:openapi/src/model/uniswapv3_ethereum_token_dto.dart';
 export 'package:openapi/src/model/uniswap_v2_bundle_dto.dart';
 export 'package:openapi/src/model/uniswap_v2_burn_dto.dart';
 export 'package:openapi/src/model/uniswap_v2_liquidity_position_dto.dart';

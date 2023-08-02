@@ -84,6 +84,10 @@ docs/SushiswapTokenDayDataDTO.md
 docs/SushiswapTransactionDTO.md
 docs/SushiswapUserDTO.md
 docs/TransactionsETradeAggressiveSide.md
+docs/UNISWAPV3ETHEREUMAccountDTO.md
+docs/UNISWAPV3ETHEREUMApi.md
+docs/UNISWAPV3ETHEREUMSwapDTO.md
+docs/UNISWAPV3ETHEREUMTokenDTO.md
 docs/UniswapV2Api.md
 docs/UniswapV2BundleDTO.md
 docs/UniswapV2BurnDTO.md
@@ -128,6 +132,7 @@ src/api/CurveApi.js
 src/api/DexApi.js
 src/api/MetadataApi.js
 src/api/SushiswapApi.js
+src/api/UNISWAPV3ETHEREUMApi.js
 src/api/UniswapV2Api.js
 src/api/UniswapV3Api.js
 src/index.js
@@ -206,6 +211,9 @@ src/model/SushiswapTokenDayDataDTO.js
 src/model/SushiswapTransactionDTO.js
 src/model/SushiswapUserDTO.js
 src/model/TransactionsETradeAggressiveSide.js
+src/model/UNISWAPV3ETHEREUMAccountDTO.js
+src/model/UNISWAPV3ETHEREUMSwapDTO.js
+src/model/UNISWAPV3ETHEREUMTokenDTO.js
 src/model/UniswapV2BundleDTO.js
 src/model/UniswapV2BurnDTO.js
 src/model/UniswapV2LiquidityPositionDTO.js
@@ -244,6 +252,7 @@ test/api/CurveApi.spec.js
 test/api/DexApi.spec.js
 test/api/MetadataApi.spec.js
 test/api/SushiswapApi.spec.js
+test/api/UNISWAPV3ETHEREUMApi.spec.js
 test/api/UniswapV2Api.spec.js
 test/api/UniswapV3Api.spec.js
 test/model/CRYPTOPUNKSBidDTO.spec.js
@@ -321,6 +330,9 @@ test/model/SushiswapTokenDayDataDTO.spec.js
 test/model/SushiswapTransactionDTO.spec.js
 test/model/SushiswapUserDTO.spec.js
 test/model/TransactionsETradeAggressiveSide.spec.js
+test/model/UNISWAPV3ETHEREUMAccountDTO.spec.js
+test/model/UNISWAPV3ETHEREUMSwapDTO.spec.js
+test/model/UNISWAPV3ETHEREUMTokenDTO.spec.js
 test/model/UniswapV2BundleDTO.spec.js
 test/model/UniswapV2BurnDTO.spec.js
 test/model/UniswapV2LiquidityPositionDTO.spec.js

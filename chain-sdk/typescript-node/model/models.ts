@@ -75,6 +75,9 @@ export * from './sushiswapTokenDayDataDTO';
 export * from './sushiswapTransactionDTO';
 export * from './sushiswapUserDTO';
 export * from './transactionsETradeAggressiveSide';
+export * from './uNISWAPV3ETHEREUMAccountDTO';
+export * from './uNISWAPV3ETHEREUMSwapDTO';
+export * from './uNISWAPV3ETHEREUMTokenDTO';
 export * from './uniswapV2BundleDTO';
 export * from './uniswapV2BurnDTO';
 export * from './uniswapV2LiquidityPositionDTO';
@@ -196,6 +199,9 @@ import { SushiswapTokenDayDataDTO } from './sushiswapTokenDayDataDTO';
 import { SushiswapTransactionDTO } from './sushiswapTransactionDTO';
 import { SushiswapUserDTO } from './sushiswapUserDTO';
 import { TransactionsETradeAggressiveSide } from './transactionsETradeAggressiveSide';
+import { UNISWAPV3ETHEREUMAccountDTO } from './uNISWAPV3ETHEREUMAccountDTO';
+import { UNISWAPV3ETHEREUMSwapDTO } from './uNISWAPV3ETHEREUMSwapDTO';
+import { UNISWAPV3ETHEREUMTokenDTO } from './uNISWAPV3ETHEREUMTokenDTO';
 import { UniswapV2BundleDTO } from './uniswapV2BundleDTO';
 import { UniswapV2BurnDTO } from './uniswapV2BurnDTO';
 import { UniswapV2LiquidityPositionDTO } from './uniswapV2LiquidityPositionDTO';
@@ -320,6 +326,9 @@ let typeMap: {[index: string]: any} = {
     "SushiswapTokenDayDataDTO": SushiswapTokenDayDataDTO,
     "SushiswapTransactionDTO": SushiswapTransactionDTO,
     "SushiswapUserDTO": SushiswapUserDTO,
+    "UNISWAPV3ETHEREUMAccountDTO": UNISWAPV3ETHEREUMAccountDTO,
+    "UNISWAPV3ETHEREUMSwapDTO": UNISWAPV3ETHEREUMSwapDTO,
+    "UNISWAPV3ETHEREUMTokenDTO": UNISWAPV3ETHEREUMTokenDTO,
     "UniswapV2BundleDTO": UniswapV2BundleDTO,
     "UniswapV2BurnDTO": UniswapV2BurnDTO,
     "UniswapV2LiquidityPositionDTO": UniswapV2LiquidityPositionDTO,

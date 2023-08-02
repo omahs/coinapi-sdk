@@ -14,3 +14,4 @@ class TagValues(str, enum.Enum):
     DEX = "Dex"
     METADATA = "Metadata"
     CRYPTOPUNKS = "CRYPTOPUNKS"
+    UNISWAP_V3_ETHEREUM = "UNISWAP_V3_ETHEREUM"

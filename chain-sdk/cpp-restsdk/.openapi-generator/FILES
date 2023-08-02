@@ -19,6 +19,7 @@ include/CppRestOpenAPIClient/api/CurveApi.h
 include/CppRestOpenAPIClient/api/DexApi.h
 include/CppRestOpenAPIClient/api/MetadataApi.h
 include/CppRestOpenAPIClient/api/SushiswapApi.h
+include/CppRestOpenAPIClient/api/UNISWAPV3ETHEREUMApi.h
 include/CppRestOpenAPIClient/api/UniswapV2Api.h
 include/CppRestOpenAPIClient/api/UniswapV3Api.h
 include/CppRestOpenAPIClient/model/CRYPTOPUNKS_BidDTO.h
@@ -96,6 +97,9 @@ include/CppRestOpenAPIClient/model/Sushiswap_TokenDayDataDTO.h
 include/CppRestOpenAPIClient/model/Sushiswap_TransactionDTO.h
 include/CppRestOpenAPIClient/model/Sushiswap_UserDTO.h
 include/CppRestOpenAPIClient/model/Transactions_ETradeAggressiveSide.h
+include/CppRestOpenAPIClient/model/UNISWAP_V3_ETHEREUM_AccountDTO.h
+include/CppRestOpenAPIClient/model/UNISWAP_V3_ETHEREUM_SwapDTO.h
+include/CppRestOpenAPIClient/model/UNISWAP_V3_ETHEREUM_TokenDTO.h
 include/CppRestOpenAPIClient/model/UniswapV2_BundleDTO.h
 include/CppRestOpenAPIClient/model/UniswapV2_BurnDTO.h
 include/CppRestOpenAPIClient/model/UniswapV2_LiquidityPositionDTO.h
@@ -142,6 +146,7 @@ src/api/CurveApi.cpp
 src/api/DexApi.cpp
 src/api/MetadataApi.cpp
 src/api/SushiswapApi.cpp
+src/api/UNISWAPV3ETHEREUMApi.cpp
 src/api/UniswapV2Api.cpp
 src/api/UniswapV3Api.cpp
 src/model/CRYPTOPUNKS_BidDTO.cpp
@@ -219,6 +224,9 @@ src/model/Sushiswap_TokenDayDataDTO.cpp
 src/model/Sushiswap_TransactionDTO.cpp
 src/model/Sushiswap_UserDTO.cpp
 src/model/Transactions_ETradeAggressiveSide.cpp
+src/model/UNISWAP_V3_ETHEREUM_AccountDTO.cpp
+src/model/UNISWAP_V3_ETHEREUM_SwapDTO.cpp
+src/model/UNISWAP_V3_ETHEREUM_TokenDTO.cpp
 src/model/UniswapV2_BundleDTO.cpp
 src/model/UniswapV2_BurnDTO.cpp
 src/model/UniswapV2_LiquidityPositionDTO.cpp

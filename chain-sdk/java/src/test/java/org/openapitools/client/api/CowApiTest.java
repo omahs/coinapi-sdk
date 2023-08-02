@@ -19,7 +19,6 @@ import org.openapitools.client.model.CowSettlementDTO;
 import org.openapitools.client.model.CowTokenDTO;
 import org.openapitools.client.model.CowTradeDTO;
 import org.openapitools.client.model.CowUserDTO;
-import java.time.OffsetDateTime;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -35,102 +34,6 @@ import java.util.Map;
 public class CowApiTest {
 
     private final CowApi api = new CowApi();
-
-    /**
-     * Orders (historical)
-     *
-     * Gets orders.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void cowGetOrdersHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String id = null;
-        List<CowOrderDTO> response = api.cowGetOrdersHistorical(startBlock, endBlock, startDate, endDate, id);
-        // TODO: test validations
-    }
-
-    /**
-     * Settlements (historical)
-     *
-     * Gets settlements.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void cowGetSettlementsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String id = null;
-        List<CowSettlementDTO> response = api.cowGetSettlementsHistorical(startBlock, endBlock, startDate, endDate, id);
-        // TODO: test validations
-    }
-
-    /**
-     * Tokens (historical)
-     *
-     * Gets tokens.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void cowGetTokensHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String id = null;
-        String address = null;
-        String name = null;
-        String symbol = null;
-        List<CowTokenDTO> response = api.cowGetTokensHistorical(startBlock, endBlock, startDate, endDate, id, address, name, symbol);
-        // TODO: test validations
-    }
-
-    /**
-     * Trades (historical)
-     *
-     * Gets trades.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void cowGetTradesHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String id = null;
-        String sellToken = null;
-        String buyToken = null;
-        List<CowTradeDTO> response = api.cowGetTradesHistorical(startBlock, endBlock, startDate, endDate, id, sellToken, buyToken);
-        // TODO: test validations
-    }
-
-    /**
-     * Users (historical)
-     *
-     * Gets users.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void cowGetUsersHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String id = null;
-        String address = null;
-        List<CowUserDTO> response = api.cowGetUsersHistorical(startBlock, endBlock, startDate, endDate, id, address);
-        // TODO: test validations
-    }
 
     /**
      * Orders (current)

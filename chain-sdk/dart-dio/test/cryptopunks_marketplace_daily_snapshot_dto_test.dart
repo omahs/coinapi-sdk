@@ -17,8 +17,8 @@ void main() {
       // TODO
     });
 
-    // 
-    // String blockNumber
+    // Number of block in which entity was recorded.
+    // int blockNumber
     test('to test the property `blockNumber`', () async {
       // TODO
     });

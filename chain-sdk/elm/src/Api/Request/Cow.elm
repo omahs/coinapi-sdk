@@ -15,12 +15,7 @@
 
 
 module Api.Request.Cow exposing
-    ( cowGetOrdersHistorical
-    , cowGetSettlementsHistorical
-    , cowGetTokensHistorical
-    , cowGetTradesHistorical
-    , cowGetUsersHistorical
-    , cowOrdersCurrent
+    ( cowOrdersCurrent
     , cowSettlementsCurrent
     , cowTokensCurrent
     , cowTradesCurrent
@@ -29,81 +24,10 @@ module Api.Request.Cow exposing
 
 import Api
 import Api.Data exposing (..)
-import Api.Time exposing (Posix)
 import Dict
 import Http
 import Json.Decode
 import Json.Encode
-
-{-| Gets orders.
--}
-cowGetOrdersHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CowOrderDTO)
-cowGetOrdersHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
-    Api.request
-        "GET"
-        "/dapps/cow/orders/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.cowOrderDTODecoder)
-
-
-{-| Gets settlements.
--}
-cowGetSettlementsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CowSettlementDTO)
-cowGetSettlementsHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
-    Api.request
-        "GET"
-        "/dapps/cow/settlements/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.cowSettlementDTODecoder)
-
-
-{-| Gets tokens.
--}
-cowGetTokensHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CowTokenDTO)
-cowGetTokensHistorical startBlock_query endBlock_query startDate_query endDate_query id_query address_query name_query symbol_query =
-    Api.request
-        "GET"
-        "/dapps/cow/tokens/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "address", Maybe.map identity address_query ), ( "name", Maybe.map identity name_query ), ( "symbol", Maybe.map identity symbol_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.cowTokenDTODecoder)
-
-
-{-| Gets trades.
--}
-cowGetTradesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CowTradeDTO)
-cowGetTradesHistorical startBlock_query endBlock_query startDate_query endDate_query id_query sellToken_query buyToken_query =
-    Api.request
-        "GET"
-        "/dapps/cow/trades/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "sell_token", Maybe.map identity sellToken_query ), ( "buy_token", Maybe.map identity buyToken_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.cowTradeDTODecoder)
-
-
-{-| Gets users.
--}
-cowGetUsersHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CowUserDTO)
-cowGetUsersHistorical startBlock_query endBlock_query startDate_query endDate_query id_query address_query =
-    Api.request
-        "GET"
-        "/dapps/cow/users/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "address", Maybe.map identity address_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.cowUserDTODecoder)
-
 
 {-| Gets orders.
 -}

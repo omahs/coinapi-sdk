@@ -6,7 +6,7 @@
 | ---- | ---- | ----------- | ----- |
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
-| **block_number** | **String** |  | [optional] |
+| **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
 | **vid** | **Integer** |  | [optional] |
 | **block_range** | **String** |  | [optional] |
 | **id** | **String** |  | [optional] |

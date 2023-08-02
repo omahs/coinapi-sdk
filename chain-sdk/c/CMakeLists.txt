@@ -146,6 +146,9 @@ set(SRCS
     model/uniswap_v2_user_dto.c
     model/uniswap_v3_bundle_dto.c
     model/uniswap_v3_burn_dto.c
+    model/uniswap_v3_ethereum_account_dto.c
+    model/uniswap_v3_ethereum_swap_dto.c
+    model/uniswap_v3_ethereum_token_dto.c
     model/uniswap_v3_factory_dto.c
     model/uniswap_v3_mint_dto.c
     model/uniswap_v3_pool_day_data_dto.c
@@ -167,6 +170,7 @@ set(SRCS
     api/DexAPI.c
     api/MetadataAPI.c
     api/SushiswapAPI.c
+    api/UNISWAPV3ETHEREUMAPI.c
     api/UniswapV2API.c
     api/UniswapV3API.c
 
@@ -271,6 +275,9 @@ set(HDRS
     model/uniswap_v2_user_dto.h
     model/uniswap_v3_bundle_dto.h
     model/uniswap_v3_burn_dto.h
+    model/uniswap_v3_ethereum_account_dto.h
+    model/uniswap_v3_ethereum_swap_dto.h
+    model/uniswap_v3_ethereum_token_dto.h
     model/uniswap_v3_factory_dto.h
     model/uniswap_v3_mint_dto.h
     model/uniswap_v3_pool_day_data_dto.h
@@ -292,6 +299,7 @@ set(HDRS
     api/DexAPI.h
     api/MetadataAPI.h
     api/SushiswapAPI.h
+    api/UNISWAPV3ETHEREUMAPI.h
     api/UniswapV2API.h
     api/UniswapV3API.h
 
@@ -381,6 +389,7 @@ set(HDRS "")
 #    unit-tests/manual-DexAPI.c
 #    unit-tests/manual-MetadataAPI.c
 #    unit-tests/manual-SushiswapAPI.c
+#    unit-tests/manual-UNISWAPV3ETHEREUMAPI.c
 #    unit-tests/manual-UniswapV2API.c
 #    unit-tests/manual-UniswapV3API.c
 #)

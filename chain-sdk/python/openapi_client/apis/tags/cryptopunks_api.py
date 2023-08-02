@@ -14,15 +14,6 @@ from openapi_client.paths.dapps_cryptopunks_bids_current.get import CRyptopunksB
 from openapi_client.paths.dapps_cryptopunks_collection_daily_snapshots_current.get import CRyptopunksCollectionDailySnapshotsCurrent
 from openapi_client.paths.dapps_cryptopunks_collections_current.get import CRyptopunksCollectionsCurrent
 from openapi_client.paths.dapps_cryptopunks_data_sources_current.get import CRyptopunksDataSourcesCurrent
-from openapi_client.paths.dapps_cryptopunks_bids_historical.get import CRyptopunksGetBidsHistorical
-from openapi_client.paths.dapps_cryptopunks_collection_daily_snapshots_historical.get import CRyptopunksGetCollectionDailySnapshotsHistorical
-from openapi_client.paths.dapps_cryptopunks_collections_historical.get import CRyptopunksGetCollectionsHistorical
-from openapi_client.paths.dapps_cryptopunks_data_sources_historical.get import CRyptopunksGetDataSourcesHistorical
-from openapi_client.paths.dapps_cryptopunks_items_historical.get import CRyptopunksGetItemsHistorical
-from openapi_client.paths.dapps_cryptopunks_market_places_historical.get import CRyptopunksGetMarketPlacesHistorical
-from openapi_client.paths.dapps_cryptopunks_marketplace_daily_snapshots_historical.get import CRyptopunksGetMarketplaceDailySnapshotsHistorical
-from openapi_client.paths.dapps_cryptopunks_trades_historical.get import CRyptopunksGetTradesHistorical
-from openapi_client.paths.dapps_cryptopunks_users_historical.get import CRyptopunksGetUsersHistorical
 from openapi_client.paths.dapps_cryptopunks_items_current.get import CRyptopunksItemsCurrent
 from openapi_client.paths.dapps_cryptopunks_market_places_current.get import CRyptopunksMarketPlacesCurrent
 from openapi_client.paths.dapps_cryptopunks_marketplace_daily_snapshots_current.get import CRyptopunksMarketplaceDailySnapshotsCurrent
@@ -35,15 +26,6 @@ class CRYPTOPUNKSApi(
     CRyptopunksCollectionDailySnapshotsCurrent,
     CRyptopunksCollectionsCurrent,
     CRyptopunksDataSourcesCurrent,
-    CRyptopunksGetBidsHistorical,
-    CRyptopunksGetCollectionDailySnapshotsHistorical,
-    CRyptopunksGetCollectionsHistorical,
-    CRyptopunksGetDataSourcesHistorical,
-    CRyptopunksGetItemsHistorical,
-    CRyptopunksGetMarketPlacesHistorical,
-    CRyptopunksGetMarketplaceDailySnapshotsHistorical,
-    CRyptopunksGetTradesHistorical,
-    CRyptopunksGetUsersHistorical,
     CRyptopunksItemsCurrent,
     CRyptopunksMarketPlacesCurrent,
     CRyptopunksMarketplaceDailySnapshotsCurrent,

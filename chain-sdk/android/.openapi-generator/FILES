@@ -83,6 +83,10 @@ docs/SushiswapTokenDayDataDTO.md
 docs/SushiswapTransactionDTO.md
 docs/SushiswapUserDTO.md
 docs/TransactionsETradeAggressiveSide.md
+docs/UNISWAPV3ETHEREUMAccountDTO.md
+docs/UNISWAPV3ETHEREUMApi.md
+docs/UNISWAPV3ETHEREUMSwapDTO.md
+docs/UNISWAPV3ETHEREUMTokenDTO.md
 docs/UniswapV2Api.md
 docs/UniswapV2BundleDTO.md
 docs/UniswapV2BurnDTO.md
@@ -134,6 +138,7 @@ src/main/java/org/openapitools/client/api/CurveApi.java
 src/main/java/org/openapitools/client/api/DexApi.java
 src/main/java/org/openapitools/client/api/MetadataApi.java
 src/main/java/org/openapitools/client/api/SushiswapApi.java
+src/main/java/org/openapitools/client/api/UNISWAPV3ETHEREUMApi.java
 src/main/java/org/openapitools/client/api/UniswapV2Api.java
 src/main/java/org/openapitools/client/api/UniswapV3Api.java
 src/main/java/org/openapitools/client/auth/ApiKeyAuth.java
@@ -214,6 +219,9 @@ src/main/java/org/openapitools/client/model/SushiswapTokenDayDataDTO.java
 src/main/java/org/openapitools/client/model/SushiswapTransactionDTO.java
 src/main/java/org/openapitools/client/model/SushiswapUserDTO.java
 src/main/java/org/openapitools/client/model/TransactionsETradeAggressiveSide.java
+src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMAccountDTO.java
+src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMSwapDTO.java
+src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMTokenDTO.java
 src/main/java/org/openapitools/client/model/UniswapV2BundleDTO.java
 src/main/java/org/openapitools/client/model/UniswapV2BurnDTO.java
 src/main/java/org/openapitools/client/model/UniswapV2LiquidityPositionDTO.java

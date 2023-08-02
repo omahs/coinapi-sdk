@@ -172,6 +172,14 @@ src/SushiswapUserDTO.cpp
 src/SushiswapUserDTO.h
 src/TransactionsETradeAggressiveSide.cpp
 src/TransactionsETradeAggressiveSide.h
+src/UNISWAPV3ETHEREUMAccountDTO.cpp
+src/UNISWAPV3ETHEREUMAccountDTO.h
+src/UNISWAPV3ETHEREUMManager.cpp
+src/UNISWAPV3ETHEREUMManager.h
+src/UNISWAPV3ETHEREUMSwapDTO.cpp
+src/UNISWAPV3ETHEREUMSwapDTO.h
+src/UNISWAPV3ETHEREUMTokenDTO.cpp
+src/UNISWAPV3ETHEREUMTokenDTO.h
 src/UniswapV2BundleDTO.cpp
 src/UniswapV2BundleDTO.h
 src/UniswapV2BurnDTO.cpp

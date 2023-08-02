@@ -9,6 +9,7 @@ from openapi_client.apis.tags.cow_api import CowApi
 from openapi_client.apis.tags.dex_api import DexApi
 from openapi_client.apis.tags.metadata_api import MetadataApi
 from openapi_client.apis.tags.cryptopunks_api import CRYPTOPUNKSApi
+from openapi_client.apis.tags.uniswapv3_ethereum_api import UNISWAPV3ETHEREUMApi
 
 TagToApi = typing_extensions.TypedDict(
     'TagToApi',
@@ -21,6 +22,7 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.DEX: DexApi,
         TagValues.METADATA: MetadataApi,
         TagValues.CRYPTOPUNKS: CRYPTOPUNKSApi,
+        TagValues.UNISWAP_V3_ETHEREUM: UNISWAPV3ETHEREUMApi,
     }
 )
 
@@ -34,5 +36,6 @@ tag_to_api = TagToApi(
         TagValues.DEX: DexApi,
         TagValues.METADATA: MetadataApi,
         TagValues.CRYPTOPUNKS: CRYPTOPUNKSApi,
+        TagValues.UNISWAP_V3_ETHEREUM: UNISWAPV3ETHEREUMApi,
     }
 )

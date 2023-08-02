@@ -102,6 +102,9 @@ src/openapi_uniswap_v2_user_dto.erl
 src/openapi_uniswap_v3_api.erl
 src/openapi_uniswap_v3_bundle_dto.erl
 src/openapi_uniswap_v3_burn_dto.erl
+src/openapi_uniswap_v3_ethereum_account_dto.erl
+src/openapi_uniswap_v3_ethereum_swap_dto.erl
+src/openapi_uniswap_v3_ethereum_token_dto.erl
 src/openapi_uniswap_v3_factory_dto.erl
 src/openapi_uniswap_v3_mint_dto.erl
 src/openapi_uniswap_v3_pool_day_data_dto.erl
@@ -117,4 +120,5 @@ src/openapi_uniswap_v3_token_hour_data_dto.erl
 src/openapi_uniswap_v3_token_v3_day_data_dto.erl
 src/openapi_uniswap_v3_transaction_dto.erl
 src/openapi_uniswap_v3_uniswap_day_data_dto.erl
+src/openapi_uniswapv3_ethereum_api.erl
 src/openapi_utils.erl

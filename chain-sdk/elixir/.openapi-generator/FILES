@@ -12,6 +12,7 @@ lib/on_chain_dapps_restapi/api/metadata.ex
 lib/on_chain_dapps_restapi/api/sushiswap.ex
 lib/on_chain_dapps_restapi/api/uniswap_v2.ex
 lib/on_chain_dapps_restapi/api/uniswap_v3.ex
+lib/on_chain_dapps_restapi/api/uniswapv3_ethereum.ex
 lib/on_chain_dapps_restapi/connection.ex
 lib/on_chain_dapps_restapi/deserializer.ex
 lib/on_chain_dapps_restapi/model/cow_order_dto.ex
@@ -106,6 +107,9 @@ lib/on_chain_dapps_restapi/model/uniswap_v2_uniswap_factory_dto.ex
 lib/on_chain_dapps_restapi/model/uniswap_v2_user_dto.ex
 lib/on_chain_dapps_restapi/model/uniswap_v3_bundle_dto.ex
 lib/on_chain_dapps_restapi/model/uniswap_v3_burn_dto.ex
+lib/on_chain_dapps_restapi/model/uniswap_v3_ethereum_account_dto.ex
+lib/on_chain_dapps_restapi/model/uniswap_v3_ethereum_swap_dto.ex
+lib/on_chain_dapps_restapi/model/uniswap_v3_ethereum_token_dto.ex
 lib/on_chain_dapps_restapi/model/uniswap_v3_factory_dto.ex
 lib/on_chain_dapps_restapi/model/uniswap_v3_mint_dto.ex
 lib/on_chain_dapps_restapi/model/uniswap_v3_pool_day_data_dto.ex

@@ -29,38 +29,6 @@ from openapi_client.paths.dapps_curve_gauge_weight_votes_current.get import Curv
 from openapi_client.paths.dapps_curve_gauge_weights_current.get import CurveGaugeWeightsCurrent
 from openapi_client.paths.dapps_curve_gauge_withdraws_current.get import CurveGaugeWithdrawsCurrent
 from openapi_client.paths.dapps_curve_gauges_current.get import CurveGaugesCurrent
-from openapi_client.paths.dapps_curve_accounts_historical.get import CurveGetAccountsHistorical
-from openapi_client.paths.dapps_curve_add_liquidity_events_historical.get import CurveGetAddLiquidityEventsHistorical
-from openapi_client.paths.dapps_curve_admin_fee_change_logs_historical.get import CurveGetAdminFeeChangeLogsHistorical
-from openapi_client.paths.dapps_curve_amplification_coeff_change_logs_historical.get import CurveGetAmplificationCoeffChangeLogsHistorical
-from openapi_client.paths.dapps_curve_coins_historical.get import CurveGetCoinsHistorical
-from openapi_client.paths.dapps_curve_contract_versions_historical.get import CurveGetContractVersionsHistorical
-from openapi_client.paths.dapps_curve_contracts_historical.get import CurveGetContractsHistorical
-from openapi_client.paths.dapps_curve_daily_volumes_historical.get import CurveGetDailyVolumesHistorical
-from openapi_client.paths.dapps_curve_exchanges_historical.get import CurveGetExchangesHistorical
-from openapi_client.paths.dapps_curve_fee_change_logs_historical.get import CurveGetFeeChangeLogsHistorical
-from openapi_client.paths.dapps_curve_gauge_deposits_historical.get import CurveGetGaugeDepositsHistorical
-from openapi_client.paths.dapps_curve_gauge_liquidities_historical.get import CurveGetGaugeLiquiditiesHistorical
-from openapi_client.paths.dapps_curve_gauge_total_weights_historical.get import CurveGetGaugeTotalWeightsHistorical
-from openapi_client.paths.dapps_curve_gauge_type_weights_historical.get import CurveGetGaugeTypeWeightsHistorical
-from openapi_client.paths.dapps_curve_gauge_types_historical.get import CurveGetGaugeTypesHistorical
-from openapi_client.paths.dapps_curve_gauge_weight_votes_historical.get import CurveGetGaugeWeightVotesHistorical
-from openapi_client.paths.dapps_curve_gauge_weights_historical.get import CurveGetGaugeWeightsHistorical
-from openapi_client.paths.dapps_curve_gauge_withdraws_historical.get import CurveGetGaugeWithdrawsHistorical
-from openapi_client.paths.dapps_curve_gauges_historical.get import CurveGetGaugesHistorical
-from openapi_client.paths.dapps_curve_hourly_volumes_historical.get import CurveGetHourlyVolumesHistorical
-from openapi_client.paths.dapps_curve_lp_tokens_historical.get import CurveGetLpTokensHistorical
-from openapi_client.paths.dapps_curve_pools_historical.get import CurveGetPoolsHistorical
-from openapi_client.paths.dapps_curve_proposal_votes_historical.get import CurveGetProposalVotesHistorical
-from openapi_client.paths.dapps_curve_proposals_historical.get import CurveGetProposalsHistorical
-from openapi_client.paths.dapps_curve_remove_liquidity_events_historical.get import CurveGetRemoveLiquidityEventsHistorical
-from openapi_client.paths.dapps_curve_remove_liquidity_one_events_historical.get import CurveGetRemoveLiquidityOneEventsHistorical
-from openapi_client.paths.dapps_curve_system_states_historical.get import CurveGetSystemStatesHistorical
-from openapi_client.paths.dapps_curve_tokens_historical.get import CurveGetTokensHistorical
-from openapi_client.paths.dapps_curve_transfer_ownership_events_historical.get import CurveGetTransferOwnershipEventsHistorical
-from openapi_client.paths.dapps_curve_underlying_coins_historical.get import CurveGetUnderlyingCoinsHistorical
-from openapi_client.paths.dapps_curve_voting_apps_historical.get import CurveGetVotingAppsHistorical
-from openapi_client.paths.dapps_curve_weekly_volumes_historical.get import CurveGetWeeklyVolumesHistorical
 from openapi_client.paths.dapps_curve_hourly_volumes_current.get import CurveHourlyVolumesCurrent
 from openapi_client.paths.dapps_curve_lp_tokens_current.get import CurveLpTokensCurrent
 from openapi_client.paths.dapps_curve_pools_current.get import CurvePoolsCurrent
@@ -96,38 +64,6 @@ class CurveApi(
     CurveGaugeWeightsCurrent,
     CurveGaugeWithdrawsCurrent,
     CurveGaugesCurrent,
-    CurveGetAccountsHistorical,
-    CurveGetAddLiquidityEventsHistorical,
-    CurveGetAdminFeeChangeLogsHistorical,
-    CurveGetAmplificationCoeffChangeLogsHistorical,
-    CurveGetCoinsHistorical,
-    CurveGetContractVersionsHistorical,
-    CurveGetContractsHistorical,
-    CurveGetDailyVolumesHistorical,
-    CurveGetExchangesHistorical,
-    CurveGetFeeChangeLogsHistorical,
-    CurveGetGaugeDepositsHistorical,
-    CurveGetGaugeLiquiditiesHistorical,
-    CurveGetGaugeTotalWeightsHistorical,
-    CurveGetGaugeTypeWeightsHistorical,
-    CurveGetGaugeTypesHistorical,
-    CurveGetGaugeWeightVotesHistorical,
-    CurveGetGaugeWeightsHistorical,
-    CurveGetGaugeWithdrawsHistorical,
-    CurveGetGaugesHistorical,
-    CurveGetHourlyVolumesHistorical,
-    CurveGetLpTokensHistorical,
-    CurveGetPoolsHistorical,
-    CurveGetProposalVotesHistorical,
-    CurveGetProposalsHistorical,
-    CurveGetRemoveLiquidityEventsHistorical,
-    CurveGetRemoveLiquidityOneEventsHistorical,
-    CurveGetSystemStatesHistorical,
-    CurveGetTokensHistorical,
-    CurveGetTransferOwnershipEventsHistorical,
-    CurveGetUnderlyingCoinsHistorical,
-    CurveGetVotingAppsHistorical,
-    CurveGetWeeklyVolumesHistorical,
     CurveHourlyVolumesCurrent,
     CurveLpTokensCurrent,
     CurvePoolsCurrent,

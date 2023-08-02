@@ -14,6 +14,8 @@ api/MetadataAPI.c
 api/MetadataAPI.h
 api/SushiswapAPI.c
 api/SushiswapAPI.h
+api/UNISWAPV3ETHEREUMAPI.c
+api/UNISWAPV3ETHEREUMAPI.h
 api/UniswapV2API.c
 api/UniswapV2API.h
 api/UniswapV3API.c
@@ -24,6 +26,7 @@ docs/CurveAPI.md
 docs/DexAPI.md
 docs/MetadataAPI.md
 docs/SushiswapAPI.md
+docs/UNISWAPV3ETHEREUMAPI.md
 docs/UniswapV2API.md
 docs/UniswapV3API.md
 docs/cow_order_dto.md
@@ -118,6 +121,9 @@ docs/uniswap_v2_uniswap_factory_dto.md
 docs/uniswap_v2_user_dto.md
 docs/uniswap_v3_bundle_dto.md
 docs/uniswap_v3_burn_dto.md
+docs/uniswap_v3_ethereum_account_dto.md
+docs/uniswap_v3_ethereum_swap_dto.md
+docs/uniswap_v3_ethereum_token_dto.md
 docs/uniswap_v3_factory_dto.md
 docs/uniswap_v3_mint_dto.md
 docs/uniswap_v3_pool_day_data_dto.md
@@ -327,6 +333,12 @@ model/uniswap_v3_bundle_dto.c
 model/uniswap_v3_bundle_dto.h
 model/uniswap_v3_burn_dto.c
 model/uniswap_v3_burn_dto.h
+model/uniswap_v3_ethereum_account_dto.c
+model/uniswap_v3_ethereum_account_dto.h
+model/uniswap_v3_ethereum_swap_dto.c
+model/uniswap_v3_ethereum_swap_dto.h
+model/uniswap_v3_ethereum_token_dto.c
+model/uniswap_v3_ethereum_token_dto.h
 model/uniswap_v3_factory_dto.c
 model/uniswap_v3_factory_dto.h
 model/uniswap_v3_mint_dto.c
@@ -454,6 +466,9 @@ unit-test/test_uniswap_v2_uniswap_factory_dto.c
 unit-test/test_uniswap_v2_user_dto.c
 unit-test/test_uniswap_v3_bundle_dto.c
 unit-test/test_uniswap_v3_burn_dto.c
+unit-test/test_uniswap_v3_ethereum_account_dto.c
+unit-test/test_uniswap_v3_ethereum_swap_dto.c
+unit-test/test_uniswap_v3_ethereum_token_dto.c
 unit-test/test_uniswap_v3_factory_dto.c
 unit-test/test_uniswap_v3_mint_dto.c
 unit-test/test_uniswap_v3_pool_day_data_dto.c

@@ -16,9 +16,9 @@ export class CRYPTOPUNKSMarketplaceDailySnapshotDTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
     /**
-    * 
+    * Number of block in which entity was recorded.
     */
-    'blockNumber'?: string | null;
+    'blockNumber'?: number;
     /**
     * 
     */
@@ -96,7 +96,7 @@ export class CRYPTOPUNKSMarketplaceDailySnapshotDTO {
         {
             "name": "blockNumber",
             "baseName": "block_number",
-            "type": "string"
+            "type": "number"
         },
         {
             "name": "vid",

@@ -15,6 +15,7 @@ import 'package:openapi/src/api/curve_api.dart';
 import 'package:openapi/src/api/dex_api.dart';
 import 'package:openapi/src/api/metadata_api.dart';
 import 'package:openapi/src/api/sushiswap_api.dart';
+import 'package:openapi/src/api/uniswapv3_ethereum_api.dart';
 import 'package:openapi/src/api/uniswap_v2_api.dart';
 import 'package:openapi/src/api/uniswap_v3_api.dart';
 
@@ -106,6 +107,12 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   SushiswapApi getSushiswapApi() {
     return SushiswapApi(dio, serializers);
+  }
+
+  /// Get UNISWAPV3ETHEREUMApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  UNISWAPV3ETHEREUMApi getUNISWAPV3ETHEREUMApi() {
+    return UNISWAPV3ETHEREUMApi(dio, serializers);
   }
 
   /// Get UniswapV2Api instance, base route and serializer can be overridden by a given but be careful,

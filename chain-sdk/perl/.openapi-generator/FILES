@@ -84,6 +84,10 @@ docs/SushiswapTokenDayDataDTO.md
 docs/SushiswapTransactionDTO.md
 docs/SushiswapUserDTO.md
 docs/TransactionsETradeAggressiveSide.md
+docs/UNISWAPV3ETHEREUMAccountDTO.md
+docs/UNISWAPV3ETHEREUMApi.md
+docs/UNISWAPV3ETHEREUMSwapDTO.md
+docs/UNISWAPV3ETHEREUMTokenDTO.md
 docs/UniswapV2Api.md
 docs/UniswapV2BundleDTO.md
 docs/UniswapV2BurnDTO.md
@@ -202,6 +206,9 @@ lib/WWW/OpenAPIClient/Object/SushiswapTokenDayDataDTO.pm
 lib/WWW/OpenAPIClient/Object/SushiswapTransactionDTO.pm
 lib/WWW/OpenAPIClient/Object/SushiswapUserDTO.pm
 lib/WWW/OpenAPIClient/Object/TransactionsETradeAggressiveSide.pm
+lib/WWW/OpenAPIClient/Object/UNISWAPV3ETHEREUMAccountDTO.pm
+lib/WWW/OpenAPIClient/Object/UNISWAPV3ETHEREUMSwapDTO.pm
+lib/WWW/OpenAPIClient/Object/UNISWAPV3ETHEREUMTokenDTO.pm
 lib/WWW/OpenAPIClient/Object/UniswapV2BundleDTO.pm
 lib/WWW/OpenAPIClient/Object/UniswapV2BurnDTO.pm
 lib/WWW/OpenAPIClient/Object/UniswapV2LiquidityPositionDTO.pm
@@ -237,6 +244,7 @@ lib/WWW/OpenAPIClient/Object/UniswapV3UniswapDayDataDTO.pm
 lib/WWW/OpenAPIClient/Role.pm
 lib/WWW/OpenAPIClient/Role/AutoDoc.pm
 lib/WWW/OpenAPIClient/SushiswapApi.pm
+lib/WWW/OpenAPIClient/UNISWAPV3ETHEREUMApi.pm
 lib/WWW/OpenAPIClient/UniswapV2Api.pm
 lib/WWW/OpenAPIClient/UniswapV3Api.pm
 t/CRYPTOPUNKSApiTest.t
@@ -320,6 +328,10 @@ t/SushiswapTokenDayDataDTOTest.t
 t/SushiswapTransactionDTOTest.t
 t/SushiswapUserDTOTest.t
 t/TransactionsETradeAggressiveSideTest.t
+t/UNISWAPV3ETHEREUMAccountDTOTest.t
+t/UNISWAPV3ETHEREUMApiTest.t
+t/UNISWAPV3ETHEREUMSwapDTOTest.t
+t/UNISWAPV3ETHEREUMTokenDTOTest.t
 t/UniswapV2ApiTest.t
 t/UniswapV2BundleDTOTest.t
 t/UniswapV2BurnDTOTest.t

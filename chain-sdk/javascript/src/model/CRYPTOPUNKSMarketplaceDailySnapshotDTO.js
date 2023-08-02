@@ -54,7 +54,7 @@ class CRYPTOPUNKSMarketplaceDailySnapshotDTO {
                 obj['recv_time'] = ApiClient.convertToType(data['recv_time'], 'Date');
             }
             if (data.hasOwnProperty('block_number')) {
-                obj['block_number'] = ApiClient.convertToType(data['block_number'], 'String');
+                obj['block_number'] = ApiClient.convertToType(data['block_number'], 'Number');
             }
             if (data.hasOwnProperty('vid')) {
                 obj['vid'] = ApiClient.convertToType(data['vid'], 'Number');
@@ -112,10 +112,6 @@ class CRYPTOPUNKSMarketplaceDailySnapshotDTO {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['block_number'] && !(typeof data['block_number'] === 'string' || data['block_number'] instanceof String)) {
-            throw new Error("Expected the field `block_number` to be a primitive type in the JSON string but got " + data['block_number']);
-        }
-        // ensure the json data is a string
         if (data['block_range'] && !(typeof data['block_range'] === 'string' || data['block_range'] instanceof String)) {
             throw new Error("Expected the field `block_range` to be a primitive type in the JSON string but got " + data['block_range']);
         }
@@ -167,8 +163,8 @@ CRYPTOPUNKSMarketplaceDailySnapshotDTO.prototype['entry_time'] = undefined;
 CRYPTOPUNKSMarketplaceDailySnapshotDTO.prototype['recv_time'] = undefined;
 
 /**
- * 
- * @member {String} block_number
+ * Number of block in which entity was recorded.
+ * @member {Number} block_number
  */
 CRYPTOPUNKSMarketplaceDailySnapshotDTO.prototype['block_number'] = undefined;
 

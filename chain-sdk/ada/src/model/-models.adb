@@ -772,483 +772,32 @@ package body .Models is
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in TransactionsETradeAggressiveSide_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in TransactionsETradeAggressiveSide_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out TransactionsETradeAggressiveSide_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out TransactionsETradeAggressiveSide_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : TransactionsETradeAggressiveSide_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in SushiswapSwapDTO_Type) is
+                        Value : in UNISWAPV3ETHEREUMTokenDTO_Type) is
    begin
       Into.Start_Entity (Name);
       Into.Write_Entity ("entry_time", Value.Entry_Time);
       Into.Write_Entity ("recv_time", Value.Recv_Time);
       Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("transaction", Value.Transaction);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("pair", Value.Pair);
-      Into.Write_Entity ("sender", Value.Sender);
-      Into.Write_Entity ("amount_0_in", Value.Amount_0_In);
-      Into.Write_Entity ("amount_1_in", Value.Amount_1_In);
-      Into.Write_Entity ("amount_0_out", Value.Amount_0_Out);
-      Into.Write_Entity ("amount_1_out", Value.Amount_1_Out);
-      Into.Write_Entity ("to", Value.To);
-      Into.Write_Entity ("log_index", Value.Log_Index);
-      Into.Write_Entity ("amount_usd", Value.Amount_Usd);
       Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("pool_id", Value.Pool_Id);
-      Into.Write_Entity ("transaction_id", Value.Transaction_Id);
-      Serialize (Into, "evaluated_price", Value.Evaluated_Price);
-      Serialize (Into, "evaluated_amount", Value.Evaluated_Amount);
-      Serialize (Into, "evaluated_aggressor", Value.Evaluated_Aggressor);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in SushiswapSwapDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out SushiswapSwapDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "pair", Value.Pair);
-      Swagger.Streams.Deserialize (Object, "sender", Value.Sender);
-      Swagger.Streams.Deserialize (Object, "amount_0_in", Value.Amount_0_In);
-      Swagger.Streams.Deserialize (Object, "amount_1_in", Value.Amount_1_In);
-      Swagger.Streams.Deserialize (Object, "amount_0_out", Value.Amount_0_Out);
-      Swagger.Streams.Deserialize (Object, "amount_1_out", Value.Amount_1_Out);
-      Swagger.Streams.Deserialize (Object, "to", Value.To);
-      Swagger.Streams.Deserialize (Object, "log_index", Value.Log_Index);
-      Swagger.Streams.Deserialize (Object, "amount_usd", Value.Amount_Usd);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "pool_id", Value.Pool_Id);
-      Swagger.Streams.Deserialize (Object, "transaction_id", Value.Transaction_Id);
-      Swagger.Streams.Deserialize (Object, "evaluated_price", Value.Evaluated_Price);
-      Swagger.Streams.Deserialize (Object, "evaluated_amount", Value.Evaluated_Amount);
-      Deserialize (Object, "evaluated_aggressor", Value.Evaluated_Aggressor);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out SushiswapSwapDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : SushiswapSwapDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexTradeDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("block_range", Value.Block_Range);
       Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("order", Value.Order);
-      Into.Write_Entity ("owner", Value.Owner);
-      Into.Write_Entity ("sell_volume", Value.Sell_Volume);
-      Into.Write_Entity ("buy_volume", Value.Buy_Volume);
-      Into.Write_Entity ("trade_batch_id", Value.Trade_Batch_Id);
-      Into.Write_Entity ("trade_epoch", Value.Trade_Epoch);
-      Into.Write_Entity ("buy_token", Value.Buy_Token);
-      Into.Write_Entity ("sell_token", Value.Sell_Token);
-      Into.Write_Entity ("create_epoch", Value.Create_Epoch);
-      Into.Write_Entity ("revert_epoch", Value.Revert_Epoch);
-      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
-      Into.Write_Entity ("tx_log_index", Value.Tx_Log_Index);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("pool_id", Value.Pool_Id);
-      Into.Write_Entity ("transaction_id", Value.Transaction_Id);
-      Serialize (Into, "evaluated_price", Value.Evaluated_Price);
-      Serialize (Into, "evaluated_amount", Value.Evaluated_Amount);
-      Serialize (Into, "evaluated_aggressor", Value.Evaluated_Aggressor);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexTradeDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexTradeDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "order", Value.Order);
-      Swagger.Streams.Deserialize (Object, "owner", Value.Owner);
-      Swagger.Streams.Deserialize (Object, "sell_volume", Value.Sell_Volume);
-      Swagger.Streams.Deserialize (Object, "buy_volume", Value.Buy_Volume);
-      Swagger.Streams.Deserialize (Object, "trade_batch_id", Value.Trade_Batch_Id);
-      Swagger.Streams.Deserialize (Object, "trade_epoch", Value.Trade_Epoch);
-      Swagger.Streams.Deserialize (Object, "buy_token", Value.Buy_Token);
-      Swagger.Streams.Deserialize (Object, "sell_token", Value.Sell_Token);
-      Swagger.Streams.Deserialize (Object, "create_epoch", Value.Create_Epoch);
-      Swagger.Streams.Deserialize (Object, "revert_epoch", Value.Revert_Epoch);
-      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
-      Swagger.Streams.Deserialize (Object, "tx_log_index", Value.Tx_Log_Index);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "pool_id", Value.Pool_Id);
-      Swagger.Streams.Deserialize (Object, "transaction_id", Value.Transaction_Id);
-      Swagger.Streams.Deserialize (Object, "evaluated_price", Value.Evaluated_Price);
-      Swagger.Streams.Deserialize (Object, "evaluated_amount", Value.Evaluated_Amount);
-      Deserialize (Object, "evaluated_aggressor", Value.Evaluated_Aggressor);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexTradeDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : DexTradeDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveExchangeDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("pool", Value.Pool);
-      Into.Write_Entity ("buyer", Value.Buyer);
-      Into.Write_Entity ("receiver", Value.Receiver);
-      Into.Write_Entity ("token_sold", Value.Token_Sold);
-      Into.Write_Entity ("token_bought", Value.Token_Bought);
-      Into.Write_Entity ("amount_sold", Value.Amount_Sold);
-      Into.Write_Entity ("amount_bought", Value.Amount_Bought);
-      Into.Write_Entity ("block", Value.Block);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("transaction", Value.Transaction);
-      Into.Write_Entity ("vid", Value.Vid);
-      Serialize (Into, "evaluated_price", Value.Evaluated_Price);
-      Serialize (Into, "evaluated_amount", Value.Evaluated_Amount);
-      Serialize (Into, "evaluated_aggressor", Value.Evaluated_Aggressor);
-      Into.Write_Entity ("pool_id", Value.Pool_Id);
-      Into.Write_Entity ("transaction_id", Value.Transaction_Id);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveExchangeDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveExchangeDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
-      Swagger.Streams.Deserialize (Object, "buyer", Value.Buyer);
-      Swagger.Streams.Deserialize (Object, "receiver", Value.Receiver);
-      Swagger.Streams.Deserialize (Object, "token_sold", Value.Token_Sold);
-      Swagger.Streams.Deserialize (Object, "token_bought", Value.Token_Bought);
-      Swagger.Streams.Deserialize (Object, "amount_sold", Value.Amount_Sold);
-      Swagger.Streams.Deserialize (Object, "amount_bought", Value.Amount_Bought);
-      Swagger.Streams.Deserialize (Object, "block", Value.Block);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "evaluated_price", Value.Evaluated_Price);
-      Swagger.Streams.Deserialize (Object, "evaluated_amount", Value.Evaluated_Amount);
-      Deserialize (Object, "evaluated_aggressor", Value.Evaluated_Aggressor);
-      Swagger.Streams.Deserialize (Object, "pool_id", Value.Pool_Id);
-      Swagger.Streams.Deserialize (Object, "transaction_id", Value.Transaction_Id);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveExchangeDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveExchangeDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CowTradeDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("gas_price", Value.Gas_Price);
-      Into.Write_Entity ("gas_limit", Value.Gas_Limit);
-      Into.Write_Entity ("fee_amount", Value.Fee_Amount);
-      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
-      Into.Write_Entity ("settlement", Value.Settlement);
-      Into.Write_Entity ("buy_amount", Value.Buy_Amount);
-      Into.Write_Entity ("sell_amount", Value.Sell_Amount);
-      Into.Write_Entity ("sell_token", Value.Sell_Token);
-      Into.Write_Entity ("buy_token", Value.Buy_Token);
-      Into.Write_Entity ("order", Value.Order);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("pool_id", Value.Pool_Id);
-      Into.Write_Entity ("transaction_id", Value.Transaction_Id);
-      Serialize (Into, "evaluated_price", Value.Evaluated_Price);
-      Serialize (Into, "evaluated_amount", Value.Evaluated_Amount);
-      Serialize (Into, "evaluated_aggressor", Value.Evaluated_Aggressor);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CowTradeDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CowTradeDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "gas_price", Value.Gas_Price);
-      Swagger.Streams.Deserialize (Object, "gas_limit", Value.Gas_Limit);
-      Swagger.Streams.Deserialize (Object, "fee_amount", Value.Fee_Amount);
-      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
-      Swagger.Streams.Deserialize (Object, "settlement", Value.Settlement);
-      Swagger.Streams.Deserialize (Object, "buy_amount", Value.Buy_Amount);
-      Swagger.Streams.Deserialize (Object, "sell_amount", Value.Sell_Amount);
-      Swagger.Streams.Deserialize (Object, "sell_token", Value.Sell_Token);
-      Swagger.Streams.Deserialize (Object, "buy_token", Value.Buy_Token);
-      Swagger.Streams.Deserialize (Object, "order", Value.Order);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "pool_id", Value.Pool_Id);
-      Swagger.Streams.Deserialize (Object, "transaction_id", Value.Transaction_Id);
-      Swagger.Streams.Deserialize (Object, "evaluated_price", Value.Evaluated_Price);
-      Swagger.Streams.Deserialize (Object, "evaluated_amount", Value.Evaluated_Amount);
-      Deserialize (Object, "evaluated_aggressor", Value.Evaluated_Aggressor);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CowTradeDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CowTradeDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in SushiswapTransactionDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Serialize (Into, "mints", Value.Mints);
-      Serialize (Into, "burns", Value.Burns);
-      Serialize (Into, "swaps", Value.Swaps);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in SushiswapTransactionDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out SushiswapTransactionDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "mints", Value.Mints);
-      Swagger.Streams.Deserialize (Object, "burns", Value.Burns);
-      Swagger.Streams.Deserialize (Object, "swaps", Value.Swaps);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out SushiswapTransactionDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : SushiswapTransactionDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in SushiswapTokenDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("factory", Value.Factory);
-      Into.Write_Entity ("symbol", Value.Symbol);
       Into.Write_Entity ("name", Value.Name);
+      Into.Write_Entity ("symbol", Value.Symbol);
       Into.Write_Entity ("decimals", Value.Decimals);
+      Into.Write_Entity ("last_price_usd", Value.Last_Price_Usd);
+      Into.Write_Entity ("last_price_block_number", Value.Last_Price_Block_Number);
+      Into.Write_Entity ("last_price_pool", Value.Last_Price_Pool);
       Into.Write_Entity ("total_supply", Value.Total_Supply);
-      Into.Write_Entity ("volume", Value.Volume);
-      Into.Write_Entity ("volume_usd", Value.Volume_Usd);
-      Into.Write_Entity ("untracked_volume_usd", Value.Untracked_Volume_Usd);
-      Into.Write_Entity ("tx_count", Value.Tx_Count);
-      Into.Write_Entity ("liquidity", Value.Liquidity);
-      Into.Write_Entity ("derived_eth", Value.Derived_Eth);
-      Serialize (Into, "whitelist_pairs", Value.Whitelist_Pairs);
-      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("total_value_locked_usd", Value.Total_Value_Locked_Usd);
+      Into.Write_Entity ("large_price_change_buffer", Value.Large_Price_Change_Buffer);
+      Into.Write_Entity ("large_tvl_impact_buffer", Value.Large_Tvl_Impact_Buffer);
       Into.Write_Entity ("token_symbol", Value.Token_Symbol);
       Into.End_Entity (Name);
    end Serialize;
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapTokenDTO_Type_Vectors.Vector) is
+                        Value : in UNISWAPV3ETHEREUMTokenDTO_Type_Vectors.Vector) is
    begin
       Into.Start_Array (Name);
       for Item of Value loop
@@ -1259,35 +808,34 @@ package body .Models is
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapTokenDTO_Type) is
+                          Value : out UNISWAPV3ETHEREUMTokenDTO_Type) is
       Object : Swagger.Value_Type;
    begin
       Swagger.Streams.Deserialize (From, Name, Object);
       Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
       Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
       Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "factory", Value.Factory);
-      Swagger.Streams.Deserialize (Object, "symbol", Value.Symbol);
-      Swagger.Streams.Deserialize (Object, "name", Value.Name);
-      Swagger.Streams.Deserialize (Object, "decimals", Value.Decimals);
-      Swagger.Streams.Deserialize (Object, "total_supply", Value.Total_Supply);
-      Swagger.Streams.Deserialize (Object, "volume", Value.Volume);
-      Swagger.Streams.Deserialize (Object, "volume_usd", Value.Volume_Usd);
-      Swagger.Streams.Deserialize (Object, "untracked_volume_usd", Value.Untracked_Volume_Usd);
-      Swagger.Streams.Deserialize (Object, "tx_count", Value.Tx_Count);
-      Swagger.Streams.Deserialize (Object, "liquidity", Value.Liquidity);
-      Swagger.Streams.Deserialize (Object, "derived_eth", Value.Derived_Eth);
-      Swagger.Streams.Deserialize (Object, "whitelist_pairs", Value.Whitelist_Pairs);
       Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "name", Value.Name);
+      Swagger.Streams.Deserialize (Object, "symbol", Value.Symbol);
+      Swagger.Streams.Deserialize (Object, "decimals", Value.Decimals);
+      Swagger.Streams.Deserialize (Object, "last_price_usd", Value.Last_Price_Usd);
+      Swagger.Streams.Deserialize (Object, "last_price_block_number", Value.Last_Price_Block_Number);
+      Swagger.Streams.Deserialize (Object, "last_price_pool", Value.Last_Price_Pool);
+      Swagger.Streams.Deserialize (Object, "total_supply", Value.Total_Supply);
+      Swagger.Streams.Deserialize (Object, "total_value_locked_usd", Value.Total_Value_Locked_Usd);
+      Swagger.Streams.Deserialize (Object, "large_price_change_buffer", Value.Large_Price_Change_Buffer);
+      Swagger.Streams.Deserialize (Object, "large_tvl_impact_buffer", Value.Large_Tvl_Impact_Buffer);
       Swagger.Streams.Deserialize (Object, "token_symbol", Value.Token_Symbol);
    end Deserialize;
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapTokenDTO_Type_Vectors.Vector) is
+                          Value : out UNISWAPV3ETHEREUMTokenDTO_Type_Vectors.Vector) is
       List : Swagger.Value_Array_Type;
-      Item : SushiswapTokenDTO_Type;
+      Item : UNISWAPV3ETHEREUMTokenDTO_Type;
    begin
       Value.Clear;
       Swagger.Streams.Deserialize (From, Name, List);
@@ -1302,7 +850,129 @@ package body .Models is
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapPairHourDataDTO_Type) is
+                        Value : in UNISWAPV3ETHEREUMAccountDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("block_range", Value.Block_Range);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("position_count", Value.Position_Count);
+      Into.Write_Entity ("open_position_count", Value.Open_Position_Count);
+      Into.Write_Entity ("closed_position_count", Value.Closed_Position_Count);
+      Into.Write_Entity ("deposit_count", Value.Deposit_Count);
+      Into.Write_Entity ("withdraw_count", Value.Withdraw_Count);
+      Into.Write_Entity ("swap_count", Value.Swap_Count);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV3ETHEREUMAccountDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV3ETHEREUMAccountDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "position_count", Value.Position_Count);
+      Swagger.Streams.Deserialize (Object, "open_position_count", Value.Open_Position_Count);
+      Swagger.Streams.Deserialize (Object, "closed_position_count", Value.Closed_Position_Count);
+      Swagger.Streams.Deserialize (Object, "deposit_count", Value.Deposit_Count);
+      Swagger.Streams.Deserialize (Object, "withdraw_count", Value.Withdraw_Count);
+      Swagger.Streams.Deserialize (Object, "swap_count", Value.Swap_Count);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV3ETHEREUMAccountDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : UNISWAPV3ETHEREUMAccountDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapUserDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapUserDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapUserDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapUserDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : SushiswapUserDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapTokenDayDataDTO_Type) is
    begin
       Into.Start_Entity (Name);
       Into.Write_Entity ("entry_time", Value.Entry_Time);
@@ -1310,21 +980,22 @@ package body .Models is
       Into.Write_Entity ("block_number", Value.Block_Number);
       Into.Write_Entity ("id", Value.Id);
       Into.Write_Entity ("date", Value.Date);
-      Into.Write_Entity ("pair", Value.Pair);
-      Into.Write_Entity ("reserve_0", Value.Reserve_0);
-      Into.Write_Entity ("reserve_1", Value.Reserve_1);
-      Into.Write_Entity ("reserve_usd", Value.Reserve_Usd);
-      Into.Write_Entity ("volume_token_0", Value.Volume_Token_0);
-      Into.Write_Entity ("volume_token_1", Value.Volume_Token_1);
+      Into.Write_Entity ("token", Value.Token);
+      Into.Write_Entity ("volume", Value.Volume);
+      Into.Write_Entity ("volume_eth", Value.Volume_Eth);
       Into.Write_Entity ("volume_usd", Value.Volume_Usd);
       Into.Write_Entity ("tx_count", Value.Tx_Count);
+      Into.Write_Entity ("liquidity", Value.Liquidity);
+      Into.Write_Entity ("liquidity_eth", Value.Liquidity_Eth);
+      Into.Write_Entity ("liquidity_usd", Value.Liquidity_Usd);
+      Into.Write_Entity ("price_usd", Value.Price_Usd);
       Into.Write_Entity ("vid", Value.Vid);
       Into.End_Entity (Name);
    end Serialize;
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapPairHourDataDTO_Type_Vectors.Vector) is
+                        Value : in SushiswapTokenDayDataDTO_Type_Vectors.Vector) is
    begin
       Into.Start_Array (Name);
       for Item of Value loop
@@ -1335,7 +1006,7 @@ package body .Models is
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapPairHourDataDTO_Type) is
+                          Value : out SushiswapTokenDayDataDTO_Type) is
       Object : Swagger.Value_Type;
    begin
       Swagger.Streams.Deserialize (From, Name, Object);
@@ -1344,22 +1015,23 @@ package body .Models is
       Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
       Swagger.Streams.Deserialize (Object, "id", Value.Id);
       Swagger.Streams.Deserialize (Object, "date", Value.Date);
-      Swagger.Streams.Deserialize (Object, "pair", Value.Pair);
-      Swagger.Streams.Deserialize (Object, "reserve_0", Value.Reserve_0);
-      Swagger.Streams.Deserialize (Object, "reserve_1", Value.Reserve_1);
-      Swagger.Streams.Deserialize (Object, "reserve_usd", Value.Reserve_Usd);
-      Swagger.Streams.Deserialize (Object, "volume_token_0", Value.Volume_Token_0);
-      Swagger.Streams.Deserialize (Object, "volume_token_1", Value.Volume_Token_1);
+      Swagger.Streams.Deserialize (Object, "token", Value.Token);
+      Swagger.Streams.Deserialize (Object, "volume", Value.Volume);
+      Swagger.Streams.Deserialize (Object, "volume_eth", Value.Volume_Eth);
       Swagger.Streams.Deserialize (Object, "volume_usd", Value.Volume_Usd);
       Swagger.Streams.Deserialize (Object, "tx_count", Value.Tx_Count);
+      Swagger.Streams.Deserialize (Object, "liquidity", Value.Liquidity);
+      Swagger.Streams.Deserialize (Object, "liquidity_eth", Value.Liquidity_Eth);
+      Swagger.Streams.Deserialize (Object, "liquidity_usd", Value.Liquidity_Usd);
+      Swagger.Streams.Deserialize (Object, "price_usd", Value.Price_Usd);
       Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
    end Deserialize;
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapPairHourDataDTO_Type_Vectors.Vector) is
+                          Value : out SushiswapTokenDayDataDTO_Type_Vectors.Vector) is
       List : Swagger.Value_Array_Type;
-      Item : SushiswapPairHourDataDTO_Type;
+      Item : SushiswapTokenDayDataDTO_Type;
    begin
       Value.Clear;
       Swagger.Streams.Deserialize (From, Name, List);
@@ -1374,41 +1046,32 @@ package body .Models is
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapPairDTO_Type) is
+                        Value : in SushiswapPairDayDataDTO_Type) is
    begin
       Into.Start_Entity (Name);
       Into.Write_Entity ("entry_time", Value.Entry_Time);
       Into.Write_Entity ("recv_time", Value.Recv_Time);
       Into.Write_Entity ("block_number", Value.Block_Number);
       Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("factory", Value.Factory);
-      Into.Write_Entity ("name", Value.Name);
+      Into.Write_Entity ("date", Value.Date);
+      Into.Write_Entity ("pair", Value.Pair);
       Into.Write_Entity ("token_0", Value.Token_0);
       Into.Write_Entity ("token_1", Value.Token_1);
       Into.Write_Entity ("reserve_0", Value.Reserve_0);
       Into.Write_Entity ("reserve_1", Value.Reserve_1);
       Into.Write_Entity ("total_supply", Value.Total_Supply);
-      Into.Write_Entity ("reserve_eth", Value.Reserve_Eth);
       Into.Write_Entity ("reserve_usd", Value.Reserve_Usd);
-      Into.Write_Entity ("tracked_reserve_eth", Value.Tracked_Reserve_Eth);
-      Into.Write_Entity ("token_0_price", Value.Token_0_Price);
-      Into.Write_Entity ("token_1_price", Value.Token_1_Price);
       Into.Write_Entity ("volume_token_0", Value.Volume_Token_0);
       Into.Write_Entity ("volume_token_1", Value.Volume_Token_1);
       Into.Write_Entity ("volume_usd", Value.Volume_Usd);
-      Into.Write_Entity ("untracked_volume_usd", Value.Untracked_Volume_Usd);
       Into.Write_Entity ("tx_count", Value.Tx_Count);
-      Into.Write_Entity ("liquidity_provider_count", Value.Liquidity_Provider_Count);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("block", Value.Block);
       Into.Write_Entity ("vid", Value.Vid);
-      Serialize (Into, "evaluated_ask", Value.Evaluated_Ask);
       Into.End_Entity (Name);
    end Serialize;
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapPairDTO_Type_Vectors.Vector) is
+                        Value : in SushiswapPairDayDataDTO_Type_Vectors.Vector) is
    begin
       Into.Start_Array (Name);
       for Item of Value loop
@@ -1419,7 +1082,7 @@ package body .Models is
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapPairDTO_Type) is
+                          Value : out SushiswapPairDayDataDTO_Type) is
       Object : Swagger.Value_Type;
    begin
       Swagger.Streams.Deserialize (From, Name, Object);
@@ -1427,35 +1090,26 @@ package body .Models is
       Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
       Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
       Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "factory", Value.Factory);
-      Swagger.Streams.Deserialize (Object, "name", Value.Name);
+      Swagger.Streams.Deserialize (Object, "date", Value.Date);
+      Swagger.Streams.Deserialize (Object, "pair", Value.Pair);
       Swagger.Streams.Deserialize (Object, "token_0", Value.Token_0);
       Swagger.Streams.Deserialize (Object, "token_1", Value.Token_1);
       Swagger.Streams.Deserialize (Object, "reserve_0", Value.Reserve_0);
       Swagger.Streams.Deserialize (Object, "reserve_1", Value.Reserve_1);
       Swagger.Streams.Deserialize (Object, "total_supply", Value.Total_Supply);
-      Swagger.Streams.Deserialize (Object, "reserve_eth", Value.Reserve_Eth);
       Swagger.Streams.Deserialize (Object, "reserve_usd", Value.Reserve_Usd);
-      Swagger.Streams.Deserialize (Object, "tracked_reserve_eth", Value.Tracked_Reserve_Eth);
-      Swagger.Streams.Deserialize (Object, "token_0_price", Value.Token_0_Price);
-      Swagger.Streams.Deserialize (Object, "token_1_price", Value.Token_1_Price);
       Swagger.Streams.Deserialize (Object, "volume_token_0", Value.Volume_Token_0);
       Swagger.Streams.Deserialize (Object, "volume_token_1", Value.Volume_Token_1);
       Swagger.Streams.Deserialize (Object, "volume_usd", Value.Volume_Usd);
-      Swagger.Streams.Deserialize (Object, "untracked_volume_usd", Value.Untracked_Volume_Usd);
       Swagger.Streams.Deserialize (Object, "tx_count", Value.Tx_Count);
-      Swagger.Streams.Deserialize (Object, "liquidity_provider_count", Value.Liquidity_Provider_Count);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "block", Value.Block);
       Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "evaluated_ask", Value.Evaluated_Ask);
    end Deserialize;
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapPairDTO_Type_Vectors.Vector) is
+                          Value : out SushiswapPairDayDataDTO_Type_Vectors.Vector) is
       List : Swagger.Value_Array_Type;
-      Item : SushiswapPairDTO_Type;
+      Item : SushiswapPairDayDataDTO_Type;
    begin
       Value.Clear;
       Swagger.Streams.Deserialize (From, Name, List);
@@ -1470,32 +1124,103 @@ package body .Models is
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapLiquidityPositionSnapshotDTO_Type) is
+                        Value : in SushiswapMintDTO_Type) is
    begin
       Into.Start_Entity (Name);
       Into.Write_Entity ("entry_time", Value.Entry_Time);
       Into.Write_Entity ("recv_time", Value.Recv_Time);
       Into.Write_Entity ("block_number", Value.Block_Number);
       Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("liquidity_position", Value.Liquidity_Position);
+      Into.Write_Entity ("transaction", Value.Transaction);
       Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("block", Value.Block);
+      Into.Write_Entity ("pair", Value.Pair);
+      Into.Write_Entity ("to", Value.To);
+      Into.Write_Entity ("liquidity", Value.Liquidity);
+      Into.Write_Entity ("sender", Value.Sender);
+      Into.Write_Entity ("amount_0", Value.Amount_0);
+      Into.Write_Entity ("amount_1", Value.Amount_1);
+      Into.Write_Entity ("log_index", Value.Log_Index);
+      Into.Write_Entity ("amount_usd", Value.Amount_Usd);
+      Into.Write_Entity ("fee_to", Value.Fee_To);
+      Into.Write_Entity ("fee_liquidity", Value.Fee_Liquidity);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapMintDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapMintDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "pair", Value.Pair);
+      Swagger.Streams.Deserialize (Object, "to", Value.To);
+      Swagger.Streams.Deserialize (Object, "liquidity", Value.Liquidity);
+      Swagger.Streams.Deserialize (Object, "sender", Value.Sender);
+      Swagger.Streams.Deserialize (Object, "amount_0", Value.Amount_0);
+      Swagger.Streams.Deserialize (Object, "amount_1", Value.Amount_1);
+      Swagger.Streams.Deserialize (Object, "log_index", Value.Log_Index);
+      Swagger.Streams.Deserialize (Object, "amount_usd", Value.Amount_Usd);
+      Swagger.Streams.Deserialize (Object, "fee_to", Value.Fee_To);
+      Swagger.Streams.Deserialize (Object, "fee_liquidity", Value.Fee_Liquidity);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapMintDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : SushiswapMintDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapLiquidityPositionDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
       Into.Write_Entity ("user", Value.User);
       Into.Write_Entity ("pair", Value.Pair);
-      Into.Write_Entity ("token_0_price_usd", Value.Token_0_Price_Usd);
-      Into.Write_Entity ("token_1_price_usd", Value.Token_1_Price_Usd);
-      Into.Write_Entity ("reserve_0", Value.Reserve_0);
-      Into.Write_Entity ("reserve_1", Value.Reserve_1);
-      Into.Write_Entity ("reserve_usd", Value.Reserve_Usd);
-      Into.Write_Entity ("liquidity_token_total_supply", Value.Liquidity_Token_Total_Supply);
       Into.Write_Entity ("liquidity_token_balance", Value.Liquidity_Token_Balance);
+      Into.Write_Entity ("block", Value.Block);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
       Into.Write_Entity ("vid", Value.Vid);
       Into.End_Entity (Name);
    end Serialize;
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapLiquidityPositionSnapshotDTO_Type_Vectors.Vector) is
+                        Value : in SushiswapLiquidityPositionDTO_Type_Vectors.Vector) is
    begin
       Into.Start_Array (Name);
       for Item of Value loop
@@ -1506,7 +1231,7 @@ package body .Models is
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapLiquidityPositionSnapshotDTO_Type) is
+                          Value : out SushiswapLiquidityPositionDTO_Type) is
       Object : Swagger.Value_Type;
    begin
       Swagger.Streams.Deserialize (From, Name, Object);
@@ -1514,792 +1239,19 @@ package body .Models is
       Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
       Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
       Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "liquidity_position", Value.Liquidity_Position);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "block", Value.Block);
       Swagger.Streams.Deserialize (Object, "user", Value.User);
       Swagger.Streams.Deserialize (Object, "pair", Value.Pair);
-      Swagger.Streams.Deserialize (Object, "token_0_price_usd", Value.Token_0_Price_Usd);
-      Swagger.Streams.Deserialize (Object, "token_1_price_usd", Value.Token_1_Price_Usd);
-      Swagger.Streams.Deserialize (Object, "reserve_0", Value.Reserve_0);
-      Swagger.Streams.Deserialize (Object, "reserve_1", Value.Reserve_1);
-      Swagger.Streams.Deserialize (Object, "reserve_usd", Value.Reserve_Usd);
-      Swagger.Streams.Deserialize (Object, "liquidity_token_total_supply", Value.Liquidity_Token_Total_Supply);
       Swagger.Streams.Deserialize (Object, "liquidity_token_balance", Value.Liquidity_Token_Balance);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out SushiswapLiquidityPositionSnapshotDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : SushiswapLiquidityPositionSnapshotDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in SushiswapHourDataDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("date", Value.Date);
-      Into.Write_Entity ("factory", Value.Factory);
-      Into.Write_Entity ("volume_eth", Value.Volume_Eth);
-      Into.Write_Entity ("volume_usd", Value.Volume_Usd);
-      Into.Write_Entity ("untracked_volume", Value.Untracked_Volume);
-      Into.Write_Entity ("liquidity_eth", Value.Liquidity_Eth);
-      Into.Write_Entity ("liquidity_usd", Value.Liquidity_Usd);
-      Into.Write_Entity ("tx_count", Value.Tx_Count);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in SushiswapHourDataDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out SushiswapHourDataDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "date", Value.Date);
-      Swagger.Streams.Deserialize (Object, "factory", Value.Factory);
-      Swagger.Streams.Deserialize (Object, "volume_eth", Value.Volume_Eth);
-      Swagger.Streams.Deserialize (Object, "volume_usd", Value.Volume_Usd);
-      Swagger.Streams.Deserialize (Object, "untracked_volume", Value.Untracked_Volume);
-      Swagger.Streams.Deserialize (Object, "liquidity_eth", Value.Liquidity_Eth);
-      Swagger.Streams.Deserialize (Object, "liquidity_usd", Value.Liquidity_Usd);
-      Swagger.Streams.Deserialize (Object, "tx_count", Value.Tx_Count);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out SushiswapHourDataDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : SushiswapHourDataDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in SushiswapDayDataDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("date", Value.Date);
-      Into.Write_Entity ("factory", Value.Factory);
-      Into.Write_Entity ("volume_eth", Value.Volume_Eth);
-      Into.Write_Entity ("volume_usd", Value.Volume_Usd);
-      Into.Write_Entity ("untracked_volume", Value.Untracked_Volume);
-      Into.Write_Entity ("liquidity_eth", Value.Liquidity_Eth);
-      Into.Write_Entity ("liquidity_usd", Value.Liquidity_Usd);
-      Into.Write_Entity ("tx_count", Value.Tx_Count);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in SushiswapDayDataDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out SushiswapDayDataDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "date", Value.Date);
-      Swagger.Streams.Deserialize (Object, "factory", Value.Factory);
-      Swagger.Streams.Deserialize (Object, "volume_eth", Value.Volume_Eth);
-      Swagger.Streams.Deserialize (Object, "volume_usd", Value.Volume_Usd);
-      Swagger.Streams.Deserialize (Object, "untracked_volume", Value.Untracked_Volume);
-      Swagger.Streams.Deserialize (Object, "liquidity_eth", Value.Liquidity_Eth);
-      Swagger.Streams.Deserialize (Object, "liquidity_usd", Value.Liquidity_Usd);
-      Swagger.Streams.Deserialize (Object, "tx_count", Value.Tx_Count);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out SushiswapDayDataDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : SushiswapDayDataDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in SushiswapBundleDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("eth_price", Value.Eth_Price);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in SushiswapBundleDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out SushiswapBundleDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "eth_price", Value.Eth_Price);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out SushiswapBundleDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : SushiswapBundleDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexWithdrawRequestDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("user", Value.User);
-      Into.Write_Entity ("token_address", Value.Token_Address);
-      Into.Write_Entity ("amount", Value.Amount);
-      Into.Write_Entity ("withdrawable_from_batch_id", Value.Withdrawable_From_Batch_Id);
-      Into.Write_Entity ("create_epoch", Value.Create_Epoch);
-      Into.Write_Entity ("create_batch_id", Value.Create_Batch_Id);
-      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexWithdrawRequestDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexWithdrawRequestDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "user", Value.User);
-      Swagger.Streams.Deserialize (Object, "token_address", Value.Token_Address);
-      Swagger.Streams.Deserialize (Object, "amount", Value.Amount);
-      Swagger.Streams.Deserialize (Object, "withdrawable_from_batch_id", Value.Withdrawable_From_Batch_Id);
-      Swagger.Streams.Deserialize (Object, "create_epoch", Value.Create_Epoch);
-      Swagger.Streams.Deserialize (Object, "create_batch_id", Value.Create_Batch_Id);
-      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexWithdrawRequestDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : DexWithdrawRequestDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexUserDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("from_batch_id", Value.From_Batch_Id);
-      Into.Write_Entity ("create_epoch", Value.Create_Epoch);
-      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexUserDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexUserDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "from_batch_id", Value.From_Batch_Id);
-      Swagger.Streams.Deserialize (Object, "create_epoch", Value.Create_Epoch);
-      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexUserDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : DexUserDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexTokenDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("address", Value.Address);
-      Into.Write_Entity ("from_batch_id", Value.From_Batch_Id);
-      Into.Write_Entity ("symbol", Value.Symbol);
-      Into.Write_Entity ("decimals", Value.Decimals);
-      Into.Write_Entity ("name", Value.Name);
-      Into.Write_Entity ("sell_volume", Value.Sell_Volume);
-      Into.Write_Entity ("create_epoch", Value.Create_Epoch);
-      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("token_symbol", Value.Token_Symbol);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexTokenDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexTokenDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "address", Value.Address);
-      Swagger.Streams.Deserialize (Object, "from_batch_id", Value.From_Batch_Id);
-      Swagger.Streams.Deserialize (Object, "symbol", Value.Symbol);
-      Swagger.Streams.Deserialize (Object, "decimals", Value.Decimals);
-      Swagger.Streams.Deserialize (Object, "name", Value.Name);
-      Swagger.Streams.Deserialize (Object, "sell_volume", Value.Sell_Volume);
-      Swagger.Streams.Deserialize (Object, "create_epoch", Value.Create_Epoch);
-      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "token_symbol", Value.Token_Symbol);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexTokenDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : DexTokenDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexSolutionDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("batch", Value.Batch);
-      Into.Write_Entity ("solver", Value.Solver);
-      Into.Write_Entity ("fee_reward", Value.Fee_Reward);
-      Into.Write_Entity ("objective_value", Value.Objective_Value);
-      Into.Write_Entity ("utility", Value.Utility);
-      Serialize (Into, "trades", Value.Trades);
-      Into.Write_Entity ("create_epoch", Value.Create_Epoch);
-      Into.Write_Entity ("revert_epoch", Value.Revert_Epoch);
-      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
-      Into.Write_Entity ("tx_log_index", Value.Tx_Log_Index);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexSolutionDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexSolutionDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "batch", Value.Batch);
-      Swagger.Streams.Deserialize (Object, "solver", Value.Solver);
-      Swagger.Streams.Deserialize (Object, "fee_reward", Value.Fee_Reward);
-      Swagger.Streams.Deserialize (Object, "objective_value", Value.Objective_Value);
-      Swagger.Streams.Deserialize (Object, "utility", Value.Utility);
-      Swagger.Streams.Deserialize (Object, "trades", Value.Trades);
-      Swagger.Streams.Deserialize (Object, "create_epoch", Value.Create_Epoch);
-      Swagger.Streams.Deserialize (Object, "revert_epoch", Value.Revert_Epoch);
-      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
-      Swagger.Streams.Deserialize (Object, "tx_log_index", Value.Tx_Log_Index);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexSolutionDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : DexSolutionDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexOrderDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("owner", Value.Owner);
-      Into.Write_Entity ("order_id", Value.Order_Id);
-      Into.Write_Entity ("from_batch_id", Value.From_Batch_Id);
-      Into.Write_Entity ("from_epoch", Value.From_Epoch);
-      Into.Write_Entity ("until_batch_id", Value.Until_Batch_Id);
-      Into.Write_Entity ("until_epoch", Value.Until_Epoch);
-      Into.Write_Entity ("buy_token", Value.Buy_Token);
-      Into.Write_Entity ("sell_token", Value.Sell_Token);
-      Into.Write_Entity ("price_numerator", Value.Price_Numerator);
-      Into.Write_Entity ("price_denominator", Value.Price_Denominator);
-      Into.Write_Entity ("max_sell_amount", Value.Max_Sell_Amount);
-      Into.Write_Entity ("min_receive_amount", Value.Min_Receive_Amount);
-      Into.Write_Entity ("sold_volume", Value.Sold_Volume);
-      Into.Write_Entity ("bought_volume", Value.Bought_Volume);
-      Into.Write_Entity ("create_epoch", Value.Create_Epoch);
-      Into.Write_Entity ("cancel_epoch", Value.Cancel_Epoch);
-      Into.Write_Entity ("delete_epoch", Value.Delete_Epoch);
-      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
-      Into.Write_Entity ("tx_log_index", Value.Tx_Log_Index);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexOrderDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexOrderDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "owner", Value.Owner);
-      Swagger.Streams.Deserialize (Object, "order_id", Value.Order_Id);
-      Swagger.Streams.Deserialize (Object, "from_batch_id", Value.From_Batch_Id);
-      Swagger.Streams.Deserialize (Object, "from_epoch", Value.From_Epoch);
-      Swagger.Streams.Deserialize (Object, "until_batch_id", Value.Until_Batch_Id);
-      Swagger.Streams.Deserialize (Object, "until_epoch", Value.Until_Epoch);
-      Swagger.Streams.Deserialize (Object, "buy_token", Value.Buy_Token);
-      Swagger.Streams.Deserialize (Object, "sell_token", Value.Sell_Token);
-      Swagger.Streams.Deserialize (Object, "price_numerator", Value.Price_Numerator);
-      Swagger.Streams.Deserialize (Object, "price_denominator", Value.Price_Denominator);
-      Swagger.Streams.Deserialize (Object, "max_sell_amount", Value.Max_Sell_Amount);
-      Swagger.Streams.Deserialize (Object, "min_receive_amount", Value.Min_Receive_Amount);
-      Swagger.Streams.Deserialize (Object, "sold_volume", Value.Sold_Volume);
-      Swagger.Streams.Deserialize (Object, "bought_volume", Value.Bought_Volume);
-      Swagger.Streams.Deserialize (Object, "create_epoch", Value.Create_Epoch);
-      Swagger.Streams.Deserialize (Object, "cancel_epoch", Value.Cancel_Epoch);
-      Swagger.Streams.Deserialize (Object, "delete_epoch", Value.Delete_Epoch);
-      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
-      Swagger.Streams.Deserialize (Object, "tx_log_index", Value.Tx_Log_Index);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexOrderDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : DexOrderDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexBatchDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("start_epoch", Value.Start_Epoch);
-      Into.Write_Entity ("end_epoch", Value.End_Epoch);
-      Into.Write_Entity ("solution", Value.Solution);
-      Into.Write_Entity ("first_solution_epoch", Value.First_Solution_Epoch);
-      Into.Write_Entity ("last_revert_epoch", Value.Last_Revert_Epoch);
-      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexBatchDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexBatchDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "start_epoch", Value.Start_Epoch);
-      Swagger.Streams.Deserialize (Object, "end_epoch", Value.End_Epoch);
-      Swagger.Streams.Deserialize (Object, "solution", Value.Solution);
-      Swagger.Streams.Deserialize (Object, "first_solution_epoch", Value.First_Solution_Epoch);
-      Swagger.Streams.Deserialize (Object, "last_revert_epoch", Value.Last_Revert_Epoch);
-      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexBatchDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : DexBatchDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveVotingAppDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("address", Value.Address);
-      Into.Write_Entity ("codename", Value.Codename);
-      Into.Write_Entity ("minimum_balance", Value.Minimum_Balance);
-      Into.Write_Entity ("minimum_quorum", Value.Minimum_Quorum);
-      Into.Write_Entity ("minimum_time", Value.Minimum_Time);
-      Into.Write_Entity ("required_support", Value.Required_Support);
-      Into.Write_Entity ("vote_time", Value.Vote_Time);
-      Into.Write_Entity ("proposal_count", Value.Proposal_Count);
-      Into.Write_Entity ("vote_count", Value.Vote_Count);
-      Into.Write_Entity ("token", Value.Token);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveVotingAppDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveVotingAppDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "address", Value.Address);
-      Swagger.Streams.Deserialize (Object, "codename", Value.Codename);
-      Swagger.Streams.Deserialize (Object, "minimum_balance", Value.Minimum_Balance);
-      Swagger.Streams.Deserialize (Object, "minimum_quorum", Value.Minimum_Quorum);
-      Swagger.Streams.Deserialize (Object, "minimum_time", Value.Minimum_Time);
-      Swagger.Streams.Deserialize (Object, "required_support", Value.Required_Support);
-      Swagger.Streams.Deserialize (Object, "vote_time", Value.Vote_Time);
-      Swagger.Streams.Deserialize (Object, "proposal_count", Value.Proposal_Count);
-      Swagger.Streams.Deserialize (Object, "vote_count", Value.Vote_Count);
-      Swagger.Streams.Deserialize (Object, "token", Value.Token);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveVotingAppDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveVotingAppDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveTransferOwnershipEventDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("pool", Value.Pool);
-      Into.Write_Entity ("new_admin", Value.New_Admin);
-      Into.Write_Entity ("block", Value.Block);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("transaction", Value.Transaction);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveTransferOwnershipEventDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveTransferOwnershipEventDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
-      Swagger.Streams.Deserialize (Object, "new_admin", Value.New_Admin);
       Swagger.Streams.Deserialize (Object, "block", Value.Block);
       Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
       Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
    end Deserialize;
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out CurveTransferOwnershipEventDTO_Type_Vectors.Vector) is
+                          Value : out SushiswapLiquidityPositionDTO_Type_Vectors.Vector) is
       List : Swagger.Value_Array_Type;
-      Item : CurveTransferOwnershipEventDTO_Type;
+      Item : SushiswapLiquidityPositionDTO_Type;
    begin
       Value.Clear;
       Swagger.Streams.Deserialize (From, Name, List);
@@ -2314,30 +1266,29 @@ package body .Models is
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in CurveSystemStateDTO_Type) is
+                        Value : in SushiswapFactoryDTO_Type) is
    begin
       Into.Start_Entity (Name);
       Into.Write_Entity ("entry_time", Value.Entry_Time);
       Into.Write_Entity ("recv_time", Value.Recv_Time);
       Into.Write_Entity ("block_number", Value.Block_Number);
       Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("registry_contract", Value.Registry_Contract);
-      Into.Write_Entity ("contract_count", Value.Contract_Count);
-      Into.Write_Entity ("gauge_count", Value.Gauge_Count);
-      Into.Write_Entity ("gauge_type_count", Value.Gauge_Type_Count);
-      Into.Write_Entity ("pool_count", Value.Pool_Count);
+      Into.Write_Entity ("pair_count", Value.Pair_Count);
+      Into.Write_Entity ("volume_usd", Value.Volume_Usd);
+      Into.Write_Entity ("volume_eth", Value.Volume_Eth);
+      Into.Write_Entity ("untracked_volume_usd", Value.Untracked_Volume_Usd);
+      Into.Write_Entity ("liquidity_usd", Value.Liquidity_Usd);
+      Into.Write_Entity ("liquidity_eth", Value.Liquidity_Eth);
+      Into.Write_Entity ("tx_count", Value.Tx_Count);
       Into.Write_Entity ("token_count", Value.Token_Count);
-      Into.Write_Entity ("total_pool_count", Value.Total_Pool_Count);
-      Into.Write_Entity ("updated", Value.Updated);
-      Into.Write_Entity ("updated_at_block", Value.Updated_At_Block);
-      Into.Write_Entity ("updated_at_transaction", Value.Updated_At_Transaction);
+      Into.Write_Entity ("user_count", Value.User_Count);
       Into.Write_Entity ("vid", Value.Vid);
       Into.End_Entity (Name);
    end Serialize;
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in CurveSystemStateDTO_Type_Vectors.Vector) is
+                        Value : in SushiswapFactoryDTO_Type_Vectors.Vector) is
    begin
       Into.Start_Array (Name);
       for Item of Value loop
@@ -2348,7 +1299,7 @@ package body .Models is
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out CurveSystemStateDTO_Type) is
+                          Value : out SushiswapFactoryDTO_Type) is
       Object : Swagger.Value_Type;
    begin
       Swagger.Streams.Deserialize (From, Name, Object);
@@ -2356,24 +1307,23 @@ package body .Models is
       Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
       Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
       Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "registry_contract", Value.Registry_Contract);
-      Swagger.Streams.Deserialize (Object, "contract_count", Value.Contract_Count);
-      Swagger.Streams.Deserialize (Object, "gauge_count", Value.Gauge_Count);
-      Swagger.Streams.Deserialize (Object, "gauge_type_count", Value.Gauge_Type_Count);
-      Swagger.Streams.Deserialize (Object, "pool_count", Value.Pool_Count);
+      Swagger.Streams.Deserialize (Object, "pair_count", Value.Pair_Count);
+      Swagger.Streams.Deserialize (Object, "volume_usd", Value.Volume_Usd);
+      Swagger.Streams.Deserialize (Object, "volume_eth", Value.Volume_Eth);
+      Swagger.Streams.Deserialize (Object, "untracked_volume_usd", Value.Untracked_Volume_Usd);
+      Swagger.Streams.Deserialize (Object, "liquidity_usd", Value.Liquidity_Usd);
+      Swagger.Streams.Deserialize (Object, "liquidity_eth", Value.Liquidity_Eth);
+      Swagger.Streams.Deserialize (Object, "tx_count", Value.Tx_Count);
       Swagger.Streams.Deserialize (Object, "token_count", Value.Token_Count);
-      Swagger.Streams.Deserialize (Object, "total_pool_count", Value.Total_Pool_Count);
-      Swagger.Streams.Deserialize (Object, "updated", Value.Updated);
-      Swagger.Streams.Deserialize (Object, "updated_at_block", Value.Updated_At_Block);
-      Swagger.Streams.Deserialize (Object, "updated_at_transaction", Value.Updated_At_Transaction);
+      Swagger.Streams.Deserialize (Object, "user_count", Value.User_Count);
       Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
    end Deserialize;
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out CurveSystemStateDTO_Type_Vectors.Vector) is
+                          Value : out SushiswapFactoryDTO_Type_Vectors.Vector) is
       List : Swagger.Value_Array_Type;
-      Item : CurveSystemStateDTO_Type;
+      Item : SushiswapFactoryDTO_Type;
    begin
       Value.Clear;
       Swagger.Streams.Deserialize (From, Name, List);
@@ -2388,1475 +1338,33 @@ package body .Models is
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in CurveRemoveLiquidityEventDTO_Type) is
+                        Value : in SushiswapBurnDTO_Type) is
    begin
       Into.Start_Entity (Name);
       Into.Write_Entity ("entry_time", Value.Entry_Time);
       Into.Write_Entity ("recv_time", Value.Recv_Time);
       Into.Write_Entity ("block_number", Value.Block_Number);
       Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("pool", Value.Pool);
-      Into.Write_Entity ("provider", Value.Provider);
-      Serialize (Into, "token_amounts", Value.Token_Amounts);
-      Serialize (Into, "fees", Value.Fees);
-      Into.Write_Entity ("token_supply", Value.Token_Supply);
-      Into.Write_Entity ("invariant", Value.Invariant);
-      Into.Write_Entity ("block", Value.Block);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
       Into.Write_Entity ("transaction", Value.Transaction);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveRemoveLiquidityEventDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveRemoveLiquidityEventDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
-      Swagger.Streams.Deserialize (Object, "provider", Value.Provider);
-      Swagger.Streams.Deserialize (Object, "token_amounts", Value.Token_Amounts);
-      Swagger.Streams.Deserialize (Object, "fees", Value.Fees);
-      Swagger.Streams.Deserialize (Object, "token_supply", Value.Token_Supply);
-      Swagger.Streams.Deserialize (Object, "invariant", Value.Invariant);
-      Swagger.Streams.Deserialize (Object, "block", Value.Block);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveRemoveLiquidityEventDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveRemoveLiquidityEventDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveProposalDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("number", Value.Number);
-      Into.Write_Entity ("app", Value.App);
-      Into.Write_Entity ("creator", Value.Creator);
-      Into.Write_Entity ("execution_script", Value.Execution_Script);
-      Into.Write_Entity ("expire_date", Value.Expire_Date);
-      Into.Write_Entity ("minimum_quorum", Value.Minimum_Quorum);
-      Into.Write_Entity ("required_support", Value.Required_Support);
-      Into.Write_Entity ("snapshot_block", Value.Snapshot_Block);
-      Into.Write_Entity ("voting_power", Value.Voting_Power);
-      Into.Write_Entity ("metadata", Value.Metadata);
-      Into.Write_Entity ("text", Value.Text);
-      Into.Write_Entity ("vote_count", Value.Vote_Count);
-      Into.Write_Entity ("positive_vote_count", Value.Positive_Vote_Count);
-      Into.Write_Entity ("negative_vote_count", Value.Negative_Vote_Count);
-      Into.Write_Entity ("current_quorum", Value.Current_Quorum);
-      Into.Write_Entity ("current_support", Value.Current_Support);
-      Into.Write_Entity ("staked_support", Value.Staked_Support);
-      Into.Write_Entity ("total_staked", Value.Total_Staked);
-      Into.Write_Entity ("created", Value.Created);
-      Into.Write_Entity ("created_at_block", Value.Created_At_Block);
-      Into.Write_Entity ("created_at_transaction", Value.Created_At_Transaction);
-      Into.Write_Entity ("updated", Value.Updated);
-      Into.Write_Entity ("updated_at_block", Value.Updated_At_Block);
-      Into.Write_Entity ("updated_at_transaction", Value.Updated_At_Transaction);
-      Into.Write_Entity ("executed", Value.Executed);
-      Into.Write_Entity ("executed_at_block", Value.Executed_At_Block);
-      Into.Write_Entity ("executed_at_transaction", Value.Executed_At_Transaction);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveProposalDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveProposalDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "number", Value.Number);
-      Swagger.Streams.Deserialize (Object, "app", Value.App);
-      Swagger.Streams.Deserialize (Object, "creator", Value.Creator);
-      Swagger.Streams.Deserialize (Object, "execution_script", Value.Execution_Script);
-      Swagger.Streams.Deserialize (Object, "expire_date", Value.Expire_Date);
-      Swagger.Streams.Deserialize (Object, "minimum_quorum", Value.Minimum_Quorum);
-      Swagger.Streams.Deserialize (Object, "required_support", Value.Required_Support);
-      Swagger.Streams.Deserialize (Object, "snapshot_block", Value.Snapshot_Block);
-      Swagger.Streams.Deserialize (Object, "voting_power", Value.Voting_Power);
-      Swagger.Streams.Deserialize (Object, "metadata", Value.Metadata);
-      Swagger.Streams.Deserialize (Object, "text", Value.Text);
-      Swagger.Streams.Deserialize (Object, "vote_count", Value.Vote_Count);
-      Swagger.Streams.Deserialize (Object, "positive_vote_count", Value.Positive_Vote_Count);
-      Swagger.Streams.Deserialize (Object, "negative_vote_count", Value.Negative_Vote_Count);
-      Swagger.Streams.Deserialize (Object, "current_quorum", Value.Current_Quorum);
-      Swagger.Streams.Deserialize (Object, "current_support", Value.Current_Support);
-      Swagger.Streams.Deserialize (Object, "staked_support", Value.Staked_Support);
-      Swagger.Streams.Deserialize (Object, "total_staked", Value.Total_Staked);
-      Swagger.Streams.Deserialize (Object, "created", Value.Created);
-      Swagger.Streams.Deserialize (Object, "created_at_block", Value.Created_At_Block);
-      Swagger.Streams.Deserialize (Object, "created_at_transaction", Value.Created_At_Transaction);
-      Swagger.Streams.Deserialize (Object, "updated", Value.Updated);
-      Swagger.Streams.Deserialize (Object, "updated_at_block", Value.Updated_At_Block);
-      Swagger.Streams.Deserialize (Object, "updated_at_transaction", Value.Updated_At_Transaction);
-      Swagger.Streams.Deserialize (Object, "executed", Value.Executed);
-      Swagger.Streams.Deserialize (Object, "executed_at_block", Value.Executed_At_Block);
-      Swagger.Streams.Deserialize (Object, "executed_at_transaction", Value.Executed_At_Transaction);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveProposalDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveProposalDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveLpTokenDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("address", Value.Address);
-      Into.Write_Entity ("decimals", Value.Decimals);
-      Into.Write_Entity ("name", Value.Name);
-      Into.Write_Entity ("symbol", Value.Symbol);
-      Into.Write_Entity ("gauge", Value.Gauge);
-      Into.Write_Entity ("pool", Value.Pool);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveLpTokenDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveLpTokenDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "address", Value.Address);
-      Swagger.Streams.Deserialize (Object, "decimals", Value.Decimals);
-      Swagger.Streams.Deserialize (Object, "name", Value.Name);
-      Swagger.Streams.Deserialize (Object, "symbol", Value.Symbol);
-      Swagger.Streams.Deserialize (Object, "gauge", Value.Gauge);
-      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveLpTokenDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveLpTokenDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveGaugeWithdrawDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("gauge", Value.Gauge);
-      Into.Write_Entity ("provider", Value.Provider);
-      Into.Write_Entity ("value", Value.Value);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveGaugeWithdrawDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveGaugeWithdrawDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "gauge", Value.Gauge);
-      Swagger.Streams.Deserialize (Object, "provider", Value.Provider);
-      Swagger.Streams.Deserialize (Object, "value", Value.Value);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveGaugeWithdrawDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveGaugeWithdrawDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveGaugeWeightDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("gauge", Value.Gauge);
-      Into.Write_Entity ("time", Value.Time);
-      Into.Write_Entity ("weight", Value.Weight);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveGaugeWeightDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveGaugeWeightDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "gauge", Value.Gauge);
-      Swagger.Streams.Deserialize (Object, "time", Value.Time);
-      Swagger.Streams.Deserialize (Object, "weight", Value.Weight);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveGaugeWeightDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveGaugeWeightDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveGaugeTypeDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("name", Value.Name);
-      Into.Write_Entity ("gauge_count", Value.Gauge_Count);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveGaugeTypeDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveGaugeTypeDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "name", Value.Name);
-      Swagger.Streams.Deserialize (Object, "gauge_count", Value.Gauge_Count);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveGaugeTypeDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveGaugeTypeDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveGaugeLiquidityDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("user", Value.User);
-      Into.Write_Entity ("gauge", Value.Gauge);
-      Into.Write_Entity ("original_balance", Value.Original_Balance);
-      Into.Write_Entity ("original_supply", Value.Original_Supply);
-      Into.Write_Entity ("working_balance", Value.Working_Balance);
-      Into.Write_Entity ("working_supply", Value.Working_Supply);
       Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("block", Value.Block);
-      Into.Write_Entity ("transaction", Value.Transaction);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveGaugeLiquidityDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveGaugeLiquidityDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "user", Value.User);
-      Swagger.Streams.Deserialize (Object, "gauge", Value.Gauge);
-      Swagger.Streams.Deserialize (Object, "original_balance", Value.Original_Balance);
-      Swagger.Streams.Deserialize (Object, "original_supply", Value.Original_Supply);
-      Swagger.Streams.Deserialize (Object, "working_balance", Value.Working_Balance);
-      Swagger.Streams.Deserialize (Object, "working_supply", Value.Working_Supply);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "block", Value.Block);
-      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveGaugeLiquidityDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveGaugeLiquidityDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveGaugeDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("address", Value.Address);
-      Into.Write_Entity ("type", Value.P_Type);
-      Into.Write_Entity ("pool", Value.Pool);
-      Into.Write_Entity ("created", Value.Created);
-      Into.Write_Entity ("created_at_block", Value.Created_At_Block);
-      Into.Write_Entity ("created_at_transaction", Value.Created_At_Transaction);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveGaugeDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveGaugeDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "address", Value.Address);
-      Swagger.Streams.Deserialize (Object, "type", Value.P_Type);
-      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
-      Swagger.Streams.Deserialize (Object, "created", Value.Created);
-      Swagger.Streams.Deserialize (Object, "created_at_block", Value.Created_At_Block);
-      Swagger.Streams.Deserialize (Object, "created_at_transaction", Value.Created_At_Transaction);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveGaugeDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveGaugeDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveContractVersionDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("contract", Value.Contract);
-      Into.Write_Entity ("address", Value.Address);
-      Into.Write_Entity ("version", Value.Version);
-      Into.Write_Entity ("added", Value.Added);
-      Into.Write_Entity ("added_at_block", Value.Added_At_Block);
-      Into.Write_Entity ("added_at_transaction", Value.Added_At_Transaction);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveContractVersionDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveContractVersionDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "contract", Value.Contract);
-      Swagger.Streams.Deserialize (Object, "address", Value.Address);
-      Swagger.Streams.Deserialize (Object, "version", Value.Version);
-      Swagger.Streams.Deserialize (Object, "added", Value.Added);
-      Swagger.Streams.Deserialize (Object, "added_at_block", Value.Added_At_Block);
-      Swagger.Streams.Deserialize (Object, "added_at_transaction", Value.Added_At_Transaction);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveContractVersionDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveContractVersionDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveCoinDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("index", Value.Index);
-      Into.Write_Entity ("pool", Value.Pool);
-      Into.Write_Entity ("token", Value.Token);
-      Into.Write_Entity ("underlying", Value.Underlying);
-      Into.Write_Entity ("balance", Value.Balance);
-      Into.Write_Entity ("rate", Value.Rate);
-      Into.Write_Entity ("updated", Value.Updated);
-      Into.Write_Entity ("updated_at_block", Value.Updated_At_Block);
-      Into.Write_Entity ("updated_at_transaction", Value.Updated_At_Transaction);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("block_range", Value.Block_Range);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveCoinDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveCoinDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "index", Value.Index);
-      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
-      Swagger.Streams.Deserialize (Object, "token", Value.Token);
-      Swagger.Streams.Deserialize (Object, "underlying", Value.Underlying);
-      Swagger.Streams.Deserialize (Object, "balance", Value.Balance);
-      Swagger.Streams.Deserialize (Object, "rate", Value.Rate);
-      Swagger.Streams.Deserialize (Object, "updated", Value.Updated);
-      Swagger.Streams.Deserialize (Object, "updated_at_block", Value.Updated_At_Block);
-      Swagger.Streams.Deserialize (Object, "updated_at_transaction", Value.Updated_At_Transaction);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveCoinDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveCoinDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveAdminFeeChangeLogDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("pool", Value.Pool);
-      Into.Write_Entity ("value", Value.Value);
-      Into.Write_Entity ("block", Value.Block);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("transaction", Value.Transaction);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveAdminFeeChangeLogDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveAdminFeeChangeLogDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
-      Swagger.Streams.Deserialize (Object, "value", Value.Value);
-      Swagger.Streams.Deserialize (Object, "block", Value.Block);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveAdminFeeChangeLogDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveAdminFeeChangeLogDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveAccountDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("address", Value.Address);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveAccountDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveAccountDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "address", Value.Address);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveAccountDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveAccountDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CowSettlementDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("solver", Value.Solver);
-      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
-      Into.Write_Entity ("first_trade_timestamp", Value.First_Trade_Timestamp);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CowSettlementDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CowSettlementDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "solver", Value.Solver);
-      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
-      Swagger.Streams.Deserialize (Object, "first_trade_timestamp", Value.First_Trade_Timestamp);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CowSettlementDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CowSettlementDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CRYPTOPUNKSUserDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("block_range", Value.Block_Range);
-      Into.Write_Entity ("id", Value.Id);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CRYPTOPUNKSUserDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CRYPTOPUNKSUserDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CRYPTOPUNKSUserDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CRYPTOPUNKSUserDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CRYPTOPUNKSMarketplaceDailySnapshotDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("block_range", Value.Block_Range);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("marketplace", Value.Marketplace);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("collection_count", Value.Collection_Count);
-      Into.Write_Entity ("cumulative_trade_volume_eth", Value.Cumulative_Trade_Volume_Eth);
-      Into.Write_Entity ("marketplace_revenue_eth", Value.Marketplace_Revenue_Eth);
-      Into.Write_Entity ("creator_revenue_eth", Value.Creator_Revenue_Eth);
-      Into.Write_Entity ("total_revenue_eth", Value.Total_Revenue_Eth);
-      Into.Write_Entity ("trade_count", Value.Trade_Count);
-      Into.Write_Entity ("cumulative_unique_traders", Value.Cumulative_Unique_Traders);
-      Into.Write_Entity ("daily_active_traders", Value.Daily_Active_Traders);
-      Into.Write_Entity ("daily_traded_collection_count", Value.Daily_Traded_Collection_Count);
-      Into.Write_Entity ("daily_traded_item_count", Value.Daily_Traded_Item_Count);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CRYPTOPUNKSMarketplaceDailySnapshotDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CRYPTOPUNKSMarketplaceDailySnapshotDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "marketplace", Value.Marketplace);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "collection_count", Value.Collection_Count);
-      Swagger.Streams.Deserialize (Object, "cumulative_trade_volume_eth", Value.Cumulative_Trade_Volume_Eth);
-      Swagger.Streams.Deserialize (Object, "marketplace_revenue_eth", Value.Marketplace_Revenue_Eth);
-      Swagger.Streams.Deserialize (Object, "creator_revenue_eth", Value.Creator_Revenue_Eth);
-      Swagger.Streams.Deserialize (Object, "total_revenue_eth", Value.Total_Revenue_Eth);
-      Swagger.Streams.Deserialize (Object, "trade_count", Value.Trade_Count);
-      Swagger.Streams.Deserialize (Object, "cumulative_unique_traders", Value.Cumulative_Unique_Traders);
-      Swagger.Streams.Deserialize (Object, "daily_active_traders", Value.Daily_Active_Traders);
-      Swagger.Streams.Deserialize (Object, "daily_traded_collection_count", Value.Daily_Traded_Collection_Count);
-      Swagger.Streams.Deserialize (Object, "daily_traded_item_count", Value.Daily_Traded_Item_Count);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CRYPTOPUNKSMarketplaceDailySnapshotDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CRYPTOPUNKSMarketplaceDailySnapshotDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CRYPTOPUNKSItemDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("block_range", Value.Block_Range);
-      Into.Write_Entity ("id", Value.Id);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CRYPTOPUNKSItemDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CRYPTOPUNKSItemDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CRYPTOPUNKSItemDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CRYPTOPUNKSItemDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CRYPTOPUNKSCollectionDailySnapshotDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("block_range", Value.Block_Range);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("collection", Value.Collection);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("royalty_fee", Value.Royalty_Fee);
-      Into.Write_Entity ("daily_min_sale_price", Value.Daily_Min_Sale_Price);
-      Into.Write_Entity ("daily_max_sale_price", Value.Daily_Max_Sale_Price);
-      Into.Write_Entity ("cumulative_trade_volume_eth", Value.Cumulative_Trade_Volume_Eth);
-      Into.Write_Entity ("daily_trade_volume_eth", Value.Daily_Trade_Volume_Eth);
-      Into.Write_Entity ("marketplace_revenue_eth", Value.Marketplace_Revenue_Eth);
-      Into.Write_Entity ("creator_revenue_eth", Value.Creator_Revenue_Eth);
-      Into.Write_Entity ("total_revenue_eth", Value.Total_Revenue_Eth);
-      Into.Write_Entity ("trade_count", Value.Trade_Count);
-      Into.Write_Entity ("daily_traded_item_count", Value.Daily_Traded_Item_Count);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CRYPTOPUNKSCollectionDailySnapshotDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CRYPTOPUNKSCollectionDailySnapshotDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "collection", Value.Collection);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "royalty_fee", Value.Royalty_Fee);
-      Swagger.Streams.Deserialize (Object, "daily_min_sale_price", Value.Daily_Min_Sale_Price);
-      Swagger.Streams.Deserialize (Object, "daily_max_sale_price", Value.Daily_Max_Sale_Price);
-      Swagger.Streams.Deserialize (Object, "cumulative_trade_volume_eth", Value.Cumulative_Trade_Volume_Eth);
-      Swagger.Streams.Deserialize (Object, "daily_trade_volume_eth", Value.Daily_Trade_Volume_Eth);
-      Swagger.Streams.Deserialize (Object, "marketplace_revenue_eth", Value.Marketplace_Revenue_Eth);
-      Swagger.Streams.Deserialize (Object, "creator_revenue_eth", Value.Creator_Revenue_Eth);
-      Swagger.Streams.Deserialize (Object, "total_revenue_eth", Value.Total_Revenue_Eth);
-      Swagger.Streams.Deserialize (Object, "trade_count", Value.Trade_Count);
-      Swagger.Streams.Deserialize (Object, "daily_traded_item_count", Value.Daily_Traded_Item_Count);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CRYPTOPUNKSCollectionDailySnapshotDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CRYPTOPUNKSCollectionDailySnapshotDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CRYPTOPUNKSBidDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("block_range", Value.Block_Range);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("tokens_bid", Value.Tokens_Bid);
-      Into.Write_Entity ("token_id", Value.Token_Id);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("bidder", Value.Bidder);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CRYPTOPUNKSBidDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CRYPTOPUNKSBidDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "tokens_bid", Value.Tokens_Bid);
-      Swagger.Streams.Deserialize (Object, "token_id", Value.Token_Id);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "bidder", Value.Bidder);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CRYPTOPUNKSBidDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CRYPTOPUNKSBidDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CRYPTOPUNKSCollectionDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("block_range", Value.Block_Range);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("name", Value.Name);
-      Into.Write_Entity ("symbol", Value.Symbol);
-      Into.Write_Entity ("total_supply", Value.Total_Supply);
-      Into.Write_Entity ("royalty_fee", Value.Royalty_Fee);
-      Into.Write_Entity ("cumulative_trade_volume_eth", Value.Cumulative_Trade_Volume_Eth);
-      Into.Write_Entity ("marketplace_revenue_eth", Value.Marketplace_Revenue_Eth);
-      Into.Write_Entity ("creator_revenue_eth", Value.Creator_Revenue_Eth);
-      Into.Write_Entity ("total_revenue_eth", Value.Total_Revenue_Eth);
-      Into.Write_Entity ("trade_count", Value.Trade_Count);
-      Into.Write_Entity ("buyer_count", Value.Buyer_Count);
-      Into.Write_Entity ("seller_count", Value.Seller_Count);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CRYPTOPUNKSCollectionDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CRYPTOPUNKSCollectionDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "name", Value.Name);
-      Swagger.Streams.Deserialize (Object, "symbol", Value.Symbol);
-      Swagger.Streams.Deserialize (Object, "total_supply", Value.Total_Supply);
-      Swagger.Streams.Deserialize (Object, "royalty_fee", Value.Royalty_Fee);
-      Swagger.Streams.Deserialize (Object, "cumulative_trade_volume_eth", Value.Cumulative_Trade_Volume_Eth);
-      Swagger.Streams.Deserialize (Object, "marketplace_revenue_eth", Value.Marketplace_Revenue_Eth);
-      Swagger.Streams.Deserialize (Object, "creator_revenue_eth", Value.Creator_Revenue_Eth);
-      Swagger.Streams.Deserialize (Object, "total_revenue_eth", Value.Total_Revenue_Eth);
-      Swagger.Streams.Deserialize (Object, "trade_count", Value.Trade_Count);
-      Swagger.Streams.Deserialize (Object, "buyer_count", Value.Buyer_Count);
-      Swagger.Streams.Deserialize (Object, "seller_count", Value.Seller_Count);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CRYPTOPUNKSCollectionDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CRYPTOPUNKSCollectionDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CRYPTOPUNKSDataSourcesDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("block_range", Value.Block_Range);
-      Into.Write_Entity ("causality_region", Value.Causality_Region);
-      Into.Write_Entity ("manifest_idx", Value.Manifest_Idx);
-      Into.Write_Entity ("parent", Value.Parent);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("param", Value.Param);
-      Into.Write_Entity ("context", Value.Context);
-      Into.Write_Entity ("done_at", Value.Done_At);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CRYPTOPUNKSDataSourcesDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CRYPTOPUNKSDataSourcesDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
-      Swagger.Streams.Deserialize (Object, "causality_region", Value.Causality_Region);
-      Swagger.Streams.Deserialize (Object, "manifest_idx", Value.Manifest_Idx);
-      Swagger.Streams.Deserialize (Object, "parent", Value.Parent);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "param", Value.Param);
-      Swagger.Streams.Deserialize (Object, "context", Value.Context);
-      Swagger.Streams.Deserialize (Object, "done_at", Value.Done_At);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CRYPTOPUNKSDataSourcesDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CRYPTOPUNKSDataSourcesDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CRYPTOPUNKSMarketPlaceDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("block_range", Value.Block_Range);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("name", Value.Name);
-      Into.Write_Entity ("slug", Value.Slug);
-      Into.Write_Entity ("schema_version", Value.Schema_Version);
-      Into.Write_Entity ("subgraph_version", Value.Subgraph_Version);
-      Into.Write_Entity ("methodology_version", Value.Methodology_Version);
-      Into.Write_Entity ("collection_count", Value.Collection_Count);
-      Into.Write_Entity ("trade_count", Value.Trade_Count);
-      Into.Write_Entity ("cumulative_trade_volume_eth", Value.Cumulative_Trade_Volume_Eth);
-      Into.Write_Entity ("marketplace_revenue_eth", Value.Marketplace_Revenue_Eth);
-      Into.Write_Entity ("creator_revenue_eth", Value.Creator_Revenue_Eth);
-      Into.Write_Entity ("total_revenue_eth", Value.Total_Revenue_Eth);
-      Into.Write_Entity ("cumulative_unique_traders", Value.Cumulative_Unique_Traders);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CRYPTOPUNKSMarketPlaceDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CRYPTOPUNKSMarketPlaceDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "name", Value.Name);
-      Swagger.Streams.Deserialize (Object, "slug", Value.Slug);
-      Swagger.Streams.Deserialize (Object, "schema_version", Value.Schema_Version);
-      Swagger.Streams.Deserialize (Object, "subgraph_version", Value.Subgraph_Version);
-      Swagger.Streams.Deserialize (Object, "methodology_version", Value.Methodology_Version);
-      Swagger.Streams.Deserialize (Object, "collection_count", Value.Collection_Count);
-      Swagger.Streams.Deserialize (Object, "trade_count", Value.Trade_Count);
-      Swagger.Streams.Deserialize (Object, "cumulative_trade_volume_eth", Value.Cumulative_Trade_Volume_Eth);
-      Swagger.Streams.Deserialize (Object, "marketplace_revenue_eth", Value.Marketplace_Revenue_Eth);
-      Swagger.Streams.Deserialize (Object, "creator_revenue_eth", Value.Creator_Revenue_Eth);
-      Swagger.Streams.Deserialize (Object, "total_revenue_eth", Value.Total_Revenue_Eth);
-      Swagger.Streams.Deserialize (Object, "cumulative_unique_traders", Value.Cumulative_Unique_Traders);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CRYPTOPUNKSMarketPlaceDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CRYPTOPUNKSMarketPlaceDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CRYPTOPUNKSTradeDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("block_range", Value.Block_Range);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("transaction_hash", Value.Transaction_Hash);
+      Into.Write_Entity ("pair", Value.Pair);
+      Into.Write_Entity ("liquidity", Value.Liquidity);
+      Into.Write_Entity ("sender", Value.Sender);
+      Into.Write_Entity ("amount_0", Value.Amount_0);
+      Into.Write_Entity ("amount_1", Value.Amount_1);
+      Into.Write_Entity ("to", Value.To);
       Into.Write_Entity ("log_index", Value.Log_Index);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("is_bundle", Value.Is_Bundle);
-      Into.Write_Entity ("collection", Value.Collection);
-      Into.Write_Entity ("token_id", Value.Token_Id);
-      Into.Write_Entity ("amount", Value.Amount);
-      Into.Write_Entity ("price_eth", Value.Price_Eth);
-      Into.Write_Entity ("buyer", Value.Buyer);
-      Into.Write_Entity ("seller", Value.Seller);
+      Into.Write_Entity ("amount_usd", Value.Amount_Usd);
+      Into.Write_Entity ("complete", Value.Complete);
+      Into.Write_Entity ("fee_to", Value.Fee_To);
+      Into.Write_Entity ("fee_liquidity", Value.Fee_Liquidity);
+      Into.Write_Entity ("vid", Value.Vid);
       Into.End_Entity (Name);
    end Serialize;
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in CRYPTOPUNKSTradeDTO_Type_Vectors.Vector) is
+                        Value : in SushiswapBurnDTO_Type_Vectors.Vector) is
    begin
       Into.Start_Array (Name);
       for Item of Value loop
@@ -3867,1555 +1375,35 @@ package body .Models is
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out CRYPTOPUNKSTradeDTO_Type) is
+                          Value : out SushiswapBurnDTO_Type) is
       Object : Swagger.Value_Type;
    begin
       Swagger.Streams.Deserialize (From, Name, Object);
       Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
       Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
       Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
       Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "transaction_hash", Value.Transaction_Hash);
+      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "pair", Value.Pair);
+      Swagger.Streams.Deserialize (Object, "liquidity", Value.Liquidity);
+      Swagger.Streams.Deserialize (Object, "sender", Value.Sender);
+      Swagger.Streams.Deserialize (Object, "amount_0", Value.Amount_0);
+      Swagger.Streams.Deserialize (Object, "amount_1", Value.Amount_1);
+      Swagger.Streams.Deserialize (Object, "to", Value.To);
       Swagger.Streams.Deserialize (Object, "log_index", Value.Log_Index);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "is_bundle", Value.Is_Bundle);
-      Swagger.Streams.Deserialize (Object, "collection", Value.Collection);
-      Swagger.Streams.Deserialize (Object, "token_id", Value.Token_Id);
-      Swagger.Streams.Deserialize (Object, "amount", Value.Amount);
-      Swagger.Streams.Deserialize (Object, "price_eth", Value.Price_Eth);
-      Swagger.Streams.Deserialize (Object, "buyer", Value.Buyer);
-      Swagger.Streams.Deserialize (Object, "seller", Value.Seller);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CRYPTOPUNKSTradeDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CRYPTOPUNKSTradeDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CowOrderDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("owner", Value.Owner);
-      Into.Write_Entity ("trades_timestamp", Value.Trades_Timestamp);
-      Into.Write_Entity ("invalidate_timestamp", Value.Invalidate_Timestamp);
-      Into.Write_Entity ("presign_timestamp", Value.Presign_Timestamp);
-      Into.Write_Entity ("is_signed", Value.Is_Signed);
-      Into.Write_Entity ("is_valid", Value.Is_Valid);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CowOrderDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CowOrderDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "owner", Value.Owner);
-      Swagger.Streams.Deserialize (Object, "trades_timestamp", Value.Trades_Timestamp);
-      Swagger.Streams.Deserialize (Object, "invalidate_timestamp", Value.Invalidate_Timestamp);
-      Swagger.Streams.Deserialize (Object, "presign_timestamp", Value.Presign_Timestamp);
-      Swagger.Streams.Deserialize (Object, "is_signed", Value.Is_Signed);
-      Swagger.Streams.Deserialize (Object, "is_valid", Value.Is_Valid);
+      Swagger.Streams.Deserialize (Object, "amount_usd", Value.Amount_Usd);
+      Swagger.Streams.Deserialize (Object, "complete", Value.Complete);
+      Swagger.Streams.Deserialize (Object, "fee_to", Value.Fee_To);
+      Swagger.Streams.Deserialize (Object, "fee_liquidity", Value.Fee_Liquidity);
       Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
    end Deserialize;
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out CowOrderDTO_Type_Vectors.Vector) is
+                          Value : out SushiswapBurnDTO_Type_Vectors.Vector) is
       List : Swagger.Value_Array_Type;
-      Item : CowOrderDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CowTokenDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("address", Value.Address);
-      Into.Write_Entity ("first_trade_timestamp", Value.First_Trade_Timestamp);
-      Into.Write_Entity ("name", Value.Name);
-      Into.Write_Entity ("symbol", Value.Symbol);
-      Into.Write_Entity ("decimals", Value.Decimals);
-      Into.Write_Entity ("total_volume", Value.Total_Volume);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("token_symbol", Value.Token_Symbol);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CowTokenDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CowTokenDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "address", Value.Address);
-      Swagger.Streams.Deserialize (Object, "first_trade_timestamp", Value.First_Trade_Timestamp);
-      Swagger.Streams.Deserialize (Object, "name", Value.Name);
-      Swagger.Streams.Deserialize (Object, "symbol", Value.Symbol);
-      Swagger.Streams.Deserialize (Object, "decimals", Value.Decimals);
-      Swagger.Streams.Deserialize (Object, "total_volume", Value.Total_Volume);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "token_symbol", Value.Token_Symbol);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CowTokenDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CowTokenDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CowUserDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("address", Value.Address);
-      Into.Write_Entity ("first_trade_timestamp", Value.First_Trade_Timestamp);
-      Into.Write_Entity ("is_solver", Value.Is_Solver);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CowUserDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CowUserDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "address", Value.Address);
-      Swagger.Streams.Deserialize (Object, "first_trade_timestamp", Value.First_Trade_Timestamp);
-      Swagger.Streams.Deserialize (Object, "is_solver", Value.Is_Solver);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CowUserDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CowUserDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveAddLiquidityEventDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("pool", Value.Pool);
-      Into.Write_Entity ("provider", Value.Provider);
-      Serialize (Into, "token_amounts", Value.Token_Amounts);
-      Serialize (Into, "fees", Value.Fees);
-      Into.Write_Entity ("invariant", Value.Invariant);
-      Into.Write_Entity ("token_supply", Value.Token_Supply);
-      Into.Write_Entity ("block", Value.Block);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("transaction", Value.Transaction);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveAddLiquidityEventDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveAddLiquidityEventDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
-      Swagger.Streams.Deserialize (Object, "provider", Value.Provider);
-      Swagger.Streams.Deserialize (Object, "token_amounts", Value.Token_Amounts);
-      Swagger.Streams.Deserialize (Object, "fees", Value.Fees);
-      Swagger.Streams.Deserialize (Object, "invariant", Value.Invariant);
-      Swagger.Streams.Deserialize (Object, "token_supply", Value.Token_Supply);
-      Swagger.Streams.Deserialize (Object, "block", Value.Block);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveAddLiquidityEventDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveAddLiquidityEventDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveAmplificationCoeffChangeLogDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("pool", Value.Pool);
-      Into.Write_Entity ("value", Value.Value);
-      Into.Write_Entity ("block", Value.Block);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("transaction", Value.Transaction);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveAmplificationCoeffChangeLogDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveAmplificationCoeffChangeLogDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
-      Swagger.Streams.Deserialize (Object, "value", Value.Value);
-      Swagger.Streams.Deserialize (Object, "block", Value.Block);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveAmplificationCoeffChangeLogDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveAmplificationCoeffChangeLogDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveContractDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("description", Value.Description);
-      Into.Write_Entity ("added", Value.Added);
-      Into.Write_Entity ("added_at_block", Value.Added_At_Block);
-      Into.Write_Entity ("added_at_transaction", Value.Added_At_Transaction);
-      Into.Write_Entity ("modified", Value.Modified);
-      Into.Write_Entity ("modified_at_block", Value.Modified_At_Block);
-      Into.Write_Entity ("modified_at_transaction", Value.Modified_At_Transaction);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveContractDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveContractDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "description", Value.Description);
-      Swagger.Streams.Deserialize (Object, "added", Value.Added);
-      Swagger.Streams.Deserialize (Object, "added_at_block", Value.Added_At_Block);
-      Swagger.Streams.Deserialize (Object, "added_at_transaction", Value.Added_At_Transaction);
-      Swagger.Streams.Deserialize (Object, "modified", Value.Modified);
-      Swagger.Streams.Deserialize (Object, "modified_at_block", Value.Modified_At_Block);
-      Swagger.Streams.Deserialize (Object, "modified_at_transaction", Value.Modified_At_Transaction);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveContractDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveContractDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveDailyVolumeDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("pool", Value.Pool);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("volume", Value.Volume);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("block_range", Value.Block_Range);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveDailyVolumeDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveDailyVolumeDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "volume", Value.Volume);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveDailyVolumeDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveDailyVolumeDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveFeeChangeLogDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("pool", Value.Pool);
-      Into.Write_Entity ("value", Value.Value);
-      Into.Write_Entity ("block", Value.Block);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("transaction", Value.Transaction);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveFeeChangeLogDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveFeeChangeLogDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
-      Swagger.Streams.Deserialize (Object, "value", Value.Value);
-      Swagger.Streams.Deserialize (Object, "block", Value.Block);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveFeeChangeLogDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveFeeChangeLogDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveGaugeDepositDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("gauge", Value.Gauge);
-      Into.Write_Entity ("provider", Value.Provider);
-      Into.Write_Entity ("value", Value.Value);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("block_range", Value.Block_Range);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveGaugeDepositDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveGaugeDepositDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "gauge", Value.Gauge);
-      Swagger.Streams.Deserialize (Object, "provider", Value.Provider);
-      Swagger.Streams.Deserialize (Object, "value", Value.Value);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveGaugeDepositDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveGaugeDepositDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveGaugeTotalWeightDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("time", Value.Time);
-      Into.Write_Entity ("weight", Value.Weight);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveGaugeTotalWeightDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveGaugeTotalWeightDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "time", Value.Time);
-      Swagger.Streams.Deserialize (Object, "weight", Value.Weight);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveGaugeTotalWeightDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveGaugeTotalWeightDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveGaugeTypeWeightDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("type", Value.P_Type);
-      Into.Write_Entity ("time", Value.Time);
-      Into.Write_Entity ("weight", Value.Weight);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveGaugeTypeWeightDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveGaugeTypeWeightDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "type", Value.P_Type);
-      Swagger.Streams.Deserialize (Object, "time", Value.Time);
-      Swagger.Streams.Deserialize (Object, "weight", Value.Weight);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveGaugeTypeWeightDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveGaugeTypeWeightDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveGaugeWeightVoteDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("gauge", Value.Gauge);
-      Into.Write_Entity ("user", Value.User);
-      Into.Write_Entity ("time", Value.Time);
-      Into.Write_Entity ("weight", Value.Weight);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveGaugeWeightVoteDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveGaugeWeightVoteDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "gauge", Value.Gauge);
-      Swagger.Streams.Deserialize (Object, "user", Value.User);
-      Swagger.Streams.Deserialize (Object, "time", Value.Time);
-      Swagger.Streams.Deserialize (Object, "weight", Value.Weight);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveGaugeWeightVoteDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveGaugeWeightVoteDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveHourlyVolumeDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("pool", Value.Pool);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("volume", Value.Volume);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveHourlyVolumeDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveHourlyVolumeDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "volume", Value.Volume);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveHourlyVolumeDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveHourlyVolumeDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurvePoolDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("name", Value.Name);
-      Into.Write_Entity ("is_meta", Value.Is_Meta);
-      Into.Write_Entity ("registry_address", Value.Registry_Address);
-      Into.Write_Entity ("swap_address", Value.Swap_Address);
-      Into.Write_Entity ("lp_token", Value.Lp_Token);
-      Into.Write_Entity ("coin_count", Value.Coin_Count);
-      Into.Write_Entity ("underlying_count", Value.Underlying_Count);
-      Into.Write_Entity ("a", Value.A);
-      Into.Write_Entity ("fee", Value.Fee);
-      Into.Write_Entity ("admin_fee", Value.Admin_Fee);
-      Into.Write_Entity ("owner", Value.Owner);
-      Into.Write_Entity ("virtual_price", Value.Virtual_Price);
-      Into.Write_Entity ("locked", Value.Locked);
-      Into.Write_Entity ("added_at", Value.Added_At);
-      Into.Write_Entity ("added_at_block", Value.Added_At_Block);
-      Into.Write_Entity ("added_at_transaction", Value.Added_At_Transaction);
-      Into.Write_Entity ("removed_at", Value.Removed_At);
-      Into.Write_Entity ("removed_at_block", Value.Removed_At_Block);
-      Into.Write_Entity ("removed_at_transaction", Value.Removed_At_Transaction);
-      Into.Write_Entity ("exchange_count", Value.Exchange_Count);
-      Into.Write_Entity ("gauge_count", Value.Gauge_Count);
-      Into.Write_Entity ("vid", Value.Vid);
-      Serialize (Into, "evaluated_ask", Value.Evaluated_Ask);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurvePoolDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurvePoolDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "name", Value.Name);
-      Swagger.Streams.Deserialize (Object, "is_meta", Value.Is_Meta);
-      Swagger.Streams.Deserialize (Object, "registry_address", Value.Registry_Address);
-      Swagger.Streams.Deserialize (Object, "swap_address", Value.Swap_Address);
-      Swagger.Streams.Deserialize (Object, "lp_token", Value.Lp_Token);
-      Swagger.Streams.Deserialize (Object, "coin_count", Value.Coin_Count);
-      Swagger.Streams.Deserialize (Object, "underlying_count", Value.Underlying_Count);
-      Swagger.Streams.Deserialize (Object, "a", Value.A);
-      Swagger.Streams.Deserialize (Object, "fee", Value.Fee);
-      Swagger.Streams.Deserialize (Object, "admin_fee", Value.Admin_Fee);
-      Swagger.Streams.Deserialize (Object, "owner", Value.Owner);
-      Swagger.Streams.Deserialize (Object, "virtual_price", Value.Virtual_Price);
-      Swagger.Streams.Deserialize (Object, "locked", Value.Locked);
-      Swagger.Streams.Deserialize (Object, "added_at", Value.Added_At);
-      Swagger.Streams.Deserialize (Object, "added_at_block", Value.Added_At_Block);
-      Swagger.Streams.Deserialize (Object, "added_at_transaction", Value.Added_At_Transaction);
-      Swagger.Streams.Deserialize (Object, "removed_at", Value.Removed_At);
-      Swagger.Streams.Deserialize (Object, "removed_at_block", Value.Removed_At_Block);
-      Swagger.Streams.Deserialize (Object, "removed_at_transaction", Value.Removed_At_Transaction);
-      Swagger.Streams.Deserialize (Object, "exchange_count", Value.Exchange_Count);
-      Swagger.Streams.Deserialize (Object, "gauge_count", Value.Gauge_Count);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "evaluated_ask", Value.Evaluated_Ask);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurvePoolDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurvePoolDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveProposalVoteDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("proposal", Value.Proposal);
-      Into.Write_Entity ("supports", Value.Supports);
-      Into.Write_Entity ("stake", Value.Stake);
-      Into.Write_Entity ("voter", Value.Voter);
-      Into.Write_Entity ("created", Value.Created);
-      Into.Write_Entity ("created_at_block", Value.Created_At_Block);
-      Into.Write_Entity ("created_at_transaction", Value.Created_At_Transaction);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveProposalVoteDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveProposalVoteDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "proposal", Value.Proposal);
-      Swagger.Streams.Deserialize (Object, "supports", Value.Supports);
-      Swagger.Streams.Deserialize (Object, "stake", Value.Stake);
-      Swagger.Streams.Deserialize (Object, "voter", Value.Voter);
-      Swagger.Streams.Deserialize (Object, "created", Value.Created);
-      Swagger.Streams.Deserialize (Object, "created_at_block", Value.Created_At_Block);
-      Swagger.Streams.Deserialize (Object, "created_at_transaction", Value.Created_At_Transaction);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveProposalVoteDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveProposalVoteDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveRemoveLiquidityOneEventDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("pool", Value.Pool);
-      Into.Write_Entity ("provider", Value.Provider);
-      Into.Write_Entity ("token_amount", Value.Token_Amount);
-      Into.Write_Entity ("coin_amount", Value.Coin_Amount);
-      Into.Write_Entity ("block", Value.Block);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("transaction", Value.Transaction);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveRemoveLiquidityOneEventDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveRemoveLiquidityOneEventDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
-      Swagger.Streams.Deserialize (Object, "provider", Value.Provider);
-      Swagger.Streams.Deserialize (Object, "token_amount", Value.Token_Amount);
-      Swagger.Streams.Deserialize (Object, "coin_amount", Value.Coin_Amount);
-      Swagger.Streams.Deserialize (Object, "block", Value.Block);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveRemoveLiquidityOneEventDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveRemoveLiquidityOneEventDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveTokenDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("address", Value.Address);
-      Into.Write_Entity ("decimals", Value.Decimals);
-      Into.Write_Entity ("name", Value.Name);
-      Into.Write_Entity ("symbol", Value.Symbol);
-      Serialize (Into, "pools", Value.Pools);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("token_symbol", Value.Token_Symbol);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveTokenDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveTokenDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "address", Value.Address);
-      Swagger.Streams.Deserialize (Object, "decimals", Value.Decimals);
-      Swagger.Streams.Deserialize (Object, "name", Value.Name);
-      Swagger.Streams.Deserialize (Object, "symbol", Value.Symbol);
-      Swagger.Streams.Deserialize (Object, "pools", Value.Pools);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "token_symbol", Value.Token_Symbol);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveTokenDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveTokenDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveUnderlyingCoinDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("index", Value.Index);
-      Into.Write_Entity ("pool", Value.Pool);
-      Into.Write_Entity ("token", Value.Token);
-      Into.Write_Entity ("coin", Value.Coin);
-      Into.Write_Entity ("balance", Value.Balance);
-      Into.Write_Entity ("updated", Value.Updated);
-      Into.Write_Entity ("updated_at_block", Value.Updated_At_Block);
-      Into.Write_Entity ("updated_at_transaction", Value.Updated_At_Transaction);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveUnderlyingCoinDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveUnderlyingCoinDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "index", Value.Index);
-      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
-      Swagger.Streams.Deserialize (Object, "token", Value.Token);
-      Swagger.Streams.Deserialize (Object, "coin", Value.Coin);
-      Swagger.Streams.Deserialize (Object, "balance", Value.Balance);
-      Swagger.Streams.Deserialize (Object, "updated", Value.Updated);
-      Swagger.Streams.Deserialize (Object, "updated_at_block", Value.Updated_At_Block);
-      Swagger.Streams.Deserialize (Object, "updated_at_transaction", Value.Updated_At_Transaction);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveUnderlyingCoinDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveUnderlyingCoinDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveWeeklyVolumeDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("pool", Value.Pool);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("volume", Value.Volume);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in CurveWeeklyVolumeDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveWeeklyVolumeDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "volume", Value.Volume);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out CurveWeeklyVolumeDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : CurveWeeklyVolumeDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexDepositDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("user", Value.User);
-      Into.Write_Entity ("token_address", Value.Token_Address);
-      Into.Write_Entity ("amount", Value.Amount);
-      Into.Write_Entity ("batch_id", Value.Batch_Id);
-      Into.Write_Entity ("create_epoch", Value.Create_Epoch);
-      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexDepositDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexDepositDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "user", Value.User);
-      Swagger.Streams.Deserialize (Object, "token_address", Value.Token_Address);
-      Swagger.Streams.Deserialize (Object, "amount", Value.Amount);
-      Swagger.Streams.Deserialize (Object, "batch_id", Value.Batch_Id);
-      Swagger.Streams.Deserialize (Object, "create_epoch", Value.Create_Epoch);
-      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexDepositDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : DexDepositDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexPriceDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("token", Value.Token);
-      Into.Write_Entity ("batch_id", Value.Batch_Id);
-      Into.Write_Entity ("price_in_owl_numerator", Value.Price_In_Owl_Numerator);
-      Into.Write_Entity ("price_in_owl_denominator", Value.Price_In_Owl_Denominator);
-      Into.Write_Entity ("volume", Value.Volume);
-      Into.Write_Entity ("create_epoch", Value.Create_Epoch);
-      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexPriceDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexPriceDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "token", Value.Token);
-      Swagger.Streams.Deserialize (Object, "batch_id", Value.Batch_Id);
-      Swagger.Streams.Deserialize (Object, "price_in_owl_numerator", Value.Price_In_Owl_Numerator);
-      Swagger.Streams.Deserialize (Object, "price_in_owl_denominator", Value.Price_In_Owl_Denominator);
-      Swagger.Streams.Deserialize (Object, "volume", Value.Volume);
-      Swagger.Streams.Deserialize (Object, "create_epoch", Value.Create_Epoch);
-      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexPriceDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : DexPriceDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexStatsDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("volume_in_owl", Value.Volume_In_Owl);
-      Into.Write_Entity ("utility_in_owl", Value.Utility_In_Owl);
-      Into.Write_Entity ("owl_burnt", Value.Owl_Burnt);
-      Into.Write_Entity ("settled_batch_count", Value.Settled_Batch_Count);
-      Into.Write_Entity ("settled_trade_count", Value.Settled_Trade_Count);
-      Into.Write_Entity ("listed_tokens", Value.Listed_Tokens);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexStatsDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexStatsDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "volume_in_owl", Value.Volume_In_Owl);
-      Swagger.Streams.Deserialize (Object, "utility_in_owl", Value.Utility_In_Owl);
-      Swagger.Streams.Deserialize (Object, "owl_burnt", Value.Owl_Burnt);
-      Swagger.Streams.Deserialize (Object, "settled_batch_count", Value.Settled_Batch_Count);
-      Swagger.Streams.Deserialize (Object, "settled_trade_count", Value.Settled_Trade_Count);
-      Swagger.Streams.Deserialize (Object, "listed_tokens", Value.Listed_Tokens);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexStatsDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : DexStatsDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexWithdrawDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("user", Value.User);
-      Into.Write_Entity ("token_address", Value.Token_Address);
-      Into.Write_Entity ("amount", Value.Amount);
-      Into.Write_Entity ("create_epoch", Value.Create_Epoch);
-      Into.Write_Entity ("create_batch_id", Value.Create_Batch_Id);
-      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in DexWithdrawDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexWithdrawDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "user", Value.User);
-      Swagger.Streams.Deserialize (Object, "token_address", Value.Token_Address);
-      Swagger.Streams.Deserialize (Object, "amount", Value.Amount);
-      Swagger.Streams.Deserialize (Object, "create_epoch", Value.Create_Epoch);
-      Swagger.Streams.Deserialize (Object, "create_batch_id", Value.Create_Batch_Id);
-      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out DexWithdrawDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : DexWithdrawDTO_Type;
+      Item : SushiswapBurnDTO_Type;
    begin
       Value.Clear;
       Swagger.Streams.Deserialize (From, Name, List);
@@ -5538,186 +1526,6 @@ package body .Models is
                           Value : out UniswapV3UniswapDayDataDTO_Type_Vectors.Vector) is
       List : Swagger.Value_Array_Type;
       Item : UniswapV3UniswapDayDataDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in UniswapV2SwapDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("transaction", Value.Transaction);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("pair", Value.Pair);
-      Into.Write_Entity ("sender", Value.Sender);
-      Into.Write_Entity ("from", Value.From);
-      Into.Write_Entity ("amount_0_in", Value.Amount_0_In);
-      Into.Write_Entity ("amount_1_in", Value.Amount_1_In);
-      Into.Write_Entity ("amount_0_out", Value.Amount_0_Out);
-      Into.Write_Entity ("amount_1_out", Value.Amount_1_Out);
-      Into.Write_Entity ("to", Value.To);
-      Serialize (Into, "log_index", Value.Log_Index);
-      Into.Write_Entity ("amount_usd", Value.Amount_Usd);
-      Serialize (Into, "evaluated_price", Value.Evaluated_Price);
-      Serialize (Into, "evaluated_amount", Value.Evaluated_Amount);
-      Serialize (Into, "evaluated_aggressor", Value.Evaluated_Aggressor);
-      Into.Write_Entity ("pool_id", Value.Pool_Id);
-      Into.Write_Entity ("transaction_id", Value.Transaction_Id);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in UniswapV2SwapDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out UniswapV2SwapDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "pair", Value.Pair);
-      Swagger.Streams.Deserialize (Object, "sender", Value.Sender);
-      Swagger.Streams.Deserialize (Object, "from", Value.From);
-      Swagger.Streams.Deserialize (Object, "amount_0_in", Value.Amount_0_In);
-      Swagger.Streams.Deserialize (Object, "amount_1_in", Value.Amount_1_In);
-      Swagger.Streams.Deserialize (Object, "amount_0_out", Value.Amount_0_Out);
-      Swagger.Streams.Deserialize (Object, "amount_1_out", Value.Amount_1_Out);
-      Swagger.Streams.Deserialize (Object, "to", Value.To);
-      Deserialize (Object, "log_index", Value.Log_Index);
-      Swagger.Streams.Deserialize (Object, "amount_usd", Value.Amount_Usd);
-      Swagger.Streams.Deserialize (Object, "evaluated_price", Value.Evaluated_Price);
-      Swagger.Streams.Deserialize (Object, "evaluated_amount", Value.Evaluated_Amount);
-      Deserialize (Object, "evaluated_aggressor", Value.Evaluated_Aggressor);
-      Swagger.Streams.Deserialize (Object, "pool_id", Value.Pool_Id);
-      Swagger.Streams.Deserialize (Object, "transaction_id", Value.Transaction_Id);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out UniswapV2SwapDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : UniswapV2SwapDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in UniswapV3SwapDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("transaction", Value.Transaction);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("pool", Value.Pool);
-      Into.Write_Entity ("token_0", Value.Token_0);
-      Into.Write_Entity ("token_1", Value.Token_1);
-      Into.Write_Entity ("sender", Value.Sender);
-      Into.Write_Entity ("recipient", Value.Recipient);
-      Into.Write_Entity ("origin", Value.Origin);
-      Into.Write_Entity ("amount_0", Value.Amount_0);
-      Into.Write_Entity ("amount_1", Value.Amount_1);
-      Into.Write_Entity ("amount_usd", Value.Amount_Usd);
-      Serialize (Into, "sqrt_price_x96", Value.Sqrt_Price_X_96);
-      Serialize (Into, "tick", Value.Tick);
-      Serialize (Into, "log_index", Value.Log_Index);
-      Serialize (Into, "evaluated_price", Value.Evaluated_Price);
-      Serialize (Into, "evaluated_amount", Value.Evaluated_Amount);
-      Serialize (Into, "evaluated_aggressor", Value.Evaluated_Aggressor);
-      Into.Write_Entity ("pool_id", Value.Pool_Id);
-      Into.Write_Entity ("transaction_id", Value.Transaction_Id);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in UniswapV3SwapDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out UniswapV3SwapDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
-      Swagger.Streams.Deserialize (Object, "token_0", Value.Token_0);
-      Swagger.Streams.Deserialize (Object, "token_1", Value.Token_1);
-      Swagger.Streams.Deserialize (Object, "sender", Value.Sender);
-      Swagger.Streams.Deserialize (Object, "recipient", Value.Recipient);
-      Swagger.Streams.Deserialize (Object, "origin", Value.Origin);
-      Swagger.Streams.Deserialize (Object, "amount_0", Value.Amount_0);
-      Swagger.Streams.Deserialize (Object, "amount_1", Value.Amount_1);
-      Swagger.Streams.Deserialize (Object, "amount_usd", Value.Amount_Usd);
-      Deserialize (Object, "sqrt_price_x96", Value.Sqrt_Price_X_96);
-      Deserialize (Object, "tick", Value.Tick);
-      Deserialize (Object, "log_index", Value.Log_Index);
-      Swagger.Streams.Deserialize (Object, "evaluated_price", Value.Evaluated_Price);
-      Swagger.Streams.Deserialize (Object, "evaluated_amount", Value.Evaluated_Amount);
-      Deserialize (Object, "evaluated_aggressor", Value.Evaluated_Aggressor);
-      Swagger.Streams.Deserialize (Object, "pool_id", Value.Pool_Id);
-      Swagger.Streams.Deserialize (Object, "transaction_id", Value.Transaction_Id);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out UniswapV3SwapDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : UniswapV3SwapDTO_Type;
    begin
       Value.Clear;
       Swagger.Streams.Deserialize (From, Name, List);
@@ -6186,159 +1994,7 @@ package body .Models is
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapBurnDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("transaction", Value.Transaction);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("pair", Value.Pair);
-      Into.Write_Entity ("liquidity", Value.Liquidity);
-      Into.Write_Entity ("sender", Value.Sender);
-      Into.Write_Entity ("amount_0", Value.Amount_0);
-      Into.Write_Entity ("amount_1", Value.Amount_1);
-      Into.Write_Entity ("to", Value.To);
-      Into.Write_Entity ("log_index", Value.Log_Index);
-      Into.Write_Entity ("amount_usd", Value.Amount_Usd);
-      Into.Write_Entity ("complete", Value.Complete);
-      Into.Write_Entity ("fee_to", Value.Fee_To);
-      Into.Write_Entity ("fee_liquidity", Value.Fee_Liquidity);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in SushiswapBurnDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out SushiswapBurnDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "pair", Value.Pair);
-      Swagger.Streams.Deserialize (Object, "liquidity", Value.Liquidity);
-      Swagger.Streams.Deserialize (Object, "sender", Value.Sender);
-      Swagger.Streams.Deserialize (Object, "amount_0", Value.Amount_0);
-      Swagger.Streams.Deserialize (Object, "amount_1", Value.Amount_1);
-      Swagger.Streams.Deserialize (Object, "to", Value.To);
-      Swagger.Streams.Deserialize (Object, "log_index", Value.Log_Index);
-      Swagger.Streams.Deserialize (Object, "amount_usd", Value.Amount_Usd);
-      Swagger.Streams.Deserialize (Object, "complete", Value.Complete);
-      Swagger.Streams.Deserialize (Object, "fee_to", Value.Fee_To);
-      Swagger.Streams.Deserialize (Object, "fee_liquidity", Value.Fee_Liquidity);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out SushiswapBurnDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : SushiswapBurnDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in SushiswapFactoryDTO_Type) is
-   begin
-      Into.Start_Entity (Name);
-      Into.Write_Entity ("entry_time", Value.Entry_Time);
-      Into.Write_Entity ("recv_time", Value.Recv_Time);
-      Into.Write_Entity ("block_number", Value.Block_Number);
-      Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("pair_count", Value.Pair_Count);
-      Into.Write_Entity ("volume_usd", Value.Volume_Usd);
-      Into.Write_Entity ("volume_eth", Value.Volume_Eth);
-      Into.Write_Entity ("untracked_volume_usd", Value.Untracked_Volume_Usd);
-      Into.Write_Entity ("liquidity_usd", Value.Liquidity_Usd);
-      Into.Write_Entity ("liquidity_eth", Value.Liquidity_Eth);
-      Into.Write_Entity ("tx_count", Value.Tx_Count);
-      Into.Write_Entity ("token_count", Value.Token_Count);
-      Into.Write_Entity ("user_count", Value.User_Count);
-      Into.Write_Entity ("vid", Value.Vid);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in SushiswapFactoryDTO_Type_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out SushiswapFactoryDTO_Type) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
-      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
-      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
-      Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "pair_count", Value.Pair_Count);
-      Swagger.Streams.Deserialize (Object, "volume_usd", Value.Volume_Usd);
-      Swagger.Streams.Deserialize (Object, "volume_eth", Value.Volume_Eth);
-      Swagger.Streams.Deserialize (Object, "untracked_volume_usd", Value.Untracked_Volume_Usd);
-      Swagger.Streams.Deserialize (Object, "liquidity_usd", Value.Liquidity_Usd);
-      Swagger.Streams.Deserialize (Object, "liquidity_eth", Value.Liquidity_Eth);
-      Swagger.Streams.Deserialize (Object, "tx_count", Value.Tx_Count);
-      Swagger.Streams.Deserialize (Object, "token_count", Value.Token_Count);
-      Swagger.Streams.Deserialize (Object, "user_count", Value.User_Count);
-      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out SushiswapFactoryDTO_Type_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : SushiswapFactoryDTO_Type;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in SushiswapLiquidityPositionDTO_Type) is
+                        Value : in DexWithdrawDTO_Type) is
    begin
       Into.Start_Entity (Name);
       Into.Write_Entity ("entry_time", Value.Entry_Time);
@@ -6346,17 +2002,18 @@ package body .Models is
       Into.Write_Entity ("block_number", Value.Block_Number);
       Into.Write_Entity ("id", Value.Id);
       Into.Write_Entity ("user", Value.User);
-      Into.Write_Entity ("pair", Value.Pair);
-      Into.Write_Entity ("liquidity_token_balance", Value.Liquidity_Token_Balance);
-      Into.Write_Entity ("block", Value.Block);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("token_address", Value.Token_Address);
+      Into.Write_Entity ("amount", Value.Amount);
+      Into.Write_Entity ("create_epoch", Value.Create_Epoch);
+      Into.Write_Entity ("create_batch_id", Value.Create_Batch_Id);
+      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
       Into.Write_Entity ("vid", Value.Vid);
       Into.End_Entity (Name);
    end Serialize;
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapLiquidityPositionDTO_Type_Vectors.Vector) is
+                        Value : in DexWithdrawDTO_Type_Vectors.Vector) is
    begin
       Into.Start_Array (Name);
       for Item of Value loop
@@ -6367,7 +2024,7 @@ package body .Models is
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapLiquidityPositionDTO_Type) is
+                          Value : out DexWithdrawDTO_Type) is
       Object : Swagger.Value_Type;
    begin
       Swagger.Streams.Deserialize (From, Name, Object);
@@ -6376,18 +2033,19 @@ package body .Models is
       Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
       Swagger.Streams.Deserialize (Object, "id", Value.Id);
       Swagger.Streams.Deserialize (Object, "user", Value.User);
-      Swagger.Streams.Deserialize (Object, "pair", Value.Pair);
-      Swagger.Streams.Deserialize (Object, "liquidity_token_balance", Value.Liquidity_Token_Balance);
-      Swagger.Streams.Deserialize (Object, "block", Value.Block);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "token_address", Value.Token_Address);
+      Swagger.Streams.Deserialize (Object, "amount", Value.Amount);
+      Swagger.Streams.Deserialize (Object, "create_epoch", Value.Create_Epoch);
+      Swagger.Streams.Deserialize (Object, "create_batch_id", Value.Create_Batch_Id);
+      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
       Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
    end Deserialize;
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapLiquidityPositionDTO_Type_Vectors.Vector) is
+                          Value : out DexWithdrawDTO_Type_Vectors.Vector) is
       List : Swagger.Value_Array_Type;
-      Item : SushiswapLiquidityPositionDTO_Type;
+      Item : DexWithdrawDTO_Type;
    begin
       Value.Clear;
       Swagger.Streams.Deserialize (From, Name, List);
@@ -6402,32 +2060,26 @@ package body .Models is
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapMintDTO_Type) is
+                        Value : in DexStatsDTO_Type) is
    begin
       Into.Start_Entity (Name);
       Into.Write_Entity ("entry_time", Value.Entry_Time);
       Into.Write_Entity ("recv_time", Value.Recv_Time);
       Into.Write_Entity ("block_number", Value.Block_Number);
       Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("transaction", Value.Transaction);
-      Into.Write_Entity ("timestamp", Value.Timestamp);
-      Into.Write_Entity ("pair", Value.Pair);
-      Into.Write_Entity ("to", Value.To);
-      Into.Write_Entity ("liquidity", Value.Liquidity);
-      Into.Write_Entity ("sender", Value.Sender);
-      Into.Write_Entity ("amount_0", Value.Amount_0);
-      Into.Write_Entity ("amount_1", Value.Amount_1);
-      Into.Write_Entity ("log_index", Value.Log_Index);
-      Into.Write_Entity ("amount_usd", Value.Amount_Usd);
-      Into.Write_Entity ("fee_to", Value.Fee_To);
-      Into.Write_Entity ("fee_liquidity", Value.Fee_Liquidity);
+      Into.Write_Entity ("volume_in_owl", Value.Volume_In_Owl);
+      Into.Write_Entity ("utility_in_owl", Value.Utility_In_Owl);
+      Into.Write_Entity ("owl_burnt", Value.Owl_Burnt);
+      Into.Write_Entity ("settled_batch_count", Value.Settled_Batch_Count);
+      Into.Write_Entity ("settled_trade_count", Value.Settled_Trade_Count);
+      Into.Write_Entity ("listed_tokens", Value.Listed_Tokens);
       Into.Write_Entity ("vid", Value.Vid);
       Into.End_Entity (Name);
    end Serialize;
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapMintDTO_Type_Vectors.Vector) is
+                        Value : in DexStatsDTO_Type_Vectors.Vector) is
    begin
       Into.Start_Array (Name);
       for Item of Value loop
@@ -6438,7 +2090,7 @@ package body .Models is
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapMintDTO_Type) is
+                          Value : out DexStatsDTO_Type) is
       Object : Swagger.Value_Type;
    begin
       Swagger.Streams.Deserialize (From, Name, Object);
@@ -6446,26 +2098,20 @@ package body .Models is
       Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
       Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
       Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
-      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
-      Swagger.Streams.Deserialize (Object, "pair", Value.Pair);
-      Swagger.Streams.Deserialize (Object, "to", Value.To);
-      Swagger.Streams.Deserialize (Object, "liquidity", Value.Liquidity);
-      Swagger.Streams.Deserialize (Object, "sender", Value.Sender);
-      Swagger.Streams.Deserialize (Object, "amount_0", Value.Amount_0);
-      Swagger.Streams.Deserialize (Object, "amount_1", Value.Amount_1);
-      Swagger.Streams.Deserialize (Object, "log_index", Value.Log_Index);
-      Swagger.Streams.Deserialize (Object, "amount_usd", Value.Amount_Usd);
-      Swagger.Streams.Deserialize (Object, "fee_to", Value.Fee_To);
-      Swagger.Streams.Deserialize (Object, "fee_liquidity", Value.Fee_Liquidity);
+      Swagger.Streams.Deserialize (Object, "volume_in_owl", Value.Volume_In_Owl);
+      Swagger.Streams.Deserialize (Object, "utility_in_owl", Value.Utility_In_Owl);
+      Swagger.Streams.Deserialize (Object, "owl_burnt", Value.Owl_Burnt);
+      Swagger.Streams.Deserialize (Object, "settled_batch_count", Value.Settled_Batch_Count);
+      Swagger.Streams.Deserialize (Object, "settled_trade_count", Value.Settled_Trade_Count);
+      Swagger.Streams.Deserialize (Object, "listed_tokens", Value.Listed_Tokens);
       Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
    end Deserialize;
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapMintDTO_Type_Vectors.Vector) is
+                          Value : out DexStatsDTO_Type_Vectors.Vector) is
       List : Swagger.Value_Array_Type;
-      Item : SushiswapMintDTO_Type;
+      Item : DexStatsDTO_Type;
    begin
       Value.Clear;
       Swagger.Streams.Deserialize (From, Name, List);
@@ -6480,7 +2126,3931 @@ package body .Models is
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapPairDayDataDTO_Type) is
+                        Value : in DexPriceDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("token", Value.Token);
+      Into.Write_Entity ("batch_id", Value.Batch_Id);
+      Into.Write_Entity ("price_in_owl_numerator", Value.Price_In_Owl_Numerator);
+      Into.Write_Entity ("price_in_owl_denominator", Value.Price_In_Owl_Denominator);
+      Into.Write_Entity ("volume", Value.Volume);
+      Into.Write_Entity ("create_epoch", Value.Create_Epoch);
+      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in DexPriceDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out DexPriceDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "token", Value.Token);
+      Swagger.Streams.Deserialize (Object, "batch_id", Value.Batch_Id);
+      Swagger.Streams.Deserialize (Object, "price_in_owl_numerator", Value.Price_In_Owl_Numerator);
+      Swagger.Streams.Deserialize (Object, "price_in_owl_denominator", Value.Price_In_Owl_Denominator);
+      Swagger.Streams.Deserialize (Object, "volume", Value.Volume);
+      Swagger.Streams.Deserialize (Object, "create_epoch", Value.Create_Epoch);
+      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out DexPriceDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : DexPriceDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in DexDepositDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("user", Value.User);
+      Into.Write_Entity ("token_address", Value.Token_Address);
+      Into.Write_Entity ("amount", Value.Amount);
+      Into.Write_Entity ("batch_id", Value.Batch_Id);
+      Into.Write_Entity ("create_epoch", Value.Create_Epoch);
+      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in DexDepositDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out DexDepositDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "user", Value.User);
+      Swagger.Streams.Deserialize (Object, "token_address", Value.Token_Address);
+      Swagger.Streams.Deserialize (Object, "amount", Value.Amount);
+      Swagger.Streams.Deserialize (Object, "batch_id", Value.Batch_Id);
+      Swagger.Streams.Deserialize (Object, "create_epoch", Value.Create_Epoch);
+      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out DexDepositDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : DexDepositDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveWeeklyVolumeDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("pool", Value.Pool);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("volume", Value.Volume);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveWeeklyVolumeDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveWeeklyVolumeDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "volume", Value.Volume);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveWeeklyVolumeDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveWeeklyVolumeDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveUnderlyingCoinDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("index", Value.Index);
+      Into.Write_Entity ("pool", Value.Pool);
+      Into.Write_Entity ("token", Value.Token);
+      Into.Write_Entity ("coin", Value.Coin);
+      Into.Write_Entity ("balance", Value.Balance);
+      Into.Write_Entity ("updated", Value.Updated);
+      Into.Write_Entity ("updated_at_block", Value.Updated_At_Block);
+      Into.Write_Entity ("updated_at_transaction", Value.Updated_At_Transaction);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveUnderlyingCoinDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveUnderlyingCoinDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "index", Value.Index);
+      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
+      Swagger.Streams.Deserialize (Object, "token", Value.Token);
+      Swagger.Streams.Deserialize (Object, "coin", Value.Coin);
+      Swagger.Streams.Deserialize (Object, "balance", Value.Balance);
+      Swagger.Streams.Deserialize (Object, "updated", Value.Updated);
+      Swagger.Streams.Deserialize (Object, "updated_at_block", Value.Updated_At_Block);
+      Swagger.Streams.Deserialize (Object, "updated_at_transaction", Value.Updated_At_Transaction);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveUnderlyingCoinDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveUnderlyingCoinDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveTokenDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("address", Value.Address);
+      Into.Write_Entity ("decimals", Value.Decimals);
+      Into.Write_Entity ("name", Value.Name);
+      Into.Write_Entity ("symbol", Value.Symbol);
+      Serialize (Into, "pools", Value.Pools);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("token_symbol", Value.Token_Symbol);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveTokenDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveTokenDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "address", Value.Address);
+      Swagger.Streams.Deserialize (Object, "decimals", Value.Decimals);
+      Swagger.Streams.Deserialize (Object, "name", Value.Name);
+      Swagger.Streams.Deserialize (Object, "symbol", Value.Symbol);
+      Swagger.Streams.Deserialize (Object, "pools", Value.Pools);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "token_symbol", Value.Token_Symbol);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveTokenDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveTokenDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveRemoveLiquidityOneEventDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("pool", Value.Pool);
+      Into.Write_Entity ("provider", Value.Provider);
+      Into.Write_Entity ("token_amount", Value.Token_Amount);
+      Into.Write_Entity ("coin_amount", Value.Coin_Amount);
+      Into.Write_Entity ("block", Value.Block);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("transaction", Value.Transaction);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveRemoveLiquidityOneEventDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveRemoveLiquidityOneEventDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
+      Swagger.Streams.Deserialize (Object, "provider", Value.Provider);
+      Swagger.Streams.Deserialize (Object, "token_amount", Value.Token_Amount);
+      Swagger.Streams.Deserialize (Object, "coin_amount", Value.Coin_Amount);
+      Swagger.Streams.Deserialize (Object, "block", Value.Block);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveRemoveLiquidityOneEventDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveRemoveLiquidityOneEventDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveProposalVoteDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("proposal", Value.Proposal);
+      Into.Write_Entity ("supports", Value.Supports);
+      Into.Write_Entity ("stake", Value.Stake);
+      Into.Write_Entity ("voter", Value.Voter);
+      Into.Write_Entity ("created", Value.Created);
+      Into.Write_Entity ("created_at_block", Value.Created_At_Block);
+      Into.Write_Entity ("created_at_transaction", Value.Created_At_Transaction);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveProposalVoteDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveProposalVoteDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "proposal", Value.Proposal);
+      Swagger.Streams.Deserialize (Object, "supports", Value.Supports);
+      Swagger.Streams.Deserialize (Object, "stake", Value.Stake);
+      Swagger.Streams.Deserialize (Object, "voter", Value.Voter);
+      Swagger.Streams.Deserialize (Object, "created", Value.Created);
+      Swagger.Streams.Deserialize (Object, "created_at_block", Value.Created_At_Block);
+      Swagger.Streams.Deserialize (Object, "created_at_transaction", Value.Created_At_Transaction);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveProposalVoteDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveProposalVoteDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurvePoolDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("name", Value.Name);
+      Into.Write_Entity ("is_meta", Value.Is_Meta);
+      Into.Write_Entity ("registry_address", Value.Registry_Address);
+      Into.Write_Entity ("swap_address", Value.Swap_Address);
+      Into.Write_Entity ("lp_token", Value.Lp_Token);
+      Into.Write_Entity ("coin_count", Value.Coin_Count);
+      Into.Write_Entity ("underlying_count", Value.Underlying_Count);
+      Into.Write_Entity ("a", Value.A);
+      Into.Write_Entity ("fee", Value.Fee);
+      Into.Write_Entity ("admin_fee", Value.Admin_Fee);
+      Into.Write_Entity ("owner", Value.Owner);
+      Into.Write_Entity ("virtual_price", Value.Virtual_Price);
+      Into.Write_Entity ("locked", Value.Locked);
+      Into.Write_Entity ("added_at", Value.Added_At);
+      Into.Write_Entity ("added_at_block", Value.Added_At_Block);
+      Into.Write_Entity ("added_at_transaction", Value.Added_At_Transaction);
+      Into.Write_Entity ("removed_at", Value.Removed_At);
+      Into.Write_Entity ("removed_at_block", Value.Removed_At_Block);
+      Into.Write_Entity ("removed_at_transaction", Value.Removed_At_Transaction);
+      Into.Write_Entity ("exchange_count", Value.Exchange_Count);
+      Into.Write_Entity ("gauge_count", Value.Gauge_Count);
+      Into.Write_Entity ("vid", Value.Vid);
+      Serialize (Into, "evaluated_ask", Value.Evaluated_Ask);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurvePoolDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurvePoolDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "name", Value.Name);
+      Swagger.Streams.Deserialize (Object, "is_meta", Value.Is_Meta);
+      Swagger.Streams.Deserialize (Object, "registry_address", Value.Registry_Address);
+      Swagger.Streams.Deserialize (Object, "swap_address", Value.Swap_Address);
+      Swagger.Streams.Deserialize (Object, "lp_token", Value.Lp_Token);
+      Swagger.Streams.Deserialize (Object, "coin_count", Value.Coin_Count);
+      Swagger.Streams.Deserialize (Object, "underlying_count", Value.Underlying_Count);
+      Swagger.Streams.Deserialize (Object, "a", Value.A);
+      Swagger.Streams.Deserialize (Object, "fee", Value.Fee);
+      Swagger.Streams.Deserialize (Object, "admin_fee", Value.Admin_Fee);
+      Swagger.Streams.Deserialize (Object, "owner", Value.Owner);
+      Swagger.Streams.Deserialize (Object, "virtual_price", Value.Virtual_Price);
+      Swagger.Streams.Deserialize (Object, "locked", Value.Locked);
+      Swagger.Streams.Deserialize (Object, "added_at", Value.Added_At);
+      Swagger.Streams.Deserialize (Object, "added_at_block", Value.Added_At_Block);
+      Swagger.Streams.Deserialize (Object, "added_at_transaction", Value.Added_At_Transaction);
+      Swagger.Streams.Deserialize (Object, "removed_at", Value.Removed_At);
+      Swagger.Streams.Deserialize (Object, "removed_at_block", Value.Removed_At_Block);
+      Swagger.Streams.Deserialize (Object, "removed_at_transaction", Value.Removed_At_Transaction);
+      Swagger.Streams.Deserialize (Object, "exchange_count", Value.Exchange_Count);
+      Swagger.Streams.Deserialize (Object, "gauge_count", Value.Gauge_Count);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "evaluated_ask", Value.Evaluated_Ask);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurvePoolDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurvePoolDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveHourlyVolumeDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("pool", Value.Pool);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("volume", Value.Volume);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveHourlyVolumeDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveHourlyVolumeDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "volume", Value.Volume);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveHourlyVolumeDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveHourlyVolumeDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveGaugeWeightVoteDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("gauge", Value.Gauge);
+      Into.Write_Entity ("user", Value.User);
+      Into.Write_Entity ("time", Value.Time);
+      Into.Write_Entity ("weight", Value.Weight);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveGaugeWeightVoteDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveGaugeWeightVoteDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "gauge", Value.Gauge);
+      Swagger.Streams.Deserialize (Object, "user", Value.User);
+      Swagger.Streams.Deserialize (Object, "time", Value.Time);
+      Swagger.Streams.Deserialize (Object, "weight", Value.Weight);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveGaugeWeightVoteDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveGaugeWeightVoteDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveGaugeTypeWeightDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("type", Value.P_Type);
+      Into.Write_Entity ("time", Value.Time);
+      Into.Write_Entity ("weight", Value.Weight);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveGaugeTypeWeightDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveGaugeTypeWeightDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "type", Value.P_Type);
+      Swagger.Streams.Deserialize (Object, "time", Value.Time);
+      Swagger.Streams.Deserialize (Object, "weight", Value.Weight);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveGaugeTypeWeightDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveGaugeTypeWeightDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveGaugeTotalWeightDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("time", Value.Time);
+      Into.Write_Entity ("weight", Value.Weight);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveGaugeTotalWeightDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveGaugeTotalWeightDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "time", Value.Time);
+      Swagger.Streams.Deserialize (Object, "weight", Value.Weight);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveGaugeTotalWeightDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveGaugeTotalWeightDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveGaugeDepositDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("gauge", Value.Gauge);
+      Into.Write_Entity ("provider", Value.Provider);
+      Into.Write_Entity ("value", Value.Value);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("block_range", Value.Block_Range);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveGaugeDepositDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveGaugeDepositDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "gauge", Value.Gauge);
+      Swagger.Streams.Deserialize (Object, "provider", Value.Provider);
+      Swagger.Streams.Deserialize (Object, "value", Value.Value);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveGaugeDepositDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveGaugeDepositDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveFeeChangeLogDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("pool", Value.Pool);
+      Into.Write_Entity ("value", Value.Value);
+      Into.Write_Entity ("block", Value.Block);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("transaction", Value.Transaction);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveFeeChangeLogDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveFeeChangeLogDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
+      Swagger.Streams.Deserialize (Object, "value", Value.Value);
+      Swagger.Streams.Deserialize (Object, "block", Value.Block);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveFeeChangeLogDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveFeeChangeLogDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveDailyVolumeDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("pool", Value.Pool);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("volume", Value.Volume);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("block_range", Value.Block_Range);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveDailyVolumeDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveDailyVolumeDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "volume", Value.Volume);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveDailyVolumeDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveDailyVolumeDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveContractDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("description", Value.Description);
+      Into.Write_Entity ("added", Value.Added);
+      Into.Write_Entity ("added_at_block", Value.Added_At_Block);
+      Into.Write_Entity ("added_at_transaction", Value.Added_At_Transaction);
+      Into.Write_Entity ("modified", Value.Modified);
+      Into.Write_Entity ("modified_at_block", Value.Modified_At_Block);
+      Into.Write_Entity ("modified_at_transaction", Value.Modified_At_Transaction);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveContractDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveContractDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "description", Value.Description);
+      Swagger.Streams.Deserialize (Object, "added", Value.Added);
+      Swagger.Streams.Deserialize (Object, "added_at_block", Value.Added_At_Block);
+      Swagger.Streams.Deserialize (Object, "added_at_transaction", Value.Added_At_Transaction);
+      Swagger.Streams.Deserialize (Object, "modified", Value.Modified);
+      Swagger.Streams.Deserialize (Object, "modified_at_block", Value.Modified_At_Block);
+      Swagger.Streams.Deserialize (Object, "modified_at_transaction", Value.Modified_At_Transaction);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveContractDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveContractDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveAmplificationCoeffChangeLogDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("pool", Value.Pool);
+      Into.Write_Entity ("value", Value.Value);
+      Into.Write_Entity ("block", Value.Block);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("transaction", Value.Transaction);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveAmplificationCoeffChangeLogDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveAmplificationCoeffChangeLogDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
+      Swagger.Streams.Deserialize (Object, "value", Value.Value);
+      Swagger.Streams.Deserialize (Object, "block", Value.Block);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveAmplificationCoeffChangeLogDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveAmplificationCoeffChangeLogDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveAddLiquidityEventDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("pool", Value.Pool);
+      Into.Write_Entity ("provider", Value.Provider);
+      Serialize (Into, "token_amounts", Value.Token_Amounts);
+      Serialize (Into, "fees", Value.Fees);
+      Into.Write_Entity ("invariant", Value.Invariant);
+      Into.Write_Entity ("token_supply", Value.Token_Supply);
+      Into.Write_Entity ("block", Value.Block);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("transaction", Value.Transaction);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveAddLiquidityEventDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveAddLiquidityEventDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
+      Swagger.Streams.Deserialize (Object, "provider", Value.Provider);
+      Swagger.Streams.Deserialize (Object, "token_amounts", Value.Token_Amounts);
+      Swagger.Streams.Deserialize (Object, "fees", Value.Fees);
+      Swagger.Streams.Deserialize (Object, "invariant", Value.Invariant);
+      Swagger.Streams.Deserialize (Object, "token_supply", Value.Token_Supply);
+      Swagger.Streams.Deserialize (Object, "block", Value.Block);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveAddLiquidityEventDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveAddLiquidityEventDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CowUserDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("address", Value.Address);
+      Into.Write_Entity ("first_trade_timestamp", Value.First_Trade_Timestamp);
+      Into.Write_Entity ("is_solver", Value.Is_Solver);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CowUserDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CowUserDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "address", Value.Address);
+      Swagger.Streams.Deserialize (Object, "first_trade_timestamp", Value.First_Trade_Timestamp);
+      Swagger.Streams.Deserialize (Object, "is_solver", Value.Is_Solver);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CowUserDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CowUserDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CowTokenDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("address", Value.Address);
+      Into.Write_Entity ("first_trade_timestamp", Value.First_Trade_Timestamp);
+      Into.Write_Entity ("name", Value.Name);
+      Into.Write_Entity ("symbol", Value.Symbol);
+      Into.Write_Entity ("decimals", Value.Decimals);
+      Into.Write_Entity ("total_volume", Value.Total_Volume);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("token_symbol", Value.Token_Symbol);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CowTokenDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CowTokenDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "address", Value.Address);
+      Swagger.Streams.Deserialize (Object, "first_trade_timestamp", Value.First_Trade_Timestamp);
+      Swagger.Streams.Deserialize (Object, "name", Value.Name);
+      Swagger.Streams.Deserialize (Object, "symbol", Value.Symbol);
+      Swagger.Streams.Deserialize (Object, "decimals", Value.Decimals);
+      Swagger.Streams.Deserialize (Object, "total_volume", Value.Total_Volume);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "token_symbol", Value.Token_Symbol);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CowTokenDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CowTokenDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CowOrderDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("owner", Value.Owner);
+      Into.Write_Entity ("trades_timestamp", Value.Trades_Timestamp);
+      Into.Write_Entity ("invalidate_timestamp", Value.Invalidate_Timestamp);
+      Into.Write_Entity ("presign_timestamp", Value.Presign_Timestamp);
+      Into.Write_Entity ("is_signed", Value.Is_Signed);
+      Into.Write_Entity ("is_valid", Value.Is_Valid);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CowOrderDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CowOrderDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "owner", Value.Owner);
+      Swagger.Streams.Deserialize (Object, "trades_timestamp", Value.Trades_Timestamp);
+      Swagger.Streams.Deserialize (Object, "invalidate_timestamp", Value.Invalidate_Timestamp);
+      Swagger.Streams.Deserialize (Object, "presign_timestamp", Value.Presign_Timestamp);
+      Swagger.Streams.Deserialize (Object, "is_signed", Value.Is_Signed);
+      Swagger.Streams.Deserialize (Object, "is_valid", Value.Is_Valid);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CowOrderDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CowOrderDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CRYPTOPUNKSTradeDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("block_range", Value.Block_Range);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("transaction_hash", Value.Transaction_Hash);
+      Into.Write_Entity ("log_index", Value.Log_Index);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("is_bundle", Value.Is_Bundle);
+      Into.Write_Entity ("collection", Value.Collection);
+      Into.Write_Entity ("token_id", Value.Token_Id);
+      Into.Write_Entity ("amount", Value.Amount);
+      Into.Write_Entity ("price_eth", Value.Price_Eth);
+      Into.Write_Entity ("buyer", Value.Buyer);
+      Into.Write_Entity ("seller", Value.Seller);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CRYPTOPUNKSTradeDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CRYPTOPUNKSTradeDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "transaction_hash", Value.Transaction_Hash);
+      Swagger.Streams.Deserialize (Object, "log_index", Value.Log_Index);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "is_bundle", Value.Is_Bundle);
+      Swagger.Streams.Deserialize (Object, "collection", Value.Collection);
+      Swagger.Streams.Deserialize (Object, "token_id", Value.Token_Id);
+      Swagger.Streams.Deserialize (Object, "amount", Value.Amount);
+      Swagger.Streams.Deserialize (Object, "price_eth", Value.Price_Eth);
+      Swagger.Streams.Deserialize (Object, "buyer", Value.Buyer);
+      Swagger.Streams.Deserialize (Object, "seller", Value.Seller);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CRYPTOPUNKSTradeDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CRYPTOPUNKSTradeDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CRYPTOPUNKSMarketPlaceDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("block_range", Value.Block_Range);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("name", Value.Name);
+      Into.Write_Entity ("slug", Value.Slug);
+      Into.Write_Entity ("schema_version", Value.Schema_Version);
+      Into.Write_Entity ("subgraph_version", Value.Subgraph_Version);
+      Into.Write_Entity ("methodology_version", Value.Methodology_Version);
+      Into.Write_Entity ("collection_count", Value.Collection_Count);
+      Into.Write_Entity ("trade_count", Value.Trade_Count);
+      Into.Write_Entity ("cumulative_trade_volume_eth", Value.Cumulative_Trade_Volume_Eth);
+      Into.Write_Entity ("marketplace_revenue_eth", Value.Marketplace_Revenue_Eth);
+      Into.Write_Entity ("creator_revenue_eth", Value.Creator_Revenue_Eth);
+      Into.Write_Entity ("total_revenue_eth", Value.Total_Revenue_Eth);
+      Into.Write_Entity ("cumulative_unique_traders", Value.Cumulative_Unique_Traders);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CRYPTOPUNKSMarketPlaceDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CRYPTOPUNKSMarketPlaceDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "name", Value.Name);
+      Swagger.Streams.Deserialize (Object, "slug", Value.Slug);
+      Swagger.Streams.Deserialize (Object, "schema_version", Value.Schema_Version);
+      Swagger.Streams.Deserialize (Object, "subgraph_version", Value.Subgraph_Version);
+      Swagger.Streams.Deserialize (Object, "methodology_version", Value.Methodology_Version);
+      Swagger.Streams.Deserialize (Object, "collection_count", Value.Collection_Count);
+      Swagger.Streams.Deserialize (Object, "trade_count", Value.Trade_Count);
+      Swagger.Streams.Deserialize (Object, "cumulative_trade_volume_eth", Value.Cumulative_Trade_Volume_Eth);
+      Swagger.Streams.Deserialize (Object, "marketplace_revenue_eth", Value.Marketplace_Revenue_Eth);
+      Swagger.Streams.Deserialize (Object, "creator_revenue_eth", Value.Creator_Revenue_Eth);
+      Swagger.Streams.Deserialize (Object, "total_revenue_eth", Value.Total_Revenue_Eth);
+      Swagger.Streams.Deserialize (Object, "cumulative_unique_traders", Value.Cumulative_Unique_Traders);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CRYPTOPUNKSMarketPlaceDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CRYPTOPUNKSMarketPlaceDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CRYPTOPUNKSDataSourcesDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("block_range", Value.Block_Range);
+      Into.Write_Entity ("causality_region", Value.Causality_Region);
+      Into.Write_Entity ("manifest_idx", Value.Manifest_Idx);
+      Into.Write_Entity ("parent", Value.Parent);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("param", Value.Param);
+      Into.Write_Entity ("context", Value.Context);
+      Into.Write_Entity ("done_at", Value.Done_At);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CRYPTOPUNKSDataSourcesDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CRYPTOPUNKSDataSourcesDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
+      Swagger.Streams.Deserialize (Object, "causality_region", Value.Causality_Region);
+      Swagger.Streams.Deserialize (Object, "manifest_idx", Value.Manifest_Idx);
+      Swagger.Streams.Deserialize (Object, "parent", Value.Parent);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "param", Value.Param);
+      Swagger.Streams.Deserialize (Object, "context", Value.Context);
+      Swagger.Streams.Deserialize (Object, "done_at", Value.Done_At);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CRYPTOPUNKSDataSourcesDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CRYPTOPUNKSDataSourcesDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CRYPTOPUNKSCollectionDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("block_range", Value.Block_Range);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("name", Value.Name);
+      Into.Write_Entity ("symbol", Value.Symbol);
+      Into.Write_Entity ("total_supply", Value.Total_Supply);
+      Into.Write_Entity ("royalty_fee", Value.Royalty_Fee);
+      Into.Write_Entity ("cumulative_trade_volume_eth", Value.Cumulative_Trade_Volume_Eth);
+      Into.Write_Entity ("marketplace_revenue_eth", Value.Marketplace_Revenue_Eth);
+      Into.Write_Entity ("creator_revenue_eth", Value.Creator_Revenue_Eth);
+      Into.Write_Entity ("total_revenue_eth", Value.Total_Revenue_Eth);
+      Into.Write_Entity ("trade_count", Value.Trade_Count);
+      Into.Write_Entity ("buyer_count", Value.Buyer_Count);
+      Into.Write_Entity ("seller_count", Value.Seller_Count);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CRYPTOPUNKSCollectionDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CRYPTOPUNKSCollectionDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "name", Value.Name);
+      Swagger.Streams.Deserialize (Object, "symbol", Value.Symbol);
+      Swagger.Streams.Deserialize (Object, "total_supply", Value.Total_Supply);
+      Swagger.Streams.Deserialize (Object, "royalty_fee", Value.Royalty_Fee);
+      Swagger.Streams.Deserialize (Object, "cumulative_trade_volume_eth", Value.Cumulative_Trade_Volume_Eth);
+      Swagger.Streams.Deserialize (Object, "marketplace_revenue_eth", Value.Marketplace_Revenue_Eth);
+      Swagger.Streams.Deserialize (Object, "creator_revenue_eth", Value.Creator_Revenue_Eth);
+      Swagger.Streams.Deserialize (Object, "total_revenue_eth", Value.Total_Revenue_Eth);
+      Swagger.Streams.Deserialize (Object, "trade_count", Value.Trade_Count);
+      Swagger.Streams.Deserialize (Object, "buyer_count", Value.Buyer_Count);
+      Swagger.Streams.Deserialize (Object, "seller_count", Value.Seller_Count);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CRYPTOPUNKSCollectionDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CRYPTOPUNKSCollectionDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CRYPTOPUNKSBidDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("block_range", Value.Block_Range);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("tokens_bid", Value.Tokens_Bid);
+      Into.Write_Entity ("token_id", Value.Token_Id);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("bidder", Value.Bidder);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CRYPTOPUNKSBidDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CRYPTOPUNKSBidDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "tokens_bid", Value.Tokens_Bid);
+      Swagger.Streams.Deserialize (Object, "token_id", Value.Token_Id);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "bidder", Value.Bidder);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CRYPTOPUNKSBidDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CRYPTOPUNKSBidDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CRYPTOPUNKSCollectionDailySnapshotDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("block_range", Value.Block_Range);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("collection", Value.Collection);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("royalty_fee", Value.Royalty_Fee);
+      Into.Write_Entity ("daily_min_sale_price", Value.Daily_Min_Sale_Price);
+      Into.Write_Entity ("daily_max_sale_price", Value.Daily_Max_Sale_Price);
+      Into.Write_Entity ("cumulative_trade_volume_eth", Value.Cumulative_Trade_Volume_Eth);
+      Into.Write_Entity ("daily_trade_volume_eth", Value.Daily_Trade_Volume_Eth);
+      Into.Write_Entity ("marketplace_revenue_eth", Value.Marketplace_Revenue_Eth);
+      Into.Write_Entity ("creator_revenue_eth", Value.Creator_Revenue_Eth);
+      Into.Write_Entity ("total_revenue_eth", Value.Total_Revenue_Eth);
+      Into.Write_Entity ("trade_count", Value.Trade_Count);
+      Into.Write_Entity ("daily_traded_item_count", Value.Daily_Traded_Item_Count);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CRYPTOPUNKSCollectionDailySnapshotDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CRYPTOPUNKSCollectionDailySnapshotDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "collection", Value.Collection);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "royalty_fee", Value.Royalty_Fee);
+      Swagger.Streams.Deserialize (Object, "daily_min_sale_price", Value.Daily_Min_Sale_Price);
+      Swagger.Streams.Deserialize (Object, "daily_max_sale_price", Value.Daily_Max_Sale_Price);
+      Swagger.Streams.Deserialize (Object, "cumulative_trade_volume_eth", Value.Cumulative_Trade_Volume_Eth);
+      Swagger.Streams.Deserialize (Object, "daily_trade_volume_eth", Value.Daily_Trade_Volume_Eth);
+      Swagger.Streams.Deserialize (Object, "marketplace_revenue_eth", Value.Marketplace_Revenue_Eth);
+      Swagger.Streams.Deserialize (Object, "creator_revenue_eth", Value.Creator_Revenue_Eth);
+      Swagger.Streams.Deserialize (Object, "total_revenue_eth", Value.Total_Revenue_Eth);
+      Swagger.Streams.Deserialize (Object, "trade_count", Value.Trade_Count);
+      Swagger.Streams.Deserialize (Object, "daily_traded_item_count", Value.Daily_Traded_Item_Count);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CRYPTOPUNKSCollectionDailySnapshotDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CRYPTOPUNKSCollectionDailySnapshotDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CRYPTOPUNKSItemDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("block_range", Value.Block_Range);
+      Into.Write_Entity ("id", Value.Id);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CRYPTOPUNKSItemDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CRYPTOPUNKSItemDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CRYPTOPUNKSItemDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CRYPTOPUNKSItemDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CRYPTOPUNKSMarketplaceDailySnapshotDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("block_range", Value.Block_Range);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("marketplace", Value.Marketplace);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("collection_count", Value.Collection_Count);
+      Into.Write_Entity ("cumulative_trade_volume_eth", Value.Cumulative_Trade_Volume_Eth);
+      Into.Write_Entity ("marketplace_revenue_eth", Value.Marketplace_Revenue_Eth);
+      Into.Write_Entity ("creator_revenue_eth", Value.Creator_Revenue_Eth);
+      Into.Write_Entity ("total_revenue_eth", Value.Total_Revenue_Eth);
+      Into.Write_Entity ("trade_count", Value.Trade_Count);
+      Into.Write_Entity ("cumulative_unique_traders", Value.Cumulative_Unique_Traders);
+      Into.Write_Entity ("daily_active_traders", Value.Daily_Active_Traders);
+      Into.Write_Entity ("daily_traded_collection_count", Value.Daily_Traded_Collection_Count);
+      Into.Write_Entity ("daily_traded_item_count", Value.Daily_Traded_Item_Count);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CRYPTOPUNKSMarketplaceDailySnapshotDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CRYPTOPUNKSMarketplaceDailySnapshotDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "marketplace", Value.Marketplace);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "collection_count", Value.Collection_Count);
+      Swagger.Streams.Deserialize (Object, "cumulative_trade_volume_eth", Value.Cumulative_Trade_Volume_Eth);
+      Swagger.Streams.Deserialize (Object, "marketplace_revenue_eth", Value.Marketplace_Revenue_Eth);
+      Swagger.Streams.Deserialize (Object, "creator_revenue_eth", Value.Creator_Revenue_Eth);
+      Swagger.Streams.Deserialize (Object, "total_revenue_eth", Value.Total_Revenue_Eth);
+      Swagger.Streams.Deserialize (Object, "trade_count", Value.Trade_Count);
+      Swagger.Streams.Deserialize (Object, "cumulative_unique_traders", Value.Cumulative_Unique_Traders);
+      Swagger.Streams.Deserialize (Object, "daily_active_traders", Value.Daily_Active_Traders);
+      Swagger.Streams.Deserialize (Object, "daily_traded_collection_count", Value.Daily_Traded_Collection_Count);
+      Swagger.Streams.Deserialize (Object, "daily_traded_item_count", Value.Daily_Traded_Item_Count);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CRYPTOPUNKSMarketplaceDailySnapshotDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CRYPTOPUNKSMarketplaceDailySnapshotDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CRYPTOPUNKSUserDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("block_range", Value.Block_Range);
+      Into.Write_Entity ("id", Value.Id);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CRYPTOPUNKSUserDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CRYPTOPUNKSUserDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CRYPTOPUNKSUserDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CRYPTOPUNKSUserDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CowSettlementDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("solver", Value.Solver);
+      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
+      Into.Write_Entity ("first_trade_timestamp", Value.First_Trade_Timestamp);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CowSettlementDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CowSettlementDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "solver", Value.Solver);
+      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
+      Swagger.Streams.Deserialize (Object, "first_trade_timestamp", Value.First_Trade_Timestamp);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CowSettlementDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CowSettlementDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveAccountDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("address", Value.Address);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveAccountDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveAccountDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "address", Value.Address);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveAccountDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveAccountDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveAdminFeeChangeLogDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("pool", Value.Pool);
+      Into.Write_Entity ("value", Value.Value);
+      Into.Write_Entity ("block", Value.Block);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("transaction", Value.Transaction);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveAdminFeeChangeLogDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveAdminFeeChangeLogDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
+      Swagger.Streams.Deserialize (Object, "value", Value.Value);
+      Swagger.Streams.Deserialize (Object, "block", Value.Block);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveAdminFeeChangeLogDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveAdminFeeChangeLogDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveCoinDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("index", Value.Index);
+      Into.Write_Entity ("pool", Value.Pool);
+      Into.Write_Entity ("token", Value.Token);
+      Into.Write_Entity ("underlying", Value.Underlying);
+      Into.Write_Entity ("balance", Value.Balance);
+      Into.Write_Entity ("rate", Value.Rate);
+      Into.Write_Entity ("updated", Value.Updated);
+      Into.Write_Entity ("updated_at_block", Value.Updated_At_Block);
+      Into.Write_Entity ("updated_at_transaction", Value.Updated_At_Transaction);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("block_range", Value.Block_Range);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveCoinDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveCoinDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "index", Value.Index);
+      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
+      Swagger.Streams.Deserialize (Object, "token", Value.Token);
+      Swagger.Streams.Deserialize (Object, "underlying", Value.Underlying);
+      Swagger.Streams.Deserialize (Object, "balance", Value.Balance);
+      Swagger.Streams.Deserialize (Object, "rate", Value.Rate);
+      Swagger.Streams.Deserialize (Object, "updated", Value.Updated);
+      Swagger.Streams.Deserialize (Object, "updated_at_block", Value.Updated_At_Block);
+      Swagger.Streams.Deserialize (Object, "updated_at_transaction", Value.Updated_At_Transaction);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "block_range", Value.Block_Range);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveCoinDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveCoinDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveContractVersionDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("contract", Value.Contract);
+      Into.Write_Entity ("address", Value.Address);
+      Into.Write_Entity ("version", Value.Version);
+      Into.Write_Entity ("added", Value.Added);
+      Into.Write_Entity ("added_at_block", Value.Added_At_Block);
+      Into.Write_Entity ("added_at_transaction", Value.Added_At_Transaction);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveContractVersionDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveContractVersionDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "contract", Value.Contract);
+      Swagger.Streams.Deserialize (Object, "address", Value.Address);
+      Swagger.Streams.Deserialize (Object, "version", Value.Version);
+      Swagger.Streams.Deserialize (Object, "added", Value.Added);
+      Swagger.Streams.Deserialize (Object, "added_at_block", Value.Added_At_Block);
+      Swagger.Streams.Deserialize (Object, "added_at_transaction", Value.Added_At_Transaction);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveContractVersionDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveContractVersionDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveGaugeDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("address", Value.Address);
+      Into.Write_Entity ("type", Value.P_Type);
+      Into.Write_Entity ("pool", Value.Pool);
+      Into.Write_Entity ("created", Value.Created);
+      Into.Write_Entity ("created_at_block", Value.Created_At_Block);
+      Into.Write_Entity ("created_at_transaction", Value.Created_At_Transaction);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveGaugeDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveGaugeDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "address", Value.Address);
+      Swagger.Streams.Deserialize (Object, "type", Value.P_Type);
+      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
+      Swagger.Streams.Deserialize (Object, "created", Value.Created);
+      Swagger.Streams.Deserialize (Object, "created_at_block", Value.Created_At_Block);
+      Swagger.Streams.Deserialize (Object, "created_at_transaction", Value.Created_At_Transaction);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveGaugeDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveGaugeDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveGaugeLiquidityDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("user", Value.User);
+      Into.Write_Entity ("gauge", Value.Gauge);
+      Into.Write_Entity ("original_balance", Value.Original_Balance);
+      Into.Write_Entity ("original_supply", Value.Original_Supply);
+      Into.Write_Entity ("working_balance", Value.Working_Balance);
+      Into.Write_Entity ("working_supply", Value.Working_Supply);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("block", Value.Block);
+      Into.Write_Entity ("transaction", Value.Transaction);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveGaugeLiquidityDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveGaugeLiquidityDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "user", Value.User);
+      Swagger.Streams.Deserialize (Object, "gauge", Value.Gauge);
+      Swagger.Streams.Deserialize (Object, "original_balance", Value.Original_Balance);
+      Swagger.Streams.Deserialize (Object, "original_supply", Value.Original_Supply);
+      Swagger.Streams.Deserialize (Object, "working_balance", Value.Working_Balance);
+      Swagger.Streams.Deserialize (Object, "working_supply", Value.Working_Supply);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "block", Value.Block);
+      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveGaugeLiquidityDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveGaugeLiquidityDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveGaugeTypeDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("name", Value.Name);
+      Into.Write_Entity ("gauge_count", Value.Gauge_Count);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveGaugeTypeDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveGaugeTypeDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "name", Value.Name);
+      Swagger.Streams.Deserialize (Object, "gauge_count", Value.Gauge_Count);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveGaugeTypeDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveGaugeTypeDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveGaugeWeightDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("gauge", Value.Gauge);
+      Into.Write_Entity ("time", Value.Time);
+      Into.Write_Entity ("weight", Value.Weight);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveGaugeWeightDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveGaugeWeightDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "gauge", Value.Gauge);
+      Swagger.Streams.Deserialize (Object, "time", Value.Time);
+      Swagger.Streams.Deserialize (Object, "weight", Value.Weight);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveGaugeWeightDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveGaugeWeightDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveGaugeWithdrawDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("gauge", Value.Gauge);
+      Into.Write_Entity ("provider", Value.Provider);
+      Into.Write_Entity ("value", Value.Value);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveGaugeWithdrawDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveGaugeWithdrawDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "gauge", Value.Gauge);
+      Swagger.Streams.Deserialize (Object, "provider", Value.Provider);
+      Swagger.Streams.Deserialize (Object, "value", Value.Value);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveGaugeWithdrawDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveGaugeWithdrawDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveLpTokenDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("address", Value.Address);
+      Into.Write_Entity ("decimals", Value.Decimals);
+      Into.Write_Entity ("name", Value.Name);
+      Into.Write_Entity ("symbol", Value.Symbol);
+      Into.Write_Entity ("gauge", Value.Gauge);
+      Into.Write_Entity ("pool", Value.Pool);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveLpTokenDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveLpTokenDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "address", Value.Address);
+      Swagger.Streams.Deserialize (Object, "decimals", Value.Decimals);
+      Swagger.Streams.Deserialize (Object, "name", Value.Name);
+      Swagger.Streams.Deserialize (Object, "symbol", Value.Symbol);
+      Swagger.Streams.Deserialize (Object, "gauge", Value.Gauge);
+      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveLpTokenDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveLpTokenDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveProposalDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("number", Value.Number);
+      Into.Write_Entity ("app", Value.App);
+      Into.Write_Entity ("creator", Value.Creator);
+      Into.Write_Entity ("execution_script", Value.Execution_Script);
+      Into.Write_Entity ("expire_date", Value.Expire_Date);
+      Into.Write_Entity ("minimum_quorum", Value.Minimum_Quorum);
+      Into.Write_Entity ("required_support", Value.Required_Support);
+      Into.Write_Entity ("snapshot_block", Value.Snapshot_Block);
+      Into.Write_Entity ("voting_power", Value.Voting_Power);
+      Into.Write_Entity ("metadata", Value.Metadata);
+      Into.Write_Entity ("text", Value.Text);
+      Into.Write_Entity ("vote_count", Value.Vote_Count);
+      Into.Write_Entity ("positive_vote_count", Value.Positive_Vote_Count);
+      Into.Write_Entity ("negative_vote_count", Value.Negative_Vote_Count);
+      Into.Write_Entity ("current_quorum", Value.Current_Quorum);
+      Into.Write_Entity ("current_support", Value.Current_Support);
+      Into.Write_Entity ("staked_support", Value.Staked_Support);
+      Into.Write_Entity ("total_staked", Value.Total_Staked);
+      Into.Write_Entity ("created", Value.Created);
+      Into.Write_Entity ("created_at_block", Value.Created_At_Block);
+      Into.Write_Entity ("created_at_transaction", Value.Created_At_Transaction);
+      Into.Write_Entity ("updated", Value.Updated);
+      Into.Write_Entity ("updated_at_block", Value.Updated_At_Block);
+      Into.Write_Entity ("updated_at_transaction", Value.Updated_At_Transaction);
+      Into.Write_Entity ("executed", Value.Executed);
+      Into.Write_Entity ("executed_at_block", Value.Executed_At_Block);
+      Into.Write_Entity ("executed_at_transaction", Value.Executed_At_Transaction);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveProposalDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveProposalDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "number", Value.Number);
+      Swagger.Streams.Deserialize (Object, "app", Value.App);
+      Swagger.Streams.Deserialize (Object, "creator", Value.Creator);
+      Swagger.Streams.Deserialize (Object, "execution_script", Value.Execution_Script);
+      Swagger.Streams.Deserialize (Object, "expire_date", Value.Expire_Date);
+      Swagger.Streams.Deserialize (Object, "minimum_quorum", Value.Minimum_Quorum);
+      Swagger.Streams.Deserialize (Object, "required_support", Value.Required_Support);
+      Swagger.Streams.Deserialize (Object, "snapshot_block", Value.Snapshot_Block);
+      Swagger.Streams.Deserialize (Object, "voting_power", Value.Voting_Power);
+      Swagger.Streams.Deserialize (Object, "metadata", Value.Metadata);
+      Swagger.Streams.Deserialize (Object, "text", Value.Text);
+      Swagger.Streams.Deserialize (Object, "vote_count", Value.Vote_Count);
+      Swagger.Streams.Deserialize (Object, "positive_vote_count", Value.Positive_Vote_Count);
+      Swagger.Streams.Deserialize (Object, "negative_vote_count", Value.Negative_Vote_Count);
+      Swagger.Streams.Deserialize (Object, "current_quorum", Value.Current_Quorum);
+      Swagger.Streams.Deserialize (Object, "current_support", Value.Current_Support);
+      Swagger.Streams.Deserialize (Object, "staked_support", Value.Staked_Support);
+      Swagger.Streams.Deserialize (Object, "total_staked", Value.Total_Staked);
+      Swagger.Streams.Deserialize (Object, "created", Value.Created);
+      Swagger.Streams.Deserialize (Object, "created_at_block", Value.Created_At_Block);
+      Swagger.Streams.Deserialize (Object, "created_at_transaction", Value.Created_At_Transaction);
+      Swagger.Streams.Deserialize (Object, "updated", Value.Updated);
+      Swagger.Streams.Deserialize (Object, "updated_at_block", Value.Updated_At_Block);
+      Swagger.Streams.Deserialize (Object, "updated_at_transaction", Value.Updated_At_Transaction);
+      Swagger.Streams.Deserialize (Object, "executed", Value.Executed);
+      Swagger.Streams.Deserialize (Object, "executed_at_block", Value.Executed_At_Block);
+      Swagger.Streams.Deserialize (Object, "executed_at_transaction", Value.Executed_At_Transaction);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveProposalDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveProposalDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveRemoveLiquidityEventDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("pool", Value.Pool);
+      Into.Write_Entity ("provider", Value.Provider);
+      Serialize (Into, "token_amounts", Value.Token_Amounts);
+      Serialize (Into, "fees", Value.Fees);
+      Into.Write_Entity ("token_supply", Value.Token_Supply);
+      Into.Write_Entity ("invariant", Value.Invariant);
+      Into.Write_Entity ("block", Value.Block);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("transaction", Value.Transaction);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveRemoveLiquidityEventDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveRemoveLiquidityEventDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
+      Swagger.Streams.Deserialize (Object, "provider", Value.Provider);
+      Swagger.Streams.Deserialize (Object, "token_amounts", Value.Token_Amounts);
+      Swagger.Streams.Deserialize (Object, "fees", Value.Fees);
+      Swagger.Streams.Deserialize (Object, "token_supply", Value.Token_Supply);
+      Swagger.Streams.Deserialize (Object, "invariant", Value.Invariant);
+      Swagger.Streams.Deserialize (Object, "block", Value.Block);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveRemoveLiquidityEventDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveRemoveLiquidityEventDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveSystemStateDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("registry_contract", Value.Registry_Contract);
+      Into.Write_Entity ("contract_count", Value.Contract_Count);
+      Into.Write_Entity ("gauge_count", Value.Gauge_Count);
+      Into.Write_Entity ("gauge_type_count", Value.Gauge_Type_Count);
+      Into.Write_Entity ("pool_count", Value.Pool_Count);
+      Into.Write_Entity ("token_count", Value.Token_Count);
+      Into.Write_Entity ("total_pool_count", Value.Total_Pool_Count);
+      Into.Write_Entity ("updated", Value.Updated);
+      Into.Write_Entity ("updated_at_block", Value.Updated_At_Block);
+      Into.Write_Entity ("updated_at_transaction", Value.Updated_At_Transaction);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveSystemStateDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveSystemStateDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "registry_contract", Value.Registry_Contract);
+      Swagger.Streams.Deserialize (Object, "contract_count", Value.Contract_Count);
+      Swagger.Streams.Deserialize (Object, "gauge_count", Value.Gauge_Count);
+      Swagger.Streams.Deserialize (Object, "gauge_type_count", Value.Gauge_Type_Count);
+      Swagger.Streams.Deserialize (Object, "pool_count", Value.Pool_Count);
+      Swagger.Streams.Deserialize (Object, "token_count", Value.Token_Count);
+      Swagger.Streams.Deserialize (Object, "total_pool_count", Value.Total_Pool_Count);
+      Swagger.Streams.Deserialize (Object, "updated", Value.Updated);
+      Swagger.Streams.Deserialize (Object, "updated_at_block", Value.Updated_At_Block);
+      Swagger.Streams.Deserialize (Object, "updated_at_transaction", Value.Updated_At_Transaction);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveSystemStateDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveSystemStateDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveTransferOwnershipEventDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("pool", Value.Pool);
+      Into.Write_Entity ("new_admin", Value.New_Admin);
+      Into.Write_Entity ("block", Value.Block);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("transaction", Value.Transaction);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveTransferOwnershipEventDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveTransferOwnershipEventDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
+      Swagger.Streams.Deserialize (Object, "new_admin", Value.New_Admin);
+      Swagger.Streams.Deserialize (Object, "block", Value.Block);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveTransferOwnershipEventDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveTransferOwnershipEventDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveVotingAppDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("address", Value.Address);
+      Into.Write_Entity ("codename", Value.Codename);
+      Into.Write_Entity ("minimum_balance", Value.Minimum_Balance);
+      Into.Write_Entity ("minimum_quorum", Value.Minimum_Quorum);
+      Into.Write_Entity ("minimum_time", Value.Minimum_Time);
+      Into.Write_Entity ("required_support", Value.Required_Support);
+      Into.Write_Entity ("vote_time", Value.Vote_Time);
+      Into.Write_Entity ("proposal_count", Value.Proposal_Count);
+      Into.Write_Entity ("vote_count", Value.Vote_Count);
+      Into.Write_Entity ("token", Value.Token);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveVotingAppDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveVotingAppDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "address", Value.Address);
+      Swagger.Streams.Deserialize (Object, "codename", Value.Codename);
+      Swagger.Streams.Deserialize (Object, "minimum_balance", Value.Minimum_Balance);
+      Swagger.Streams.Deserialize (Object, "minimum_quorum", Value.Minimum_Quorum);
+      Swagger.Streams.Deserialize (Object, "minimum_time", Value.Minimum_Time);
+      Swagger.Streams.Deserialize (Object, "required_support", Value.Required_Support);
+      Swagger.Streams.Deserialize (Object, "vote_time", Value.Vote_Time);
+      Swagger.Streams.Deserialize (Object, "proposal_count", Value.Proposal_Count);
+      Swagger.Streams.Deserialize (Object, "vote_count", Value.Vote_Count);
+      Swagger.Streams.Deserialize (Object, "token", Value.Token);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveVotingAppDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveVotingAppDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in DexBatchDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("start_epoch", Value.Start_Epoch);
+      Into.Write_Entity ("end_epoch", Value.End_Epoch);
+      Into.Write_Entity ("solution", Value.Solution);
+      Into.Write_Entity ("first_solution_epoch", Value.First_Solution_Epoch);
+      Into.Write_Entity ("last_revert_epoch", Value.Last_Revert_Epoch);
+      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in DexBatchDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out DexBatchDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "start_epoch", Value.Start_Epoch);
+      Swagger.Streams.Deserialize (Object, "end_epoch", Value.End_Epoch);
+      Swagger.Streams.Deserialize (Object, "solution", Value.Solution);
+      Swagger.Streams.Deserialize (Object, "first_solution_epoch", Value.First_Solution_Epoch);
+      Swagger.Streams.Deserialize (Object, "last_revert_epoch", Value.Last_Revert_Epoch);
+      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out DexBatchDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : DexBatchDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in DexOrderDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("owner", Value.Owner);
+      Into.Write_Entity ("order_id", Value.Order_Id);
+      Into.Write_Entity ("from_batch_id", Value.From_Batch_Id);
+      Into.Write_Entity ("from_epoch", Value.From_Epoch);
+      Into.Write_Entity ("until_batch_id", Value.Until_Batch_Id);
+      Into.Write_Entity ("until_epoch", Value.Until_Epoch);
+      Into.Write_Entity ("buy_token", Value.Buy_Token);
+      Into.Write_Entity ("sell_token", Value.Sell_Token);
+      Into.Write_Entity ("price_numerator", Value.Price_Numerator);
+      Into.Write_Entity ("price_denominator", Value.Price_Denominator);
+      Into.Write_Entity ("max_sell_amount", Value.Max_Sell_Amount);
+      Into.Write_Entity ("min_receive_amount", Value.Min_Receive_Amount);
+      Into.Write_Entity ("sold_volume", Value.Sold_Volume);
+      Into.Write_Entity ("bought_volume", Value.Bought_Volume);
+      Into.Write_Entity ("create_epoch", Value.Create_Epoch);
+      Into.Write_Entity ("cancel_epoch", Value.Cancel_Epoch);
+      Into.Write_Entity ("delete_epoch", Value.Delete_Epoch);
+      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
+      Into.Write_Entity ("tx_log_index", Value.Tx_Log_Index);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in DexOrderDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out DexOrderDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "owner", Value.Owner);
+      Swagger.Streams.Deserialize (Object, "order_id", Value.Order_Id);
+      Swagger.Streams.Deserialize (Object, "from_batch_id", Value.From_Batch_Id);
+      Swagger.Streams.Deserialize (Object, "from_epoch", Value.From_Epoch);
+      Swagger.Streams.Deserialize (Object, "until_batch_id", Value.Until_Batch_Id);
+      Swagger.Streams.Deserialize (Object, "until_epoch", Value.Until_Epoch);
+      Swagger.Streams.Deserialize (Object, "buy_token", Value.Buy_Token);
+      Swagger.Streams.Deserialize (Object, "sell_token", Value.Sell_Token);
+      Swagger.Streams.Deserialize (Object, "price_numerator", Value.Price_Numerator);
+      Swagger.Streams.Deserialize (Object, "price_denominator", Value.Price_Denominator);
+      Swagger.Streams.Deserialize (Object, "max_sell_amount", Value.Max_Sell_Amount);
+      Swagger.Streams.Deserialize (Object, "min_receive_amount", Value.Min_Receive_Amount);
+      Swagger.Streams.Deserialize (Object, "sold_volume", Value.Sold_Volume);
+      Swagger.Streams.Deserialize (Object, "bought_volume", Value.Bought_Volume);
+      Swagger.Streams.Deserialize (Object, "create_epoch", Value.Create_Epoch);
+      Swagger.Streams.Deserialize (Object, "cancel_epoch", Value.Cancel_Epoch);
+      Swagger.Streams.Deserialize (Object, "delete_epoch", Value.Delete_Epoch);
+      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
+      Swagger.Streams.Deserialize (Object, "tx_log_index", Value.Tx_Log_Index);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out DexOrderDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : DexOrderDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in DexSolutionDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("batch", Value.Batch);
+      Into.Write_Entity ("solver", Value.Solver);
+      Into.Write_Entity ("fee_reward", Value.Fee_Reward);
+      Into.Write_Entity ("objective_value", Value.Objective_Value);
+      Into.Write_Entity ("utility", Value.Utility);
+      Serialize (Into, "trades", Value.Trades);
+      Into.Write_Entity ("create_epoch", Value.Create_Epoch);
+      Into.Write_Entity ("revert_epoch", Value.Revert_Epoch);
+      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
+      Into.Write_Entity ("tx_log_index", Value.Tx_Log_Index);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in DexSolutionDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out DexSolutionDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "batch", Value.Batch);
+      Swagger.Streams.Deserialize (Object, "solver", Value.Solver);
+      Swagger.Streams.Deserialize (Object, "fee_reward", Value.Fee_Reward);
+      Swagger.Streams.Deserialize (Object, "objective_value", Value.Objective_Value);
+      Swagger.Streams.Deserialize (Object, "utility", Value.Utility);
+      Swagger.Streams.Deserialize (Object, "trades", Value.Trades);
+      Swagger.Streams.Deserialize (Object, "create_epoch", Value.Create_Epoch);
+      Swagger.Streams.Deserialize (Object, "revert_epoch", Value.Revert_Epoch);
+      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
+      Swagger.Streams.Deserialize (Object, "tx_log_index", Value.Tx_Log_Index);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out DexSolutionDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : DexSolutionDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in DexTokenDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("address", Value.Address);
+      Into.Write_Entity ("from_batch_id", Value.From_Batch_Id);
+      Into.Write_Entity ("symbol", Value.Symbol);
+      Into.Write_Entity ("decimals", Value.Decimals);
+      Into.Write_Entity ("name", Value.Name);
+      Into.Write_Entity ("sell_volume", Value.Sell_Volume);
+      Into.Write_Entity ("create_epoch", Value.Create_Epoch);
+      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("token_symbol", Value.Token_Symbol);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in DexTokenDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out DexTokenDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "address", Value.Address);
+      Swagger.Streams.Deserialize (Object, "from_batch_id", Value.From_Batch_Id);
+      Swagger.Streams.Deserialize (Object, "symbol", Value.Symbol);
+      Swagger.Streams.Deserialize (Object, "decimals", Value.Decimals);
+      Swagger.Streams.Deserialize (Object, "name", Value.Name);
+      Swagger.Streams.Deserialize (Object, "sell_volume", Value.Sell_Volume);
+      Swagger.Streams.Deserialize (Object, "create_epoch", Value.Create_Epoch);
+      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "token_symbol", Value.Token_Symbol);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out DexTokenDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : DexTokenDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in DexUserDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("from_batch_id", Value.From_Batch_Id);
+      Into.Write_Entity ("create_epoch", Value.Create_Epoch);
+      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in DexUserDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out DexUserDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "from_batch_id", Value.From_Batch_Id);
+      Swagger.Streams.Deserialize (Object, "create_epoch", Value.Create_Epoch);
+      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out DexUserDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : DexUserDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in DexWithdrawRequestDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("user", Value.User);
+      Into.Write_Entity ("token_address", Value.Token_Address);
+      Into.Write_Entity ("amount", Value.Amount);
+      Into.Write_Entity ("withdrawable_from_batch_id", Value.Withdrawable_From_Batch_Id);
+      Into.Write_Entity ("create_epoch", Value.Create_Epoch);
+      Into.Write_Entity ("create_batch_id", Value.Create_Batch_Id);
+      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in DexWithdrawRequestDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out DexWithdrawRequestDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "user", Value.User);
+      Swagger.Streams.Deserialize (Object, "token_address", Value.Token_Address);
+      Swagger.Streams.Deserialize (Object, "amount", Value.Amount);
+      Swagger.Streams.Deserialize (Object, "withdrawable_from_batch_id", Value.Withdrawable_From_Batch_Id);
+      Swagger.Streams.Deserialize (Object, "create_epoch", Value.Create_Epoch);
+      Swagger.Streams.Deserialize (Object, "create_batch_id", Value.Create_Batch_Id);
+      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out DexWithdrawRequestDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : DexWithdrawRequestDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapBundleDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("eth_price", Value.Eth_Price);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapBundleDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapBundleDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "eth_price", Value.Eth_Price);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapBundleDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : SushiswapBundleDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapDayDataDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("date", Value.Date);
+      Into.Write_Entity ("factory", Value.Factory);
+      Into.Write_Entity ("volume_eth", Value.Volume_Eth);
+      Into.Write_Entity ("volume_usd", Value.Volume_Usd);
+      Into.Write_Entity ("untracked_volume", Value.Untracked_Volume);
+      Into.Write_Entity ("liquidity_eth", Value.Liquidity_Eth);
+      Into.Write_Entity ("liquidity_usd", Value.Liquidity_Usd);
+      Into.Write_Entity ("tx_count", Value.Tx_Count);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapDayDataDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapDayDataDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "date", Value.Date);
+      Swagger.Streams.Deserialize (Object, "factory", Value.Factory);
+      Swagger.Streams.Deserialize (Object, "volume_eth", Value.Volume_Eth);
+      Swagger.Streams.Deserialize (Object, "volume_usd", Value.Volume_Usd);
+      Swagger.Streams.Deserialize (Object, "untracked_volume", Value.Untracked_Volume);
+      Swagger.Streams.Deserialize (Object, "liquidity_eth", Value.Liquidity_Eth);
+      Swagger.Streams.Deserialize (Object, "liquidity_usd", Value.Liquidity_Usd);
+      Swagger.Streams.Deserialize (Object, "tx_count", Value.Tx_Count);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapDayDataDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : SushiswapDayDataDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapHourDataDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("date", Value.Date);
+      Into.Write_Entity ("factory", Value.Factory);
+      Into.Write_Entity ("volume_eth", Value.Volume_Eth);
+      Into.Write_Entity ("volume_usd", Value.Volume_Usd);
+      Into.Write_Entity ("untracked_volume", Value.Untracked_Volume);
+      Into.Write_Entity ("liquidity_eth", Value.Liquidity_Eth);
+      Into.Write_Entity ("liquidity_usd", Value.Liquidity_Usd);
+      Into.Write_Entity ("tx_count", Value.Tx_Count);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapHourDataDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapHourDataDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "date", Value.Date);
+      Swagger.Streams.Deserialize (Object, "factory", Value.Factory);
+      Swagger.Streams.Deserialize (Object, "volume_eth", Value.Volume_Eth);
+      Swagger.Streams.Deserialize (Object, "volume_usd", Value.Volume_Usd);
+      Swagger.Streams.Deserialize (Object, "untracked_volume", Value.Untracked_Volume);
+      Swagger.Streams.Deserialize (Object, "liquidity_eth", Value.Liquidity_Eth);
+      Swagger.Streams.Deserialize (Object, "liquidity_usd", Value.Liquidity_Usd);
+      Swagger.Streams.Deserialize (Object, "tx_count", Value.Tx_Count);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapHourDataDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : SushiswapHourDataDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapLiquidityPositionSnapshotDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("liquidity_position", Value.Liquidity_Position);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("block", Value.Block);
+      Into.Write_Entity ("user", Value.User);
+      Into.Write_Entity ("pair", Value.Pair);
+      Into.Write_Entity ("token_0_price_usd", Value.Token_0_Price_Usd);
+      Into.Write_Entity ("token_1_price_usd", Value.Token_1_Price_Usd);
+      Into.Write_Entity ("reserve_0", Value.Reserve_0);
+      Into.Write_Entity ("reserve_1", Value.Reserve_1);
+      Into.Write_Entity ("reserve_usd", Value.Reserve_Usd);
+      Into.Write_Entity ("liquidity_token_total_supply", Value.Liquidity_Token_Total_Supply);
+      Into.Write_Entity ("liquidity_token_balance", Value.Liquidity_Token_Balance);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapLiquidityPositionSnapshotDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapLiquidityPositionSnapshotDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "liquidity_position", Value.Liquidity_Position);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "block", Value.Block);
+      Swagger.Streams.Deserialize (Object, "user", Value.User);
+      Swagger.Streams.Deserialize (Object, "pair", Value.Pair);
+      Swagger.Streams.Deserialize (Object, "token_0_price_usd", Value.Token_0_Price_Usd);
+      Swagger.Streams.Deserialize (Object, "token_1_price_usd", Value.Token_1_Price_Usd);
+      Swagger.Streams.Deserialize (Object, "reserve_0", Value.Reserve_0);
+      Swagger.Streams.Deserialize (Object, "reserve_1", Value.Reserve_1);
+      Swagger.Streams.Deserialize (Object, "reserve_usd", Value.Reserve_Usd);
+      Swagger.Streams.Deserialize (Object, "liquidity_token_total_supply", Value.Liquidity_Token_Total_Supply);
+      Swagger.Streams.Deserialize (Object, "liquidity_token_balance", Value.Liquidity_Token_Balance);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapLiquidityPositionSnapshotDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : SushiswapLiquidityPositionSnapshotDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapPairDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("factory", Value.Factory);
+      Into.Write_Entity ("name", Value.Name);
+      Into.Write_Entity ("token_0", Value.Token_0);
+      Into.Write_Entity ("token_1", Value.Token_1);
+      Into.Write_Entity ("reserve_0", Value.Reserve_0);
+      Into.Write_Entity ("reserve_1", Value.Reserve_1);
+      Into.Write_Entity ("total_supply", Value.Total_Supply);
+      Into.Write_Entity ("reserve_eth", Value.Reserve_Eth);
+      Into.Write_Entity ("reserve_usd", Value.Reserve_Usd);
+      Into.Write_Entity ("tracked_reserve_eth", Value.Tracked_Reserve_Eth);
+      Into.Write_Entity ("token_0_price", Value.Token_0_Price);
+      Into.Write_Entity ("token_1_price", Value.Token_1_Price);
+      Into.Write_Entity ("volume_token_0", Value.Volume_Token_0);
+      Into.Write_Entity ("volume_token_1", Value.Volume_Token_1);
+      Into.Write_Entity ("volume_usd", Value.Volume_Usd);
+      Into.Write_Entity ("untracked_volume_usd", Value.Untracked_Volume_Usd);
+      Into.Write_Entity ("tx_count", Value.Tx_Count);
+      Into.Write_Entity ("liquidity_provider_count", Value.Liquidity_Provider_Count);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("block", Value.Block);
+      Into.Write_Entity ("vid", Value.Vid);
+      Serialize (Into, "evaluated_ask", Value.Evaluated_Ask);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapPairDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapPairDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "factory", Value.Factory);
+      Swagger.Streams.Deserialize (Object, "name", Value.Name);
+      Swagger.Streams.Deserialize (Object, "token_0", Value.Token_0);
+      Swagger.Streams.Deserialize (Object, "token_1", Value.Token_1);
+      Swagger.Streams.Deserialize (Object, "reserve_0", Value.Reserve_0);
+      Swagger.Streams.Deserialize (Object, "reserve_1", Value.Reserve_1);
+      Swagger.Streams.Deserialize (Object, "total_supply", Value.Total_Supply);
+      Swagger.Streams.Deserialize (Object, "reserve_eth", Value.Reserve_Eth);
+      Swagger.Streams.Deserialize (Object, "reserve_usd", Value.Reserve_Usd);
+      Swagger.Streams.Deserialize (Object, "tracked_reserve_eth", Value.Tracked_Reserve_Eth);
+      Swagger.Streams.Deserialize (Object, "token_0_price", Value.Token_0_Price);
+      Swagger.Streams.Deserialize (Object, "token_1_price", Value.Token_1_Price);
+      Swagger.Streams.Deserialize (Object, "volume_token_0", Value.Volume_Token_0);
+      Swagger.Streams.Deserialize (Object, "volume_token_1", Value.Volume_Token_1);
+      Swagger.Streams.Deserialize (Object, "volume_usd", Value.Volume_Usd);
+      Swagger.Streams.Deserialize (Object, "untracked_volume_usd", Value.Untracked_Volume_Usd);
+      Swagger.Streams.Deserialize (Object, "tx_count", Value.Tx_Count);
+      Swagger.Streams.Deserialize (Object, "liquidity_provider_count", Value.Liquidity_Provider_Count);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "block", Value.Block);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "evaluated_ask", Value.Evaluated_Ask);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapPairDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : SushiswapPairDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapPairHourDataDTO_Type) is
    begin
       Into.Start_Entity (Name);
       Into.Write_Entity ("entry_time", Value.Entry_Time);
@@ -6489,11 +6059,8 @@ package body .Models is
       Into.Write_Entity ("id", Value.Id);
       Into.Write_Entity ("date", Value.Date);
       Into.Write_Entity ("pair", Value.Pair);
-      Into.Write_Entity ("token_0", Value.Token_0);
-      Into.Write_Entity ("token_1", Value.Token_1);
       Into.Write_Entity ("reserve_0", Value.Reserve_0);
       Into.Write_Entity ("reserve_1", Value.Reserve_1);
-      Into.Write_Entity ("total_supply", Value.Total_Supply);
       Into.Write_Entity ("reserve_usd", Value.Reserve_Usd);
       Into.Write_Entity ("volume_token_0", Value.Volume_Token_0);
       Into.Write_Entity ("volume_token_1", Value.Volume_Token_1);
@@ -6505,7 +6072,7 @@ package body .Models is
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapPairDayDataDTO_Type_Vectors.Vector) is
+                        Value : in SushiswapPairHourDataDTO_Type_Vectors.Vector) is
    begin
       Into.Start_Array (Name);
       for Item of Value loop
@@ -6516,7 +6083,7 @@ package body .Models is
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapPairDayDataDTO_Type) is
+                          Value : out SushiswapPairHourDataDTO_Type) is
       Object : Swagger.Value_Type;
    begin
       Swagger.Streams.Deserialize (From, Name, Object);
@@ -6526,11 +6093,8 @@ package body .Models is
       Swagger.Streams.Deserialize (Object, "id", Value.Id);
       Swagger.Streams.Deserialize (Object, "date", Value.Date);
       Swagger.Streams.Deserialize (Object, "pair", Value.Pair);
-      Swagger.Streams.Deserialize (Object, "token_0", Value.Token_0);
-      Swagger.Streams.Deserialize (Object, "token_1", Value.Token_1);
       Swagger.Streams.Deserialize (Object, "reserve_0", Value.Reserve_0);
       Swagger.Streams.Deserialize (Object, "reserve_1", Value.Reserve_1);
-      Swagger.Streams.Deserialize (Object, "total_supply", Value.Total_Supply);
       Swagger.Streams.Deserialize (Object, "reserve_usd", Value.Reserve_Usd);
       Swagger.Streams.Deserialize (Object, "volume_token_0", Value.Volume_Token_0);
       Swagger.Streams.Deserialize (Object, "volume_token_1", Value.Volume_Token_1);
@@ -6541,9 +6105,9 @@ package body .Models is
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapPairDayDataDTO_Type_Vectors.Vector) is
+                          Value : out SushiswapPairHourDataDTO_Type_Vectors.Vector) is
       List : Swagger.Value_Array_Type;
-      Item : SushiswapPairDayDataDTO_Type;
+      Item : SushiswapPairHourDataDTO_Type;
    begin
       Value.Clear;
       Swagger.Streams.Deserialize (From, Name, List);
@@ -6558,30 +6122,33 @@ package body .Models is
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapTokenDayDataDTO_Type) is
+                        Value : in SushiswapTokenDTO_Type) is
    begin
       Into.Start_Entity (Name);
       Into.Write_Entity ("entry_time", Value.Entry_Time);
       Into.Write_Entity ("recv_time", Value.Recv_Time);
       Into.Write_Entity ("block_number", Value.Block_Number);
       Into.Write_Entity ("id", Value.Id);
-      Into.Write_Entity ("date", Value.Date);
-      Into.Write_Entity ("token", Value.Token);
+      Into.Write_Entity ("factory", Value.Factory);
+      Into.Write_Entity ("symbol", Value.Symbol);
+      Into.Write_Entity ("name", Value.Name);
+      Into.Write_Entity ("decimals", Value.Decimals);
+      Into.Write_Entity ("total_supply", Value.Total_Supply);
       Into.Write_Entity ("volume", Value.Volume);
-      Into.Write_Entity ("volume_eth", Value.Volume_Eth);
       Into.Write_Entity ("volume_usd", Value.Volume_Usd);
+      Into.Write_Entity ("untracked_volume_usd", Value.Untracked_Volume_Usd);
       Into.Write_Entity ("tx_count", Value.Tx_Count);
       Into.Write_Entity ("liquidity", Value.Liquidity);
-      Into.Write_Entity ("liquidity_eth", Value.Liquidity_Eth);
-      Into.Write_Entity ("liquidity_usd", Value.Liquidity_Usd);
-      Into.Write_Entity ("price_usd", Value.Price_Usd);
+      Into.Write_Entity ("derived_eth", Value.Derived_Eth);
+      Serialize (Into, "whitelist_pairs", Value.Whitelist_Pairs);
       Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("token_symbol", Value.Token_Symbol);
       Into.End_Entity (Name);
    end Serialize;
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapTokenDayDataDTO_Type_Vectors.Vector) is
+                        Value : in SushiswapTokenDTO_Type_Vectors.Vector) is
    begin
       Into.Start_Array (Name);
       for Item of Value loop
@@ -6592,7 +6159,7 @@ package body .Models is
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapTokenDayDataDTO_Type) is
+                          Value : out SushiswapTokenDTO_Type) is
       Object : Swagger.Value_Type;
    begin
       Swagger.Streams.Deserialize (From, Name, Object);
@@ -6600,24 +6167,27 @@ package body .Models is
       Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
       Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
       Swagger.Streams.Deserialize (Object, "id", Value.Id);
-      Swagger.Streams.Deserialize (Object, "date", Value.Date);
-      Swagger.Streams.Deserialize (Object, "token", Value.Token);
+      Swagger.Streams.Deserialize (Object, "factory", Value.Factory);
+      Swagger.Streams.Deserialize (Object, "symbol", Value.Symbol);
+      Swagger.Streams.Deserialize (Object, "name", Value.Name);
+      Swagger.Streams.Deserialize (Object, "decimals", Value.Decimals);
+      Swagger.Streams.Deserialize (Object, "total_supply", Value.Total_Supply);
       Swagger.Streams.Deserialize (Object, "volume", Value.Volume);
-      Swagger.Streams.Deserialize (Object, "volume_eth", Value.Volume_Eth);
       Swagger.Streams.Deserialize (Object, "volume_usd", Value.Volume_Usd);
+      Swagger.Streams.Deserialize (Object, "untracked_volume_usd", Value.Untracked_Volume_Usd);
       Swagger.Streams.Deserialize (Object, "tx_count", Value.Tx_Count);
       Swagger.Streams.Deserialize (Object, "liquidity", Value.Liquidity);
-      Swagger.Streams.Deserialize (Object, "liquidity_eth", Value.Liquidity_Eth);
-      Swagger.Streams.Deserialize (Object, "liquidity_usd", Value.Liquidity_Usd);
-      Swagger.Streams.Deserialize (Object, "price_usd", Value.Price_Usd);
+      Swagger.Streams.Deserialize (Object, "derived_eth", Value.Derived_Eth);
+      Swagger.Streams.Deserialize (Object, "whitelist_pairs", Value.Whitelist_Pairs);
       Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "token_symbol", Value.Token_Symbol);
    end Deserialize;
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapTokenDayDataDTO_Type_Vectors.Vector) is
+                          Value : out SushiswapTokenDTO_Type_Vectors.Vector) is
       List : Swagger.Value_Array_Type;
-      Item : SushiswapTokenDayDataDTO_Type;
+      Item : SushiswapTokenDTO_Type;
    begin
       Value.Clear;
       Swagger.Streams.Deserialize (From, Name, List);
@@ -6632,20 +6202,24 @@ package body .Models is
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapUserDTO_Type) is
+                        Value : in SushiswapTransactionDTO_Type) is
    begin
       Into.Start_Entity (Name);
       Into.Write_Entity ("entry_time", Value.Entry_Time);
       Into.Write_Entity ("recv_time", Value.Recv_Time);
       Into.Write_Entity ("block_number", Value.Block_Number);
       Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Serialize (Into, "mints", Value.Mints);
+      Serialize (Into, "burns", Value.Burns);
+      Serialize (Into, "swaps", Value.Swaps);
       Into.Write_Entity ("vid", Value.Vid);
       Into.End_Entity (Name);
    end Serialize;
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapUserDTO_Type_Vectors.Vector) is
+                        Value : in SushiswapTransactionDTO_Type_Vectors.Vector) is
    begin
       Into.Start_Array (Name);
       for Item of Value loop
@@ -6656,7 +6230,7 @@ package body .Models is
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapUserDTO_Type) is
+                          Value : out SushiswapTransactionDTO_Type) is
       Object : Swagger.Value_Type;
    begin
       Swagger.Streams.Deserialize (From, Name, Object);
@@ -6664,14 +6238,688 @@ package body .Models is
       Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
       Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
       Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "mints", Value.Mints);
+      Swagger.Streams.Deserialize (Object, "burns", Value.Burns);
+      Swagger.Streams.Deserialize (Object, "swaps", Value.Swaps);
       Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
    end Deserialize;
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapUserDTO_Type_Vectors.Vector) is
+                          Value : out SushiswapTransactionDTO_Type_Vectors.Vector) is
       List : Swagger.Value_Array_Type;
-      Item : SushiswapUserDTO_Type;
+      Item : SushiswapTransactionDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in TransactionsETradeAggressiveSide_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in TransactionsETradeAggressiveSide_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out TransactionsETradeAggressiveSide_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out TransactionsETradeAggressiveSide_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : TransactionsETradeAggressiveSide_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UniswapV2SwapDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("transaction", Value.Transaction);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("pair", Value.Pair);
+      Into.Write_Entity ("sender", Value.Sender);
+      Into.Write_Entity ("from", Value.From);
+      Into.Write_Entity ("amount_0_in", Value.Amount_0_In);
+      Into.Write_Entity ("amount_1_in", Value.Amount_1_In);
+      Into.Write_Entity ("amount_0_out", Value.Amount_0_Out);
+      Into.Write_Entity ("amount_1_out", Value.Amount_1_Out);
+      Into.Write_Entity ("to", Value.To);
+      Serialize (Into, "log_index", Value.Log_Index);
+      Into.Write_Entity ("amount_usd", Value.Amount_Usd);
+      Serialize (Into, "evaluated_price", Value.Evaluated_Price);
+      Serialize (Into, "evaluated_amount", Value.Evaluated_Amount);
+      Serialize (Into, "evaluated_aggressor", Value.Evaluated_Aggressor);
+      Into.Write_Entity ("pool_id", Value.Pool_Id);
+      Into.Write_Entity ("transaction_id", Value.Transaction_Id);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UniswapV2SwapDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UniswapV2SwapDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "pair", Value.Pair);
+      Swagger.Streams.Deserialize (Object, "sender", Value.Sender);
+      Swagger.Streams.Deserialize (Object, "from", Value.From);
+      Swagger.Streams.Deserialize (Object, "amount_0_in", Value.Amount_0_In);
+      Swagger.Streams.Deserialize (Object, "amount_1_in", Value.Amount_1_In);
+      Swagger.Streams.Deserialize (Object, "amount_0_out", Value.Amount_0_Out);
+      Swagger.Streams.Deserialize (Object, "amount_1_out", Value.Amount_1_Out);
+      Swagger.Streams.Deserialize (Object, "to", Value.To);
+      Deserialize (Object, "log_index", Value.Log_Index);
+      Swagger.Streams.Deserialize (Object, "amount_usd", Value.Amount_Usd);
+      Swagger.Streams.Deserialize (Object, "evaluated_price", Value.Evaluated_Price);
+      Swagger.Streams.Deserialize (Object, "evaluated_amount", Value.Evaluated_Amount);
+      Deserialize (Object, "evaluated_aggressor", Value.Evaluated_Aggressor);
+      Swagger.Streams.Deserialize (Object, "pool_id", Value.Pool_Id);
+      Swagger.Streams.Deserialize (Object, "transaction_id", Value.Transaction_Id);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UniswapV2SwapDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : UniswapV2SwapDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UniswapV3SwapDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("transaction", Value.Transaction);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("pool", Value.Pool);
+      Into.Write_Entity ("token_0", Value.Token_0);
+      Into.Write_Entity ("token_1", Value.Token_1);
+      Into.Write_Entity ("sender", Value.Sender);
+      Into.Write_Entity ("recipient", Value.Recipient);
+      Into.Write_Entity ("origin", Value.Origin);
+      Into.Write_Entity ("amount_0", Value.Amount_0);
+      Into.Write_Entity ("amount_1", Value.Amount_1);
+      Into.Write_Entity ("amount_usd", Value.Amount_Usd);
+      Serialize (Into, "sqrt_price_x96", Value.Sqrt_Price_X_96);
+      Serialize (Into, "tick", Value.Tick);
+      Serialize (Into, "log_index", Value.Log_Index);
+      Serialize (Into, "evaluated_price", Value.Evaluated_Price);
+      Serialize (Into, "evaluated_amount", Value.Evaluated_Amount);
+      Serialize (Into, "evaluated_aggressor", Value.Evaluated_Aggressor);
+      Into.Write_Entity ("pool_id", Value.Pool_Id);
+      Into.Write_Entity ("transaction_id", Value.Transaction_Id);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UniswapV3SwapDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UniswapV3SwapDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
+      Swagger.Streams.Deserialize (Object, "token_0", Value.Token_0);
+      Swagger.Streams.Deserialize (Object, "token_1", Value.Token_1);
+      Swagger.Streams.Deserialize (Object, "sender", Value.Sender);
+      Swagger.Streams.Deserialize (Object, "recipient", Value.Recipient);
+      Swagger.Streams.Deserialize (Object, "origin", Value.Origin);
+      Swagger.Streams.Deserialize (Object, "amount_0", Value.Amount_0);
+      Swagger.Streams.Deserialize (Object, "amount_1", Value.Amount_1);
+      Swagger.Streams.Deserialize (Object, "amount_usd", Value.Amount_Usd);
+      Deserialize (Object, "sqrt_price_x96", Value.Sqrt_Price_X_96);
+      Deserialize (Object, "tick", Value.Tick);
+      Deserialize (Object, "log_index", Value.Log_Index);
+      Swagger.Streams.Deserialize (Object, "evaluated_price", Value.Evaluated_Price);
+      Swagger.Streams.Deserialize (Object, "evaluated_amount", Value.Evaluated_Amount);
+      Deserialize (Object, "evaluated_aggressor", Value.Evaluated_Aggressor);
+      Swagger.Streams.Deserialize (Object, "pool_id", Value.Pool_Id);
+      Swagger.Streams.Deserialize (Object, "transaction_id", Value.Transaction_Id);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UniswapV3SwapDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : UniswapV3SwapDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CowTradeDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("gas_price", Value.Gas_Price);
+      Into.Write_Entity ("gas_limit", Value.Gas_Limit);
+      Into.Write_Entity ("fee_amount", Value.Fee_Amount);
+      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
+      Into.Write_Entity ("settlement", Value.Settlement);
+      Into.Write_Entity ("buy_amount", Value.Buy_Amount);
+      Into.Write_Entity ("sell_amount", Value.Sell_Amount);
+      Into.Write_Entity ("sell_token", Value.Sell_Token);
+      Into.Write_Entity ("buy_token", Value.Buy_Token);
+      Into.Write_Entity ("order", Value.Order);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("pool_id", Value.Pool_Id);
+      Into.Write_Entity ("transaction_id", Value.Transaction_Id);
+      Serialize (Into, "evaluated_price", Value.Evaluated_Price);
+      Serialize (Into, "evaluated_amount", Value.Evaluated_Amount);
+      Serialize (Into, "evaluated_aggressor", Value.Evaluated_Aggressor);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CowTradeDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CowTradeDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "gas_price", Value.Gas_Price);
+      Swagger.Streams.Deserialize (Object, "gas_limit", Value.Gas_Limit);
+      Swagger.Streams.Deserialize (Object, "fee_amount", Value.Fee_Amount);
+      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
+      Swagger.Streams.Deserialize (Object, "settlement", Value.Settlement);
+      Swagger.Streams.Deserialize (Object, "buy_amount", Value.Buy_Amount);
+      Swagger.Streams.Deserialize (Object, "sell_amount", Value.Sell_Amount);
+      Swagger.Streams.Deserialize (Object, "sell_token", Value.Sell_Token);
+      Swagger.Streams.Deserialize (Object, "buy_token", Value.Buy_Token);
+      Swagger.Streams.Deserialize (Object, "order", Value.Order);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "pool_id", Value.Pool_Id);
+      Swagger.Streams.Deserialize (Object, "transaction_id", Value.Transaction_Id);
+      Swagger.Streams.Deserialize (Object, "evaluated_price", Value.Evaluated_Price);
+      Swagger.Streams.Deserialize (Object, "evaluated_amount", Value.Evaluated_Amount);
+      Deserialize (Object, "evaluated_aggressor", Value.Evaluated_Aggressor);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CowTradeDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CowTradeDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveExchangeDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("pool", Value.Pool);
+      Into.Write_Entity ("buyer", Value.Buyer);
+      Into.Write_Entity ("receiver", Value.Receiver);
+      Into.Write_Entity ("token_sold", Value.Token_Sold);
+      Into.Write_Entity ("token_bought", Value.Token_Bought);
+      Into.Write_Entity ("amount_sold", Value.Amount_Sold);
+      Into.Write_Entity ("amount_bought", Value.Amount_Bought);
+      Into.Write_Entity ("block", Value.Block);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("transaction", Value.Transaction);
+      Into.Write_Entity ("vid", Value.Vid);
+      Serialize (Into, "evaluated_price", Value.Evaluated_Price);
+      Serialize (Into, "evaluated_amount", Value.Evaluated_Amount);
+      Serialize (Into, "evaluated_aggressor", Value.Evaluated_Aggressor);
+      Into.Write_Entity ("pool_id", Value.Pool_Id);
+      Into.Write_Entity ("transaction_id", Value.Transaction_Id);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CurveExchangeDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveExchangeDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
+      Swagger.Streams.Deserialize (Object, "buyer", Value.Buyer);
+      Swagger.Streams.Deserialize (Object, "receiver", Value.Receiver);
+      Swagger.Streams.Deserialize (Object, "token_sold", Value.Token_Sold);
+      Swagger.Streams.Deserialize (Object, "token_bought", Value.Token_Bought);
+      Swagger.Streams.Deserialize (Object, "amount_sold", Value.Amount_Sold);
+      Swagger.Streams.Deserialize (Object, "amount_bought", Value.Amount_Bought);
+      Swagger.Streams.Deserialize (Object, "block", Value.Block);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "evaluated_price", Value.Evaluated_Price);
+      Swagger.Streams.Deserialize (Object, "evaluated_amount", Value.Evaluated_Amount);
+      Deserialize (Object, "evaluated_aggressor", Value.Evaluated_Aggressor);
+      Swagger.Streams.Deserialize (Object, "pool_id", Value.Pool_Id);
+      Swagger.Streams.Deserialize (Object, "transaction_id", Value.Transaction_Id);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CurveExchangeDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : CurveExchangeDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in DexTradeDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("order", Value.Order);
+      Into.Write_Entity ("owner", Value.Owner);
+      Into.Write_Entity ("sell_volume", Value.Sell_Volume);
+      Into.Write_Entity ("buy_volume", Value.Buy_Volume);
+      Into.Write_Entity ("trade_batch_id", Value.Trade_Batch_Id);
+      Into.Write_Entity ("trade_epoch", Value.Trade_Epoch);
+      Into.Write_Entity ("buy_token", Value.Buy_Token);
+      Into.Write_Entity ("sell_token", Value.Sell_Token);
+      Into.Write_Entity ("create_epoch", Value.Create_Epoch);
+      Into.Write_Entity ("revert_epoch", Value.Revert_Epoch);
+      Into.Write_Entity ("tx_hash", Value.Tx_Hash);
+      Into.Write_Entity ("tx_log_index", Value.Tx_Log_Index);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("pool_id", Value.Pool_Id);
+      Into.Write_Entity ("transaction_id", Value.Transaction_Id);
+      Serialize (Into, "evaluated_price", Value.Evaluated_Price);
+      Serialize (Into, "evaluated_amount", Value.Evaluated_Amount);
+      Serialize (Into, "evaluated_aggressor", Value.Evaluated_Aggressor);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in DexTradeDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out DexTradeDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "order", Value.Order);
+      Swagger.Streams.Deserialize (Object, "owner", Value.Owner);
+      Swagger.Streams.Deserialize (Object, "sell_volume", Value.Sell_Volume);
+      Swagger.Streams.Deserialize (Object, "buy_volume", Value.Buy_Volume);
+      Swagger.Streams.Deserialize (Object, "trade_batch_id", Value.Trade_Batch_Id);
+      Swagger.Streams.Deserialize (Object, "trade_epoch", Value.Trade_Epoch);
+      Swagger.Streams.Deserialize (Object, "buy_token", Value.Buy_Token);
+      Swagger.Streams.Deserialize (Object, "sell_token", Value.Sell_Token);
+      Swagger.Streams.Deserialize (Object, "create_epoch", Value.Create_Epoch);
+      Swagger.Streams.Deserialize (Object, "revert_epoch", Value.Revert_Epoch);
+      Swagger.Streams.Deserialize (Object, "tx_hash", Value.Tx_Hash);
+      Swagger.Streams.Deserialize (Object, "tx_log_index", Value.Tx_Log_Index);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "pool_id", Value.Pool_Id);
+      Swagger.Streams.Deserialize (Object, "transaction_id", Value.Transaction_Id);
+      Swagger.Streams.Deserialize (Object, "evaluated_price", Value.Evaluated_Price);
+      Swagger.Streams.Deserialize (Object, "evaluated_amount", Value.Evaluated_Amount);
+      Deserialize (Object, "evaluated_aggressor", Value.Evaluated_Aggressor);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out DexTradeDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : DexTradeDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapSwapDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("transaction", Value.Transaction);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("pair", Value.Pair);
+      Into.Write_Entity ("sender", Value.Sender);
+      Into.Write_Entity ("amount_0_in", Value.Amount_0_In);
+      Into.Write_Entity ("amount_1_in", Value.Amount_1_In);
+      Into.Write_Entity ("amount_0_out", Value.Amount_0_Out);
+      Into.Write_Entity ("amount_1_out", Value.Amount_1_Out);
+      Into.Write_Entity ("to", Value.To);
+      Into.Write_Entity ("log_index", Value.Log_Index);
+      Into.Write_Entity ("amount_usd", Value.Amount_Usd);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("pool_id", Value.Pool_Id);
+      Into.Write_Entity ("transaction_id", Value.Transaction_Id);
+      Serialize (Into, "evaluated_price", Value.Evaluated_Price);
+      Serialize (Into, "evaluated_amount", Value.Evaluated_Amount);
+      Serialize (Into, "evaluated_aggressor", Value.Evaluated_Aggressor);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapSwapDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapSwapDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "transaction", Value.Transaction);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "pair", Value.Pair);
+      Swagger.Streams.Deserialize (Object, "sender", Value.Sender);
+      Swagger.Streams.Deserialize (Object, "amount_0_in", Value.Amount_0_In);
+      Swagger.Streams.Deserialize (Object, "amount_1_in", Value.Amount_1_In);
+      Swagger.Streams.Deserialize (Object, "amount_0_out", Value.Amount_0_Out);
+      Swagger.Streams.Deserialize (Object, "amount_1_out", Value.Amount_1_Out);
+      Swagger.Streams.Deserialize (Object, "to", Value.To);
+      Swagger.Streams.Deserialize (Object, "log_index", Value.Log_Index);
+      Swagger.Streams.Deserialize (Object, "amount_usd", Value.Amount_Usd);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "pool_id", Value.Pool_Id);
+      Swagger.Streams.Deserialize (Object, "transaction_id", Value.Transaction_Id);
+      Swagger.Streams.Deserialize (Object, "evaluated_price", Value.Evaluated_Price);
+      Swagger.Streams.Deserialize (Object, "evaluated_amount", Value.Evaluated_Amount);
+      Deserialize (Object, "evaluated_aggressor", Value.Evaluated_Aggressor);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapSwapDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : SushiswapSwapDTO_Type;
+   begin
+      Value.Clear;
+      Swagger.Streams.Deserialize (From, Name, List);
+      for Data of List loop
+         Deserialize (Data, "", Item);
+         Value.Append (Item);
+      end loop;
+   end Deserialize;
+
+
+
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV3ETHEREUMSwapDTO_Type) is
+   begin
+      Into.Start_Entity (Name);
+      Into.Write_Entity ("entry_time", Value.Entry_Time);
+      Into.Write_Entity ("recv_time", Value.Recv_Time);
+      Into.Write_Entity ("block_number", Value.Block_Number);
+      Into.Write_Entity ("vid", Value.Vid);
+      Into.Write_Entity ("block_", Value.Block_);
+      Into.Write_Entity ("id", Value.Id);
+      Into.Write_Entity ("hash", Value.Hash);
+      Into.Write_Entity ("nonce", Value.Nonce);
+      Into.Write_Entity ("log_index", Value.Log_Index);
+      Into.Write_Entity ("gas_limit", Value.Gas_Limit);
+      Into.Write_Entity ("gas_used", Value.Gas_Used);
+      Into.Write_Entity ("gas_price", Value.Gas_Price);
+      Into.Write_Entity ("protocol", Value.Protocol);
+      Into.Write_Entity ("account", Value.Account);
+      Into.Write_Entity ("pool", Value.Pool);
+      Into.Write_Entity ("timestamp", Value.Timestamp);
+      Into.Write_Entity ("tick", Value.Tick);
+      Into.Write_Entity ("token_in", Value.Token_In);
+      Into.Write_Entity ("amount_in", Value.Amount_In);
+      Into.Write_Entity ("amount_in_usd", Value.Amount_In_Usd);
+      Into.Write_Entity ("token_out", Value.Token_Out);
+      Into.Write_Entity ("amount_out", Value.Amount_Out);
+      Into.Write_Entity ("amount_out_usd", Value.Amount_Out_Usd);
+      Serialize (Into, "reserve_amounts", Value.Reserve_Amounts);
+      Into.Write_Entity ("pool_id", Value.Pool_Id);
+      Into.Write_Entity ("transaction_id", Value.Transaction_Id);
+      Serialize (Into, "evaluated_price", Value.Evaluated_Price);
+      Serialize (Into, "evaluated_amount", Value.Evaluated_Amount);
+      Serialize (Into, "evaluated_aggressor", Value.Evaluated_Aggressor);
+      Into.End_Entity (Name);
+   end Serialize;
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV3ETHEREUMSwapDTO_Type_Vectors.Vector) is
+   begin
+      Into.Start_Array (Name);
+      for Item of Value loop
+         Serialize (Into, "", Item);
+      end loop;
+      Into.End_Array (Name);
+   end Serialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV3ETHEREUMSwapDTO_Type) is
+      Object : Swagger.Value_Type;
+   begin
+      Swagger.Streams.Deserialize (From, Name, Object);
+      Swagger.Streams.Deserialize (Object, "entry_time", Value.Entry_Time);
+      Swagger.Streams.Deserialize (Object, "recv_time", Value.Recv_Time);
+      Swagger.Streams.Deserialize (Object, "block_number", Value.Block_Number);
+      Swagger.Streams.Deserialize (Object, "vid", Value.Vid);
+      Swagger.Streams.Deserialize (Object, "block_", Value.Block_);
+      Swagger.Streams.Deserialize (Object, "id", Value.Id);
+      Swagger.Streams.Deserialize (Object, "hash", Value.Hash);
+      Swagger.Streams.Deserialize (Object, "nonce", Value.Nonce);
+      Swagger.Streams.Deserialize (Object, "log_index", Value.Log_Index);
+      Swagger.Streams.Deserialize (Object, "gas_limit", Value.Gas_Limit);
+      Swagger.Streams.Deserialize (Object, "gas_used", Value.Gas_Used);
+      Swagger.Streams.Deserialize (Object, "gas_price", Value.Gas_Price);
+      Swagger.Streams.Deserialize (Object, "protocol", Value.Protocol);
+      Swagger.Streams.Deserialize (Object, "account", Value.Account);
+      Swagger.Streams.Deserialize (Object, "pool", Value.Pool);
+      Swagger.Streams.Deserialize (Object, "timestamp", Value.Timestamp);
+      Swagger.Streams.Deserialize (Object, "tick", Value.Tick);
+      Swagger.Streams.Deserialize (Object, "token_in", Value.Token_In);
+      Swagger.Streams.Deserialize (Object, "amount_in", Value.Amount_In);
+      Swagger.Streams.Deserialize (Object, "amount_in_usd", Value.Amount_In_Usd);
+      Swagger.Streams.Deserialize (Object, "token_out", Value.Token_Out);
+      Swagger.Streams.Deserialize (Object, "amount_out", Value.Amount_Out);
+      Swagger.Streams.Deserialize (Object, "amount_out_usd", Value.Amount_Out_Usd);
+      Swagger.Streams.Deserialize (Object, "reserve_amounts", Value.Reserve_Amounts);
+      Swagger.Streams.Deserialize (Object, "pool_id", Value.Pool_Id);
+      Swagger.Streams.Deserialize (Object, "transaction_id", Value.Transaction_Id);
+      Swagger.Streams.Deserialize (Object, "evaluated_price", Value.Evaluated_Price);
+      Swagger.Streams.Deserialize (Object, "evaluated_amount", Value.Evaluated_Amount);
+      Deserialize (Object, "evaluated_aggressor", Value.Evaluated_Aggressor);
+   end Deserialize;
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV3ETHEREUMSwapDTO_Type_Vectors.Vector) is
+      List : Swagger.Value_Array_Type;
+      Item : UNISWAPV3ETHEREUMSwapDTO_Type;
    begin
       Value.Clear;
       Swagger.Streams.Deserialize (From, Name, List);

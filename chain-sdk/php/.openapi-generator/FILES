@@ -10,6 +10,7 @@ docs/Api/CurveApi.md
 docs/Api/DexApi.md
 docs/Api/MetadataApi.md
 docs/Api/SushiswapApi.md
+docs/Api/UNISWAPV3ETHEREUMApi.md
 docs/Api/UniswapV2Api.md
 docs/Api/UniswapV3Api.md
 docs/Model/CRYPTOPUNKSBidDTO.md
@@ -87,6 +88,9 @@ docs/Model/SushiswapTokenDayDataDTO.md
 docs/Model/SushiswapTransactionDTO.md
 docs/Model/SushiswapUserDTO.md
 docs/Model/TransactionsETradeAggressiveSide.md
+docs/Model/UNISWAPV3ETHEREUMAccountDTO.md
+docs/Model/UNISWAPV3ETHEREUMSwapDTO.md
+docs/Model/UNISWAPV3ETHEREUMTokenDTO.md
 docs/Model/UniswapV2BundleDTO.md
 docs/Model/UniswapV2BurnDTO.md
 docs/Model/UniswapV2LiquidityPositionDTO.md
@@ -126,6 +130,7 @@ lib/Api/CurveApi.php
 lib/Api/DexApi.php
 lib/Api/MetadataApi.php
 lib/Api/SushiswapApi.php
+lib/Api/UNISWAPV3ETHEREUMApi.php
 lib/Api/UniswapV2Api.php
 lib/Api/UniswapV3Api.php
 lib/ApiException.php
@@ -207,6 +212,9 @@ lib/Model/SushiswapTokenDayDataDTO.php
 lib/Model/SushiswapTransactionDTO.php
 lib/Model/SushiswapUserDTO.php
 lib/Model/TransactionsETradeAggressiveSide.php
+lib/Model/UNISWAPV3ETHEREUMAccountDTO.php
+lib/Model/UNISWAPV3ETHEREUMSwapDTO.php
+lib/Model/UNISWAPV3ETHEREUMTokenDTO.php
 lib/Model/UniswapV2BundleDTO.php
 lib/Model/UniswapV2BurnDTO.php
 lib/Model/UniswapV2LiquidityPositionDTO.php
@@ -247,6 +255,7 @@ test/Api/CurveApiTest.php
 test/Api/DexApiTest.php
 test/Api/MetadataApiTest.php
 test/Api/SushiswapApiTest.php
+test/Api/UNISWAPV3ETHEREUMApiTest.php
 test/Api/UniswapV2ApiTest.php
 test/Api/UniswapV3ApiTest.php
 test/Model/CRYPTOPUNKSBidDTOTest.php
@@ -324,6 +333,9 @@ test/Model/SushiswapTokenDayDataDTOTest.php
 test/Model/SushiswapTransactionDTOTest.php
 test/Model/SushiswapUserDTOTest.php
 test/Model/TransactionsETradeAggressiveSideTest.php
+test/Model/UNISWAPV3ETHEREUMAccountDTOTest.php
+test/Model/UNISWAPV3ETHEREUMSwapDTOTest.php
+test/Model/UNISWAPV3ETHEREUMTokenDTOTest.php
 test/Model/UniswapV2BundleDTOTest.php
 test/Model/UniswapV2BurnDTOTest.php
 test/Model/UniswapV2LiquidityPositionDTOTest.php

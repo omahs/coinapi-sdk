@@ -83,6 +83,10 @@ doc/SushiswapTokenDayDataDTO.md
 doc/SushiswapTransactionDTO.md
 doc/SushiswapUserDTO.md
 doc/TransactionsETradeAggressiveSide.md
+doc/UNISWAPV3ETHEREUMAccountDTO.md
+doc/UNISWAPV3ETHEREUMApi.md
+doc/UNISWAPV3ETHEREUMSwapDTO.md
+doc/UNISWAPV3ETHEREUMTokenDTO.md
 doc/UniswapV2Api.md
 doc/UniswapV2BundleDTO.md
 doc/UniswapV2BurnDTO.md
@@ -127,6 +131,7 @@ lib/src/api/metadata_api.dart
 lib/src/api/sushiswap_api.dart
 lib/src/api/uniswap_v2_api.dart
 lib/src/api/uniswap_v3_api.dart
+lib/src/api/uniswapv3_ethereum_api.dart
 lib/src/api_util.dart
 lib/src/auth/api_key_auth.dart
 lib/src/auth/auth.dart
@@ -242,6 +247,9 @@ lib/src/model/uniswap_v3_token_hour_data_dto.dart
 lib/src/model/uniswap_v3_token_v3_day_data_dto.dart
 lib/src/model/uniswap_v3_transaction_dto.dart
 lib/src/model/uniswap_v3_uniswap_day_data_dto.dart
+lib/src/model/uniswapv3_ethereum_account_dto.dart
+lib/src/model/uniswapv3_ethereum_swap_dto.dart
+lib/src/model/uniswapv3_ethereum_token_dto.dart
 lib/src/serializers.dart
 pubspec.yaml
 test/cow_api_test.dart
@@ -359,3 +367,7 @@ test/uniswap_v3_token_hour_data_dto_test.dart
 test/uniswap_v3_token_v3_day_data_dto_test.dart
 test/uniswap_v3_transaction_dto_test.dart
 test/uniswap_v3_uniswap_day_data_dto_test.dart
+test/uniswapv3_ethereum_account_dto_test.dart
+test/uniswapv3_ethereum_api_test.dart
+test/uniswapv3_ethereum_swap_dto_test.dart
+test/uniswapv3_ethereum_token_dto_test.dart

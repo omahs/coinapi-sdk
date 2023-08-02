@@ -87,6 +87,9 @@ docs/SushiswapTokenDayDataDTO.md
 docs/SushiswapTransactionDTO.md
 docs/SushiswapUserDTO.md
 docs/TransactionsETradeAggressiveSide.md
+docs/UNISWAPV3ETHEREUMAccountDTO.md
+docs/UNISWAPV3ETHEREUMSwapDTO.md
+docs/UNISWAPV3ETHEREUMTokenDTO.md
 docs/UniswapV2Api.md
 docs/UniswapV2BundleDTO.md
 docs/UniswapV2BurnDTO.md
@@ -106,6 +109,7 @@ docs/UniswapV2UserDTO.md
 docs/UniswapV3Api.md
 docs/UniswapV3BundleDTO.md
 docs/UniswapV3BurnDTO.md
+docs/UniswapV3EthereumApi.md
 docs/UniswapV3FactoryDTO.md
 docs/UniswapV3MintDTO.md
 docs/UniswapV3PoolDTO.md
@@ -151,6 +155,7 @@ src/main/java/org/openapitools/client/api/MetadataApi.java
 src/main/java/org/openapitools/client/api/SushiswapApi.java
 src/main/java/org/openapitools/client/api/UniswapV2Api.java
 src/main/java/org/openapitools/client/api/UniswapV3Api.java
+src/main/java/org/openapitools/client/api/UniswapV3EthereumApi.java
 src/main/java/org/openapitools/client/auth/ApiKeyAuth.java
 src/main/java/org/openapitools/client/auth/Authentication.java
 src/main/java/org/openapitools/client/auth/HttpBasicAuth.java
@@ -231,6 +236,9 @@ src/main/java/org/openapitools/client/model/SushiswapTokenDayDataDTO.java
 src/main/java/org/openapitools/client/model/SushiswapTransactionDTO.java
 src/main/java/org/openapitools/client/model/SushiswapUserDTO.java
 src/main/java/org/openapitools/client/model/TransactionsETradeAggressiveSide.java
+src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMAccountDTO.java
+src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMSwapDTO.java
+src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMTokenDTO.java
 src/main/java/org/openapitools/client/model/UniswapV2BundleDTO.java
 src/main/java/org/openapitools/client/model/UniswapV2BurnDTO.java
 src/main/java/org/openapitools/client/model/UniswapV2LiquidityPositionDTO.java
@@ -271,6 +279,7 @@ src/test/java/org/openapitools/client/api/MetadataApiTest.java
 src/test/java/org/openapitools/client/api/SushiswapApiTest.java
 src/test/java/org/openapitools/client/api/UniswapV2ApiTest.java
 src/test/java/org/openapitools/client/api/UniswapV3ApiTest.java
+src/test/java/org/openapitools/client/api/UniswapV3EthereumApiTest.java
 src/test/java/org/openapitools/client/model/CRYPTOPUNKSBidDTOTest.java
 src/test/java/org/openapitools/client/model/CRYPTOPUNKSCollectionDTOTest.java
 src/test/java/org/openapitools/client/model/CRYPTOPUNKSCollectionDailySnapshotDTOTest.java
@@ -346,6 +355,9 @@ src/test/java/org/openapitools/client/model/SushiswapTokenDayDataDTOTest.java
 src/test/java/org/openapitools/client/model/SushiswapTransactionDTOTest.java
 src/test/java/org/openapitools/client/model/SushiswapUserDTOTest.java
 src/test/java/org/openapitools/client/model/TransactionsETradeAggressiveSideTest.java
+src/test/java/org/openapitools/client/model/UNISWAPV3ETHEREUMAccountDTOTest.java
+src/test/java/org/openapitools/client/model/UNISWAPV3ETHEREUMSwapDTOTest.java
+src/test/java/org/openapitools/client/model/UNISWAPV3ETHEREUMTokenDTOTest.java
 src/test/java/org/openapitools/client/model/UniswapV2BundleDTOTest.java
 src/test/java/org/openapitools/client/model/UniswapV2BurnDTOTest.java
 src/test/java/org/openapitools/client/model/UniswapV2LiquidityPositionDTOTest.java

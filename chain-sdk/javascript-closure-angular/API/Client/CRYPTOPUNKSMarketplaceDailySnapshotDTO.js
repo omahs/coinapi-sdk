@@ -18,8 +18,8 @@ API.Client.CRYPTOPUNKSMarketplaceDailySnapshotDTO.prototype.entryTime;
 API.Client.CRYPTOPUNKSMarketplaceDailySnapshotDTO.prototype.recvTime;
 
 /**
- * 
- * @type {!string}
+ * Number of block in which entity was recorded.
+ * @type {!number}
  * @export
  */
 API.Client.CRYPTOPUNKSMarketplaceDailySnapshotDTO.prototype.blockNumber;

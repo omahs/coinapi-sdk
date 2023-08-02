@@ -7,46 +7,6 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'CowApi' {
-    Context 'Invoke-CowGetOrdersHistorical' {
-        It 'Test Invoke-CowGetOrdersHistorical' {
-            #$TestResult = Invoke-CowGetOrdersHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-CowGetSettlementsHistorical' {
-        It 'Test Invoke-CowGetSettlementsHistorical' {
-            #$TestResult = Invoke-CowGetSettlementsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-CowGetTokensHistorical' {
-        It 'Test Invoke-CowGetTokensHistorical' {
-            #$TestResult = Invoke-CowGetTokensHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE" -Address "TEST_VALUE" -Name "TEST_VALUE" -Symbol "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-CowGetTradesHistorical' {
-        It 'Test Invoke-CowGetTradesHistorical' {
-            #$TestResult = Invoke-CowGetTradesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE" -SellToken "TEST_VALUE" -BuyToken "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-CowGetUsersHistorical' {
-        It 'Test Invoke-CowGetUsersHistorical' {
-            #$TestResult = Invoke-CowGetUsersHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE" -Address "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-CowOrdersCurrent' {
         It 'Test Invoke-CowOrdersCurrent' {
             #$TestResult = Invoke-CowOrdersCurrent

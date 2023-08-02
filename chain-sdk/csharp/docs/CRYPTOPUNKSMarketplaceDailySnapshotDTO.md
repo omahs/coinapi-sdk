@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EntryTime** | **DateTime** |  | [optional] 
 **RecvTime** | **DateTime** |  | [optional] 
-**BlockNumber** | **string** |  | [optional] 
+**BlockNumber** | **long** | Number of block in which entity was recorded. | [optional] 
 **Vid** | **long** |  | [optional] 
 **BlockRange** | **string** |  | [optional] 
 **Id** | **string** |  | [optional] 

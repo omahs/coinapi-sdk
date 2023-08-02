@@ -23,6 +23,7 @@
             [on-chain-dapps-rest-api.specs.curve/transfer-ownership-event-dto :refer :all]
             [on-chain-dapps-rest-api.specs.sushiswap/day-data-dto :refer :all]
             [on-chain-dapps-rest-api.specs.curve/proposal-vote-dto :refer :all]
+            [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/token-dto :refer :all]
             [on-chain-dapps-rest-api.specs.curve/coin-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v2/transaction-dto :refer :all]
             [on-chain-dapps-rest-api.specs.cryptopunks/item-dto :refer :all]
@@ -62,6 +63,7 @@
             [on-chain-dapps-rest-api.specs.uniswap-v3/token-hour-data-dto :refer :all]
             [on-chain-dapps-rest-api.specs.dex/order-dto :refer :all]
             [on-chain-dapps-rest-api.specs.curve/token-dto :refer :all]
+            [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/account-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v2/user-dto :refer :all]
             [on-chain-dapps-rest-api.specs.cow/user-dto :refer :all]
             [on-chain-dapps-rest-api.specs.dex/user-dto :refer :all]
@@ -90,6 +92,7 @@
             [on-chain-dapps-rest-api.specs.uniswap-v3/uniswap-day-data-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v2/uniswap-day-data-dto :refer :all]
             [on-chain-dapps-rest-api.specs.curve/fee-change-log-dto :refer :all]
+            [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/swap-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3/bundle-dto :refer :all]
             [on-chain-dapps-rest-api.specs.curve/weekly-volume-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3/pool-hour-data-dto :refer :all]
@@ -158,281 +161,6 @@
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of dex/deposit-dto-spec) res st/string-transformer)
        res)))
-
-
-(defn-spec dex-get-batches-historical-with-http-info any?
-  "Batches (historical)
-  Gets batches."
-  ([] (dex-get-batches-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/dex/batches/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec dex-get-batches-historical (s/coll-of dex/batch-dto-spec)
-  "Batches (historical)
-  Gets batches."
-  ([] (dex-get-batches-historical nil))
-  ([optional-params any?]
-   (let [res (:data (dex-get-batches-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of dex/batch-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec dex-get-deposits-historical-with-http-info any?
-  "Deposits (historical)
-  Gets deposits."
-  ([] (dex-get-deposits-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id user]} (s/map-of keyword? any?)]
-   (call-api "/dapps/dex/deposits/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id "user" user }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec dex-get-deposits-historical (s/coll-of dex/deposit-dto-spec)
-  "Deposits (historical)
-  Gets deposits."
-  ([] (dex-get-deposits-historical nil))
-  ([optional-params any?]
-   (let [res (:data (dex-get-deposits-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of dex/deposit-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec dex-get-orders-historical-with-http-info any?
-  "Orders (historical)
-  Gets orders."
-  ([] (dex-get-orders-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id buy_token sell_token]} (s/map-of keyword? any?)]
-   (call-api "/dapps/dex/orders/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id "buy_token" buy_token "sell_token" sell_token }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec dex-get-orders-historical (s/coll-of dex/order-dto-spec)
-  "Orders (historical)
-  Gets orders."
-  ([] (dex-get-orders-historical nil))
-  ([optional-params any?]
-   (let [res (:data (dex-get-orders-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of dex/order-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec dex-get-prices-historical-with-http-info any?
-  "Prices (historical)
-  Gets prices."
-  ([] (dex-get-prices-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/dex/prices/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec dex-get-prices-historical (s/coll-of dex/price-dto-spec)
-  "Prices (historical)
-  Gets prices."
-  ([] (dex-get-prices-historical nil))
-  ([optional-params any?]
-   (let [res (:data (dex-get-prices-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of dex/price-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec dex-get-solutions-historical-with-http-info any?
-  "Solutions (historical)
-  Gets solutions."
-  ([] (dex-get-solutions-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/dex/solutions/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec dex-get-solutions-historical (s/coll-of dex/solution-dto-spec)
-  "Solutions (historical)
-  Gets solutions."
-  ([] (dex-get-solutions-historical nil))
-  ([optional-params any?]
-   (let [res (:data (dex-get-solutions-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of dex/solution-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec dex-get-stats-historical-with-http-info any?
-  "Stats (historical)
-  Gets stats."
-  ([] (dex-get-stats-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/dex/stats/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec dex-get-stats-historical (s/coll-of dex/stats-dto-spec)
-  "Stats (historical)
-  Gets stats."
-  ([] (dex-get-stats-historical nil))
-  ([optional-params any?]
-   (let [res (:data (dex-get-stats-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of dex/stats-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec dex-get-tokens-historical-with-http-info any?
-  "Tokens (historical)
-  Gets tokens."
-  ([] (dex-get-tokens-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id address symbol name]} (s/map-of keyword? any?)]
-   (call-api "/dapps/dex/tokens/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id "address" address "symbol" symbol "name" name }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec dex-get-tokens-historical (s/coll-of dex/token-dto-spec)
-  "Tokens (historical)
-  Gets tokens."
-  ([] (dex-get-tokens-historical nil))
-  ([optional-params any?]
-   (let [res (:data (dex-get-tokens-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of dex/token-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec dex-get-trades-historical-with-http-info any?
-  "Trades (historical)
-  Gets trades."
-  ([] (dex-get-trades-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id buy_token sell_token]} (s/map-of keyword? any?)]
-   (call-api "/dapps/dex/trades/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id "buy_token" buy_token "sell_token" sell_token }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec dex-get-trades-historical (s/coll-of dex/trade-dto-spec)
-  "Trades (historical)
-  Gets trades."
-  ([] (dex-get-trades-historical nil))
-  ([optional-params any?]
-   (let [res (:data (dex-get-trades-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of dex/trade-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec dex-get-users-historical-with-http-info any?
-  "Users (historical)
-  Gets users."
-  ([] (dex-get-users-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/dex/users/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec dex-get-users-historical (s/coll-of dex/user-dto-spec)
-  "Users (historical)
-  Gets users."
-  ([] (dex-get-users-historical nil))
-  ([optional-params any?]
-   (let [res (:data (dex-get-users-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of dex/user-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec dex-get-withdraw-requests-historical-with-http-info any?
-  "WithdrawRequests (historical)
-  Gets withdrawRequests."
-  ([] (dex-get-withdraw-requests-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id user]} (s/map-of keyword? any?)]
-   (call-api "/dapps/dex/withdrawRequests/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id "user" user }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec dex-get-withdraw-requests-historical (s/coll-of dex/withdraw-request-dto-spec)
-  "WithdrawRequests (historical)
-  Gets withdrawRequests."
-  ([] (dex-get-withdraw-requests-historical nil))
-  ([optional-params any?]
-   (let [res (:data (dex-get-withdraw-requests-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of dex/withdraw-request-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec dex-get-withdraws-historical-with-http-info any?
-  "Withdraws (historical)
-  Gets withdraws."
-  ([] (dex-get-withdraws-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id user]} (s/map-of keyword? any?)]
-   (call-api "/dapps/dex/withdraws/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id "user" user }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec dex-get-withdraws-historical (s/coll-of dex/withdraw-dto-spec)
-  "Withdraws (historical)
-  Gets withdraws."
-  ([] (dex-get-withdraws-historical nil))
-  ([optional-params any?]
-   (let [res (:data (dex-get-withdraws-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of dex/withdraw-dto-spec) res st/string-transformer)
-        res))))
 
 
 (defn-spec dex-orders-current-with-http-info any?

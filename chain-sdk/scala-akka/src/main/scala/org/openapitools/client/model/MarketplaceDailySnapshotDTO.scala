@@ -17,8 +17,8 @@ import org.openapitools.client.core.ApiModel
 case class MarketplaceDailySnapshotDTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
-  /*  */
-  blockNumber: Option[String] = None,
+  /* Number of block in which entity was recorded. */
+  blockNumber: Option[Long] = None,
   /*  */
   vid: Option[Long] = None,
   /*  */

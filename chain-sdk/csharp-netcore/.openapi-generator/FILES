@@ -85,6 +85,10 @@ docs/SushiswapTokenDayDataDTO.md
 docs/SushiswapTransactionDTO.md
 docs/SushiswapUserDTO.md
 docs/TransactionsETradeAggressiveSide.md
+docs/UNISWAPV3ETHEREUMAccountDTO.md
+docs/UNISWAPV3ETHEREUMApi.md
+docs/UNISWAPV3ETHEREUMSwapDTO.md
+docs/UNISWAPV3ETHEREUMTokenDTO.md
 docs/UniswapV2Api.md
 docs/UniswapV2BundleDTO.md
 docs/UniswapV2BurnDTO.md
@@ -126,6 +130,7 @@ src/CoinAPI.EMS.REST.V1.Test/Api/CurveApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/DexApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/MetadataApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/SushiswapApiTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Api/UNISWAPV3ETHEREUMApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/UniswapV2ApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/UniswapV3ApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/CoinAPI.EMS.REST.V1.Test.csproj
@@ -204,6 +209,9 @@ src/CoinAPI.EMS.REST.V1.Test/Model/SushiswapTokenDayDataDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/SushiswapTransactionDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/SushiswapUserDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/TransactionsETradeAggressiveSideTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Model/UNISWAPV3ETHEREUMAccountDTOTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Model/UNISWAPV3ETHEREUMSwapDTOTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Model/UNISWAPV3ETHEREUMTokenDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/UniswapV2BundleDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/UniswapV2BurnDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/UniswapV2LiquidityPositionDTOTests.cs
@@ -242,6 +250,7 @@ src/CoinAPI.EMS.REST.V1/Api/CurveApi.cs
 src/CoinAPI.EMS.REST.V1/Api/DexApi.cs
 src/CoinAPI.EMS.REST.V1/Api/MetadataApi.cs
 src/CoinAPI.EMS.REST.V1/Api/SushiswapApi.cs
+src/CoinAPI.EMS.REST.V1/Api/UNISWAPV3ETHEREUMApi.cs
 src/CoinAPI.EMS.REST.V1/Api/UniswapV2Api.cs
 src/CoinAPI.EMS.REST.V1/Api/UniswapV3Api.cs
 src/CoinAPI.EMS.REST.V1/Client/ApiClient.cs
@@ -337,6 +346,9 @@ src/CoinAPI.EMS.REST.V1/Model/SushiswapTokenDayDataDTO.cs
 src/CoinAPI.EMS.REST.V1/Model/SushiswapTransactionDTO.cs
 src/CoinAPI.EMS.REST.V1/Model/SushiswapUserDTO.cs
 src/CoinAPI.EMS.REST.V1/Model/TransactionsETradeAggressiveSide.cs
+src/CoinAPI.EMS.REST.V1/Model/UNISWAPV3ETHEREUMAccountDTO.cs
+src/CoinAPI.EMS.REST.V1/Model/UNISWAPV3ETHEREUMSwapDTO.cs
+src/CoinAPI.EMS.REST.V1/Model/UNISWAPV3ETHEREUMTokenDTO.cs
 src/CoinAPI.EMS.REST.V1/Model/UniswapV2BundleDTO.cs
 src/CoinAPI.EMS.REST.V1/Model/UniswapV2BurnDTO.cs
 src/CoinAPI.EMS.REST.V1/Model/UniswapV2LiquidityPositionDTO.cs

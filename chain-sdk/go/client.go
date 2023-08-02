@@ -62,6 +62,8 @@ type APIClient struct {
 
 	SushiswapApi *SushiswapApiService
 
+	UNISWAPV3ETHEREUMApi *UNISWAPV3ETHEREUMApiService
+
 	UniswapV2Api *UniswapV2ApiService
 
 	UniswapV3Api *UniswapV3ApiService
@@ -89,6 +91,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.DexApi = (*DexApiService)(&c.common)
 	c.MetadataApi = (*MetadataApiService)(&c.common)
 	c.SushiswapApi = (*SushiswapApiService)(&c.common)
+	c.UNISWAPV3ETHEREUMApi = (*UNISWAPV3ETHEREUMApiService)(&c.common)
 	c.UniswapV2Api = (*UniswapV2ApiService)(&c.common)
 	c.UniswapV3Api = (*UniswapV3ApiService)(&c.common)
 

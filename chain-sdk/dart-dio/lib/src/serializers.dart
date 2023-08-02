@@ -89,6 +89,9 @@ import 'package:openapi/src/model/sushiswap_token_day_data_dto.dart';
 import 'package:openapi/src/model/sushiswap_transaction_dto.dart';
 import 'package:openapi/src/model/sushiswap_user_dto.dart';
 import 'package:openapi/src/model/transactions_e_trade_aggressive_side.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_account_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_swap_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_token_dto.dart';
 import 'package:openapi/src/model/uniswap_v2_bundle_dto.dart';
 import 'package:openapi/src/model/uniswap_v2_burn_dto.dart';
 import 'package:openapi/src/model/uniswap_v2_liquidity_position_dto.dart';
@@ -200,6 +203,9 @@ part 'serializers.g.dart';
   SushiswapTransactionDTO,
   SushiswapUserDTO,
   TransactionsETradeAggressiveSide,
+  UNISWAPV3ETHEREUMAccountDTO,
+  UNISWAPV3ETHEREUMSwapDTO,
+  UNISWAPV3ETHEREUMTokenDTO,
   UniswapV2BundleDTO,
   UniswapV2BurnDTO,
   UniswapV2LiquidityPositionDTO,
@@ -275,6 +281,10 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<DexWithdrawRequestDTO>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMSwapDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMSwapDTO>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UniswapV2UniswapDayDataDTO)]),
         () => ListBuilder<UniswapV2UniswapDayDataDTO>(),
       )
@@ -321,6 +331,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UniswapV3FactoryDTO)]),
         () => ListBuilder<UniswapV3FactoryDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMAccountDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMAccountDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(SushiswapMintDTO)]),
@@ -513,6 +527,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UniswapV2BundleDTO)]),
         () => ListBuilder<UniswapV2BundleDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMTokenDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMTokenDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UniswapV2PairDTO)]),

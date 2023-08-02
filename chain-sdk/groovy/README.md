@@ -10,7 +10,7 @@ This Groovy package, using the [http-builder-ng library](https://http-builder-ng
 
 - API version: v1
 - Package version: v1
-- Build date: 2023-08-01T12:33:44.662654Z[Etc/UTC]
+- Build date: 2023-08-02T09:27:26.029644Z[Etc/UTC]
 - Build package: org.openapitools.codegen.languages.GroovyClientCodegen
 For more information, please visit [https://www.coinapi.io](https://www.coinapi.io)
 
@@ -38,13 +38,8 @@ Then, run:
 
 ```groovy
 def apiInstance = new CowApi()
-def startBlock = 56L // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-def endBlock = 56L // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-def startDate = new Date() // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-def endDate = new Date() // Date | The end date of timeframe.
-def id = "id_example" // String | User's address.
 
-apiInstance.cowGetOrdersHistorical(startBlock, endBlock, startDate, endDate, id)
+apiInstance.cowOrdersCurrent()
     {
     // on success
     def result = (List&lt;CowOrderDTO&gt;)it

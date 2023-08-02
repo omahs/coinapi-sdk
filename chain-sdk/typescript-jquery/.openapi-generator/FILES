@@ -5,6 +5,7 @@ api/CurveApi.ts
 api/DexApi.ts
 api/MetadataApi.ts
 api/SushiswapApi.ts
+api/UNISWAPV3ETHEREUMApi.ts
 api/UniswapV2Api.ts
 api/UniswapV3Api.ts
 api/api.ts
@@ -86,6 +87,9 @@ model/SushiswapTokenDayDataDTO.ts
 model/SushiswapTransactionDTO.ts
 model/SushiswapUserDTO.ts
 model/TransactionsETradeAggressiveSide.ts
+model/UNISWAPV3ETHEREUMAccountDTO.ts
+model/UNISWAPV3ETHEREUMSwapDTO.ts
+model/UNISWAPV3ETHEREUMTokenDTO.ts
 model/UniswapV2BundleDTO.ts
 model/UniswapV2BurnDTO.ts
 model/UniswapV2LiquidityPositionDTO.ts

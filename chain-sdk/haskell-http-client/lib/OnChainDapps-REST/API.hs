@@ -20,6 +20,7 @@ module OnChainDapps-REST.API
   , module OnChainDapps-REST.API.Dex
   , module OnChainDapps-REST.API.Metadata
   , module OnChainDapps-REST.API.Sushiswap
+  , module OnChainDapps-REST.API.UNISWAPV3ETHEREUM
   , module OnChainDapps-REST.API.UniswapV2
   , module OnChainDapps-REST.API.UniswapV3
   ) where
@@ -30,5 +31,6 @@ import OnChainDapps-REST.API.Curve
 import OnChainDapps-REST.API.Dex
 import OnChainDapps-REST.API.Metadata
 import OnChainDapps-REST.API.Sushiswap
+import OnChainDapps-REST.API.UNISWAPV3ETHEREUM
 import OnChainDapps-REST.API.UniswapV2
 import OnChainDapps-REST.API.UniswapV3

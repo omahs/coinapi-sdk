@@ -73,6 +73,7 @@ docs/SushiswapSwapDTO.md
 docs/SushiswapTokenDayDataDTO.md
 docs/SushiswapTransactionDTO.md
 docs/TransactionsETradeAggressiveSide.md
+docs/UNISWAPV3ETHEREUMApi.md
 docs/UniswapV2Api.md
 docs/UniswapV2UniswapDayDataDTO.md
 docs/UniswapV2UniswapFactoryDTO.md
@@ -95,6 +96,7 @@ src/main/scala/org/openapitools/client/api/DexApi.scala
 src/main/scala/org/openapitools/client/api/EnumsSerializers.scala
 src/main/scala/org/openapitools/client/api/MetadataApi.scala
 src/main/scala/org/openapitools/client/api/SushiswapApi.scala
+src/main/scala/org/openapitools/client/api/UNISWAPV3ETHEREUMApi.scala
 src/main/scala/org/openapitools/client/api/UniswapV2Api.scala
 src/main/scala/org/openapitools/client/api/UniswapV3Api.scala
 src/main/scala/org/openapitools/client/core/ApiInvoker.scala

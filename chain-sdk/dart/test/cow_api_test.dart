@@ -17,51 +17,6 @@ void main() {
   // final instance = CowApi();
 
   group('tests for CowApi', () {
-    // Orders (historical)
-    //
-    // Gets orders.
-    //
-    //Future<List<CowOrderDTO>> cowGetOrdersHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
-    test('test cowGetOrdersHistorical', () async {
-      // TODO
-    });
-
-    // Settlements (historical)
-    //
-    // Gets settlements.
-    //
-    //Future<List<CowSettlementDTO>> cowGetSettlementsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
-    test('test cowGetSettlementsHistorical', () async {
-      // TODO
-    });
-
-    // Tokens (historical)
-    //
-    // Gets tokens.
-    //
-    //Future<List<CowTokenDTO>> cowGetTokensHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id, String address, String name, String symbol }) async
-    test('test cowGetTokensHistorical', () async {
-      // TODO
-    });
-
-    // Trades (historical)
-    //
-    // Gets trades.
-    //
-    //Future<List<CowTradeDTO>> cowGetTradesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id, String sellToken, String buyToken }) async
-    test('test cowGetTradesHistorical', () async {
-      // TODO
-    });
-
-    // Users (historical)
-    //
-    // Gets users.
-    //
-    //Future<List<CowUserDTO>> cowGetUsersHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id, String address }) async
-    test('test cowGetUsersHistorical', () async {
-      // TODO
-    });
-
     // Orders (current)
     //
     // Gets orders.

@@ -10,6 +10,7 @@ src/main/groovy/org/openapitools/api/MetadataApi.groovy
 src/main/groovy/org/openapitools/api/SushiswapApi.groovy
 src/main/groovy/org/openapitools/api/UniswapV2Api.groovy
 src/main/groovy/org/openapitools/api/UniswapV3Api.groovy
+src/main/groovy/org/openapitools/api/UniswapV3EthereumApi.groovy
 src/main/groovy/org/openapitools/model/CRYPTOPUNKSBidDTO.groovy
 src/main/groovy/org/openapitools/model/CRYPTOPUNKSCollectionDTO.groovy
 src/main/groovy/org/openapitools/model/CRYPTOPUNKSCollectionDailySnapshotDTO.groovy
@@ -85,6 +86,9 @@ src/main/groovy/org/openapitools/model/SushiswapTokenDayDataDTO.groovy
 src/main/groovy/org/openapitools/model/SushiswapTransactionDTO.groovy
 src/main/groovy/org/openapitools/model/SushiswapUserDTO.groovy
 src/main/groovy/org/openapitools/model/TransactionsETradeAggressiveSide.groovy
+src/main/groovy/org/openapitools/model/UNISWAPV3ETHEREUMAccountDTO.groovy
+src/main/groovy/org/openapitools/model/UNISWAPV3ETHEREUMSwapDTO.groovy
+src/main/groovy/org/openapitools/model/UNISWAPV3ETHEREUMTokenDTO.groovy
 src/main/groovy/org/openapitools/model/UniswapV2BundleDTO.groovy
 src/main/groovy/org/openapitools/model/UniswapV2BurnDTO.groovy
 src/main/groovy/org/openapitools/model/UniswapV2LiquidityPositionDTO.groovy

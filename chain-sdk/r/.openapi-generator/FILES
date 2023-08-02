@@ -123,6 +123,10 @@ R/uniswap_v3_token_hour_data_dto.R
 R/uniswap_v3_token_v3_day_data_dto.R
 R/uniswap_v3_transaction_dto.R
 R/uniswap_v3_uniswap_day_data_dto.R
+R/uniswapv3_ethereum_account_dto.R
+R/uniswapv3_ethereum_api.R
+R/uniswapv3_ethereum_swap_dto.R
+R/uniswapv3_ethereum_token_dto.R
 README.md
 docs/CRYPTOPUNKSApi.md
 docs/CRYPTOPUNKSBidDTO.md
@@ -205,6 +209,10 @@ docs/SushiswapTokenDayDataDTO.md
 docs/SushiswapTransactionDTO.md
 docs/SushiswapUserDTO.md
 docs/TransactionsETradeAggressiveSide.md
+docs/UNISWAPV3ETHEREUMAccountDTO.md
+docs/UNISWAPV3ETHEREUMApi.md
+docs/UNISWAPV3ETHEREUMSwapDTO.md
+docs/UNISWAPV3ETHEREUMTokenDTO.md
 docs/UniswapV2Api.md
 docs/UniswapV2BundleDTO.md
 docs/UniswapV2BurnDTO.md
@@ -356,3 +364,7 @@ tests/testthat/test_uniswap_v3_token_hour_data_dto.R
 tests/testthat/test_uniswap_v3_token_v3_day_data_dto.R
 tests/testthat/test_uniswap_v3_transaction_dto.R
 tests/testthat/test_uniswap_v3_uniswap_day_data_dto.R
+tests/testthat/test_uniswapv3_ethereum_account_dto.R
+tests/testthat/test_uniswapv3_ethereum_api.R
+tests/testthat/test_uniswapv3_ethereum_swap_dto.R
+tests/testthat/test_uniswapv3_ethereum_token_dto.R

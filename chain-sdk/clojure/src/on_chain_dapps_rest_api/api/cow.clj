@@ -23,6 +23,7 @@
             [on-chain-dapps-rest-api.specs.curve/transfer-ownership-event-dto :refer :all]
             [on-chain-dapps-rest-api.specs.sushiswap/day-data-dto :refer :all]
             [on-chain-dapps-rest-api.specs.curve/proposal-vote-dto :refer :all]
+            [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/token-dto :refer :all]
             [on-chain-dapps-rest-api.specs.curve/coin-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v2/transaction-dto :refer :all]
             [on-chain-dapps-rest-api.specs.cryptopunks/item-dto :refer :all]
@@ -62,6 +63,7 @@
             [on-chain-dapps-rest-api.specs.uniswap-v3/token-hour-data-dto :refer :all]
             [on-chain-dapps-rest-api.specs.dex/order-dto :refer :all]
             [on-chain-dapps-rest-api.specs.curve/token-dto :refer :all]
+            [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/account-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v2/user-dto :refer :all]
             [on-chain-dapps-rest-api.specs.cow/user-dto :refer :all]
             [on-chain-dapps-rest-api.specs.dex/user-dto :refer :all]
@@ -90,6 +92,7 @@
             [on-chain-dapps-rest-api.specs.uniswap-v3/uniswap-day-data-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v2/uniswap-day-data-dto :refer :all]
             [on-chain-dapps-rest-api.specs.curve/fee-change-log-dto :refer :all]
+            [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/swap-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3/bundle-dto :refer :all]
             [on-chain-dapps-rest-api.specs.curve/weekly-volume-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3/pool-hour-data-dto :refer :all]
@@ -112,131 +115,6 @@
             [on-chain-dapps-rest-api.specs.curve/remove-liquidity-event-dto :refer :all]
             )
   (:import (java.io File)))
-
-
-(defn-spec cow-get-orders-historical-with-http-info any?
-  "Orders (historical)
-  Gets orders."
-  ([] (cow-get-orders-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/cow/orders/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec cow-get-orders-historical (s/coll-of cow/order-dto-spec)
-  "Orders (historical)
-  Gets orders."
-  ([] (cow-get-orders-historical nil))
-  ([optional-params any?]
-   (let [res (:data (cow-get-orders-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of cow/order-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec cow-get-settlements-historical-with-http-info any?
-  "Settlements (historical)
-  Gets settlements."
-  ([] (cow-get-settlements-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/cow/settlements/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec cow-get-settlements-historical (s/coll-of cow/settlement-dto-spec)
-  "Settlements (historical)
-  Gets settlements."
-  ([] (cow-get-settlements-historical nil))
-  ([optional-params any?]
-   (let [res (:data (cow-get-settlements-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of cow/settlement-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec cow-get-tokens-historical-with-http-info any?
-  "Tokens (historical)
-  Gets tokens."
-  ([] (cow-get-tokens-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id address name symbol]} (s/map-of keyword? any?)]
-   (call-api "/dapps/cow/tokens/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id "address" address "name" name "symbol" symbol }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec cow-get-tokens-historical (s/coll-of cow/token-dto-spec)
-  "Tokens (historical)
-  Gets tokens."
-  ([] (cow-get-tokens-historical nil))
-  ([optional-params any?]
-   (let [res (:data (cow-get-tokens-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of cow/token-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec cow-get-trades-historical-with-http-info any?
-  "Trades (historical)
-  Gets trades."
-  ([] (cow-get-trades-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id sell_token buy_token]} (s/map-of keyword? any?)]
-   (call-api "/dapps/cow/trades/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id "sell_token" sell_token "buy_token" buy_token }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec cow-get-trades-historical (s/coll-of cow/trade-dto-spec)
-  "Trades (historical)
-  Gets trades."
-  ([] (cow-get-trades-historical nil))
-  ([optional-params any?]
-   (let [res (:data (cow-get-trades-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of cow/trade-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec cow-get-users-historical-with-http-info any?
-  "Users (historical)
-  Gets users."
-  ([] (cow-get-users-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate id address]} (s/map-of keyword? any?)]
-   (call-api "/dapps/cow/users/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id "address" address }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec cow-get-users-historical (s/coll-of cow/user-dto-spec)
-  "Users (historical)
-  Gets users."
-  ([] (cow-get-users-historical nil))
-  ([optional-params any?]
-   (let [res (:data (cow-get-users-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of cow/user-dto-spec) res st/string-transformer)
-        res))))
 
 
 (defn-spec cow-orders-current-with-http-info any?

@@ -15,41 +15,6 @@ Please update as you see appropriate
 ]]
 describe("cow_api", function()
   local openapiclient_cow_api = require "openapiclient.api.cow_api"
-  -- unit tests for cow_get_orders__historical
-  describe("cow_get_orders__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for cow_get_settlements__historical
-  describe("cow_get_settlements__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for cow_get_tokens__historical
-  describe("cow_get_tokens__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for cow_get_trades__historical
-  describe("cow_get_trades__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for cow_get_users__historical
-  describe("cow_get_users__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for cow_orders__current
   describe("cow_orders__current test", function()
     it("should work", function()

@@ -11,7 +11,7 @@
 -type openapi_cryptopunks_marketplace_daily_snapshot_dto() ::
   [ {'entry_time', datetime() }
   | {'recv_time', datetime() }
-  | {'block_number', binary() }
+  | {'block_number', integer() }
   | {'vid', integer() }
   | {'block_range', binary() }
   | {'id', binary() }
@@ -36,7 +36,7 @@ openapi_cryptopunks_marketplace_daily_snapshot_dto() ->
 openapi_cryptopunks_marketplace_daily_snapshot_dto(Fields) ->
   Default = [ {'entry_time', datetime() }
             , {'recv_time', datetime() }
-            , {'block_number', binary() }
+            , {'block_number', integer() }
             , {'vid', integer() }
             , {'block_range', binary() }
             , {'id', binary() }

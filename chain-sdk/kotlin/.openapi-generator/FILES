@@ -82,6 +82,10 @@ docs/SushiswapTokenDayDataDTO.md
 docs/SushiswapTransactionDTO.md
 docs/SushiswapUserDTO.md
 docs/TransactionsETradeAggressiveSide.md
+docs/UNISWAPV3ETHEREUMAccountDTO.md
+docs/UNISWAPV3ETHEREUMApi.md
+docs/UNISWAPV3ETHEREUMSwapDTO.md
+docs/UNISWAPV3ETHEREUMTokenDTO.md
 docs/UniswapV2Api.md
 docs/UniswapV2BundleDTO.md
 docs/UniswapV2BurnDTO.md
@@ -127,6 +131,7 @@ src/main/kotlin/org/openapitools/client/apis/CurveApi.kt
 src/main/kotlin/org/openapitools/client/apis/DexApi.kt
 src/main/kotlin/org/openapitools/client/apis/MetadataApi.kt
 src/main/kotlin/org/openapitools/client/apis/SushiswapApi.kt
+src/main/kotlin/org/openapitools/client/apis/UNISWAPV3ETHEREUMApi.kt
 src/main/kotlin/org/openapitools/client/apis/UniswapV2Api.kt
 src/main/kotlin/org/openapitools/client/apis/UniswapV3Api.kt
 src/main/kotlin/org/openapitools/client/infrastructure/ApiAbstractions.kt
@@ -221,6 +226,9 @@ src/main/kotlin/org/openapitools/client/models/SushiswapTokenDayDataDTO.kt
 src/main/kotlin/org/openapitools/client/models/SushiswapTransactionDTO.kt
 src/main/kotlin/org/openapitools/client/models/SushiswapUserDTO.kt
 src/main/kotlin/org/openapitools/client/models/TransactionsETradeAggressiveSide.kt
+src/main/kotlin/org/openapitools/client/models/UNISWAPV3ETHEREUMAccountDTO.kt
+src/main/kotlin/org/openapitools/client/models/UNISWAPV3ETHEREUMSwapDTO.kt
+src/main/kotlin/org/openapitools/client/models/UNISWAPV3ETHEREUMTokenDTO.kt
 src/main/kotlin/org/openapitools/client/models/UniswapV2BundleDTO.kt
 src/main/kotlin/org/openapitools/client/models/UniswapV2BurnDTO.kt
 src/main/kotlin/org/openapitools/client/models/UniswapV2LiquidityPositionDTO.kt

@@ -331,6 +331,12 @@ class ApiClient {
           return SushiswapUserDTO.fromJson(value);
         case 'TransactionsETradeAggressiveSide':
           return TransactionsETradeAggressiveSideTypeTransformer().decode(value);
+        case 'UNISWAPV3ETHEREUMAccountDTO':
+          return UNISWAPV3ETHEREUMAccountDTO.fromJson(value);
+        case 'UNISWAPV3ETHEREUMSwapDTO':
+          return UNISWAPV3ETHEREUMSwapDTO.fromJson(value);
+        case 'UNISWAPV3ETHEREUMTokenDTO':
+          return UNISWAPV3ETHEREUMTokenDTO.fromJson(value);
         case 'UniswapV2BundleDTO':
           return UniswapV2BundleDTO.fromJson(value);
         case 'UniswapV2BurnDTO':

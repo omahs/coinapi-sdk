@@ -13,23 +13,6 @@
 from openapi_client.paths.dapps_uniswapv3_bundles_current.get import UniswapV3BundlesCurrent
 from openapi_client.paths.dapps_uniswapv3_burns_current.get import UniswapV3BurnsCurrent
 from openapi_client.paths.dapps_uniswapv3_factories_current.get import UniswapV3FactoriesCurrent
-from openapi_client.paths.dapps_uniswapv3_bundles_historical.get import UniswapV3GetBundlesHistorical
-from openapi_client.paths.dapps_uniswapv3_burns_historical.get import UniswapV3GetBurnsHistorical
-from openapi_client.paths.dapps_uniswapv3_factories_historical.get import UniswapV3GetFactoriesHistorical
-from openapi_client.paths.dapps_uniswapv3_mints_historical.get import UniswapV3GetMintsHistorical
-from openapi_client.paths.dapps_uniswapv3_pool_day_data_historical.get import UniswapV3GetPoolDayDataHistorical
-from openapi_client.paths.dapps_uniswapv3_pool_hour_data_historical.get import UniswapV3GetPoolHourDataHistorical
-from openapi_client.paths.dapps_uniswapv3_pools_historical.get import UniswapV3GetPoolsHistorical
-from openapi_client.paths.dapps_uniswapv3_position_snapshots_historical.get import UniswapV3GetPositionSnapshotsHistorical
-from openapi_client.paths.dapps_uniswapv3_positions_historical.get import UniswapV3GetPositionsHistorical
-from openapi_client.paths.dapps_uniswapv3_swaps_historical.get import UniswapV3GetSwapsHistorical
-from openapi_client.paths.dapps_uniswapv3_tick_day_data_historical.get import UniswapV3GetTickDayDataHistorical
-from openapi_client.paths.dapps_uniswapv3_ticks_historical.get import UniswapV3GetTicksHistorical
-from openapi_client.paths.dapps_uniswapv3_token_hour_data_historical.get import UniswapV3GetTokenHourDataHistorical
-from openapi_client.paths.dapps_uniswapv3_token_v3_day_data_historical.get import UniswapV3GetTokenV3DayDataHistorical
-from openapi_client.paths.dapps_uniswapv3_tokens_historical.get import UniswapV3GetTokensHistorical
-from openapi_client.paths.dapps_uniswapv3_transactions_historical.get import UniswapV3GetTransactionsHistorical
-from openapi_client.paths.dapps_uniswapv3_uniswap_day_data_historical.get import UniswapV3GetUniswapDayDataHistorical
 from openapi_client.paths.dapps_uniswapv3_mints_current.get import UniswapV3MintsCurrent
 from openapi_client.paths.dapps_uniswapv3_pool_day_data_current.get import UniswapV3PoolDayDataCurrent
 from openapi_client.paths.dapps_uniswapv3_pool_hour_data_current.get import UniswapV3PoolHourDataCurrent
@@ -50,23 +33,6 @@ class UniswapV3Api(
     UniswapV3BundlesCurrent,
     UniswapV3BurnsCurrent,
     UniswapV3FactoriesCurrent,
-    UniswapV3GetBundlesHistorical,
-    UniswapV3GetBurnsHistorical,
-    UniswapV3GetFactoriesHistorical,
-    UniswapV3GetMintsHistorical,
-    UniswapV3GetPoolDayDataHistorical,
-    UniswapV3GetPoolHourDataHistorical,
-    UniswapV3GetPoolsHistorical,
-    UniswapV3GetPositionSnapshotsHistorical,
-    UniswapV3GetPositionsHistorical,
-    UniswapV3GetSwapsHistorical,
-    UniswapV3GetTickDayDataHistorical,
-    UniswapV3GetTicksHistorical,
-    UniswapV3GetTokenHourDataHistorical,
-    UniswapV3GetTokenV3DayDataHistorical,
-    UniswapV3GetTokensHistorical,
-    UniswapV3GetTransactionsHistorical,
-    UniswapV3GetUniswapDayDataHistorical,
     UniswapV3MintsCurrent,
     UniswapV3PoolDayDataCurrent,
     UniswapV3PoolHourDataCurrent,

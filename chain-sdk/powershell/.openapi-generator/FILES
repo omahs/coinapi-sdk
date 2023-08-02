@@ -83,6 +83,10 @@ docs/SushiswapTokenDayDataDTO.md
 docs/SushiswapTransactionDTO.md
 docs/SushiswapUserDTO.md
 docs/TransactionsETradeAggressiveSide.md
+docs/UNISWAPV3ETHEREUMAccountDTO.md
+docs/UNISWAPV3ETHEREUMApi.md
+docs/UNISWAPV3ETHEREUMSwapDTO.md
+docs/UNISWAPV3ETHEREUMTokenDTO.md
 docs/UniswapV2Api.md
 docs/UniswapV2BundleDTO.md
 docs/UniswapV2BurnDTO.md
@@ -123,6 +127,7 @@ src/PSOpenAPITools/Api/CurveApi.ps1
 src/PSOpenAPITools/Api/DexApi.ps1
 src/PSOpenAPITools/Api/MetadataApi.ps1
 src/PSOpenAPITools/Api/SushiswapApi.ps1
+src/PSOpenAPITools/Api/UNISWAPV3ETHEREUMApi.ps1
 src/PSOpenAPITools/Api/UniswapV2Api.ps1
 src/PSOpenAPITools/Api/UniswapV3Api.ps1
 src/PSOpenAPITools/Client/Configuration.ps1
@@ -201,6 +206,9 @@ src/PSOpenAPITools/Model/SushiswapTokenDayDataDTO.ps1
 src/PSOpenAPITools/Model/SushiswapTransactionDTO.ps1
 src/PSOpenAPITools/Model/SushiswapUserDTO.ps1
 src/PSOpenAPITools/Model/TransactionsETradeAggressiveSide.ps1
+src/PSOpenAPITools/Model/UNISWAPV3ETHEREUMAccountDTO.ps1
+src/PSOpenAPITools/Model/UNISWAPV3ETHEREUMSwapDTO.ps1
+src/PSOpenAPITools/Model/UNISWAPV3ETHEREUMTokenDTO.ps1
 src/PSOpenAPITools/Model/UniswapV2BundleDTO.ps1
 src/PSOpenAPITools/Model/UniswapV2BurnDTO.ps1
 src/PSOpenAPITools/Model/UniswapV2LiquidityPositionDTO.ps1
@@ -246,6 +254,7 @@ tests/Api/CurveApi.Tests.ps1
 tests/Api/DexApi.Tests.ps1
 tests/Api/MetadataApi.Tests.ps1
 tests/Api/SushiswapApi.Tests.ps1
+tests/Api/UNISWAPV3ETHEREUMApi.Tests.ps1
 tests/Api/UniswapV2Api.Tests.ps1
 tests/Api/UniswapV3Api.Tests.ps1
 tests/Model/CRYPTOPUNKSBidDTO.Tests.ps1
@@ -323,6 +332,9 @@ tests/Model/SushiswapTokenDayDataDTO.Tests.ps1
 tests/Model/SushiswapTransactionDTO.Tests.ps1
 tests/Model/SushiswapUserDTO.Tests.ps1
 tests/Model/TransactionsETradeAggressiveSide.Tests.ps1
+tests/Model/UNISWAPV3ETHEREUMAccountDTO.Tests.ps1
+tests/Model/UNISWAPV3ETHEREUMSwapDTO.Tests.ps1
+tests/Model/UNISWAPV3ETHEREUMTokenDTO.Tests.ps1
 tests/Model/UniswapV2BundleDTO.Tests.ps1
 tests/Model/UniswapV2BurnDTO.Tests.ps1
 tests/Model/UniswapV2LiquidityPositionDTO.Tests.ps1

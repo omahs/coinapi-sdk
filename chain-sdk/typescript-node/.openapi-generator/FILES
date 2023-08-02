@@ -8,6 +8,7 @@ api/curveApi.ts
 api/dexApi.ts
 api/metadataApi.ts
 api/sushiswapApi.ts
+api/uNISWAPV3ETHEREUMApi.ts
 api/uniswapV2Api.ts
 api/uniswapV3Api.ts
 git_push.sh
@@ -87,6 +88,9 @@ model/sushiswapTokenDayDataDTO.ts
 model/sushiswapTransactionDTO.ts
 model/sushiswapUserDTO.ts
 model/transactionsETradeAggressiveSide.ts
+model/uNISWAPV3ETHEREUMAccountDTO.ts
+model/uNISWAPV3ETHEREUMSwapDTO.ts
+model/uNISWAPV3ETHEREUMTokenDTO.ts
 model/uniswapV2BundleDTO.ts
 model/uniswapV2BurnDTO.ts
 model/uniswapV2LiquidityPositionDTO.ts

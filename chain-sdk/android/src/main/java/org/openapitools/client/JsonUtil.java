@@ -357,6 +357,18 @@ public class JsonUtil {
       return new TypeToken<List<TransactionsETradeAggressiveSide>>(){}.getType();
     }
     
+    if ("UNISWAPV3ETHEREUMAccountDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMAccountDTO>>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMSwapDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMSwapDTO>>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMTokenDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMTokenDTO>>(){}.getType();
+    }
+    
     if ("UniswapV2BundleDTO".equalsIgnoreCase(className)) {
       return new TypeToken<List<UniswapV2BundleDTO>>(){}.getType();
     }
@@ -789,6 +801,18 @@ public class JsonUtil {
     
     if ("TransactionsETradeAggressiveSide".equalsIgnoreCase(className)) {
       return new TypeToken<TransactionsETradeAggressiveSide>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMAccountDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMAccountDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMSwapDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMSwapDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMTokenDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMTokenDTO>(){}.getType();
     }
     
     if ("UniswapV2BundleDTO".equalsIgnoreCase(className)) {

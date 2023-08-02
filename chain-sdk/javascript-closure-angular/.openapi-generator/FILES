@@ -80,6 +80,10 @@ API/Client/SushiswapTokenDayDataDTO.js
 API/Client/SushiswapTransactionDTO.js
 API/Client/SushiswapUserDTO.js
 API/Client/TransactionsETradeAggressiveSide.js
+API/Client/UNISWAPV3ETHEREUMAccountDTO.js
+API/Client/UNISWAPV3ETHEREUMApi.js
+API/Client/UNISWAPV3ETHEREUMSwapDTO.js
+API/Client/UNISWAPV3ETHEREUMTokenDTO.js
 API/Client/UniswapV2Api.js
 API/Client/UniswapV2BundleDTO.js
 API/Client/UniswapV2BurnDTO.js

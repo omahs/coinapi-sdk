@@ -28,7 +28,6 @@
 #include "CppRestOpenAPIClient/model/Cow_TokenDTO.h"
 #include "CppRestOpenAPIClient/model/Cow_TradeDTO.h"
 #include "CppRestOpenAPIClient/model/Cow_UserDTO.h"
-#include <cpprest/details/basic_types.h>
 #include <boost/optional.hpp>
 
 namespace org {
@@ -48,108 +47,6 @@ public:
 
     virtual ~CowApi();
 
-    /// <summary>
-    /// Orders (historical)
-    /// </summary>
-    /// <remarks>
-    /// Gets orders.
-    /// </remarks>
-    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
-    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
-    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
-    /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
-    /// <param name="id">User&#39;s address. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Cow_OrderDTO>>> cow_GetOrders__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> id
-    ) const;
-    /// <summary>
-    /// Settlements (historical)
-    /// </summary>
-    /// <remarks>
-    /// Gets settlements.
-    /// </remarks>
-    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
-    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
-    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
-    /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
-    /// <param name="id">Transaction hash. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Cow_SettlementDTO>>> cow_GetSettlements__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> id
-    ) const;
-    /// <summary>
-    /// Tokens (historical)
-    /// </summary>
-    /// <remarks>
-    /// Gets tokens.
-    /// </remarks>
-    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
-    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
-    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
-    /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
-    /// <param name="id">Token&#39;s address. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    /// <param name="address">Token&#39;s address. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    /// <param name="name">Token name fetched by ERC20 contract call. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    /// <param name="symbol">Token symbol fetched by contract call. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Cow_TokenDTO>>> cow_GetTokens__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> id,
-        boost::optional<utility::string_t> address,
-        boost::optional<utility::string_t> name,
-        boost::optional<utility::string_t> symbol
-    ) const;
-    /// <summary>
-    /// Trades (historical)
-    /// </summary>
-    /// <remarks>
-    /// Gets trades.
-    /// </remarks>
-    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
-    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
-    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
-    /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
-    /// <param name="id">Identifier, format: (order id)|(transaction hash)|(event index). (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    /// <param name="sellToken">Address of token that is sold. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    /// <param name="buyToken">Address of token that is bought. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Cow_TradeDTO>>> cow_GetTrades__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> id,
-        boost::optional<utility::string_t> sellToken,
-        boost::optional<utility::string_t> buyToken
-    ) const;
-    /// <summary>
-    /// Users (historical)
-    /// </summary>
-    /// <remarks>
-    /// Gets users.
-    /// </remarks>
-    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
-    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
-    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
-    /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
-    /// <param name="id">User&#39;s address. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    /// <param name="address">User&#39;s address. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Cow_UserDTO>>> cow_GetUsers__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> id,
-        boost::optional<utility::string_t> address
-    ) const;
     /// <summary>
     /// Orders (current)
     /// </summary>

@@ -50,24 +50,6 @@ Method | HTTP request | Description
 *cRYPTOPUNKSCollections (current)ASync* | *GET* /dapps/cryptopunks/collections/current | Collections (current).
 *cRYPTOPUNKSDataSources (current)Sync* | *GET* /dapps/cryptopunks/dataSources/current | DataSources (current).
 *cRYPTOPUNKSDataSources (current)ASync* | *GET* /dapps/cryptopunks/dataSources/current | DataSources (current).
-*cRYPTOPUNKSGetBids (historical)Sync* | *GET* /dapps/cryptopunks/bids/historical | Bids (historical).
-*cRYPTOPUNKSGetBids (historical)ASync* | *GET* /dapps/cryptopunks/bids/historical | Bids (historical).
-*cRYPTOPUNKSGetCollectionDailySnapshots (historical)Sync* | *GET* /dapps/cryptopunks/collectionDailySnapshots/historical | CollectionDailySnapshots (historical).
-*cRYPTOPUNKSGetCollectionDailySnapshots (historical)ASync* | *GET* /dapps/cryptopunks/collectionDailySnapshots/historical | CollectionDailySnapshots (historical).
-*cRYPTOPUNKSGetCollections (historical)Sync* | *GET* /dapps/cryptopunks/collections/historical | Collections (historical).
-*cRYPTOPUNKSGetCollections (historical)ASync* | *GET* /dapps/cryptopunks/collections/historical | Collections (historical).
-*cRYPTOPUNKSGetDataSources (historical)Sync* | *GET* /dapps/cryptopunks/dataSources/historical | DataSources (historical).
-*cRYPTOPUNKSGetDataSources (historical)ASync* | *GET* /dapps/cryptopunks/dataSources/historical | DataSources (historical).
-*cRYPTOPUNKSGetItems (historical)Sync* | *GET* /dapps/cryptopunks/items/historical | Items (historical).
-*cRYPTOPUNKSGetItems (historical)ASync* | *GET* /dapps/cryptopunks/items/historical | Items (historical).
-*cRYPTOPUNKSGetMarketPlaces (historical)Sync* | *GET* /dapps/cryptopunks/marketPlaces/historical | MarketPlaces (historical).
-*cRYPTOPUNKSGetMarketPlaces (historical)ASync* | *GET* /dapps/cryptopunks/marketPlaces/historical | MarketPlaces (historical).
-*cRYPTOPUNKSGetMarketplaceDailySnapshots (historical)Sync* | *GET* /dapps/cryptopunks/marketplaceDailySnapshots/historical | MarketplaceDailySnapshots (historical).
-*cRYPTOPUNKSGetMarketplaceDailySnapshots (historical)ASync* | *GET* /dapps/cryptopunks/marketplaceDailySnapshots/historical | MarketplaceDailySnapshots (historical).
-*cRYPTOPUNKSGetTrades (historical)Sync* | *GET* /dapps/cryptopunks/trades/historical | Trades (historical).
-*cRYPTOPUNKSGetTrades (historical)ASync* | *GET* /dapps/cryptopunks/trades/historical | Trades (historical).
-*cRYPTOPUNKSGetUsers (historical)Sync* | *GET* /dapps/cryptopunks/users/historical | Users (historical).
-*cRYPTOPUNKSGetUsers (historical)ASync* | *GET* /dapps/cryptopunks/users/historical | Users (historical).
 *cRYPTOPUNKSItems (current)Sync* | *GET* /dapps/cryptopunks/items/current | Items (current).
 *cRYPTOPUNKSItems (current)ASync* | *GET* /dapps/cryptopunks/items/current | Items (current).
 *cRYPTOPUNKSMarketPlaces (current)Sync* | *GET* /dapps/cryptopunks/marketPlaces/current | MarketPlaces (current).
@@ -83,16 +65,6 @@ Method | HTTP request | Description
 ### CowManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-*cowGetOrders (historical)Sync* | *GET* /dapps/cow/orders/historical | Orders (historical).
-*cowGetOrders (historical)ASync* | *GET* /dapps/cow/orders/historical | Orders (historical).
-*cowGetSettlements (historical)Sync* | *GET* /dapps/cow/settlements/historical | Settlements (historical).
-*cowGetSettlements (historical)ASync* | *GET* /dapps/cow/settlements/historical | Settlements (historical).
-*cowGetTokens (historical)Sync* | *GET* /dapps/cow/tokens/historical | Tokens (historical).
-*cowGetTokens (historical)ASync* | *GET* /dapps/cow/tokens/historical | Tokens (historical).
-*cowGetTrades (historical)Sync* | *GET* /dapps/cow/trades/historical | Trades (historical).
-*cowGetTrades (historical)ASync* | *GET* /dapps/cow/trades/historical | Trades (historical).
-*cowGetUsers (historical)Sync* | *GET* /dapps/cow/users/historical | Users (historical).
-*cowGetUsers (historical)ASync* | *GET* /dapps/cow/users/historical | Users (historical).
 *cowOrders (current)Sync* | *GET* /dapps/cow/orders/current | Orders (current).
 *cowOrders (current)ASync* | *GET* /dapps/cow/orders/current | Orders (current).
 *cowSettlements (current)Sync* | *GET* /dapps/cow/settlements/current | Settlements (current).
@@ -146,70 +118,6 @@ Method | HTTP request | Description
 *curveGaugeWithdraws (current)ASync* | *GET* /dapps/curve/gaugeWithdraws/current | GaugeWithdraws (current).
 *curveGauges (current)Sync* | *GET* /dapps/curve/gauges/current | Gauges (current).
 *curveGauges (current)ASync* | *GET* /dapps/curve/gauges/current | Gauges (current).
-*curveGetAccounts (historical)Sync* | *GET* /dapps/curve/accounts/historical | Accounts (historical).
-*curveGetAccounts (historical)ASync* | *GET* /dapps/curve/accounts/historical | Accounts (historical).
-*curveGetAddLiquidityEvents (historical)Sync* | *GET* /dapps/curve/addLiquidityEvents/historical | AddLiquidityEvents (historical).
-*curveGetAddLiquidityEvents (historical)ASync* | *GET* /dapps/curve/addLiquidityEvents/historical | AddLiquidityEvents (historical).
-*curveGetAdminFeeChangeLogs (historical)Sync* | *GET* /dapps/curve/adminFeeChangeLogs/historical | AdminFeeChangeLogs (historical).
-*curveGetAdminFeeChangeLogs (historical)ASync* | *GET* /dapps/curve/adminFeeChangeLogs/historical | AdminFeeChangeLogs (historical).
-*curveGetAmplificationCoeffChangeLogs (historical)Sync* | *GET* /dapps/curve/amplificationCoeffChangeLogs/historical | AmplificationCoeffChangeLogs (historical).
-*curveGetAmplificationCoeffChangeLogs (historical)ASync* | *GET* /dapps/curve/amplificationCoeffChangeLogs/historical | AmplificationCoeffChangeLogs (historical).
-*curveGetCoins (historical)Sync* | *GET* /dapps/curve/coins/historical | Coins (historical).
-*curveGetCoins (historical)ASync* | *GET* /dapps/curve/coins/historical | Coins (historical).
-*curveGetContractVersions (historical)Sync* | *GET* /dapps/curve/contractVersions/historical | ContractVersions (historical).
-*curveGetContractVersions (historical)ASync* | *GET* /dapps/curve/contractVersions/historical | ContractVersions (historical).
-*curveGetContracts (historical)Sync* | *GET* /dapps/curve/contracts/historical | Contracts (historical).
-*curveGetContracts (historical)ASync* | *GET* /dapps/curve/contracts/historical | Contracts (historical).
-*curveGetDailyVolumes (historical)Sync* | *GET* /dapps/curve/dailyVolumes/historical | DailyVolumes (historical).
-*curveGetDailyVolumes (historical)ASync* | *GET* /dapps/curve/dailyVolumes/historical | DailyVolumes (historical).
-*curveGetExchanges (historical)Sync* | *GET* /dapps/curve/exchanges/historical | Exchanges (historical).
-*curveGetExchanges (historical)ASync* | *GET* /dapps/curve/exchanges/historical | Exchanges (historical).
-*curveGetFeeChangeLogs (historical)Sync* | *GET* /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical).
-*curveGetFeeChangeLogs (historical)ASync* | *GET* /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical).
-*curveGetGaugeDeposits (historical)Sync* | *GET* /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical).
-*curveGetGaugeDeposits (historical)ASync* | *GET* /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical).
-*curveGetGaugeLiquidities (historical)Sync* | *GET* /dapps/curve/gaugeLiquidities/historical | GaugeLiquidities (historical).
-*curveGetGaugeLiquidities (historical)ASync* | *GET* /dapps/curve/gaugeLiquidities/historical | GaugeLiquidities (historical).
-*curveGetGaugeTotalWeights (historical)Sync* | *GET* /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical).
-*curveGetGaugeTotalWeights (historical)ASync* | *GET* /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical).
-*curveGetGaugeTypeWeights (historical)Sync* | *GET* /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical).
-*curveGetGaugeTypeWeights (historical)ASync* | *GET* /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical).
-*curveGetGaugeTypes (historical)Sync* | *GET* /dapps/curve/gaugeTypes/historical | GaugeTypes (historical).
-*curveGetGaugeTypes (historical)ASync* | *GET* /dapps/curve/gaugeTypes/historical | GaugeTypes (historical).
-*curveGetGaugeWeightVotes (historical)Sync* | *GET* /dapps/curve/gaugeWeightVotes/historical | GaugeWeightVotes (historical).
-*curveGetGaugeWeightVotes (historical)ASync* | *GET* /dapps/curve/gaugeWeightVotes/historical | GaugeWeightVotes (historical).
-*curveGetGaugeWeights (historical)Sync* | *GET* /dapps/curve/gaugeWeights/historical | GaugeWeights (historical).
-*curveGetGaugeWeights (historical)ASync* | *GET* /dapps/curve/gaugeWeights/historical | GaugeWeights (historical).
-*curveGetGaugeWithdraws (historical)Sync* | *GET* /dapps/curve/gaugeWithdraws/historical | GaugeWithdraws (historical).
-*curveGetGaugeWithdraws (historical)ASync* | *GET* /dapps/curve/gaugeWithdraws/historical | GaugeWithdraws (historical).
-*curveGetGauges (historical)Sync* | *GET* /dapps/curve/gauges/historical | Gauges (historical).
-*curveGetGauges (historical)ASync* | *GET* /dapps/curve/gauges/historical | Gauges (historical).
-*curveGetHourlyVolumes (historical)Sync* | *GET* /dapps/curve/hourlyVolumes/historical | HourlyVolumes (historical).
-*curveGetHourlyVolumes (historical)ASync* | *GET* /dapps/curve/hourlyVolumes/historical | HourlyVolumes (historical).
-*curveGetLpTokens (historical)Sync* | *GET* /dapps/curve/lpTokens/historical | LpTokens (historical).
-*curveGetLpTokens (historical)ASync* | *GET* /dapps/curve/lpTokens/historical | LpTokens (historical).
-*curveGetPools (historical)Sync* | *GET* /dapps/curve/pools/historical | Pools (historical).
-*curveGetPools (historical)ASync* | *GET* /dapps/curve/pools/historical | Pools (historical).
-*curveGetProposalVotes (historical)Sync* | *GET* /dapps/curve/proposalVotes/historical | ProposalVotes (historical).
-*curveGetProposalVotes (historical)ASync* | *GET* /dapps/curve/proposalVotes/historical | ProposalVotes (historical).
-*curveGetProposals (historical)Sync* | *GET* /dapps/curve/proposals/historical | Proposals (historical).
-*curveGetProposals (historical)ASync* | *GET* /dapps/curve/proposals/historical | Proposals (historical).
-*curveGetRemoveLiquidityEvents (historical)Sync* | *GET* /dapps/curve/removeLiquidityEvents/historical | RemoveLiquidityEvents (historical).
-*curveGetRemoveLiquidityEvents (historical)ASync* | *GET* /dapps/curve/removeLiquidityEvents/historical | RemoveLiquidityEvents (historical).
-*curveGetRemoveLiquidityOneEvents (historical)Sync* | *GET* /dapps/curve/removeLiquidityOneEvents/historical | RemoveLiquidityOneEvents (historical).
-*curveGetRemoveLiquidityOneEvents (historical)ASync* | *GET* /dapps/curve/removeLiquidityOneEvents/historical | RemoveLiquidityOneEvents (historical).
-*curveGetSystemStates (historical)Sync* | *GET* /dapps/curve/systemStates/historical | SystemStates (historical).
-*curveGetSystemStates (historical)ASync* | *GET* /dapps/curve/systemStates/historical | SystemStates (historical).
-*curveGetTokens (historical)Sync* | *GET* /dapps/curve/tokens/historical | Tokens (historical).
-*curveGetTokens (historical)ASync* | *GET* /dapps/curve/tokens/historical | Tokens (historical).
-*curveGetTransferOwnershipEvents (historical)Sync* | *GET* /dapps/curve/transferOwnershipEvents/historical | TransferOwnershipEvents (historical).
-*curveGetTransferOwnershipEvents (historical)ASync* | *GET* /dapps/curve/transferOwnershipEvents/historical | TransferOwnershipEvents (historical).
-*curveGetUnderlyingCoins (historical)Sync* | *GET* /dapps/curve/underlyingCoins/historical | UnderlyingCoins (historical).
-*curveGetUnderlyingCoins (historical)ASync* | *GET* /dapps/curve/underlyingCoins/historical | UnderlyingCoins (historical).
-*curveGetVotingApps (historical)Sync* | *GET* /dapps/curve/votingApps/historical | VotingApps (historical).
-*curveGetVotingApps (historical)ASync* | *GET* /dapps/curve/votingApps/historical | VotingApps (historical).
-*curveGetWeeklyVolumes (historical)Sync* | *GET* /dapps/curve/weeklyVolumes/historical | WeeklyVolumes (historical).
-*curveGetWeeklyVolumes (historical)ASync* | *GET* /dapps/curve/weeklyVolumes/historical | WeeklyVolumes (historical).
 *curveHourlyVolumes (current)Sync* | *GET* /dapps/curve/hourlyVolumes/current | HourlyVolumes (current).
 *curveHourlyVolumes (current)ASync* | *GET* /dapps/curve/hourlyVolumes/current | HourlyVolumes (current).
 *curveLpTokens (current)Sync* | *GET* /dapps/curve/lpTokens/current | LpTokens (current).
@@ -245,28 +153,6 @@ Method | HTTP request | Description
 *dexBatches (current)ASync* | *GET* /dapps/dex/batches/current | Batches (current).
 *dexDeposits (current)Sync* | *GET* /dapps/dex/deposits/current | Deposits (current).
 *dexDeposits (current)ASync* | *GET* /dapps/dex/deposits/current | Deposits (current).
-*dexGetBatches (historical)Sync* | *GET* /dapps/dex/batches/historical | Batches (historical).
-*dexGetBatches (historical)ASync* | *GET* /dapps/dex/batches/historical | Batches (historical).
-*dexGetDeposits (historical)Sync* | *GET* /dapps/dex/deposits/historical | Deposits (historical).
-*dexGetDeposits (historical)ASync* | *GET* /dapps/dex/deposits/historical | Deposits (historical).
-*dexGetOrders (historical)Sync* | *GET* /dapps/dex/orders/historical | Orders (historical).
-*dexGetOrders (historical)ASync* | *GET* /dapps/dex/orders/historical | Orders (historical).
-*dexGetPrices (historical)Sync* | *GET* /dapps/dex/prices/historical | Prices (historical).
-*dexGetPrices (historical)ASync* | *GET* /dapps/dex/prices/historical | Prices (historical).
-*dexGetSolutions (historical)Sync* | *GET* /dapps/dex/solutions/historical | Solutions (historical).
-*dexGetSolutions (historical)ASync* | *GET* /dapps/dex/solutions/historical | Solutions (historical).
-*dexGetStats (historical)Sync* | *GET* /dapps/dex/stats/historical | Stats (historical).
-*dexGetStats (historical)ASync* | *GET* /dapps/dex/stats/historical | Stats (historical).
-*dexGetTokens (historical)Sync* | *GET* /dapps/dex/tokens/historical | Tokens (historical).
-*dexGetTokens (historical)ASync* | *GET* /dapps/dex/tokens/historical | Tokens (historical).
-*dexGetTrades (historical)Sync* | *GET* /dapps/dex/trades/historical | Trades (historical).
-*dexGetTrades (historical)ASync* | *GET* /dapps/dex/trades/historical | Trades (historical).
-*dexGetUsers (historical)Sync* | *GET* /dapps/dex/users/historical | Users (historical).
-*dexGetUsers (historical)ASync* | *GET* /dapps/dex/users/historical | Users (historical).
-*dexGetWithdrawRequests (historical)Sync* | *GET* /dapps/dex/withdrawRequests/historical | WithdrawRequests (historical).
-*dexGetWithdrawRequests (historical)ASync* | *GET* /dapps/dex/withdrawRequests/historical | WithdrawRequests (historical).
-*dexGetWithdraws (historical)Sync* | *GET* /dapps/dex/withdraws/historical | Withdraws (historical).
-*dexGetWithdraws (historical)ASync* | *GET* /dapps/dex/withdraws/historical | Withdraws (historical).
 *dexOrders (current)Sync* | *GET* /dapps/dex/orders/current | Orders (current).
 *dexOrders (current)ASync* | *GET* /dapps/dex/orders/current | Orders (current).
 *dexPrices (current)Sync* | *GET* /dapps/dex/prices/current | Prices (current).
@@ -309,38 +195,6 @@ Method | HTTP request | Description
 *sushiswapDayData (current)ASync* | *GET* /dapps/sushiswap/dayData/current | DayData (current).
 *sushiswapFactories (current)Sync* | *GET* /dapps/sushiswap/factories/current | Factories (current).
 *sushiswapFactories (current)ASync* | *GET* /dapps/sushiswap/factories/current | Factories (current).
-*sushiswapGetBundles (historical)Sync* | *GET* /dapps/sushiswap/bundles/historical | Bundles (historical).
-*sushiswapGetBundles (historical)ASync* | *GET* /dapps/sushiswap/bundles/historical | Bundles (historical).
-*sushiswapGetBurns (historical)Sync* | *GET* /dapps/sushiswap/burns/historical | Burns (historical).
-*sushiswapGetBurns (historical)ASync* | *GET* /dapps/sushiswap/burns/historical | Burns (historical).
-*sushiswapGetDayData (historical)Sync* | *GET* /dapps/sushiswap/dayData/historical | DayData (historical).
-*sushiswapGetDayData (historical)ASync* | *GET* /dapps/sushiswap/dayData/historical | DayData (historical).
-*sushiswapGetFactories (historical)Sync* | *GET* /dapps/sushiswap/factories/historical | Factories (historical).
-*sushiswapGetFactories (historical)ASync* | *GET* /dapps/sushiswap/factories/historical | Factories (historical).
-*sushiswapGetHourData (historical)Sync* | *GET* /dapps/sushiswap/hourData/historical | HourData (historical).
-*sushiswapGetHourData (historical)ASync* | *GET* /dapps/sushiswap/hourData/historical | HourData (historical).
-*sushiswapGetLiquidityPositionSnapshots (historical)Sync* | *GET* /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical).
-*sushiswapGetLiquidityPositionSnapshots (historical)ASync* | *GET* /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical).
-*sushiswapGetLiquidityPositions (historical)Sync* | *GET* /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical).
-*sushiswapGetLiquidityPositions (historical)ASync* | *GET* /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical).
-*sushiswapGetMints (historical)Sync* | *GET* /dapps/sushiswap/mints/historical | Mints (historical).
-*sushiswapGetMints (historical)ASync* | *GET* /dapps/sushiswap/mints/historical | Mints (historical).
-*sushiswapGetPairDayData (historical)Sync* | *GET* /dapps/sushiswap/pairDayData/historical | PairDayData (historical).
-*sushiswapGetPairDayData (historical)ASync* | *GET* /dapps/sushiswap/pairDayData/historical | PairDayData (historical).
-*sushiswapGetPairHourData (historical)Sync* | *GET* /dapps/sushiswap/pairHourData/historical | PairHourData (historical).
-*sushiswapGetPairHourData (historical)ASync* | *GET* /dapps/sushiswap/pairHourData/historical | PairHourData (historical).
-*sushiswapGetPairs (historical)Sync* | *GET* /dapps/sushiswap/pairs/historical | Pairs (historical).
-*sushiswapGetPairs (historical)ASync* | *GET* /dapps/sushiswap/pairs/historical | Pairs (historical).
-*sushiswapGetSwaps (historical)Sync* | *GET* /dapps/sushiswap/swaps/historical | Swaps (historical).
-*sushiswapGetSwaps (historical)ASync* | *GET* /dapps/sushiswap/swaps/historical | Swaps (historical).
-*sushiswapGetTokenDayData (historical)Sync* | *GET* /dapps/sushiswap/tokenDayData/historical | TokenDayData (historical).
-*sushiswapGetTokenDayData (historical)ASync* | *GET* /dapps/sushiswap/tokenDayData/historical | TokenDayData (historical).
-*sushiswapGetTokens (historical)Sync* | *GET* /dapps/sushiswap/tokens/historical | Tokens (historical).
-*sushiswapGetTokens (historical)ASync* | *GET* /dapps/sushiswap/tokens/historical | Tokens (historical).
-*sushiswapGetTransactions (historical)Sync* | *GET* /dapps/sushiswap/transactions/historical | Transactions (historical).
-*sushiswapGetTransactions (historical)ASync* | *GET* /dapps/sushiswap/transactions/historical | Transactions (historical).
-*sushiswapGetUsers (historical)Sync* | *GET* /dapps/sushiswap/users/historical | Users (historical).
-*sushiswapGetUsers (historical)ASync* | *GET* /dapps/sushiswap/users/historical | Users (historical).
 *sushiswapHourData (current)Sync* | *GET* /dapps/sushiswap/hourData/current | HourData (current).
 *sushiswapHourData (current)ASync* | *GET* /dapps/sushiswap/hourData/current | HourData (current).
 *sushiswapLiquidityPositionSnapshots (current)Sync* | *GET* /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current).
@@ -367,6 +221,17 @@ Method | HTTP request | Description
 *sushiswapUsers (current)ASync* | *GET* /dapps/sushiswap/users/current | Users (current).
 
 
+### UNISWAPV3ETHEREUMManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*uNISWAPV3ETHEREUMAccounts (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/accounts/current | Accounts (current).
+*uNISWAPV3ETHEREUMAccounts (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/accounts/current | Accounts (current).
+*uNISWAPV3ETHEREUMSwaps (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/swaps/current | Swaps (current).
+*uNISWAPV3ETHEREUMSwaps (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/swaps/current | Swaps (current).
+*uNISWAPV3ETHEREUMTokens (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/tokens/current | Tokens (current).
+*uNISWAPV3ETHEREUMTokens (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/tokens/current | Tokens (current).
+
+
 ### UniswapV2Manager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -374,36 +239,6 @@ Method | HTTP request | Description
 *uniswapV2Bundles (current)ASync* | *GET* /dapps/uniswapv2/bundles/current | Bundles (current).
 *uniswapV2Burns (current)Sync* | *GET* /dapps/uniswapv2/burns/current | Burns (current).
 *uniswapV2Burns (current)ASync* | *GET* /dapps/uniswapv2/burns/current | Burns (current).
-*uniswapV2GetBundles (historical)Sync* | *GET* /dapps/uniswapv2/bundles/historical | Bundles (historical).
-*uniswapV2GetBundles (historical)ASync* | *GET* /dapps/uniswapv2/bundles/historical | Bundles (historical).
-*uniswapV2GetBurns (historical)Sync* | *GET* /dapps/uniswapv2/burns/historical | Burns (historical).
-*uniswapV2GetBurns (historical)ASync* | *GET* /dapps/uniswapv2/burns/historical | Burns (historical).
-*uniswapV2GetLiquidityPositionSnapshots (historical)Sync* | *GET* /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical).
-*uniswapV2GetLiquidityPositionSnapshots (historical)ASync* | *GET* /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical).
-*uniswapV2GetLiquidityPositions (historical)Sync* | *GET* /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical).
-*uniswapV2GetLiquidityPositions (historical)ASync* | *GET* /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical).
-*uniswapV2GetMints (historical)Sync* | *GET* /dapps/uniswapv2/mints/historical | Mints (historical).
-*uniswapV2GetMints (historical)ASync* | *GET* /dapps/uniswapv2/mints/historical | Mints (historical).
-*uniswapV2GetPairDayData (historical)Sync* | *GET* /dapps/uniswapv2/pairDayData/historical | PairDayData (historical).
-*uniswapV2GetPairDayData (historical)ASync* | *GET* /dapps/uniswapv2/pairDayData/historical | PairDayData (historical).
-*uniswapV2GetPairHourData (historical)Sync* | *GET* /dapps/uniswapv2/pairHourData/historical | PairHourData (historical).
-*uniswapV2GetPairHourData (historical)ASync* | *GET* /dapps/uniswapv2/pairHourData/historical | PairHourData (historical).
-*uniswapV2GetPairs (historical)Sync* | *GET* /dapps/uniswapv2/pairs/historical | Pairs (historical).
-*uniswapV2GetPairs (historical)ASync* | *GET* /dapps/uniswapv2/pairs/historical | Pairs (historical).
-*uniswapV2GetSwaps (historical)Sync* | *GET* /dapps/uniswapv2/swaps/historical | Swaps (historical).
-*uniswapV2GetSwaps (historical)ASync* | *GET* /dapps/uniswapv2/swaps/historical | Swaps (historical).
-*uniswapV2GetTokenDayData (historical)Sync* | *GET* /dapps/uniswapv2/tokenDayData/historical | TokenDayData (historical).
-*uniswapV2GetTokenDayData (historical)ASync* | *GET* /dapps/uniswapv2/tokenDayData/historical | TokenDayData (historical).
-*uniswapV2GetTokens (historical)Sync* | *GET* /dapps/uniswapv2/tokens/historical | Tokens (historical).
-*uniswapV2GetTokens (historical)ASync* | *GET* /dapps/uniswapv2/tokens/historical | Tokens (historical).
-*uniswapV2GetTransactions (historical)Sync* | *GET* /dapps/uniswapv2/transactions/historical | Transactions (historical).
-*uniswapV2GetTransactions (historical)ASync* | *GET* /dapps/uniswapv2/transactions/historical | Transactions (historical).
-*uniswapV2GetUniswapDayData (historical)Sync* | *GET* /dapps/uniswapv2/uniswapDayData/historical | UniswapDayData (historical).
-*uniswapV2GetUniswapDayData (historical)ASync* | *GET* /dapps/uniswapv2/uniswapDayData/historical | UniswapDayData (historical).
-*uniswapV2GetUniswapFactories (historical)Sync* | *GET* /dapps/uniswapv2/uniswapFactories/historical | UniswapFactories (historical).
-*uniswapV2GetUniswapFactories (historical)ASync* | *GET* /dapps/uniswapv2/uniswapFactories/historical | UniswapFactories (historical).
-*uniswapV2GetUsers (historical)Sync* | *GET* /dapps/uniswapv2/users/historical | Users (historical).
-*uniswapV2GetUsers (historical)ASync* | *GET* /dapps/uniswapv2/users/historical | Users (historical).
 *uniswapV2LiquidityPositionSnapshots (current)Sync* | *GET* /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current).
 *uniswapV2LiquidityPositionSnapshots (current)ASync* | *GET* /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current).
 *uniswapV2LiquidityPositions (current)Sync* | *GET* /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current).
@@ -441,40 +276,6 @@ Method | HTTP request | Description
 *uniswapV3Burns (current)ASync* | *GET* /dapps/uniswapv3/burns/current | Burns (current).
 *uniswapV3Factories (current)Sync* | *GET* /dapps/uniswapv3/factories/current | Factories (current).
 *uniswapV3Factories (current)ASync* | *GET* /dapps/uniswapv3/factories/current | Factories (current).
-*uniswapV3GetBundles (historical)Sync* | *GET* /dapps/uniswapv3/bundles/historical | Bundles (historical).
-*uniswapV3GetBundles (historical)ASync* | *GET* /dapps/uniswapv3/bundles/historical | Bundles (historical).
-*uniswapV3GetBurns (historical)Sync* | *GET* /dapps/uniswapv3/burns/historical | Burns (historical).
-*uniswapV3GetBurns (historical)ASync* | *GET* /dapps/uniswapv3/burns/historical | Burns (historical).
-*uniswapV3GetFactories (historical)Sync* | *GET* /dapps/uniswapv3/factories/historical | Factories (historical).
-*uniswapV3GetFactories (historical)ASync* | *GET* /dapps/uniswapv3/factories/historical | Factories (historical).
-*uniswapV3GetMints (historical)Sync* | *GET* /dapps/uniswapv3/mints/historical | Mints (historical).
-*uniswapV3GetMints (historical)ASync* | *GET* /dapps/uniswapv3/mints/historical | Mints (historical).
-*uniswapV3GetPoolDayData (historical)Sync* | *GET* /dapps/uniswapv3/poolDayData/historical | PoolDayData (historical).
-*uniswapV3GetPoolDayData (historical)ASync* | *GET* /dapps/uniswapv3/poolDayData/historical | PoolDayData (historical).
-*uniswapV3GetPoolHourData (historical)Sync* | *GET* /dapps/uniswapv3/poolHourData/historical | PoolHourData (historical).
-*uniswapV3GetPoolHourData (historical)ASync* | *GET* /dapps/uniswapv3/poolHourData/historical | PoolHourData (historical).
-*uniswapV3GetPools (historical)Sync* | *GET* /dapps/uniswapv3/pools/historical | Pools (historical).
-*uniswapV3GetPools (historical)ASync* | *GET* /dapps/uniswapv3/pools/historical | Pools (historical).
-*uniswapV3GetPositionSnapshots (historical)Sync* | *GET* /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical).
-*uniswapV3GetPositionSnapshots (historical)ASync* | *GET* /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical).
-*uniswapV3GetPositions (historical)Sync* | *GET* /dapps/uniswapv3/positions/historical | Positions (historical).
-*uniswapV3GetPositions (historical)ASync* | *GET* /dapps/uniswapv3/positions/historical | Positions (historical).
-*uniswapV3GetSwaps (historical)Sync* | *GET* /dapps/uniswapv3/swaps/historical | Swaps (historical).
-*uniswapV3GetSwaps (historical)ASync* | *GET* /dapps/uniswapv3/swaps/historical | Swaps (historical).
-*uniswapV3GetTickDayData (historical)Sync* | *GET* /dapps/uniswapv3/tickDayData/historical | TickDayData (historical).
-*uniswapV3GetTickDayData (historical)ASync* | *GET* /dapps/uniswapv3/tickDayData/historical | TickDayData (historical).
-*uniswapV3GetTicks (historical)Sync* | *GET* /dapps/uniswapv3/ticks/historical | Ticks (historical).
-*uniswapV3GetTicks (historical)ASync* | *GET* /dapps/uniswapv3/ticks/historical | Ticks (historical).
-*uniswapV3GetTokenHourData (historical)Sync* | *GET* /dapps/uniswapv3/tokenHourData/historical | TokenHourData (historical).
-*uniswapV3GetTokenHourData (historical)ASync* | *GET* /dapps/uniswapv3/tokenHourData/historical | TokenHourData (historical).
-*uniswapV3GetTokenV3DayData (historical)Sync* | *GET* /dapps/uniswapv3/tokenV3DayData/historical | TokenV3DayData (historical).
-*uniswapV3GetTokenV3DayData (historical)ASync* | *GET* /dapps/uniswapv3/tokenV3DayData/historical | TokenV3DayData (historical).
-*uniswapV3GetTokens (historical)Sync* | *GET* /dapps/uniswapv3/tokens/historical | Tokens (historical).
-*uniswapV3GetTokens (historical)ASync* | *GET* /dapps/uniswapv3/tokens/historical | Tokens (historical).
-*uniswapV3GetTransactions (historical)Sync* | *GET* /dapps/uniswapv3/transactions/historical | Transactions (historical).
-*uniswapV3GetTransactions (historical)ASync* | *GET* /dapps/uniswapv3/transactions/historical | Transactions (historical).
-*uniswapV3GetUniswapDayData (historical)Sync* | *GET* /dapps/uniswapv3/uniswapDayData/historical | UniswapDayData (historical).
-*uniswapV3GetUniswapDayData (historical)ASync* | *GET* /dapps/uniswapv3/uniswapDayData/historical | UniswapDayData (historical).
 *uniswapV3Mints (current)Sync* | *GET* /dapps/uniswapv3/mints/current | Mints (current).
 *uniswapV3Mints (current)ASync* | *GET* /dapps/uniswapv3/mints/current | Mints (current).
 *uniswapV3PoolDayData (current)Sync* | *GET* /dapps/uniswapv3/poolDayData/current | PoolDayData (current).
@@ -583,6 +384,9 @@ Class | Description
  *Sushiswap.TransactionDTO* | Transaction entities are created for each Ethereum transaction that contains an interaction within Sushiswap contracts. Each transaction contains 3 arrays, and at least one of these arrays has a length of 1.
  *Sushiswap.UserDTO* | 
  *Transactions.ETradeAggressiveSide* | 
+ *UNISWAP_V3_ETHEREUM.AccountDTO* | 
+ *UNISWAP_V3_ETHEREUM.SwapDTO* | Swap are created for each token swap within a pair.
+ *UNISWAP_V3_ETHEREUM.TokenDTO* | Stores aggregated information for a specific token across all pairs that token is included in.
  *UniswapV2.BundleDTO* | The Bundle is used as a global store of derived ETH price in USD. Because there is no guaranteed common base token across pairs, a global reference of USD price is useful for deriving other USD values. The Bundle entity stores an updated weighted average of ETH<->Stablecoin pair prices. This provides a strong estimate for the USD price of ETH.
  *UniswapV2.BurnDTO* | Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned LP tokens, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
  *UniswapV2.LiquidityPositionDTO* | This entity is used to store data about a user's liquidity position. This information, along with information from the pair itself can be used to provide position sizes, token deposits, and more.

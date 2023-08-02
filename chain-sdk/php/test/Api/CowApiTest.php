@@ -73,66 +73,6 @@ class CowApiTest extends TestCase
     }
 
     /**
-     * Test case for cowGetOrdersHistorical
-     *
-     * Orders (historical).
-     *
-     */
-    public function testCowGetOrdersHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for cowGetSettlementsHistorical
-     *
-     * Settlements (historical).
-     *
-     */
-    public function testCowGetSettlementsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for cowGetTokensHistorical
-     *
-     * Tokens (historical).
-     *
-     */
-    public function testCowGetTokensHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for cowGetTradesHistorical
-     *
-     * Trades (historical).
-     *
-     */
-    public function testCowGetTradesHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for cowGetUsersHistorical
-     *
-     * Users (historical).
-     *
-     */
-    public function testCowGetUsersHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for cowOrdersCurrent
      *
      * Orders (current).

@@ -12,21 +12,6 @@
 
 from openapi_client.paths.dapps_uniswapv2_bundles_current.get import UniswapV2BundlesCurrent
 from openapi_client.paths.dapps_uniswapv2_burns_current.get import UniswapV2BurnsCurrent
-from openapi_client.paths.dapps_uniswapv2_bundles_historical.get import UniswapV2GetBundlesHistorical
-from openapi_client.paths.dapps_uniswapv2_burns_historical.get import UniswapV2GetBurnsHistorical
-from openapi_client.paths.dapps_uniswapv2_liquidity_position_snapshots_historical.get import UniswapV2GetLiquidityPositionSnapshotsHistorical
-from openapi_client.paths.dapps_uniswapv2_liquidity_positions_historical.get import UniswapV2GetLiquidityPositionsHistorical
-from openapi_client.paths.dapps_uniswapv2_mints_historical.get import UniswapV2GetMintsHistorical
-from openapi_client.paths.dapps_uniswapv2_pair_day_data_historical.get import UniswapV2GetPairDayDataHistorical
-from openapi_client.paths.dapps_uniswapv2_pair_hour_data_historical.get import UniswapV2GetPairHourDataHistorical
-from openapi_client.paths.dapps_uniswapv2_pairs_historical.get import UniswapV2GetPairsHistorical
-from openapi_client.paths.dapps_uniswapv2_swaps_historical.get import UniswapV2GetSwapsHistorical
-from openapi_client.paths.dapps_uniswapv2_token_day_data_historical.get import UniswapV2GetTokenDayDataHistorical
-from openapi_client.paths.dapps_uniswapv2_tokens_historical.get import UniswapV2GetTokensHistorical
-from openapi_client.paths.dapps_uniswapv2_transactions_historical.get import UniswapV2GetTransactionsHistorical
-from openapi_client.paths.dapps_uniswapv2_uniswap_day_data_historical.get import UniswapV2GetUniswapDayDataHistorical
-from openapi_client.paths.dapps_uniswapv2_uniswap_factories_historical.get import UniswapV2GetUniswapFactoriesHistorical
-from openapi_client.paths.dapps_uniswapv2_users_historical.get import UniswapV2GetUsersHistorical
 from openapi_client.paths.dapps_uniswapv2_liquidity_position_snapshots_current.get import UniswapV2LiquidityPositionSnapshotsCurrent
 from openapi_client.paths.dapps_uniswapv2_liquidity_positions_current.get import UniswapV2LiquidityPositionsCurrent
 from openapi_client.paths.dapps_uniswapv2_mints_current.get import UniswapV2MintsCurrent
@@ -45,21 +30,6 @@ from openapi_client.paths.dapps_uniswapv2_users_current.get import UniswapV2User
 class UniswapV2Api(
     UniswapV2BundlesCurrent,
     UniswapV2BurnsCurrent,
-    UniswapV2GetBundlesHistorical,
-    UniswapV2GetBurnsHistorical,
-    UniswapV2GetLiquidityPositionSnapshotsHistorical,
-    UniswapV2GetLiquidityPositionsHistorical,
-    UniswapV2GetMintsHistorical,
-    UniswapV2GetPairDayDataHistorical,
-    UniswapV2GetPairHourDataHistorical,
-    UniswapV2GetPairsHistorical,
-    UniswapV2GetSwapsHistorical,
-    UniswapV2GetTokenDayDataHistorical,
-    UniswapV2GetTokensHistorical,
-    UniswapV2GetTransactionsHistorical,
-    UniswapV2GetUniswapDayDataHistorical,
-    UniswapV2GetUniswapFactoriesHistorical,
-    UniswapV2GetUsersHistorical,
     UniswapV2LiquidityPositionSnapshotsCurrent,
     UniswapV2LiquidityPositionsCurrent,
     UniswapV2MintsCurrent,

@@ -19,15 +19,6 @@ module Api.Request.CRYPTOPUNKS exposing
     , cRYPTOPUNKSCollectionDailySnapshotsCurrent
     , cRYPTOPUNKSCollectionsCurrent
     , cRYPTOPUNKSDataSourcesCurrent
-    , cRYPTOPUNKSGetBidsHistorical
-    , cRYPTOPUNKSGetCollectionDailySnapshotsHistorical
-    , cRYPTOPUNKSGetCollectionsHistorical
-    , cRYPTOPUNKSGetDataSourcesHistorical
-    , cRYPTOPUNKSGetItemsHistorical
-    , cRYPTOPUNKSGetMarketPlacesHistorical
-    , cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical
-    , cRYPTOPUNKSGetTradesHistorical
-    , cRYPTOPUNKSGetUsersHistorical
     , cRYPTOPUNKSItemsCurrent
     , cRYPTOPUNKSMarketPlacesCurrent
     , cRYPTOPUNKSMarketplaceDailySnapshotsCurrent
@@ -37,7 +28,6 @@ module Api.Request.CRYPTOPUNKS exposing
 
 import Api
 import Api.Data exposing (..)
-import Api.Time exposing (Posix)
 import Dict
 import Http
 import Json.Decode
@@ -97,132 +87,6 @@ cRYPTOPUNKSDataSourcesCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.cRYPTOPUNKSDataSourcesDTODecoder)
-
-
-{-| Gets bids.
--}
-cRYPTOPUNKSGetBidsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CRYPTOPUNKSBidDTO)
-cRYPTOPUNKSGetBidsHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
-    Api.request
-        "GET"
-        "/dapps/cryptopunks/bids/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.cRYPTOPUNKSBidDTODecoder)
-
-
-{-| Gets collectionDailySnapshots.
--}
-cRYPTOPUNKSGetCollectionDailySnapshotsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CRYPTOPUNKSCollectionDailySnapshotDTO)
-cRYPTOPUNKSGetCollectionDailySnapshotsHistorical startBlock_query endBlock_query startDate_query endDate_query =
-    Api.request
-        "GET"
-        "/dapps/cryptopunks/collectionDailySnapshots/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.cRYPTOPUNKSCollectionDailySnapshotDTODecoder)
-
-
-{-| Gets collections.
--}
-cRYPTOPUNKSGetCollectionsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CRYPTOPUNKSCollectionDTO)
-cRYPTOPUNKSGetCollectionsHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
-    Api.request
-        "GET"
-        "/dapps/cryptopunks/collections/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.cRYPTOPUNKSCollectionDTODecoder)
-
-
-{-| Gets dataSources.
--}
-cRYPTOPUNKSGetDataSourcesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CRYPTOPUNKSDataSourcesDTO)
-cRYPTOPUNKSGetDataSourcesHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
-    Api.request
-        "GET"
-        "/dapps/cryptopunks/dataSources/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.cRYPTOPUNKSDataSourcesDTODecoder)
-
-
-{-| Gets items.
--}
-cRYPTOPUNKSGetItemsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CRYPTOPUNKSItemDTO)
-cRYPTOPUNKSGetItemsHistorical startBlock_query endBlock_query startDate_query endDate_query =
-    Api.request
-        "GET"
-        "/dapps/cryptopunks/items/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.cRYPTOPUNKSItemDTODecoder)
-
-
-{-| Gets marketPlaces.
--}
-cRYPTOPUNKSGetMarketPlacesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CRYPTOPUNKSMarketPlaceDTO)
-cRYPTOPUNKSGetMarketPlacesHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
-    Api.request
-        "GET"
-        "/dapps/cryptopunks/marketPlaces/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.cRYPTOPUNKSMarketPlaceDTODecoder)
-
-
-{-| Gets marketplaceDailySnapshots.
--}
-cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CRYPTOPUNKSMarketplaceDailySnapshotDTO)
-cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
-    Api.request
-        "GET"
-        "/dapps/cryptopunks/marketplaceDailySnapshots/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.cRYPTOPUNKSMarketplaceDailySnapshotDTODecoder)
-
-
-{-| Gets trades.
--}
-cRYPTOPUNKSGetTradesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CRYPTOPUNKSTradeDTO)
-cRYPTOPUNKSGetTradesHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
-    Api.request
-        "GET"
-        "/dapps/cryptopunks/trades/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.cRYPTOPUNKSTradeDTODecoder)
-
-
-{-| Gets users.
--}
-cRYPTOPUNKSGetUsersHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CRYPTOPUNKSUserDTO)
-cRYPTOPUNKSGetUsersHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
-    Api.request
-        "GET"
-        "/dapps/cryptopunks/users/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.cRYPTOPUNKSUserDTODecoder)
 
 
 {-| Gets items.

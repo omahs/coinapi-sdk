@@ -11,6 +11,7 @@ api_metadata.go
 api_sushiswap.go
 api_uniswap_v2.go
 api_uniswap_v3.go
+api_uniswapv3_ethereum.go
 client.go
 configuration.go
 docs/CRYPTOPUNKSApi.md
@@ -94,6 +95,10 @@ docs/SushiswapTokenDayDataDTO.md
 docs/SushiswapTransactionDTO.md
 docs/SushiswapUserDTO.md
 docs/TransactionsETradeAggressiveSide.md
+docs/UNISWAPV3ETHEREUMAccountDTO.md
+docs/UNISWAPV3ETHEREUMApi.md
+docs/UNISWAPV3ETHEREUMSwapDTO.md
+docs/UNISWAPV3ETHEREUMTokenDTO.md
 docs/UniswapV2Api.md
 docs/UniswapV2BundleDTO.md
 docs/UniswapV2BurnDTO.md
@@ -223,6 +228,9 @@ model_uniswap_v2_uniswap_factory_dto.go
 model_uniswap_v2_user_dto.go
 model_uniswap_v3_bundle_dto.go
 model_uniswap_v3_burn_dto.go
+model_uniswap_v3_ethereum_account_dto.go
+model_uniswap_v3_ethereum_swap_dto.go
+model_uniswap_v3_ethereum_token_dto.go
 model_uniswap_v3_factory_dto.go
 model_uniswap_v3_mint_dto.go
 model_uniswap_v3_pool_day_data_dto.go
@@ -247,4 +255,5 @@ test/api_metadata_test.go
 test/api_sushiswap_test.go
 test/api_uniswap_v2_test.go
 test/api_uniswap_v3_test.go
+test/api_uniswapv3_ethereum_test.go
 utils.go

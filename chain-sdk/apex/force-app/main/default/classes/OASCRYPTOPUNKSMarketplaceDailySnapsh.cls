@@ -27,10 +27,10 @@ public class OASCRYPTOPUNKSMarketplaceDailySnapsh implements OAS.MappedPropertie
     public Datetime recvTime { get; set; }
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
-    public String blockNumber { get; set; }
+    public Long blockNumber { get; set; }
 
     /**
      * 
@@ -420,7 +420,7 @@ public class OASCRYPTOPUNKSMarketplaceDailySnapsh implements OAS.MappedPropertie
         OASCRYPTOPUNKSMarketplaceDailySnapsh crYPTOPUNKSMarketplaceDailySnapshotDTO = new OASCRYPTOPUNKSMarketplaceDailySnapsh();
           crYPTOPUNKSMarketplaceDailySnapshotDTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           crYPTOPUNKSMarketplaceDailySnapshotDTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
-          crYPTOPUNKSMarketplaceDailySnapshotDTO.blockNumber = '';
+          crYPTOPUNKSMarketplaceDailySnapshotDTO.blockNumber = 123456789L;
           crYPTOPUNKSMarketplaceDailySnapshotDTO.vid = 123456789L;
           crYPTOPUNKSMarketplaceDailySnapshotDTO.blockRange = '';
           crYPTOPUNKSMarketplaceDailySnapshotDTO.id = '';

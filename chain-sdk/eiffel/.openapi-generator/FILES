@@ -84,6 +84,7 @@ docs/SUSHISWAP_TRANSACTION_DTO.md
 docs/SUSHISWAP_USER_DTO.md
 docs/TRANSACTIONS_E_TRADE_AGGRESSIVE_SIDE.md
 docs/UNISWAPV2_API.md
+docs/UNISWAPV3ETHEREUM_API.md
 docs/UNISWAPV3_API.md
 docs/UNISWAP_V2_BUNDLE_DTO.md
 docs/UNISWAP_V2_BURN_DTO.md
@@ -102,6 +103,9 @@ docs/UNISWAP_V2_UNISWAP_FACTORY_DTO.md
 docs/UNISWAP_V2_USER_DTO.md
 docs/UNISWAP_V3_BUNDLE_DTO.md
 docs/UNISWAP_V3_BURN_DTO.md
+docs/UNISWAP_V3_ETHEREUM_ACCOUNT_DTO.md
+docs/UNISWAP_V3_ETHEREUM_SWAP_DTO.md
+docs/UNISWAP_V3_ETHEREUM_TOKEN_DTO.md
 docs/UNISWAP_V3_FACTORY_DTO.md
 docs/UNISWAP_V3_MINT_DTO.md
 docs/UNISWAP_V3_POOL_DAY_DATA_DTO.md
@@ -125,6 +129,7 @@ src/api/metadata_api.e
 src/api/sushiswap_api.e
 src/api/uniswap_v2_api.e
 src/api/uniswap_v3_api.e
+src/api/uniswapv3_ethereum_api.e
 src/api_client.e
 src/domain/cow_order_dto.e
 src/domain/cow_settlement_dto.e
@@ -218,6 +223,9 @@ src/domain/uniswap_v2_uniswap_factory_dto.e
 src/domain/uniswap_v2_user_dto.e
 src/domain/uniswap_v3_bundle_dto.e
 src/domain/uniswap_v3_burn_dto.e
+src/domain/uniswap_v3_ethereum_account_dto.e
+src/domain/uniswap_v3_ethereum_swap_dto.e
+src/domain/uniswap_v3_ethereum_token_dto.e
 src/domain/uniswap_v3_factory_dto.e
 src/domain/uniswap_v3_mint_dto.e
 src/domain/uniswap_v3_pool_day_data_dto.e
@@ -257,4 +265,5 @@ test/apis/metadata_api_test.e
 test/apis/sushiswap_api_test.e
 test/apis/uniswapv2_api_test.e
 test/apis/uniswapv3_api_test.e
+test/apis/uniswapv3ethereum_api_test.e
 test/application.e
