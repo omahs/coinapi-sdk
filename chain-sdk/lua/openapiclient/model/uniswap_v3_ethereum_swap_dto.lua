@@ -19,12 +19,11 @@ local function cast_uniswap_v3_ethereum_swap_dto(t)
 	return setmetatable(t, uniswap_v3_ethereum_swap_dto_mt)
 end
 
-local function new_uniswap_v3_ethereum_swap_dto(entry_time, recv_time, block_number, vid, block_, id, hash, nonce, log_index, gas_limit, gas_used, gas_price, protocol, account, pool, timestamp, tick, token_in, amount_in, amount_in_usd, token_out, amount_out, amount_out_usd, reserve_amounts, pool_id, transaction_id, evaluated_price, evaluated_amount, evaluated_aggressor)
+local function new_uniswap_v3_ethereum_swap_dto(entry_time, recv_time, block_number, block_, id, hash, nonce, log_index, gas_limit, gas_used, gas_price, protocol, account, pool, timestamp, tick, token_in, amount_in, amount_in_usd, token_out, amount_out, amount_out_usd, reserve_amounts, pool_id, transaction_id, evaluated_price, evaluated_amount, evaluated_aggressor)
 	return cast_uniswap_v3_ethereum_swap_dto({
 		["entry_time"] = entry_time;
 		["recv_time"] = recv_time;
 		["block_number"] = block_number;
-		["vid"] = vid;
 		["block_"] = block_;
 		["id"] = id;
 		["hash"] = hash;

@@ -75,6 +75,117 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
+        /// Test UNISWAPV3ETHEREUMActiveAccountsCurrent
+        /// </summary>
+        [Test]
+        public void UNISWAPV3ETHEREUMActiveAccountsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV3ETHEREUMActiveAccountsCurrent();
+            //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMActiveAccountDTO>), response, "response is List<UNISWAPV3ETHEREUMActiveAccountDTO>");
+        }
+        
+        /// <summary>
+        /// Test UNISWAPV3ETHEREUMDepositsCurrent
+        /// </summary>
+        [Test]
+        public void UNISWAPV3ETHEREUMDepositsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV3ETHEREUMDepositsCurrent();
+            //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMDepositDTO>), response, "response is List<UNISWAPV3ETHEREUMDepositDTO>");
+        }
+        
+        /// <summary>
+        /// Test UNISWAPV3ETHEREUMDexAmmProtocolsCurrent
+        /// </summary>
+        [Test]
+        public void UNISWAPV3ETHEREUMDexAmmProtocolsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV3ETHEREUMDexAmmProtocolsCurrent();
+            //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>), response, "response is List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>");
+        }
+        
+        /// <summary>
+        /// Test UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
+        /// </summary>
+        [Test]
+        public void UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent();
+            //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>), response, "response is List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>");
+        }
+        
+        /// <summary>
+        /// Test UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+        /// </summary>
+        [Test]
+        public void UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent();
+            //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>), response, "response is List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>");
+        }
+        
+        /// <summary>
+        /// Test UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent
+        /// </summary>
+        [Test]
+        public void UNISWAPV3ETHEREUMLiquidityPoolFeesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent();
+            //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>), response, "response is List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>");
+        }
+        
+        /// <summary>
+        /// Test UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+        /// </summary>
+        [Test]
+        public void UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent();
+            //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>), response, "response is List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>");
+        }
+        
+        /// <summary>
+        /// Test UNISWAPV3ETHEREUMPositionSnapshotsCurrent
+        /// </summary>
+        [Test]
+        public void UNISWAPV3ETHEREUMPositionSnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV3ETHEREUMPositionSnapshotsCurrent();
+            //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMPositionSnapshotDTO>), response, "response is List<UNISWAPV3ETHEREUMPositionSnapshotDTO>");
+        }
+        
+        /// <summary>
+        /// Test UNISWAPV3ETHEREUMPositionsCurrent
+        /// </summary>
+        [Test]
+        public void UNISWAPV3ETHEREUMPositionsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pool = null;
+            //var response = instance.UNISWAPV3ETHEREUMPositionsCurrent(pool);
+            //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMPositionDTO>), response, "response is List<UNISWAPV3ETHEREUMPositionDTO>");
+        }
+        
+        /// <summary>
+        /// Test UNISWAPV3ETHEREUMRewardTokensCurrent
+        /// </summary>
+        [Test]
+        public void UNISWAPV3ETHEREUMRewardTokensCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV3ETHEREUMRewardTokensCurrent();
+            //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMRewardTokenDTO>), response, "response is List<UNISWAPV3ETHEREUMRewardTokenDTO>");
+        }
+        
+        /// <summary>
         /// Test UNISWAPV3ETHEREUMSwapsCurrent
         /// </summary>
         [Test]
@@ -86,6 +197,63 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
+        /// Test UNISWAPV3ETHEREUMTickDailySnapshotsCurrent
+        /// </summary>
+        [Test]
+        public void UNISWAPV3ETHEREUMTickDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent();
+            //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>), response, "response is List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>");
+        }
+        
+        /// <summary>
+        /// Test UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent
+        /// </summary>
+        [Test]
+        public void UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pool = null;
+            //var response = instance.UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool);
+            //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>), response, "response is List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>");
+        }
+        
+        /// <summary>
+        /// Test UNISWAPV3ETHEREUMTicksCurrent
+        /// </summary>
+        [Test]
+        public void UNISWAPV3ETHEREUMTicksCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pool = null;
+            //var response = instance.UNISWAPV3ETHEREUMTicksCurrent(pool);
+            //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMTickDTO>), response, "response is List<UNISWAPV3ETHEREUMTickDTO>");
+        }
+        
+        /// <summary>
+        /// Test UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
+        /// </summary>
+        [Test]
+        public void UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent();
+            //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>), response, "response is List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>");
+        }
+        
+        /// <summary>
+        /// Test UNISWAPV3ETHEREUMTokenWhiteListsCurrent
+        /// </summary>
+        [Test]
+        public void UNISWAPV3ETHEREUMTokenWhiteListsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV3ETHEREUMTokenWhiteListsCurrent();
+            //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMTokenWhiteListDTO>), response, "response is List<UNISWAPV3ETHEREUMTokenWhiteListDTO>");
+        }
+        
+        /// <summary>
         /// Test UNISWAPV3ETHEREUMTokensCurrent
         /// </summary>
         [Test]
@@ -94,6 +262,39 @@ namespace CoinAPI.EMS.REST.V1.Test
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.UNISWAPV3ETHEREUMTokensCurrent();
             //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMTokenDTO>), response, "response is List<UNISWAPV3ETHEREUMTokenDTO>");
+        }
+        
+        /// <summary>
+        /// Test UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
+        /// </summary>
+        [Test]
+        public void UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent();
+            //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>), response, "response is List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>");
+        }
+        
+        /// <summary>
+        /// Test UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
+        /// </summary>
+        [Test]
+        public void UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent();
+            //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>), response, "response is List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>");
+        }
+        
+        /// <summary>
+        /// Test UNISWAPV3ETHEREUMWithdrawsCurrent
+        /// </summary>
+        [Test]
+        public void UNISWAPV3ETHEREUMWithdrawsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV3ETHEREUMWithdrawsCurrent();
+            //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMWithdrawDTO>), response, "response is List<UNISWAPV3ETHEREUMWithdrawDTO>");
         }
         
     }

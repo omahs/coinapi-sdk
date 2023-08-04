@@ -29,7 +29,7 @@ test_that("block_number", {
 
 test_that("vid", {
   # tests for the property `vid` (integer)
-  # 
+  # .
 
   # uncomment below to test the property
   #expect_equal(model.instance$`vid`, "EXPECTED_RESULT")
@@ -45,7 +45,7 @@ test_that("block_range", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # 
+  # Smart contract address of the token.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")
@@ -53,7 +53,7 @@ test_that("id", {
 
 test_that("name", {
   # tests for the property `name` (character)
-  # 
+  # Name of the token, mirrored from the smart contract.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`name`, "EXPECTED_RESULT")
@@ -61,7 +61,7 @@ test_that("name", {
 
 test_that("symbol", {
   # tests for the property `symbol` (character)
-  # 
+  # Symbol of the token, mirrored from the smart contract.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`symbol`, "EXPECTED_RESULT")
@@ -69,7 +69,7 @@ test_that("symbol", {
 
 test_that("decimals", {
   # tests for the property `decimals` (integer)
-  # 
+  # The number of decimal places this token uses, default to 18.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`decimals`, "EXPECTED_RESULT")
@@ -77,7 +77,7 @@ test_that("decimals", {
 
 test_that("last_price_usd", {
   # tests for the property `last_price_usd` (character)
-  # 
+  # Optional field to track the price of a token, mostly for caching purposes.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`last_price_usd`, "EXPECTED_RESULT")
@@ -85,7 +85,7 @@ test_that("last_price_usd", {
 
 test_that("last_price_block_number", {
   # tests for the property `last_price_block_number` (character)
-  # 
+  # Optional field to track the block number of the last token price.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`last_price_block_number`, "EXPECTED_RESULT")
@@ -93,7 +93,7 @@ test_that("last_price_block_number", {
 
 test_that("last_price_pool", {
   # tests for the property `last_price_pool` (character)
-  # 
+  # Last pool that gave this token a price.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`last_price_pool`, "EXPECTED_RESULT")
@@ -101,7 +101,7 @@ test_that("last_price_pool", {
 
 test_that("total_supply", {
   # tests for the property `total_supply` (character)
-  # 
+  # Amount of tokens in the protocol.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_supply`, "EXPECTED_RESULT")
@@ -109,7 +109,7 @@ test_that("total_supply", {
 
 test_that("total_value_locked_usd", {
   # tests for the property `total_value_locked_usd` (character)
-  # 
+  # Total value locked in the protocol.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_value_locked_usd`, "EXPECTED_RESULT")
@@ -117,7 +117,7 @@ test_that("total_value_locked_usd", {
 
 test_that("large_price_change_buffer", {
   # tests for the property `large_price_change_buffer` (integer)
-  # 
+  # The buffer for detecting large price changes.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`large_price_change_buffer`, "EXPECTED_RESULT")
@@ -125,7 +125,7 @@ test_that("large_price_change_buffer", {
 
 test_that("large_tvl_impact_buffer", {
   # tests for the property `large_tvl_impact_buffer` (integer)
-  # 
+  # The buffer for detecting large TVL (Total Value Locked) impact.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`large_tvl_impact_buffer`, "EXPECTED_RESULT")

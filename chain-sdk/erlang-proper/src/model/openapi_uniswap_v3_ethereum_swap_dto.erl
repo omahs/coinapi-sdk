@@ -12,7 +12,6 @@
   [ {'entry_time', datetime() }
   | {'recv_time', datetime() }
   | {'block_number', integer() }
-  | {'vid', integer() }
   | {'block_', integer() }
   | {'id', binary() }
   | {'hash', binary() }
@@ -48,7 +47,6 @@ openapi_uniswap_v3_ethereum_swap_dto(Fields) ->
   Default = [ {'entry_time', datetime() }
             , {'recv_time', datetime() }
             , {'block_number', integer() }
-            , {'vid', integer() }
             , {'block_', integer() }
             , {'id', binary() }
             , {'hash', binary() }

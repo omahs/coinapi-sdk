@@ -23,7 +23,7 @@ export class UNISWAPV3ETHEREUMTokenDTO {
     */
     'blockNumber'?: number;
     /**
-    * 
+    * .
     */
     'vid'?: number;
     /**
@@ -31,47 +31,47 @@ export class UNISWAPV3ETHEREUMTokenDTO {
     */
     'blockRange'?: string | null;
     /**
-    * 
+    * Smart contract address of the token.
     */
     'id'?: string | null;
     /**
-    * 
+    * Name of the token, mirrored from the smart contract.
     */
     'name'?: string | null;
     /**
-    * 
+    * Symbol of the token, mirrored from the smart contract.
     */
     'symbol'?: string | null;
     /**
-    * 
+    * The number of decimal places this token uses, default to 18.
     */
     'decimals'?: number;
     /**
-    * 
+    * Optional field to track the price of a token, mostly for caching purposes.
     */
     'lastPriceUsd'?: string | null;
     /**
-    * 
+    * Optional field to track the block number of the last token price.
     */
     'lastPriceBlockNumber'?: string | null;
     /**
-    * 
+    * Last pool that gave this token a price.
     */
     'lastPricePool'?: string | null;
     /**
-    * 
+    * Amount of tokens in the protocol.
     */
     'totalSupply'?: string | null;
     /**
-    * 
+    * Total value locked in the protocol.
     */
     'totalValueLockedUsd'?: string | null;
     /**
-    * 
+    * The buffer for detecting large price changes.
     */
     'largePriceChangeBuffer'?: number;
     /**
-    * 
+    * The buffer for detecting large TVL (Total Value Locked) impact.
     */
     'largeTvlImpactBuffer'?: number;
     'tokenSymbol'?: string | null;

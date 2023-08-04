@@ -85,6 +85,126 @@ class UNISWAPV3ETHEREUMApiTest extends TestCase
     }
 
     /**
+     * Test case for uNISWAPV3ETHEREUMActiveAccountsCurrent
+     *
+     * ActiveAccounts (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMActiveAccountsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for uNISWAPV3ETHEREUMDepositsCurrent
+     *
+     * Deposits (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMDepositsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for uNISWAPV3ETHEREUMDexAmmProtocolsCurrent
+     *
+     * DexAmmProtocols (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMDexAmmProtocolsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
+     *
+     * FinancialsDailySnapshots (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+     *
+     * LiquidityPoolAmounts (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent
+     *
+     * LiquidityPoolFees (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMLiquidityPoolFeesCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+     *
+     * LiquidityPoolHourlySnapshots (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for uNISWAPV3ETHEREUMPositionSnapshotsCurrent
+     *
+     * PositionSnapshots (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMPositionSnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for uNISWAPV3ETHEREUMPositionsCurrent
+     *
+     * Positions (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMPositionsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for uNISWAPV3ETHEREUMRewardTokensCurrent
+     *
+     * RewardTokens (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMRewardTokensCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for uNISWAPV3ETHEREUMSwapsCurrent
      *
      * Swaps (current).
@@ -97,12 +217,108 @@ class UNISWAPV3ETHEREUMApiTest extends TestCase
     }
 
     /**
+     * Test case for uNISWAPV3ETHEREUMTickDailySnapshotsCurrent
+     *
+     * TickDailySnapshots (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMTickDailySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent
+     *
+     * TickHourlySnapshots (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMTickHourlySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for uNISWAPV3ETHEREUMTicksCurrent
+     *
+     * Ticks (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMTicksCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
+     *
+     * TokenWhiteListSymbols (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for uNISWAPV3ETHEREUMTokenWhiteListsCurrent
+     *
+     * TokenWhiteLists (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMTokenWhiteListsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for uNISWAPV3ETHEREUMTokensCurrent
      *
      * Tokens (current).
      *
      */
     public function testUNISWAPV3ETHEREUMTokensCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
+     *
+     * UsageMetricsDailySnapshots (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
+     *
+     * UsageMetricsHourlySnapshots (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for uNISWAPV3ETHEREUMWithdrawsCurrent
+     *
+     * Withdraws (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMWithdrawsCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

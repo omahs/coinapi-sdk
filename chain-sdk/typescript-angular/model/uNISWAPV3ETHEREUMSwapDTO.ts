@@ -13,7 +13,7 @@ import { TransactionsETradeAggressiveSide } from './transactionsETradeAggressive
 
 
 /**
- * Swap are created for each token swap within a pair.
+ * Trade (swap) event occurred in a pool.
  */
 export interface UNISWAPV3ETHEREUMSwapDTO { 
     entry_time?: string;
@@ -23,87 +23,83 @@ export interface UNISWAPV3ETHEREUMSwapDTO {
      */
     block_number?: number;
     /**
-     * 
-     */
-    vid?: number;
-    /**
-     * 
+     * Block number in which the swap operation was recorded.
      */
     block_?: number;
     /**
-     * 
+     * Unique string identifier of the swap operation, format: (transaction hash)-(log index).
      */
     id?: string | null;
     /**
-     * 
+     * Transaction hash of the transaction that emitted this event.
      */
     hash?: string | null;
     /**
-     * 
+     * Nonce of the transaction that emitted this event.
      */
     nonce?: string | null;
     /**
-     * 
+     * Event log index. For transactions that don\'t emit event, create arbitrary index starting from 0.
      */
     log_index?: number;
     /**
-     * 
+     * Gas limit of the transaction that emitted this event.
      */
     gas_limit?: string | null;
     /**
-     * 
+     * Gas used in this transaction.
      */
     gas_used?: string | null;
     /**
-     * 
+     * Gas price of the transaction that emitted this event.
      */
     gas_price?: string | null;
     /**
-     * 
+     * The protocol this transaction belongs to.
      */
     protocol?: string | null;
     /**
-     * 
+     * Account that emitted this event.
      */
     account?: string | null;
     /**
-     * 
+     * The pool involving this event.
      */
     pool?: string | null;
     /**
-     * 
+     * Timestamp of this event.
      */
     timestamp?: string | null;
     /**
-     * 
+     * Tick of the swap operation.
      */
     tick?: string | null;
     /**
-     * 
+     * Token deposited into pool.
      */
     token_in?: string | null;
     /**
-     * 
+     * Amount of token deposited into pool in native units.
      */
     amount_in?: string | null;
     /**
-     * 
+     * Amount of token deposited into pool in USD.
      */
     amount_in_usd?: string | null;
     /**
-     * 
+     * Token withdrawn from pool.
      */
     token_out?: string | null;
     /**
-     * 
+     * Amount of token withdrawn from pool in native units.
      */
     amount_out?: string | null;
     /**
-     * 
+     * Amount of token withdrawn from pool in USD.
      */
     amount_out_usd?: string | null;
     /**
-     * 
+     * Amount of input tokens in the liquidity pool.
      */
     reserve_amounts?: Array<string> | null;
     readonly pool_id?: string | null;

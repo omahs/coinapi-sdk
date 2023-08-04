@@ -20,8 +20,26 @@ import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
 import org.openapitools.client.models.UNISWAPV3ETHEREUMAccountDTO
+import org.openapitools.client.models.UNISWAPV3ETHEREUMActiveAccountDTO
+import org.openapitools.client.models.UNISWAPV3ETHEREUMDepositDTO
+import org.openapitools.client.models.UNISWAPV3ETHEREUMDexAmmProtocolDTO
+import org.openapitools.client.models.UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+import org.openapitools.client.models.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO
+import org.openapitools.client.models.UNISWAPV3ETHEREUMLiquidityPoolFeeDTO
+import org.openapitools.client.models.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+import org.openapitools.client.models.UNISWAPV3ETHEREUMPositionDTO
+import org.openapitools.client.models.UNISWAPV3ETHEREUMPositionSnapshotDTO
+import org.openapitools.client.models.UNISWAPV3ETHEREUMRewardTokenDTO
 import org.openapitools.client.models.UNISWAPV3ETHEREUMSwapDTO
+import org.openapitools.client.models.UNISWAPV3ETHEREUMTickDTO
+import org.openapitools.client.models.UNISWAPV3ETHEREUMTickDailySnapshotDTO
+import org.openapitools.client.models.UNISWAPV3ETHEREUMTickHourlySnapshotDTO
 import org.openapitools.client.models.UNISWAPV3ETHEREUMTokenDTO
+import org.openapitools.client.models.UNISWAPV3ETHEREUMTokenWhiteListDTO
+import org.openapitools.client.models.UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO
+import org.openapitools.client.models.UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+import org.openapitools.client.models.UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+import org.openapitools.client.models.UNISWAPV3ETHEREUMWithdrawDTO
 
 import com.squareup.moshi.Json
 
@@ -116,6 +134,694 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
     }
 
     /**
+     * ActiveAccounts (current)
+     * Gets activeAccounts.
+     * @return kotlin.collections.List<UNISWAPV3ETHEREUMActiveAccountDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun uNISWAPV3ETHEREUMActiveAccountsCurrent() : kotlin.collections.List<UNISWAPV3ETHEREUMActiveAccountDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMActiveAccountDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * ActiveAccounts (current)
+     * Gets activeAccounts.
+     * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMActiveAccountDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun uNISWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMActiveAccountDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMActiveAccountsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMActiveAccountDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation uNISWAPV3ETHEREUMActiveAccountsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun uNISWAPV3ETHEREUMActiveAccountsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswap_v3_ethereum/activeAccounts/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @return kotlin.collections.List<UNISWAPV3ETHEREUMDepositDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun uNISWAPV3ETHEREUMDepositsCurrent() : kotlin.collections.List<UNISWAPV3ETHEREUMDepositDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMDepositsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMDepositDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMDepositDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun uNISWAPV3ETHEREUMDepositsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMDepositDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMDepositsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMDepositDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation uNISWAPV3ETHEREUMDepositsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun uNISWAPV3ETHEREUMDepositsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswap_v3_ethereum/deposits/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * DexAmmProtocols (current)
+     * Gets dexAmmProtocols.
+     * @return kotlin.collections.List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun uNISWAPV3ETHEREUMDexAmmProtocolsCurrent() : kotlin.collections.List<UNISWAPV3ETHEREUMDexAmmProtocolDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * DexAmmProtocols (current)
+     * Gets dexAmmProtocols.
+     * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun uNISWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMDexAmmProtocolsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation uNISWAPV3ETHEREUMDexAmmProtocolsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun uNISWAPV3ETHEREUMDexAmmProtocolsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * FinancialsDailySnapshots (current)
+     * Gets financialsDailySnapshots.
+     * @return kotlin.collections.List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent() : kotlin.collections.List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * FinancialsDailySnapshots (current)
+     * Gets financialsDailySnapshots.
+     * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * LiquidityPoolAmounts (current)
+     * Gets liquidityPoolAmounts.
+     * @return kotlin.collections.List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent() : kotlin.collections.List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * LiquidityPoolAmounts (current)
+     * Gets liquidityPoolAmounts.
+     * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * LiquidityPoolFees (current)
+     * Gets liquidityPoolFees.
+     * @return kotlin.collections.List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent() : kotlin.collections.List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * LiquidityPoolFees (current)
+     * Gets liquidityPoolFees.
+     * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun uNISWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMLiquidityPoolFeesCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent
+     *
+     * @return RequestConfig
+     */
+    fun uNISWAPV3ETHEREUMLiquidityPoolFeesCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     * Gets liquidityPoolHourlySnapshots.
+     * @return kotlin.collections.List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent() : kotlin.collections.List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     * Gets liquidityPoolHourlySnapshots.
+     * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * PositionSnapshots (current)
+     * Gets positionSnapshots.
+     * @return kotlin.collections.List<UNISWAPV3ETHEREUMPositionSnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun uNISWAPV3ETHEREUMPositionSnapshotsCurrent() : kotlin.collections.List<UNISWAPV3ETHEREUMPositionSnapshotDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMPositionSnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * PositionSnapshots (current)
+     * Gets positionSnapshots.
+     * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMPositionSnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun uNISWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMPositionSnapshotDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMPositionSnapshotsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMPositionSnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation uNISWAPV3ETHEREUMPositionSnapshotsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun uNISWAPV3ETHEREUMPositionSnapshotsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswap_v3_ethereum/positionSnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Positions (current)
+     * Gets positions.
+     * @param pool The liquidity pool in which this position was opened (optional)
+     * @return kotlin.collections.List<UNISWAPV3ETHEREUMPositionDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun uNISWAPV3ETHEREUMPositionsCurrent(pool: kotlin.String? = null) : kotlin.collections.List<UNISWAPV3ETHEREUMPositionDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMPositionsCurrentWithHttpInfo(pool = pool)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMPositionDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Positions (current)
+     * Gets positions.
+     * @param pool The liquidity pool in which this position was opened (optional)
+     * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMPositionDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun uNISWAPV3ETHEREUMPositionsCurrentWithHttpInfo(pool: kotlin.String?) : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMPositionDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMPositionsCurrentRequestConfig(pool = pool)
+
+        return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMPositionDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation uNISWAPV3ETHEREUMPositionsCurrent
+     *
+     * @param pool The liquidity pool in which this position was opened (optional)
+     * @return RequestConfig
+     */
+    fun uNISWAPV3ETHEREUMPositionsCurrentRequestConfig(pool: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (pool != null) {
+                    put("pool", listOf(pool.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswap_v3_ethereum/positions/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * RewardTokens (current)
+     * Gets rewardTokens.
+     * @return kotlin.collections.List<UNISWAPV3ETHEREUMRewardTokenDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun uNISWAPV3ETHEREUMRewardTokensCurrent() : kotlin.collections.List<UNISWAPV3ETHEREUMRewardTokenDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMRewardTokenDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * RewardTokens (current)
+     * Gets rewardTokens.
+     * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMRewardTokenDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun uNISWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMRewardTokenDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMRewardTokensCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMRewardTokenDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation uNISWAPV3ETHEREUMRewardTokensCurrent
+     *
+     * @return RequestConfig
+     */
+    fun uNISWAPV3ETHEREUMRewardTokensCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswap_v3_ethereum/rewardTokens/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * Swaps (current)
      * Gets swaps.
      * @return kotlin.collections.List<UNISWAPV3ETHEREUMSwapDTO>
@@ -184,6 +890,362 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
     }
 
     /**
+     * TickDailySnapshots (current)
+     * Gets tickDailySnapshots.
+     * @return kotlin.collections.List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun uNISWAPV3ETHEREUMTickDailySnapshotsCurrent() : kotlin.collections.List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * TickDailySnapshots (current)
+     * Gets tickDailySnapshots.
+     * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation uNISWAPV3ETHEREUMTickDailySnapshotsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun uNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * TickHourlySnapshots (current)
+     * Gets tickHourlySnapshots.
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @return kotlin.collections.List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool: kotlin.String? = null) : kotlin.collections.List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(pool = pool)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * TickHourlySnapshots (current)
+     * Gets tickHourlySnapshots.
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(pool: kotlin.String?) : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequestConfig(pool = pool)
+
+        return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent
+     *
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @return RequestConfig
+     */
+    fun uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequestConfig(pool: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (pool != null) {
+                    put("pool", listOf(pool.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Ticks (current)
+     * Gets ticks.
+     * @param pool Liquidity pool this tick belongs to (optional)
+     * @return kotlin.collections.List<UNISWAPV3ETHEREUMTickDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun uNISWAPV3ETHEREUMTicksCurrent(pool: kotlin.String? = null) : kotlin.collections.List<UNISWAPV3ETHEREUMTickDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo(pool = pool)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMTickDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Ticks (current)
+     * Gets ticks.
+     * @param pool Liquidity pool this tick belongs to (optional)
+     * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMTickDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo(pool: kotlin.String?) : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMTickDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMTicksCurrentRequestConfig(pool = pool)
+
+        return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMTickDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation uNISWAPV3ETHEREUMTicksCurrent
+     *
+     * @param pool Liquidity pool this tick belongs to (optional)
+     * @return RequestConfig
+     */
+    fun uNISWAPV3ETHEREUMTicksCurrentRequestConfig(pool: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (pool != null) {
+                    put("pool", listOf(pool.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswap_v3_ethereum/ticks/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * TokenWhiteListSymbols (current)
+     * Gets tokenWhiteListSymbols.
+     * @return kotlin.collections.List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent() : kotlin.collections.List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * TokenWhiteListSymbols (current)
+     * Gets tokenWhiteListSymbols.
+     * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * TokenWhiteLists (current)
+     * Gets tokenWhiteLists.
+     * @return kotlin.collections.List<UNISWAPV3ETHEREUMTokenWhiteListDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun uNISWAPV3ETHEREUMTokenWhiteListsCurrent() : kotlin.collections.List<UNISWAPV3ETHEREUMTokenWhiteListDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMTokenWhiteListDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * TokenWhiteLists (current)
+     * Gets tokenWhiteLists.
+     * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMTokenWhiteListDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun uNISWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMTokenWhiteListDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMTokenWhiteListsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMTokenWhiteListDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation uNISWAPV3ETHEREUMTokenWhiteListsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun uNISWAPV3ETHEREUMTokenWhiteListsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * Tokens (current)
      * Gets tokens.
      * @return kotlin.collections.List<UNISWAPV3ETHEREUMTokenDTO>
@@ -244,6 +1306,210 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/dapps/uniswap_v3_ethereum/tokens/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * UsageMetricsDailySnapshots (current)
+     * Gets usageMetricsDailySnapshots.
+     * @return kotlin.collections.List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent() : kotlin.collections.List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * UsageMetricsDailySnapshots (current)
+     * Gets usageMetricsDailySnapshots.
+     * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     * Gets usageMetricsHourlySnapshots.
+     * @return kotlin.collections.List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent() : kotlin.collections.List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     * Gets usageMetricsHourlySnapshots.
+     * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @return kotlin.collections.List<UNISWAPV3ETHEREUMWithdrawDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun uNISWAPV3ETHEREUMWithdrawsCurrent() : kotlin.collections.List<UNISWAPV3ETHEREUMWithdrawDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMWithdrawDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMWithdrawDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun uNISWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMWithdrawDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMWithdrawsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMWithdrawDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation uNISWAPV3ETHEREUMWithdrawsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun uNISWAPV3ETHEREUMWithdrawsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswap_v3_ethereum/withdraws/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,

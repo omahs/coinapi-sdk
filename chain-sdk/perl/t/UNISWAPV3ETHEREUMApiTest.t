@@ -36,14 +36,125 @@ isa_ok($api, 'WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi');
 #my $u_niswapv3_ethereum_accounts__current_result = $api->u_niswapv3_ethereum_accounts__current();
 
 #
+# u_niswapv3_ethereum_active_accounts__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_active_accounts__current_result = $api->u_niswapv3_ethereum_active_accounts__current();
+
+#
+# u_niswapv3_ethereum_deposits__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_deposits__current_result = $api->u_niswapv3_ethereum_deposits__current();
+
+#
+# u_niswapv3_ethereum_dex_amm_protocols__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_dex_amm_protocols__current_result = $api->u_niswapv3_ethereum_dex_amm_protocols__current();
+
+#
+# u_niswapv3_ethereum_financials_daily_snapshots__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_financials_daily_snapshots__current_result = $api->u_niswapv3_ethereum_financials_daily_snapshots__current();
+
+#
+# u_niswapv3_ethereum_liquidity_pool_amounts__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_liquidity_pool_amounts__current_result = $api->u_niswapv3_ethereum_liquidity_pool_amounts__current();
+
+#
+# u_niswapv3_ethereum_liquidity_pool_fees__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_liquidity_pool_fees__current_result = $api->u_niswapv3_ethereum_liquidity_pool_fees__current();
+
+#
+# u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current_result = $api->u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current();
+
+#
+# u_niswapv3_ethereum_position_snapshots__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_position_snapshots__current_result = $api->u_niswapv3_ethereum_position_snapshots__current();
+
+#
+# u_niswapv3_ethereum_positions__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_positions__current_pool = undef; # replace NULL with a proper value
+#my $u_niswapv3_ethereum_positions__current_result = $api->u_niswapv3_ethereum_positions__current(pool => $u_niswapv3_ethereum_positions__current_pool);
+
+#
+# u_niswapv3_ethereum_reward_tokens__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_reward_tokens__current_result = $api->u_niswapv3_ethereum_reward_tokens__current();
+
+#
 # u_niswapv3_ethereum_swaps__current test
 #
 # uncomment below and update the test
 #my $u_niswapv3_ethereum_swaps__current_result = $api->u_niswapv3_ethereum_swaps__current();
 
 #
+# u_niswapv3_ethereum_tick_daily_snapshots__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_tick_daily_snapshots__current_result = $api->u_niswapv3_ethereum_tick_daily_snapshots__current();
+
+#
+# u_niswapv3_ethereum_tick_hourly_snapshots__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_tick_hourly_snapshots__current_pool = undef; # replace NULL with a proper value
+#my $u_niswapv3_ethereum_tick_hourly_snapshots__current_result = $api->u_niswapv3_ethereum_tick_hourly_snapshots__current(pool => $u_niswapv3_ethereum_tick_hourly_snapshots__current_pool);
+
+#
+# u_niswapv3_ethereum_ticks__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_ticks__current_pool = undef; # replace NULL with a proper value
+#my $u_niswapv3_ethereum_ticks__current_result = $api->u_niswapv3_ethereum_ticks__current(pool => $u_niswapv3_ethereum_ticks__current_pool);
+
+#
+# u_niswapv3_ethereum_token_white_list_symbols__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_token_white_list_symbols__current_result = $api->u_niswapv3_ethereum_token_white_list_symbols__current();
+
+#
+# u_niswapv3_ethereum_token_white_lists__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_token_white_lists__current_result = $api->u_niswapv3_ethereum_token_white_lists__current();
+
+#
 # u_niswapv3_ethereum_tokens__current test
 #
 # uncomment below and update the test
 #my $u_niswapv3_ethereum_tokens__current_result = $api->u_niswapv3_ethereum_tokens__current();
+
+#
+# u_niswapv3_ethereum_usage_metrics_daily_snapshots__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_usage_metrics_daily_snapshots__current_result = $api->u_niswapv3_ethereum_usage_metrics_daily_snapshots__current();
+
+#
+# u_niswapv3_ethereum_usage_metrics_hourly_snapshots__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_usage_metrics_hourly_snapshots__current_result = $api->u_niswapv3_ethereum_usage_metrics_hourly_snapshots__current();
+
+#
+# u_niswapv3_ethereum_withdraws__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_withdraws__current_result = $api->u_niswapv3_ethereum_withdraws__current();
 

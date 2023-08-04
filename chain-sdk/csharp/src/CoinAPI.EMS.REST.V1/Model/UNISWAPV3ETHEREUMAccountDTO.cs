@@ -36,23 +36,21 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
-        /// <param name="vid">vid.</param>
         /// <param name="blockRange">blockRange.</param>
-        /// <param name="id">id.</param>
-        /// <param name="positionCount">positionCount.</param>
-        /// <param name="openPositionCount">openPositionCount.</param>
-        /// <param name="closedPositionCount">closedPositionCount.</param>
-        /// <param name="depositCount">depositCount.</param>
-        /// <param name="withdrawCount">withdrawCount.</param>
-        /// <param name="swapCount">swapCount.</param>
-        public UNISWAPV3ETHEREUMAccountDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), long vid = default(long), string blockRange = default(string), string id = default(string), int positionCount = default(int), int openPositionCount = default(int), int closedPositionCount = default(int), int depositCount = default(int), int withdrawCount = default(int), int swapCount = default(int))
+        /// <param name="id">Account address..</param>
+        /// <param name="positionCount">Number of positions this account has..</param>
+        /// <param name="openPositionCount">Number of open positions this account has..</param>
+        /// <param name="closedPositionCount">Number of closed positions this account has..</param>
+        /// <param name="depositCount">Number of deposits this account made..</param>
+        /// <param name="withdrawCount">Number of withdrawals this account made..</param>
+        /// <param name="swapCount">Number of times this account has traded/swapped..</param>
+        public UNISWAPV3ETHEREUMAccountDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), string blockRange = default(string), string id = default(string), int positionCount = default(int), int openPositionCount = default(int), int closedPositionCount = default(int), int depositCount = default(int), int withdrawCount = default(int), int swapCount = default(int))
         {
             this.BlockRange = blockRange;
             this.Id = id;
             this.EntryTime = entryTime;
             this.RecvTime = recvTime;
             this.BlockNumber = blockNumber;
-            this.Vid = vid;
             this.BlockRange = blockRange;
             this.Id = id;
             this.PositionCount = positionCount;
@@ -83,56 +81,57 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets Vid
-        /// </summary>
-        [DataMember(Name="vid", EmitDefaultValue=false)]
-        public long Vid { get; set; }
-
-        /// <summary>
         /// Gets or Sets BlockRange
         /// </summary>
         [DataMember(Name="block_range", EmitDefaultValue=true)]
         public string BlockRange { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Account address.
         /// </summary>
+        /// <value>Account address.</value>
         [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets PositionCount
+        /// Number of positions this account has.
         /// </summary>
+        /// <value>Number of positions this account has.</value>
         [DataMember(Name="position_count", EmitDefaultValue=false)]
         public int PositionCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets OpenPositionCount
+        /// Number of open positions this account has.
         /// </summary>
+        /// <value>Number of open positions this account has.</value>
         [DataMember(Name="open_position_count", EmitDefaultValue=false)]
         public int OpenPositionCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClosedPositionCount
+        /// Number of closed positions this account has.
         /// </summary>
+        /// <value>Number of closed positions this account has.</value>
         [DataMember(Name="closed_position_count", EmitDefaultValue=false)]
         public int ClosedPositionCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets DepositCount
+        /// Number of deposits this account made.
         /// </summary>
+        /// <value>Number of deposits this account made.</value>
         [DataMember(Name="deposit_count", EmitDefaultValue=false)]
         public int DepositCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets WithdrawCount
+        /// Number of withdrawals this account made.
         /// </summary>
+        /// <value>Number of withdrawals this account made.</value>
         [DataMember(Name="withdraw_count", EmitDefaultValue=false)]
         public int WithdrawCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets SwapCount
+        /// Number of times this account has traded/swapped.
         /// </summary>
+        /// <value>Number of times this account has traded/swapped.</value>
         [DataMember(Name="swap_count", EmitDefaultValue=false)]
         public int SwapCount { get; set; }
 
@@ -147,7 +146,6 @@ namespace CoinAPI.EMS.REST.V1.Model
             sb.Append("  EntryTime: ").Append(EntryTime).Append("\n");
             sb.Append("  RecvTime: ").Append(RecvTime).Append("\n");
             sb.Append("  BlockNumber: ").Append(BlockNumber).Append("\n");
-            sb.Append("  Vid: ").Append(Vid).Append("\n");
             sb.Append("  BlockRange: ").Append(BlockRange).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  PositionCount: ").Append(PositionCount).Append("\n");
@@ -206,11 +204,6 @@ namespace CoinAPI.EMS.REST.V1.Model
                     this.BlockNumber.Equals(input.BlockNumber))
                 ) && 
                 (
-                    this.Vid == input.Vid ||
-                    (this.Vid != null &&
-                    this.Vid.Equals(input.Vid))
-                ) && 
-                (
                     this.BlockRange == input.BlockRange ||
                     (this.BlockRange != null &&
                     this.BlockRange.Equals(input.BlockRange))
@@ -267,8 +260,6 @@ namespace CoinAPI.EMS.REST.V1.Model
                     hashCode = hashCode * 59 + this.RecvTime.GetHashCode();
                 if (this.BlockNumber != null)
                     hashCode = hashCode * 59 + this.BlockNumber.GetHashCode();
-                if (this.Vid != null)
-                    hashCode = hashCode * 59 + this.Vid.GetHashCode();
                 if (this.BlockRange != null)
                     hashCode = hashCode * 59 + this.BlockRange.GetHashCode();
                 if (this.Id != null)

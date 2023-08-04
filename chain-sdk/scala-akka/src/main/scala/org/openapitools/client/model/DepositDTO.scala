@@ -19,21 +19,47 @@ case class DepositDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* Identifier, format: (transaction hash)-(token id). */
-  id: Option[String] = None,
-  /* User address. */
-  user: Option[String] = None,
-  /* Token address. */
-  tokenAddress: Option[String] = None,
-  /* Amount of deposit. */
-  amount: Option[String] = None,
-  /* Identifier (numerical). */
-  batchId: Option[String] = None,
-  /* Create epoch. */
-  createEpoch: Option[String] = None,
-  /* Transaction hash. */
-  txHash: Option[String] = None,
   /*  */
-  vid: Option[Long] = None
+  block: Option[Int] = None,
+  /* Identifier, format: (transaction hash)-(log index) */
+  id: Option[String] = None,
+  /* Transaction hash of the transaction that emitted this event. */
+  hash: Option[String] = None,
+  /* Nonce of the transaction that emitted this event. */
+  nonce: Option[String] = None,
+  /* Event log index. For transactions that don't emit event, create arbitrary index starting from 0. */
+  logIndex: Option[Int] = None,
+  /* Gas limit of the transaction that emitted this event. */
+  gasLimit: Option[String] = None,
+  /* Gas used in this transaction. (Optional because not every chain will support this). */
+  gasUsed: Option[String] = None,
+  /* Gas price of the transaction that emitted this event. */
+  gasPrice: Option[String] = None,
+  /* The protocol this transaction belongs to. */
+  protocol: Option[String] = None,
+  /* Account that emitted this event. */
+  account: Option[String] = None,
+  /* The user position changed by this event. */
+  position: Option[String] = None,
+  /* The pool involving this event. */
+  pool: Option[String] = None,
+  /* Lower tick of position. */
+  tickLower: Option[String] = None,
+  /* Upper tick of position. */
+  tickUpper: Option[String] = None,
+  /* Timestamp of this event. */
+  timestamp: Option[String] = None,
+  /* Amount of liquidity minted. */
+  liquidity: Option[String] = None,
+  /* Input tokens of the pool. E.g. WETH and USDC to a WETH-USDC pool. */
+  inputTokens: Option[Seq[String]] = None,
+  /* Amount of input tokens in the token's native unit. */
+  inputTokenAmounts: Option[Seq[String]] = None,
+  /* Amount of input tokens in the liquidity pool. */
+  reserveAmounts: Option[Seq[String]] = None,
+  /* USD-normalized value of the transaction of the underlying (e.g. sum of tokens deposited into a pool). */
+  amountUsd: Option[String] = None,
+  /*  */
+  blockRange: Option[String] = None
 ) extends ApiModel
 

@@ -22,31 +22,31 @@ No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
 .PARAMETER Vid
-
+.
 .PARAMETER BlockRange
 
 .PARAMETER Id
-
+Smart contract address of the token.
 .PARAMETER Name
-
+Name of the token, mirrored from the smart contract.
 .PARAMETER Symbol
-
+Symbol of the token, mirrored from the smart contract.
 .PARAMETER Decimals
-
+The number of decimal places this token uses, default to 18.
 .PARAMETER LastPriceUsd
-
+Optional field to track the price of a token, mostly for caching purposes.
 .PARAMETER LastPriceBlockNumber
-
+Optional field to track the block number of the last token price.
 .PARAMETER LastPricePool
-
+Last pool that gave this token a price.
 .PARAMETER TotalSupply
-
+Amount of tokens in the protocol.
 .PARAMETER TotalValueLockedUsd
-
+Total value locked in the protocol.
 .PARAMETER LargePriceChangeBuffer
-
+The buffer for detecting large price changes.
 .PARAMETER LargeTvlImpactBuffer
-
+The buffer for detecting large TVL (Total Value Locked) impact.
 .PARAMETER TokenSymbol
 No description available.
 .OUTPUTS

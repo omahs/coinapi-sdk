@@ -100,6 +100,9 @@ operation_parameters_minimum_occurrences["curvePoolsCurrent:::id"]=0
 operation_parameters_minimum_occurrences["metadataDappsDappNameGet:::dappName"]=1
 operation_parameters_minimum_occurrences["sushiswapPairsCurrent:::id"]=0
 operation_parameters_minimum_occurrences["sushiswapSwapsCurrent:::pair"]=0
+operation_parameters_minimum_occurrences["uNISWAPV3ETHEREUMPositionsCurrent:::pool"]=0
+operation_parameters_minimum_occurrences["uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent:::pool"]=0
+operation_parameters_minimum_occurrences["uNISWAPV3ETHEREUMTicksCurrent:::pool"]=0
 operation_parameters_minimum_occurrences["uniswapV2PairsCurrent:::id"]=0
 operation_parameters_minimum_occurrences["uniswapV2SwapsCurrent:::pair"]=0
 operation_parameters_minimum_occurrences["uniswapV3PoolsCurrent:::id"]=0
@@ -117,6 +120,9 @@ operation_parameters_maximum_occurrences["curvePoolsCurrent:::id"]=0
 operation_parameters_maximum_occurrences["metadataDappsDappNameGet:::dappName"]=0
 operation_parameters_maximum_occurrences["sushiswapPairsCurrent:::id"]=0
 operation_parameters_maximum_occurrences["sushiswapSwapsCurrent:::pair"]=0
+operation_parameters_maximum_occurrences["uNISWAPV3ETHEREUMPositionsCurrent:::pool"]=0
+operation_parameters_maximum_occurrences["uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent:::pool"]=0
+operation_parameters_maximum_occurrences["uNISWAPV3ETHEREUMTicksCurrent:::pool"]=0
 operation_parameters_maximum_occurrences["uniswapV2PairsCurrent:::id"]=0
 operation_parameters_maximum_occurrences["uniswapV2SwapsCurrent:::pair"]=0
 operation_parameters_maximum_occurrences["uniswapV3PoolsCurrent:::id"]=0
@@ -131,6 +137,9 @@ operation_parameters_collection_type["curvePoolsCurrent:::id"]=""
 operation_parameters_collection_type["metadataDappsDappNameGet:::dappName"]=""
 operation_parameters_collection_type["sushiswapPairsCurrent:::id"]=""
 operation_parameters_collection_type["sushiswapSwapsCurrent:::pair"]=""
+operation_parameters_collection_type["uNISWAPV3ETHEREUMPositionsCurrent:::pool"]=""
+operation_parameters_collection_type["uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent:::pool"]=""
+operation_parameters_collection_type["uNISWAPV3ETHEREUMTicksCurrent:::pool"]=""
 operation_parameters_collection_type["uniswapV2PairsCurrent:::id"]=""
 operation_parameters_collection_type["uniswapV2SwapsCurrent:::pair"]=""
 operation_parameters_collection_type["uniswapV3PoolsCurrent:::id"]=""
@@ -626,8 +635,26 @@ echo "  $ops" | column -t -s ';'
     echo -e "${BOLD}${WHITE}[uNISWAPV3ETHEREUM]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}uNISWAPV3ETHEREUMAccountsCurrent${OFF};Accounts (current)
+  ${CYAN}uNISWAPV3ETHEREUMActiveAccountsCurrent${OFF};ActiveAccounts (current)
+  ${CYAN}uNISWAPV3ETHEREUMDepositsCurrent${OFF};Deposits (current)
+  ${CYAN}uNISWAPV3ETHEREUMDexAmmProtocolsCurrent${OFF};DexAmmProtocols (current)
+  ${CYAN}uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent${OFF};FinancialsDailySnapshots (current)
+  ${CYAN}uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent${OFF};LiquidityPoolAmounts (current)
+  ${CYAN}uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent${OFF};LiquidityPoolFees (current)
+  ${CYAN}uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent${OFF};LiquidityPoolHourlySnapshots (current)
+  ${CYAN}uNISWAPV3ETHEREUMPositionSnapshotsCurrent${OFF};PositionSnapshots (current)
+  ${CYAN}uNISWAPV3ETHEREUMPositionsCurrent${OFF};Positions (current)
+  ${CYAN}uNISWAPV3ETHEREUMRewardTokensCurrent${OFF};RewardTokens (current)
   ${CYAN}uNISWAPV3ETHEREUMSwapsCurrent${OFF};Swaps (current)
+  ${CYAN}uNISWAPV3ETHEREUMTickDailySnapshotsCurrent${OFF};TickDailySnapshots (current)
+  ${CYAN}uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent${OFF};TickHourlySnapshots (current)
+  ${CYAN}uNISWAPV3ETHEREUMTicksCurrent${OFF};Ticks (current)
+  ${CYAN}uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent${OFF};TokenWhiteListSymbols (current)
+  ${CYAN}uNISWAPV3ETHEREUMTokenWhiteListsCurrent${OFF};TokenWhiteLists (current)
   ${CYAN}uNISWAPV3ETHEREUMTokensCurrent${OFF};Tokens (current)
+  ${CYAN}uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent${OFF};UsageMetricsDailySnapshots (current)
+  ${CYAN}uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent${OFF};UsageMetricsHourlySnapshots (current)
+  ${CYAN}uNISWAPV3ETHEREUMWithdrawsCurrent${OFF};Withdraws (current)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -1967,6 +1994,169 @@ print_uNISWAPV3ETHEREUMAccountsCurrent_help() {
 }
 ##############################################################################
 #
+# Print help for uNISWAPV3ETHEREUMActiveAccountsCurrent operation
+#
+##############################################################################
+print_uNISWAPV3ETHEREUMActiveAccountsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV3ETHEREUMActiveAccountsCurrent - ActiveAccounts (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets activeAccounts." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uNISWAPV3ETHEREUMDepositsCurrent operation
+#
+##############################################################################
+print_uNISWAPV3ETHEREUMDepositsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV3ETHEREUMDepositsCurrent - Deposits (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets deposits." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uNISWAPV3ETHEREUMDexAmmProtocolsCurrent operation
+#
+##############################################################################
+print_uNISWAPV3ETHEREUMDexAmmProtocolsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV3ETHEREUMDexAmmProtocolsCurrent - DexAmmProtocols (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets dexAmmProtocols." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent operation
+#
+##############################################################################
+print_uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent - FinancialsDailySnapshots (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets financialsDailySnapshots." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent operation
+#
+##############################################################################
+print_uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent - LiquidityPoolAmounts (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets liquidityPoolAmounts." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent operation
+#
+##############################################################################
+print_uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent - LiquidityPoolFees (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets liquidityPoolFees." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent operation
+#
+##############################################################################
+print_uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent - LiquidityPoolHourlySnapshots (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets liquidityPoolHourlySnapshots." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uNISWAPV3ETHEREUMPositionSnapshotsCurrent operation
+#
+##############################################################################
+print_uNISWAPV3ETHEREUMPositionSnapshotsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV3ETHEREUMPositionSnapshotsCurrent - PositionSnapshots (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets positionSnapshots." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uNISWAPV3ETHEREUMPositionsCurrent operation
+#
+##############################################################################
+print_uNISWAPV3ETHEREUMPositionsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV3ETHEREUMPositionsCurrent - Positions (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets positions." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}pool${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The liquidity pool in which this position was opened${YELLOW} Specify as: pool=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uNISWAPV3ETHEREUMRewardTokensCurrent operation
+#
+##############################################################################
+print_uNISWAPV3ETHEREUMRewardTokensCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV3ETHEREUMRewardTokensCurrent - RewardTokens (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets rewardTokens." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for uNISWAPV3ETHEREUMSwapsCurrent operation
 #
 ##############################################################################
@@ -1983,6 +2173,92 @@ print_uNISWAPV3ETHEREUMSwapsCurrent_help() {
 }
 ##############################################################################
 #
+# Print help for uNISWAPV3ETHEREUMTickDailySnapshotsCurrent operation
+#
+##############################################################################
+print_uNISWAPV3ETHEREUMTickDailySnapshotsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV3ETHEREUMTickDailySnapshotsCurrent - TickDailySnapshots (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets tickDailySnapshots." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent operation
+#
+##############################################################################
+print_uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent - TickHourlySnapshots (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets tickHourlySnapshots." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}pool${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - liquidity pool this tick belongs to${YELLOW} Specify as: pool=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uNISWAPV3ETHEREUMTicksCurrent operation
+#
+##############################################################################
+print_uNISWAPV3ETHEREUMTicksCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV3ETHEREUMTicksCurrent - Ticks (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets ticks." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}pool${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Liquidity pool this tick belongs to${YELLOW} Specify as: pool=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent operation
+#
+##############################################################################
+print_uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent - TokenWhiteListSymbols (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets tokenWhiteListSymbols." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uNISWAPV3ETHEREUMTokenWhiteListsCurrent operation
+#
+##############################################################################
+print_uNISWAPV3ETHEREUMTokenWhiteListsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV3ETHEREUMTokenWhiteListsCurrent - TokenWhiteLists (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets tokenWhiteLists." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for uNISWAPV3ETHEREUMTokensCurrent operation
 #
 ##############################################################################
@@ -1991,6 +2267,54 @@ print_uNISWAPV3ETHEREUMTokensCurrent_help() {
     echo -e "${BOLD}${WHITE}uNISWAPV3ETHEREUMTokensCurrent - Tokens (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent operation
+#
+##############################################################################
+print_uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent - UsageMetricsDailySnapshots (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets usageMetricsDailySnapshots." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent operation
+#
+##############################################################################
+print_uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent - UsageMetricsHourlySnapshots (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets usageMetricsHourlySnapshots." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uNISWAPV3ETHEREUMWithdrawsCurrent operation
+#
+##############################################################################
+print_uNISWAPV3ETHEREUMWithdrawsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV3ETHEREUMWithdrawsCurrent - Withdraws (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets withdraws." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -5297,6 +5621,366 @@ call_uNISWAPV3ETHEREUMAccountsCurrent() {
 
 ##############################################################################
 #
+# Call uNISWAPV3ETHEREUMActiveAccountsCurrent operation
+#
+##############################################################################
+call_uNISWAPV3ETHEREUMActiveAccountsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/activeAccounts/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uNISWAPV3ETHEREUMDepositsCurrent operation
+#
+##############################################################################
+call_uNISWAPV3ETHEREUMDepositsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/deposits/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uNISWAPV3ETHEREUMDexAmmProtocolsCurrent operation
+#
+##############################################################################
+call_uNISWAPV3ETHEREUMDexAmmProtocolsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent operation
+#
+##############################################################################
+call_uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent operation
+#
+##############################################################################
+call_uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent operation
+#
+##############################################################################
+call_uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent operation
+#
+##############################################################################
+call_uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uNISWAPV3ETHEREUMPositionSnapshotsCurrent operation
+#
+##############################################################################
+call_uNISWAPV3ETHEREUMPositionSnapshotsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/positionSnapshots/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uNISWAPV3ETHEREUMPositionsCurrent operation
+#
+##############################################################################
+call_uNISWAPV3ETHEREUMPositionsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(pool)
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/positions/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uNISWAPV3ETHEREUMRewardTokensCurrent operation
+#
+##############################################################################
+call_uNISWAPV3ETHEREUMRewardTokensCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/rewardTokens/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call uNISWAPV3ETHEREUMSwapsCurrent operation
 #
 ##############################################################################
@@ -5333,6 +6017,186 @@ call_uNISWAPV3ETHEREUMSwapsCurrent() {
 
 ##############################################################################
 #
+# Call uNISWAPV3ETHEREUMTickDailySnapshotsCurrent operation
+#
+##############################################################################
+call_uNISWAPV3ETHEREUMTickDailySnapshotsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent operation
+#
+##############################################################################
+call_uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(pool)
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uNISWAPV3ETHEREUMTicksCurrent operation
+#
+##############################################################################
+call_uNISWAPV3ETHEREUMTicksCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(pool)
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/ticks/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent operation
+#
+##############################################################################
+call_uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uNISWAPV3ETHEREUMTokenWhiteListsCurrent operation
+#
+##############################################################################
+call_uNISWAPV3ETHEREUMTokenWhiteListsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call uNISWAPV3ETHEREUMTokensCurrent operation
 #
 ##############################################################################
@@ -5346,6 +6210,114 @@ call_uNISWAPV3ETHEREUMTokensCurrent() {
     local path
 
     if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/tokens/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent operation
+#
+##############################################################################
+call_uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent operation
+#
+##############################################################################
+call_uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uNISWAPV3ETHEREUMWithdrawsCurrent operation
+#
+##############################################################################
+call_uNISWAPV3ETHEREUMWithdrawsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/withdraws/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -6847,11 +7819,65 @@ case $key in
     uNISWAPV3ETHEREUMAccountsCurrent)
     operation="uNISWAPV3ETHEREUMAccountsCurrent"
     ;;
+    uNISWAPV3ETHEREUMActiveAccountsCurrent)
+    operation="uNISWAPV3ETHEREUMActiveAccountsCurrent"
+    ;;
+    uNISWAPV3ETHEREUMDepositsCurrent)
+    operation="uNISWAPV3ETHEREUMDepositsCurrent"
+    ;;
+    uNISWAPV3ETHEREUMDexAmmProtocolsCurrent)
+    operation="uNISWAPV3ETHEREUMDexAmmProtocolsCurrent"
+    ;;
+    uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent)
+    operation="uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent"
+    ;;
+    uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent)
+    operation="uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent"
+    ;;
+    uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent)
+    operation="uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent"
+    ;;
+    uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent)
+    operation="uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent"
+    ;;
+    uNISWAPV3ETHEREUMPositionSnapshotsCurrent)
+    operation="uNISWAPV3ETHEREUMPositionSnapshotsCurrent"
+    ;;
+    uNISWAPV3ETHEREUMPositionsCurrent)
+    operation="uNISWAPV3ETHEREUMPositionsCurrent"
+    ;;
+    uNISWAPV3ETHEREUMRewardTokensCurrent)
+    operation="uNISWAPV3ETHEREUMRewardTokensCurrent"
+    ;;
     uNISWAPV3ETHEREUMSwapsCurrent)
     operation="uNISWAPV3ETHEREUMSwapsCurrent"
     ;;
+    uNISWAPV3ETHEREUMTickDailySnapshotsCurrent)
+    operation="uNISWAPV3ETHEREUMTickDailySnapshotsCurrent"
+    ;;
+    uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent)
+    operation="uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent"
+    ;;
+    uNISWAPV3ETHEREUMTicksCurrent)
+    operation="uNISWAPV3ETHEREUMTicksCurrent"
+    ;;
+    uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent)
+    operation="uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent"
+    ;;
+    uNISWAPV3ETHEREUMTokenWhiteListsCurrent)
+    operation="uNISWAPV3ETHEREUMTokenWhiteListsCurrent"
+    ;;
     uNISWAPV3ETHEREUMTokensCurrent)
     operation="uNISWAPV3ETHEREUMTokensCurrent"
+    ;;
+    uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent)
+    operation="uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent"
+    ;;
+    uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent)
+    operation="uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent"
+    ;;
+    uNISWAPV3ETHEREUMWithdrawsCurrent)
+    operation="uNISWAPV3ETHEREUMWithdrawsCurrent"
     ;;
     uniswapV2BundlesCurrent)
     operation="uniswapV2BundlesCurrent"
@@ -7257,11 +8283,65 @@ case $operation in
     uNISWAPV3ETHEREUMAccountsCurrent)
     call_uNISWAPV3ETHEREUMAccountsCurrent
     ;;
+    uNISWAPV3ETHEREUMActiveAccountsCurrent)
+    call_uNISWAPV3ETHEREUMActiveAccountsCurrent
+    ;;
+    uNISWAPV3ETHEREUMDepositsCurrent)
+    call_uNISWAPV3ETHEREUMDepositsCurrent
+    ;;
+    uNISWAPV3ETHEREUMDexAmmProtocolsCurrent)
+    call_uNISWAPV3ETHEREUMDexAmmProtocolsCurrent
+    ;;
+    uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent)
+    call_uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
+    ;;
+    uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent)
+    call_uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+    ;;
+    uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent)
+    call_uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent
+    ;;
+    uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent)
+    call_uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+    ;;
+    uNISWAPV3ETHEREUMPositionSnapshotsCurrent)
+    call_uNISWAPV3ETHEREUMPositionSnapshotsCurrent
+    ;;
+    uNISWAPV3ETHEREUMPositionsCurrent)
+    call_uNISWAPV3ETHEREUMPositionsCurrent
+    ;;
+    uNISWAPV3ETHEREUMRewardTokensCurrent)
+    call_uNISWAPV3ETHEREUMRewardTokensCurrent
+    ;;
     uNISWAPV3ETHEREUMSwapsCurrent)
     call_uNISWAPV3ETHEREUMSwapsCurrent
     ;;
+    uNISWAPV3ETHEREUMTickDailySnapshotsCurrent)
+    call_uNISWAPV3ETHEREUMTickDailySnapshotsCurrent
+    ;;
+    uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent)
+    call_uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent
+    ;;
+    uNISWAPV3ETHEREUMTicksCurrent)
+    call_uNISWAPV3ETHEREUMTicksCurrent
+    ;;
+    uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent)
+    call_uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
+    ;;
+    uNISWAPV3ETHEREUMTokenWhiteListsCurrent)
+    call_uNISWAPV3ETHEREUMTokenWhiteListsCurrent
+    ;;
     uNISWAPV3ETHEREUMTokensCurrent)
     call_uNISWAPV3ETHEREUMTokensCurrent
+    ;;
+    uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent)
+    call_uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
+    ;;
+    uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent)
+    call_uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
+    ;;
+    uNISWAPV3ETHEREUMWithdrawsCurrent)
+    call_uNISWAPV3ETHEREUMWithdrawsCurrent
     ;;
     uniswapV2BundlesCurrent)
     call_uniswapV2BundlesCurrent

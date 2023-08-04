@@ -14,7 +14,7 @@ require 'date'
 require 'time'
 
 module OpenapiClient
-  # Swap are created for each token swap within a pair.
+  # Trade (swap) event occurred in a pool.
   class UNISWAPV3ETHEREUMSwapDTO
     attr_accessor :entry_time
 
@@ -23,67 +23,64 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # 
-    attr_accessor :vid
-
-    # 
+    # Block number in which the swap operation was recorded.
     attr_accessor :block_
 
-    # 
+    # Unique string identifier of the swap operation, format: (transaction hash)-(log index).
     attr_accessor :id
 
-    # 
+    # Transaction hash of the transaction that emitted this event.
     attr_accessor :hash
 
-    # 
+    # Nonce of the transaction that emitted this event.
     attr_accessor :nonce
 
-    # 
+    # Event log index. For transactions that don't emit event, create arbitrary index starting from 0.
     attr_accessor :log_index
 
-    # 
+    # Gas limit of the transaction that emitted this event.
     attr_accessor :gas_limit
 
-    # 
+    # Gas used in this transaction.
     attr_accessor :gas_used
 
-    # 
+    # Gas price of the transaction that emitted this event.
     attr_accessor :gas_price
 
-    # 
+    # The protocol this transaction belongs to.
     attr_accessor :protocol
 
-    # 
+    # Account that emitted this event.
     attr_accessor :account
 
-    # 
+    # The pool involving this event.
     attr_accessor :pool
 
-    # 
+    # Timestamp of this event.
     attr_accessor :timestamp
 
-    # 
+    # Tick of the swap operation.
     attr_accessor :tick
 
-    # 
+    # Token deposited into pool.
     attr_accessor :token_in
 
-    # 
+    # Amount of token deposited into pool in native units.
     attr_accessor :amount_in
 
-    # 
+    # Amount of token deposited into pool in USD.
     attr_accessor :amount_in_usd
 
-    # 
+    # Token withdrawn from pool.
     attr_accessor :token_out
 
-    # 
+    # Amount of token withdrawn from pool in native units.
     attr_accessor :amount_out
 
-    # 
+    # Amount of token withdrawn from pool in USD.
     attr_accessor :amount_out_usd
 
-    # 
+    # Amount of input tokens in the liquidity pool.
     attr_accessor :reserve_amounts
 
     attr_accessor :pool_id
@@ -124,7 +121,6 @@ module OpenapiClient
         :'entry_time' => :'entry_time',
         :'recv_time' => :'recv_time',
         :'block_number' => :'block_number',
-        :'vid' => :'vid',
         :'block_' => :'block_',
         :'id' => :'id',
         :'hash' => :'hash',
@@ -164,7 +160,6 @@ module OpenapiClient
         :'entry_time' => :'Time',
         :'recv_time' => :'Time',
         :'block_number' => :'Integer',
-        :'vid' => :'Integer',
         :'block_' => :'Integer',
         :'id' => :'String',
         :'hash' => :'String',
@@ -244,10 +239,6 @@ module OpenapiClient
 
       if attributes.key?(:'block_number')
         self.block_number = attributes[:'block_number']
-      end
-
-      if attributes.key?(:'vid')
-        self.vid = attributes[:'vid']
       end
 
       if attributes.key?(:'block_')
@@ -374,7 +365,6 @@ module OpenapiClient
           entry_time == o.entry_time &&
           recv_time == o.recv_time &&
           block_number == o.block_number &&
-          vid == o.vid &&
           block_ == o.block_ &&
           id == o.id &&
           hash == o.hash &&
@@ -411,7 +401,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [entry_time, recv_time, block_number, vid, block_, id, hash, nonce, log_index, gas_limit, gas_used, gas_price, protocol, account, pool, timestamp, tick, token_in, amount_in, amount_in_usd, token_out, amount_out, amount_out_usd, reserve_amounts, pool_id, transaction_id, evaluated_price, evaluated_amount, evaluated_aggressor].hash
+      [entry_time, recv_time, block_number, block_, id, hash, nonce, log_index, gas_limit, gas_used, gas_price, protocol, account, pool, timestamp, tick, token_in, amount_in, amount_in_usd, token_out, amount_out, amount_out_usd, reserve_amounts, pool_id, transaction_id, evaluated_price, evaluated_amount, evaluated_aggressor].hash
     end
 
     # Builds the object from hash

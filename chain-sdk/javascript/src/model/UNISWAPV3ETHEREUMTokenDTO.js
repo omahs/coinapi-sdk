@@ -175,7 +175,7 @@ UNISWAPV3ETHEREUMTokenDTO.prototype['recv_time'] = undefined;
 UNISWAPV3ETHEREUMTokenDTO.prototype['block_number'] = undefined;
 
 /**
- * 
+ * .
  * @member {Number} vid
  */
 UNISWAPV3ETHEREUMTokenDTO.prototype['vid'] = undefined;
@@ -187,67 +187,67 @@ UNISWAPV3ETHEREUMTokenDTO.prototype['vid'] = undefined;
 UNISWAPV3ETHEREUMTokenDTO.prototype['block_range'] = undefined;
 
 /**
- * 
+ * Smart contract address of the token.
  * @member {String} id
  */
 UNISWAPV3ETHEREUMTokenDTO.prototype['id'] = undefined;
 
 /**
- * 
+ * Name of the token, mirrored from the smart contract.
  * @member {String} name
  */
 UNISWAPV3ETHEREUMTokenDTO.prototype['name'] = undefined;
 
 /**
- * 
+ * Symbol of the token, mirrored from the smart contract.
  * @member {String} symbol
  */
 UNISWAPV3ETHEREUMTokenDTO.prototype['symbol'] = undefined;
 
 /**
- * 
+ * The number of decimal places this token uses, default to 18.
  * @member {Number} decimals
  */
 UNISWAPV3ETHEREUMTokenDTO.prototype['decimals'] = undefined;
 
 /**
- * 
+ * Optional field to track the price of a token, mostly for caching purposes.
  * @member {String} last_price_usd
  */
 UNISWAPV3ETHEREUMTokenDTO.prototype['last_price_usd'] = undefined;
 
 /**
- * 
+ * Optional field to track the block number of the last token price.
  * @member {String} last_price_block_number
  */
 UNISWAPV3ETHEREUMTokenDTO.prototype['last_price_block_number'] = undefined;
 
 /**
- * 
+ * Last pool that gave this token a price.
  * @member {String} last_price_pool
  */
 UNISWAPV3ETHEREUMTokenDTO.prototype['last_price_pool'] = undefined;
 
 /**
- * 
+ * Amount of tokens in the protocol.
  * @member {String} total_supply
  */
 UNISWAPV3ETHEREUMTokenDTO.prototype['total_supply'] = undefined;
 
 /**
- * 
+ * Total value locked in the protocol.
  * @member {String} total_value_locked_usd
  */
 UNISWAPV3ETHEREUMTokenDTO.prototype['total_value_locked_usd'] = undefined;
 
 /**
- * 
+ * The buffer for detecting large price changes.
  * @member {Number} large_price_change_buffer
  */
 UNISWAPV3ETHEREUMTokenDTO.prototype['large_price_change_buffer'] = undefined;
 
 /**
- * 
+ * The buffer for detecting large TVL (Total Value Locked) impact.
  * @member {Number} large_tvl_impact_buffer
  */
 UNISWAPV3ETHEREUMTokenDTO.prototype['large_tvl_impact_buffer'] = undefined;

@@ -15,8 +15,26 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
 import org.openapitools.client.model.UNISWAPV3ETHEREUMAccountDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMActiveAccountDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMDepositDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMDexAmmProtocolDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMLiquidityPoolFeeDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMPositionDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMPositionSnapshotDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMRewardTokenDTO;
 import org.openapitools.client.model.UNISWAPV3ETHEREUMSwapDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMTickDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMTickDailySnapshotDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMTickHourlySnapshotDTO;
 import org.openapitools.client.model.UNISWAPV3ETHEREUMTokenDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMTokenWhiteListDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMWithdrawDTO;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -47,6 +65,137 @@ public class UniswapV3EthereumApiTest {
     }
 
     /**
+     * ActiveAccounts (current)
+     *
+     * Gets activeAccounts.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uNISWAPV3ETHEREUMActiveAccountsCurrentTest() throws ApiException {
+        List<UNISWAPV3ETHEREUMActiveAccountDTO> response = api.uNISWAPV3ETHEREUMActiveAccountsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Deposits (current)
+     *
+     * Gets deposits.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uNISWAPV3ETHEREUMDepositsCurrentTest() throws ApiException {
+        List<UNISWAPV3ETHEREUMDepositDTO> response = api.uNISWAPV3ETHEREUMDepositsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * DexAmmProtocols (current)
+     *
+     * Gets dexAmmProtocols.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uNISWAPV3ETHEREUMDexAmmProtocolsCurrentTest() throws ApiException {
+        List<UNISWAPV3ETHEREUMDexAmmProtocolDTO> response = api.uNISWAPV3ETHEREUMDexAmmProtocolsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * FinancialsDailySnapshots (current)
+     *
+     * Gets financialsDailySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentTest() throws ApiException {
+        List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO> response = api.uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * LiquidityPoolAmounts (current)
+     *
+     * Gets liquidityPoolAmounts.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentTest() throws ApiException {
+        List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> response = api.uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * LiquidityPoolFees (current)
+     *
+     * Gets liquidityPoolFees.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uNISWAPV3ETHEREUMLiquidityPoolFeesCurrentTest() throws ApiException {
+        List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO> response = api.uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     *
+     * Gets liquidityPoolHourlySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentTest() throws ApiException {
+        List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> response = api.uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * PositionSnapshots (current)
+     *
+     * Gets positionSnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uNISWAPV3ETHEREUMPositionSnapshotsCurrentTest() throws ApiException {
+        List<UNISWAPV3ETHEREUMPositionSnapshotDTO> response = api.uNISWAPV3ETHEREUMPositionSnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Positions (current)
+     *
+     * Gets positions.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uNISWAPV3ETHEREUMPositionsCurrentTest() throws ApiException {
+        String pool = null;
+        List<UNISWAPV3ETHEREUMPositionDTO> response = api.uNISWAPV3ETHEREUMPositionsCurrent(pool);
+        // TODO: test validations
+    }
+
+    /**
+     * RewardTokens (current)
+     *
+     * Gets rewardTokens.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uNISWAPV3ETHEREUMRewardTokensCurrentTest() throws ApiException {
+        List<UNISWAPV3ETHEREUMRewardTokenDTO> response = api.uNISWAPV3ETHEREUMRewardTokensCurrent();
+        // TODO: test validations
+    }
+
+    /**
      * Swaps (current)
      *
      * Gets swaps.
@@ -60,6 +209,73 @@ public class UniswapV3EthereumApiTest {
     }
 
     /**
+     * TickDailySnapshots (current)
+     *
+     * Gets tickDailySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uNISWAPV3ETHEREUMTickDailySnapshotsCurrentTest() throws ApiException {
+        List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> response = api.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * TickHourlySnapshots (current)
+     *
+     * Gets tickHourlySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentTest() throws ApiException {
+        String pool = null;
+        List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> response = api.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool);
+        // TODO: test validations
+    }
+
+    /**
+     * Ticks (current)
+     *
+     * Gets ticks.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uNISWAPV3ETHEREUMTicksCurrentTest() throws ApiException {
+        String pool = null;
+        List<UNISWAPV3ETHEREUMTickDTO> response = api.uNISWAPV3ETHEREUMTicksCurrent(pool);
+        // TODO: test validations
+    }
+
+    /**
+     * TokenWhiteListSymbols (current)
+     *
+     * Gets tokenWhiteListSymbols.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentTest() throws ApiException {
+        List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO> response = api.uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * TokenWhiteLists (current)
+     *
+     * Gets tokenWhiteLists.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uNISWAPV3ETHEREUMTokenWhiteListsCurrentTest() throws ApiException {
+        List<UNISWAPV3ETHEREUMTokenWhiteListDTO> response = api.uNISWAPV3ETHEREUMTokenWhiteListsCurrent();
+        // TODO: test validations
+    }
+
+    /**
      * Tokens (current)
      *
      * Gets tokens.
@@ -69,6 +285,45 @@ public class UniswapV3EthereumApiTest {
     @Test
     public void uNISWAPV3ETHEREUMTokensCurrentTest() throws ApiException {
         List<UNISWAPV3ETHEREUMTokenDTO> response = api.uNISWAPV3ETHEREUMTokensCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * UsageMetricsDailySnapshots (current)
+     *
+     * Gets usageMetricsDailySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentTest() throws ApiException {
+        List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO> response = api.uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     *
+     * Gets usageMetricsHourlySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentTest() throws ApiException {
+        List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO> response = api.uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Withdraws (current)
+     *
+     * Gets withdraws.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uNISWAPV3ETHEREUMWithdrawsCurrentTest() throws ApiException {
+        List<UNISWAPV3ETHEREUMWithdrawDTO> response = api.uNISWAPV3ETHEREUMWithdrawsCurrent();
         // TODO: test validations
     }
 

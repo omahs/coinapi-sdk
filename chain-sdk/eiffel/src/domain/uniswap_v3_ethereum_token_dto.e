@@ -26,31 +26,31 @@ feature --Access
  	block_number: INTEGER_64
     	 -- Number of block in which entity was recorded.
  	vid: INTEGER_64
-    	 -- 
+    	 -- .
     block_range: detachable STRING_32
       -- 
     id: detachable STRING_32
-      -- 
+      -- Smart contract address of the token.
     name: detachable STRING_32
-      -- 
+      -- Name of the token, mirrored from the smart contract.
     symbol: detachable STRING_32
-      -- 
+      -- Symbol of the token, mirrored from the smart contract.
  	decimals: INTEGER_32
-    	 -- 
+    	 -- The number of decimal places this token uses, default to 18.
     last_price_usd: detachable STRING_32
-      -- 
+      -- Optional field to track the price of a token, mostly for caching purposes.
     last_price_block_number: detachable STRING_32
-      -- 
+      -- Optional field to track the block number of the last token price.
     last_price_pool: detachable STRING_32
-      -- 
+      -- Last pool that gave this token a price.
     total_supply: detachable STRING_32
-      -- 
+      -- Amount of tokens in the protocol.
     total_value_locked_usd: detachable STRING_32
-      -- 
+      -- Total value locked in the protocol.
  	large_price_change_buffer: INTEGER_32
-    	 -- 
+    	 -- The buffer for detecting large price changes.
  	large_tvl_impact_buffer: INTEGER_32
-    	 -- 
+    	 -- The buffer for detecting large TVL (Total Value Locked) impact.
     token_symbol: detachable STRING_32
       
 

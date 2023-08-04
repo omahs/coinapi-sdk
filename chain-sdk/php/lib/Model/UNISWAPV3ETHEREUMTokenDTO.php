@@ -497,7 +497,7 @@ class UNISWAPV3ETHEREUMTokenDTO implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets vid
      *
-     * @param int|null $vid 
+     * @param int|null $vid .
      *
      * @return self
      */
@@ -558,7 +558,7 @@ class UNISWAPV3ETHEREUMTokenDTO implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets id
      *
-     * @param string|null $id 
+     * @param string|null $id Smart contract address of the token.
      *
      * @return self
      */
@@ -592,7 +592,7 @@ class UNISWAPV3ETHEREUMTokenDTO implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets name
      *
-     * @param string|null $name 
+     * @param string|null $name Name of the token, mirrored from the smart contract.
      *
      * @return self
      */
@@ -626,7 +626,7 @@ class UNISWAPV3ETHEREUMTokenDTO implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets symbol
      *
-     * @param string|null $symbol 
+     * @param string|null $symbol Symbol of the token, mirrored from the smart contract.
      *
      * @return self
      */
@@ -660,7 +660,7 @@ class UNISWAPV3ETHEREUMTokenDTO implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets decimals
      *
-     * @param int|null $decimals 
+     * @param int|null $decimals The number of decimal places this token uses, default to 18.
      *
      * @return self
      */
@@ -687,7 +687,7 @@ class UNISWAPV3ETHEREUMTokenDTO implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets last_price_usd
      *
-     * @param string|null $last_price_usd 
+     * @param string|null $last_price_usd Optional field to track the price of a token, mostly for caching purposes.
      *
      * @return self
      */
@@ -721,7 +721,7 @@ class UNISWAPV3ETHEREUMTokenDTO implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets last_price_block_number
      *
-     * @param string|null $last_price_block_number 
+     * @param string|null $last_price_block_number Optional field to track the block number of the last token price.
      *
      * @return self
      */
@@ -755,7 +755,7 @@ class UNISWAPV3ETHEREUMTokenDTO implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets last_price_pool
      *
-     * @param string|null $last_price_pool 
+     * @param string|null $last_price_pool Last pool that gave this token a price.
      *
      * @return self
      */
@@ -789,7 +789,7 @@ class UNISWAPV3ETHEREUMTokenDTO implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets total_supply
      *
-     * @param string|null $total_supply 
+     * @param string|null $total_supply Amount of tokens in the protocol.
      *
      * @return self
      */
@@ -823,7 +823,7 @@ class UNISWAPV3ETHEREUMTokenDTO implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets total_value_locked_usd
      *
-     * @param string|null $total_value_locked_usd 
+     * @param string|null $total_value_locked_usd Total value locked in the protocol.
      *
      * @return self
      */
@@ -857,7 +857,7 @@ class UNISWAPV3ETHEREUMTokenDTO implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets large_price_change_buffer
      *
-     * @param int|null $large_price_change_buffer 
+     * @param int|null $large_price_change_buffer The buffer for detecting large price changes.
      *
      * @return self
      */
@@ -884,7 +884,7 @@ class UNISWAPV3ETHEREUMTokenDTO implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets large_tvl_impact_buffer
      *
-     * @param int|null $large_tvl_impact_buffer 
+     * @param int|null $large_tvl_impact_buffer The buffer for detecting large TVL (Total Value Locked) impact.
      *
      * @return self
      */

@@ -25,31 +25,31 @@ type UNISWAPV3ETHEREUMTokenDTO struct {
 	RecvTime *time.Time `json:"recv_time,omitempty"`
 	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
-	// 
+	// .
 	Vid *int64 `json:"vid,omitempty"`
 	// 
 	BlockRange NullableString `json:"block_range,omitempty"`
-	// 
+	// Smart contract address of the token.
 	Id NullableString `json:"id,omitempty"`
-	// 
+	// Name of the token, mirrored from the smart contract.
 	Name NullableString `json:"name,omitempty"`
-	// 
+	// Symbol of the token, mirrored from the smart contract.
 	Symbol NullableString `json:"symbol,omitempty"`
-	// 
+	// The number of decimal places this token uses, default to 18.
 	Decimals *int32 `json:"decimals,omitempty"`
-	// 
+	// Optional field to track the price of a token, mostly for caching purposes.
 	LastPriceUsd NullableString `json:"last_price_usd,omitempty"`
-	// 
+	// Optional field to track the block number of the last token price.
 	LastPriceBlockNumber NullableString `json:"last_price_block_number,omitempty"`
-	// 
+	// Last pool that gave this token a price.
 	LastPricePool NullableString `json:"last_price_pool,omitempty"`
-	// 
+	// Amount of tokens in the protocol.
 	TotalSupply NullableString `json:"total_supply,omitempty"`
-	// 
+	// Total value locked in the protocol.
 	TotalValueLockedUsd NullableString `json:"total_value_locked_usd,omitempty"`
-	// 
+	// The buffer for detecting large price changes.
 	LargePriceChangeBuffer *int32 `json:"large_price_change_buffer,omitempty"`
-	// 
+	// The buffer for detecting large TVL (Total Value Locked) impact.
 	LargeTvlImpactBuffer *int32 `json:"large_tvl_impact_buffer,omitempty"`
 	TokenSymbol NullableString `json:"token_symbol,omitempty"`
 }

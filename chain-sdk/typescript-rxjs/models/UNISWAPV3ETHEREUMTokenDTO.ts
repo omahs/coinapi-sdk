@@ -34,7 +34,7 @@ export interface UNISWAPV3ETHEREUMTokenDTO {
      */
     block_number?: number;
     /**
-     * 
+     * .
      * @type {number}
      * @memberof UNISWAPV3ETHEREUMTokenDTO
      */
@@ -46,67 +46,67 @@ export interface UNISWAPV3ETHEREUMTokenDTO {
      */
     block_range?: string | null;
     /**
-     * 
+     * Smart contract address of the token.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMTokenDTO
      */
     id?: string | null;
     /**
-     * 
+     * Name of the token, mirrored from the smart contract.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMTokenDTO
      */
     name?: string | null;
     /**
-     * 
+     * Symbol of the token, mirrored from the smart contract.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMTokenDTO
      */
     symbol?: string | null;
     /**
-     * 
+     * The number of decimal places this token uses, default to 18.
      * @type {number}
      * @memberof UNISWAPV3ETHEREUMTokenDTO
      */
     decimals?: number;
     /**
-     * 
+     * Optional field to track the price of a token, mostly for caching purposes.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMTokenDTO
      */
     last_price_usd?: string | null;
     /**
-     * 
+     * Optional field to track the block number of the last token price.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMTokenDTO
      */
     last_price_block_number?: string | null;
     /**
-     * 
+     * Last pool that gave this token a price.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMTokenDTO
      */
     last_price_pool?: string | null;
     /**
-     * 
+     * Amount of tokens in the protocol.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMTokenDTO
      */
     total_supply?: string | null;
     /**
-     * 
+     * Total value locked in the protocol.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMTokenDTO
      */
     total_value_locked_usd?: string | null;
     /**
-     * 
+     * The buffer for detecting large price changes.
      * @type {number}
      * @memberof UNISWAPV3ETHEREUMTokenDTO
      */
     large_price_change_buffer?: number;
     /**
-     * 
+     * The buffer for detecting large TVL (Total Value Locked) impact.
      * @type {number}
      * @memberof UNISWAPV3ETHEREUMTokenDTO
      */

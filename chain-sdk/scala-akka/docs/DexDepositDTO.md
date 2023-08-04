@@ -2,7 +2,7 @@
 
 # DepositDTO
 
-Deposit of an user.
+Entity represents a user action in the protocol involving the addition of funds to a liquidity pool.
 
 ## Properties
 
@@ -11,14 +11,27 @@ Name | Type | Description | Notes
 **entryTime** | **OffsetDateTime** |  |  [optional]
 **recvTime** | **OffsetDateTime** |  |  [optional]
 **blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional]
-**id** | **String** | Identifier, format: (transaction hash)-(token id). |  [optional]
-**user** | **String** | User address. |  [optional]
-**tokenAddress** | **String** | Token address. |  [optional]
-**amount** | **String** | Amount of deposit. |  [optional]
-**batchId** | **String** | Identifier (numerical). |  [optional]
-**createEpoch** | **String** | Create epoch. |  [optional]
-**txHash** | **String** | Transaction hash. |  [optional]
-**vid** | **Long** |  |  [optional]
+**block** | **Int** |  |  [optional]
+**id** | **String** | Identifier, format: (transaction hash)-(log index) |  [optional]
+**hash** | **String** | Transaction hash of the transaction that emitted this event. |  [optional]
+**nonce** | **String** | Nonce of the transaction that emitted this event. |  [optional]
+**logIndex** | **Int** | Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0. |  [optional]
+**gasLimit** | **String** | Gas limit of the transaction that emitted this event. |  [optional]
+**gasUsed** | **String** | Gas used in this transaction. (Optional because not every chain will support this). |  [optional]
+**gasPrice** | **String** | Gas price of the transaction that emitted this event. |  [optional]
+**protocol** | **String** | The protocol this transaction belongs to. |  [optional]
+**account** | **String** | Account that emitted this event. |  [optional]
+**position** | **String** | The user position changed by this event. |  [optional]
+**pool** | **String** | The pool involving this event. |  [optional]
+**tickLower** | **String** | Lower tick of position. |  [optional]
+**tickUpper** | **String** | Upper tick of position. |  [optional]
+**timestamp** | **String** | Timestamp of this event. |  [optional]
+**liquidity** | **String** | Amount of liquidity minted. |  [optional]
+**inputTokens** | **Seq&lt;String&gt;** | Input tokens of the pool. E.g. WETH and USDC to a WETH-USDC pool. |  [optional]
+**inputTokenAmounts** | **Seq&lt;String&gt;** | Amount of input tokens in the token&#39;s native unit. |  [optional]
+**reserveAmounts** | **Seq&lt;String&gt;** | Amount of input tokens in the liquidity pool. |  [optional]
+**amountUsd** | **String** | USD-normalized value of the transaction of the underlying (e.g. sum of tokens deposited into a pool). |  [optional]
+**blockRange** | **String** |  |  [optional]
 
 
 

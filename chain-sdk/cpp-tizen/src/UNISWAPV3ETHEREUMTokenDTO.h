@@ -66,11 +66,11 @@ public:
 	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
-	/*! \brief Get 
+	/*! \brief Get .
 	 */
 	long long getVid();
 
-	/*! \brief Set 
+	/*! \brief Set .
 	 */
 	void setVid(long long  vid);
 	/*! \brief Get 
@@ -80,81 +80,81 @@ public:
 	/*! \brief Set 
 	 */
 	void setBlockRange(std::string  block_range);
-	/*! \brief Get 
+	/*! \brief Get Smart contract address of the token.
 	 */
 	std::string getId();
 
-	/*! \brief Set 
+	/*! \brief Set Smart contract address of the token.
 	 */
 	void setId(std::string  id);
-	/*! \brief Get 
+	/*! \brief Get Name of the token, mirrored from the smart contract.
 	 */
 	std::string getName();
 
-	/*! \brief Set 
+	/*! \brief Set Name of the token, mirrored from the smart contract.
 	 */
 	void setName(std::string  name);
-	/*! \brief Get 
+	/*! \brief Get Symbol of the token, mirrored from the smart contract.
 	 */
 	std::string getSymbol();
 
-	/*! \brief Set 
+	/*! \brief Set Symbol of the token, mirrored from the smart contract.
 	 */
 	void setSymbol(std::string  symbol);
-	/*! \brief Get 
+	/*! \brief Get The number of decimal places this token uses, default to 18.
 	 */
 	int getDecimals();
 
-	/*! \brief Set 
+	/*! \brief Set The number of decimal places this token uses, default to 18.
 	 */
 	void setDecimals(int  decimals);
-	/*! \brief Get 
+	/*! \brief Get Optional field to track the price of a token, mostly for caching purposes.
 	 */
 	std::string getLastPriceUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Optional field to track the price of a token, mostly for caching purposes.
 	 */
 	void setLastPriceUsd(std::string  last_price_usd);
-	/*! \brief Get 
+	/*! \brief Get Optional field to track the block number of the last token price.
 	 */
 	std::string getLastPriceBlockNumber();
 
-	/*! \brief Set 
+	/*! \brief Set Optional field to track the block number of the last token price.
 	 */
 	void setLastPriceBlockNumber(std::string  last_price_block_number);
-	/*! \brief Get 
+	/*! \brief Get Last pool that gave this token a price.
 	 */
 	std::string getLastPricePool();
 
-	/*! \brief Set 
+	/*! \brief Set Last pool that gave this token a price.
 	 */
 	void setLastPricePool(std::string  last_price_pool);
-	/*! \brief Get 
+	/*! \brief Get Amount of tokens in the protocol.
 	 */
 	std::string getTotalSupply();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of tokens in the protocol.
 	 */
 	void setTotalSupply(std::string  total_supply);
-	/*! \brief Get 
+	/*! \brief Get Total value locked in the protocol.
 	 */
 	std::string getTotalValueLockedUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Total value locked in the protocol.
 	 */
 	void setTotalValueLockedUsd(std::string  total_value_locked_usd);
-	/*! \brief Get 
+	/*! \brief Get The buffer for detecting large price changes.
 	 */
 	int getLargePriceChangeBuffer();
 
-	/*! \brief Set 
+	/*! \brief Set The buffer for detecting large price changes.
 	 */
 	void setLargePriceChangeBuffer(int  large_price_change_buffer);
-	/*! \brief Get 
+	/*! \brief Get The buffer for detecting large TVL (Total Value Locked) impact.
 	 */
 	int getLargeTvlImpactBuffer();
 
-	/*! \brief Set 
+	/*! \brief Set The buffer for detecting large TVL (Total Value Locked) impact.
 	 */
 	void setLargeTvlImpactBuffer(int  large_tvl_impact_buffer);
 	/*! \brief Get 

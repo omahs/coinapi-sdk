@@ -19,53 +19,51 @@ import (
 // checks if the UNISWAPV3ETHEREUMSwapDTO type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &UNISWAPV3ETHEREUMSwapDTO{}
 
-// UNISWAPV3ETHEREUMSwapDTO Swap are created for each token swap within a pair.
+// UNISWAPV3ETHEREUMSwapDTO Trade (swap) event occurred in a pool.
 type UNISWAPV3ETHEREUMSwapDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
 	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
-	// 
-	Vid *int64 `json:"vid,omitempty"`
-	// 
+	// Block number in which the swap operation was recorded.
 	Block *int32 `json:"block_,omitempty"`
-	// 
+	// Unique string identifier of the swap operation, format: (transaction hash)-(log index).
 	Id NullableString `json:"id,omitempty"`
-	// 
+	// Transaction hash of the transaction that emitted this event.
 	Hash NullableString `json:"hash,omitempty"`
-	// 
+	// Nonce of the transaction that emitted this event.
 	Nonce NullableString `json:"nonce,omitempty"`
-	// 
+	// Event log index. For transactions that don't emit event, create arbitrary index starting from 0.
 	LogIndex *int32 `json:"log_index,omitempty"`
-	// 
+	// Gas limit of the transaction that emitted this event.
 	GasLimit NullableString `json:"gas_limit,omitempty"`
-	// 
+	// Gas used in this transaction.
 	GasUsed NullableString `json:"gas_used,omitempty"`
-	// 
+	// Gas price of the transaction that emitted this event.
 	GasPrice NullableString `json:"gas_price,omitempty"`
-	// 
+	// The protocol this transaction belongs to.
 	Protocol NullableString `json:"protocol,omitempty"`
-	// 
+	// Account that emitted this event.
 	Account NullableString `json:"account,omitempty"`
-	// 
+	// The pool involving this event.
 	Pool NullableString `json:"pool,omitempty"`
-	// 
+	// Timestamp of this event.
 	Timestamp NullableString `json:"timestamp,omitempty"`
-	// 
+	// Tick of the swap operation.
 	Tick NullableString `json:"tick,omitempty"`
-	// 
+	// Token deposited into pool.
 	TokenIn NullableString `json:"token_in,omitempty"`
-	// 
+	// Amount of token deposited into pool in native units.
 	AmountIn NullableString `json:"amount_in,omitempty"`
-	// 
+	// Amount of token deposited into pool in USD.
 	AmountInUsd NullableString `json:"amount_in_usd,omitempty"`
-	// 
+	// Token withdrawn from pool.
 	TokenOut NullableString `json:"token_out,omitempty"`
-	// 
+	// Amount of token withdrawn from pool in native units.
 	AmountOut NullableString `json:"amount_out,omitempty"`
-	// 
+	// Amount of token withdrawn from pool in USD.
 	AmountOutUsd NullableString `json:"amount_out_usd,omitempty"`
-	// 
+	// Amount of input tokens in the liquidity pool.
 	ReserveAmounts []string `json:"reserve_amounts,omitempty"`
 	PoolId NullableString `json:"pool_id,omitempty"`
 	TransactionId NullableString `json:"transaction_id,omitempty"`
@@ -185,38 +183,6 @@ func (o *UNISWAPV3ETHEREUMSwapDTO) HasBlockNumber() bool {
 // SetBlockNumber gets a reference to the given int64 and assigns it to the BlockNumber field.
 func (o *UNISWAPV3ETHEREUMSwapDTO) SetBlockNumber(v int64) {
 	o.BlockNumber = &v
-}
-
-// GetVid returns the Vid field value if set, zero value otherwise.
-func (o *UNISWAPV3ETHEREUMSwapDTO) GetVid() int64 {
-	if o == nil || IsNil(o.Vid) {
-		var ret int64
-		return ret
-	}
-	return *o.Vid
-}
-
-// GetVidOk returns a tuple with the Vid field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *UNISWAPV3ETHEREUMSwapDTO) GetVidOk() (*int64, bool) {
-	if o == nil || IsNil(o.Vid) {
-		return nil, false
-	}
-	return o.Vid, true
-}
-
-// HasVid returns a boolean if a field has been set.
-func (o *UNISWAPV3ETHEREUMSwapDTO) HasVid() bool {
-	if o != nil && !IsNil(o.Vid) {
-		return true
-	}
-
-	return false
-}
-
-// SetVid gets a reference to the given int64 and assigns it to the Vid field.
-func (o *UNISWAPV3ETHEREUMSwapDTO) SetVid(v int64) {
-	o.Vid = &v
 }
 
 // GetBlock returns the Block field value if set, zero value otherwise.
@@ -1228,9 +1194,6 @@ func (o UNISWAPV3ETHEREUMSwapDTO) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
-	}
-	if !IsNil(o.Vid) {
-		toSerialize["vid"] = o.Vid
 	}
 	if !IsNil(o.Block) {
 		toSerialize["block_"] = o.Block

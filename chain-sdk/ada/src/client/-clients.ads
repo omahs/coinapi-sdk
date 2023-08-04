@@ -476,17 +476,128 @@ package .Clients is
       (Client : in out Client_Type;
        Result : out .Models.UNISWAPV3ETHEREUMAccountDTO_Type_Vectors.Vector);
 
+   --  ActiveAccounts (current)
+   --  Gets activeAccounts.
+   procedure U_NISWAPV3ETHEREUM_Active_Accounts__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMActiveAccountDTO_Type_Vectors.Vector);
+
+   --  Deposits (current)
+   --  Gets deposits.
+   procedure U_NISWAPV3ETHEREUM_Deposits__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMDepositDTO_Type_Vectors.Vector);
+
+   --  DexAmmProtocols (current)
+   --  Gets dexAmmProtocols.
+   procedure U_NISWAPV3ETHEREUM_Dex_Amm_Protocols__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMDexAmmProtocolDTO_Type_Vectors.Vector);
+
+   --  FinancialsDailySnapshots (current)
+   --  Gets financialsDailySnapshots.
+   procedure U_NISWAPV3ETHEREUM_Financials_Daily_Snapshots__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO_Type_Vectors.Vector);
+
+   --  LiquidityPoolAmounts (current)
+   --  Gets liquidityPoolAmounts.
+   procedure U_NISWAPV3ETHEREUM_Liquidity_Pool_Amounts__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO_Type_Vectors.Vector);
+
+   --  LiquidityPoolFees (current)
+   --  Gets liquidityPoolFees.
+   procedure U_NISWAPV3ETHEREUM_Liquidity_Pool_Fees__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMLiquidityPoolFeeDTO_Type_Vectors.Vector);
+
+   --  LiquidityPoolHourlySnapshots (current)
+   --  Gets liquidityPoolHourlySnapshots.
+   procedure U_NISWAPV3ETHEREUM_Liquidity_Pool_Hourly_Snapshots__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO_Type_Vectors.Vector);
+
+   --  PositionSnapshots (current)
+   --  Gets positionSnapshots.
+   procedure U_NISWAPV3ETHEREUM_Position_Snapshots__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMPositionSnapshotDTO_Type_Vectors.Vector);
+
+   --  Positions (current)
+   --  Gets positions.
+   procedure U_NISWAPV3ETHEREUM_Positions__current
+      (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.UNISWAPV3ETHEREUMPositionDTO_Type_Vectors.Vector);
+
+   --  RewardTokens (current)
+   --  Gets rewardTokens.
+   procedure U_NISWAPV3ETHEREUM_Reward_Tokens__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMRewardTokenDTO_Type_Vectors.Vector);
+
    --  Swaps (current)
    --  Gets swaps.
    procedure U_NISWAPV3ETHEREUM_Swaps__current
       (Client : in out Client_Type;
        Result : out .Models.UNISWAPV3ETHEREUMSwapDTO_Type_Vectors.Vector);
 
+   --  TickDailySnapshots (current)
+   --  Gets tickDailySnapshots.
+   procedure U_NISWAPV3ETHEREUM_Tick_Daily_Snapshots__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMTickDailySnapshotDTO_Type_Vectors.Vector);
+
+   --  TickHourlySnapshots (current)
+   --  Gets tickHourlySnapshots.
+   procedure U_NISWAPV3ETHEREUM_Tick_Hourly_Snapshots__current
+      (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.UNISWAPV3ETHEREUMTickHourlySnapshotDTO_Type_Vectors.Vector);
+
+   --  Ticks (current)
+   --  Gets ticks.
+   procedure U_NISWAPV3ETHEREUM_Ticks__current
+      (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.UNISWAPV3ETHEREUMTickDTO_Type_Vectors.Vector);
+
+   --  TokenWhiteListSymbols (current)
+   --  Gets tokenWhiteListSymbols.
+   procedure U_NISWAPV3ETHEREUM_Token_White_List_Symbols__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO_Type_Vectors.Vector);
+
+   --  TokenWhiteLists (current)
+   --  Gets tokenWhiteLists.
+   procedure U_NISWAPV3ETHEREUM_Token_White_Lists__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMTokenWhiteListDTO_Type_Vectors.Vector);
+
    --  Tokens (current)
    --  Gets tokens.
    procedure U_NISWAPV3ETHEREUM_Tokens__current
       (Client : in out Client_Type;
        Result : out .Models.UNISWAPV3ETHEREUMTokenDTO_Type_Vectors.Vector);
+
+   --  UsageMetricsDailySnapshots (current)
+   --  Gets usageMetricsDailySnapshots.
+   procedure U_NISWAPV3ETHEREUM_Usage_Metrics_Daily_Snapshots__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO_Type_Vectors.Vector);
+
+   --  UsageMetricsHourlySnapshots (current)
+   --  Gets usageMetricsHourlySnapshots.
+   procedure U_NISWAPV3ETHEREUM_Usage_Metrics_Hourly_Snapshots__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO_Type_Vectors.Vector);
+
+   --  Withdraws (current)
+   --  Gets withdraws.
+   procedure U_NISWAPV3ETHEREUM_Withdraws__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMWithdrawDTO_Type_Vectors.Vector);
 
    --  Bundles (current)
    --  Gets bundles.

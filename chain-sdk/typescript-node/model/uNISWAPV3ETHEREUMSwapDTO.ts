@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { TransactionsETradeAggressiveSide } from './transactionsETradeAggressiveSide';
 
 /**
-* Swap are created for each token swap within a pair.
+* Trade (swap) event occurred in a pool.
 */
 export class UNISWAPV3ETHEREUMSwapDTO {
     'entryTime'?: Date;
@@ -24,87 +24,83 @@ export class UNISWAPV3ETHEREUMSwapDTO {
     */
     'blockNumber'?: number;
     /**
-    * 
-    */
-    'vid'?: number;
-    /**
-    * 
+    * Block number in which the swap operation was recorded.
     */
     'block'?: number;
     /**
-    * 
+    * Unique string identifier of the swap operation, format: (transaction hash)-(log index).
     */
     'id'?: string | null;
     /**
-    * 
+    * Transaction hash of the transaction that emitted this event.
     */
     'hash'?: string | null;
     /**
-    * 
+    * Nonce of the transaction that emitted this event.
     */
     'nonce'?: string | null;
     /**
-    * 
+    * Event log index. For transactions that don\'t emit event, create arbitrary index starting from 0.
     */
     'logIndex'?: number;
     /**
-    * 
+    * Gas limit of the transaction that emitted this event.
     */
     'gasLimit'?: string | null;
     /**
-    * 
+    * Gas used in this transaction.
     */
     'gasUsed'?: string | null;
     /**
-    * 
+    * Gas price of the transaction that emitted this event.
     */
     'gasPrice'?: string | null;
     /**
-    * 
+    * The protocol this transaction belongs to.
     */
     'protocol'?: string | null;
     /**
-    * 
+    * Account that emitted this event.
     */
     'account'?: string | null;
     /**
-    * 
+    * The pool involving this event.
     */
     'pool'?: string | null;
     /**
-    * 
+    * Timestamp of this event.
     */
     'timestamp'?: string | null;
     /**
-    * 
+    * Tick of the swap operation.
     */
     'tick'?: string | null;
     /**
-    * 
+    * Token deposited into pool.
     */
     'tokenIn'?: string | null;
     /**
-    * 
+    * Amount of token deposited into pool in native units.
     */
     'amountIn'?: string | null;
     /**
-    * 
+    * Amount of token deposited into pool in USD.
     */
     'amountInUsd'?: string | null;
     /**
-    * 
+    * Token withdrawn from pool.
     */
     'tokenOut'?: string | null;
     /**
-    * 
+    * Amount of token withdrawn from pool in native units.
     */
     'amountOut'?: string | null;
     /**
-    * 
+    * Amount of token withdrawn from pool in USD.
     */
     'amountOutUsd'?: string | null;
     /**
-    * 
+    * Amount of input tokens in the liquidity pool.
     */
     'reserveAmounts'?: Array<string> | null;
     'poolId'?: string | null;
@@ -129,11 +125,6 @@ export class UNISWAPV3ETHEREUMSwapDTO {
         {
             "name": "blockNumber",
             "baseName": "block_number",
-            "type": "number"
-        },
-        {
-            "name": "vid",
-            "baseName": "vid",
             "type": "number"
         },
         {

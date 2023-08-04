@@ -89,8 +89,26 @@ import SushiswapTransactionDTO from './model/SushiswapTransactionDTO';
 import SushiswapUserDTO from './model/SushiswapUserDTO';
 import TransactionsETradeAggressiveSide from './model/TransactionsETradeAggressiveSide';
 import UNISWAPV3ETHEREUMAccountDTO from './model/UNISWAPV3ETHEREUMAccountDTO';
+import UNISWAPV3ETHEREUMActiveAccountDTO from './model/UNISWAPV3ETHEREUMActiveAccountDTO';
+import UNISWAPV3ETHEREUMDepositDTO from './model/UNISWAPV3ETHEREUMDepositDTO';
+import UNISWAPV3ETHEREUMDexAmmProtocolDTO from './model/UNISWAPV3ETHEREUMDexAmmProtocolDTO';
+import UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO from './model/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO';
+import UNISWAPV3ETHEREUMLiquidityPoolAmountDTO from './model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO';
+import UNISWAPV3ETHEREUMLiquidityPoolFeeDTO from './model/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO';
+import UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO from './model/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO';
+import UNISWAPV3ETHEREUMPositionDTO from './model/UNISWAPV3ETHEREUMPositionDTO';
+import UNISWAPV3ETHEREUMPositionSnapshotDTO from './model/UNISWAPV3ETHEREUMPositionSnapshotDTO';
+import UNISWAPV3ETHEREUMRewardTokenDTO from './model/UNISWAPV3ETHEREUMRewardTokenDTO';
 import UNISWAPV3ETHEREUMSwapDTO from './model/UNISWAPV3ETHEREUMSwapDTO';
+import UNISWAPV3ETHEREUMTickDTO from './model/UNISWAPV3ETHEREUMTickDTO';
+import UNISWAPV3ETHEREUMTickDailySnapshotDTO from './model/UNISWAPV3ETHEREUMTickDailySnapshotDTO';
+import UNISWAPV3ETHEREUMTickHourlySnapshotDTO from './model/UNISWAPV3ETHEREUMTickHourlySnapshotDTO';
 import UNISWAPV3ETHEREUMTokenDTO from './model/UNISWAPV3ETHEREUMTokenDTO';
+import UNISWAPV3ETHEREUMTokenWhiteListDTO from './model/UNISWAPV3ETHEREUMTokenWhiteListDTO';
+import UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO from './model/UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO';
+import UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO from './model/UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO';
+import UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO from './model/UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO';
+import UNISWAPV3ETHEREUMWithdrawDTO from './model/UNISWAPV3ETHEREUMWithdrawDTO';
 import UniswapV2BundleDTO from './model/UniswapV2BundleDTO';
 import UniswapV2BurnDTO from './model/UniswapV2BurnDTO';
 import UniswapV2LiquidityPositionDTO from './model/UniswapV2LiquidityPositionDTO';
@@ -629,16 +647,124 @@ export {
     UNISWAPV3ETHEREUMAccountDTO,
 
     /**
+     * The UNISWAPV3ETHEREUMActiveAccountDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMActiveAccountDTO}
+     */
+    UNISWAPV3ETHEREUMActiveAccountDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMDepositDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMDepositDTO}
+     */
+    UNISWAPV3ETHEREUMDepositDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMDexAmmProtocolDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMDexAmmProtocolDTO}
+     */
+    UNISWAPV3ETHEREUMDexAmmProtocolDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO}
+     */
+    UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMLiquidityPoolAmountDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO}
+     */
+    UNISWAPV3ETHEREUMLiquidityPoolAmountDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMLiquidityPoolFeeDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO}
+     */
+    UNISWAPV3ETHEREUMLiquidityPoolFeeDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO}
+     */
+    UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMPositionDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMPositionDTO}
+     */
+    UNISWAPV3ETHEREUMPositionDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMPositionSnapshotDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMPositionSnapshotDTO}
+     */
+    UNISWAPV3ETHEREUMPositionSnapshotDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMRewardTokenDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMRewardTokenDTO}
+     */
+    UNISWAPV3ETHEREUMRewardTokenDTO,
+
+    /**
      * The UNISWAPV3ETHEREUMSwapDTO model constructor.
      * @property {module:model/UNISWAPV3ETHEREUMSwapDTO}
      */
     UNISWAPV3ETHEREUMSwapDTO,
 
     /**
+     * The UNISWAPV3ETHEREUMTickDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMTickDTO}
+     */
+    UNISWAPV3ETHEREUMTickDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMTickDailySnapshotDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMTickDailySnapshotDTO}
+     */
+    UNISWAPV3ETHEREUMTickDailySnapshotDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMTickHourlySnapshotDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMTickHourlySnapshotDTO}
+     */
+    UNISWAPV3ETHEREUMTickHourlySnapshotDTO,
+
+    /**
      * The UNISWAPV3ETHEREUMTokenDTO model constructor.
      * @property {module:model/UNISWAPV3ETHEREUMTokenDTO}
      */
     UNISWAPV3ETHEREUMTokenDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMTokenWhiteListDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMTokenWhiteListDTO}
+     */
+    UNISWAPV3ETHEREUMTokenWhiteListDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO}
+     */
+    UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO}
+     */
+    UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO}
+     */
+    UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMWithdrawDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMWithdrawDTO}
+     */
+    UNISWAPV3ETHEREUMWithdrawDTO,
 
     /**
      * The UniswapV2BundleDTO model constructor.

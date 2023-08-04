@@ -23,30 +23,27 @@ module OpenapiClient
     attr_accessor :block_number
 
     # 
-    attr_accessor :vid
-
-    # 
     attr_accessor :block_range
 
-    # 
+    # Account address.
     attr_accessor :id
 
-    # 
+    # Number of positions this account has.
     attr_accessor :position_count
 
-    # 
+    # Number of open positions this account has.
     attr_accessor :open_position_count
 
-    # 
+    # Number of closed positions this account has.
     attr_accessor :closed_position_count
 
-    # 
+    # Number of deposits this account made.
     attr_accessor :deposit_count
 
-    # 
+    # Number of withdrawals this account made.
     attr_accessor :withdraw_count
 
-    # 
+    # Number of times this account has traded/swapped.
     attr_accessor :swap_count
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -55,7 +52,6 @@ module OpenapiClient
         :'entry_time' => :'entry_time',
         :'recv_time' => :'recv_time',
         :'block_number' => :'block_number',
-        :'vid' => :'vid',
         :'block_range' => :'block_range',
         :'id' => :'id',
         :'position_count' => :'position_count',
@@ -78,7 +74,6 @@ module OpenapiClient
         :'entry_time' => :'Time',
         :'recv_time' => :'Time',
         :'block_number' => :'Integer',
-        :'vid' => :'Integer',
         :'block_range' => :'String',
         :'id' => :'String',
         :'position_count' => :'Integer',
@@ -123,10 +118,6 @@ module OpenapiClient
 
       if attributes.key?(:'block_number')
         self.block_number = attributes[:'block_number']
-      end
-
-      if attributes.key?(:'vid')
-        self.vid = attributes[:'vid']
       end
 
       if attributes.key?(:'block_range')
@@ -183,7 +174,6 @@ module OpenapiClient
           entry_time == o.entry_time &&
           recv_time == o.recv_time &&
           block_number == o.block_number &&
-          vid == o.vid &&
           block_range == o.block_range &&
           id == o.id &&
           position_count == o.position_count &&
@@ -203,7 +193,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [entry_time, recv_time, block_number, vid, block_range, id, position_count, open_position_count, closed_position_count, deposit_count, withdraw_count, swap_count].hash
+      [entry_time, recv_time, block_number, block_range, id, position_count, open_position_count, closed_position_count, deposit_count, withdraw_count, swap_count].hash
     end
 
     # Builds the object from hash

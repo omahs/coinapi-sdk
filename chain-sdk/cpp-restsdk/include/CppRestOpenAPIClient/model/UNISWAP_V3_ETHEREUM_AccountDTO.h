@@ -84,15 +84,6 @@ public:
     /// <summary>
     /// 
     /// </summary>
-    int64_t getVid() const;
-    bool vidIsSet() const;
-    void unsetVid();
-
-    void setVid(int64_t value);
-
-    /// <summary>
-    /// 
-    /// </summary>
     utility::string_t getBlockRange() const;
     bool blockRangeIsSet() const;
     void unsetBlock_range();
@@ -100,7 +91,7 @@ public:
     void setBlockRange(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Account address.
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;
@@ -109,7 +100,7 @@ public:
     void setId(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Number of positions this account has.
     /// </summary>
     int32_t getPositionCount() const;
     bool positionCountIsSet() const;
@@ -118,7 +109,7 @@ public:
     void setPositionCount(int32_t value);
 
     /// <summary>
-    /// 
+    /// Number of open positions this account has.
     /// </summary>
     int32_t getOpenPositionCount() const;
     bool openPositionCountIsSet() const;
@@ -127,7 +118,7 @@ public:
     void setOpenPositionCount(int32_t value);
 
     /// <summary>
-    /// 
+    /// Number of closed positions this account has.
     /// </summary>
     int32_t getClosedPositionCount() const;
     bool closedPositionCountIsSet() const;
@@ -136,7 +127,7 @@ public:
     void setClosedPositionCount(int32_t value);
 
     /// <summary>
-    /// 
+    /// Number of deposits this account made.
     /// </summary>
     int32_t getDepositCount() const;
     bool depositCountIsSet() const;
@@ -145,7 +136,7 @@ public:
     void setDepositCount(int32_t value);
 
     /// <summary>
-    /// 
+    /// Number of withdrawals this account made.
     /// </summary>
     int32_t getWithdrawCount() const;
     bool withdrawCountIsSet() const;
@@ -154,7 +145,7 @@ public:
     void setWithdrawCount(int32_t value);
 
     /// <summary>
-    /// 
+    /// Number of times this account has traded/swapped.
     /// </summary>
     int32_t getSwapCount() const;
     bool swapCountIsSet() const;
@@ -170,8 +161,6 @@ protected:
     bool m_Recv_timeIsSet;
     int64_t m_Block_number;
     bool m_Block_numberIsSet;
-    int64_t m_Vid;
-    bool m_VidIsSet;
     utility::string_t m_Block_range;
     bool m_Block_rangeIsSet;
     utility::string_t m_Id;

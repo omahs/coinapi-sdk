@@ -45,6 +45,198 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMAccountDTO></returns>
         ApiResponse<List<UNISWAPV3ETHEREUMAccountDTO>> UNISWAPV3ETHEREUMAccountsCurrentWithHttpInfo ();
         /// <summary>
+        /// ActiveAccounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets activeAccounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMActiveAccountDTO></returns>
+        List<UNISWAPV3ETHEREUMActiveAccountDTO> UNISWAPV3ETHEREUMActiveAccountsCurrent ();
+
+        /// <summary>
+        /// ActiveAccounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets activeAccounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMActiveAccountDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMActiveAccountDTO>> UNISWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo ();
+        /// <summary>
+        /// Deposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets deposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMDepositDTO></returns>
+        List<UNISWAPV3ETHEREUMDepositDTO> UNISWAPV3ETHEREUMDepositsCurrent ();
+
+        /// <summary>
+        /// Deposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets deposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMDepositDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMDepositDTO>> UNISWAPV3ETHEREUMDepositsCurrentWithHttpInfo ();
+        /// <summary>
+        /// DexAmmProtocols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dexAmmProtocols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMDexAmmProtocolDTO></returns>
+        List<UNISWAPV3ETHEREUMDexAmmProtocolDTO> UNISWAPV3ETHEREUMDexAmmProtocolsCurrent ();
+
+        /// <summary>
+        /// DexAmmProtocols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dexAmmProtocols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMDexAmmProtocolDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>> UNISWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo ();
+        /// <summary>
+        /// FinancialsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets financialsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO></returns>
+        List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO> UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent ();
+
+        /// <summary>
+        /// FinancialsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets financialsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>> UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo ();
+        /// <summary>
+        /// LiquidityPoolAmounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolAmounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO></returns>
+        List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent ();
+
+        /// <summary>
+        /// LiquidityPoolAmounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolAmounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo ();
+        /// <summary>
+        /// LiquidityPoolFees (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolFees.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO></returns>
+        List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO> UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent ();
+
+        /// <summary>
+        /// LiquidityPoolFees (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolFees.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>> UNISWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo ();
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO></returns>
+        List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent ();
+
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo ();
+        /// <summary>
+        /// PositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets positionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMPositionSnapshotDTO></returns>
+        List<UNISWAPV3ETHEREUMPositionSnapshotDTO> UNISWAPV3ETHEREUMPositionSnapshotsCurrent ();
+
+        /// <summary>
+        /// PositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets positionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMPositionSnapshotDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>> UNISWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo ();
+        /// <summary>
+        /// Positions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets positions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The liquidity pool in which this position was opened (optional)</param>
+        /// <returns>List<UNISWAPV3ETHEREUMPositionDTO></returns>
+        List<UNISWAPV3ETHEREUMPositionDTO> UNISWAPV3ETHEREUMPositionsCurrent (string pool = default(string));
+
+        /// <summary>
+        /// Positions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets positions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The liquidity pool in which this position was opened (optional)</param>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMPositionDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMPositionDTO>> UNISWAPV3ETHEREUMPositionsCurrentWithHttpInfo (string pool = default(string));
+        /// <summary>
+        /// RewardTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets rewardTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMRewardTokenDTO></returns>
+        List<UNISWAPV3ETHEREUMRewardTokenDTO> UNISWAPV3ETHEREUMRewardTokensCurrent ();
+
+        /// <summary>
+        /// RewardTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets rewardTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMRewardTokenDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMRewardTokenDTO>> UNISWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo ();
+        /// <summary>
         /// Swaps (current)
         /// </summary>
         /// <remarks>
@@ -64,6 +256,105 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMSwapDTO></returns>
         ApiResponse<List<UNISWAPV3ETHEREUMSwapDTO>> UNISWAPV3ETHEREUMSwapsCurrentWithHttpInfo ();
         /// <summary>
+        /// TickDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tickDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMTickDailySnapshotDTO></returns>
+        List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> UNISWAPV3ETHEREUMTickDailySnapshotsCurrent ();
+
+        /// <summary>
+        /// TickDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tickDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMTickDailySnapshotDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo ();
+        /// <summary>
+        /// TickHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tickHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <returns>List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO></returns>
+        List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent (string pool = default(string));
+
+        /// <summary>
+        /// TickHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tickHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo (string pool = default(string));
+        /// <summary>
+        /// Ticks (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets ticks.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Liquidity pool this tick belongs to (optional)</param>
+        /// <returns>List<UNISWAPV3ETHEREUMTickDTO></returns>
+        List<UNISWAPV3ETHEREUMTickDTO> UNISWAPV3ETHEREUMTicksCurrent (string pool = default(string));
+
+        /// <summary>
+        /// Ticks (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets ticks.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Liquidity pool this tick belongs to (optional)</param>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMTickDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMTickDTO>> UNISWAPV3ETHEREUMTicksCurrentWithHttpInfo (string pool = default(string));
+        /// <summary>
+        /// TokenWhiteListSymbols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenWhiteListSymbols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO></returns>
+        List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO> UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent ();
+
+        /// <summary>
+        /// TokenWhiteListSymbols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenWhiteListSymbols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>> UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo ();
+        /// <summary>
+        /// TokenWhiteLists (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenWhiteLists.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMTokenWhiteListDTO></returns>
+        List<UNISWAPV3ETHEREUMTokenWhiteListDTO> UNISWAPV3ETHEREUMTokenWhiteListsCurrent ();
+
+        /// <summary>
+        /// TokenWhiteLists (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenWhiteLists.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMTokenWhiteListDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>> UNISWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo ();
+        /// <summary>
         /// Tokens (current)
         /// </summary>
         /// <remarks>
@@ -82,6 +373,63 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMTokenDTO></returns>
         ApiResponse<List<UNISWAPV3ETHEREUMTokenDTO>> UNISWAPV3ETHEREUMTokensCurrentWithHttpInfo ();
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO></returns>
+        List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO> UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent ();
+
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo ();
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO></returns>
+        List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO> UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent ();
+
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo ();
+        /// <summary>
+        /// Withdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMWithdrawDTO></returns>
+        List<UNISWAPV3ETHEREUMWithdrawDTO> UNISWAPV3ETHEREUMWithdrawsCurrent ();
+
+        /// <summary>
+        /// Withdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMWithdrawDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMWithdrawDTO>> UNISWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -106,6 +454,218 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMAccountDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMAccountDTO>>> UNISWAPV3ETHEREUMAccountsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
+        /// ActiveAccounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets activeAccounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMActiveAccountDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMActiveAccountDTO>> UNISWAPV3ETHEREUMActiveAccountsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// ActiveAccounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets activeAccounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMActiveAccountDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMActiveAccountDTO>>> UNISWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Deposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets deposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMDepositDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMDepositDTO>> UNISWAPV3ETHEREUMDepositsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Deposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets deposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMDepositDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMDepositDTO>>> UNISWAPV3ETHEREUMDepositsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// DexAmmProtocols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dexAmmProtocols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMDexAmmProtocolDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>> UNISWAPV3ETHEREUMDexAmmProtocolsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// DexAmmProtocols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dexAmmProtocols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMDexAmmProtocolDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>> UNISWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// FinancialsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets financialsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>> UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// FinancialsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets financialsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>> UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// LiquidityPoolAmounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolAmounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// LiquidityPoolAmounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolAmounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMLiquidityPoolAmountDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// LiquidityPoolFees (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolFees.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>> UNISWAPV3ETHEREUMLiquidityPoolFeesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// LiquidityPoolFees (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolFees.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMLiquidityPoolFeeDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>> UNISWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// PositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets positionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMPositionSnapshotDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>> UNISWAPV3ETHEREUMPositionSnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// PositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets positionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMPositionSnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>>> UNISWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Positions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets positions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The liquidity pool in which this position was opened (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMPositionDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMPositionDTO>> UNISWAPV3ETHEREUMPositionsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Positions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets positions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The liquidity pool in which this position was opened (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMPositionDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMPositionDTO>>> UNISWAPV3ETHEREUMPositionsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// RewardTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets rewardTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMRewardTokenDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMRewardTokenDTO>> UNISWAPV3ETHEREUMRewardTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// RewardTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets rewardTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMRewardTokenDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMRewardTokenDTO>>> UNISWAPV3ETHEREUMRewardTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
         /// Swaps (current)
         /// </summary>
         /// <remarks>
@@ -127,6 +687,115 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMSwapDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMSwapDTO>>> UNISWAPV3ETHEREUMSwapsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
+        /// TickDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tickDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMTickDailySnapshotDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// TickDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tickDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// TickHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tickHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// TickHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tickHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMTickHourlySnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>> UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Ticks (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets ticks.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMTickDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMTickDTO>> UNISWAPV3ETHEREUMTicksCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Ticks (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets ticks.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMTickDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTickDTO>>> UNISWAPV3ETHEREUMTicksCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// TokenWhiteListSymbols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenWhiteListSymbols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>> UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// TokenWhiteListSymbols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenWhiteListSymbols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>> UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// TokenWhiteLists (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenWhiteLists.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMTokenWhiteListDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>> UNISWAPV3ETHEREUMTokenWhiteListsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// TokenWhiteLists (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenWhiteLists.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMTokenWhiteListDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>>> UNISWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
         /// Tokens (current)
         /// </summary>
         /// <remarks>
@@ -147,6 +816,69 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMTokenDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTokenDTO>>> UNISWAPV3ETHEREUMTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>> UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>> UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Withdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMWithdrawDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMWithdrawDTO>> UNISWAPV3ETHEREUMWithdrawsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Withdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMWithdrawDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMWithdrawDTO>>> UNISWAPV3ETHEREUMWithdrawsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -386,6 +1118,1282 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
+        /// ActiveAccounts (current) Gets activeAccounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMActiveAccountDTO></returns>
+        public List<UNISWAPV3ETHEREUMActiveAccountDTO> UNISWAPV3ETHEREUMActiveAccountsCurrent ()
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMActiveAccountDTO>> localVarResponse = UNISWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// ActiveAccounts (current) Gets activeAccounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMActiveAccountDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMActiveAccountDTO>> UNISWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/activeAccounts/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMActiveAccountsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMActiveAccountDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMActiveAccountDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMActiveAccountDTO>)));
+        }
+
+        /// <summary>
+        /// ActiveAccounts (current) Gets activeAccounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMActiveAccountDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMActiveAccountDTO>> UNISWAPV3ETHEREUMActiveAccountsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMActiveAccountDTO>> localVarResponse = await UNISWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// ActiveAccounts (current) Gets activeAccounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMActiveAccountDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMActiveAccountDTO>>> UNISWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/activeAccounts/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMActiveAccountsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMActiveAccountDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMActiveAccountDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMActiveAccountDTO>)));
+        }
+
+        /// <summary>
+        /// Deposits (current) Gets deposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMDepositDTO></returns>
+        public List<UNISWAPV3ETHEREUMDepositDTO> UNISWAPV3ETHEREUMDepositsCurrent ()
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMDepositDTO>> localVarResponse = UNISWAPV3ETHEREUMDepositsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Deposits (current) Gets deposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMDepositDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMDepositDTO>> UNISWAPV3ETHEREUMDepositsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/deposits/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMDepositsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMDepositDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMDepositDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMDepositDTO>)));
+        }
+
+        /// <summary>
+        /// Deposits (current) Gets deposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMDepositDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMDepositDTO>> UNISWAPV3ETHEREUMDepositsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMDepositDTO>> localVarResponse = await UNISWAPV3ETHEREUMDepositsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Deposits (current) Gets deposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMDepositDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMDepositDTO>>> UNISWAPV3ETHEREUMDepositsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/deposits/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMDepositsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMDepositDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMDepositDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMDepositDTO>)));
+        }
+
+        /// <summary>
+        /// DexAmmProtocols (current) Gets dexAmmProtocols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMDexAmmProtocolDTO></returns>
+        public List<UNISWAPV3ETHEREUMDexAmmProtocolDTO> UNISWAPV3ETHEREUMDexAmmProtocolsCurrent ()
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>> localVarResponse = UNISWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// DexAmmProtocols (current) Gets dexAmmProtocols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMDexAmmProtocolDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>> UNISWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMDexAmmProtocolsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>)));
+        }
+
+        /// <summary>
+        /// DexAmmProtocols (current) Gets dexAmmProtocols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMDexAmmProtocolDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>> UNISWAPV3ETHEREUMDexAmmProtocolsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>> localVarResponse = await UNISWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// DexAmmProtocols (current) Gets dexAmmProtocols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMDexAmmProtocolDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>> UNISWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMDexAmmProtocolsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>)));
+        }
+
+        /// <summary>
+        /// FinancialsDailySnapshots (current) Gets financialsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO></returns>
+        public List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO> UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent ()
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>> localVarResponse = UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// FinancialsDailySnapshots (current) Gets financialsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>> UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// FinancialsDailySnapshots (current) Gets financialsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>> UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>> localVarResponse = await UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// FinancialsDailySnapshots (current) Gets financialsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>> UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPoolAmounts (current) Gets liquidityPoolAmounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO></returns>
+        public List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent ()
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> localVarResponse = UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPoolAmounts (current) Gets liquidityPoolAmounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPoolAmounts (current) Gets liquidityPoolAmounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> localVarResponse = await UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// LiquidityPoolAmounts (current) Gets liquidityPoolAmounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMLiquidityPoolAmountDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPoolFees (current) Gets liquidityPoolFees.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO></returns>
+        public List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO> UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent ()
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>> localVarResponse = UNISWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPoolFees (current) Gets liquidityPoolFees.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>> UNISWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPoolFees (current) Gets liquidityPoolFees.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>> UNISWAPV3ETHEREUMLiquidityPoolFeesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>> localVarResponse = await UNISWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// LiquidityPoolFees (current) Gets liquidityPoolFees.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMLiquidityPoolFeeDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>> UNISWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current) Gets liquidityPoolHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO></returns>
+        public List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent ()
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> localVarResponse = UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current) Gets liquidityPoolHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current) Gets liquidityPoolHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> localVarResponse = await UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current) Gets liquidityPoolHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// PositionSnapshots (current) Gets positionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMPositionSnapshotDTO></returns>
+        public List<UNISWAPV3ETHEREUMPositionSnapshotDTO> UNISWAPV3ETHEREUMPositionSnapshotsCurrent ()
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>> localVarResponse = UNISWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// PositionSnapshots (current) Gets positionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMPositionSnapshotDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>> UNISWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/positionSnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMPositionSnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMPositionSnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMPositionSnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// PositionSnapshots (current) Gets positionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMPositionSnapshotDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>> UNISWAPV3ETHEREUMPositionSnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>> localVarResponse = await UNISWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// PositionSnapshots (current) Gets positionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMPositionSnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>>> UNISWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/positionSnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMPositionSnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMPositionSnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMPositionSnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// Positions (current) Gets positions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The liquidity pool in which this position was opened (optional)</param>
+        /// <returns>List<UNISWAPV3ETHEREUMPositionDTO></returns>
+        public List<UNISWAPV3ETHEREUMPositionDTO> UNISWAPV3ETHEREUMPositionsCurrent (string pool = default(string))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMPositionDTO>> localVarResponse = UNISWAPV3ETHEREUMPositionsCurrentWithHttpInfo(pool);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Positions (current) Gets positions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The liquidity pool in which this position was opened (optional)</param>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMPositionDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMPositionDTO>> UNISWAPV3ETHEREUMPositionsCurrentWithHttpInfo (string pool = default(string))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/positions/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMPositionsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMPositionDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMPositionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMPositionDTO>)));
+        }
+
+        /// <summary>
+        /// Positions (current) Gets positions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The liquidity pool in which this position was opened (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMPositionDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMPositionDTO>> UNISWAPV3ETHEREUMPositionsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMPositionDTO>> localVarResponse = await UNISWAPV3ETHEREUMPositionsCurrentWithHttpInfoAsync(pool, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Positions (current) Gets positions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The liquidity pool in which this position was opened (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMPositionDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMPositionDTO>>> UNISWAPV3ETHEREUMPositionsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/positions/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMPositionsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMPositionDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMPositionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMPositionDTO>)));
+        }
+
+        /// <summary>
+        /// RewardTokens (current) Gets rewardTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMRewardTokenDTO></returns>
+        public List<UNISWAPV3ETHEREUMRewardTokenDTO> UNISWAPV3ETHEREUMRewardTokensCurrent ()
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMRewardTokenDTO>> localVarResponse = UNISWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// RewardTokens (current) Gets rewardTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMRewardTokenDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMRewardTokenDTO>> UNISWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/rewardTokens/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMRewardTokensCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMRewardTokenDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMRewardTokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMRewardTokenDTO>)));
+        }
+
+        /// <summary>
+        /// RewardTokens (current) Gets rewardTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMRewardTokenDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMRewardTokenDTO>> UNISWAPV3ETHEREUMRewardTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMRewardTokenDTO>> localVarResponse = await UNISWAPV3ETHEREUMRewardTokensCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// RewardTokens (current) Gets rewardTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMRewardTokenDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMRewardTokenDTO>>> UNISWAPV3ETHEREUMRewardTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/rewardTokens/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMRewardTokensCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMRewardTokenDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMRewardTokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMRewardTokenDTO>)));
+        }
+
+        /// <summary>
         /// Swaps (current) Gets swaps.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
@@ -513,6 +2521,653 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
+        /// TickDailySnapshots (current) Gets tickDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMTickDailySnapshotDTO></returns>
+        public List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> UNISWAPV3ETHEREUMTickDailySnapshotsCurrent ()
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> localVarResponse = UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// TickDailySnapshots (current) Gets tickDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMTickDailySnapshotDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMTickDailySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// TickDailySnapshots (current) Gets tickDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMTickDailySnapshotDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> localVarResponse = await UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// TickDailySnapshots (current) Gets tickDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMTickDailySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// TickHourlySnapshots (current) Gets tickHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <returns>List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO></returns>
+        public List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent (string pool = default(string))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> localVarResponse = UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(pool);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// TickHourlySnapshots (current) Gets tickHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo (string pool = default(string))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// TickHourlySnapshots (current) Gets tickHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> localVarResponse = await UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfoAsync(pool, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// TickHourlySnapshots (current) Gets tickHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMTickHourlySnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>> UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// Ticks (current) Gets ticks.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Liquidity pool this tick belongs to (optional)</param>
+        /// <returns>List<UNISWAPV3ETHEREUMTickDTO></returns>
+        public List<UNISWAPV3ETHEREUMTickDTO> UNISWAPV3ETHEREUMTicksCurrent (string pool = default(string))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMTickDTO>> localVarResponse = UNISWAPV3ETHEREUMTicksCurrentWithHttpInfo(pool);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Ticks (current) Gets ticks.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Liquidity pool this tick belongs to (optional)</param>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMTickDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMTickDTO>> UNISWAPV3ETHEREUMTicksCurrentWithHttpInfo (string pool = default(string))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/ticks/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMTicksCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMTickDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMTickDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMTickDTO>)));
+        }
+
+        /// <summary>
+        /// Ticks (current) Gets ticks.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMTickDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMTickDTO>> UNISWAPV3ETHEREUMTicksCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMTickDTO>> localVarResponse = await UNISWAPV3ETHEREUMTicksCurrentWithHttpInfoAsync(pool, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Ticks (current) Gets ticks.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMTickDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTickDTO>>> UNISWAPV3ETHEREUMTicksCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/ticks/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMTicksCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMTickDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMTickDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMTickDTO>)));
+        }
+
+        /// <summary>
+        /// TokenWhiteListSymbols (current) Gets tokenWhiteListSymbols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO></returns>
+        public List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO> UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent ()
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>> localVarResponse = UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// TokenWhiteListSymbols (current) Gets tokenWhiteListSymbols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>> UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>)));
+        }
+
+        /// <summary>
+        /// TokenWhiteListSymbols (current) Gets tokenWhiteListSymbols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>> UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>> localVarResponse = await UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// TokenWhiteListSymbols (current) Gets tokenWhiteListSymbols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>> UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>)));
+        }
+
+        /// <summary>
+        /// TokenWhiteLists (current) Gets tokenWhiteLists.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMTokenWhiteListDTO></returns>
+        public List<UNISWAPV3ETHEREUMTokenWhiteListDTO> UNISWAPV3ETHEREUMTokenWhiteListsCurrent ()
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>> localVarResponse = UNISWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// TokenWhiteLists (current) Gets tokenWhiteLists.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMTokenWhiteListDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>> UNISWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMTokenWhiteListsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMTokenWhiteListDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMTokenWhiteListDTO>)));
+        }
+
+        /// <summary>
+        /// TokenWhiteLists (current) Gets tokenWhiteLists.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMTokenWhiteListDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>> UNISWAPV3ETHEREUMTokenWhiteListsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>> localVarResponse = await UNISWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// TokenWhiteLists (current) Gets tokenWhiteLists.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMTokenWhiteListDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>>> UNISWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMTokenWhiteListsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMTokenWhiteListDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMTokenWhiteListDTO>)));
+        }
+
+        /// <summary>
         /// Tokens (current) Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
@@ -637,6 +3292,387 @@ namespace CoinAPI.EMS.REST.V1.Api
             return new ApiResponse<List<UNISWAPV3ETHEREUMTokenDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<UNISWAPV3ETHEREUMTokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMTokenDTO>)));
+        }
+
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current) Gets usageMetricsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO></returns>
+        public List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO> UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent ()
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> localVarResponse = UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current) Gets usageMetricsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current) Gets usageMetricsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> localVarResponse = await UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current) Gets usageMetricsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>> UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current) Gets usageMetricsHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO></returns>
+        public List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO> UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent ()
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> localVarResponse = UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current) Gets usageMetricsHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current) Gets usageMetricsHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> localVarResponse = await UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current) Gets usageMetricsHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>> UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// Withdraws (current) Gets withdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UNISWAPV3ETHEREUMWithdrawDTO></returns>
+        public List<UNISWAPV3ETHEREUMWithdrawDTO> UNISWAPV3ETHEREUMWithdrawsCurrent ()
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMWithdrawDTO>> localVarResponse = UNISWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Withdraws (current) Gets withdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMWithdrawDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMWithdrawDTO>> UNISWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/withdraws/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMWithdrawsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMWithdrawDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMWithdrawDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMWithdrawDTO>)));
+        }
+
+        /// <summary>
+        /// Withdraws (current) Gets withdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMWithdrawDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMWithdrawDTO>> UNISWAPV3ETHEREUMWithdrawsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMWithdrawDTO>> localVarResponse = await UNISWAPV3ETHEREUMWithdrawsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Withdraws (current) Gets withdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMWithdrawDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMWithdrawDTO>>> UNISWAPV3ETHEREUMWithdrawsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/withdraws/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMWithdrawsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMWithdrawDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMWithdrawDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMWithdrawDTO>)));
         }
 
     }

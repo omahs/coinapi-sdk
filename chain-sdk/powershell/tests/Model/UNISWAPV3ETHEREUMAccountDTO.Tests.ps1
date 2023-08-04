@@ -10,7 +10,7 @@ Describe -tag 'PSOpenAPITools' -name 'UNISWAPV3ETHEREUMAccountDTO' {
     Context 'UNISWAPV3ETHEREUMAccountDTO' {
         It 'Initialize-UNISWAPV3ETHEREUMAccountDTO' {
             # a simple test to create an object
-            #$NewObject = Initialize-UNISWAPV3ETHEREUMAccountDTO -EntryTime "TEST_VALUE" -RecvTime "TEST_VALUE" -BlockNumber "TEST_VALUE" -Vid "TEST_VALUE" -BlockRange "TEST_VALUE" -Id "TEST_VALUE" -PositionCount "TEST_VALUE" -OpenPositionCount "TEST_VALUE" -ClosedPositionCount "TEST_VALUE" -DepositCount "TEST_VALUE" -WithdrawCount "TEST_VALUE" -SwapCount "TEST_VALUE"
+            #$NewObject = Initialize-UNISWAPV3ETHEREUMAccountDTO -EntryTime "TEST_VALUE" -RecvTime "TEST_VALUE" -BlockNumber "TEST_VALUE" -BlockRange "TEST_VALUE" -Id "TEST_VALUE" -PositionCount "TEST_VALUE" -OpenPositionCount "TEST_VALUE" -ClosedPositionCount "TEST_VALUE" -DepositCount "TEST_VALUE" -WithdrawCount "TEST_VALUE" -SwapCount "TEST_VALUE"
             #$NewObject | Should -BeOfType UNISWAPV3ETHEREUMAccountDTO
             #$NewObject.property | Should -Be 0
         }

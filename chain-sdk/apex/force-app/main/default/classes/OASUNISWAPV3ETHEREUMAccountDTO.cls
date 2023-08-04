@@ -34,54 +34,48 @@ public class OASUNISWAPV3ETHEREUMAccountDTO implements OAS.MappedProperties {
 
     /**
      * 
-     * @return vid
-     */
-    public Long vid { get; set; }
-
-    /**
-     * 
      * @return blockRange
      */
     public String blockRange { get; set; }
 
     /**
-     * 
+     * Account address.
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * 
+     * Number of positions this account has.
      * @return positionCount
      */
     public Integer positionCount { get; set; }
 
     /**
-     * 
+     * Number of open positions this account has.
      * @return openPositionCount
      */
     public Integer openPositionCount { get; set; }
 
     /**
-     * 
+     * Number of closed positions this account has.
      * @return closedPositionCount
      */
     public Integer closedPositionCount { get; set; }
 
     /**
-     * 
+     * Number of deposits this account made.
      * @return depositCount
      */
     public Integer depositCount { get; set; }
 
     /**
-     * 
+     * Number of withdrawals this account made.
      * @return withdrawCount
      */
     public Integer withdrawCount { get; set; }
 
     /**
-     * 
+     * Number of times this account has traded/swapped.
      * @return swapCount
      */
     public Integer swapCount { get; set; }
@@ -261,7 +255,6 @@ public class OASUNISWAPV3ETHEREUMAccountDTO implements OAS.MappedProperties {
           unISWAPV3ETHEREUMAccountDTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           unISWAPV3ETHEREUMAccountDTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           unISWAPV3ETHEREUMAccountDTO.blockNumber = 123456789L;
-          unISWAPV3ETHEREUMAccountDTO.vid = 123456789L;
           unISWAPV3ETHEREUMAccountDTO.blockRange = '';
           unISWAPV3ETHEREUMAccountDTO.id = '';
           unISWAPV3ETHEREUMAccountDTO.positionCount = 0;
@@ -279,7 +272,6 @@ public class OASUNISWAPV3ETHEREUMAccountDTO implements OAS.MappedProperties {
             return this.entryTime == unISWAPV3ETHEREUMAccountDTO.entryTime
                 && this.recvTime == unISWAPV3ETHEREUMAccountDTO.recvTime
                 && this.blockNumber == unISWAPV3ETHEREUMAccountDTO.blockNumber
-                && this.vid == unISWAPV3ETHEREUMAccountDTO.vid
                 && this.blockRange == unISWAPV3ETHEREUMAccountDTO.blockRange
                 && this.id == unISWAPV3ETHEREUMAccountDTO.id
                 && this.positionCount == unISWAPV3ETHEREUMAccountDTO.positionCount
@@ -297,7 +289,6 @@ public class OASUNISWAPV3ETHEREUMAccountDTO implements OAS.MappedProperties {
         hashCode = (17 * hashCode) + (entryTime == null ? 0 : System.hashCode(entryTime));
         hashCode = (17 * hashCode) + (recvTime == null ? 0 : System.hashCode(recvTime));
         hashCode = (17 * hashCode) + (blockNumber == null ? 0 : System.hashCode(blockNumber));
-        hashCode = (17 * hashCode) + (vid == null ? 0 : System.hashCode(vid));
         hashCode = (17 * hashCode) + (blockRange == null ? 0 : System.hashCode(blockRange));
         hashCode = (17 * hashCode) + (id == null ? 0 : System.hashCode(id));
         hashCode = (17 * hashCode) + (positionCount == null ? 0 : System.hashCode(positionCount));

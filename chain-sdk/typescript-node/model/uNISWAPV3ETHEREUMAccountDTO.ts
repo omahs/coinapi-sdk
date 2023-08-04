@@ -22,37 +22,33 @@ export class UNISWAPV3ETHEREUMAccountDTO {
     /**
     * 
     */
-    'vid'?: number;
-    /**
-    * 
-    */
     'blockRange'?: string | null;
     /**
-    * 
+    * Account address.
     */
     'id'?: string | null;
     /**
-    * 
+    * Number of positions this account has.
     */
     'positionCount'?: number;
     /**
-    * 
+    * Number of open positions this account has.
     */
     'openPositionCount'?: number;
     /**
-    * 
+    * Number of closed positions this account has.
     */
     'closedPositionCount'?: number;
     /**
-    * 
+    * Number of deposits this account made.
     */
     'depositCount'?: number;
     /**
-    * 
+    * Number of withdrawals this account made.
     */
     'withdrawCount'?: number;
     /**
-    * 
+    * Number of times this account has traded/swapped.
     */
     'swapCount'?: number;
 
@@ -72,11 +68,6 @@ export class UNISWAPV3ETHEREUMAccountDTO {
         {
             "name": "blockNumber",
             "baseName": "block_number",
-            "type": "number"
-        },
-        {
-            "name": "vid",
-            "baseName": "vid",
             "type": "number"
         },
         {

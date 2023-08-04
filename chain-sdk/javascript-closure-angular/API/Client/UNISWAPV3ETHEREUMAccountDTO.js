@@ -26,62 +26,55 @@ API.Client.UNISWAPV3ETHEREUMAccountDTO.prototype.blockNumber;
 
 /**
  * 
- * @type {!number}
- * @export
- */
-API.Client.UNISWAPV3ETHEREUMAccountDTO.prototype.vid;
-
-/**
- * 
  * @type {!string}
  * @export
  */
 API.Client.UNISWAPV3ETHEREUMAccountDTO.prototype.blockRange;
 
 /**
- * 
+ * Account address.
  * @type {!string}
  * @export
  */
 API.Client.UNISWAPV3ETHEREUMAccountDTO.prototype.id;
 
 /**
- * 
+ * Number of positions this account has.
  * @type {!number}
  * @export
  */
 API.Client.UNISWAPV3ETHEREUMAccountDTO.prototype.positionCount;
 
 /**
- * 
+ * Number of open positions this account has.
  * @type {!number}
  * @export
  */
 API.Client.UNISWAPV3ETHEREUMAccountDTO.prototype.openPositionCount;
 
 /**
- * 
+ * Number of closed positions this account has.
  * @type {!number}
  * @export
  */
 API.Client.UNISWAPV3ETHEREUMAccountDTO.prototype.closedPositionCount;
 
 /**
- * 
+ * Number of deposits this account made.
  * @type {!number}
  * @export
  */
 API.Client.UNISWAPV3ETHEREUMAccountDTO.prototype.depositCount;
 
 /**
- * 
+ * Number of withdrawals this account made.
  * @type {!number}
  * @export
  */
 API.Client.UNISWAPV3ETHEREUMAccountDTO.prototype.withdrawCount;
 
 /**
- * 
+ * Number of times this account has traded/swapped.
  * @type {!number}
  * @export
  */

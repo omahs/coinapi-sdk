@@ -57,7 +57,7 @@ class UNISWAPV3ETHEREUMTokenDTO {
   ///
   int? blockNumber;
 
-  /// 
+  /// .
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -69,16 +69,16 @@ class UNISWAPV3ETHEREUMTokenDTO {
   /// 
   String? blockRange;
 
-  /// 
+  /// Smart contract address of the token.
   String? id;
 
-  /// 
+  /// Name of the token, mirrored from the smart contract.
   String? name;
 
-  /// 
+  /// Symbol of the token, mirrored from the smart contract.
   String? symbol;
 
-  /// 
+  /// The number of decimal places this token uses, default to 18.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -87,22 +87,22 @@ class UNISWAPV3ETHEREUMTokenDTO {
   ///
   int? decimals;
 
-  /// 
+  /// Optional field to track the price of a token, mostly for caching purposes.
   String? lastPriceUsd;
 
-  /// 
+  /// Optional field to track the block number of the last token price.
   String? lastPriceBlockNumber;
 
-  /// 
+  /// Last pool that gave this token a price.
   String? lastPricePool;
 
-  /// 
+  /// Amount of tokens in the protocol.
   String? totalSupply;
 
-  /// 
+  /// Total value locked in the protocol.
   String? totalValueLockedUsd;
 
-  /// 
+  /// The buffer for detecting large price changes.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -111,7 +111,7 @@ class UNISWAPV3ETHEREUMTokenDTO {
   ///
   int? largePriceChangeBuffer;
 
-  /// 
+  /// The buffer for detecting large TVL (Total Value Locked) impact.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

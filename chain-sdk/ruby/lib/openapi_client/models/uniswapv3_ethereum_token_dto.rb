@@ -23,43 +23,43 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # 
+    # .
     attr_accessor :vid
 
     # 
     attr_accessor :block_range
 
-    # 
+    # Smart contract address of the token.
     attr_accessor :id
 
-    # 
+    # Name of the token, mirrored from the smart contract.
     attr_accessor :name
 
-    # 
+    # Symbol of the token, mirrored from the smart contract.
     attr_accessor :symbol
 
-    # 
+    # The number of decimal places this token uses, default to 18.
     attr_accessor :decimals
 
-    # 
+    # Optional field to track the price of a token, mostly for caching purposes.
     attr_accessor :last_price_usd
 
-    # 
+    # Optional field to track the block number of the last token price.
     attr_accessor :last_price_block_number
 
-    # 
+    # Last pool that gave this token a price.
     attr_accessor :last_price_pool
 
-    # 
+    # Amount of tokens in the protocol.
     attr_accessor :total_supply
 
-    # 
+    # Total value locked in the protocol.
     attr_accessor :total_value_locked_usd
 
-    # 
+    # The buffer for detecting large price changes.
     attr_accessor :large_price_change_buffer
 
-    # 
+    # The buffer for detecting large TVL (Total Value Locked) impact.
     attr_accessor :large_tvl_impact_buffer
 
     attr_accessor :token_symbol

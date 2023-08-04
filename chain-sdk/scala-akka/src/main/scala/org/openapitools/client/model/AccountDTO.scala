@@ -20,22 +20,20 @@ case class AccountDTO (
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
   /*  */
-  vid: Option[Long] = None,
-  /*  */
   blockRange: Option[String] = None,
-  /*  */
+  /* Account address. */
   id: Option[String] = None,
-  /*  */
+  /* Number of positions this account has. */
   positionCount: Option[Int] = None,
-  /*  */
+  /* Number of open positions this account has. */
   openPositionCount: Option[Int] = None,
-  /*  */
+  /* Number of closed positions this account has. */
   closedPositionCount: Option[Int] = None,
-  /*  */
+  /* Number of deposits this account made. */
   depositCount: Option[Int] = None,
-  /*  */
+  /* Number of withdrawals this account made. */
   withdrawCount: Option[Int] = None,
-  /*  */
+  /* Number of times this account has traded/swapped. */
   swapCount: Option[Int] = None
 ) extends ApiModel
 

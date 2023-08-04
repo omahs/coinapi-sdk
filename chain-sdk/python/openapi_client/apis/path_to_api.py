@@ -78,8 +78,26 @@ from openapi_client.apis.paths.dapps_sushiswap_tokens_current import DappsSushis
 from openapi_client.apis.paths.dapps_sushiswap_transactions_current import DappsSushiswapTransactionsCurrent
 from openapi_client.apis.paths.dapps_sushiswap_users_current import DappsSushiswapUsersCurrent
 from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_accounts_current import DappsUniswapV3EthereumAccountsCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_active_accounts_current import DappsUniswapV3EthereumActiveAccountsCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_deposits_current import DappsUniswapV3EthereumDepositsCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_dex_amm_protocols_current import DappsUniswapV3EthereumDexAmmProtocolsCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_financials_daily_snapshots_current import DappsUniswapV3EthereumFinancialsDailySnapshotsCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_liquidity_pool_amounts_current import DappsUniswapV3EthereumLiquidityPoolAmountsCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_liquidity_pool_fees_current import DappsUniswapV3EthereumLiquidityPoolFeesCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_liquidity_pool_hourly_snapshots_current import DappsUniswapV3EthereumLiquidityPoolHourlySnapshotsCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_positions_current import DappsUniswapV3EthereumPositionsCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_position_snapshots_current import DappsUniswapV3EthereumPositionSnapshotsCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_reward_tokens_current import DappsUniswapV3EthereumRewardTokensCurrent
 from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_swaps_current import DappsUniswapV3EthereumSwapsCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_tick_daily_snapshots_current import DappsUniswapV3EthereumTickDailySnapshotsCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_ticks_current import DappsUniswapV3EthereumTicksCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_tick_hourly_snapshots_current import DappsUniswapV3EthereumTickHourlySnapshotsCurrent
 from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_tokens_current import DappsUniswapV3EthereumTokensCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_token_white_lists_current import DappsUniswapV3EthereumTokenWhiteListsCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_token_white_list_symbols_current import DappsUniswapV3EthereumTokenWhiteListSymbolsCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_usage_metrics_daily_snapshots_current import DappsUniswapV3EthereumUsageMetricsDailySnapshotsCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_usage_metrics_hourly_snapshots_current import DappsUniswapV3EthereumUsageMetricsHourlySnapshotsCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_withdraws_current import DappsUniswapV3EthereumWithdrawsCurrent
 from openapi_client.apis.paths.dapps_uniswapv2_bundles_current import DappsUniswapv2BundlesCurrent
 from openapi_client.apis.paths.dapps_uniswapv2_burns_current import DappsUniswapv2BurnsCurrent
 from openapi_client.apis.paths.dapps_uniswapv2_liquidity_positions_current import DappsUniswapv2LiquidityPositionsCurrent
@@ -193,8 +211,26 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.DAPPS_SUSHISWAP_TRANSACTIONS_CURRENT: DappsSushiswapTransactionsCurrent,
         PathValues.DAPPS_SUSHISWAP_USERS_CURRENT: DappsSushiswapUsersCurrent,
         PathValues.DAPPS_UNISWAP_V3_ETHEREUM_ACCOUNTS_CURRENT: DappsUniswapV3EthereumAccountsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_ACTIVE_ACCOUNTS_CURRENT: DappsUniswapV3EthereumActiveAccountsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_DEPOSITS_CURRENT: DappsUniswapV3EthereumDepositsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_DEX_AMM_PROTOCOLS_CURRENT: DappsUniswapV3EthereumDexAmmProtocolsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_FINANCIALS_DAILY_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumFinancialsDailySnapshotsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_AMOUNTS_CURRENT: DappsUniswapV3EthereumLiquidityPoolAmountsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_FEES_CURRENT: DappsUniswapV3EthereumLiquidityPoolFeesCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_HOURLY_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumLiquidityPoolHourlySnapshotsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_POSITIONS_CURRENT: DappsUniswapV3EthereumPositionsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_POSITION_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumPositionSnapshotsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_REWARD_TOKENS_CURRENT: DappsUniswapV3EthereumRewardTokensCurrent,
         PathValues.DAPPS_UNISWAP_V3_ETHEREUM_SWAPS_CURRENT: DappsUniswapV3EthereumSwapsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_TICK_DAILY_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumTickDailySnapshotsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_TICKS_CURRENT: DappsUniswapV3EthereumTicksCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_TICK_HOURLY_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumTickHourlySnapshotsCurrent,
         PathValues.DAPPS_UNISWAP_V3_ETHEREUM_TOKENS_CURRENT: DappsUniswapV3EthereumTokensCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_TOKEN_WHITE_LISTS_CURRENT: DappsUniswapV3EthereumTokenWhiteListsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_TOKEN_WHITE_LIST_SYMBOLS_CURRENT: DappsUniswapV3EthereumTokenWhiteListSymbolsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_USAGE_METRICS_DAILY_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumUsageMetricsDailySnapshotsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_USAGE_METRICS_HOURLY_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumUsageMetricsHourlySnapshotsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_WITHDRAWS_CURRENT: DappsUniswapV3EthereumWithdrawsCurrent,
         PathValues.DAPPS_UNISWAPV2_BUNDLES_CURRENT: DappsUniswapv2BundlesCurrent,
         PathValues.DAPPS_UNISWAPV2_BURNS_CURRENT: DappsUniswapv2BurnsCurrent,
         PathValues.DAPPS_UNISWAPV2_LIQUIDITY_POSITIONS_CURRENT: DappsUniswapv2LiquidityPositionsCurrent,
@@ -309,8 +345,26 @@ path_to_api = PathToApi(
         PathValues.DAPPS_SUSHISWAP_TRANSACTIONS_CURRENT: DappsSushiswapTransactionsCurrent,
         PathValues.DAPPS_SUSHISWAP_USERS_CURRENT: DappsSushiswapUsersCurrent,
         PathValues.DAPPS_UNISWAP_V3_ETHEREUM_ACCOUNTS_CURRENT: DappsUniswapV3EthereumAccountsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_ACTIVE_ACCOUNTS_CURRENT: DappsUniswapV3EthereumActiveAccountsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_DEPOSITS_CURRENT: DappsUniswapV3EthereumDepositsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_DEX_AMM_PROTOCOLS_CURRENT: DappsUniswapV3EthereumDexAmmProtocolsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_FINANCIALS_DAILY_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumFinancialsDailySnapshotsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_AMOUNTS_CURRENT: DappsUniswapV3EthereumLiquidityPoolAmountsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_FEES_CURRENT: DappsUniswapV3EthereumLiquidityPoolFeesCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_HOURLY_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumLiquidityPoolHourlySnapshotsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_POSITIONS_CURRENT: DappsUniswapV3EthereumPositionsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_POSITION_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumPositionSnapshotsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_REWARD_TOKENS_CURRENT: DappsUniswapV3EthereumRewardTokensCurrent,
         PathValues.DAPPS_UNISWAP_V3_ETHEREUM_SWAPS_CURRENT: DappsUniswapV3EthereumSwapsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_TICK_DAILY_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumTickDailySnapshotsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_TICKS_CURRENT: DappsUniswapV3EthereumTicksCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_TICK_HOURLY_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumTickHourlySnapshotsCurrent,
         PathValues.DAPPS_UNISWAP_V3_ETHEREUM_TOKENS_CURRENT: DappsUniswapV3EthereumTokensCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_TOKEN_WHITE_LISTS_CURRENT: DappsUniswapV3EthereumTokenWhiteListsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_TOKEN_WHITE_LIST_SYMBOLS_CURRENT: DappsUniswapV3EthereumTokenWhiteListSymbolsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_USAGE_METRICS_DAILY_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumUsageMetricsDailySnapshotsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_USAGE_METRICS_HOURLY_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumUsageMetricsHourlySnapshotsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_WITHDRAWS_CURRENT: DappsUniswapV3EthereumWithdrawsCurrent,
         PathValues.DAPPS_UNISWAPV2_BUNDLES_CURRENT: DappsUniswapv2BundlesCurrent,
         PathValues.DAPPS_UNISWAPV2_BURNS_CURRENT: DappsUniswapv2BurnsCurrent,
         PathValues.DAPPS_UNISWAPV2_LIQUIDITY_POSITIONS_CURRENT: DappsUniswapv2LiquidityPositionsCurrent,

@@ -10,8 +10,26 @@ All URIs are relative to *https://onchain.coinapi.io*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**u_niswapv3_ethereum_accounts__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_accounts__current) | **GET** /dapps/uniswap_v3_ethereum/accounts/current | Accounts (current)
+[**u_niswapv3_ethereum_active_accounts__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_active_accounts__current) | **GET** /dapps/uniswap_v3_ethereum/activeAccounts/current | ActiveAccounts (current)
+[**u_niswapv3_ethereum_deposits__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_deposits__current) | **GET** /dapps/uniswap_v3_ethereum/deposits/current | Deposits (current)
+[**u_niswapv3_ethereum_dex_amm_protocols__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_dex_amm_protocols__current) | **GET** /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
+[**u_niswapv3_ethereum_financials_daily_snapshots__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_financials_daily_snapshots__current) | **GET** /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
+[**u_niswapv3_ethereum_liquidity_pool_amounts__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_liquidity_pool_amounts__current) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
+[**u_niswapv3_ethereum_liquidity_pool_fees__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_liquidity_pool_fees__current) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
+[**u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
+[**u_niswapv3_ethereum_position_snapshots__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_position_snapshots__current) | **GET** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current)
+[**u_niswapv3_ethereum_positions__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_positions__current) | **GET** /dapps/uniswap_v3_ethereum/positions/current | Positions (current)
+[**u_niswapv3_ethereum_reward_tokens__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_reward_tokens__current) | **GET** /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current)
 [**u_niswapv3_ethereum_swaps__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_swaps__current) | **GET** /dapps/uniswap_v3_ethereum/swaps/current | Swaps (current)
+[**u_niswapv3_ethereum_tick_daily_snapshots__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_tick_daily_snapshots__current) | **GET** /dapps/uniswap_v3_ethereum/tickDailySnapshots/current | TickDailySnapshots (current)
+[**u_niswapv3_ethereum_tick_hourly_snapshots__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_tick_hourly_snapshots__current) | **GET** /dapps/uniswap_v3_ethereum/tickHourlySnapshots/current | TickHourlySnapshots (current)
+[**u_niswapv3_ethereum_ticks__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_ticks__current) | **GET** /dapps/uniswap_v3_ethereum/ticks/current | Ticks (current)
+[**u_niswapv3_ethereum_token_white_list_symbols__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_token_white_list_symbols__current) | **GET** /dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current | TokenWhiteListSymbols (current)
+[**u_niswapv3_ethereum_token_white_lists__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_token_white_lists__current) | **GET** /dapps/uniswap_v3_ethereum/tokenWhiteLists/current | TokenWhiteLists (current)
 [**u_niswapv3_ethereum_tokens__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_tokens__current) | **GET** /dapps/uniswap_v3_ethereum/tokens/current | Tokens (current)
+[**u_niswapv3_ethereum_usage_metrics_daily_snapshots__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_usage_metrics_daily_snapshots__current) | **GET** /dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current)
+[**u_niswapv3_ethereum_usage_metrics_hourly_snapshots__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_usage_metrics_hourly_snapshots__current) | **GET** /dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current)
+[**u_niswapv3_ethereum_withdraws__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_withdraws__current) | **GET** /dapps/uniswap_v3_ethereum/withdraws/current | Withdraws (current)
 
 
 # **u_niswapv3_ethereum_accounts__current**
@@ -44,6 +62,430 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ARRAY[UNISWAPV3ETHEREUMAccountDTO]**](UNISWAPV3ETHEREUMAccountDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_niswapv3_ethereum_active_accounts__current**
+> ARRAY[UNISWAPV3ETHEREUMActiveAccountDTO] u_niswapv3_ethereum_active_accounts__current()
+
+ActiveAccounts (current)
+
+Gets activeAccounts.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_active_accounts__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_active_accounts__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMActiveAccountDTO]**](UNISWAPV3ETHEREUMActiveAccountDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_niswapv3_ethereum_deposits__current**
+> ARRAY[UNISWAPV3ETHEREUMDepositDTO] u_niswapv3_ethereum_deposits__current()
+
+Deposits (current)
+
+Gets deposits.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_deposits__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_deposits__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMDepositDTO]**](UNISWAPV3ETHEREUMDepositDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_niswapv3_ethereum_dex_amm_protocols__current**
+> ARRAY[UNISWAPV3ETHEREUMDexAmmProtocolDTO] u_niswapv3_ethereum_dex_amm_protocols__current()
+
+DexAmmProtocols (current)
+
+Gets dexAmmProtocols.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_dex_amm_protocols__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_dex_amm_protocols__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMDexAmmProtocolDTO]**](UNISWAPV3ETHEREUMDexAmmProtocolDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_niswapv3_ethereum_financials_daily_snapshots__current**
+> ARRAY[UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO] u_niswapv3_ethereum_financials_daily_snapshots__current()
+
+FinancialsDailySnapshots (current)
+
+Gets financialsDailySnapshots.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_financials_daily_snapshots__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_financials_daily_snapshots__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO]**](UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_niswapv3_ethereum_liquidity_pool_amounts__current**
+> ARRAY[UNISWAPV3ETHEREUMLiquidityPoolAmountDTO] u_niswapv3_ethereum_liquidity_pool_amounts__current()
+
+LiquidityPoolAmounts (current)
+
+Gets liquidityPoolAmounts.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_liquidity_pool_amounts__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_liquidity_pool_amounts__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMLiquidityPoolAmountDTO]**](UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_niswapv3_ethereum_liquidity_pool_fees__current**
+> ARRAY[UNISWAPV3ETHEREUMLiquidityPoolFeeDTO] u_niswapv3_ethereum_liquidity_pool_fees__current()
+
+LiquidityPoolFees (current)
+
+Gets liquidityPoolFees.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_liquidity_pool_fees__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_liquidity_pool_fees__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMLiquidityPoolFeeDTO]**](UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current**
+> ARRAY[UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO] u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current()
+
+LiquidityPoolHourlySnapshots (current)
+
+Gets liquidityPoolHourlySnapshots.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]**](UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_niswapv3_ethereum_position_snapshots__current**
+> ARRAY[UNISWAPV3ETHEREUMPositionSnapshotDTO] u_niswapv3_ethereum_position_snapshots__current()
+
+PositionSnapshots (current)
+
+Gets positionSnapshots.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_position_snapshots__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_position_snapshots__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMPositionSnapshotDTO]**](UNISWAPV3ETHEREUMPositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_niswapv3_ethereum_positions__current**
+> ARRAY[UNISWAPV3ETHEREUMPositionDTO] u_niswapv3_ethereum_positions__current(pool => $pool)
+
+Positions (current)
+
+Gets positions.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+my $pool = "pool_example"; # string | The liquidity pool in which this position was opened
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_positions__current(pool => $pool);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_positions__current: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **string**| The liquidity pool in which this position was opened | [optional] 
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMPositionDTO]**](UNISWAPV3ETHEREUMPositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_niswapv3_ethereum_reward_tokens__current**
+> ARRAY[UNISWAPV3ETHEREUMRewardTokenDTO] u_niswapv3_ethereum_reward_tokens__current()
+
+RewardTokens (current)
+
+Gets rewardTokens.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_reward_tokens__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_reward_tokens__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMRewardTokenDTO]**](UNISWAPV3ETHEREUMRewardTokenDTO.md)
 
 ### Authorization
 
@@ -98,6 +540,224 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **u_niswapv3_ethereum_tick_daily_snapshots__current**
+> ARRAY[UNISWAPV3ETHEREUMTickDailySnapshotDTO] u_niswapv3_ethereum_tick_daily_snapshots__current()
+
+TickDailySnapshots (current)
+
+Gets tickDailySnapshots.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_tick_daily_snapshots__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_tick_daily_snapshots__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMTickDailySnapshotDTO]**](UNISWAPV3ETHEREUMTickDailySnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_niswapv3_ethereum_tick_hourly_snapshots__current**
+> ARRAY[UNISWAPV3ETHEREUMTickHourlySnapshotDTO] u_niswapv3_ethereum_tick_hourly_snapshots__current(pool => $pool)
+
+TickHourlySnapshots (current)
+
+Gets tickHourlySnapshots.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+my $pool = "pool_example"; # string | liquidity pool this tick belongs to
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_tick_hourly_snapshots__current(pool => $pool);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_tick_hourly_snapshots__current: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **string**| liquidity pool this tick belongs to | [optional] 
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMTickHourlySnapshotDTO]**](UNISWAPV3ETHEREUMTickHourlySnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_niswapv3_ethereum_ticks__current**
+> ARRAY[UNISWAPV3ETHEREUMTickDTO] u_niswapv3_ethereum_ticks__current(pool => $pool)
+
+Ticks (current)
+
+Gets ticks.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+my $pool = "pool_example"; # string | Liquidity pool this tick belongs to
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_ticks__current(pool => $pool);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_ticks__current: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **string**| Liquidity pool this tick belongs to | [optional] 
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMTickDTO]**](UNISWAPV3ETHEREUMTickDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_niswapv3_ethereum_token_white_list_symbols__current**
+> ARRAY[UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO] u_niswapv3_ethereum_token_white_list_symbols__current()
+
+TokenWhiteListSymbols (current)
+
+Gets tokenWhiteListSymbols.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_token_white_list_symbols__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_token_white_list_symbols__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO]**](UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_niswapv3_ethereum_token_white_lists__current**
+> ARRAY[UNISWAPV3ETHEREUMTokenWhiteListDTO] u_niswapv3_ethereum_token_white_lists__current()
+
+TokenWhiteLists (current)
+
+Gets tokenWhiteLists.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_token_white_lists__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_token_white_lists__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMTokenWhiteListDTO]**](UNISWAPV3ETHEREUMTokenWhiteListDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **u_niswapv3_ethereum_tokens__current**
 > ARRAY[UNISWAPV3ETHEREUMTokenDTO] u_niswapv3_ethereum_tokens__current()
 
@@ -128,6 +788,132 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ARRAY[UNISWAPV3ETHEREUMTokenDTO]**](UNISWAPV3ETHEREUMTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_niswapv3_ethereum_usage_metrics_daily_snapshots__current**
+> ARRAY[UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO] u_niswapv3_ethereum_usage_metrics_daily_snapshots__current()
+
+UsageMetricsDailySnapshots (current)
+
+Gets usageMetricsDailySnapshots.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_usage_metrics_daily_snapshots__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_usage_metrics_daily_snapshots__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]**](UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_niswapv3_ethereum_usage_metrics_hourly_snapshots__current**
+> ARRAY[UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO] u_niswapv3_ethereum_usage_metrics_hourly_snapshots__current()
+
+UsageMetricsHourlySnapshots (current)
+
+Gets usageMetricsHourlySnapshots.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_usage_metrics_hourly_snapshots__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_usage_metrics_hourly_snapshots__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]**](UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_niswapv3_ethereum_withdraws__current**
+> ARRAY[UNISWAPV3ETHEREUMWithdrawDTO] u_niswapv3_ethereum_withdraws__current()
+
+Withdraws (current)
+
+Gets withdraws.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_withdraws__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_withdraws__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMWithdrawDTO]**](UNISWAPV3ETHEREUMWithdrawDTO.md)
 
 ### Authorization
 

@@ -33,7 +33,7 @@ public class OASUNISWAPV3ETHEREUMTokenDTO implements OAS.MappedProperties {
     public Long blockNumber { get; set; }
 
     /**
-     * 
+     * .
      * @return vid
      */
     public Long vid { get; set; }
@@ -45,67 +45,67 @@ public class OASUNISWAPV3ETHEREUMTokenDTO implements OAS.MappedProperties {
     public String blockRange { get; set; }
 
     /**
-     * 
+     * Smart contract address of the token.
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * 
+     * Name of the token, mirrored from the smart contract.
      * @return name
      */
     public String name { get; set; }
 
     /**
-     * 
+     * Symbol of the token, mirrored from the smart contract.
      * @return symbol
      */
     public String symbol { get; set; }
 
     /**
-     * 
+     * The number of decimal places this token uses, default to 18.
      * @return decimals
      */
     public Integer decimals { get; set; }
 
     /**
-     * 
+     * Optional field to track the price of a token, mostly for caching purposes.
      * @return lastPriceUsd
      */
     public String lastPriceUsd { get; set; }
 
     /**
-     * 
+     * Optional field to track the block number of the last token price.
      * @return lastPriceBlockNumber
      */
     public String lastPriceBlockNumber { get; set; }
 
     /**
-     * 
+     * Last pool that gave this token a price.
      * @return lastPricePool
      */
     public String lastPricePool { get; set; }
 
     /**
-     * 
+     * Amount of tokens in the protocol.
      * @return totalSupply
      */
     public String totalSupply { get; set; }
 
     /**
-     * 
+     * Total value locked in the protocol.
      * @return totalValueLockedUsd
      */
     public String totalValueLockedUsd { get; set; }
 
     /**
-     * 
+     * The buffer for detecting large price changes.
      * @return largePriceChangeBuffer
      */
     public Integer largePriceChangeBuffer { get; set; }
 
     /**
-     * 
+     * The buffer for detecting large TVL (Total Value Locked) impact.
      * @return largeTvlImpactBuffer
      */
     public Integer largeTvlImpactBuffer { get; set; }

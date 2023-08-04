@@ -102,7 +102,6 @@ private class OASUNISWAPV3ETHEREUMSwapDTOTest {
         System.assertEquals(null, unISWAPV3ETHEREUMSwapDTO.entryTime);
         System.assertEquals(null, unISWAPV3ETHEREUMSwapDTO.recvTime);
         System.assertEquals(null, unISWAPV3ETHEREUMSwapDTO.blockNumber);
-        System.assertEquals(null, unISWAPV3ETHEREUMSwapDTO.vid);
         System.assertEquals(null, unISWAPV3ETHEREUMSwapDTO.block);
         System.assertEquals(null, unISWAPV3ETHEREUMSwapDTO.id);
         System.assertEquals(null, unISWAPV3ETHEREUMSwapDTO.hash);

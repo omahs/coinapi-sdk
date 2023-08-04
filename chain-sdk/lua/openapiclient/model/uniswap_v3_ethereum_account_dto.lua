@@ -19,12 +19,11 @@ local function cast_uniswap_v3_ethereum_account_dto(t)
 	return setmetatable(t, uniswap_v3_ethereum_account_dto_mt)
 end
 
-local function new_uniswap_v3_ethereum_account_dto(entry_time, recv_time, block_number, vid, block_range, id, position_count, open_position_count, closed_position_count, deposit_count, withdraw_count, swap_count)
+local function new_uniswap_v3_ethereum_account_dto(entry_time, recv_time, block_number, block_range, id, position_count, open_position_count, closed_position_count, deposit_count, withdraw_count, swap_count)
 	return cast_uniswap_v3_ethereum_account_dto({
 		["entry_time"] = entry_time;
 		["recv_time"] = recv_time;
 		["block_number"] = block_number;
-		["vid"] = vid;
 		["block_range"] = block_range;
 		["id"] = id;
 		["position_count"] = position_count;

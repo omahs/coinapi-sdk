@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  * UNISWAPV3ETHEREUMSwapDTOTest Class Doc Comment
  *
  * @category    Class
- * @description Swap are created for each token swap within a pair.
+ * @description Trade (swap) event occurred in a pool.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
@@ -102,15 +102,6 @@ class UNISWAPV3ETHEREUMSwapDTOTest extends TestCase
      * Test attribute "block_number"
      */
     public function testPropertyBlockNumber()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "vid"
-     */
-    public function testPropertyVid()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

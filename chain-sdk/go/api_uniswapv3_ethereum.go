@@ -122,6 +122,1006 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMAccountsCurrentExecute(r 
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiUNISWAPV3ETHEREUMActiveAccountsCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+}
+
+func (r ApiUNISWAPV3ETHEREUMActiveAccountsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMActiveAccountDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMActiveAccountsCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMActiveAccountsCurrent ActiveAccounts (current)
+
+Gets activeAccounts.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMActiveAccountsCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMActiveAccountsCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMActiveAccountsCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMActiveAccountsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMActiveAccountDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMActiveAccountsCurrentExecute(r ApiUNISWAPV3ETHEREUMActiveAccountsCurrentRequest) ([]UNISWAPV3ETHEREUMActiveAccountDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMActiveAccountDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMActiveAccountsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/activeAccounts/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUNISWAPV3ETHEREUMDepositsCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+}
+
+func (r ApiUNISWAPV3ETHEREUMDepositsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMDepositDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMDepositsCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMDepositsCurrent Deposits (current)
+
+Gets deposits.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMDepositsCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMDepositsCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMDepositsCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMDepositsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMDepositDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMDepositsCurrentExecute(r ApiUNISWAPV3ETHEREUMDepositsCurrentRequest) ([]UNISWAPV3ETHEREUMDepositDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMDepositDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMDepositsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/deposits/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUNISWAPV3ETHEREUMDexAmmProtocolsCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+}
+
+func (r ApiUNISWAPV3ETHEREUMDexAmmProtocolsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMDexAmmProtocolDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMDexAmmProtocolsCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMDexAmmProtocolsCurrent DexAmmProtocols (current)
+
+Gets dexAmmProtocols.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMDexAmmProtocolsCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMDexAmmProtocolsCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMDexAmmProtocolsCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMDexAmmProtocolsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMDexAmmProtocolDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMDexAmmProtocolsCurrentExecute(r ApiUNISWAPV3ETHEREUMDexAmmProtocolsCurrentRequest) ([]UNISWAPV3ETHEREUMDexAmmProtocolDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMDexAmmProtocolDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMDexAmmProtocolsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+}
+
+func (r ApiUNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent FinancialsDailySnapshots (current)
+
+Gets financialsDailySnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentExecute(r ApiUNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentRequest) ([]UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+}
+
+func (r ApiUNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMLiquidityPoolAmountDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent LiquidityPoolAmounts (current)
+
+Gets liquidityPoolAmounts.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMLiquidityPoolAmountDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentExecute(r ApiUNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest) ([]UNISWAPV3ETHEREUMLiquidityPoolAmountDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMLiquidityPoolAmountDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUNISWAPV3ETHEREUMLiquidityPoolFeesCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+}
+
+func (r ApiUNISWAPV3ETHEREUMLiquidityPoolFeesCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMLiquidityPoolFeeDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMLiquidityPoolFeesCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent LiquidityPoolFees (current)
+
+Gets liquidityPoolFees.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMLiquidityPoolFeesCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMLiquidityPoolFeesCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMLiquidityPoolFeesCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMLiquidityPoolFeeDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolFeesCurrentExecute(r ApiUNISWAPV3ETHEREUMLiquidityPoolFeesCurrentRequest) ([]UNISWAPV3ETHEREUMLiquidityPoolFeeDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMLiquidityPoolFeeDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+}
+
+func (r ApiUNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent LiquidityPoolHourlySnapshots (current)
+
+Gets liquidityPoolHourlySnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentExecute(r ApiUNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest) ([]UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUNISWAPV3ETHEREUMPositionSnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+}
+
+func (r ApiUNISWAPV3ETHEREUMPositionSnapshotsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMPositionSnapshotDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMPositionSnapshotsCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMPositionSnapshotsCurrent PositionSnapshots (current)
+
+Gets positionSnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMPositionSnapshotsCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMPositionSnapshotsCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMPositionSnapshotsCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMPositionSnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMPositionSnapshotDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMPositionSnapshotsCurrentExecute(r ApiUNISWAPV3ETHEREUMPositionSnapshotsCurrentRequest) ([]UNISWAPV3ETHEREUMPositionSnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMPositionSnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMPositionSnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/positionSnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUNISWAPV3ETHEREUMPositionsCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+	pool *string
+}
+
+// The liquidity pool in which this position was opened
+func (r ApiUNISWAPV3ETHEREUMPositionsCurrentRequest) Pool(pool string) ApiUNISWAPV3ETHEREUMPositionsCurrentRequest {
+	r.pool = &pool
+	return r
+}
+
+func (r ApiUNISWAPV3ETHEREUMPositionsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMPositionDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMPositionsCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMPositionsCurrent Positions (current)
+
+Gets positions.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMPositionsCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMPositionsCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMPositionsCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMPositionsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMPositionDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMPositionsCurrentExecute(r ApiUNISWAPV3ETHEREUMPositionsCurrentRequest) ([]UNISWAPV3ETHEREUMPositionDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMPositionDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMPositionsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/positions/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.pool != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pool", r.pool, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUNISWAPV3ETHEREUMRewardTokensCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+}
+
+func (r ApiUNISWAPV3ETHEREUMRewardTokensCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMRewardTokenDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMRewardTokensCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMRewardTokensCurrent RewardTokens (current)
+
+Gets rewardTokens.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMRewardTokensCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMRewardTokensCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMRewardTokensCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMRewardTokensCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMRewardTokenDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMRewardTokensCurrentExecute(r ApiUNISWAPV3ETHEREUMRewardTokensCurrentRequest) ([]UNISWAPV3ETHEREUMRewardTokenDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMRewardTokenDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMRewardTokensCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/rewardTokens/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiUNISWAPV3ETHEREUMSwapsCurrentRequest struct {
 	ctx context.Context
 	ApiService *UNISWAPV3ETHEREUMApiService
@@ -221,6 +1221,521 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMSwapsCurrentExecute(r Api
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiUNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+}
+
+func (r ApiUNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMTickDailySnapshotDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMTickDailySnapshotsCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMTickDailySnapshotsCurrent TickDailySnapshots (current)
+
+Gets tickDailySnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMTickDailySnapshotDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTickDailySnapshotsCurrentExecute(r ApiUNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest) ([]UNISWAPV3ETHEREUMTickDailySnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMTickDailySnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+	pool *string
+}
+
+// liquidity pool this tick belongs to
+func (r ApiUNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest) Pool(pool string) ApiUNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest {
+	r.pool = &pool
+	return r
+}
+
+func (r ApiUNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMTickHourlySnapshotDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent TickHourlySnapshots (current)
+
+Gets tickHourlySnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMTickHourlySnapshotDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentExecute(r ApiUNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest) ([]UNISWAPV3ETHEREUMTickHourlySnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMTickHourlySnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.pool != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pool", r.pool, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUNISWAPV3ETHEREUMTicksCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+	pool *string
+}
+
+// Liquidity pool this tick belongs to
+func (r ApiUNISWAPV3ETHEREUMTicksCurrentRequest) Pool(pool string) ApiUNISWAPV3ETHEREUMTicksCurrentRequest {
+	r.pool = &pool
+	return r
+}
+
+func (r ApiUNISWAPV3ETHEREUMTicksCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMTickDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMTicksCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMTicksCurrent Ticks (current)
+
+Gets ticks.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMTicksCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTicksCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMTicksCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMTicksCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMTickDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTicksCurrentExecute(r ApiUNISWAPV3ETHEREUMTicksCurrentRequest) ([]UNISWAPV3ETHEREUMTickDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMTickDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMTicksCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/ticks/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.pool != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pool", r.pool, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+}
+
+func (r ApiUNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent TokenWhiteListSymbols (current)
+
+Gets tokenWhiteListSymbols.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentExecute(r ApiUNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentRequest) ([]UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUNISWAPV3ETHEREUMTokenWhiteListsCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+}
+
+func (r ApiUNISWAPV3ETHEREUMTokenWhiteListsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMTokenWhiteListDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMTokenWhiteListsCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMTokenWhiteListsCurrent TokenWhiteLists (current)
+
+Gets tokenWhiteLists.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMTokenWhiteListsCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTokenWhiteListsCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMTokenWhiteListsCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMTokenWhiteListsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMTokenWhiteListDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTokenWhiteListsCurrentExecute(r ApiUNISWAPV3ETHEREUMTokenWhiteListsCurrentRequest) ([]UNISWAPV3ETHEREUMTokenWhiteListDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMTokenWhiteListDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMTokenWhiteListsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiUNISWAPV3ETHEREUMTokensCurrentRequest struct {
 	ctx context.Context
 	ApiService *UNISWAPV3ETHEREUMApiService
@@ -261,6 +1776,303 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTokensCurrentExecute(r Ap
 	}
 
 	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/tokens/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+}
+
+func (r ApiUNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent UsageMetricsDailySnapshots (current)
+
+Gets usageMetricsDailySnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentExecute(r ApiUNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentRequest) ([]UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+}
+
+func (r ApiUNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent UsageMetricsHourlySnapshots (current)
+
+Gets usageMetricsHourlySnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentExecute(r ApiUNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentRequest) ([]UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUNISWAPV3ETHEREUMWithdrawsCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+}
+
+func (r ApiUNISWAPV3ETHEREUMWithdrawsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMWithdrawDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMWithdrawsCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMWithdrawsCurrent Withdraws (current)
+
+Gets withdraws.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMWithdrawsCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMWithdrawsCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMWithdrawsCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMWithdrawsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMWithdrawDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMWithdrawsCurrentExecute(r ApiUNISWAPV3ETHEREUMWithdrawsCurrentRequest) ([]UNISWAPV3ETHEREUMWithdrawDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMWithdrawDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMWithdrawsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/withdraws/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}

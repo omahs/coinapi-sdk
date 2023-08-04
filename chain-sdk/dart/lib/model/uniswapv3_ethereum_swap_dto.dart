@@ -16,7 +16,6 @@ class UNISWAPV3ETHEREUMSwapDTO {
     this.entryTime,
     this.recvTime,
     this.blockNumber,
-    this.vid,
     this.block,
     this.id,
     this.hash,
@@ -69,16 +68,7 @@ class UNISWAPV3ETHEREUMSwapDTO {
   ///
   int? blockNumber;
 
-  /// 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? vid;
-
-  /// 
+  /// Block number in which the swap operation was recorded.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -87,16 +77,16 @@ class UNISWAPV3ETHEREUMSwapDTO {
   ///
   int? block;
 
-  /// 
+  /// Unique string identifier of the swap operation, format: (transaction hash)-(log index).
   String? id;
 
-  /// 
+  /// Transaction hash of the transaction that emitted this event.
   String? hash;
 
-  /// 
+  /// Nonce of the transaction that emitted this event.
   String? nonce;
 
-  /// 
+  /// Event log index. For transactions that don't emit event, create arbitrary index starting from 0.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -105,49 +95,49 @@ class UNISWAPV3ETHEREUMSwapDTO {
   ///
   int? logIndex;
 
-  /// 
+  /// Gas limit of the transaction that emitted this event.
   String? gasLimit;
 
-  /// 
+  /// Gas used in this transaction.
   String? gasUsed;
 
-  /// 
+  /// Gas price of the transaction that emitted this event.
   String? gasPrice;
 
-  /// 
+  /// The protocol this transaction belongs to.
   String? protocol;
 
-  /// 
+  /// Account that emitted this event.
   String? account;
 
-  /// 
+  /// The pool involving this event.
   String? pool;
 
-  /// 
+  /// Timestamp of this event.
   String? timestamp;
 
-  /// 
+  /// Tick of the swap operation.
   String? tick;
 
-  /// 
+  /// Token deposited into pool.
   String? tokenIn;
 
-  /// 
+  /// Amount of token deposited into pool in native units.
   String? amountIn;
 
-  /// 
+  /// Amount of token deposited into pool in USD.
   String? amountInUsd;
 
-  /// 
+  /// Token withdrawn from pool.
   String? tokenOut;
 
-  /// 
+  /// Amount of token withdrawn from pool in native units.
   String? amountOut;
 
-  /// 
+  /// Amount of token withdrawn from pool in USD.
   String? amountOutUsd;
 
-  /// 
+  /// Amount of input tokens in the liquidity pool.
   List<String>? reserveAmounts;
 
   String? poolId;
@@ -183,7 +173,6 @@ class UNISWAPV3ETHEREUMSwapDTO {
      other.entryTime == entryTime &&
      other.recvTime == recvTime &&
      other.blockNumber == blockNumber &&
-     other.vid == vid &&
      other.block == block &&
      other.id == id &&
      other.hash == hash &&
@@ -216,7 +205,6 @@ class UNISWAPV3ETHEREUMSwapDTO {
     (entryTime == null ? 0 : entryTime!.hashCode) +
     (recvTime == null ? 0 : recvTime!.hashCode) +
     (blockNumber == null ? 0 : blockNumber!.hashCode) +
-    (vid == null ? 0 : vid!.hashCode) +
     (block == null ? 0 : block!.hashCode) +
     (id == null ? 0 : id!.hashCode) +
     (hash == null ? 0 : hash!.hashCode) +
@@ -244,7 +232,7 @@ class UNISWAPV3ETHEREUMSwapDTO {
     (evaluatedAggressor == null ? 0 : evaluatedAggressor!.hashCode);
 
   @override
-  String toString() => 'UNISWAPV3ETHEREUMSwapDTO[entryTime=$entryTime, recvTime=$recvTime, blockNumber=$blockNumber, vid=$vid, block=$block, id=$id, hash=$hash, nonce=$nonce, logIndex=$logIndex, gasLimit=$gasLimit, gasUsed=$gasUsed, gasPrice=$gasPrice, protocol=$protocol, account=$account, pool=$pool, timestamp=$timestamp, tick=$tick, tokenIn=$tokenIn, amountIn=$amountIn, amountInUsd=$amountInUsd, tokenOut=$tokenOut, amountOut=$amountOut, amountOutUsd=$amountOutUsd, reserveAmounts=$reserveAmounts, poolId=$poolId, transactionId=$transactionId, evaluatedPrice=$evaluatedPrice, evaluatedAmount=$evaluatedAmount, evaluatedAggressor=$evaluatedAggressor]';
+  String toString() => 'UNISWAPV3ETHEREUMSwapDTO[entryTime=$entryTime, recvTime=$recvTime, blockNumber=$blockNumber, block=$block, id=$id, hash=$hash, nonce=$nonce, logIndex=$logIndex, gasLimit=$gasLimit, gasUsed=$gasUsed, gasPrice=$gasPrice, protocol=$protocol, account=$account, pool=$pool, timestamp=$timestamp, tick=$tick, tokenIn=$tokenIn, amountIn=$amountIn, amountInUsd=$amountInUsd, tokenOut=$tokenOut, amountOut=$amountOut, amountOutUsd=$amountOutUsd, reserveAmounts=$reserveAmounts, poolId=$poolId, transactionId=$transactionId, evaluatedPrice=$evaluatedPrice, evaluatedAmount=$evaluatedAmount, evaluatedAggressor=$evaluatedAggressor]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -262,11 +250,6 @@ class UNISWAPV3ETHEREUMSwapDTO {
       json[r'block_number'] = this.blockNumber;
     } else {
       json[r'block_number'] = null;
-    }
-    if (this.vid != null) {
-      json[r'vid'] = this.vid;
-    } else {
-      json[r'vid'] = null;
     }
     if (this.block != null) {
       json[r'block_'] = this.block;
@@ -418,7 +401,6 @@ class UNISWAPV3ETHEREUMSwapDTO {
         entryTime: mapDateTime(json, r'entry_time', ''),
         recvTime: mapDateTime(json, r'recv_time', ''),
         blockNumber: mapValueOfType<int>(json, r'block_number'),
-        vid: mapValueOfType<int>(json, r'vid'),
         block: mapValueOfType<int>(json, r'block_'),
         id: mapValueOfType<String>(json, r'id'),
         hash: mapValueOfType<String>(json, r'hash'),

@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * UNISWAPV3ETHEREUMAccountDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-02T10:05:55.316054Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-04T12:28:52.928454Z[Etc/UTC]")
 public class UNISWAPV3ETHEREUMAccountDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -65,10 +65,6 @@ public class UNISWAPV3ETHEREUMAccountDTO {
   public static final String SERIALIZED_NAME_BLOCK_NUMBER = "block_number";
   @SerializedName(SERIALIZED_NAME_BLOCK_NUMBER)
   private Long blockNumber;
-
-  public static final String SERIALIZED_NAME_VID = "vid";
-  @SerializedName(SERIALIZED_NAME_VID)
-  private Long vid;
 
   public static final String SERIALIZED_NAME_BLOCK_RANGE = "block_range";
   @SerializedName(SERIALIZED_NAME_BLOCK_RANGE)
@@ -168,27 +164,6 @@ public class UNISWAPV3ETHEREUMAccountDTO {
   }
 
 
-  public UNISWAPV3ETHEREUMAccountDTO vid(Long vid) {
-    
-    this.vid = vid;
-    return this;
-  }
-
-   /**
-   * 
-   * @return vid
-  **/
-  @javax.annotation.Nullable
-  public Long getVid() {
-    return vid;
-  }
-
-
-  public void setVid(Long vid) {
-    this.vid = vid;
-  }
-
-
   public UNISWAPV3ETHEREUMAccountDTO blockRange(String blockRange) {
     
     this.blockRange = blockRange;
@@ -217,7 +192,7 @@ public class UNISWAPV3ETHEREUMAccountDTO {
   }
 
    /**
-   * 
+   * Account address.
    * @return id
   **/
   @javax.annotation.Nullable
@@ -238,7 +213,7 @@ public class UNISWAPV3ETHEREUMAccountDTO {
   }
 
    /**
-   * 
+   * Number of positions this account has.
    * @return positionCount
   **/
   @javax.annotation.Nullable
@@ -259,7 +234,7 @@ public class UNISWAPV3ETHEREUMAccountDTO {
   }
 
    /**
-   * 
+   * Number of open positions this account has.
    * @return openPositionCount
   **/
   @javax.annotation.Nullable
@@ -280,7 +255,7 @@ public class UNISWAPV3ETHEREUMAccountDTO {
   }
 
    /**
-   * 
+   * Number of closed positions this account has.
    * @return closedPositionCount
   **/
   @javax.annotation.Nullable
@@ -301,7 +276,7 @@ public class UNISWAPV3ETHEREUMAccountDTO {
   }
 
    /**
-   * 
+   * Number of deposits this account made.
    * @return depositCount
   **/
   @javax.annotation.Nullable
@@ -322,7 +297,7 @@ public class UNISWAPV3ETHEREUMAccountDTO {
   }
 
    /**
-   * 
+   * Number of withdrawals this account made.
    * @return withdrawCount
   **/
   @javax.annotation.Nullable
@@ -343,7 +318,7 @@ public class UNISWAPV3ETHEREUMAccountDTO {
   }
 
    /**
-   * 
+   * Number of times this account has traded/swapped.
    * @return swapCount
   **/
   @javax.annotation.Nullable
@@ -370,7 +345,6 @@ public class UNISWAPV3ETHEREUMAccountDTO {
     return Objects.equals(this.entryTime, unISWAPV3ETHEREUMAccountDTO.entryTime) &&
         Objects.equals(this.recvTime, unISWAPV3ETHEREUMAccountDTO.recvTime) &&
         Objects.equals(this.blockNumber, unISWAPV3ETHEREUMAccountDTO.blockNumber) &&
-        Objects.equals(this.vid, unISWAPV3ETHEREUMAccountDTO.vid) &&
         Objects.equals(this.blockRange, unISWAPV3ETHEREUMAccountDTO.blockRange) &&
         Objects.equals(this.id, unISWAPV3ETHEREUMAccountDTO.id) &&
         Objects.equals(this.positionCount, unISWAPV3ETHEREUMAccountDTO.positionCount) &&
@@ -387,7 +361,7 @@ public class UNISWAPV3ETHEREUMAccountDTO {
 
   @Override
   public int hashCode() {
-    return Objects.hash(entryTime, recvTime, blockNumber, vid, blockRange, id, positionCount, openPositionCount, closedPositionCount, depositCount, withdrawCount, swapCount);
+    return Objects.hash(entryTime, recvTime, blockNumber, blockRange, id, positionCount, openPositionCount, closedPositionCount, depositCount, withdrawCount, swapCount);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -404,7 +378,6 @@ public class UNISWAPV3ETHEREUMAccountDTO {
     sb.append("    entryTime: ").append(toIndentedString(entryTime)).append("\n");
     sb.append("    recvTime: ").append(toIndentedString(recvTime)).append("\n");
     sb.append("    blockNumber: ").append(toIndentedString(blockNumber)).append("\n");
-    sb.append("    vid: ").append(toIndentedString(vid)).append("\n");
     sb.append("    blockRange: ").append(toIndentedString(blockRange)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    positionCount: ").append(toIndentedString(positionCount)).append("\n");
@@ -438,7 +411,6 @@ public class UNISWAPV3ETHEREUMAccountDTO {
     openapiFields.add("entry_time");
     openapiFields.add("recv_time");
     openapiFields.add("block_number");
-    openapiFields.add("vid");
     openapiFields.add("block_range");
     openapiFields.add("id");
     openapiFields.add("position_count");

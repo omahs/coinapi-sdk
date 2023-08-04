@@ -27,14 +27,6 @@ test_that("block_number", {
   #expect_equal(model.instance$`block_number`, "EXPECTED_RESULT")
 })
 
-test_that("vid", {
-  # tests for the property `vid` (integer)
-  # 
-
-  # uncomment below to test the property
-  #expect_equal(model.instance$`vid`, "EXPECTED_RESULT")
-})
-
 test_that("block_range", {
   # tests for the property `block_range` (character)
   # 
@@ -45,7 +37,7 @@ test_that("block_range", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # 
+  # Account address.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")
@@ -53,7 +45,7 @@ test_that("id", {
 
 test_that("position_count", {
   # tests for the property `position_count` (integer)
-  # 
+  # Number of positions this account has.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`position_count`, "EXPECTED_RESULT")
@@ -61,7 +53,7 @@ test_that("position_count", {
 
 test_that("open_position_count", {
   # tests for the property `open_position_count` (integer)
-  # 
+  # Number of open positions this account has.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`open_position_count`, "EXPECTED_RESULT")
@@ -69,7 +61,7 @@ test_that("open_position_count", {
 
 test_that("closed_position_count", {
   # tests for the property `closed_position_count` (integer)
-  # 
+  # Number of closed positions this account has.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`closed_position_count`, "EXPECTED_RESULT")
@@ -77,7 +69,7 @@ test_that("closed_position_count", {
 
 test_that("deposit_count", {
   # tests for the property `deposit_count` (integer)
-  # 
+  # Number of deposits this account made.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`deposit_count`, "EXPECTED_RESULT")
@@ -85,7 +77,7 @@ test_that("deposit_count", {
 
 test_that("withdraw_count", {
   # tests for the property `withdraw_count` (integer)
-  # 
+  # Number of withdrawals this account made.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`withdraw_count`, "EXPECTED_RESULT")
@@ -93,7 +85,7 @@ test_that("withdraw_count", {
 
 test_that("swap_count", {
   # tests for the property `swap_count` (integer)
-  # 
+  # Number of times this account has traded/swapped.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`swap_count`, "EXPECTED_RESULT")

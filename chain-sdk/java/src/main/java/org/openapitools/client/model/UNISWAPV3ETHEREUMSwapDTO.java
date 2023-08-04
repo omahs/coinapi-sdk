@@ -53,9 +53,9 @@ import java.util.Set;
 import org.openapitools.client.JSON;
 
 /**
- * Swap are created for each token swap within a pair.
+ * Trade (swap) event occurred in a pool.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-02T10:05:55.316054Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-04T12:28:52.928454Z[Etc/UTC]")
 public class UNISWAPV3ETHEREUMSwapDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -68,10 +68,6 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   public static final String SERIALIZED_NAME_BLOCK_NUMBER = "block_number";
   @SerializedName(SERIALIZED_NAME_BLOCK_NUMBER)
   private Long blockNumber;
-
-  public static final String SERIALIZED_NAME_VID = "vid";
-  @SerializedName(SERIALIZED_NAME_VID)
-  private Long vid;
 
   public static final String SERIALIZED_NAME_BLOCK = "block_";
   @SerializedName(SERIALIZED_NAME_BLOCK)
@@ -253,27 +249,6 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
 
-  public UNISWAPV3ETHEREUMSwapDTO vid(Long vid) {
-    
-    this.vid = vid;
-    return this;
-  }
-
-   /**
-   * 
-   * @return vid
-  **/
-  @javax.annotation.Nullable
-  public Long getVid() {
-    return vid;
-  }
-
-
-  public void setVid(Long vid) {
-    this.vid = vid;
-  }
-
-
   public UNISWAPV3ETHEREUMSwapDTO block(Integer block) {
     
     this.block = block;
@@ -281,7 +256,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * Block number in which the swap operation was recorded.
    * @return block
   **/
   @javax.annotation.Nullable
@@ -302,7 +277,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * Unique string identifier of the swap operation, format: (transaction hash)-(log index).
    * @return id
   **/
   @javax.annotation.Nullable
@@ -323,7 +298,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * Transaction hash of the transaction that emitted this event.
    * @return hash
   **/
   @javax.annotation.Nullable
@@ -344,7 +319,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * Nonce of the transaction that emitted this event.
    * @return nonce
   **/
   @javax.annotation.Nullable
@@ -365,7 +340,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0.
    * @return logIndex
   **/
   @javax.annotation.Nullable
@@ -386,7 +361,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * Gas limit of the transaction that emitted this event.
    * @return gasLimit
   **/
   @javax.annotation.Nullable
@@ -407,7 +382,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * Gas used in this transaction.
    * @return gasUsed
   **/
   @javax.annotation.Nullable
@@ -428,7 +403,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * Gas price of the transaction that emitted this event.
    * @return gasPrice
   **/
   @javax.annotation.Nullable
@@ -449,7 +424,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * The protocol this transaction belongs to.
    * @return protocol
   **/
   @javax.annotation.Nullable
@@ -470,7 +445,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * Account that emitted this event.
    * @return account
   **/
   @javax.annotation.Nullable
@@ -491,7 +466,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * The pool involving this event.
    * @return pool
   **/
   @javax.annotation.Nullable
@@ -512,7 +487,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * Timestamp of this event.
    * @return timestamp
   **/
   @javax.annotation.Nullable
@@ -533,7 +508,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * Tick of the swap operation.
    * @return tick
   **/
   @javax.annotation.Nullable
@@ -554,7 +529,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * Token deposited into pool.
    * @return tokenIn
   **/
   @javax.annotation.Nullable
@@ -575,7 +550,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * Amount of token deposited into pool in native units.
    * @return amountIn
   **/
   @javax.annotation.Nullable
@@ -596,7 +571,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * Amount of token deposited into pool in USD.
    * @return amountInUsd
   **/
   @javax.annotation.Nullable
@@ -617,7 +592,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * Token withdrawn from pool.
    * @return tokenOut
   **/
   @javax.annotation.Nullable
@@ -638,7 +613,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * Amount of token withdrawn from pool in native units.
    * @return amountOut
   **/
   @javax.annotation.Nullable
@@ -659,7 +634,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * Amount of token withdrawn from pool in USD.
    * @return amountOutUsd
   **/
   @javax.annotation.Nullable
@@ -688,7 +663,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
    /**
-   * 
+   * Amount of input tokens in the liquidity pool.
    * @return reserveAmounts
   **/
   @javax.annotation.Nullable
@@ -784,7 +759,6 @@ public class UNISWAPV3ETHEREUMSwapDTO {
     return Objects.equals(this.entryTime, unISWAPV3ETHEREUMSwapDTO.entryTime) &&
         Objects.equals(this.recvTime, unISWAPV3ETHEREUMSwapDTO.recvTime) &&
         Objects.equals(this.blockNumber, unISWAPV3ETHEREUMSwapDTO.blockNumber) &&
-        Objects.equals(this.vid, unISWAPV3ETHEREUMSwapDTO.vid) &&
         Objects.equals(this.block, unISWAPV3ETHEREUMSwapDTO.block) &&
         Objects.equals(this.id, unISWAPV3ETHEREUMSwapDTO.id) &&
         Objects.equals(this.hash, unISWAPV3ETHEREUMSwapDTO.hash) &&
@@ -818,7 +792,7 @@ public class UNISWAPV3ETHEREUMSwapDTO {
 
   @Override
   public int hashCode() {
-    return Objects.hash(entryTime, recvTime, blockNumber, vid, block, id, hash, nonce, logIndex, gasLimit, gasUsed, gasPrice, protocol, account, pool, timestamp, tick, tokenIn, amountIn, amountInUsd, tokenOut, amountOut, amountOutUsd, reserveAmounts, poolId, transactionId, evaluatedPrice, evaluatedAmount, evaluatedAggressor);
+    return Objects.hash(entryTime, recvTime, blockNumber, block, id, hash, nonce, logIndex, gasLimit, gasUsed, gasPrice, protocol, account, pool, timestamp, tick, tokenIn, amountIn, amountInUsd, tokenOut, amountOut, amountOutUsd, reserveAmounts, poolId, transactionId, evaluatedPrice, evaluatedAmount, evaluatedAggressor);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -835,7 +809,6 @@ public class UNISWAPV3ETHEREUMSwapDTO {
     sb.append("    entryTime: ").append(toIndentedString(entryTime)).append("\n");
     sb.append("    recvTime: ").append(toIndentedString(recvTime)).append("\n");
     sb.append("    blockNumber: ").append(toIndentedString(blockNumber)).append("\n");
-    sb.append("    vid: ").append(toIndentedString(vid)).append("\n");
     sb.append("    block: ").append(toIndentedString(block)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    hash: ").append(toIndentedString(hash)).append("\n");
@@ -886,7 +859,6 @@ public class UNISWAPV3ETHEREUMSwapDTO {
     openapiFields.add("entry_time");
     openapiFields.add("recv_time");
     openapiFields.add("block_number");
-    openapiFields.add("vid");
     openapiFields.add("block_");
     openapiFields.add("id");
     openapiFields.add("hash");

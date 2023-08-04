@@ -36,7 +36,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * UNISWAPV3ETHEREUMSwapDTO Class Doc Comment
  *
  * @category Class
- * @description Swap are created for each token swap within a pair.
+ * @description Trade (swap) event occurred in a pool.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -62,7 +62,6 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
         'entry_time' => '\DateTime',
         'recv_time' => '\DateTime',
         'block_number' => 'int',
-        'vid' => 'int',
         'block_' => 'int',
         'id' => 'string',
         'hash' => 'string',
@@ -101,7 +100,6 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
         'entry_time' => 'date-time',
         'recv_time' => 'date-time',
         'block_number' => 'int64',
-        'vid' => 'int64',
         'block_' => 'int32',
         'id' => null,
         'hash' => null,
@@ -138,7 +136,6 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
         'entry_time' => false,
 		'recv_time' => false,
 		'block_number' => false,
-		'vid' => false,
 		'block_' => false,
 		'id' => true,
 		'hash' => true,
@@ -255,7 +252,6 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
         'entry_time' => 'entry_time',
         'recv_time' => 'recv_time',
         'block_number' => 'block_number',
-        'vid' => 'vid',
         'block_' => 'block_',
         'id' => 'id',
         'hash' => 'hash',
@@ -292,7 +288,6 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
         'entry_time' => 'setEntryTime',
         'recv_time' => 'setRecvTime',
         'block_number' => 'setBlockNumber',
-        'vid' => 'setVid',
         'block_' => 'setBlock',
         'id' => 'setId',
         'hash' => 'setHash',
@@ -329,7 +324,6 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
         'entry_time' => 'getEntryTime',
         'recv_time' => 'getRecvTime',
         'block_number' => 'getBlockNumber',
-        'vid' => 'getVid',
         'block_' => 'getBlock',
         'id' => 'getId',
         'hash' => 'getHash',
@@ -417,7 +411,6 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
         $this->setIfExists('entry_time', $data ?? [], null);
         $this->setIfExists('recv_time', $data ?? [], null);
         $this->setIfExists('block_number', $data ?? [], null);
-        $this->setIfExists('vid', $data ?? [], null);
         $this->setIfExists('block_', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('hash', $data ?? [], null);
@@ -569,33 +562,6 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     }
 
     /**
-     * Gets vid
-     *
-     * @return int|null
-     */
-    public function getVid()
-    {
-        return $this->container['vid'];
-    }
-
-    /**
-     * Sets vid
-     *
-     * @param int|null $vid 
-     *
-     * @return self
-     */
-    public function setVid($vid)
-    {
-        if (is_null($vid)) {
-            throw new \InvalidArgumentException('non-nullable vid cannot be null');
-        }
-        $this->container['vid'] = $vid;
-
-        return $this;
-    }
-
-    /**
      * Gets block_
      *
      * @return int|null
@@ -608,7 +574,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets block_
      *
-     * @param int|null $block_ 
+     * @param int|null $block_ Block number in which the swap operation was recorded.
      *
      * @return self
      */
@@ -635,7 +601,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets id
      *
-     * @param string|null $id 
+     * @param string|null $id Unique string identifier of the swap operation, format: (transaction hash)-(log index).
      *
      * @return self
      */
@@ -669,7 +635,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets hash
      *
-     * @param string|null $hash 
+     * @param string|null $hash Transaction hash of the transaction that emitted this event.
      *
      * @return self
      */
@@ -703,7 +669,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets nonce
      *
-     * @param string|null $nonce 
+     * @param string|null $nonce Nonce of the transaction that emitted this event.
      *
      * @return self
      */
@@ -737,7 +703,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets log_index
      *
-     * @param int|null $log_index 
+     * @param int|null $log_index Event log index. For transactions that don't emit event, create arbitrary index starting from 0.
      *
      * @return self
      */
@@ -764,7 +730,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets gas_limit
      *
-     * @param string|null $gas_limit 
+     * @param string|null $gas_limit Gas limit of the transaction that emitted this event.
      *
      * @return self
      */
@@ -798,7 +764,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets gas_used
      *
-     * @param string|null $gas_used 
+     * @param string|null $gas_used Gas used in this transaction.
      *
      * @return self
      */
@@ -832,7 +798,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets gas_price
      *
-     * @param string|null $gas_price 
+     * @param string|null $gas_price Gas price of the transaction that emitted this event.
      *
      * @return self
      */
@@ -866,7 +832,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets protocol
      *
-     * @param string|null $protocol 
+     * @param string|null $protocol The protocol this transaction belongs to.
      *
      * @return self
      */
@@ -900,7 +866,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets account
      *
-     * @param string|null $account 
+     * @param string|null $account Account that emitted this event.
      *
      * @return self
      */
@@ -934,7 +900,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets pool
      *
-     * @param string|null $pool 
+     * @param string|null $pool The pool involving this event.
      *
      * @return self
      */
@@ -968,7 +934,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets timestamp
      *
-     * @param string|null $timestamp 
+     * @param string|null $timestamp Timestamp of this event.
      *
      * @return self
      */
@@ -1002,7 +968,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets tick
      *
-     * @param string|null $tick 
+     * @param string|null $tick Tick of the swap operation.
      *
      * @return self
      */
@@ -1036,7 +1002,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets token_in
      *
-     * @param string|null $token_in 
+     * @param string|null $token_in Token deposited into pool.
      *
      * @return self
      */
@@ -1070,7 +1036,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets amount_in
      *
-     * @param string|null $amount_in 
+     * @param string|null $amount_in Amount of token deposited into pool in native units.
      *
      * @return self
      */
@@ -1104,7 +1070,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets amount_in_usd
      *
-     * @param string|null $amount_in_usd 
+     * @param string|null $amount_in_usd Amount of token deposited into pool in USD.
      *
      * @return self
      */
@@ -1138,7 +1104,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets token_out
      *
-     * @param string|null $token_out 
+     * @param string|null $token_out Token withdrawn from pool.
      *
      * @return self
      */
@@ -1172,7 +1138,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets amount_out
      *
-     * @param string|null $amount_out 
+     * @param string|null $amount_out Amount of token withdrawn from pool in native units.
      *
      * @return self
      */
@@ -1206,7 +1172,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets amount_out_usd
      *
-     * @param string|null $amount_out_usd 
+     * @param string|null $amount_out_usd Amount of token withdrawn from pool in USD.
      *
      * @return self
      */
@@ -1240,7 +1206,7 @@ class UNISWAPV3ETHEREUMSwapDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets reserve_amounts
      *
-     * @param string[]|null $reserve_amounts 
+     * @param string[]|null $reserve_amounts Amount of input tokens in the liquidity pool.
      *
      * @return self
      */

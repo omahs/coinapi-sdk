@@ -7,15 +7,14 @@
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
 | **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
-| **vid** | **Integer** |  | [optional] |
 | **block_range** | **String** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **position_count** | **Integer** |  | [optional] |
-| **open_position_count** | **Integer** |  | [optional] |
-| **closed_position_count** | **Integer** |  | [optional] |
-| **deposit_count** | **Integer** |  | [optional] |
-| **withdraw_count** | **Integer** |  | [optional] |
-| **swap_count** | **Integer** |  | [optional] |
+| **id** | **String** | Account address. | [optional] |
+| **position_count** | **Integer** | Number of positions this account has. | [optional] |
+| **open_position_count** | **Integer** | Number of open positions this account has. | [optional] |
+| **closed_position_count** | **Integer** | Number of closed positions this account has. | [optional] |
+| **deposit_count** | **Integer** | Number of deposits this account made. | [optional] |
+| **withdraw_count** | **Integer** | Number of withdrawals this account made. | [optional] |
+| **swap_count** | **Integer** | Number of times this account has traded/swapped. | [optional] |
 
 ## Example
 
@@ -26,7 +25,6 @@ instance = OpenapiClient::UNISWAPV3ETHEREUMAccountDTO.new(
   entry_time: null,
   recv_time: null,
   block_number: null,
-  vid: null,
   block_range: null,
   id: null,
   position_count: null,

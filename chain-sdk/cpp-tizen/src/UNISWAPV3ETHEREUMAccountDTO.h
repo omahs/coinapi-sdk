@@ -68,65 +68,58 @@ public:
 	void setBlockNumber(long long  block_number);
 	/*! \brief Get 
 	 */
-	long long getVid();
-
-	/*! \brief Set 
-	 */
-	void setVid(long long  vid);
-	/*! \brief Get 
-	 */
 	std::string getBlockRange();
 
 	/*! \brief Set 
 	 */
 	void setBlockRange(std::string  block_range);
-	/*! \brief Get 
+	/*! \brief Get Account address.
 	 */
 	std::string getId();
 
-	/*! \brief Set 
+	/*! \brief Set Account address.
 	 */
 	void setId(std::string  id);
-	/*! \brief Get 
+	/*! \brief Get Number of positions this account has.
 	 */
 	int getPositionCount();
 
-	/*! \brief Set 
+	/*! \brief Set Number of positions this account has.
 	 */
 	void setPositionCount(int  position_count);
-	/*! \brief Get 
+	/*! \brief Get Number of open positions this account has.
 	 */
 	int getOpenPositionCount();
 
-	/*! \brief Set 
+	/*! \brief Set Number of open positions this account has.
 	 */
 	void setOpenPositionCount(int  open_position_count);
-	/*! \brief Get 
+	/*! \brief Get Number of closed positions this account has.
 	 */
 	int getClosedPositionCount();
 
-	/*! \brief Set 
+	/*! \brief Set Number of closed positions this account has.
 	 */
 	void setClosedPositionCount(int  closed_position_count);
-	/*! \brief Get 
+	/*! \brief Get Number of deposits this account made.
 	 */
 	int getDepositCount();
 
-	/*! \brief Set 
+	/*! \brief Set Number of deposits this account made.
 	 */
 	void setDepositCount(int  deposit_count);
-	/*! \brief Get 
+	/*! \brief Get Number of withdrawals this account made.
 	 */
 	int getWithdrawCount();
 
-	/*! \brief Set 
+	/*! \brief Set Number of withdrawals this account made.
 	 */
 	void setWithdrawCount(int  withdraw_count);
-	/*! \brief Get 
+	/*! \brief Get Number of times this account has traded/swapped.
 	 */
 	int getSwapCount();
 
-	/*! \brief Set 
+	/*! \brief Set Number of times this account has traded/swapped.
 	 */
 	void setSwapCount(int  swap_count);
 
@@ -134,7 +127,6 @@ private:
 	std::string entry_time;
 	std::string recv_time;
 	long long block_number;
-	long long vid;
 	std::string block_range;
 	std::string id;
 	int position_count;

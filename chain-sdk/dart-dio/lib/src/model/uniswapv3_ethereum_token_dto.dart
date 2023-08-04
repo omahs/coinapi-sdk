@@ -14,19 +14,19 @@ part 'uniswapv3_ethereum_token_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [vid] - 
+/// * [vid] - .
 /// * [blockRange] - 
-/// * [id] - 
-/// * [name] - 
-/// * [symbol] - 
-/// * [decimals] - 
-/// * [lastPriceUsd] - 
-/// * [lastPriceBlockNumber] - 
-/// * [lastPricePool] - 
-/// * [totalSupply] - 
-/// * [totalValueLockedUsd] - 
-/// * [largePriceChangeBuffer] - 
-/// * [largeTvlImpactBuffer] - 
+/// * [id] - Smart contract address of the token.
+/// * [name] - Name of the token, mirrored from the smart contract.
+/// * [symbol] - Symbol of the token, mirrored from the smart contract.
+/// * [decimals] - The number of decimal places this token uses, default to 18.
+/// * [lastPriceUsd] - Optional field to track the price of a token, mostly for caching purposes.
+/// * [lastPriceBlockNumber] - Optional field to track the block number of the last token price.
+/// * [lastPricePool] - Last pool that gave this token a price.
+/// * [totalSupply] - Amount of tokens in the protocol.
+/// * [totalValueLockedUsd] - Total value locked in the protocol.
+/// * [largePriceChangeBuffer] - The buffer for detecting large price changes.
+/// * [largeTvlImpactBuffer] - The buffer for detecting large TVL (Total Value Locked) impact.
 /// * [tokenSymbol] 
 @BuiltValue()
 abstract class UNISWAPV3ETHEREUMTokenDTO implements Built<UNISWAPV3ETHEREUMTokenDTO, UNISWAPV3ETHEREUMTokenDTOBuilder> {
@@ -40,7 +40,7 @@ abstract class UNISWAPV3ETHEREUMTokenDTO implements Built<UNISWAPV3ETHEREUMToken
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// 
+  /// .
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 
@@ -48,47 +48,47 @@ abstract class UNISWAPV3ETHEREUMTokenDTO implements Built<UNISWAPV3ETHEREUMToken
   @BuiltValueField(wireName: r'block_range')
   String? get blockRange;
 
-  /// 
+  /// Smart contract address of the token.
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// 
+  /// Name of the token, mirrored from the smart contract.
   @BuiltValueField(wireName: r'name')
   String? get name;
 
-  /// 
+  /// Symbol of the token, mirrored from the smart contract.
   @BuiltValueField(wireName: r'symbol')
   String? get symbol;
 
-  /// 
+  /// The number of decimal places this token uses, default to 18.
   @BuiltValueField(wireName: r'decimals')
   int? get decimals;
 
-  /// 
+  /// Optional field to track the price of a token, mostly for caching purposes.
   @BuiltValueField(wireName: r'last_price_usd')
   String? get lastPriceUsd;
 
-  /// 
+  /// Optional field to track the block number of the last token price.
   @BuiltValueField(wireName: r'last_price_block_number')
   String? get lastPriceBlockNumber;
 
-  /// 
+  /// Last pool that gave this token a price.
   @BuiltValueField(wireName: r'last_price_pool')
   String? get lastPricePool;
 
-  /// 
+  /// Amount of tokens in the protocol.
   @BuiltValueField(wireName: r'total_supply')
   String? get totalSupply;
 
-  /// 
+  /// Total value locked in the protocol.
   @BuiltValueField(wireName: r'total_value_locked_usd')
   String? get totalValueLockedUsd;
 
-  /// 
+  /// The buffer for detecting large price changes.
   @BuiltValueField(wireName: r'large_price_change_buffer')
   int? get largePriceChangeBuffer;
 
-  /// 
+  /// The buffer for detecting large TVL (Total Value Locked) impact.
   @BuiltValueField(wireName: r'large_tvl_impact_buffer')
   int? get largeTvlImpactBuffer;
 

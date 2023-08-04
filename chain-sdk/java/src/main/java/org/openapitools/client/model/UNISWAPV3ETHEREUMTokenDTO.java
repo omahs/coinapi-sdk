@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Stores aggregated information for a specific token across all pairs that token is included in.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-02T10:05:55.316054Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-04T12:28:52.928454Z[Etc/UTC]")
 public class UNISWAPV3ETHEREUMTokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -203,7 +203,7 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
    /**
-   * 
+   * .
    * @return vid
   **/
   @javax.annotation.Nullable
@@ -245,7 +245,7 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
    /**
-   * 
+   * Smart contract address of the token.
    * @return id
   **/
   @javax.annotation.Nullable
@@ -266,7 +266,7 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
    /**
-   * 
+   * Name of the token, mirrored from the smart contract.
    * @return name
   **/
   @javax.annotation.Nullable
@@ -287,7 +287,7 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
    /**
-   * 
+   * Symbol of the token, mirrored from the smart contract.
    * @return symbol
   **/
   @javax.annotation.Nullable
@@ -308,7 +308,7 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
    /**
-   * 
+   * The number of decimal places this token uses, default to 18.
    * @return decimals
   **/
   @javax.annotation.Nullable
@@ -329,7 +329,7 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
    /**
-   * 
+   * Optional field to track the price of a token, mostly for caching purposes.
    * @return lastPriceUsd
   **/
   @javax.annotation.Nullable
@@ -350,7 +350,7 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
    /**
-   * 
+   * Optional field to track the block number of the last token price.
    * @return lastPriceBlockNumber
   **/
   @javax.annotation.Nullable
@@ -371,7 +371,7 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
    /**
-   * 
+   * Last pool that gave this token a price.
    * @return lastPricePool
   **/
   @javax.annotation.Nullable
@@ -392,7 +392,7 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
    /**
-   * 
+   * Amount of tokens in the protocol.
    * @return totalSupply
   **/
   @javax.annotation.Nullable
@@ -413,7 +413,7 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
    /**
-   * 
+   * Total value locked in the protocol.
    * @return totalValueLockedUsd
   **/
   @javax.annotation.Nullable
@@ -434,7 +434,7 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
    /**
-   * 
+   * The buffer for detecting large price changes.
    * @return largePriceChangeBuffer
   **/
   @javax.annotation.Nullable
@@ -455,7 +455,7 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
    /**
-   * 
+   * The buffer for detecting large TVL (Total Value Locked) impact.
    * @return largeTvlImpactBuffer
   **/
   @javax.annotation.Nullable

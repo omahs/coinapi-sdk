@@ -3,7 +3,7 @@
 
 defmodule OnChainDapps-RESTAPI.Model.UniswapV3EthereumSwapDto do
   @moduledoc """
-  Swap are created for each token swap within a pair.
+  Trade (swap) event occurred in a pool.
   """
 
   @derive [Poison.Encoder]
@@ -11,7 +11,6 @@ defmodule OnChainDapps-RESTAPI.Model.UniswapV3EthereumSwapDto do
     :entry_time,
     :recv_time,
     :block_number,
-    :vid,
     :block_,
     :id,
     :hash,
@@ -43,7 +42,6 @@ defmodule OnChainDapps-RESTAPI.Model.UniswapV3EthereumSwapDto do
     :entry_time => DateTime.t | nil,
     :recv_time => DateTime.t | nil,
     :block_number => integer() | nil,
-    :vid => integer() | nil,
     :block_ => integer() | nil,
     :id => String.t | nil,
     :hash => String.t | nil,

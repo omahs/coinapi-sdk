@@ -25,15 +25,14 @@ import com.squareup.moshi.JsonClass
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param vid 
  * @param blockRange 
- * @param id 
- * @param positionCount 
- * @param openPositionCount 
- * @param closedPositionCount 
- * @param depositCount 
- * @param withdrawCount 
- * @param swapCount 
+ * @param id Account address.
+ * @param positionCount Number of positions this account has.
+ * @param openPositionCount Number of open positions this account has.
+ * @param closedPositionCount Number of closed positions this account has.
+ * @param depositCount Number of deposits this account made.
+ * @param withdrawCount Number of withdrawals this account made.
+ * @param swapCount Number of times this account has traded/swapped.
  */
 
 
@@ -50,38 +49,34 @@ data class UNISWAPV3ETHEREUMAccountDTO (
     val blockNumber: kotlin.Long? = null,
 
     /*  */
-    @Json(name = "vid")
-    val vid: kotlin.Long? = null,
-
-    /*  */
     @Json(name = "block_range")
     val blockRange: kotlin.String? = null,
 
-    /*  */
+    /* Account address. */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
-    /*  */
+    /* Number of positions this account has. */
     @Json(name = "position_count")
     val positionCount: kotlin.Int? = null,
 
-    /*  */
+    /* Number of open positions this account has. */
     @Json(name = "open_position_count")
     val openPositionCount: kotlin.Int? = null,
 
-    /*  */
+    /* Number of closed positions this account has. */
     @Json(name = "closed_position_count")
     val closedPositionCount: kotlin.Int? = null,
 
-    /*  */
+    /* Number of deposits this account made. */
     @Json(name = "deposit_count")
     val depositCount: kotlin.Int? = null,
 
-    /*  */
+    /* Number of withdrawals this account made. */
     @Json(name = "withdraw_count")
     val withdrawCount: kotlin.Int? = null,
 
-    /*  */
+    /* Number of times this account has traded/swapped. */
     @Json(name = "swap_count")
     val swapCount: kotlin.Int? = null
 

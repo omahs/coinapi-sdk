@@ -1314,6 +1314,178 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Accounts__current;
 
+   --  ActiveAccounts (current)
+   --  Gets activeAccounts.
+   procedure U_NISWAPV3ETHEREUM_Active_Accounts__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMActiveAccountDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/activeAccounts/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Active_Accounts__current;
+
+   --  Deposits (current)
+   --  Gets deposits.
+   procedure U_NISWAPV3ETHEREUM_Deposits__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMDepositDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/deposits/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Deposits__current;
+
+   --  DexAmmProtocols (current)
+   --  Gets dexAmmProtocols.
+   procedure U_NISWAPV3ETHEREUM_Dex_Amm_Protocols__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMDexAmmProtocolDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/dexAmmProtocols/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Dex_Amm_Protocols__current;
+
+   --  FinancialsDailySnapshots (current)
+   --  Gets financialsDailySnapshots.
+   procedure U_NISWAPV3ETHEREUM_Financials_Daily_Snapshots__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Financials_Daily_Snapshots__current;
+
+   --  LiquidityPoolAmounts (current)
+   --  Gets liquidityPoolAmounts.
+   procedure U_NISWAPV3ETHEREUM_Liquidity_Pool_Amounts__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Liquidity_Pool_Amounts__current;
+
+   --  LiquidityPoolFees (current)
+   --  Gets liquidityPoolFees.
+   procedure U_NISWAPV3ETHEREUM_Liquidity_Pool_Fees__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMLiquidityPoolFeeDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/liquidityPoolFees/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Liquidity_Pool_Fees__current;
+
+   --  LiquidityPoolHourlySnapshots (current)
+   --  Gets liquidityPoolHourlySnapshots.
+   procedure U_NISWAPV3ETHEREUM_Liquidity_Pool_Hourly_Snapshots__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Liquidity_Pool_Hourly_Snapshots__current;
+
+   --  PositionSnapshots (current)
+   --  Gets positionSnapshots.
+   procedure U_NISWAPV3ETHEREUM_Position_Snapshots__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMPositionSnapshotDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/positionSnapshots/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Position_Snapshots__current;
+
+   --  Positions (current)
+   --  Gets positions.
+   procedure U_NISWAPV3ETHEREUM_Positions__current
+      (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.UNISWAPV3ETHEREUMPositionDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Add_Param ("pool", Pool);
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/positions/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Positions__current;
+
+   --  RewardTokens (current)
+   --  Gets rewardTokens.
+   procedure U_NISWAPV3ETHEREUM_Reward_Tokens__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMRewardTokenDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/rewardTokens/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Reward_Tokens__current;
+
    --  Swaps (current)
    --  Gets swaps.
    procedure U_NISWAPV3ETHEREUM_Swaps__current
@@ -1331,6 +1503,95 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Swaps__current;
 
+   --  TickDailySnapshots (current)
+   --  Gets tickDailySnapshots.
+   procedure U_NISWAPV3ETHEREUM_Tick_Daily_Snapshots__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMTickDailySnapshotDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/tickDailySnapshots/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Tick_Daily_Snapshots__current;
+
+   --  TickHourlySnapshots (current)
+   --  Gets tickHourlySnapshots.
+   procedure U_NISWAPV3ETHEREUM_Tick_Hourly_Snapshots__current
+      (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.UNISWAPV3ETHEREUMTickHourlySnapshotDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Add_Param ("pool", Pool);
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Tick_Hourly_Snapshots__current;
+
+   --  Ticks (current)
+   --  Gets ticks.
+   procedure U_NISWAPV3ETHEREUM_Ticks__current
+      (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.UNISWAPV3ETHEREUMTickDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Add_Param ("pool", Pool);
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/ticks/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Ticks__current;
+
+   --  TokenWhiteListSymbols (current)
+   --  Gets tokenWhiteListSymbols.
+   procedure U_NISWAPV3ETHEREUM_Token_White_List_Symbols__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Token_White_List_Symbols__current;
+
+   --  TokenWhiteLists (current)
+   --  Gets tokenWhiteLists.
+   procedure U_NISWAPV3ETHEREUM_Token_White_Lists__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMTokenWhiteListDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/tokenWhiteLists/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Token_White_Lists__current;
+
    --  Tokens (current)
    --  Gets tokens.
    procedure U_NISWAPV3ETHEREUM_Tokens__current
@@ -1347,6 +1608,57 @@ package body .Clients is
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Tokens__current;
+
+   --  UsageMetricsDailySnapshots (current)
+   --  Gets usageMetricsDailySnapshots.
+   procedure U_NISWAPV3ETHEREUM_Usage_Metrics_Daily_Snapshots__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Usage_Metrics_Daily_Snapshots__current;
+
+   --  UsageMetricsHourlySnapshots (current)
+   --  Gets usageMetricsHourlySnapshots.
+   procedure U_NISWAPV3ETHEREUM_Usage_Metrics_Hourly_Snapshots__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Usage_Metrics_Hourly_Snapshots__current;
+
+   --  Withdraws (current)
+   --  Gets withdraws.
+   procedure U_NISWAPV3ETHEREUM_Withdraws__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV3ETHEREUMWithdrawDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/withdraws/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Withdraws__current;
 
    --  Bundles (current)
    --  Gets bundles.

@@ -19,9 +19,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Swap are created for each token swap within a pair.
+ * Trade (swap) event occurred in a pool.
  **/
-@ApiModel(description = "Swap are created for each token swap within a pair.")
+@ApiModel(description = "Trade (swap) event occurred in a pool.")
 public class UNISWAPV3ETHEREUMSwapDTO {
   
   @SerializedName("entry_time")
@@ -30,8 +30,6 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   private Date recvTime = null;
   @SerializedName("block_number")
   private Long blockNumber = null;
-  @SerializedName("vid")
-  private Long vid = null;
   @SerializedName("block_")
   private Integer block = null;
   @SerializedName("id")
@@ -115,20 +113,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * Block number in which the swap operation was recorded.
    **/
-  @ApiModelProperty(value = "")
-  public Long getVid() {
-    return vid;
-  }
-  public void setVid(Long vid) {
-    this.vid = vid;
-  }
-
-  /**
-   * 
-   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Block number in which the swap operation was recorded.")
   public Integer getBlock() {
     return block;
   }
@@ -137,9 +124,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * Unique string identifier of the swap operation, format: (transaction hash)-(log index).
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Unique string identifier of the swap operation, format: (transaction hash)-(log index).")
   public String getId() {
     return id;
   }
@@ -148,9 +135,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * Transaction hash of the transaction that emitted this event.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Transaction hash of the transaction that emitted this event.")
   public String getHash() {
     return hash;
   }
@@ -159,9 +146,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * Nonce of the transaction that emitted this event.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Nonce of the transaction that emitted this event.")
   public String getNonce() {
     return nonce;
   }
@@ -170,9 +157,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * Event log index. For transactions that don't emit event, create arbitrary index starting from 0.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Event log index. For transactions that don't emit event, create arbitrary index starting from 0.")
   public Integer getLogIndex() {
     return logIndex;
   }
@@ -181,9 +168,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * Gas limit of the transaction that emitted this event.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Gas limit of the transaction that emitted this event.")
   public String getGasLimit() {
     return gasLimit;
   }
@@ -192,9 +179,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * Gas used in this transaction.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Gas used in this transaction.")
   public String getGasUsed() {
     return gasUsed;
   }
@@ -203,9 +190,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * Gas price of the transaction that emitted this event.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Gas price of the transaction that emitted this event.")
   public String getGasPrice() {
     return gasPrice;
   }
@@ -214,9 +201,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * The protocol this transaction belongs to.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The protocol this transaction belongs to.")
   public String getProtocol() {
     return protocol;
   }
@@ -225,9 +212,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * Account that emitted this event.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Account that emitted this event.")
   public String getAccount() {
     return account;
   }
@@ -236,9 +223,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * The pool involving this event.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The pool involving this event.")
   public String getPool() {
     return pool;
   }
@@ -247,9 +234,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * Timestamp of this event.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Timestamp of this event.")
   public String getTimestamp() {
     return timestamp;
   }
@@ -258,9 +245,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * Tick of the swap operation.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Tick of the swap operation.")
   public String getTick() {
     return tick;
   }
@@ -269,9 +256,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * Token deposited into pool.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Token deposited into pool.")
   public String getTokenIn() {
     return tokenIn;
   }
@@ -280,9 +267,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * Amount of token deposited into pool in native units.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token deposited into pool in native units.")
   public String getAmountIn() {
     return amountIn;
   }
@@ -291,9 +278,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * Amount of token deposited into pool in USD.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token deposited into pool in USD.")
   public String getAmountInUsd() {
     return amountInUsd;
   }
@@ -302,9 +289,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * Token withdrawn from pool.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Token withdrawn from pool.")
   public String getTokenOut() {
     return tokenOut;
   }
@@ -313,9 +300,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * Amount of token withdrawn from pool in native units.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token withdrawn from pool in native units.")
   public String getAmountOut() {
     return amountOut;
   }
@@ -324,9 +311,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * Amount of token withdrawn from pool in USD.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token withdrawn from pool in USD.")
   public String getAmountOutUsd() {
     return amountOutUsd;
   }
@@ -335,9 +322,9 @@ public class UNISWAPV3ETHEREUMSwapDTO {
   }
 
   /**
-   * 
+   * Amount of input tokens in the liquidity pool.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of input tokens in the liquidity pool.")
   public List<String> getReserveAmounts() {
     return reserveAmounts;
   }
@@ -408,7 +395,6 @@ public class UNISWAPV3ETHEREUMSwapDTO {
     return (this.entryTime == null ? uNISWAPV3ETHEREUMSwapDTO.entryTime == null : this.entryTime.equals(uNISWAPV3ETHEREUMSwapDTO.entryTime)) &&
         (this.recvTime == null ? uNISWAPV3ETHEREUMSwapDTO.recvTime == null : this.recvTime.equals(uNISWAPV3ETHEREUMSwapDTO.recvTime)) &&
         (this.blockNumber == null ? uNISWAPV3ETHEREUMSwapDTO.blockNumber == null : this.blockNumber.equals(uNISWAPV3ETHEREUMSwapDTO.blockNumber)) &&
-        (this.vid == null ? uNISWAPV3ETHEREUMSwapDTO.vid == null : this.vid.equals(uNISWAPV3ETHEREUMSwapDTO.vid)) &&
         (this.block == null ? uNISWAPV3ETHEREUMSwapDTO.block == null : this.block.equals(uNISWAPV3ETHEREUMSwapDTO.block)) &&
         (this.id == null ? uNISWAPV3ETHEREUMSwapDTO.id == null : this.id.equals(uNISWAPV3ETHEREUMSwapDTO.id)) &&
         (this.hash == null ? uNISWAPV3ETHEREUMSwapDTO.hash == null : this.hash.equals(uNISWAPV3ETHEREUMSwapDTO.hash)) &&
@@ -442,7 +428,6 @@ public class UNISWAPV3ETHEREUMSwapDTO {
     result = 31 * result + (this.entryTime == null ? 0: this.entryTime.hashCode());
     result = 31 * result + (this.recvTime == null ? 0: this.recvTime.hashCode());
     result = 31 * result + (this.blockNumber == null ? 0: this.blockNumber.hashCode());
-    result = 31 * result + (this.vid == null ? 0: this.vid.hashCode());
     result = 31 * result + (this.block == null ? 0: this.block.hashCode());
     result = 31 * result + (this.id == null ? 0: this.id.hashCode());
     result = 31 * result + (this.hash == null ? 0: this.hash.hashCode());
@@ -479,7 +464,6 @@ public class UNISWAPV3ETHEREUMSwapDTO {
     sb.append("  entryTime: ").append(entryTime).append("\n");
     sb.append("  recvTime: ").append(recvTime).append("\n");
     sb.append("  blockNumber: ").append(blockNumber).append("\n");
-    sb.append("  vid: ").append(vid).append("\n");
     sb.append("  block: ").append(block).append("\n");
     sb.append("  id: ").append(id).append("\n");
     sb.append("  hash: ").append(hash).append("\n");

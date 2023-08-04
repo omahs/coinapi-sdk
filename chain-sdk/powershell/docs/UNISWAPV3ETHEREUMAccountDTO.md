@@ -6,15 +6,14 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Vid** | **Int64** |  | [optional] 
 **BlockRange** | **String** |  | [optional] 
-**Id** | **String** |  | [optional] 
-**PositionCount** | **Int32** |  | [optional] 
-**OpenPositionCount** | **Int32** |  | [optional] 
-**ClosedPositionCount** | **Int32** |  | [optional] 
-**DepositCount** | **Int32** |  | [optional] 
-**WithdrawCount** | **Int32** |  | [optional] 
-**SwapCount** | **Int32** |  | [optional] 
+**Id** | **String** | Account address. | [optional] 
+**PositionCount** | **Int32** | Number of positions this account has. | [optional] 
+**OpenPositionCount** | **Int32** | Number of open positions this account has. | [optional] 
+**ClosedPositionCount** | **Int32** | Number of closed positions this account has. | [optional] 
+**DepositCount** | **Int32** | Number of deposits this account made. | [optional] 
+**WithdrawCount** | **Int32** | Number of withdrawals this account made. | [optional] 
+**SwapCount** | **Int32** | Number of times this account has traded/swapped. | [optional] 
 
 ## Examples
 
@@ -23,7 +22,6 @@ Name | Type | Description | Notes
 $UNISWAPV3ETHEREUMAccountDTO = Initialize-PSOpenAPIToolsUNISWAPV3ETHEREUMAccountDTO  -EntryTime null `
  -RecvTime null `
  -BlockNumber null `
- -Vid null `
  -BlockRange null `
  -Id null `
  -PositionCount null `

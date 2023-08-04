@@ -89,9 +89,9 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
   /**
-   * 
+   * .
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = ".")
   public Long getVid() {
     return vid;
   }
@@ -111,9 +111,9 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
   /**
-   * 
+   * Smart contract address of the token.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Smart contract address of the token.")
   public String getId() {
     return id;
   }
@@ -122,9 +122,9 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
   /**
-   * 
+   * Name of the token, mirrored from the smart contract.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Name of the token, mirrored from the smart contract.")
   public String getName() {
     return name;
   }
@@ -133,9 +133,9 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
   /**
-   * 
+   * Symbol of the token, mirrored from the smart contract.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Symbol of the token, mirrored from the smart contract.")
   public String getSymbol() {
     return symbol;
   }
@@ -144,9 +144,9 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
   /**
-   * 
+   * The number of decimal places this token uses, default to 18.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The number of decimal places this token uses, default to 18.")
   public Integer getDecimals() {
     return decimals;
   }
@@ -155,9 +155,9 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
   /**
-   * 
+   * Optional field to track the price of a token, mostly for caching purposes.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Optional field to track the price of a token, mostly for caching purposes.")
   public String getLastPriceUsd() {
     return lastPriceUsd;
   }
@@ -166,9 +166,9 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
   /**
-   * 
+   * Optional field to track the block number of the last token price.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Optional field to track the block number of the last token price.")
   public String getLastPriceBlockNumber() {
     return lastPriceBlockNumber;
   }
@@ -177,9 +177,9 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
   /**
-   * 
+   * Last pool that gave this token a price.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Last pool that gave this token a price.")
   public String getLastPricePool() {
     return lastPricePool;
   }
@@ -188,9 +188,9 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
   /**
-   * 
+   * Amount of tokens in the protocol.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of tokens in the protocol.")
   public String getTotalSupply() {
     return totalSupply;
   }
@@ -199,9 +199,9 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
   /**
-   * 
+   * Total value locked in the protocol.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total value locked in the protocol.")
   public String getTotalValueLockedUsd() {
     return totalValueLockedUsd;
   }
@@ -210,9 +210,9 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
   /**
-   * 
+   * The buffer for detecting large price changes.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The buffer for detecting large price changes.")
   public Integer getLargePriceChangeBuffer() {
     return largePriceChangeBuffer;
   }
@@ -221,9 +221,9 @@ public class UNISWAPV3ETHEREUMTokenDTO {
   }
 
   /**
-   * 
+   * The buffer for detecting large TVL (Total Value Locked) impact.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The buffer for detecting large TVL (Total Value Locked) impact.")
   public Integer getLargeTvlImpactBuffer() {
     return largeTvlImpactBuffer;
   }

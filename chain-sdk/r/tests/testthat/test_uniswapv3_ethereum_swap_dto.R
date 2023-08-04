@@ -27,17 +27,9 @@ test_that("block_number", {
   #expect_equal(model.instance$`block_number`, "EXPECTED_RESULT")
 })
 
-test_that("vid", {
-  # tests for the property `vid` (integer)
-  # 
-
-  # uncomment below to test the property
-  #expect_equal(model.instance$`vid`, "EXPECTED_RESULT")
-})
-
 test_that("block_", {
   # tests for the property `block_` (integer)
-  # 
+  # Block number in which the swap operation was recorded.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`block_`, "EXPECTED_RESULT")
@@ -45,7 +37,7 @@ test_that("block_", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # 
+  # Unique string identifier of the swap operation, format: (transaction hash)-(log index).
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")
@@ -53,7 +45,7 @@ test_that("id", {
 
 test_that("hash", {
   # tests for the property `hash` (character)
-  # 
+  # Transaction hash of the transaction that emitted this event.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`hash`, "EXPECTED_RESULT")
@@ -61,7 +53,7 @@ test_that("hash", {
 
 test_that("nonce", {
   # tests for the property `nonce` (character)
-  # 
+  # Nonce of the transaction that emitted this event.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`nonce`, "EXPECTED_RESULT")
@@ -69,7 +61,7 @@ test_that("nonce", {
 
 test_that("log_index", {
   # tests for the property `log_index` (integer)
-  # 
+  # Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`log_index`, "EXPECTED_RESULT")
@@ -77,7 +69,7 @@ test_that("log_index", {
 
 test_that("gas_limit", {
   # tests for the property `gas_limit` (character)
-  # 
+  # Gas limit of the transaction that emitted this event.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`gas_limit`, "EXPECTED_RESULT")
@@ -85,7 +77,7 @@ test_that("gas_limit", {
 
 test_that("gas_used", {
   # tests for the property `gas_used` (character)
-  # 
+  # Gas used in this transaction.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`gas_used`, "EXPECTED_RESULT")
@@ -93,7 +85,7 @@ test_that("gas_used", {
 
 test_that("gas_price", {
   # tests for the property `gas_price` (character)
-  # 
+  # Gas price of the transaction that emitted this event.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`gas_price`, "EXPECTED_RESULT")
@@ -101,7 +93,7 @@ test_that("gas_price", {
 
 test_that("protocol", {
   # tests for the property `protocol` (character)
-  # 
+  # The protocol this transaction belongs to.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`protocol`, "EXPECTED_RESULT")
@@ -109,7 +101,7 @@ test_that("protocol", {
 
 test_that("account", {
   # tests for the property `account` (character)
-  # 
+  # Account that emitted this event.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`account`, "EXPECTED_RESULT")
@@ -117,7 +109,7 @@ test_that("account", {
 
 test_that("pool", {
   # tests for the property `pool` (character)
-  # 
+  # The pool involving this event.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`pool`, "EXPECTED_RESULT")
@@ -125,7 +117,7 @@ test_that("pool", {
 
 test_that("timestamp", {
   # tests for the property `timestamp` (character)
-  # 
+  # Timestamp of this event.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`timestamp`, "EXPECTED_RESULT")
@@ -133,7 +125,7 @@ test_that("timestamp", {
 
 test_that("tick", {
   # tests for the property `tick` (character)
-  # 
+  # Tick of the swap operation.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`tick`, "EXPECTED_RESULT")
@@ -141,7 +133,7 @@ test_that("tick", {
 
 test_that("token_in", {
   # tests for the property `token_in` (character)
-  # 
+  # Token deposited into pool.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`token_in`, "EXPECTED_RESULT")
@@ -149,7 +141,7 @@ test_that("token_in", {
 
 test_that("amount_in", {
   # tests for the property `amount_in` (character)
-  # 
+  # Amount of token deposited into pool in native units.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`amount_in`, "EXPECTED_RESULT")
@@ -157,7 +149,7 @@ test_that("amount_in", {
 
 test_that("amount_in_usd", {
   # tests for the property `amount_in_usd` (character)
-  # 
+  # Amount of token deposited into pool in USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`amount_in_usd`, "EXPECTED_RESULT")
@@ -165,7 +157,7 @@ test_that("amount_in_usd", {
 
 test_that("token_out", {
   # tests for the property `token_out` (character)
-  # 
+  # Token withdrawn from pool.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`token_out`, "EXPECTED_RESULT")
@@ -173,7 +165,7 @@ test_that("token_out", {
 
 test_that("amount_out", {
   # tests for the property `amount_out` (character)
-  # 
+  # Amount of token withdrawn from pool in native units.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`amount_out`, "EXPECTED_RESULT")
@@ -181,7 +173,7 @@ test_that("amount_out", {
 
 test_that("amount_out_usd", {
   # tests for the property `amount_out_usd` (character)
-  # 
+  # Amount of token withdrawn from pool in USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`amount_out_usd`, "EXPECTED_RESULT")
@@ -189,7 +181,7 @@ test_that("amount_out_usd", {
 
 test_that("reserve_amounts", {
   # tests for the property `reserve_amounts` (array[character])
-  # 
+  # Amount of input tokens in the liquidity pool.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`reserve_amounts`, "EXPECTED_RESULT")

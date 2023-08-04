@@ -147,8 +147,26 @@ set(SRCS
     model/uniswap_v3_bundle_dto.c
     model/uniswap_v3_burn_dto.c
     model/uniswap_v3_ethereum_account_dto.c
+    model/uniswap_v3_ethereum_active_account_dto.c
+    model/uniswap_v3_ethereum_deposit_dto.c
+    model/uniswap_v3_ethereum_dex_amm_protocol_dto.c
+    model/uniswap_v3_ethereum_financials_daily_snapshot_dto.c
+    model/uniswap_v3_ethereum_liquidity_pool_amount_dto.c
+    model/uniswap_v3_ethereum_liquidity_pool_fee_dto.c
+    model/uniswap_v3_ethereum_liquidity_pool_hourly_snapshot_dto.c
+    model/uniswap_v3_ethereum_position_dto.c
+    model/uniswap_v3_ethereum_position_snapshot_dto.c
+    model/uniswap_v3_ethereum_reward_token_dto.c
     model/uniswap_v3_ethereum_swap_dto.c
+    model/uniswap_v3_ethereum_tick_daily_snapshot_dto.c
+    model/uniswap_v3_ethereum_tick_dto.c
+    model/uniswap_v3_ethereum_tick_hourly_snapshot_dto.c
     model/uniswap_v3_ethereum_token_dto.c
+    model/uniswap_v3_ethereum_token_white_list_dto.c
+    model/uniswap_v3_ethereum_token_white_list_symbol_dto.c
+    model/uniswap_v3_ethereum_usage_metrics_daily_snapshot_dto.c
+    model/uniswap_v3_ethereum_usage_metrics_hourly_snapshot_dto.c
+    model/uniswap_v3_ethereum_withdraw_dto.c
     model/uniswap_v3_factory_dto.c
     model/uniswap_v3_mint_dto.c
     model/uniswap_v3_pool_day_data_dto.c
@@ -276,8 +294,26 @@ set(HDRS
     model/uniswap_v3_bundle_dto.h
     model/uniswap_v3_burn_dto.h
     model/uniswap_v3_ethereum_account_dto.h
+    model/uniswap_v3_ethereum_active_account_dto.h
+    model/uniswap_v3_ethereum_deposit_dto.h
+    model/uniswap_v3_ethereum_dex_amm_protocol_dto.h
+    model/uniswap_v3_ethereum_financials_daily_snapshot_dto.h
+    model/uniswap_v3_ethereum_liquidity_pool_amount_dto.h
+    model/uniswap_v3_ethereum_liquidity_pool_fee_dto.h
+    model/uniswap_v3_ethereum_liquidity_pool_hourly_snapshot_dto.h
+    model/uniswap_v3_ethereum_position_dto.h
+    model/uniswap_v3_ethereum_position_snapshot_dto.h
+    model/uniswap_v3_ethereum_reward_token_dto.h
     model/uniswap_v3_ethereum_swap_dto.h
+    model/uniswap_v3_ethereum_tick_daily_snapshot_dto.h
+    model/uniswap_v3_ethereum_tick_dto.h
+    model/uniswap_v3_ethereum_tick_hourly_snapshot_dto.h
     model/uniswap_v3_ethereum_token_dto.h
+    model/uniswap_v3_ethereum_token_white_list_dto.h
+    model/uniswap_v3_ethereum_token_white_list_symbol_dto.h
+    model/uniswap_v3_ethereum_usage_metrics_daily_snapshot_dto.h
+    model/uniswap_v3_ethereum_usage_metrics_hourly_snapshot_dto.h
+    model/uniswap_v3_ethereum_withdraw_dto.h
     model/uniswap_v3_factory_dto.h
     model/uniswap_v3_mint_dto.h
     model/uniswap_v3_pool_day_data_dto.h

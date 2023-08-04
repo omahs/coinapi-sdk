@@ -16,7 +16,7 @@ import type {
 } from './';
 
 /**
- * Swap are created for each token swap within a pair.
+ * Trade (swap) event occurred in a pool.
  * @export
  * @interface UNISWAPV3ETHEREUMSwapDTO
  */
@@ -38,127 +38,121 @@ export interface UNISWAPV3ETHEREUMSwapDTO {
      */
     block_number?: number;
     /**
-     * 
-     * @type {number}
-     * @memberof UNISWAPV3ETHEREUMSwapDTO
-     */
-    vid?: number;
-    /**
-     * 
+     * Block number in which the swap operation was recorded.
      * @type {number}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */
     block_?: number;
     /**
-     * 
+     * Unique string identifier of the swap operation, format: (transaction hash)-(log index).
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */
     id?: string | null;
     /**
-     * 
+     * Transaction hash of the transaction that emitted this event.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */
     hash?: string | null;
     /**
-     * 
+     * Nonce of the transaction that emitted this event.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */
     nonce?: string | null;
     /**
-     * 
+     * Event log index. For transactions that don\'t emit event, create arbitrary index starting from 0.
      * @type {number}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */
     log_index?: number;
     /**
-     * 
+     * Gas limit of the transaction that emitted this event.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */
     gas_limit?: string | null;
     /**
-     * 
+     * Gas used in this transaction.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */
     gas_used?: string | null;
     /**
-     * 
+     * Gas price of the transaction that emitted this event.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */
     gas_price?: string | null;
     /**
-     * 
+     * The protocol this transaction belongs to.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */
     protocol?: string | null;
     /**
-     * 
+     * Account that emitted this event.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */
     account?: string | null;
     /**
-     * 
+     * The pool involving this event.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */
     pool?: string | null;
     /**
-     * 
+     * Timestamp of this event.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */
     timestamp?: string | null;
     /**
-     * 
+     * Tick of the swap operation.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */
     tick?: string | null;
     /**
-     * 
+     * Token deposited into pool.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */
     token_in?: string | null;
     /**
-     * 
+     * Amount of token deposited into pool in native units.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */
     amount_in?: string | null;
     /**
-     * 
+     * Amount of token deposited into pool in USD.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */
     amount_in_usd?: string | null;
     /**
-     * 
+     * Token withdrawn from pool.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */
     token_out?: string | null;
     /**
-     * 
+     * Amount of token withdrawn from pool in native units.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */
     amount_out?: string | null;
     /**
-     * 
+     * Amount of token withdrawn from pool in USD.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */
     amount_out_usd?: string | null;
     /**
-     * 
+     * Amount of input tokens in the liquidity pool.
      * @type {Array<string>}
      * @memberof UNISWAPV3ETHEREUMSwapDTO
      */

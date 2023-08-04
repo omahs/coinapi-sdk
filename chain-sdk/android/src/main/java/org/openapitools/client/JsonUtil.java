@@ -361,12 +361,84 @@ public class JsonUtil {
       return new TypeToken<List<UNISWAPV3ETHEREUMAccountDTO>>(){}.getType();
     }
     
+    if ("UNISWAPV3ETHEREUMActiveAccountDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMActiveAccountDTO>>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMDepositDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMDepositDTO>>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMDexAmmProtocolDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMLiquidityPoolAmountDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMLiquidityPoolFeeDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMPositionDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMPositionDTO>>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMPositionSnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMRewardTokenDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMRewardTokenDTO>>(){}.getType();
+    }
+    
     if ("UNISWAPV3ETHEREUMSwapDTO".equalsIgnoreCase(className)) {
       return new TypeToken<List<UNISWAPV3ETHEREUMSwapDTO>>(){}.getType();
     }
     
+    if ("UNISWAPV3ETHEREUMTickDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMTickDTO>>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMTickDailySnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMTickHourlySnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>(){}.getType();
+    }
+    
     if ("UNISWAPV3ETHEREUMTokenDTO".equalsIgnoreCase(className)) {
       return new TypeToken<List<UNISWAPV3ETHEREUMTokenDTO>>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMTokenWhiteListDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMWithdrawDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMWithdrawDTO>>(){}.getType();
     }
     
     if ("UniswapV2BundleDTO".equalsIgnoreCase(className)) {
@@ -807,12 +879,84 @@ public class JsonUtil {
       return new TypeToken<UNISWAPV3ETHEREUMAccountDTO>(){}.getType();
     }
     
+    if ("UNISWAPV3ETHEREUMActiveAccountDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMActiveAccountDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMDepositDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMDepositDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMDexAmmProtocolDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMDexAmmProtocolDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMLiquidityPoolAmountDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMLiquidityPoolFeeDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMPositionDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMPositionDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMPositionSnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMPositionSnapshotDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMRewardTokenDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMRewardTokenDTO>(){}.getType();
+    }
+    
     if ("UNISWAPV3ETHEREUMSwapDTO".equalsIgnoreCase(className)) {
       return new TypeToken<UNISWAPV3ETHEREUMSwapDTO>(){}.getType();
     }
     
+    if ("UNISWAPV3ETHEREUMTickDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMTickDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMTickDailySnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMTickDailySnapshotDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMTickHourlySnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>(){}.getType();
+    }
+    
     if ("UNISWAPV3ETHEREUMTokenDTO".equalsIgnoreCase(className)) {
       return new TypeToken<UNISWAPV3ETHEREUMTokenDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMTokenWhiteListDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMTokenWhiteListDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMWithdrawDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMWithdrawDTO>(){}.getType();
     }
     
     if ("UniswapV2BundleDTO".equalsIgnoreCase(className)) {

@@ -1,7 +1,7 @@
 /*
  * UNISWAP_V3_ETHEREUM.SwapDTO.h
  *
- * Swap are created for each token swap within a pair.
+ * Trade (swap) event occurred in a pool.
  */
 
 #ifndef _UNISWAP_V3_ETHEREUM.SwapDTO_H_
@@ -22,7 +22,7 @@ namespace Tizen {
 namespace ArtikCloud {
 
 
-/*! \brief Swap are created for each token swap within a pair.
+/*! \brief Trade (swap) event occurred in a pool.
  *
  *  \ingroup Models
  *
@@ -68,151 +68,144 @@ public:
 	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
-	/*! \brief Get 
-	 */
-	long long getVid();
-
-	/*! \brief Set 
-	 */
-	void setVid(long long  vid);
-	/*! \brief Get 
+	/*! \brief Get Block number in which the swap operation was recorded.
 	 */
 	int getBlock();
 
-	/*! \brief Set 
+	/*! \brief Set Block number in which the swap operation was recorded.
 	 */
 	void setBlock(int  block_);
-	/*! \brief Get 
+	/*! \brief Get Unique string identifier of the swap operation, format: (transaction hash)-(log index).
 	 */
 	std::string getId();
 
-	/*! \brief Set 
+	/*! \brief Set Unique string identifier of the swap operation, format: (transaction hash)-(log index).
 	 */
 	void setId(std::string  id);
-	/*! \brief Get 
+	/*! \brief Get Transaction hash of the transaction that emitted this event.
 	 */
 	std::string getHash();
 
-	/*! \brief Set 
+	/*! \brief Set Transaction hash of the transaction that emitted this event.
 	 */
 	void setHash(std::string  hash);
-	/*! \brief Get 
+	/*! \brief Get Nonce of the transaction that emitted this event.
 	 */
 	std::string getNonce();
 
-	/*! \brief Set 
+	/*! \brief Set Nonce of the transaction that emitted this event.
 	 */
 	void setNonce(std::string  nonce);
-	/*! \brief Get 
+	/*! \brief Get Event log index. For transactions that don't emit event, create arbitrary index starting from 0.
 	 */
 	int getLogIndex();
 
-	/*! \brief Set 
+	/*! \brief Set Event log index. For transactions that don't emit event, create arbitrary index starting from 0.
 	 */
 	void setLogIndex(int  log_index);
-	/*! \brief Get 
+	/*! \brief Get Gas limit of the transaction that emitted this event.
 	 */
 	std::string getGasLimit();
 
-	/*! \brief Set 
+	/*! \brief Set Gas limit of the transaction that emitted this event.
 	 */
 	void setGasLimit(std::string  gas_limit);
-	/*! \brief Get 
+	/*! \brief Get Gas used in this transaction.
 	 */
 	std::string getGasUsed();
 
-	/*! \brief Set 
+	/*! \brief Set Gas used in this transaction.
 	 */
 	void setGasUsed(std::string  gas_used);
-	/*! \brief Get 
+	/*! \brief Get Gas price of the transaction that emitted this event.
 	 */
 	std::string getGasPrice();
 
-	/*! \brief Set 
+	/*! \brief Set Gas price of the transaction that emitted this event.
 	 */
 	void setGasPrice(std::string  gas_price);
-	/*! \brief Get 
+	/*! \brief Get The protocol this transaction belongs to.
 	 */
 	std::string getProtocol();
 
-	/*! \brief Set 
+	/*! \brief Set The protocol this transaction belongs to.
 	 */
 	void setProtocol(std::string  protocol);
-	/*! \brief Get 
+	/*! \brief Get Account that emitted this event.
 	 */
 	std::string getAccount();
 
-	/*! \brief Set 
+	/*! \brief Set Account that emitted this event.
 	 */
 	void setAccount(std::string  account);
-	/*! \brief Get 
+	/*! \brief Get The pool involving this event.
 	 */
 	std::string getPool();
 
-	/*! \brief Set 
+	/*! \brief Set The pool involving this event.
 	 */
 	void setPool(std::string  pool);
-	/*! \brief Get 
+	/*! \brief Get Timestamp of this event.
 	 */
 	std::string getTimestamp();
 
-	/*! \brief Set 
+	/*! \brief Set Timestamp of this event.
 	 */
 	void setTimestamp(std::string  timestamp);
-	/*! \brief Get 
+	/*! \brief Get Tick of the swap operation.
 	 */
 	std::string getTick();
 
-	/*! \brief Set 
+	/*! \brief Set Tick of the swap operation.
 	 */
 	void setTick(std::string  tick);
-	/*! \brief Get 
+	/*! \brief Get Token deposited into pool.
 	 */
 	std::string getTokenIn();
 
-	/*! \brief Set 
+	/*! \brief Set Token deposited into pool.
 	 */
 	void setTokenIn(std::string  token_in);
-	/*! \brief Get 
+	/*! \brief Get Amount of token deposited into pool in native units.
 	 */
 	std::string getAmountIn();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of token deposited into pool in native units.
 	 */
 	void setAmountIn(std::string  amount_in);
-	/*! \brief Get 
+	/*! \brief Get Amount of token deposited into pool in USD.
 	 */
 	std::string getAmountInUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of token deposited into pool in USD.
 	 */
 	void setAmountInUsd(std::string  amount_in_usd);
-	/*! \brief Get 
+	/*! \brief Get Token withdrawn from pool.
 	 */
 	std::string getTokenOut();
 
-	/*! \brief Set 
+	/*! \brief Set Token withdrawn from pool.
 	 */
 	void setTokenOut(std::string  token_out);
-	/*! \brief Get 
+	/*! \brief Get Amount of token withdrawn from pool in native units.
 	 */
 	std::string getAmountOut();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of token withdrawn from pool in native units.
 	 */
 	void setAmountOut(std::string  amount_out);
-	/*! \brief Get 
+	/*! \brief Get Amount of token withdrawn from pool in USD.
 	 */
 	std::string getAmountOutUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of token withdrawn from pool in USD.
 	 */
 	void setAmountOutUsd(std::string  amount_out_usd);
-	/*! \brief Get 
+	/*! \brief Get Amount of input tokens in the liquidity pool.
 	 */
 	std::list<std::string> getReserveAmounts();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of input tokens in the liquidity pool.
 	 */
 	void setReserveAmounts(std::list <std::string> reserve_amounts);
 	/*! \brief Get 
@@ -255,7 +248,6 @@ private:
 	std::string entry_time;
 	std::string recv_time;
 	long long block_number;
-	long long vid;
 	int block_;
 	std::string id;
 	std::string hash;

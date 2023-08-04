@@ -82,7 +82,7 @@ public:
     void setBlockNumber(int64_t value);
 
     /// <summary>
-    /// 
+    /// .
     /// </summary>
     int64_t getVid() const;
     bool vidIsSet() const;
@@ -100,7 +100,7 @@ public:
     void setBlockRange(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Smart contract address of the token.
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;
@@ -109,7 +109,7 @@ public:
     void setId(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Name of the token, mirrored from the smart contract.
     /// </summary>
     utility::string_t getName() const;
     bool nameIsSet() const;
@@ -118,7 +118,7 @@ public:
     void setName(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Symbol of the token, mirrored from the smart contract.
     /// </summary>
     utility::string_t getSymbol() const;
     bool symbolIsSet() const;
@@ -127,7 +127,7 @@ public:
     void setSymbol(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// The number of decimal places this token uses, default to 18.
     /// </summary>
     int32_t getDecimals() const;
     bool decimalsIsSet() const;
@@ -136,7 +136,7 @@ public:
     void setDecimals(int32_t value);
 
     /// <summary>
-    /// 
+    /// Optional field to track the price of a token, mostly for caching purposes.
     /// </summary>
     utility::string_t getLastPriceUsd() const;
     bool lastPriceUsdIsSet() const;
@@ -145,7 +145,7 @@ public:
     void setLastPriceUsd(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Optional field to track the block number of the last token price.
     /// </summary>
     utility::string_t getLastPriceBlockNumber() const;
     bool lastPriceBlockNumberIsSet() const;
@@ -154,7 +154,7 @@ public:
     void setLastPriceBlockNumber(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Last pool that gave this token a price.
     /// </summary>
     utility::string_t getLastPricePool() const;
     bool lastPricePoolIsSet() const;
@@ -163,7 +163,7 @@ public:
     void setLastPricePool(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Amount of tokens in the protocol.
     /// </summary>
     utility::string_t getTotalSupply() const;
     bool totalSupplyIsSet() const;
@@ -172,7 +172,7 @@ public:
     void setTotalSupply(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Total value locked in the protocol.
     /// </summary>
     utility::string_t getTotalValueLockedUsd() const;
     bool totalValueLockedUsdIsSet() const;
@@ -181,7 +181,7 @@ public:
     void setTotalValueLockedUsd(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// The buffer for detecting large price changes.
     /// </summary>
     int32_t getLargePriceChangeBuffer() const;
     bool largePriceChangeBufferIsSet() const;
@@ -190,7 +190,7 @@ public:
     void setLargePriceChangeBuffer(int32_t value);
 
     /// <summary>
-    /// 
+    /// The buffer for detecting large TVL (Total Value Locked) impact.
     /// </summary>
     int32_t getLargeTvlImpactBuffer() const;
     bool largeTvlImpactBufferIsSet() const;

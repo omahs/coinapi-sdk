@@ -22,7 +22,6 @@ typedef struct uniswap_v3_ethereum_account_dto_t {
     char *entry_time; //date time
     char *recv_time; //date time
     long block_number; //numeric
-    long vid; //numeric
     char *block_range; // string
     char *id; // string
     int position_count; //numeric
@@ -38,7 +37,6 @@ uniswap_v3_ethereum_account_dto_t *uniswap_v3_ethereum_account_dto_create(
     char *entry_time,
     char *recv_time,
     long block_number,
-    long vid,
     char *block_range,
     char *id,
     int position_count,

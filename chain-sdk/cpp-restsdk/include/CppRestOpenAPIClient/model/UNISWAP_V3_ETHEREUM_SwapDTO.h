@@ -13,7 +13,7 @@
 /*
  * UNISWAP_V3_ETHEREUM_SwapDTO.h
  *
- * Swap are created for each token swap within a pair.
+ * Trade (swap) event occurred in a pool.
  */
 
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_UNISWAP_V3_ETHEREUM_SwapDTO_H_
@@ -33,7 +33,7 @@ namespace model {
 
 
 /// <summary>
-/// Swap are created for each token swap within a pair.
+/// Trade (swap) event occurred in a pool.
 /// </summary>
 class  UNISWAP_V3_ETHEREUM_SwapDTO
     : public ModelBase
@@ -84,16 +84,7 @@ public:
     void setBlockNumber(int64_t value);
 
     /// <summary>
-    /// 
-    /// </summary>
-    int64_t getVid() const;
-    bool vidIsSet() const;
-    void unsetVid();
-
-    void setVid(int64_t value);
-
-    /// <summary>
-    /// 
+    /// Block number in which the swap operation was recorded.
     /// </summary>
     int32_t getBlock() const;
     bool blockIsSet() const;
@@ -102,7 +93,7 @@ public:
     void setBlock(int32_t value);
 
     /// <summary>
-    /// 
+    /// Unique string identifier of the swap operation, format: (transaction hash)-(log index).
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;
@@ -111,7 +102,7 @@ public:
     void setId(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Transaction hash of the transaction that emitted this event.
     /// </summary>
     utility::string_t getHash() const;
     bool hashIsSet() const;
@@ -120,7 +111,7 @@ public:
     void setHash(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Nonce of the transaction that emitted this event.
     /// </summary>
     utility::string_t getNonce() const;
     bool nonceIsSet() const;
@@ -129,7 +120,7 @@ public:
     void setNonce(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0.
     /// </summary>
     int32_t getLogIndex() const;
     bool logIndexIsSet() const;
@@ -138,7 +129,7 @@ public:
     void setLogIndex(int32_t value);
 
     /// <summary>
-    /// 
+    /// Gas limit of the transaction that emitted this event.
     /// </summary>
     utility::string_t getGasLimit() const;
     bool gasLimitIsSet() const;
@@ -147,7 +138,7 @@ public:
     void setGasLimit(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Gas used in this transaction.
     /// </summary>
     utility::string_t getGasUsed() const;
     bool gasUsedIsSet() const;
@@ -156,7 +147,7 @@ public:
     void setGasUsed(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Gas price of the transaction that emitted this event.
     /// </summary>
     utility::string_t getGasPrice() const;
     bool gasPriceIsSet() const;
@@ -165,7 +156,7 @@ public:
     void setGasPrice(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// The protocol this transaction belongs to.
     /// </summary>
     utility::string_t getProtocol() const;
     bool protocolIsSet() const;
@@ -174,7 +165,7 @@ public:
     void setProtocol(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Account that emitted this event.
     /// </summary>
     utility::string_t getAccount() const;
     bool accountIsSet() const;
@@ -183,7 +174,7 @@ public:
     void setAccount(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// The pool involving this event.
     /// </summary>
     utility::string_t getPool() const;
     bool poolIsSet() const;
@@ -192,7 +183,7 @@ public:
     void setPool(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Timestamp of this event.
     /// </summary>
     utility::string_t getTimestamp() const;
     bool timestampIsSet() const;
@@ -201,7 +192,7 @@ public:
     void setTimestamp(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Tick of the swap operation.
     /// </summary>
     utility::string_t getTick() const;
     bool tickIsSet() const;
@@ -210,7 +201,7 @@ public:
     void setTick(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Token deposited into pool.
     /// </summary>
     utility::string_t getTokenIn() const;
     bool tokenInIsSet() const;
@@ -219,7 +210,7 @@ public:
     void setTokenIn(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Amount of token deposited into pool in native units.
     /// </summary>
     utility::string_t getAmountIn() const;
     bool amountInIsSet() const;
@@ -228,7 +219,7 @@ public:
     void setAmountIn(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Amount of token deposited into pool in USD.
     /// </summary>
     utility::string_t getAmountInUsd() const;
     bool amountInUsdIsSet() const;
@@ -237,7 +228,7 @@ public:
     void setAmountInUsd(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Token withdrawn from pool.
     /// </summary>
     utility::string_t getTokenOut() const;
     bool tokenOutIsSet() const;
@@ -246,7 +237,7 @@ public:
     void setTokenOut(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Amount of token withdrawn from pool in native units.
     /// </summary>
     utility::string_t getAmountOut() const;
     bool amountOutIsSet() const;
@@ -255,7 +246,7 @@ public:
     void setAmountOut(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Amount of token withdrawn from pool in USD.
     /// </summary>
     utility::string_t getAmountOutUsd() const;
     bool amountOutUsdIsSet() const;
@@ -264,7 +255,7 @@ public:
     void setAmountOutUsd(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Amount of input tokens in the liquidity pool.
     /// </summary>
     std::vector<utility::string_t>& getReserveAmounts();
     bool reserveAmountsIsSet() const;
@@ -325,8 +316,6 @@ protected:
     bool m_Recv_timeIsSet;
     int64_t m_Block_number;
     bool m_Block_numberIsSet;
-    int64_t m_Vid;
-    bool m_VidIsSet;
     int32_t m_Block_;
     bool m_Block_IsSet;
     utility::string_t m_Id;

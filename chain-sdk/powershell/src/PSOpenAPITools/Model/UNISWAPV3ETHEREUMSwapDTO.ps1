@@ -13,7 +13,7 @@ No summary available.
 
 .DESCRIPTION
 
-Swap are created for each token swap within a pair.
+Trade (swap) event occurred in a pool.
 
 .PARAMETER EntryTime
 No description available.
@@ -21,48 +21,46 @@ No description available.
 No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
-.PARAMETER Vid
-
 .PARAMETER Block
-
+Block number in which the swap operation was recorded.
 .PARAMETER Id
-
+Unique string identifier of the swap operation, format: (transaction hash)-(log index).
 .PARAMETER Hash
-
+Transaction hash of the transaction that emitted this event.
 .PARAMETER Nonce
-
+Nonce of the transaction that emitted this event.
 .PARAMETER LogIndex
-
+Event log index. For transactions that don't emit event, create arbitrary index starting from 0.
 .PARAMETER GasLimit
-
+Gas limit of the transaction that emitted this event.
 .PARAMETER GasUsed
-
+Gas used in this transaction.
 .PARAMETER GasPrice
-
+Gas price of the transaction that emitted this event.
 .PARAMETER Protocol
-
+The protocol this transaction belongs to.
 .PARAMETER Account
-
+Account that emitted this event.
 .PARAMETER Pool
-
+The pool involving this event.
 .PARAMETER Timestamp
-
+Timestamp of this event.
 .PARAMETER Tick
-
+Tick of the swap operation.
 .PARAMETER TokenIn
-
+Token deposited into pool.
 .PARAMETER AmountIn
-
+Amount of token deposited into pool in native units.
 .PARAMETER AmountInUsd
-
+Amount of token deposited into pool in USD.
 .PARAMETER TokenOut
-
+Token withdrawn from pool.
 .PARAMETER AmountOut
-
+Amount of token withdrawn from pool in native units.
 .PARAMETER AmountOutUsd
-
+Amount of token withdrawn from pool in USD.
 .PARAMETER ReserveAmounts
-
+Amount of input tokens in the liquidity pool.
 .PARAMETER PoolId
 No description available.
 .PARAMETER TransactionId
@@ -91,81 +89,78 @@ function Initialize-UNISWAPV3ETHEREUMSwapDTO {
         [System.Nullable[Int64]]
         ${BlockNumber},
         [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true)]
-        [System.Nullable[Int64]]
-        ${Vid},
-        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
         ${Block},
-        [Parameter(Position = 5, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
-        [Parameter(Position = 6, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 5, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Hash},
-        [Parameter(Position = 7, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 6, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Nonce},
-        [Parameter(Position = 8, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 7, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
         ${LogIndex},
-        [Parameter(Position = 9, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 8, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${GasLimit},
-        [Parameter(Position = 10, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 9, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${GasUsed},
-        [Parameter(Position = 11, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 10, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${GasPrice},
-        [Parameter(Position = 12, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 11, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Protocol},
-        [Parameter(Position = 13, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 12, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Account},
-        [Parameter(Position = 14, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 13, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Pool},
-        [Parameter(Position = 15, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 14, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Timestamp},
-        [Parameter(Position = 16, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 15, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Tick},
-        [Parameter(Position = 17, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 16, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${TokenIn},
-        [Parameter(Position = 18, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 17, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${AmountIn},
-        [Parameter(Position = 19, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 18, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${AmountInUsd},
-        [Parameter(Position = 20, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 19, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${TokenOut},
-        [Parameter(Position = 21, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 20, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${AmountOut},
-        [Parameter(Position = 22, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 21, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${AmountOutUsd},
-        [Parameter(Position = 23, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 22, ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${ReserveAmounts},
-        [Parameter(Position = 24, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 23, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${PoolId},
-        [Parameter(Position = 25, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 24, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${TransactionId},
-        [Parameter(Position = 26, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 25, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Double]]
         ${EvaluatedPrice},
-        [Parameter(Position = 27, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 26, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Double]]
         ${EvaluatedAmount},
-        [Parameter(Position = 28, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 27, ValueFromPipelineByPropertyName = $true)]
         [ValidateSet("Buy", "Sell", "EstimatedBuy", "EstimatedSell", "Unknown")]
         [PSCustomObject]
         ${EvaluatedAggressor}
@@ -180,7 +175,6 @@ function Initialize-UNISWAPV3ETHEREUMSwapDTO {
             "entry_time" = ${EntryTime}
             "recv_time" = ${RecvTime}
             "block_number" = ${BlockNumber}
-            "vid" = ${Vid}
             "block_" = ${Block}
             "id" = ${Id}
             "hash" = ${Hash}
@@ -243,7 +237,7 @@ function ConvertFrom-JsonToUNISWAPV3ETHEREUMSwapDTO {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in UNISWAPV3ETHEREUMSwapDTO
-        $AllProperties = ("entry_time", "recv_time", "block_number", "vid", "block_", "id", "hash", "nonce", "log_index", "gas_limit", "gas_used", "gas_price", "protocol", "account", "pool", "timestamp", "tick", "token_in", "amount_in", "amount_in_usd", "token_out", "amount_out", "amount_out_usd", "reserve_amounts", "pool_id", "transaction_id", "evaluated_price", "evaluated_amount", "evaluated_aggressor")
+        $AllProperties = ("entry_time", "recv_time", "block_number", "block_", "id", "hash", "nonce", "log_index", "gas_limit", "gas_used", "gas_price", "protocol", "account", "pool", "timestamp", "tick", "token_in", "amount_in", "amount_in_usd", "token_out", "amount_out", "amount_out_usd", "reserve_amounts", "pool_id", "transaction_id", "evaluated_price", "evaluated_amount", "evaluated_aggressor")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -266,12 +260,6 @@ function ConvertFrom-JsonToUNISWAPV3ETHEREUMSwapDTO {
             $BlockNumber = $null
         } else {
             $BlockNumber = $JsonParameters.PSobject.Properties["block_number"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "vid"))) { #optional property not found
-            $Vid = $null
-        } else {
-            $Vid = $JsonParameters.PSobject.Properties["vid"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "block_"))) { #optional property not found
@@ -428,7 +416,6 @@ function ConvertFrom-JsonToUNISWAPV3ETHEREUMSwapDTO {
             "entry_time" = ${EntryTime}
             "recv_time" = ${RecvTime}
             "block_number" = ${BlockNumber}
-            "vid" = ${Vid}
             "block_" = ${Block}
             "id" = ${Id}
             "hash" = ${Hash}

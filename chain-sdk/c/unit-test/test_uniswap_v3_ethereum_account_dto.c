@@ -25,7 +25,6 @@ uniswap_v3_ethereum_account_dto_t* instantiate_uniswap_v3_ethereum_account_dto(i
       "2013-10-20T19:20:30+01:00",
       "2013-10-20T19:20:30+01:00",
       56,
-      56,
       "0",
       "0",
       56,
@@ -39,7 +38,6 @@ uniswap_v3_ethereum_account_dto_t* instantiate_uniswap_v3_ethereum_account_dto(i
     uniswap_v3_ethereum_account_dto = uniswap_v3_ethereum_account_dto_create(
       "2013-10-20T19:20:30+01:00",
       "2013-10-20T19:20:30+01:00",
-      56,
       56,
       "0",
       "0",

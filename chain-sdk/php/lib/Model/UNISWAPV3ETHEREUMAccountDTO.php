@@ -61,7 +61,6 @@ class UNISWAPV3ETHEREUMAccountDTO implements ModelInterface, ArrayAccess, \JsonS
         'entry_time' => '\DateTime',
         'recv_time' => '\DateTime',
         'block_number' => 'int',
-        'vid' => 'int',
         'block_range' => 'string',
         'id' => 'string',
         'position_count' => 'int',
@@ -83,7 +82,6 @@ class UNISWAPV3ETHEREUMAccountDTO implements ModelInterface, ArrayAccess, \JsonS
         'entry_time' => 'date-time',
         'recv_time' => 'date-time',
         'block_number' => 'int64',
-        'vid' => 'int64',
         'block_range' => null,
         'id' => null,
         'position_count' => 'int32',
@@ -103,7 +101,6 @@ class UNISWAPV3ETHEREUMAccountDTO implements ModelInterface, ArrayAccess, \JsonS
         'entry_time' => false,
 		'recv_time' => false,
 		'block_number' => false,
-		'vid' => false,
 		'block_range' => true,
 		'id' => true,
 		'position_count' => false,
@@ -203,7 +200,6 @@ class UNISWAPV3ETHEREUMAccountDTO implements ModelInterface, ArrayAccess, \JsonS
         'entry_time' => 'entry_time',
         'recv_time' => 'recv_time',
         'block_number' => 'block_number',
-        'vid' => 'vid',
         'block_range' => 'block_range',
         'id' => 'id',
         'position_count' => 'position_count',
@@ -223,7 +219,6 @@ class UNISWAPV3ETHEREUMAccountDTO implements ModelInterface, ArrayAccess, \JsonS
         'entry_time' => 'setEntryTime',
         'recv_time' => 'setRecvTime',
         'block_number' => 'setBlockNumber',
-        'vid' => 'setVid',
         'block_range' => 'setBlockRange',
         'id' => 'setId',
         'position_count' => 'setPositionCount',
@@ -243,7 +238,6 @@ class UNISWAPV3ETHEREUMAccountDTO implements ModelInterface, ArrayAccess, \JsonS
         'entry_time' => 'getEntryTime',
         'recv_time' => 'getRecvTime',
         'block_number' => 'getBlockNumber',
-        'vid' => 'getVid',
         'block_range' => 'getBlockRange',
         'id' => 'getId',
         'position_count' => 'getPositionCount',
@@ -314,7 +308,6 @@ class UNISWAPV3ETHEREUMAccountDTO implements ModelInterface, ArrayAccess, \JsonS
         $this->setIfExists('entry_time', $data ?? [], null);
         $this->setIfExists('recv_time', $data ?? [], null);
         $this->setIfExists('block_number', $data ?? [], null);
-        $this->setIfExists('vid', $data ?? [], null);
         $this->setIfExists('block_range', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('position_count', $data ?? [], null);
@@ -449,33 +442,6 @@ class UNISWAPV3ETHEREUMAccountDTO implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
-     * Gets vid
-     *
-     * @return int|null
-     */
-    public function getVid()
-    {
-        return $this->container['vid'];
-    }
-
-    /**
-     * Sets vid
-     *
-     * @param int|null $vid 
-     *
-     * @return self
-     */
-    public function setVid($vid)
-    {
-        if (is_null($vid)) {
-            throw new \InvalidArgumentException('non-nullable vid cannot be null');
-        }
-        $this->container['vid'] = $vid;
-
-        return $this;
-    }
-
-    /**
      * Gets block_range
      *
      * @return string|null
@@ -522,7 +488,7 @@ class UNISWAPV3ETHEREUMAccountDTO implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets id
      *
-     * @param string|null $id 
+     * @param string|null $id Account address.
      *
      * @return self
      */
@@ -556,7 +522,7 @@ class UNISWAPV3ETHEREUMAccountDTO implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets position_count
      *
-     * @param int|null $position_count 
+     * @param int|null $position_count Number of positions this account has.
      *
      * @return self
      */
@@ -583,7 +549,7 @@ class UNISWAPV3ETHEREUMAccountDTO implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets open_position_count
      *
-     * @param int|null $open_position_count 
+     * @param int|null $open_position_count Number of open positions this account has.
      *
      * @return self
      */
@@ -610,7 +576,7 @@ class UNISWAPV3ETHEREUMAccountDTO implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets closed_position_count
      *
-     * @param int|null $closed_position_count 
+     * @param int|null $closed_position_count Number of closed positions this account has.
      *
      * @return self
      */
@@ -637,7 +603,7 @@ class UNISWAPV3ETHEREUMAccountDTO implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets deposit_count
      *
-     * @param int|null $deposit_count 
+     * @param int|null $deposit_count Number of deposits this account made.
      *
      * @return self
      */
@@ -664,7 +630,7 @@ class UNISWAPV3ETHEREUMAccountDTO implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets withdraw_count
      *
-     * @param int|null $withdraw_count 
+     * @param int|null $withdraw_count Number of withdrawals this account made.
      *
      * @return self
      */
@@ -691,7 +657,7 @@ class UNISWAPV3ETHEREUMAccountDTO implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets swap_count
      *
-     * @param int|null $swap_count 
+     * @param int|null $swap_count Number of times this account has traded/swapped.
      *
      * @return self
      */

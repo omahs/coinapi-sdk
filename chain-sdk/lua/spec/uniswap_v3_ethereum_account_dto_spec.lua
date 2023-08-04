@@ -37,13 +37,6 @@ describe("uniswap_v3_ethereum_account_dto", function()
     end)
   end)
 
-  -- unit tests for the property 'vid'
-  describe("property vid test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for the property 'block_range'
   describe("property block_range test", function()
     it("should work", function()

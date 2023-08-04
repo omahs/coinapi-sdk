@@ -7,27 +7,26 @@ Name | Type | Description | Notes
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
 **BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
-**Vid** | Pointer to **int64** |  | [optional] 
-**Block** | Pointer to **int32** |  | [optional] 
-**Id** | Pointer to **NullableString** |  | [optional] 
-**Hash** | Pointer to **NullableString** |  | [optional] 
-**Nonce** | Pointer to **NullableString** |  | [optional] 
-**LogIndex** | Pointer to **int32** |  | [optional] 
-**GasLimit** | Pointer to **NullableString** |  | [optional] 
-**GasUsed** | Pointer to **NullableString** |  | [optional] 
-**GasPrice** | Pointer to **NullableString** |  | [optional] 
-**Protocol** | Pointer to **NullableString** |  | [optional] 
-**Account** | Pointer to **NullableString** |  | [optional] 
-**Pool** | Pointer to **NullableString** |  | [optional] 
-**Timestamp** | Pointer to **NullableString** |  | [optional] 
-**Tick** | Pointer to **NullableString** |  | [optional] 
-**TokenIn** | Pointer to **NullableString** |  | [optional] 
-**AmountIn** | Pointer to **NullableString** |  | [optional] 
-**AmountInUsd** | Pointer to **NullableString** |  | [optional] 
-**TokenOut** | Pointer to **NullableString** |  | [optional] 
-**AmountOut** | Pointer to **NullableString** |  | [optional] 
-**AmountOutUsd** | Pointer to **NullableString** |  | [optional] 
-**ReserveAmounts** | Pointer to **[]string** |  | [optional] 
+**Block** | Pointer to **int32** | Block number in which the swap operation was recorded. | [optional] 
+**Id** | Pointer to **NullableString** | Unique string identifier of the swap operation, format: (transaction hash)-(log index). | [optional] 
+**Hash** | Pointer to **NullableString** | Transaction hash of the transaction that emitted this event. | [optional] 
+**Nonce** | Pointer to **NullableString** | Nonce of the transaction that emitted this event. | [optional] 
+**LogIndex** | Pointer to **int32** | Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0. | [optional] 
+**GasLimit** | Pointer to **NullableString** | Gas limit of the transaction that emitted this event. | [optional] 
+**GasUsed** | Pointer to **NullableString** | Gas used in this transaction. | [optional] 
+**GasPrice** | Pointer to **NullableString** | Gas price of the transaction that emitted this event. | [optional] 
+**Protocol** | Pointer to **NullableString** | The protocol this transaction belongs to. | [optional] 
+**Account** | Pointer to **NullableString** | Account that emitted this event. | [optional] 
+**Pool** | Pointer to **NullableString** | The pool involving this event. | [optional] 
+**Timestamp** | Pointer to **NullableString** | Timestamp of this event. | [optional] 
+**Tick** | Pointer to **NullableString** | Tick of the swap operation. | [optional] 
+**TokenIn** | Pointer to **NullableString** | Token deposited into pool. | [optional] 
+**AmountIn** | Pointer to **NullableString** | Amount of token deposited into pool in native units. | [optional] 
+**AmountInUsd** | Pointer to **NullableString** | Amount of token deposited into pool in USD. | [optional] 
+**TokenOut** | Pointer to **NullableString** | Token withdrawn from pool. | [optional] 
+**AmountOut** | Pointer to **NullableString** | Amount of token withdrawn from pool in native units. | [optional] 
+**AmountOutUsd** | Pointer to **NullableString** | Amount of token withdrawn from pool in USD. | [optional] 
+**ReserveAmounts** | Pointer to **[]string** | Amount of input tokens in the liquidity pool. | [optional] 
 **PoolId** | Pointer to **NullableString** |  | [optional] [readonly] 
 **TransactionId** | Pointer to **NullableString** |  | [optional] [readonly] 
 **EvaluatedPrice** | Pointer to **float64** |  | [optional] [readonly] 
@@ -127,31 +126,6 @@ SetBlockNumber sets BlockNumber field to given value.
 `func (o *UNISWAPV3ETHEREUMSwapDTO) HasBlockNumber() bool`
 
 HasBlockNumber returns a boolean if a field has been set.
-
-### GetVid
-
-`func (o *UNISWAPV3ETHEREUMSwapDTO) GetVid() int64`
-
-GetVid returns the Vid field if non-nil, zero value otherwise.
-
-### GetVidOk
-
-`func (o *UNISWAPV3ETHEREUMSwapDTO) GetVidOk() (*int64, bool)`
-
-GetVidOk returns a tuple with the Vid field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVid
-
-`func (o *UNISWAPV3ETHEREUMSwapDTO) SetVid(v int64)`
-
-SetVid sets Vid field to given value.
-
-### HasVid
-
-`func (o *UNISWAPV3ETHEREUMSwapDTO) HasVid() bool`
-
-HasVid returns a boolean if a field has been set.
 
 ### GetBlock
 

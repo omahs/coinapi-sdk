@@ -34,54 +34,48 @@ export interface UNISWAPV3ETHEREUMAccountDTO {
     block_number?: number;
     /**
      * 
-     * @type {number}
-     * @memberof UNISWAPV3ETHEREUMAccountDTO
-     */
-    vid?: number;
-    /**
-     * 
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMAccountDTO
      */
     block_range?: string | null;
     /**
-     * 
+     * Account address.
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMAccountDTO
      */
     id?: string | null;
     /**
-     * 
+     * Number of positions this account has.
      * @type {number}
      * @memberof UNISWAPV3ETHEREUMAccountDTO
      */
     position_count?: number;
     /**
-     * 
+     * Number of open positions this account has.
      * @type {number}
      * @memberof UNISWAPV3ETHEREUMAccountDTO
      */
     open_position_count?: number;
     /**
-     * 
+     * Number of closed positions this account has.
      * @type {number}
      * @memberof UNISWAPV3ETHEREUMAccountDTO
      */
     closed_position_count?: number;
     /**
-     * 
+     * Number of deposits this account made.
      * @type {number}
      * @memberof UNISWAPV3ETHEREUMAccountDTO
      */
     deposit_count?: number;
     /**
-     * 
+     * Number of withdrawals this account made.
      * @type {number}
      * @memberof UNISWAPV3ETHEREUMAccountDTO
      */
     withdraw_count?: number;
     /**
-     * 
+     * Number of times this account has traded/swapped.
      * @type {number}
      * @memberof UNISWAPV3ETHEREUMAccountDTO
      */

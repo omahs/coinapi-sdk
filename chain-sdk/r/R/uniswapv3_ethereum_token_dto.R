@@ -10,19 +10,19 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field vid  integer [optional]
+#' @field vid . integer [optional]
 #' @field block_range  character [optional]
-#' @field id  character [optional]
-#' @field name  character [optional]
-#' @field symbol  character [optional]
-#' @field decimals  integer [optional]
-#' @field last_price_usd  character [optional]
-#' @field last_price_block_number  character [optional]
-#' @field last_price_pool  character [optional]
-#' @field total_supply  character [optional]
-#' @field total_value_locked_usd  character [optional]
-#' @field large_price_change_buffer  integer [optional]
-#' @field large_tvl_impact_buffer  integer [optional]
+#' @field id Smart contract address of the token. character [optional]
+#' @field name Name of the token, mirrored from the smart contract. character [optional]
+#' @field symbol Symbol of the token, mirrored from the smart contract. character [optional]
+#' @field decimals The number of decimal places this token uses, default to 18. integer [optional]
+#' @field last_price_usd Optional field to track the price of a token, mostly for caching purposes. character [optional]
+#' @field last_price_block_number Optional field to track the block number of the last token price. character [optional]
+#' @field last_price_pool Last pool that gave this token a price. character [optional]
+#' @field total_supply Amount of tokens in the protocol. character [optional]
+#' @field total_value_locked_usd Total value locked in the protocol. character [optional]
+#' @field large_price_change_buffer The buffer for detecting large price changes. integer [optional]
+#' @field large_tvl_impact_buffer The buffer for detecting large TVL (Total Value Locked) impact. integer [optional]
 #' @field token_symbol  character [optional]
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -55,19 +55,19 @@ UNISWAPV3ETHEREUMTokenDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param vid 
+    #' @param vid .
     #' @param block_range 
-    #' @param id 
-    #' @param name 
-    #' @param symbol 
-    #' @param decimals 
-    #' @param last_price_usd 
-    #' @param last_price_block_number 
-    #' @param last_price_pool 
-    #' @param total_supply 
-    #' @param total_value_locked_usd 
-    #' @param large_price_change_buffer 
-    #' @param large_tvl_impact_buffer 
+    #' @param id Smart contract address of the token.
+    #' @param name Name of the token, mirrored from the smart contract.
+    #' @param symbol Symbol of the token, mirrored from the smart contract.
+    #' @param decimals The number of decimal places this token uses, default to 18.
+    #' @param last_price_usd Optional field to track the price of a token, mostly for caching purposes.
+    #' @param last_price_block_number Optional field to track the block number of the last token price.
+    #' @param last_price_pool Last pool that gave this token a price.
+    #' @param total_supply Amount of tokens in the protocol.
+    #' @param total_value_locked_usd Total value locked in the protocol.
+    #' @param large_price_change_buffer The buffer for detecting large price changes.
+    #' @param large_tvl_impact_buffer The buffer for detecting large TVL (Total Value Locked) impact.
     #' @param token_symbol token_symbol
     #' @param ... Other optional arguments.
     #' @export

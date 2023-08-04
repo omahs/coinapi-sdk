@@ -28,8 +28,26 @@ import java.io.IOException;
 
 
 import org.openapitools.client.model.UNISWAPV3ETHEREUMAccountDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMActiveAccountDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMDepositDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMDexAmmProtocolDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMLiquidityPoolFeeDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMPositionDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMPositionSnapshotDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMRewardTokenDTO;
 import org.openapitools.client.model.UNISWAPV3ETHEREUMSwapDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMTickDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMTickDailySnapshotDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMTickHourlySnapshotDTO;
 import org.openapitools.client.model.UNISWAPV3ETHEREUMTokenDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMTokenWhiteListDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMWithdrawDTO;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -191,6 +209,1164 @@ public class UniswapV3EthereumApi {
         return localVarCall;
     }
     /**
+     * Build call for uNISWAPV3ETHEREUMActiveAccountsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMActiveAccountsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswap_v3_ethereum/activeAccounts/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uNISWAPV3ETHEREUMActiveAccountsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMActiveAccountsCurrentCall(_callback);
+
+    }
+
+    /**
+     * ActiveAccounts (current)
+     * Gets activeAccounts.
+     * @return List&lt;UNISWAPV3ETHEREUMActiveAccountDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UNISWAPV3ETHEREUMActiveAccountDTO> uNISWAPV3ETHEREUMActiveAccountsCurrent() throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMActiveAccountDTO>> localVarResp = uNISWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * ActiveAccounts (current)
+     * Gets activeAccounts.
+     * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMActiveAccountDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UNISWAPV3ETHEREUMActiveAccountDTO>> uNISWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMActiveAccountsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMActiveAccountDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * ActiveAccounts (current) (asynchronously)
+     * Gets activeAccounts.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMActiveAccountsCurrentAsync(final ApiCallback<List<UNISWAPV3ETHEREUMActiveAccountDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMActiveAccountsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMActiveAccountDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for uNISWAPV3ETHEREUMDepositsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMDepositsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswap_v3_ethereum/deposits/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uNISWAPV3ETHEREUMDepositsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMDepositsCurrentCall(_callback);
+
+    }
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @return List&lt;UNISWAPV3ETHEREUMDepositDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UNISWAPV3ETHEREUMDepositDTO> uNISWAPV3ETHEREUMDepositsCurrent() throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMDepositDTO>> localVarResp = uNISWAPV3ETHEREUMDepositsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMDepositDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UNISWAPV3ETHEREUMDepositDTO>> uNISWAPV3ETHEREUMDepositsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMDepositsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMDepositDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Deposits (current) (asynchronously)
+     * Gets deposits.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMDepositsCurrentAsync(final ApiCallback<List<UNISWAPV3ETHEREUMDepositDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMDepositsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMDepositDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for uNISWAPV3ETHEREUMDexAmmProtocolsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMDexAmmProtocolsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uNISWAPV3ETHEREUMDexAmmProtocolsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMDexAmmProtocolsCurrentCall(_callback);
+
+    }
+
+    /**
+     * DexAmmProtocols (current)
+     * Gets dexAmmProtocols.
+     * @return List&lt;UNISWAPV3ETHEREUMDexAmmProtocolDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UNISWAPV3ETHEREUMDexAmmProtocolDTO> uNISWAPV3ETHEREUMDexAmmProtocolsCurrent() throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>> localVarResp = uNISWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * DexAmmProtocols (current)
+     * Gets dexAmmProtocols.
+     * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMDexAmmProtocolDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>> uNISWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMDexAmmProtocolsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * DexAmmProtocols (current) (asynchronously)
+     * Gets dexAmmProtocols.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMDexAmmProtocolsCurrentAsync(final ApiCallback<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMDexAmmProtocolsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentCall(_callback);
+
+    }
+
+    /**
+     * FinancialsDailySnapshots (current)
+     * Gets financialsDailySnapshots.
+     * @return List&lt;UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO> uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent() throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>> localVarResp = uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * FinancialsDailySnapshots (current)
+     * Gets financialsDailySnapshots.
+     * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>> uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * FinancialsDailySnapshots (current) (asynchronously)
+     * Gets financialsDailySnapshots.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentAsync(final ApiCallback<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentCall(_callback);
+
+    }
+
+    /**
+     * LiquidityPoolAmounts (current)
+     * Gets liquidityPoolAmounts.
+     * @return List&lt;UNISWAPV3ETHEREUMLiquidityPoolAmountDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent() throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> localVarResp = uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * LiquidityPoolAmounts (current)
+     * Gets liquidityPoolAmounts.
+     * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMLiquidityPoolAmountDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * LiquidityPoolAmounts (current) (asynchronously)
+     * Gets liquidityPoolAmounts.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentAsync(final ApiCallback<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMLiquidityPoolFeesCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uNISWAPV3ETHEREUMLiquidityPoolFeesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMLiquidityPoolFeesCurrentCall(_callback);
+
+    }
+
+    /**
+     * LiquidityPoolFees (current)
+     * Gets liquidityPoolFees.
+     * @return List&lt;UNISWAPV3ETHEREUMLiquidityPoolFeeDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO> uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent() throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>> localVarResp = uNISWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * LiquidityPoolFees (current)
+     * Gets liquidityPoolFees.
+     * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMLiquidityPoolFeeDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>> uNISWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMLiquidityPoolFeesCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * LiquidityPoolFees (current) (asynchronously)
+     * Gets liquidityPoolFees.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMLiquidityPoolFeesCurrentAsync(final ApiCallback<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMLiquidityPoolFeesCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentCall(_callback);
+
+    }
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     * Gets liquidityPoolHourlySnapshots.
+     * @return List&lt;UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent() throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> localVarResp = uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     * Gets liquidityPoolHourlySnapshots.
+     * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * LiquidityPoolHourlySnapshots (current) (asynchronously)
+     * Gets liquidityPoolHourlySnapshots.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentAsync(final ApiCallback<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for uNISWAPV3ETHEREUMPositionSnapshotsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMPositionSnapshotsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswap_v3_ethereum/positionSnapshots/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uNISWAPV3ETHEREUMPositionSnapshotsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMPositionSnapshotsCurrentCall(_callback);
+
+    }
+
+    /**
+     * PositionSnapshots (current)
+     * Gets positionSnapshots.
+     * @return List&lt;UNISWAPV3ETHEREUMPositionSnapshotDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UNISWAPV3ETHEREUMPositionSnapshotDTO> uNISWAPV3ETHEREUMPositionSnapshotsCurrent() throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>> localVarResp = uNISWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * PositionSnapshots (current)
+     * Gets positionSnapshots.
+     * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMPositionSnapshotDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>> uNISWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMPositionSnapshotsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * PositionSnapshots (current) (asynchronously)
+     * Gets positionSnapshots.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMPositionSnapshotsCurrentAsync(final ApiCallback<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMPositionSnapshotsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for uNISWAPV3ETHEREUMPositionsCurrent
+     * @param pool The liquidity pool in which this position was opened (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMPositionsCurrentCall(String pool, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswap_v3_ethereum/positions/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (pool != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pool", pool));
+        }
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uNISWAPV3ETHEREUMPositionsCurrentValidateBeforeCall(String pool, final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMPositionsCurrentCall(pool, _callback);
+
+    }
+
+    /**
+     * Positions (current)
+     * Gets positions.
+     * @param pool The liquidity pool in which this position was opened (optional)
+     * @return List&lt;UNISWAPV3ETHEREUMPositionDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UNISWAPV3ETHEREUMPositionDTO> uNISWAPV3ETHEREUMPositionsCurrent(String pool) throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMPositionDTO>> localVarResp = uNISWAPV3ETHEREUMPositionsCurrentWithHttpInfo(pool);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Positions (current)
+     * Gets positions.
+     * @param pool The liquidity pool in which this position was opened (optional)
+     * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMPositionDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UNISWAPV3ETHEREUMPositionDTO>> uNISWAPV3ETHEREUMPositionsCurrentWithHttpInfo(String pool) throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMPositionsCurrentValidateBeforeCall(pool, null);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMPositionDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Positions (current) (asynchronously)
+     * Gets positions.
+     * @param pool The liquidity pool in which this position was opened (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMPositionsCurrentAsync(String pool, final ApiCallback<List<UNISWAPV3ETHEREUMPositionDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMPositionsCurrentValidateBeforeCall(pool, _callback);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMPositionDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for uNISWAPV3ETHEREUMRewardTokensCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMRewardTokensCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswap_v3_ethereum/rewardTokens/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uNISWAPV3ETHEREUMRewardTokensCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMRewardTokensCurrentCall(_callback);
+
+    }
+
+    /**
+     * RewardTokens (current)
+     * Gets rewardTokens.
+     * @return List&lt;UNISWAPV3ETHEREUMRewardTokenDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UNISWAPV3ETHEREUMRewardTokenDTO> uNISWAPV3ETHEREUMRewardTokensCurrent() throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMRewardTokenDTO>> localVarResp = uNISWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * RewardTokens (current)
+     * Gets rewardTokens.
+     * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMRewardTokenDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UNISWAPV3ETHEREUMRewardTokenDTO>> uNISWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMRewardTokensCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMRewardTokenDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * RewardTokens (current) (asynchronously)
+     * Gets rewardTokens.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMRewardTokensCurrentAsync(final ApiCallback<List<UNISWAPV3ETHEREUMRewardTokenDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMRewardTokensCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMRewardTokenDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for uNISWAPV3ETHEREUMSwapsCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -306,6 +1482,597 @@ public class UniswapV3EthereumApi {
         return localVarCall;
     }
     /**
+     * Build call for uNISWAPV3ETHEREUMTickDailySnapshotsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMTickDailySnapshotsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uNISWAPV3ETHEREUMTickDailySnapshotsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMTickDailySnapshotsCurrentCall(_callback);
+
+    }
+
+    /**
+     * TickDailySnapshots (current)
+     * Gets tickDailySnapshots.
+     * @return List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent() throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> localVarResp = uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * TickDailySnapshots (current)
+     * Gets tickDailySnapshots.
+     * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTickDailySnapshotsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * TickDailySnapshots (current) (asynchronously)
+     * Gets tickDailySnapshots.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMTickDailySnapshotsCurrentAsync(final ApiCallback<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTickDailySnapshotsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentCall(String pool, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (pool != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pool", pool));
+        }
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentValidateBeforeCall(String pool, final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentCall(pool, _callback);
+
+    }
+
+    /**
+     * TickHourlySnapshots (current)
+     * Gets tickHourlySnapshots.
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @return List&lt;UNISWAPV3ETHEREUMTickHourlySnapshotDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(String pool) throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> localVarResp = uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(pool);
+        return localVarResp.getData();
+    }
+
+    /**
+     * TickHourlySnapshots (current)
+     * Gets tickHourlySnapshots.
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMTickHourlySnapshotDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(String pool) throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentValidateBeforeCall(pool, null);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * TickHourlySnapshots (current) (asynchronously)
+     * Gets tickHourlySnapshots.
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentAsync(String pool, final ApiCallback<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentValidateBeforeCall(pool, _callback);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for uNISWAPV3ETHEREUMTicksCurrent
+     * @param pool Liquidity pool this tick belongs to (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMTicksCurrentCall(String pool, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswap_v3_ethereum/ticks/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (pool != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pool", pool));
+        }
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uNISWAPV3ETHEREUMTicksCurrentValidateBeforeCall(String pool, final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMTicksCurrentCall(pool, _callback);
+
+    }
+
+    /**
+     * Ticks (current)
+     * Gets ticks.
+     * @param pool Liquidity pool this tick belongs to (optional)
+     * @return List&lt;UNISWAPV3ETHEREUMTickDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UNISWAPV3ETHEREUMTickDTO> uNISWAPV3ETHEREUMTicksCurrent(String pool) throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMTickDTO>> localVarResp = uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo(pool);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Ticks (current)
+     * Gets ticks.
+     * @param pool Liquidity pool this tick belongs to (optional)
+     * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMTickDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UNISWAPV3ETHEREUMTickDTO>> uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo(String pool) throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTicksCurrentValidateBeforeCall(pool, null);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMTickDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Ticks (current) (asynchronously)
+     * Gets ticks.
+     * @param pool Liquidity pool this tick belongs to (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMTicksCurrentAsync(String pool, final ApiCallback<List<UNISWAPV3ETHEREUMTickDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTicksCurrentValidateBeforeCall(pool, _callback);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMTickDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentCall(_callback);
+
+    }
+
+    /**
+     * TokenWhiteListSymbols (current)
+     * Gets tokenWhiteListSymbols.
+     * @return List&lt;UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO> uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent() throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>> localVarResp = uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * TokenWhiteListSymbols (current)
+     * Gets tokenWhiteListSymbols.
+     * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>> uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * TokenWhiteListSymbols (current) (asynchronously)
+     * Gets tokenWhiteListSymbols.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentAsync(final ApiCallback<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for uNISWAPV3ETHEREUMTokenWhiteListsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMTokenWhiteListsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uNISWAPV3ETHEREUMTokenWhiteListsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMTokenWhiteListsCurrentCall(_callback);
+
+    }
+
+    /**
+     * TokenWhiteLists (current)
+     * Gets tokenWhiteLists.
+     * @return List&lt;UNISWAPV3ETHEREUMTokenWhiteListDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UNISWAPV3ETHEREUMTokenWhiteListDTO> uNISWAPV3ETHEREUMTokenWhiteListsCurrent() throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>> localVarResp = uNISWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * TokenWhiteLists (current)
+     * Gets tokenWhiteLists.
+     * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMTokenWhiteListDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>> uNISWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTokenWhiteListsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * TokenWhiteLists (current) (asynchronously)
+     * Gets tokenWhiteLists.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMTokenWhiteListsCurrentAsync(final ApiCallback<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTokenWhiteListsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for uNISWAPV3ETHEREUMTokensCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -417,6 +2184,351 @@ public class UniswapV3EthereumApi {
 
         okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTokensCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMTokenDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentCall(_callback);
+
+    }
+
+    /**
+     * UsageMetricsDailySnapshots (current)
+     * Gets usageMetricsDailySnapshots.
+     * @return List&lt;UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO> uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent() throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> localVarResp = uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * UsageMetricsDailySnapshots (current)
+     * Gets usageMetricsDailySnapshots.
+     * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * UsageMetricsDailySnapshots (current) (asynchronously)
+     * Gets usageMetricsDailySnapshots.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentAsync(final ApiCallback<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentCall(_callback);
+
+    }
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     * Gets usageMetricsHourlySnapshots.
+     * @return List&lt;UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO> uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent() throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> localVarResp = uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     * Gets usageMetricsHourlySnapshots.
+     * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * UsageMetricsHourlySnapshots (current) (asynchronously)
+     * Gets usageMetricsHourlySnapshots.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentAsync(final ApiCallback<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for uNISWAPV3ETHEREUMWithdrawsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMWithdrawsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswap_v3_ethereum/withdraws/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uNISWAPV3ETHEREUMWithdrawsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMWithdrawsCurrentCall(_callback);
+
+    }
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @return List&lt;UNISWAPV3ETHEREUMWithdrawDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UNISWAPV3ETHEREUMWithdrawDTO> uNISWAPV3ETHEREUMWithdrawsCurrent() throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMWithdrawDTO>> localVarResp = uNISWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMWithdrawDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UNISWAPV3ETHEREUMWithdrawDTO>> uNISWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMWithdrawsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMWithdrawDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Withdraws (current) (asynchronously)
+     * Gets withdraws.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uNISWAPV3ETHEREUMWithdrawsCurrentAsync(final ApiCallback<List<UNISWAPV3ETHEREUMWithdrawDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMWithdrawsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMWithdrawDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

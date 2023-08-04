@@ -25,45 +25,40 @@ export interface UNISWAPV3ETHEREUMAccountDTO {
     /**
      * 
      */
-    vid?: number;
-
-    /**
-     * 
-     */
     block_range?: string;
 
     /**
-     * 
+     * Account address.
      */
     id?: string;
 
     /**
-     * 
+     * Number of positions this account has.
      */
     position_count?: number;
 
     /**
-     * 
+     * Number of open positions this account has.
      */
     open_position_count?: number;
 
     /**
-     * 
+     * Number of closed positions this account has.
      */
     closed_position_count?: number;
 
     /**
-     * 
+     * Number of deposits this account made.
      */
     deposit_count?: number;
 
     /**
-     * 
+     * Number of withdrawals this account made.
      */
     withdraw_count?: number;
 
     /**
-     * 
+     * Number of times this account has traded/swapped.
      */
     swap_count?: number;
 

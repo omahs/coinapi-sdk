@@ -21,32 +21,31 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * Swap are created for each token swap within a pair.
+ * Trade (swap) event occurred in a pool.
  *
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param vid 
- * @param block 
- * @param id 
- * @param hash 
- * @param nonce 
- * @param logIndex 
- * @param gasLimit 
- * @param gasUsed 
- * @param gasPrice 
- * @param protocol 
- * @param account 
- * @param pool 
- * @param timestamp 
- * @param tick 
- * @param tokenIn 
- * @param amountIn 
- * @param amountInUsd 
- * @param tokenOut 
- * @param amountOut 
- * @param amountOutUsd 
- * @param reserveAmounts 
+ * @param block Block number in which the swap operation was recorded.
+ * @param id Unique string identifier of the swap operation, format: (transaction hash)-(log index).
+ * @param hash Transaction hash of the transaction that emitted this event.
+ * @param nonce Nonce of the transaction that emitted this event.
+ * @param logIndex Event log index. For transactions that don't emit event, create arbitrary index starting from 0.
+ * @param gasLimit Gas limit of the transaction that emitted this event.
+ * @param gasUsed Gas used in this transaction.
+ * @param gasPrice Gas price of the transaction that emitted this event.
+ * @param protocol The protocol this transaction belongs to.
+ * @param account Account that emitted this event.
+ * @param pool The pool involving this event.
+ * @param timestamp Timestamp of this event.
+ * @param tick Tick of the swap operation.
+ * @param tokenIn Token deposited into pool.
+ * @param amountIn Amount of token deposited into pool in native units.
+ * @param amountInUsd Amount of token deposited into pool in USD.
+ * @param tokenOut Token withdrawn from pool.
+ * @param amountOut Amount of token withdrawn from pool in native units.
+ * @param amountOutUsd Amount of token withdrawn from pool in USD.
+ * @param reserveAmounts Amount of input tokens in the liquidity pool.
  * @param poolId 
  * @param transactionId 
  * @param evaluatedPrice 
@@ -67,87 +66,83 @@ data class UNISWAPV3ETHEREUMSwapDTO (
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
-    /*  */
-    @Json(name = "vid")
-    val vid: kotlin.Long? = null,
-
-    /*  */
+    /* Block number in which the swap operation was recorded. */
     @Json(name = "block_")
     val block: kotlin.Int? = null,
 
-    /*  */
+    /* Unique string identifier of the swap operation, format: (transaction hash)-(log index). */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
-    /*  */
+    /* Transaction hash of the transaction that emitted this event. */
     @Json(name = "hash")
     val hash: kotlin.String? = null,
 
-    /*  */
+    /* Nonce of the transaction that emitted this event. */
     @Json(name = "nonce")
     val nonce: kotlin.String? = null,
 
-    /*  */
+    /* Event log index. For transactions that don't emit event, create arbitrary index starting from 0. */
     @Json(name = "log_index")
     val logIndex: kotlin.Int? = null,
 
-    /*  */
+    /* Gas limit of the transaction that emitted this event. */
     @Json(name = "gas_limit")
     val gasLimit: kotlin.String? = null,
 
-    /*  */
+    /* Gas used in this transaction. */
     @Json(name = "gas_used")
     val gasUsed: kotlin.String? = null,
 
-    /*  */
+    /* Gas price of the transaction that emitted this event. */
     @Json(name = "gas_price")
     val gasPrice: kotlin.String? = null,
 
-    /*  */
+    /* The protocol this transaction belongs to. */
     @Json(name = "protocol")
     val protocol: kotlin.String? = null,
 
-    /*  */
+    /* Account that emitted this event. */
     @Json(name = "account")
     val account: kotlin.String? = null,
 
-    /*  */
+    /* The pool involving this event. */
     @Json(name = "pool")
     val pool: kotlin.String? = null,
 
-    /*  */
+    /* Timestamp of this event. */
     @Json(name = "timestamp")
     val timestamp: kotlin.String? = null,
 
-    /*  */
+    /* Tick of the swap operation. */
     @Json(name = "tick")
     val tick: kotlin.String? = null,
 
-    /*  */
+    /* Token deposited into pool. */
     @Json(name = "token_in")
     val tokenIn: kotlin.String? = null,
 
-    /*  */
+    /* Amount of token deposited into pool in native units. */
     @Json(name = "amount_in")
     val amountIn: kotlin.String? = null,
 
-    /*  */
+    /* Amount of token deposited into pool in USD. */
     @Json(name = "amount_in_usd")
     val amountInUsd: kotlin.String? = null,
 
-    /*  */
+    /* Token withdrawn from pool. */
     @Json(name = "token_out")
     val tokenOut: kotlin.String? = null,
 
-    /*  */
+    /* Amount of token withdrawn from pool in native units. */
     @Json(name = "amount_out")
     val amountOut: kotlin.String? = null,
 
-    /*  */
+    /* Amount of token withdrawn from pool in USD. */
     @Json(name = "amount_out_usd")
     val amountOutUsd: kotlin.String? = null,
 
-    /*  */
+    /* Amount of input tokens in the liquidity pool. */
     @Json(name = "reserve_amounts")
     val reserveAmounts: kotlin.collections.List<kotlin.String>? = null,
 

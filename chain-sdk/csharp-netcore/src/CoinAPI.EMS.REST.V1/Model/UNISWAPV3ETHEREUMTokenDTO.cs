@@ -38,19 +38,19 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
-        /// <param name="vid">vid.</param>
+        /// <param name="vid">..</param>
         /// <param name="blockRange">blockRange.</param>
-        /// <param name="id">id.</param>
-        /// <param name="name">name.</param>
-        /// <param name="symbol">symbol.</param>
-        /// <param name="decimals">decimals.</param>
-        /// <param name="lastPriceUsd">lastPriceUsd.</param>
-        /// <param name="lastPriceBlockNumber">lastPriceBlockNumber.</param>
-        /// <param name="lastPricePool">lastPricePool.</param>
-        /// <param name="totalSupply">totalSupply.</param>
-        /// <param name="totalValueLockedUsd">totalValueLockedUsd.</param>
-        /// <param name="largePriceChangeBuffer">largePriceChangeBuffer.</param>
-        /// <param name="largeTvlImpactBuffer">largeTvlImpactBuffer.</param>
+        /// <param name="id">Smart contract address of the token..</param>
+        /// <param name="name">Name of the token, mirrored from the smart contract..</param>
+        /// <param name="symbol">Symbol of the token, mirrored from the smart contract..</param>
+        /// <param name="decimals">The number of decimal places this token uses, default to 18..</param>
+        /// <param name="lastPriceUsd">Optional field to track the price of a token, mostly for caching purposes..</param>
+        /// <param name="lastPriceBlockNumber">Optional field to track the block number of the last token price..</param>
+        /// <param name="lastPricePool">Last pool that gave this token a price..</param>
+        /// <param name="totalSupply">Amount of tokens in the protocol..</param>
+        /// <param name="totalValueLockedUsd">Total value locked in the protocol..</param>
+        /// <param name="largePriceChangeBuffer">The buffer for detecting large price changes..</param>
+        /// <param name="largeTvlImpactBuffer">The buffer for detecting large TVL (Total Value Locked) impact..</param>
         public UNISWAPV3ETHEREUMTokenDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), long vid = default(long), string blockRange = default(string), string id = default(string), string name = default(string), string symbol = default(string), int decimals = default(int), string lastPriceUsd = default(string), string lastPriceBlockNumber = default(string), string lastPricePool = default(string), string totalSupply = default(string), string totalValueLockedUsd = default(string), int largePriceChangeBuffer = default(int), int largeTvlImpactBuffer = default(int))
         {
             this.EntryTime = entryTime;
@@ -91,8 +91,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets Vid
+        /// .
         /// </summary>
+        /// <value>.</value>
         [DataMember(Name = "vid", EmitDefaultValue = false)]
         public long Vid { get; set; }
 
@@ -103,68 +104,79 @@ namespace CoinAPI.EMS.REST.V1.Model
         public string BlockRange { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Smart contract address of the token.
         /// </summary>
+        /// <value>Smart contract address of the token.</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Name of the token, mirrored from the smart contract.
         /// </summary>
+        /// <value>Name of the token, mirrored from the smart contract.</value>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Symbol
+        /// Symbol of the token, mirrored from the smart contract.
         /// </summary>
+        /// <value>Symbol of the token, mirrored from the smart contract.</value>
         [DataMember(Name = "symbol", EmitDefaultValue = true)]
         public string Symbol { get; set; }
 
         /// <summary>
-        /// Gets or Sets Decimals
+        /// The number of decimal places this token uses, default to 18.
         /// </summary>
+        /// <value>The number of decimal places this token uses, default to 18.</value>
         [DataMember(Name = "decimals", EmitDefaultValue = false)]
         public int Decimals { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastPriceUsd
+        /// Optional field to track the price of a token, mostly for caching purposes.
         /// </summary>
+        /// <value>Optional field to track the price of a token, mostly for caching purposes.</value>
         [DataMember(Name = "last_price_usd", EmitDefaultValue = true)]
         public string LastPriceUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastPriceBlockNumber
+        /// Optional field to track the block number of the last token price.
         /// </summary>
+        /// <value>Optional field to track the block number of the last token price.</value>
         [DataMember(Name = "last_price_block_number", EmitDefaultValue = true)]
         public string LastPriceBlockNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastPricePool
+        /// Last pool that gave this token a price.
         /// </summary>
+        /// <value>Last pool that gave this token a price.</value>
         [DataMember(Name = "last_price_pool", EmitDefaultValue = true)]
         public string LastPricePool { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalSupply
+        /// Amount of tokens in the protocol.
         /// </summary>
+        /// <value>Amount of tokens in the protocol.</value>
         [DataMember(Name = "total_supply", EmitDefaultValue = true)]
         public string TotalSupply { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalValueLockedUsd
+        /// Total value locked in the protocol.
         /// </summary>
+        /// <value>Total value locked in the protocol.</value>
         [DataMember(Name = "total_value_locked_usd", EmitDefaultValue = true)]
         public string TotalValueLockedUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets LargePriceChangeBuffer
+        /// The buffer for detecting large price changes.
         /// </summary>
+        /// <value>The buffer for detecting large price changes.</value>
         [DataMember(Name = "large_price_change_buffer", EmitDefaultValue = false)]
         public int LargePriceChangeBuffer { get; set; }
 
         /// <summary>
-        /// Gets or Sets LargeTvlImpactBuffer
+        /// The buffer for detecting large TVL (Total Value Locked) impact.
         /// </summary>
+        /// <value>The buffer for detecting large TVL (Total Value Locked) impact.</value>
         [DataMember(Name = "large_tvl_impact_buffer", EmitDefaultValue = false)]
         public int LargeTvlImpactBuffer { get; set; }
 

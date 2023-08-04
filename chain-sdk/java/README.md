@@ -2,7 +2,7 @@
 
 On Chain Dapps - REST API
 - API version: v1
-  - Build date: 2023-08-02T10:05:55.316054Z[Etc/UTC]
+  - Build date: 2023-08-04T12:28:52.928454Z[Etc/UTC]
 
 
 This section will provide necessary information about the `OnChain API` protocol. 
@@ -227,8 +227,26 @@ Class | Method | HTTP request | Description
 *UniswapV3Api* | [**uniswapV3TransactionsCurrent**](docs/UniswapV3Api.md#uniswapV3TransactionsCurrent) | **GET** /dapps/uniswapv3/transactions/current | Transactions (current)
 *UniswapV3Api* | [**uniswapV3UniswapDayDataCurrent**](docs/UniswapV3Api.md#uniswapV3UniswapDayDataCurrent) | **GET** /dapps/uniswapv3/uniswapDayData/current | UniswapDayData (current)
 *UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMAccountsCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMAccountsCurrent) | **GET** /dapps/uniswap_v3_ethereum/accounts/current | Accounts (current)
+*UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMActiveAccountsCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMActiveAccountsCurrent) | **GET** /dapps/uniswap_v3_ethereum/activeAccounts/current | ActiveAccounts (current)
+*UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMDepositsCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMDepositsCurrent) | **GET** /dapps/uniswap_v3_ethereum/deposits/current | Deposits (current)
+*UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMDexAmmProtocolsCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMDexAmmProtocolsCurrent) | **GET** /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
+*UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
+*UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
+*UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
+*UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
+*UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMPositionSnapshotsCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMPositionSnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current)
+*UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMPositionsCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMPositionsCurrent) | **GET** /dapps/uniswap_v3_ethereum/positions/current | Positions (current)
+*UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMRewardTokensCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMRewardTokensCurrent) | **GET** /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current)
 *UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMSwapsCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMSwapsCurrent) | **GET** /dapps/uniswap_v3_ethereum/swaps/current | Swaps (current)
+*UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMTickDailySnapshotsCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMTickDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/tickDailySnapshots/current | TickDailySnapshots (current)
+*UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/tickHourlySnapshots/current | TickHourlySnapshots (current)
+*UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMTicksCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMTicksCurrent) | **GET** /dapps/uniswap_v3_ethereum/ticks/current | Ticks (current)
+*UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent) | **GET** /dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current | TokenWhiteListSymbols (current)
+*UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMTokenWhiteListsCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMTokenWhiteListsCurrent) | **GET** /dapps/uniswap_v3_ethereum/tokenWhiteLists/current | TokenWhiteLists (current)
 *UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMTokensCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMTokensCurrent) | **GET** /dapps/uniswap_v3_ethereum/tokens/current | Tokens (current)
+*UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current)
+*UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current)
+*UniswapV3EthereumApi* | [**uNISWAPV3ETHEREUMWithdrawsCurrent**](docs/UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMWithdrawsCurrent) | **GET** /dapps/uniswap_v3_ethereum/withdraws/current | Withdraws (current)
 
 
 ## Documentation for Models
@@ -309,8 +327,26 @@ Class | Method | HTTP request | Description
  - [SushiswapUserDTO](docs/SushiswapUserDTO.md)
  - [TransactionsETradeAggressiveSide](docs/TransactionsETradeAggressiveSide.md)
  - [UNISWAPV3ETHEREUMAccountDTO](docs/UNISWAPV3ETHEREUMAccountDTO.md)
+ - [UNISWAPV3ETHEREUMActiveAccountDTO](docs/UNISWAPV3ETHEREUMActiveAccountDTO.md)
+ - [UNISWAPV3ETHEREUMDepositDTO](docs/UNISWAPV3ETHEREUMDepositDTO.md)
+ - [UNISWAPV3ETHEREUMDexAmmProtocolDTO](docs/UNISWAPV3ETHEREUMDexAmmProtocolDTO.md)
+ - [UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO](docs/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md)
+ - [UNISWAPV3ETHEREUMLiquidityPoolAmountDTO](docs/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md)
+ - [UNISWAPV3ETHEREUMLiquidityPoolFeeDTO](docs/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.md)
+ - [UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO](docs/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md)
+ - [UNISWAPV3ETHEREUMPositionDTO](docs/UNISWAPV3ETHEREUMPositionDTO.md)
+ - [UNISWAPV3ETHEREUMPositionSnapshotDTO](docs/UNISWAPV3ETHEREUMPositionSnapshotDTO.md)
+ - [UNISWAPV3ETHEREUMRewardTokenDTO](docs/UNISWAPV3ETHEREUMRewardTokenDTO.md)
  - [UNISWAPV3ETHEREUMSwapDTO](docs/UNISWAPV3ETHEREUMSwapDTO.md)
+ - [UNISWAPV3ETHEREUMTickDTO](docs/UNISWAPV3ETHEREUMTickDTO.md)
+ - [UNISWAPV3ETHEREUMTickDailySnapshotDTO](docs/UNISWAPV3ETHEREUMTickDailySnapshotDTO.md)
+ - [UNISWAPV3ETHEREUMTickHourlySnapshotDTO](docs/UNISWAPV3ETHEREUMTickHourlySnapshotDTO.md)
  - [UNISWAPV3ETHEREUMTokenDTO](docs/UNISWAPV3ETHEREUMTokenDTO.md)
+ - [UNISWAPV3ETHEREUMTokenWhiteListDTO](docs/UNISWAPV3ETHEREUMTokenWhiteListDTO.md)
+ - [UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO](docs/UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO.md)
+ - [UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO](docs/UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO.md)
+ - [UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO](docs/UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.md)
+ - [UNISWAPV3ETHEREUMWithdrawDTO](docs/UNISWAPV3ETHEREUMWithdrawDTO.md)
  - [UniswapV2BundleDTO](docs/UniswapV2BundleDTO.md)
  - [UniswapV2BurnDTO](docs/UniswapV2BurnDTO.md)
  - [UniswapV2LiquidityPositionDTO](docs/UniswapV2LiquidityPositionDTO.md)

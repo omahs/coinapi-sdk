@@ -22,7 +22,7 @@ import TransactionsETradeAggressiveSide from './TransactionsETradeAggressiveSide
 class UNISWAPV3ETHEREUMSwapDTO {
     /**
      * Constructs a new <code>UNISWAPV3ETHEREUMSwapDTO</code>.
-     * Swap are created for each token swap within a pair.
+     * Trade (swap) event occurred in a pool.
      * @alias module:model/UNISWAPV3ETHEREUMSwapDTO
      */
     constructor() { 
@@ -57,9 +57,6 @@ class UNISWAPV3ETHEREUMSwapDTO {
             }
             if (data.hasOwnProperty('block_number')) {
                 obj['block_number'] = ApiClient.convertToType(data['block_number'], 'Number');
-            }
-            if (data.hasOwnProperty('vid')) {
-                obj['vid'] = ApiClient.convertToType(data['vid'], 'Number');
             }
             if (data.hasOwnProperty('block_')) {
                 obj['block_'] = ApiClient.convertToType(data['block_'], 'Number');
@@ -252,127 +249,121 @@ UNISWAPV3ETHEREUMSwapDTO.prototype['recv_time'] = undefined;
 UNISWAPV3ETHEREUMSwapDTO.prototype['block_number'] = undefined;
 
 /**
- * 
- * @member {Number} vid
- */
-UNISWAPV3ETHEREUMSwapDTO.prototype['vid'] = undefined;
-
-/**
- * 
+ * Block number in which the swap operation was recorded.
  * @member {Number} block_
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['block_'] = undefined;
 
 /**
- * 
+ * Unique string identifier of the swap operation, format: (transaction hash)-(log index).
  * @member {String} id
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['id'] = undefined;
 
 /**
- * 
+ * Transaction hash of the transaction that emitted this event.
  * @member {String} hash
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['hash'] = undefined;
 
 /**
- * 
+ * Nonce of the transaction that emitted this event.
  * @member {String} nonce
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['nonce'] = undefined;
 
 /**
- * 
+ * Event log index. For transactions that don't emit event, create arbitrary index starting from 0.
  * @member {Number} log_index
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['log_index'] = undefined;
 
 /**
- * 
+ * Gas limit of the transaction that emitted this event.
  * @member {String} gas_limit
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['gas_limit'] = undefined;
 
 /**
- * 
+ * Gas used in this transaction.
  * @member {String} gas_used
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['gas_used'] = undefined;
 
 /**
- * 
+ * Gas price of the transaction that emitted this event.
  * @member {String} gas_price
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['gas_price'] = undefined;
 
 /**
- * 
+ * The protocol this transaction belongs to.
  * @member {String} protocol
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['protocol'] = undefined;
 
 /**
- * 
+ * Account that emitted this event.
  * @member {String} account
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['account'] = undefined;
 
 /**
- * 
+ * The pool involving this event.
  * @member {String} pool
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['pool'] = undefined;
 
 /**
- * 
+ * Timestamp of this event.
  * @member {String} timestamp
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['timestamp'] = undefined;
 
 /**
- * 
+ * Tick of the swap operation.
  * @member {String} tick
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['tick'] = undefined;
 
 /**
- * 
+ * Token deposited into pool.
  * @member {String} token_in
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['token_in'] = undefined;
 
 /**
- * 
+ * Amount of token deposited into pool in native units.
  * @member {String} amount_in
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['amount_in'] = undefined;
 
 /**
- * 
+ * Amount of token deposited into pool in USD.
  * @member {String} amount_in_usd
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['amount_in_usd'] = undefined;
 
 /**
- * 
+ * Token withdrawn from pool.
  * @member {String} token_out
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['token_out'] = undefined;
 
 /**
- * 
+ * Amount of token withdrawn from pool in native units.
  * @member {String} amount_out
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['amount_out'] = undefined;
 
 /**
- * 
+ * Amount of token withdrawn from pool in USD.
  * @member {String} amount_out_usd
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['amount_out_usd'] = undefined;
 
 /**
- * 
+ * Amount of input tokens in the liquidity pool.
  * @member {Array.<String>} reserve_amounts
  */
 UNISWAPV3ETHEREUMSwapDTO.prototype['reserve_amounts'] = undefined;

@@ -1,7 +1,7 @@
 /*
  * uniswap_v3_ethereum_swap_dto.h
  *
- * Swap are created for each token swap within a pair.
+ * Trade (swap) event occurred in a pool.
  */
 
 #ifndef _uniswap_v3_ethereum_swap_dto_H_
@@ -31,7 +31,6 @@ typedef struct uniswap_v3_ethereum_swap_dto_t {
     char *entry_time; //date time
     char *recv_time; //date time
     long block_number; //numeric
-    long vid; //numeric
     int block_; //numeric
     char *id; // string
     char *hash; // string
@@ -64,7 +63,6 @@ uniswap_v3_ethereum_swap_dto_t *uniswap_v3_ethereum_swap_dto_create(
     char *entry_time,
     char *recv_time,
     long block_number,
-    long vid,
     int block_,
     char *id,
     char *hash,

@@ -25,24 +25,22 @@ feature --Access
       
  	block_number: INTEGER_64
     	 -- Number of block in which entity was recorded.
- 	vid: INTEGER_64
-    	 -- 
     block_range: detachable STRING_32
       -- 
     id: detachable STRING_32
-      -- 
+      -- Account address.
  	position_count: INTEGER_32
-    	 -- 
+    	 -- Number of positions this account has.
  	open_position_count: INTEGER_32
-    	 -- 
+    	 -- Number of open positions this account has.
  	closed_position_count: INTEGER_32
-    	 -- 
+    	 -- Number of closed positions this account has.
  	deposit_count: INTEGER_32
-    	 -- 
+    	 -- Number of deposits this account made.
  	withdraw_count: INTEGER_32
-    	 -- 
+    	 -- Number of withdrawals this account made.
  	swap_count: INTEGER_32
-    	 -- 
+    	 -- Number of times this account has traded/swapped.
 
 feature -- Change Element
 
@@ -68,14 +66,6 @@ feature -- Change Element
         block_number := a_name
       ensure
         block_number_set: block_number = a_name
-      end
-
-    set_vid (a_name: like vid)
-        -- Set 'vid' with 'a_name'.
-      do
-        vid := a_name
-      ensure
-        vid_set: vid = a_name
       end
 
     set_block_range (a_name: like block_range)
@@ -163,11 +153,6 @@ feature -- Change Element
         if attached block_number as l_block_number then
           Result.append ("%Nblock_number:")
           Result.append (l_block_number.out)
-          Result.append ("%N")
-        end
-        if attached vid as l_vid then
-          Result.append ("%Nvid:")
-          Result.append (l_vid.out)
           Result.append ("%N")
         end
         if attached block_range as l_block_range then

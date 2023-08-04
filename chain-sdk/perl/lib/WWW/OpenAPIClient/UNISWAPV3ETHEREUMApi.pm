@@ -98,6 +98,507 @@ sub u_niswapv3_ethereum_accounts__current {
 }
 
 #
+# u_niswapv3_ethereum_active_accounts__current
+#
+# ActiveAccounts (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_active_accounts__current' } = {
+        summary => 'ActiveAccounts (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMActiveAccountDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMActiveAccountDTO]
+#
+sub u_niswapv3_ethereum_active_accounts__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/activeAccounts/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMActiveAccountDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv3_ethereum_deposits__current
+#
+# Deposits (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_deposits__current' } = {
+        summary => 'Deposits (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMDepositDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMDepositDTO]
+#
+sub u_niswapv3_ethereum_deposits__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/deposits/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMDepositDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv3_ethereum_dex_amm_protocols__current
+#
+# DexAmmProtocols (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_dex_amm_protocols__current' } = {
+        summary => 'DexAmmProtocols (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMDexAmmProtocolDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMDexAmmProtocolDTO]
+#
+sub u_niswapv3_ethereum_dex_amm_protocols__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/dexAmmProtocols/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMDexAmmProtocolDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv3_ethereum_financials_daily_snapshots__current
+#
+# FinancialsDailySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_financials_daily_snapshots__current' } = {
+        summary => 'FinancialsDailySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO]
+#
+sub u_niswapv3_ethereum_financials_daily_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv3_ethereum_liquidity_pool_amounts__current
+#
+# LiquidityPoolAmounts (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_liquidity_pool_amounts__current' } = {
+        summary => 'LiquidityPoolAmounts (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMLiquidityPoolAmountDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMLiquidityPoolAmountDTO]
+#
+sub u_niswapv3_ethereum_liquidity_pool_amounts__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMLiquidityPoolAmountDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv3_ethereum_liquidity_pool_fees__current
+#
+# LiquidityPoolFees (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_liquidity_pool_fees__current' } = {
+        summary => 'LiquidityPoolFees (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMLiquidityPoolFeeDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMLiquidityPoolFeeDTO]
+#
+sub u_niswapv3_ethereum_liquidity_pool_fees__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/liquidityPoolFees/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMLiquidityPoolFeeDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current
+#
+# LiquidityPoolHourlySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current' } = {
+        summary => 'LiquidityPoolHourlySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]
+#
+sub u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv3_ethereum_position_snapshots__current
+#
+# PositionSnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_position_snapshots__current' } = {
+        summary => 'PositionSnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMPositionSnapshotDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMPositionSnapshotDTO]
+#
+sub u_niswapv3_ethereum_position_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/positionSnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMPositionSnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv3_ethereum_positions__current
+#
+# Positions (current)
+#
+# @param string $pool The liquidity pool in which this position was opened (optional)
+{
+    my $params = {
+    'pool' => {
+        data_type => 'string',
+        description => 'The liquidity pool in which this position was opened',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_positions__current' } = {
+        summary => 'Positions (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMPositionDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMPositionDTO]
+#
+sub u_niswapv3_ethereum_positions__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/positions/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMPositionDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv3_ethereum_reward_tokens__current
+#
+# RewardTokens (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_reward_tokens__current' } = {
+        summary => 'RewardTokens (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMRewardTokenDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMRewardTokenDTO]
+#
+sub u_niswapv3_ethereum_reward_tokens__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/rewardTokens/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMRewardTokenDTO]', $response);
+    return $_response_object;
+}
+
+#
 # u_niswapv3_ethereum_swaps__current
 #
 # Swaps (current)
@@ -147,6 +648,273 @@ sub u_niswapv3_ethereum_swaps__current {
 }
 
 #
+# u_niswapv3_ethereum_tick_daily_snapshots__current
+#
+# TickDailySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_tick_daily_snapshots__current' } = {
+        summary => 'TickDailySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMTickDailySnapshotDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMTickDailySnapshotDTO]
+#
+sub u_niswapv3_ethereum_tick_daily_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/tickDailySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMTickDailySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv3_ethereum_tick_hourly_snapshots__current
+#
+# TickHourlySnapshots (current)
+#
+# @param string $pool liquidity pool this tick belongs to (optional)
+{
+    my $params = {
+    'pool' => {
+        data_type => 'string',
+        description => 'liquidity pool this tick belongs to',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_tick_hourly_snapshots__current' } = {
+        summary => 'TickHourlySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMTickHourlySnapshotDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMTickHourlySnapshotDTO]
+#
+sub u_niswapv3_ethereum_tick_hourly_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMTickHourlySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv3_ethereum_ticks__current
+#
+# Ticks (current)
+#
+# @param string $pool Liquidity pool this tick belongs to (optional)
+{
+    my $params = {
+    'pool' => {
+        data_type => 'string',
+        description => 'Liquidity pool this tick belongs to',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_ticks__current' } = {
+        summary => 'Ticks (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMTickDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMTickDTO]
+#
+sub u_niswapv3_ethereum_ticks__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/ticks/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMTickDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv3_ethereum_token_white_list_symbols__current
+#
+# TokenWhiteListSymbols (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_token_white_list_symbols__current' } = {
+        summary => 'TokenWhiteListSymbols (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO]
+#
+sub u_niswapv3_ethereum_token_white_list_symbols__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv3_ethereum_token_white_lists__current
+#
+# TokenWhiteLists (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_token_white_lists__current' } = {
+        summary => 'TokenWhiteLists (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMTokenWhiteListDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMTokenWhiteListDTO]
+#
+sub u_niswapv3_ethereum_token_white_lists__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/tokenWhiteLists/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMTokenWhiteListDTO]', $response);
+    return $_response_object;
+}
+
+#
 # u_niswapv3_ethereum_tokens__current
 #
 # Tokens (current)
@@ -192,6 +960,153 @@ sub u_niswapv3_ethereum_tokens__current {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMTokenDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv3_ethereum_usage_metrics_daily_snapshots__current
+#
+# UsageMetricsDailySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_usage_metrics_daily_snapshots__current' } = {
+        summary => 'UsageMetricsDailySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]
+#
+sub u_niswapv3_ethereum_usage_metrics_daily_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv3_ethereum_usage_metrics_hourly_snapshots__current
+#
+# UsageMetricsHourlySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_usage_metrics_hourly_snapshots__current' } = {
+        summary => 'UsageMetricsHourlySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]
+#
+sub u_niswapv3_ethereum_usage_metrics_hourly_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv3_ethereum_withdraws__current
+#
+# Withdraws (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_withdraws__current' } = {
+        summary => 'Withdraws (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMWithdrawDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMWithdrawDTO]
+#
+sub u_niswapv3_ethereum_withdraws__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/withdraws/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMWithdrawDTO]', $response);
     return $_response_object;
 }
 

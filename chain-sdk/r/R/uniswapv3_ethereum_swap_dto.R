@@ -1,7 +1,7 @@
 #' Create a new UNISWAPV3ETHEREUMSwapDTO
 #'
 #' @description
-#' Swap are created for each token swap within a pair.
+#' Trade (swap) event occurred in a pool.
 #'
 #' @docType class
 #' @title UNISWAPV3ETHEREUMSwapDTO
@@ -10,27 +10,26 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field vid  integer [optional]
-#' @field block_  integer [optional]
-#' @field id  character [optional]
-#' @field hash  character [optional]
-#' @field nonce  character [optional]
-#' @field log_index  integer [optional]
-#' @field gas_limit  character [optional]
-#' @field gas_used  character [optional]
-#' @field gas_price  character [optional]
-#' @field protocol  character [optional]
-#' @field account  character [optional]
-#' @field pool  character [optional]
-#' @field timestamp  character [optional]
-#' @field tick  character [optional]
-#' @field token_in  character [optional]
-#' @field amount_in  character [optional]
-#' @field amount_in_usd  character [optional]
-#' @field token_out  character [optional]
-#' @field amount_out  character [optional]
-#' @field amount_out_usd  character [optional]
-#' @field reserve_amounts  list(character) [optional]
+#' @field block_ Block number in which the swap operation was recorded. integer [optional]
+#' @field id Unique string identifier of the swap operation, format: (transaction hash)-(log index). character [optional]
+#' @field hash Transaction hash of the transaction that emitted this event. character [optional]
+#' @field nonce Nonce of the transaction that emitted this event. character [optional]
+#' @field log_index Event log index. For transactions that don't emit event, create arbitrary index starting from 0. integer [optional]
+#' @field gas_limit Gas limit of the transaction that emitted this event. character [optional]
+#' @field gas_used Gas used in this transaction. character [optional]
+#' @field gas_price Gas price of the transaction that emitted this event. character [optional]
+#' @field protocol The protocol this transaction belongs to. character [optional]
+#' @field account Account that emitted this event. character [optional]
+#' @field pool The pool involving this event. character [optional]
+#' @field timestamp Timestamp of this event. character [optional]
+#' @field tick Tick of the swap operation. character [optional]
+#' @field token_in Token deposited into pool. character [optional]
+#' @field amount_in Amount of token deposited into pool in native units. character [optional]
+#' @field amount_in_usd Amount of token deposited into pool in USD. character [optional]
+#' @field token_out Token withdrawn from pool. character [optional]
+#' @field amount_out Amount of token withdrawn from pool in native units. character [optional]
+#' @field amount_out_usd Amount of token withdrawn from pool in USD. character [optional]
+#' @field reserve_amounts Amount of input tokens in the liquidity pool. list(character) [optional]
 #' @field pool_id  character [optional]
 #' @field transaction_id  character [optional]
 #' @field evaluated_price  numeric [optional]
@@ -45,7 +44,6 @@ UNISWAPV3ETHEREUMSwapDTO <- R6::R6Class(
     `entry_time` = NULL,
     `recv_time` = NULL,
     `block_number` = NULL,
-    `vid` = NULL,
     `block_` = NULL,
     `id` = NULL,
     `hash` = NULL,
@@ -79,27 +77,26 @@ UNISWAPV3ETHEREUMSwapDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param vid 
-    #' @param block_ 
-    #' @param id 
-    #' @param hash 
-    #' @param nonce 
-    #' @param log_index 
-    #' @param gas_limit 
-    #' @param gas_used 
-    #' @param gas_price 
-    #' @param protocol 
-    #' @param account 
-    #' @param pool 
-    #' @param timestamp 
-    #' @param tick 
-    #' @param token_in 
-    #' @param amount_in 
-    #' @param amount_in_usd 
-    #' @param token_out 
-    #' @param amount_out 
-    #' @param amount_out_usd 
-    #' @param reserve_amounts 
+    #' @param block_ Block number in which the swap operation was recorded.
+    #' @param id Unique string identifier of the swap operation, format: (transaction hash)-(log index).
+    #' @param hash Transaction hash of the transaction that emitted this event.
+    #' @param nonce Nonce of the transaction that emitted this event.
+    #' @param log_index Event log index. For transactions that don't emit event, create arbitrary index starting from 0.
+    #' @param gas_limit Gas limit of the transaction that emitted this event.
+    #' @param gas_used Gas used in this transaction.
+    #' @param gas_price Gas price of the transaction that emitted this event.
+    #' @param protocol The protocol this transaction belongs to.
+    #' @param account Account that emitted this event.
+    #' @param pool The pool involving this event.
+    #' @param timestamp Timestamp of this event.
+    #' @param tick Tick of the swap operation.
+    #' @param token_in Token deposited into pool.
+    #' @param amount_in Amount of token deposited into pool in native units.
+    #' @param amount_in_usd Amount of token deposited into pool in USD.
+    #' @param token_out Token withdrawn from pool.
+    #' @param amount_out Amount of token withdrawn from pool in native units.
+    #' @param amount_out_usd Amount of token withdrawn from pool in USD.
+    #' @param reserve_amounts Amount of input tokens in the liquidity pool.
     #' @param pool_id pool_id
     #' @param transaction_id transaction_id
     #' @param evaluated_price evaluated_price
@@ -107,7 +104,7 @@ UNISWAPV3ETHEREUMSwapDTO <- R6::R6Class(
     #' @param evaluated_aggressor evaluated_aggressor
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `vid` = NULL, `block_` = NULL, `id` = NULL, `hash` = NULL, `nonce` = NULL, `log_index` = NULL, `gas_limit` = NULL, `gas_used` = NULL, `gas_price` = NULL, `protocol` = NULL, `account` = NULL, `pool` = NULL, `timestamp` = NULL, `tick` = NULL, `token_in` = NULL, `amount_in` = NULL, `amount_in_usd` = NULL, `token_out` = NULL, `amount_out` = NULL, `amount_out_usd` = NULL, `reserve_amounts` = NULL, `pool_id` = NULL, `transaction_id` = NULL, `evaluated_price` = NULL, `evaluated_amount` = NULL, `evaluated_aggressor` = NULL, ...) {
+    initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `block_` = NULL, `id` = NULL, `hash` = NULL, `nonce` = NULL, `log_index` = NULL, `gas_limit` = NULL, `gas_used` = NULL, `gas_price` = NULL, `protocol` = NULL, `account` = NULL, `pool` = NULL, `timestamp` = NULL, `tick` = NULL, `token_in` = NULL, `amount_in` = NULL, `amount_in_usd` = NULL, `token_out` = NULL, `amount_out` = NULL, `amount_out_usd` = NULL, `reserve_amounts` = NULL, `pool_id` = NULL, `transaction_id` = NULL, `evaluated_price` = NULL, `evaluated_amount` = NULL, `evaluated_aggressor` = NULL, ...) {
       if (!is.null(`entry_time`)) {
         if (!is.character(`entry_time`)) {
           stop(paste("Error! Invalid data for `entry_time`. Must be a string:", `entry_time`))
@@ -125,12 +122,6 @@ UNISWAPV3ETHEREUMSwapDTO <- R6::R6Class(
           stop(paste("Error! Invalid data for `block_number`. Must be an integer:", `block_number`))
         }
         self$`block_number` <- `block_number`
-      }
-      if (!is.null(`vid`)) {
-        if (!(is.numeric(`vid`) && length(`vid`) == 1)) {
-          stop(paste("Error! Invalid data for `vid`. Must be an integer:", `vid`))
-        }
-        self$`vid` <- `vid`
       }
       if (!is.null(`block_`)) {
         if (!(is.numeric(`block_`) && length(`block_`) == 1)) {
@@ -304,10 +295,6 @@ UNISWAPV3ETHEREUMSwapDTO <- R6::R6Class(
         UNISWAPV3ETHEREUMSwapDTOObject[["block_number"]] <-
           self$`block_number`
       }
-      if (!is.null(self$`vid`)) {
-        UNISWAPV3ETHEREUMSwapDTOObject[["vid"]] <-
-          self$`vid`
-      }
       if (!is.null(self$`block_`)) {
         UNISWAPV3ETHEREUMSwapDTOObject[["block_"]] <-
           self$`block_`
@@ -429,9 +416,6 @@ UNISWAPV3ETHEREUMSwapDTO <- R6::R6Class(
       if (!is.null(this_object$`block_number`)) {
         self$`block_number` <- this_object$`block_number`
       }
-      if (!is.null(this_object$`vid`)) {
-        self$`vid` <- this_object$`vid`
-      }
       if (!is.null(this_object$`block_`)) {
         self$`block_` <- this_object$`block_`
       }
@@ -542,14 +526,6 @@ UNISWAPV3ETHEREUMSwapDTO <- R6::R6Class(
             %d
                     ',
           self$`block_number`
-          )
-        },
-        if (!is.null(self$`vid`)) {
-          sprintf(
-          '"vid":
-            %d
-                    ',
-          self$`vid`
           )
         },
         if (!is.null(self$`block_`)) {
@@ -769,7 +745,6 @@ UNISWAPV3ETHEREUMSwapDTO <- R6::R6Class(
       self$`entry_time` <- this_object$`entry_time`
       self$`recv_time` <- this_object$`recv_time`
       self$`block_number` <- this_object$`block_number`
-      self$`vid` <- this_object$`vid`
       self$`block_` <- this_object$`block_`
       self$`id` <- this_object$`id`
       self$`hash` <- this_object$`hash`

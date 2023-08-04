@@ -26,7 +26,6 @@ UNISWAP_V3_ETHEREUM.SwapDTO::__init()
 	//entry_time = null;
 	//recv_time = null;
 	//block_number = long(0);
-	//vid = long(0);
 	//block_ = int(0);
 	//id = std::string();
 	//hash = std::string();
@@ -71,11 +70,6 @@ UNISWAP_V3_ETHEREUM.SwapDTO::__cleanup()
 	//
 	//delete block_number;
 	//block_number = NULL;
-	//}
-	//if(vid != NULL) {
-	//
-	//delete vid;
-	//vid = NULL;
 	//}
 	//if(block_ != NULL) {
 	//
@@ -239,17 +233,6 @@ UNISWAP_V3_ETHEREUM.SwapDTO::fromJson(char* jsonStr)
 
 		if (isprimitive("long long")) {
 			jsonToValue(&block_number, node, "long long", "");
-		} else {
-			
-		}
-	}
-	const gchar *vidKey = "vid";
-	node = json_object_get_member(pJsonObject, vidKey);
-	if (node !=NULL) {
-	
-
-		if (isprimitive("long long")) {
-			jsonToValue(&vid, node, "long long", "");
 		} else {
 			
 		}
@@ -582,15 +565,6 @@ UNISWAP_V3_ETHEREUM.SwapDTO::toJson()
 	}
 	const gchar *block_numberKey = "block_number";
 	json_object_set_member(pJsonObject, block_numberKey, node);
-	if (isprimitive("long long")) {
-		long long obj = getVid();
-		node = converttoJson(&obj, "long long", "");
-	}
-	else {
-		
-	}
-	const gchar *vidKey = "vid";
-	json_object_set_member(pJsonObject, vidKey, node);
 	if (isprimitive("int")) {
 		int obj = getBlock();
 		node = converttoJson(&obj, "int", "");
@@ -869,18 +843,6 @@ void
 UNISWAP_V3_ETHEREUM.SwapDTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
-}
-
-long long
-UNISWAP_V3_ETHEREUM.SwapDTO::getVid()
-{
-	return vid;
-}
-
-void
-UNISWAP_V3_ETHEREUM.SwapDTO::setVid(long long  vid)
-{
-	this->vid = vid;
 }
 
 int

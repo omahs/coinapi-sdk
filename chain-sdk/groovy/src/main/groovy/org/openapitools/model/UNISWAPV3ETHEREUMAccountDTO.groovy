@@ -14,21 +14,19 @@ class UNISWAPV3ETHEREUMAccountDTO {
     /* Number of block in which entity was recorded. */
     Long blockNumber
     /*  */
-    Long vid
-    /*  */
     String blockRange
-    /*  */
+    /* Account address. */
     String id
-    /*  */
+    /* Number of positions this account has. */
     Integer positionCount
-    /*  */
+    /* Number of open positions this account has. */
     Integer openPositionCount
-    /*  */
+    /* Number of closed positions this account has. */
     Integer closedPositionCount
-    /*  */
+    /* Number of deposits this account made. */
     Integer depositCount
-    /*  */
+    /* Number of withdrawals this account made. */
     Integer withdrawCount
-    /*  */
+    /* Number of times this account has traded/swapped. */
     Integer swapCount
 }

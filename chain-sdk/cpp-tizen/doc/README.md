@@ -226,10 +226,46 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 *uNISWAPV3ETHEREUMAccounts (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/accounts/current | Accounts (current).
 *uNISWAPV3ETHEREUMAccounts (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/accounts/current | Accounts (current).
+*uNISWAPV3ETHEREUMActiveAccounts (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/activeAccounts/current | ActiveAccounts (current).
+*uNISWAPV3ETHEREUMActiveAccounts (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/activeAccounts/current | ActiveAccounts (current).
+*uNISWAPV3ETHEREUMDeposits (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/deposits/current | Deposits (current).
+*uNISWAPV3ETHEREUMDeposits (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/deposits/current | Deposits (current).
+*uNISWAPV3ETHEREUMDexAmmProtocols (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current).
+*uNISWAPV3ETHEREUMDexAmmProtocols (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current).
+*uNISWAPV3ETHEREUMFinancialsDailySnapshots (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current).
+*uNISWAPV3ETHEREUMFinancialsDailySnapshots (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current).
+*uNISWAPV3ETHEREUMLiquidityPoolAmounts (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current).
+*uNISWAPV3ETHEREUMLiquidityPoolAmounts (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current).
+*uNISWAPV3ETHEREUMLiquidityPoolFees (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current).
+*uNISWAPV3ETHEREUMLiquidityPoolFees (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current).
+*uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshots (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current).
+*uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshots (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current).
+*uNISWAPV3ETHEREUMPositionSnapshots (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current).
+*uNISWAPV3ETHEREUMPositionSnapshots (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current).
+*uNISWAPV3ETHEREUMPositions (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/positions/current | Positions (current).
+*uNISWAPV3ETHEREUMPositions (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/positions/current | Positions (current).
+*uNISWAPV3ETHEREUMRewardTokens (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current).
+*uNISWAPV3ETHEREUMRewardTokens (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current).
 *uNISWAPV3ETHEREUMSwaps (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/swaps/current | Swaps (current).
 *uNISWAPV3ETHEREUMSwaps (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/swaps/current | Swaps (current).
+*uNISWAPV3ETHEREUMTickDailySnapshots (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/tickDailySnapshots/current | TickDailySnapshots (current).
+*uNISWAPV3ETHEREUMTickDailySnapshots (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/tickDailySnapshots/current | TickDailySnapshots (current).
+*uNISWAPV3ETHEREUMTickHourlySnapshots (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/tickHourlySnapshots/current | TickHourlySnapshots (current).
+*uNISWAPV3ETHEREUMTickHourlySnapshots (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/tickHourlySnapshots/current | TickHourlySnapshots (current).
+*uNISWAPV3ETHEREUMTicks (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/ticks/current | Ticks (current).
+*uNISWAPV3ETHEREUMTicks (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/ticks/current | Ticks (current).
+*uNISWAPV3ETHEREUMTokenWhiteListSymbols (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current | TokenWhiteListSymbols (current).
+*uNISWAPV3ETHEREUMTokenWhiteListSymbols (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current | TokenWhiteListSymbols (current).
+*uNISWAPV3ETHEREUMTokenWhiteLists (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/tokenWhiteLists/current | TokenWhiteLists (current).
+*uNISWAPV3ETHEREUMTokenWhiteLists (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/tokenWhiteLists/current | TokenWhiteLists (current).
 *uNISWAPV3ETHEREUMTokens (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/tokens/current | Tokens (current).
 *uNISWAPV3ETHEREUMTokens (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/tokens/current | Tokens (current).
+*uNISWAPV3ETHEREUMUsageMetricsDailySnapshots (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current).
+*uNISWAPV3ETHEREUMUsageMetricsDailySnapshots (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current).
+*uNISWAPV3ETHEREUMUsageMetricsHourlySnapshots (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current).
+*uNISWAPV3ETHEREUMUsageMetricsHourlySnapshots (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current).
+*uNISWAPV3ETHEREUMWithdraws (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/withdraws/current | Withdraws (current).
+*uNISWAPV3ETHEREUMWithdraws (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/withdraws/current | Withdraws (current).
 
 
 ### UniswapV2Manager
@@ -385,8 +421,26 @@ Class | Description
  *Sushiswap.UserDTO* | 
  *Transactions.ETradeAggressiveSide* | 
  *UNISWAP_V3_ETHEREUM.AccountDTO* | 
- *UNISWAP_V3_ETHEREUM.SwapDTO* | Swap are created for each token swap within a pair.
+ *UNISWAP_V3_ETHEREUM.ActiveAccountDTO* | Entity for calculating daily/hourly active users.
+ *UNISWAP_V3_ETHEREUM.DepositDTO* | Entity represents a user action in the protocol involving the addition of funds to a liquidity pool.
+ *UNISWAP_V3_ETHEREUM.DexAmmProtocolDTO* |  Decentralized exchange (Dex) automated market maker (Amm) protocol. It's an entity that represents a protocol involving a smart contract that use automated market makers.
+ *UNISWAP_V3_ETHEREUM.FinancialsDailySnapshotDTO* | Daily financial metrics for Uniswap V3.
+ *UNISWAP_V3_ETHEREUM.LiquidityPoolAmountDTO* | 
+ *UNISWAP_V3_ETHEREUM.LiquidityPoolFeeDTO* | 
+ *UNISWAP_V3_ETHEREUM.LiquidityPoolHourlySnapshotDTO* | 
+ *UNISWAP_V3_ETHEREUM.PositionDTO* | 
+ *UNISWAP_V3_ETHEREUM.PositionSnapshotDTO* | 
+ *UNISWAP_V3_ETHEREUM.RewardTokenDTO* | Reward tokens awarded to lenders and borrowers.
+ *UNISWAP_V3_ETHEREUM.SwapDTO* | Trade (swap) event occurred in a pool.
+ *UNISWAP_V3_ETHEREUM.TickDTO* | 
+ *UNISWAP_V3_ETHEREUM.TickDailySnapshotDTO* | 
+ *UNISWAP_V3_ETHEREUM.TickHourlySnapshotDTO* | 
  *UNISWAP_V3_ETHEREUM.TokenDTO* | Stores aggregated information for a specific token across all pairs that token is included in.
+ *UNISWAP_V3_ETHEREUM.TokenWhiteListDTO* | 
+ *UNISWAP_V3_ETHEREUM.TokenWhiteListSymbolDTO* | 
+ *UNISWAP_V3_ETHEREUM.UsageMetricsDailySnapshotDTO* | 
+ *UNISWAP_V3_ETHEREUM.UsageMetricsHourlySnapshotDTO* | 
+ *UNISWAP_V3_ETHEREUM.WithdrawDTO* | 
  *UniswapV2.BundleDTO* | The Bundle is used as a global store of derived ETH price in USD. Because there is no guaranteed common base token across pairs, a global reference of USD price is useful for deriving other USD values. The Bundle entity stores an updated weighted average of ETH<->Stablecoin pair prices. This provides a strong estimate for the USD price of ETH.
  *UniswapV2.BurnDTO* | Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned LP tokens, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
  *UniswapV2.LiquidityPositionDTO* | This entity is used to store data about a user's liquidity position. This information, along with information from the pair itself can be used to provide position sizes, token deposits, and more.

@@ -14,15 +14,14 @@ part 'uniswapv3_ethereum_account_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [vid] - 
 /// * [blockRange] - 
-/// * [id] - 
-/// * [positionCount] - 
-/// * [openPositionCount] - 
-/// * [closedPositionCount] - 
-/// * [depositCount] - 
-/// * [withdrawCount] - 
-/// * [swapCount] - 
+/// * [id] - Account address.
+/// * [positionCount] - Number of positions this account has.
+/// * [openPositionCount] - Number of open positions this account has.
+/// * [closedPositionCount] - Number of closed positions this account has.
+/// * [depositCount] - Number of deposits this account made.
+/// * [withdrawCount] - Number of withdrawals this account made.
+/// * [swapCount] - Number of times this account has traded/swapped.
 @BuiltValue()
 abstract class UNISWAPV3ETHEREUMAccountDTO implements Built<UNISWAPV3ETHEREUMAccountDTO, UNISWAPV3ETHEREUMAccountDTOBuilder> {
   @BuiltValueField(wireName: r'entry_time')
@@ -36,38 +35,34 @@ abstract class UNISWAPV3ETHEREUMAccountDTO implements Built<UNISWAPV3ETHEREUMAcc
   int? get blockNumber;
 
   /// 
-  @BuiltValueField(wireName: r'vid')
-  int? get vid;
-
-  /// 
   @BuiltValueField(wireName: r'block_range')
   String? get blockRange;
 
-  /// 
+  /// Account address.
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// 
+  /// Number of positions this account has.
   @BuiltValueField(wireName: r'position_count')
   int? get positionCount;
 
-  /// 
+  /// Number of open positions this account has.
   @BuiltValueField(wireName: r'open_position_count')
   int? get openPositionCount;
 
-  /// 
+  /// Number of closed positions this account has.
   @BuiltValueField(wireName: r'closed_position_count')
   int? get closedPositionCount;
 
-  /// 
+  /// Number of deposits this account made.
   @BuiltValueField(wireName: r'deposit_count')
   int? get depositCount;
 
-  /// 
+  /// Number of withdrawals this account made.
   @BuiltValueField(wireName: r'withdraw_count')
   int? get withdrawCount;
 
-  /// 
+  /// Number of times this account has traded/swapped.
   @BuiltValueField(wireName: r'swap_count')
   int? get swapCount;
 
@@ -112,13 +107,6 @@ class _$UNISWAPV3ETHEREUMAccountDTOSerializer implements PrimitiveSerializer<UNI
       yield r'block_number';
       yield serializers.serialize(
         object.blockNumber,
-        specifiedType: const FullType(int),
-      );
-    }
-    if (object.vid != null) {
-      yield r'vid';
-      yield serializers.serialize(
-        object.vid,
         specifiedType: const FullType(int),
       );
     }
@@ -221,13 +209,6 @@ class _$UNISWAPV3ETHEREUMAccountDTOSerializer implements PrimitiveSerializer<UNI
             specifiedType: const FullType(int),
           ) as int;
           result.blockNumber = valueDes;
-          break;
-        case r'vid':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(int),
-          ) as int;
-          result.vid = valueDes;
           break;
         case r'block_range':
           final valueDes = serializers.deserialize(

@@ -64,14 +64,6 @@ public class UNISWAPV3ETHEREUMAccountDTOTest {
     }
 
     /**
-     * Test the property 'vid'
-     */
-    @Test
-    public void vidTest() {
-        // TODO: test vid
-    }
-
-    /**
      * Test the property 'blockRange'
      */
     @Test

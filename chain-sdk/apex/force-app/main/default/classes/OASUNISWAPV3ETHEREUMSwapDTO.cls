@@ -11,7 +11,7 @@
  */
 
 /**
- * Swap are created for each token swap within a pair.
+ * Trade (swap) event occurred in a pool.
  */
 public class OASUNISWAPV3ETHEREUMSwapDTO implements OAS.MappedProperties {
     /**
@@ -33,127 +33,121 @@ public class OASUNISWAPV3ETHEREUMSwapDTO implements OAS.MappedProperties {
     public Long blockNumber { get; set; }
 
     /**
-     * 
-     * @return vid
-     */
-    public Long vid { get; set; }
-
-    /**
-     * 
+     * Block number in which the swap operation was recorded.
      * @return block
      */
     public Integer block { get; set; }
 
     /**
-     * 
+     * Unique string identifier of the swap operation, format: (transaction hash)-(log index).
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * 
+     * Transaction hash of the transaction that emitted this event.
      * @return hash
      */
     public String hash { get; set; }
 
     /**
-     * 
+     * Nonce of the transaction that emitted this event.
      * @return nonce
      */
     public String nonce { get; set; }
 
     /**
-     * 
+     * Event log index. For transactions that don\'t emit event, create arbitrary index starting from 0.
      * @return logIndex
      */
     public Integer logIndex { get; set; }
 
     /**
-     * 
+     * Gas limit of the transaction that emitted this event.
      * @return gasLimit
      */
     public String gasLimit { get; set; }
 
     /**
-     * 
+     * Gas used in this transaction.
      * @return gasUsed
      */
     public String gasUsed { get; set; }
 
     /**
-     * 
+     * Gas price of the transaction that emitted this event.
      * @return gasPrice
      */
     public String gasPrice { get; set; }
 
     /**
-     * 
+     * The protocol this transaction belongs to.
      * @return protocol
      */
     public String protocol { get; set; }
 
     /**
-     * 
+     * Account that emitted this event.
      * @return account
      */
     public String account { get; set; }
 
     /**
-     * 
+     * The pool involving this event.
      * @return pool
      */
     public String pool { get; set; }
 
     /**
-     * 
+     * Timestamp of this event.
      * @return timestamp
      */
     public String timestamp { get; set; }
 
     /**
-     * 
+     * Tick of the swap operation.
      * @return tick
      */
     public String tick { get; set; }
 
     /**
-     * 
+     * Token deposited into pool.
      * @return tokenIn
      */
     public String tokenIn { get; set; }
 
     /**
-     * 
+     * Amount of token deposited into pool in native units.
      * @return amountIn
      */
     public String amountIn { get; set; }
 
     /**
-     * 
+     * Amount of token deposited into pool in USD.
      * @return amountInUsd
      */
     public String amountInUsd { get; set; }
 
     /**
-     * 
+     * Token withdrawn from pool.
      * @return tokenOut
      */
     public String tokenOut { get; set; }
 
     /**
-     * 
+     * Amount of token withdrawn from pool in native units.
      * @return amountOut
      */
     public String amountOut { get; set; }
 
     /**
-     * 
+     * Amount of token withdrawn from pool in USD.
      * @return amountOutUsd
      */
     public String amountOutUsd { get; set; }
 
     /**
-     * 
+     * Amount of input tokens in the liquidity pool.
      * @return reserveAmounts
      */
     public List<String> reserveAmounts { get; set; }
@@ -737,7 +731,6 @@ public class OASUNISWAPV3ETHEREUMSwapDTO implements OAS.MappedProperties {
           unISWAPV3ETHEREUMSwapDTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           unISWAPV3ETHEREUMSwapDTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           unISWAPV3ETHEREUMSwapDTO.blockNumber = 123456789L;
-          unISWAPV3ETHEREUMSwapDTO.vid = 123456789L;
           unISWAPV3ETHEREUMSwapDTO.block = 0;
           unISWAPV3ETHEREUMSwapDTO.id = '';
           unISWAPV3ETHEREUMSwapDTO.hash = '';
@@ -772,7 +765,6 @@ public class OASUNISWAPV3ETHEREUMSwapDTO implements OAS.MappedProperties {
             return this.entryTime == unISWAPV3ETHEREUMSwapDTO.entryTime
                 && this.recvTime == unISWAPV3ETHEREUMSwapDTO.recvTime
                 && this.blockNumber == unISWAPV3ETHEREUMSwapDTO.blockNumber
-                && this.vid == unISWAPV3ETHEREUMSwapDTO.vid
                 && this.block == unISWAPV3ETHEREUMSwapDTO.block
                 && this.id == unISWAPV3ETHEREUMSwapDTO.id
                 && this.hash == unISWAPV3ETHEREUMSwapDTO.hash
@@ -807,7 +799,6 @@ public class OASUNISWAPV3ETHEREUMSwapDTO implements OAS.MappedProperties {
         hashCode = (17 * hashCode) + (entryTime == null ? 0 : System.hashCode(entryTime));
         hashCode = (17 * hashCode) + (recvTime == null ? 0 : System.hashCode(recvTime));
         hashCode = (17 * hashCode) + (blockNumber == null ? 0 : System.hashCode(blockNumber));
-        hashCode = (17 * hashCode) + (vid == null ? 0 : System.hashCode(vid));
         hashCode = (17 * hashCode) + (block == null ? 0 : System.hashCode(block));
         hashCode = (17 * hashCode) + (id == null ? 0 : System.hashCode(id));
         hashCode = (17 * hashCode) + (hash == null ? 0 : System.hashCode(hash));

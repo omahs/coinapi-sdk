@@ -10,33 +10,32 @@ import 'package:built_value/serializer.dart';
 
 part 'uniswapv3_ethereum_swap_dto.g.dart';
 
-/// Swap are created for each token swap within a pair.
+/// Trade (swap) event occurred in a pool.
 ///
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [vid] - 
-/// * [block] - 
-/// * [id] - 
-/// * [hash] - 
-/// * [nonce] - 
-/// * [logIndex] - 
-/// * [gasLimit] - 
-/// * [gasUsed] - 
-/// * [gasPrice] - 
-/// * [protocol] - 
-/// * [account] - 
-/// * [pool] - 
-/// * [timestamp] - 
-/// * [tick] - 
-/// * [tokenIn] - 
-/// * [amountIn] - 
-/// * [amountInUsd] - 
-/// * [tokenOut] - 
-/// * [amountOut] - 
-/// * [amountOutUsd] - 
-/// * [reserveAmounts] - 
+/// * [block] - Block number in which the swap operation was recorded.
+/// * [id] - Unique string identifier of the swap operation, format: (transaction hash)-(log index).
+/// * [hash] - Transaction hash of the transaction that emitted this event.
+/// * [nonce] - Nonce of the transaction that emitted this event.
+/// * [logIndex] - Event log index. For transactions that don't emit event, create arbitrary index starting from 0.
+/// * [gasLimit] - Gas limit of the transaction that emitted this event.
+/// * [gasUsed] - Gas used in this transaction.
+/// * [gasPrice] - Gas price of the transaction that emitted this event.
+/// * [protocol] - The protocol this transaction belongs to.
+/// * [account] - Account that emitted this event.
+/// * [pool] - The pool involving this event.
+/// * [timestamp] - Timestamp of this event.
+/// * [tick] - Tick of the swap operation.
+/// * [tokenIn] - Token deposited into pool.
+/// * [amountIn] - Amount of token deposited into pool in native units.
+/// * [amountInUsd] - Amount of token deposited into pool in USD.
+/// * [tokenOut] - Token withdrawn from pool.
+/// * [amountOut] - Amount of token withdrawn from pool in native units.
+/// * [amountOutUsd] - Amount of token withdrawn from pool in USD.
+/// * [reserveAmounts] - Amount of input tokens in the liquidity pool.
 /// * [poolId] 
 /// * [transactionId] 
 /// * [evaluatedPrice] 
@@ -54,87 +53,83 @@ abstract class UNISWAPV3ETHEREUMSwapDTO implements Built<UNISWAPV3ETHEREUMSwapDT
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// 
-  @BuiltValueField(wireName: r'vid')
-  int? get vid;
-
-  /// 
+  /// Block number in which the swap operation was recorded.
   @BuiltValueField(wireName: r'block_')
   int? get block;
 
-  /// 
+  /// Unique string identifier of the swap operation, format: (transaction hash)-(log index).
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// 
+  /// Transaction hash of the transaction that emitted this event.
   @BuiltValueField(wireName: r'hash')
   String? get hash;
 
-  /// 
+  /// Nonce of the transaction that emitted this event.
   @BuiltValueField(wireName: r'nonce')
   String? get nonce;
 
-  /// 
+  /// Event log index. For transactions that don't emit event, create arbitrary index starting from 0.
   @BuiltValueField(wireName: r'log_index')
   int? get logIndex;
 
-  /// 
+  /// Gas limit of the transaction that emitted this event.
   @BuiltValueField(wireName: r'gas_limit')
   String? get gasLimit;
 
-  /// 
+  /// Gas used in this transaction.
   @BuiltValueField(wireName: r'gas_used')
   String? get gasUsed;
 
-  /// 
+  /// Gas price of the transaction that emitted this event.
   @BuiltValueField(wireName: r'gas_price')
   String? get gasPrice;
 
-  /// 
+  /// The protocol this transaction belongs to.
   @BuiltValueField(wireName: r'protocol')
   String? get protocol;
 
-  /// 
+  /// Account that emitted this event.
   @BuiltValueField(wireName: r'account')
   String? get account;
 
-  /// 
+  /// The pool involving this event.
   @BuiltValueField(wireName: r'pool')
   String? get pool;
 
-  /// 
+  /// Timestamp of this event.
   @BuiltValueField(wireName: r'timestamp')
   String? get timestamp;
 
-  /// 
+  /// Tick of the swap operation.
   @BuiltValueField(wireName: r'tick')
   String? get tick;
 
-  /// 
+  /// Token deposited into pool.
   @BuiltValueField(wireName: r'token_in')
   String? get tokenIn;
 
-  /// 
+  /// Amount of token deposited into pool in native units.
   @BuiltValueField(wireName: r'amount_in')
   String? get amountIn;
 
-  /// 
+  /// Amount of token deposited into pool in USD.
   @BuiltValueField(wireName: r'amount_in_usd')
   String? get amountInUsd;
 
-  /// 
+  /// Token withdrawn from pool.
   @BuiltValueField(wireName: r'token_out')
   String? get tokenOut;
 
-  /// 
+  /// Amount of token withdrawn from pool in native units.
   @BuiltValueField(wireName: r'amount_out')
   String? get amountOut;
 
-  /// 
+  /// Amount of token withdrawn from pool in USD.
   @BuiltValueField(wireName: r'amount_out_usd')
   String? get amountOutUsd;
 
-  /// 
+  /// Amount of input tokens in the liquidity pool.
   @BuiltValueField(wireName: r'reserve_amounts')
   BuiltList<String>? get reserveAmounts;
 
@@ -195,13 +190,6 @@ class _$UNISWAPV3ETHEREUMSwapDTOSerializer implements PrimitiveSerializer<UNISWA
       yield r'block_number';
       yield serializers.serialize(
         object.blockNumber,
-        specifiedType: const FullType(int),
-      );
-    }
-    if (object.vid != null) {
-      yield r'vid';
-      yield serializers.serialize(
-        object.vid,
         specifiedType: const FullType(int),
       );
     }
@@ -423,13 +411,6 @@ class _$UNISWAPV3ETHEREUMSwapDTOSerializer implements PrimitiveSerializer<UNISWA
             specifiedType: const FullType(int),
           ) as int;
           result.blockNumber = valueDes;
-          break;
-        case r'vid':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(int),
-          ) as int;
-          result.vid = valueDes;
           break;
         case r'block_':
           final valueDes = serializers.deserialize(

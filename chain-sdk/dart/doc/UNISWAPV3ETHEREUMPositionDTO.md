@@ -1,0 +1,40 @@
+# openapi.model.UNISWAPV3ETHEREUMPositionDTO
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**entryTime** | [**DateTime**](DateTime.md) |  | [optional] 
+**recvTime** | [**DateTime**](DateTime.md) |  | [optional] 
+**blockNumber** | **int** | Number of block in which entity was recorded. | [optional] 
+**vid** | **int** |  | [optional] 
+**id** | **String** | (account address)-(market address)-(count) | [optional] 
+**account** | **String** | Account that owns this position | [optional] 
+**pool** | **String** | The liquidity pool in which this position was opened | [optional] 
+**hashOpened** | **String** | The hash of the transaction that opened this position | [optional] 
+**hashClosed** | **String** | The hash of the transaction that closed this position | [optional] 
+**blockNumberOpened** | **String** | Block number of when the position was opened | [optional] 
+**timestampOpened** | **String** | Timestamp when the position was opened | [optional] 
+**blockNumberClosed** | **String** | Block number of when the position was closed (0 if still open) | [optional] 
+**timestampClosed** | **String** | Timestamp when the position was closed (0 if still open) | [optional] 
+**tickLower** | **String** | lower tick of the position | [optional] 
+**tickUpper** | **String** | upper tick of the position | [optional] 
+**liquidityToken** | **String** | Token that is to represent ownership of liquidity | [optional] 
+**liquidityTokenType** | **String** | Type of token used to track liquidity | [optional] 
+**liquidity** | **String** | total position liquidity | [optional] 
+**liquidityUsd** | **String** | total position liquidity in USD | [optional] 
+**cumulativeDepositTokenAmounts** | **List<String>** | amount of tokens ever deposited to position | [optional] [default to const []]
+**cumulativeDepositUsd** | **String** | amount of tokens in USD deposited to position | [optional] 
+**cumulativeWithdrawTokenAmounts** | **List<String>** | amount of tokens ever withdrawn from position (without fees) | [optional] [default to const []]
+**cumulativeWithdrawUsd** | **String** | amount of tokens in USD withdrawn from position (without fees) | [optional] 
+**cumulativeRewardUsd** | **List<String>** | Total reward token accumulated under this position, in USD | [optional] [default to const []]
+**depositCount** | **int** | Number of deposits related to this position | [optional] 
+**withdrawCount** | **int** | Number of withdrawals related to this position | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

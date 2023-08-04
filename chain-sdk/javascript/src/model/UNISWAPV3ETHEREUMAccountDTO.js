@@ -56,9 +56,6 @@ class UNISWAPV3ETHEREUMAccountDTO {
             if (data.hasOwnProperty('block_number')) {
                 obj['block_number'] = ApiClient.convertToType(data['block_number'], 'Number');
             }
-            if (data.hasOwnProperty('vid')) {
-                obj['vid'] = ApiClient.convertToType(data['vid'], 'Number');
-            }
             if (data.hasOwnProperty('block_range')) {
                 obj['block_range'] = ApiClient.convertToType(data['block_range'], 'String');
             }
@@ -128,54 +125,48 @@ UNISWAPV3ETHEREUMAccountDTO.prototype['block_number'] = undefined;
 
 /**
  * 
- * @member {Number} vid
- */
-UNISWAPV3ETHEREUMAccountDTO.prototype['vid'] = undefined;
-
-/**
- * 
  * @member {String} block_range
  */
 UNISWAPV3ETHEREUMAccountDTO.prototype['block_range'] = undefined;
 
 /**
- * 
+ * Account address.
  * @member {String} id
  */
 UNISWAPV3ETHEREUMAccountDTO.prototype['id'] = undefined;
 
 /**
- * 
+ * Number of positions this account has.
  * @member {Number} position_count
  */
 UNISWAPV3ETHEREUMAccountDTO.prototype['position_count'] = undefined;
 
 /**
- * 
+ * Number of open positions this account has.
  * @member {Number} open_position_count
  */
 UNISWAPV3ETHEREUMAccountDTO.prototype['open_position_count'] = undefined;
 
 /**
- * 
+ * Number of closed positions this account has.
  * @member {Number} closed_position_count
  */
 UNISWAPV3ETHEREUMAccountDTO.prototype['closed_position_count'] = undefined;
 
 /**
- * 
+ * Number of deposits this account made.
  * @member {Number} deposit_count
  */
 UNISWAPV3ETHEREUMAccountDTO.prototype['deposit_count'] = undefined;
 
 /**
- * 
+ * Number of withdrawals this account made.
  * @member {Number} withdraw_count
  */
 UNISWAPV3ETHEREUMAccountDTO.prototype['withdraw_count'] = undefined;
 
 /**
- * 
+ * Number of times this account has traded/swapped.
  * @member {Number} swap_count
  */
 UNISWAPV3ETHEREUMAccountDTO.prototype['swap_count'] = undefined;

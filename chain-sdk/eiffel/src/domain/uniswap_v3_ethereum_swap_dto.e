@@ -25,48 +25,46 @@ feature --Access
       
  	block_number: INTEGER_64
     	 -- Number of block in which entity was recorded.
- 	vid: INTEGER_64
-    	 -- 
  	block_: INTEGER_32
-    	 -- 
+    	 -- Block number in which the swap operation was recorded.
     id: detachable STRING_32
-      -- 
+      -- Unique string identifier of the swap operation, format: (transaction hash)-(log index).
     hash: detachable STRING_32
-      -- 
+      -- Transaction hash of the transaction that emitted this event.
     nonce: detachable STRING_32
-      -- 
+      -- Nonce of the transaction that emitted this event.
  	log_index: INTEGER_32
-    	 -- 
+    	 -- Event log index. For transactions that don't emit event, create arbitrary index starting from 0.
     gas_limit: detachable STRING_32
-      -- 
+      -- Gas limit of the transaction that emitted this event.
     gas_used: detachable STRING_32
-      -- 
+      -- Gas used in this transaction.
     gas_price: detachable STRING_32
-      -- 
+      -- Gas price of the transaction that emitted this event.
     protocol: detachable STRING_32
-      -- 
+      -- The protocol this transaction belongs to.
     account: detachable STRING_32
-      -- 
+      -- Account that emitted this event.
     pool: detachable STRING_32
-      -- 
+      -- The pool involving this event.
     timestamp: detachable STRING_32
-      -- 
+      -- Timestamp of this event.
     tick: detachable STRING_32
-      -- 
+      -- Tick of the swap operation.
     token_in: detachable STRING_32
-      -- 
+      -- Token deposited into pool.
     amount_in: detachable STRING_32
-      -- 
+      -- Amount of token deposited into pool in native units.
     amount_in_usd: detachable STRING_32
-      -- 
+      -- Amount of token deposited into pool in USD.
     token_out: detachable STRING_32
-      -- 
+      -- Token withdrawn from pool.
     amount_out: detachable STRING_32
-      -- 
+      -- Amount of token withdrawn from pool in native units.
     amount_out_usd: detachable STRING_32
-      -- 
+      -- Amount of token withdrawn from pool in USD.
     reserve_amounts: detachable LIST [STRING_32]
-      -- 
+      -- Amount of input tokens in the liquidity pool.
     pool_id: detachable STRING_32
       
     transaction_id: detachable STRING_32
@@ -102,14 +100,6 @@ feature -- Change Element
         block_number := a_name
       ensure
         block_number_set: block_number = a_name
-      end
-
-    set_vid (a_name: like vid)
-        -- Set 'vid' with 'a_name'.
-      do
-        vid := a_name
-      ensure
-        vid_set: vid = a_name
       end
 
     set_block_ (a_name: like block_)
@@ -333,11 +323,6 @@ feature -- Change Element
         if attached block_number as l_block_number then
           Result.append ("%Nblock_number:")
           Result.append (l_block_number.out)
-          Result.append ("%N")
-        end
-        if attached vid as l_vid then
-          Result.append ("%Nvid:")
-          Result.append (l_vid.out)
           Result.append ("%N")
         end
         if attached block_ as l_block_ then

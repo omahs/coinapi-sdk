@@ -90,8 +90,26 @@ import 'package:openapi/src/model/sushiswap_transaction_dto.dart';
 import 'package:openapi/src/model/sushiswap_user_dto.dart';
 import 'package:openapi/src/model/transactions_e_trade_aggressive_side.dart';
 import 'package:openapi/src/model/uniswapv3_ethereum_account_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_active_account_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_deposit_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_dex_amm_protocol_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_financials_daily_snapshot_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_liquidity_pool_amount_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_liquidity_pool_fee_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_liquidity_pool_hourly_snapshot_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_position_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_position_snapshot_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_reward_token_dto.dart';
 import 'package:openapi/src/model/uniswapv3_ethereum_swap_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_tick_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_tick_daily_snapshot_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_tick_hourly_snapshot_dto.dart';
 import 'package:openapi/src/model/uniswapv3_ethereum_token_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_token_white_list_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_token_white_list_symbol_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_usage_metrics_daily_snapshot_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_usage_metrics_hourly_snapshot_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_withdraw_dto.dart';
 import 'package:openapi/src/model/uniswap_v2_bundle_dto.dart';
 import 'package:openapi/src/model/uniswap_v2_burn_dto.dart';
 import 'package:openapi/src/model/uniswap_v2_liquidity_position_dto.dart';
@@ -204,8 +222,26 @@ part 'serializers.g.dart';
   SushiswapUserDTO,
   TransactionsETradeAggressiveSide,
   UNISWAPV3ETHEREUMAccountDTO,
+  UNISWAPV3ETHEREUMActiveAccountDTO,
+  UNISWAPV3ETHEREUMDepositDTO,
+  UNISWAPV3ETHEREUMDexAmmProtocolDTO,
+  UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO,
+  UNISWAPV3ETHEREUMLiquidityPoolAmountDTO,
+  UNISWAPV3ETHEREUMLiquidityPoolFeeDTO,
+  UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO,
+  UNISWAPV3ETHEREUMPositionDTO,
+  UNISWAPV3ETHEREUMPositionSnapshotDTO,
+  UNISWAPV3ETHEREUMRewardTokenDTO,
   UNISWAPV3ETHEREUMSwapDTO,
+  UNISWAPV3ETHEREUMTickDTO,
+  UNISWAPV3ETHEREUMTickDailySnapshotDTO,
+  UNISWAPV3ETHEREUMTickHourlySnapshotDTO,
   UNISWAPV3ETHEREUMTokenDTO,
+  UNISWAPV3ETHEREUMTokenWhiteListDTO,
+  UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO,
+  UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO,
+  UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO,
+  UNISWAPV3ETHEREUMWithdrawDTO,
   UniswapV2BundleDTO,
   UniswapV2BurnDTO,
   UniswapV2LiquidityPositionDTO,
@@ -241,6 +277,14 @@ part 'serializers.g.dart';
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMTokenWhiteListDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMTokenWhiteListDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMLiquidityPoolFeeDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CRYPTOPUNKSDataSourcesDTO)]),
         () => ListBuilder<CRYPTOPUNKSDataSourcesDTO>(),
       )
@@ -251,6 +295,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UniswapV2PairDayDataDTO)]),
         () => ListBuilder<UniswapV2PairDayDataDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(DexTokenDTO)]),
@@ -289,6 +337,10 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<UniswapV2UniswapDayDataDTO>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UniswapV2UserDTO)]),
         () => ListBuilder<UniswapV2UserDTO>(),
       )
@@ -305,6 +357,10 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<CurveGaugeWeightVoteDTO>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMWithdrawDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMWithdrawDTO>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UniswapV2LiquidityPositionSnapshotDTO)]),
         () => ListBuilder<UniswapV2LiquidityPositionSnapshotDTO>(),
       )
@@ -315,6 +371,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CurvePoolDTO)]),
         () => ListBuilder<CurvePoolDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMDepositDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMDepositDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(SushiswapLiquidityPositionSnapshotDTO)]),
@@ -333,6 +393,10 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<UniswapV3FactoryDTO>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMAccountDTO)]),
         () => ListBuilder<UNISWAPV3ETHEREUMAccountDTO>(),
       )
@@ -347,6 +411,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UniswapV3PoolDTO)]),
         () => ListBuilder<UniswapV3PoolDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CowOrderDTO)]),
@@ -391,6 +459,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CRYPTOPUNKSTradeDTO)]),
         () => ListBuilder<CRYPTOPUNKSTradeDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMActiveAccountDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMActiveAccountDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UniswapV2LiquidityPositionDTO)]),
@@ -481,8 +553,16 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<UniswapV3PositionDTO>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMPositionDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMPositionDTO>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UniswapV2PairHourDataDTO)]),
         () => ListBuilder<UniswapV2PairHourDataDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMTickHourlySnapshotDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(SushiswapHourDataDTO)]),
@@ -491,6 +571,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CurveGaugeDepositDTO)]),
         () => ListBuilder<CurveGaugeDepositDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UniswapV3UniswapDayDataDTO)]),
@@ -509,6 +593,10 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<CurveVotingAppDTO>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMRewardTokenDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMRewardTokenDTO>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CurveLpTokenDTO)]),
         () => ListBuilder<CurveLpTokenDTO>(),
       )
@@ -519,6 +607,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(DexWithdrawDTO)]),
         () => ListBuilder<DexWithdrawDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMDexAmmProtocolDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMDexAmmProtocolDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CurveSystemStateDTO)]),
@@ -533,12 +625,20 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<UNISWAPV3ETHEREUMTokenDTO>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMLiquidityPoolAmountDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UniswapV2PairDTO)]),
         () => ListBuilder<UniswapV2PairDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UniswapV2UniswapFactoryDTO)]),
         () => ListBuilder<UniswapV2UniswapFactoryDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMTickDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMTickDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(DexSolutionDTO)]),
@@ -571,6 +671,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CurveProposalVoteDTO)]),
         () => ListBuilder<CurveProposalVoteDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMTickDailySnapshotDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMTickDailySnapshotDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UniswapV3TokenDTO)]),
@@ -655,6 +759,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(SushiswapSwapDTO)]),
         () => ListBuilder<SushiswapSwapDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMPositionSnapshotDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMPositionSnapshotDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CRYPTOPUNKSMarketplaceDailySnapshotDTO)]),

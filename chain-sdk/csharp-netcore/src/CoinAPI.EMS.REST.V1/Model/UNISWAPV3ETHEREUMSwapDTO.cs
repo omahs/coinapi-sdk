@@ -27,7 +27,7 @@ using OpenAPIDateConverter = CoinAPI.EMS.REST.V1.Client.OpenAPIDateConverter;
 namespace CoinAPI.EMS.REST.V1.Model
 {
     /// <summary>
-    /// Swap are created for each token swap within a pair.
+    /// Trade (swap) event occurred in a pool.
     /// </summary>
     [DataContract(Name = "UNISWAP_V3_ETHEREUM.SwapDTO")]
     public partial class UNISWAPV3ETHEREUMSwapDTO : IEquatable<UNISWAPV3ETHEREUMSwapDTO>, IValidatableObject
@@ -44,34 +44,32 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
-        /// <param name="vid">vid.</param>
-        /// <param name="block">block.</param>
-        /// <param name="id">id.</param>
-        /// <param name="hash">hash.</param>
-        /// <param name="nonce">nonce.</param>
-        /// <param name="logIndex">logIndex.</param>
-        /// <param name="gasLimit">gasLimit.</param>
-        /// <param name="gasUsed">gasUsed.</param>
-        /// <param name="gasPrice">gasPrice.</param>
-        /// <param name="protocol">protocol.</param>
-        /// <param name="account">account.</param>
-        /// <param name="pool">pool.</param>
-        /// <param name="timestamp">timestamp.</param>
-        /// <param name="tick">tick.</param>
-        /// <param name="tokenIn">tokenIn.</param>
-        /// <param name="amountIn">amountIn.</param>
-        /// <param name="amountInUsd">amountInUsd.</param>
-        /// <param name="tokenOut">tokenOut.</param>
-        /// <param name="amountOut">amountOut.</param>
-        /// <param name="amountOutUsd">amountOutUsd.</param>
-        /// <param name="reserveAmounts">reserveAmounts.</param>
+        /// <param name="block">Block number in which the swap operation was recorded..</param>
+        /// <param name="id">Unique string identifier of the swap operation, format: (transaction hash)-(log index)..</param>
+        /// <param name="hash">Transaction hash of the transaction that emitted this event..</param>
+        /// <param name="nonce">Nonce of the transaction that emitted this event..</param>
+        /// <param name="logIndex">Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0..</param>
+        /// <param name="gasLimit">Gas limit of the transaction that emitted this event..</param>
+        /// <param name="gasUsed">Gas used in this transaction..</param>
+        /// <param name="gasPrice">Gas price of the transaction that emitted this event..</param>
+        /// <param name="protocol">The protocol this transaction belongs to..</param>
+        /// <param name="account">Account that emitted this event..</param>
+        /// <param name="pool">The pool involving this event..</param>
+        /// <param name="timestamp">Timestamp of this event..</param>
+        /// <param name="tick">Tick of the swap operation..</param>
+        /// <param name="tokenIn">Token deposited into pool..</param>
+        /// <param name="amountIn">Amount of token deposited into pool in native units..</param>
+        /// <param name="amountInUsd">Amount of token deposited into pool in USD..</param>
+        /// <param name="tokenOut">Token withdrawn from pool..</param>
+        /// <param name="amountOut">Amount of token withdrawn from pool in native units..</param>
+        /// <param name="amountOutUsd">Amount of token withdrawn from pool in USD..</param>
+        /// <param name="reserveAmounts">Amount of input tokens in the liquidity pool..</param>
         /// <param name="evaluatedAggressor">evaluatedAggressor.</param>
-        public UNISWAPV3ETHEREUMSwapDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), long vid = default(long), int block = default(int), string id = default(string), string hash = default(string), string nonce = default(string), int logIndex = default(int), string gasLimit = default(string), string gasUsed = default(string), string gasPrice = default(string), string protocol = default(string), string account = default(string), string pool = default(string), string timestamp = default(string), string tick = default(string), string tokenIn = default(string), string amountIn = default(string), string amountInUsd = default(string), string tokenOut = default(string), string amountOut = default(string), string amountOutUsd = default(string), List<string> reserveAmounts = default(List<string>), TransactionsETradeAggressiveSide? evaluatedAggressor = default(TransactionsETradeAggressiveSide?))
+        public UNISWAPV3ETHEREUMSwapDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), int block = default(int), string id = default(string), string hash = default(string), string nonce = default(string), int logIndex = default(int), string gasLimit = default(string), string gasUsed = default(string), string gasPrice = default(string), string protocol = default(string), string account = default(string), string pool = default(string), string timestamp = default(string), string tick = default(string), string tokenIn = default(string), string amountIn = default(string), string amountInUsd = default(string), string tokenOut = default(string), string amountOut = default(string), string amountOutUsd = default(string), List<string> reserveAmounts = default(List<string>), TransactionsETradeAggressiveSide? evaluatedAggressor = default(TransactionsETradeAggressiveSide?))
         {
             this.EntryTime = entryTime;
             this.RecvTime = recvTime;
             this.BlockNumber = blockNumber;
-            this.Vid = vid;
             this.Block = block;
             this.Id = id;
             this.Hash = hash;
@@ -115,128 +113,142 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets Vid
+        /// Block number in which the swap operation was recorded.
         /// </summary>
-        [DataMember(Name = "vid", EmitDefaultValue = false)]
-        public long Vid { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Block
-        /// </summary>
+        /// <value>Block number in which the swap operation was recorded.</value>
         [DataMember(Name = "block_", EmitDefaultValue = false)]
         public int Block { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Unique string identifier of the swap operation, format: (transaction hash)-(log index).
         /// </summary>
+        /// <value>Unique string identifier of the swap operation, format: (transaction hash)-(log index).</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Hash
+        /// Transaction hash of the transaction that emitted this event.
         /// </summary>
+        /// <value>Transaction hash of the transaction that emitted this event.</value>
         [DataMember(Name = "hash", EmitDefaultValue = true)]
         public string Hash { get; set; }
 
         /// <summary>
-        /// Gets or Sets Nonce
+        /// Nonce of the transaction that emitted this event.
         /// </summary>
+        /// <value>Nonce of the transaction that emitted this event.</value>
         [DataMember(Name = "nonce", EmitDefaultValue = true)]
         public string Nonce { get; set; }
 
         /// <summary>
-        /// Gets or Sets LogIndex
+        /// Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0.
         /// </summary>
+        /// <value>Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0.</value>
         [DataMember(Name = "log_index", EmitDefaultValue = false)]
         public int LogIndex { get; set; }
 
         /// <summary>
-        /// Gets or Sets GasLimit
+        /// Gas limit of the transaction that emitted this event.
         /// </summary>
+        /// <value>Gas limit of the transaction that emitted this event.</value>
         [DataMember(Name = "gas_limit", EmitDefaultValue = true)]
         public string GasLimit { get; set; }
 
         /// <summary>
-        /// Gets or Sets GasUsed
+        /// Gas used in this transaction.
         /// </summary>
+        /// <value>Gas used in this transaction.</value>
         [DataMember(Name = "gas_used", EmitDefaultValue = true)]
         public string GasUsed { get; set; }
 
         /// <summary>
-        /// Gets or Sets GasPrice
+        /// Gas price of the transaction that emitted this event.
         /// </summary>
+        /// <value>Gas price of the transaction that emitted this event.</value>
         [DataMember(Name = "gas_price", EmitDefaultValue = true)]
         public string GasPrice { get; set; }
 
         /// <summary>
-        /// Gets or Sets Protocol
+        /// The protocol this transaction belongs to.
         /// </summary>
+        /// <value>The protocol this transaction belongs to.</value>
         [DataMember(Name = "protocol", EmitDefaultValue = true)]
         public string Protocol { get; set; }
 
         /// <summary>
-        /// Gets or Sets Account
+        /// Account that emitted this event.
         /// </summary>
+        /// <value>Account that emitted this event.</value>
         [DataMember(Name = "account", EmitDefaultValue = true)]
         public string Account { get; set; }
 
         /// <summary>
-        /// Gets or Sets Pool
+        /// The pool involving this event.
         /// </summary>
+        /// <value>The pool involving this event.</value>
         [DataMember(Name = "pool", EmitDefaultValue = true)]
         public string Pool { get; set; }
 
         /// <summary>
-        /// Gets or Sets Timestamp
+        /// Timestamp of this event.
         /// </summary>
+        /// <value>Timestamp of this event.</value>
         [DataMember(Name = "timestamp", EmitDefaultValue = true)]
         public string Timestamp { get; set; }
 
         /// <summary>
-        /// Gets or Sets Tick
+        /// Tick of the swap operation.
         /// </summary>
+        /// <value>Tick of the swap operation.</value>
         [DataMember(Name = "tick", EmitDefaultValue = true)]
         public string Tick { get; set; }
 
         /// <summary>
-        /// Gets or Sets TokenIn
+        /// Token deposited into pool.
         /// </summary>
+        /// <value>Token deposited into pool.</value>
         [DataMember(Name = "token_in", EmitDefaultValue = true)]
         public string TokenIn { get; set; }
 
         /// <summary>
-        /// Gets or Sets AmountIn
+        /// Amount of token deposited into pool in native units.
         /// </summary>
+        /// <value>Amount of token deposited into pool in native units.</value>
         [DataMember(Name = "amount_in", EmitDefaultValue = true)]
         public string AmountIn { get; set; }
 
         /// <summary>
-        /// Gets or Sets AmountInUsd
+        /// Amount of token deposited into pool in USD.
         /// </summary>
+        /// <value>Amount of token deposited into pool in USD.</value>
         [DataMember(Name = "amount_in_usd", EmitDefaultValue = true)]
         public string AmountInUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets TokenOut
+        /// Token withdrawn from pool.
         /// </summary>
+        /// <value>Token withdrawn from pool.</value>
         [DataMember(Name = "token_out", EmitDefaultValue = true)]
         public string TokenOut { get; set; }
 
         /// <summary>
-        /// Gets or Sets AmountOut
+        /// Amount of token withdrawn from pool in native units.
         /// </summary>
+        /// <value>Amount of token withdrawn from pool in native units.</value>
         [DataMember(Name = "amount_out", EmitDefaultValue = true)]
         public string AmountOut { get; set; }
 
         /// <summary>
-        /// Gets or Sets AmountOutUsd
+        /// Amount of token withdrawn from pool in USD.
         /// </summary>
+        /// <value>Amount of token withdrawn from pool in USD.</value>
         [DataMember(Name = "amount_out_usd", EmitDefaultValue = true)]
         public string AmountOutUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets ReserveAmounts
+        /// Amount of input tokens in the liquidity pool.
         /// </summary>
+        /// <value>Amount of input tokens in the liquidity pool.</value>
         [DataMember(Name = "reserve_amounts", EmitDefaultValue = true)]
         public List<string> ReserveAmounts { get; set; }
 
@@ -307,7 +319,6 @@ namespace CoinAPI.EMS.REST.V1.Model
             sb.Append("  EntryTime: ").Append(EntryTime).Append("\n");
             sb.Append("  RecvTime: ").Append(RecvTime).Append("\n");
             sb.Append("  BlockNumber: ").Append(BlockNumber).Append("\n");
-            sb.Append("  Vid: ").Append(Vid).Append("\n");
             sb.Append("  Block: ").Append(Block).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Hash: ").Append(Hash).Append("\n");
@@ -381,10 +392,6 @@ namespace CoinAPI.EMS.REST.V1.Model
                 (
                     this.BlockNumber == input.BlockNumber ||
                     this.BlockNumber.Equals(input.BlockNumber)
-                ) && 
-                (
-                    this.Vid == input.Vid ||
-                    this.Vid.Equals(input.Vid)
                 ) && 
                 (
                     this.Block == input.Block ||
@@ -527,7 +534,6 @@ namespace CoinAPI.EMS.REST.V1.Model
                     hashCode = (hashCode * 59) + this.RecvTime.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.BlockNumber.GetHashCode();
-                hashCode = (hashCode * 59) + this.Vid.GetHashCode();
                 hashCode = (hashCode * 59) + this.Block.GetHashCode();
                 if (this.Id != null)
                 {

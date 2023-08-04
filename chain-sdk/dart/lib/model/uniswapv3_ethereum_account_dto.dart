@@ -16,7 +16,6 @@ class UNISWAPV3ETHEREUMAccountDTO {
     this.entryTime,
     this.recvTime,
     this.blockNumber,
-    this.vid,
     this.blockRange,
     this.id,
     this.positionCount,
@@ -53,21 +52,12 @@ class UNISWAPV3ETHEREUMAccountDTO {
   int? blockNumber;
 
   /// 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? vid;
-
-  /// 
   String? blockRange;
 
-  /// 
+  /// Account address.
   String? id;
 
-  /// 
+  /// Number of positions this account has.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -76,7 +66,7 @@ class UNISWAPV3ETHEREUMAccountDTO {
   ///
   int? positionCount;
 
-  /// 
+  /// Number of open positions this account has.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -85,7 +75,7 @@ class UNISWAPV3ETHEREUMAccountDTO {
   ///
   int? openPositionCount;
 
-  /// 
+  /// Number of closed positions this account has.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -94,7 +84,7 @@ class UNISWAPV3ETHEREUMAccountDTO {
   ///
   int? closedPositionCount;
 
-  /// 
+  /// Number of deposits this account made.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -103,7 +93,7 @@ class UNISWAPV3ETHEREUMAccountDTO {
   ///
   int? depositCount;
 
-  /// 
+  /// Number of withdrawals this account made.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -112,7 +102,7 @@ class UNISWAPV3ETHEREUMAccountDTO {
   ///
   int? withdrawCount;
 
-  /// 
+  /// Number of times this account has traded/swapped.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -126,7 +116,6 @@ class UNISWAPV3ETHEREUMAccountDTO {
      other.entryTime == entryTime &&
      other.recvTime == recvTime &&
      other.blockNumber == blockNumber &&
-     other.vid == vid &&
      other.blockRange == blockRange &&
      other.id == id &&
      other.positionCount == positionCount &&
@@ -142,7 +131,6 @@ class UNISWAPV3ETHEREUMAccountDTO {
     (entryTime == null ? 0 : entryTime!.hashCode) +
     (recvTime == null ? 0 : recvTime!.hashCode) +
     (blockNumber == null ? 0 : blockNumber!.hashCode) +
-    (vid == null ? 0 : vid!.hashCode) +
     (blockRange == null ? 0 : blockRange!.hashCode) +
     (id == null ? 0 : id!.hashCode) +
     (positionCount == null ? 0 : positionCount!.hashCode) +
@@ -153,7 +141,7 @@ class UNISWAPV3ETHEREUMAccountDTO {
     (swapCount == null ? 0 : swapCount!.hashCode);
 
   @override
-  String toString() => 'UNISWAPV3ETHEREUMAccountDTO[entryTime=$entryTime, recvTime=$recvTime, blockNumber=$blockNumber, vid=$vid, blockRange=$blockRange, id=$id, positionCount=$positionCount, openPositionCount=$openPositionCount, closedPositionCount=$closedPositionCount, depositCount=$depositCount, withdrawCount=$withdrawCount, swapCount=$swapCount]';
+  String toString() => 'UNISWAPV3ETHEREUMAccountDTO[entryTime=$entryTime, recvTime=$recvTime, blockNumber=$blockNumber, blockRange=$blockRange, id=$id, positionCount=$positionCount, openPositionCount=$openPositionCount, closedPositionCount=$closedPositionCount, depositCount=$depositCount, withdrawCount=$withdrawCount, swapCount=$swapCount]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -171,11 +159,6 @@ class UNISWAPV3ETHEREUMAccountDTO {
       json[r'block_number'] = this.blockNumber;
     } else {
       json[r'block_number'] = null;
-    }
-    if (this.vid != null) {
-      json[r'vid'] = this.vid;
-    } else {
-      json[r'vid'] = null;
     }
     if (this.blockRange != null) {
       json[r'block_range'] = this.blockRange;
@@ -242,7 +225,6 @@ class UNISWAPV3ETHEREUMAccountDTO {
         entryTime: mapDateTime(json, r'entry_time', ''),
         recvTime: mapDateTime(json, r'recv_time', ''),
         blockNumber: mapValueOfType<int>(json, r'block_number'),
-        vid: mapValueOfType<int>(json, r'vid'),
         blockRange: mapValueOfType<String>(json, r'block_range'),
         id: mapValueOfType<String>(json, r'id'),
         positionCount: mapValueOfType<int>(json, r'position_count'),
