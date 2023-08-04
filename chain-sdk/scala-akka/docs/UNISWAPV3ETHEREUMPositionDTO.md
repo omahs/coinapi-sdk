@@ -2,7 +2,7 @@
 
 # PositionDTO
 
-Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
+
 
 ## Properties
 
@@ -11,24 +11,29 @@ Name | Type | Description | Notes
 **entryTime** | **OffsetDateTime** |  |  [optional]
 **recvTime** | **OffsetDateTime** |  |  [optional]
 **blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional]
-**id** | **String** | NFT token identifier. |  [optional]
-**owner** | **String** | Owner of the NFT. |  [optional]
-**pool** | **String** | Pool position is within. |  [optional]
-**token0** | **String** | Reference to token0 as stored in pair contract. |  [optional]
-**token1** | **String** | Reference to token1 as stored in pair contract. |  [optional]
-**tickLower** | **String** | Lower tick of the position. |  [optional]
-**tickUpper** | **String** | Upper tick of the position. |  [optional]
-**liquidity** | **String** | Total position liquidity. |  [optional]
-**depositedToken0** | **String** | Amount of token 0 ever deposited to position. |  [optional]
-**depositedToken1** | **String** | Amount of token 1 ever deposited to position. |  [optional]
-**withdrawnToken0** | **String** | Amount of token 0 ever withdrawn from position (without fees). |  [optional]
-**withdrawnToken1** | **String** | Amount of token 1 ever withdrawn from position (without fees). |  [optional]
-**collectedFeesToken0** | **String** | All time collected fees in token0. |  [optional]
-**collectedFeesToken1** | **String** | All time collected fees in token1. |  [optional]
-**transaction** | **String** | Transaction in which the position was initialized. |  [optional]
-**feeGrowthInside0LastX128** | **String** | Variable needed for fee computation. |  [optional]
-**feeGrowthInside1LastX128** | **String** | Variable needed for fee computation. |  [optional]
 **vid** | **Long** |  |  [optional]
+**id** | **String** | (account address)-(market address)-(count) |  [optional]
+**account** | **String** | Account that owns this position |  [optional]
+**pool** | **String** | The liquidity pool in which this position was opened |  [optional]
+**hashOpened** | **String** | The hash of the transaction that opened this position |  [optional]
+**hashClosed** | **String** | The hash of the transaction that closed this position |  [optional]
+**blockNumberOpened** | **String** | Block number of when the position was opened |  [optional]
+**timestampOpened** | **String** | Timestamp when the position was opened |  [optional]
+**blockNumberClosed** | **String** | Block number of when the position was closed (0 if still open) |  [optional]
+**timestampClosed** | **String** | Timestamp when the position was closed (0 if still open) |  [optional]
+**tickLower** | **String** | lower tick of the position |  [optional]
+**tickUpper** | **String** | upper tick of the position |  [optional]
+**liquidityToken** | **String** | Token that is to represent ownership of liquidity |  [optional]
+**liquidityTokenType** | **String** | Type of token used to track liquidity |  [optional]
+**liquidity** | **String** | total position liquidity |  [optional]
+**liquidityUsd** | **String** | total position liquidity in USD |  [optional]
+**cumulativeDepositTokenAmounts** | **Seq&lt;String&gt;** | amount of tokens ever deposited to position |  [optional]
+**cumulativeDepositUsd** | **String** | amount of tokens in USD deposited to position |  [optional]
+**cumulativeWithdrawTokenAmounts** | **Seq&lt;String&gt;** | amount of tokens ever withdrawn from position (without fees) |  [optional]
+**cumulativeWithdrawUsd** | **String** | amount of tokens in USD withdrawn from position (without fees) |  [optional]
+**cumulativeRewardUsd** | **Seq&lt;String&gt;** | Total reward token accumulated under this position, in USD |  [optional]
+**depositCount** | **Int** | Number of deposits related to this position |  [optional]
+**withdrawCount** | **Int** | Number of withdrawals related to this position |  [optional]
 
 
 

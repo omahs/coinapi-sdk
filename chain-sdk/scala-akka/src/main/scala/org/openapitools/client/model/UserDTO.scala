@@ -19,11 +19,11 @@ case class UserDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* User address. */
-  id: Option[String] = None,
-  /* Total USD value swapped. */
-  usdSwapped: Option[String] = None,
   /*  */
-  vid: Option[Long] = None
+  vid: Option[Long] = None,
+  /*  */
+  blockRange: Option[String] = None,
+  /*  */
+  id: Option[String] = None
 ) extends ApiModel
 

@@ -10,14 +10,8 @@ import 'package:openapi/src/auth/basic_auth.dart';
 import 'package:openapi/src/auth/bearer_auth.dart';
 import 'package:openapi/src/auth/oauth.dart';
 import 'package:openapi/src/api/cryptopunks_api.dart';
-import 'package:openapi/src/api/cow_api.dart';
-import 'package:openapi/src/api/curve_api.dart';
-import 'package:openapi/src/api/dex_api.dart';
 import 'package:openapi/src/api/metadata_api.dart';
-import 'package:openapi/src/api/sushiswap_api.dart';
 import 'package:openapi/src/api/uniswapv3_ethereum_api.dart';
-import 'package:openapi/src/api/uniswap_v2_api.dart';
-import 'package:openapi/src/api/uniswap_v3_api.dart';
 
 class Openapi {
   static const String basePath = r'https://onchain.coinapi.io';
@@ -79,51 +73,15 @@ class Openapi {
     return CRYPTOPUNKSApi(dio, serializers);
   }
 
-  /// Get CowApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  CowApi getCowApi() {
-    return CowApi(dio, serializers);
-  }
-
-  /// Get CurveApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  CurveApi getCurveApi() {
-    return CurveApi(dio, serializers);
-  }
-
-  /// Get DexApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  DexApi getDexApi() {
-    return DexApi(dio, serializers);
-  }
-
   /// Get MetadataApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   MetadataApi getMetadataApi() {
     return MetadataApi(dio, serializers);
   }
 
-  /// Get SushiswapApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  SushiswapApi getSushiswapApi() {
-    return SushiswapApi(dio, serializers);
-  }
-
   /// Get UNISWAPV3ETHEREUMApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   UNISWAPV3ETHEREUMApi getUNISWAPV3ETHEREUMApi() {
     return UNISWAPV3ETHEREUMApi(dio, serializers);
-  }
-
-  /// Get UniswapV2Api instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  UniswapV2Api getUniswapV2Api() {
-    return UniswapV2Api(dio, serializers);
-  }
-
-  /// Get UniswapV3Api instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  UniswapV3Api getUniswapV3Api() {
-    return UniswapV3Api(dio, serializers);
   }
 }

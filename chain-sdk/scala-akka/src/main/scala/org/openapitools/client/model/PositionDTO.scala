@@ -19,41 +19,51 @@ case class PositionDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* NFT token identifier. */
-  id: Option[String] = None,
-  /* Owner of the NFT. */
-  owner: Option[String] = None,
-  /* Pool position is within. */
-  pool: Option[String] = None,
-  /* Reference to token0 as stored in pair contract. */
-  token0: Option[String] = None,
-  /* Reference to token1 as stored in pair contract. */
-  token1: Option[String] = None,
-  /* Lower tick of the position. */
-  tickLower: Option[String] = None,
-  /* Upper tick of the position. */
-  tickUpper: Option[String] = None,
-  /* Total position liquidity. */
-  liquidity: Option[String] = None,
-  /* Amount of token 0 ever deposited to position. */
-  depositedToken0: Option[String] = None,
-  /* Amount of token 1 ever deposited to position. */
-  depositedToken1: Option[String] = None,
-  /* Amount of token 0 ever withdrawn from position (without fees). */
-  withdrawnToken0: Option[String] = None,
-  /* Amount of token 1 ever withdrawn from position (without fees). */
-  withdrawnToken1: Option[String] = None,
-  /* All time collected fees in token0. */
-  collectedFeesToken0: Option[String] = None,
-  /* All time collected fees in token1. */
-  collectedFeesToken1: Option[String] = None,
-  /* Transaction in which the position was initialized. */
-  transaction: Option[String] = None,
-  /* Variable needed for fee computation. */
-  feeGrowthInside0LastX128: Option[String] = None,
-  /* Variable needed for fee computation. */
-  feeGrowthInside1LastX128: Option[String] = None,
   /*  */
-  vid: Option[Long] = None
+  vid: Option[Long] = None,
+  /* (account address)-(market address)-(count) */
+  id: Option[String] = None,
+  /* Account that owns this position */
+  account: Option[String] = None,
+  /* The liquidity pool in which this position was opened */
+  pool: Option[String] = None,
+  /* The hash of the transaction that opened this position */
+  hashOpened: Option[String] = None,
+  /* The hash of the transaction that closed this position */
+  hashClosed: Option[String] = None,
+  /* Block number of when the position was opened */
+  blockNumberOpened: Option[String] = None,
+  /* Timestamp when the position was opened */
+  timestampOpened: Option[String] = None,
+  /* Block number of when the position was closed (0 if still open) */
+  blockNumberClosed: Option[String] = None,
+  /* Timestamp when the position was closed (0 if still open) */
+  timestampClosed: Option[String] = None,
+  /* lower tick of the position */
+  tickLower: Option[String] = None,
+  /* upper tick of the position */
+  tickUpper: Option[String] = None,
+  /* Token that is to represent ownership of liquidity */
+  liquidityToken: Option[String] = None,
+  /* Type of token used to track liquidity */
+  liquidityTokenType: Option[String] = None,
+  /* total position liquidity */
+  liquidity: Option[String] = None,
+  /* total position liquidity in USD */
+  liquidityUsd: Option[String] = None,
+  /* amount of tokens ever deposited to position */
+  cumulativeDepositTokenAmounts: Option[Seq[String]] = None,
+  /* amount of tokens in USD deposited to position */
+  cumulativeDepositUsd: Option[String] = None,
+  /* amount of tokens ever withdrawn from position (without fees) */
+  cumulativeWithdrawTokenAmounts: Option[Seq[String]] = None,
+  /* amount of tokens in USD withdrawn from position (without fees) */
+  cumulativeWithdrawUsd: Option[String] = None,
+  /* Total reward token accumulated under this position, in USD */
+  cumulativeRewardUsd: Option[Seq[String]] = None,
+  /* Number of deposits related to this position */
+  depositCount: Option[Int] = None,
+  /* Number of withdrawals related to this position */
+  withdrawCount: Option[Int] = None
 ) extends ApiModel
 

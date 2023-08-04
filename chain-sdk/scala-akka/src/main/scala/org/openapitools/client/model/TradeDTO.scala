@@ -17,43 +17,33 @@ import org.openapitools.client.core.ApiModel
 case class TradeDTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
-  /* Number of block in which entity was recorded. */
-  blockNumber: Option[Long] = None,
+  /*  */
+  blockNumber: Option[String] = None,
+  /*  */
+  vid: Option[Long] = None,
+  /*  */
+  blockRange: Option[String] = None,
   /*  */
   id: Option[String] = None,
   /*  */
-  order: Option[String] = None,
+  transactionHash: Option[String] = None,
   /*  */
-  owner: Option[String] = None,
+  logIndex: Option[Int] = None,
   /*  */
-  sellVolume: Option[String] = None,
+  timestamp: Option[String] = None,
   /*  */
-  buyVolume: Option[String] = None,
+  isBundle: Option[Boolean] = None,
   /*  */
-  tradeBatchId: Option[String] = None,
-  /* The date of the end of the batch. */
-  tradeEpoch: Option[String] = None,
+  collection: Option[String] = None,
   /*  */
-  buyToken: Option[String] = None,
+  tokenId: Option[String] = None,
   /*  */
-  sellToken: Option[String] = None,
-  /* The date where the transaction was mined. */
-  createEpoch: Option[String] = None,
+  amount: Option[String] = None,
   /*  */
-  revertEpoch: Option[String] = None,
+  priceEth: Option[String] = None,
   /*  */
-  txHash: Option[String] = None,
+  buyer: Option[String] = None,
   /*  */
-  txLogIndex: Option[String] = None,
-  /*  */
-  vid: Option[Long] = None,
-  poolId: Option[String] = None,
-  transactionId: Option[String] = None,
-  evaluatedPrice: Option[Double] = None,
-  evaluatedAmount: Option[Double] = None,
-  evaluatedAggressor: Option[ETradeAggressiveSide] = None
+  seller: Option[String] = None
 ) extends ApiModel
 
-object TradeDTOEnums {
-
-}

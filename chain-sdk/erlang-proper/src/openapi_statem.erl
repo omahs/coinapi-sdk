@@ -58,172 +58,232 @@ cleanup() -> ok.
 initial_state() -> #{}.
 
 %%==============================================================================
-%% uniswap_v3_bundles_(current)
+%% u_niswapv3_ethereum_accounts_(current)
 %%==============================================================================
 
-uniswap_v3_bundles_(current)() ->
-  openapi_api:uniswap_v3_bundles_(current)().
+u_niswapv3_ethereum_accounts_(current)() ->
+  openapi_api:u_niswapv3_ethereum_accounts_(current)().
 
-uniswap_v3_bundles_(current)_args(_S) ->
+u_niswapv3_ethereum_accounts_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_burns_(current)
+%% u_niswapv3_ethereum_active_accounts_(current)
 %%==============================================================================
 
-uniswap_v3_burns_(current)() ->
-  openapi_api:uniswap_v3_burns_(current)().
+u_niswapv3_ethereum_active_accounts_(current)() ->
+  openapi_api:u_niswapv3_ethereum_active_accounts_(current)().
 
-uniswap_v3_burns_(current)_args(_S) ->
+u_niswapv3_ethereum_active_accounts_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_factories_(current)
+%% u_niswapv3_ethereum_deposits_(current)
 %%==============================================================================
 
-uniswap_v3_factories_(current)() ->
-  openapi_api:uniswap_v3_factories_(current)().
+u_niswapv3_ethereum_deposits_(current)() ->
+  openapi_api:u_niswapv3_ethereum_deposits_(current)().
 
-uniswap_v3_factories_(current)_args(_S) ->
+u_niswapv3_ethereum_deposits_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_mints_(current)
+%% u_niswapv3_ethereum_dex_amm_protocols_(current)
 %%==============================================================================
 
-uniswap_v3_mints_(current)() ->
-  openapi_api:uniswap_v3_mints_(current)().
+u_niswapv3_ethereum_dex_amm_protocols_(current)() ->
+  openapi_api:u_niswapv3_ethereum_dex_amm_protocols_(current)().
 
-uniswap_v3_mints_(current)_args(_S) ->
+u_niswapv3_ethereum_dex_amm_protocols_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_pool_day_data_(current)
+%% u_niswapv3_ethereum_financials_daily_snapshots_(current)
 %%==============================================================================
 
-uniswap_v3_pool_day_data_(current)() ->
-  openapi_api:uniswap_v3_pool_day_data_(current)().
+u_niswapv3_ethereum_financials_daily_snapshots_(current)() ->
+  openapi_api:u_niswapv3_ethereum_financials_daily_snapshots_(current)().
 
-uniswap_v3_pool_day_data_(current)_args(_S) ->
+u_niswapv3_ethereum_financials_daily_snapshots_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_pool_hour_data_(current)
+%% u_niswapv3_ethereum_liquidity_pool_amounts_(current)
 %%==============================================================================
 
-uniswap_v3_pool_hour_data_(current)() ->
-  openapi_api:uniswap_v3_pool_hour_data_(current)().
+u_niswapv3_ethereum_liquidity_pool_amounts_(current)() ->
+  openapi_api:u_niswapv3_ethereum_liquidity_pool_amounts_(current)().
 
-uniswap_v3_pool_hour_data_(current)_args(_S) ->
+u_niswapv3_ethereum_liquidity_pool_amounts_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_pools_(current)
+%% u_niswapv3_ethereum_liquidity_pool_daily_snapshots_(current)
 %%==============================================================================
 
-uniswap_v3_pools_(current)() ->
-  openapi_api:uniswap_v3_pools_(current)().
+u_niswapv3_ethereum_liquidity_pool_daily_snapshots_(current)() ->
+  openapi_api:u_niswapv3_ethereum_liquidity_pool_daily_snapshots_(current)().
 
-uniswap_v3_pools_(current)_args(_S) ->
+u_niswapv3_ethereum_liquidity_pool_daily_snapshots_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_position_snapshots_(current)
+%% u_niswapv3_ethereum_liquidity_pool_fees_(current)
 %%==============================================================================
 
-uniswap_v3_position_snapshots_(current)() ->
-  openapi_api:uniswap_v3_position_snapshots_(current)().
+u_niswapv3_ethereum_liquidity_pool_fees_(current)() ->
+  openapi_api:u_niswapv3_ethereum_liquidity_pool_fees_(current)().
 
-uniswap_v3_position_snapshots_(current)_args(_S) ->
+u_niswapv3_ethereum_liquidity_pool_fees_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_positions_(current)
+%% u_niswapv3_ethereum_liquidity_pool_hourly_snapshots_(current)
 %%==============================================================================
 
-uniswap_v3_positions_(current)() ->
-  openapi_api:uniswap_v3_positions_(current)().
+u_niswapv3_ethereum_liquidity_pool_hourly_snapshots_(current)() ->
+  openapi_api:u_niswapv3_ethereum_liquidity_pool_hourly_snapshots_(current)().
 
-uniswap_v3_positions_(current)_args(_S) ->
+u_niswapv3_ethereum_liquidity_pool_hourly_snapshots_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_swaps_(current)
+%% u_niswapv3_ethereum_liquidity_pools_(current)
 %%==============================================================================
 
-uniswap_v3_swaps_(current)() ->
-  openapi_api:uniswap_v3_swaps_(current)().
+u_niswapv3_ethereum_liquidity_pools_(current)() ->
+  openapi_api:u_niswapv3_ethereum_liquidity_pools_(current)().
 
-uniswap_v3_swaps_(current)_args(_S) ->
+u_niswapv3_ethereum_liquidity_pools_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_tick_day_data_(current)
+%% u_niswapv3_ethereum_position_snapshots_(current)
 %%==============================================================================
 
-uniswap_v3_tick_day_data_(current)() ->
-  openapi_api:uniswap_v3_tick_day_data_(current)().
+u_niswapv3_ethereum_position_snapshots_(current)() ->
+  openapi_api:u_niswapv3_ethereum_position_snapshots_(current)().
 
-uniswap_v3_tick_day_data_(current)_args(_S) ->
+u_niswapv3_ethereum_position_snapshots_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_ticks_(current)
+%% u_niswapv3_ethereum_positions_(current)
 %%==============================================================================
 
-uniswap_v3_ticks_(current)() ->
-  openapi_api:uniswap_v3_ticks_(current)().
+u_niswapv3_ethereum_positions_(current)() ->
+  openapi_api:u_niswapv3_ethereum_positions_(current)().
 
-uniswap_v3_ticks_(current)_args(_S) ->
+u_niswapv3_ethereum_positions_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_token_hour_data_(current)
+%% u_niswapv3_ethereum_reward_tokens_(current)
 %%==============================================================================
 
-uniswap_v3_token_hour_data_(current)() ->
-  openapi_api:uniswap_v3_token_hour_data_(current)().
+u_niswapv3_ethereum_reward_tokens_(current)() ->
+  openapi_api:u_niswapv3_ethereum_reward_tokens_(current)().
 
-uniswap_v3_token_hour_data_(current)_args(_S) ->
+u_niswapv3_ethereum_reward_tokens_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_token_v3_day_data_(current)
+%% u_niswapv3_ethereum_swaps_(current)
 %%==============================================================================
 
-uniswap_v3_token_v3_day_data_(current)() ->
-  openapi_api:uniswap_v3_token_v3_day_data_(current)().
+u_niswapv3_ethereum_swaps_(current)() ->
+  openapi_api:u_niswapv3_ethereum_swaps_(current)().
 
-uniswap_v3_token_v3_day_data_(current)_args(_S) ->
+u_niswapv3_ethereum_swaps_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_tokens_(current)
+%% u_niswapv3_ethereum_tick_daily_snapshots_(current)
 %%==============================================================================
 
-uniswap_v3_tokens_(current)() ->
-  openapi_api:uniswap_v3_tokens_(current)().
+u_niswapv3_ethereum_tick_daily_snapshots_(current)() ->
+  openapi_api:u_niswapv3_ethereum_tick_daily_snapshots_(current)().
 
-uniswap_v3_tokens_(current)_args(_S) ->
+u_niswapv3_ethereum_tick_daily_snapshots_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_transactions_(current)
+%% u_niswapv3_ethereum_tick_hourly_snapshots_(current)
 %%==============================================================================
 
-uniswap_v3_transactions_(current)() ->
-  openapi_api:uniswap_v3_transactions_(current)().
+u_niswapv3_ethereum_tick_hourly_snapshots_(current)() ->
+  openapi_api:u_niswapv3_ethereum_tick_hourly_snapshots_(current)().
 
-uniswap_v3_transactions_(current)_args(_S) ->
+u_niswapv3_ethereum_tick_hourly_snapshots_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_uniswap_day_data_(current)
+%% u_niswapv3_ethereum_ticks_(current)
 %%==============================================================================
 
-uniswap_v3_uniswap_day_data_(current)() ->
-  openapi_api:uniswap_v3_uniswap_day_data_(current)().
+u_niswapv3_ethereum_ticks_(current)() ->
+  openapi_api:u_niswapv3_ethereum_ticks_(current)().
 
-uniswap_v3_uniswap_day_data_(current)_args(_S) ->
+u_niswapv3_ethereum_ticks_(current)_args(_S) ->
+  [].
+
+%%==============================================================================
+%% u_niswapv3_ethereum_token_white_list_symbols_(current)
+%%==============================================================================
+
+u_niswapv3_ethereum_token_white_list_symbols_(current)() ->
+  openapi_api:u_niswapv3_ethereum_token_white_list_symbols_(current)().
+
+u_niswapv3_ethereum_token_white_list_symbols_(current)_args(_S) ->
+  [].
+
+%%==============================================================================
+%% u_niswapv3_ethereum_token_white_lists_(current)
+%%==============================================================================
+
+u_niswapv3_ethereum_token_white_lists_(current)() ->
+  openapi_api:u_niswapv3_ethereum_token_white_lists_(current)().
+
+u_niswapv3_ethereum_token_white_lists_(current)_args(_S) ->
+  [].
+
+%%==============================================================================
+%% u_niswapv3_ethereum_tokens_(current)
+%%==============================================================================
+
+u_niswapv3_ethereum_tokens_(current)() ->
+  openapi_api:u_niswapv3_ethereum_tokens_(current)().
+
+u_niswapv3_ethereum_tokens_(current)_args(_S) ->
+  [].
+
+%%==============================================================================
+%% u_niswapv3_ethereum_usage_metrics_daily_snapshots_(current)
+%%==============================================================================
+
+u_niswapv3_ethereum_usage_metrics_daily_snapshots_(current)() ->
+  openapi_api:u_niswapv3_ethereum_usage_metrics_daily_snapshots_(current)().
+
+u_niswapv3_ethereum_usage_metrics_daily_snapshots_(current)_args(_S) ->
+  [].
+
+%%==============================================================================
+%% u_niswapv3_ethereum_usage_metrics_hourly_snapshots_(current)
+%%==============================================================================
+
+u_niswapv3_ethereum_usage_metrics_hourly_snapshots_(current)() ->
+  openapi_api:u_niswapv3_ethereum_usage_metrics_hourly_snapshots_(current)().
+
+u_niswapv3_ethereum_usage_metrics_hourly_snapshots_(current)_args(_S) ->
+  [].
+
+%%==============================================================================
+%% u_niswapv3_ethereum_withdraws_(current)
+%%==============================================================================
+
+u_niswapv3_ethereum_withdraws_(current)() ->
+  openapi_api:u_niswapv3_ethereum_withdraws_(current)().
+
+u_niswapv3_ethereum_withdraws_(current)_args(_S) ->
   [].
 

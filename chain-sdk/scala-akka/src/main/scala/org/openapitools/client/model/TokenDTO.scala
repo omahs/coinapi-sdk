@@ -19,37 +19,32 @@ case class TokenDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /*  */
+  /* . */
   vid: Option[Long] = None,
-  /* Token address. */
+  /*  */
+  blockRange: Option[String] = None,
+  /* Smart contract address of the token. */
   id: Option[String] = None,
-  /* Token symbol. */
-  symbol: Option[String] = None,
-  /* Token name. */
+  /* Name of the token, mirrored from the smart contract. */
   name: Option[String] = None,
-  /* Token decimals. */
+  /* Symbol of the token, mirrored from the smart contract. */
+  symbol: Option[String] = None,
+  /* The number of decimal places this token uses, default to 18. */
   decimals: Option[Int] = None,
-  totalSupply: Option[BigInteger] = None,
-  /* Volume in token units. */
-  volume: Option[String] = None,
-  /* Volume in derived USD. */
-  volumeUsd: Option[String] = None,
-  /* Volume in USD even on pools with less reliable USD values. */
-  untrackedVolumeUsd: Option[String] = None,
-  /* Fees in USD. */
-  feesUsd: Option[String] = None,
-  txCount: Option[BigInteger] = None,
-  poolCount: Option[BigInteger] = None,
-  /* Liquidity across all pools in token units. */
-  totalValueLocked: Option[String] = None,
-  /* Liquidity across all pools in derived USD. */
+  /* Optional field to track the price of a token, mostly for caching purposes. */
+  lastPriceUsd: Option[String] = None,
+  /* Optional field to track the block number of the last token price. */
+  lastPriceBlockNumber: Option[String] = None,
+  /* Last pool that gave this token a price. */
+  lastPricePool: Option[String] = None,
+  /* Amount of tokens in the protocol. */
+  totalSupply: Option[String] = None,
+  /* Total value locked in the protocol. */
   totalValueLockedUsd: Option[String] = None,
-  /* TVL derived in USD untracked. */
-  totalValueLockedUsdUntracked: Option[String] = None,
-  /* Derived price in ETH. */
-  derivedEth: Option[String] = None,
-  /* Pools token is in that are white listed for USD pricing. */
-  whitelistPools: Option[Seq[String]] = None,
+  /* The buffer for detecting large price changes. */
+  largePriceChangeBuffer: Option[Int] = None,
+  /* The buffer for detecting large TVL (Total Value Locked) impact. */
+  largeTvlImpactBuffer: Option[Int] = None,
   tokenSymbol: Option[String] = None
 ) extends ApiModel
 

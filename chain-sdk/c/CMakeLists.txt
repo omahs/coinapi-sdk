@@ -54,11 +54,6 @@ set(SRCS
     src/binary.c
     external/cJSON.c
     model/object.c
-    model/cow_order_dto.c
-    model/cow_settlement_dto.c
-    model/cow_token_dto.c
-    model/cow_trade_dto.c
-    model/cow_user_dto.c
     model/cryptopunks_bid_dto.c
     model/cryptopunks_collection_daily_snapshot_dto.c
     model/cryptopunks_collection_dto.c
@@ -68,84 +63,7 @@ set(SRCS
     model/cryptopunks_marketplace_daily_snapshot_dto.c
     model/cryptopunks_trade_dto.c
     model/cryptopunks_user_dto.c
-    model/curve_account_dto.c
-    model/curve_add_liquidity_event_dto.c
-    model/curve_admin_fee_change_log_dto.c
-    model/curve_amplification_coeff_change_log_dto.c
-    model/curve_coin_dto.c
-    model/curve_contract_dto.c
-    model/curve_contract_version_dto.c
-    model/curve_daily_volume_dto.c
-    model/curve_exchange_dto.c
-    model/curve_fee_change_log_dto.c
-    model/curve_gauge_deposit_dto.c
-    model/curve_gauge_dto.c
-    model/curve_gauge_liquidity_dto.c
-    model/curve_gauge_total_weight_dto.c
-    model/curve_gauge_type_dto.c
-    model/curve_gauge_type_weight_dto.c
-    model/curve_gauge_weight_dto.c
-    model/curve_gauge_weight_vote_dto.c
-    model/curve_gauge_withdraw_dto.c
-    model/curve_hourly_volume_dto.c
-    model/curve_lp_token_dto.c
-    model/curve_pool_dto.c
-    model/curve_proposal_dto.c
-    model/curve_proposal_vote_dto.c
-    model/curve_remove_liquidity_event_dto.c
-    model/curve_remove_liquidity_one_event_dto.c
-    model/curve_system_state_dto.c
-    model/curve_token_dto.c
-    model/curve_transfer_ownership_event_dto.c
-    model/curve_underlying_coin_dto.c
-    model/curve_voting_app_dto.c
-    model/curve_weekly_volume_dto.c
-    model/dex_batch_dto.c
-    model/dex_deposit_dto.c
-    model/dex_order_dto.c
-    model/dex_price_dto.c
-    model/dex_solution_dto.c
-    model/dex_stats_dto.c
-    model/dex_token_dto.c
-    model/dex_trade_dto.c
-    model/dex_user_dto.c
-    model/dex_withdraw_dto.c
-    model/dex_withdraw_request_dto.c
-    model/numerics_big_integer.c
-    model/sushiswap_bundle_dto.c
-    model/sushiswap_burn_dto.c
-    model/sushiswap_day_data_dto.c
-    model/sushiswap_factory_dto.c
-    model/sushiswap_hour_data_dto.c
-    model/sushiswap_liquidity_position_dto.c
-    model/sushiswap_liquidity_position_snapshot_dto.c
-    model/sushiswap_mint_dto.c
-    model/sushiswap_pair_day_data_dto.c
-    model/sushiswap_pair_dto.c
-    model/sushiswap_pair_hour_data_dto.c
-    model/sushiswap_swap_dto.c
-    model/sushiswap_token_day_data_dto.c
-    model/sushiswap_token_dto.c
-    model/sushiswap_transaction_dto.c
-    model/sushiswap_user_dto.c
     model/transactions_e_trade_aggressive_side.c
-    model/uniswap_v2_bundle_dto.c
-    model/uniswap_v2_burn_dto.c
-    model/uniswap_v2_liquidity_position_dto.c
-    model/uniswap_v2_liquidity_position_snapshot_dto.c
-    model/uniswap_v2_mint_dto.c
-    model/uniswap_v2_pair_day_data_dto.c
-    model/uniswap_v2_pair_dto.c
-    model/uniswap_v2_pair_hour_data_dto.c
-    model/uniswap_v2_swap_dto.c
-    model/uniswap_v2_token_day_data_dto.c
-    model/uniswap_v2_token_dto.c
-    model/uniswap_v2_transaction_dto.c
-    model/uniswap_v2_uniswap_day_data_dto.c
-    model/uniswap_v2_uniswap_factory_dto.c
-    model/uniswap_v2_user_dto.c
-    model/uniswap_v3_bundle_dto.c
-    model/uniswap_v3_burn_dto.c
     model/uniswap_v3_ethereum_account_dto.c
     model/uniswap_v3_ethereum_active_account_dto.c
     model/uniswap_v3_ethereum_deposit_dto.c
@@ -169,30 +87,9 @@ set(SRCS
     model/uniswap_v3_ethereum_usage_metrics_daily_snapshot_dto.c
     model/uniswap_v3_ethereum_usage_metrics_hourly_snapshot_dto.c
     model/uniswap_v3_ethereum_withdraw_dto.c
-    model/uniswap_v3_factory_dto.c
-    model/uniswap_v3_mint_dto.c
-    model/uniswap_v3_pool_day_data_dto.c
-    model/uniswap_v3_pool_dto.c
-    model/uniswap_v3_pool_hour_data_dto.c
-    model/uniswap_v3_position_dto.c
-    model/uniswap_v3_position_snapshot_dto.c
-    model/uniswap_v3_swap_dto.c
-    model/uniswap_v3_tick_day_data_dto.c
-    model/uniswap_v3_tick_dto.c
-    model/uniswap_v3_token_dto.c
-    model/uniswap_v3_token_hour_data_dto.c
-    model/uniswap_v3_token_v3_day_data_dto.c
-    model/uniswap_v3_transaction_dto.c
-    model/uniswap_v3_uniswap_day_data_dto.c
     api/CRYPTOPUNKSAPI.c
-    api/CowAPI.c
-    api/CurveAPI.c
-    api/DexAPI.c
     api/MetadataAPI.c
-    api/SushiswapAPI.c
     api/UNISWAPV3ETHEREUMAPI.c
-    api/UniswapV2API.c
-    api/UniswapV3API.c
 
 )
 
@@ -203,11 +100,6 @@ set(HDRS
     include/keyValuePair.h
     external/cJSON.h
     model/object.h
-    model/cow_order_dto.h
-    model/cow_settlement_dto.h
-    model/cow_token_dto.h
-    model/cow_trade_dto.h
-    model/cow_user_dto.h
     model/cryptopunks_bid_dto.h
     model/cryptopunks_collection_daily_snapshot_dto.h
     model/cryptopunks_collection_dto.h
@@ -217,84 +109,7 @@ set(HDRS
     model/cryptopunks_marketplace_daily_snapshot_dto.h
     model/cryptopunks_trade_dto.h
     model/cryptopunks_user_dto.h
-    model/curve_account_dto.h
-    model/curve_add_liquidity_event_dto.h
-    model/curve_admin_fee_change_log_dto.h
-    model/curve_amplification_coeff_change_log_dto.h
-    model/curve_coin_dto.h
-    model/curve_contract_dto.h
-    model/curve_contract_version_dto.h
-    model/curve_daily_volume_dto.h
-    model/curve_exchange_dto.h
-    model/curve_fee_change_log_dto.h
-    model/curve_gauge_deposit_dto.h
-    model/curve_gauge_dto.h
-    model/curve_gauge_liquidity_dto.h
-    model/curve_gauge_total_weight_dto.h
-    model/curve_gauge_type_dto.h
-    model/curve_gauge_type_weight_dto.h
-    model/curve_gauge_weight_dto.h
-    model/curve_gauge_weight_vote_dto.h
-    model/curve_gauge_withdraw_dto.h
-    model/curve_hourly_volume_dto.h
-    model/curve_lp_token_dto.h
-    model/curve_pool_dto.h
-    model/curve_proposal_dto.h
-    model/curve_proposal_vote_dto.h
-    model/curve_remove_liquidity_event_dto.h
-    model/curve_remove_liquidity_one_event_dto.h
-    model/curve_system_state_dto.h
-    model/curve_token_dto.h
-    model/curve_transfer_ownership_event_dto.h
-    model/curve_underlying_coin_dto.h
-    model/curve_voting_app_dto.h
-    model/curve_weekly_volume_dto.h
-    model/dex_batch_dto.h
-    model/dex_deposit_dto.h
-    model/dex_order_dto.h
-    model/dex_price_dto.h
-    model/dex_solution_dto.h
-    model/dex_stats_dto.h
-    model/dex_token_dto.h
-    model/dex_trade_dto.h
-    model/dex_user_dto.h
-    model/dex_withdraw_dto.h
-    model/dex_withdraw_request_dto.h
-    model/numerics_big_integer.h
-    model/sushiswap_bundle_dto.h
-    model/sushiswap_burn_dto.h
-    model/sushiswap_day_data_dto.h
-    model/sushiswap_factory_dto.h
-    model/sushiswap_hour_data_dto.h
-    model/sushiswap_liquidity_position_dto.h
-    model/sushiswap_liquidity_position_snapshot_dto.h
-    model/sushiswap_mint_dto.h
-    model/sushiswap_pair_day_data_dto.h
-    model/sushiswap_pair_dto.h
-    model/sushiswap_pair_hour_data_dto.h
-    model/sushiswap_swap_dto.h
-    model/sushiswap_token_day_data_dto.h
-    model/sushiswap_token_dto.h
-    model/sushiswap_transaction_dto.h
-    model/sushiswap_user_dto.h
     model/transactions_e_trade_aggressive_side.h
-    model/uniswap_v2_bundle_dto.h
-    model/uniswap_v2_burn_dto.h
-    model/uniswap_v2_liquidity_position_dto.h
-    model/uniswap_v2_liquidity_position_snapshot_dto.h
-    model/uniswap_v2_mint_dto.h
-    model/uniswap_v2_pair_day_data_dto.h
-    model/uniswap_v2_pair_dto.h
-    model/uniswap_v2_pair_hour_data_dto.h
-    model/uniswap_v2_swap_dto.h
-    model/uniswap_v2_token_day_data_dto.h
-    model/uniswap_v2_token_dto.h
-    model/uniswap_v2_transaction_dto.h
-    model/uniswap_v2_uniswap_day_data_dto.h
-    model/uniswap_v2_uniswap_factory_dto.h
-    model/uniswap_v2_user_dto.h
-    model/uniswap_v3_bundle_dto.h
-    model/uniswap_v3_burn_dto.h
     model/uniswap_v3_ethereum_account_dto.h
     model/uniswap_v3_ethereum_active_account_dto.h
     model/uniswap_v3_ethereum_deposit_dto.h
@@ -318,30 +133,9 @@ set(HDRS
     model/uniswap_v3_ethereum_usage_metrics_daily_snapshot_dto.h
     model/uniswap_v3_ethereum_usage_metrics_hourly_snapshot_dto.h
     model/uniswap_v3_ethereum_withdraw_dto.h
-    model/uniswap_v3_factory_dto.h
-    model/uniswap_v3_mint_dto.h
-    model/uniswap_v3_pool_day_data_dto.h
-    model/uniswap_v3_pool_dto.h
-    model/uniswap_v3_pool_hour_data_dto.h
-    model/uniswap_v3_position_dto.h
-    model/uniswap_v3_position_snapshot_dto.h
-    model/uniswap_v3_swap_dto.h
-    model/uniswap_v3_tick_day_data_dto.h
-    model/uniswap_v3_tick_dto.h
-    model/uniswap_v3_token_dto.h
-    model/uniswap_v3_token_hour_data_dto.h
-    model/uniswap_v3_token_v3_day_data_dto.h
-    model/uniswap_v3_transaction_dto.h
-    model/uniswap_v3_uniswap_day_data_dto.h
     api/CRYPTOPUNKSAPI.h
-    api/CowAPI.h
-    api/CurveAPI.h
-    api/DexAPI.h
     api/MetadataAPI.h
-    api/SushiswapAPI.h
     api/UNISWAPV3ETHEREUMAPI.h
-    api/UniswapV2API.h
-    api/UniswapV3API.h
 
 )
 
@@ -424,14 +218,8 @@ set(HDRS "")
 ## set source files
 #set(SRCS
 #    unit-tests/manual-CRYPTOPUNKSAPI.c
-#    unit-tests/manual-CowAPI.c
-#    unit-tests/manual-CurveAPI.c
-#    unit-tests/manual-DexAPI.c
 #    unit-tests/manual-MetadataAPI.c
-#    unit-tests/manual-SushiswapAPI.c
 #    unit-tests/manual-UNISWAPV3ETHEREUMAPI.c
-#    unit-tests/manual-UniswapV2API.c
-#    unit-tests/manual-UniswapV3API.c
 #)
 
 ##set header files

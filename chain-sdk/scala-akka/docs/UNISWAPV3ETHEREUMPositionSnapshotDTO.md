@@ -3,6 +3,7 @@
 # PositionSnapshotDTO
 
 
+
 ## Properties
 
 Name | Type | Description | Notes
@@ -10,22 +11,23 @@ Name | Type | Description | Notes
 **entryTime** | **OffsetDateTime** |  |  [optional]
 **recvTime** | **OffsetDateTime** |  |  [optional]
 **blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional]
-**id** | **String** | NFT token identifier, format: (NFT token id)#(block number). |  [optional]
-**owner** | **String** | Owner of the NFT. |  [optional]
-**pool** | **String** | Pool the position is within. |  [optional]
-**position** | **String** | Position of which the snap was taken of. |  [optional]
-**timestamp** | **String** | Timestamp of block in which the snap was created. |  [optional]
-**liquidity** | **String** | Total position liquidity. |  [optional]
-**depositedToken0** | **String** | Amount of token 0 ever deposited to position. |  [optional]
-**depositedToken1** | **String** | Amount of token 1 ever deposited to position. |  [optional]
-**withdrawnToken0** | **String** | Amount of token 0 ever withdrawn from position (without fees). |  [optional]
-**withdrawnToken1** | **String** | Amount of token 1 ever withdrawn from position (without fees). |  [optional]
-**collectedFeesToken0** | **String** | All time collected fees in token0. |  [optional]
-**collectedFeesToken1** | **String** | All time collected fees in token1. |  [optional]
-**transaction** | **String** | Transaction in which the snapshot was initialized. |  [optional]
-**feeGrowthInside0LastX128** | **String** | Variable needed for fee computation. |  [optional]
-**feeGrowthInside1LastX128** | **String** | Variable needed for fee computation. |  [optional]
-**vid** | **Long** |  |  [optional]
+**id** | **String** |  (position id )-( transaction hash )-( log index )  |  [optional]
+**hash** | **String** | Transaction hash of the transaction that triggered this snapshot |  [optional]
+**logIndex** | **Int** | Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0 |  [optional]
+**nonce** | **String** | Nonce of the transaction that triggered this snapshot |  [optional]
+**position** | **String** | Position of this snapshot |  [optional]
+**liquidityTokenType** | **String** | Type of token used to track liquidity |  [optional]
+**liquidity** | **String** | total position liquidity |  [optional]
+**liquidityUsd** | **String** | total position liquidity in USD |  [optional]
+**cumulativeDepositTokenAmounts** | **Seq&lt;String&gt;** | amount of tokens ever deposited to position |  [optional]
+**cumulativeDepositUsd** | **String** | amount of tokens in USD deposited to position |  [optional]
+**cumulativeWithdrawTokenAmounts** | **Seq&lt;String&gt;** | amount of tokens ever withdrawn from position (without fees) |  [optional]
+**cumulativeWithdrawUsd** | **String** | amount of tokens in USD withdrawn from position (without fees) |  [optional]
+**cumulativeRewardTokenAmounts** | **Seq&lt;String&gt;** | Total reward token accumulated under this position, in native amounts |  [optional]
+**cumulativeRewardUsd** | **Seq&lt;String&gt;** | Total reward token accumulated under this position, in USD |  [optional]
+**depositCount** | **Int** | Number of deposits related to this position |  [optional]
+**withdrawCount** | **Int** | Number of withdrawals related to this position |  [optional]
+**timestamp** | **String** | Timestamp of this snapshot |  [optional]
 
 
 

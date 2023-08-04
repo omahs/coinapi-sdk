@@ -21,39 +21,33 @@ case class TickDTO (
   blockNumber: Option[Long] = None,
   /*  */
   vid: Option[Long] = None,
-  /* Identifier, format: (pool address)#(tick index) */
+  /* (pool address)-(tick index) */
   id: Option[String] = None,
-  /* Pool address. */
-  poolAddress: Option[String] = None,
-  tickIdx: Option[BigInteger] = None,
-  /* Pool address. */
+  /* tick index */
+  index: Option[String] = None,
+  /* Liquidity pool this tick belongs to */
   pool: Option[String] = None,
-  liquidityGross: Option[BigInteger] = None,
-  liquidityNet: Option[BigInteger] = None,
-  /* Calculated price of token0 of tick within this pool - constant. */
-  price0: Option[String] = None,
-  /* Calculated price of token1 of tick within this pool - constant. */
-  price1: Option[String] = None,
-  /* Lifetime volume of token0 with this tick in range. */
-  volumeToken0: Option[String] = None,
-  /* Lifetime volume of token1 with this tick in range. */
-  volumeToken1: Option[String] = None,
-  /* Lifetime volume in derived USD with this tick in range. */
-  volumeUsd: Option[String] = None,
-  /* Lifetime volume in untracked USD with this tick in range. */
-  untrackedVolumeUsd: Option[String] = None,
-  /* Fees in USD. */
-  feesUsd: Option[String] = None,
-  /* All time collected fees in token0. */
-  collectedFeesToken0: Option[String] = None,
-  /* All time collected fees in token1. */
-  collectedFeesToken1: Option[String] = None,
-  /* All time collected fees in USD. */
-  collectedFeesUsd: Option[String] = None,
-  /* Created time. */
-  createdAtTimestamp: Option[OffsetDateTime] = None,
-  liquidityProviderCount: Option[BigInteger] = None,
-  feeGrowthOutside0x128: Option[BigInteger] = None,
-  feeGrowthOutside1x128: Option[BigInteger] = None
+  /* Creation timestamp */
+  createdTimestamp: Option[String] = None,
+  /* Creation block number */
+  createdBlockNumber: Option[String] = None,
+  /* calculated price of token0 of tick within this pool - constant */
+  prices: Option[Seq[String]] = None,
+  /* total liquidity pool has as tick lower or upper */
+  liquidityGross: Option[String] = None,
+  /* total liquidity in USD pool has as tick lower or upper */
+  liquidityGrossUsd: Option[String] = None,
+  /* how much liquidity changes when tick crossed */
+  liquidityNet: Option[String] = None,
+  /* how much liquidity in USD changes when tick crossed */
+  liquidityNetUsd: Option[String] = None,
+  /* Day ID of the most recent daily snapshot */
+  lastSnapshotDayId: Option[Int] = None,
+  /* Hour ID of the most recent hourly snapshot */
+  lastSnapshotHourId: Option[Int] = None,
+  /* Timestamp of the last time this entity was updated */
+  lastUpdateTimestamp: Option[String] = None,
+  /* Block number of the last time this entity was updated */
+  lastUpdateBlockNumber: Option[String] = None
 ) extends ApiModel
 

@@ -19,37 +19,39 @@ case class PositionSnapshotDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* NFT token identifier, format: (NFT token id)#(block number). */
+  /*  (position id )-( transaction hash )-( log index )  */
   id: Option[String] = None,
-  /* Owner of the NFT. */
-  owner: Option[String] = None,
-  /* Pool the position is within. */
-  pool: Option[String] = None,
-  /* Position of which the snap was taken of. */
+  /* Transaction hash of the transaction that triggered this snapshot */
+  hash: Option[String] = None,
+  /* Event log index. For transactions that don't emit event, create arbitrary index starting from 0 */
+  logIndex: Option[Int] = None,
+  /* Nonce of the transaction that triggered this snapshot */
+  nonce: Option[String] = None,
+  /* Position of this snapshot */
   position: Option[String] = None,
-  /* Timestamp of block in which the snap was created. */
-  timestamp: Option[String] = None,
-  /* Total position liquidity. */
+  /* Type of token used to track liquidity */
+  liquidityTokenType: Option[String] = None,
+  /* total position liquidity */
   liquidity: Option[String] = None,
-  /* Amount of token 0 ever deposited to position. */
-  depositedToken0: Option[String] = None,
-  /* Amount of token 1 ever deposited to position. */
-  depositedToken1: Option[String] = None,
-  /* Amount of token 0 ever withdrawn from position (without fees). */
-  withdrawnToken0: Option[String] = None,
-  /* Amount of token 1 ever withdrawn from position (without fees). */
-  withdrawnToken1: Option[String] = None,
-  /* All time collected fees in token0. */
-  collectedFeesToken0: Option[String] = None,
-  /* All time collected fees in token1. */
-  collectedFeesToken1: Option[String] = None,
-  /* Transaction in which the snapshot was initialized. */
-  transaction: Option[String] = None,
-  /* Variable needed for fee computation. */
-  feeGrowthInside0LastX128: Option[String] = None,
-  /* Variable needed for fee computation. */
-  feeGrowthInside1LastX128: Option[String] = None,
-  /*  */
-  vid: Option[Long] = None
+  /* total position liquidity in USD */
+  liquidityUsd: Option[String] = None,
+  /* amount of tokens ever deposited to position */
+  cumulativeDepositTokenAmounts: Option[Seq[String]] = None,
+  /* amount of tokens in USD deposited to position */
+  cumulativeDepositUsd: Option[String] = None,
+  /* amount of tokens ever withdrawn from position (without fees) */
+  cumulativeWithdrawTokenAmounts: Option[Seq[String]] = None,
+  /* amount of tokens in USD withdrawn from position (without fees) */
+  cumulativeWithdrawUsd: Option[String] = None,
+  /* Total reward token accumulated under this position, in native amounts */
+  cumulativeRewardTokenAmounts: Option[Seq[String]] = None,
+  /* Total reward token accumulated under this position, in USD */
+  cumulativeRewardUsd: Option[Seq[String]] = None,
+  /* Number of deposits related to this position */
+  depositCount: Option[Int] = None,
+  /* Number of withdrawals related to this position */
+  withdrawCount: Option[Int] = None,
+  /* Timestamp of this snapshot */
+  timestamp: Option[String] = None
 ) extends ApiModel
 

@@ -19,40 +19,51 @@ case class SwapDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /*  */
-  vid: Option[Long] = None,
-  /* Identifier, format: (transaction hash) + # + (index in swaps Transaction array). */
+  /* Block number in which the swap operation was recorded. */
+  block: Option[Int] = None,
+  /* Unique string identifier of the swap operation, format: (transaction hash)-(log index). */
   id: Option[String] = None,
-  /* Pointer to transaction. */
-  transaction: Option[String] = None,
-  /* Timestamp of transaction. */
-  timestamp: Option[OffsetDateTime] = None,
-  /* Pool swap occured within. */
+  /* Transaction hash of the transaction that emitted this event. */
+  hash: Option[String] = None,
+  /* Nonce of the transaction that emitted this event. */
+  nonce: Option[String] = None,
+  /* Event log index. For transactions that don't emit event, create arbitrary index starting from 0. */
+  logIndex: Option[Int] = None,
+  /* Gas limit of the transaction that emitted this event. */
+  gasLimit: Option[String] = None,
+  /* Gas used in this transaction. */
+  gasUsed: Option[String] = None,
+  /* Gas price of the transaction that emitted this event. */
+  gasPrice: Option[String] = None,
+  /* The protocol this transaction belongs to. */
+  protocol: Option[String] = None,
+  /* Account that emitted this event. */
+  account: Option[String] = None,
+  /* The pool involving this event. */
   pool: Option[String] = None,
-  /* Reference to token0 as stored in pair contract. */
-  token0: Option[String] = None,
-  /* Reference to token1 as stored in pair contract. */
-  token1: Option[String] = None,
-  /* Sender of the swap. */
-  sender: Option[String] = None,
-  /* Recipient of the swap. */
-  recipient: Option[String] = None,
-  /* Transaction origin: the EOA (Externally Owned Account) that initiated the transaction */
-  origin: Option[String] = None,
-  /* Delta of token0 swapped. */
-  amount0: Option[String] = None,
-  /* Delta of token1 swapped. */
-  amount1: Option[String] = None,
-  /* Derived amount of tokens sold in USD. */
-  amountUsd: Option[String] = None,
-  sqrtPriceX96: Option[BigInteger] = None,
-  tick: Option[BigInteger] = None,
-  logIndex: Option[BigInteger] = None,
+  /* Timestamp of this event. */
+  timestamp: Option[String] = None,
+  /* Tick of the swap operation. */
+  tick: Option[String] = None,
+  /* Token deposited into pool. */
+  tokenIn: Option[String] = None,
+  /* Amount of token deposited into pool in native units. */
+  amountIn: Option[String] = None,
+  /* Amount of token deposited into pool in USD. */
+  amountInUsd: Option[String] = None,
+  /* Token withdrawn from pool. */
+  tokenOut: Option[String] = None,
+  /* Amount of token withdrawn from pool in native units. */
+  amountOut: Option[String] = None,
+  /* Amount of token withdrawn from pool in USD. */
+  amountOutUsd: Option[String] = None,
+  /* Amount of input tokens in the liquidity pool. */
+  reserveAmounts: Option[Seq[String]] = None,
+  poolId: Option[String] = None,
+  transactionId: Option[String] = None,
   evaluatedPrice: Option[Double] = None,
   evaluatedAmount: Option[Double] = None,
-  evaluatedAggressor: Option[ETradeAggressiveSide] = None,
-  poolId: Option[String] = None,
-  transactionId: Option[String] = None
+  evaluatedAggressor: Option[ETradeAggressiveSide] = None
 ) extends ApiModel
 
 object SwapDTOEnums {

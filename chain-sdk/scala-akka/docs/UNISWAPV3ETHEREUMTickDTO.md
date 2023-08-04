@@ -2,7 +2,7 @@
 
 # TickDTO
 
-Ticks are the boundaries between discrete areas in price space.
+
 
 ## Properties
 
@@ -12,26 +12,20 @@ Name | Type | Description | Notes
 **recvTime** | **OffsetDateTime** |  |  [optional]
 **blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional]
 **vid** | **Long** |  |  [optional]
-**id** | **String** | Identifier, format: (pool address)#(tick index) |  [optional]
-**poolAddress** | **String** | Pool address. |  [optional]
-**tickIdx** | [**BigInteger**](BigInteger.md) |  |  [optional]
-**pool** | **String** | Pool address. |  [optional]
-**liquidityGross** | [**BigInteger**](BigInteger.md) |  |  [optional]
-**liquidityNet** | [**BigInteger**](BigInteger.md) |  |  [optional]
-**price0** | **String** | Calculated price of token0 of tick within this pool - constant. |  [optional]
-**price1** | **String** | Calculated price of token1 of tick within this pool - constant. |  [optional]
-**volumeToken0** | **String** | Lifetime volume of token0 with this tick in range. |  [optional]
-**volumeToken1** | **String** | Lifetime volume of token1 with this tick in range. |  [optional]
-**volumeUsd** | **String** | Lifetime volume in derived USD with this tick in range. |  [optional]
-**untrackedVolumeUsd** | **String** | Lifetime volume in untracked USD with this tick in range. |  [optional]
-**feesUsd** | **String** | Fees in USD. |  [optional]
-**collectedFeesToken0** | **String** | All time collected fees in token0. |  [optional]
-**collectedFeesToken1** | **String** | All time collected fees in token1. |  [optional]
-**collectedFeesUsd** | **String** | All time collected fees in USD. |  [optional]
-**createdAtTimestamp** | **OffsetDateTime** | Created time. |  [optional]
-**liquidityProviderCount** | [**BigInteger**](BigInteger.md) |  |  [optional]
-**feeGrowthOutside0x128** | [**BigInteger**](BigInteger.md) |  |  [optional]
-**feeGrowthOutside1x128** | [**BigInteger**](BigInteger.md) |  |  [optional]
+**id** | **String** | (pool address)-(tick index) |  [optional]
+**index** | **String** | tick index |  [optional]
+**pool** | **String** | Liquidity pool this tick belongs to |  [optional]
+**createdTimestamp** | **String** | Creation timestamp |  [optional]
+**createdBlockNumber** | **String** | Creation block number |  [optional]
+**prices** | **Seq&lt;String&gt;** | calculated price of token0 of tick within this pool - constant |  [optional]
+**liquidityGross** | **String** | total liquidity pool has as tick lower or upper |  [optional]
+**liquidityGrossUsd** | **String** | total liquidity in USD pool has as tick lower or upper |  [optional]
+**liquidityNet** | **String** | how much liquidity changes when tick crossed |  [optional]
+**liquidityNetUsd** | **String** | how much liquidity in USD changes when tick crossed |  [optional]
+**lastSnapshotDayId** | **Int** | Day ID of the most recent daily snapshot |  [optional]
+**lastSnapshotHourId** | **Int** | Hour ID of the most recent hourly snapshot |  [optional]
+**lastUpdateTimestamp** | **String** | Timestamp of the last time this entity was updated |  [optional]
+**lastUpdateBlockNumber** | **String** | Block number of the last time this entity was updated |  [optional]
 
 
 
