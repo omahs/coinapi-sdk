@@ -49,7 +49,15 @@ Describe -tag 'PSOpenAPITools' -name 'UNISWAPV3ETHEREUMApi' {
 
     Context 'Invoke-UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent' {
         It 'Test Invoke-UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent' {
-            #$TestResult = Invoke-UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+            #$TestResult = Invoke-UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent -Id "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent' {
+        It 'Test Invoke-UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent' {
+            #$TestResult = Invoke-UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent -Pool "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -65,7 +73,15 @@ Describe -tag 'PSOpenAPITools' -name 'UNISWAPV3ETHEREUMApi' {
 
     Context 'Invoke-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent' {
         It 'Test Invoke-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent' {
-            #$TestResult = Invoke-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+            #$TestResult = Invoke-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent -Pool "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV3ETHEREUMLiquidityPoolsCurrent' {
+        It 'Test Invoke-UNISWAPV3ETHEREUMLiquidityPoolsCurrent' {
+            #$TestResult = Invoke-UNISWAPV3ETHEREUMLiquidityPoolsCurrent -Id "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -105,7 +121,7 @@ Describe -tag 'PSOpenAPITools' -name 'UNISWAPV3ETHEREUMApi' {
 
     Context 'Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent' {
         It 'Test Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent' {
-            #$TestResult = Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent
+            #$TestResult = Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent -Pool "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -145,7 +161,7 @@ Describe -tag 'PSOpenAPITools' -name 'UNISWAPV3ETHEREUMApi' {
 
     Context 'Invoke-UNISWAPV3ETHEREUMTokensCurrent' {
         It 'Test Invoke-UNISWAPV3ETHEREUMTokensCurrent' {
-            #$TestResult = Invoke-UNISWAPV3ETHEREUMTokensCurrent
+            #$TestResult = Invoke-UNISWAPV3ETHEREUMTokensCurrent -Id "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

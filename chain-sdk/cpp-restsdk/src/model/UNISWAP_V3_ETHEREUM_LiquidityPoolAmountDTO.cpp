@@ -29,6 +29,8 @@ UNISWAP_V3_ETHEREUM_LiquidityPoolAmountDTO::UNISWAP_V3_ETHEREUM_LiquidityPoolAmo
     m_Recv_timeIsSet = false;
     m_Block_number = 0L;
     m_Block_numberIsSet = false;
+    m_Vid = 0L;
+    m_VidIsSet = false;
     m_Block_range = utility::conversions::to_string_t("");
     m_Block_rangeIsSet = false;
     m_Id = utility::conversions::to_string_t("");
@@ -63,6 +65,10 @@ web::json::value UNISWAP_V3_ETHEREUM_LiquidityPoolAmountDTO::toJson() const
     if(m_Block_numberIsSet)
     {
         val[utility::conversions::to_string_t(U("block_number"))] = ModelBase::toJson(m_Block_number);
+    }
+    if(m_VidIsSet)
+    {
+        val[utility::conversions::to_string_t(U("vid"))] = ModelBase::toJson(m_Vid);
     }
     if(m_Block_rangeIsSet)
     {
@@ -120,6 +126,16 @@ bool UNISWAP_V3_ETHEREUM_LiquidityPoolAmountDTO::fromJson(const web::json::value
             int64_t refVal_setBlockNumber;
             ok &= ModelBase::fromJson(fieldValue, refVal_setBlockNumber);
             setBlockNumber(refVal_setBlockNumber);
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(U("vid"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(U("vid")));
+        if(!fieldValue.is_null())
+        {
+            int64_t refVal_setVid;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setVid);
+            setVid(refVal_setVid);
         }
     }
     if(val.has_field(utility::conversions::to_string_t(U("block_range"))))
@@ -194,6 +210,10 @@ void UNISWAP_V3_ETHEREUM_LiquidityPoolAmountDTO::toMultipart(std::shared_ptr<Mul
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(U("block_number")), m_Block_number));
     }
+    if(m_VidIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(U("vid")), m_Vid));
+    }
     if(m_Block_rangeIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(U("block_range")), m_Block_range));
@@ -242,6 +262,12 @@ bool UNISWAP_V3_ETHEREUM_LiquidityPoolAmountDTO::fromMultiPart(std::shared_ptr<M
         int64_t refVal_setBlockNumber;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(U("block_number"))), refVal_setBlockNumber );
         setBlockNumber(refVal_setBlockNumber);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(U("vid"))))
+    {
+        int64_t refVal_setVid;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(U("vid"))), refVal_setVid );
+        setVid(refVal_setVid);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(U("block_range"))))
     {
@@ -335,6 +361,26 @@ bool UNISWAP_V3_ETHEREUM_LiquidityPoolAmountDTO::blockNumberIsSet() const
 void UNISWAP_V3_ETHEREUM_LiquidityPoolAmountDTO::unsetBlock_number()
 {
     m_Block_numberIsSet = false;
+}
+int64_t UNISWAP_V3_ETHEREUM_LiquidityPoolAmountDTO::getVid() const
+{
+    return m_Vid;
+}
+
+void UNISWAP_V3_ETHEREUM_LiquidityPoolAmountDTO::setVid(int64_t value)
+{
+    m_Vid = value;
+    m_VidIsSet = true;
+}
+
+bool UNISWAP_V3_ETHEREUM_LiquidityPoolAmountDTO::vidIsSet() const
+{
+    return m_VidIsSet;
+}
+
+void UNISWAP_V3_ETHEREUM_LiquidityPoolAmountDTO::unsetVid()
+{
+    m_VidIsSet = false;
 }
 utility::string_t UNISWAP_V3_ETHEREUM_LiquidityPoolAmountDTO::getBlockRange() const
 {

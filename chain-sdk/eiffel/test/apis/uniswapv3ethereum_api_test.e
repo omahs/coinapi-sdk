@@ -84,10 +84,25 @@ feature -- Test routines
             -- Gets liquidityPoolAmounts.
         local
             l_response: LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_AMOUNT_DTO]
+            l_id: STRING_32
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_amounts_current
+            -- l_response := api.u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_amounts_current(l_id)
+            assert ("not_implemented", False)
+        end
+
+    test_u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_daily_snapshots_current
+            -- LiquidityPoolDailySnapshots (current)
+            --
+            -- Gets liquidityPoolDailySnapshots.
+        local
+            l_response: LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOT_DTO]
+            l_pool: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_daily_snapshots_current(l_pool)
             assert ("not_implemented", False)
         end
 
@@ -110,10 +125,25 @@ feature -- Test routines
             -- Gets liquidityPoolHourlySnapshots.
         local
             l_response: LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_HOURLY_SNAPSHOT_DTO]
+            l_pool: STRING_32
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_hourly_snapshots_current
+            -- l_response := api.u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_hourly_snapshots_current(l_pool)
+            assert ("not_implemented", False)
+        end
+
+    test_u_ni_sw_ap_v3_et_he_re_um_liquidity_pools_current
+            -- LiquidityPools (current)
+            --
+            -- Gets liquidityPools.
+        local
+            l_response: LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_DTO]
+            l_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.u_ni_sw_ap_v3_et_he_re_um_liquidity_pools_current(l_id)
             assert ("not_implemented", False)
         end
 
@@ -176,10 +206,11 @@ feature -- Test routines
             -- Gets tickDailySnapshots.
         local
             l_response: LIST [UNISWAP_V3_ETHEREUM_TICK_DAILY_SNAPSHOT_DTO]
+            l_pool: STRING_32
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.u_ni_sw_ap_v3_et_he_re_um_tick_daily_snapshots_current
+            -- l_response := api.u_ni_sw_ap_v3_et_he_re_um_tick_daily_snapshots_current(l_pool)
             assert ("not_implemented", False)
         end
 
@@ -243,10 +274,11 @@ feature -- Test routines
             -- Gets tokens.
         local
             l_response: LIST [UNISWAP_V3_ETHEREUM_TOKEN_DTO]
+            l_id: STRING_32
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.u_ni_sw_ap_v3_et_he_re_um_tokens_current
+            -- l_response := api.u_ni_sw_ap_v3_et_he_re_um_tokens_current(l_id)
             assert ("not_implemented", False)
         end
 

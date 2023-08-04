@@ -11,6 +11,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
+**vid** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 64 bit integer
 **id** | None, str,  | NoneClass, str,  | (Smart contract address of the pool)-( # of hours since Unix epoch time) | [optional] 
 **hour** | decimal.Decimal, int,  | decimal.Decimal,  | Number of hours since Unix epoch time | [optional] value must be a 32 bit integer
 **protocol** | None, str,  | NoneClass, str,  | The protocol this snapshot belongs to | [optional] 

@@ -7,6 +7,8 @@ import org.openapitools.model.UNISWAPV3ETHEREUMDepositDTO
 import org.openapitools.model.UNISWAPV3ETHEREUMDexAmmProtocolDTO
 import org.openapitools.model.UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO
 import org.openapitools.model.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO
+import org.openapitools.model.UNISWAPV3ETHEREUMLiquidityPoolDTO
+import org.openapitools.model.UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
 import org.openapitools.model.UNISWAPV3ETHEREUMLiquidityPoolFeeDTO
 import org.openapitools.model.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
 import org.openapitools.model.UNISWAPV3ETHEREUMPositionDTO
@@ -128,7 +130,7 @@ class UniswapV3EthereumApi {
 
     }
 
-    def uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent ( Closure onSuccess, Closure onFailure)  {
+    def uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent ( String id, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current"
 
         // params
@@ -138,6 +140,9 @@ class UniswapV3EthereumApi {
         def contentType
 
 
+        if (id != null) {
+            queryParams.put("id", id)
+        }
 
 
 
@@ -145,6 +150,29 @@ class UniswapV3EthereumApi {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.class )
+
+    }
+
+    def uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent ( String pool, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (pool != null) {
+            queryParams.put("pool", pool)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.class )
 
     }
 
@@ -168,7 +196,7 @@ class UniswapV3EthereumApi {
 
     }
 
-    def uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent ( Closure onSuccess, Closure onFailure)  {
+    def uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent ( String pool, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current"
 
         // params
@@ -178,6 +206,9 @@ class UniswapV3EthereumApi {
         def contentType
 
 
+        if (pool != null) {
+            queryParams.put("pool", pool)
+        }
 
 
 
@@ -185,6 +216,29 @@ class UniswapV3EthereumApi {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.class )
+
+    }
+
+    def uNISWAPV3ETHEREUMLiquidityPoolsCurrent ( String id, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswap_v3_ethereum/liquidityPools/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (id != null) {
+            queryParams.put("id", id)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    UNISWAPV3ETHEREUMLiquidityPoolDTO.class )
 
     }
 
@@ -271,7 +325,7 @@ class UniswapV3EthereumApi {
 
     }
 
-    def uNISWAPV3ETHEREUMTickDailySnapshotsCurrent ( Closure onSuccess, Closure onFailure)  {
+    def uNISWAPV3ETHEREUMTickDailySnapshotsCurrent ( String pool, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current"
 
         // params
@@ -281,6 +335,9 @@ class UniswapV3EthereumApi {
         def contentType
 
 
+        if (pool != null) {
+            queryParams.put("pool", pool)
+        }
 
 
 
@@ -377,7 +434,7 @@ class UniswapV3EthereumApi {
 
     }
 
-    def uNISWAPV3ETHEREUMTokensCurrent ( Closure onSuccess, Closure onFailure)  {
+    def uNISWAPV3ETHEREUMTokensCurrent ( String id, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/uniswap_v3_ethereum/tokens/current"
 
         // params
@@ -387,6 +444,9 @@ class UniswapV3EthereumApi {
         def contentType
 
 
+        if (id != null) {
+            queryParams.put("id", id)
+        }
 
 
 

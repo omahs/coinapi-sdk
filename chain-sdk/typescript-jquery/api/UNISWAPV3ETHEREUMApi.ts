@@ -339,8 +339,9 @@ export class UNISWAPV3ETHEREUMApi {
     /**
      * Gets liquidityPoolAmounts.
      * @summary LiquidityPoolAmounts (current)
+     * @param id Smart contract address of the pool.
      */
-    public uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
@@ -348,6 +349,9 @@ export class UNISWAPV3ETHEREUMApi {
 
         let queryParameters: any = {};
         let headerParams: any = {};
+        if (id !== null && id !== undefined) {
+            queryParameters['id'] = <string><any>id;
+        }
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
         // to determine the Content-Type header
@@ -387,6 +391,68 @@ export class UNISWAPV3ETHEREUMApi {
         >();
         $.ajax(requestOptions).then(
             (data: Array<models.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets liquidityPoolDailySnapshots.
+     * @summary LiquidityPoolDailySnapshots (current)
+     * @param pool Pool this snapshot belongs to.
+     */
+    public uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (pool !== null && pool !== undefined) {
+            queryParameters['pool'] = <string><any>pool;
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -455,8 +521,9 @@ export class UNISWAPV3ETHEREUMApi {
     /**
      * Gets liquidityPoolHourlySnapshots.
      * @summary LiquidityPoolHourlySnapshots (current)
+     * @param pool The pool this snapshot belongs to
      */
-    public uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
@@ -464,6 +531,9 @@ export class UNISWAPV3ETHEREUMApi {
 
         let queryParameters: any = {};
         let headerParams: any = {};
+        if (pool !== null && pool !== undefined) {
+            queryParameters['pool'] = <string><any>pool;
+        }
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
         // to determine the Content-Type header
@@ -503,6 +573,68 @@ export class UNISWAPV3ETHEREUMApi {
         >();
         $.ajax(requestOptions).then(
             (data: Array<models.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets liquidityPools.
+     * @summary LiquidityPools (current)
+     * @param id Smart contract address of the pool.
+     */
+    public uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMLiquidityPoolDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/liquidityPools/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (id !== null && id !== undefined) {
+            queryParameters['id'] = <string><any>id;
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMLiquidityPoolDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.UNISWAPV3ETHEREUMLiquidityPoolDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -749,8 +881,9 @@ export class UNISWAPV3ETHEREUMApi {
     /**
      * Gets tickDailySnapshots.
      * @summary TickDailySnapshots (current)
+     * @param pool liquidity pool this tick belongs to
      */
-    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMTickDailySnapshotDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
@@ -758,6 +891,9 @@ export class UNISWAPV3ETHEREUMApi {
 
         let queryParameters: any = {};
         let headerParams: any = {};
+        if (pool !== null && pool !== undefined) {
+            queryParameters['pool'] = <string><any>pool;
+        }
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
         // to determine the Content-Type header
@@ -1047,8 +1183,9 @@ export class UNISWAPV3ETHEREUMApi {
     /**
      * Gets tokens.
      * @summary Tokens (current)
+     * @param id Smart contract address of the token.
      */
-    public uNISWAPV3ETHEREUMTokensCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uNISWAPV3ETHEREUMTokensCurrent(id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMTokenDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
@@ -1056,6 +1193,9 @@ export class UNISWAPV3ETHEREUMApi {
 
         let queryParameters: any = {};
         let headerParams: any = {};
+        if (id !== null && id !== undefined) {
+            queryParameters['id'] = <string><any>id;
+        }
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
         // to determine the Content-Type header

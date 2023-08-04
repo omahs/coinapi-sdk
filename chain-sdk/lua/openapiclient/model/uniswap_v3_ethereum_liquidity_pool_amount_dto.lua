@@ -19,11 +19,12 @@ local function cast_uniswap_v3_ethereum_liquidity_pool_amount_dto(t)
 	return setmetatable(t, uniswap_v3_ethereum_liquidity_pool_amount_dto_mt)
 end
 
-local function new_uniswap_v3_ethereum_liquidity_pool_amount_dto(entry_time, recv_time, block_number, block_range, id, input_tokens, input_token_balances, token_prices)
+local function new_uniswap_v3_ethereum_liquidity_pool_amount_dto(entry_time, recv_time, block_number, vid, block_range, id, input_tokens, input_token_balances, token_prices)
 	return cast_uniswap_v3_ethereum_liquidity_pool_amount_dto({
 		["entry_time"] = entry_time;
 		["recv_time"] = recv_time;
 		["block_number"] = block_number;
+		["vid"] = vid;
 		["block_range"] = block_range;
 		["id"] = id;
 		["input_tokens"] = input_tokens;

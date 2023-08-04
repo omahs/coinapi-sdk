@@ -19,6 +19,8 @@ import UNISWAPV3ETHEREUMDepositDTO from '../model/UNISWAPV3ETHEREUMDepositDTO';
 import UNISWAPV3ETHEREUMDexAmmProtocolDTO from '../model/UNISWAPV3ETHEREUMDexAmmProtocolDTO';
 import UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO from '../model/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO';
 import UNISWAPV3ETHEREUMLiquidityPoolAmountDTO from '../model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO';
+import UNISWAPV3ETHEREUMLiquidityPoolDTO from '../model/UNISWAPV3ETHEREUMLiquidityPoolDTO';
+import UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO from '../model/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO';
 import UNISWAPV3ETHEREUMLiquidityPoolFeeDTO from '../model/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO';
 import UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO from '../model/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO';
 import UNISWAPV3ETHEREUMPositionDTO from '../model/UNISWAPV3ETHEREUMPositionDTO';
@@ -250,15 +252,19 @@ export default class UNISWAPV3ETHEREUMApi {
     /**
      * LiquidityPoolAmounts (current)
      * Gets liquidityPoolAmounts.
+     * @param {Object} opts Optional parameters
+     * @param {String} [id] Smart contract address of the pool.
      * @param {module:api/UNISWAPV3ETHEREUMApi~uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>}
      */
-    uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(callback) {
+    uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(opts, callback) {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
       };
       let queryParams = {
+        'id': opts['id']
       };
       let headerParams = {
       };
@@ -271,6 +277,47 @@ export default class UNISWAPV3ETHEREUMApi {
       let returnType = [UNISWAPV3ETHEREUMLiquidityPoolAmountDTO];
       return this.apiClient.callApi(
         '/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent operation.
+     * @callback module:api/UNISWAPV3ETHEREUMApi~uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     * Gets liquidityPoolDailySnapshots.
+     * @param {Object} opts Optional parameters
+     * @param {String} [pool] Pool this snapshot belongs to.
+     * @param {module:api/UNISWAPV3ETHEREUMApi~uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>}
+     */
+    uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'pool': opts['pool']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -324,15 +371,19 @@ export default class UNISWAPV3ETHEREUMApi {
     /**
      * LiquidityPoolHourlySnapshots (current)
      * Gets liquidityPoolHourlySnapshots.
+     * @param {Object} opts Optional parameters
+     * @param {String} [pool] The pool this snapshot belongs to
      * @param {module:api/UNISWAPV3ETHEREUMApi~uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>}
      */
-    uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(callback) {
+    uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(opts, callback) {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
       };
       let queryParams = {
+        'pool': opts['pool']
       };
       let headerParams = {
       };
@@ -345,6 +396,47 @@ export default class UNISWAPV3ETHEREUMApi {
       let returnType = [UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO];
       return this.apiClient.callApi(
         '/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV3ETHEREUMLiquidityPoolsCurrent operation.
+     * @callback module:api/UNISWAPV3ETHEREUMApi~uNISWAPV3ETHEREUMLiquidityPoolsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV3ETHEREUMLiquidityPoolDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPools (current)
+     * Gets liquidityPools.
+     * @param {Object} opts Optional parameters
+     * @param {String} [id] Smart contract address of the pool.
+     * @param {module:api/UNISWAPV3ETHEREUMApi~uNISWAPV3ETHEREUMLiquidityPoolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV3ETHEREUMLiquidityPoolDTO>}
+     */
+    uNISWAPV3ETHEREUMLiquidityPoolsCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UNISWAPV3ETHEREUMLiquidityPoolDTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswap_v3_ethereum/liquidityPools/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -513,15 +605,19 @@ export default class UNISWAPV3ETHEREUMApi {
     /**
      * TickDailySnapshots (current)
      * Gets tickDailySnapshots.
+     * @param {Object} opts Optional parameters
+     * @param {String} [pool] liquidity pool this tick belongs to
      * @param {module:api/UNISWAPV3ETHEREUMApi~uNISWAPV3ETHEREUMTickDailySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UNISWAPV3ETHEREUMTickDailySnapshotDTO>}
      */
-    uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(callback) {
+    uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(opts, callback) {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
       };
       let queryParams = {
+        'pool': opts['pool']
       };
       let headerParams = {
       };
@@ -706,15 +802,19 @@ export default class UNISWAPV3ETHEREUMApi {
     /**
      * Tokens (current)
      * Gets tokens.
+     * @param {Object} opts Optional parameters
+     * @param {String} [id] Smart contract address of the token.
      * @param {module:api/UNISWAPV3ETHEREUMApi~uNISWAPV3ETHEREUMTokensCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UNISWAPV3ETHEREUMTokenDTO>}
      */
-    uNISWAPV3ETHEREUMTokensCurrent(callback) {
+    uNISWAPV3ETHEREUMTokensCurrent(opts, callback) {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
       };
       let queryParams = {
+        'id': opts['id']
       };
       let headerParams = {
       };

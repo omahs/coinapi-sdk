@@ -521,6 +521,13 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMFinancialsDailySnapshotsC
 type ApiUNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest struct {
 	ctx context.Context
 	ApiService *UNISWAPV3ETHEREUMApiService
+	id *string
+}
+
+// Smart contract address of the pool.
+func (r ApiUNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest) Id(id string) ApiUNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest {
+	r.id = &id
+	return r
 }
 
 func (r ApiUNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMLiquidityPoolAmountDTO, *http.Response, error) {
@@ -563,6 +570,118 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolAmountsCurre
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	if r.id != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+	pool *string
+}
+
+// Pool this snapshot belongs to.
+func (r ApiUNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest) Pool(pool string) ApiUNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest {
+	r.pool = &pool
+	return r
+}
+
+func (r ApiUNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent LiquidityPoolDailySnapshots (current)
+
+Gets liquidityPoolDailySnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentExecute(r ApiUNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest) ([]UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.pool != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pool", r.pool, "")
+	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -719,6 +838,13 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolFeesCurrentE
 type ApiUNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest struct {
 	ctx context.Context
 	ApiService *UNISWAPV3ETHEREUMApiService
+	pool *string
+}
+
+// The pool this snapshot belongs to
+func (r ApiUNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest) Pool(pool string) ApiUNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest {
+	r.pool = &pool
+	return r
 }
 
 func (r ApiUNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO, *http.Response, error) {
@@ -761,6 +887,118 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolHourlySnapsh
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	if r.pool != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pool", r.pool, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUNISWAPV3ETHEREUMLiquidityPoolsCurrentRequest struct {
+	ctx context.Context
+	ApiService *UNISWAPV3ETHEREUMApiService
+	id *string
+}
+
+// Smart contract address of the pool.
+func (r ApiUNISWAPV3ETHEREUMLiquidityPoolsCurrentRequest) Id(id string) ApiUNISWAPV3ETHEREUMLiquidityPoolsCurrentRequest {
+	r.id = &id
+	return r
+}
+
+func (r ApiUNISWAPV3ETHEREUMLiquidityPoolsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMLiquidityPoolDTO, *http.Response, error) {
+	return r.ApiService.UNISWAPV3ETHEREUMLiquidityPoolsCurrentExecute(r)
+}
+
+/*
+UNISWAPV3ETHEREUMLiquidityPoolsCurrent LiquidityPools (current)
+
+Gets liquidityPools.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUNISWAPV3ETHEREUMLiquidityPoolsCurrentRequest
+*/
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolsCurrent(ctx context.Context) ApiUNISWAPV3ETHEREUMLiquidityPoolsCurrentRequest {
+	return ApiUNISWAPV3ETHEREUMLiquidityPoolsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UNISWAPV3ETHEREUMLiquidityPoolDTO
+func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolsCurrentExecute(r ApiUNISWAPV3ETHEREUMLiquidityPoolsCurrentRequest) ([]UNISWAPV3ETHEREUMLiquidityPoolDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UNISWAPV3ETHEREUMLiquidityPoolDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UNISWAPV3ETHEREUMApiService.UNISWAPV3ETHEREUMLiquidityPoolsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/liquidityPools/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.id != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
+	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -1224,6 +1462,13 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMSwapsCurrentExecute(r Api
 type ApiUNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest struct {
 	ctx context.Context
 	ApiService *UNISWAPV3ETHEREUMApiService
+	pool *string
+}
+
+// liquidity pool this tick belongs to
+func (r ApiUNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest) Pool(pool string) ApiUNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest {
+	r.pool = &pool
+	return r
 }
 
 func (r ApiUNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMTickDailySnapshotDTO, *http.Response, error) {
@@ -1266,6 +1511,9 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTickDailySnapshotsCurrent
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	if r.pool != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pool", r.pool, "")
+	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -1739,6 +1987,13 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTokenWhiteListsCurrentExe
 type ApiUNISWAPV3ETHEREUMTokensCurrentRequest struct {
 	ctx context.Context
 	ApiService *UNISWAPV3ETHEREUMApiService
+	id *string
+}
+
+// Smart contract address of the token.
+func (r ApiUNISWAPV3ETHEREUMTokensCurrentRequest) Id(id string) ApiUNISWAPV3ETHEREUMTokensCurrentRequest {
+	r.id = &id
+	return r
 }
 
 func (r ApiUNISWAPV3ETHEREUMTokensCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMTokenDTO, *http.Response, error) {
@@ -1781,6 +2036,9 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTokensCurrentExecute(r Ap
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	if r.id != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
+	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 

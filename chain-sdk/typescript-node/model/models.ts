@@ -81,6 +81,8 @@ export * from './uNISWAPV3ETHEREUMDepositDTO';
 export * from './uNISWAPV3ETHEREUMDexAmmProtocolDTO';
 export * from './uNISWAPV3ETHEREUMFinancialsDailySnapshotDTO';
 export * from './uNISWAPV3ETHEREUMLiquidityPoolAmountDTO';
+export * from './uNISWAPV3ETHEREUMLiquidityPoolDTO';
+export * from './uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO';
 export * from './uNISWAPV3ETHEREUMLiquidityPoolFeeDTO';
 export * from './uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO';
 export * from './uNISWAPV3ETHEREUMPositionDTO';
@@ -223,6 +225,8 @@ import { UNISWAPV3ETHEREUMDepositDTO } from './uNISWAPV3ETHEREUMDepositDTO';
 import { UNISWAPV3ETHEREUMDexAmmProtocolDTO } from './uNISWAPV3ETHEREUMDexAmmProtocolDTO';
 import { UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO } from './uNISWAPV3ETHEREUMFinancialsDailySnapshotDTO';
 import { UNISWAPV3ETHEREUMLiquidityPoolAmountDTO } from './uNISWAPV3ETHEREUMLiquidityPoolAmountDTO';
+import { UNISWAPV3ETHEREUMLiquidityPoolDTO } from './uNISWAPV3ETHEREUMLiquidityPoolDTO';
+import { UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO } from './uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO';
 import { UNISWAPV3ETHEREUMLiquidityPoolFeeDTO } from './uNISWAPV3ETHEREUMLiquidityPoolFeeDTO';
 import { UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO } from './uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO';
 import { UNISWAPV3ETHEREUMPositionDTO } from './uNISWAPV3ETHEREUMPositionDTO';
@@ -368,6 +372,8 @@ let typeMap: {[index: string]: any} = {
     "UNISWAPV3ETHEREUMDexAmmProtocolDTO": UNISWAPV3ETHEREUMDexAmmProtocolDTO,
     "UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO": UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO,
     "UNISWAPV3ETHEREUMLiquidityPoolAmountDTO": UNISWAPV3ETHEREUMLiquidityPoolAmountDTO,
+    "UNISWAPV3ETHEREUMLiquidityPoolDTO": UNISWAPV3ETHEREUMLiquidityPoolDTO,
+    "UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO": UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO,
     "UNISWAPV3ETHEREUMLiquidityPoolFeeDTO": UNISWAPV3ETHEREUMLiquidityPoolFeeDTO,
     "UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO": UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO,
     "UNISWAPV3ETHEREUMPositionDTO": UNISWAPV3ETHEREUMPositionDTO,

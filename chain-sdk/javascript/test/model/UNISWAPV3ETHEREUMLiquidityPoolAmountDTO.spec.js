@@ -72,6 +72,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property vid (base name: "vid")', function() {
+      // uncomment below and update the code to test the property vid
+      //var instance = new OnChainDappsRestApi.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO();
+      //expect(instance).to.be();
+    });
+
     it('should have the property blockRange (base name: "block_range")', function() {
       // uncomment below and update the code to test the property blockRange
       //var instance = new OnChainDappsRestApi.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO();

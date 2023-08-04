@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **entryTime** | **OffsetDateTime** |  |  [optional]
 **recvTime** | **OffsetDateTime** |  |  [optional]
 **blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional]
+**vid** | **Long** |  |  [optional]
 **id** | **String** | (Smart contract address of the pool)-( # of hours since Unix epoch time) |  [optional]
 **hour** | **Int** | Number of hours since Unix epoch time |  [optional]
 **protocol** | **String** | The protocol this snapshot belongs to |  [optional]

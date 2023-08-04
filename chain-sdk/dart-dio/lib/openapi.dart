@@ -100,6 +100,8 @@ export 'package:openapi/src/model/uniswapv3_ethereum_deposit_dto.dart';
 export 'package:openapi/src/model/uniswapv3_ethereum_dex_amm_protocol_dto.dart';
 export 'package:openapi/src/model/uniswapv3_ethereum_financials_daily_snapshot_dto.dart';
 export 'package:openapi/src/model/uniswapv3_ethereum_liquidity_pool_amount_dto.dart';
+export 'package:openapi/src/model/uniswapv3_ethereum_liquidity_pool_dto.dart';
+export 'package:openapi/src/model/uniswapv3_ethereum_liquidity_pool_daily_snapshot_dto.dart';
 export 'package:openapi/src/model/uniswapv3_ethereum_liquidity_pool_fee_dto.dart';
 export 'package:openapi/src/model/uniswapv3_ethereum_liquidity_pool_hourly_snapshot_dto.dart';
 export 'package:openapi/src/model/uniswapv3_ethereum_position_dto.dart';

@@ -6935,6 +6935,12 @@ export type UNISWAPV3ETHEREUMLiquidityPoolAmountDTO = {
      */
     block_number?: number;
     /**
+     * .
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolAmountDTO
+     */
+    vid?: number;
+    /**
      * 
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMLiquidityPoolAmountDTO
@@ -6964,6 +6970,596 @@ export type UNISWAPV3ETHEREUMLiquidityPoolAmountDTO = {
      * @memberof UNISWAPV3ETHEREUMLiquidityPoolAmountDTO
      */
     token_prices?: Array<string>;
+}
+
+/**
+ * All Uniswap V3 pools.
+ * @export
+ */
+export type UNISWAPV3ETHEREUMLiquidityPoolDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    block_number?: number;
+    /**
+     * .
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    vid?: number;
+    /**
+     * Block range of the liquidity pool.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    block_range?: string;
+    /**
+     * Smart contract address of the pool.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    id?: string;
+    /**
+     * Protocol this pool belongs to.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    protocol?: string;
+    /**
+     * Name of liquidity pool (e.g. Curve.fi DAI/USDC/USDT).
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    name?: string;
+    /**
+     * Symbol of liquidity pool (e.g. 3CRV).
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    symbol?: string;
+    /**
+     * Token that is to represent ownership of liquidity.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    liquidity_token?: string;
+    /**
+     * Tokens that need to be deposited to take a position in protocol. e.g. WETH and USDC to deposit into the WETH-USDC pool. Array to account for multi-asset pools like Curve and Balancer.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    input_tokens?: Array<string>;
+    /**
+     * Additional tokens that are given as reward for position in a protocol, usually in liquidity mining programs. e.g. SUSHI in the Onsen program, MATIC for Aave Polygon, usually in liquidity mining programs. e.g. SUSHI in the Onsen program, MATIC for Aave Polygon.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    reward_tokens?: Array<string>;
+    /**
+     * Fees per trade incurred to the user. Should include all fees that apply to a pool (e.g. Curve has a trading fee AND an admin fee, which is a portion of the trading fee. Uniswap only has a trading fee and no protocol fee.).
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    fees?: Array<string>;
+    /**
+     * Specifies whether this pool is single-sided (e.g. Bancor, Platypus\'s Alternative Pool). The specifics of the implementation depends on the protocol.
+     * @type {boolean}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    is_single_sided?: boolean;
+    /**
+     * Timestamp when the liquidity pool was created.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    created_timestamp?: string;
+    /**
+     * Block number when the liquidity pool was created.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    created_block_number?: string;
+    /**
+     * Current tick representing the price of token0/token1.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    tick?: string;
+    /**
+     * Current TVL (Total Value Locked) of this pool in USD.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    total_value_locked_usd?: string;
+    /**
+     * Sum of all active and non-active liquidity for this pool.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    total_liquidity?: string;
+    /**
+     * Sum of all active and non-active liquidity in USD for this pool.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    total_liquidity_usd?: string;
+    /**
+     * All liquidity `k` that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pools current tick.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    active_liquidity?: string;
+    /**
+     * All liquidity in USD that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pools current tick.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    active_liquidity_usd?: string;
+    /**
+     * All protocol-side value locked in token amounts that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    uncollected_protocol_side_token_amounts?: Array<string>;
+    /**
+     * All protocol-side value locking in USD that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    uncollected_protocol_side_values_usd?: Array<string>;
+    /**
+     * All supply-side value locked in token amounts that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    uncollected_supply_side_token_amounts?: Array<string>;
+    /**
+     * All supply-side value locked in USD that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    uncollected_supply_side_values_usd?: Array<string>;
+    /**
+     * All revenue generated by the liquidity pool, accrued to the supply side.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    cumulative_supply_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool, accrued to the protocol.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    cumulative_protocol_side_revenue_usd?: string;
+    /**
+     *  All revenue generated by the liquidity pool.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    cumulative_total_revenue_usd?: string;
+    /**
+     * All trade volume occurred for a specific input token, in native amount. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    cumulative_volume_by_token_amount?: Array<string>;
+    /**
+     * All trade volume occurred for a specific input token, in USD. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    cumulative_volume_by_token_usd?: Array<string>;
+    /**
+     * All trade volume occurred for a specific input token, in USD. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    cumulative_volume_usd?: string;
+    /**
+     * Amount of input tokens in the pool. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    input_token_balances?: Array<string>;
+    /**
+     * Amount of input tokens in USD in the pool. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    input_token_balances_usd?: Array<string>;
+    /**
+     * Weights of input tokens in the liquidity pool in percentage values. For example, 50/50 for Uniswap pools, 48.2/51.8 for a Curve pool, 10/10/80 for a Balancer pool.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    input_token_weights?: Array<string>;
+    /**
+     * Total supply of output tokens that are staked (usually in the MasterChef contract). Used to calculate reward APY.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    staked_output_token_amount?: string;
+    /**
+     * Per-block reward token emission as of the current block normalized to a day, in token\'s native amount. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    reward_token_emissions_amount?: Array<string>;
+    /**
+     * Per-block reward token emission as of the current block normalized to a day, in USD value. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    reward_token_emissions_usd?: Array<string>;
+    /**
+     * Total number of deposits (add liquidity).
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    cumulative_deposit_count?: number;
+    /**
+     * Total number of withdrawals (remove liquidity).
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    cumulative_withdraw_count?: number;
+    /**
+     * Total number of trades (swaps).
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    cumulative_swap_count?: number;
+    /**
+     * Number of positions in this market.
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    position_count?: number;
+    /**
+     * Number of open positions in this market.
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    open_position_count?: number;
+    /**
+     * Number of closed positions in this market.
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    closed_position_count?: number;
+    /**
+     * Day ID of the most recent daily snapshot.
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    last_snapshot_day_id?: number;
+    /**
+     * Hour ID of the most recent hourly snapshot.
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    last_snapshot_hour_id?: number;
+    /**
+     * Timestamp of the last time this entity was updated.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    last_update_timestamp?: string;
+    /**
+     * Block number of the last time this entity was updated.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    last_update_block_number?: string;
+    /**
+     * Evaluated ask value of the liquidity pool.
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    evaluated_ask?: number;
+}
+
+/**
+ * Represents a liquidity pool daily snapshot for Uniswap V3.
+ * @export
+ */
+export type UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * .
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    vid?: number;
+    /**
+     * The Ethereum block number associated with the liquidity pool daily snapshot.
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    block_?: number;
+    /**
+     * Identifier, format: (smart contract address of the pool)-(# of days since Unix epoch time).
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    id?: string;
+    /**
+     * Number of days since Unix epoch time.
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    day?: number;
+    /**
+     * Protocol associated with the liquidity pool.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    protocol?: string;
+    /**
+     * Pool this snapshot belongs to.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    pool?: string;
+    /**
+     * Current tick representing the price of token0/token1.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    tick?: string;
+    /**
+     * Current TVL (Total Value Locked) of this pool.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    total_value_locked_usd?: string;
+    /**
+     * The sum of all active and non-active liquidity for this pool.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    total_liquidity?: string;
+    /**
+     * Sum of all active and non-active liquidity in USD for this pool.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    total_liquidity_usd?: string;
+    /**
+     * All liquidity `k` that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pools current tick.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    active_liquidity?: string;
+    /**
+     * All liquidity in USD that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pools current tick.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    active_liquidity_usd?: string;
+    /**
+     * All protocol-side value locked in token amounts that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    uncollected_protocol_side_token_amounts?: Array<string>;
+    /**
+     * All protocol-side value locking in USD that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    uncollected_protocol_side_values_usd?: Array<string>;
+    /**
+     * All supply-side value locked in token amounts that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    uncollected_supply_side_token_amounts?: Array<string>;
+    /**
+     * All supply-side value locked in USD that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    uncollected_supply_side_values_usd?: Array<string>;
+    /**
+     * All revenue generated by the liquidity pool, accrued to the supply side.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_supply_side_revenue_usd?: string;
+    /**
+     * Daily revenue generated by the liquidity pool, accrued to the supply side.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_supply_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool, accrued to the protocol.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_protocol_side_revenue_usd?: string;
+    /**
+     * Daily revenue generated by the liquidity pool, accrued to the protocol.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_protocol_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_total_revenue_usd?: string;
+    /**
+     * Daily revenue generated by the liquidity pool.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_total_revenue_usd?: string;
+    /**
+     * All historical trade volume occurred in this pool, in USD.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_volume_usd?: string;
+    /**
+     * All trade volume occurred in a given day, in USD.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_volume_usd?: string;
+    /**
+     * All trade volume , in native amount. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_volume_by_token_amount?: Array<string>;
+    /**
+     * All trade volume occurred in a given day for a specific input token, in native amount. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_volume_by_token_amount?: Array<string>;
+    /**
+     * All trade volume, in USD. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_volume_by_token_usd?: Array<string>;
+    /**
+     *  All trade volume occurred in a given day for a specific input token, in USD. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_volume_by_token_usd?: Array<string>;
+    /**
+     * Amount of input tokens in the pool. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    input_token_balances?: Array<string>;
+    /**
+     * Amount of input tokens in USD in the pool. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    input_token_balances_usd?: Array<string>;
+    /**
+     * Weights of input tokens in the liquidity pool in percentage values. For example, 50/50 for Uniswap pools, 48.2/51.8 for a Curve pool, 10/10/80 for a Balancer pool.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    input_token_weights?: Array<string>;
+    /**
+     * Total supply of output tokens that are staked (usually in the MasterChef contract). Used to calculate reward APY.
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    staked_output_token_amount?: string;
+    /**
+     * Per-block reward token emission as of the current block normalized to a day, in token\'s native amount. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    reward_token_emissions_amount?: Array<string>;
+    /**
+     * Per-block reward token emission as of the current block normalized to a day, in USD value. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * @type {Array<string>}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    reward_token_emissions_usd?: Array<string>;
+    /**
+     * Total number of deposits (add liquidity).
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_deposit_count?: number;
+    /**
+     * Total number of deposits (add liquidity) in a day.
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_deposit_count?: number;
+    /**
+     * Total number of withdrawals (remove liquidity).
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_withdraw_count?: number;
+    /**
+     * Total number of withdrawals (remove liquidity) in a day.
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_withdraw_count?: number;
+    /**
+     * Total number of trades (swaps).
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_swap_count?: number;
+    /**
+     * Total number of trades (swaps) in a day.
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_swap_count?: number;
+    /**
+     * Number of positions in this market.
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    position_count?: number;
+    /**
+     * Number of open positions in this market.
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    open_position_count?: number;
+    /**
+     * Number of closed positions in this market.
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    closed_position_count?: number;
+    /**
+     * Timestamp of when this snapshot was taken/last modified (May be taken after interval has passed).
+     * @type {string}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    timestamp?: string;
 }
 
 /**
@@ -7032,6 +7628,12 @@ export type UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO = {
      * @memberof UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
      */
     block_number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    vid?: number;
     /**
      * (Smart contract address of the pool)-( # of hours since Unix epoch time)
      * @type {string}
@@ -15287,12 +15889,42 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @summary LiquidityPoolAmounts (current)
          * @throws {RequiredError}
          */
-        uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(options: RequestOptions): FetchArgs {
+        uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id?: string, options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets liquidityPoolDailySnapshots.
+         * @summary LiquidityPoolDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (pool !== undefined) {
+                localVarQueryParameter['pool'] = ((pool:any):string);
+            }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -15331,12 +15963,42 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @summary LiquidityPoolHourlySnapshots (current)
          * @throws {RequiredError}
          */
-        uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(options: RequestOptions): FetchArgs {
+        uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool?: string, options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
+
+            if (pool !== undefined) {
+                localVarQueryParameter['pool'] = ((pool:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets liquidityPools.
+         * @summary LiquidityPools (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswap_v3_ethereum/liquidityPools/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -15445,12 +16107,16 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @summary TickDailySnapshots (current)
          * @throws {RequiredError}
          */
-        uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
+        uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/uniswap_v3_ethereum/tickDailySnapshots/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
+
+            if (pool !== undefined) {
+                localVarQueryParameter['pool'] = ((pool:any):string);
+            }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -15563,12 +16229,16 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @summary Tokens (current)
          * @throws {RequiredError}
          */
-        uNISWAPV3ETHEREUMTokensCurrent(options: RequestOptions): FetchArgs {
+        uNISWAPV3ETHEREUMTokensCurrent(id?: string, options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/uniswap_v3_ethereum/tokens/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -15660,11 +16330,15 @@ export type UNISWAPV3ETHEREUMApiType = {
 
     uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>,
 
-    uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>,
+    uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id?: string, options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>,
+
+    uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>,
 
     uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent(options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>,
 
-    uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>,
+    uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool?: string, options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>,
+
+    uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id?: string, options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>>,
 
     uNISWAPV3ETHEREUMPositionSnapshotsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMPositionSnapshotDTO>>,
 
@@ -15674,7 +16348,7 @@ export type UNISWAPV3ETHEREUMApiType = {
 
     uNISWAPV3ETHEREUMSwapsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMSwapDTO>>,
 
-    uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>,
+    uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>,
 
     uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>,
 
@@ -15684,7 +16358,7 @@ export type UNISWAPV3ETHEREUMApiType = {
 
     uNISWAPV3ETHEREUMTokenWhiteListsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMTokenWhiteListDTO>>,
 
-    uNISWAPV3ETHEREUMTokensCurrent(options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMTokenDTO>>,
+    uNISWAPV3ETHEREUMTokensCurrent(id?: string, options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMTokenDTO>>,
 
     uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>,
 
@@ -15780,8 +16454,23 @@ export const UNISWAPV3ETHEREUMApi = function(configuration?: Configuration, fetc
          * @summary LiquidityPoolAmounts (current)
          * @throws {RequiredError}
          */
-        uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> {
-            const localVarFetchArgs = UNISWAPV3ETHEREUMApiFetchParamCreator(configuration).uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(options);
+        uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id?: string, options?: RequestOptions = {}): Promise<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> {
+            const localVarFetchArgs = UNISWAPV3ETHEREUMApiFetchParamCreator(configuration).uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityPoolDailySnapshots.
+         * @summary LiquidityPoolDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, options?: RequestOptions = {}): Promise<Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> {
+            const localVarFetchArgs = UNISWAPV3ETHEREUMApiFetchParamCreator(configuration).uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15810,8 +16499,23 @@ export const UNISWAPV3ETHEREUMApi = function(configuration?: Configuration, fetc
          * @summary LiquidityPoolHourlySnapshots (current)
          * @throws {RequiredError}
          */
-        uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> {
-            const localVarFetchArgs = UNISWAPV3ETHEREUMApiFetchParamCreator(configuration).uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(options);
+        uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool?: string, options?: RequestOptions = {}): Promise<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> {
+            const localVarFetchArgs = UNISWAPV3ETHEREUMApiFetchParamCreator(configuration).uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityPools.
+         * @summary LiquidityPools (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id?: string, options?: RequestOptions = {}): Promise<Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>> {
+            const localVarFetchArgs = UNISWAPV3ETHEREUMApiFetchParamCreator(configuration).uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15885,8 +16589,8 @@ export const UNISWAPV3ETHEREUMApi = function(configuration?: Configuration, fetc
          * @summary TickDailySnapshots (current)
          * @throws {RequiredError}
          */
-        uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> {
-            const localVarFetchArgs = UNISWAPV3ETHEREUMApiFetchParamCreator(configuration).uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(options);
+        uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, options?: RequestOptions = {}): Promise<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> {
+            const localVarFetchArgs = UNISWAPV3ETHEREUMApiFetchParamCreator(configuration).uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15960,8 +16664,8 @@ export const UNISWAPV3ETHEREUMApi = function(configuration?: Configuration, fetc
          * @summary Tokens (current)
          * @throws {RequiredError}
          */
-        uNISWAPV3ETHEREUMTokensCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV3ETHEREUMTokenDTO>> {
-            const localVarFetchArgs = UNISWAPV3ETHEREUMApiFetchParamCreator(configuration).uNISWAPV3ETHEREUMTokensCurrent(options);
+        uNISWAPV3ETHEREUMTokensCurrent(id?: string, options?: RequestOptions = {}): Promise<Array<UNISWAPV3ETHEREUMTokenDTO>> {
+            const localVarFetchArgs = UNISWAPV3ETHEREUMApiFetchParamCreator(configuration).uNISWAPV3ETHEREUMTokensCurrent(id, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();

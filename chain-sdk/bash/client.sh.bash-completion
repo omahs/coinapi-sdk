@@ -150,8 +150,10 @@ _()
     operations["uNISWAPV3ETHEREUMDexAmmProtocolsCurrent"]=1
     operations["uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent"]=1
     operations["uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent"]=1
+    operations["uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent"]=1
     operations["uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent"]=1
     operations["uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent"]=1
+    operations["uNISWAPV3ETHEREUMLiquidityPoolsCurrent"]=1
     operations["uNISWAPV3ETHEREUMPositionSnapshotsCurrent"]=1
     operations["uNISWAPV3ETHEREUMPositionsCurrent"]=1
     operations["uNISWAPV3ETHEREUMRewardTokensCurrent"]=1
@@ -282,19 +284,21 @@ _()
     operation_parameters["uNISWAPV3ETHEREUMDepositsCurrent"]=""
     operation_parameters["uNISWAPV3ETHEREUMDexAmmProtocolsCurrent"]=""
     operation_parameters["uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent"]=""
-    operation_parameters["uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent"]=""
+    operation_parameters["uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent"]="id= "
+    operation_parameters["uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent"]="pool= "
     operation_parameters["uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent"]=""
-    operation_parameters["uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent"]=""
+    operation_parameters["uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent"]="pool= "
+    operation_parameters["uNISWAPV3ETHEREUMLiquidityPoolsCurrent"]="id= "
     operation_parameters["uNISWAPV3ETHEREUMPositionSnapshotsCurrent"]=""
     operation_parameters["uNISWAPV3ETHEREUMPositionsCurrent"]="pool= "
     operation_parameters["uNISWAPV3ETHEREUMRewardTokensCurrent"]=""
     operation_parameters["uNISWAPV3ETHEREUMSwapsCurrent"]=""
-    operation_parameters["uNISWAPV3ETHEREUMTickDailySnapshotsCurrent"]=""
+    operation_parameters["uNISWAPV3ETHEREUMTickDailySnapshotsCurrent"]="pool= "
     operation_parameters["uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent"]="pool= "
     operation_parameters["uNISWAPV3ETHEREUMTicksCurrent"]="pool= "
     operation_parameters["uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent"]=""
     operation_parameters["uNISWAPV3ETHEREUMTokenWhiteListsCurrent"]=""
-    operation_parameters["uNISWAPV3ETHEREUMTokensCurrent"]=""
+    operation_parameters["uNISWAPV3ETHEREUMTokensCurrent"]="id= "
     operation_parameters["uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent"]=""
     operation_parameters["uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent"]=""
     operation_parameters["uNISWAPV3ETHEREUMWithdrawsCurrent"]=""

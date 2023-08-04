@@ -29,6 +29,8 @@ import org.openapitools.client.model.UNISWAPV3ETHEREUMDepositDTO;
 import org.openapitools.client.model.UNISWAPV3ETHEREUMDexAmmProtocolDTO;
 import org.openapitools.client.model.UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO;
 import org.openapitools.client.model.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMLiquidityPoolDTO;
+import org.openapitools.client.model.UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO;
 import org.openapitools.client.model.UNISWAPV3ETHEREUMLiquidityPoolFeeDTO;
 import org.openapitools.client.model.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO;
 import org.openapitools.client.model.UNISWAPV3ETHEREUMPositionDTO;
@@ -658,9 +660,10 @@ public class UNISWAPV3ETHEREUMApi {
   /**
   * LiquidityPoolAmounts (current)
   * Gets liquidityPoolAmounts.
+   * @param id Smart contract address of the pool.
    * @return List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>
   */
-  public List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent (String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -672,6 +675,7 @@ public class UNISWAPV3ETHEREUMApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
     String[] contentTypes = {
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
@@ -714,9 +718,9 @@ public class UNISWAPV3ETHEREUMApi {
       /**
    * LiquidityPoolAmounts (current)
    * Gets liquidityPoolAmounts.
-
+   * @param id Smart contract address of the pool.
   */
-  public void uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent (final Response.Listener<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent (String id, final Response.Listener<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -730,6 +734,7 @@ public class UNISWAPV3ETHEREUMApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
 
 
     String[] contentTypes = {
@@ -757,6 +762,125 @@ public class UNISWAPV3ETHEREUMApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>) ApiInvoker.deserialize(localVarResponse,  "array", UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * LiquidityPoolDailySnapshots (current)
+  * Gets liquidityPoolDailySnapshots.
+   * @param pool Pool this snapshot belongs to.
+   * @return List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>
+  */
+  public List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent (String pool) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "pool", pool));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>) ApiInvoker.deserialize(localVarResponse, "array", UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * LiquidityPoolDailySnapshots (current)
+   * Gets liquidityPoolDailySnapshots.
+   * @param pool Pool this snapshot belongs to.
+  */
+  public void uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent (String pool, final Response.Listener<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "pool", pool));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>) ApiInvoker.deserialize(localVarResponse,  "array", UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -890,9 +1014,10 @@ public class UNISWAPV3ETHEREUMApi {
   /**
   * LiquidityPoolHourlySnapshots (current)
   * Gets liquidityPoolHourlySnapshots.
+   * @param pool The pool this snapshot belongs to
    * @return List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>
   */
-  public List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent (String pool) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -904,6 +1029,7 @@ public class UNISWAPV3ETHEREUMApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "pool", pool));
     String[] contentTypes = {
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
@@ -946,9 +1072,9 @@ public class UNISWAPV3ETHEREUMApi {
       /**
    * LiquidityPoolHourlySnapshots (current)
    * Gets liquidityPoolHourlySnapshots.
-
+   * @param pool The pool this snapshot belongs to
   */
-  public void uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent (final Response.Listener<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent (String pool, final Response.Listener<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -962,6 +1088,7 @@ public class UNISWAPV3ETHEREUMApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "pool", pool));
 
 
     String[] contentTypes = {
@@ -989,6 +1116,125 @@ public class UNISWAPV3ETHEREUMApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>) ApiInvoker.deserialize(localVarResponse,  "array", UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * LiquidityPools (current)
+  * Gets liquidityPools.
+   * @param id Smart contract address of the pool.
+   * @return List<UNISWAPV3ETHEREUMLiquidityPoolDTO>
+  */
+  public List<UNISWAPV3ETHEREUMLiquidityPoolDTO> uNISWAPV3ETHEREUMLiquidityPoolsCurrent (String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswap_v3_ethereum/liquidityPools/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<UNISWAPV3ETHEREUMLiquidityPoolDTO>) ApiInvoker.deserialize(localVarResponse, "array", UNISWAPV3ETHEREUMLiquidityPoolDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * LiquidityPools (current)
+   * Gets liquidityPools.
+   * @param id Smart contract address of the pool.
+  */
+  public void uNISWAPV3ETHEREUMLiquidityPoolsCurrent (String id, final Response.Listener<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswap_v3_ethereum/liquidityPools/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<UNISWAPV3ETHEREUMLiquidityPoolDTO>) ApiInvoker.deserialize(localVarResponse,  "array", UNISWAPV3ETHEREUMLiquidityPoolDTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1473,9 +1719,10 @@ public class UNISWAPV3ETHEREUMApi {
   /**
   * TickDailySnapshots (current)
   * Gets tickDailySnapshots.
+   * @param pool liquidity pool this tick belongs to
    * @return List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>
   */
-  public List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent (String pool) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -1487,6 +1734,7 @@ public class UNISWAPV3ETHEREUMApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "pool", pool));
     String[] contentTypes = {
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
@@ -1529,9 +1777,9 @@ public class UNISWAPV3ETHEREUMApi {
       /**
    * TickDailySnapshots (current)
    * Gets tickDailySnapshots.
-
+   * @param pool liquidity pool this tick belongs to
   */
-  public void uNISWAPV3ETHEREUMTickDailySnapshotsCurrent (final Response.Listener<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uNISWAPV3ETHEREUMTickDailySnapshotsCurrent (String pool, final Response.Listener<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -1545,6 +1793,7 @@ public class UNISWAPV3ETHEREUMApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "pool", pool));
 
 
     String[] contentTypes = {
@@ -2059,9 +2308,10 @@ public class UNISWAPV3ETHEREUMApi {
   /**
   * Tokens (current)
   * Gets tokens.
+   * @param id Smart contract address of the token.
    * @return List<UNISWAPV3ETHEREUMTokenDTO>
   */
-  public List<UNISWAPV3ETHEREUMTokenDTO> uNISWAPV3ETHEREUMTokensCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UNISWAPV3ETHEREUMTokenDTO> uNISWAPV3ETHEREUMTokensCurrent (String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -2073,6 +2323,7 @@ public class UNISWAPV3ETHEREUMApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
     String[] contentTypes = {
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
@@ -2115,9 +2366,9 @@ public class UNISWAPV3ETHEREUMApi {
       /**
    * Tokens (current)
    * Gets tokens.
-
+   * @param id Smart contract address of the token.
   */
-  public void uNISWAPV3ETHEREUMTokensCurrent (final Response.Listener<List<UNISWAPV3ETHEREUMTokenDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uNISWAPV3ETHEREUMTokensCurrent (String id, final Response.Listener<List<UNISWAPV3ETHEREUMTokenDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -2131,6 +2382,7 @@ public class UNISWAPV3ETHEREUMApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
 
 
     String[] contentTypes = {

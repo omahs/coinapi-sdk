@@ -25,6 +25,8 @@ type UNISWAPV3ETHEREUMLiquidityPoolAmountDTO struct {
 	RecvTime *time.Time `json:"recv_time,omitempty"`
 	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
+	// .
+	Vid *int64 `json:"vid,omitempty"`
 	// 
 	BlockRange NullableString `json:"block_range,omitempty"`
 	// Smart contract address of the pool.
@@ -148,6 +150,38 @@ func (o *UNISWAPV3ETHEREUMLiquidityPoolAmountDTO) HasBlockNumber() bool {
 // SetBlockNumber gets a reference to the given int64 and assigns it to the BlockNumber field.
 func (o *UNISWAPV3ETHEREUMLiquidityPoolAmountDTO) SetBlockNumber(v int64) {
 	o.BlockNumber = &v
+}
+
+// GetVid returns the Vid field value if set, zero value otherwise.
+func (o *UNISWAPV3ETHEREUMLiquidityPoolAmountDTO) GetVid() int64 {
+	if o == nil || IsNil(o.Vid) {
+		var ret int64
+		return ret
+	}
+	return *o.Vid
+}
+
+// GetVidOk returns a tuple with the Vid field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *UNISWAPV3ETHEREUMLiquidityPoolAmountDTO) GetVidOk() (*int64, bool) {
+	if o == nil || IsNil(o.Vid) {
+		return nil, false
+	}
+	return o.Vid, true
+}
+
+// HasVid returns a boolean if a field has been set.
+func (o *UNISWAPV3ETHEREUMLiquidityPoolAmountDTO) HasVid() bool {
+	if o != nil && !IsNil(o.Vid) {
+		return true
+	}
+
+	return false
+}
+
+// SetVid gets a reference to the given int64 and assigns it to the Vid field.
+func (o *UNISWAPV3ETHEREUMLiquidityPoolAmountDTO) SetVid(v int64) {
+	o.Vid = &v
 }
 
 // GetBlockRange returns the BlockRange field value if set, zero value otherwise (both if not set or set to explicit null).
@@ -351,6 +385,9 @@ func (o UNISWAPV3ETHEREUMLiquidityPoolAmountDTO) ToMap() (map[string]interface{}
 	}
 	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
+	}
+	if !IsNil(o.Vid) {
+		toSerialize["vid"] = o.Vid
 	}
 	if o.BlockRange.IsSet() {
 		toSerialize["block_range"] = o.BlockRange.Get()

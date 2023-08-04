@@ -34,6 +34,12 @@ export interface UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
      */
     block_number?: number;
     /**
+     * .
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolAmountDTO
+     */
+    vid?: number;
+    /**
      * 
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMLiquidityPoolAmountDTO

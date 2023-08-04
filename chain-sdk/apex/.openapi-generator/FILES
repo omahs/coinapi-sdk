@@ -361,6 +361,14 @@ force-app/main/default/classes/OASUNISWAPV3ETHEREUMLiquidityPoolAmo.cls
 force-app/main/default/classes/OASUNISWAPV3ETHEREUMLiquidityPoolAmo.cls-meta.xml
 force-app/main/default/classes/OASUNISWAPV3ETHEREUMLiquidityPoolAmoTest.cls
 force-app/main/default/classes/OASUNISWAPV3ETHEREUMLiquidityPoolAmoTest.cls-meta.xml
+force-app/main/default/classes/OASUNISWAPV3ETHEREUMLiquidityPoolDTO.cls
+force-app/main/default/classes/OASUNISWAPV3ETHEREUMLiquidityPoolDTO.cls-meta.xml
+force-app/main/default/classes/OASUNISWAPV3ETHEREUMLiquidityPoolDTOTest.cls
+force-app/main/default/classes/OASUNISWAPV3ETHEREUMLiquidityPoolDTOTest.cls-meta.xml
+force-app/main/default/classes/OASUNISWAPV3ETHEREUMLiquidityPoolDai.cls
+force-app/main/default/classes/OASUNISWAPV3ETHEREUMLiquidityPoolDai.cls-meta.xml
+force-app/main/default/classes/OASUNISWAPV3ETHEREUMLiquidityPoolDaiTest.cls
+force-app/main/default/classes/OASUNISWAPV3ETHEREUMLiquidityPoolDaiTest.cls-meta.xml
 force-app/main/default/classes/OASUNISWAPV3ETHEREUMLiquidityPoolFee.cls
 force-app/main/default/classes/OASUNISWAPV3ETHEREUMLiquidityPoolFee.cls-meta.xml
 force-app/main/default/classes/OASUNISWAPV3ETHEREUMLiquidityPoolFeeTest.cls

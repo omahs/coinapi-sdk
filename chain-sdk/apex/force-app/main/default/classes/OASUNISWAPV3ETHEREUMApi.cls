@@ -133,11 +133,16 @@ public class OASUNISWAPV3ETHEREUMApi {
     /**
      * LiquidityPoolAmounts (current)
      * Gets liquidityPoolAmounts.
+     * @param id Smart contract address of the pool. (optional)
      * @return List<OASUNISWAPV3ETHEREUMLiquidityPoolAmo>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUNISWAPV3ETHEREUMLiquidityPoolAmo> uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent() {
+    public List<OASUNISWAPV3ETHEREUMLiquidityPoolAmo> uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('id', (String) params.get('id')));
+
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMLiquidityPoolAmo>) client.invoke(
@@ -149,6 +154,32 @@ public class OASUNISWAPV3ETHEREUMApi {
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMLiquidityPoolAmo>.class
+        );
+    }
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     * Gets liquidityPoolDailySnapshots.
+     * @param pool Pool this snapshot belongs to. (optional)
+     * @return List<OASUNISWAPV3ETHEREUMLiquidityPoolDai>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV3ETHEREUMLiquidityPoolDai> uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('pool', (String) params.get('pool')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV3ETHEREUMLiquidityPoolDai>) client.invoke(
+            'GET', '/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV3ETHEREUMLiquidityPoolDai>.class
         );
     }
     /**
@@ -175,11 +206,16 @@ public class OASUNISWAPV3ETHEREUMApi {
     /**
      * LiquidityPoolHourlySnapshots (current)
      * Gets liquidityPoolHourlySnapshots.
+     * @param pool The pool this snapshot belongs to (optional)
      * @return List<OASUNISWAPV3ETHEREUMLiquidityPoolHou>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUNISWAPV3ETHEREUMLiquidityPoolHou> uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent() {
+    public List<OASUNISWAPV3ETHEREUMLiquidityPoolHou> uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('pool', (String) params.get('pool')));
+
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMLiquidityPoolHou>) client.invoke(
@@ -191,6 +227,32 @@ public class OASUNISWAPV3ETHEREUMApi {
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMLiquidityPoolHou>.class
+        );
+    }
+    /**
+     * LiquidityPools (current)
+     * Gets liquidityPools.
+     * @param id Smart contract address of the pool. (optional)
+     * @return List<OASUNISWAPV3ETHEREUMLiquidityPoolDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV3ETHEREUMLiquidityPoolDTO> uNISWAPV3ETHEREUMLiquidityPoolsCurrent(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('id', (String) params.get('id')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV3ETHEREUMLiquidityPoolDTO>) client.invoke(
+            'GET', '/dapps/uniswap_v3_ethereum/liquidityPools/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV3ETHEREUMLiquidityPoolDTO>.class
         );
     }
     /**
@@ -285,11 +347,16 @@ public class OASUNISWAPV3ETHEREUMApi {
     /**
      * TickDailySnapshots (current)
      * Gets tickDailySnapshots.
+     * @param pool liquidity pool this tick belongs to (optional)
      * @return List<OASUNISWAPV3ETHEREUMTickDailySnapsho>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUNISWAPV3ETHEREUMTickDailySnapsho> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent() {
+    public List<OASUNISWAPV3ETHEREUMTickDailySnapsho> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('pool', (String) params.get('pool')));
+
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMTickDailySnapsho>) client.invoke(
@@ -400,11 +467,16 @@ public class OASUNISWAPV3ETHEREUMApi {
     /**
      * Tokens (current)
      * Gets tokens.
+     * @param id Smart contract address of the token. (optional)
      * @return List<OASUNISWAPV3ETHEREUMTokenDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUNISWAPV3ETHEREUMTokenDTO> uNISWAPV3ETHEREUMTokensCurrent() {
+    public List<OASUNISWAPV3ETHEREUMTokenDTO> uNISWAPV3ETHEREUMTokensCurrent(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('id', (String) params.get('id')));
+
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMTokenDTO>) client.invoke(

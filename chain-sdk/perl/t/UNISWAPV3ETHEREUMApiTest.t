@@ -63,7 +63,15 @@ isa_ok($api, 'WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi');
 # u_niswapv3_ethereum_liquidity_pool_amounts__current test
 #
 # uncomment below and update the test
-#my $u_niswapv3_ethereum_liquidity_pool_amounts__current_result = $api->u_niswapv3_ethereum_liquidity_pool_amounts__current();
+#my $u_niswapv3_ethereum_liquidity_pool_amounts__current_id = undef; # replace NULL with a proper value
+#my $u_niswapv3_ethereum_liquidity_pool_amounts__current_result = $api->u_niswapv3_ethereum_liquidity_pool_amounts__current(id => $u_niswapv3_ethereum_liquidity_pool_amounts__current_id);
+
+#
+# u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current_pool = undef; # replace NULL with a proper value
+#my $u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current_result = $api->u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current(pool => $u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current_pool);
 
 #
 # u_niswapv3_ethereum_liquidity_pool_fees__current test
@@ -75,7 +83,15 @@ isa_ok($api, 'WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi');
 # u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current test
 #
 # uncomment below and update the test
-#my $u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current_result = $api->u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current();
+#my $u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current_pool = undef; # replace NULL with a proper value
+#my $u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current_result = $api->u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current(pool => $u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current_pool);
+
+#
+# u_niswapv3_ethereum_liquidity_pools__current test
+#
+# uncomment below and update the test
+#my $u_niswapv3_ethereum_liquidity_pools__current_id = undef; # replace NULL with a proper value
+#my $u_niswapv3_ethereum_liquidity_pools__current_result = $api->u_niswapv3_ethereum_liquidity_pools__current(id => $u_niswapv3_ethereum_liquidity_pools__current_id);
 
 #
 # u_niswapv3_ethereum_position_snapshots__current test
@@ -106,7 +122,8 @@ isa_ok($api, 'WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi');
 # u_niswapv3_ethereum_tick_daily_snapshots__current test
 #
 # uncomment below and update the test
-#my $u_niswapv3_ethereum_tick_daily_snapshots__current_result = $api->u_niswapv3_ethereum_tick_daily_snapshots__current();
+#my $u_niswapv3_ethereum_tick_daily_snapshots__current_pool = undef; # replace NULL with a proper value
+#my $u_niswapv3_ethereum_tick_daily_snapshots__current_result = $api->u_niswapv3_ethereum_tick_daily_snapshots__current(pool => $u_niswapv3_ethereum_tick_daily_snapshots__current_pool);
 
 #
 # u_niswapv3_ethereum_tick_hourly_snapshots__current test
@@ -138,7 +155,8 @@ isa_ok($api, 'WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi');
 # u_niswapv3_ethereum_tokens__current test
 #
 # uncomment below and update the test
-#my $u_niswapv3_ethereum_tokens__current_result = $api->u_niswapv3_ethereum_tokens__current();
+#my $u_niswapv3_ethereum_tokens__current_id = undef; # replace NULL with a proper value
+#my $u_niswapv3_ethereum_tokens__current_result = $api->u_niswapv3_ethereum_tokens__current(id => $u_niswapv3_ethereum_tokens__current_id);
 
 #
 # u_niswapv3_ethereum_usage_metrics_daily_snapshots__current test

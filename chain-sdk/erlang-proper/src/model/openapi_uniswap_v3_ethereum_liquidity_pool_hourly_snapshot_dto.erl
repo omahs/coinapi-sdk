@@ -12,6 +12,7 @@
   [ {'entry_time', datetime() }
   | {'recv_time', datetime() }
   | {'block_number', integer() }
+  | {'vid', integer() }
   | {'id', binary() }
   | {'hour', integer() }
   | {'protocol', binary() }
@@ -64,6 +65,7 @@ openapi_uniswap_v3_ethereum_liquidity_pool_hourly_snapshot_dto(Fields) ->
   Default = [ {'entry_time', datetime() }
             , {'recv_time', datetime() }
             , {'block_number', integer() }
+            , {'vid', integer() }
             , {'id', binary() }
             , {'hour', integer() }
             , {'protocol', binary() }

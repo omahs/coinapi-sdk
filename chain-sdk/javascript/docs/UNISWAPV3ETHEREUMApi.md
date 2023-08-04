@@ -10,8 +10,10 @@ Method | HTTP request | Description
 [**uNISWAPV3ETHEREUMDexAmmProtocolsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMDexAmmProtocolsCurrent) | **GET** /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
 [**uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
 [**uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
+[**uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
 [**uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
 [**uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
+[**uNISWAPV3ETHEREUMLiquidityPoolsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current)
 [**uNISWAPV3ETHEREUMPositionSnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMPositionSnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current)
 [**uNISWAPV3ETHEREUMPositionsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMPositionsCurrent) | **GET** /dapps/uniswap_v3_ethereum/positions/current | Positions (current)
 [**uNISWAPV3ETHEREUMRewardTokensCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMRewardTokensCurrent) | **GET** /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current)
@@ -235,7 +237,7 @@ No authorization required
 
 ## uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent
 
-> [UNISWAPV3ETHEREUMLiquidityPoolAmountDTO] uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent()
+> [UNISWAPV3ETHEREUMLiquidityPoolAmountDTO] uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(opts)
 
 LiquidityPoolAmounts (current)
 
@@ -247,7 +249,10 @@ Gets liquidityPoolAmounts.
 import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
 let apiInstance = new OnChainDappsRestApi.UNISWAPV3ETHEREUMApi();
-apiInstance.uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent((error, data, response) => {
+let opts = {
+  'id': "id_example" // String | Smart contract address of the pool.
+};
+apiInstance.uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -258,11 +263,61 @@ apiInstance.uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent((error, data, response)
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Smart contract address of the pool. | [optional] 
 
 ### Return type
 
 [**[UNISWAPV3ETHEREUMLiquidityPoolAmountDTO]**](UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+
+> [UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO] uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(opts)
+
+LiquidityPoolDailySnapshots (current)
+
+Gets liquidityPoolDailySnapshots.
+
+### Example
+
+```javascript
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
+
+let apiInstance = new OnChainDappsRestApi.UNISWAPV3ETHEREUMApi();
+let opts = {
+  'pool': "pool_example" // String | Pool this snapshot belongs to.
+};
+apiInstance.uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **String**| Pool this snapshot belongs to. | [optional] 
+
+### Return type
+
+[**[UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]**](UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md)
 
 ### Authorization
 
@@ -317,7 +372,7 @@ No authorization required
 
 ## uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
 
-> [UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO] uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent()
+> [UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO] uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(opts)
 
 LiquidityPoolHourlySnapshots (current)
 
@@ -329,7 +384,10 @@ Gets liquidityPoolHourlySnapshots.
 import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
 let apiInstance = new OnChainDappsRestApi.UNISWAPV3ETHEREUMApi();
-apiInstance.uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent((error, data, response) => {
+let opts = {
+  'pool': "pool_example" // String | The pool this snapshot belongs to
+};
+apiInstance.uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -340,11 +398,61 @@ apiInstance.uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent((error, data, r
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **String**| The pool this snapshot belongs to | [optional] 
 
 ### Return type
 
 [**[UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]**](UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uNISWAPV3ETHEREUMLiquidityPoolsCurrent
+
+> [UNISWAPV3ETHEREUMLiquidityPoolDTO] uNISWAPV3ETHEREUMLiquidityPoolsCurrent(opts)
+
+LiquidityPools (current)
+
+Gets liquidityPools.
+
+### Example
+
+```javascript
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
+
+let apiInstance = new OnChainDappsRestApi.UNISWAPV3ETHEREUMApi();
+let opts = {
+  'id': "id_example" // String | Smart contract address of the pool.
+};
+apiInstance.uNISWAPV3ETHEREUMLiquidityPoolsCurrent(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Smart contract address of the pool. | [optional] 
+
+### Return type
+
+[**[UNISWAPV3ETHEREUMLiquidityPoolDTO]**](UNISWAPV3ETHEREUMLiquidityPoolDTO.md)
 
 ### Authorization
 
@@ -528,7 +636,7 @@ No authorization required
 
 ## uNISWAPV3ETHEREUMTickDailySnapshotsCurrent
 
-> [UNISWAPV3ETHEREUMTickDailySnapshotDTO] uNISWAPV3ETHEREUMTickDailySnapshotsCurrent()
+> [UNISWAPV3ETHEREUMTickDailySnapshotDTO] uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(opts)
 
 TickDailySnapshots (current)
 
@@ -540,7 +648,10 @@ Gets tickDailySnapshots.
 import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
 let apiInstance = new OnChainDappsRestApi.UNISWAPV3ETHEREUMApi();
-apiInstance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent((error, data, response) => {
+let opts = {
+  'pool': "pool_example" // String | liquidity pool this tick belongs to
+};
+apiInstance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -551,7 +662,10 @@ apiInstance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent((error, data, response) =
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **String**| liquidity pool this tick belongs to | [optional] 
 
 ### Return type
 
@@ -745,7 +859,7 @@ No authorization required
 
 ## uNISWAPV3ETHEREUMTokensCurrent
 
-> [UNISWAPV3ETHEREUMTokenDTO] uNISWAPV3ETHEREUMTokensCurrent()
+> [UNISWAPV3ETHEREUMTokenDTO] uNISWAPV3ETHEREUMTokensCurrent(opts)
 
 Tokens (current)
 
@@ -757,7 +871,10 @@ Gets tokens.
 import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
 let apiInstance = new OnChainDappsRestApi.UNISWAPV3ETHEREUMApi();
-apiInstance.uNISWAPV3ETHEREUMTokensCurrent((error, data, response) => {
+let opts = {
+  'id': "id_example" // String | Smart contract address of the token.
+};
+apiInstance.uNISWAPV3ETHEREUMTokensCurrent(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -768,7 +885,10 @@ apiInstance.uNISWAPV3ETHEREUMTokensCurrent((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Smart contract address of the token. | [optional] 
 
 ### Return type
 

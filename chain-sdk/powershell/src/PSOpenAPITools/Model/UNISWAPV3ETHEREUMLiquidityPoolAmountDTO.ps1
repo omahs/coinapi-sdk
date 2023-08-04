@@ -21,6 +21,8 @@ No description available.
 No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
+.PARAMETER Vid
+.
 .PARAMETER BlockRange
 
 .PARAMETER Id
@@ -49,18 +51,21 @@ function Initialize-UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
         [System.Nullable[Int64]]
         ${BlockNumber},
         [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true)]
-        [String]
-        ${BlockRange},
+        [System.Nullable[Int64]]
+        ${Vid},
         [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${Id},
+        ${BlockRange},
         [Parameter(Position = 5, ValueFromPipelineByPropertyName = $true)]
-        [String[]]
-        ${InputTokens},
+        [String]
+        ${Id},
         [Parameter(Position = 6, ValueFromPipelineByPropertyName = $true)]
         [String[]]
-        ${InputTokenBalances},
+        ${InputTokens},
         [Parameter(Position = 7, ValueFromPipelineByPropertyName = $true)]
+        [String[]]
+        ${InputTokenBalances},
+        [Parameter(Position = 8, ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${TokenPrices}
     )
@@ -74,6 +79,7 @@ function Initialize-UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
             "entry_time" = ${EntryTime}
             "recv_time" = ${RecvTime}
             "block_number" = ${BlockNumber}
+            "vid" = ${Vid}
             "block_range" = ${BlockRange}
             "id" = ${Id}
             "input_tokens" = ${InputTokens}
@@ -116,7 +122,7 @@ function ConvertFrom-JsonToUNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in UNISWAPV3ETHEREUMLiquidityPoolAmountDTO
-        $AllProperties = ("entry_time", "recv_time", "block_number", "block_range", "id", "input_tokens", "input_token_balances", "token_prices")
+        $AllProperties = ("entry_time", "recv_time", "block_number", "vid", "block_range", "id", "input_tokens", "input_token_balances", "token_prices")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -139,6 +145,12 @@ function ConvertFrom-JsonToUNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
             $BlockNumber = $null
         } else {
             $BlockNumber = $JsonParameters.PSobject.Properties["block_number"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "vid"))) { #optional property not found
+            $Vid = $null
+        } else {
+            $Vid = $JsonParameters.PSobject.Properties["vid"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "block_range"))) { #optional property not found
@@ -175,6 +187,7 @@ function ConvertFrom-JsonToUNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
             "entry_time" = ${EntryTime}
             "recv_time" = ${RecvTime}
             "block_number" = ${BlockNumber}
+            "vid" = ${Vid}
             "block_range" = ${BlockRange}
             "id" = ${Id}
             "input_tokens" = ${InputTokens}

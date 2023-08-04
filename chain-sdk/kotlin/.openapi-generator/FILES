@@ -89,6 +89,8 @@ docs/UNISWAPV3ETHEREUMDepositDTO.md
 docs/UNISWAPV3ETHEREUMDexAmmProtocolDTO.md
 docs/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md
+docs/UNISWAPV3ETHEREUMLiquidityPoolDTO.md
+docs/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMPositionDTO.md
@@ -250,6 +252,8 @@ src/main/kotlin/org/openapitools/client/models/UNISWAPV3ETHEREUMDepositDTO.kt
 src/main/kotlin/org/openapitools/client/models/UNISWAPV3ETHEREUMDexAmmProtocolDTO.kt
 src/main/kotlin/org/openapitools/client/models/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.kt
 src/main/kotlin/org/openapitools/client/models/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.kt
+src/main/kotlin/org/openapitools/client/models/UNISWAPV3ETHEREUMLiquidityPoolDTO.kt
+src/main/kotlin/org/openapitools/client/models/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.kt
 src/main/kotlin/org/openapitools/client/models/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.kt
 src/main/kotlin/org/openapitools/client/models/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.kt
 src/main/kotlin/org/openapitools/client/models/UNISWAPV3ETHEREUMPositionDTO.kt

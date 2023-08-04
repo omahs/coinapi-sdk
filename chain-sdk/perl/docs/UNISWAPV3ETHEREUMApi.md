@@ -15,8 +15,10 @@ Method | HTTP request | Description
 [**u_niswapv3_ethereum_dex_amm_protocols__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_dex_amm_protocols__current) | **GET** /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
 [**u_niswapv3_ethereum_financials_daily_snapshots__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_financials_daily_snapshots__current) | **GET** /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
 [**u_niswapv3_ethereum_liquidity_pool_amounts__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_liquidity_pool_amounts__current) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
+[**u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
 [**u_niswapv3_ethereum_liquidity_pool_fees__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_liquidity_pool_fees__current) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
 [**u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
+[**u_niswapv3_ethereum_liquidity_pools__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_liquidity_pools__current) | **GET** /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current)
 [**u_niswapv3_ethereum_position_snapshots__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_position_snapshots__current) | **GET** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current)
 [**u_niswapv3_ethereum_positions__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_positions__current) | **GET** /dapps/uniswap_v3_ethereum/positions/current | Positions (current)
 [**u_niswapv3_ethereum_reward_tokens__current**](UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_reward_tokens__current) | **GET** /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current)
@@ -243,7 +245,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **u_niswapv3_ethereum_liquidity_pool_amounts__current**
-> ARRAY[UNISWAPV3ETHEREUMLiquidityPoolAmountDTO] u_niswapv3_ethereum_liquidity_pool_amounts__current()
+> ARRAY[UNISWAPV3ETHEREUMLiquidityPoolAmountDTO] u_niswapv3_ethereum_liquidity_pool_amounts__current(id => $id)
 
 LiquidityPoolAmounts (current)
 
@@ -256,9 +258,10 @@ use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
 my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
 );
 
+my $id = "id_example"; # string | Smart contract address of the pool.
 
 eval {
-    my $result = $api_instance->u_niswapv3_ethereum_liquidity_pool_amounts__current();
+    my $result = $api_instance->u_niswapv3_ethereum_liquidity_pool_amounts__current(id => $id);
     print Dumper($result);
 };
 if ($@) {
@@ -267,11 +270,60 @@ if ($@) {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Smart contract address of the pool. | [optional] 
 
 ### Return type
 
 [**ARRAY[UNISWAPV3ETHEREUMLiquidityPoolAmountDTO]**](UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current**
+> ARRAY[UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO] u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current(pool => $pool)
+
+LiquidityPoolDailySnapshots (current)
+
+Gets liquidityPoolDailySnapshots.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+my $pool = "pool_example"; # string | Pool this snapshot belongs to.
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current(pool => $pool);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **string**| Pool this snapshot belongs to. | [optional] 
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]**](UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md)
 
 ### Authorization
 
@@ -327,7 +379,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current**
-> ARRAY[UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO] u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current()
+> ARRAY[UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO] u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current(pool => $pool)
 
 LiquidityPoolHourlySnapshots (current)
 
@@ -340,9 +392,10 @@ use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
 my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
 );
 
+my $pool = "pool_example"; # string | The pool this snapshot belongs to
 
 eval {
-    my $result = $api_instance->u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current();
+    my $result = $api_instance->u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current(pool => $pool);
     print Dumper($result);
 };
 if ($@) {
@@ -351,11 +404,60 @@ if ($@) {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **string**| The pool this snapshot belongs to | [optional] 
 
 ### Return type
 
 [**ARRAY[UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]**](UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_niswapv3_ethereum_liquidity_pools__current**
+> ARRAY[UNISWAPV3ETHEREUMLiquidityPoolDTO] u_niswapv3_ethereum_liquidity_pools__current(id => $id)
+
+LiquidityPools (current)
+
+Gets liquidityPools.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
+my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
+);
+
+my $id = "id_example"; # string | Smart contract address of the pool.
+
+eval {
+    my $result = $api_instance->u_niswapv3_ethereum_liquidity_pools__current(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_liquidity_pools__current: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Smart contract address of the pool. | [optional] 
+
+### Return type
+
+[**ARRAY[UNISWAPV3ETHEREUMLiquidityPoolDTO]**](UNISWAPV3ETHEREUMLiquidityPoolDTO.md)
 
 ### Authorization
 
@@ -541,7 +643,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **u_niswapv3_ethereum_tick_daily_snapshots__current**
-> ARRAY[UNISWAPV3ETHEREUMTickDailySnapshotDTO] u_niswapv3_ethereum_tick_daily_snapshots__current()
+> ARRAY[UNISWAPV3ETHEREUMTickDailySnapshotDTO] u_niswapv3_ethereum_tick_daily_snapshots__current(pool => $pool)
 
 TickDailySnapshots (current)
 
@@ -554,9 +656,10 @@ use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
 my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
 );
 
+my $pool = "pool_example"; # string | liquidity pool this tick belongs to
 
 eval {
-    my $result = $api_instance->u_niswapv3_ethereum_tick_daily_snapshots__current();
+    my $result = $api_instance->u_niswapv3_ethereum_tick_daily_snapshots__current(pool => $pool);
     print Dumper($result);
 };
 if ($@) {
@@ -565,7 +668,10 @@ if ($@) {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **string**| liquidity pool this tick belongs to | [optional] 
 
 ### Return type
 
@@ -759,7 +865,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **u_niswapv3_ethereum_tokens__current**
-> ARRAY[UNISWAPV3ETHEREUMTokenDTO] u_niswapv3_ethereum_tokens__current()
+> ARRAY[UNISWAPV3ETHEREUMTokenDTO] u_niswapv3_ethereum_tokens__current(id => $id)
 
 Tokens (current)
 
@@ -772,9 +878,10 @@ use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
 my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
 );
 
+my $id = "id_example"; # string | Smart contract address of the token.
 
 eval {
-    my $result = $api_instance->u_niswapv3_ethereum_tokens__current();
+    my $result = $api_instance->u_niswapv3_ethereum_tokens__current(id => $id);
     print Dumper($result);
 };
 if ($@) {
@@ -783,7 +890,10 @@ if ($@) {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Smart contract address of the token. | [optional] 
 
 ### Return type
 

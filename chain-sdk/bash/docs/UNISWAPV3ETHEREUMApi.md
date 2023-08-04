@@ -10,8 +10,10 @@ Method | HTTP request | Description
 [**uNISWAPV3ETHEREUMDexAmmProtocolsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMDexAmmProtocolsCurrent) | **GET** /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
 [**uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
 [**uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
+[**uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
 [**uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
 [**uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
+[**uNISWAPV3ETHEREUMLiquidityPoolsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current)
 [**uNISWAPV3ETHEREUMPositionSnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMPositionSnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current)
 [**uNISWAPV3ETHEREUMPositionsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMPositionsCurrent) | **GET** /dapps/uniswap_v3_ethereum/positions/current | Positions (current)
 [**uNISWAPV3ETHEREUMRewardTokensCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMRewardTokensCurrent) | **GET** /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current)
@@ -197,16 +199,54 @@ Gets liquidityPoolAmounts.
 ### Example
 
 ```bash
- uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+ uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent  id=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string** | Smart contract address of the pool. | [optional] [default to null]
 
 ### Return type
 
 [**array[UNISWAPV3ETHEREUMLiquidityPoolAmountDTO]**](UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+
+LiquidityPoolDailySnapshots (current)
+
+Gets liquidityPoolDailySnapshots.
+
+### Example
+
+```bash
+ uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent  pool=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **string** | Pool this snapshot belongs to. | [optional] [default to null]
+
+### Return type
+
+[**array[UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]**](UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md)
 
 ### Authorization
 
@@ -261,16 +301,54 @@ Gets liquidityPoolHourlySnapshots.
 ### Example
 
 ```bash
- uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+ uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent  pool=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **string** | The pool this snapshot belongs to | [optional] [default to null]
 
 ### Return type
 
 [**array[UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]**](UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uNISWAPV3ETHEREUMLiquidityPoolsCurrent
+
+LiquidityPools (current)
+
+Gets liquidityPools.
+
+### Example
+
+```bash
+ uNISWAPV3ETHEREUMLiquidityPoolsCurrent  id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string** | Smart contract address of the pool. | [optional] [default to null]
+
+### Return type
+
+[**array[UNISWAPV3ETHEREUMLiquidityPoolDTO]**](UNISWAPV3ETHEREUMLiquidityPoolDTO.md)
 
 ### Authorization
 
@@ -424,12 +502,15 @@ Gets tickDailySnapshots.
 ### Example
 
 ```bash
- uNISWAPV3ETHEREUMTickDailySnapshotsCurrent
+ uNISWAPV3ETHEREUMTickDailySnapshotsCurrent  pool=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **string** | liquidity pool this tick belongs to | [optional] [default to null]
 
 ### Return type
 
@@ -590,12 +671,15 @@ Gets tokens.
 ### Example
 
 ```bash
- uNISWAPV3ETHEREUMTokensCurrent
+ uNISWAPV3ETHEREUMTokensCurrent  id=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string** | Smart contract address of the token. | [optional] [default to null]
 
 ### Return type
 

@@ -10,8 +10,10 @@ Feature | HTTP request | Description
 [**u_ni_sw_ap_v3_et_he_re_um_dex_amm_protocols_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_dex_amm_protocols_current) | **Get** /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
 [**u_ni_sw_ap_v3_et_he_re_um_financials_daily_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_financials_daily_snapshots_current) | **Get** /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
 [**u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_amounts_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_amounts_current) | **Get** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
+[**u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_daily_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_daily_snapshots_current) | **Get** /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
 [**u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_fees_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_fees_current) | **Get** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
 [**u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_hourly_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_hourly_snapshots_current) | **Get** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
+[**u_ni_sw_ap_v3_et_he_re_um_liquidity_pools_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_liquidity_pools_current) | **Get** /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current)
 [**u_ni_sw_ap_v3_et_he_re_um_position_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_position_snapshots_current) | **Get** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current)
 [**u_ni_sw_ap_v3_et_he_re_um_positions_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_positions_current) | **Get** /dapps/uniswap_v3_ethereum/positions/current | Positions (current)
 [**u_ni_sw_ap_v3_et_he_re_um_reward_tokens_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_reward_tokens_current) | **Get** /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current)
@@ -163,7 +165,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_amounts_current**
-> u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_amounts_current : detachable LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_AMOUNT_DTO]
+> u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_amounts_current (id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_AMOUNT_DTO]
 
 
 LiquidityPoolAmounts (current)
@@ -172,11 +174,44 @@ Gets liquidityPoolAmounts.
 
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **STRING_32**| Smart contract address of the pool. | [optional] [default to null]
 
 ### Return type
 
 [**LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_AMOUNT_DTO]**](UNISWAP_V3_ETHEREUM.LiquidityPoolAmountDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_daily_snapshots_current**
+> u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_daily_snapshots_current (pool:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOT_DTO]
+
+
+LiquidityPoolDailySnapshots (current)
+
+Gets liquidityPoolDailySnapshots.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **STRING_32**| Pool this snapshot belongs to. | [optional] [default to null]
+
+### Return type
+
+[**LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOT_DTO]**](UNISWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO.md)
 
 ### Authorization
 
@@ -217,7 +252,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_hourly_snapshots_current**
-> u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_hourly_snapshots_current : detachable LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_HOURLY_SNAPSHOT_DTO]
+> u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_hourly_snapshots_current (pool:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_HOURLY_SNAPSHOT_DTO]
 
 
 LiquidityPoolHourlySnapshots (current)
@@ -226,11 +261,44 @@ Gets liquidityPoolHourlySnapshots.
 
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **STRING_32**| The pool this snapshot belongs to | [optional] [default to null]
 
 ### Return type
 
 [**LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_HOURLY_SNAPSHOT_DTO]**](UNISWAP_V3_ETHEREUM.LiquidityPoolHourlySnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **u_ni_sw_ap_v3_et_he_re_um_liquidity_pools_current**
+> u_ni_sw_ap_v3_et_he_re_um_liquidity_pools_current (id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_DTO]
+
+
+LiquidityPools (current)
+
+Gets liquidityPools.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **STRING_32**| Smart contract address of the pool. | [optional] [default to null]
+
+### Return type
+
+[**LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_DTO]**](UNISWAP_V3_ETHEREUM.LiquidityPoolDTO.md)
 
 ### Authorization
 
@@ -355,7 +423,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **u_ni_sw_ap_v3_et_he_re_um_tick_daily_snapshots_current**
-> u_ni_sw_ap_v3_et_he_re_um_tick_daily_snapshots_current : detachable LIST [UNISWAP_V3_ETHEREUM_TICK_DAILY_SNAPSHOT_DTO]
+> u_ni_sw_ap_v3_et_he_re_um_tick_daily_snapshots_current (pool:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_ETHEREUM_TICK_DAILY_SNAPSHOT_DTO]
 
 
 TickDailySnapshots (current)
@@ -364,7 +432,10 @@ Gets tickDailySnapshots.
 
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **STRING_32**| liquidity pool this tick belongs to | [optional] [default to null]
 
 ### Return type
 
@@ -496,7 +567,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **u_ni_sw_ap_v3_et_he_re_um_tokens_current**
-> u_ni_sw_ap_v3_et_he_re_um_tokens_current : detachable LIST [UNISWAP_V3_ETHEREUM_TOKEN_DTO]
+> u_ni_sw_ap_v3_et_he_re_um_tokens_current (id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_ETHEREUM_TOKEN_DTO]
 
 
 Tokens (current)
@@ -505,7 +576,10 @@ Gets tokens.
 
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **STRING_32**| Smart contract address of the token. | [optional] [default to null]
 
 ### Return type
 

@@ -67,6 +67,13 @@ public:
 	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
+	/*! \brief Get 
+	 */
+	long long getVid();
+
+	/*! \brief Set 
+	 */
+	void setVid(long long  vid);
 	/*! \brief Get (Smart contract address of the pool)-( # of hours since Unix epoch time)
 	 */
 	std::string getId();
@@ -366,6 +373,7 @@ private:
 	std::string entry_time;
 	std::string recv_time;
 	long long block_number;
+	long long vid;
 	std::string id;
 	int hour;
 	std::string protocol;

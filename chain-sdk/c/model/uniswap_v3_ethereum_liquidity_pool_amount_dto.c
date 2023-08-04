@@ -9,6 +9,7 @@ uniswap_v3_ethereum_liquidity_pool_amount_dto_t *uniswap_v3_ethereum_liquidity_p
     char *entry_time,
     char *recv_time,
     long block_number,
+    long vid,
     char *block_range,
     char *id,
     list_t *input_tokens,
@@ -22,6 +23,7 @@ uniswap_v3_ethereum_liquidity_pool_amount_dto_t *uniswap_v3_ethereum_liquidity_p
     uniswap_v3_ethereum_liquidity_pool_amount_dto_local_var->entry_time = entry_time;
     uniswap_v3_ethereum_liquidity_pool_amount_dto_local_var->recv_time = recv_time;
     uniswap_v3_ethereum_liquidity_pool_amount_dto_local_var->block_number = block_number;
+    uniswap_v3_ethereum_liquidity_pool_amount_dto_local_var->vid = vid;
     uniswap_v3_ethereum_liquidity_pool_amount_dto_local_var->block_range = block_range;
     uniswap_v3_ethereum_liquidity_pool_amount_dto_local_var->id = id;
     uniswap_v3_ethereum_liquidity_pool_amount_dto_local_var->input_tokens = input_tokens;
@@ -99,6 +101,14 @@ cJSON *uniswap_v3_ethereum_liquidity_pool_amount_dto_convertToJSON(uniswap_v3_et
     // uniswap_v3_ethereum_liquidity_pool_amount_dto->block_number
     if(uniswap_v3_ethereum_liquidity_pool_amount_dto->block_number) {
     if(cJSON_AddNumberToObject(item, "block_number", uniswap_v3_ethereum_liquidity_pool_amount_dto->block_number) == NULL) {
+    goto fail; //Numeric
+    }
+    }
+
+
+    // uniswap_v3_ethereum_liquidity_pool_amount_dto->vid
+    if(uniswap_v3_ethereum_liquidity_pool_amount_dto->vid) {
+    if(cJSON_AddNumberToObject(item, "vid", uniswap_v3_ethereum_liquidity_pool_amount_dto->vid) == NULL) {
     goto fail; //Numeric
     }
     }
@@ -218,6 +228,15 @@ uniswap_v3_ethereum_liquidity_pool_amount_dto_t *uniswap_v3_ethereum_liquidity_p
     }
     }
 
+    // uniswap_v3_ethereum_liquidity_pool_amount_dto->vid
+    cJSON *vid = cJSON_GetObjectItemCaseSensitive(uniswap_v3_ethereum_liquidity_pool_amount_dtoJSON, "vid");
+    if (vid) { 
+    if(!cJSON_IsNumber(vid))
+    {
+    goto end; //Numeric
+    }
+    }
+
     // uniswap_v3_ethereum_liquidity_pool_amount_dto->block_range
     cJSON *block_range = cJSON_GetObjectItemCaseSensitive(uniswap_v3_ethereum_liquidity_pool_amount_dtoJSON, "block_range");
     if (block_range) { 
@@ -298,6 +317,7 @@ uniswap_v3_ethereum_liquidity_pool_amount_dto_t *uniswap_v3_ethereum_liquidity_p
         entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
         recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
+        vid ? vid->valuedouble : 0,
         block_range && !cJSON_IsNull(block_range) ? strdup(block_range->valuestring) : NULL,
         id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
         input_tokens ? input_tokensList : NULL,

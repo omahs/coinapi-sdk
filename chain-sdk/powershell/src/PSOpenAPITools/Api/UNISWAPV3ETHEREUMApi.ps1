@@ -390,6 +390,9 @@ LiquidityPoolAmounts (current)
 
 No description available.
 
+.PARAMETER Id
+Smart contract address of the pool.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json, text/json
@@ -405,6 +408,9 @@ UNISWAPV3ETHEREUMLiquidityPoolAmountDTO[]
 function Invoke-UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent {
     [CmdletBinding()]
     Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${Id},
         [String]
         [ValidateSet("text/plain", "application/json", "text/json")]
         $ReturnType,
@@ -436,6 +442,10 @@ function Invoke-UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent {
 
         $LocalVarUri = '/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current'
 
+        if ($Id) {
+            $LocalVarQueryParameters['id'] = $Id
+        }
+
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
                                 -Accepts $LocalVarAccepts `
@@ -446,6 +456,91 @@ function Invoke-UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent {
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
                                 -ReturnType "UNISWAPV3ETHEREUMLiquidityPoolAmountDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+LiquidityPoolDailySnapshots (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER Pool
+Pool this snapshot belongs to.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[]
+#>
+function Invoke-UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${Pool},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current'
+
+        if ($Pool) {
+            $LocalVarQueryParameters['pool'] = $Pool
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -540,6 +635,9 @@ LiquidityPoolHourlySnapshots (current)
 
 No description available.
 
+.PARAMETER Pool
+The pool this snapshot belongs to
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json, text/json
@@ -555,6 +653,9 @@ UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO[]
 function Invoke-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent {
     [CmdletBinding()]
     Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${Pool},
         [String]
         [ValidateSet("text/plain", "application/json", "text/json")]
         $ReturnType,
@@ -586,6 +687,10 @@ function Invoke-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent {
 
         $LocalVarUri = '/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current'
 
+        if ($Pool) {
+            $LocalVarQueryParameters['pool'] = $Pool
+        }
+
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
                                 -Accepts $LocalVarAccepts `
@@ -596,6 +701,91 @@ function Invoke-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent {
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
                                 -ReturnType "UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+LiquidityPools (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER Id
+Smart contract address of the pool.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+UNISWAPV3ETHEREUMLiquidityPoolDTO[]
+#>
+function Invoke-UNISWAPV3ETHEREUMLiquidityPoolsCurrent {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${Id},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-UNISWAPV3ETHEREUMLiquidityPoolsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/uniswap_v3_ethereum/liquidityPools/current'
+
+        if ($Id) {
+            $LocalVarQueryParameters['id'] = $Id
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "UNISWAPV3ETHEREUMLiquidityPoolDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -925,6 +1115,9 @@ TickDailySnapshots (current)
 
 No description available.
 
+.PARAMETER Pool
+liquidity pool this tick belongs to
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json, text/json
@@ -940,6 +1133,9 @@ UNISWAPV3ETHEREUMTickDailySnapshotDTO[]
 function Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent {
     [CmdletBinding()]
     Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${Pool},
         [String]
         [ValidateSet("text/plain", "application/json", "text/json")]
         $ReturnType,
@@ -970,6 +1166,10 @@ function Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent {
         }
 
         $LocalVarUri = '/dapps/uniswap_v3_ethereum/tickDailySnapshots/current'
+
+        if ($Pool) {
+            $LocalVarQueryParameters['pool'] = $Pool
+        }
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -1320,6 +1520,9 @@ Tokens (current)
 
 No description available.
 
+.PARAMETER Id
+Smart contract address of the token.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json, text/json
@@ -1335,6 +1538,9 @@ UNISWAPV3ETHEREUMTokenDTO[]
 function Invoke-UNISWAPV3ETHEREUMTokensCurrent {
     [CmdletBinding()]
     Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${Id},
         [String]
         [ValidateSet("text/plain", "application/json", "text/json")]
         $ReturnType,
@@ -1365,6 +1571,10 @@ function Invoke-UNISWAPV3ETHEREUMTokensCurrent {
         }
 
         $LocalVarUri = '/dapps/uniswap_v3_ethereum/tokens/current'
+
+        if ($Id) {
+            $LocalVarQueryParameters['id'] = $Id
+        }
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `

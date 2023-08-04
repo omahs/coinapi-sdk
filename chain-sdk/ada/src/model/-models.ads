@@ -766,6 +766,82 @@ package .Models is
 
 
 
+   type UNISWAPV3ETHEREUMLiquidityPoolDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Vid : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Protocol : Swagger.Nullable_UString;
+       Name : Swagger.Nullable_UString;
+       Symbol : Swagger.Nullable_UString;
+       Liquidity_Token : Swagger.Nullable_UString;
+       Input_Tokens : Swagger.UString_Vectors.Vector;
+       Reward_Tokens : Swagger.UString_Vectors.Vector;
+       Fees : Swagger.UString_Vectors.Vector;
+       Is_Single_Sided : Swagger.Nullable_Boolean;
+       Created_Timestamp : Swagger.Nullable_UString;
+       Created_Block_Number : Swagger.Nullable_UString;
+       Tick : Swagger.Nullable_UString;
+       Total_Value_Locked_Usd : Swagger.Nullable_UString;
+       Total_Liquidity : Swagger.Nullable_UString;
+       Total_Liquidity_Usd : Swagger.Nullable_UString;
+       Active_Liquidity : Swagger.Nullable_UString;
+       Active_Liquidity_Usd : Swagger.Nullable_UString;
+       Uncollected_Protocol_Side_Token_Amounts : Swagger.UString_Vectors.Vector;
+       Uncollected_Protocol_Side_Values_Usd : Swagger.UString_Vectors.Vector;
+       Uncollected_Supply_Side_Token_Amounts : Swagger.UString_Vectors.Vector;
+       Uncollected_Supply_Side_Values_Usd : Swagger.UString_Vectors.Vector;
+       Cumulative_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Volume_By_Token_Amount : Swagger.UString_Vectors.Vector;
+       Cumulative_Volume_By_Token_Usd : Swagger.UString_Vectors.Vector;
+       Cumulative_Volume_Usd : Swagger.Nullable_UString;
+       Input_Token_Balances : Swagger.UString_Vectors.Vector;
+       Input_Token_Balances_Usd : Swagger.UString_Vectors.Vector;
+       Input_Token_Weights : Swagger.UString_Vectors.Vector;
+       Staked_Output_Token_Amount : Swagger.Nullable_UString;
+       Reward_Token_Emissions_Amount : Swagger.UString_Vectors.Vector;
+       Reward_Token_Emissions_Usd : Swagger.UString_Vectors.Vector;
+       Cumulative_Deposit_Count : Swagger.Nullable_Integer;
+       Cumulative_Withdraw_Count : Swagger.Nullable_Integer;
+       Cumulative_Swap_Count : Swagger.Nullable_Integer;
+       Position_Count : Swagger.Nullable_Integer;
+       Open_Position_Count : Swagger.Nullable_Integer;
+       Closed_Position_Count : Swagger.Nullable_Integer;
+       Last_Snapshot_Day_Id : Swagger.Nullable_Integer;
+       Last_Snapshot_Hour_Id : Swagger.Nullable_Integer;
+       Last_Update_Timestamp : Swagger.Nullable_UString;
+       Last_Update_Block_Number : Swagger.Nullable_UString;
+       Evaluated_Ask : double;
+     end record;
+
+   package UNISWAPV3ETHEREUMLiquidityPoolDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV3ETHEREUMLiquidityPoolDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV3ETHEREUMLiquidityPoolDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV3ETHEREUMLiquidityPoolDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV3ETHEREUMLiquidityPoolDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV3ETHEREUMLiquidityPoolDTO_Type_Vectors.Vector);
+
+
+
+
    type UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
@@ -4424,6 +4500,7 @@ package .Models is
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
+       Vid : Swagger.Nullable_Long;
        Block_Range : Swagger.Nullable_UString;
        Id : Swagger.Nullable_UString;
        Input_Tokens : Swagger.UString_Vectors.Vector;
@@ -4454,11 +4531,86 @@ package .Models is
 
 
 
+   type UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Vid : Swagger.Nullable_Long;
+       Block_ : Swagger.Nullable_Integer;
+       Id : Swagger.Nullable_UString;
+       Day : Swagger.Nullable_Integer;
+       Protocol : Swagger.Nullable_UString;
+       Pool : Swagger.Nullable_UString;
+       Tick : Swagger.Nullable_UString;
+       Total_Value_Locked_Usd : Swagger.Nullable_UString;
+       Total_Liquidity : Swagger.Nullable_UString;
+       Total_Liquidity_Usd : Swagger.Nullable_UString;
+       Active_Liquidity : Swagger.Nullable_UString;
+       Active_Liquidity_Usd : Swagger.Nullable_UString;
+       Uncollected_Protocol_Side_Token_Amounts : Swagger.UString_Vectors.Vector;
+       Uncollected_Protocol_Side_Values_Usd : Swagger.UString_Vectors.Vector;
+       Uncollected_Supply_Side_Token_Amounts : Swagger.UString_Vectors.Vector;
+       Uncollected_Supply_Side_Values_Usd : Swagger.UString_Vectors.Vector;
+       Cumulative_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Volume_Usd : Swagger.Nullable_UString;
+       Daily_Volume_Usd : Swagger.Nullable_UString;
+       Cumulative_Volume_By_Token_Amount : Swagger.UString_Vectors.Vector;
+       Daily_Volume_By_Token_Amount : Swagger.UString_Vectors.Vector;
+       Cumulative_Volume_By_Token_Usd : Swagger.UString_Vectors.Vector;
+       Daily_Volume_By_Token_Usd : Swagger.UString_Vectors.Vector;
+       Input_Token_Balances : Swagger.UString_Vectors.Vector;
+       Input_Token_Balances_Usd : Swagger.UString_Vectors.Vector;
+       Input_Token_Weights : Swagger.UString_Vectors.Vector;
+       Staked_Output_Token_Amount : Swagger.Nullable_UString;
+       Reward_Token_Emissions_Amount : Swagger.UString_Vectors.Vector;
+       Reward_Token_Emissions_Usd : Swagger.UString_Vectors.Vector;
+       Cumulative_Deposit_Count : Swagger.Nullable_Integer;
+       Daily_Deposit_Count : Swagger.Nullable_Integer;
+       Cumulative_Withdraw_Count : Swagger.Nullable_Integer;
+       Daily_Withdraw_Count : Swagger.Nullable_Integer;
+       Cumulative_Swap_Count : Swagger.Nullable_Integer;
+       Daily_Swap_Count : Swagger.Nullable_Integer;
+       Position_Count : Swagger.Nullable_Integer;
+       Open_Position_Count : Swagger.Nullable_Integer;
+       Closed_Position_Count : Swagger.Nullable_Integer;
+       Timestamp : Swagger.Nullable_UString;
+     end record;
+
+   package UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO_Type_Vectors.Vector);
+
+
+
+
    type UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
+       Vid : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
        Hour : Swagger.Nullable_Integer;
        Protocol : Swagger.Nullable_UString;

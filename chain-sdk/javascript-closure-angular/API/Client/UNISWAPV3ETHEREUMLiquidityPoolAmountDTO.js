@@ -26,6 +26,13 @@ API.Client.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.prototype.recvTime;
 API.Client.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.prototype.blockNumber;
 
 /**
+ * .
+ * @type {!number}
+ * @export
+ */
+API.Client.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.prototype.vid;
+
+/**
  * 
  * @type {!string}
  * @export

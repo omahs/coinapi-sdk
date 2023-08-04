@@ -188,12 +188,45 @@ uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent  _ =
   _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current"]
 
 data UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent  
+
+-- | /Optional Param/ "id" - Smart contract address of the pool.
+instance HasOptionalParam UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent Id where
+  applyOptionalParam req (Id xs) =
+    req `addQuery` toQuery ("id", Just xs)
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent MimeJSON
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent MimeTextJson
 -- | @text/plain@
 instance Produces UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent MimePlainText
+
+
+-- *** uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+
+-- | @GET \/dapps\/uniswap_v3_ethereum\/liquidityPoolDailySnapshots\/current@
+-- 
+-- LiquidityPoolDailySnapshots (current)
+-- 
+-- Gets liquidityPoolDailySnapshots.
+-- 
+uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent MimeNoContent [UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO] accept
+uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent  _ =
+  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current"]
+
+data UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent  
+
+-- | /Optional Param/ "pool" - Pool this snapshot belongs to.
+instance HasOptionalParam UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent Pool where
+  applyOptionalParam req (Pool xs) =
+    req `addQuery` toQuery ("pool", Just xs)
+-- | @application/json@
+instance Produces UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent MimeJSON
+-- | @text/json@
+instance Produces UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent MimePlainText
 
 
 -- *** uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent
@@ -234,12 +267,45 @@ uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent  _ =
   _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current"]
 
 data UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent  
+
+-- | /Optional Param/ "pool" - The pool this snapshot belongs to
+instance HasOptionalParam UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent Pool where
+  applyOptionalParam req (Pool xs) =
+    req `addQuery` toQuery ("pool", Just xs)
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent MimeJSON
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent MimeTextJson
 -- | @text/plain@
 instance Produces UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent MimePlainText
+
+
+-- *** uNISWAPV3ETHEREUMLiquidityPoolsCurrent
+
+-- | @GET \/dapps\/uniswap_v3_ethereum\/liquidityPools\/current@
+-- 
+-- LiquidityPools (current)
+-- 
+-- Gets liquidityPools.
+-- 
+uNISWAPV3ETHEREUMLiquidityPoolsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMLiquidityPoolsCurrent MimeNoContent [UNISWAPV3ETHEREUMLiquidityPoolDTO] accept
+uNISWAPV3ETHEREUMLiquidityPoolsCurrent  _ =
+  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/liquidityPools/current"]
+
+data UNISWAPV3ETHEREUMLiquidityPoolsCurrent  
+
+-- | /Optional Param/ "id" - Smart contract address of the pool.
+instance HasOptionalParam UNISWAPV3ETHEREUMLiquidityPoolsCurrent Id where
+  applyOptionalParam req (Id xs) =
+    req `addQuery` toQuery ("id", Just xs)
+-- | @application/json@
+instance Produces UNISWAPV3ETHEREUMLiquidityPoolsCurrent MimeJSON
+-- | @text/json@
+instance Produces UNISWAPV3ETHEREUMLiquidityPoolsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces UNISWAPV3ETHEREUMLiquidityPoolsCurrent MimePlainText
 
 
 -- *** uNISWAPV3ETHEREUMPositionSnapshotsCurrent
@@ -354,6 +420,11 @@ uNISWAPV3ETHEREUMTickDailySnapshotsCurrent  _ =
   _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/tickDailySnapshots/current"]
 
 data UNISWAPV3ETHEREUMTickDailySnapshotsCurrent  
+
+-- | /Optional Param/ "pool" - liquidity pool this tick belongs to
+instance HasOptionalParam UNISWAPV3ETHEREUMTickDailySnapshotsCurrent Pool where
+  applyOptionalParam req (Pool xs) =
+    req `addQuery` toQuery ("pool", Just xs)
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMTickDailySnapshotsCurrent MimeJSON
 -- | @text/json@
@@ -479,6 +550,11 @@ uNISWAPV3ETHEREUMTokensCurrent  _ =
   _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/tokens/current"]
 
 data UNISWAPV3ETHEREUMTokensCurrent  
+
+-- | /Optional Param/ "id" - Smart contract address of the token.
+instance HasOptionalParam UNISWAPV3ETHEREUMTokensCurrent Id where
+  applyOptionalParam req (Id xs) =
+    req `addQuery` toQuery ("id", Just xs)
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMTokensCurrent MimeJSON
 -- | @text/json@

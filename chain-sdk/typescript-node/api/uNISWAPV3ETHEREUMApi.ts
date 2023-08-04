@@ -21,6 +21,8 @@ import { UNISWAPV3ETHEREUMDepositDTO } from '../model/uNISWAPV3ETHEREUMDepositDT
 import { UNISWAPV3ETHEREUMDexAmmProtocolDTO } from '../model/uNISWAPV3ETHEREUMDexAmmProtocolDTO';
 import { UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO } from '../model/uNISWAPV3ETHEREUMFinancialsDailySnapshotDTO';
 import { UNISWAPV3ETHEREUMLiquidityPoolAmountDTO } from '../model/uNISWAPV3ETHEREUMLiquidityPoolAmountDTO';
+import { UNISWAPV3ETHEREUMLiquidityPoolDTO } from '../model/uNISWAPV3ETHEREUMLiquidityPoolDTO';
+import { UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO } from '../model/uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO';
 import { UNISWAPV3ETHEREUMLiquidityPoolFeeDTO } from '../model/uNISWAPV3ETHEREUMLiquidityPoolFeeDTO';
 import { UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO } from '../model/uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO';
 import { UNISWAPV3ETHEREUMPositionDTO } from '../model/uNISWAPV3ETHEREUMPositionDTO';
@@ -419,8 +421,9 @@ export class UNISWAPV3ETHEREUMApi {
     /**
      * Gets liquidityPoolAmounts.
      * @summary LiquidityPoolAmounts (current)
+     * @param id Smart contract address of the pool.
      */
-    public async uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>;  }> {
+    public async uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent (id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -432,6 +435,10 @@ export class UNISWAPV3ETHEREUMApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
+
+        if (id !== undefined) {
+            localVarQueryParameters['id'] = ObjectSerializer.serialize(id, "string");
+        }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
@@ -469,6 +476,73 @@ export class UNISWAPV3ETHEREUMApi {
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             body = ObjectSerializer.deserialize(body, "Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Gets liquidityPoolDailySnapshots.
+     * @summary LiquidityPoolDailySnapshots (current)
+     * @param pool Pool this snapshot belongs to.
+     */
+    public async uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent (pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['text/plain', 'application/json', 'text/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        if (pool !== undefined) {
+            localVarQueryParameters['pool'] = ObjectSerializer.serialize(pool, "string");
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -543,8 +617,9 @@ export class UNISWAPV3ETHEREUMApi {
     /**
      * Gets liquidityPoolHourlySnapshots.
      * @summary LiquidityPoolHourlySnapshots (current)
+     * @param pool The pool this snapshot belongs to
      */
-    public async uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>;  }> {
+    public async uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent (pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -556,6 +631,10 @@ export class UNISWAPV3ETHEREUMApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
+
+        if (pool !== undefined) {
+            localVarQueryParameters['pool'] = ObjectSerializer.serialize(pool, "string");
+        }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
@@ -593,6 +672,73 @@ export class UNISWAPV3ETHEREUMApi {
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             body = ObjectSerializer.deserialize(body, "Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Gets liquidityPools.
+     * @summary LiquidityPools (current)
+     * @param id Smart contract address of the pool.
+     */
+    public async uNISWAPV3ETHEREUMLiquidityPoolsCurrent (id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/liquidityPools/current';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['text/plain', 'application/json', 'text/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        if (id !== undefined) {
+            localVarQueryParameters['id'] = ObjectSerializer.serialize(id, "string");
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -858,8 +1004,9 @@ export class UNISWAPV3ETHEREUMApi {
     /**
      * Gets tickDailySnapshots.
      * @summary TickDailySnapshots (current)
+     * @param pool liquidity pool this tick belongs to
      */
-    public async uNISWAPV3ETHEREUMTickDailySnapshotsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>;  }> {
+    public async uNISWAPV3ETHEREUMTickDailySnapshotsCurrent (pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/tickDailySnapshots/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -871,6 +1018,10 @@ export class UNISWAPV3ETHEREUMApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
+
+        if (pool !== undefined) {
+            localVarQueryParameters['pool'] = ObjectSerializer.serialize(pool, "string");
+        }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
@@ -1178,8 +1329,9 @@ export class UNISWAPV3ETHEREUMApi {
     /**
      * Gets tokens.
      * @summary Tokens (current)
+     * @param id Smart contract address of the token.
      */
-    public async uNISWAPV3ETHEREUMTokensCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMTokenDTO>;  }> {
+    public async uNISWAPV3ETHEREUMTokensCurrent (id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMTokenDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/tokens/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1191,6 +1343,10 @@ export class UNISWAPV3ETHEREUMApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
+
+        if (id !== undefined) {
+            localVarQueryParameters['id'] = ObjectSerializer.serialize(id, "string");
+        }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);
 

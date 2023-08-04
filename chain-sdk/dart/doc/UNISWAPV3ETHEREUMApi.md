@@ -15,8 +15,10 @@ Method | HTTP request | Description
 [**uNISWAPV3ETHEREUMDexAmmProtocolsCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumdexammprotocolscurrent) | **GET** /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
 [**uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumfinancialsdailysnapshotscurrent) | **GET** /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
 [**uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumliquiditypoolamountscurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
+[**uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumliquiditypooldailysnapshotscurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
 [**uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumliquiditypoolfeescurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
 [**uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumliquiditypoolhourlysnapshotscurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
+[**uNISWAPV3ETHEREUMLiquidityPoolsCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumliquiditypoolscurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current)
 [**uNISWAPV3ETHEREUMPositionSnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumpositionsnapshotscurrent) | **GET** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current)
 [**uNISWAPV3ETHEREUMPositionsCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumpositionscurrent) | **GET** /dapps/uniswap_v3_ethereum/positions/current | Positions (current)
 [**uNISWAPV3ETHEREUMRewardTokensCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumrewardtokenscurrent) | **GET** /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current)
@@ -228,7 +230,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent**
-> List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent()
+> List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id)
 
 LiquidityPoolAmounts (current)
 
@@ -239,9 +241,10 @@ Gets liquidityPoolAmounts.
 import 'package:openapi/api.dart';
 
 final api_instance = UNISWAPV3ETHEREUMApi();
+final id = id_example; // String | Smart contract address of the pool.
 
 try {
-    final result = api_instance.uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent();
+    final result = api_instance.uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id);
     print(result);
 } catch (e) {
     print('Exception when calling UNISWAPV3ETHEREUMApi->uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent: $e\n');
@@ -249,11 +252,57 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Smart contract address of the pool. | [optional] 
 
 ### Return type
 
 [**List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>**](UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**
+> List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool)
+
+LiquidityPoolDailySnapshots (current)
+
+Gets liquidityPoolDailySnapshots.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UNISWAPV3ETHEREUMApi();
+final pool = pool_example; // String | Pool this snapshot belongs to.
+
+try {
+    final result = api_instance.uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool);
+    print(result);
+} catch (e) {
+    print('Exception when calling UNISWAPV3ETHEREUMApi->uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **String**| Pool this snapshot belongs to. | [optional] 
+
+### Return type
+
+[**List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>**](UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md)
 
 ### Authorization
 
@@ -306,7 +355,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent**
-> List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent()
+> List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool)
 
 LiquidityPoolHourlySnapshots (current)
 
@@ -317,9 +366,10 @@ Gets liquidityPoolHourlySnapshots.
 import 'package:openapi/api.dart';
 
 final api_instance = UNISWAPV3ETHEREUMApi();
+final pool = pool_example; // String | The pool this snapshot belongs to
 
 try {
-    final result = api_instance.uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent();
+    final result = api_instance.uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool);
     print(result);
 } catch (e) {
     print('Exception when calling UNISWAPV3ETHEREUMApi->uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent: $e\n');
@@ -327,11 +377,57 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **String**| The pool this snapshot belongs to | [optional] 
 
 ### Return type
 
 [**List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>**](UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uNISWAPV3ETHEREUMLiquidityPoolsCurrent**
+> List<UNISWAPV3ETHEREUMLiquidityPoolDTO> uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id)
+
+LiquidityPools (current)
+
+Gets liquidityPools.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UNISWAPV3ETHEREUMApi();
+final id = id_example; // String | Smart contract address of the pool.
+
+try {
+    final result = api_instance.uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id);
+    print(result);
+} catch (e) {
+    print('Exception when calling UNISWAPV3ETHEREUMApi->uNISWAPV3ETHEREUMLiquidityPoolsCurrent: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Smart contract address of the pool. | [optional] 
+
+### Return type
+
+[**List<UNISWAPV3ETHEREUMLiquidityPoolDTO>**](UNISWAPV3ETHEREUMLiquidityPoolDTO.md)
 
 ### Authorization
 
@@ -505,7 +601,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **uNISWAPV3ETHEREUMTickDailySnapshotsCurrent**
-> List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent()
+> List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool)
 
 TickDailySnapshots (current)
 
@@ -516,9 +612,10 @@ Gets tickDailySnapshots.
 import 'package:openapi/api.dart';
 
 final api_instance = UNISWAPV3ETHEREUMApi();
+final pool = pool_example; // String | liquidity pool this tick belongs to
 
 try {
-    final result = api_instance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent();
+    final result = api_instance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool);
     print(result);
 } catch (e) {
     print('Exception when calling UNISWAPV3ETHEREUMApi->uNISWAPV3ETHEREUMTickDailySnapshotsCurrent: $e\n');
@@ -526,7 +623,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **String**| liquidity pool this tick belongs to | [optional] 
 
 ### Return type
 
@@ -708,7 +808,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **uNISWAPV3ETHEREUMTokensCurrent**
-> List<UNISWAPV3ETHEREUMTokenDTO> uNISWAPV3ETHEREUMTokensCurrent()
+> List<UNISWAPV3ETHEREUMTokenDTO> uNISWAPV3ETHEREUMTokensCurrent(id)
 
 Tokens (current)
 
@@ -719,9 +819,10 @@ Gets tokens.
 import 'package:openapi/api.dart';
 
 final api_instance = UNISWAPV3ETHEREUMApi();
+final id = id_example; // String | Smart contract address of the token.
 
 try {
-    final result = api_instance.uNISWAPV3ETHEREUMTokensCurrent();
+    final result = api_instance.uNISWAPV3ETHEREUMTokensCurrent(id);
     print(result);
 } catch (e) {
     print('Exception when calling UNISWAPV3ETHEREUMApi->uNISWAPV3ETHEREUMTokensCurrent: $e\n');
@@ -729,7 +830,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Smart contract address of the token. | [optional] 
 
 ### Return type
 

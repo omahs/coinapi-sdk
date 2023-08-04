@@ -29,6 +29,8 @@
 #include "CppRestOpenAPIClient/model/UNISWAP_V3_ETHEREUM_DexAmmProtocolDTO.h"
 #include "CppRestOpenAPIClient/model/UNISWAP_V3_ETHEREUM_FinancialsDailySnapshotDTO.h"
 #include "CppRestOpenAPIClient/model/UNISWAP_V3_ETHEREUM_LiquidityPoolAmountDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V3_ETHEREUM_LiquidityPoolDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V3_ETHEREUM_LiquidityPoolDailySnapshotDTO.h"
 #include "CppRestOpenAPIClient/model/UNISWAP_V3_ETHEREUM_LiquidityPoolFeeDTO.h"
 #include "CppRestOpenAPIClient/model/UNISWAP_V3_ETHEREUM_LiquidityPoolHourlySnapshotDTO.h"
 #include "CppRestOpenAPIClient/model/UNISWAP_V3_ETHEREUM_PositionDTO.h"
@@ -110,7 +112,19 @@ public:
     /// <remarks>
     /// Gets liquidityPoolAmounts.
     /// </remarks>
+    /// <param name="id">Smart contract address of the pool. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_LiquidityPoolAmountDTO>>> uNISWAPV3ETHEREUM_LiquidityPoolAmounts__current(
+        boost::optional<utility::string_t> id
+    ) const;
+    /// <summary>
+    /// LiquidityPoolDailySnapshots (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets liquidityPoolDailySnapshots.
+    /// </remarks>
+    /// <param name="pool">Pool this snapshot belongs to. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_LiquidityPoolDailySnapshotDTO>>> uNISWAPV3ETHEREUM_LiquidityPoolDailySnapshots__current(
+        boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
     /// LiquidityPoolFees (current)
@@ -126,7 +140,19 @@ public:
     /// <remarks>
     /// Gets liquidityPoolHourlySnapshots.
     /// </remarks>
+    /// <param name="pool">The pool this snapshot belongs to (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_LiquidityPoolHourlySnapshotDTO>>> uNISWAPV3ETHEREUM_LiquidityPoolHourlySnapshots__current(
+        boost::optional<utility::string_t> pool
+    ) const;
+    /// <summary>
+    /// LiquidityPools (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets liquidityPools.
+    /// </remarks>
+    /// <param name="id">Smart contract address of the pool. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_LiquidityPoolDTO>>> uNISWAPV3ETHEREUM_LiquidityPools__current(
+        boost::optional<utility::string_t> id
     ) const;
     /// <summary>
     /// PositionSnapshots (current)
@@ -168,7 +194,9 @@ public:
     /// <remarks>
     /// Gets tickDailySnapshots.
     /// </remarks>
+    /// <param name="pool">liquidity pool this tick belongs to (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickDailySnapshotDTO>>> uNISWAPV3ETHEREUM_TickDailySnapshots__current(
+        boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
     /// TickHourlySnapshots (current)
@@ -212,7 +240,9 @@ public:
     /// <remarks>
     /// Gets tokens.
     /// </remarks>
+    /// <param name="id">Smart contract address of the token. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TokenDTO>>> uNISWAPV3ETHEREUM_Tokens__current(
+        boost::optional<utility::string_t> id
     ) const;
     /// <summary>
     /// UsageMetricsDailySnapshots (current)

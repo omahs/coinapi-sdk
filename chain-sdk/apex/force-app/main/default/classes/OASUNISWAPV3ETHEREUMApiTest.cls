@@ -152,6 +152,10 @@ private class OASUNISWAPV3ETHEREUMApiTest {
         res.setStatus('OK');
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
+        Map<String, Object> params = new Map<String, Object>{
+            'id' => 'null'
+        };
+
         OASClient client;
         OASUNISWAPV3ETHEREUMApi api;
         List<OASUNISWAPV3ETHEREUMLiquidityPoolAmo> response;
@@ -164,7 +168,39 @@ private class OASUNISWAPV3ETHEREUMApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASUNISWAPV3ETHEREUMLiquidityPoolAmo>{OASUNISWAPV3ETHEREUMLiquidityPoolAmo.getExample()};
-        response = (List<OASUNISWAPV3ETHEREUMLiquidityPoolAmo>) api.uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent();
+        response = (List<OASUNISWAPV3ETHEREUMLiquidityPoolAmo>) api.uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     *
+     * Gets liquidityPoolDailySnapshots.
+     */
+    @isTest
+    private static void uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pool' => 'null'
+        };
+
+        OASClient client;
+        OASUNISWAPV3ETHEREUMApi api;
+        List<OASUNISWAPV3ETHEREUMLiquidityPoolDai> response;
+        List<OASUNISWAPV3ETHEREUMLiquidityPoolDai> expectedResponse;
+        String js = '';
+
+        api = new OASUNISWAPV3ETHEREUMApi(new OASClient());
+
+        js = JSON.serialize(new List<OASUNISWAPV3ETHEREUMLiquidityPoolDai>{OASUNISWAPV3ETHEREUMLiquidityPoolDai.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUNISWAPV3ETHEREUMLiquidityPoolDai>{OASUNISWAPV3ETHEREUMLiquidityPoolDai.getExample()};
+        response = (List<OASUNISWAPV3ETHEREUMLiquidityPoolDai>) api.uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -208,6 +244,10 @@ private class OASUNISWAPV3ETHEREUMApiTest {
         res.setStatus('OK');
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
+        Map<String, Object> params = new Map<String, Object>{
+            'pool' => 'null'
+        };
+
         OASClient client;
         OASUNISWAPV3ETHEREUMApi api;
         List<OASUNISWAPV3ETHEREUMLiquidityPoolHou> response;
@@ -220,7 +260,39 @@ private class OASUNISWAPV3ETHEREUMApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASUNISWAPV3ETHEREUMLiquidityPoolHou>{OASUNISWAPV3ETHEREUMLiquidityPoolHou.getExample()};
-        response = (List<OASUNISWAPV3ETHEREUMLiquidityPoolHou>) api.uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent();
+        response = (List<OASUNISWAPV3ETHEREUMLiquidityPoolHou>) api.uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * LiquidityPools (current)
+     *
+     * Gets liquidityPools.
+     */
+    @isTest
+    private static void uNISWAPV3ETHEREUMLiquidityPoolsCurrentTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'id' => 'null'
+        };
+
+        OASClient client;
+        OASUNISWAPV3ETHEREUMApi api;
+        List<OASUNISWAPV3ETHEREUMLiquidityPoolDTO> response;
+        List<OASUNISWAPV3ETHEREUMLiquidityPoolDTO> expectedResponse;
+        String js = '';
+
+        api = new OASUNISWAPV3ETHEREUMApi(new OASClient());
+
+        js = JSON.serialize(new List<OASUNISWAPV3ETHEREUMLiquidityPoolDTO>{OASUNISWAPV3ETHEREUMLiquidityPoolDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUNISWAPV3ETHEREUMLiquidityPoolDTO>{OASUNISWAPV3ETHEREUMLiquidityPoolDTO.getExample()};
+        response = (List<OASUNISWAPV3ETHEREUMLiquidityPoolDTO>) api.uNISWAPV3ETHEREUMLiquidityPoolsCurrent(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -352,6 +424,10 @@ private class OASUNISWAPV3ETHEREUMApiTest {
         res.setStatus('OK');
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
+        Map<String, Object> params = new Map<String, Object>{
+            'pool' => 'null'
+        };
+
         OASClient client;
         OASUNISWAPV3ETHEREUMApi api;
         List<OASUNISWAPV3ETHEREUMTickDailySnapsho> response;
@@ -364,7 +440,7 @@ private class OASUNISWAPV3ETHEREUMApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASUNISWAPV3ETHEREUMTickDailySnapsho>{OASUNISWAPV3ETHEREUMTickDailySnapsho.getExample()};
-        response = (List<OASUNISWAPV3ETHEREUMTickDailySnapsho>) api.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent();
+        response = (List<OASUNISWAPV3ETHEREUMTickDailySnapsho>) api.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -500,6 +576,10 @@ private class OASUNISWAPV3ETHEREUMApiTest {
         res.setStatus('OK');
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
+        Map<String, Object> params = new Map<String, Object>{
+            'id' => 'null'
+        };
+
         OASClient client;
         OASUNISWAPV3ETHEREUMApi api;
         List<OASUNISWAPV3ETHEREUMTokenDTO> response;
@@ -512,7 +592,7 @@ private class OASUNISWAPV3ETHEREUMApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASUNISWAPV3ETHEREUMTokenDTO>{OASUNISWAPV3ETHEREUMTokenDTO.getExample()};
-        response = (List<OASUNISWAPV3ETHEREUMTokenDTO>) api.uNISWAPV3ETHEREUMTokensCurrent();
+        response = (List<OASUNISWAPV3ETHEREUMTokenDTO>) api.uNISWAPV3ETHEREUMTokensCurrent(params);
         System.assertEquals(expectedResponse, response);
     }
 

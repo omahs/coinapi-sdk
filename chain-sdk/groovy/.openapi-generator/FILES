@@ -92,6 +92,8 @@ src/main/groovy/org/openapitools/model/UNISWAPV3ETHEREUMDepositDTO.groovy
 src/main/groovy/org/openapitools/model/UNISWAPV3ETHEREUMDexAmmProtocolDTO.groovy
 src/main/groovy/org/openapitools/model/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.groovy
 src/main/groovy/org/openapitools/model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.groovy
+src/main/groovy/org/openapitools/model/UNISWAPV3ETHEREUMLiquidityPoolDTO.groovy
+src/main/groovy/org/openapitools/model/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.groovy
 src/main/groovy/org/openapitools/model/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.groovy
 src/main/groovy/org/openapitools/model/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.groovy
 src/main/groovy/org/openapitools/model/UNISWAPV3ETHEREUMPositionDTO.groovy

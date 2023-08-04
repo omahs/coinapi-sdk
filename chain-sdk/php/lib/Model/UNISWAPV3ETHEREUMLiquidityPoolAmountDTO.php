@@ -62,6 +62,7 @@ class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO implements ModelInterface, ArrayAc
         'entry_time' => '\DateTime',
         'recv_time' => '\DateTime',
         'block_number' => 'int',
+        'vid' => 'int',
         'block_range' => 'string',
         'id' => 'string',
         'input_tokens' => 'string[]',
@@ -80,6 +81,7 @@ class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO implements ModelInterface, ArrayAc
         'entry_time' => 'date-time',
         'recv_time' => 'date-time',
         'block_number' => 'int64',
+        'vid' => 'int64',
         'block_range' => null,
         'id' => null,
         'input_tokens' => null,
@@ -96,6 +98,7 @@ class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO implements ModelInterface, ArrayAc
         'entry_time' => false,
 		'recv_time' => false,
 		'block_number' => false,
+		'vid' => false,
 		'block_range' => true,
 		'id' => true,
 		'input_tokens' => true,
@@ -192,6 +195,7 @@ class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO implements ModelInterface, ArrayAc
         'entry_time' => 'entry_time',
         'recv_time' => 'recv_time',
         'block_number' => 'block_number',
+        'vid' => 'vid',
         'block_range' => 'block_range',
         'id' => 'id',
         'input_tokens' => 'input_tokens',
@@ -208,6 +212,7 @@ class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO implements ModelInterface, ArrayAc
         'entry_time' => 'setEntryTime',
         'recv_time' => 'setRecvTime',
         'block_number' => 'setBlockNumber',
+        'vid' => 'setVid',
         'block_range' => 'setBlockRange',
         'id' => 'setId',
         'input_tokens' => 'setInputTokens',
@@ -224,6 +229,7 @@ class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO implements ModelInterface, ArrayAc
         'entry_time' => 'getEntryTime',
         'recv_time' => 'getRecvTime',
         'block_number' => 'getBlockNumber',
+        'vid' => 'getVid',
         'block_range' => 'getBlockRange',
         'id' => 'getId',
         'input_tokens' => 'getInputTokens',
@@ -291,6 +297,7 @@ class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO implements ModelInterface, ArrayAc
         $this->setIfExists('entry_time', $data ?? [], null);
         $this->setIfExists('recv_time', $data ?? [], null);
         $this->setIfExists('block_number', $data ?? [], null);
+        $this->setIfExists('vid', $data ?? [], null);
         $this->setIfExists('block_range', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('input_tokens', $data ?? [], null);
@@ -417,6 +424,33 @@ class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO implements ModelInterface, ArrayAc
             throw new \InvalidArgumentException('non-nullable block_number cannot be null');
         }
         $this->container['block_number'] = $block_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets vid
+     *
+     * @return int|null
+     */
+    public function getVid()
+    {
+        return $this->container['vid'];
+    }
+
+    /**
+     * Sets vid
+     *
+     * @param int|null $vid .
+     *
+     * @return self
+     */
+    public function setVid($vid)
+    {
+        if (is_null($vid)) {
+            throw new \InvalidArgumentException('non-nullable vid cannot be null');
+        }
+        $this->container['vid'] = $vid;
 
         return $this;
     }

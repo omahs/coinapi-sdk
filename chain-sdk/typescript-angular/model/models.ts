@@ -79,6 +79,8 @@ export * from './uNISWAPV3ETHEREUMDepositDTO';
 export * from './uNISWAPV3ETHEREUMDexAmmProtocolDTO';
 export * from './uNISWAPV3ETHEREUMFinancialsDailySnapshotDTO';
 export * from './uNISWAPV3ETHEREUMLiquidityPoolAmountDTO';
+export * from './uNISWAPV3ETHEREUMLiquidityPoolDTO';
+export * from './uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO';
 export * from './uNISWAPV3ETHEREUMLiquidityPoolFeeDTO';
 export * from './uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO';
 export * from './uNISWAPV3ETHEREUMPositionDTO';

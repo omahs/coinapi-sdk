@@ -66,8 +66,17 @@ void main() {
     //
     // Gets liquidityPoolAmounts.
     //
-    //Future<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent() async
+    //Future<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent({ String id }) async
     test('test uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent', () async {
+      // TODO
+    });
+
+    // LiquidityPoolDailySnapshots (current)
+    //
+    // Gets liquidityPoolDailySnapshots.
+    //
+    //Future<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent({ String pool }) async
+    test('test uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent', () async {
       // TODO
     });
 
@@ -84,8 +93,17 @@ void main() {
     //
     // Gets liquidityPoolHourlySnapshots.
     //
-    //Future<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent() async
+    //Future<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent({ String pool }) async
     test('test uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent', () async {
+      // TODO
+    });
+
+    // LiquidityPools (current)
+    //
+    // Gets liquidityPools.
+    //
+    //Future<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>> uNISWAPV3ETHEREUMLiquidityPoolsCurrent({ String id }) async
+    test('test uNISWAPV3ETHEREUMLiquidityPoolsCurrent', () async {
       // TODO
     });
 
@@ -129,7 +147,7 @@ void main() {
     //
     // Gets tickDailySnapshots.
     //
-    //Future<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent() async
+    //Future<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent({ String pool }) async
     test('test uNISWAPV3ETHEREUMTickDailySnapshotsCurrent', () async {
       // TODO
     });
@@ -174,7 +192,7 @@ void main() {
     //
     // Gets tokens.
     //
-    //Future<List<UNISWAPV3ETHEREUMTokenDTO>> uNISWAPV3ETHEREUMTokensCurrent() async
+    //Future<List<UNISWAPV3ETHEREUMTokenDTO>> uNISWAPV3ETHEREUMTokensCurrent({ String id }) async
     test('test uNISWAPV3ETHEREUMTokensCurrent', () async {
       // TODO
     });

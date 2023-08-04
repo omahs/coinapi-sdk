@@ -34,6 +34,12 @@ export interface UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
      */
     block_number?: number;
     /**
+     * 
+     * @type {number}
+     * @memberof UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    vid?: number;
+    /**
      * (Smart contract address of the pool)-( # of hours since Unix epoch time)
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO

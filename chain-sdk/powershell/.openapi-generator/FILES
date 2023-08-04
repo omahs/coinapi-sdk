@@ -90,6 +90,8 @@ docs/UNISWAPV3ETHEREUMDepositDTO.md
 docs/UNISWAPV3ETHEREUMDexAmmProtocolDTO.md
 docs/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md
+docs/UNISWAPV3ETHEREUMLiquidityPoolDTO.md
+docs/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMPositionDTO.md
@@ -230,6 +232,8 @@ src/PSOpenAPITools/Model/UNISWAPV3ETHEREUMDepositDTO.ps1
 src/PSOpenAPITools/Model/UNISWAPV3ETHEREUMDexAmmProtocolDTO.ps1
 src/PSOpenAPITools/Model/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.ps1
 src/PSOpenAPITools/Model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.ps1
+src/PSOpenAPITools/Model/UNISWAPV3ETHEREUMLiquidityPoolDTO.ps1
+src/PSOpenAPITools/Model/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.ps1
 src/PSOpenAPITools/Model/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.ps1
 src/PSOpenAPITools/Model/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.ps1
 src/PSOpenAPITools/Model/UNISWAPV3ETHEREUMPositionDTO.ps1
@@ -374,6 +378,8 @@ tests/Model/UNISWAPV3ETHEREUMDepositDTO.Tests.ps1
 tests/Model/UNISWAPV3ETHEREUMDexAmmProtocolDTO.Tests.ps1
 tests/Model/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.Tests.ps1
 tests/Model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.Tests.ps1
+tests/Model/UNISWAPV3ETHEREUMLiquidityPoolDTO.Tests.ps1
+tests/Model/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.Tests.ps1
 tests/Model/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.Tests.ps1
 tests/Model/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.Tests.ps1
 tests/Model/UNISWAPV3ETHEREUMPositionDTO.Tests.ps1

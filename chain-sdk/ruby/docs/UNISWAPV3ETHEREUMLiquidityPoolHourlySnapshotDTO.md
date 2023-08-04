@@ -7,6 +7,7 @@
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
 | **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
+| **vid** | **Integer** |  | [optional] |
 | **id** | **String** | (Smart contract address of the pool)-( # of hours since Unix epoch time) | [optional] |
 | **hour** | **Integer** | Number of hours since Unix epoch time | [optional] |
 | **protocol** | **String** | The protocol this snapshot belongs to | [optional] |
@@ -59,6 +60,7 @@ instance = OpenapiClient::UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.new(
   entry_time: null,
   recv_time: null,
   block_number: null,
+  vid: null,
   id: null,
   hour: null,
   protocol: null,

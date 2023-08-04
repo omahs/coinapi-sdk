@@ -16,10 +16,14 @@ Method | HTTP request | Description
 [**uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo) | **GET** /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
 [**uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
 [**uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
+[**uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
+[**uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
 [**uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
 [**uNISWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
 [**uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
 [**uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
+[**uNISWAPV3ETHEREUMLiquidityPoolsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current)
+[**uNISWAPV3ETHEREUMLiquidityPoolsCurrentWithHttpInfo**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolsCurrentWithHttpInfo) | **GET** /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current)
 [**uNISWAPV3ETHEREUMPositionSnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMPositionSnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current)
 [**uNISWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo) | **GET** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current)
 [**uNISWAPV3ETHEREUMPositionsCurrent**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMPositionsCurrent) | **GET** /dapps/uniswap_v3_ethereum/positions/current | Positions (current)
@@ -426,7 +430,7 @@ No authorization required
 
 ## uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent
 
-> uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(): ApiRequest[Seq[LiquidityPoolAmountDTO]]
+> uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest): ApiRequest[Seq[LiquidityPoolAmountDTO]]
 
 LiquidityPoolAmounts (current)
 
@@ -451,8 +455,10 @@ object Example extends App {
     import system.dispatcher
 
     val apiInvoker = ApiInvoker()
-    val apiInstance = UNISWAPV3ETHEREUMApi("https://onchain.coinapi.io")    
-    val request = apiInstance.uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent()
+    val apiInstance = UNISWAPV3ETHEREUMApi("https://onchain.coinapi.io")
+    val id: String = id_example // String | Smart contract address of the pool.
+    
+    val request = apiInstance.uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -477,11 +483,94 @@ object Example extends App {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Smart contract address of the pool. | [optional]
 
 ### Return type
 
 ApiRequest[[**Seq[LiquidityPoolAmountDTO]**](LiquidityPoolAmountDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+
+> uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest): ApiRequest[Seq[LiquidityPoolDailySnapshotDTO]]
+
+LiquidityPoolDailySnapshots (current)
+
+Gets liquidityPoolDailySnapshots.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = UNISWAPV3ETHEREUMApi("https://onchain.coinapi.io")
+    val pool: String = pool_example // String | Pool this snapshot belongs to.
+    
+    val request = apiInstance.uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling UNISWAPV3ETHEREUMApi#uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling UNISWAPV3ETHEREUMApi#uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **String**| Pool this snapshot belongs to. | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[LiquidityPoolDailySnapshotDTO]**](LiquidityPoolDailySnapshotDTO.md)]
 
 
 ### Authorization
@@ -576,7 +665,7 @@ No authorization required
 
 ## uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
 
-> uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(): ApiRequest[Seq[LiquidityPoolHourlySnapshotDTO]]
+> uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest): ApiRequest[Seq[LiquidityPoolHourlySnapshotDTO]]
 
 LiquidityPoolHourlySnapshots (current)
 
@@ -601,8 +690,10 @@ object Example extends App {
     import system.dispatcher
 
     val apiInvoker = ApiInvoker()
-    val apiInstance = UNISWAPV3ETHEREUMApi("https://onchain.coinapi.io")    
-    val request = apiInstance.uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent()
+    val apiInstance = UNISWAPV3ETHEREUMApi("https://onchain.coinapi.io")
+    val pool: String = pool_example // String | The pool this snapshot belongs to
+    
+    val request = apiInstance.uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -627,11 +718,94 @@ object Example extends App {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **String**| The pool this snapshot belongs to | [optional]
 
 ### Return type
 
 ApiRequest[[**Seq[LiquidityPoolHourlySnapshotDTO]**](LiquidityPoolHourlySnapshotDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## uNISWAPV3ETHEREUMLiquidityPoolsCurrent
+
+> uNISWAPV3ETHEREUMLiquidityPoolsCurrent(uNISWAPV3ETHEREUMLiquidityPoolsCurrentRequest): ApiRequest[Seq[LiquidityPoolDTO]]
+
+LiquidityPools (current)
+
+Gets liquidityPools.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = UNISWAPV3ETHEREUMApi("https://onchain.coinapi.io")
+    val id: String = id_example // String | Smart contract address of the pool.
+    
+    val request = apiInstance.uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling UNISWAPV3ETHEREUMApi#uNISWAPV3ETHEREUMLiquidityPoolsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling UNISWAPV3ETHEREUMApi#uNISWAPV3ETHEREUMLiquidityPoolsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Smart contract address of the pool. | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[LiquidityPoolDTO]**](LiquidityPoolDTO.md)]
 
 
 ### Authorization
@@ -956,7 +1130,7 @@ No authorization required
 
 ## uNISWAPV3ETHEREUMTickDailySnapshotsCurrent
 
-> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(): ApiRequest[Seq[TickDailySnapshotDTO]]
+> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(uNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest): ApiRequest[Seq[TickDailySnapshotDTO]]
 
 TickDailySnapshots (current)
 
@@ -981,8 +1155,10 @@ object Example extends App {
     import system.dispatcher
 
     val apiInvoker = ApiInvoker()
-    val apiInstance = UNISWAPV3ETHEREUMApi("https://onchain.coinapi.io")    
-    val request = apiInstance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent()
+    val apiInstance = UNISWAPV3ETHEREUMApi("https://onchain.coinapi.io")
+    val pool: String = pool_example // String | liquidity pool this tick belongs to
+    
+    val request = apiInstance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1007,7 +1183,10 @@ object Example extends App {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **String**| liquidity pool this tick belongs to | [optional]
 
 ### Return type
 
@@ -1341,7 +1520,7 @@ No authorization required
 
 ## uNISWAPV3ETHEREUMTokensCurrent
 
-> uNISWAPV3ETHEREUMTokensCurrent(): ApiRequest[Seq[TokenDTO]]
+> uNISWAPV3ETHEREUMTokensCurrent(uNISWAPV3ETHEREUMTokensCurrentRequest): ApiRequest[Seq[TokenDTO]]
 
 Tokens (current)
 
@@ -1366,8 +1545,10 @@ object Example extends App {
     import system.dispatcher
 
     val apiInvoker = ApiInvoker()
-    val apiInstance = UNISWAPV3ETHEREUMApi("https://onchain.coinapi.io")    
-    val request = apiInstance.uNISWAPV3ETHEREUMTokensCurrent()
+    val apiInstance = UNISWAPV3ETHEREUMApi("https://onchain.coinapi.io")
+    val id: String = id_example // String | Smart contract address of the token.
+    
+    val request = apiInstance.uNISWAPV3ETHEREUMTokensCurrent(id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1392,7 +1573,10 @@ object Example extends App {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Smart contract address of the token. | [optional]
 
 ### Return type
 

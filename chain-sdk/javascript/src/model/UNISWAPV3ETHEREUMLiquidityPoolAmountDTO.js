@@ -57,6 +57,9 @@ class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
             if (data.hasOwnProperty('block_number')) {
                 obj['block_number'] = ApiClient.convertToType(data['block_number'], 'Number');
             }
+            if (data.hasOwnProperty('vid')) {
+                obj['vid'] = ApiClient.convertToType(data['vid'], 'Number');
+            }
             if (data.hasOwnProperty('block_range')) {
                 obj['block_range'] = ApiClient.convertToType(data['block_range'], 'String');
             }
@@ -126,6 +129,12 @@ UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.prototype['recv_time'] = undefined;
  * @member {Number} block_number
  */
 UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.prototype['block_number'] = undefined;
+
+/**
+ * .
+ * @member {Number} vid
+ */
+UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.prototype['vid'] = undefined;
 
 /**
  * 

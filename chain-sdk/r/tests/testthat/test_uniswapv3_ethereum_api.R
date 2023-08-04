@@ -65,7 +65,20 @@ test_that("UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent", {
   # base path: https://onchain.coinapi.io
   # LiquidityPoolAmounts (current)
   # Gets liquidityPoolAmounts.
+  # @param id character Smart contract address of the pool. (optional)
   # @return [array[UNISWAPV3ETHEREUMLiquidityPoolAmountDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent", {
+  # tests for UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # LiquidityPoolDailySnapshots (current)
+  # Gets liquidityPoolDailySnapshots.
+  # @param pool character Pool this snapshot belongs to. (optional)
+  # @return [array[UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -87,7 +100,20 @@ test_that("UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent", {
   # base path: https://onchain.coinapi.io
   # LiquidityPoolHourlySnapshots (current)
   # Gets liquidityPoolHourlySnapshots.
+  # @param pool character The pool this snapshot belongs to (optional)
   # @return [array[UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UNISWAPV3ETHEREUMLiquidityPoolsCurrent", {
+  # tests for UNISWAPV3ETHEREUMLiquidityPoolsCurrent
+  # base path: https://onchain.coinapi.io
+  # LiquidityPools (current)
+  # Gets liquidityPools.
+  # @param id character Smart contract address of the pool. (optional)
+  # @return [array[UNISWAPV3ETHEREUMLiquidityPoolDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -143,6 +169,7 @@ test_that("UNISWAPV3ETHEREUMTickDailySnapshotsCurrent", {
   # base path: https://onchain.coinapi.io
   # TickDailySnapshots (current)
   # Gets tickDailySnapshots.
+  # @param pool character liquidity pool this tick belongs to (optional)
   # @return [array[UNISWAPV3ETHEREUMTickDailySnapshotDTO]]
 
   # uncomment below to test the operation
@@ -200,6 +227,7 @@ test_that("UNISWAPV3ETHEREUMTokensCurrent", {
   # base path: https://onchain.coinapi.io
   # Tokens (current)
   # Gets tokens.
+  # @param id character Smart contract address of the token. (optional)
   # @return [array[UNISWAPV3ETHEREUMTokenDTO]]
 
   # uncomment below to test the operation

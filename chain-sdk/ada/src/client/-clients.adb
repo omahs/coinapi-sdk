@@ -1386,6 +1386,7 @@ package body .Clients is
    --  Gets liquidityPoolAmounts.
    procedure U_NISWAPV3ETHEREUM_Liquidity_Pool_Amounts__current
       (Client : in out Client_Type;
+       Id : in Swagger.Nullable_UString;
        Result : out .Models.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
@@ -1394,10 +1395,30 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
+      URI.Add_Param ("id", Id);
       URI.Set_Path ("/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Liquidity_Pool_Amounts__current;
+
+   --  LiquidityPoolDailySnapshots (current)
+   --  Gets liquidityPoolDailySnapshots.
+   procedure U_NISWAPV3ETHEREUM_Liquidity_Pool_Daily_Snapshots__current
+      (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Add_Param ("pool", Pool);
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Liquidity_Pool_Daily_Snapshots__current;
 
    --  LiquidityPoolFees (current)
    --  Gets liquidityPoolFees.
@@ -1420,6 +1441,7 @@ package body .Clients is
    --  Gets liquidityPoolHourlySnapshots.
    procedure U_NISWAPV3ETHEREUM_Liquidity_Pool_Hourly_Snapshots__current
       (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
        Result : out .Models.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
@@ -1428,10 +1450,30 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
+      URI.Add_Param ("pool", Pool);
       URI.Set_Path ("/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Liquidity_Pool_Hourly_Snapshots__current;
+
+   --  LiquidityPools (current)
+   --  Gets liquidityPools.
+   procedure U_NISWAPV3ETHEREUM_Liquidity_Pools__current
+      (Client : in out Client_Type;
+       Id : in Swagger.Nullable_UString;
+       Result : out .Models.UNISWAPV3ETHEREUMLiquidityPoolDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Add_Param ("id", Id);
+      URI.Set_Path ("/dapps/uniswap_v3_ethereum/liquidityPools/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV3ETHEREUM_Liquidity_Pools__current;
 
    --  PositionSnapshots (current)
    --  Gets positionSnapshots.
@@ -1507,6 +1549,7 @@ package body .Clients is
    --  Gets tickDailySnapshots.
    procedure U_NISWAPV3ETHEREUM_Tick_Daily_Snapshots__current
       (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
        Result : out .Models.UNISWAPV3ETHEREUMTickDailySnapshotDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
@@ -1515,6 +1558,7 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
+      URI.Add_Param ("pool", Pool);
       URI.Set_Path ("/dapps/uniswap_v3_ethereum/tickDailySnapshots/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
@@ -1596,6 +1640,7 @@ package body .Clients is
    --  Gets tokens.
    procedure U_NISWAPV3ETHEREUM_Tokens__current
       (Client : in out Client_Type;
+       Id : in Swagger.Nullable_UString;
        Result : out .Models.UNISWAPV3ETHEREUMTokenDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
@@ -1604,6 +1649,7 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
+      URI.Add_Param ("id", Id);
       URI.Set_Path ("/dapps/uniswap_v3_ethereum/tokens/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);

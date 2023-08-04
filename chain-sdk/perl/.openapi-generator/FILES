@@ -91,6 +91,8 @@ docs/UNISWAPV3ETHEREUMDepositDTO.md
 docs/UNISWAPV3ETHEREUMDexAmmProtocolDTO.md
 docs/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md
+docs/UNISWAPV3ETHEREUMLiquidityPoolDTO.md
+docs/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMPositionDTO.md
@@ -230,6 +232,8 @@ lib/WWW/OpenAPIClient/Object/UNISWAPV3ETHEREUMDepositDTO.pm
 lib/WWW/OpenAPIClient/Object/UNISWAPV3ETHEREUMDexAmmProtocolDTO.pm
 lib/WWW/OpenAPIClient/Object/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.pm
 lib/WWW/OpenAPIClient/Object/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.pm
+lib/WWW/OpenAPIClient/Object/UNISWAPV3ETHEREUMLiquidityPoolDTO.pm
+lib/WWW/OpenAPIClient/Object/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.pm
 lib/WWW/OpenAPIClient/Object/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.pm
 lib/WWW/OpenAPIClient/Object/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.pm
 lib/WWW/OpenAPIClient/Object/UNISWAPV3ETHEREUMPositionDTO.pm
@@ -371,6 +375,8 @@ t/UNISWAPV3ETHEREUMDepositDTOTest.t
 t/UNISWAPV3ETHEREUMDexAmmProtocolDTOTest.t
 t/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTOTest.t
 t/UNISWAPV3ETHEREUMLiquidityPoolAmountDTOTest.t
+t/UNISWAPV3ETHEREUMLiquidityPoolDTOTest.t
+t/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTest.t
 t/UNISWAPV3ETHEREUMLiquidityPoolFeeDTOTest.t
 t/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTest.t
 t/UNISWAPV3ETHEREUMPositionDTOTest.t

@@ -152,6 +152,8 @@ set(SRCS
     model/uniswap_v3_ethereum_dex_amm_protocol_dto.c
     model/uniswap_v3_ethereum_financials_daily_snapshot_dto.c
     model/uniswap_v3_ethereum_liquidity_pool_amount_dto.c
+    model/uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto.c
+    model/uniswap_v3_ethereum_liquidity_pool_dto.c
     model/uniswap_v3_ethereum_liquidity_pool_fee_dto.c
     model/uniswap_v3_ethereum_liquidity_pool_hourly_snapshot_dto.c
     model/uniswap_v3_ethereum_position_dto.c
@@ -299,6 +301,8 @@ set(HDRS
     model/uniswap_v3_ethereum_dex_amm_protocol_dto.h
     model/uniswap_v3_ethereum_financials_daily_snapshot_dto.h
     model/uniswap_v3_ethereum_liquidity_pool_amount_dto.h
+    model/uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto.h
+    model/uniswap_v3_ethereum_liquidity_pool_dto.h
     model/uniswap_v3_ethereum_liquidity_pool_fee_dto.h
     model/uniswap_v3_ethereum_liquidity_pool_hourly_snapshot_dto.h
     model/uniswap_v3_ethereum_position_dto.h

@@ -276,7 +276,12 @@ class UNISWAPV3ETHEREUMApi {
   /// Gets liquidityPoolAmounts.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo() async {
+  ///
+  /// Parameters:
+  ///
+  /// * [String] id:
+  ///   Smart contract address of the pool.
+  Future<Response> uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo({ String? id, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current';
 
@@ -286,6 +291,10 @@ class UNISWAPV3ETHEREUMApi {
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
+
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
 
     const contentTypes = <String>[];
 
@@ -304,8 +313,13 @@ class UNISWAPV3ETHEREUMApi {
   /// LiquidityPoolAmounts (current)
   ///
   /// Gets liquidityPoolAmounts.
-  Future<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>?> uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent() async {
-    final response = await uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo();
+  ///
+  /// Parameters:
+  ///
+  /// * [String] id:
+  ///   Smart contract address of the pool.
+  Future<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>?> uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent({ String? id, }) async {
+    final response = await uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo( id: id, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -316,6 +330,71 @@ class UNISWAPV3ETHEREUMApi {
       final responseBody = await _decodeBodyBytes(response);
       return (await apiClient.deserializeAsync(responseBody, 'List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>') as List)
         .cast<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// LiquidityPoolDailySnapshots (current)
+  ///
+  /// Gets liquidityPoolDailySnapshots.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [String] pool:
+  ///   Pool this snapshot belongs to.
+  Future<Response> uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo({ String? pool, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (pool != null) {
+      queryParams.addAll(_queryParams('', 'pool', pool));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// LiquidityPoolDailySnapshots (current)
+  ///
+  /// Gets liquidityPoolDailySnapshots.
+  ///
+  /// Parameters:
+  ///
+  /// * [String] pool:
+  ///   Pool this snapshot belongs to.
+  Future<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>?> uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent({ String? pool, }) async {
+    final response = await uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo( pool: pool, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>') as List)
+        .cast<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>()
         .toList();
 
     }
@@ -378,7 +457,12 @@ class UNISWAPV3ETHEREUMApi {
   /// Gets liquidityPoolHourlySnapshots.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo() async {
+  ///
+  /// Parameters:
+  ///
+  /// * [String] pool:
+  ///   The pool this snapshot belongs to
+  Future<Response> uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo({ String? pool, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current';
 
@@ -388,6 +472,10 @@ class UNISWAPV3ETHEREUMApi {
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
+
+    if (pool != null) {
+      queryParams.addAll(_queryParams('', 'pool', pool));
+    }
 
     const contentTypes = <String>[];
 
@@ -406,8 +494,13 @@ class UNISWAPV3ETHEREUMApi {
   /// LiquidityPoolHourlySnapshots (current)
   ///
   /// Gets liquidityPoolHourlySnapshots.
-  Future<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>?> uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent() async {
-    final response = await uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo();
+  ///
+  /// Parameters:
+  ///
+  /// * [String] pool:
+  ///   The pool this snapshot belongs to
+  Future<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>?> uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent({ String? pool, }) async {
+    final response = await uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo( pool: pool, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -418,6 +511,71 @@ class UNISWAPV3ETHEREUMApi {
       final responseBody = await _decodeBodyBytes(response);
       return (await apiClient.deserializeAsync(responseBody, 'List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>') as List)
         .cast<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// LiquidityPools (current)
+  ///
+  /// Gets liquidityPools.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [String] id:
+  ///   Smart contract address of the pool.
+  Future<Response> uNISWAPV3ETHEREUMLiquidityPoolsCurrentWithHttpInfo({ String? id, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswap_v3_ethereum/liquidityPools/current';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// LiquidityPools (current)
+  ///
+  /// Gets liquidityPools.
+  ///
+  /// Parameters:
+  ///
+  /// * [String] id:
+  ///   Smart contract address of the pool.
+  Future<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>?> uNISWAPV3ETHEREUMLiquidityPoolsCurrent({ String? id, }) async {
+    final response = await uNISWAPV3ETHEREUMLiquidityPoolsCurrentWithHttpInfo( id: id, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UNISWAPV3ETHEREUMLiquidityPoolDTO>') as List)
+        .cast<UNISWAPV3ETHEREUMLiquidityPoolDTO>()
         .toList();
 
     }
@@ -647,7 +805,12 @@ class UNISWAPV3ETHEREUMApi {
   /// Gets tickDailySnapshots.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo() async {
+  ///
+  /// Parameters:
+  ///
+  /// * [String] pool:
+  ///   liquidity pool this tick belongs to
+  Future<Response> uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo({ String? pool, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswap_v3_ethereum/tickDailySnapshots/current';
 
@@ -657,6 +820,10 @@ class UNISWAPV3ETHEREUMApi {
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
+
+    if (pool != null) {
+      queryParams.addAll(_queryParams('', 'pool', pool));
+    }
 
     const contentTypes = <String>[];
 
@@ -675,8 +842,13 @@ class UNISWAPV3ETHEREUMApi {
   /// TickDailySnapshots (current)
   ///
   /// Gets tickDailySnapshots.
-  Future<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>?> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent() async {
-    final response = await uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo();
+  ///
+  /// Parameters:
+  ///
+  /// * [String] pool:
+  ///   liquidity pool this tick belongs to
+  Future<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>?> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent({ String? pool, }) async {
+    final response = await uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo( pool: pool, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -930,7 +1102,12 @@ class UNISWAPV3ETHEREUMApi {
   /// Gets tokens.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> uNISWAPV3ETHEREUMTokensCurrentWithHttpInfo() async {
+  ///
+  /// Parameters:
+  ///
+  /// * [String] id:
+  ///   Smart contract address of the token.
+  Future<Response> uNISWAPV3ETHEREUMTokensCurrentWithHttpInfo({ String? id, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswap_v3_ethereum/tokens/current';
 
@@ -940,6 +1117,10 @@ class UNISWAPV3ETHEREUMApi {
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
+
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
 
     const contentTypes = <String>[];
 
@@ -958,8 +1139,13 @@ class UNISWAPV3ETHEREUMApi {
   /// Tokens (current)
   ///
   /// Gets tokens.
-  Future<List<UNISWAPV3ETHEREUMTokenDTO>?> uNISWAPV3ETHEREUMTokensCurrent() async {
-    final response = await uNISWAPV3ETHEREUMTokensCurrentWithHttpInfo();
+  ///
+  /// Parameters:
+  ///
+  /// * [String] id:
+  ///   Smart contract address of the token.
+  Future<List<UNISWAPV3ETHEREUMTokenDTO>?> uNISWAPV3ETHEREUMTokensCurrent({ String? id, }) async {
+    final response = await uNISWAPV3ETHEREUMTokensCurrentWithHttpInfo( id: id, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

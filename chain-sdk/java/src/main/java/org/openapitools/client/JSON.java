@@ -173,6 +173,8 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.UNISWAPV3ETHEREUMDexAmmProtocolDTO.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.UNISWAPV3ETHEREUMLiquidityPoolDTO.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.UNISWAPV3ETHEREUMPositionDTO.CustomTypeAdapterFactory());

@@ -101,6 +101,8 @@ main =
       propMimeEq MimeJSON (Proxy :: Proxy UNISWAPV3ETHEREUMDexAmmProtocolDTO)
       propMimeEq MimeJSON (Proxy :: Proxy UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO)
       propMimeEq MimeJSON (Proxy :: Proxy UNISWAPV3ETHEREUMLiquidityPoolAmountDTO)
+      propMimeEq MimeJSON (Proxy :: Proxy UNISWAPV3ETHEREUMLiquidityPoolDTO)
+      propMimeEq MimeJSON (Proxy :: Proxy UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO)
       propMimeEq MimeJSON (Proxy :: Proxy UNISWAPV3ETHEREUMLiquidityPoolFeeDTO)
       propMimeEq MimeJSON (Proxy :: Proxy UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO)
       propMimeEq MimeJSON (Proxy :: Proxy UNISWAPV3ETHEREUMPositionDTO)

@@ -78,6 +78,8 @@ docs/UNISWAPV3ETHEREUMApi.md
 docs/UNISWAPV3ETHEREUMDexAmmProtocolDTO.md
 docs/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md
+docs/UNISWAPV3ETHEREUMLiquidityPoolDTO.md
+docs/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMPositionDTO.md
@@ -155,6 +157,8 @@ src/main/scala/org/openapitools/client/model/HourDataDTO.scala
 src/main/scala/org/openapitools/client/model/HourlyVolumeDTO.scala
 src/main/scala/org/openapitools/client/model/ItemDTO.scala
 src/main/scala/org/openapitools/client/model/LiquidityPoolAmountDTO.scala
+src/main/scala/org/openapitools/client/model/LiquidityPoolDTO.scala
+src/main/scala/org/openapitools/client/model/LiquidityPoolDailySnapshotDTO.scala
 src/main/scala/org/openapitools/client/model/LiquidityPoolFeeDTO.scala
 src/main/scala/org/openapitools/client/model/LiquidityPoolHourlySnapshotDTO.scala
 src/main/scala/org/openapitools/client/model/LiquidityPositionDTO.scala

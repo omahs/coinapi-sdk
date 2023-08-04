@@ -91,8 +91,21 @@ describe 'UNISWAPV3ETHEREUMApi' do
   # LiquidityPoolAmounts (current)
   # Gets liquidityPoolAmounts.
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :id Smart contract address of the pool.
   # @return [Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>]
   describe 'u_niswapv3_ethereum_liquidity_pool_amounts__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current
+  # LiquidityPoolDailySnapshots (current)
+  # Gets liquidityPoolDailySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :pool Pool this snapshot belongs to.
+  # @return [Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>]
+  describe 'u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
@@ -113,8 +126,21 @@ describe 'UNISWAPV3ETHEREUMApi' do
   # LiquidityPoolHourlySnapshots (current)
   # Gets liquidityPoolHourlySnapshots.
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :pool The pool this snapshot belongs to
   # @return [Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>]
   describe 'u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv3_ethereum_liquidity_pools__current
+  # LiquidityPools (current)
+  # Gets liquidityPools.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :id Smart contract address of the pool.
+  # @return [Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>]
+  describe 'u_niswapv3_ethereum_liquidity_pools__current test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
@@ -169,6 +195,7 @@ describe 'UNISWAPV3ETHEREUMApi' do
   # TickDailySnapshots (current)
   # Gets tickDailySnapshots.
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :pool liquidity pool this tick belongs to
   # @return [Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>]
   describe 'u_niswapv3_ethereum_tick_daily_snapshots__current test' do
     it 'should work' do
@@ -226,6 +253,7 @@ describe 'UNISWAPV3ETHEREUMApi' do
   # Tokens (current)
   # Gets tokens.
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :id Smart contract address of the token.
   # @return [Array<UNISWAPV3ETHEREUMTokenDTO>]
   describe 'u_niswapv3_ethereum_tokens__current test' do
     it 'should work' do

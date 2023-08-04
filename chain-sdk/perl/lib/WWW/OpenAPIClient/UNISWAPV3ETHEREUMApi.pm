@@ -298,8 +298,14 @@ sub u_niswapv3_ethereum_financials_daily_snapshots__current {
 #
 # LiquidityPoolAmounts (current)
 #
+# @param string $id Smart contract address of the pool. (optional)
 {
     my $params = {
+    'id' => {
+        data_type => 'string',
+        description => 'Smart contract address of the pool.',
+        required => '0',
+    },
     };
     __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_liquidity_pool_amounts__current' } = {
         summary => 'LiquidityPoolAmounts (current)',
@@ -327,6 +333,11 @@ sub u_niswapv3_ethereum_liquidity_pool_amounts__current {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
 
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
     my $_body_data;
     # authentication setting, if any
     my $auth_settings = [qw()];
@@ -339,6 +350,66 @@ sub u_niswapv3_ethereum_liquidity_pool_amounts__current {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMLiquidityPoolAmountDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current
+#
+# LiquidityPoolDailySnapshots (current)
+#
+# @param string $pool Pool this snapshot belongs to. (optional)
+{
+    my $params = {
+    'pool' => {
+        data_type => 'string',
+        description => 'Pool this snapshot belongs to.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current' } = {
+        summary => 'LiquidityPoolDailySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]
+#
+sub u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]', $response);
     return $_response_object;
 }
 
@@ -396,8 +467,14 @@ sub u_niswapv3_ethereum_liquidity_pool_fees__current {
 #
 # LiquidityPoolHourlySnapshots (current)
 #
+# @param string $pool The pool this snapshot belongs to (optional)
 {
     my $params = {
+    'pool' => {
+        data_type => 'string',
+        description => 'The pool this snapshot belongs to',
+        required => '0',
+    },
     };
     __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current' } = {
         summary => 'LiquidityPoolHourlySnapshots (current)',
@@ -425,6 +502,11 @@ sub u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
 
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
     my $_body_data;
     # authentication setting, if any
     my $auth_settings = [qw()];
@@ -437,6 +519,66 @@ sub u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv3_ethereum_liquidity_pools__current
+#
+# LiquidityPools (current)
+#
+# @param string $id Smart contract address of the pool. (optional)
+{
+    my $params = {
+    'id' => {
+        data_type => 'string',
+        description => 'Smart contract address of the pool.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_liquidity_pools__current' } = {
+        summary => 'LiquidityPools (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV3ETHEREUMLiquidityPoolDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV3ETHEREUMLiquidityPoolDTO]
+#
+sub u_niswapv3_ethereum_liquidity_pools__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswap_v3_ethereum/liquidityPools/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV3ETHEREUMLiquidityPoolDTO]', $response);
     return $_response_object;
 }
 
@@ -652,8 +794,14 @@ sub u_niswapv3_ethereum_swaps__current {
 #
 # TickDailySnapshots (current)
 #
+# @param string $pool liquidity pool this tick belongs to (optional)
 {
     my $params = {
+    'pool' => {
+        data_type => 'string',
+        description => 'liquidity pool this tick belongs to',
+        required => '0',
+    },
     };
     __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_tick_daily_snapshots__current' } = {
         summary => 'TickDailySnapshots (current)',
@@ -680,6 +828,11 @@ sub u_niswapv3_ethereum_tick_daily_snapshots__current {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
 
     my $_body_data;
     # authentication setting, if any
@@ -919,8 +1072,14 @@ sub u_niswapv3_ethereum_token_white_lists__current {
 #
 # Tokens (current)
 #
+# @param string $id Smart contract address of the token. (optional)
 {
     my $params = {
+    'id' => {
+        data_type => 'string',
+        description => 'Smart contract address of the token.',
+        required => '0',
+    },
     };
     __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_tokens__current' } = {
         summary => 'Tokens (current)',
@@ -947,6 +1106,11 @@ sub u_niswapv3_ethereum_tokens__current {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
 
     my $_body_data;
     # authentication setting, if any

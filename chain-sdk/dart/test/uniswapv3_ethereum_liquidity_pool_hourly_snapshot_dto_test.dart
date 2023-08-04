@@ -32,6 +32,12 @@ void main() {
       // TODO
     });
 
+    // 
+    // int vid
+    test('to test the property `vid`', () async {
+      // TODO
+    });
+
     // (Smart contract address of the pool)-( # of hours since Unix epoch time)
     // String id
     test('to test the property `id`', () async {

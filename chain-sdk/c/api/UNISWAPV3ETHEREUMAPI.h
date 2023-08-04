@@ -11,6 +11,8 @@
 #include "../model/uniswap_v3_ethereum_dex_amm_protocol_dto.h"
 #include "../model/uniswap_v3_ethereum_financials_daily_snapshot_dto.h"
 #include "../model/uniswap_v3_ethereum_liquidity_pool_amount_dto.h"
+#include "../model/uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto.h"
+#include "../model/uniswap_v3_ethereum_liquidity_pool_dto.h"
 #include "../model/uniswap_v3_ethereum_liquidity_pool_fee_dto.h"
 #include "../model/uniswap_v3_ethereum_liquidity_pool_hourly_snapshot_dto.h"
 #include "../model/uniswap_v3_ethereum_position_dto.h"
@@ -73,7 +75,15 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(apiClient_
 // Gets liquidityPoolAmounts.
 //
 list_t*
-UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(apiClient_t *apiClient);
+UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(apiClient_t *apiClient, char * id );
+
+
+// LiquidityPoolDailySnapshots (current)
+//
+// Gets liquidityPoolDailySnapshots.
+//
+list_t*
+UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(apiClient_t *apiClient, char * pool );
 
 
 // LiquidityPoolFees (current)
@@ -89,7 +99,15 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent(apiClient_t *apiC
 // Gets liquidityPoolHourlySnapshots.
 //
 list_t*
-UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(apiClient_t *apiClient);
+UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(apiClient_t *apiClient, char * pool );
+
+
+// LiquidityPools (current)
+//
+// Gets liquidityPools.
+//
+list_t*
+UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMLiquidityPoolsCurrent(apiClient_t *apiClient, char * id );
 
 
 // PositionSnapshots (current)
@@ -129,7 +147,7 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMSwapsCurrent(apiClient_t *apiClient);
 // Gets tickDailySnapshots.
 //
 list_t*
-UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(apiClient_t *apiClient);
+UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(apiClient_t *apiClient, char * pool );
 
 
 // TickHourlySnapshots (current)
@@ -169,7 +187,7 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTokenWhiteListsCurrent(apiClient_t *apiCli
 // Gets tokens.
 //
 list_t*
-UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTokensCurrent(apiClient_t *apiClient);
+UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTokensCurrent(apiClient_t *apiClient, char * id );
 
 
 // UsageMetricsDailySnapshots (current)

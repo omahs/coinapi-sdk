@@ -91,6 +91,7 @@ private class OASUNISWAPV3ETHEREUMLiquidityPoolAmoTest {
         System.assertEquals(null, unISWAPV3ETHEREUMLiquidityPoolAmountDTO.entryTime);
         System.assertEquals(null, unISWAPV3ETHEREUMLiquidityPoolAmountDTO.recvTime);
         System.assertEquals(null, unISWAPV3ETHEREUMLiquidityPoolAmountDTO.blockNumber);
+        System.assertEquals(null, unISWAPV3ETHEREUMLiquidityPoolAmountDTO.vid);
         System.assertEquals(null, unISWAPV3ETHEREUMLiquidityPoolAmountDTO.blockRange);
         System.assertEquals(null, unISWAPV3ETHEREUMLiquidityPoolAmountDTO.id);
     }

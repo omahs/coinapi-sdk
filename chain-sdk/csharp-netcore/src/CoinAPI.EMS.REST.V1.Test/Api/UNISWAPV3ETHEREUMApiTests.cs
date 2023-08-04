@@ -117,8 +117,21 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         public void UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent();
+            //string id = null;
+            //var response = instance.UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id);
             //Assert.IsType<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pool = null;
+            //var response = instance.UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool);
+            //Assert.IsType<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>(response);
         }
 
         /// <summary>
@@ -139,8 +152,21 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         public void UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent();
+            //string pool = null;
+            //var response = instance.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool);
             //Assert.IsType<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV3ETHEREUMLiquidityPoolsCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV3ETHEREUMLiquidityPoolsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //var response = instance.UNISWAPV3ETHEREUMLiquidityPoolsCurrent(id);
+            //Assert.IsType<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>>(response);
         }
 
         /// <summary>
@@ -195,7 +221,8 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         public void UNISWAPV3ETHEREUMTickDailySnapshotsCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent();
+            //string pool = null;
+            //var response = instance.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool);
             //Assert.IsType<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>(response);
         }
 
@@ -252,7 +279,8 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         public void UNISWAPV3ETHEREUMTokensCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.UNISWAPV3ETHEREUMTokensCurrent();
+            //string id = null;
+            //var response = instance.UNISWAPV3ETHEREUMTokensCurrent(id);
             //Assert.IsType<List<UNISWAPV3ETHEREUMTokenDTO>>(response);
         }
 

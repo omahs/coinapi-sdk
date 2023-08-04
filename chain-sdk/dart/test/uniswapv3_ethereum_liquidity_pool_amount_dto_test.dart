@@ -32,6 +32,12 @@ void main() {
       // TODO
     });
 
+    // .
+    // int vid
+    test('to test the property `vid`', () async {
+      // TODO
+    });
+
     // 
     // String blockRange
     test('to test the property `blockRange`', () async {

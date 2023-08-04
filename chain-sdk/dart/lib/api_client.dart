@@ -343,6 +343,10 @@ class ApiClient {
           return UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.fromJson(value);
         case 'UNISWAPV3ETHEREUMLiquidityPoolAmountDTO':
           return UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.fromJson(value);
+        case 'UNISWAPV3ETHEREUMLiquidityPoolDTO':
+          return UNISWAPV3ETHEREUMLiquidityPoolDTO.fromJson(value);
+        case 'UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO':
+          return UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.fromJson(value);
         case 'UNISWAPV3ETHEREUMLiquidityPoolFeeDTO':
           return UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.fromJson(value);
         case 'UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO':

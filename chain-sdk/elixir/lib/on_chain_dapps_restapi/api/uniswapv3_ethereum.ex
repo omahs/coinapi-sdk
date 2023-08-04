@@ -162,6 +162,7 @@ defmodule OnChainDapps-RESTAPI.Api.UNISWAPV3ETHEREUM do
 
   - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
+    - `:id` (String.t): Smart contract address of the pool.
 
   ### Returns
 
@@ -169,17 +170,57 @@ defmodule OnChainDapps-RESTAPI.Api.UNISWAPV3ETHEREUM do
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec u_niswapv3_ethereum_liquidity_pool_amounts__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV3EthereumLiquidityPoolAmountDto.t)} | {:error, Tesla.Env.t}
-  def u_niswapv3_ethereum_liquidity_pool_amounts__current(connection, _opts \\ []) do
+  def u_niswapv3_ethereum_liquidity_pool_amounts__current(connection, opts \\ []) do
+    optional_params = %{
+      :id => :query
+    }
+
     request =
       %{}
       |> method(:get)
       |> url("/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current")
+      |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainDapps-RESTAPI.Model.UniswapV3EthereumLiquidityPoolAmountDto{}]}
+    ])
+  end
+
+  @doc """
+  LiquidityPoolDailySnapshots (current)
+  Gets liquidityPoolDailySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:pool` (String.t): Pool this snapshot belongs to.
+
+  ### Returns
+
+  - `{:ok, [%UniswapV3EthereumLiquidityPoolDailySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV3EthereumLiquidityPoolDailySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current(connection, opts \\ []) do
+    optional_params = %{
+      :pool => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV3EthereumLiquidityPoolDailySnapshotDto{}]}
     ])
   end
 
@@ -220,6 +261,7 @@ defmodule OnChainDapps-RESTAPI.Api.UNISWAPV3ETHEREUM do
 
   - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
+    - `:pool` (String.t): The pool this snapshot belongs to
 
   ### Returns
 
@@ -227,17 +269,57 @@ defmodule OnChainDapps-RESTAPI.Api.UNISWAPV3ETHEREUM do
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV3EthereumLiquidityPoolHourlySnapshotDto.t)} | {:error, Tesla.Env.t}
-  def u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current(connection, _opts \\ []) do
+  def u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current(connection, opts \\ []) do
+    optional_params = %{
+      :pool => :query
+    }
+
     request =
       %{}
       |> method(:get)
       |> url("/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current")
+      |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainDapps-RESTAPI.Model.UniswapV3EthereumLiquidityPoolHourlySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  LiquidityPools (current)
+  Gets liquidityPools.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:id` (String.t): Smart contract address of the pool.
+
+  ### Returns
+
+  - `{:ok, [%UniswapV3EthereumLiquidityPoolDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv3_ethereum_liquidity_pools__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV3EthereumLiquidityPoolDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv3_ethereum_liquidity_pools__current(connection, opts \\ []) do
+    optional_params = %{
+      :id => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/uniswap_v3_ethereum/liquidityPools/current")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV3EthereumLiquidityPoolDto{}]}
     ])
   end
 
@@ -371,6 +453,7 @@ defmodule OnChainDapps-RESTAPI.Api.UNISWAPV3ETHEREUM do
 
   - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
+    - `:pool` (String.t): liquidity pool this tick belongs to
 
   ### Returns
 
@@ -378,11 +461,16 @@ defmodule OnChainDapps-RESTAPI.Api.UNISWAPV3ETHEREUM do
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec u_niswapv3_ethereum_tick_daily_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV3EthereumTickDailySnapshotDto.t)} | {:error, Tesla.Env.t}
-  def u_niswapv3_ethereum_tick_daily_snapshots__current(connection, _opts \\ []) do
+  def u_niswapv3_ethereum_tick_daily_snapshots__current(connection, opts \\ []) do
+    optional_params = %{
+      :pool => :query
+    }
+
     request =
       %{}
       |> method(:get)
       |> url("/dapps/uniswap_v3_ethereum/tickDailySnapshots/current")
+      |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection
@@ -528,6 +616,7 @@ defmodule OnChainDapps-RESTAPI.Api.UNISWAPV3ETHEREUM do
 
   - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
+    - `:id` (String.t): Smart contract address of the token.
 
   ### Returns
 
@@ -535,11 +624,16 @@ defmodule OnChainDapps-RESTAPI.Api.UNISWAPV3ETHEREUM do
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec u_niswapv3_ethereum_tokens__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV3EthereumTokenDto.t)} | {:error, Tesla.Env.t}
-  def u_niswapv3_ethereum_tokens__current(connection, _opts \\ []) do
+  def u_niswapv3_ethereum_tokens__current(connection, opts \\ []) do
+    optional_params = %{
+      :id => :query
+    }
+
     request =
       %{}
       |> method(:get)
       |> url("/dapps/uniswap_v3_ethereum/tokens/current")
+      |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection

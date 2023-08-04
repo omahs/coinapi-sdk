@@ -25,6 +25,7 @@ import com.squareup.moshi.JsonClass
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
+ * @param vid .
  * @param blockRange 
  * @param id Smart contract address of the pool.
  * @param inputTokens Input tokens of the pool (not input tokens of the event/transaction). E.g. WETH and USDC from a WETH-USDC pool.
@@ -44,6 +45,10 @@ data class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO (
     /* Number of block in which entity was recorded. */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
+
+    /* . */
+    @Json(name = "vid")
+    val vid: kotlin.Long? = null,
 
     /*  */
     @Json(name = "block_range")

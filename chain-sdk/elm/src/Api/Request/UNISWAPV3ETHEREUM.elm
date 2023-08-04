@@ -21,8 +21,10 @@ module Api.Request.UNISWAPV3ETHEREUM exposing
     , uNISWAPV3ETHEREUMDexAmmProtocolsCurrent
     , uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
     , uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+    , uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
     , uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent
     , uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+    , uNISWAPV3ETHEREUMLiquidityPoolsCurrent
     , uNISWAPV3ETHEREUMPositionSnapshotsCurrent
     , uNISWAPV3ETHEREUMPositionsCurrent
     , uNISWAPV3ETHEREUMRewardTokensCurrent
@@ -117,16 +119,30 @@ uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent =
 
 {-| Gets liquidityPoolAmounts.
 -}
-uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent : Api.Request (List Api.Data.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO)
-uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent =
+uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent : Maybe String -> Api.Request (List Api.Data.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO)
+uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent id_query =
     Api.request
         "GET"
         "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current"
         []
-        []
+        [ ( "id", Maybe.map identity id_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.uNISWAPV3ETHEREUMLiquidityPoolAmountDTODecoder)
+
+
+{-| Gets liquidityPoolDailySnapshots.
+-}
+uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent : Maybe String -> Api.Request (List Api.Data.UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO)
+uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent pool_query =
+    Api.request
+        "GET"
+        "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current"
+        []
+        [ ( "pool", Maybe.map identity pool_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODecoder)
 
 
 {-| Gets liquidityPoolFees.
@@ -145,16 +161,30 @@ uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent =
 
 {-| Gets liquidityPoolHourlySnapshots.
 -}
-uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent : Api.Request (List Api.Data.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO)
-uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent =
+uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent : Maybe String -> Api.Request (List Api.Data.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO)
+uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent pool_query =
     Api.request
         "GET"
         "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current"
         []
-        []
+        [ ( "pool", Maybe.map identity pool_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTODecoder)
+
+
+{-| Gets liquidityPools.
+-}
+uNISWAPV3ETHEREUMLiquidityPoolsCurrent : Maybe String -> Api.Request (List Api.Data.UNISWAPV3ETHEREUMLiquidityPoolDTO)
+uNISWAPV3ETHEREUMLiquidityPoolsCurrent id_query =
+    Api.request
+        "GET"
+        "/dapps/uniswap_v3_ethereum/liquidityPools/current"
+        []
+        [ ( "id", Maybe.map identity id_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV3ETHEREUMLiquidityPoolDTODecoder)
 
 
 {-| Gets positionSnapshots.
@@ -215,13 +245,13 @@ uNISWAPV3ETHEREUMSwapsCurrent =
 
 {-| Gets tickDailySnapshots.
 -}
-uNISWAPV3ETHEREUMTickDailySnapshotsCurrent : Api.Request (List Api.Data.UNISWAPV3ETHEREUMTickDailySnapshotDTO)
-uNISWAPV3ETHEREUMTickDailySnapshotsCurrent =
+uNISWAPV3ETHEREUMTickDailySnapshotsCurrent : Maybe String -> Api.Request (List Api.Data.UNISWAPV3ETHEREUMTickDailySnapshotDTO)
+uNISWAPV3ETHEREUMTickDailySnapshotsCurrent pool_query =
     Api.request
         "GET"
         "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current"
         []
-        []
+        [ ( "pool", Maybe.map identity pool_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.uNISWAPV3ETHEREUMTickDailySnapshotDTODecoder)
@@ -285,13 +315,13 @@ uNISWAPV3ETHEREUMTokenWhiteListsCurrent =
 
 {-| Gets tokens.
 -}
-uNISWAPV3ETHEREUMTokensCurrent : Api.Request (List Api.Data.UNISWAPV3ETHEREUMTokenDTO)
-uNISWAPV3ETHEREUMTokensCurrent =
+uNISWAPV3ETHEREUMTokensCurrent : Maybe String -> Api.Request (List Api.Data.UNISWAPV3ETHEREUMTokenDTO)
+uNISWAPV3ETHEREUMTokensCurrent id_query =
     Api.request
         "GET"
         "/dapps/uniswap_v3_ethereum/tokens/current"
         []
-        []
+        [ ( "id", Maybe.map identity id_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.uNISWAPV3ETHEREUMTokenDTODecoder)

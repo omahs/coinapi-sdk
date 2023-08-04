@@ -22,6 +22,8 @@ import type {
     UNISWAPV3ETHEREUMDexAmmProtocolDTO,
     UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO,
     UNISWAPV3ETHEREUMLiquidityPoolAmountDTO,
+    UNISWAPV3ETHEREUMLiquidityPoolDTO,
+    UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO,
     UNISWAPV3ETHEREUMLiquidityPoolFeeDTO,
     UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO,
     UNISWAPV3ETHEREUMPositionDTO,
@@ -39,7 +41,27 @@ import type {
     UNISWAPV3ETHEREUMWithdrawDTO,
 } from '../models';
 
+export interface UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest {
+    id?: string;
+}
+
+export interface UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest {
+    pool?: string;
+}
+
+export interface UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest {
+    pool?: string;
+}
+
+export interface UNISWAPV3ETHEREUMLiquidityPoolsCurrentRequest {
+    id?: string;
+}
+
 export interface UNISWAPV3ETHEREUMPositionsCurrentRequest {
+    pool?: string;
+}
+
+export interface UNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest {
     pool?: string;
 }
 
@@ -49,6 +71,10 @@ export interface UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest {
 
 export interface UNISWAPV3ETHEREUMTicksCurrentRequest {
     pool?: string;
+}
+
+export interface UNISWAPV3ETHEREUMTokensCurrentRequest {
+    id?: string;
 }
 
 /**
@@ -125,12 +151,37 @@ export class UNISWAPV3ETHEREUMApi extends BaseAPI {
      * Gets liquidityPoolAmounts.
      * LiquidityPoolAmounts (current)
      */
-    uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>
-    uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>>
-    uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> | AjaxResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>> {
+    uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent({ id }: UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>
+    uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent({ id }: UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>>
+    uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent({ id }: UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest, opts?: OperationOpts): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> | AjaxResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (id != null) { query['id'] = id; }
+
         return this.request<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>({
             url: '/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current',
             method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets liquidityPoolDailySnapshots.
+     * LiquidityPoolDailySnapshots (current)
+     */
+    uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent({ pool }: UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>
+    uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent({ pool }: UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>>
+    uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent({ pool }: UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest, opts?: OperationOpts): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> | AjaxResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (pool != null) { query['pool'] = pool; }
+
+        return this.request<Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>({
+            url: '/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current',
+            method: 'GET',
+            query,
         }, opts?.responseOpts);
     };
 
@@ -151,12 +202,37 @@ export class UNISWAPV3ETHEREUMApi extends BaseAPI {
      * Gets liquidityPoolHourlySnapshots.
      * LiquidityPoolHourlySnapshots (current)
      */
-    uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>
-    uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>>
-    uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> | AjaxResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>> {
+    uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent({ pool }: UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>
+    uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent({ pool }: UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>>
+    uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent({ pool }: UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest, opts?: OperationOpts): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> | AjaxResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (pool != null) { query['pool'] = pool; }
+
         return this.request<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>({
             url: '/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current',
             method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets liquidityPools.
+     * LiquidityPools (current)
+     */
+    uNISWAPV3ETHEREUMLiquidityPoolsCurrent({ id }: UNISWAPV3ETHEREUMLiquidityPoolsCurrentRequest): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>>
+    uNISWAPV3ETHEREUMLiquidityPoolsCurrent({ id }: UNISWAPV3ETHEREUMLiquidityPoolsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>>>
+    uNISWAPV3ETHEREUMLiquidityPoolsCurrent({ id }: UNISWAPV3ETHEREUMLiquidityPoolsCurrentRequest, opts?: OperationOpts): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolDTO> | AjaxResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (id != null) { query['id'] = id; }
+
+        return this.request<Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>>({
+            url: '/dapps/uniswap_v3_ethereum/liquidityPools/current',
+            method: 'GET',
+            query,
         }, opts?.responseOpts);
     };
 
@@ -222,12 +298,18 @@ export class UNISWAPV3ETHEREUMApi extends BaseAPI {
      * Gets tickDailySnapshots.
      * TickDailySnapshots (current)
      */
-    uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(): Observable<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>
-    uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>>
-    uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO> | AjaxResponse<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>> {
+    uNISWAPV3ETHEREUMTickDailySnapshotsCurrent({ pool }: UNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest): Observable<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>
+    uNISWAPV3ETHEREUMTickDailySnapshotsCurrent({ pool }: UNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>>
+    uNISWAPV3ETHEREUMTickDailySnapshotsCurrent({ pool }: UNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest, opts?: OperationOpts): Observable<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO> | AjaxResponse<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (pool != null) { query['pool'] = pool; }
+
         return this.request<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>({
             url: '/dapps/uniswap_v3_ethereum/tickDailySnapshots/current',
             method: 'GET',
+            query,
         }, opts?.responseOpts);
     };
 
@@ -299,12 +381,18 @@ export class UNISWAPV3ETHEREUMApi extends BaseAPI {
      * Gets tokens.
      * Tokens (current)
      */
-    uNISWAPV3ETHEREUMTokensCurrent(): Observable<Array<UNISWAPV3ETHEREUMTokenDTO>>
-    uNISWAPV3ETHEREUMTokensCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV3ETHEREUMTokenDTO>>>
-    uNISWAPV3ETHEREUMTokensCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV3ETHEREUMTokenDTO> | AjaxResponse<Array<UNISWAPV3ETHEREUMTokenDTO>>> {
+    uNISWAPV3ETHEREUMTokensCurrent({ id }: UNISWAPV3ETHEREUMTokensCurrentRequest): Observable<Array<UNISWAPV3ETHEREUMTokenDTO>>
+    uNISWAPV3ETHEREUMTokensCurrent({ id }: UNISWAPV3ETHEREUMTokensCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV3ETHEREUMTokenDTO>>>
+    uNISWAPV3ETHEREUMTokensCurrent({ id }: UNISWAPV3ETHEREUMTokensCurrentRequest, opts?: OperationOpts): Observable<Array<UNISWAPV3ETHEREUMTokenDTO> | AjaxResponse<Array<UNISWAPV3ETHEREUMTokenDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (id != null) { query['id'] = id; }
+
         return this.request<Array<UNISWAPV3ETHEREUMTokenDTO>>({
             url: '/dapps/uniswap_v3_ethereum/tokens/current',
             method: 'GET',
+            query,
         }, opts?.responseOpts);
     };
 

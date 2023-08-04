@@ -93,6 +93,8 @@ docs/UNISWAPV3ETHEREUMDepositDTO.md
 docs/UNISWAPV3ETHEREUMDexAmmProtocolDTO.md
 docs/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md
+docs/UNISWAPV3ETHEREUMLiquidityPoolDTO.md
+docs/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMPositionDTO.md
@@ -235,6 +237,8 @@ src/CoinAPI.EMS.REST.V1.Test/Model/UNISWAPV3ETHEREUMDepositDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/UNISWAPV3ETHEREUMDexAmmProtocolDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTOTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Model/UNISWAPV3ETHEREUMLiquidityPoolDTOTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Model/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/UNISWAPV3ETHEREUMLiquidityPoolFeeDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/UNISWAPV3ETHEREUMPositionDTOTests.cs
@@ -384,6 +388,8 @@ src/CoinAPI.EMS.REST.V1/Model/UNISWAPV3ETHEREUMDepositDTO.cs
 src/CoinAPI.EMS.REST.V1/Model/UNISWAPV3ETHEREUMDexAmmProtocolDTO.cs
 src/CoinAPI.EMS.REST.V1/Model/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.cs
 src/CoinAPI.EMS.REST.V1/Model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.cs
+src/CoinAPI.EMS.REST.V1/Model/UNISWAPV3ETHEREUMLiquidityPoolDTO.cs
+src/CoinAPI.EMS.REST.V1/Model/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.cs
 src/CoinAPI.EMS.REST.V1/Model/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.cs
 src/CoinAPI.EMS.REST.V1/Model/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.cs
 src/CoinAPI.EMS.REST.V1/Model/UNISWAPV3ETHEREUMPositionDTO.cs

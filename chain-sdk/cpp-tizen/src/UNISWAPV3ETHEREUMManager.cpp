@@ -786,7 +786,7 @@ static bool uNISWAPV3ETHEREUMLiquidityPoolAmounts (current)Processor(MemoryStruc
 }
 
 static bool uNISWAPV3ETHEREUMLiquidityPoolAmounts (current)Helper(char * accessToken,
-	
+	std::string id, 
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.LiquidityPoolAmountDTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -803,6 +803,13 @@ static bool uNISWAPV3ETHEREUMLiquidityPoolAmounts (current)Helper(char * accessT
 	map <string, string> queryParams;
 	string itemAtq;
 	
+
+	itemAtq = stringify(&id, "std::string");
+	queryParams.insert(pair<string, string>("id", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("id");
+	}
+
 	string mBody = "";
 	JsonNode* node;
 	JsonArray* json_array;
@@ -857,22 +864,167 @@ static bool uNISWAPV3ETHEREUMLiquidityPoolAmounts (current)Helper(char * accessT
 
 
 bool UNISWAPV3ETHEREUMManager::uNISWAPV3ETHEREUMLiquidityPoolAmounts (current)Async(char * accessToken,
-	
+	std::string id, 
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.LiquidityPoolAmountDTO>, Error, void* )
 	, void* userData)
 {
 	return uNISWAPV3ETHEREUMLiquidityPoolAmounts (current)Helper(accessToken,
-	
+	id, 
 	handler, userData, true);
 }
 
 bool UNISWAPV3ETHEREUMManager::uNISWAPV3ETHEREUMLiquidityPoolAmounts (current)Sync(char * accessToken,
-	
+	std::string id, 
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.LiquidityPoolAmountDTO>, Error, void* )
 	, void* userData)
 {
 	return uNISWAPV3ETHEREUMLiquidityPoolAmounts (current)Helper(accessToken,
+	id, 
+	handler, userData, false);
+}
+
+static bool uNISWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<UNISWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO>, Error, void* )> (voidHandler);
 	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<UNISWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			UNISWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool uNISWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)Helper(char * accessToken,
+	std::string pool, 
+	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&pool, "std::string");
+	queryParams.insert(pair<string, string>("pool", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("pool");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UNISWAPV3ETHEREUMManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = uNISWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UNISWAPV3ETHEREUMManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uNISWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UNISWAPV3ETHEREUMManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UNISWAPV3ETHEREUMManager::uNISWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)Async(char * accessToken,
+	std::string pool, 
+	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO>, Error, void* )
+	, void* userData)
+{
+	return uNISWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)Helper(accessToken,
+	pool, 
+	handler, userData, true);
+}
+
+bool UNISWAPV3ETHEREUMManager::uNISWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)Sync(char * accessToken,
+	std::string pool, 
+	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO>, Error, void* )
+	, void* userData)
+{
+	return uNISWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)Helper(accessToken,
+	pool, 
 	handler, userData, false);
 }
 
@@ -1062,7 +1214,7 @@ static bool uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshots (current)Processor(Mem
 }
 
 static bool uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshots (current)Helper(char * accessToken,
-	
+	std::string pool, 
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.LiquidityPoolHourlySnapshotDTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -1079,6 +1231,13 @@ static bool uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshots (current)Helper(char *
 	map <string, string> queryParams;
 	string itemAtq;
 	
+
+	itemAtq = stringify(&pool, "std::string");
+	queryParams.insert(pair<string, string>("pool", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("pool");
+	}
+
 	string mBody = "";
 	JsonNode* node;
 	JsonArray* json_array;
@@ -1133,22 +1292,167 @@ static bool uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshots (current)Helper(char *
 
 
 bool UNISWAPV3ETHEREUMManager::uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshots (current)Async(char * accessToken,
-	
+	std::string pool, 
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.LiquidityPoolHourlySnapshotDTO>, Error, void* )
 	, void* userData)
 {
 	return uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshots (current)Helper(accessToken,
-	
+	pool, 
 	handler, userData, true);
 }
 
 bool UNISWAPV3ETHEREUMManager::uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshots (current)Sync(char * accessToken,
-	
+	std::string pool, 
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.LiquidityPoolHourlySnapshotDTO>, Error, void* )
 	, void* userData)
 {
 	return uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshots (current)Helper(accessToken,
+	pool, 
+	handler, userData, false);
+}
+
+static bool uNISWAPV3ETHEREUMLiquidityPools (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.LiquidityPoolDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<UNISWAP_V3_ETHEREUM.LiquidityPoolDTO>, Error, void* )> (voidHandler);
 	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<UNISWAP_V3_ETHEREUM.LiquidityPoolDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			UNISWAP_V3_ETHEREUM.LiquidityPoolDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool uNISWAPV3ETHEREUMLiquidityPools (current)Helper(char * accessToken,
+	std::string id, 
+	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.LiquidityPoolDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&id, "std::string");
+	queryParams.insert(pair<string, string>("id", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("id");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswap_v3_ethereum/liquidityPools/current");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UNISWAPV3ETHEREUMManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = uNISWAPV3ETHEREUMLiquidityPools (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UNISWAPV3ETHEREUMManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uNISWAPV3ETHEREUMLiquidityPools (current)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UNISWAPV3ETHEREUMManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UNISWAPV3ETHEREUMManager::uNISWAPV3ETHEREUMLiquidityPools (current)Async(char * accessToken,
+	std::string id, 
+	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.LiquidityPoolDTO>, Error, void* )
+	, void* userData)
+{
+	return uNISWAPV3ETHEREUMLiquidityPools (current)Helper(accessToken,
+	id, 
+	handler, userData, true);
+}
+
+bool UNISWAPV3ETHEREUMManager::uNISWAPV3ETHEREUMLiquidityPools (current)Sync(char * accessToken,
+	std::string id, 
+	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.LiquidityPoolDTO>, Error, void* )
+	, void* userData)
+{
+	return uNISWAPV3ETHEREUMLiquidityPools (current)Helper(accessToken,
+	id, 
 	handler, userData, false);
 }
 
@@ -1759,7 +2063,7 @@ static bool uNISWAPV3ETHEREUMTickDailySnapshots (current)Processor(MemoryStruct_
 }
 
 static bool uNISWAPV3ETHEREUMTickDailySnapshots (current)Helper(char * accessToken,
-	
+	std::string pool, 
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TickDailySnapshotDTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -1776,6 +2080,13 @@ static bool uNISWAPV3ETHEREUMTickDailySnapshots (current)Helper(char * accessTok
 	map <string, string> queryParams;
 	string itemAtq;
 	
+
+	itemAtq = stringify(&pool, "std::string");
+	queryParams.insert(pair<string, string>("pool", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("pool");
+	}
+
 	string mBody = "";
 	JsonNode* node;
 	JsonArray* json_array;
@@ -1830,22 +2141,22 @@ static bool uNISWAPV3ETHEREUMTickDailySnapshots (current)Helper(char * accessTok
 
 
 bool UNISWAPV3ETHEREUMManager::uNISWAPV3ETHEREUMTickDailySnapshots (current)Async(char * accessToken,
-	
+	std::string pool, 
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TickDailySnapshotDTO>, Error, void* )
 	, void* userData)
 {
 	return uNISWAPV3ETHEREUMTickDailySnapshots (current)Helper(accessToken,
-	
+	pool, 
 	handler, userData, true);
 }
 
 bool UNISWAPV3ETHEREUMManager::uNISWAPV3ETHEREUMTickDailySnapshots (current)Sync(char * accessToken,
-	
+	std::string pool, 
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TickDailySnapshotDTO>, Error, void* )
 	, void* userData)
 {
 	return uNISWAPV3ETHEREUMTickDailySnapshots (current)Helper(accessToken,
-	
+	pool, 
 	handler, userData, false);
 }
 
@@ -2463,7 +2774,7 @@ static bool uNISWAPV3ETHEREUMTokens (current)Processor(MemoryStruct_s p_chunk, l
 }
 
 static bool uNISWAPV3ETHEREUMTokens (current)Helper(char * accessToken,
-	
+	std::string id, 
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TokenDTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -2480,6 +2791,13 @@ static bool uNISWAPV3ETHEREUMTokens (current)Helper(char * accessToken,
 	map <string, string> queryParams;
 	string itemAtq;
 	
+
+	itemAtq = stringify(&id, "std::string");
+	queryParams.insert(pair<string, string>("id", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("id");
+	}
+
 	string mBody = "";
 	JsonNode* node;
 	JsonArray* json_array;
@@ -2534,22 +2852,22 @@ static bool uNISWAPV3ETHEREUMTokens (current)Helper(char * accessToken,
 
 
 bool UNISWAPV3ETHEREUMManager::uNISWAPV3ETHEREUMTokens (current)Async(char * accessToken,
-	
+	std::string id, 
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TokenDTO>, Error, void* )
 	, void* userData)
 {
 	return uNISWAPV3ETHEREUMTokens (current)Helper(accessToken,
-	
+	id, 
 	handler, userData, true);
 }
 
 bool UNISWAPV3ETHEREUMManager::uNISWAPV3ETHEREUMTokens (current)Sync(char * accessToken,
-	
+	std::string id, 
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TokenDTO>, Error, void* )
 	, void* userData)
 {
 	return uNISWAPV3ETHEREUMTokens (current)Helper(accessToken,
-	
+	id, 
 	handler, userData, false);
 }
 

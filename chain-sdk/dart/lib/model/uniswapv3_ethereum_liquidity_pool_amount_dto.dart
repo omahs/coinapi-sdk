@@ -16,6 +16,7 @@ class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
     this.entryTime,
     this.recvTime,
     this.blockNumber,
+    this.vid,
     this.blockRange,
     this.id,
     this.inputTokens = const [],
@@ -48,6 +49,15 @@ class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
   ///
   int? blockNumber;
 
+  /// .
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? vid;
+
   /// 
   String? blockRange;
 
@@ -68,6 +78,7 @@ class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
      other.entryTime == entryTime &&
      other.recvTime == recvTime &&
      other.blockNumber == blockNumber &&
+     other.vid == vid &&
      other.blockRange == blockRange &&
      other.id == id &&
      other.inputTokens == inputTokens &&
@@ -80,6 +91,7 @@ class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
     (entryTime == null ? 0 : entryTime!.hashCode) +
     (recvTime == null ? 0 : recvTime!.hashCode) +
     (blockNumber == null ? 0 : blockNumber!.hashCode) +
+    (vid == null ? 0 : vid!.hashCode) +
     (blockRange == null ? 0 : blockRange!.hashCode) +
     (id == null ? 0 : id!.hashCode) +
     (inputTokens == null ? 0 : inputTokens!.hashCode) +
@@ -87,7 +99,7 @@ class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
     (tokenPrices == null ? 0 : tokenPrices!.hashCode);
 
   @override
-  String toString() => 'UNISWAPV3ETHEREUMLiquidityPoolAmountDTO[entryTime=$entryTime, recvTime=$recvTime, blockNumber=$blockNumber, blockRange=$blockRange, id=$id, inputTokens=$inputTokens, inputTokenBalances=$inputTokenBalances, tokenPrices=$tokenPrices]';
+  String toString() => 'UNISWAPV3ETHEREUMLiquidityPoolAmountDTO[entryTime=$entryTime, recvTime=$recvTime, blockNumber=$blockNumber, vid=$vid, blockRange=$blockRange, id=$id, inputTokens=$inputTokens, inputTokenBalances=$inputTokenBalances, tokenPrices=$tokenPrices]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -105,6 +117,11 @@ class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
       json[r'block_number'] = this.blockNumber;
     } else {
       json[r'block_number'] = null;
+    }
+    if (this.vid != null) {
+      json[r'vid'] = this.vid;
+    } else {
+      json[r'vid'] = null;
     }
     if (this.blockRange != null) {
       json[r'block_range'] = this.blockRange;
@@ -156,6 +173,7 @@ class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
         entryTime: mapDateTime(json, r'entry_time', ''),
         recvTime: mapDateTime(json, r'recv_time', ''),
         blockNumber: mapValueOfType<int>(json, r'block_number'),
+        vid: mapValueOfType<int>(json, r'vid'),
         blockRange: mapValueOfType<String>(json, r'block_range'),
         id: mapValueOfType<String>(json, r'id'),
         inputTokens: json[r'input_tokens'] is List

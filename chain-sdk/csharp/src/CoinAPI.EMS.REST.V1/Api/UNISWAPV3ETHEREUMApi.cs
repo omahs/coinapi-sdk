@@ -127,8 +127,9 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPoolAmounts.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
         /// <returns>List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO></returns>
-        List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent ();
+        List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent (string id = default(string));
 
         /// <summary>
         /// LiquidityPoolAmounts (current)
@@ -137,8 +138,30 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPoolAmounts.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
         /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO></returns>
-        ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo ();
+        ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo (string id = default(string));
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
+        /// <returns>List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO></returns>
+        List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent (string pool = default(string));
+
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo (string pool = default(string));
         /// <summary>
         /// LiquidityPoolFees (current)
         /// </summary>
@@ -165,8 +188,9 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPoolHourlySnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The pool this snapshot belongs to (optional)</param>
         /// <returns>List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO></returns>
-        List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent ();
+        List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent (string pool = default(string));
 
         /// <summary>
         /// LiquidityPoolHourlySnapshots (current)
@@ -175,8 +199,30 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPoolHourlySnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The pool this snapshot belongs to (optional)</param>
         /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO></returns>
-        ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo ();
+        ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo (string pool = default(string));
+        /// <summary>
+        /// LiquidityPools (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPools.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
+        /// <returns>List<UNISWAPV3ETHEREUMLiquidityPoolDTO></returns>
+        List<UNISWAPV3ETHEREUMLiquidityPoolDTO> UNISWAPV3ETHEREUMLiquidityPoolsCurrent (string id = default(string));
+
+        /// <summary>
+        /// LiquidityPools (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPools.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMLiquidityPoolDTO></returns>
+        ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>> UNISWAPV3ETHEREUMLiquidityPoolsCurrentWithHttpInfo (string id = default(string));
         /// <summary>
         /// PositionSnapshots (current)
         /// </summary>
@@ -262,8 +308,9 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets tickDailySnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
         /// <returns>List<UNISWAPV3ETHEREUMTickDailySnapshotDTO></returns>
-        List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> UNISWAPV3ETHEREUMTickDailySnapshotsCurrent ();
+        List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> UNISWAPV3ETHEREUMTickDailySnapshotsCurrent (string pool = default(string));
 
         /// <summary>
         /// TickDailySnapshots (current)
@@ -272,8 +319,9 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets tickDailySnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
         /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMTickDailySnapshotDTO></returns>
-        ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo ();
+        ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo (string pool = default(string));
         /// <summary>
         /// TickHourlySnapshots (current)
         /// </summary>
@@ -361,8 +409,9 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets tokens.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the token. (optional)</param>
         /// <returns>List<UNISWAPV3ETHEREUMTokenDTO></returns>
-        List<UNISWAPV3ETHEREUMTokenDTO> UNISWAPV3ETHEREUMTokensCurrent ();
+        List<UNISWAPV3ETHEREUMTokenDTO> UNISWAPV3ETHEREUMTokensCurrent (string id = default(string));
 
         /// <summary>
         /// Tokens (current)
@@ -371,8 +420,9 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets tokens.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the token. (optional)</param>
         /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMTokenDTO></returns>
-        ApiResponse<List<UNISWAPV3ETHEREUMTokenDTO>> UNISWAPV3ETHEREUMTokensCurrentWithHttpInfo ();
+        ApiResponse<List<UNISWAPV3ETHEREUMTokenDTO>> UNISWAPV3ETHEREUMTokensCurrentWithHttpInfo (string id = default(string));
         /// <summary>
         /// UsageMetricsDailySnapshots (current)
         /// </summary>
@@ -544,9 +594,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPoolAmounts.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO></returns>
-        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// LiquidityPoolAmounts (current)
@@ -555,9 +606,33 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPoolAmounts.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMLiquidityPoolAmountDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfoAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>> UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// LiquidityPoolFees (current)
         /// </summary>
@@ -586,9 +661,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPoolHourlySnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The pool this snapshot belongs to (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO></returns>
-        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// LiquidityPoolHourlySnapshots (current)
@@ -597,9 +673,33 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPoolHourlySnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The pool this snapshot belongs to (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// LiquidityPools (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPools.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMLiquidityPoolDTO></returns>
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>> UNISWAPV3ETHEREUMLiquidityPoolsCurrentAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// LiquidityPools (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPools.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMLiquidityPoolDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>>> UNISWAPV3ETHEREUMLiquidityPoolsCurrentWithHttpInfoAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// PositionSnapshots (current)
         /// </summary>
@@ -693,9 +793,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets tickDailySnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UNISWAPV3ETHEREUMTickDailySnapshotDTO></returns>
-        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// TickDailySnapshots (current)
@@ -704,9 +805,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets tickDailySnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// TickHourlySnapshots (current)
         /// </summary>
@@ -802,9 +904,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets tokens.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the token. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UNISWAPV3ETHEREUMTokenDTO></returns>
-        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMTokenDTO>> UNISWAPV3ETHEREUMTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMTokenDTO>> UNISWAPV3ETHEREUMTokensCurrentAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Tokens (current)
@@ -813,9 +916,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets tokens.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the token. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMTokenDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTokenDTO>>> UNISWAPV3ETHEREUMTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTokenDTO>>> UNISWAPV3ETHEREUMTokensCurrentWithHttpInfoAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// UsageMetricsDailySnapshots (current)
         /// </summary>
@@ -1629,10 +1733,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPoolAmounts (current) Gets liquidityPoolAmounts.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
         /// <returns>List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO></returns>
-        public List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent ()
+        public List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent (string id = default(string))
         {
-             ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> localVarResponse = UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo();
+             ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> localVarResponse = UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1640,8 +1745,9 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPoolAmounts (current) Gets liquidityPoolAmounts.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
         /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO></returns>
-        public ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo ()
+        public ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo (string id = default(string))
         {
 
             var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current";
@@ -1667,6 +1773,7 @@ namespace CoinAPI.EMS.REST.V1.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
 
 
             // make the HTTP request
@@ -1691,11 +1798,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPoolAmounts (current) Gets liquidityPoolAmounts.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO></returns>
-        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> localVarResponse = await UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfoAsync(cancellationToken);
+             ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> localVarResponse = await UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfoAsync(id, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1704,9 +1812,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPoolAmounts (current) Gets liquidityPoolAmounts.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMLiquidityPoolAmountDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfoAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current";
@@ -1732,6 +1841,7 @@ namespace CoinAPI.EMS.REST.V1.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
 
 
             // make the HTTP request
@@ -1750,6 +1860,139 @@ namespace CoinAPI.EMS.REST.V1.Api
             return new ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current) Gets liquidityPoolDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
+        /// <returns>List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO></returns>
+        public List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent (string pool = default(string))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> localVarResponse = UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(pool);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current) Gets liquidityPoolDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo (string pool = default(string))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current) Gets liquidityPoolDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> localVarResponse = await UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfoAsync(pool, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current) Gets liquidityPoolDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>> UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>)));
         }
 
         /// <summary>
@@ -1883,10 +2126,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPoolHourlySnapshots (current) Gets liquidityPoolHourlySnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The pool this snapshot belongs to (optional)</param>
         /// <returns>List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO></returns>
-        public List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent ()
+        public List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent (string pool = default(string))
         {
-             ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> localVarResponse = UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo();
+             ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> localVarResponse = UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo(pool);
              return localVarResponse.Data;
         }
 
@@ -1894,8 +2138,9 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPoolHourlySnapshots (current) Gets liquidityPoolHourlySnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The pool this snapshot belongs to (optional)</param>
         /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO></returns>
-        public ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo ()
+        public ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo (string pool = default(string))
         {
 
             var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current";
@@ -1921,6 +2166,7 @@ namespace CoinAPI.EMS.REST.V1.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
 
 
             // make the HTTP request
@@ -1945,11 +2191,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPoolHourlySnapshots (current) Gets liquidityPoolHourlySnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The pool this snapshot belongs to (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO></returns>
-        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> localVarResponse = await UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfoAsync(cancellationToken);
+             ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> localVarResponse = await UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfoAsync(pool, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1958,9 +2205,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPoolHourlySnapshots (current) Gets liquidityPoolHourlySnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The pool this snapshot belongs to (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current";
@@ -1986,6 +2234,7 @@ namespace CoinAPI.EMS.REST.V1.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
 
 
             // make the HTTP request
@@ -2004,6 +2253,139 @@ namespace CoinAPI.EMS.REST.V1.Api
             return new ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPools (current) Gets liquidityPools.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
+        /// <returns>List<UNISWAPV3ETHEREUMLiquidityPoolDTO></returns>
+        public List<UNISWAPV3ETHEREUMLiquidityPoolDTO> UNISWAPV3ETHEREUMLiquidityPoolsCurrent (string id = default(string))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>> localVarResponse = UNISWAPV3ETHEREUMLiquidityPoolsCurrentWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPools (current) Gets liquidityPools.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
+        /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMLiquidityPoolDTO></returns>
+        public ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>> UNISWAPV3ETHEREUMLiquidityPoolsCurrentWithHttpInfo (string id = default(string))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPools/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMLiquidityPoolsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMLiquidityPoolDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMLiquidityPoolDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPools (current) Gets liquidityPools.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UNISWAPV3ETHEREUMLiquidityPoolDTO></returns>
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>> UNISWAPV3ETHEREUMLiquidityPoolsCurrentAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>> localVarResponse = await UNISWAPV3ETHEREUMLiquidityPoolsCurrentWithHttpInfoAsync(id, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// LiquidityPools (current) Gets liquidityPools.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMLiquidityPoolDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>>> UNISWAPV3ETHEREUMLiquidityPoolsCurrentWithHttpInfoAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPools/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UNISWAPV3ETHEREUMLiquidityPoolsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UNISWAPV3ETHEREUMLiquidityPoolDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UNISWAPV3ETHEREUMLiquidityPoolDTO>)));
         }
 
         /// <summary>
@@ -2524,10 +2906,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TickDailySnapshots (current) Gets tickDailySnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
         /// <returns>List<UNISWAPV3ETHEREUMTickDailySnapshotDTO></returns>
-        public List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> UNISWAPV3ETHEREUMTickDailySnapshotsCurrent ()
+        public List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> UNISWAPV3ETHEREUMTickDailySnapshotsCurrent (string pool = default(string))
         {
-             ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> localVarResponse = UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo();
+             ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> localVarResponse = UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo(pool);
              return localVarResponse.Data;
         }
 
@@ -2535,8 +2918,9 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TickDailySnapshots (current) Gets tickDailySnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
         /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMTickDailySnapshotDTO></returns>
-        public ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo ()
+        public ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo (string pool = default(string))
         {
 
             var localVarPath = "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current";
@@ -2562,6 +2946,7 @@ namespace CoinAPI.EMS.REST.V1.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
 
 
             // make the HTTP request
@@ -2586,11 +2971,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TickDailySnapshots (current) Gets tickDailySnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UNISWAPV3ETHEREUMTickDailySnapshotDTO></returns>
-        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> localVarResponse = await UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfoAsync(cancellationToken);
+             ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> localVarResponse = await UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfoAsync(pool, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2599,9 +2985,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TickDailySnapshots (current) Gets tickDailySnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current";
@@ -2627,6 +3014,7 @@ namespace CoinAPI.EMS.REST.V1.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
 
 
             // make the HTTP request
@@ -3171,10 +3559,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Tokens (current) Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the token. (optional)</param>
         /// <returns>List<UNISWAPV3ETHEREUMTokenDTO></returns>
-        public List<UNISWAPV3ETHEREUMTokenDTO> UNISWAPV3ETHEREUMTokensCurrent ()
+        public List<UNISWAPV3ETHEREUMTokenDTO> UNISWAPV3ETHEREUMTokensCurrent (string id = default(string))
         {
-             ApiResponse<List<UNISWAPV3ETHEREUMTokenDTO>> localVarResponse = UNISWAPV3ETHEREUMTokensCurrentWithHttpInfo();
+             ApiResponse<List<UNISWAPV3ETHEREUMTokenDTO>> localVarResponse = UNISWAPV3ETHEREUMTokensCurrentWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -3182,8 +3571,9 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Tokens (current) Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the token. (optional)</param>
         /// <returns>ApiResponse of List<UNISWAPV3ETHEREUMTokenDTO></returns>
-        public ApiResponse<List<UNISWAPV3ETHEREUMTokenDTO>> UNISWAPV3ETHEREUMTokensCurrentWithHttpInfo ()
+        public ApiResponse<List<UNISWAPV3ETHEREUMTokenDTO>> UNISWAPV3ETHEREUMTokensCurrentWithHttpInfo (string id = default(string))
         {
 
             var localVarPath = "/dapps/uniswap_v3_ethereum/tokens/current";
@@ -3209,6 +3599,7 @@ namespace CoinAPI.EMS.REST.V1.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
 
 
             // make the HTTP request
@@ -3233,11 +3624,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Tokens (current) Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the token. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UNISWAPV3ETHEREUMTokenDTO></returns>
-        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMTokenDTO>> UNISWAPV3ETHEREUMTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<UNISWAPV3ETHEREUMTokenDTO>> UNISWAPV3ETHEREUMTokensCurrentAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UNISWAPV3ETHEREUMTokenDTO>> localVarResponse = await UNISWAPV3ETHEREUMTokensCurrentWithHttpInfoAsync(cancellationToken);
+             ApiResponse<List<UNISWAPV3ETHEREUMTokenDTO>> localVarResponse = await UNISWAPV3ETHEREUMTokensCurrentWithHttpInfoAsync(id, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -3246,9 +3638,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Tokens (current) Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the token. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UNISWAPV3ETHEREUMTokenDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTokenDTO>>> UNISWAPV3ETHEREUMTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTokenDTO>>> UNISWAPV3ETHEREUMTokensCurrentWithHttpInfoAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/dapps/uniswap_v3_ethereum/tokens/current";
@@ -3274,6 +3667,7 @@ namespace CoinAPI.EMS.REST.V1.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
 
 
             // make the HTTP request

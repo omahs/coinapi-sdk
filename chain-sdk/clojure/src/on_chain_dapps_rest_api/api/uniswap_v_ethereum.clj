@@ -70,6 +70,7 @@
             [on-chain-dapps-rest-api.specs.curve/token-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/account-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v2/user-dto :refer :all]
+            [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/liquidity-pool-daily-snapshot-dto :refer :all]
             [on-chain-dapps-rest-api.specs.cow/user-dto :refer :all]
             [on-chain-dapps-rest-api.specs.dex/user-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/tick-hourly-snapshot-dto :refer :all]
@@ -117,6 +118,7 @@
             [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/tick-daily-snapshot-dto :refer :all]
             [on-chain-dapps-rest-api.specs.dex/withdraw-request-dto :refer :all]
             [on-chain-dapps-rest-api.specs.curve/lp-token-dto :refer :all]
+            [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/liquidity-pool-dto :refer :all]
             [on-chain-dapps-rest-api.specs.sushiswap/pair-hour-data-dto :refer :all]
             [on-chain-dapps-rest-api.specs.curve/daily-volume-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3/burn-dto :refer :all]
@@ -253,24 +255,51 @@
 (defn-spec u-niswapv3-ethereum-liquidity-pool-amounts-current-with-http-info any?
   "LiquidityPoolAmounts (current)
   Gets liquidityPoolAmounts."
-  []
-  (call-api "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current" :get
-            {:path-params   {}
-             :header-params {}
-             :query-params  {}
-             :form-params   {}
-             :content-types []
-             :accepts       ["text/plain" "application/json" "text/json"]
-             :auth-names    []}))
+  ([] (u-niswapv3-ethereum-liquidity-pool-amounts-current-with-http-info nil))
+  ([{:keys [id]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"id" id }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
 
 (defn-spec u-niswapv3-ethereum-liquidity-pool-amounts-current (s/coll-of uniswap-v3-ethereum/liquidity-pool-amount-dto-spec)
   "LiquidityPoolAmounts (current)
   Gets liquidityPoolAmounts."
-  []
-  (let [res (:data (u-niswapv3-ethereum-liquidity-pool-amounts-current-with-http-info))]
-    (if (:decode-models *api-context*)
-       (st/decode (s/coll-of uniswap-v3-ethereum/liquidity-pool-amount-dto-spec) res st/string-transformer)
-       res)))
+  ([] (u-niswapv3-ethereum-liquidity-pool-amounts-current nil))
+  ([optional-params any?]
+   (let [res (:data (u-niswapv3-ethereum-liquidity-pool-amounts-current-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3-ethereum/liquidity-pool-amount-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec u-niswapv3-ethereum-liquidity-pool-daily-snapshots-current-with-http-info any?
+  "LiquidityPoolDailySnapshots (current)
+  Gets liquidityPoolDailySnapshots."
+  ([] (u-niswapv3-ethereum-liquidity-pool-daily-snapshots-current-with-http-info nil))
+  ([{:keys [pool]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"pool" pool }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec u-niswapv3-ethereum-liquidity-pool-daily-snapshots-current (s/coll-of uniswap-v3-ethereum/liquidity-pool-daily-snapshot-dto-spec)
+  "LiquidityPoolDailySnapshots (current)
+  Gets liquidityPoolDailySnapshots."
+  ([] (u-niswapv3-ethereum-liquidity-pool-daily-snapshots-current nil))
+  ([optional-params any?]
+   (let [res (:data (u-niswapv3-ethereum-liquidity-pool-daily-snapshots-current-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3-ethereum/liquidity-pool-daily-snapshot-dto-spec) res st/string-transformer)
+        res))))
 
 
 (defn-spec u-niswapv3-ethereum-liquidity-pool-fees-current-with-http-info any?
@@ -299,24 +328,51 @@
 (defn-spec u-niswapv3-ethereum-liquidity-pool-hourly-snapshots-current-with-http-info any?
   "LiquidityPoolHourlySnapshots (current)
   Gets liquidityPoolHourlySnapshots."
-  []
-  (call-api "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current" :get
-            {:path-params   {}
-             :header-params {}
-             :query-params  {}
-             :form-params   {}
-             :content-types []
-             :accepts       ["text/plain" "application/json" "text/json"]
-             :auth-names    []}))
+  ([] (u-niswapv3-ethereum-liquidity-pool-hourly-snapshots-current-with-http-info nil))
+  ([{:keys [pool]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"pool" pool }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
 
 (defn-spec u-niswapv3-ethereum-liquidity-pool-hourly-snapshots-current (s/coll-of uniswap-v3-ethereum/liquidity-pool-hourly-snapshot-dto-spec)
   "LiquidityPoolHourlySnapshots (current)
   Gets liquidityPoolHourlySnapshots."
-  []
-  (let [res (:data (u-niswapv3-ethereum-liquidity-pool-hourly-snapshots-current-with-http-info))]
-    (if (:decode-models *api-context*)
-       (st/decode (s/coll-of uniswap-v3-ethereum/liquidity-pool-hourly-snapshot-dto-spec) res st/string-transformer)
-       res)))
+  ([] (u-niswapv3-ethereum-liquidity-pool-hourly-snapshots-current nil))
+  ([optional-params any?]
+   (let [res (:data (u-niswapv3-ethereum-liquidity-pool-hourly-snapshots-current-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3-ethereum/liquidity-pool-hourly-snapshot-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec u-niswapv3-ethereum-liquidity-pools-current-with-http-info any?
+  "LiquidityPools (current)
+  Gets liquidityPools."
+  ([] (u-niswapv3-ethereum-liquidity-pools-current-with-http-info nil))
+  ([{:keys [id]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswap_v3_ethereum/liquidityPools/current" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"id" id }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec u-niswapv3-ethereum-liquidity-pools-current (s/coll-of uniswap-v3-ethereum/liquidity-pool-dto-spec)
+  "LiquidityPools (current)
+  Gets liquidityPools."
+  ([] (u-niswapv3-ethereum-liquidity-pools-current nil))
+  ([optional-params any?]
+   (let [res (:data (u-niswapv3-ethereum-liquidity-pools-current-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3-ethereum/liquidity-pool-dto-spec) res st/string-transformer)
+        res))))
 
 
 (defn-spec u-niswapv3-ethereum-position-snapshots-current-with-http-info any?
@@ -416,24 +472,26 @@
 (defn-spec u-niswapv3-ethereum-tick-daily-snapshots-current-with-http-info any?
   "TickDailySnapshots (current)
   Gets tickDailySnapshots."
-  []
-  (call-api "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current" :get
-            {:path-params   {}
-             :header-params {}
-             :query-params  {}
-             :form-params   {}
-             :content-types []
-             :accepts       ["text/plain" "application/json" "text/json"]
-             :auth-names    []}))
+  ([] (u-niswapv3-ethereum-tick-daily-snapshots-current-with-http-info nil))
+  ([{:keys [pool]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"pool" pool }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
 
 (defn-spec u-niswapv3-ethereum-tick-daily-snapshots-current (s/coll-of uniswap-v3-ethereum/tick-daily-snapshot-dto-spec)
   "TickDailySnapshots (current)
   Gets tickDailySnapshots."
-  []
-  (let [res (:data (u-niswapv3-ethereum-tick-daily-snapshots-current-with-http-info))]
-    (if (:decode-models *api-context*)
-       (st/decode (s/coll-of uniswap-v3-ethereum/tick-daily-snapshot-dto-spec) res st/string-transformer)
-       res)))
+  ([] (u-niswapv3-ethereum-tick-daily-snapshots-current nil))
+  ([optional-params any?]
+   (let [res (:data (u-niswapv3-ethereum-tick-daily-snapshots-current-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3-ethereum/tick-daily-snapshot-dto-spec) res st/string-transformer)
+        res))))
 
 
 (defn-spec u-niswapv3-ethereum-tick-hourly-snapshots-current-with-http-info any?
@@ -535,24 +593,26 @@
 (defn-spec u-niswapv3-ethereum-tokens-current-with-http-info any?
   "Tokens (current)
   Gets tokens."
-  []
-  (call-api "/dapps/uniswap_v3_ethereum/tokens/current" :get
-            {:path-params   {}
-             :header-params {}
-             :query-params  {}
-             :form-params   {}
-             :content-types []
-             :accepts       ["text/plain" "application/json" "text/json"]
-             :auth-names    []}))
+  ([] (u-niswapv3-ethereum-tokens-current-with-http-info nil))
+  ([{:keys [id]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswap_v3_ethereum/tokens/current" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"id" id }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
 
 (defn-spec u-niswapv3-ethereum-tokens-current (s/coll-of uniswap-v3-ethereum/token-dto-spec)
   "Tokens (current)
   Gets tokens."
-  []
-  (let [res (:data (u-niswapv3-ethereum-tokens-current-with-http-info))]
-    (if (:decode-models *api-context*)
-       (st/decode (s/coll-of uniswap-v3-ethereum/token-dto-spec) res st/string-transformer)
-       res)))
+  ([] (u-niswapv3-ethereum-tokens-current nil))
+  ([optional-params any?]
+   (let [res (:data (u-niswapv3-ethereum-tokens-current-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3-ethereum/token-dto-spec) res st/string-transformer)
+        res))))
 
 
 (defn-spec u-niswapv3-ethereum-usage-metrics-daily-snapshots-current-with-http-info any?

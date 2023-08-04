@@ -17,6 +17,8 @@ import org.openapitools.client.model.DepositDTO
 import org.openapitools.client.model.DexAmmProtocolDTO
 import org.openapitools.client.model.FinancialsDailySnapshotDTO
 import org.openapitools.client.model.LiquidityPoolAmountDTO
+import org.openapitools.client.model.LiquidityPoolDTO
+import org.openapitools.client.model.LiquidityPoolDailySnapshotDTO
 import org.openapitools.client.model.LiquidityPoolFeeDTO
 import org.openapitools.client.model.LiquidityPoolHourlySnapshotDTO
 import org.openapitools.client.model.PositionDTO
@@ -103,10 +105,27 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    * 
    * Expected answers:
    *   code 200 : Seq[LiquidityPoolAmountDTO] (successful operation)
+   * 
+   * @param id Smart contract address of the pool.
    */
-  def uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(): ApiRequest[Seq[LiquidityPoolAmountDTO]] =
+  def uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id: Option[String] = None): ApiRequest[Seq[LiquidityPoolAmountDTO]] =
     ApiRequest[Seq[LiquidityPoolAmountDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current", "application/json")
+      .withQueryParam("id", id)
       .withSuccessResponse[Seq[LiquidityPoolAmountDTO]](200)
+      
+
+  /**
+   * Gets liquidityPoolDailySnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LiquidityPoolDailySnapshotDTO] (successful operation)
+   * 
+   * @param pool Pool this snapshot belongs to.
+   */
+  def uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool: Option[String] = None): ApiRequest[Seq[LiquidityPoolDailySnapshotDTO]] =
+    ApiRequest[Seq[LiquidityPoolDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current", "application/json")
+      .withQueryParam("pool", pool)
+      .withSuccessResponse[Seq[LiquidityPoolDailySnapshotDTO]](200)
       
 
   /**
@@ -125,10 +144,27 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    * 
    * Expected answers:
    *   code 200 : Seq[LiquidityPoolHourlySnapshotDTO] (successful operation)
+   * 
+   * @param pool The pool this snapshot belongs to
    */
-  def uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(): ApiRequest[Seq[LiquidityPoolHourlySnapshotDTO]] =
+  def uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool: Option[String] = None): ApiRequest[Seq[LiquidityPoolHourlySnapshotDTO]] =
     ApiRequest[Seq[LiquidityPoolHourlySnapshotDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current", "application/json")
+      .withQueryParam("pool", pool)
       .withSuccessResponse[Seq[LiquidityPoolHourlySnapshotDTO]](200)
+      
+
+  /**
+   * Gets liquidityPools.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LiquidityPoolDTO] (successful operation)
+   * 
+   * @param id Smart contract address of the pool.
+   */
+  def uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id: Option[String] = None): ApiRequest[Seq[LiquidityPoolDTO]] =
+    ApiRequest[Seq[LiquidityPoolDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/liquidityPools/current", "application/json")
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[LiquidityPoolDTO]](200)
       
 
   /**
@@ -183,9 +219,12 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    * 
    * Expected answers:
    *   code 200 : Seq[TickDailySnapshotDTO] (successful operation)
+   * 
+   * @param pool liquidity pool this tick belongs to
    */
-  def uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(): ApiRequest[Seq[TickDailySnapshotDTO]] =
+  def uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool: Option[String] = None): ApiRequest[Seq[TickDailySnapshotDTO]] =
     ApiRequest[Seq[TickDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current", "application/json")
+      .withQueryParam("pool", pool)
       .withSuccessResponse[Seq[TickDailySnapshotDTO]](200)
       
 
@@ -244,9 +283,12 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    * 
    * Expected answers:
    *   code 200 : Seq[TokenDTO] (successful operation)
+   * 
+   * @param id Smart contract address of the token.
    */
-  def uNISWAPV3ETHEREUMTokensCurrent(): ApiRequest[Seq[TokenDTO]] =
+  def uNISWAPV3ETHEREUMTokensCurrent(id: Option[String] = None): ApiRequest[Seq[TokenDTO]] =
     ApiRequest[Seq[TokenDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/tokens/current", "application/json")
+      .withQueryParam("id", id)
       .withSuccessResponse[Seq[TokenDTO]](200)
       
 

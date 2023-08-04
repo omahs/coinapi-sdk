@@ -108,6 +108,15 @@ class UNISWAPV3ETHEREUMLiquidityPoolAmountDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "vid"
+     */
+    public function testPropertyVid()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "block_range"
      */
     public function testPropertyBlockRange()

@@ -10,8 +10,10 @@ Method | HTTP request | Description
 [**UNISWAPV3ETHEREUMDexAmmProtocolsCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumdexammprotocolscurrent) | **GET** /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
 [**UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumfinancialsdailysnapshotscurrent) | **GET** /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
 [**UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumliquiditypoolamountscurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
+[**UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumliquiditypooldailysnapshotscurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
 [**UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumliquiditypoolfeescurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
 [**UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumliquiditypoolhourlysnapshotscurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
+[**UNISWAPV3ETHEREUMLiquidityPoolsCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumliquiditypoolscurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current)
 [**UNISWAPV3ETHEREUMPositionSnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumpositionsnapshotscurrent) | **GET** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current)
 [**UNISWAPV3ETHEREUMPositionsCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumpositionscurrent) | **GET** /dapps/uniswap_v3_ethereum/positions/current | Positions (current)
 [**UNISWAPV3ETHEREUMRewardTokensCurrent**](UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumrewardtokenscurrent) | **GET** /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current)
@@ -390,7 +392,7 @@ No authorization required
 
 ## UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent
 
-> List&lt;UNISWAPV3ETHEREUMLiquidityPoolAmountDTO&gt; UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent ()
+> List&lt;UNISWAPV3ETHEREUMLiquidityPoolAmountDTO&gt; UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent (string id = null)
 
 LiquidityPoolAmounts (current)
 
@@ -413,11 +415,12 @@ namespace Example
         {
             Configuration.Default.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new UNISWAPV3ETHEREUMApi(Configuration.Default);
+            var id = "id_example";  // string | Smart contract address of the pool. (optional) 
 
             try
             {
                 // LiquidityPoolAmounts (current)
-                List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> result = apiInstance.UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent();
+                List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> result = apiInstance.UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -433,11 +436,90 @@ namespace Example
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Smart contract address of the pool. | [optional] 
 
 ### Return type
 
 [**List&lt;UNISWAPV3ETHEREUMLiquidityPoolAmountDTO&gt;**](UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+
+> List&lt;UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt; UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent (string pool = null)
+
+LiquidityPoolDailySnapshots (current)
+
+Gets liquidityPoolDailySnapshots.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UNISWAPV3ETHEREUMApi(Configuration.Default);
+            var pool = "pool_example";  // string | Pool this snapshot belongs to. (optional) 
+
+            try
+            {
+                // LiquidityPoolDailySnapshots (current)
+                List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> result = apiInstance.UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **string**| Pool this snapshot belongs to. | [optional] 
+
+### Return type
+
+[**List&lt;UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt;**](UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md)
 
 ### Authorization
 
@@ -534,7 +616,7 @@ No authorization required
 
 ## UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
 
-> List&lt;UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO&gt; UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent ()
+> List&lt;UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO&gt; UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent (string pool = null)
 
 LiquidityPoolHourlySnapshots (current)
 
@@ -557,11 +639,12 @@ namespace Example
         {
             Configuration.Default.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new UNISWAPV3ETHEREUMApi(Configuration.Default);
+            var pool = "pool_example";  // string | The pool this snapshot belongs to (optional) 
 
             try
             {
                 // LiquidityPoolHourlySnapshots (current)
-                List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> result = apiInstance.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent();
+                List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> result = apiInstance.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -577,11 +660,90 @@ namespace Example
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **string**| The pool this snapshot belongs to | [optional] 
 
 ### Return type
 
 [**List&lt;UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO&gt;**](UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UNISWAPV3ETHEREUMLiquidityPoolsCurrent
+
+> List&lt;UNISWAPV3ETHEREUMLiquidityPoolDTO&gt; UNISWAPV3ETHEREUMLiquidityPoolsCurrent (string id = null)
+
+LiquidityPools (current)
+
+Gets liquidityPools.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UNISWAPV3ETHEREUMLiquidityPoolsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UNISWAPV3ETHEREUMApi(Configuration.Default);
+            var id = "id_example";  // string | Smart contract address of the pool. (optional) 
+
+            try
+            {
+                // LiquidityPools (current)
+                List<UNISWAPV3ETHEREUMLiquidityPoolDTO> result = apiInstance.UNISWAPV3ETHEREUMLiquidityPoolsCurrent(id);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMLiquidityPoolsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Smart contract address of the pool. | [optional] 
+
+### Return type
+
+[**List&lt;UNISWAPV3ETHEREUMLiquidityPoolDTO&gt;**](UNISWAPV3ETHEREUMLiquidityPoolDTO.md)
 
 ### Authorization
 
@@ -898,7 +1060,7 @@ No authorization required
 
 ## UNISWAPV3ETHEREUMTickDailySnapshotsCurrent
 
-> List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt; UNISWAPV3ETHEREUMTickDailySnapshotsCurrent ()
+> List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt; UNISWAPV3ETHEREUMTickDailySnapshotsCurrent (string pool = null)
 
 TickDailySnapshots (current)
 
@@ -921,11 +1083,12 @@ namespace Example
         {
             Configuration.Default.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new UNISWAPV3ETHEREUMApi(Configuration.Default);
+            var pool = "pool_example";  // string | liquidity pool this tick belongs to (optional) 
 
             try
             {
                 // TickDailySnapshots (current)
-                List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> result = apiInstance.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent();
+                List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> result = apiInstance.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -941,7 +1104,10 @@ namespace Example
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **string**| liquidity pool this tick belongs to | [optional] 
 
 ### Return type
 
@@ -1266,7 +1432,7 @@ No authorization required
 
 ## UNISWAPV3ETHEREUMTokensCurrent
 
-> List&lt;UNISWAPV3ETHEREUMTokenDTO&gt; UNISWAPV3ETHEREUMTokensCurrent ()
+> List&lt;UNISWAPV3ETHEREUMTokenDTO&gt; UNISWAPV3ETHEREUMTokensCurrent (string id = null)
 
 Tokens (current)
 
@@ -1289,11 +1455,12 @@ namespace Example
         {
             Configuration.Default.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new UNISWAPV3ETHEREUMApi(Configuration.Default);
+            var id = "id_example";  // string | Smart contract address of the token. (optional) 
 
             try
             {
                 // Tokens (current)
-                List<UNISWAPV3ETHEREUMTokenDTO> result = apiInstance.UNISWAPV3ETHEREUMTokensCurrent();
+                List<UNISWAPV3ETHEREUMTokenDTO> result = apiInstance.UNISWAPV3ETHEREUMTokensCurrent(id);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1309,7 +1476,10 @@ namespace Example
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Smart contract address of the token. | [optional] 
 
 ### Return type
 

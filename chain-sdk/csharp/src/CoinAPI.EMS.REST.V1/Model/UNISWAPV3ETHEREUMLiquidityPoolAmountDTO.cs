@@ -36,12 +36,13 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
+        /// <param name="vid">..</param>
         /// <param name="blockRange">blockRange.</param>
         /// <param name="id">Smart contract address of the pool..</param>
         /// <param name="inputTokens">Input tokens of the pool (not input tokens of the event/transaction). E.g. WETH and USDC from a WETH-USDC pool..</param>
         /// <param name="inputTokenBalances">Amount of input tokens in the pool. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field..</param>
         /// <param name="tokenPrices">tokenPrices.</param>
-        public UNISWAPV3ETHEREUMLiquidityPoolAmountDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), string blockRange = default(string), string id = default(string), List<string> inputTokens = default(List<string>), List<string> inputTokenBalances = default(List<string>), List<string> tokenPrices = default(List<string>))
+        public UNISWAPV3ETHEREUMLiquidityPoolAmountDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), long vid = default(long), string blockRange = default(string), string id = default(string), List<string> inputTokens = default(List<string>), List<string> inputTokenBalances = default(List<string>), List<string> tokenPrices = default(List<string>))
         {
             this.BlockRange = blockRange;
             this.Id = id;
@@ -51,6 +52,7 @@ namespace CoinAPI.EMS.REST.V1.Model
             this.EntryTime = entryTime;
             this.RecvTime = recvTime;
             this.BlockNumber = blockNumber;
+            this.Vid = vid;
             this.BlockRange = blockRange;
             this.Id = id;
             this.InputTokens = inputTokens;
@@ -76,6 +78,13 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <value>Number of block in which entity was recorded.</value>
         [DataMember(Name="block_number", EmitDefaultValue=false)]
         public long BlockNumber { get; set; }
+
+        /// <summary>
+        /// .
+        /// </summary>
+        /// <value>.</value>
+        [DataMember(Name="vid", EmitDefaultValue=false)]
+        public long Vid { get; set; }
 
         /// <summary>
         /// Gets or Sets BlockRange
@@ -121,6 +130,7 @@ namespace CoinAPI.EMS.REST.V1.Model
             sb.Append("  EntryTime: ").Append(EntryTime).Append("\n");
             sb.Append("  RecvTime: ").Append(RecvTime).Append("\n");
             sb.Append("  BlockNumber: ").Append(BlockNumber).Append("\n");
+            sb.Append("  Vid: ").Append(Vid).Append("\n");
             sb.Append("  BlockRange: ").Append(BlockRange).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  InputTokens: ").Append(InputTokens).Append("\n");
@@ -176,6 +186,11 @@ namespace CoinAPI.EMS.REST.V1.Model
                     this.BlockNumber.Equals(input.BlockNumber))
                 ) && 
                 (
+                    this.Vid == input.Vid ||
+                    (this.Vid != null &&
+                    this.Vid.Equals(input.Vid))
+                ) && 
+                (
                     this.BlockRange == input.BlockRange ||
                     (this.BlockRange != null &&
                     this.BlockRange.Equals(input.BlockRange))
@@ -220,6 +235,8 @@ namespace CoinAPI.EMS.REST.V1.Model
                     hashCode = hashCode * 59 + this.RecvTime.GetHashCode();
                 if (this.BlockNumber != null)
                     hashCode = hashCode * 59 + this.BlockNumber.GetHashCode();
+                if (this.Vid != null)
+                    hashCode = hashCode * 59 + this.Vid.GetHashCode();
                 if (this.BlockRange != null)
                     hashCode = hashCode * 59 + this.BlockRange.GetHashCode();
                 if (this.Id != null)

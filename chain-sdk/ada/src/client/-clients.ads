@@ -504,7 +504,15 @@ package .Clients is
    --  Gets liquidityPoolAmounts.
    procedure U_NISWAPV3ETHEREUM_Liquidity_Pool_Amounts__current
       (Client : in out Client_Type;
+       Id : in Swagger.Nullable_UString;
        Result : out .Models.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO_Type_Vectors.Vector);
+
+   --  LiquidityPoolDailySnapshots (current)
+   --  Gets liquidityPoolDailySnapshots.
+   procedure U_NISWAPV3ETHEREUM_Liquidity_Pool_Daily_Snapshots__current
+      (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO_Type_Vectors.Vector);
 
    --  LiquidityPoolFees (current)
    --  Gets liquidityPoolFees.
@@ -516,7 +524,15 @@ package .Clients is
    --  Gets liquidityPoolHourlySnapshots.
    procedure U_NISWAPV3ETHEREUM_Liquidity_Pool_Hourly_Snapshots__current
       (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
        Result : out .Models.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO_Type_Vectors.Vector);
+
+   --  LiquidityPools (current)
+   --  Gets liquidityPools.
+   procedure U_NISWAPV3ETHEREUM_Liquidity_Pools__current
+      (Client : in out Client_Type;
+       Id : in Swagger.Nullable_UString;
+       Result : out .Models.UNISWAPV3ETHEREUMLiquidityPoolDTO_Type_Vectors.Vector);
 
    --  PositionSnapshots (current)
    --  Gets positionSnapshots.
@@ -547,6 +563,7 @@ package .Clients is
    --  Gets tickDailySnapshots.
    procedure U_NISWAPV3ETHEREUM_Tick_Daily_Snapshots__current
       (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
        Result : out .Models.UNISWAPV3ETHEREUMTickDailySnapshotDTO_Type_Vectors.Vector);
 
    --  TickHourlySnapshots (current)
@@ -579,6 +596,7 @@ package .Clients is
    --  Gets tokens.
    procedure U_NISWAPV3ETHEREUM_Tokens__current
       (Client : in out Client_Type;
+       Id : in Swagger.Nullable_UString;
        Result : out .Models.UNISWAPV3ETHEREUMTokenDTO_Type_Vectors.Vector);
 
    --  UsageMetricsDailySnapshots (current)

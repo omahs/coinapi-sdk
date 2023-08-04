@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **EntryTime** | **DateTime** |  | [optional] 
 **RecvTime** | **DateTime** |  | [optional] 
 **BlockNumber** | **long** | Number of block in which entity was recorded. | [optional] 
+**Vid** | **long** | . | [optional] 
 **BlockRange** | **string** |  | [optional] 
 **Id** | **string** | Smart contract address of the pool. | [optional] 
 **InputTokens** | **List&lt;string&gt;** | Input tokens of the pool (not input tokens of the event/transaction). E.g. WETH and USDC from a WETH-USDC pool. | [optional] 

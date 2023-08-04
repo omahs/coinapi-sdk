@@ -91,6 +91,8 @@ docs/UNISWAPV3ETHEREUMDepositDTO.md
 docs/UNISWAPV3ETHEREUMDexAmmProtocolDTO.md
 docs/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md
+docs/UNISWAPV3ETHEREUMLiquidityPoolDTO.md
+docs/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMPositionDTO.md
@@ -235,6 +237,8 @@ src/model/UNISWAPV3ETHEREUMDepositDTO.js
 src/model/UNISWAPV3ETHEREUMDexAmmProtocolDTO.js
 src/model/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.js
 src/model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.js
+src/model/UNISWAPV3ETHEREUMLiquidityPoolDTO.js
+src/model/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.js
 src/model/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.js
 src/model/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.js
 src/model/UNISWAPV3ETHEREUMPositionDTO.js
@@ -372,6 +376,8 @@ test/model/UNISWAPV3ETHEREUMDepositDTO.spec.js
 test/model/UNISWAPV3ETHEREUMDexAmmProtocolDTO.spec.js
 test/model/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.spec.js
 test/model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.spec.js
+test/model/UNISWAPV3ETHEREUMLiquidityPoolDTO.spec.js
+test/model/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.spec.js
 test/model/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.spec.js
 test/model/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.spec.js
 test/model/UNISWAPV3ETHEREUMPositionDTO.spec.js

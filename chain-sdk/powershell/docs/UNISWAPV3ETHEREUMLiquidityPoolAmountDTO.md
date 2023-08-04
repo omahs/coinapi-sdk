@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
+**Vid** | **Int64** | . | [optional] 
 **BlockRange** | **String** |  | [optional] 
 **Id** | **String** | Smart contract address of the pool. | [optional] 
 **InputTokens** | **String[]** | Input tokens of the pool (not input tokens of the event/transaction). E.g. WETH and USDC from a WETH-USDC pool. | [optional] 
@@ -19,6 +20,7 @@ Name | Type | Description | Notes
 $UNISWAPV3ETHEREUMLiquidityPoolAmountDTO = Initialize-PSOpenAPIToolsUNISWAPV3ETHEREUMLiquidityPoolAmountDTO  -EntryTime null `
  -RecvTime null `
  -BlockNumber null `
+ -Vid null `
  -BlockRange null `
  -Id null `
  -InputTokens null `

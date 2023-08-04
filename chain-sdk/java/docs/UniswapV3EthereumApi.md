@@ -10,8 +10,10 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**uNISWAPV3ETHEREUMDexAmmProtocolsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMDexAmmProtocolsCurrent) | **GET** /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current) |
 | [**uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current) |
 | [**uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current) |
+| [**uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current) |
 | [**uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current) |
 | [**uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current) |
+| [**uNISWAPV3ETHEREUMLiquidityPoolsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMLiquidityPoolsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current) |
 | [**uNISWAPV3ETHEREUMPositionSnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMPositionSnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current) |
 | [**uNISWAPV3ETHEREUMPositionsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMPositionsCurrent) | **GET** /dapps/uniswap_v3_ethereum/positions/current | Positions (current) |
 | [**uNISWAPV3ETHEREUMRewardTokensCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMRewardTokensCurrent) | **GET** /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current) |
@@ -319,7 +321,7 @@ No authorization required
 
 <a id="uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent"></a>
 # **uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent**
-> List&lt;UNISWAPV3ETHEREUMLiquidityPoolAmountDTO&gt; uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent()
+> List&lt;UNISWAPV3ETHEREUMLiquidityPoolAmountDTO&gt; uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id)
 
 LiquidityPoolAmounts (current)
 
@@ -340,8 +342,9 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     UniswapV3EthereumApi apiInstance = new UniswapV3EthereumApi(defaultClient);
+    String id = "id_example"; // String | Smart contract address of the pool.
     try {
-      List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> result = apiInstance.uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent();
+      List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> result = apiInstance.uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UniswapV3EthereumApi#uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent");
@@ -355,11 +358,76 @@ public class Example {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **String**| Smart contract address of the pool. | [optional] |
 
 ### Return type
 
 [**List&lt;UNISWAPV3ETHEREUMLiquidityPoolAmountDTO&gt;**](UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a id="uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent"></a>
+# **uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**
+> List&lt;UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt; uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool)
+
+LiquidityPoolDailySnapshots (current)
+
+Gets liquidityPoolDailySnapshots.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV3EthereumApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV3EthereumApi apiInstance = new UniswapV3EthereumApi(defaultClient);
+    String pool = "pool_example"; // String | Pool this snapshot belongs to.
+    try {
+      List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> result = apiInstance.uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV3EthereumApi#uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pool** | **String**| Pool this snapshot belongs to. | [optional] |
+
+### Return type
+
+[**List&lt;UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt;**](UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md)
 
 ### Authorization
 
@@ -435,7 +503,7 @@ No authorization required
 
 <a id="uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent"></a>
 # **uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent**
-> List&lt;UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO&gt; uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent()
+> List&lt;UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO&gt; uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool)
 
 LiquidityPoolHourlySnapshots (current)
 
@@ -456,8 +524,9 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     UniswapV3EthereumApi apiInstance = new UniswapV3EthereumApi(defaultClient);
+    String pool = "pool_example"; // String | The pool this snapshot belongs to
     try {
-      List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> result = apiInstance.uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent();
+      List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> result = apiInstance.uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UniswapV3EthereumApi#uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent");
@@ -471,11 +540,76 @@ public class Example {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pool** | **String**| The pool this snapshot belongs to | [optional] |
 
 ### Return type
 
 [**List&lt;UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO&gt;**](UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a id="uNISWAPV3ETHEREUMLiquidityPoolsCurrent"></a>
+# **uNISWAPV3ETHEREUMLiquidityPoolsCurrent**
+> List&lt;UNISWAPV3ETHEREUMLiquidityPoolDTO&gt; uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id)
+
+LiquidityPools (current)
+
+Gets liquidityPools.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV3EthereumApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV3EthereumApi apiInstance = new UniswapV3EthereumApi(defaultClient);
+    String id = "id_example"; // String | Smart contract address of the pool.
+    try {
+      List<UNISWAPV3ETHEREUMLiquidityPoolDTO> result = apiInstance.uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV3EthereumApi#uNISWAPV3ETHEREUMLiquidityPoolsCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **String**| Smart contract address of the pool. | [optional] |
+
+### Return type
+
+[**List&lt;UNISWAPV3ETHEREUMLiquidityPoolDTO&gt;**](UNISWAPV3ETHEREUMLiquidityPoolDTO.md)
 
 ### Authorization
 
@@ -729,7 +863,7 @@ No authorization required
 
 <a id="uNISWAPV3ETHEREUMTickDailySnapshotsCurrent"></a>
 # **uNISWAPV3ETHEREUMTickDailySnapshotsCurrent**
-> List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt; uNISWAPV3ETHEREUMTickDailySnapshotsCurrent()
+> List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt; uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool)
 
 TickDailySnapshots (current)
 
@@ -750,8 +884,9 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     UniswapV3EthereumApi apiInstance = new UniswapV3EthereumApi(defaultClient);
+    String pool = "pool_example"; // String | liquidity pool this tick belongs to
     try {
-      List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> result = apiInstance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent();
+      List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> result = apiInstance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UniswapV3EthereumApi#uNISWAPV3ETHEREUMTickDailySnapshotsCurrent");
@@ -765,7 +900,10 @@ public class Example {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pool** | **String**| liquidity pool this tick belongs to | [optional] |
 
 ### Return type
 
@@ -1027,7 +1165,7 @@ No authorization required
 
 <a id="uNISWAPV3ETHEREUMTokensCurrent"></a>
 # **uNISWAPV3ETHEREUMTokensCurrent**
-> List&lt;UNISWAPV3ETHEREUMTokenDTO&gt; uNISWAPV3ETHEREUMTokensCurrent()
+> List&lt;UNISWAPV3ETHEREUMTokenDTO&gt; uNISWAPV3ETHEREUMTokensCurrent(id)
 
 Tokens (current)
 
@@ -1048,8 +1186,9 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     UniswapV3EthereumApi apiInstance = new UniswapV3EthereumApi(defaultClient);
+    String id = "id_example"; // String | Smart contract address of the token.
     try {
-      List<UNISWAPV3ETHEREUMTokenDTO> result = apiInstance.uNISWAPV3ETHEREUMTokensCurrent();
+      List<UNISWAPV3ETHEREUMTokenDTO> result = apiInstance.uNISWAPV3ETHEREUMTokensCurrent(id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UniswapV3EthereumApi#uNISWAPV3ETHEREUMTokensCurrent");
@@ -1063,7 +1202,10 @@ public class Example {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **String**| Smart contract address of the token. | [optional] |
 
 ### Return type
 

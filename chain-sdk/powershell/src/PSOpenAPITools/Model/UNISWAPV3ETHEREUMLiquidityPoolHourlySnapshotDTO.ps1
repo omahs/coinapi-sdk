@@ -21,6 +21,8 @@ No description available.
 No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
+.PARAMETER Vid
+
 .PARAMETER Id
 (Smart contract address of the pool)-( # of hours since Unix epoch time)
 .PARAMETER Hour
@@ -123,129 +125,132 @@ function Initialize-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
         [System.Nullable[Int64]]
         ${BlockNumber},
         [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Int64]]
+        ${Vid},
+        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
-        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 5, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
         ${Hour},
-        [Parameter(Position = 5, ValueFromPipelineByPropertyName = $true)]
-        [String]
-        ${Protocol},
         [Parameter(Position = 6, ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${Pool},
+        ${Protocol},
         [Parameter(Position = 7, ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${Tick},
+        ${Pool},
         [Parameter(Position = 8, ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${TotalValueLockedUsd},
+        ${Tick},
         [Parameter(Position = 9, ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${TotalLiquidity},
+        ${TotalValueLockedUsd},
         [Parameter(Position = 10, ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${TotalLiquidityUsd},
+        ${TotalLiquidity},
         [Parameter(Position = 11, ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${ActiveLiquidity},
+        ${TotalLiquidityUsd},
         [Parameter(Position = 12, ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${ActiveLiquidityUsd},
+        ${ActiveLiquidity},
         [Parameter(Position = 13, ValueFromPipelineByPropertyName = $true)]
-        [String[]]
-        ${UncollectedProtocolSideTokenAmounts},
+        [String]
+        ${ActiveLiquidityUsd},
         [Parameter(Position = 14, ValueFromPipelineByPropertyName = $true)]
         [String[]]
-        ${UncollectedProtocolSideValuesUsd},
+        ${UncollectedProtocolSideTokenAmounts},
         [Parameter(Position = 15, ValueFromPipelineByPropertyName = $true)]
         [String[]]
-        ${UncollectedSupplySideTokenAmounts},
+        ${UncollectedProtocolSideValuesUsd},
         [Parameter(Position = 16, ValueFromPipelineByPropertyName = $true)]
         [String[]]
-        ${UncollectedSupplySideValuesUsd},
+        ${UncollectedSupplySideTokenAmounts},
         [Parameter(Position = 17, ValueFromPipelineByPropertyName = $true)]
-        [String]
-        ${CumulativeSupplySideRevenueUsd},
+        [String[]]
+        ${UncollectedSupplySideValuesUsd},
         [Parameter(Position = 18, ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${HourlySupplySideRevenueUsd},
+        ${CumulativeSupplySideRevenueUsd},
         [Parameter(Position = 19, ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${CumulativeProtocolSideRevenueUsd},
+        ${HourlySupplySideRevenueUsd},
         [Parameter(Position = 20, ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${HourlyProtocolSideRevenueUsd},
+        ${CumulativeProtocolSideRevenueUsd},
         [Parameter(Position = 21, ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${CumulativeTotalRevenueUsd},
+        ${HourlyProtocolSideRevenueUsd},
         [Parameter(Position = 22, ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${HourlyTotalRevenueUsd},
+        ${CumulativeTotalRevenueUsd},
         [Parameter(Position = 23, ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${CumulativeVolumeUsd},
+        ${HourlyTotalRevenueUsd},
         [Parameter(Position = 24, ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${HourlyVolumeUsd},
+        ${CumulativeVolumeUsd},
         [Parameter(Position = 25, ValueFromPipelineByPropertyName = $true)]
-        [String[]]
-        ${CumulativeVolumeByTokenAmount},
+        [String]
+        ${HourlyVolumeUsd},
         [Parameter(Position = 26, ValueFromPipelineByPropertyName = $true)]
         [String[]]
-        ${HourlyVolumeByTokenAmount},
+        ${CumulativeVolumeByTokenAmount},
         [Parameter(Position = 27, ValueFromPipelineByPropertyName = $true)]
         [String[]]
-        ${CumulativeVolumeByTokenUsd},
+        ${HourlyVolumeByTokenAmount},
         [Parameter(Position = 28, ValueFromPipelineByPropertyName = $true)]
         [String[]]
-        ${HourlyVolumeByTokenUsd},
+        ${CumulativeVolumeByTokenUsd},
         [Parameter(Position = 29, ValueFromPipelineByPropertyName = $true)]
         [String[]]
-        ${InputTokenBalances},
+        ${HourlyVolumeByTokenUsd},
         [Parameter(Position = 30, ValueFromPipelineByPropertyName = $true)]
         [String[]]
-        ${InputTokenBalancesUsd},
+        ${InputTokenBalances},
         [Parameter(Position = 31, ValueFromPipelineByPropertyName = $true)]
         [String[]]
-        ${InputTokenWeights},
+        ${InputTokenBalancesUsd},
         [Parameter(Position = 32, ValueFromPipelineByPropertyName = $true)]
+        [String[]]
+        ${InputTokenWeights},
+        [Parameter(Position = 33, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${StakedOutputTokenAmount},
-        [Parameter(Position = 33, ValueFromPipelineByPropertyName = $true)]
-        [String[]]
-        ${RewardTokenEmissionsAmount},
         [Parameter(Position = 34, ValueFromPipelineByPropertyName = $true)]
         [String[]]
-        ${RewardTokenEmissionsUsd},
+        ${RewardTokenEmissionsAmount},
         [Parameter(Position = 35, ValueFromPipelineByPropertyName = $true)]
-        [System.Nullable[Int32]]
-        ${CumulativeDepositCount},
+        [String[]]
+        ${RewardTokenEmissionsUsd},
         [Parameter(Position = 36, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${HourlyDepositCount},
+        ${CumulativeDepositCount},
         [Parameter(Position = 37, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${CumulativeWithdrawCount},
+        ${HourlyDepositCount},
         [Parameter(Position = 38, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${HourlyWithdrawCount},
+        ${CumulativeWithdrawCount},
         [Parameter(Position = 39, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${CumulativeSwapCount},
+        ${HourlyWithdrawCount},
         [Parameter(Position = 40, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${HourlySwapCount},
+        ${CumulativeSwapCount},
         [Parameter(Position = 41, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${PositionCount},
+        ${HourlySwapCount},
         [Parameter(Position = 42, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${OpenPositionCount},
+        ${PositionCount},
         [Parameter(Position = 43, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${ClosedPositionCount},
+        ${OpenPositionCount},
         [Parameter(Position = 44, ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Int32]]
+        ${ClosedPositionCount},
+        [Parameter(Position = 45, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Timestamp}
     )
@@ -259,6 +264,7 @@ function Initialize-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
             "entry_time" = ${EntryTime}
             "recv_time" = ${RecvTime}
             "block_number" = ${BlockNumber}
+            "vid" = ${Vid}
             "id" = ${Id}
             "hour" = ${Hour}
             "protocol" = ${Protocol}
@@ -338,7 +344,7 @@ function ConvertFrom-JsonToUNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
-        $AllProperties = ("entry_time", "recv_time", "block_number", "id", "hour", "protocol", "pool", "tick", "total_value_locked_usd", "total_liquidity", "total_liquidity_usd", "active_liquidity", "active_liquidity_usd", "uncollected_protocol_side_token_amounts", "uncollected_protocol_side_values_usd", "uncollected_supply_side_token_amounts", "uncollected_supply_side_values_usd", "cumulative_supply_side_revenue_usd", "hourly_supply_side_revenue_usd", "cumulative_protocol_side_revenue_usd", "hourly_protocol_side_revenue_usd", "cumulative_total_revenue_usd", "hourly_total_revenue_usd", "cumulative_volume_usd", "hourly_volume_usd", "cumulative_volume_by_token_amount", "hourly_volume_by_token_amount", "cumulative_volume_by_token_usd", "hourly_volume_by_token_usd", "input_token_balances", "input_token_balances_usd", "input_token_weights", "staked_output_token_amount", "reward_token_emissions_amount", "reward_token_emissions_usd", "cumulative_deposit_count", "hourly_deposit_count", "cumulative_withdraw_count", "hourly_withdraw_count", "cumulative_swap_count", "hourly_swap_count", "position_count", "open_position_count", "closed_position_count", "timestamp")
+        $AllProperties = ("entry_time", "recv_time", "block_number", "vid", "id", "hour", "protocol", "pool", "tick", "total_value_locked_usd", "total_liquidity", "total_liquidity_usd", "active_liquidity", "active_liquidity_usd", "uncollected_protocol_side_token_amounts", "uncollected_protocol_side_values_usd", "uncollected_supply_side_token_amounts", "uncollected_supply_side_values_usd", "cumulative_supply_side_revenue_usd", "hourly_supply_side_revenue_usd", "cumulative_protocol_side_revenue_usd", "hourly_protocol_side_revenue_usd", "cumulative_total_revenue_usd", "hourly_total_revenue_usd", "cumulative_volume_usd", "hourly_volume_usd", "cumulative_volume_by_token_amount", "hourly_volume_by_token_amount", "cumulative_volume_by_token_usd", "hourly_volume_by_token_usd", "input_token_balances", "input_token_balances_usd", "input_token_weights", "staked_output_token_amount", "reward_token_emissions_amount", "reward_token_emissions_usd", "cumulative_deposit_count", "hourly_deposit_count", "cumulative_withdraw_count", "hourly_withdraw_count", "cumulative_swap_count", "hourly_swap_count", "position_count", "open_position_count", "closed_position_count", "timestamp")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -361,6 +367,12 @@ function ConvertFrom-JsonToUNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
             $BlockNumber = $null
         } else {
             $BlockNumber = $JsonParameters.PSobject.Properties["block_number"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "vid"))) { #optional property not found
+            $Vid = $null
+        } else {
+            $Vid = $JsonParameters.PSobject.Properties["vid"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "id"))) { #optional property not found
@@ -619,6 +631,7 @@ function ConvertFrom-JsonToUNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
             "entry_time" = ${EntryTime}
             "recv_time" = ${RecvTime}
             "block_number" = ${BlockNumber}
+            "vid" = ${Vid}
             "id" = ${Id}
             "hour" = ${Hour}
             "protocol" = ${Protocol}

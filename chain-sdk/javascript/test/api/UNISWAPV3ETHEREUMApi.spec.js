@@ -108,6 +108,16 @@
         done();
       });
     });
+    describe('uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent', function() {
+      it('should call uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+        //instance.uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent', function() {
       it('should call uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent successfully', function(done) {
         //uncomment below and update the code to test uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent
@@ -122,6 +132,16 @@
       it('should call uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent successfully', function(done) {
         //uncomment below and update the code to test uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
         //instance.uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uNISWAPV3ETHEREUMLiquidityPoolsCurrent', function() {
+      it('should call uNISWAPV3ETHEREUMLiquidityPoolsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV3ETHEREUMLiquidityPoolsCurrent
+        //instance.uNISWAPV3ETHEREUMLiquidityPoolsCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

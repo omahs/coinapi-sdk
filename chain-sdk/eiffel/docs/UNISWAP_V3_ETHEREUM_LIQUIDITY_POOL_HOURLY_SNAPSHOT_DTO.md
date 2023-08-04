@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
+**vid** | **INTEGER_64** |  | [optional] [default to null]
 **id** | [**STRING_32**](STRING_32.md) | (Smart contract address of the pool)-( # of hours since Unix epoch time) | [optional] [default to null]
 **hour** | **INTEGER_32** | Number of hours since Unix epoch time | [optional] [default to null]
 **protocol** | [**STRING_32**](STRING_32.md) | The protocol this snapshot belongs to | [optional] [default to null]

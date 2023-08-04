@@ -94,6 +94,8 @@ import UNISWAPV3ETHEREUMDepositDTO from './model/UNISWAPV3ETHEREUMDepositDTO';
 import UNISWAPV3ETHEREUMDexAmmProtocolDTO from './model/UNISWAPV3ETHEREUMDexAmmProtocolDTO';
 import UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO from './model/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO';
 import UNISWAPV3ETHEREUMLiquidityPoolAmountDTO from './model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO';
+import UNISWAPV3ETHEREUMLiquidityPoolDTO from './model/UNISWAPV3ETHEREUMLiquidityPoolDTO';
+import UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO from './model/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO';
 import UNISWAPV3ETHEREUMLiquidityPoolFeeDTO from './model/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO';
 import UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO from './model/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO';
 import UNISWAPV3ETHEREUMPositionDTO from './model/UNISWAPV3ETHEREUMPositionDTO';
@@ -675,6 +677,18 @@ export {
      * @property {module:model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO}
      */
     UNISWAPV3ETHEREUMLiquidityPoolAmountDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMLiquidityPoolDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMLiquidityPoolDTO}
+     */
+    UNISWAPV3ETHEREUMLiquidityPoolDTO,
+
+    /**
+     * The UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO model constructor.
+     * @property {module:model/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO}
+     */
+    UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO,
 
     /**
      * The UNISWAPV3ETHEREUMLiquidityPoolFeeDTO model constructor.

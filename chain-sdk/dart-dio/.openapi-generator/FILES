@@ -90,6 +90,8 @@ doc/UNISWAPV3ETHEREUMDepositDTO.md
 doc/UNISWAPV3ETHEREUMDexAmmProtocolDTO.md
 doc/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md
 doc/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md
+doc/UNISWAPV3ETHEREUMLiquidityPoolDTO.md
+doc/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md
 doc/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.md
 doc/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md
 doc/UNISWAPV3ETHEREUMPositionDTO.md
@@ -271,6 +273,8 @@ lib/src/model/uniswapv3_ethereum_deposit_dto.dart
 lib/src/model/uniswapv3_ethereum_dex_amm_protocol_dto.dart
 lib/src/model/uniswapv3_ethereum_financials_daily_snapshot_dto.dart
 lib/src/model/uniswapv3_ethereum_liquidity_pool_amount_dto.dart
+lib/src/model/uniswapv3_ethereum_liquidity_pool_daily_snapshot_dto.dart
+lib/src/model/uniswapv3_ethereum_liquidity_pool_dto.dart
 lib/src/model/uniswapv3_ethereum_liquidity_pool_fee_dto.dart
 lib/src/model/uniswapv3_ethereum_liquidity_pool_hourly_snapshot_dto.dart
 lib/src/model/uniswapv3_ethereum_position_dto.dart
@@ -410,6 +414,8 @@ test/uniswapv3_ethereum_deposit_dto_test.dart
 test/uniswapv3_ethereum_dex_amm_protocol_dto_test.dart
 test/uniswapv3_ethereum_financials_daily_snapshot_dto_test.dart
 test/uniswapv3_ethereum_liquidity_pool_amount_dto_test.dart
+test/uniswapv3_ethereum_liquidity_pool_daily_snapshot_dto_test.dart
+test/uniswapv3_ethereum_liquidity_pool_dto_test.dart
 test/uniswapv3_ethereum_liquidity_pool_fee_dto_test.dart
 test/uniswapv3_ethereum_liquidity_pool_hourly_snapshot_dto_test.dart
 test/uniswapv3_ethereum_position_dto_test.dart

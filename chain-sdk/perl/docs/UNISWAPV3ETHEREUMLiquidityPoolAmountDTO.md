@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **entry_time** | **DATE_TIME** |  | [optional] 
 **recv_time** | **DATE_TIME** |  | [optional] 
 **block_number** | **int** | Number of block in which entity was recorded. | [optional] 
+**vid** | **int** | . | [optional] 
 **block_range** | **string** |  | [optional] 
 **id** | **string** | Smart contract address of the pool. | [optional] 
 **input_tokens** | **ARRAY[string]** | Input tokens of the pool (not input tokens of the event/transaction). E.g. WETH and USDC from a WETH-USDC pool. | [optional] 

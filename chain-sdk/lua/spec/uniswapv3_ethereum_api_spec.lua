@@ -57,6 +57,13 @@ describe("uniswapv3_ethereum_api", function()
     end)
   end)
 
+  -- unit tests for u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current
+  describe("u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for u_niswapv3_ethereum_liquidity_pool_fees__current
   describe("u_niswapv3_ethereum_liquidity_pool_fees__current test", function()
     it("should work", function()
@@ -66,6 +73,13 @@ describe("uniswapv3_ethereum_api", function()
 
   -- unit tests for u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current
   describe("u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for u_niswapv3_ethereum_liquidity_pools__current
+  describe("u_niswapv3_ethereum_liquidity_pools__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

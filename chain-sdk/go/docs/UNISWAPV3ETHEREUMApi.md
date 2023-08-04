@@ -10,8 +10,10 @@ Method | HTTP request | Description
 [**UNISWAPV3ETHEREUMDexAmmProtocolsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMDexAmmProtocolsCurrent) | **Get** /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
 [**UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent) | **Get** /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
 [**UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent) | **Get** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
+[**UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent) | **Get** /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
 [**UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent) | **Get** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
 [**UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent) | **Get** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
+[**UNISWAPV3ETHEREUMLiquidityPoolsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolsCurrent) | **Get** /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current)
 [**UNISWAPV3ETHEREUMPositionSnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMPositionSnapshotsCurrent) | **Get** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current)
 [**UNISWAPV3ETHEREUMPositionsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMPositionsCurrent) | **Get** /dapps/uniswap_v3_ethereum/positions/current | Positions (current)
 [**UNISWAPV3ETHEREUMRewardTokensCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMRewardTokensCurrent) | **Get** /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current)
@@ -335,7 +337,7 @@ No authorization required
 
 ## UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent
 
-> []UNISWAPV3ETHEREUMLiquidityPoolAmountDTO UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(ctx).Execute()
+> []UNISWAPV3ETHEREUMLiquidityPoolAmountDTO UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(ctx).Id(id).Execute()
 
 LiquidityPoolAmounts (current)
 
@@ -354,10 +356,11 @@ import (
 )
 
 func main() {
+    id := "id_example" // string | Smart contract address of the pool. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(context.Background()).Execute()
+    resp, r, err := apiClient.UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(context.Background()).Id(id).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -369,16 +372,86 @@ func main() {
 
 ### Path Parameters
 
-This endpoint does not need any parameter.
+
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest struct via the builder pattern
 
 
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string** | Smart contract address of the pool. | 
+
 ### Return type
 
 [**[]UNISWAPV3ETHEREUMLiquidityPoolAmountDTO**](UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+
+> []UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(ctx).Pool(pool).Execute()
+
+LiquidityPoolDailySnapshots (current)
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+    pool := "pool_example" // string | Pool this snapshot belongs to. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(context.Background()).Pool(pool).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent`: []UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+    fmt.Fprintf(os.Stdout, "Response from `UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **string** | Pool this snapshot belongs to. | 
+
+### Return type
+
+[**[]UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO**](UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md)
 
 ### Authorization
 
@@ -457,7 +530,7 @@ No authorization required
 
 ## UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
 
-> []UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(ctx).Execute()
+> []UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(ctx).Pool(pool).Execute()
 
 LiquidityPoolHourlySnapshots (current)
 
@@ -476,10 +549,11 @@ import (
 )
 
 func main() {
+    pool := "pool_example" // string | The pool this snapshot belongs to (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(context.Background()).Execute()
+    resp, r, err := apiClient.UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(context.Background()).Pool(pool).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -491,16 +565,86 @@ func main() {
 
 ### Path Parameters
 
-This endpoint does not need any parameter.
+
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest struct via the builder pattern
 
 
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **string** | The pool this snapshot belongs to | 
+
 ### Return type
 
 [**[]UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO**](UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UNISWAPV3ETHEREUMLiquidityPoolsCurrent
+
+> []UNISWAPV3ETHEREUMLiquidityPoolDTO UNISWAPV3ETHEREUMLiquidityPoolsCurrent(ctx).Id(id).Execute()
+
+LiquidityPools (current)
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+    id := "id_example" // string | Smart contract address of the pool. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMLiquidityPoolsCurrent(context.Background()).Id(id).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMLiquidityPoolsCurrent``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UNISWAPV3ETHEREUMLiquidityPoolsCurrent`: []UNISWAPV3ETHEREUMLiquidityPoolDTO
+    fmt.Fprintf(os.Stdout, "Response from `UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMLiquidityPoolsCurrent`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUNISWAPV3ETHEREUMLiquidityPoolsCurrentRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string** | Smart contract address of the pool. | 
+
+### Return type
+
+[**[]UNISWAPV3ETHEREUMLiquidityPoolDTO**](UNISWAPV3ETHEREUMLiquidityPoolDTO.md)
 
 ### Authorization
 
@@ -767,7 +911,7 @@ No authorization required
 
 ## UNISWAPV3ETHEREUMTickDailySnapshotsCurrent
 
-> []UNISWAPV3ETHEREUMTickDailySnapshotDTO UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(ctx).Execute()
+> []UNISWAPV3ETHEREUMTickDailySnapshotDTO UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(ctx).Pool(pool).Execute()
 
 TickDailySnapshots (current)
 
@@ -786,10 +930,11 @@ import (
 )
 
 func main() {
+    pool := "pool_example" // string | liquidity pool this tick belongs to (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(context.Background()).Execute()
+    resp, r, err := apiClient.UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(context.Background()).Pool(pool).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -801,12 +946,16 @@ func main() {
 
 ### Path Parameters
 
-This endpoint does not need any parameter.
+
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest struct via the builder pattern
 
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **string** | liquidity pool this tick belongs to | 
 
 ### Return type
 
@@ -1082,7 +1231,7 @@ No authorization required
 
 ## UNISWAPV3ETHEREUMTokensCurrent
 
-> []UNISWAPV3ETHEREUMTokenDTO UNISWAPV3ETHEREUMTokensCurrent(ctx).Execute()
+> []UNISWAPV3ETHEREUMTokenDTO UNISWAPV3ETHEREUMTokensCurrent(ctx).Id(id).Execute()
 
 Tokens (current)
 
@@ -1101,10 +1250,11 @@ import (
 )
 
 func main() {
+    id := "id_example" // string | Smart contract address of the token. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMTokensCurrent(context.Background()).Execute()
+    resp, r, err := apiClient.UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMTokensCurrent(context.Background()).Id(id).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMTokensCurrent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1116,12 +1266,16 @@ func main() {
 
 ### Path Parameters
 
-This endpoint does not need any parameter.
+
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUNISWAPV3ETHEREUMTokensCurrentRequest struct via the builder pattern
 
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string** | Smart contract address of the token. | 
 
 ### Return type
 

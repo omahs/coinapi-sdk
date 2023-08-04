@@ -93,6 +93,8 @@ model/UNISWAPV3ETHEREUMDepositDTO.ts
 model/UNISWAPV3ETHEREUMDexAmmProtocolDTO.ts
 model/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.ts
 model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.ts
+model/UNISWAPV3ETHEREUMLiquidityPoolDTO.ts
+model/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.ts
 model/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.ts
 model/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.ts
 model/UNISWAPV3ETHEREUMPositionDTO.ts

@@ -10,8 +10,10 @@ Method | HTTP request | Description
 [**UNISWAPV3ETHEREUMDexAmmProtocolsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMDexAmmProtocolsCurrent) | **GET** /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
 [**UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
 [**UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
+[**UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
 [**UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
 [**UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
+[**UNISWAPV3ETHEREUMLiquidityPoolsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current)
 [**UNISWAPV3ETHEREUMPositionSnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMPositionSnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current)
 [**UNISWAPV3ETHEREUMPositionsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMPositionsCurrent) | **GET** /dapps/uniswap_v3_ethereum/positions/current | Positions (current)
 [**UNISWAPV3ETHEREUMRewardTokensCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMRewardTokensCurrent) | **GET** /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current)
@@ -238,7 +240,7 @@ No authorization required
 | **200** | successful operation |  -  |
 
 # **UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent**
-> array[UNISWAPV3ETHEREUMLiquidityPoolAmountDTO] UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent()
+> array[UNISWAPV3ETHEREUMLiquidityPoolAmountDTO] UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id = var.id)
 
 LiquidityPoolAmounts (current)
 
@@ -250,20 +252,72 @@ library(openapi)
 
 # LiquidityPoolAmounts (current)
 #
+# prepare function argument(s)
+var_id <- "id_example" # character | Smart contract address of the pool. (Optional)
 
 api_instance <- UNISWAPV3ETHEREUMApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(data_file = "result.txt")
-result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent()
+# result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id = var_iddata_file = "result.txt")
+result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id = var_id)
 dput(result)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **character**| Smart contract address of the pool. | [optional] 
 
 ### Return type
 
 [**array[UNISWAPV3ETHEREUMLiquidityPoolAmountDTO]**](UNISWAP_V3_ETHEREUM.LiquidityPoolAmountDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**
+> array[UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO] UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool = var.pool)
+
+LiquidityPoolDailySnapshots (current)
+
+Gets liquidityPoolDailySnapshots.
+
+### Example
+```R
+library(openapi)
+
+# LiquidityPoolDailySnapshots (current)
+#
+# prepare function argument(s)
+var_pool <- "pool_example" # character | Pool this snapshot belongs to. (Optional)
+
+api_instance <- UNISWAPV3ETHEREUMApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool = var_pooldata_file = "result.txt")
+result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool = var_pool)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **character**| Pool this snapshot belongs to. | [optional] 
+
+### Return type
+
+[**array[UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]**](UNISWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO.md)
 
 ### Authorization
 
@@ -322,7 +376,7 @@ No authorization required
 | **200** | successful operation |  -  |
 
 # **UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent**
-> array[UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO] UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent()
+> array[UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO] UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool = var.pool)
 
 LiquidityPoolHourlySnapshots (current)
 
@@ -334,20 +388,72 @@ library(openapi)
 
 # LiquidityPoolHourlySnapshots (current)
 #
+# prepare function argument(s)
+var_pool <- "pool_example" # character | The pool this snapshot belongs to (Optional)
 
 api_instance <- UNISWAPV3ETHEREUMApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(data_file = "result.txt")
-result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent()
+# result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool = var_pooldata_file = "result.txt")
+result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool = var_pool)
 dput(result)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **character**| The pool this snapshot belongs to | [optional] 
 
 ### Return type
 
 [**array[UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]**](UNISWAP_V3_ETHEREUM.LiquidityPoolHourlySnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **UNISWAPV3ETHEREUMLiquidityPoolsCurrent**
+> array[UNISWAPV3ETHEREUMLiquidityPoolDTO] UNISWAPV3ETHEREUMLiquidityPoolsCurrent(id = var.id)
+
+LiquidityPools (current)
+
+Gets liquidityPools.
+
+### Example
+```R
+library(openapi)
+
+# LiquidityPools (current)
+#
+# prepare function argument(s)
+var_id <- "id_example" # character | Smart contract address of the pool. (Optional)
+
+api_instance <- UNISWAPV3ETHEREUMApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolsCurrent(id = var_iddata_file = "result.txt")
+result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolsCurrent(id = var_id)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **character**| Smart contract address of the pool. | [optional] 
+
+### Return type
+
+[**array[UNISWAPV3ETHEREUMLiquidityPoolDTO]**](UNISWAP_V3_ETHEREUM.LiquidityPoolDTO.md)
 
 ### Authorization
 
@@ -537,7 +643,7 @@ No authorization required
 | **200** | successful operation |  -  |
 
 # **UNISWAPV3ETHEREUMTickDailySnapshotsCurrent**
-> array[UNISWAPV3ETHEREUMTickDailySnapshotDTO] UNISWAPV3ETHEREUMTickDailySnapshotsCurrent()
+> array[UNISWAPV3ETHEREUMTickDailySnapshotDTO] UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool = var.pool)
 
 TickDailySnapshots (current)
 
@@ -549,16 +655,21 @@ library(openapi)
 
 # TickDailySnapshots (current)
 #
+# prepare function argument(s)
+var_pool <- "pool_example" # character | liquidity pool this tick belongs to (Optional)
 
 api_instance <- UNISWAPV3ETHEREUMApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(data_file = "result.txt")
-result <- api_instance$UNISWAPV3ETHEREUMTickDailySnapshotsCurrent()
+# result <- api_instance$UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool = var_pooldata_file = "result.txt")
+result <- api_instance$UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool = var_pool)
 dput(result)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **character**| liquidity pool this tick belongs to | [optional] 
 
 ### Return type
 
@@ -757,7 +868,7 @@ No authorization required
 | **200** | successful operation |  -  |
 
 # **UNISWAPV3ETHEREUMTokensCurrent**
-> array[UNISWAPV3ETHEREUMTokenDTO] UNISWAPV3ETHEREUMTokensCurrent()
+> array[UNISWAPV3ETHEREUMTokenDTO] UNISWAPV3ETHEREUMTokensCurrent(id = var.id)
 
 Tokens (current)
 
@@ -769,16 +880,21 @@ library(openapi)
 
 # Tokens (current)
 #
+# prepare function argument(s)
+var_id <- "id_example" # character | Smart contract address of the token. (Optional)
 
 api_instance <- UNISWAPV3ETHEREUMApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UNISWAPV3ETHEREUMTokensCurrent(data_file = "result.txt")
-result <- api_instance$UNISWAPV3ETHEREUMTokensCurrent()
+# result <- api_instance$UNISWAPV3ETHEREUMTokensCurrent(id = var_iddata_file = "result.txt")
+result <- api_instance$UNISWAPV3ETHEREUMTokensCurrent(id = var_id)
 dput(result)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **character**| Smart contract address of the token. | [optional] 
 
 ### Return type
 

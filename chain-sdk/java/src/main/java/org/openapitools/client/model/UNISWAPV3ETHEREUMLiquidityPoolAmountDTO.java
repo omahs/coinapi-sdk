@@ -54,7 +54,7 @@ import org.openapitools.client.JSON;
 /**
  * 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-04T12:28:52.928454Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-04T14:32:35.731994Z[Etc/UTC]")
 public class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -67,6 +67,10 @@ public class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
   public static final String SERIALIZED_NAME_BLOCK_NUMBER = "block_number";
   @SerializedName(SERIALIZED_NAME_BLOCK_NUMBER)
   private Long blockNumber;
+
+  public static final String SERIALIZED_NAME_VID = "vid";
+  @SerializedName(SERIALIZED_NAME_VID)
+  private Long vid;
 
   public static final String SERIALIZED_NAME_BLOCK_RANGE = "block_range";
   @SerializedName(SERIALIZED_NAME_BLOCK_RANGE)
@@ -151,6 +155,27 @@ public class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
 
   public void setBlockNumber(Long blockNumber) {
     this.blockNumber = blockNumber;
+  }
+
+
+  public UNISWAPV3ETHEREUMLiquidityPoolAmountDTO vid(Long vid) {
+    
+    this.vid = vid;
+    return this;
+  }
+
+   /**
+   * .
+   * @return vid
+  **/
+  @javax.annotation.Nullable
+  public Long getVid() {
+    return vid;
+  }
+
+
+  public void setVid(Long vid) {
+    this.vid = vid;
   }
 
 
@@ -296,6 +321,7 @@ public class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
     return Objects.equals(this.entryTime, unISWAPV3ETHEREUMLiquidityPoolAmountDTO.entryTime) &&
         Objects.equals(this.recvTime, unISWAPV3ETHEREUMLiquidityPoolAmountDTO.recvTime) &&
         Objects.equals(this.blockNumber, unISWAPV3ETHEREUMLiquidityPoolAmountDTO.blockNumber) &&
+        Objects.equals(this.vid, unISWAPV3ETHEREUMLiquidityPoolAmountDTO.vid) &&
         Objects.equals(this.blockRange, unISWAPV3ETHEREUMLiquidityPoolAmountDTO.blockRange) &&
         Objects.equals(this.id, unISWAPV3ETHEREUMLiquidityPoolAmountDTO.id) &&
         Objects.equals(this.inputTokens, unISWAPV3ETHEREUMLiquidityPoolAmountDTO.inputTokens) &&
@@ -309,7 +335,7 @@ public class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
 
   @Override
   public int hashCode() {
-    return Objects.hash(entryTime, recvTime, blockNumber, blockRange, id, inputTokens, inputTokenBalances, tokenPrices);
+    return Objects.hash(entryTime, recvTime, blockNumber, vid, blockRange, id, inputTokens, inputTokenBalances, tokenPrices);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -326,6 +352,7 @@ public class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
     sb.append("    entryTime: ").append(toIndentedString(entryTime)).append("\n");
     sb.append("    recvTime: ").append(toIndentedString(recvTime)).append("\n");
     sb.append("    blockNumber: ").append(toIndentedString(blockNumber)).append("\n");
+    sb.append("    vid: ").append(toIndentedString(vid)).append("\n");
     sb.append("    blockRange: ").append(toIndentedString(blockRange)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    inputTokens: ").append(toIndentedString(inputTokens)).append("\n");
@@ -356,6 +383,7 @@ public class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
     openapiFields.add("entry_time");
     openapiFields.add("recv_time");
     openapiFields.add("block_number");
+    openapiFields.add("vid");
     openapiFields.add("block_range");
     openapiFields.add("id");
     openapiFields.add("input_tokens");

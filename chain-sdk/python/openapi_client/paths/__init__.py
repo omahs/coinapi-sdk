@@ -88,6 +88,8 @@ class PathValues(str, enum.Enum):
     DAPPS_UNISWAP_V3_ETHEREUM_DEX_AMM_PROTOCOLS_CURRENT = "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current"
     DAPPS_UNISWAP_V3_ETHEREUM_FINANCIALS_DAILY_SNAPSHOTS_CURRENT = "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current"
     DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_AMOUNTS_CURRENT = "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current"
+    DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOTS_CURRENT = "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current"
+    DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOLS_CURRENT = "/dapps/uniswap_v3_ethereum/liquidityPools/current"
     DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_FEES_CURRENT = "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current"
     DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_HOURLY_SNAPSHOTS_CURRENT = "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current"
     DAPPS_UNISWAP_V3_ETHEREUM_POSITIONS_CURRENT = "/dapps/uniswap_v3_ethereum/positions/current"

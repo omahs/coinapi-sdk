@@ -6,8 +6,10 @@
          u_niswapv3_ethereum_dex_amm_protocols_(current)/1, u_niswapv3_ethereum_dex_amm_protocols_(current)/2,
          u_niswapv3_ethereum_financials_daily_snapshots_(current)/1, u_niswapv3_ethereum_financials_daily_snapshots_(current)/2,
          u_niswapv3_ethereum_liquidity_pool_amounts_(current)/1, u_niswapv3_ethereum_liquidity_pool_amounts_(current)/2,
+         u_niswapv3_ethereum_liquidity_pool_daily_snapshots_(current)/1, u_niswapv3_ethereum_liquidity_pool_daily_snapshots_(current)/2,
          u_niswapv3_ethereum_liquidity_pool_fees_(current)/1, u_niswapv3_ethereum_liquidity_pool_fees_(current)/2,
          u_niswapv3_ethereum_liquidity_pool_hourly_snapshots_(current)/1, u_niswapv3_ethereum_liquidity_pool_hourly_snapshots_(current)/2,
+         u_niswapv3_ethereum_liquidity_pools_(current)/1, u_niswapv3_ethereum_liquidity_pools_(current)/2,
          u_niswapv3_ethereum_position_snapshots_(current)/1, u_niswapv3_ethereum_position_snapshots_(current)/2,
          u_niswapv3_ethereum_positions_(current)/1, u_niswapv3_ethereum_positions_(current)/2,
          u_niswapv3_ethereum_reward_tokens_(current)/1, u_niswapv3_ethereum_reward_tokens_(current)/2,
@@ -142,7 +144,28 @@ u_niswapv3_ethereum_liquidity_pool_amounts_(current)(Ctx, Optional) ->
 
     Method = get,
     Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current"],
-    QS = [],
+    QS = lists:flatten([])++openapi_utils:optional_params(['id'], _OptionalParams),
+    Headers = [],
+    Body1 = [],
+    ContentTypeHeader = openapi_utils:select_header_content_type([]),
+    Opts = maps:get(hackney_opts, Optional, []),
+
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+
+%% @doc LiquidityPoolDailySnapshots (current)
+%% Gets liquidityPoolDailySnapshots.
+-spec u_niswapv3_ethereum_liquidity_pool_daily_snapshots_(current)(ctx:ctx()) -> {ok, [openapi_u_niswap_v3_ethereum_liquidity_pool_daily_snapshot_dto:openapi_u_niswap_v3_ethereum_liquidity_pool_daily_snapshot_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+u_niswapv3_ethereum_liquidity_pool_daily_snapshots_(current)(Ctx) ->
+    u_niswapv3_ethereum_liquidity_pool_daily_snapshots_(current)(Ctx, #{}).
+
+-spec u_niswapv3_ethereum_liquidity_pool_daily_snapshots_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_u_niswap_v3_ethereum_liquidity_pool_daily_snapshot_dto:openapi_u_niswap_v3_ethereum_liquidity_pool_daily_snapshot_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+u_niswapv3_ethereum_liquidity_pool_daily_snapshots_(current)(Ctx, Optional) ->
+    _OptionalParams = maps:get(params, Optional, #{}),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
+
+    Method = get,
+    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current"],
+    QS = lists:flatten([])++openapi_utils:optional_params(['pool'], _OptionalParams),
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
@@ -184,7 +207,28 @@ u_niswapv3_ethereum_liquidity_pool_hourly_snapshots_(current)(Ctx, Optional) ->
 
     Method = get,
     Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current"],
-    QS = [],
+    QS = lists:flatten([])++openapi_utils:optional_params(['pool'], _OptionalParams),
+    Headers = [],
+    Body1 = [],
+    ContentTypeHeader = openapi_utils:select_header_content_type([]),
+    Opts = maps:get(hackney_opts, Optional, []),
+
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+
+%% @doc LiquidityPools (current)
+%% Gets liquidityPools.
+-spec u_niswapv3_ethereum_liquidity_pools_(current)(ctx:ctx()) -> {ok, [openapi_u_niswap_v3_ethereum_liquidity_pool_dto:openapi_u_niswap_v3_ethereum_liquidity_pool_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+u_niswapv3_ethereum_liquidity_pools_(current)(Ctx) ->
+    u_niswapv3_ethereum_liquidity_pools_(current)(Ctx, #{}).
+
+-spec u_niswapv3_ethereum_liquidity_pools_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_u_niswap_v3_ethereum_liquidity_pool_dto:openapi_u_niswap_v3_ethereum_liquidity_pool_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+u_niswapv3_ethereum_liquidity_pools_(current)(Ctx, Optional) ->
+    _OptionalParams = maps:get(params, Optional, #{}),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
+
+    Method = get,
+    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/liquidityPools/current"],
+    QS = lists:flatten([])++openapi_utils:optional_params(['id'], _OptionalParams),
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
@@ -289,7 +333,7 @@ u_niswapv3_ethereum_tick_daily_snapshots_(current)(Ctx, Optional) ->
 
     Method = get,
     Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current"],
-    QS = [],
+    QS = lists:flatten([])++openapi_utils:optional_params(['pool'], _OptionalParams),
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
@@ -394,7 +438,7 @@ u_niswapv3_ethereum_tokens_(current)(Ctx, Optional) ->
 
     Method = get,
     Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/tokens/current"],
-    QS = [],
+    QS = lists:flatten([])++openapi_utils:optional_params(['id'], _OptionalParams),
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),

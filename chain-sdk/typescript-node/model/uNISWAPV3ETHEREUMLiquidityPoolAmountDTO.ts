@@ -23,6 +23,10 @@ export class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
     */
     'blockNumber'?: number;
     /**
+    * .
+    */
+    'vid'?: number;
+    /**
     * 
     */
     'blockRange'?: string | null;
@@ -59,6 +63,11 @@ export class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
         {
             "name": "blockNumber",
             "baseName": "block_number",
+            "type": "number"
+        },
+        {
+            "name": "vid",
+            "baseName": "vid",
             "type": "number"
         },
         {

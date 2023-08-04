@@ -33,6 +33,12 @@ public class OASUNISWAPV3ETHEREUMLiquidityPoolAmo implements OAS.MappedPropertie
     public Long blockNumber { get; set; }
 
     /**
+     * .
+     * @return vid
+     */
+    public Long vid { get; set; }
+
+    /**
      * 
      * @return blockRange
      */
@@ -171,6 +177,7 @@ public class OASUNISWAPV3ETHEREUMLiquidityPoolAmo implements OAS.MappedPropertie
           unISWAPV3ETHEREUMLiquidityPoolAmountDTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           unISWAPV3ETHEREUMLiquidityPoolAmountDTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           unISWAPV3ETHEREUMLiquidityPoolAmountDTO.blockNumber = 123456789L;
+          unISWAPV3ETHEREUMLiquidityPoolAmountDTO.vid = 123456789L;
           unISWAPV3ETHEREUMLiquidityPoolAmountDTO.blockRange = '';
           unISWAPV3ETHEREUMLiquidityPoolAmountDTO.id = '';
           unISWAPV3ETHEREUMLiquidityPoolAmountDTO.inputTokens = new List<String>{''};
@@ -185,6 +192,7 @@ public class OASUNISWAPV3ETHEREUMLiquidityPoolAmo implements OAS.MappedPropertie
             return this.entryTime == unISWAPV3ETHEREUMLiquidityPoolAmountDTO.entryTime
                 && this.recvTime == unISWAPV3ETHEREUMLiquidityPoolAmountDTO.recvTime
                 && this.blockNumber == unISWAPV3ETHEREUMLiquidityPoolAmountDTO.blockNumber
+                && this.vid == unISWAPV3ETHEREUMLiquidityPoolAmountDTO.vid
                 && this.blockRange == unISWAPV3ETHEREUMLiquidityPoolAmountDTO.blockRange
                 && this.id == unISWAPV3ETHEREUMLiquidityPoolAmountDTO.id
                 && this.inputTokens == unISWAPV3ETHEREUMLiquidityPoolAmountDTO.inputTokens
@@ -199,6 +207,7 @@ public class OASUNISWAPV3ETHEREUMLiquidityPoolAmo implements OAS.MappedPropertie
         hashCode = (17 * hashCode) + (entryTime == null ? 0 : System.hashCode(entryTime));
         hashCode = (17 * hashCode) + (recvTime == null ? 0 : System.hashCode(recvTime));
         hashCode = (17 * hashCode) + (blockNumber == null ? 0 : System.hashCode(blockNumber));
+        hashCode = (17 * hashCode) + (vid == null ? 0 : System.hashCode(vid));
         hashCode = (17 * hashCode) + (blockRange == null ? 0 : System.hashCode(blockRange));
         hashCode = (17 * hashCode) + (id == null ? 0 : System.hashCode(id));
         hashCode = (17 * hashCode) + (inputTokens == null ? 0 : System.hashCode(inputTokens));

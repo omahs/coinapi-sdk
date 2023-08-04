@@ -94,6 +94,8 @@ docs/Model/UNISWAPV3ETHEREUMDepositDTO.md
 docs/Model/UNISWAPV3ETHEREUMDexAmmProtocolDTO.md
 docs/Model/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md
 docs/Model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md
+docs/Model/UNISWAPV3ETHEREUMLiquidityPoolDTO.md
+docs/Model/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md
 docs/Model/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.md
 docs/Model/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md
 docs/Model/UNISWAPV3ETHEREUMPositionDTO.md
@@ -236,6 +238,8 @@ lib/Model/UNISWAPV3ETHEREUMDepositDTO.php
 lib/Model/UNISWAPV3ETHEREUMDexAmmProtocolDTO.php
 lib/Model/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.php
 lib/Model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.php
+lib/Model/UNISWAPV3ETHEREUMLiquidityPoolDTO.php
+lib/Model/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.php
 lib/Model/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.php
 lib/Model/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.php
 lib/Model/UNISWAPV3ETHEREUMPositionDTO.php
@@ -375,6 +379,8 @@ test/Model/UNISWAPV3ETHEREUMDepositDTOTest.php
 test/Model/UNISWAPV3ETHEREUMDexAmmProtocolDTOTest.php
 test/Model/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTOTest.php
 test/Model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTOTest.php
+test/Model/UNISWAPV3ETHEREUMLiquidityPoolDTOTest.php
+test/Model/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTest.php
 test/Model/UNISWAPV3ETHEREUMLiquidityPoolFeeDTOTest.php
 test/Model/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTest.php
 test/Model/UNISWAPV3ETHEREUMPositionDTOTest.php

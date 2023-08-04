@@ -10,6 +10,7 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
+#' @field vid . integer [optional]
 #' @field block_range  character [optional]
 #' @field id Smart contract address of the pool. character [optional]
 #' @field input_tokens Input tokens of the pool (not input tokens of the event/transaction). E.g. WETH and USDC from a WETH-USDC pool. list(character) [optional]
@@ -24,6 +25,7 @@ UNISWAPV3ETHEREUMLiquidityPoolAmountDTO <- R6::R6Class(
     `entry_time` = NULL,
     `recv_time` = NULL,
     `block_number` = NULL,
+    `vid` = NULL,
     `block_range` = NULL,
     `id` = NULL,
     `input_tokens` = NULL,
@@ -37,6 +39,7 @@ UNISWAPV3ETHEREUMLiquidityPoolAmountDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
+    #' @param vid .
     #' @param block_range 
     #' @param id Smart contract address of the pool.
     #' @param input_tokens Input tokens of the pool (not input tokens of the event/transaction). E.g. WETH and USDC from a WETH-USDC pool.
@@ -44,7 +47,7 @@ UNISWAPV3ETHEREUMLiquidityPoolAmountDTO <- R6::R6Class(
     #' @param token_prices 
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `block_range` = NULL, `id` = NULL, `input_tokens` = NULL, `input_token_balances` = NULL, `token_prices` = NULL, ...) {
+    initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `vid` = NULL, `block_range` = NULL, `id` = NULL, `input_tokens` = NULL, `input_token_balances` = NULL, `token_prices` = NULL, ...) {
       if (!is.null(`entry_time`)) {
         if (!is.character(`entry_time`)) {
           stop(paste("Error! Invalid data for `entry_time`. Must be a string:", `entry_time`))
@@ -62,6 +65,12 @@ UNISWAPV3ETHEREUMLiquidityPoolAmountDTO <- R6::R6Class(
           stop(paste("Error! Invalid data for `block_number`. Must be an integer:", `block_number`))
         }
         self$`block_number` <- `block_number`
+      }
+      if (!is.null(`vid`)) {
+        if (!(is.numeric(`vid`) && length(`vid`) == 1)) {
+          stop(paste("Error! Invalid data for `vid`. Must be an integer:", `vid`))
+        }
+        self$`vid` <- `vid`
       }
       if (!is.null(`block_range`)) {
         if (!(is.character(`block_range`) && length(`block_range`) == 1)) {
@@ -112,6 +121,10 @@ UNISWAPV3ETHEREUMLiquidityPoolAmountDTO <- R6::R6Class(
         UNISWAPV3ETHEREUMLiquidityPoolAmountDTOObject[["block_number"]] <-
           self$`block_number`
       }
+      if (!is.null(self$`vid`)) {
+        UNISWAPV3ETHEREUMLiquidityPoolAmountDTOObject[["vid"]] <-
+          self$`vid`
+      }
       if (!is.null(self$`block_range`)) {
         UNISWAPV3ETHEREUMLiquidityPoolAmountDTOObject[["block_range"]] <-
           self$`block_range`
@@ -152,6 +165,9 @@ UNISWAPV3ETHEREUMLiquidityPoolAmountDTO <- R6::R6Class(
       }
       if (!is.null(this_object$`block_number`)) {
         self$`block_number` <- this_object$`block_number`
+      }
+      if (!is.null(this_object$`vid`)) {
+        self$`vid` <- this_object$`vid`
       }
       if (!is.null(this_object$`block_range`)) {
         self$`block_range` <- this_object$`block_range`
@@ -201,6 +217,14 @@ UNISWAPV3ETHEREUMLiquidityPoolAmountDTO <- R6::R6Class(
             %d
                     ',
           self$`block_number`
+          )
+        },
+        if (!is.null(self$`vid`)) {
+          sprintf(
+          '"vid":
+            %d
+                    ',
+          self$`vid`
           )
         },
         if (!is.null(self$`block_range`)) {
@@ -260,6 +284,7 @@ UNISWAPV3ETHEREUMLiquidityPoolAmountDTO <- R6::R6Class(
       self$`entry_time` <- this_object$`entry_time`
       self$`recv_time` <- this_object$`recv_time`
       self$`block_number` <- this_object$`block_number`
+      self$`vid` <- this_object$`vid`
       self$`block_range` <- this_object$`block_range`
       self$`id` <- this_object$`id`
       self$`input_tokens` <- ApiClient$new()$deserializeObj(this_object$`input_tokens`, "array[character]", loadNamespace("openapi"))

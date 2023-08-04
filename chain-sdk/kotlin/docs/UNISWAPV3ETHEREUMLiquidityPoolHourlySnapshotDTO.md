@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **entryTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **recvTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **blockNumber** | **kotlin.Long** | Number of block in which entity was recorded. |  [optional]
+**vid** | **kotlin.Long** |  |  [optional]
 **id** | **kotlin.String** | (Smart contract address of the pool)-( # of hours since Unix epoch time) |  [optional]
 **hour** | **kotlin.Int** | Number of hours since Unix epoch time |  [optional]
 **protocol** | **kotlin.String** | The protocol this snapshot belongs to |  [optional]

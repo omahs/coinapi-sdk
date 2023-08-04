@@ -372,8 +372,10 @@ case $state in
             "uNISWAPV3ETHEREUMDexAmmProtocolsCurrent[DexAmmProtocols (current)]" \
             "uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent[FinancialsDailySnapshots (current)]" \
             "uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent[LiquidityPoolAmounts (current)]" \
+            "uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent[LiquidityPoolDailySnapshots (current)]" \
             "uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent[LiquidityPoolFees (current)]" \
             "uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent[LiquidityPoolHourlySnapshots (current)]" \
+            "uNISWAPV3ETHEREUMLiquidityPoolsCurrent[LiquidityPools (current)]" \
             "uNISWAPV3ETHEREUMPositionSnapshotsCurrent[PositionSnapshots (current)]" \
             "uNISWAPV3ETHEREUMPositionsCurrent[Positions (current)]" \
             "uNISWAPV3ETHEREUMRewardTokensCurrent[RewardTokens (current)]" \
@@ -918,7 +920,15 @@ case $state in
       uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "id=:[QUERY] Smart contract address of the pool."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "pool=:[QUERY] Pool this snapshot belongs to."
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent)
@@ -930,7 +940,15 @@ case $state in
       uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "pool=:[QUERY] The pool this snapshot belongs to"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV3ETHEREUMLiquidityPoolsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "id=:[QUERY] Smart contract address of the pool."
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       uNISWAPV3ETHEREUMPositionSnapshotsCurrent)
@@ -961,7 +979,8 @@ case $state in
       uNISWAPV3ETHEREUMTickDailySnapshotsCurrent)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "pool=:[QUERY] liquidity pool this tick belongs to"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent)
@@ -993,7 +1012,8 @@ case $state in
       uNISWAPV3ETHEREUMTokensCurrent)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "id=:[QUERY] Smart contract address of the token."
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent)

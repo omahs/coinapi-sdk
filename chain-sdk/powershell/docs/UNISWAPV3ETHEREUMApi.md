@@ -10,8 +10,10 @@ Method | HTTP request | Description
 [**Invoke-UNISWAPV3ETHEREUMDexAmmProtocolsCurrent**](UNISWAPV3ETHEREUMApi.md#Invoke-UNISWAPV3ETHEREUMDexAmmProtocolsCurrent) | **GET** /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
 [**Invoke-UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#Invoke-UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
 [**Invoke-UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent**](UNISWAPV3ETHEREUMApi.md#Invoke-UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
+[**Invoke-UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#Invoke-UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
 [**Invoke-UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent**](UNISWAPV3ETHEREUMApi.md#Invoke-UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
 [**Invoke-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#Invoke-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
+[**Invoke-UNISWAPV3ETHEREUMLiquidityPoolsCurrent**](UNISWAPV3ETHEREUMApi.md#Invoke-UNISWAPV3ETHEREUMLiquidityPoolsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current)
 [**Invoke-UNISWAPV3ETHEREUMPositionSnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#Invoke-UNISWAPV3ETHEREUMPositionSnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current)
 [**Invoke-UNISWAPV3ETHEREUMPositionsCurrent**](UNISWAPV3ETHEREUMApi.md#Invoke-UNISWAPV3ETHEREUMPositionsCurrent) | **GET** /dapps/uniswap_v3_ethereum/positions/current | Positions (current)
 [**Invoke-UNISWAPV3ETHEREUMRewardTokensCurrent**](UNISWAPV3ETHEREUMApi.md#Invoke-UNISWAPV3ETHEREUMRewardTokensCurrent) | **GET** /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current)
@@ -220,6 +222,7 @@ No authorization required
 <a id="Invoke-UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent"></a>
 # **Invoke-UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent**
 > UNISWAPV3ETHEREUMLiquidityPoolAmountDTO[] Invoke-UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
 LiquidityPoolAmounts (current)
 
@@ -227,10 +230,11 @@ Gets liquidityPoolAmounts.
 
 ### Example
 ```powershell
+$Id = "MyId" # String | Smart contract address of the pool. (optional)
 
 # LiquidityPoolAmounts (current)
 try {
-    $Result = Invoke-UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+    $Result = Invoke-UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent -Id $Id
 } catch {
     Write-Host ("Exception occurred when calling Invoke-UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -238,11 +242,57 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | **String**| Smart contract address of the pool. | [optional] 
 
 ### Return type
 
 [**UNISWAPV3ETHEREUMLiquidityPoolAmountDTO[]**](UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="Invoke-UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent"></a>
+# **Invoke-UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**
+> UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[] Invoke-UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pool] <String><br>
+
+LiquidityPoolDailySnapshots (current)
+
+Gets liquidityPoolDailySnapshots.
+
+### Example
+```powershell
+$Pool = "MyPool" # String | Pool this snapshot belongs to. (optional)
+
+# LiquidityPoolDailySnapshots (current)
+try {
+    $Result = Invoke-UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent -Pool $Pool
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Pool** | **String**| Pool this snapshot belongs to. | [optional] 
+
+### Return type
+
+[**UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[]**](UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -296,6 +346,7 @@ No authorization required
 <a id="Invoke-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent"></a>
 # **Invoke-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent**
 > UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO[] Invoke-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pool] <String><br>
 
 LiquidityPoolHourlySnapshots (current)
 
@@ -303,10 +354,11 @@ Gets liquidityPoolHourlySnapshots.
 
 ### Example
 ```powershell
+$Pool = "MyPool" # String | The pool this snapshot belongs to (optional)
 
 # LiquidityPoolHourlySnapshots (current)
 try {
-    $Result = Invoke-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+    $Result = Invoke-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent -Pool $Pool
 } catch {
     Write-Host ("Exception occurred when calling Invoke-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -314,11 +366,57 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Pool** | **String**| The pool this snapshot belongs to | [optional] 
 
 ### Return type
 
 [**UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO[]**](UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="Invoke-UNISWAPV3ETHEREUMLiquidityPoolsCurrent"></a>
+# **Invoke-UNISWAPV3ETHEREUMLiquidityPoolsCurrent**
+> UNISWAPV3ETHEREUMLiquidityPoolDTO[] Invoke-UNISWAPV3ETHEREUMLiquidityPoolsCurrent<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+
+LiquidityPools (current)
+
+Gets liquidityPools.
+
+### Example
+```powershell
+$Id = "MyId" # String | Smart contract address of the pool. (optional)
+
+# LiquidityPools (current)
+try {
+    $Result = Invoke-UNISWAPV3ETHEREUMLiquidityPoolsCurrent -Id $Id
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UNISWAPV3ETHEREUMLiquidityPoolsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | **String**| Smart contract address of the pool. | [optional] 
+
+### Return type
+
+[**UNISWAPV3ETHEREUMLiquidityPoolDTO[]**](UNISWAPV3ETHEREUMLiquidityPoolDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -491,6 +589,7 @@ No authorization required
 <a id="Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent"></a>
 # **Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent**
 > UNISWAPV3ETHEREUMTickDailySnapshotDTO[] Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pool] <String><br>
 
 TickDailySnapshots (current)
 
@@ -498,10 +597,11 @@ Gets tickDailySnapshots.
 
 ### Example
 ```powershell
+$Pool = "MyPool" # String | liquidity pool this tick belongs to (optional)
 
 # TickDailySnapshots (current)
 try {
-    $Result = Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent
+    $Result = Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent -Pool $Pool
 } catch {
     Write-Host ("Exception occurred when calling Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -509,7 +609,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Pool** | **String**| liquidity pool this tick belongs to | [optional] 
 
 ### Return type
 
@@ -691,6 +794,7 @@ No authorization required
 <a id="Invoke-UNISWAPV3ETHEREUMTokensCurrent"></a>
 # **Invoke-UNISWAPV3ETHEREUMTokensCurrent**
 > UNISWAPV3ETHEREUMTokenDTO[] Invoke-UNISWAPV3ETHEREUMTokensCurrent<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
 Tokens (current)
 
@@ -698,10 +802,11 @@ Gets tokens.
 
 ### Example
 ```powershell
+$Id = "MyId" # String | Smart contract address of the token. (optional)
 
 # Tokens (current)
 try {
-    $Result = Invoke-UNISWAPV3ETHEREUMTokensCurrent
+    $Result = Invoke-UNISWAPV3ETHEREUMTokensCurrent -Id $Id
 } catch {
     Write-Host ("Exception occurred when calling Invoke-UNISWAPV3ETHEREUMTokensCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -709,7 +814,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | **String**| Smart contract address of the token. | [optional] 
 
 ### Return type
 

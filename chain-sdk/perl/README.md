@@ -330,6 +330,8 @@ use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMDepositDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMDexAmmProtocolDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMLiquidityPoolAmountDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMLiquidityPoolDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMLiquidityPoolFeeDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMPositionDTO;
@@ -480,6 +482,8 @@ use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMDepositDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMDexAmmProtocolDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMLiquidityPoolAmountDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMLiquidityPoolDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMLiquidityPoolFeeDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMPositionDTO;
@@ -634,8 +638,10 @@ Class | Method | HTTP request | Description
 *UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_dex_amm_protocols__current**](docs/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_dex_amm_protocols__current) | **GET** /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
 *UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_financials_daily_snapshots__current**](docs/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_financials_daily_snapshots__current) | **GET** /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
 *UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_liquidity_pool_amounts__current**](docs/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_liquidity_pool_amounts__current) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
+*UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current**](docs/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
 *UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_liquidity_pool_fees__current**](docs/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_liquidity_pool_fees__current) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
 *UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current**](docs/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
+*UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_liquidity_pools__current**](docs/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_liquidity_pools__current) | **GET** /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current)
 *UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_position_snapshots__current**](docs/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_position_snapshots__current) | **GET** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current)
 *UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_positions__current**](docs/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_positions__current) | **GET** /dapps/uniswap_v3_ethereum/positions/current | Positions (current)
 *UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_reward_tokens__current**](docs/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_reward_tokens__current) | **GET** /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current)
@@ -765,6 +771,8 @@ Class | Method | HTTP request | Description
  - [WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMDexAmmProtocolDTO](docs/UNISWAPV3ETHEREUMDexAmmProtocolDTO.md)
  - [WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO](docs/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md)
  - [WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMLiquidityPoolAmountDTO](docs/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMLiquidityPoolDTO](docs/UNISWAPV3ETHEREUMLiquidityPoolDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO](docs/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md)
  - [WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMLiquidityPoolFeeDTO](docs/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.md)
  - [WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO](docs/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md)
  - [WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMPositionDTO](docs/UNISWAPV3ETHEREUMPositionDTO.md)

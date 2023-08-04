@@ -307,6 +307,7 @@ module OpenapiClient
     # LiquidityPoolAmounts (current)
     # Gets liquidityPoolAmounts.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :id Smart contract address of the pool.
     # @return [Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>]
     def u_niswapv3_ethereum_liquidity_pool_amounts__current(opts = {})
       data, _status_code, _headers = u_niswapv3_ethereum_liquidity_pool_amounts__current_with_http_info(opts)
@@ -316,6 +317,7 @@ module OpenapiClient
     # LiquidityPoolAmounts (current)
     # Gets liquidityPoolAmounts.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :id Smart contract address of the pool.
     # @return [Array<(Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>, Integer, Hash)>] Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO> data, response status code and response headers
     def u_niswapv3_ethereum_liquidity_pool_amounts__current_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -326,6 +328,7 @@ module OpenapiClient
 
       # query parameters
       query_params = opts[:query_params] || {}
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -357,6 +360,66 @@ module OpenapiClient
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UNISWAPV3ETHEREUMApi#u_niswapv3_ethereum_liquidity_pool_amounts__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # LiquidityPoolDailySnapshots (current)
+    # Gets liquidityPoolDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool Pool this snapshot belongs to.
+    # @return [Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>]
+    def u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current(opts = {})
+      data, _status_code, _headers = u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current_with_http_info(opts)
+      data
+    end
+
+    # LiquidityPoolDailySnapshots (current)
+    # Gets liquidityPoolDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool Pool this snapshot belongs to.
+    # @return [Array<(Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>, Integer, Hash)>] Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> data, response status code and response headers
+    def u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'pool'] = opts[:'pool'] if !opts[:'pool'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV3ETHEREUMApi#u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -421,6 +484,7 @@ module OpenapiClient
     # LiquidityPoolHourlySnapshots (current)
     # Gets liquidityPoolHourlySnapshots.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool The pool this snapshot belongs to
     # @return [Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>]
     def u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current(opts = {})
       data, _status_code, _headers = u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current_with_http_info(opts)
@@ -430,6 +494,7 @@ module OpenapiClient
     # LiquidityPoolHourlySnapshots (current)
     # Gets liquidityPoolHourlySnapshots.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool The pool this snapshot belongs to
     # @return [Array<(Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>, Integer, Hash)>] Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> data, response status code and response headers
     def u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -440,6 +505,7 @@ module OpenapiClient
 
       # query parameters
       query_params = opts[:query_params] || {}
+      query_params[:'pool'] = opts[:'pool'] if !opts[:'pool'].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -471,6 +537,66 @@ module OpenapiClient
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UNISWAPV3ETHEREUMApi#u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # LiquidityPools (current)
+    # Gets liquidityPools.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :id Smart contract address of the pool.
+    # @return [Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>]
+    def u_niswapv3_ethereum_liquidity_pools__current(opts = {})
+      data, _status_code, _headers = u_niswapv3_ethereum_liquidity_pools__current_with_http_info(opts)
+      data
+    end
+
+    # LiquidityPools (current)
+    # Gets liquidityPools.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :id Smart contract address of the pool.
+    # @return [Array<(Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>, Integer, Hash)>] Array<UNISWAPV3ETHEREUMLiquidityPoolDTO> data, response status code and response headers
+    def u_niswapv3_ethereum_liquidity_pools__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_liquidity_pools__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswap_v3_ethereum/liquidityPools/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_liquidity_pools__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV3ETHEREUMApi#u_niswapv3_ethereum_liquidity_pools__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -709,6 +835,7 @@ module OpenapiClient
     # TickDailySnapshots (current)
     # Gets tickDailySnapshots.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool liquidity pool this tick belongs to
     # @return [Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>]
     def u_niswapv3_ethereum_tick_daily_snapshots__current(opts = {})
       data, _status_code, _headers = u_niswapv3_ethereum_tick_daily_snapshots__current_with_http_info(opts)
@@ -718,6 +845,7 @@ module OpenapiClient
     # TickDailySnapshots (current)
     # Gets tickDailySnapshots.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool liquidity pool this tick belongs to
     # @return [Array<(Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>, Integer, Hash)>] Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO> data, response status code and response headers
     def u_niswapv3_ethereum_tick_daily_snapshots__current_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -728,6 +856,7 @@ module OpenapiClient
 
       # query parameters
       query_params = opts[:query_params] || {}
+      query_params[:'pool'] = opts[:'pool'] if !opts[:'pool'].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -1000,6 +1129,7 @@ module OpenapiClient
     # Tokens (current)
     # Gets tokens.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :id Smart contract address of the token.
     # @return [Array<UNISWAPV3ETHEREUMTokenDTO>]
     def u_niswapv3_ethereum_tokens__current(opts = {})
       data, _status_code, _headers = u_niswapv3_ethereum_tokens__current_with_http_info(opts)
@@ -1009,6 +1139,7 @@ module OpenapiClient
     # Tokens (current)
     # Gets tokens.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :id Smart contract address of the token.
     # @return [Array<(Array<UNISWAPV3ETHEREUMTokenDTO>, Integer, Hash)>] Array<UNISWAPV3ETHEREUMTokenDTO> data, response status code and response headers
     def u_niswapv3_ethereum_tokens__current_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1019,6 +1150,7 @@ module OpenapiClient
 
       # query parameters
       query_params = opts[:query_params] || {}
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}

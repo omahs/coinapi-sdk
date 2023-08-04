@@ -29,6 +29,8 @@ public class UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
   private Date recvTime = null;
   @SerializedName("block_number")
   private Long blockNumber = null;
+  @SerializedName("vid")
+  private Long vid = null;
   @SerializedName("id")
   private String id = null;
   @SerializedName("hour")
@@ -143,6 +145,17 @@ public class UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
   }
   public void setBlockNumber(Long blockNumber) {
     this.blockNumber = blockNumber;
+  }
+
+  /**
+   * 
+   **/
+  @ApiModelProperty(value = "")
+  public Long getVid() {
+    return vid;
+  }
+  public void setVid(Long vid) {
+    this.vid = vid;
   }
 
   /**
@@ -620,6 +633,7 @@ public class UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
     return (this.entryTime == null ? uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.entryTime == null : this.entryTime.equals(uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.entryTime)) &&
         (this.recvTime == null ? uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.recvTime == null : this.recvTime.equals(uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.recvTime)) &&
         (this.blockNumber == null ? uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.blockNumber == null : this.blockNumber.equals(uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.blockNumber)) &&
+        (this.vid == null ? uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.vid == null : this.vid.equals(uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.vid)) &&
         (this.id == null ? uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.id == null : this.id.equals(uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.id)) &&
         (this.hour == null ? uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hour == null : this.hour.equals(uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hour)) &&
         (this.protocol == null ? uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.protocol == null : this.protocol.equals(uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.protocol)) &&
@@ -670,6 +684,7 @@ public class UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
     result = 31 * result + (this.entryTime == null ? 0: this.entryTime.hashCode());
     result = 31 * result + (this.recvTime == null ? 0: this.recvTime.hashCode());
     result = 31 * result + (this.blockNumber == null ? 0: this.blockNumber.hashCode());
+    result = 31 * result + (this.vid == null ? 0: this.vid.hashCode());
     result = 31 * result + (this.id == null ? 0: this.id.hashCode());
     result = 31 * result + (this.hour == null ? 0: this.hour.hashCode());
     result = 31 * result + (this.protocol == null ? 0: this.protocol.hashCode());
@@ -723,6 +738,7 @@ public class UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
     sb.append("  entryTime: ").append(entryTime).append("\n");
     sb.append("  recvTime: ").append(recvTime).append("\n");
     sb.append("  blockNumber: ").append(blockNumber).append("\n");
+    sb.append("  vid: ").append(vid).append("\n");
     sb.append("  id: ").append(id).append("\n");
     sb.append("  hour: ").append(hour).append("\n");
     sb.append("  protocol: ").append(protocol).append("\n");

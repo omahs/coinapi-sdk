@@ -95,6 +95,8 @@ import 'package:openapi/src/model/uniswapv3_ethereum_deposit_dto.dart';
 import 'package:openapi/src/model/uniswapv3_ethereum_dex_amm_protocol_dto.dart';
 import 'package:openapi/src/model/uniswapv3_ethereum_financials_daily_snapshot_dto.dart';
 import 'package:openapi/src/model/uniswapv3_ethereum_liquidity_pool_amount_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_liquidity_pool_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_liquidity_pool_daily_snapshot_dto.dart';
 import 'package:openapi/src/model/uniswapv3_ethereum_liquidity_pool_fee_dto.dart';
 import 'package:openapi/src/model/uniswapv3_ethereum_liquidity_pool_hourly_snapshot_dto.dart';
 import 'package:openapi/src/model/uniswapv3_ethereum_position_dto.dart';
@@ -227,6 +229,8 @@ part 'serializers.g.dart';
   UNISWAPV3ETHEREUMDexAmmProtocolDTO,
   UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO,
   UNISWAPV3ETHEREUMLiquidityPoolAmountDTO,
+  UNISWAPV3ETHEREUMLiquidityPoolDTO,
+  UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO,
   UNISWAPV3ETHEREUMLiquidityPoolFeeDTO,
   UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO,
   UNISWAPV3ETHEREUMPositionDTO,
@@ -449,6 +453,10 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<UniswapV3BundleDTO>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CurveTransferOwnershipEventDTO)]),
         () => ListBuilder<CurveTransferOwnershipEventDTO>(),
       )
@@ -515,6 +523,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UniswapV3BurnDTO)]),
         () => ListBuilder<UniswapV3BurnDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMLiquidityPoolDTO)]),
+        () => ListBuilder<UNISWAPV3ETHEREUMLiquidityPoolDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CurveGaugeDTO)]),

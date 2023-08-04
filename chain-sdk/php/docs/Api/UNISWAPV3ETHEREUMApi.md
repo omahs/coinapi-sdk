@@ -10,8 +10,10 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 | [**uNISWAPV3ETHEREUMDexAmmProtocolsCurrent()**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMDexAmmProtocolsCurrent) | **GET** /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current) |
 | [**uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent()**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current) |
 | [**uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent()**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current) |
+| [**uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent()**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current) |
 | [**uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent()**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current) |
 | [**uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent()**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current) |
+| [**uNISWAPV3ETHEREUMLiquidityPoolsCurrent()**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMLiquidityPoolsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current) |
 | [**uNISWAPV3ETHEREUMPositionSnapshotsCurrent()**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMPositionSnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current) |
 | [**uNISWAPV3ETHEREUMPositionsCurrent()**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMPositionsCurrent) | **GET** /dapps/uniswap_v3_ethereum/positions/current | Positions (current) |
 | [**uNISWAPV3ETHEREUMRewardTokensCurrent()**](UNISWAPV3ETHEREUMApi.md#uNISWAPV3ETHEREUMRewardTokensCurrent) | **GET** /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current) |
@@ -295,7 +297,7 @@ No authorization required
 ## `uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent()`
 
 ```php
-uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(): \OpenAPI\Client\Model\UNISWAPV3ETHEREUMLiquidityPoolAmountDTO[]
+uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent($id): \OpenAPI\Client\Model\UNISWAPV3ETHEREUMLiquidityPoolAmountDTO[]
 ```
 
 LiquidityPoolAmounts (current)
@@ -315,9 +317,10 @@ $apiInstance = new OpenAPI\Client\Api\UNISWAPV3ETHEREUMApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$id = 'id_example'; // string | Smart contract address of the pool.
 
 try {
-    $result = $apiInstance->uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent();
+    $result = $apiInstance->uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UNISWAPV3ETHEREUMApi->uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent: ', $e->getMessage(), PHP_EOL;
@@ -326,11 +329,69 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Smart contract address of the pool. | [optional] |
 
 ### Return type
 
 [**\OpenAPI\Client\Model\UNISWAPV3ETHEREUMLiquidityPoolAmountDTO[]**](../Model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent()`
+
+```php
+uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent($pool): \OpenAPI\Client\Model\UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[]
+```
+
+LiquidityPoolDailySnapshots (current)
+
+Gets liquidityPoolDailySnapshots.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UNISWAPV3ETHEREUMApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$pool = 'pool_example'; // string | Pool this snapshot belongs to.
+
+try {
+    $result = $apiInstance->uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent($pool);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UNISWAPV3ETHEREUMApi->uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pool** | **string**| Pool this snapshot belongs to. | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[]**](../Model/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md)
 
 ### Authorization
 
@@ -401,7 +462,7 @@ No authorization required
 ## `uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent()`
 
 ```php
-uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(): \OpenAPI\Client\Model\UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO[]
+uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent($pool): \OpenAPI\Client\Model\UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO[]
 ```
 
 LiquidityPoolHourlySnapshots (current)
@@ -421,9 +482,10 @@ $apiInstance = new OpenAPI\Client\Api\UNISWAPV3ETHEREUMApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$pool = 'pool_example'; // string | The pool this snapshot belongs to
 
 try {
-    $result = $apiInstance->uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent();
+    $result = $apiInstance->uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent($pool);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UNISWAPV3ETHEREUMApi->uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent: ', $e->getMessage(), PHP_EOL;
@@ -432,11 +494,69 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pool** | **string**| The pool this snapshot belongs to | [optional] |
 
 ### Return type
 
 [**\OpenAPI\Client\Model\UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO[]**](../Model/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uNISWAPV3ETHEREUMLiquidityPoolsCurrent()`
+
+```php
+uNISWAPV3ETHEREUMLiquidityPoolsCurrent($id): \OpenAPI\Client\Model\UNISWAPV3ETHEREUMLiquidityPoolDTO[]
+```
+
+LiquidityPools (current)
+
+Gets liquidityPools.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UNISWAPV3ETHEREUMApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$id = 'id_example'; // string | Smart contract address of the pool.
+
+try {
+    $result = $apiInstance->uNISWAPV3ETHEREUMLiquidityPoolsCurrent($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UNISWAPV3ETHEREUMApi->uNISWAPV3ETHEREUMLiquidityPoolsCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Smart contract address of the pool. | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\UNISWAPV3ETHEREUMLiquidityPoolDTO[]**](../Model/UNISWAPV3ETHEREUMLiquidityPoolDTO.md)
 
 ### Authorization
 
@@ -669,7 +789,7 @@ No authorization required
 ## `uNISWAPV3ETHEREUMTickDailySnapshotsCurrent()`
 
 ```php
-uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(): \OpenAPI\Client\Model\UNISWAPV3ETHEREUMTickDailySnapshotDTO[]
+uNISWAPV3ETHEREUMTickDailySnapshotsCurrent($pool): \OpenAPI\Client\Model\UNISWAPV3ETHEREUMTickDailySnapshotDTO[]
 ```
 
 TickDailySnapshots (current)
@@ -689,9 +809,10 @@ $apiInstance = new OpenAPI\Client\Api\UNISWAPV3ETHEREUMApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$pool = 'pool_example'; // string | liquidity pool this tick belongs to
 
 try {
-    $result = $apiInstance->uNISWAPV3ETHEREUMTickDailySnapshotsCurrent();
+    $result = $apiInstance->uNISWAPV3ETHEREUMTickDailySnapshotsCurrent($pool);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UNISWAPV3ETHEREUMApi->uNISWAPV3ETHEREUMTickDailySnapshotsCurrent: ', $e->getMessage(), PHP_EOL;
@@ -700,7 +821,9 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pool** | **string**| liquidity pool this tick belongs to | [optional] |
 
 ### Return type
 
@@ -940,7 +1063,7 @@ No authorization required
 ## `uNISWAPV3ETHEREUMTokensCurrent()`
 
 ```php
-uNISWAPV3ETHEREUMTokensCurrent(): \OpenAPI\Client\Model\UNISWAPV3ETHEREUMTokenDTO[]
+uNISWAPV3ETHEREUMTokensCurrent($id): \OpenAPI\Client\Model\UNISWAPV3ETHEREUMTokenDTO[]
 ```
 
 Tokens (current)
@@ -960,9 +1083,10 @@ $apiInstance = new OpenAPI\Client\Api\UNISWAPV3ETHEREUMApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$id = 'id_example'; // string | Smart contract address of the token.
 
 try {
-    $result = $apiInstance->uNISWAPV3ETHEREUMTokensCurrent();
+    $result = $apiInstance->uNISWAPV3ETHEREUMTokensCurrent($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UNISWAPV3ETHEREUMApi->uNISWAPV3ETHEREUMTokensCurrent: ', $e->getMessage(), PHP_EOL;
@@ -971,7 +1095,9 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Smart contract address of the token. | [optional] |
 
 ### Return type
 

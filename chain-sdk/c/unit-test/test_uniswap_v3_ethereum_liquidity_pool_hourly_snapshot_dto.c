@@ -25,6 +25,7 @@ uniswap_v3_ethereum_liquidity_pool_hourly_snapshot_dto_t* instantiate_uniswap_v3
       "2013-10-20T19:20:30+01:00",
       "2013-10-20T19:20:30+01:00",
       56,
+      56,
       "0",
       56,
       "0",
@@ -72,6 +73,7 @@ uniswap_v3_ethereum_liquidity_pool_hourly_snapshot_dto_t* instantiate_uniswap_v3
     uniswap_v3_ethereum_liquidity_pool_hourly_snapshot_dto = uniswap_v3_ethereum_liquidity_pool_hourly_snapshot_dto_create(
       "2013-10-20T19:20:30+01:00",
       "2013-10-20T19:20:30+01:00",
+      56,
       56,
       "0",
       56,

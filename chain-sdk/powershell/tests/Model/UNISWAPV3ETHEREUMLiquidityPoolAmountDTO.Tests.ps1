@@ -10,7 +10,7 @@ Describe -tag 'PSOpenAPITools' -name 'UNISWAPV3ETHEREUMLiquidityPoolAmountDTO' {
     Context 'UNISWAPV3ETHEREUMLiquidityPoolAmountDTO' {
         It 'Initialize-UNISWAPV3ETHEREUMLiquidityPoolAmountDTO' {
             # a simple test to create an object
-            #$NewObject = Initialize-UNISWAPV3ETHEREUMLiquidityPoolAmountDTO -EntryTime "TEST_VALUE" -RecvTime "TEST_VALUE" -BlockNumber "TEST_VALUE" -BlockRange "TEST_VALUE" -Id "TEST_VALUE" -InputTokens "TEST_VALUE" -InputTokenBalances "TEST_VALUE" -TokenPrices "TEST_VALUE"
+            #$NewObject = Initialize-UNISWAPV3ETHEREUMLiquidityPoolAmountDTO -EntryTime "TEST_VALUE" -RecvTime "TEST_VALUE" -BlockNumber "TEST_VALUE" -Vid "TEST_VALUE" -BlockRange "TEST_VALUE" -Id "TEST_VALUE" -InputTokens "TEST_VALUE" -InputTokenBalances "TEST_VALUE" -TokenPrices "TEST_VALUE"
             #$NewObject | Should -BeOfType UNISWAPV3ETHEREUMLiquidityPoolAmountDTO
             #$NewObject.property | Should -Be 0
         }

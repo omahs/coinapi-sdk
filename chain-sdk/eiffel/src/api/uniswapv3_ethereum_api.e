@@ -189,9 +189,11 @@ feature -- API Access
 			end
 		end
 
-	u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_amounts_current : detachable LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_AMOUNT_DTO]
+	u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_amounts_current (id: STRING_32): detachable LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_AMOUNT_DTO]
 			-- LiquidityPoolAmounts (current)
 			-- Gets liquidityPoolAmounts.
+			-- 
+			-- argument: id Smart contract address of the pool. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_AMOUNT_DTO]
@@ -205,6 +207,7 @@ feature -- API Access
 			create l_request
 			
 			l_path := "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "id", id));
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
@@ -216,6 +219,42 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_AMOUNT_DTO] } l_response.data ({ LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_AMOUNT_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_daily_snapshots_current (pool: STRING_32): detachable LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOT_DTO]
+			-- LiquidityPoolDailySnapshots (current)
+			-- Gets liquidityPoolDailySnapshots.
+			-- 
+			-- argument: pool Pool this snapshot belongs to. (optional, default to null)
+			-- 
+			-- 
+			-- Result LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOT_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "pool", pool));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOT_DTO] } l_response.data ({ LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOT_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -255,9 +294,11 @@ feature -- API Access
 			end
 		end
 
-	u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_hourly_snapshots_current : detachable LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_HOURLY_SNAPSHOT_DTO]
+	u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_hourly_snapshots_current (pool: STRING_32): detachable LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_HOURLY_SNAPSHOT_DTO]
 			-- LiquidityPoolHourlySnapshots (current)
 			-- Gets liquidityPoolHourlySnapshots.
+			-- 
+			-- argument: pool The pool this snapshot belongs to (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_HOURLY_SNAPSHOT_DTO]
@@ -271,6 +312,7 @@ feature -- API Access
 			create l_request
 			
 			l_path := "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "pool", pool));
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
@@ -282,6 +324,42 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_HOURLY_SNAPSHOT_DTO] } l_response.data ({ LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_HOURLY_SNAPSHOT_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	u_ni_sw_ap_v3_et_he_re_um_liquidity_pools_current (id: STRING_32): detachable LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_DTO]
+			-- LiquidityPools (current)
+			-- Gets liquidityPools.
+			-- 
+			-- argument: id Smart contract address of the pool. (optional, default to null)
+			-- 
+			-- 
+			-- Result LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswap_v3_ethereum/liquidityPools/current"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "id", id));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_DTO] } l_response.data ({ LIST [UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -423,9 +501,11 @@ feature -- API Access
 			end
 		end
 
-	u_ni_sw_ap_v3_et_he_re_um_tick_daily_snapshots_current : detachable LIST [UNISWAP_V3_ETHEREUM_TICK_DAILY_SNAPSHOT_DTO]
+	u_ni_sw_ap_v3_et_he_re_um_tick_daily_snapshots_current (pool: STRING_32): detachable LIST [UNISWAP_V3_ETHEREUM_TICK_DAILY_SNAPSHOT_DTO]
 			-- TickDailySnapshots (current)
 			-- Gets tickDailySnapshots.
+			-- 
+			-- argument: pool liquidity pool this tick belongs to (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V3_ETHEREUM_TICK_DAILY_SNAPSHOT_DTO]
@@ -439,6 +519,7 @@ feature -- API Access
 			create l_request
 			
 			l_path := "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "pool", pool));
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
@@ -594,9 +675,11 @@ feature -- API Access
 			end
 		end
 
-	u_ni_sw_ap_v3_et_he_re_um_tokens_current : detachable LIST [UNISWAP_V3_ETHEREUM_TOKEN_DTO]
+	u_ni_sw_ap_v3_et_he_re_um_tokens_current (id: STRING_32): detachable LIST [UNISWAP_V3_ETHEREUM_TOKEN_DTO]
 			-- Tokens (current)
 			-- Gets tokens.
+			-- 
+			-- argument: id Smart contract address of the token. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V3_ETHEREUM_TOKEN_DTO]
@@ -610,6 +693,7 @@ feature -- API Access
 			create l_request
 			
 			l_path := "/dapps/uniswap_v3_ethereum/tokens/current"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "id", id));
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then

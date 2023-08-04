@@ -236,10 +236,14 @@ Method | HTTP request | Description
 *uNISWAPV3ETHEREUMFinancialsDailySnapshots (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current).
 *uNISWAPV3ETHEREUMLiquidityPoolAmounts (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current).
 *uNISWAPV3ETHEREUMLiquidityPoolAmounts (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current).
+*uNISWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current).
+*uNISWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current).
 *uNISWAPV3ETHEREUMLiquidityPoolFees (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current).
 *uNISWAPV3ETHEREUMLiquidityPoolFees (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current).
 *uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshots (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current).
 *uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshots (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current).
+*uNISWAPV3ETHEREUMLiquidityPools (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current).
+*uNISWAPV3ETHEREUMLiquidityPools (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current).
 *uNISWAPV3ETHEREUMPositionSnapshots (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current).
 *uNISWAPV3ETHEREUMPositionSnapshots (current)ASync* | *GET* /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current).
 *uNISWAPV3ETHEREUMPositions (current)Sync* | *GET* /dapps/uniswap_v3_ethereum/positions/current | Positions (current).
@@ -426,6 +430,8 @@ Class | Description
  *UNISWAP_V3_ETHEREUM.DexAmmProtocolDTO* |  Decentralized exchange (Dex) automated market maker (Amm) protocol. It's an entity that represents a protocol involving a smart contract that use automated market makers.
  *UNISWAP_V3_ETHEREUM.FinancialsDailySnapshotDTO* | Daily financial metrics for Uniswap V3.
  *UNISWAP_V3_ETHEREUM.LiquidityPoolAmountDTO* | 
+ *UNISWAP_V3_ETHEREUM.LiquidityPoolDTO* | All Uniswap V3 pools.
+ *UNISWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO* | Represents a liquidity pool daily snapshot for Uniswap V3.
  *UNISWAP_V3_ETHEREUM.LiquidityPoolFeeDTO* | 
  *UNISWAP_V3_ETHEREUM.LiquidityPoolHourlySnapshotDTO* | 
  *UNISWAP_V3_ETHEREUM.PositionDTO* | 

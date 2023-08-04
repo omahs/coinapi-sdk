@@ -15,6 +15,8 @@ class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
+    /* . */
+    Long vid
     /*  */
     String blockRange
     /* Smart contract address of the pool. */

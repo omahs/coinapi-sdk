@@ -87,6 +87,8 @@ API/Client/UNISWAPV3ETHEREUMDepositDTO.js
 API/Client/UNISWAPV3ETHEREUMDexAmmProtocolDTO.js
 API/Client/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.js
 API/Client/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.js
+API/Client/UNISWAPV3ETHEREUMLiquidityPoolDTO.js
+API/Client/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.js
 API/Client/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.js
 API/Client/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.js
 API/Client/UNISWAPV3ETHEREUMPositionDTO.js

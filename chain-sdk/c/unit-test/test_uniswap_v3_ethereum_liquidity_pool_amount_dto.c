@@ -25,6 +25,7 @@ uniswap_v3_ethereum_liquidity_pool_amount_dto_t* instantiate_uniswap_v3_ethereum
       "2013-10-20T19:20:30+01:00",
       "2013-10-20T19:20:30+01:00",
       56,
+      56,
       "0",
       "0",
       list_createList(),
@@ -35,6 +36,7 @@ uniswap_v3_ethereum_liquidity_pool_amount_dto_t* instantiate_uniswap_v3_ethereum
     uniswap_v3_ethereum_liquidity_pool_amount_dto = uniswap_v3_ethereum_liquidity_pool_amount_dto_create(
       "2013-10-20T19:20:30+01:00",
       "2013-10-20T19:20:30+01:00",
+      56,
       56,
       "0",
       "0",

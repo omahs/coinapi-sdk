@@ -29,6 +29,8 @@ public class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
   private Date recvTime = null;
   @SerializedName("block_number")
   private Long blockNumber = null;
+  @SerializedName("vid")
+  private Long vid = null;
   @SerializedName("block_range")
   private String blockRange = null;
   @SerializedName("id")
@@ -69,6 +71,17 @@ public class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
   }
   public void setBlockNumber(Long blockNumber) {
     this.blockNumber = blockNumber;
+  }
+
+  /**
+   * .
+   **/
+  @ApiModelProperty(value = ".")
+  public Long getVid() {
+    return vid;
+  }
+  public void setVid(Long vid) {
+    this.vid = vid;
   }
 
   /**
@@ -139,6 +152,7 @@ public class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
     return (this.entryTime == null ? uNISWAPV3ETHEREUMLiquidityPoolAmountDTO.entryTime == null : this.entryTime.equals(uNISWAPV3ETHEREUMLiquidityPoolAmountDTO.entryTime)) &&
         (this.recvTime == null ? uNISWAPV3ETHEREUMLiquidityPoolAmountDTO.recvTime == null : this.recvTime.equals(uNISWAPV3ETHEREUMLiquidityPoolAmountDTO.recvTime)) &&
         (this.blockNumber == null ? uNISWAPV3ETHEREUMLiquidityPoolAmountDTO.blockNumber == null : this.blockNumber.equals(uNISWAPV3ETHEREUMLiquidityPoolAmountDTO.blockNumber)) &&
+        (this.vid == null ? uNISWAPV3ETHEREUMLiquidityPoolAmountDTO.vid == null : this.vid.equals(uNISWAPV3ETHEREUMLiquidityPoolAmountDTO.vid)) &&
         (this.blockRange == null ? uNISWAPV3ETHEREUMLiquidityPoolAmountDTO.blockRange == null : this.blockRange.equals(uNISWAPV3ETHEREUMLiquidityPoolAmountDTO.blockRange)) &&
         (this.id == null ? uNISWAPV3ETHEREUMLiquidityPoolAmountDTO.id == null : this.id.equals(uNISWAPV3ETHEREUMLiquidityPoolAmountDTO.id)) &&
         (this.inputTokens == null ? uNISWAPV3ETHEREUMLiquidityPoolAmountDTO.inputTokens == null : this.inputTokens.equals(uNISWAPV3ETHEREUMLiquidityPoolAmountDTO.inputTokens)) &&
@@ -152,6 +166,7 @@ public class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
     result = 31 * result + (this.entryTime == null ? 0: this.entryTime.hashCode());
     result = 31 * result + (this.recvTime == null ? 0: this.recvTime.hashCode());
     result = 31 * result + (this.blockNumber == null ? 0: this.blockNumber.hashCode());
+    result = 31 * result + (this.vid == null ? 0: this.vid.hashCode());
     result = 31 * result + (this.blockRange == null ? 0: this.blockRange.hashCode());
     result = 31 * result + (this.id == null ? 0: this.id.hashCode());
     result = 31 * result + (this.inputTokens == null ? 0: this.inputTokens.hashCode());
@@ -168,6 +183,7 @@ public class UNISWAPV3ETHEREUMLiquidityPoolAmountDTO {
     sb.append("  entryTime: ").append(entryTime).append("\n");
     sb.append("  recvTime: ").append(recvTime).append("\n");
     sb.append("  blockNumber: ").append(blockNumber).append("\n");
+    sb.append("  vid: ").append(vid).append("\n");
     sb.append("  blockRange: ").append(blockRange).append("\n");
     sb.append("  id: ").append(id).append("\n");
     sb.append("  inputTokens: ").append(inputTokens).append("\n");

@@ -93,6 +93,8 @@ docs/UNISWAPV3ETHEREUMDepositDTO.md
 docs/UNISWAPV3ETHEREUMDexAmmProtocolDTO.md
 docs/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md
+docs/UNISWAPV3ETHEREUMLiquidityPoolDTO.md
+docs/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMPositionDTO.md
@@ -260,6 +262,8 @@ src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMDepositDTO.java
 src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMDexAmmProtocolDTO.java
 src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.java
 src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.java
+src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMLiquidityPoolDTO.java
+src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.java
 src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.java
 src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.java
 src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMPositionDTO.java
@@ -397,6 +401,8 @@ src/test/java/org/openapitools/client/model/UNISWAPV3ETHEREUMDepositDTOTest.java
 src/test/java/org/openapitools/client/model/UNISWAPV3ETHEREUMDexAmmProtocolDTOTest.java
 src/test/java/org/openapitools/client/model/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTOTest.java
 src/test/java/org/openapitools/client/model/UNISWAPV3ETHEREUMLiquidityPoolAmountDTOTest.java
+src/test/java/org/openapitools/client/model/UNISWAPV3ETHEREUMLiquidityPoolDTOTest.java
+src/test/java/org/openapitools/client/model/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTest.java
 src/test/java/org/openapitools/client/model/UNISWAPV3ETHEREUMLiquidityPoolFeeDTOTest.java
 src/test/java/org/openapitools/client/model/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTest.java
 src/test/java/org/openapitools/client/model/UNISWAPV3ETHEREUMPositionDTOTest.java

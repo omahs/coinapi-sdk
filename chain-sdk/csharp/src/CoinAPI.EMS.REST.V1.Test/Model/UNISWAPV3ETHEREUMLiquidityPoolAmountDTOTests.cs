@@ -90,6 +90,14 @@ namespace CoinAPI.EMS.REST.V1.Test
             // TODO unit test for the property 'BlockNumber'
         }
         /// <summary>
+        /// Test the property 'Vid'
+        /// </summary>
+        [Test]
+        public void VidTest()
+        {
+            // TODO unit test for the property 'Vid'
+        }
+        /// <summary>
         /// Test the property 'BlockRange'
         /// </summary>
         [Test]

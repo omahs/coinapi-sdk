@@ -83,6 +83,8 @@ from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_deposits_current import
 from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_dex_amm_protocols_current import DappsUniswapV3EthereumDexAmmProtocolsCurrent
 from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_financials_daily_snapshots_current import DappsUniswapV3EthereumFinancialsDailySnapshotsCurrent
 from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_liquidity_pool_amounts_current import DappsUniswapV3EthereumLiquidityPoolAmountsCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_liquidity_pool_daily_snapshots_current import DappsUniswapV3EthereumLiquidityPoolDailySnapshotsCurrent
+from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_liquidity_pools_current import DappsUniswapV3EthereumLiquidityPoolsCurrent
 from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_liquidity_pool_fees_current import DappsUniswapV3EthereumLiquidityPoolFeesCurrent
 from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_liquidity_pool_hourly_snapshots_current import DappsUniswapV3EthereumLiquidityPoolHourlySnapshotsCurrent
 from openapi_client.apis.paths.dapps_uniswap_v3_ethereum_positions_current import DappsUniswapV3EthereumPositionsCurrent
@@ -216,6 +218,8 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.DAPPS_UNISWAP_V3_ETHEREUM_DEX_AMM_PROTOCOLS_CURRENT: DappsUniswapV3EthereumDexAmmProtocolsCurrent,
         PathValues.DAPPS_UNISWAP_V3_ETHEREUM_FINANCIALS_DAILY_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumFinancialsDailySnapshotsCurrent,
         PathValues.DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_AMOUNTS_CURRENT: DappsUniswapV3EthereumLiquidityPoolAmountsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumLiquidityPoolDailySnapshotsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOLS_CURRENT: DappsUniswapV3EthereumLiquidityPoolsCurrent,
         PathValues.DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_FEES_CURRENT: DappsUniswapV3EthereumLiquidityPoolFeesCurrent,
         PathValues.DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_HOURLY_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumLiquidityPoolHourlySnapshotsCurrent,
         PathValues.DAPPS_UNISWAP_V3_ETHEREUM_POSITIONS_CURRENT: DappsUniswapV3EthereumPositionsCurrent,
@@ -350,6 +354,8 @@ path_to_api = PathToApi(
         PathValues.DAPPS_UNISWAP_V3_ETHEREUM_DEX_AMM_PROTOCOLS_CURRENT: DappsUniswapV3EthereumDexAmmProtocolsCurrent,
         PathValues.DAPPS_UNISWAP_V3_ETHEREUM_FINANCIALS_DAILY_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumFinancialsDailySnapshotsCurrent,
         PathValues.DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_AMOUNTS_CURRENT: DappsUniswapV3EthereumLiquidityPoolAmountsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumLiquidityPoolDailySnapshotsCurrent,
+        PathValues.DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOLS_CURRENT: DappsUniswapV3EthereumLiquidityPoolsCurrent,
         PathValues.DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_FEES_CURRENT: DappsUniswapV3EthereumLiquidityPoolFeesCurrent,
         PathValues.DAPPS_UNISWAP_V3_ETHEREUM_LIQUIDITY_POOL_HOURLY_SNAPSHOTS_CURRENT: DappsUniswapV3EthereumLiquidityPoolHourlySnapshotsCurrent,
         PathValues.DAPPS_UNISWAP_V3_ETHEREUM_POSITIONS_CURRENT: DappsUniswapV3EthereumPositionsCurrent,

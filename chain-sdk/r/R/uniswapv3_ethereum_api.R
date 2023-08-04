@@ -98,12 +98,30 @@
 #' Gets liquidityPoolAmounts.
 #'
 #' \itemize{
+#' \item \emph{ @param } id character
 #' \item \emph{ @returnType } list( \link{UNISWAP_V3_ETHEREUM.LiquidityPoolAmountDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
 #' \item return type : array[UNISWAPV3ETHEREUMLiquidityPoolAmountDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent } \emph{ LiquidityPoolDailySnapshots (current) }
+#' Gets liquidityPoolDailySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @param } pool character
+#' \item \emph{ @returnType } list( \link{UNISWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -130,12 +148,30 @@
 #' Gets liquidityPoolHourlySnapshots.
 #'
 #' \itemize{
+#' \item \emph{ @param } pool character
 #' \item \emph{ @returnType } list( \link{UNISWAP_V3_ETHEREUM.LiquidityPoolHourlySnapshotDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
 #' \item return type : array[UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UNISWAPV3ETHEREUMLiquidityPoolsCurrent } \emph{ LiquidityPools (current) }
+#' Gets liquidityPools.
+#'
+#' \itemize{
+#' \item \emph{ @param } id character
+#' \item \emph{ @returnType } list( \link{UNISWAP_V3_ETHEREUM.LiquidityPoolDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV3ETHEREUMLiquidityPoolDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -211,6 +247,7 @@
 #' Gets tickDailySnapshots.
 #'
 #' \itemize{
+#' \item \emph{ @param } pool character
 #' \item \emph{ @returnType } list( \link{UNISWAP_V3_ETHEREUM.TickDailySnapshotDTO} ) \cr
 #'
 #'
@@ -293,6 +330,7 @@
 #' Gets tokens.
 #'
 #' \itemize{
+#' \item \emph{ @param } id character
 #' \item \emph{ @returnType } list( \link{UNISWAP_V3_ETHEREUM.TokenDTO} ) \cr
 #'
 #'
@@ -426,13 +464,28 @@
 #' ####################  UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent  ####################
 #'
 #' library(openapi)
+#' var_id <- "id_example" # character | Smart contract address of the pool. (Optional)
 #'
 #' #LiquidityPoolAmounts (current)
 #' api_instance <- UNISWAPV3ETHEREUMApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(data_file = "result.txt")
-#' result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent()
+#' # result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id = var_iddata_file = "result.txt")
+#' result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id = var_id)
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#' var_pool <- "pool_example" # character | Pool this snapshot belongs to. (Optional)
+#'
+#' #LiquidityPoolDailySnapshots (current)
+#' api_instance <- UNISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool = var_pooldata_file = "result.txt")
+#' result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool = var_pool)
 #' dput(result)
 #'
 #'
@@ -452,13 +505,28 @@
 #' ####################  UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent  ####################
 #'
 #' library(openapi)
+#' var_pool <- "pool_example" # character | The pool this snapshot belongs to (Optional)
 #'
 #' #LiquidityPoolHourlySnapshots (current)
 #' api_instance <- UNISWAPV3ETHEREUMApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(data_file = "result.txt")
-#' result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent()
+#' # result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool = var_pooldata_file = "result.txt")
+#' result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool = var_pool)
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV3ETHEREUMLiquidityPoolsCurrent  ####################
+#'
+#' library(openapi)
+#' var_id <- "id_example" # character | Smart contract address of the pool. (Optional)
+#'
+#' #LiquidityPools (current)
+#' api_instance <- UNISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolsCurrent(id = var_iddata_file = "result.txt")
+#' result <- api_instance$UNISWAPV3ETHEREUMLiquidityPoolsCurrent(id = var_id)
 #' dput(result)
 #'
 #'
@@ -518,13 +586,14 @@
 #' ####################  UNISWAPV3ETHEREUMTickDailySnapshotsCurrent  ####################
 #'
 #' library(openapi)
+#' var_pool <- "pool_example" # character | liquidity pool this tick belongs to (Optional)
 #'
 #' #TickDailySnapshots (current)
 #' api_instance <- UNISWAPV3ETHEREUMApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(data_file = "result.txt")
-#' result <- api_instance$UNISWAPV3ETHEREUMTickDailySnapshotsCurrent()
+#' # result <- api_instance$UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool = var_pooldata_file = "result.txt")
+#' result <- api_instance$UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool = var_pool)
 #' dput(result)
 #'
 #'
@@ -585,13 +654,14 @@
 #' ####################  UNISWAPV3ETHEREUMTokensCurrent  ####################
 #'
 #' library(openapi)
+#' var_id <- "id_example" # character | Smart contract address of the token. (Optional)
 #'
 #' #Tokens (current)
 #' api_instance <- UNISWAPV3ETHEREUMApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$UNISWAPV3ETHEREUMTokensCurrent(data_file = "result.txt")
-#' result <- api_instance$UNISWAPV3ETHEREUMTokensCurrent()
+#' # result <- api_instance$UNISWAPV3ETHEREUMTokensCurrent(id = var_iddata_file = "result.txt")
+#' result <- api_instance$UNISWAPV3ETHEREUMTokensCurrent(id = var_id)
 #' dput(result)
 #'
 #'
@@ -1091,12 +1161,13 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
     #' @description
     #' LiquidityPoolAmounts (current)
     #'
+    #' @param id (optional) Smart contract address of the pool.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UNISWAPV3ETHEREUMLiquidityPoolAmountDTO]
     #' @export
-    UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent = function(data_file = NULL, ...) {
-      local_var_response <- self$UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo(data_file = data_file, ...)
+    UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent = function(id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo(id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1112,11 +1183,12 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
     #' @description
     #' LiquidityPoolAmounts (current)
     #'
+    #' @param id (optional) Smart contract address of the pool.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UNISWAPV3ETHEREUMLiquidityPoolAmountDTO]) with additional information such as HTTP status code, headers
     #' @export
-    UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+    UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo = function(id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1125,6 +1197,9 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       local_var_body <- NULL
       oauth_scopes <- NULL
       is_oauth <- FALSE
+
+
+      query_params[["id"]] <- `id`
 
       local_var_url_path <- "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current"
 
@@ -1155,6 +1230,97 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV3ETHEREUMLiquidityPoolAmountDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @description
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @param pool (optional) Pool this snapshot belongs to.
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]
+    #' @export
+    UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent = function(pool = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(pool, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @description
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @param pool (optional) Pool this snapshot belongs to.
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo = function(pool = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+      query_params[["pool"]] <- `pool`
+
+      local_var_url_path <- "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -1263,12 +1429,13 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
     #' @description
     #' LiquidityPoolHourlySnapshots (current)
     #'
+    #' @param pool (optional) The pool this snapshot belongs to
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]
     #' @export
-    UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent = function(data_file = NULL, ...) {
-      local_var_response <- self$UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+    UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent = function(pool = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo(pool, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1284,11 +1451,12 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
     #' @description
     #' LiquidityPoolHourlySnapshots (current)
     #'
+    #' @param pool (optional) The pool this snapshot belongs to
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]) with additional information such as HTTP status code, headers
     #' @export
-    UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+    UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo = function(pool = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1297,6 +1465,9 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       local_var_body <- NULL
       oauth_scopes <- NULL
       is_oauth <- FALSE
+
+
+      query_params[["pool"]] <- `pool`
 
       local_var_url_path <- "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current"
 
@@ -1327,6 +1498,97 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' LiquidityPools (current)
+    #'
+    #' @description
+    #' LiquidityPools (current)
+    #'
+    #' @param id (optional) Smart contract address of the pool.
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV3ETHEREUMLiquidityPoolDTO]
+    #' @export
+    UNISWAPV3ETHEREUMLiquidityPoolsCurrent = function(id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV3ETHEREUMLiquidityPoolsCurrentWithHttpInfo(id, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' LiquidityPools (current)
+    #'
+    #' @description
+    #' LiquidityPools (current)
+    #'
+    #' @param id (optional) Smart contract address of the pool.
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV3ETHEREUMLiquidityPoolDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV3ETHEREUMLiquidityPoolsCurrentWithHttpInfo = function(id = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+      query_params[["id"]] <- `id`
+
+      local_var_url_path <- "/dapps/uniswap_v3_ethereum/liquidityPools/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV3ETHEREUMLiquidityPoolDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -1698,12 +1960,13 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
     #' @description
     #' TickDailySnapshots (current)
     #'
+    #' @param pool (optional) liquidity pool this tick belongs to
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UNISWAPV3ETHEREUMTickDailySnapshotDTO]
     #' @export
-    UNISWAPV3ETHEREUMTickDailySnapshotsCurrent = function(data_file = NULL, ...) {
-      local_var_response <- self$UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+    UNISWAPV3ETHEREUMTickDailySnapshotsCurrent = function(pool = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo(pool, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1719,11 +1982,12 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
     #' @description
     #' TickDailySnapshots (current)
     #'
+    #' @param pool (optional) liquidity pool this tick belongs to
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UNISWAPV3ETHEREUMTickDailySnapshotDTO]) with additional information such as HTTP status code, headers
     #' @export
-    UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+    UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo = function(pool = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1732,6 +1996,9 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       local_var_body <- NULL
       oauth_scopes <- NULL
       is_oauth <- FALSE
+
+
+      query_params[["pool"]] <- `pool`
 
       local_var_url_path <- "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current"
 
@@ -2138,12 +2405,13 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
     #' @description
     #' Tokens (current)
     #'
+    #' @param id (optional) Smart contract address of the token.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UNISWAPV3ETHEREUMTokenDTO]
     #' @export
-    UNISWAPV3ETHEREUMTokensCurrent = function(data_file = NULL, ...) {
-      local_var_response <- self$UNISWAPV3ETHEREUMTokensCurrentWithHttpInfo(data_file = data_file, ...)
+    UNISWAPV3ETHEREUMTokensCurrent = function(id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV3ETHEREUMTokensCurrentWithHttpInfo(id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -2159,11 +2427,12 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
     #' @description
     #' Tokens (current)
     #'
+    #' @param id (optional) Smart contract address of the token.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UNISWAPV3ETHEREUMTokenDTO]) with additional information such as HTTP status code, headers
     #' @export
-    UNISWAPV3ETHEREUMTokensCurrentWithHttpInfo = function(data_file = NULL, ...) {
+    UNISWAPV3ETHEREUMTokensCurrentWithHttpInfo = function(id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2172,6 +2441,9 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       local_var_body <- NULL
       oauth_scopes <- NULL
       is_oauth <- FALSE
+
+
+      query_params[["id"]] <- `id`
 
       local_var_url_path <- "/dapps/uniswap_v3_ethereum/tokens/current"
 

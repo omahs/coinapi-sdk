@@ -381,6 +381,14 @@ public class JsonUtil {
       return new TypeToken<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>(){}.getType();
     }
     
+    if ("UNISWAPV3ETHEREUMLiquidityPoolDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>(){}.getType();
+    }
+    
     if ("UNISWAPV3ETHEREUMLiquidityPoolFeeDTO".equalsIgnoreCase(className)) {
       return new TypeToken<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>(){}.getType();
     }
@@ -897,6 +905,14 @@ public class JsonUtil {
     
     if ("UNISWAPV3ETHEREUMLiquidityPoolAmountDTO".equalsIgnoreCase(className)) {
       return new TypeToken<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMLiquidityPoolDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMLiquidityPoolDTO>(){}.getType();
+    }
+    
+    if ("UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>(){}.getType();
     }
     
     if ("UNISWAPV3ETHEREUMLiquidityPoolFeeDTO".equalsIgnoreCase(className)) {

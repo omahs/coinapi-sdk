@@ -15,6 +15,8 @@ import 'package:openapi/src/model/uniswapv3_ethereum_deposit_dto.dart';
 import 'package:openapi/src/model/uniswapv3_ethereum_dex_amm_protocol_dto.dart';
 import 'package:openapi/src/model/uniswapv3_ethereum_financials_daily_snapshot_dto.dart';
 import 'package:openapi/src/model/uniswapv3_ethereum_liquidity_pool_amount_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_liquidity_pool_daily_snapshot_dto.dart';
+import 'package:openapi/src/model/uniswapv3_ethereum_liquidity_pool_dto.dart';
 import 'package:openapi/src/model/uniswapv3_ethereum_liquidity_pool_fee_dto.dart';
 import 'package:openapi/src/model/uniswapv3_ethereum_liquidity_pool_hourly_snapshot_dto.dart';
 import 'package:openapi/src/model/uniswapv3_ethereum_position_dto.dart';
@@ -408,6 +410,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Gets liquidityPoolAmounts.
   ///
   /// Parameters:
+  /// * [id] - Smart contract address of the pool.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -418,6 +421,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Returns a [Future] containing a [Response] with a [BuiltList<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>> uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent({ 
+    String? id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -438,9 +442,14 @@ class UNISWAPV3ETHEREUMApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (id != null) r'id': encodeQueryParameter(_serializers, id, const FullType(String)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -466,6 +475,86 @@ class UNISWAPV3ETHEREUMApi {
     }
 
     return Response<BuiltList<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// LiquidityPoolDailySnapshots (current)
+  /// Gets liquidityPoolDailySnapshots.
+  ///
+  /// Parameters:
+  /// * [pool] - Pool this snapshot belongs to.
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>> uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent({ 
+    String? pool,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (pool != null) r'pool': encodeQueryParameter(_serializers, pool, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO)]),
+      ) as BuiltList<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<BuiltList<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -554,6 +643,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Gets liquidityPoolHourlySnapshots.
   ///
   /// Parameters:
+  /// * [pool] - The pool this snapshot belongs to
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -564,6 +654,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Returns a [Future] containing a [Response] with a [BuiltList<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>> uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent({ 
+    String? pool,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -584,9 +675,14 @@ class UNISWAPV3ETHEREUMApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (pool != null) r'pool': encodeQueryParameter(_serializers, pool, const FullType(String)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -612,6 +708,86 @@ class UNISWAPV3ETHEREUMApi {
     }
 
     return Response<BuiltList<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// LiquidityPools (current)
+  /// Gets liquidityPools.
+  ///
+  /// Parameters:
+  /// * [id] - Smart contract address of the pool.
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UNISWAPV3ETHEREUMLiquidityPoolDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UNISWAPV3ETHEREUMLiquidityPoolDTO>>> uNISWAPV3ETHEREUMLiquidityPoolsCurrent({ 
+    String? id,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswap_v3_ethereum/liquidityPools/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (id != null) r'id': encodeQueryParameter(_serializers, id, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UNISWAPV3ETHEREUMLiquidityPoolDTO>? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMLiquidityPoolDTO)]),
+      ) as BuiltList<UNISWAPV3ETHEREUMLiquidityPoolDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<BuiltList<UNISWAPV3ETHEREUMLiquidityPoolDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -926,6 +1102,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Gets tickDailySnapshots.
   ///
   /// Parameters:
+  /// * [pool] - liquidity pool this tick belongs to
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -936,6 +1113,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Returns a [Future] containing a [Response] with a [BuiltList<UNISWAPV3ETHEREUMTickDailySnapshotDTO>] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent({ 
+    String? pool,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -956,9 +1134,14 @@ class UNISWAPV3ETHEREUMApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (pool != null) r'pool': encodeQueryParameter(_serializers, pool, const FullType(String)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -1305,6 +1488,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Gets tokens.
   ///
   /// Parameters:
+  /// * [id] - Smart contract address of the token.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1315,6 +1499,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Returns a [Future] containing a [Response] with a [BuiltList<UNISWAPV3ETHEREUMTokenDTO>] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<UNISWAPV3ETHEREUMTokenDTO>>> uNISWAPV3ETHEREUMTokensCurrent({ 
+    String? id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1335,9 +1520,14 @@ class UNISWAPV3ETHEREUMApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (id != null) r'id': encodeQueryParameter(_serializers, id, const FullType(String)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,

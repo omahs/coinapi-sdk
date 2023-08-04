@@ -145,6 +145,18 @@ class UNISWAPV3ETHEREUMApiTest extends TestCase
     }
 
     /**
+     * Test case for uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+     *
+     * LiquidityPoolDailySnapshots (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent
      *
      * LiquidityPoolFees (current).
@@ -163,6 +175,18 @@ class UNISWAPV3ETHEREUMApiTest extends TestCase
      *
      */
     public function testUNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for uNISWAPV3ETHEREUMLiquidityPoolsCurrent
+     *
+     * LiquidityPools (current).
+     *
+     */
+    public function testUNISWAPV3ETHEREUMLiquidityPoolsCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

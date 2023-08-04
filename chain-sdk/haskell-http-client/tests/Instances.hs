@@ -1722,11 +1722,122 @@ genUNISWAPV3ETHEREUMLiquidityPoolAmountDTO n =
     <$> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolAmountDTOEntryTime :: Maybe DateTime
     <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolAmountDTORecvTime :: Maybe DateTime
     <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolAmountDTOVid :: Maybe Integer
     <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockRange :: Maybe Text
     <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolAmountDTOId :: Maybe Text
     <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokens :: Maybe [Text]
     <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokenBalances :: Maybe [Text]
     <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolAmountDTOTokenPrices :: Maybe [Text]
+  
+instance Arbitrary UNISWAPV3ETHEREUMLiquidityPoolDTO where
+  arbitrary = sized genUNISWAPV3ETHEREUMLiquidityPoolDTO
+
+genUNISWAPV3ETHEREUMLiquidityPoolDTO :: Int -> Gen UNISWAPV3ETHEREUMLiquidityPoolDTO
+genUNISWAPV3ETHEREUMLiquidityPoolDTO n =
+  UNISWAPV3ETHEREUMLiquidityPoolDTO
+    <$> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOBlockRange :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOProtocol :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOName :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOSymbol :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOLiquidityToken :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOInputTokens :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTORewardTokens :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOFees :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOIsSingleSided :: Maybe Bool
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOCreatedTimestamp :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOCreatedBlockNumber :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOTick :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOTotalValueLockedUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOTotalLiquidity :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOTotalLiquidityUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOActiveLiquidity :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOActiveLiquidityUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOUncollectedProtocolSideTokenAmounts :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOUncollectedProtocolSideValuesUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOUncollectedSupplySideTokenAmounts :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOUncollectedSupplySideValuesUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOCumulativeSupplySideRevenueUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOCumulativeProtocolSideRevenueUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOCumulativeTotalRevenueUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeByTokenAmount :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeByTokenUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOInputTokenBalances :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOInputTokenBalancesUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOInputTokenWeights :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOStakedOutputTokenAmount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTORewardTokenEmissionsAmount :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTORewardTokenEmissionsUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOCumulativeDepositCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOCumulativeWithdrawCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOCumulativeSwapCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOPositionCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOOpenPositionCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOClosedPositionCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOLastSnapshotDayId :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOLastSnapshotHourId :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOLastUpdateTimestamp :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOLastUpdateBlockNumber :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDTOEvaluatedAsk :: Maybe Double
+  
+instance Arbitrary UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO where
+  arbitrary = sized genUNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+
+genUNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO :: Int -> Gen UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+genUNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO n =
+  UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+    <$> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODay :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOProtocol :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPool :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTick :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidity :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidityUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidity :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidityUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideTokenAmounts :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideValuesUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideTokenAmounts :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideValuesUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenAmount :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeDepositCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyDepositCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeWithdrawCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyWithdrawCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSwapCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySwapCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPositionCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOOpenPositionCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOClosedPositionCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTimestamp :: Maybe Text
   
 instance Arbitrary UNISWAPV3ETHEREUMLiquidityPoolFeeDTO where
   arbitrary = sized genUNISWAPV3ETHEREUMLiquidityPoolFeeDTO
@@ -1750,6 +1861,7 @@ genUNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO n =
     <$> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime :: Maybe DateTime
     <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime :: Maybe DateTime
     <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVid :: Maybe Integer
     <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId :: Maybe Text
     <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHour :: Maybe Int
     <*> arbitraryReducedMaybe n -- uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol :: Maybe Text

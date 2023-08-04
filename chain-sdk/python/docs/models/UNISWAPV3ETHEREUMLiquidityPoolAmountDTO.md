@@ -11,6 +11,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
+**vid** | decimal.Decimal, int,  | decimal.Decimal,  | . | [optional] value must be a 64 bit integer
 **block_range** | None, str,  | NoneClass, str,  |  | [optional] 
 **id** | None, str,  | NoneClass, str,  | Smart contract address of the pool. | [optional] 
 **[input_tokens](#input_tokens)** | list, tuple, None,  | tuple, NoneClass,  | Input tokens of the pool (not input tokens of the event/transaction). E.g. WETH and USDC from a WETH-USDC pool. | [optional] 
