@@ -6,12 +6,6 @@ import enum
 
 
 class TagValues(str, enum.Enum):
-    SUSHISWAP = "Sushiswap"
-    UNISWAP_V2 = "UniswapV2"
-    UNISWAP_V3 = "UniswapV3"
-    CURVE = "Curve"
-    COW = "Cow"
-    DEX = "Dex"
-    METADATA = "Metadata"
     CRYPTOPUNKS = "CRYPTOPUNKS"
     UNISWAP_V3_ETHEREUM = "UNISWAP_V3_ETHEREUM"
+    METADATA = "Metadata"
