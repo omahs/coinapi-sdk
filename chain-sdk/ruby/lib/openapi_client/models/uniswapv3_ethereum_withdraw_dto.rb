@@ -23,7 +23,7 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # (transaction hash)-{ Log index }
+    # (transaction hash)-(log index)
     attr_accessor :id
 
     # Transaction hash of the transaction that emitted this event

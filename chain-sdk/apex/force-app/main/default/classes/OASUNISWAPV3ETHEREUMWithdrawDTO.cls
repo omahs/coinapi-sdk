@@ -33,7 +33,7 @@ public class OASUNISWAPV3ETHEREUMWithdrawDTO implements OAS.MappedProperties {
     public Long blockNumber { get; set; }
 
     /**
-     * (transaction hash)-{ Log index }
+     * (transaction hash)-(log index)
      * @return id
      */
     public String id { get; set; }

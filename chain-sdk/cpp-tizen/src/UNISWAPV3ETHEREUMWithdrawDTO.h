@@ -67,11 +67,11 @@ public:
 	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
-	/*! \brief Get (transaction hash)-{ Log index }
+	/*! \brief Get (transaction hash)-(log index)
 	 */
 	std::string getId();
 
-	/*! \brief Set (transaction hash)-{ Log index }
+	/*! \brief Set (transaction hash)-(log index)
 	 */
 	void setId(std::string  id);
 	/*! \brief Get Transaction hash of the transaction that emitted this event

@@ -26,7 +26,7 @@ API.Client.UNISWAPV3ETHEREUMWithdrawDTO.prototype.recvTime;
 API.Client.UNISWAPV3ETHEREUMWithdrawDTO.prototype.blockNumber;
 
 /**
- * (transaction hash)-{ Log index }
+ * (transaction hash)-(log index)
  * @type {!string}
  * @export
  */

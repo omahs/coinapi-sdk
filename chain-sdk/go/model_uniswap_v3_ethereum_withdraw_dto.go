@@ -25,7 +25,7 @@ type UNISWAPV3ETHEREUMWithdrawDTO struct {
 	RecvTime *time.Time `json:"recv_time,omitempty"`
 	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
-	// (transaction hash)-{ Log index }
+	// (transaction hash)-(log index)
 	Id NullableString `json:"id,omitempty"`
 	// Transaction hash of the transaction that emitted this event
 	Hash NullableString `json:"hash,omitempty"`

@@ -32,7 +32,7 @@ void main() {
       // TODO
     });
 
-    // (transaction hash)-{ Log index }
+    // (transaction hash)-(log index)
     // String id
     test('to test the property `id`', () async {
       // TODO

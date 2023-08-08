@@ -22,7 +22,7 @@ No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
 .PARAMETER Id
-(transaction hash)-{ Log index }
+(transaction hash)-(log index)
 .PARAMETER Hash
 Transaction hash of the transaction that emitted this event
 .PARAMETER Nonce

@@ -222,7 +222,7 @@ UNISWAPV3ETHEREUMWithdrawDTO.prototype['recv_time'] = undefined;
 UNISWAPV3ETHEREUMWithdrawDTO.prototype['block_number'] = undefined;
 
 /**
- * (transaction hash)-{ Log index }
+ * (transaction hash)-(log index)
  * @member {String} id
  */
 UNISWAPV3ETHEREUMWithdrawDTO.prototype['id'] = undefined;

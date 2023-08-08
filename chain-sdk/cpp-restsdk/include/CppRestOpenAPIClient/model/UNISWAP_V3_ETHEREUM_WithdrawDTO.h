@@ -83,7 +83,7 @@ public:
     void setBlockNumber(int64_t value);
 
     /// <summary>
-    /// (transaction hash)-{ Log index }
+    /// (transaction hash)-(log index)
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;

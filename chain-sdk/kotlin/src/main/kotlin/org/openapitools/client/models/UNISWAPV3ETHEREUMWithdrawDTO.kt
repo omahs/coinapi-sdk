@@ -25,7 +25,7 @@ import com.squareup.moshi.JsonClass
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param id (transaction hash)-{ Log index }
+ * @param id (transaction hash)-(log index)
  * @param hash Transaction hash of the transaction that emitted this event
  * @param nonce Nonce of the transaction that emitted this event
  * @param logIndex Event log index. For transactions that don't emit event, create arbitrary index starting from 0
@@ -59,7 +59,7 @@ data class UNISWAPV3ETHEREUMWithdrawDTO (
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
-    /* (transaction hash)-{ Log index } */
+    /* (transaction hash)-(log index) */
     @Json(name = "id")
     val id: kotlin.String? = null,
 

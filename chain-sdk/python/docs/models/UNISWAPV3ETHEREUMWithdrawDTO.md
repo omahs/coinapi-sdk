@@ -11,7 +11,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
-**id** | None, str,  | NoneClass, str,  | (transaction hash)-{ Log index } | [optional] 
+**id** | None, str,  | NoneClass, str,  | (transaction hash)-(log index) | [optional] 
 **hash** | None, str,  | NoneClass, str,  | Transaction hash of the transaction that emitted this event | [optional] 
 **nonce** | None, str,  | NoneClass, str,  | Nonce of the transaction that emitted this event | [optional] 
 **log_index** | decimal.Decimal, int,  | decimal.Decimal,  | Event log index. For transactions that don&#x27;t emit event, create arbitrary index starting from 0 | [optional] value must be a 32 bit integer

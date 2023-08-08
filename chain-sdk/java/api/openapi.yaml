@@ -4278,7 +4278,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "(transaction hash)-{ Log index }"
+          description: (transaction hash)-(log index)
           nullable: true
           type: string
         hash:

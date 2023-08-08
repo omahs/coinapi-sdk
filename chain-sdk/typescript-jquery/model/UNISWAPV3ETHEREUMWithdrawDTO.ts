@@ -26,7 +26,7 @@ export interface UNISWAPV3ETHEREUMWithdrawDTO {
     block_number?: number;
 
     /**
-     * (transaction hash)-{ Log index }
+     * (transaction hash)-(log index)
      */
     id?: string;
 

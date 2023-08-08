@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | **char \*** |  | [optional] 
 **recv_time** | **char \*** |  | [optional] 
 **block_number** | **long** | Number of block in which entity was recorded. | [optional] 
-**id** | **char \*** | (transaction hash)-{ Log index } | [optional] 
+**id** | **char \*** | (transaction hash)-(log index) | [optional] 
 **hash** | **char \*** | Transaction hash of the transaction that emitted this event | [optional] 
 **nonce** | **char \*** | Nonce of the transaction that emitted this event | [optional] 
 **log_index** | **int** | Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0 | [optional] 

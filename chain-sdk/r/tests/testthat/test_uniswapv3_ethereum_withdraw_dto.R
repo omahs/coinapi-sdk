@@ -29,7 +29,7 @@ test_that("block_number", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # (transaction hash)-{ Log index }
+  # (transaction hash)-(log index)
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")

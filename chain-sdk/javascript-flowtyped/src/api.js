@@ -3593,7 +3593,7 @@ export type UNISWAPV3ETHEREUMWithdrawDTO = {
      */
     block_number?: number;
     /**
-     * (transaction hash)-{ Log index }
+     * (transaction hash)-(log index)
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMWithdrawDTO
      */

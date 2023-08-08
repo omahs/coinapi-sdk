@@ -3035,7 +3035,7 @@ data UNISWAPV3ETHEREUMWithdrawDTO = UNISWAPV3ETHEREUMWithdrawDTO
   { uNISWAPV3ETHEREUMWithdrawDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , uNISWAPV3ETHEREUMWithdrawDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , uNISWAPV3ETHEREUMWithdrawDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uNISWAPV3ETHEREUMWithdrawDTOId :: !(Maybe Text) -- ^ "id" - (transaction hash)-{ Log index }
+  , uNISWAPV3ETHEREUMWithdrawDTOId :: !(Maybe Text) -- ^ "id" - (transaction hash)-(log index)
   , uNISWAPV3ETHEREUMWithdrawDTOHash :: !(Maybe Text) -- ^ "hash" - Transaction hash of the transaction that emitted this event
   , uNISWAPV3ETHEREUMWithdrawDTONonce :: !(Maybe Text) -- ^ "nonce" - Nonce of the transaction that emitted this event
   , uNISWAPV3ETHEREUMWithdrawDTOLogIndex :: !(Maybe Int) -- ^ "log_index" - Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0

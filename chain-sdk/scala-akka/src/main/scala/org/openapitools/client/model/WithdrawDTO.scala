@@ -19,7 +19,7 @@ case class WithdrawDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* (transaction hash)-{ Log index } */
+  /* (transaction hash)-(log index) */
   id: Option[String] = None,
   /* Transaction hash of the transaction that emitted this event */
   hash: Option[String] = None,

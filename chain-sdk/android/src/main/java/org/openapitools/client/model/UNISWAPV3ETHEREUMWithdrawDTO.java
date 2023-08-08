@@ -100,9 +100,9 @@ public class UNISWAPV3ETHEREUMWithdrawDTO {
   }
 
   /**
-   * (transaction hash)-{ Log index }
+   * (transaction hash)-(log index)
    **/
-  @ApiModelProperty(value = "(transaction hash)-{ Log index }")
+  @ApiModelProperty(value = "(transaction hash)-(log index)")
   public String getId() {
     return id;
   }

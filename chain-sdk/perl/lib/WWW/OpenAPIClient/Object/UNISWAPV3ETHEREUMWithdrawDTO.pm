@@ -243,7 +243,7 @@ __PACKAGE__->method_documentation({
     'id' => {
         datatype => 'string',
         base_name => 'id',
-        description => '(transaction hash)-{ Log index }',
+        description => '(transaction hash)-(log index)',
         format => '',
         read_only => '',
             },

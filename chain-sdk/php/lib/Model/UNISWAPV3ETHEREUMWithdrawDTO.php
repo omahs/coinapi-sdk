@@ -532,7 +532,7 @@ class UNISWAPV3ETHEREUMWithdrawDTO implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets id
      *
-     * @param string|null $id (transaction hash)-{ Log index }
+     * @param string|null $id (transaction hash)-(log index)
      *
      * @return self
      */

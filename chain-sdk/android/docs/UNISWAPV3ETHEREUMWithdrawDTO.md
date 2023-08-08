@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **entryTime** | [**Date**](Date.md) |  |  [optional]
 **recvTime** | [**Date**](Date.md) |  |  [optional]
 **blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional]
-**id** | **String** | (transaction hash)-{ Log index } |  [optional]
+**id** | **String** | (transaction hash)-(log index) |  [optional]
 **hash** | **String** | Transaction hash of the transaction that emitted this event |  [optional]
 **nonce** | **String** | Nonce of the transaction that emitted this event |  [optional]
 **logIndex** | **Integer** | Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0 |  [optional]

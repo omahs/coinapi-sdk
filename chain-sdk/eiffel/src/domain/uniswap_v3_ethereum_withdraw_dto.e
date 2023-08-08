@@ -26,7 +26,7 @@ feature --Access
  	block_number: INTEGER_64
     	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- (transaction hash)-{ Log index }
+      -- (transaction hash)-(log index)
     hash: detachable STRING_32
       -- Transaction hash of the transaction that emitted this event
     nonce: detachable STRING_32

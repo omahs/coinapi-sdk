@@ -15,7 +15,7 @@ part 'uniswapv3_ethereum_withdraw_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [id] - (transaction hash)-{ Log index }
+/// * [id] - (transaction hash)-(log index)
 /// * [hash] - Transaction hash of the transaction that emitted this event
 /// * [nonce] - Nonce of the transaction that emitted this event
 /// * [logIndex] - Event log index. For transactions that don't emit event, create arbitrary index starting from 0
@@ -46,7 +46,7 @@ abstract class UNISWAPV3ETHEREUMWithdrawDTO implements Built<UNISWAPV3ETHEREUMWi
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// (transaction hash)-{ Log index }
+  /// (transaction hash)-(log index)
   @BuiltValueField(wireName: r'id')
   String? get id;
 

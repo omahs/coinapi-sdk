@@ -23,7 +23,7 @@ export class UNISWAPV3ETHEREUMWithdrawDTO {
     */
     'blockNumber'?: number;
     /**
-    * (transaction hash)-{ Log index }
+    * (transaction hash)-(log index)
     */
     'id'?: string | null;
     /**

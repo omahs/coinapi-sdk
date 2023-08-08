@@ -62,7 +62,7 @@ class UNISWAPV3ETHEREUMWithdrawDTO {
   ///
   int? blockNumber;
 
-  /// (transaction hash)-{ Log index }
+  /// (transaction hash)-(log index)
   String? id;
 
   /// Transaction hash of the transaction that emitted this event

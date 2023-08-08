@@ -36,7 +36,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
-        /// <param name="id">(transaction hash)-{ Log index }.</param>
+        /// <param name="id">(transaction hash)-(log index).</param>
         /// <param name="hash">Transaction hash of the transaction that emitted this event.</param>
         /// <param name="nonce">Nonce of the transaction that emitted this event.</param>
         /// <param name="logIndex">Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0.</param>
@@ -119,9 +119,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// (transaction hash)-{ Log index }
+        /// (transaction hash)-(log index)
         /// </summary>
-        /// <value>(transaction hash)-{ Log index }</value>
+        /// <value>(transaction hash)-(log index)</value>
         [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
 

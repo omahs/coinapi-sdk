@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
 **BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | Pointer to **NullableString** | (transaction hash)-{ Log index } | [optional] 
+**Id** | Pointer to **NullableString** | (transaction hash)-(log index) | [optional] 
 **Hash** | Pointer to **NullableString** | Transaction hash of the transaction that emitted this event | [optional] 
 **Nonce** | Pointer to **NullableString** | Nonce of the transaction that emitted this event | [optional] 
 **LogIndex** | Pointer to **int32** | Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0 | [optional] 

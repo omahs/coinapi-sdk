@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **entryTime** | [**DateTime**](DateTime.md) |  | [optional] 
 **recvTime** | [**DateTime**](DateTime.md) |  | [optional] 
 **blockNumber** | **int** | Number of block in which entity was recorded. | [optional] 
-**id** | **String** | (transaction hash)-{ Log index } | [optional] 
+**id** | **String** | (transaction hash)-(log index) | [optional] 
 **hash** | **String** | Transaction hash of the transaction that emitted this event | [optional] 
 **nonce** | **String** | Nonce of the transaction that emitted this event | [optional] 
 **logIndex** | **int** | Event log index. For transactions that don't emit event, create arbitrary index starting from 0 | [optional] 

@@ -10,7 +10,7 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field id (transaction hash)-{ Log index } character [optional]
+#' @field id (transaction hash)-(log index) character [optional]
 #' @field hash Transaction hash of the transaction that emitted this event character [optional]
 #' @field nonce Nonce of the transaction that emitted this event character [optional]
 #' @field log_index Event log index. For transactions that don't emit event, create arbitrary index starting from 0 integer [optional]
@@ -65,7 +65,7 @@ UNISWAPV3ETHEREUMWithdrawDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param id (transaction hash)-{ Log index }
+    #' @param id (transaction hash)-(log index)
     #' @param hash Transaction hash of the transaction that emitted this event
     #' @param nonce Nonce of the transaction that emitted this event
     #' @param log_index Event log index. For transactions that don't emit event, create arbitrary index starting from 0

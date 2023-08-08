@@ -15,7 +15,7 @@ class UNISWAPV3ETHEREUMWithdrawDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /* (transaction hash)-{ Log index } */
+    /* (transaction hash)-(log index) */
     String id
     /* Transaction hash of the transaction that emitted this event */
     String hash
