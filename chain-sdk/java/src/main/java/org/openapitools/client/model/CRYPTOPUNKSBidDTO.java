@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * CRYPTOPUNKSBidDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-08T12:51:03.637217Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-08T14:08:59.731775Z[Etc/UTC]")
 public class CRYPTOPUNKSBidDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
