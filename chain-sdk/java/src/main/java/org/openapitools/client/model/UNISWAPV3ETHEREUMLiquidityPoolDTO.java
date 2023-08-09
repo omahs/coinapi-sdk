@@ -54,7 +54,7 @@ import org.openapitools.client.JSON;
 /**
  * All Uniswap V3 pools.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-08T15:16:38.462419Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-09T07:36:44.300898Z[Etc/UTC]")
 public class UNISWAPV3ETHEREUMLiquidityPoolDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
