@@ -54,7 +54,7 @@ import org.openapitools.client.JSON;
 /**
  * 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-09T07:36:44.300898Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-09T08:31:06.196129Z[Etc/UTC]")
 public class UNISWAPV3ETHEREUMTokenWhiteListDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
