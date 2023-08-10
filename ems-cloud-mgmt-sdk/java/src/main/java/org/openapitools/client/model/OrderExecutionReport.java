@@ -59,7 +59,7 @@ import org.openapitools.client.JSON;
 /**
  * The order execution report object.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-09T08:31:03.305708Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-10T12:32:39.607501Z[Etc/UTC]")
 public class OrderExecutionReport {
   public static final String SERIALIZED_NAME_EXCHANGE_ID = "exchange_id";
   @SerializedName(SERIALIZED_NAME_EXCHANGE_ID)

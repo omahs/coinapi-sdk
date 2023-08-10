@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Fills
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-09T08:31:03.305708Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-10T12:32:39.607501Z[Etc/UTC]")
 public class Fills {
   public static final String SERIALIZED_NAME_TIME = "time";
   @SerializedName(SERIALIZED_NAME_TIME)
