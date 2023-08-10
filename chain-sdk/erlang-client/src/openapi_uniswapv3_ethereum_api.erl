@@ -38,7 +38,7 @@ u_niswapv3_ethereum_accounts_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/accounts/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/accounts/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -59,7 +59,7 @@ u_niswapv3_ethereum_active_accounts_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/activeAccounts/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/activeAccounts/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -80,7 +80,7 @@ u_niswapv3_ethereum_deposits_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/deposits/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/deposits/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -101,7 +101,7 @@ u_niswapv3_ethereum_dex_amm_protocols_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -122,7 +122,7 @@ u_niswapv3_ethereum_financials_daily_snapshots_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -143,7 +143,7 @@ u_niswapv3_ethereum_liquidity_pool_amounts_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current"],
     QS = lists:flatten([])++openapi_utils:optional_params(['id'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -164,7 +164,7 @@ u_niswapv3_ethereum_liquidity_pool_daily_snapshots_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current"],
     QS = lists:flatten([])++openapi_utils:optional_params(['pool'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -185,7 +185,7 @@ u_niswapv3_ethereum_liquidity_pool_fees_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -206,7 +206,7 @@ u_niswapv3_ethereum_liquidity_pool_hourly_snapshots_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current"],
     QS = lists:flatten([])++openapi_utils:optional_params(['pool'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -227,7 +227,7 @@ u_niswapv3_ethereum_liquidity_pools_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/liquidityPools/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/liquidityPools/current"],
     QS = lists:flatten([])++openapi_utils:optional_params(['id'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -248,7 +248,7 @@ u_niswapv3_ethereum_position_snapshots_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/positionSnapshots/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -269,7 +269,7 @@ u_niswapv3_ethereum_positions_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/positions/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/positions/current"],
     QS = lists:flatten([])++openapi_utils:optional_params(['pool'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -290,7 +290,7 @@ u_niswapv3_ethereum_reward_tokens_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/rewardTokens/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/rewardTokens/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -311,7 +311,7 @@ u_niswapv3_ethereum_swaps_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/swaps/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/swaps/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -332,7 +332,7 @@ u_niswapv3_ethereum_tick_daily_snapshots_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current"],
     QS = lists:flatten([])++openapi_utils:optional_params(['pool'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -353,7 +353,7 @@ u_niswapv3_ethereum_tick_hourly_snapshots_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current"],
     QS = lists:flatten([])++openapi_utils:optional_params(['pool'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -374,7 +374,7 @@ u_niswapv3_ethereum_ticks_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/ticks/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/ticks/current"],
     QS = lists:flatten([])++openapi_utils:optional_params(['pool'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -395,7 +395,7 @@ u_niswapv3_ethereum_token_white_list_symbols_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -416,7 +416,7 @@ u_niswapv3_ethereum_token_white_lists_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -437,7 +437,7 @@ u_niswapv3_ethereum_tokens_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/tokens/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/tokens/current"],
     QS = lists:flatten([])++openapi_utils:optional_params(['id'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -458,7 +458,7 @@ u_niswapv3_ethereum_usage_metrics_daily_snapshots_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -479,7 +479,7 @@ u_niswapv3_ethereum_usage_metrics_hourly_snapshots_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -500,7 +500,7 @@ u_niswapv3_ethereum_withdraws_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/uniswap_v3_ethereum/withdraws/current"],
+    Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/withdraws/current"],
     QS = [],
     Headers = [],
     Body1 = [],

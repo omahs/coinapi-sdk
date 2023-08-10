@@ -41,7 +41,7 @@ pplx::task<std::vector<std::shared_ptr<CRYPTOPUNKS_BidDTO>>> CRYPTOPUNKSApi::cRY
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/cryptopunks/bids/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/cryptopunks/bids/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -52,6 +52,7 @@ pplx::task<std::vector<std::shared_ptr<CRYPTOPUNKS_BidDTO>>> CRYPTOPUNKSApi::cRY
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -169,7 +170,7 @@ pplx::task<std::vector<std::shared_ptr<CRYPTOPUNKS_CollectionDailySnapshotDTO>>>
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/cryptopunks/collectionDailySnapshots/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/cryptopunks/collectionDailySnapshots/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -180,6 +181,7 @@ pplx::task<std::vector<std::shared_ptr<CRYPTOPUNKS_CollectionDailySnapshotDTO>>>
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -297,7 +299,7 @@ pplx::task<std::vector<std::shared_ptr<CRYPTOPUNKS_CollectionDTO>>> CRYPTOPUNKSA
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/cryptopunks/collections/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/cryptopunks/collections/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -308,6 +310,7 @@ pplx::task<std::vector<std::shared_ptr<CRYPTOPUNKS_CollectionDTO>>> CRYPTOPUNKSA
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -425,7 +428,7 @@ pplx::task<std::vector<std::shared_ptr<CRYPTOPUNKS_DataSourcesDTO>>> CRYPTOPUNKS
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/cryptopunks/dataSources/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/cryptopunks/dataSources/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -436,6 +439,7 @@ pplx::task<std::vector<std::shared_ptr<CRYPTOPUNKS_DataSourcesDTO>>> CRYPTOPUNKS
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -553,7 +557,7 @@ pplx::task<std::vector<std::shared_ptr<CRYPTOPUNKS_ItemDTO>>> CRYPTOPUNKSApi::cR
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/cryptopunks/items/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/cryptopunks/items/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -564,6 +568,7 @@ pplx::task<std::vector<std::shared_ptr<CRYPTOPUNKS_ItemDTO>>> CRYPTOPUNKSApi::cR
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -681,7 +686,7 @@ pplx::task<std::vector<std::shared_ptr<CRYPTOPUNKS_MarketPlaceDTO>>> CRYPTOPUNKS
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/cryptopunks/marketPlaces/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/cryptopunks/marketPlaces/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -692,6 +697,7 @@ pplx::task<std::vector<std::shared_ptr<CRYPTOPUNKS_MarketPlaceDTO>>> CRYPTOPUNKS
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -809,7 +815,7 @@ pplx::task<std::vector<std::shared_ptr<CRYPTOPUNKS_MarketplaceDailySnapshotDTO>>
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/cryptopunks/marketplaceDailySnapshots/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/cryptopunks/marketplaceDailySnapshots/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -820,6 +826,7 @@ pplx::task<std::vector<std::shared_ptr<CRYPTOPUNKS_MarketplaceDailySnapshotDTO>>
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -937,7 +944,7 @@ pplx::task<std::vector<std::shared_ptr<CRYPTOPUNKS_TradeDTO>>> CRYPTOPUNKSApi::c
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/cryptopunks/trades/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/cryptopunks/trades/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -948,6 +955,7 @@ pplx::task<std::vector<std::shared_ptr<CRYPTOPUNKS_TradeDTO>>> CRYPTOPUNKSApi::c
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1065,7 +1073,7 @@ pplx::task<std::vector<std::shared_ptr<CRYPTOPUNKS_UserDTO>>> CRYPTOPUNKSApi::cR
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/cryptopunks/users/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/cryptopunks/users/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1076,6 +1084,7 @@ pplx::task<std::vector<std::shared_ptr<CRYPTOPUNKS_UserDTO>>> CRYPTOPUNKSApi::cR
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 

@@ -4,15 +4,15 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**c_ryptopunks_bids__current**](CRYPTOPUNKSApi.md#c_ryptopunks_bids__current) | **GET** /dapps/cryptopunks/bids/current | Bids (current) |
-| [**c_ryptopunks_collection_daily_snapshots__current**](CRYPTOPUNKSApi.md#c_ryptopunks_collection_daily_snapshots__current) | **GET** /dapps/cryptopunks/collectionDailySnapshots/current | CollectionDailySnapshots (current) |
-| [**c_ryptopunks_collections__current**](CRYPTOPUNKSApi.md#c_ryptopunks_collections__current) | **GET** /dapps/cryptopunks/collections/current | Collections (current) |
-| [**c_ryptopunks_data_sources__current**](CRYPTOPUNKSApi.md#c_ryptopunks_data_sources__current) | **GET** /dapps/cryptopunks/dataSources/current | DataSources (current) |
-| [**c_ryptopunks_items__current**](CRYPTOPUNKSApi.md#c_ryptopunks_items__current) | **GET** /dapps/cryptopunks/items/current | Items (current) |
-| [**c_ryptopunks_market_places__current**](CRYPTOPUNKSApi.md#c_ryptopunks_market_places__current) | **GET** /dapps/cryptopunks/marketPlaces/current | MarketPlaces (current) |
-| [**c_ryptopunks_marketplace_daily_snapshots__current**](CRYPTOPUNKSApi.md#c_ryptopunks_marketplace_daily_snapshots__current) | **GET** /dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current) |
-| [**c_ryptopunks_trades__current**](CRYPTOPUNKSApi.md#c_ryptopunks_trades__current) | **GET** /dapps/cryptopunks/trades/current | Trades (current) |
-| [**c_ryptopunks_users__current**](CRYPTOPUNKSApi.md#c_ryptopunks_users__current) | **GET** /dapps/cryptopunks/users/current | Users (current) |
+| [**c_ryptopunks_bids__current**](CRYPTOPUNKSApi.md#c_ryptopunks_bids__current) | **GET** /v1/dapps/cryptopunks/bids/current | Bids (current) |
+| [**c_ryptopunks_collection_daily_snapshots__current**](CRYPTOPUNKSApi.md#c_ryptopunks_collection_daily_snapshots__current) | **GET** /v1/dapps/cryptopunks/collectionDailySnapshots/current | CollectionDailySnapshots (current) |
+| [**c_ryptopunks_collections__current**](CRYPTOPUNKSApi.md#c_ryptopunks_collections__current) | **GET** /v1/dapps/cryptopunks/collections/current | Collections (current) |
+| [**c_ryptopunks_data_sources__current**](CRYPTOPUNKSApi.md#c_ryptopunks_data_sources__current) | **GET** /v1/dapps/cryptopunks/dataSources/current | DataSources (current) |
+| [**c_ryptopunks_items__current**](CRYPTOPUNKSApi.md#c_ryptopunks_items__current) | **GET** /v1/dapps/cryptopunks/items/current | Items (current) |
+| [**c_ryptopunks_market_places__current**](CRYPTOPUNKSApi.md#c_ryptopunks_market_places__current) | **GET** /v1/dapps/cryptopunks/marketPlaces/current | MarketPlaces (current) |
+| [**c_ryptopunks_marketplace_daily_snapshots__current**](CRYPTOPUNKSApi.md#c_ryptopunks_marketplace_daily_snapshots__current) | **GET** /v1/dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current) |
+| [**c_ryptopunks_trades__current**](CRYPTOPUNKSApi.md#c_ryptopunks_trades__current) | **GET** /v1/dapps/cryptopunks/trades/current | Trades (current) |
+| [**c_ryptopunks_users__current**](CRYPTOPUNKSApi.md#c_ryptopunks_users__current) | **GET** /v1/dapps/cryptopunks/users/current | Users (current) |
 
 
 ## c_ryptopunks_bids__current
@@ -73,7 +73,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 
 ## c_ryptopunks_collection_daily_snapshots__current
@@ -134,7 +134,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 
 ## c_ryptopunks_collections__current
@@ -195,7 +195,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 
 ## c_ryptopunks_data_sources__current
@@ -256,7 +256,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 
 ## c_ryptopunks_items__current
@@ -317,7 +317,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 
 ## c_ryptopunks_market_places__current
@@ -378,7 +378,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 
 ## c_ryptopunks_marketplace_daily_snapshots__current
@@ -439,7 +439,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 
 ## c_ryptopunks_trades__current
@@ -500,7 +500,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 
 ## c_ryptopunks_users__current
@@ -561,5 +561,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 

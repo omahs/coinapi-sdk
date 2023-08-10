@@ -141,10 +141,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMAccountsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMAccountDTO>>;
-    public uNISWAPV3ETHEREUMAccountsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMAccountDTO>>>;
-    public uNISWAPV3ETHEREUMAccountsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMAccountDTO>>>;
-    public uNISWAPV3ETHEREUMAccountsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMAccountsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMAccountDTO>>;
+    public uNISWAPV3ETHEREUMAccountsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMAccountDTO>>>;
+    public uNISWAPV3ETHEREUMAccountsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMAccountDTO>>>;
+    public uNISWAPV3ETHEREUMAccountsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -154,7 +154,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -179,7 +180,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/accounts/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/accounts/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMAccountDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -198,10 +199,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMActiveAccountsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMActiveAccountDTO>>;
-    public uNISWAPV3ETHEREUMActiveAccountsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMActiveAccountDTO>>>;
-    public uNISWAPV3ETHEREUMActiveAccountsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMActiveAccountDTO>>>;
-    public uNISWAPV3ETHEREUMActiveAccountsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMActiveAccountsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMActiveAccountDTO>>;
+    public uNISWAPV3ETHEREUMActiveAccountsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMActiveAccountDTO>>>;
+    public uNISWAPV3ETHEREUMActiveAccountsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMActiveAccountDTO>>>;
+    public uNISWAPV3ETHEREUMActiveAccountsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -211,7 +212,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -236,7 +238,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/activeAccounts/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/activeAccounts/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMActiveAccountDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -255,10 +257,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMDepositsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMDepositDTO>>;
-    public uNISWAPV3ETHEREUMDepositsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMDepositDTO>>>;
-    public uNISWAPV3ETHEREUMDepositsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMDepositDTO>>>;
-    public uNISWAPV3ETHEREUMDepositsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMDepositsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMDepositDTO>>;
+    public uNISWAPV3ETHEREUMDepositsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMDepositDTO>>>;
+    public uNISWAPV3ETHEREUMDepositsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMDepositDTO>>>;
+    public uNISWAPV3ETHEREUMDepositsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -268,7 +270,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -293,7 +296,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/deposits/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/deposits/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMDepositDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -312,10 +315,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMDexAmmProtocolsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>;
-    public uNISWAPV3ETHEREUMDexAmmProtocolsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>>;
-    public uNISWAPV3ETHEREUMDexAmmProtocolsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>>;
-    public uNISWAPV3ETHEREUMDexAmmProtocolsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMDexAmmProtocolsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>;
+    public uNISWAPV3ETHEREUMDexAmmProtocolsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>>;
+    public uNISWAPV3ETHEREUMDexAmmProtocolsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>>;
+    public uNISWAPV3ETHEREUMDexAmmProtocolsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -325,7 +328,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -350,7 +354,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/dexAmmProtocols/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -369,10 +373,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>;
-    public uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>;
+    public uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -382,7 +386,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -407,7 +412,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -427,10 +432,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>;
-    public uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>>;
-    public uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>>;
-    public uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>;
+    public uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>>;
+    public uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>>;
+    public uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (id !== undefined && id !== null) {
@@ -446,7 +451,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -471,7 +477,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -492,10 +498,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>;
-    public uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>;
+    public uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (pool !== undefined && pool !== null) {
@@ -511,7 +517,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -536,7 +543,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -556,10 +563,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>;
-    public uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>>;
-    public uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>>;
-    public uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>;
+    public uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>>;
+    public uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>>;
+    public uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -569,7 +576,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -594,7 +602,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/liquidityPoolFees/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -614,10 +622,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>;
-    public uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>;
+    public uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (pool !== undefined && pool !== null) {
@@ -633,7 +641,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -658,7 +667,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -679,10 +688,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>>;
-    public uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>>>;
-    public uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>>>;
-    public uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>>;
+    public uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>>>;
+    public uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>>>;
+    public uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (id !== undefined && id !== null) {
@@ -698,7 +707,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -723,7 +733,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/liquidityPools/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/liquidityPools/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -743,10 +753,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMPositionSnapshotsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMPositionSnapshotDTO>>;
-    public uNISWAPV3ETHEREUMPositionSnapshotsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMPositionSnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMPositionSnapshotsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMPositionSnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMPositionSnapshotsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMPositionSnapshotsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMPositionSnapshotDTO>>;
+    public uNISWAPV3ETHEREUMPositionSnapshotsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMPositionSnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMPositionSnapshotsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMPositionSnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMPositionSnapshotsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -756,7 +766,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -781,7 +792,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/positionSnapshots/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMPositionSnapshotDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -801,10 +812,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMPositionsCurrent(pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMPositionDTO>>;
-    public uNISWAPV3ETHEREUMPositionsCurrent(pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMPositionDTO>>>;
-    public uNISWAPV3ETHEREUMPositionsCurrent(pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMPositionDTO>>>;
-    public uNISWAPV3ETHEREUMPositionsCurrent(pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMPositionsCurrent(pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMPositionDTO>>;
+    public uNISWAPV3ETHEREUMPositionsCurrent(pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMPositionDTO>>>;
+    public uNISWAPV3ETHEREUMPositionsCurrent(pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMPositionDTO>>>;
+    public uNISWAPV3ETHEREUMPositionsCurrent(pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (pool !== undefined && pool !== null) {
@@ -820,7 +831,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -845,7 +857,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/positions/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/positions/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMPositionDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -865,10 +877,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMRewardTokensCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMRewardTokenDTO>>;
-    public uNISWAPV3ETHEREUMRewardTokensCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMRewardTokenDTO>>>;
-    public uNISWAPV3ETHEREUMRewardTokensCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMRewardTokenDTO>>>;
-    public uNISWAPV3ETHEREUMRewardTokensCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMRewardTokensCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMRewardTokenDTO>>;
+    public uNISWAPV3ETHEREUMRewardTokensCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMRewardTokenDTO>>>;
+    public uNISWAPV3ETHEREUMRewardTokensCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMRewardTokenDTO>>>;
+    public uNISWAPV3ETHEREUMRewardTokensCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -878,7 +890,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -903,7 +916,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/rewardTokens/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/rewardTokens/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMRewardTokenDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -922,10 +935,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMSwapsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMSwapDTO>>;
-    public uNISWAPV3ETHEREUMSwapsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMSwapDTO>>>;
-    public uNISWAPV3ETHEREUMSwapsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMSwapDTO>>>;
-    public uNISWAPV3ETHEREUMSwapsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMSwapsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMSwapDTO>>;
+    public uNISWAPV3ETHEREUMSwapsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMSwapDTO>>>;
+    public uNISWAPV3ETHEREUMSwapsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMSwapDTO>>>;
+    public uNISWAPV3ETHEREUMSwapsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -935,7 +948,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -960,7 +974,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/swaps/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/swaps/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMSwapDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -980,10 +994,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>;
-    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>;
+    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (pool !== undefined && pool !== null) {
@@ -999,7 +1013,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -1024,7 +1039,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/tickDailySnapshots/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -1045,10 +1060,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>;
-    public uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>;
+    public uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (pool !== undefined && pool !== null) {
@@ -1064,7 +1079,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -1089,7 +1105,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -1110,10 +1126,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMTicksCurrent(pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMTickDTO>>;
-    public uNISWAPV3ETHEREUMTicksCurrent(pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMTickDTO>>>;
-    public uNISWAPV3ETHEREUMTicksCurrent(pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMTickDTO>>>;
-    public uNISWAPV3ETHEREUMTicksCurrent(pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMTicksCurrent(pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMTickDTO>>;
+    public uNISWAPV3ETHEREUMTicksCurrent(pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMTickDTO>>>;
+    public uNISWAPV3ETHEREUMTicksCurrent(pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMTickDTO>>>;
+    public uNISWAPV3ETHEREUMTicksCurrent(pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (pool !== undefined && pool !== null) {
@@ -1129,7 +1145,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -1154,7 +1171,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/ticks/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/ticks/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMTickDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -1174,10 +1191,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>;
-    public uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>>;
-    public uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>>;
-    public uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>;
+    public uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>>;
+    public uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>>;
+    public uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -1187,7 +1204,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -1212,7 +1230,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -1231,10 +1249,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMTokenWhiteListsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMTokenWhiteListDTO>>;
-    public uNISWAPV3ETHEREUMTokenWhiteListsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMTokenWhiteListDTO>>>;
-    public uNISWAPV3ETHEREUMTokenWhiteListsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMTokenWhiteListDTO>>>;
-    public uNISWAPV3ETHEREUMTokenWhiteListsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMTokenWhiteListsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMTokenWhiteListDTO>>;
+    public uNISWAPV3ETHEREUMTokenWhiteListsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMTokenWhiteListDTO>>>;
+    public uNISWAPV3ETHEREUMTokenWhiteListsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMTokenWhiteListDTO>>>;
+    public uNISWAPV3ETHEREUMTokenWhiteListsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -1244,7 +1262,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -1269,7 +1288,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/tokenWhiteLists/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMTokenWhiteListDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -1289,10 +1308,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMTokensCurrent(id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMTokenDTO>>;
-    public uNISWAPV3ETHEREUMTokensCurrent(id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMTokenDTO>>>;
-    public uNISWAPV3ETHEREUMTokensCurrent(id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMTokenDTO>>>;
-    public uNISWAPV3ETHEREUMTokensCurrent(id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMTokensCurrent(id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMTokenDTO>>;
+    public uNISWAPV3ETHEREUMTokensCurrent(id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMTokenDTO>>>;
+    public uNISWAPV3ETHEREUMTokensCurrent(id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMTokenDTO>>>;
+    public uNISWAPV3ETHEREUMTokensCurrent(id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (id !== undefined && id !== null) {
@@ -1308,7 +1327,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -1333,7 +1353,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/tokens/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/tokens/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMTokenDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -1353,10 +1373,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>;
-    public uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>;
+    public uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -1366,7 +1386,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -1391,7 +1412,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -1410,10 +1431,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>;
-    public uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>;
+    public uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -1423,7 +1444,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -1448,7 +1470,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -1467,10 +1489,10 @@ export class UNISWAPV3ETHEREUMService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMWithdrawsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMWithdrawDTO>>;
-    public uNISWAPV3ETHEREUMWithdrawsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMWithdrawDTO>>>;
-    public uNISWAPV3ETHEREUMWithdrawsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMWithdrawDTO>>>;
-    public uNISWAPV3ETHEREUMWithdrawsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uNISWAPV3ETHEREUMWithdrawsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMWithdrawDTO>>;
+    public uNISWAPV3ETHEREUMWithdrawsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMWithdrawDTO>>>;
+    public uNISWAPV3ETHEREUMWithdrawsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMWithdrawDTO>>>;
+    public uNISWAPV3ETHEREUMWithdrawsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -1480,7 +1502,8 @@ export class UNISWAPV3ETHEREUMService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -1505,7 +1528,7 @@ export class UNISWAPV3ETHEREUMService {
             }
         }
 
-        let localVarPath = `/dapps/uniswap_v3_ethereum/withdraws/current`;
+        let localVarPath = `/v1/dapps/uniswap-v3-ethereum/withdraws/current`;
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMWithdrawDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,

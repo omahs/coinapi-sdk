@@ -37,7 +37,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_accounts__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/accounts/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/accounts/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -45,7 +45,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -94,7 +94,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_active_accounts__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/activeAccounts/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/activeAccounts/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -102,7 +102,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -151,7 +151,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_deposits__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/deposits/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/deposits/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -159,7 +159,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -208,7 +208,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_dex_amm_protocols__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/dexAmmProtocols/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -216,7 +216,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -265,7 +265,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_financials_daily_snapshots__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -273,7 +273,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -324,7 +324,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_liquidity_pool_amounts__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -333,7 +333,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -384,7 +384,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -393,7 +393,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -442,7 +442,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_liquidity_pool_fees__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/liquidityPoolFees/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -450,7 +450,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -501,7 +501,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -510,7 +510,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -561,7 +561,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_liquidity_pools__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/liquidityPools/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/liquidityPools/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -570,7 +570,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -619,7 +619,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_position_snapshots__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/positionSnapshots/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -627,7 +627,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -678,7 +678,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_positions__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/positions/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/positions/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -687,7 +687,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -736,7 +736,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_reward_tokens__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/rewardTokens/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/rewardTokens/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -744,7 +744,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -793,7 +793,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_swaps__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/swaps/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/swaps/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -801,7 +801,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -852,7 +852,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_tick_daily_snapshots__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/tickDailySnapshots/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -861,7 +861,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -912,7 +912,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_tick_hourly_snapshots__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -921,7 +921,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -972,7 +972,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_ticks__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/ticks/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/ticks/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -981,7 +981,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -1030,7 +1030,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_token_white_list_symbols__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1038,7 +1038,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -1087,7 +1087,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_token_white_lists__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/tokenWhiteLists/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1095,7 +1095,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -1146,7 +1146,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_tokens__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/tokens/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/tokens/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1155,7 +1155,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -1204,7 +1204,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_usage_metrics_daily_snapshots__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1212,7 +1212,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -1261,7 +1261,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_usage_metrics_hourly_snapshots__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1269,7 +1269,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -1318,7 +1318,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: UNISWAPV3ETHEREUMApi.u_niswapv3_ethereum_withdraws__current ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswap_v3_ethereum/withdraws/current'
+      local_var_path = '/v1/dapps/uniswap-v3-ethereum/withdraws/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1326,7 +1326,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}

@@ -27,15 +27,16 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMAccountsCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/accounts/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/accounts/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/accounts/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/accounts/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -102,15 +103,16 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMActiveAccountsCurrent(apiClient_t *apiClie
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/activeAccounts/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/activeAccounts/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/activeAccounts/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/activeAccounts/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -177,15 +179,16 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMDepositsCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/deposits/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/deposits/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/deposits/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/deposits/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -252,15 +255,16 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMDexAmmProtocolsCurrent(apiClient_t *apiCli
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/dexAmmProtocols/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -327,15 +331,16 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(apiClient_
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -402,9 +407,9 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(apiClient_t *a
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current");
 
 
 
@@ -423,6 +428,7 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(apiClient_t *a
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -501,9 +507,9 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(apiClie
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current");
 
 
 
@@ -522,6 +528,7 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(apiClie
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -600,15 +607,16 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent(apiClient_t *apiC
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/liquidityPoolFees/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -675,9 +683,9 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(apiCli
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current");
 
 
 
@@ -696,6 +704,7 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(apiCli
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -774,9 +783,9 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMLiquidityPoolsCurrent(apiClient_t *apiClie
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/liquidityPools/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/liquidityPools/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/liquidityPools/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/liquidityPools/current");
 
 
 
@@ -795,6 +804,7 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMLiquidityPoolsCurrent(apiClient_t *apiClie
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -873,15 +883,16 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMPositionSnapshotsCurrent(apiClient_t *apiC
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/positionSnapshots/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/positionSnapshots/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -948,9 +959,9 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMPositionsCurrent(apiClient_t *apiClient, c
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/positions/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/positions/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/positions/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/positions/current");
 
 
 
@@ -969,6 +980,7 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMPositionsCurrent(apiClient_t *apiClient, c
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -1047,15 +1059,16 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMRewardTokensCurrent(apiClient_t *apiClient
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/rewardTokens/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/rewardTokens/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/rewardTokens/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/rewardTokens/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -1122,15 +1135,16 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMSwapsCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/swaps/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/swaps/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/swaps/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/swaps/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -1197,9 +1211,9 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(apiClient_t *api
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/tickDailySnapshots/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current");
 
 
 
@@ -1218,6 +1232,7 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(apiClient_t *api
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -1296,9 +1311,9 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(apiClient_t *ap
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current");
 
 
 
@@ -1317,6 +1332,7 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(apiClient_t *ap
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -1395,9 +1411,9 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTicksCurrent(apiClient_t *apiClient, char 
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/ticks/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/ticks/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/ticks/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/ticks/current");
 
 
 
@@ -1416,6 +1432,7 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTicksCurrent(apiClient_t *apiClient, char 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -1494,15 +1511,16 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(apiClient_t *
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -1569,15 +1587,16 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTokenWhiteListsCurrent(apiClient_t *apiCli
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/tokenWhiteLists/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -1644,9 +1663,9 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTokensCurrent(apiClient_t *apiClient, char
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/tokens/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/tokens/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/tokens/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/tokens/current");
 
 
 
@@ -1665,6 +1684,7 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTokensCurrent(apiClient_t *apiClient, char
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -1743,15 +1763,16 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(apiClien
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -1818,15 +1839,16 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(apiClie
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -1893,15 +1915,16 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMWithdrawsCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswap_v3_ethereum/withdraws/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/uniswap-v3-ethereum/withdraws/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswap_v3_ethereum/withdraws/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/uniswap-v3-ethereum/withdraws/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,

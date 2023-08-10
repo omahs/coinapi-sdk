@@ -54,7 +54,7 @@ export class CRYPTOPUNKSApi {
     { response: JQueryXHR; body: Array<models.CRYPTOPUNKSBidDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/cryptopunks/bids/current';
+        let localVarPath = this.basePath + '/v1/dapps/cryptopunks/bids/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -68,7 +68,8 @@ export class CRYPTOPUNKSApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -112,7 +113,7 @@ export class CRYPTOPUNKSApi {
     { response: JQueryXHR; body: Array<models.CRYPTOPUNKSCollectionDailySnapshotDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/cryptopunks/collectionDailySnapshots/current';
+        let localVarPath = this.basePath + '/v1/dapps/cryptopunks/collectionDailySnapshots/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -126,7 +127,8 @@ export class CRYPTOPUNKSApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -170,7 +172,7 @@ export class CRYPTOPUNKSApi {
     { response: JQueryXHR; body: Array<models.CRYPTOPUNKSCollectionDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/cryptopunks/collections/current';
+        let localVarPath = this.basePath + '/v1/dapps/cryptopunks/collections/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -184,7 +186,8 @@ export class CRYPTOPUNKSApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -228,7 +231,7 @@ export class CRYPTOPUNKSApi {
     { response: JQueryXHR; body: Array<models.CRYPTOPUNKSDataSourcesDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/cryptopunks/dataSources/current';
+        let localVarPath = this.basePath + '/v1/dapps/cryptopunks/dataSources/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -242,7 +245,8 @@ export class CRYPTOPUNKSApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -286,7 +290,7 @@ export class CRYPTOPUNKSApi {
     { response: JQueryXHR; body: Array<models.CRYPTOPUNKSItemDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/cryptopunks/items/current';
+        let localVarPath = this.basePath + '/v1/dapps/cryptopunks/items/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -300,7 +304,8 @@ export class CRYPTOPUNKSApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -344,7 +349,7 @@ export class CRYPTOPUNKSApi {
     { response: JQueryXHR; body: Array<models.CRYPTOPUNKSMarketPlaceDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/cryptopunks/marketPlaces/current';
+        let localVarPath = this.basePath + '/v1/dapps/cryptopunks/marketPlaces/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -358,7 +363,8 @@ export class CRYPTOPUNKSApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -402,7 +408,7 @@ export class CRYPTOPUNKSApi {
     { response: JQueryXHR; body: Array<models.CRYPTOPUNKSMarketplaceDailySnapshotDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/cryptopunks/marketplaceDailySnapshots/current';
+        let localVarPath = this.basePath + '/v1/dapps/cryptopunks/marketplaceDailySnapshots/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -416,7 +422,8 @@ export class CRYPTOPUNKSApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -460,7 +467,7 @@ export class CRYPTOPUNKSApi {
     { response: JQueryXHR; body: Array<models.CRYPTOPUNKSTradeDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/cryptopunks/trades/current';
+        let localVarPath = this.basePath + '/v1/dapps/cryptopunks/trades/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -474,7 +481,8 @@ export class CRYPTOPUNKSApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -518,7 +526,7 @@ export class CRYPTOPUNKSApi {
     { response: JQueryXHR; body: Array<models.CRYPTOPUNKSUserDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/cryptopunks/users/current';
+        let localVarPath = this.basePath + '/v1/dapps/cryptopunks/users/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -532,7 +540,8 @@ export class CRYPTOPUNKSApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 

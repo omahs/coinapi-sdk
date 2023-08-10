@@ -117,7 +117,7 @@ static bool cRYPTOPUNKSBids (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/cryptopunks/bids/current");
+	string url("/v1/dapps/cryptopunks/bids/current");
 	int pos;
 
 
@@ -255,7 +255,7 @@ static bool cRYPTOPUNKSCollectionDailySnapshots (current)Helper(char * accessTok
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/cryptopunks/collectionDailySnapshots/current");
+	string url("/v1/dapps/cryptopunks/collectionDailySnapshots/current");
 	int pos;
 
 
@@ -393,7 +393,7 @@ static bool cRYPTOPUNKSCollections (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/cryptopunks/collections/current");
+	string url("/v1/dapps/cryptopunks/collections/current");
 	int pos;
 
 
@@ -531,7 +531,7 @@ static bool cRYPTOPUNKSDataSources (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/cryptopunks/dataSources/current");
+	string url("/v1/dapps/cryptopunks/dataSources/current");
 	int pos;
 
 
@@ -669,7 +669,7 @@ static bool cRYPTOPUNKSItems (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/cryptopunks/items/current");
+	string url("/v1/dapps/cryptopunks/items/current");
 	int pos;
 
 
@@ -807,7 +807,7 @@ static bool cRYPTOPUNKSMarketPlaces (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/cryptopunks/marketPlaces/current");
+	string url("/v1/dapps/cryptopunks/marketPlaces/current");
 	int pos;
 
 
@@ -945,7 +945,7 @@ static bool cRYPTOPUNKSMarketplaceDailySnapshots (current)Helper(char * accessTo
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/cryptopunks/marketplaceDailySnapshots/current");
+	string url("/v1/dapps/cryptopunks/marketplaceDailySnapshots/current");
 	int pos;
 
 
@@ -1083,7 +1083,7 @@ static bool cRYPTOPUNKSTrades (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/cryptopunks/trades/current");
+	string url("/v1/dapps/cryptopunks/trades/current");
 	int pos;
 
 
@@ -1221,7 +1221,7 @@ static bool cRYPTOPUNKSUsers (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/cryptopunks/users/current");
+	string url("/v1/dapps/cryptopunks/users/current");
 	int pos;
 
 

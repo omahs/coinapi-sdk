@@ -117,7 +117,7 @@ static bool uNISWAPV3ETHEREUMAccounts (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/accounts/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/accounts/current");
 	int pos;
 
 
@@ -255,7 +255,7 @@ static bool uNISWAPV3ETHEREUMActiveAccounts (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/activeAccounts/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/activeAccounts/current");
 	int pos;
 
 
@@ -393,7 +393,7 @@ static bool uNISWAPV3ETHEREUMDeposits (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/deposits/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/deposits/current");
 	int pos;
 
 
@@ -531,7 +531,7 @@ static bool uNISWAPV3ETHEREUMDexAmmProtocols (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/dexAmmProtocols/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current");
 	int pos;
 
 
@@ -669,7 +669,7 @@ static bool uNISWAPV3ETHEREUMFinancialsDailySnapshots (current)Helper(char * acc
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current");
 	int pos;
 
 
@@ -814,7 +814,7 @@ static bool uNISWAPV3ETHEREUMLiquidityPoolAmounts (current)Helper(char * accessT
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current");
 	int pos;
 
 
@@ -959,7 +959,7 @@ static bool uNISWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)Helper(char * 
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current");
 	int pos;
 
 
@@ -1097,7 +1097,7 @@ static bool uNISWAPV3ETHEREUMLiquidityPoolFees (current)Helper(char * accessToke
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/liquidityPoolFees/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current");
 	int pos;
 
 
@@ -1242,7 +1242,7 @@ static bool uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshots (current)Helper(char *
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current");
 	int pos;
 
 
@@ -1387,7 +1387,7 @@ static bool uNISWAPV3ETHEREUMLiquidityPools (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/liquidityPools/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/liquidityPools/current");
 	int pos;
 
 
@@ -1525,7 +1525,7 @@ static bool uNISWAPV3ETHEREUMPositionSnapshots (current)Helper(char * accessToke
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/positionSnapshots/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current");
 	int pos;
 
 
@@ -1670,7 +1670,7 @@ static bool uNISWAPV3ETHEREUMPositions (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/positions/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/positions/current");
 	int pos;
 
 
@@ -1808,7 +1808,7 @@ static bool uNISWAPV3ETHEREUMRewardTokens (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/rewardTokens/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/rewardTokens/current");
 	int pos;
 
 
@@ -1946,7 +1946,7 @@ static bool uNISWAPV3ETHEREUMSwaps (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/swaps/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/swaps/current");
 	int pos;
 
 
@@ -2091,7 +2091,7 @@ static bool uNISWAPV3ETHEREUMTickDailySnapshots (current)Helper(char * accessTok
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/tickDailySnapshots/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current");
 	int pos;
 
 
@@ -2236,7 +2236,7 @@ static bool uNISWAPV3ETHEREUMTickHourlySnapshots (current)Helper(char * accessTo
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current");
 	int pos;
 
 
@@ -2381,7 +2381,7 @@ static bool uNISWAPV3ETHEREUMTicks (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/ticks/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/ticks/current");
 	int pos;
 
 
@@ -2519,7 +2519,7 @@ static bool uNISWAPV3ETHEREUMTokenWhiteListSymbols (current)Helper(char * access
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current");
 	int pos;
 
 
@@ -2657,7 +2657,7 @@ static bool uNISWAPV3ETHEREUMTokenWhiteLists (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/tokenWhiteLists/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current");
 	int pos;
 
 
@@ -2802,7 +2802,7 @@ static bool uNISWAPV3ETHEREUMTokens (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/tokens/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/tokens/current");
 	int pos;
 
 
@@ -2940,7 +2940,7 @@ static bool uNISWAPV3ETHEREUMUsageMetricsDailySnapshots (current)Helper(char * a
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current");
 	int pos;
 
 
@@ -3078,7 +3078,7 @@ static bool uNISWAPV3ETHEREUMUsageMetricsHourlySnapshots (current)Helper(char * 
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current");
 	int pos;
 
 
@@ -3216,7 +3216,7 @@ static bool uNISWAPV3ETHEREUMWithdraws (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswap_v3_ethereum/withdraws/current");
+	string url("/v1/dapps/uniswap-v3-ethereum/withdraws/current");
 	int pos;
 
 

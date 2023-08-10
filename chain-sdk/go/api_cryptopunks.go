@@ -62,7 +62,7 @@ func (a *CRYPTOPUNKSApiService) CRYPTOPUNKSBidsCurrentExecute(r ApiCRYPTOPUNKSBi
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/cryptopunks/bids/current"
+	localVarPath := localBasePath + "/v1/dapps/cryptopunks/bids/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -78,7 +78,7 @@ func (a *CRYPTOPUNKSApiService) CRYPTOPUNKSBidsCurrentExecute(r ApiCRYPTOPUNKSBi
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -161,7 +161,7 @@ func (a *CRYPTOPUNKSApiService) CRYPTOPUNKSCollectionDailySnapshotsCurrentExecut
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/cryptopunks/collectionDailySnapshots/current"
+	localVarPath := localBasePath + "/v1/dapps/cryptopunks/collectionDailySnapshots/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -177,7 +177,7 @@ func (a *CRYPTOPUNKSApiService) CRYPTOPUNKSCollectionDailySnapshotsCurrentExecut
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -260,7 +260,7 @@ func (a *CRYPTOPUNKSApiService) CRYPTOPUNKSCollectionsCurrentExecute(r ApiCRYPTO
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/cryptopunks/collections/current"
+	localVarPath := localBasePath + "/v1/dapps/cryptopunks/collections/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -276,7 +276,7 @@ func (a *CRYPTOPUNKSApiService) CRYPTOPUNKSCollectionsCurrentExecute(r ApiCRYPTO
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -359,7 +359,7 @@ func (a *CRYPTOPUNKSApiService) CRYPTOPUNKSDataSourcesCurrentExecute(r ApiCRYPTO
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/cryptopunks/dataSources/current"
+	localVarPath := localBasePath + "/v1/dapps/cryptopunks/dataSources/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -375,7 +375,7 @@ func (a *CRYPTOPUNKSApiService) CRYPTOPUNKSDataSourcesCurrentExecute(r ApiCRYPTO
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -458,7 +458,7 @@ func (a *CRYPTOPUNKSApiService) CRYPTOPUNKSItemsCurrentExecute(r ApiCRYPTOPUNKSI
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/cryptopunks/items/current"
+	localVarPath := localBasePath + "/v1/dapps/cryptopunks/items/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -474,7 +474,7 @@ func (a *CRYPTOPUNKSApiService) CRYPTOPUNKSItemsCurrentExecute(r ApiCRYPTOPUNKSI
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -557,7 +557,7 @@ func (a *CRYPTOPUNKSApiService) CRYPTOPUNKSMarketPlacesCurrentExecute(r ApiCRYPT
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/cryptopunks/marketPlaces/current"
+	localVarPath := localBasePath + "/v1/dapps/cryptopunks/marketPlaces/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -573,7 +573,7 @@ func (a *CRYPTOPUNKSApiService) CRYPTOPUNKSMarketPlacesCurrentExecute(r ApiCRYPT
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -656,7 +656,7 @@ func (a *CRYPTOPUNKSApiService) CRYPTOPUNKSMarketplaceDailySnapshotsCurrentExecu
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/cryptopunks/marketplaceDailySnapshots/current"
+	localVarPath := localBasePath + "/v1/dapps/cryptopunks/marketplaceDailySnapshots/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -672,7 +672,7 @@ func (a *CRYPTOPUNKSApiService) CRYPTOPUNKSMarketplaceDailySnapshotsCurrentExecu
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -755,7 +755,7 @@ func (a *CRYPTOPUNKSApiService) CRYPTOPUNKSTradesCurrentExecute(r ApiCRYPTOPUNKS
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/cryptopunks/trades/current"
+	localVarPath := localBasePath + "/v1/dapps/cryptopunks/trades/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -771,7 +771,7 @@ func (a *CRYPTOPUNKSApiService) CRYPTOPUNKSTradesCurrentExecute(r ApiCRYPTOPUNKS
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -854,7 +854,7 @@ func (a *CRYPTOPUNKSApiService) CRYPTOPUNKSUsersCurrentExecute(r ApiCRYPTOPUNKSU
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/cryptopunks/users/current"
+	localVarPath := localBasePath + "/v1/dapps/cryptopunks/users/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -870,7 +870,7 @@ func (a *CRYPTOPUNKSApiService) CRYPTOPUNKSUsersCurrentExecute(r ApiCRYPTOPUNKSU
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)

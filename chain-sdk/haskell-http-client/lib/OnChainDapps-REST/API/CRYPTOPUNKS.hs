@@ -60,7 +60,7 @@ import qualified Prelude as P
 
 -- *** cRYPTOPUNKSBidsCurrent
 
--- | @GET \/dapps\/cryptopunks\/bids\/current@
+-- | @GET \/v1\/dapps\/cryptopunks\/bids\/current@
 -- 
 -- Bids (current)
 -- 
@@ -70,11 +70,13 @@ cRYPTOPUNKSBidsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest CRYPTOPUNKSBidsCurrent MimeNoContent [CRYPTOPUNKSBidDTO] accept
 cRYPTOPUNKSBidsCurrent  _ =
-  _mkRequest "GET" ["/dapps/cryptopunks/bids/current"]
+  _mkRequest "GET" ["/v1/dapps/cryptopunks/bids/current"]
 
 data CRYPTOPUNKSBidsCurrent  
 -- | @application/json@
 instance Produces CRYPTOPUNKSBidsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CRYPTOPUNKSBidsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces CRYPTOPUNKSBidsCurrent MimeTextJson
 -- | @text/plain@
@@ -83,7 +85,7 @@ instance Produces CRYPTOPUNKSBidsCurrent MimePlainText
 
 -- *** cRYPTOPUNKSCollectionDailySnapshotsCurrent
 
--- | @GET \/dapps\/cryptopunks\/collectionDailySnapshots\/current@
+-- | @GET \/v1\/dapps\/cryptopunks\/collectionDailySnapshots\/current@
 -- 
 -- CollectionDailySnapshots (current)
 -- 
@@ -93,11 +95,13 @@ cRYPTOPUNKSCollectionDailySnapshotsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest CRYPTOPUNKSCollectionDailySnapshotsCurrent MimeNoContent [CRYPTOPUNKSCollectionDailySnapshotDTO] accept
 cRYPTOPUNKSCollectionDailySnapshotsCurrent  _ =
-  _mkRequest "GET" ["/dapps/cryptopunks/collectionDailySnapshots/current"]
+  _mkRequest "GET" ["/v1/dapps/cryptopunks/collectionDailySnapshots/current"]
 
 data CRYPTOPUNKSCollectionDailySnapshotsCurrent  
 -- | @application/json@
 instance Produces CRYPTOPUNKSCollectionDailySnapshotsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CRYPTOPUNKSCollectionDailySnapshotsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces CRYPTOPUNKSCollectionDailySnapshotsCurrent MimeTextJson
 -- | @text/plain@
@@ -106,7 +110,7 @@ instance Produces CRYPTOPUNKSCollectionDailySnapshotsCurrent MimePlainText
 
 -- *** cRYPTOPUNKSCollectionsCurrent
 
--- | @GET \/dapps\/cryptopunks\/collections\/current@
+-- | @GET \/v1\/dapps\/cryptopunks\/collections\/current@
 -- 
 -- Collections (current)
 -- 
@@ -116,11 +120,13 @@ cRYPTOPUNKSCollectionsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest CRYPTOPUNKSCollectionsCurrent MimeNoContent [CRYPTOPUNKSCollectionDTO] accept
 cRYPTOPUNKSCollectionsCurrent  _ =
-  _mkRequest "GET" ["/dapps/cryptopunks/collections/current"]
+  _mkRequest "GET" ["/v1/dapps/cryptopunks/collections/current"]
 
 data CRYPTOPUNKSCollectionsCurrent  
 -- | @application/json@
 instance Produces CRYPTOPUNKSCollectionsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CRYPTOPUNKSCollectionsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces CRYPTOPUNKSCollectionsCurrent MimeTextJson
 -- | @text/plain@
@@ -129,7 +135,7 @@ instance Produces CRYPTOPUNKSCollectionsCurrent MimePlainText
 
 -- *** cRYPTOPUNKSDataSourcesCurrent
 
--- | @GET \/dapps\/cryptopunks\/dataSources\/current@
+-- | @GET \/v1\/dapps\/cryptopunks\/dataSources\/current@
 -- 
 -- DataSources (current)
 -- 
@@ -139,11 +145,13 @@ cRYPTOPUNKSDataSourcesCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest CRYPTOPUNKSDataSourcesCurrent MimeNoContent [CRYPTOPUNKSDataSourcesDTO] accept
 cRYPTOPUNKSDataSourcesCurrent  _ =
-  _mkRequest "GET" ["/dapps/cryptopunks/dataSources/current"]
+  _mkRequest "GET" ["/v1/dapps/cryptopunks/dataSources/current"]
 
 data CRYPTOPUNKSDataSourcesCurrent  
 -- | @application/json@
 instance Produces CRYPTOPUNKSDataSourcesCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CRYPTOPUNKSDataSourcesCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces CRYPTOPUNKSDataSourcesCurrent MimeTextJson
 -- | @text/plain@
@@ -152,7 +160,7 @@ instance Produces CRYPTOPUNKSDataSourcesCurrent MimePlainText
 
 -- *** cRYPTOPUNKSItemsCurrent
 
--- | @GET \/dapps\/cryptopunks\/items\/current@
+-- | @GET \/v1\/dapps\/cryptopunks\/items\/current@
 -- 
 -- Items (current)
 -- 
@@ -162,11 +170,13 @@ cRYPTOPUNKSItemsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest CRYPTOPUNKSItemsCurrent MimeNoContent [CRYPTOPUNKSItemDTO] accept
 cRYPTOPUNKSItemsCurrent  _ =
-  _mkRequest "GET" ["/dapps/cryptopunks/items/current"]
+  _mkRequest "GET" ["/v1/dapps/cryptopunks/items/current"]
 
 data CRYPTOPUNKSItemsCurrent  
 -- | @application/json@
 instance Produces CRYPTOPUNKSItemsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CRYPTOPUNKSItemsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces CRYPTOPUNKSItemsCurrent MimeTextJson
 -- | @text/plain@
@@ -175,7 +185,7 @@ instance Produces CRYPTOPUNKSItemsCurrent MimePlainText
 
 -- *** cRYPTOPUNKSMarketPlacesCurrent
 
--- | @GET \/dapps\/cryptopunks\/marketPlaces\/current@
+-- | @GET \/v1\/dapps\/cryptopunks\/marketPlaces\/current@
 -- 
 -- MarketPlaces (current)
 -- 
@@ -185,11 +195,13 @@ cRYPTOPUNKSMarketPlacesCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest CRYPTOPUNKSMarketPlacesCurrent MimeNoContent [CRYPTOPUNKSMarketPlaceDTO] accept
 cRYPTOPUNKSMarketPlacesCurrent  _ =
-  _mkRequest "GET" ["/dapps/cryptopunks/marketPlaces/current"]
+  _mkRequest "GET" ["/v1/dapps/cryptopunks/marketPlaces/current"]
 
 data CRYPTOPUNKSMarketPlacesCurrent  
 -- | @application/json@
 instance Produces CRYPTOPUNKSMarketPlacesCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CRYPTOPUNKSMarketPlacesCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces CRYPTOPUNKSMarketPlacesCurrent MimeTextJson
 -- | @text/plain@
@@ -198,7 +210,7 @@ instance Produces CRYPTOPUNKSMarketPlacesCurrent MimePlainText
 
 -- *** cRYPTOPUNKSMarketplaceDailySnapshotsCurrent
 
--- | @GET \/dapps\/cryptopunks\/marketplaceDailySnapshots\/current@
+-- | @GET \/v1\/dapps\/cryptopunks\/marketplaceDailySnapshots\/current@
 -- 
 -- MarketplaceDailySnapshots (current)
 -- 
@@ -208,11 +220,13 @@ cRYPTOPUNKSMarketplaceDailySnapshotsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest CRYPTOPUNKSMarketplaceDailySnapshotsCurrent MimeNoContent [CRYPTOPUNKSMarketplaceDailySnapshotDTO] accept
 cRYPTOPUNKSMarketplaceDailySnapshotsCurrent  _ =
-  _mkRequest "GET" ["/dapps/cryptopunks/marketplaceDailySnapshots/current"]
+  _mkRequest "GET" ["/v1/dapps/cryptopunks/marketplaceDailySnapshots/current"]
 
 data CRYPTOPUNKSMarketplaceDailySnapshotsCurrent  
 -- | @application/json@
 instance Produces CRYPTOPUNKSMarketplaceDailySnapshotsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CRYPTOPUNKSMarketplaceDailySnapshotsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces CRYPTOPUNKSMarketplaceDailySnapshotsCurrent MimeTextJson
 -- | @text/plain@
@@ -221,7 +235,7 @@ instance Produces CRYPTOPUNKSMarketplaceDailySnapshotsCurrent MimePlainText
 
 -- *** cRYPTOPUNKSTradesCurrent
 
--- | @GET \/dapps\/cryptopunks\/trades\/current@
+-- | @GET \/v1\/dapps\/cryptopunks\/trades\/current@
 -- 
 -- Trades (current)
 -- 
@@ -231,11 +245,13 @@ cRYPTOPUNKSTradesCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest CRYPTOPUNKSTradesCurrent MimeNoContent [CRYPTOPUNKSTradeDTO] accept
 cRYPTOPUNKSTradesCurrent  _ =
-  _mkRequest "GET" ["/dapps/cryptopunks/trades/current"]
+  _mkRequest "GET" ["/v1/dapps/cryptopunks/trades/current"]
 
 data CRYPTOPUNKSTradesCurrent  
 -- | @application/json@
 instance Produces CRYPTOPUNKSTradesCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CRYPTOPUNKSTradesCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces CRYPTOPUNKSTradesCurrent MimeTextJson
 -- | @text/plain@
@@ -244,7 +260,7 @@ instance Produces CRYPTOPUNKSTradesCurrent MimePlainText
 
 -- *** cRYPTOPUNKSUsersCurrent
 
--- | @GET \/dapps\/cryptopunks\/users\/current@
+-- | @GET \/v1\/dapps\/cryptopunks\/users\/current@
 -- 
 -- Users (current)
 -- 
@@ -254,11 +270,13 @@ cRYPTOPUNKSUsersCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest CRYPTOPUNKSUsersCurrent MimeNoContent [CRYPTOPUNKSUserDTO] accept
 cRYPTOPUNKSUsersCurrent  _ =
-  _mkRequest "GET" ["/dapps/cryptopunks/users/current"]
+  _mkRequest "GET" ["/v1/dapps/cryptopunks/users/current"]
 
 data CRYPTOPUNKSUsersCurrent  
 -- | @application/json@
 instance Produces CRYPTOPUNKSUsersCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CRYPTOPUNKSUsersCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces CRYPTOPUNKSUsersCurrent MimeTextJson
 -- | @text/plain@

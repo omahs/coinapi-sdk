@@ -60,7 +60,7 @@ import qualified Prelude as P
 
 -- *** uNISWAPV3ETHEREUMAccountsCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/accounts\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/accounts\/current@
 -- 
 -- Accounts (current)
 -- 
@@ -70,11 +70,13 @@ uNISWAPV3ETHEREUMAccountsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMAccountsCurrent MimeNoContent [UNISWAPV3ETHEREUMAccountDTO] accept
 uNISWAPV3ETHEREUMAccountsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/accounts/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/accounts/current"]
 
 data UNISWAPV3ETHEREUMAccountsCurrent  
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMAccountsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMAccountsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMAccountsCurrent MimeTextJson
 -- | @text/plain@
@@ -83,7 +85,7 @@ instance Produces UNISWAPV3ETHEREUMAccountsCurrent MimePlainText
 
 -- *** uNISWAPV3ETHEREUMActiveAccountsCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/activeAccounts\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/activeAccounts\/current@
 -- 
 -- ActiveAccounts (current)
 -- 
@@ -93,11 +95,13 @@ uNISWAPV3ETHEREUMActiveAccountsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMActiveAccountsCurrent MimeNoContent [UNISWAPV3ETHEREUMActiveAccountDTO] accept
 uNISWAPV3ETHEREUMActiveAccountsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/activeAccounts/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/activeAccounts/current"]
 
 data UNISWAPV3ETHEREUMActiveAccountsCurrent  
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMActiveAccountsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMActiveAccountsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMActiveAccountsCurrent MimeTextJson
 -- | @text/plain@
@@ -106,7 +110,7 @@ instance Produces UNISWAPV3ETHEREUMActiveAccountsCurrent MimePlainText
 
 -- *** uNISWAPV3ETHEREUMDepositsCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/deposits\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/deposits\/current@
 -- 
 -- Deposits (current)
 -- 
@@ -116,11 +120,13 @@ uNISWAPV3ETHEREUMDepositsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMDepositsCurrent MimeNoContent [UNISWAPV3ETHEREUMDepositDTO] accept
 uNISWAPV3ETHEREUMDepositsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/deposits/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/deposits/current"]
 
 data UNISWAPV3ETHEREUMDepositsCurrent  
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMDepositsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMDepositsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMDepositsCurrent MimeTextJson
 -- | @text/plain@
@@ -129,7 +135,7 @@ instance Produces UNISWAPV3ETHEREUMDepositsCurrent MimePlainText
 
 -- *** uNISWAPV3ETHEREUMDexAmmProtocolsCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/dexAmmProtocols\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/dexAmmProtocols\/current@
 -- 
 -- DexAmmProtocols (current)
 -- 
@@ -139,11 +145,13 @@ uNISWAPV3ETHEREUMDexAmmProtocolsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMDexAmmProtocolsCurrent MimeNoContent [UNISWAPV3ETHEREUMDexAmmProtocolDTO] accept
 uNISWAPV3ETHEREUMDexAmmProtocolsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/dexAmmProtocols/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current"]
 
 data UNISWAPV3ETHEREUMDexAmmProtocolsCurrent  
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMDexAmmProtocolsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMDexAmmProtocolsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMDexAmmProtocolsCurrent MimeTextJson
 -- | @text/plain@
@@ -152,7 +160,7 @@ instance Produces UNISWAPV3ETHEREUMDexAmmProtocolsCurrent MimePlainText
 
 -- *** uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/financialsDailySnapshots\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/financialsDailySnapshots\/current@
 -- 
 -- FinancialsDailySnapshots (current)
 -- 
@@ -162,11 +170,13 @@ uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent MimeNoContent [UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO] accept
 uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current"]
 
 data UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent  
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent MimeTextJson
 -- | @text/plain@
@@ -175,7 +185,7 @@ instance Produces UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent MimePlainText
 
 -- *** uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/liquidityPoolAmounts\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/liquidityPoolAmounts\/current@
 -- 
 -- LiquidityPoolAmounts (current)
 -- 
@@ -185,7 +195,7 @@ uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent MimeNoContent [UNISWAPV3ETHEREUMLiquidityPoolAmountDTO] accept
 uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current"]
 
 data UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent  
 
@@ -195,6 +205,8 @@ instance HasOptionalParam UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent Id where
     req `addQuery` toQuery ("id", Just xs)
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent MimeTextJson
 -- | @text/plain@
@@ -203,7 +215,7 @@ instance Produces UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent MimePlainText
 
 -- *** uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/liquidityPoolDailySnapshots\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/liquidityPoolDailySnapshots\/current@
 -- 
 -- LiquidityPoolDailySnapshots (current)
 -- 
@@ -213,7 +225,7 @@ uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent MimeNoContent [UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO] accept
 uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current"]
 
 data UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent  
 
@@ -223,6 +235,8 @@ instance HasOptionalParam UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent Po
     req `addQuery` toQuery ("pool", Just xs)
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent MimeTextJson
 -- | @text/plain@
@@ -231,7 +245,7 @@ instance Produces UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent MimePlainT
 
 -- *** uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/liquidityPoolFees\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/liquidityPoolFees\/current@
 -- 
 -- LiquidityPoolFees (current)
 -- 
@@ -241,11 +255,13 @@ uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent MimeNoContent [UNISWAPV3ETHEREUMLiquidityPoolFeeDTO] accept
 uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/liquidityPoolFees/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current"]
 
 data UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent  
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent MimeTextJson
 -- | @text/plain@
@@ -254,7 +270,7 @@ instance Produces UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent MimePlainText
 
 -- *** uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/liquidityPoolHourlySnapshots\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/liquidityPoolHourlySnapshots\/current@
 -- 
 -- LiquidityPoolHourlySnapshots (current)
 -- 
@@ -264,7 +280,7 @@ uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent MimeNoContent [UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO] accept
 uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current"]
 
 data UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent  
 
@@ -274,6 +290,8 @@ instance HasOptionalParam UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent P
     req `addQuery` toQuery ("pool", Just xs)
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent MimeTextJson
 -- | @text/plain@
@@ -282,7 +300,7 @@ instance Produces UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent MimePlain
 
 -- *** uNISWAPV3ETHEREUMLiquidityPoolsCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/liquidityPools\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/liquidityPools\/current@
 -- 
 -- LiquidityPools (current)
 -- 
@@ -292,7 +310,7 @@ uNISWAPV3ETHEREUMLiquidityPoolsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMLiquidityPoolsCurrent MimeNoContent [UNISWAPV3ETHEREUMLiquidityPoolDTO] accept
 uNISWAPV3ETHEREUMLiquidityPoolsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/liquidityPools/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/liquidityPools/current"]
 
 data UNISWAPV3ETHEREUMLiquidityPoolsCurrent  
 
@@ -302,6 +320,8 @@ instance HasOptionalParam UNISWAPV3ETHEREUMLiquidityPoolsCurrent Id where
     req `addQuery` toQuery ("id", Just xs)
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMLiquidityPoolsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMLiquidityPoolsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMLiquidityPoolsCurrent MimeTextJson
 -- | @text/plain@
@@ -310,7 +330,7 @@ instance Produces UNISWAPV3ETHEREUMLiquidityPoolsCurrent MimePlainText
 
 -- *** uNISWAPV3ETHEREUMPositionSnapshotsCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/positionSnapshots\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/positionSnapshots\/current@
 -- 
 -- PositionSnapshots (current)
 -- 
@@ -320,11 +340,13 @@ uNISWAPV3ETHEREUMPositionSnapshotsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMPositionSnapshotsCurrent MimeNoContent [UNISWAPV3ETHEREUMPositionSnapshotDTO] accept
 uNISWAPV3ETHEREUMPositionSnapshotsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/positionSnapshots/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current"]
 
 data UNISWAPV3ETHEREUMPositionSnapshotsCurrent  
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMPositionSnapshotsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMPositionSnapshotsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMPositionSnapshotsCurrent MimeTextJson
 -- | @text/plain@
@@ -333,7 +355,7 @@ instance Produces UNISWAPV3ETHEREUMPositionSnapshotsCurrent MimePlainText
 
 -- *** uNISWAPV3ETHEREUMPositionsCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/positions\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/positions\/current@
 -- 
 -- Positions (current)
 -- 
@@ -343,7 +365,7 @@ uNISWAPV3ETHEREUMPositionsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMPositionsCurrent MimeNoContent [UNISWAPV3ETHEREUMPositionDTO] accept
 uNISWAPV3ETHEREUMPositionsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/positions/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/positions/current"]
 
 data UNISWAPV3ETHEREUMPositionsCurrent  
 
@@ -353,6 +375,8 @@ instance HasOptionalParam UNISWAPV3ETHEREUMPositionsCurrent Pool where
     req `addQuery` toQuery ("pool", Just xs)
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMPositionsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMPositionsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMPositionsCurrent MimeTextJson
 -- | @text/plain@
@@ -361,7 +385,7 @@ instance Produces UNISWAPV3ETHEREUMPositionsCurrent MimePlainText
 
 -- *** uNISWAPV3ETHEREUMRewardTokensCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/rewardTokens\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/rewardTokens\/current@
 -- 
 -- RewardTokens (current)
 -- 
@@ -371,11 +395,13 @@ uNISWAPV3ETHEREUMRewardTokensCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMRewardTokensCurrent MimeNoContent [UNISWAPV3ETHEREUMRewardTokenDTO] accept
 uNISWAPV3ETHEREUMRewardTokensCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/rewardTokens/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/rewardTokens/current"]
 
 data UNISWAPV3ETHEREUMRewardTokensCurrent  
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMRewardTokensCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMRewardTokensCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMRewardTokensCurrent MimeTextJson
 -- | @text/plain@
@@ -384,7 +410,7 @@ instance Produces UNISWAPV3ETHEREUMRewardTokensCurrent MimePlainText
 
 -- *** uNISWAPV3ETHEREUMSwapsCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/swaps\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/swaps\/current@
 -- 
 -- Swaps (current)
 -- 
@@ -394,11 +420,13 @@ uNISWAPV3ETHEREUMSwapsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMSwapsCurrent MimeNoContent [UNISWAPV3ETHEREUMSwapDTO] accept
 uNISWAPV3ETHEREUMSwapsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/swaps/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/swaps/current"]
 
 data UNISWAPV3ETHEREUMSwapsCurrent  
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMSwapsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMSwapsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMSwapsCurrent MimeTextJson
 -- | @text/plain@
@@ -407,7 +435,7 @@ instance Produces UNISWAPV3ETHEREUMSwapsCurrent MimePlainText
 
 -- *** uNISWAPV3ETHEREUMTickDailySnapshotsCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/tickDailySnapshots\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/tickDailySnapshots\/current@
 -- 
 -- TickDailySnapshots (current)
 -- 
@@ -417,7 +445,7 @@ uNISWAPV3ETHEREUMTickDailySnapshotsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMTickDailySnapshotsCurrent MimeNoContent [UNISWAPV3ETHEREUMTickDailySnapshotDTO] accept
 uNISWAPV3ETHEREUMTickDailySnapshotsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/tickDailySnapshots/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current"]
 
 data UNISWAPV3ETHEREUMTickDailySnapshotsCurrent  
 
@@ -427,6 +455,8 @@ instance HasOptionalParam UNISWAPV3ETHEREUMTickDailySnapshotsCurrent Pool where
     req `addQuery` toQuery ("pool", Just xs)
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMTickDailySnapshotsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMTickDailySnapshotsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMTickDailySnapshotsCurrent MimeTextJson
 -- | @text/plain@
@@ -435,7 +465,7 @@ instance Produces UNISWAPV3ETHEREUMTickDailySnapshotsCurrent MimePlainText
 
 -- *** uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/tickHourlySnapshots\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/tickHourlySnapshots\/current@
 -- 
 -- TickHourlySnapshots (current)
 -- 
@@ -445,7 +475,7 @@ uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent MimeNoContent [UNISWAPV3ETHEREUMTickHourlySnapshotDTO] accept
 uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current"]
 
 data UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent  
 
@@ -455,6 +485,8 @@ instance HasOptionalParam UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent Pool where
     req `addQuery` toQuery ("pool", Just xs)
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent MimeTextJson
 -- | @text/plain@
@@ -463,7 +495,7 @@ instance Produces UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent MimePlainText
 
 -- *** uNISWAPV3ETHEREUMTicksCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/ticks\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/ticks\/current@
 -- 
 -- Ticks (current)
 -- 
@@ -473,7 +505,7 @@ uNISWAPV3ETHEREUMTicksCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMTicksCurrent MimeNoContent [UNISWAPV3ETHEREUMTickDTO] accept
 uNISWAPV3ETHEREUMTicksCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/ticks/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/ticks/current"]
 
 data UNISWAPV3ETHEREUMTicksCurrent  
 
@@ -483,6 +515,8 @@ instance HasOptionalParam UNISWAPV3ETHEREUMTicksCurrent Pool where
     req `addQuery` toQuery ("pool", Just xs)
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMTicksCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMTicksCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMTicksCurrent MimeTextJson
 -- | @text/plain@
@@ -491,7 +525,7 @@ instance Produces UNISWAPV3ETHEREUMTicksCurrent MimePlainText
 
 -- *** uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/tokenWhiteListSymbols\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/tokenWhiteListSymbols\/current@
 -- 
 -- TokenWhiteListSymbols (current)
 -- 
@@ -501,11 +535,13 @@ uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent MimeNoContent [UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO] accept
 uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current"]
 
 data UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent  
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent MimeTextJson
 -- | @text/plain@
@@ -514,7 +550,7 @@ instance Produces UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent MimePlainText
 
 -- *** uNISWAPV3ETHEREUMTokenWhiteListsCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/tokenWhiteLists\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/tokenWhiteLists\/current@
 -- 
 -- TokenWhiteLists (current)
 -- 
@@ -524,11 +560,13 @@ uNISWAPV3ETHEREUMTokenWhiteListsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMTokenWhiteListsCurrent MimeNoContent [UNISWAPV3ETHEREUMTokenWhiteListDTO] accept
 uNISWAPV3ETHEREUMTokenWhiteListsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/tokenWhiteLists/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current"]
 
 data UNISWAPV3ETHEREUMTokenWhiteListsCurrent  
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMTokenWhiteListsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMTokenWhiteListsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMTokenWhiteListsCurrent MimeTextJson
 -- | @text/plain@
@@ -537,7 +575,7 @@ instance Produces UNISWAPV3ETHEREUMTokenWhiteListsCurrent MimePlainText
 
 -- *** uNISWAPV3ETHEREUMTokensCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/tokens\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/tokens\/current@
 -- 
 -- Tokens (current)
 -- 
@@ -547,7 +585,7 @@ uNISWAPV3ETHEREUMTokensCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMTokensCurrent MimeNoContent [UNISWAPV3ETHEREUMTokenDTO] accept
 uNISWAPV3ETHEREUMTokensCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/tokens/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/tokens/current"]
 
 data UNISWAPV3ETHEREUMTokensCurrent  
 
@@ -557,6 +595,8 @@ instance HasOptionalParam UNISWAPV3ETHEREUMTokensCurrent Id where
     req `addQuery` toQuery ("id", Just xs)
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMTokensCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMTokensCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMTokensCurrent MimeTextJson
 -- | @text/plain@
@@ -565,7 +605,7 @@ instance Produces UNISWAPV3ETHEREUMTokensCurrent MimePlainText
 
 -- *** uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/usageMetricsDailySnapshots\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/usageMetricsDailySnapshots\/current@
 -- 
 -- UsageMetricsDailySnapshots (current)
 -- 
@@ -575,11 +615,13 @@ uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent MimeNoContent [UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO] accept
 uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current"]
 
 data UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent  
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent MimeTextJson
 -- | @text/plain@
@@ -588,7 +630,7 @@ instance Produces UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent MimePlainTe
 
 -- *** uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/usageMetricsHourlySnapshots\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/usageMetricsHourlySnapshots\/current@
 -- 
 -- UsageMetricsHourlySnapshots (current)
 -- 
@@ -598,11 +640,13 @@ uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent MimeNoContent [UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO] accept
 uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current"]
 
 data UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent  
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent MimeTextJson
 -- | @text/plain@
@@ -611,7 +655,7 @@ instance Produces UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent MimePlainT
 
 -- *** uNISWAPV3ETHEREUMWithdrawsCurrent
 
--- | @GET \/dapps\/uniswap_v3_ethereum\/withdraws\/current@
+-- | @GET \/v1\/dapps\/uniswap-v3-ethereum\/withdraws\/current@
 -- 
 -- Withdraws (current)
 -- 
@@ -621,11 +665,13 @@ uNISWAPV3ETHEREUMWithdrawsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainDapps-RESTRequest UNISWAPV3ETHEREUMWithdrawsCurrent MimeNoContent [UNISWAPV3ETHEREUMWithdrawDTO] accept
 uNISWAPV3ETHEREUMWithdrawsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswap_v3_ethereum/withdraws/current"]
+  _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/withdraws/current"]
 
 data UNISWAPV3ETHEREUMWithdrawsCurrent  
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMWithdrawsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces UNISWAPV3ETHEREUMWithdrawsCurrent MimeXMsgpack
 -- | @text/json@
 instance Produces UNISWAPV3ETHEREUMWithdrawsCurrent MimeTextJson
 -- | @text/plain@

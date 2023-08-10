@@ -5,15 +5,15 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**c_ryptopunks_bids__current**](#c_ryptopunks_bids__current) | **get** /dapps/cryptopunks/bids/current | Bids (current)
-[**c_ryptopunks_collection_daily_snapshots__current**](#c_ryptopunks_collection_daily_snapshots__current) | **get** /dapps/cryptopunks/collectionDailySnapshots/current | CollectionDailySnapshots (current)
-[**c_ryptopunks_collections__current**](#c_ryptopunks_collections__current) | **get** /dapps/cryptopunks/collections/current | Collections (current)
-[**c_ryptopunks_data_sources__current**](#c_ryptopunks_data_sources__current) | **get** /dapps/cryptopunks/dataSources/current | DataSources (current)
-[**c_ryptopunks_items__current**](#c_ryptopunks_items__current) | **get** /dapps/cryptopunks/items/current | Items (current)
-[**c_ryptopunks_market_places__current**](#c_ryptopunks_market_places__current) | **get** /dapps/cryptopunks/marketPlaces/current | MarketPlaces (current)
-[**c_ryptopunks_marketplace_daily_snapshots__current**](#c_ryptopunks_marketplace_daily_snapshots__current) | **get** /dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
-[**c_ryptopunks_trades__current**](#c_ryptopunks_trades__current) | **get** /dapps/cryptopunks/trades/current | Trades (current)
-[**c_ryptopunks_users__current**](#c_ryptopunks_users__current) | **get** /dapps/cryptopunks/users/current | Users (current)
+[**c_ryptopunks_bids__current**](#c_ryptopunks_bids__current) | **get** /v1/dapps/cryptopunks/bids/current | Bids (current)
+[**c_ryptopunks_collection_daily_snapshots__current**](#c_ryptopunks_collection_daily_snapshots__current) | **get** /v1/dapps/cryptopunks/collectionDailySnapshots/current | CollectionDailySnapshots (current)
+[**c_ryptopunks_collections__current**](#c_ryptopunks_collections__current) | **get** /v1/dapps/cryptopunks/collections/current | Collections (current)
+[**c_ryptopunks_data_sources__current**](#c_ryptopunks_data_sources__current) | **get** /v1/dapps/cryptopunks/dataSources/current | DataSources (current)
+[**c_ryptopunks_items__current**](#c_ryptopunks_items__current) | **get** /v1/dapps/cryptopunks/items/current | Items (current)
+[**c_ryptopunks_market_places__current**](#c_ryptopunks_market_places__current) | **get** /v1/dapps/cryptopunks/marketPlaces/current | MarketPlaces (current)
+[**c_ryptopunks_marketplace_daily_snapshots__current**](#c_ryptopunks_marketplace_daily_snapshots__current) | **get** /v1/dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
+[**c_ryptopunks_trades__current**](#c_ryptopunks_trades__current) | **get** /v1/dapps/cryptopunks/trades/current | Trades (current)
+[**c_ryptopunks_users__current**](#c_ryptopunks_users__current) | **get** /v1/dapps/cryptopunks/users/current | Users (current)
 
 # **c_ryptopunks_bids__current**
 <a id="c_ryptopunks_bids__current"></a>
@@ -63,7 +63,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -91,6 +91,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**CRYPTOPUNKSBidDTO**]({{complexTypePrefix}}CRYPTOPUNKSBidDTO.md) | [**CRYPTOPUNKSBidDTO**]({{complexTypePrefix}}CRYPTOPUNKSBidDTO.md) | [**CRYPTOPUNKSBidDTO**]({{complexTypePrefix}}CRYPTOPUNKSBidDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CRYPTOPUNKSBidDTO**]({{complexTypePrefix}}CRYPTOPUNKSBidDTO.md) | [**CRYPTOPUNKSBidDTO**]({{complexTypePrefix}}CRYPTOPUNKSBidDTO.md) | [**CRYPTOPUNKSBidDTO**]({{complexTypePrefix}}CRYPTOPUNKSBidDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -156,7 +168,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -184,6 +196,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**CRYPTOPUNKSCollectionDailySnapshotDTO**]({{complexTypePrefix}}CRYPTOPUNKSCollectionDailySnapshotDTO.md) | [**CRYPTOPUNKSCollectionDailySnapshotDTO**]({{complexTypePrefix}}CRYPTOPUNKSCollectionDailySnapshotDTO.md) | [**CRYPTOPUNKSCollectionDailySnapshotDTO**]({{complexTypePrefix}}CRYPTOPUNKSCollectionDailySnapshotDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CRYPTOPUNKSCollectionDailySnapshotDTO**]({{complexTypePrefix}}CRYPTOPUNKSCollectionDailySnapshotDTO.md) | [**CRYPTOPUNKSCollectionDailySnapshotDTO**]({{complexTypePrefix}}CRYPTOPUNKSCollectionDailySnapshotDTO.md) | [**CRYPTOPUNKSCollectionDailySnapshotDTO**]({{complexTypePrefix}}CRYPTOPUNKSCollectionDailySnapshotDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -249,7 +273,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -277,6 +301,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**CRYPTOPUNKSCollectionDTO**]({{complexTypePrefix}}CRYPTOPUNKSCollectionDTO.md) | [**CRYPTOPUNKSCollectionDTO**]({{complexTypePrefix}}CRYPTOPUNKSCollectionDTO.md) | [**CRYPTOPUNKSCollectionDTO**]({{complexTypePrefix}}CRYPTOPUNKSCollectionDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CRYPTOPUNKSCollectionDTO**]({{complexTypePrefix}}CRYPTOPUNKSCollectionDTO.md) | [**CRYPTOPUNKSCollectionDTO**]({{complexTypePrefix}}CRYPTOPUNKSCollectionDTO.md) | [**CRYPTOPUNKSCollectionDTO**]({{complexTypePrefix}}CRYPTOPUNKSCollectionDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -342,7 +378,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -370,6 +406,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**CRYPTOPUNKSDataSourcesDTO**]({{complexTypePrefix}}CRYPTOPUNKSDataSourcesDTO.md) | [**CRYPTOPUNKSDataSourcesDTO**]({{complexTypePrefix}}CRYPTOPUNKSDataSourcesDTO.md) | [**CRYPTOPUNKSDataSourcesDTO**]({{complexTypePrefix}}CRYPTOPUNKSDataSourcesDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CRYPTOPUNKSDataSourcesDTO**]({{complexTypePrefix}}CRYPTOPUNKSDataSourcesDTO.md) | [**CRYPTOPUNKSDataSourcesDTO**]({{complexTypePrefix}}CRYPTOPUNKSDataSourcesDTO.md) | [**CRYPTOPUNKSDataSourcesDTO**]({{complexTypePrefix}}CRYPTOPUNKSDataSourcesDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -435,7 +483,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -463,6 +511,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**CRYPTOPUNKSItemDTO**]({{complexTypePrefix}}CRYPTOPUNKSItemDTO.md) | [**CRYPTOPUNKSItemDTO**]({{complexTypePrefix}}CRYPTOPUNKSItemDTO.md) | [**CRYPTOPUNKSItemDTO**]({{complexTypePrefix}}CRYPTOPUNKSItemDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CRYPTOPUNKSItemDTO**]({{complexTypePrefix}}CRYPTOPUNKSItemDTO.md) | [**CRYPTOPUNKSItemDTO**]({{complexTypePrefix}}CRYPTOPUNKSItemDTO.md) | [**CRYPTOPUNKSItemDTO**]({{complexTypePrefix}}CRYPTOPUNKSItemDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -528,7 +588,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -556,6 +616,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**CRYPTOPUNKSMarketPlaceDTO**]({{complexTypePrefix}}CRYPTOPUNKSMarketPlaceDTO.md) | [**CRYPTOPUNKSMarketPlaceDTO**]({{complexTypePrefix}}CRYPTOPUNKSMarketPlaceDTO.md) | [**CRYPTOPUNKSMarketPlaceDTO**]({{complexTypePrefix}}CRYPTOPUNKSMarketPlaceDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CRYPTOPUNKSMarketPlaceDTO**]({{complexTypePrefix}}CRYPTOPUNKSMarketPlaceDTO.md) | [**CRYPTOPUNKSMarketPlaceDTO**]({{complexTypePrefix}}CRYPTOPUNKSMarketPlaceDTO.md) | [**CRYPTOPUNKSMarketPlaceDTO**]({{complexTypePrefix}}CRYPTOPUNKSMarketPlaceDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -621,7 +693,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -649,6 +721,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**CRYPTOPUNKSMarketplaceDailySnapshotDTO**]({{complexTypePrefix}}CRYPTOPUNKSMarketplaceDailySnapshotDTO.md) | [**CRYPTOPUNKSMarketplaceDailySnapshotDTO**]({{complexTypePrefix}}CRYPTOPUNKSMarketplaceDailySnapshotDTO.md) | [**CRYPTOPUNKSMarketplaceDailySnapshotDTO**]({{complexTypePrefix}}CRYPTOPUNKSMarketplaceDailySnapshotDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CRYPTOPUNKSMarketplaceDailySnapshotDTO**]({{complexTypePrefix}}CRYPTOPUNKSMarketplaceDailySnapshotDTO.md) | [**CRYPTOPUNKSMarketplaceDailySnapshotDTO**]({{complexTypePrefix}}CRYPTOPUNKSMarketplaceDailySnapshotDTO.md) | [**CRYPTOPUNKSMarketplaceDailySnapshotDTO**]({{complexTypePrefix}}CRYPTOPUNKSMarketplaceDailySnapshotDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -714,7 +798,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -742,6 +826,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**CRYPTOPUNKSTradeDTO**]({{complexTypePrefix}}CRYPTOPUNKSTradeDTO.md) | [**CRYPTOPUNKSTradeDTO**]({{complexTypePrefix}}CRYPTOPUNKSTradeDTO.md) | [**CRYPTOPUNKSTradeDTO**]({{complexTypePrefix}}CRYPTOPUNKSTradeDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CRYPTOPUNKSTradeDTO**]({{complexTypePrefix}}CRYPTOPUNKSTradeDTO.md) | [**CRYPTOPUNKSTradeDTO**]({{complexTypePrefix}}CRYPTOPUNKSTradeDTO.md) | [**CRYPTOPUNKSTradeDTO**]({{complexTypePrefix}}CRYPTOPUNKSTradeDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -807,7 +903,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -835,6 +931,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**CRYPTOPUNKSUserDTO**]({{complexTypePrefix}}CRYPTOPUNKSUserDTO.md) | [**CRYPTOPUNKSUserDTO**]({{complexTypePrefix}}CRYPTOPUNKSUserDTO.md) | [**CRYPTOPUNKSUserDTO**]({{complexTypePrefix}}CRYPTOPUNKSUserDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CRYPTOPUNKSUserDTO**]({{complexTypePrefix}}CRYPTOPUNKSUserDTO.md) | [**CRYPTOPUNKSUserDTO**]({{complexTypePrefix}}CRYPTOPUNKSUserDTO.md) | [**CRYPTOPUNKSUserDTO**]({{complexTypePrefix}}CRYPTOPUNKSUserDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

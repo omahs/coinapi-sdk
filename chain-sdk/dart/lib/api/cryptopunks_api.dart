@@ -23,7 +23,7 @@ class CRYPTOPUNKSApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> cRYPTOPUNKSBidsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/cryptopunks/bids/current';
+    final path = r'/v1/dapps/cryptopunks/bids/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -74,7 +74,7 @@ class CRYPTOPUNKSApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> cRYPTOPUNKSCollectionDailySnapshotsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/cryptopunks/collectionDailySnapshots/current';
+    final path = r'/v1/dapps/cryptopunks/collectionDailySnapshots/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -125,7 +125,7 @@ class CRYPTOPUNKSApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> cRYPTOPUNKSCollectionsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/cryptopunks/collections/current';
+    final path = r'/v1/dapps/cryptopunks/collections/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -176,7 +176,7 @@ class CRYPTOPUNKSApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> cRYPTOPUNKSDataSourcesCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/cryptopunks/dataSources/current';
+    final path = r'/v1/dapps/cryptopunks/dataSources/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -227,7 +227,7 @@ class CRYPTOPUNKSApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> cRYPTOPUNKSItemsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/cryptopunks/items/current';
+    final path = r'/v1/dapps/cryptopunks/items/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -278,7 +278,7 @@ class CRYPTOPUNKSApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> cRYPTOPUNKSMarketPlacesCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/cryptopunks/marketPlaces/current';
+    final path = r'/v1/dapps/cryptopunks/marketPlaces/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -329,7 +329,7 @@ class CRYPTOPUNKSApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> cRYPTOPUNKSMarketplaceDailySnapshotsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/cryptopunks/marketplaceDailySnapshots/current';
+    final path = r'/v1/dapps/cryptopunks/marketplaceDailySnapshots/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -380,7 +380,7 @@ class CRYPTOPUNKSApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> cRYPTOPUNKSTradesCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/cryptopunks/trades/current';
+    final path = r'/v1/dapps/cryptopunks/trades/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -431,7 +431,7 @@ class CRYPTOPUNKSApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> cRYPTOPUNKSUsersCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/cryptopunks/users/current';
+    final path = r'/v1/dapps/cryptopunks/users/current';
 
     // ignore: prefer_final_locals
     Object? postBody;

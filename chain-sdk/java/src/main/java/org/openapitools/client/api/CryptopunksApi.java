@@ -109,7 +109,7 @@ public class CryptopunksApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/cryptopunks/bids/current";
+        String localVarPath = "/v1/dapps/cryptopunks/bids/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -120,7 +120,8 @@ public class CryptopunksApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -224,7 +225,7 @@ public class CryptopunksApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/cryptopunks/collectionDailySnapshots/current";
+        String localVarPath = "/v1/dapps/cryptopunks/collectionDailySnapshots/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -235,7 +236,8 @@ public class CryptopunksApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -339,7 +341,7 @@ public class CryptopunksApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/cryptopunks/collections/current";
+        String localVarPath = "/v1/dapps/cryptopunks/collections/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -350,7 +352,8 @@ public class CryptopunksApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -454,7 +457,7 @@ public class CryptopunksApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/cryptopunks/dataSources/current";
+        String localVarPath = "/v1/dapps/cryptopunks/dataSources/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -465,7 +468,8 @@ public class CryptopunksApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -569,7 +573,7 @@ public class CryptopunksApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/cryptopunks/items/current";
+        String localVarPath = "/v1/dapps/cryptopunks/items/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -580,7 +584,8 @@ public class CryptopunksApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -684,7 +689,7 @@ public class CryptopunksApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/cryptopunks/marketPlaces/current";
+        String localVarPath = "/v1/dapps/cryptopunks/marketPlaces/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -695,7 +700,8 @@ public class CryptopunksApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -799,7 +805,7 @@ public class CryptopunksApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/cryptopunks/marketplaceDailySnapshots/current";
+        String localVarPath = "/v1/dapps/cryptopunks/marketplaceDailySnapshots/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -810,7 +816,8 @@ public class CryptopunksApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -914,7 +921,7 @@ public class CryptopunksApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/cryptopunks/trades/current";
+        String localVarPath = "/v1/dapps/cryptopunks/trades/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -925,7 +932,8 @@ public class CryptopunksApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1029,7 +1037,7 @@ public class CryptopunksApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/cryptopunks/users/current";
+        String localVarPath = "/v1/dapps/cryptopunks/users/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1040,7 +1048,8 @@ public class CryptopunksApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {

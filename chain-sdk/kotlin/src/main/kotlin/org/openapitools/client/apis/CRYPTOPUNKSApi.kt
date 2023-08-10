@@ -113,7 +113,7 @@ class CRYPTOPUNKSApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCl
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/cryptopunks/bids/current",
+            path = "/v1/dapps/cryptopunks/bids/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -181,7 +181,7 @@ class CRYPTOPUNKSApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCl
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/cryptopunks/collectionDailySnapshots/current",
+            path = "/v1/dapps/cryptopunks/collectionDailySnapshots/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -249,7 +249,7 @@ class CRYPTOPUNKSApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCl
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/cryptopunks/collections/current",
+            path = "/v1/dapps/cryptopunks/collections/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -317,7 +317,7 @@ class CRYPTOPUNKSApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCl
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/cryptopunks/dataSources/current",
+            path = "/v1/dapps/cryptopunks/dataSources/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -385,7 +385,7 @@ class CRYPTOPUNKSApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCl
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/cryptopunks/items/current",
+            path = "/v1/dapps/cryptopunks/items/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -453,7 +453,7 @@ class CRYPTOPUNKSApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCl
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/cryptopunks/marketPlaces/current",
+            path = "/v1/dapps/cryptopunks/marketPlaces/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -521,7 +521,7 @@ class CRYPTOPUNKSApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCl
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/cryptopunks/marketplaceDailySnapshots/current",
+            path = "/v1/dapps/cryptopunks/marketplaceDailySnapshots/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -589,7 +589,7 @@ class CRYPTOPUNKSApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCl
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/cryptopunks/trades/current",
+            path = "/v1/dapps/cryptopunks/trades/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -657,7 +657,7 @@ class CRYPTOPUNKSApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCl
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/cryptopunks/users/current",
+            path = "/v1/dapps/cryptopunks/users/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,

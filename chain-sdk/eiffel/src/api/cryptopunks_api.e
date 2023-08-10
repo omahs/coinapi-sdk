@@ -39,10 +39,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/cryptopunks/bids/current"
+			l_path := "/v1/dapps/cryptopunks/bids/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -72,10 +72,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/cryptopunks/collectionDailySnapshots/current"
+			l_path := "/v1/dapps/cryptopunks/collectionDailySnapshots/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -105,10 +105,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/cryptopunks/collections/current"
+			l_path := "/v1/dapps/cryptopunks/collections/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -138,10 +138,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/cryptopunks/dataSources/current"
+			l_path := "/v1/dapps/cryptopunks/dataSources/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -171,10 +171,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/cryptopunks/items/current"
+			l_path := "/v1/dapps/cryptopunks/items/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -204,10 +204,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/cryptopunks/marketPlaces/current"
+			l_path := "/v1/dapps/cryptopunks/marketPlaces/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -237,10 +237,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/cryptopunks/marketplaceDailySnapshots/current"
+			l_path := "/v1/dapps/cryptopunks/marketplaceDailySnapshots/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -270,10 +270,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/cryptopunks/trades/current"
+			l_path := "/v1/dapps/cryptopunks/trades/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -303,10 +303,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/cryptopunks/users/current"
+			l_path := "/v1/dapps/cryptopunks/users/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")

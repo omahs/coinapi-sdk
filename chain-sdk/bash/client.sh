@@ -1221,7 +1221,7 @@ call_cRYPTOPUNKSBidsCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/cryptopunks/bids/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/cryptopunks/bids/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1257,7 +1257,7 @@ call_cRYPTOPUNKSCollectionDailySnapshotsCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/cryptopunks/collectionDailySnapshots/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/cryptopunks/collectionDailySnapshots/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1293,7 +1293,7 @@ call_cRYPTOPUNKSCollectionsCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/cryptopunks/collections/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/cryptopunks/collections/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1329,7 +1329,7 @@ call_cRYPTOPUNKSDataSourcesCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/cryptopunks/dataSources/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/cryptopunks/dataSources/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1365,7 +1365,7 @@ call_cRYPTOPUNKSItemsCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/cryptopunks/items/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/cryptopunks/items/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1401,7 +1401,7 @@ call_cRYPTOPUNKSMarketPlacesCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/cryptopunks/marketPlaces/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/cryptopunks/marketPlaces/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1437,7 +1437,7 @@ call_cRYPTOPUNKSMarketplaceDailySnapshotsCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/cryptopunks/marketplaceDailySnapshots/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/cryptopunks/marketplaceDailySnapshots/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1473,7 +1473,7 @@ call_cRYPTOPUNKSTradesCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/cryptopunks/trades/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/cryptopunks/trades/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1509,7 +1509,7 @@ call_cRYPTOPUNKSUsersCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/cryptopunks/users/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/cryptopunks/users/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1653,7 +1653,7 @@ call_uNISWAPV3ETHEREUMAccountsCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/accounts/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/accounts/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1689,7 +1689,7 @@ call_uNISWAPV3ETHEREUMActiveAccountsCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/activeAccounts/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/activeAccounts/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1725,7 +1725,7 @@ call_uNISWAPV3ETHEREUMDepositsCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/deposits/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/deposits/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1761,7 +1761,7 @@ call_uNISWAPV3ETHEREUMDexAmmProtocolsCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1797,7 +1797,7 @@ call_uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1833,7 +1833,7 @@ call_uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent() {
     local query_parameter_names=(id)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1869,7 +1869,7 @@ call_uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent() {
     local query_parameter_names=(pool)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1905,7 +1905,7 @@ call_uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1941,7 +1941,7 @@ call_uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent() {
     local query_parameter_names=(pool)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1977,7 +1977,7 @@ call_uNISWAPV3ETHEREUMLiquidityPoolsCurrent() {
     local query_parameter_names=(id)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/liquidityPools/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/liquidityPools/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -2013,7 +2013,7 @@ call_uNISWAPV3ETHEREUMPositionSnapshotsCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/positionSnapshots/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -2049,7 +2049,7 @@ call_uNISWAPV3ETHEREUMPositionsCurrent() {
     local query_parameter_names=(pool)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/positions/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/positions/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -2085,7 +2085,7 @@ call_uNISWAPV3ETHEREUMRewardTokensCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/rewardTokens/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/rewardTokens/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -2121,7 +2121,7 @@ call_uNISWAPV3ETHEREUMSwapsCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/swaps/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/swaps/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -2157,7 +2157,7 @@ call_uNISWAPV3ETHEREUMTickDailySnapshotsCurrent() {
     local query_parameter_names=(pool)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -2193,7 +2193,7 @@ call_uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent() {
     local query_parameter_names=(pool)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -2229,7 +2229,7 @@ call_uNISWAPV3ETHEREUMTicksCurrent() {
     local query_parameter_names=(pool)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/ticks/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/ticks/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -2265,7 +2265,7 @@ call_uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -2301,7 +2301,7 @@ call_uNISWAPV3ETHEREUMTokenWhiteListsCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -2337,7 +2337,7 @@ call_uNISWAPV3ETHEREUMTokensCurrent() {
     local query_parameter_names=(id)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/tokens/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/tokens/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -2373,7 +2373,7 @@ call_uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -2409,7 +2409,7 @@ call_uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -2445,7 +2445,7 @@ call_uNISWAPV3ETHEREUMWithdrawsCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswap_v3_ethereum/withdraws/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v3-ethereum/withdraws/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi

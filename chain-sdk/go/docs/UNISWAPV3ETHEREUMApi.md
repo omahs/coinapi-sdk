@@ -4,29 +4,29 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UNISWAPV3ETHEREUMAccountsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMAccountsCurrent) | **Get** /dapps/uniswap_v3_ethereum/accounts/current | Accounts (current)
-[**UNISWAPV3ETHEREUMActiveAccountsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMActiveAccountsCurrent) | **Get** /dapps/uniswap_v3_ethereum/activeAccounts/current | ActiveAccounts (current)
-[**UNISWAPV3ETHEREUMDepositsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMDepositsCurrent) | **Get** /dapps/uniswap_v3_ethereum/deposits/current | Deposits (current)
-[**UNISWAPV3ETHEREUMDexAmmProtocolsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMDexAmmProtocolsCurrent) | **Get** /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
-[**UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent) | **Get** /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
-[**UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent) | **Get** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
-[**UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent) | **Get** /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
-[**UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent) | **Get** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
-[**UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent) | **Get** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
-[**UNISWAPV3ETHEREUMLiquidityPoolsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolsCurrent) | **Get** /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current)
-[**UNISWAPV3ETHEREUMPositionSnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMPositionSnapshotsCurrent) | **Get** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current)
-[**UNISWAPV3ETHEREUMPositionsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMPositionsCurrent) | **Get** /dapps/uniswap_v3_ethereum/positions/current | Positions (current)
-[**UNISWAPV3ETHEREUMRewardTokensCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMRewardTokensCurrent) | **Get** /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current)
-[**UNISWAPV3ETHEREUMSwapsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMSwapsCurrent) | **Get** /dapps/uniswap_v3_ethereum/swaps/current | Swaps (current)
-[**UNISWAPV3ETHEREUMTickDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMTickDailySnapshotsCurrent) | **Get** /dapps/uniswap_v3_ethereum/tickDailySnapshots/current | TickDailySnapshots (current)
-[**UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent) | **Get** /dapps/uniswap_v3_ethereum/tickHourlySnapshots/current | TickHourlySnapshots (current)
-[**UNISWAPV3ETHEREUMTicksCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMTicksCurrent) | **Get** /dapps/uniswap_v3_ethereum/ticks/current | Ticks (current)
-[**UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent) | **Get** /dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current | TokenWhiteListSymbols (current)
-[**UNISWAPV3ETHEREUMTokenWhiteListsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMTokenWhiteListsCurrent) | **Get** /dapps/uniswap_v3_ethereum/tokenWhiteLists/current | TokenWhiteLists (current)
-[**UNISWAPV3ETHEREUMTokensCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMTokensCurrent) | **Get** /dapps/uniswap_v3_ethereum/tokens/current | Tokens (current)
-[**UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent) | **Get** /dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current)
-[**UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent) | **Get** /dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current)
-[**UNISWAPV3ETHEREUMWithdrawsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMWithdrawsCurrent) | **Get** /dapps/uniswap_v3_ethereum/withdraws/current | Withdraws (current)
+[**UNISWAPV3ETHEREUMAccountsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMAccountsCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/accounts/current | Accounts (current)
+[**UNISWAPV3ETHEREUMActiveAccountsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMActiveAccountsCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/activeAccounts/current | ActiveAccounts (current)
+[**UNISWAPV3ETHEREUMDepositsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMDepositsCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/deposits/current | Deposits (current)
+[**UNISWAPV3ETHEREUMDexAmmProtocolsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMDexAmmProtocolsCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
+[**UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
+[**UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
+[**UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
+[**UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
+[**UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
+[**UNISWAPV3ETHEREUMLiquidityPoolsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMLiquidityPoolsCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
+[**UNISWAPV3ETHEREUMPositionSnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMPositionSnapshotsCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/positionSnapshots/current | PositionSnapshots (current)
+[**UNISWAPV3ETHEREUMPositionsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMPositionsCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/positions/current | Positions (current)
+[**UNISWAPV3ETHEREUMRewardTokensCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMRewardTokensCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/rewardTokens/current | RewardTokens (current)
+[**UNISWAPV3ETHEREUMSwapsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMSwapsCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/swaps/current | Swaps (current)
+[**UNISWAPV3ETHEREUMTickDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMTickDailySnapshotsCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current | TickDailySnapshots (current)
+[**UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current | TickHourlySnapshots (current)
+[**UNISWAPV3ETHEREUMTicksCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMTicksCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/ticks/current | Ticks (current)
+[**UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current | TokenWhiteListSymbols (current)
+[**UNISWAPV3ETHEREUMTokenWhiteListsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMTokenWhiteListsCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current | TokenWhiteLists (current)
+[**UNISWAPV3ETHEREUMTokensCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMTokensCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/tokens/current | Tokens (current)
+[**UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current)
+[**UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current)
+[**UNISWAPV3ETHEREUMWithdrawsCurrent**](UNISWAPV3ETHEREUMApi.md#UNISWAPV3ETHEREUMWithdrawsCurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/withdraws/current | Withdraws (current)
 
 
 
@@ -84,7 +84,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -145,7 +145,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -206,7 +206,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -267,7 +267,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -328,7 +328,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -394,7 +394,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -460,7 +460,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -521,7 +521,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -587,7 +587,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -653,7 +653,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -714,7 +714,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -780,7 +780,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -841,7 +841,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -902,7 +902,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -968,7 +968,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1034,7 +1034,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1100,7 +1100,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1161,7 +1161,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1222,7 +1222,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1288,7 +1288,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1349,7 +1349,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1410,7 +1410,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1471,7 +1471,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

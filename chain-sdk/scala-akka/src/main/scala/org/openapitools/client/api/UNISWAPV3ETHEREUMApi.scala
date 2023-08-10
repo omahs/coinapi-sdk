@@ -52,7 +52,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    *   code 200 : Seq[AccountDTO] (successful operation)
    */
   def uNISWAPV3ETHEREUMAccountsCurrent(): ApiRequest[Seq[AccountDTO]] =
-    ApiRequest[Seq[AccountDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/accounts/current", "application/json")
+    ApiRequest[Seq[AccountDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/accounts/current", "application/json")
       .withSuccessResponse[Seq[AccountDTO]](200)
       
 
@@ -63,7 +63,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    *   code 200 : Seq[ActiveAccountDTO] (successful operation)
    */
   def uNISWAPV3ETHEREUMActiveAccountsCurrent(): ApiRequest[Seq[ActiveAccountDTO]] =
-    ApiRequest[Seq[ActiveAccountDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/activeAccounts/current", "application/json")
+    ApiRequest[Seq[ActiveAccountDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/activeAccounts/current", "application/json")
       .withSuccessResponse[Seq[ActiveAccountDTO]](200)
       
 
@@ -74,7 +74,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    *   code 200 : Seq[DepositDTO] (successful operation)
    */
   def uNISWAPV3ETHEREUMDepositsCurrent(): ApiRequest[Seq[DepositDTO]] =
-    ApiRequest[Seq[DepositDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/deposits/current", "application/json")
+    ApiRequest[Seq[DepositDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/deposits/current", "application/json")
       .withSuccessResponse[Seq[DepositDTO]](200)
       
 
@@ -85,7 +85,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    *   code 200 : Seq[DexAmmProtocolDTO] (successful operation)
    */
   def uNISWAPV3ETHEREUMDexAmmProtocolsCurrent(): ApiRequest[Seq[DexAmmProtocolDTO]] =
-    ApiRequest[Seq[DexAmmProtocolDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current", "application/json")
+    ApiRequest[Seq[DexAmmProtocolDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current", "application/json")
       .withSuccessResponse[Seq[DexAmmProtocolDTO]](200)
       
 
@@ -96,7 +96,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    *   code 200 : Seq[FinancialsDailySnapshotDTO] (successful operation)
    */
   def uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(): ApiRequest[Seq[FinancialsDailySnapshotDTO]] =
-    ApiRequest[Seq[FinancialsDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current", "application/json")
+    ApiRequest[Seq[FinancialsDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current", "application/json")
       .withSuccessResponse[Seq[FinancialsDailySnapshotDTO]](200)
       
 
@@ -109,7 +109,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    * @param id Smart contract address of the pool.
    */
   def uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id: Option[String] = None): ApiRequest[Seq[LiquidityPoolAmountDTO]] =
-    ApiRequest[Seq[LiquidityPoolAmountDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current", "application/json")
+    ApiRequest[Seq[LiquidityPoolAmountDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current", "application/json")
       .withQueryParam("id", id)
       .withSuccessResponse[Seq[LiquidityPoolAmountDTO]](200)
       
@@ -123,7 +123,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    * @param pool Pool this snapshot belongs to.
    */
   def uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool: Option[String] = None): ApiRequest[Seq[LiquidityPoolDailySnapshotDTO]] =
-    ApiRequest[Seq[LiquidityPoolDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current", "application/json")
+    ApiRequest[Seq[LiquidityPoolDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current", "application/json")
       .withQueryParam("pool", pool)
       .withSuccessResponse[Seq[LiquidityPoolDailySnapshotDTO]](200)
       
@@ -135,7 +135,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    *   code 200 : Seq[LiquidityPoolFeeDTO] (successful operation)
    */
   def uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent(): ApiRequest[Seq[LiquidityPoolFeeDTO]] =
-    ApiRequest[Seq[LiquidityPoolFeeDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current", "application/json")
+    ApiRequest[Seq[LiquidityPoolFeeDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current", "application/json")
       .withSuccessResponse[Seq[LiquidityPoolFeeDTO]](200)
       
 
@@ -148,7 +148,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    * @param pool The pool this snapshot belongs to
    */
   def uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool: Option[String] = None): ApiRequest[Seq[LiquidityPoolHourlySnapshotDTO]] =
-    ApiRequest[Seq[LiquidityPoolHourlySnapshotDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current", "application/json")
+    ApiRequest[Seq[LiquidityPoolHourlySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current", "application/json")
       .withQueryParam("pool", pool)
       .withSuccessResponse[Seq[LiquidityPoolHourlySnapshotDTO]](200)
       
@@ -162,7 +162,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    * @param id Smart contract address of the pool.
    */
   def uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id: Option[String] = None): ApiRequest[Seq[LiquidityPoolDTO]] =
-    ApiRequest[Seq[LiquidityPoolDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/liquidityPools/current", "application/json")
+    ApiRequest[Seq[LiquidityPoolDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/liquidityPools/current", "application/json")
       .withQueryParam("id", id)
       .withSuccessResponse[Seq[LiquidityPoolDTO]](200)
       
@@ -174,7 +174,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    *   code 200 : Seq[PositionSnapshotDTO] (successful operation)
    */
   def uNISWAPV3ETHEREUMPositionSnapshotsCurrent(): ApiRequest[Seq[PositionSnapshotDTO]] =
-    ApiRequest[Seq[PositionSnapshotDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/positionSnapshots/current", "application/json")
+    ApiRequest[Seq[PositionSnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current", "application/json")
       .withSuccessResponse[Seq[PositionSnapshotDTO]](200)
       
 
@@ -187,7 +187,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    * @param pool The liquidity pool in which this position was opened
    */
   def uNISWAPV3ETHEREUMPositionsCurrent(pool: Option[String] = None): ApiRequest[Seq[PositionDTO]] =
-    ApiRequest[Seq[PositionDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/positions/current", "application/json")
+    ApiRequest[Seq[PositionDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/positions/current", "application/json")
       .withQueryParam("pool", pool)
       .withSuccessResponse[Seq[PositionDTO]](200)
       
@@ -199,7 +199,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    *   code 200 : Seq[RewardTokenDTO] (successful operation)
    */
   def uNISWAPV3ETHEREUMRewardTokensCurrent(): ApiRequest[Seq[RewardTokenDTO]] =
-    ApiRequest[Seq[RewardTokenDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/rewardTokens/current", "application/json")
+    ApiRequest[Seq[RewardTokenDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/rewardTokens/current", "application/json")
       .withSuccessResponse[Seq[RewardTokenDTO]](200)
       
 
@@ -210,7 +210,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    *   code 200 : Seq[SwapDTO] (successful operation)
    */
   def uNISWAPV3ETHEREUMSwapsCurrent(): ApiRequest[Seq[SwapDTO]] =
-    ApiRequest[Seq[SwapDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/swaps/current", "application/json")
+    ApiRequest[Seq[SwapDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/swaps/current", "application/json")
       .withSuccessResponse[Seq[SwapDTO]](200)
       
 
@@ -223,7 +223,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    * @param pool liquidity pool this tick belongs to
    */
   def uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool: Option[String] = None): ApiRequest[Seq[TickDailySnapshotDTO]] =
-    ApiRequest[Seq[TickDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current", "application/json")
+    ApiRequest[Seq[TickDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current", "application/json")
       .withQueryParam("pool", pool)
       .withSuccessResponse[Seq[TickDailySnapshotDTO]](200)
       
@@ -237,7 +237,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    * @param pool liquidity pool this tick belongs to
    */
   def uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool: Option[String] = None): ApiRequest[Seq[TickHourlySnapshotDTO]] =
-    ApiRequest[Seq[TickHourlySnapshotDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current", "application/json")
+    ApiRequest[Seq[TickHourlySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current", "application/json")
       .withQueryParam("pool", pool)
       .withSuccessResponse[Seq[TickHourlySnapshotDTO]](200)
       
@@ -251,7 +251,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    * @param pool Liquidity pool this tick belongs to
    */
   def uNISWAPV3ETHEREUMTicksCurrent(pool: Option[String] = None): ApiRequest[Seq[TickDTO]] =
-    ApiRequest[Seq[TickDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/ticks/current", "application/json")
+    ApiRequest[Seq[TickDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/ticks/current", "application/json")
       .withQueryParam("pool", pool)
       .withSuccessResponse[Seq[TickDTO]](200)
       
@@ -263,7 +263,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    *   code 200 : Seq[TokenWhiteListSymbolDTO] (successful operation)
    */
   def uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(): ApiRequest[Seq[TokenWhiteListSymbolDTO]] =
-    ApiRequest[Seq[TokenWhiteListSymbolDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current", "application/json")
+    ApiRequest[Seq[TokenWhiteListSymbolDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current", "application/json")
       .withSuccessResponse[Seq[TokenWhiteListSymbolDTO]](200)
       
 
@@ -274,7 +274,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    *   code 200 : Seq[TokenWhiteListDTO] (successful operation)
    */
   def uNISWAPV3ETHEREUMTokenWhiteListsCurrent(): ApiRequest[Seq[TokenWhiteListDTO]] =
-    ApiRequest[Seq[TokenWhiteListDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current", "application/json")
+    ApiRequest[Seq[TokenWhiteListDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current", "application/json")
       .withSuccessResponse[Seq[TokenWhiteListDTO]](200)
       
 
@@ -287,7 +287,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    * @param id Smart contract address of the token.
    */
   def uNISWAPV3ETHEREUMTokensCurrent(id: Option[String] = None): ApiRequest[Seq[TokenDTO]] =
-    ApiRequest[Seq[TokenDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/tokens/current", "application/json")
+    ApiRequest[Seq[TokenDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/tokens/current", "application/json")
       .withQueryParam("id", id)
       .withSuccessResponse[Seq[TokenDTO]](200)
       
@@ -299,7 +299,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    *   code 200 : Seq[UsageMetricsDailySnapshotDTO] (successful operation)
    */
   def uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(): ApiRequest[Seq[UsageMetricsDailySnapshotDTO]] =
-    ApiRequest[Seq[UsageMetricsDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current", "application/json")
+    ApiRequest[Seq[UsageMetricsDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current", "application/json")
       .withSuccessResponse[Seq[UsageMetricsDailySnapshotDTO]](200)
       
 
@@ -310,7 +310,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    *   code 200 : Seq[UsageMetricsHourlySnapshotDTO] (successful operation)
    */
   def uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(): ApiRequest[Seq[UsageMetricsHourlySnapshotDTO]] =
-    ApiRequest[Seq[UsageMetricsHourlySnapshotDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current", "application/json")
+    ApiRequest[Seq[UsageMetricsHourlySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current", "application/json")
       .withSuccessResponse[Seq[UsageMetricsHourlySnapshotDTO]](200)
       
 
@@ -321,7 +321,7 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    *   code 200 : Seq[WithdrawDTO] (successful operation)
    */
   def uNISWAPV3ETHEREUMWithdrawsCurrent(): ApiRequest[Seq[WithdrawDTO]] =
-    ApiRequest[Seq[WithdrawDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswap_v3_ethereum/withdraws/current", "application/json")
+    ApiRequest[Seq[WithdrawDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/withdraws/current", "application/json")
       .withSuccessResponse[Seq[WithdrawDTO]](200)
       
 

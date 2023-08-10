@@ -346,7 +346,7 @@ class CRYPTOPUNKSApi
     {
 
 
-        $resourcePath = '/dapps/cryptopunks/bids/current';
+        $resourcePath = '/v1/dapps/cryptopunks/bids/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -358,7 +358,7 @@ class CRYPTOPUNKSApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -609,7 +609,7 @@ class CRYPTOPUNKSApi
     {
 
 
-        $resourcePath = '/dapps/cryptopunks/collectionDailySnapshots/current';
+        $resourcePath = '/v1/dapps/cryptopunks/collectionDailySnapshots/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -621,7 +621,7 @@ class CRYPTOPUNKSApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -872,7 +872,7 @@ class CRYPTOPUNKSApi
     {
 
 
-        $resourcePath = '/dapps/cryptopunks/collections/current';
+        $resourcePath = '/v1/dapps/cryptopunks/collections/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -884,7 +884,7 @@ class CRYPTOPUNKSApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -1135,7 +1135,7 @@ class CRYPTOPUNKSApi
     {
 
 
-        $resourcePath = '/dapps/cryptopunks/dataSources/current';
+        $resourcePath = '/v1/dapps/cryptopunks/dataSources/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1147,7 +1147,7 @@ class CRYPTOPUNKSApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -1398,7 +1398,7 @@ class CRYPTOPUNKSApi
     {
 
 
-        $resourcePath = '/dapps/cryptopunks/items/current';
+        $resourcePath = '/v1/dapps/cryptopunks/items/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1410,7 +1410,7 @@ class CRYPTOPUNKSApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -1661,7 +1661,7 @@ class CRYPTOPUNKSApi
     {
 
 
-        $resourcePath = '/dapps/cryptopunks/marketPlaces/current';
+        $resourcePath = '/v1/dapps/cryptopunks/marketPlaces/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1673,7 +1673,7 @@ class CRYPTOPUNKSApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -1924,7 +1924,7 @@ class CRYPTOPUNKSApi
     {
 
 
-        $resourcePath = '/dapps/cryptopunks/marketplaceDailySnapshots/current';
+        $resourcePath = '/v1/dapps/cryptopunks/marketplaceDailySnapshots/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1936,7 +1936,7 @@ class CRYPTOPUNKSApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -2187,7 +2187,7 @@ class CRYPTOPUNKSApi
     {
 
 
-        $resourcePath = '/dapps/cryptopunks/trades/current';
+        $resourcePath = '/v1/dapps/cryptopunks/trades/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2199,7 +2199,7 @@ class CRYPTOPUNKSApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -2450,7 +2450,7 @@ class CRYPTOPUNKSApi
     {
 
 
-        $resourcePath = '/dapps/cryptopunks/users/current';
+        $resourcePath = '/v1/dapps/cryptopunks/users/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2462,7 +2462,7 @@ class CRYPTOPUNKSApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );

@@ -73,7 +73,7 @@ API.Client.UNISWAPV3ETHEREUMApi.$inject = ['$http', '$httpParamSerializer', '$in
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMAccountsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/accounts/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/accounts/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -104,7 +104,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMAccountsCurrent = fun
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMActiveAccountsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/activeAccounts/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/activeAccounts/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -135,7 +135,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMActiveAccountsCurrent
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMDepositsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/deposits/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/deposits/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -166,7 +166,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMDepositsCurrent = fun
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMDexAmmProtocolsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/dexAmmProtocols/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -197,7 +197,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMDexAmmProtocolsCurren
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -229,7 +229,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMFinancialsDailySnapsh
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent = function(opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -265,7 +265,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMLiquidityPoolAmountsC
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent = function(opt_pool, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -300,7 +300,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMLiquidityPoolDailySna
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/liquidityPoolFees/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -332,7 +332,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMLiquidityPoolFeesCurr
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent = function(opt_pool, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -368,7 +368,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMLiquidityPoolHourlySn
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMLiquidityPoolsCurrent = function(opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/liquidityPools/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/liquidityPools/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -403,7 +403,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMLiquidityPoolsCurrent
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMPositionSnapshotsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/positionSnapshots/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -435,7 +435,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMPositionSnapshotsCurr
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMPositionsCurrent = function(opt_pool, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/positions/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/positions/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -470,7 +470,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMPositionsCurrent = fu
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMRewardTokensCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/rewardTokens/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/rewardTokens/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -501,7 +501,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMRewardTokensCurrent =
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMSwapsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/swaps/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/swaps/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -533,7 +533,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMSwapsCurrent = functi
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent = function(opt_pool, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/tickDailySnapshots/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -569,7 +569,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTickDailySnapshotsCur
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent = function(opt_pool, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -605,7 +605,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTickHourlySnapshotsCu
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTicksCurrent = function(opt_pool, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/ticks/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/ticks/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -640,7 +640,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTicksCurrent = functi
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -671,7 +671,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTokenWhiteListSymbols
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTokenWhiteListsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/tokenWhiteLists/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -703,7 +703,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTokenWhiteListsCurren
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTokensCurrent = function(opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/tokens/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/tokens/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -738,7 +738,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTokensCurrent = funct
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -769,7 +769,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMUsageMetricsDailySnap
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -800,7 +800,7 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMUsageMetricsHourlySna
  */
 API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMWithdrawsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswap_v3_ethereum/withdraws/current';
+  var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/withdraws/current';
 
   /** @type {!Object} */
   var queryParameters = {};

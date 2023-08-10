@@ -127,7 +127,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/accounts/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/accounts/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -195,7 +195,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/activeAccounts/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/activeAccounts/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -263,7 +263,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/deposits/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/deposits/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -331,7 +331,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -399,7 +399,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -475,7 +475,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -551,7 +551,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -619,7 +619,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -695,7 +695,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -771,7 +771,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/liquidityPools/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/liquidityPools/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -839,7 +839,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/positionSnapshots/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -915,7 +915,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/positions/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/positions/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -983,7 +983,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/rewardTokens/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/rewardTokens/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -1051,7 +1051,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/swaps/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/swaps/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -1127,7 +1127,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -1203,7 +1203,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -1279,7 +1279,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/ticks/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/ticks/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -1347,7 +1347,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -1415,7 +1415,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -1491,7 +1491,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/tokens/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/tokens/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -1559,7 +1559,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -1627,7 +1627,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -1695,7 +1695,7 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswap_v3_ethereum/withdraws/current",
+            path = "/v1/dapps/uniswap-v3-ethereum/withdraws/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,

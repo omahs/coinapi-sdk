@@ -4,29 +4,29 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**uNISWAPV3ETHEREUMAccountsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMAccountsCurrent) | **GET** /dapps/uniswap_v3_ethereum/accounts/current | Accounts (current) |
-| [**uNISWAPV3ETHEREUMActiveAccountsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMActiveAccountsCurrent) | **GET** /dapps/uniswap_v3_ethereum/activeAccounts/current | ActiveAccounts (current) |
-| [**uNISWAPV3ETHEREUMDepositsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMDepositsCurrent) | **GET** /dapps/uniswap_v3_ethereum/deposits/current | Deposits (current) |
-| [**uNISWAPV3ETHEREUMDexAmmProtocolsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMDexAmmProtocolsCurrent) | **GET** /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current) |
-| [**uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current) |
-| [**uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current) |
-| [**uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current) |
-| [**uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current) |
-| [**uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current) |
-| [**uNISWAPV3ETHEREUMLiquidityPoolsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMLiquidityPoolsCurrent) | **GET** /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current) |
-| [**uNISWAPV3ETHEREUMPositionSnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMPositionSnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current) |
-| [**uNISWAPV3ETHEREUMPositionsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMPositionsCurrent) | **GET** /dapps/uniswap_v3_ethereum/positions/current | Positions (current) |
-| [**uNISWAPV3ETHEREUMRewardTokensCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMRewardTokensCurrent) | **GET** /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current) |
-| [**uNISWAPV3ETHEREUMSwapsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMSwapsCurrent) | **GET** /dapps/uniswap_v3_ethereum/swaps/current | Swaps (current) |
-| [**uNISWAPV3ETHEREUMTickDailySnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMTickDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/tickDailySnapshots/current | TickDailySnapshots (current) |
-| [**uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/tickHourlySnapshots/current | TickHourlySnapshots (current) |
-| [**uNISWAPV3ETHEREUMTicksCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMTicksCurrent) | **GET** /dapps/uniswap_v3_ethereum/ticks/current | Ticks (current) |
-| [**uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent) | **GET** /dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current | TokenWhiteListSymbols (current) |
-| [**uNISWAPV3ETHEREUMTokenWhiteListsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMTokenWhiteListsCurrent) | **GET** /dapps/uniswap_v3_ethereum/tokenWhiteLists/current | TokenWhiteLists (current) |
-| [**uNISWAPV3ETHEREUMTokensCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMTokensCurrent) | **GET** /dapps/uniswap_v3_ethereum/tokens/current | Tokens (current) |
-| [**uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current) |
-| [**uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent) | **GET** /dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current) |
-| [**uNISWAPV3ETHEREUMWithdrawsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMWithdrawsCurrent) | **GET** /dapps/uniswap_v3_ethereum/withdraws/current | Withdraws (current) |
+| [**uNISWAPV3ETHEREUMAccountsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMAccountsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/accounts/current | Accounts (current) |
+| [**uNISWAPV3ETHEREUMActiveAccountsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMActiveAccountsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/activeAccounts/current | ActiveAccounts (current) |
+| [**uNISWAPV3ETHEREUMDepositsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMDepositsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/deposits/current | Deposits (current) |
+| [**uNISWAPV3ETHEREUMDexAmmProtocolsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMDexAmmProtocolsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current | DexAmmProtocols (current) |
+| [**uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current) |
+| [**uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current) |
+| [**uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current) |
+| [**uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current | LiquidityPoolFees (current) |
+| [**uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current) |
+| [**uNISWAPV3ETHEREUMLiquidityPoolsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMLiquidityPoolsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/liquidityPools/current | LiquidityPools (current) |
+| [**uNISWAPV3ETHEREUMPositionSnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMPositionSnapshotsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/positionSnapshots/current | PositionSnapshots (current) |
+| [**uNISWAPV3ETHEREUMPositionsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMPositionsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/positions/current | Positions (current) |
+| [**uNISWAPV3ETHEREUMRewardTokensCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMRewardTokensCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/rewardTokens/current | RewardTokens (current) |
+| [**uNISWAPV3ETHEREUMSwapsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMSwapsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/swaps/current | Swaps (current) |
+| [**uNISWAPV3ETHEREUMTickDailySnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMTickDailySnapshotsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current | TickDailySnapshots (current) |
+| [**uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current | TickHourlySnapshots (current) |
+| [**uNISWAPV3ETHEREUMTicksCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMTicksCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/ticks/current | Ticks (current) |
+| [**uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current | TokenWhiteListSymbols (current) |
+| [**uNISWAPV3ETHEREUMTokenWhiteListsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMTokenWhiteListsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current | TokenWhiteLists (current) |
+| [**uNISWAPV3ETHEREUMTokensCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMTokensCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/tokens/current | Tokens (current) |
+| [**uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current) |
+| [**uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current) |
+| [**uNISWAPV3ETHEREUMWithdrawsCurrent**](UniswapV3EthereumApi.md#uNISWAPV3ETHEREUMWithdrawsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/withdraws/current | Withdraws (current) |
 
 
 <a id="uNISWAPV3ETHEREUMAccountsCurrent"></a>
@@ -80,7 +80,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -138,7 +138,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -196,7 +196,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -254,7 +254,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -312,7 +312,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -374,7 +374,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -436,7 +436,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -494,7 +494,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -556,7 +556,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -618,7 +618,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -676,7 +676,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -738,7 +738,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -796,7 +796,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -854,7 +854,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -916,7 +916,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -978,7 +978,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1040,7 +1040,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1098,7 +1098,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1156,7 +1156,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1218,7 +1218,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1276,7 +1276,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1334,7 +1334,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1392,7 +1392,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |

@@ -113,10 +113,10 @@ export class CRYPTOPUNKSService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public cRYPTOPUNKSBidsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<CRYPTOPUNKSBidDTO>>;
-    public cRYPTOPUNKSBidsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<CRYPTOPUNKSBidDTO>>>;
-    public cRYPTOPUNKSBidsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<CRYPTOPUNKSBidDTO>>>;
-    public cRYPTOPUNKSBidsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public cRYPTOPUNKSBidsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<CRYPTOPUNKSBidDTO>>;
+    public cRYPTOPUNKSBidsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<CRYPTOPUNKSBidDTO>>>;
+    public cRYPTOPUNKSBidsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<CRYPTOPUNKSBidDTO>>>;
+    public cRYPTOPUNKSBidsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -126,7 +126,8 @@ export class CRYPTOPUNKSService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -151,7 +152,7 @@ export class CRYPTOPUNKSService {
             }
         }
 
-        let localVarPath = `/dapps/cryptopunks/bids/current`;
+        let localVarPath = `/v1/dapps/cryptopunks/bids/current`;
         return this.httpClient.request<Array<CRYPTOPUNKSBidDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -170,10 +171,10 @@ export class CRYPTOPUNKSService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public cRYPTOPUNKSCollectionDailySnapshotsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<CRYPTOPUNKSCollectionDailySnapshotDTO>>;
-    public cRYPTOPUNKSCollectionDailySnapshotsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<CRYPTOPUNKSCollectionDailySnapshotDTO>>>;
-    public cRYPTOPUNKSCollectionDailySnapshotsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<CRYPTOPUNKSCollectionDailySnapshotDTO>>>;
-    public cRYPTOPUNKSCollectionDailySnapshotsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public cRYPTOPUNKSCollectionDailySnapshotsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<CRYPTOPUNKSCollectionDailySnapshotDTO>>;
+    public cRYPTOPUNKSCollectionDailySnapshotsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<CRYPTOPUNKSCollectionDailySnapshotDTO>>>;
+    public cRYPTOPUNKSCollectionDailySnapshotsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<CRYPTOPUNKSCollectionDailySnapshotDTO>>>;
+    public cRYPTOPUNKSCollectionDailySnapshotsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -183,7 +184,8 @@ export class CRYPTOPUNKSService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -208,7 +210,7 @@ export class CRYPTOPUNKSService {
             }
         }
 
-        let localVarPath = `/dapps/cryptopunks/collectionDailySnapshots/current`;
+        let localVarPath = `/v1/dapps/cryptopunks/collectionDailySnapshots/current`;
         return this.httpClient.request<Array<CRYPTOPUNKSCollectionDailySnapshotDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -227,10 +229,10 @@ export class CRYPTOPUNKSService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public cRYPTOPUNKSCollectionsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<CRYPTOPUNKSCollectionDTO>>;
-    public cRYPTOPUNKSCollectionsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<CRYPTOPUNKSCollectionDTO>>>;
-    public cRYPTOPUNKSCollectionsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<CRYPTOPUNKSCollectionDTO>>>;
-    public cRYPTOPUNKSCollectionsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public cRYPTOPUNKSCollectionsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<CRYPTOPUNKSCollectionDTO>>;
+    public cRYPTOPUNKSCollectionsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<CRYPTOPUNKSCollectionDTO>>>;
+    public cRYPTOPUNKSCollectionsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<CRYPTOPUNKSCollectionDTO>>>;
+    public cRYPTOPUNKSCollectionsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -240,7 +242,8 @@ export class CRYPTOPUNKSService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -265,7 +268,7 @@ export class CRYPTOPUNKSService {
             }
         }
 
-        let localVarPath = `/dapps/cryptopunks/collections/current`;
+        let localVarPath = `/v1/dapps/cryptopunks/collections/current`;
         return this.httpClient.request<Array<CRYPTOPUNKSCollectionDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -284,10 +287,10 @@ export class CRYPTOPUNKSService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public cRYPTOPUNKSDataSourcesCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<CRYPTOPUNKSDataSourcesDTO>>;
-    public cRYPTOPUNKSDataSourcesCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<CRYPTOPUNKSDataSourcesDTO>>>;
-    public cRYPTOPUNKSDataSourcesCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<CRYPTOPUNKSDataSourcesDTO>>>;
-    public cRYPTOPUNKSDataSourcesCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public cRYPTOPUNKSDataSourcesCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<CRYPTOPUNKSDataSourcesDTO>>;
+    public cRYPTOPUNKSDataSourcesCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<CRYPTOPUNKSDataSourcesDTO>>>;
+    public cRYPTOPUNKSDataSourcesCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<CRYPTOPUNKSDataSourcesDTO>>>;
+    public cRYPTOPUNKSDataSourcesCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -297,7 +300,8 @@ export class CRYPTOPUNKSService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -322,7 +326,7 @@ export class CRYPTOPUNKSService {
             }
         }
 
-        let localVarPath = `/dapps/cryptopunks/dataSources/current`;
+        let localVarPath = `/v1/dapps/cryptopunks/dataSources/current`;
         return this.httpClient.request<Array<CRYPTOPUNKSDataSourcesDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -341,10 +345,10 @@ export class CRYPTOPUNKSService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public cRYPTOPUNKSItemsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<CRYPTOPUNKSItemDTO>>;
-    public cRYPTOPUNKSItemsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<CRYPTOPUNKSItemDTO>>>;
-    public cRYPTOPUNKSItemsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<CRYPTOPUNKSItemDTO>>>;
-    public cRYPTOPUNKSItemsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public cRYPTOPUNKSItemsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<CRYPTOPUNKSItemDTO>>;
+    public cRYPTOPUNKSItemsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<CRYPTOPUNKSItemDTO>>>;
+    public cRYPTOPUNKSItemsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<CRYPTOPUNKSItemDTO>>>;
+    public cRYPTOPUNKSItemsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -354,7 +358,8 @@ export class CRYPTOPUNKSService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -379,7 +384,7 @@ export class CRYPTOPUNKSService {
             }
         }
 
-        let localVarPath = `/dapps/cryptopunks/items/current`;
+        let localVarPath = `/v1/dapps/cryptopunks/items/current`;
         return this.httpClient.request<Array<CRYPTOPUNKSItemDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -398,10 +403,10 @@ export class CRYPTOPUNKSService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public cRYPTOPUNKSMarketPlacesCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<CRYPTOPUNKSMarketPlaceDTO>>;
-    public cRYPTOPUNKSMarketPlacesCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<CRYPTOPUNKSMarketPlaceDTO>>>;
-    public cRYPTOPUNKSMarketPlacesCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<CRYPTOPUNKSMarketPlaceDTO>>>;
-    public cRYPTOPUNKSMarketPlacesCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public cRYPTOPUNKSMarketPlacesCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<CRYPTOPUNKSMarketPlaceDTO>>;
+    public cRYPTOPUNKSMarketPlacesCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<CRYPTOPUNKSMarketPlaceDTO>>>;
+    public cRYPTOPUNKSMarketPlacesCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<CRYPTOPUNKSMarketPlaceDTO>>>;
+    public cRYPTOPUNKSMarketPlacesCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -411,7 +416,8 @@ export class CRYPTOPUNKSService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -436,7 +442,7 @@ export class CRYPTOPUNKSService {
             }
         }
 
-        let localVarPath = `/dapps/cryptopunks/marketPlaces/current`;
+        let localVarPath = `/v1/dapps/cryptopunks/marketPlaces/current`;
         return this.httpClient.request<Array<CRYPTOPUNKSMarketPlaceDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -455,10 +461,10 @@ export class CRYPTOPUNKSService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>;
-    public cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>>;
-    public cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>>;
-    public cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>;
+    public cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>>;
+    public cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>>;
+    public cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -468,7 +474,8 @@ export class CRYPTOPUNKSService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -493,7 +500,7 @@ export class CRYPTOPUNKSService {
             }
         }
 
-        let localVarPath = `/dapps/cryptopunks/marketplaceDailySnapshots/current`;
+        let localVarPath = `/v1/dapps/cryptopunks/marketplaceDailySnapshots/current`;
         return this.httpClient.request<Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -512,10 +519,10 @@ export class CRYPTOPUNKSService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public cRYPTOPUNKSTradesCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<CRYPTOPUNKSTradeDTO>>;
-    public cRYPTOPUNKSTradesCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<CRYPTOPUNKSTradeDTO>>>;
-    public cRYPTOPUNKSTradesCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<CRYPTOPUNKSTradeDTO>>>;
-    public cRYPTOPUNKSTradesCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public cRYPTOPUNKSTradesCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<CRYPTOPUNKSTradeDTO>>;
+    public cRYPTOPUNKSTradesCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<CRYPTOPUNKSTradeDTO>>>;
+    public cRYPTOPUNKSTradesCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<CRYPTOPUNKSTradeDTO>>>;
+    public cRYPTOPUNKSTradesCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -525,7 +532,8 @@ export class CRYPTOPUNKSService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -550,7 +558,7 @@ export class CRYPTOPUNKSService {
             }
         }
 
-        let localVarPath = `/dapps/cryptopunks/trades/current`;
+        let localVarPath = `/v1/dapps/cryptopunks/trades/current`;
         return this.httpClient.request<Array<CRYPTOPUNKSTradeDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -569,10 +577,10 @@ export class CRYPTOPUNKSService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public cRYPTOPUNKSUsersCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<CRYPTOPUNKSUserDTO>>;
-    public cRYPTOPUNKSUsersCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<CRYPTOPUNKSUserDTO>>>;
-    public cRYPTOPUNKSUsersCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<CRYPTOPUNKSUserDTO>>>;
-    public cRYPTOPUNKSUsersCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public cRYPTOPUNKSUsersCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<CRYPTOPUNKSUserDTO>>;
+    public cRYPTOPUNKSUsersCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<CRYPTOPUNKSUserDTO>>>;
+    public cRYPTOPUNKSUsersCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<CRYPTOPUNKSUserDTO>>>;
+    public cRYPTOPUNKSUsersCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -582,7 +590,8 @@ export class CRYPTOPUNKSService {
             const httpHeaderAccepts: string[] = [
                 'text/plain',
                 'application/json',
-                'text/json'
+                'text/json',
+                'application/x-msgpack'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -607,7 +616,7 @@ export class CRYPTOPUNKSService {
             }
         }
 
-        let localVarPath = `/dapps/cryptopunks/users/current`;
+        let localVarPath = `/v1/dapps/cryptopunks/users/current`;
         return this.httpClient.request<Array<CRYPTOPUNKSUserDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,

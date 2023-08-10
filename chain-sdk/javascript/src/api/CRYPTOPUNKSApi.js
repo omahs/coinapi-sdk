@@ -70,10 +70,10 @@ export default class CRYPTOPUNKSApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [CRYPTOPUNKSBidDTO];
       return this.apiClient.callApi(
-        '/dapps/cryptopunks/bids/current', 'GET',
+        '/v1/dapps/cryptopunks/bids/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -107,10 +107,10 @@ export default class CRYPTOPUNKSApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [CRYPTOPUNKSCollectionDailySnapshotDTO];
       return this.apiClient.callApi(
-        '/dapps/cryptopunks/collectionDailySnapshots/current', 'GET',
+        '/v1/dapps/cryptopunks/collectionDailySnapshots/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -144,10 +144,10 @@ export default class CRYPTOPUNKSApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [CRYPTOPUNKSCollectionDTO];
       return this.apiClient.callApi(
-        '/dapps/cryptopunks/collections/current', 'GET',
+        '/v1/dapps/cryptopunks/collections/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -181,10 +181,10 @@ export default class CRYPTOPUNKSApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [CRYPTOPUNKSDataSourcesDTO];
       return this.apiClient.callApi(
-        '/dapps/cryptopunks/dataSources/current', 'GET',
+        '/v1/dapps/cryptopunks/dataSources/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -218,10 +218,10 @@ export default class CRYPTOPUNKSApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [CRYPTOPUNKSItemDTO];
       return this.apiClient.callApi(
-        '/dapps/cryptopunks/items/current', 'GET',
+        '/v1/dapps/cryptopunks/items/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -255,10 +255,10 @@ export default class CRYPTOPUNKSApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [CRYPTOPUNKSMarketPlaceDTO];
       return this.apiClient.callApi(
-        '/dapps/cryptopunks/marketPlaces/current', 'GET',
+        '/v1/dapps/cryptopunks/marketPlaces/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -292,10 +292,10 @@ export default class CRYPTOPUNKSApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [CRYPTOPUNKSMarketplaceDailySnapshotDTO];
       return this.apiClient.callApi(
-        '/dapps/cryptopunks/marketplaceDailySnapshots/current', 'GET',
+        '/v1/dapps/cryptopunks/marketplaceDailySnapshots/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -329,10 +329,10 @@ export default class CRYPTOPUNKSApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [CRYPTOPUNKSTradeDTO];
       return this.apiClient.callApi(
-        '/dapps/cryptopunks/trades/current', 'GET',
+        '/v1/dapps/cryptopunks/trades/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -366,10 +366,10 @@ export default class CRYPTOPUNKSApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [CRYPTOPUNKSUserDTO];
       return this.apiClient.callApi(
-        '/dapps/cryptopunks/users/current', 'GET',
+        '/v1/dapps/cryptopunks/users/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

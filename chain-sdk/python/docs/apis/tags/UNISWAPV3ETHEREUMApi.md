@@ -5,29 +5,29 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**u_niswapv3_ethereum_accounts__current**](#u_niswapv3_ethereum_accounts__current) | **get** /dapps/uniswap_v3_ethereum/accounts/current | Accounts (current)
-[**u_niswapv3_ethereum_active_accounts__current**](#u_niswapv3_ethereum_active_accounts__current) | **get** /dapps/uniswap_v3_ethereum/activeAccounts/current | ActiveAccounts (current)
-[**u_niswapv3_ethereum_deposits__current**](#u_niswapv3_ethereum_deposits__current) | **get** /dapps/uniswap_v3_ethereum/deposits/current | Deposits (current)
-[**u_niswapv3_ethereum_dex_amm_protocols__current**](#u_niswapv3_ethereum_dex_amm_protocols__current) | **get** /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
-[**u_niswapv3_ethereum_financials_daily_snapshots__current**](#u_niswapv3_ethereum_financials_daily_snapshots__current) | **get** /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
-[**u_niswapv3_ethereum_liquidity_pool_amounts__current**](#u_niswapv3_ethereum_liquidity_pool_amounts__current) | **get** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
-[**u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current**](#u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current) | **get** /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
-[**u_niswapv3_ethereum_liquidity_pool_fees__current**](#u_niswapv3_ethereum_liquidity_pool_fees__current) | **get** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
-[**u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current**](#u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current) | **get** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
-[**u_niswapv3_ethereum_liquidity_pools__current**](#u_niswapv3_ethereum_liquidity_pools__current) | **get** /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current)
-[**u_niswapv3_ethereum_position_snapshots__current**](#u_niswapv3_ethereum_position_snapshots__current) | **get** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current)
-[**u_niswapv3_ethereum_positions__current**](#u_niswapv3_ethereum_positions__current) | **get** /dapps/uniswap_v3_ethereum/positions/current | Positions (current)
-[**u_niswapv3_ethereum_reward_tokens__current**](#u_niswapv3_ethereum_reward_tokens__current) | **get** /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current)
-[**u_niswapv3_ethereum_swaps__current**](#u_niswapv3_ethereum_swaps__current) | **get** /dapps/uniswap_v3_ethereum/swaps/current | Swaps (current)
-[**u_niswapv3_ethereum_tick_daily_snapshots__current**](#u_niswapv3_ethereum_tick_daily_snapshots__current) | **get** /dapps/uniswap_v3_ethereum/tickDailySnapshots/current | TickDailySnapshots (current)
-[**u_niswapv3_ethereum_tick_hourly_snapshots__current**](#u_niswapv3_ethereum_tick_hourly_snapshots__current) | **get** /dapps/uniswap_v3_ethereum/tickHourlySnapshots/current | TickHourlySnapshots (current)
-[**u_niswapv3_ethereum_ticks__current**](#u_niswapv3_ethereum_ticks__current) | **get** /dapps/uniswap_v3_ethereum/ticks/current | Ticks (current)
-[**u_niswapv3_ethereum_token_white_list_symbols__current**](#u_niswapv3_ethereum_token_white_list_symbols__current) | **get** /dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current | TokenWhiteListSymbols (current)
-[**u_niswapv3_ethereum_token_white_lists__current**](#u_niswapv3_ethereum_token_white_lists__current) | **get** /dapps/uniswap_v3_ethereum/tokenWhiteLists/current | TokenWhiteLists (current)
-[**u_niswapv3_ethereum_tokens__current**](#u_niswapv3_ethereum_tokens__current) | **get** /dapps/uniswap_v3_ethereum/tokens/current | Tokens (current)
-[**u_niswapv3_ethereum_usage_metrics_daily_snapshots__current**](#u_niswapv3_ethereum_usage_metrics_daily_snapshots__current) | **get** /dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current)
-[**u_niswapv3_ethereum_usage_metrics_hourly_snapshots__current**](#u_niswapv3_ethereum_usage_metrics_hourly_snapshots__current) | **get** /dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current)
-[**u_niswapv3_ethereum_withdraws__current**](#u_niswapv3_ethereum_withdraws__current) | **get** /dapps/uniswap_v3_ethereum/withdraws/current | Withdraws (current)
+[**u_niswapv3_ethereum_accounts__current**](#u_niswapv3_ethereum_accounts__current) | **get** /v1/dapps/uniswap-v3-ethereum/accounts/current | Accounts (current)
+[**u_niswapv3_ethereum_active_accounts__current**](#u_niswapv3_ethereum_active_accounts__current) | **get** /v1/dapps/uniswap-v3-ethereum/activeAccounts/current | ActiveAccounts (current)
+[**u_niswapv3_ethereum_deposits__current**](#u_niswapv3_ethereum_deposits__current) | **get** /v1/dapps/uniswap-v3-ethereum/deposits/current | Deposits (current)
+[**u_niswapv3_ethereum_dex_amm_protocols__current**](#u_niswapv3_ethereum_dex_amm_protocols__current) | **get** /v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
+[**u_niswapv3_ethereum_financials_daily_snapshots__current**](#u_niswapv3_ethereum_financials_daily_snapshots__current) | **get** /v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
+[**u_niswapv3_ethereum_liquidity_pool_amounts__current**](#u_niswapv3_ethereum_liquidity_pool_amounts__current) | **get** /v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
+[**u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current**](#u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current) | **get** /v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
+[**u_niswapv3_ethereum_liquidity_pool_fees__current**](#u_niswapv3_ethereum_liquidity_pool_fees__current) | **get** /v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
+[**u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current**](#u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current) | **get** /v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
+[**u_niswapv3_ethereum_liquidity_pools__current**](#u_niswapv3_ethereum_liquidity_pools__current) | **get** /v1/dapps/uniswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
+[**u_niswapv3_ethereum_position_snapshots__current**](#u_niswapv3_ethereum_position_snapshots__current) | **get** /v1/dapps/uniswap-v3-ethereum/positionSnapshots/current | PositionSnapshots (current)
+[**u_niswapv3_ethereum_positions__current**](#u_niswapv3_ethereum_positions__current) | **get** /v1/dapps/uniswap-v3-ethereum/positions/current | Positions (current)
+[**u_niswapv3_ethereum_reward_tokens__current**](#u_niswapv3_ethereum_reward_tokens__current) | **get** /v1/dapps/uniswap-v3-ethereum/rewardTokens/current | RewardTokens (current)
+[**u_niswapv3_ethereum_swaps__current**](#u_niswapv3_ethereum_swaps__current) | **get** /v1/dapps/uniswap-v3-ethereum/swaps/current | Swaps (current)
+[**u_niswapv3_ethereum_tick_daily_snapshots__current**](#u_niswapv3_ethereum_tick_daily_snapshots__current) | **get** /v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current | TickDailySnapshots (current)
+[**u_niswapv3_ethereum_tick_hourly_snapshots__current**](#u_niswapv3_ethereum_tick_hourly_snapshots__current) | **get** /v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current | TickHourlySnapshots (current)
+[**u_niswapv3_ethereum_ticks__current**](#u_niswapv3_ethereum_ticks__current) | **get** /v1/dapps/uniswap-v3-ethereum/ticks/current | Ticks (current)
+[**u_niswapv3_ethereum_token_white_list_symbols__current**](#u_niswapv3_ethereum_token_white_list_symbols__current) | **get** /v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current | TokenWhiteListSymbols (current)
+[**u_niswapv3_ethereum_token_white_lists__current**](#u_niswapv3_ethereum_token_white_lists__current) | **get** /v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current | TokenWhiteLists (current)
+[**u_niswapv3_ethereum_tokens__current**](#u_niswapv3_ethereum_tokens__current) | **get** /v1/dapps/uniswap-v3-ethereum/tokens/current | Tokens (current)
+[**u_niswapv3_ethereum_usage_metrics_daily_snapshots__current**](#u_niswapv3_ethereum_usage_metrics_daily_snapshots__current) | **get** /v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current)
+[**u_niswapv3_ethereum_usage_metrics_hourly_snapshots__current**](#u_niswapv3_ethereum_usage_metrics_hourly_snapshots__current) | **get** /v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current)
+[**u_niswapv3_ethereum_withdraws__current**](#u_niswapv3_ethereum_withdraws__current) | **get** /v1/dapps/uniswap-v3-ethereum/withdraws/current | Withdraws (current)
 
 # **u_niswapv3_ethereum_accounts__current**
 <a id="u_niswapv3_ethereum_accounts__current"></a>
@@ -77,7 +77,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -105,6 +105,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMAccountDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMAccountDTO.md) | [**UNISWAPV3ETHEREUMAccountDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMAccountDTO.md) | [**UNISWAPV3ETHEREUMAccountDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMAccountDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMAccountDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMAccountDTO.md) | [**UNISWAPV3ETHEREUMAccountDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMAccountDTO.md) | [**UNISWAPV3ETHEREUMAccountDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMAccountDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -170,7 +182,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -198,6 +210,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMActiveAccountDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMActiveAccountDTO.md) | [**UNISWAPV3ETHEREUMActiveAccountDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMActiveAccountDTO.md) | [**UNISWAPV3ETHEREUMActiveAccountDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMActiveAccountDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMActiveAccountDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMActiveAccountDTO.md) | [**UNISWAPV3ETHEREUMActiveAccountDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMActiveAccountDTO.md) | [**UNISWAPV3ETHEREUMActiveAccountDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMActiveAccountDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -263,7 +287,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -291,6 +315,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMDepositDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMDepositDTO.md) | [**UNISWAPV3ETHEREUMDepositDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMDepositDTO.md) | [**UNISWAPV3ETHEREUMDepositDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMDepositDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMDepositDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMDepositDTO.md) | [**UNISWAPV3ETHEREUMDepositDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMDepositDTO.md) | [**UNISWAPV3ETHEREUMDepositDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMDepositDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -356,7 +392,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -384,6 +420,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMDexAmmProtocolDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMDexAmmProtocolDTO.md) | [**UNISWAPV3ETHEREUMDexAmmProtocolDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMDexAmmProtocolDTO.md) | [**UNISWAPV3ETHEREUMDexAmmProtocolDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMDexAmmProtocolDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMDexAmmProtocolDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMDexAmmProtocolDTO.md) | [**UNISWAPV3ETHEREUMDexAmmProtocolDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMDexAmmProtocolDTO.md) | [**UNISWAPV3ETHEREUMDexAmmProtocolDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMDexAmmProtocolDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -449,7 +497,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -477,6 +525,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md) | [**UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md) | [**UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md) | [**UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md) | [**UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -538,7 +598,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 query_params | RequestQueryParams | |
-accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', 'application/x-msgpack', ) | Tells the server the content type(s) that are accepted by the client
 stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
 timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
 skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
@@ -569,7 +629,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -597,6 +657,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMLiquidityPoolAmountDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolAmountDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolAmountDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMLiquidityPoolAmountDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolAmountDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolAmountDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -658,7 +730,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 query_params | RequestQueryParams | |
-accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', 'application/x-msgpack', ) | Tells the server the content type(s) that are accepted by the client
 stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
 timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
 skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
@@ -689,7 +761,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -717,6 +789,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -782,7 +866,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -810,6 +894,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMLiquidityPoolFeeDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolFeeDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolFeeDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMLiquidityPoolFeeDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolFeeDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolFeeDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -871,7 +967,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 query_params | RequestQueryParams | |
-accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', 'application/x-msgpack', ) | Tells the server the content type(s) that are accepted by the client
 stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
 timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
 skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
@@ -902,7 +998,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -930,6 +1026,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -991,7 +1099,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 query_params | RequestQueryParams | |
-accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', 'application/x-msgpack', ) | Tells the server the content type(s) that are accepted by the client
 stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
 timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
 skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
@@ -1022,7 +1130,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -1050,6 +1158,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMLiquidityPoolDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMLiquidityPoolDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolDTO.md) | [**UNISWAPV3ETHEREUMLiquidityPoolDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMLiquidityPoolDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -1115,7 +1235,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -1143,6 +1263,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMPositionSnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMPositionSnapshotDTO.md) | [**UNISWAPV3ETHEREUMPositionSnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMPositionSnapshotDTO.md) | [**UNISWAPV3ETHEREUMPositionSnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMPositionSnapshotDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMPositionSnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMPositionSnapshotDTO.md) | [**UNISWAPV3ETHEREUMPositionSnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMPositionSnapshotDTO.md) | [**UNISWAPV3ETHEREUMPositionSnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMPositionSnapshotDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -1204,7 +1336,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 query_params | RequestQueryParams | |
-accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', 'application/x-msgpack', ) | Tells the server the content type(s) that are accepted by the client
 stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
 timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
 skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
@@ -1235,7 +1367,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -1263,6 +1395,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMPositionDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMPositionDTO.md) | [**UNISWAPV3ETHEREUMPositionDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMPositionDTO.md) | [**UNISWAPV3ETHEREUMPositionDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMPositionDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMPositionDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMPositionDTO.md) | [**UNISWAPV3ETHEREUMPositionDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMPositionDTO.md) | [**UNISWAPV3ETHEREUMPositionDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMPositionDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -1328,7 +1472,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -1356,6 +1500,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMRewardTokenDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMRewardTokenDTO.md) | [**UNISWAPV3ETHEREUMRewardTokenDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMRewardTokenDTO.md) | [**UNISWAPV3ETHEREUMRewardTokenDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMRewardTokenDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMRewardTokenDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMRewardTokenDTO.md) | [**UNISWAPV3ETHEREUMRewardTokenDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMRewardTokenDTO.md) | [**UNISWAPV3ETHEREUMRewardTokenDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMRewardTokenDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -1421,7 +1577,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -1449,6 +1605,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMSwapDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMSwapDTO.md) | [**UNISWAPV3ETHEREUMSwapDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMSwapDTO.md) | [**UNISWAPV3ETHEREUMSwapDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMSwapDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMSwapDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMSwapDTO.md) | [**UNISWAPV3ETHEREUMSwapDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMSwapDTO.md) | [**UNISWAPV3ETHEREUMSwapDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMSwapDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -1510,7 +1678,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 query_params | RequestQueryParams | |
-accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', 'application/x-msgpack', ) | Tells the server the content type(s) that are accepted by the client
 stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
 timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
 skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
@@ -1541,7 +1709,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -1569,6 +1737,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMTickDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTickDailySnapshotDTO.md) | [**UNISWAPV3ETHEREUMTickDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTickDailySnapshotDTO.md) | [**UNISWAPV3ETHEREUMTickDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTickDailySnapshotDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMTickDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTickDailySnapshotDTO.md) | [**UNISWAPV3ETHEREUMTickDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTickDailySnapshotDTO.md) | [**UNISWAPV3ETHEREUMTickDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTickDailySnapshotDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -1630,7 +1810,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 query_params | RequestQueryParams | |
-accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', 'application/x-msgpack', ) | Tells the server the content type(s) that are accepted by the client
 stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
 timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
 skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
@@ -1661,7 +1841,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -1689,6 +1869,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMTickHourlySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTickHourlySnapshotDTO.md) | [**UNISWAPV3ETHEREUMTickHourlySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTickHourlySnapshotDTO.md) | [**UNISWAPV3ETHEREUMTickHourlySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTickHourlySnapshotDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMTickHourlySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTickHourlySnapshotDTO.md) | [**UNISWAPV3ETHEREUMTickHourlySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTickHourlySnapshotDTO.md) | [**UNISWAPV3ETHEREUMTickHourlySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTickHourlySnapshotDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -1750,7 +1942,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 query_params | RequestQueryParams | |
-accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', 'application/x-msgpack', ) | Tells the server the content type(s) that are accepted by the client
 stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
 timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
 skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
@@ -1781,7 +1973,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -1809,6 +2001,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMTickDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTickDTO.md) | [**UNISWAPV3ETHEREUMTickDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTickDTO.md) | [**UNISWAPV3ETHEREUMTickDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTickDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMTickDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTickDTO.md) | [**UNISWAPV3ETHEREUMTickDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTickDTO.md) | [**UNISWAPV3ETHEREUMTickDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTickDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -1874,7 +2078,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -1902,6 +2106,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO.md) | [**UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO.md) | [**UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO.md) | [**UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO.md) | [**UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -1967,7 +2183,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -1995,6 +2211,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMTokenWhiteListDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTokenWhiteListDTO.md) | [**UNISWAPV3ETHEREUMTokenWhiteListDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTokenWhiteListDTO.md) | [**UNISWAPV3ETHEREUMTokenWhiteListDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTokenWhiteListDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMTokenWhiteListDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTokenWhiteListDTO.md) | [**UNISWAPV3ETHEREUMTokenWhiteListDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTokenWhiteListDTO.md) | [**UNISWAPV3ETHEREUMTokenWhiteListDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTokenWhiteListDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -2056,7 +2284,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 query_params | RequestQueryParams | |
-accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', 'application/x-msgpack', ) | Tells the server the content type(s) that are accepted by the client
 stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
 timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
 skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
@@ -2087,7 +2315,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -2115,6 +2343,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMTokenDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTokenDTO.md) | [**UNISWAPV3ETHEREUMTokenDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTokenDTO.md) | [**UNISWAPV3ETHEREUMTokenDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTokenDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMTokenDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTokenDTO.md) | [**UNISWAPV3ETHEREUMTokenDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTokenDTO.md) | [**UNISWAPV3ETHEREUMTokenDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMTokenDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -2180,7 +2420,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -2208,6 +2448,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO.md) | [**UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO.md) | [**UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO.md) | [**UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO.md) | [**UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -2273,7 +2525,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -2301,6 +2553,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.md) | [**UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.md) | [**UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.md) | [**UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.md) | [**UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -2366,7 +2630,7 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, SchemaFor200ResponseBodyApplicationXMsgpack, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
@@ -2394,6 +2658,18 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [**UNISWAPV3ETHEREUMWithdrawDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMWithdrawDTO.md) | [**UNISWAPV3ETHEREUMWithdrawDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMWithdrawDTO.md) | [**UNISWAPV3ETHEREUMWithdrawDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMWithdrawDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UNISWAPV3ETHEREUMWithdrawDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMWithdrawDTO.md) | [**UNISWAPV3ETHEREUMWithdrawDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMWithdrawDTO.md) | [**UNISWAPV3ETHEREUMWithdrawDTO**]({{complexTypePrefix}}UNISWAPV3ETHEREUMWithdrawDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationXMsgpack
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

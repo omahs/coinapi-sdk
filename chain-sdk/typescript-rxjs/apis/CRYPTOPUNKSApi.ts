@@ -40,7 +40,7 @@ export class CRYPTOPUNKSApi extends BaseAPI {
     cRYPTOPUNKSBidsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CRYPTOPUNKSBidDTO>>>
     cRYPTOPUNKSBidsCurrent(opts?: OperationOpts): Observable<Array<CRYPTOPUNKSBidDTO> | AjaxResponse<Array<CRYPTOPUNKSBidDTO>>> {
         return this.request<Array<CRYPTOPUNKSBidDTO>>({
-            url: '/dapps/cryptopunks/bids/current',
+            url: '/v1/dapps/cryptopunks/bids/current',
             method: 'GET',
         }, opts?.responseOpts);
     };
@@ -53,7 +53,7 @@ export class CRYPTOPUNKSApi extends BaseAPI {
     cRYPTOPUNKSCollectionDailySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CRYPTOPUNKSCollectionDailySnapshotDTO>>>
     cRYPTOPUNKSCollectionDailySnapshotsCurrent(opts?: OperationOpts): Observable<Array<CRYPTOPUNKSCollectionDailySnapshotDTO> | AjaxResponse<Array<CRYPTOPUNKSCollectionDailySnapshotDTO>>> {
         return this.request<Array<CRYPTOPUNKSCollectionDailySnapshotDTO>>({
-            url: '/dapps/cryptopunks/collectionDailySnapshots/current',
+            url: '/v1/dapps/cryptopunks/collectionDailySnapshots/current',
             method: 'GET',
         }, opts?.responseOpts);
     };
@@ -66,7 +66,7 @@ export class CRYPTOPUNKSApi extends BaseAPI {
     cRYPTOPUNKSCollectionsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CRYPTOPUNKSCollectionDTO>>>
     cRYPTOPUNKSCollectionsCurrent(opts?: OperationOpts): Observable<Array<CRYPTOPUNKSCollectionDTO> | AjaxResponse<Array<CRYPTOPUNKSCollectionDTO>>> {
         return this.request<Array<CRYPTOPUNKSCollectionDTO>>({
-            url: '/dapps/cryptopunks/collections/current',
+            url: '/v1/dapps/cryptopunks/collections/current',
             method: 'GET',
         }, opts?.responseOpts);
     };
@@ -79,7 +79,7 @@ export class CRYPTOPUNKSApi extends BaseAPI {
     cRYPTOPUNKSDataSourcesCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CRYPTOPUNKSDataSourcesDTO>>>
     cRYPTOPUNKSDataSourcesCurrent(opts?: OperationOpts): Observable<Array<CRYPTOPUNKSDataSourcesDTO> | AjaxResponse<Array<CRYPTOPUNKSDataSourcesDTO>>> {
         return this.request<Array<CRYPTOPUNKSDataSourcesDTO>>({
-            url: '/dapps/cryptopunks/dataSources/current',
+            url: '/v1/dapps/cryptopunks/dataSources/current',
             method: 'GET',
         }, opts?.responseOpts);
     };
@@ -92,7 +92,7 @@ export class CRYPTOPUNKSApi extends BaseAPI {
     cRYPTOPUNKSItemsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CRYPTOPUNKSItemDTO>>>
     cRYPTOPUNKSItemsCurrent(opts?: OperationOpts): Observable<Array<CRYPTOPUNKSItemDTO> | AjaxResponse<Array<CRYPTOPUNKSItemDTO>>> {
         return this.request<Array<CRYPTOPUNKSItemDTO>>({
-            url: '/dapps/cryptopunks/items/current',
+            url: '/v1/dapps/cryptopunks/items/current',
             method: 'GET',
         }, opts?.responseOpts);
     };
@@ -105,7 +105,7 @@ export class CRYPTOPUNKSApi extends BaseAPI {
     cRYPTOPUNKSMarketPlacesCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CRYPTOPUNKSMarketPlaceDTO>>>
     cRYPTOPUNKSMarketPlacesCurrent(opts?: OperationOpts): Observable<Array<CRYPTOPUNKSMarketPlaceDTO> | AjaxResponse<Array<CRYPTOPUNKSMarketPlaceDTO>>> {
         return this.request<Array<CRYPTOPUNKSMarketPlaceDTO>>({
-            url: '/dapps/cryptopunks/marketPlaces/current',
+            url: '/v1/dapps/cryptopunks/marketPlaces/current',
             method: 'GET',
         }, opts?.responseOpts);
     };
@@ -118,7 +118,7 @@ export class CRYPTOPUNKSApi extends BaseAPI {
     cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>>
     cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(opts?: OperationOpts): Observable<Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO> | AjaxResponse<Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>> {
         return this.request<Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>({
-            url: '/dapps/cryptopunks/marketplaceDailySnapshots/current',
+            url: '/v1/dapps/cryptopunks/marketplaceDailySnapshots/current',
             method: 'GET',
         }, opts?.responseOpts);
     };
@@ -131,7 +131,7 @@ export class CRYPTOPUNKSApi extends BaseAPI {
     cRYPTOPUNKSTradesCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CRYPTOPUNKSTradeDTO>>>
     cRYPTOPUNKSTradesCurrent(opts?: OperationOpts): Observable<Array<CRYPTOPUNKSTradeDTO> | AjaxResponse<Array<CRYPTOPUNKSTradeDTO>>> {
         return this.request<Array<CRYPTOPUNKSTradeDTO>>({
-            url: '/dapps/cryptopunks/trades/current',
+            url: '/v1/dapps/cryptopunks/trades/current',
             method: 'GET',
         }, opts?.responseOpts);
     };
@@ -144,7 +144,7 @@ export class CRYPTOPUNKSApi extends BaseAPI {
     cRYPTOPUNKSUsersCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CRYPTOPUNKSUserDTO>>>
     cRYPTOPUNKSUsersCurrent(opts?: OperationOpts): Observable<Array<CRYPTOPUNKSUserDTO> | AjaxResponse<Array<CRYPTOPUNKSUserDTO>>> {
         return this.request<Array<CRYPTOPUNKSUserDTO>>({
-            url: '/dapps/cryptopunks/users/current',
+            url: '/v1/dapps/cryptopunks/users/current',
             method: 'GET',
         }, opts?.responseOpts);
     };

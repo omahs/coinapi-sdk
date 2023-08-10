@@ -68,7 +68,7 @@ sub c_ryptopunks_bids__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/cryptopunks/bids/current';
+    my $_resource_path = '/v1/dapps/cryptopunks/bids/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -76,7 +76,7 @@ sub c_ryptopunks_bids__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -117,7 +117,7 @@ sub c_ryptopunks_collection_daily_snapshots__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/cryptopunks/collectionDailySnapshots/current';
+    my $_resource_path = '/v1/dapps/cryptopunks/collectionDailySnapshots/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -125,7 +125,7 @@ sub c_ryptopunks_collection_daily_snapshots__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -166,7 +166,7 @@ sub c_ryptopunks_collections__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/cryptopunks/collections/current';
+    my $_resource_path = '/v1/dapps/cryptopunks/collections/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -174,7 +174,7 @@ sub c_ryptopunks_collections__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -215,7 +215,7 @@ sub c_ryptopunks_data_sources__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/cryptopunks/dataSources/current';
+    my $_resource_path = '/v1/dapps/cryptopunks/dataSources/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -223,7 +223,7 @@ sub c_ryptopunks_data_sources__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -264,7 +264,7 @@ sub c_ryptopunks_items__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/cryptopunks/items/current';
+    my $_resource_path = '/v1/dapps/cryptopunks/items/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -272,7 +272,7 @@ sub c_ryptopunks_items__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -313,7 +313,7 @@ sub c_ryptopunks_market_places__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/cryptopunks/marketPlaces/current';
+    my $_resource_path = '/v1/dapps/cryptopunks/marketPlaces/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -321,7 +321,7 @@ sub c_ryptopunks_market_places__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -362,7 +362,7 @@ sub c_ryptopunks_marketplace_daily_snapshots__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/cryptopunks/marketplaceDailySnapshots/current';
+    my $_resource_path = '/v1/dapps/cryptopunks/marketplaceDailySnapshots/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -370,7 +370,7 @@ sub c_ryptopunks_marketplace_daily_snapshots__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -411,7 +411,7 @@ sub c_ryptopunks_trades__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/cryptopunks/trades/current';
+    my $_resource_path = '/v1/dapps/cryptopunks/trades/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -419,7 +419,7 @@ sub c_ryptopunks_trades__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -460,7 +460,7 @@ sub c_ryptopunks_users__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/cryptopunks/users/current';
+    my $_resource_path = '/v1/dapps/cryptopunks/users/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -468,7 +468,7 @@ sub c_ryptopunks_users__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }

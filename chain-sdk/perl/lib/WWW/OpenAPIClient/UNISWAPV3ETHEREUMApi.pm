@@ -68,7 +68,7 @@ sub u_niswapv3_ethereum_accounts__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/accounts/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/accounts/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -76,7 +76,7 @@ sub u_niswapv3_ethereum_accounts__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -117,7 +117,7 @@ sub u_niswapv3_ethereum_active_accounts__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/activeAccounts/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/activeAccounts/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -125,7 +125,7 @@ sub u_niswapv3_ethereum_active_accounts__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -166,7 +166,7 @@ sub u_niswapv3_ethereum_deposits__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/deposits/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/deposits/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -174,7 +174,7 @@ sub u_niswapv3_ethereum_deposits__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -215,7 +215,7 @@ sub u_niswapv3_ethereum_dex_amm_protocols__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/dexAmmProtocols/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -223,7 +223,7 @@ sub u_niswapv3_ethereum_dex_amm_protocols__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -264,7 +264,7 @@ sub u_niswapv3_ethereum_financials_daily_snapshots__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -272,7 +272,7 @@ sub u_niswapv3_ethereum_financials_daily_snapshots__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -319,7 +319,7 @@ sub u_niswapv3_ethereum_liquidity_pool_amounts__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -327,7 +327,7 @@ sub u_niswapv3_ethereum_liquidity_pool_amounts__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -379,7 +379,7 @@ sub u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -387,7 +387,7 @@ sub u_niswapv3_ethereum_liquidity_pool_daily_snapshots__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -433,7 +433,7 @@ sub u_niswapv3_ethereum_liquidity_pool_fees__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/liquidityPoolFees/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -441,7 +441,7 @@ sub u_niswapv3_ethereum_liquidity_pool_fees__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -488,7 +488,7 @@ sub u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -496,7 +496,7 @@ sub u_niswapv3_ethereum_liquidity_pool_hourly_snapshots__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -548,7 +548,7 @@ sub u_niswapv3_ethereum_liquidity_pools__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/liquidityPools/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/liquidityPools/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -556,7 +556,7 @@ sub u_niswapv3_ethereum_liquidity_pools__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -602,7 +602,7 @@ sub u_niswapv3_ethereum_position_snapshots__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/positionSnapshots/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -610,7 +610,7 @@ sub u_niswapv3_ethereum_position_snapshots__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -657,7 +657,7 @@ sub u_niswapv3_ethereum_positions__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/positions/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/positions/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -665,7 +665,7 @@ sub u_niswapv3_ethereum_positions__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -711,7 +711,7 @@ sub u_niswapv3_ethereum_reward_tokens__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/rewardTokens/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/rewardTokens/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -719,7 +719,7 @@ sub u_niswapv3_ethereum_reward_tokens__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -760,7 +760,7 @@ sub u_niswapv3_ethereum_swaps__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/swaps/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/swaps/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -768,7 +768,7 @@ sub u_niswapv3_ethereum_swaps__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -815,7 +815,7 @@ sub u_niswapv3_ethereum_tick_daily_snapshots__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/tickDailySnapshots/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -823,7 +823,7 @@ sub u_niswapv3_ethereum_tick_daily_snapshots__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -875,7 +875,7 @@ sub u_niswapv3_ethereum_tick_hourly_snapshots__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -883,7 +883,7 @@ sub u_niswapv3_ethereum_tick_hourly_snapshots__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -935,7 +935,7 @@ sub u_niswapv3_ethereum_ticks__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/ticks/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/ticks/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -943,7 +943,7 @@ sub u_niswapv3_ethereum_ticks__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -989,7 +989,7 @@ sub u_niswapv3_ethereum_token_white_list_symbols__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -997,7 +997,7 @@ sub u_niswapv3_ethereum_token_white_list_symbols__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -1038,7 +1038,7 @@ sub u_niswapv3_ethereum_token_white_lists__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/tokenWhiteLists/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1046,7 +1046,7 @@ sub u_niswapv3_ethereum_token_white_lists__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -1093,7 +1093,7 @@ sub u_niswapv3_ethereum_tokens__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/tokens/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/tokens/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1101,7 +1101,7 @@ sub u_niswapv3_ethereum_tokens__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -1147,7 +1147,7 @@ sub u_niswapv3_ethereum_usage_metrics_daily_snapshots__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1155,7 +1155,7 @@ sub u_niswapv3_ethereum_usage_metrics_daily_snapshots__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -1196,7 +1196,7 @@ sub u_niswapv3_ethereum_usage_metrics_hourly_snapshots__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1204,7 +1204,7 @@ sub u_niswapv3_ethereum_usage_metrics_hourly_snapshots__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -1245,7 +1245,7 @@ sub u_niswapv3_ethereum_withdraws__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswap_v3_ethereum/withdraws/current';
+    my $_resource_path = '/v1/dapps/uniswap-v3-ethereum/withdraws/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1253,7 +1253,7 @@ sub u_niswapv3_ethereum_withdraws__current {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }

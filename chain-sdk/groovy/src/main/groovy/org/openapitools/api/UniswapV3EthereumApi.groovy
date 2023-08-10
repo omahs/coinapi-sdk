@@ -31,7 +31,7 @@ class UniswapV3EthereumApi {
     ApiUtils apiUtils = new ApiUtils();
 
     def uNISWAPV3ETHEREUMAccountsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/accounts/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/accounts/current"
 
         // params
         def queryParams = [:]
@@ -51,7 +51,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMActiveAccountsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/activeAccounts/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/activeAccounts/current"
 
         // params
         def queryParams = [:]
@@ -71,7 +71,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMDepositsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/deposits/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/deposits/current"
 
         // params
         def queryParams = [:]
@@ -91,7 +91,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMDexAmmProtocolsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current"
 
         // params
         def queryParams = [:]
@@ -111,7 +111,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current"
 
         // params
         def queryParams = [:]
@@ -131,7 +131,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent ( String id, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current"
 
         // params
         def queryParams = [:]
@@ -154,7 +154,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent ( String pool, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current"
 
         // params
         def queryParams = [:]
@@ -177,7 +177,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current"
 
         // params
         def queryParams = [:]
@@ -197,7 +197,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent ( String pool, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current"
 
         // params
         def queryParams = [:]
@@ -220,7 +220,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMLiquidityPoolsCurrent ( String id, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/liquidityPools/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/liquidityPools/current"
 
         // params
         def queryParams = [:]
@@ -243,7 +243,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMPositionSnapshotsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/positionSnapshots/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current"
 
         // params
         def queryParams = [:]
@@ -263,7 +263,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMPositionsCurrent ( String pool, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/positions/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/positions/current"
 
         // params
         def queryParams = [:]
@@ -286,7 +286,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMRewardTokensCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/rewardTokens/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/rewardTokens/current"
 
         // params
         def queryParams = [:]
@@ -306,7 +306,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMSwapsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/swaps/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/swaps/current"
 
         // params
         def queryParams = [:]
@@ -326,7 +326,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMTickDailySnapshotsCurrent ( String pool, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current"
 
         // params
         def queryParams = [:]
@@ -349,7 +349,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent ( String pool, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current"
 
         // params
         def queryParams = [:]
@@ -372,7 +372,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMTicksCurrent ( String pool, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/ticks/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/ticks/current"
 
         // params
         def queryParams = [:]
@@ -395,7 +395,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current"
 
         // params
         def queryParams = [:]
@@ -415,7 +415,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMTokenWhiteListsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current"
 
         // params
         def queryParams = [:]
@@ -435,7 +435,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMTokensCurrent ( String id, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/tokens/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/tokens/current"
 
         // params
         def queryParams = [:]
@@ -458,7 +458,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current"
 
         // params
         def queryParams = [:]
@@ -478,7 +478,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current"
 
         // params
         def queryParams = [:]
@@ -498,7 +498,7 @@ class UniswapV3EthereumApi {
     }
 
     def uNISWAPV3ETHEREUMWithdrawsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswap_v3_ethereum/withdraws/current"
+        String resourcePath = "/v1/dapps/uniswap-v3-ethereum/withdraws/current"
 
         // params
         def queryParams = [:]

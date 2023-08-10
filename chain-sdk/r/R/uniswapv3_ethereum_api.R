@@ -766,10 +766,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/accounts/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/accounts/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -852,10 +852,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/activeAccounts/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/activeAccounts/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -938,10 +938,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/deposits/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/deposits/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1024,10 +1024,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1110,10 +1110,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1201,10 +1201,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
 
       query_params[["id"]] <- `id`
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1292,10 +1292,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
 
       query_params[["pool"]] <- `pool`
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1378,10 +1378,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1469,10 +1469,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
 
       query_params[["pool"]] <- `pool`
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1560,10 +1560,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
 
       query_params[["id"]] <- `id`
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/liquidityPools/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/liquidityPools/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1646,10 +1646,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/positionSnapshots/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1737,10 +1737,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
 
       query_params[["pool"]] <- `pool`
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/positions/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/positions/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1823,10 +1823,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/rewardTokens/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/rewardTokens/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1909,10 +1909,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/swaps/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/swaps/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -2000,10 +2000,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
 
       query_params[["pool"]] <- `pool`
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -2091,10 +2091,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
 
       query_params[["pool"]] <- `pool`
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -2182,10 +2182,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
 
       query_params[["pool"]] <- `pool`
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/ticks/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/ticks/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -2268,10 +2268,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -2354,10 +2354,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -2445,10 +2445,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
 
       query_params[["id"]] <- `id`
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/tokens/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/tokens/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -2531,10 +2531,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -2617,10 +2617,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -2703,10 +2703,10 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswap_v3_ethereum/withdraws/current"
+      local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/withdraws/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()

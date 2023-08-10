@@ -99,10 +99,10 @@ export class CRYPTOPUNKSApi {
      * @summary Bids (current)
      */
     public async cRYPTOPUNKSBidsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CRYPTOPUNKSBidDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/cryptopunks/bids/current';
+        const localVarPath = this.basePath + '/v1/dapps/cryptopunks/bids/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -161,10 +161,10 @@ export class CRYPTOPUNKSApi {
      * @summary CollectionDailySnapshots (current)
      */
     public async cRYPTOPUNKSCollectionDailySnapshotsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CRYPTOPUNKSCollectionDailySnapshotDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/cryptopunks/collectionDailySnapshots/current';
+        const localVarPath = this.basePath + '/v1/dapps/cryptopunks/collectionDailySnapshots/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -223,10 +223,10 @@ export class CRYPTOPUNKSApi {
      * @summary Collections (current)
      */
     public async cRYPTOPUNKSCollectionsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CRYPTOPUNKSCollectionDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/cryptopunks/collections/current';
+        const localVarPath = this.basePath + '/v1/dapps/cryptopunks/collections/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -285,10 +285,10 @@ export class CRYPTOPUNKSApi {
      * @summary DataSources (current)
      */
     public async cRYPTOPUNKSDataSourcesCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CRYPTOPUNKSDataSourcesDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/cryptopunks/dataSources/current';
+        const localVarPath = this.basePath + '/v1/dapps/cryptopunks/dataSources/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -347,10 +347,10 @@ export class CRYPTOPUNKSApi {
      * @summary Items (current)
      */
     public async cRYPTOPUNKSItemsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CRYPTOPUNKSItemDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/cryptopunks/items/current';
+        const localVarPath = this.basePath + '/v1/dapps/cryptopunks/items/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -409,10 +409,10 @@ export class CRYPTOPUNKSApi {
      * @summary MarketPlaces (current)
      */
     public async cRYPTOPUNKSMarketPlacesCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CRYPTOPUNKSMarketPlaceDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/cryptopunks/marketPlaces/current';
+        const localVarPath = this.basePath + '/v1/dapps/cryptopunks/marketPlaces/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -471,10 +471,10 @@ export class CRYPTOPUNKSApi {
      * @summary MarketplaceDailySnapshots (current)
      */
     public async cRYPTOPUNKSMarketplaceDailySnapshotsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/cryptopunks/marketplaceDailySnapshots/current';
+        const localVarPath = this.basePath + '/v1/dapps/cryptopunks/marketplaceDailySnapshots/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -533,10 +533,10 @@ export class CRYPTOPUNKSApi {
      * @summary Trades (current)
      */
     public async cRYPTOPUNKSTradesCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CRYPTOPUNKSTradeDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/cryptopunks/trades/current';
+        const localVarPath = this.basePath + '/v1/dapps/cryptopunks/trades/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -595,10 +595,10 @@ export class CRYPTOPUNKSApi {
      * @summary Users (current)
      */
     public async cRYPTOPUNKSUsersCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CRYPTOPUNKSUserDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/cryptopunks/users/current';
+        const localVarPath = this.basePath + '/v1/dapps/cryptopunks/users/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';

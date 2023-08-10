@@ -39,10 +39,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/accounts/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/accounts/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -72,10 +72,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/activeAccounts/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/activeAccounts/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -105,10 +105,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/deposits/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/deposits/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -138,10 +138,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -171,10 +171,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -206,11 +206,11 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "id", id));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -242,11 +242,11 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "pool", pool));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -276,10 +276,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -311,11 +311,11 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "pool", pool));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -347,11 +347,11 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/liquidityPools/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/liquidityPools/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "id", id));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -381,10 +381,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/positionSnapshots/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -416,11 +416,11 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/positions/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/positions/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "pool", pool));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -450,10 +450,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/rewardTokens/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/rewardTokens/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -483,10 +483,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/swaps/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/swaps/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -518,11 +518,11 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "pool", pool));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -554,11 +554,11 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "pool", pool));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -590,11 +590,11 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/ticks/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/ticks/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "pool", pool));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -624,10 +624,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -657,10 +657,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -692,11 +692,11 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/tokens/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/tokens/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "id", id));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -726,10 +726,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -759,10 +759,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -792,10 +792,10 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswap_v3_ethereum/withdraws/current"
+			l_path := "/v1/dapps/uniswap-v3-ethereum/withdraws/current"
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")

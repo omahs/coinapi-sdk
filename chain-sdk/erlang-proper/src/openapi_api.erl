@@ -34,7 +34,7 @@
 u_niswapv3_ethereum_accounts_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/accounts/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/accounts/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
@@ -45,7 +45,7 @@ u_niswapv3_ethereum_accounts_(current)() ->
 u_niswapv3_ethereum_active_accounts_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/activeAccounts/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/activeAccounts/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
@@ -56,7 +56,7 @@ u_niswapv3_ethereum_active_accounts_(current)() ->
 u_niswapv3_ethereum_deposits_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/deposits/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/deposits/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
@@ -67,7 +67,7 @@ u_niswapv3_ethereum_deposits_(current)() ->
 u_niswapv3_ethereum_dex_amm_protocols_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/dexAmmProtocols/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
@@ -78,7 +78,7 @@ u_niswapv3_ethereum_dex_amm_protocols_(current)() ->
 u_niswapv3_ethereum_financials_daily_snapshots_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
@@ -89,7 +89,7 @@ u_niswapv3_ethereum_financials_daily_snapshots_(current)() ->
 u_niswapv3_ethereum_liquidity_pool_amounts_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current"],
   QueryString = [<<"id=">>, Id, <<"&">>],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
@@ -101,7 +101,7 @@ u_niswapv3_ethereum_liquidity_pool_amounts_(current)() ->
 u_niswapv3_ethereum_liquidity_pool_daily_snapshots_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current"],
   QueryString = [<<"pool=">>, Pool, <<"&">>],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
@@ -113,7 +113,7 @@ u_niswapv3_ethereum_liquidity_pool_daily_snapshots_(current)() ->
 u_niswapv3_ethereum_liquidity_pool_fees_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/liquidityPoolFees/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
@@ -124,7 +124,7 @@ u_niswapv3_ethereum_liquidity_pool_fees_(current)() ->
 u_niswapv3_ethereum_liquidity_pool_hourly_snapshots_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current"],
   QueryString = [<<"pool=">>, Pool, <<"&">>],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
@@ -136,7 +136,7 @@ u_niswapv3_ethereum_liquidity_pool_hourly_snapshots_(current)() ->
 u_niswapv3_ethereum_liquidity_pools_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/liquidityPools/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/liquidityPools/current"],
   QueryString = [<<"id=">>, Id, <<"&">>],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
@@ -148,7 +148,7 @@ u_niswapv3_ethereum_liquidity_pools_(current)() ->
 u_niswapv3_ethereum_position_snapshots_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/positionSnapshots/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
@@ -159,7 +159,7 @@ u_niswapv3_ethereum_position_snapshots_(current)() ->
 u_niswapv3_ethereum_positions_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/positions/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/positions/current"],
   QueryString = [<<"pool=">>, Pool, <<"&">>],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
@@ -171,7 +171,7 @@ u_niswapv3_ethereum_positions_(current)() ->
 u_niswapv3_ethereum_reward_tokens_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/rewardTokens/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/rewardTokens/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
@@ -182,7 +182,7 @@ u_niswapv3_ethereum_reward_tokens_(current)() ->
 u_niswapv3_ethereum_swaps_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/swaps/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/swaps/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
@@ -193,7 +193,7 @@ u_niswapv3_ethereum_swaps_(current)() ->
 u_niswapv3_ethereum_tick_daily_snapshots_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/tickDailySnapshots/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current"],
   QueryString = [<<"pool=">>, Pool, <<"&">>],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
@@ -205,7 +205,7 @@ u_niswapv3_ethereum_tick_daily_snapshots_(current)() ->
 u_niswapv3_ethereum_tick_hourly_snapshots_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current"],
   QueryString = [<<"pool=">>, Pool, <<"&">>],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
@@ -217,7 +217,7 @@ u_niswapv3_ethereum_tick_hourly_snapshots_(current)() ->
 u_niswapv3_ethereum_ticks_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/ticks/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/ticks/current"],
   QueryString = [<<"pool=">>, Pool, <<"&">>],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
@@ -229,7 +229,7 @@ u_niswapv3_ethereum_ticks_(current)() ->
 u_niswapv3_ethereum_token_white_list_symbols_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
@@ -240,7 +240,7 @@ u_niswapv3_ethereum_token_white_list_symbols_(current)() ->
 u_niswapv3_ethereum_token_white_lists_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/tokenWhiteLists/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
@@ -251,7 +251,7 @@ u_niswapv3_ethereum_token_white_lists_(current)() ->
 u_niswapv3_ethereum_tokens_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/tokens/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/tokens/current"],
   QueryString = [<<"id=">>, Id, <<"&">>],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
@@ -263,7 +263,7 @@ u_niswapv3_ethereum_tokens_(current)() ->
 u_niswapv3_ethereum_usage_metrics_daily_snapshots_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
@@ -274,7 +274,7 @@ u_niswapv3_ethereum_usage_metrics_daily_snapshots_(current)() ->
 u_niswapv3_ethereum_usage_metrics_hourly_snapshots_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
@@ -285,7 +285,7 @@ u_niswapv3_ethereum_usage_metrics_hourly_snapshots_(current)() ->
 u_niswapv3_ethereum_withdraws_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswap_v3_ethereum/withdraws/current"],
+  Path        = ["/v1/dapps/uniswap-v3-ethereum/withdraws/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 

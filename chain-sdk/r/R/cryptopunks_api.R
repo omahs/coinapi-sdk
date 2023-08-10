@@ -342,10 +342,10 @@ CRYPTOPUNKSApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/cryptopunks/bids/current"
+      local_var_url_path <- "/v1/dapps/cryptopunks/bids/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -428,10 +428,10 @@ CRYPTOPUNKSApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/cryptopunks/collectionDailySnapshots/current"
+      local_var_url_path <- "/v1/dapps/cryptopunks/collectionDailySnapshots/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -514,10 +514,10 @@ CRYPTOPUNKSApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/cryptopunks/collections/current"
+      local_var_url_path <- "/v1/dapps/cryptopunks/collections/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -600,10 +600,10 @@ CRYPTOPUNKSApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/cryptopunks/dataSources/current"
+      local_var_url_path <- "/v1/dapps/cryptopunks/dataSources/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -686,10 +686,10 @@ CRYPTOPUNKSApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/cryptopunks/items/current"
+      local_var_url_path <- "/v1/dapps/cryptopunks/items/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -772,10 +772,10 @@ CRYPTOPUNKSApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/cryptopunks/marketPlaces/current"
+      local_var_url_path <- "/v1/dapps/cryptopunks/marketPlaces/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -858,10 +858,10 @@ CRYPTOPUNKSApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/cryptopunks/marketplaceDailySnapshots/current"
+      local_var_url_path <- "/v1/dapps/cryptopunks/marketplaceDailySnapshots/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -944,10 +944,10 @@ CRYPTOPUNKSApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/cryptopunks/trades/current"
+      local_var_url_path <- "/v1/dapps/cryptopunks/trades/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1030,10 +1030,10 @@ CRYPTOPUNKSApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/cryptopunks/users/current"
+      local_var_url_path <- "/v1/dapps/cryptopunks/users/current"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
 
       # The Content-Type representation header
       local_var_content_types <- list()

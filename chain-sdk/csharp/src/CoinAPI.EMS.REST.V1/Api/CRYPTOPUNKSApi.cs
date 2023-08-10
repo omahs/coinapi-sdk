@@ -517,7 +517,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CRYPTOPUNKSBidDTO>> CRYPTOPUNKSBidsCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/cryptopunks/bids/current";
+            var localVarPath = "/v1/dapps/cryptopunks/bids/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -534,7 +534,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -582,7 +583,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CRYPTOPUNKSBidDTO>>> CRYPTOPUNKSBidsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/cryptopunks/bids/current";
+            var localVarPath = "/v1/dapps/cryptopunks/bids/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -599,7 +600,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -644,7 +646,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CRYPTOPUNKSCollectionDailySnapshotDTO>> CRYPTOPUNKSCollectionDailySnapshotsCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/cryptopunks/collectionDailySnapshots/current";
+            var localVarPath = "/v1/dapps/cryptopunks/collectionDailySnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -661,7 +663,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -709,7 +712,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CRYPTOPUNKSCollectionDailySnapshotDTO>>> CRYPTOPUNKSCollectionDailySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/cryptopunks/collectionDailySnapshots/current";
+            var localVarPath = "/v1/dapps/cryptopunks/collectionDailySnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -726,7 +729,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -771,7 +775,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CRYPTOPUNKSCollectionDTO>> CRYPTOPUNKSCollectionsCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/cryptopunks/collections/current";
+            var localVarPath = "/v1/dapps/cryptopunks/collections/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -788,7 +792,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -836,7 +841,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CRYPTOPUNKSCollectionDTO>>> CRYPTOPUNKSCollectionsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/cryptopunks/collections/current";
+            var localVarPath = "/v1/dapps/cryptopunks/collections/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -853,7 +858,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -898,7 +904,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CRYPTOPUNKSDataSourcesDTO>> CRYPTOPUNKSDataSourcesCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/cryptopunks/dataSources/current";
+            var localVarPath = "/v1/dapps/cryptopunks/dataSources/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -915,7 +921,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -963,7 +970,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CRYPTOPUNKSDataSourcesDTO>>> CRYPTOPUNKSDataSourcesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/cryptopunks/dataSources/current";
+            var localVarPath = "/v1/dapps/cryptopunks/dataSources/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -980,7 +987,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1025,7 +1033,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CRYPTOPUNKSItemDTO>> CRYPTOPUNKSItemsCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/cryptopunks/items/current";
+            var localVarPath = "/v1/dapps/cryptopunks/items/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1042,7 +1050,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1090,7 +1099,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CRYPTOPUNKSItemDTO>>> CRYPTOPUNKSItemsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/cryptopunks/items/current";
+            var localVarPath = "/v1/dapps/cryptopunks/items/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1107,7 +1116,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1152,7 +1162,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CRYPTOPUNKSMarketPlaceDTO>> CRYPTOPUNKSMarketPlacesCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/cryptopunks/marketPlaces/current";
+            var localVarPath = "/v1/dapps/cryptopunks/marketPlaces/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1169,7 +1179,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1217,7 +1228,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CRYPTOPUNKSMarketPlaceDTO>>> CRYPTOPUNKSMarketPlacesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/cryptopunks/marketPlaces/current";
+            var localVarPath = "/v1/dapps/cryptopunks/marketPlaces/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1234,7 +1245,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1279,7 +1291,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CRYPTOPUNKSMarketplaceDailySnapshotDTO>> CRYPTOPUNKSMarketplaceDailySnapshotsCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/cryptopunks/marketplaceDailySnapshots/current";
+            var localVarPath = "/v1/dapps/cryptopunks/marketplaceDailySnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1296,7 +1308,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1344,7 +1357,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>> CRYPTOPUNKSMarketplaceDailySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/cryptopunks/marketplaceDailySnapshots/current";
+            var localVarPath = "/v1/dapps/cryptopunks/marketplaceDailySnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1361,7 +1374,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1406,7 +1420,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CRYPTOPUNKSTradeDTO>> CRYPTOPUNKSTradesCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/cryptopunks/trades/current";
+            var localVarPath = "/v1/dapps/cryptopunks/trades/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1423,7 +1437,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1471,7 +1486,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CRYPTOPUNKSTradeDTO>>> CRYPTOPUNKSTradesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/cryptopunks/trades/current";
+            var localVarPath = "/v1/dapps/cryptopunks/trades/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1488,7 +1503,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1533,7 +1549,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CRYPTOPUNKSUserDTO>> CRYPTOPUNKSUsersCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/cryptopunks/users/current";
+            var localVarPath = "/v1/dapps/cryptopunks/users/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1550,7 +1566,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1598,7 +1615,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CRYPTOPUNKSUserDTO>>> CRYPTOPUNKSUsersCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/cryptopunks/users/current";
+            var localVarPath = "/v1/dapps/cryptopunks/users/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1615,7 +1632,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)

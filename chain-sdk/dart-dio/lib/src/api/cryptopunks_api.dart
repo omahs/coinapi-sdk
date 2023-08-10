@@ -47,7 +47,7 @@ class CRYPTOPUNKSApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/cryptopunks/bids/current';
+    final _path = r'/v1/dapps/cryptopunks/bids/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -120,7 +120,7 @@ class CRYPTOPUNKSApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/cryptopunks/collectionDailySnapshots/current';
+    final _path = r'/v1/dapps/cryptopunks/collectionDailySnapshots/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -193,7 +193,7 @@ class CRYPTOPUNKSApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/cryptopunks/collections/current';
+    final _path = r'/v1/dapps/cryptopunks/collections/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -266,7 +266,7 @@ class CRYPTOPUNKSApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/cryptopunks/dataSources/current';
+    final _path = r'/v1/dapps/cryptopunks/dataSources/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -339,7 +339,7 @@ class CRYPTOPUNKSApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/cryptopunks/items/current';
+    final _path = r'/v1/dapps/cryptopunks/items/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -412,7 +412,7 @@ class CRYPTOPUNKSApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/cryptopunks/marketPlaces/current';
+    final _path = r'/v1/dapps/cryptopunks/marketPlaces/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -485,7 +485,7 @@ class CRYPTOPUNKSApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/cryptopunks/marketplaceDailySnapshots/current';
+    final _path = r'/v1/dapps/cryptopunks/marketplaceDailySnapshots/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -558,7 +558,7 @@ class CRYPTOPUNKSApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/cryptopunks/trades/current';
+    final _path = r'/v1/dapps/cryptopunks/trades/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -631,7 +631,7 @@ class CRYPTOPUNKSApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/cryptopunks/users/current';
+    final _path = r'/v1/dapps/cryptopunks/users/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{

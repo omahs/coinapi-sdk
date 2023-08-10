@@ -81,7 +81,7 @@ Contact: support@coinapi.io
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\CoinAPI.EMS.REST.V1\CoinAPI.EMS.REST.V1.csproj">
-          <Project>{6E96DF5B-2F4F-41C4-8D46-D1789C2A661D}</Project>
+          <Project>{9F0E5E0A-6A76-4EF0-9A2A-EAD5B9102D41}</Project>
           <Name>CoinAPI.EMS.REST.V1</Name>
       </ProjectReference>
   </ItemGroup>

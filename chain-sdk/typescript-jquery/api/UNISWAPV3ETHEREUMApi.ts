@@ -54,7 +54,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMAccountDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/accounts/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/accounts/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -68,7 +68,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -112,7 +113,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMActiveAccountDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/activeAccounts/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/activeAccounts/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -126,7 +127,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -170,7 +172,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMDepositDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/deposits/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/deposits/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -184,7 +186,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -228,7 +231,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMDexAmmProtocolDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/dexAmmProtocols/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -242,7 +245,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -286,7 +290,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -300,7 +304,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -345,7 +350,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -362,7 +367,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -407,7 +413,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -424,7 +430,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -468,7 +475,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/liquidityPoolFees/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -482,7 +489,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -527,7 +535,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -544,7 +552,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -589,7 +598,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMLiquidityPoolDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/liquidityPools/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/liquidityPools/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -606,7 +615,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -650,7 +660,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMPositionSnapshotDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/positionSnapshots/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -664,7 +674,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -709,7 +720,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMPositionDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/positions/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/positions/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -726,7 +737,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -770,7 +782,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMRewardTokenDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/rewardTokens/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/rewardTokens/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -784,7 +796,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -828,7 +841,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMSwapDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/swaps/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/swaps/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -842,7 +855,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -887,7 +901,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMTickDailySnapshotDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/tickDailySnapshots/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -904,7 +918,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -949,7 +964,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMTickHourlySnapshotDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -966,7 +981,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -1011,7 +1027,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMTickDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/ticks/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/ticks/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1028,7 +1044,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -1072,7 +1089,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1086,7 +1103,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -1130,7 +1148,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMTokenWhiteListDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/tokenWhiteLists/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1144,7 +1162,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -1189,7 +1208,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMTokenDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/tokens/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/tokens/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1206,7 +1225,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -1250,7 +1270,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1264,7 +1284,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -1308,7 +1329,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1322,7 +1343,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 
@@ -1366,7 +1388,7 @@ export class UNISWAPV3ETHEREUMApi {
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMWithdrawDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/withdraws/current';
+        let localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/withdraws/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1380,7 +1402,8 @@ export class UNISWAPV3ETHEREUMApi {
         let produces: string[] = [
             'text/plain', 
             'application/json', 
-            'text/json'
+            'text/json', 
+            'application/x-msgpack'
         ];
 
 

@@ -4,15 +4,15 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**cRYPTOPUNKSBidsCurrent()**](CRYPTOPUNKSApi.md#cRYPTOPUNKSBidsCurrent) | **GET** /dapps/cryptopunks/bids/current | Bids (current) |
-| [**cRYPTOPUNKSCollectionDailySnapshotsCurrent()**](CRYPTOPUNKSApi.md#cRYPTOPUNKSCollectionDailySnapshotsCurrent) | **GET** /dapps/cryptopunks/collectionDailySnapshots/current | CollectionDailySnapshots (current) |
-| [**cRYPTOPUNKSCollectionsCurrent()**](CRYPTOPUNKSApi.md#cRYPTOPUNKSCollectionsCurrent) | **GET** /dapps/cryptopunks/collections/current | Collections (current) |
-| [**cRYPTOPUNKSDataSourcesCurrent()**](CRYPTOPUNKSApi.md#cRYPTOPUNKSDataSourcesCurrent) | **GET** /dapps/cryptopunks/dataSources/current | DataSources (current) |
-| [**cRYPTOPUNKSItemsCurrent()**](CRYPTOPUNKSApi.md#cRYPTOPUNKSItemsCurrent) | **GET** /dapps/cryptopunks/items/current | Items (current) |
-| [**cRYPTOPUNKSMarketPlacesCurrent()**](CRYPTOPUNKSApi.md#cRYPTOPUNKSMarketPlacesCurrent) | **GET** /dapps/cryptopunks/marketPlaces/current | MarketPlaces (current) |
-| [**cRYPTOPUNKSMarketplaceDailySnapshotsCurrent()**](CRYPTOPUNKSApi.md#cRYPTOPUNKSMarketplaceDailySnapshotsCurrent) | **GET** /dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current) |
-| [**cRYPTOPUNKSTradesCurrent()**](CRYPTOPUNKSApi.md#cRYPTOPUNKSTradesCurrent) | **GET** /dapps/cryptopunks/trades/current | Trades (current) |
-| [**cRYPTOPUNKSUsersCurrent()**](CRYPTOPUNKSApi.md#cRYPTOPUNKSUsersCurrent) | **GET** /dapps/cryptopunks/users/current | Users (current) |
+| [**cRYPTOPUNKSBidsCurrent()**](CRYPTOPUNKSApi.md#cRYPTOPUNKSBidsCurrent) | **GET** /v1/dapps/cryptopunks/bids/current | Bids (current) |
+| [**cRYPTOPUNKSCollectionDailySnapshotsCurrent()**](CRYPTOPUNKSApi.md#cRYPTOPUNKSCollectionDailySnapshotsCurrent) | **GET** /v1/dapps/cryptopunks/collectionDailySnapshots/current | CollectionDailySnapshots (current) |
+| [**cRYPTOPUNKSCollectionsCurrent()**](CRYPTOPUNKSApi.md#cRYPTOPUNKSCollectionsCurrent) | **GET** /v1/dapps/cryptopunks/collections/current | Collections (current) |
+| [**cRYPTOPUNKSDataSourcesCurrent()**](CRYPTOPUNKSApi.md#cRYPTOPUNKSDataSourcesCurrent) | **GET** /v1/dapps/cryptopunks/dataSources/current | DataSources (current) |
+| [**cRYPTOPUNKSItemsCurrent()**](CRYPTOPUNKSApi.md#cRYPTOPUNKSItemsCurrent) | **GET** /v1/dapps/cryptopunks/items/current | Items (current) |
+| [**cRYPTOPUNKSMarketPlacesCurrent()**](CRYPTOPUNKSApi.md#cRYPTOPUNKSMarketPlacesCurrent) | **GET** /v1/dapps/cryptopunks/marketPlaces/current | MarketPlaces (current) |
+| [**cRYPTOPUNKSMarketplaceDailySnapshotsCurrent()**](CRYPTOPUNKSApi.md#cRYPTOPUNKSMarketplaceDailySnapshotsCurrent) | **GET** /v1/dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current) |
+| [**cRYPTOPUNKSTradesCurrent()**](CRYPTOPUNKSApi.md#cRYPTOPUNKSTradesCurrent) | **GET** /v1/dapps/cryptopunks/trades/current | Trades (current) |
+| [**cRYPTOPUNKSUsersCurrent()**](CRYPTOPUNKSApi.md#cRYPTOPUNKSUsersCurrent) | **GET** /v1/dapps/cryptopunks/users/current | Users (current) |
 
 
 ## `cRYPTOPUNKSBidsCurrent()`
@@ -62,7 +62,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: `text/plain`, `application/json`, `text/json`, `application/x-msgpack`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -115,7 +115,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: `text/plain`, `application/json`, `text/json`, `application/x-msgpack`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -168,7 +168,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: `text/plain`, `application/json`, `text/json`, `application/x-msgpack`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -221,7 +221,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: `text/plain`, `application/json`, `text/json`, `application/x-msgpack`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -274,7 +274,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: `text/plain`, `application/json`, `text/json`, `application/x-msgpack`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -327,7 +327,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: `text/plain`, `application/json`, `text/json`, `application/x-msgpack`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -380,7 +380,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: `text/plain`, `application/json`, `text/json`, `application/x-msgpack`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -433,7 +433,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: `text/plain`, `application/json`, `text/json`, `application/x-msgpack`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -486,7 +486,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: `text/plain`, `application/json`, `text/json`, `application/x-msgpack`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

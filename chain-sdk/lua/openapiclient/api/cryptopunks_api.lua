@@ -57,14 +57,14 @@ function cryptopunks_api:c_ryptopunks_bids__current()
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/cryptopunks/bids/current",
+		path = string.format("%s/v1/dapps/cryptopunks/bids/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -106,14 +106,14 @@ function cryptopunks_api:c_ryptopunks_collection_daily_snapshots__current()
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/cryptopunks/collectionDailySnapshots/current",
+		path = string.format("%s/v1/dapps/cryptopunks/collectionDailySnapshots/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -155,14 +155,14 @@ function cryptopunks_api:c_ryptopunks_collections__current()
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/cryptopunks/collections/current",
+		path = string.format("%s/v1/dapps/cryptopunks/collections/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -204,14 +204,14 @@ function cryptopunks_api:c_ryptopunks_data_sources__current()
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/cryptopunks/dataSources/current",
+		path = string.format("%s/v1/dapps/cryptopunks/dataSources/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -253,14 +253,14 @@ function cryptopunks_api:c_ryptopunks_items__current()
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/cryptopunks/items/current",
+		path = string.format("%s/v1/dapps/cryptopunks/items/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -302,14 +302,14 @@ function cryptopunks_api:c_ryptopunks_market_places__current()
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/cryptopunks/marketPlaces/current",
+		path = string.format("%s/v1/dapps/cryptopunks/marketPlaces/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -351,14 +351,14 @@ function cryptopunks_api:c_ryptopunks_marketplace_daily_snapshots__current()
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/cryptopunks/marketplaceDailySnapshots/current",
+		path = string.format("%s/v1/dapps/cryptopunks/marketplaceDailySnapshots/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -400,14 +400,14 @@ function cryptopunks_api:c_ryptopunks_trades__current()
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/cryptopunks/trades/current",
+		path = string.format("%s/v1/dapps/cryptopunks/trades/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -449,14 +449,14 @@ function cryptopunks_api:c_ryptopunks_users__current()
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/cryptopunks/users/current",
+		path = string.format("%s/v1/dapps/cryptopunks/users/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 

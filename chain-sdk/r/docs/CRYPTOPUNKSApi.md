@@ -4,15 +4,15 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CRYPTOPUNKSBidsCurrent**](CRYPTOPUNKSApi.md#CRYPTOPUNKSBidsCurrent) | **GET** /dapps/cryptopunks/bids/current | Bids (current)
-[**CRYPTOPUNKSCollectionDailySnapshotsCurrent**](CRYPTOPUNKSApi.md#CRYPTOPUNKSCollectionDailySnapshotsCurrent) | **GET** /dapps/cryptopunks/collectionDailySnapshots/current | CollectionDailySnapshots (current)
-[**CRYPTOPUNKSCollectionsCurrent**](CRYPTOPUNKSApi.md#CRYPTOPUNKSCollectionsCurrent) | **GET** /dapps/cryptopunks/collections/current | Collections (current)
-[**CRYPTOPUNKSDataSourcesCurrent**](CRYPTOPUNKSApi.md#CRYPTOPUNKSDataSourcesCurrent) | **GET** /dapps/cryptopunks/dataSources/current | DataSources (current)
-[**CRYPTOPUNKSItemsCurrent**](CRYPTOPUNKSApi.md#CRYPTOPUNKSItemsCurrent) | **GET** /dapps/cryptopunks/items/current | Items (current)
-[**CRYPTOPUNKSMarketPlacesCurrent**](CRYPTOPUNKSApi.md#CRYPTOPUNKSMarketPlacesCurrent) | **GET** /dapps/cryptopunks/marketPlaces/current | MarketPlaces (current)
-[**CRYPTOPUNKSMarketplaceDailySnapshotsCurrent**](CRYPTOPUNKSApi.md#CRYPTOPUNKSMarketplaceDailySnapshotsCurrent) | **GET** /dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
-[**CRYPTOPUNKSTradesCurrent**](CRYPTOPUNKSApi.md#CRYPTOPUNKSTradesCurrent) | **GET** /dapps/cryptopunks/trades/current | Trades (current)
-[**CRYPTOPUNKSUsersCurrent**](CRYPTOPUNKSApi.md#CRYPTOPUNKSUsersCurrent) | **GET** /dapps/cryptopunks/users/current | Users (current)
+[**CRYPTOPUNKSBidsCurrent**](CRYPTOPUNKSApi.md#CRYPTOPUNKSBidsCurrent) | **GET** /v1/dapps/cryptopunks/bids/current | Bids (current)
+[**CRYPTOPUNKSCollectionDailySnapshotsCurrent**](CRYPTOPUNKSApi.md#CRYPTOPUNKSCollectionDailySnapshotsCurrent) | **GET** /v1/dapps/cryptopunks/collectionDailySnapshots/current | CollectionDailySnapshots (current)
+[**CRYPTOPUNKSCollectionsCurrent**](CRYPTOPUNKSApi.md#CRYPTOPUNKSCollectionsCurrent) | **GET** /v1/dapps/cryptopunks/collections/current | Collections (current)
+[**CRYPTOPUNKSDataSourcesCurrent**](CRYPTOPUNKSApi.md#CRYPTOPUNKSDataSourcesCurrent) | **GET** /v1/dapps/cryptopunks/dataSources/current | DataSources (current)
+[**CRYPTOPUNKSItemsCurrent**](CRYPTOPUNKSApi.md#CRYPTOPUNKSItemsCurrent) | **GET** /v1/dapps/cryptopunks/items/current | Items (current)
+[**CRYPTOPUNKSMarketPlacesCurrent**](CRYPTOPUNKSApi.md#CRYPTOPUNKSMarketPlacesCurrent) | **GET** /v1/dapps/cryptopunks/marketPlaces/current | MarketPlaces (current)
+[**CRYPTOPUNKSMarketplaceDailySnapshotsCurrent**](CRYPTOPUNKSApi.md#CRYPTOPUNKSMarketplaceDailySnapshotsCurrent) | **GET** /v1/dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
+[**CRYPTOPUNKSTradesCurrent**](CRYPTOPUNKSApi.md#CRYPTOPUNKSTradesCurrent) | **GET** /v1/dapps/cryptopunks/trades/current | Trades (current)
+[**CRYPTOPUNKSUsersCurrent**](CRYPTOPUNKSApi.md#CRYPTOPUNKSUsersCurrent) | **GET** /v1/dapps/cryptopunks/users/current | Users (current)
 
 
 # **CRYPTOPUNKSBidsCurrent**
@@ -50,7 +50,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -92,7 +92,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -134,7 +134,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -176,7 +176,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -218,7 +218,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -260,7 +260,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -302,7 +302,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -344,7 +344,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -386,7 +386,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 ### HTTP response details
 | Status code | Description | Response headers |

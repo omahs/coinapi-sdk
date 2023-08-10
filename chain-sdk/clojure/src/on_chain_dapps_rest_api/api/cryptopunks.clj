@@ -44,13 +44,13 @@
   "Bids (current)
   Gets bids."
   []
-  (call-api "/dapps/cryptopunks/bids/current" :get
+  (call-api "/v1/dapps/cryptopunks/bids/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
              :form-params   {}
              :content-types []
-             :accepts       ["text/plain" "application/json" "text/json"]
+             :accepts       ["text/plain" "application/json" "text/json" "application/x-msgpack"]
              :auth-names    []}))
 
 (defn-spec c-ryptopunks-bids-current (s/coll-of cryptopunks/bid-dto-spec)
@@ -67,13 +67,13 @@
   "CollectionDailySnapshots (current)
   Gets collectionDailySnapshots."
   []
-  (call-api "/dapps/cryptopunks/collectionDailySnapshots/current" :get
+  (call-api "/v1/dapps/cryptopunks/collectionDailySnapshots/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
              :form-params   {}
              :content-types []
-             :accepts       ["text/plain" "application/json" "text/json"]
+             :accepts       ["text/plain" "application/json" "text/json" "application/x-msgpack"]
              :auth-names    []}))
 
 (defn-spec c-ryptopunks-collection-daily-snapshots-current (s/coll-of cryptopunks/collection-daily-snapshot-dto-spec)
@@ -90,13 +90,13 @@
   "Collections (current)
   Gets collections."
   []
-  (call-api "/dapps/cryptopunks/collections/current" :get
+  (call-api "/v1/dapps/cryptopunks/collections/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
              :form-params   {}
              :content-types []
-             :accepts       ["text/plain" "application/json" "text/json"]
+             :accepts       ["text/plain" "application/json" "text/json" "application/x-msgpack"]
              :auth-names    []}))
 
 (defn-spec c-ryptopunks-collections-current (s/coll-of cryptopunks/collection-dto-spec)
@@ -113,13 +113,13 @@
   "DataSources (current)
   Gets dataSources."
   []
-  (call-api "/dapps/cryptopunks/dataSources/current" :get
+  (call-api "/v1/dapps/cryptopunks/dataSources/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
              :form-params   {}
              :content-types []
-             :accepts       ["text/plain" "application/json" "text/json"]
+             :accepts       ["text/plain" "application/json" "text/json" "application/x-msgpack"]
              :auth-names    []}))
 
 (defn-spec c-ryptopunks-data-sources-current (s/coll-of cryptopunks/data-sources-dto-spec)
@@ -136,13 +136,13 @@
   "Items (current)
   Gets items."
   []
-  (call-api "/dapps/cryptopunks/items/current" :get
+  (call-api "/v1/dapps/cryptopunks/items/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
              :form-params   {}
              :content-types []
-             :accepts       ["text/plain" "application/json" "text/json"]
+             :accepts       ["text/plain" "application/json" "text/json" "application/x-msgpack"]
              :auth-names    []}))
 
 (defn-spec c-ryptopunks-items-current (s/coll-of cryptopunks/item-dto-spec)
@@ -159,13 +159,13 @@
   "MarketPlaces (current)
   Gets marketPlaces."
   []
-  (call-api "/dapps/cryptopunks/marketPlaces/current" :get
+  (call-api "/v1/dapps/cryptopunks/marketPlaces/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
              :form-params   {}
              :content-types []
-             :accepts       ["text/plain" "application/json" "text/json"]
+             :accepts       ["text/plain" "application/json" "text/json" "application/x-msgpack"]
              :auth-names    []}))
 
 (defn-spec c-ryptopunks-market-places-current (s/coll-of cryptopunks/market-place-dto-spec)
@@ -182,13 +182,13 @@
   "MarketplaceDailySnapshots (current)
   Gets marketplaceDailySnapshots."
   []
-  (call-api "/dapps/cryptopunks/marketplaceDailySnapshots/current" :get
+  (call-api "/v1/dapps/cryptopunks/marketplaceDailySnapshots/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
              :form-params   {}
              :content-types []
-             :accepts       ["text/plain" "application/json" "text/json"]
+             :accepts       ["text/plain" "application/json" "text/json" "application/x-msgpack"]
              :auth-names    []}))
 
 (defn-spec c-ryptopunks-marketplace-daily-snapshots-current (s/coll-of cryptopunks/marketplace-daily-snapshot-dto-spec)
@@ -205,13 +205,13 @@
   "Trades (current)
   Gets trades."
   []
-  (call-api "/dapps/cryptopunks/trades/current" :get
+  (call-api "/v1/dapps/cryptopunks/trades/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
              :form-params   {}
              :content-types []
-             :accepts       ["text/plain" "application/json" "text/json"]
+             :accepts       ["text/plain" "application/json" "text/json" "application/x-msgpack"]
              :auth-names    []}))
 
 (defn-spec c-ryptopunks-trades-current (s/coll-of cryptopunks/trade-dto-spec)
@@ -228,13 +228,13 @@
   "Users (current)
   Gets users."
   []
-  (call-api "/dapps/cryptopunks/users/current" :get
+  (call-api "/v1/dapps/cryptopunks/users/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
              :form-params   {}
              :content-types []
-             :accepts       ["text/plain" "application/json" "text/json"]
+             :accepts       ["text/plain" "application/json" "text/json" "application/x-msgpack"]
              :auth-names    []}))
 
 (defn-spec c-ryptopunks-users-current (s/coll-of cryptopunks/user-dto-spec)

@@ -17,7 +17,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -31,7 +31,7 @@ function Invoke-CRYPTOPUNKSBidsCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -52,14 +52,14 @@ function Invoke-CRYPTOPUNKSBidsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/cryptopunks/bids/current'
+        $LocalVarUri = '/v1/dapps/cryptopunks/bids/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -92,7 +92,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -106,7 +106,7 @@ function Invoke-CRYPTOPUNKSCollectionDailySnapshotsCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -127,14 +127,14 @@ function Invoke-CRYPTOPUNKSCollectionDailySnapshotsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/cryptopunks/collectionDailySnapshots/current'
+        $LocalVarUri = '/v1/dapps/cryptopunks/collectionDailySnapshots/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -167,7 +167,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -181,7 +181,7 @@ function Invoke-CRYPTOPUNKSCollectionsCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -202,14 +202,14 @@ function Invoke-CRYPTOPUNKSCollectionsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/cryptopunks/collections/current'
+        $LocalVarUri = '/v1/dapps/cryptopunks/collections/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -242,7 +242,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -256,7 +256,7 @@ function Invoke-CRYPTOPUNKSDataSourcesCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -277,14 +277,14 @@ function Invoke-CRYPTOPUNKSDataSourcesCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/cryptopunks/dataSources/current'
+        $LocalVarUri = '/v1/dapps/cryptopunks/dataSources/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -317,7 +317,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -331,7 +331,7 @@ function Invoke-CRYPTOPUNKSItemsCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -352,14 +352,14 @@ function Invoke-CRYPTOPUNKSItemsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/cryptopunks/items/current'
+        $LocalVarUri = '/v1/dapps/cryptopunks/items/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -392,7 +392,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -406,7 +406,7 @@ function Invoke-CRYPTOPUNKSMarketPlacesCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -427,14 +427,14 @@ function Invoke-CRYPTOPUNKSMarketPlacesCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/cryptopunks/marketPlaces/current'
+        $LocalVarUri = '/v1/dapps/cryptopunks/marketPlaces/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -467,7 +467,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -481,7 +481,7 @@ function Invoke-CRYPTOPUNKSMarketplaceDailySnapshotsCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -502,14 +502,14 @@ function Invoke-CRYPTOPUNKSMarketplaceDailySnapshotsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/cryptopunks/marketplaceDailySnapshots/current'
+        $LocalVarUri = '/v1/dapps/cryptopunks/marketplaceDailySnapshots/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -542,7 +542,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -556,7 +556,7 @@ function Invoke-CRYPTOPUNKSTradesCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -577,14 +577,14 @@ function Invoke-CRYPTOPUNKSTradesCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/cryptopunks/trades/current'
+        $LocalVarUri = '/v1/dapps/cryptopunks/trades/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -617,7 +617,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -631,7 +631,7 @@ function Invoke-CRYPTOPUNKSUsersCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -652,14 +652,14 @@ function Invoke-CRYPTOPUNKSUsersCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/cryptopunks/users/current'
+        $LocalVarUri = '/v1/dapps/cryptopunks/users/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `

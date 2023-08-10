@@ -4,29 +4,29 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Feature | HTTP request | Description
 ------------- | ------------- | -------------
-[**u_ni_sw_ap_v3_et_he_re_um_accounts_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_accounts_current) | **Get** /dapps/uniswap_v3_ethereum/accounts/current | Accounts (current)
-[**u_ni_sw_ap_v3_et_he_re_um_active_accounts_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_active_accounts_current) | **Get** /dapps/uniswap_v3_ethereum/activeAccounts/current | ActiveAccounts (current)
-[**u_ni_sw_ap_v3_et_he_re_um_deposits_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_deposits_current) | **Get** /dapps/uniswap_v3_ethereum/deposits/current | Deposits (current)
-[**u_ni_sw_ap_v3_et_he_re_um_dex_amm_protocols_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_dex_amm_protocols_current) | **Get** /dapps/uniswap_v3_ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
-[**u_ni_sw_ap_v3_et_he_re_um_financials_daily_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_financials_daily_snapshots_current) | **Get** /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
-[**u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_amounts_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_amounts_current) | **Get** /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
-[**u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_daily_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_daily_snapshots_current) | **Get** /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
-[**u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_fees_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_fees_current) | **Get** /dapps/uniswap_v3_ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
-[**u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_hourly_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_hourly_snapshots_current) | **Get** /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
-[**u_ni_sw_ap_v3_et_he_re_um_liquidity_pools_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_liquidity_pools_current) | **Get** /dapps/uniswap_v3_ethereum/liquidityPools/current | LiquidityPools (current)
-[**u_ni_sw_ap_v3_et_he_re_um_position_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_position_snapshots_current) | **Get** /dapps/uniswap_v3_ethereum/positionSnapshots/current | PositionSnapshots (current)
-[**u_ni_sw_ap_v3_et_he_re_um_positions_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_positions_current) | **Get** /dapps/uniswap_v3_ethereum/positions/current | Positions (current)
-[**u_ni_sw_ap_v3_et_he_re_um_reward_tokens_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_reward_tokens_current) | **Get** /dapps/uniswap_v3_ethereum/rewardTokens/current | RewardTokens (current)
-[**u_ni_sw_ap_v3_et_he_re_um_swaps_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_swaps_current) | **Get** /dapps/uniswap_v3_ethereum/swaps/current | Swaps (current)
-[**u_ni_sw_ap_v3_et_he_re_um_tick_daily_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_tick_daily_snapshots_current) | **Get** /dapps/uniswap_v3_ethereum/tickDailySnapshots/current | TickDailySnapshots (current)
-[**u_ni_sw_ap_v3_et_he_re_um_tick_hourly_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_tick_hourly_snapshots_current) | **Get** /dapps/uniswap_v3_ethereum/tickHourlySnapshots/current | TickHourlySnapshots (current)
-[**u_ni_sw_ap_v3_et_he_re_um_ticks_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_ticks_current) | **Get** /dapps/uniswap_v3_ethereum/ticks/current | Ticks (current)
-[**u_ni_sw_ap_v3_et_he_re_um_token_white_list_symbols_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_token_white_list_symbols_current) | **Get** /dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current | TokenWhiteListSymbols (current)
-[**u_ni_sw_ap_v3_et_he_re_um_token_white_lists_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_token_white_lists_current) | **Get** /dapps/uniswap_v3_ethereum/tokenWhiteLists/current | TokenWhiteLists (current)
-[**u_ni_sw_ap_v3_et_he_re_um_tokens_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_tokens_current) | **Get** /dapps/uniswap_v3_ethereum/tokens/current | Tokens (current)
-[**u_ni_sw_ap_v3_et_he_re_um_usage_metrics_daily_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_usage_metrics_daily_snapshots_current) | **Get** /dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current)
-[**u_ni_sw_ap_v3_et_he_re_um_usage_metrics_hourly_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_usage_metrics_hourly_snapshots_current) | **Get** /dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current)
-[**u_ni_sw_ap_v3_et_he_re_um_withdraws_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_withdraws_current) | **Get** /dapps/uniswap_v3_ethereum/withdraws/current | Withdraws (current)
+[**u_ni_sw_ap_v3_et_he_re_um_accounts_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_accounts_current) | **Get** /v1/dapps/uniswap-v3-ethereum/accounts/current | Accounts (current)
+[**u_ni_sw_ap_v3_et_he_re_um_active_accounts_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_active_accounts_current) | **Get** /v1/dapps/uniswap-v3-ethereum/activeAccounts/current | ActiveAccounts (current)
+[**u_ni_sw_ap_v3_et_he_re_um_deposits_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_deposits_current) | **Get** /v1/dapps/uniswap-v3-ethereum/deposits/current | Deposits (current)
+[**u_ni_sw_ap_v3_et_he_re_um_dex_amm_protocols_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_dex_amm_protocols_current) | **Get** /v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
+[**u_ni_sw_ap_v3_et_he_re_um_financials_daily_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_financials_daily_snapshots_current) | **Get** /v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
+[**u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_amounts_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_amounts_current) | **Get** /v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
+[**u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_daily_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_daily_snapshots_current) | **Get** /v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
+[**u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_fees_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_fees_current) | **Get** /v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
+[**u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_hourly_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_liquidity_pool_hourly_snapshots_current) | **Get** /v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
+[**u_ni_sw_ap_v3_et_he_re_um_liquidity_pools_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_liquidity_pools_current) | **Get** /v1/dapps/uniswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
+[**u_ni_sw_ap_v3_et_he_re_um_position_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_position_snapshots_current) | **Get** /v1/dapps/uniswap-v3-ethereum/positionSnapshots/current | PositionSnapshots (current)
+[**u_ni_sw_ap_v3_et_he_re_um_positions_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_positions_current) | **Get** /v1/dapps/uniswap-v3-ethereum/positions/current | Positions (current)
+[**u_ni_sw_ap_v3_et_he_re_um_reward_tokens_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_reward_tokens_current) | **Get** /v1/dapps/uniswap-v3-ethereum/rewardTokens/current | RewardTokens (current)
+[**u_ni_sw_ap_v3_et_he_re_um_swaps_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_swaps_current) | **Get** /v1/dapps/uniswap-v3-ethereum/swaps/current | Swaps (current)
+[**u_ni_sw_ap_v3_et_he_re_um_tick_daily_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_tick_daily_snapshots_current) | **Get** /v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current | TickDailySnapshots (current)
+[**u_ni_sw_ap_v3_et_he_re_um_tick_hourly_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_tick_hourly_snapshots_current) | **Get** /v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current | TickHourlySnapshots (current)
+[**u_ni_sw_ap_v3_et_he_re_um_ticks_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_ticks_current) | **Get** /v1/dapps/uniswap-v3-ethereum/ticks/current | Ticks (current)
+[**u_ni_sw_ap_v3_et_he_re_um_token_white_list_symbols_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_token_white_list_symbols_current) | **Get** /v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current | TokenWhiteListSymbols (current)
+[**u_ni_sw_ap_v3_et_he_re_um_token_white_lists_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_token_white_lists_current) | **Get** /v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current | TokenWhiteLists (current)
+[**u_ni_sw_ap_v3_et_he_re_um_tokens_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_tokens_current) | **Get** /v1/dapps/uniswap-v3-ethereum/tokens/current | Tokens (current)
+[**u_ni_sw_ap_v3_et_he_re_um_usage_metrics_daily_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_usage_metrics_daily_snapshots_current) | **Get** /v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current)
+[**u_ni_sw_ap_v3_et_he_re_um_usage_metrics_hourly_snapshots_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_usage_metrics_hourly_snapshots_current) | **Get** /v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current)
+[**u_ni_sw_ap_v3_et_he_re_um_withdraws_current**](UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_withdraws_current) | **Get** /v1/dapps/uniswap-v3-ethereum/withdraws/current | Withdraws (current)
 
 
 # **u_ni_sw_ap_v3_et_he_re_um_accounts_current**
@@ -52,7 +52,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -79,7 +79,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -106,7 +106,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -133,7 +133,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -160,7 +160,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -190,7 +190,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -220,7 +220,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -247,7 +247,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -277,7 +277,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -307,7 +307,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -334,7 +334,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -364,7 +364,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -391,7 +391,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -418,7 +418,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -448,7 +448,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -478,7 +478,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -508,7 +508,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -535,7 +535,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -562,7 +562,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -592,7 +592,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -619,7 +619,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -646,7 +646,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -673,7 +673,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

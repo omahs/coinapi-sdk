@@ -36,11 +36,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMAccountDTO>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/accounts/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/accounts/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMAccountDTO>.class
@@ -57,11 +57,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMActiveAccountDTO>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/activeAccounts/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/activeAccounts/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMActiveAccountDTO>.class
@@ -78,11 +78,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMDepositDTO>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/deposits/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/deposits/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMDepositDTO>.class
@@ -99,11 +99,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMDexAmmProtocolDT>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/dexAmmProtocols/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMDexAmmProtocolDT>.class
@@ -120,11 +120,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMFinancialsDailyS>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMFinancialsDailyS>.class
@@ -146,11 +146,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMLiquidityPoolAmo>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMLiquidityPoolAmo>.class
@@ -172,11 +172,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMLiquidityPoolDai>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMLiquidityPoolDai>.class
@@ -193,11 +193,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMLiquidityPoolFee>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/liquidityPoolFees/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMLiquidityPoolFee>.class
@@ -219,11 +219,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMLiquidityPoolHou>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMLiquidityPoolHou>.class
@@ -245,11 +245,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMLiquidityPoolDTO>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/liquidityPools/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/liquidityPools/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMLiquidityPoolDTO>.class
@@ -266,11 +266,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMPositionSnapshot>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/positionSnapshots/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMPositionSnapshot>.class
@@ -292,11 +292,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMPositionDTO>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/positions/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/positions/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMPositionDTO>.class
@@ -313,11 +313,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMRewardTokenDTO>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/rewardTokens/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/rewardTokens/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMRewardTokenDTO>.class
@@ -334,11 +334,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMSwapDTO>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/swaps/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/swaps/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMSwapDTO>.class
@@ -360,11 +360,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMTickDailySnapsho>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/tickDailySnapshots/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMTickDailySnapsho>.class
@@ -386,11 +386,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMTickHourlySnapsh>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMTickHourlySnapsh>.class
@@ -412,11 +412,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMTickDTO>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/ticks/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/ticks/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMTickDTO>.class
@@ -433,11 +433,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMTokenWhiteListSy>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMTokenWhiteListSy>.class
@@ -454,11 +454,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMTokenWhiteListDT>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/tokenWhiteLists/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMTokenWhiteListDT>.class
@@ -480,11 +480,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMTokenDTO>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/tokens/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/tokens/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMTokenDTO>.class
@@ -501,11 +501,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMUsageMetricsDail>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMUsageMetricsDail>.class
@@ -522,11 +522,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMUsageMetricsHour>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMUsageMetricsHour>.class
@@ -543,11 +543,11 @@ public class OASUNISWAPV3ETHEREUMApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMWithdrawDTO>) client.invoke(
-            'GET', '/dapps/uniswap_v3_ethereum/withdraws/current', '',
+            'GET', '/v1/dapps/uniswap-v3-ethereum/withdraws/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV3ETHEREUMWithdrawDTO>.class

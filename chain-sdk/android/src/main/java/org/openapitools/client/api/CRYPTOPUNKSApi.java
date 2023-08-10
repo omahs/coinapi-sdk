@@ -72,7 +72,7 @@ public class CRYPTOPUNKSApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/cryptopunks/bids/current";
+    String path = "/v1/dapps/cryptopunks/bids/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -129,7 +129,7 @@ public class CRYPTOPUNKSApi {
 
 
     // create path and map variables
-    String path = "/dapps/cryptopunks/bids/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/cryptopunks/bids/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -188,7 +188,7 @@ public class CRYPTOPUNKSApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/cryptopunks/collectionDailySnapshots/current";
+    String path = "/v1/dapps/cryptopunks/collectionDailySnapshots/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -245,7 +245,7 @@ public class CRYPTOPUNKSApi {
 
 
     // create path and map variables
-    String path = "/dapps/cryptopunks/collectionDailySnapshots/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/cryptopunks/collectionDailySnapshots/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -304,7 +304,7 @@ public class CRYPTOPUNKSApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/cryptopunks/collections/current";
+    String path = "/v1/dapps/cryptopunks/collections/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -361,7 +361,7 @@ public class CRYPTOPUNKSApi {
 
 
     // create path and map variables
-    String path = "/dapps/cryptopunks/collections/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/cryptopunks/collections/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -420,7 +420,7 @@ public class CRYPTOPUNKSApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/cryptopunks/dataSources/current";
+    String path = "/v1/dapps/cryptopunks/dataSources/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -477,7 +477,7 @@ public class CRYPTOPUNKSApi {
 
 
     // create path and map variables
-    String path = "/dapps/cryptopunks/dataSources/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/cryptopunks/dataSources/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -536,7 +536,7 @@ public class CRYPTOPUNKSApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/cryptopunks/items/current";
+    String path = "/v1/dapps/cryptopunks/items/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -593,7 +593,7 @@ public class CRYPTOPUNKSApi {
 
 
     // create path and map variables
-    String path = "/dapps/cryptopunks/items/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/cryptopunks/items/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -652,7 +652,7 @@ public class CRYPTOPUNKSApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/cryptopunks/marketPlaces/current";
+    String path = "/v1/dapps/cryptopunks/marketPlaces/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -709,7 +709,7 @@ public class CRYPTOPUNKSApi {
 
 
     // create path and map variables
-    String path = "/dapps/cryptopunks/marketPlaces/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/cryptopunks/marketPlaces/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -768,7 +768,7 @@ public class CRYPTOPUNKSApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/cryptopunks/marketplaceDailySnapshots/current";
+    String path = "/v1/dapps/cryptopunks/marketplaceDailySnapshots/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -825,7 +825,7 @@ public class CRYPTOPUNKSApi {
 
 
     // create path and map variables
-    String path = "/dapps/cryptopunks/marketplaceDailySnapshots/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/cryptopunks/marketplaceDailySnapshots/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -884,7 +884,7 @@ public class CRYPTOPUNKSApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/cryptopunks/trades/current";
+    String path = "/v1/dapps/cryptopunks/trades/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -941,7 +941,7 @@ public class CRYPTOPUNKSApi {
 
 
     // create path and map variables
-    String path = "/dapps/cryptopunks/trades/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/cryptopunks/trades/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1000,7 +1000,7 @@ public class CRYPTOPUNKSApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/cryptopunks/users/current";
+    String path = "/v1/dapps/cryptopunks/users/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1057,7 +1057,7 @@ public class CRYPTOPUNKSApi {
 
 
     // create path and map variables
-    String path = "/dapps/cryptopunks/users/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/cryptopunks/users/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

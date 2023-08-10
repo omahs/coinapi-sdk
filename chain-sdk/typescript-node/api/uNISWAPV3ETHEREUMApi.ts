@@ -113,10 +113,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @summary Accounts (current)
      */
     public async uNISWAPV3ETHEREUMAccountsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMAccountDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/accounts/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/accounts/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -175,10 +175,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @summary ActiveAccounts (current)
      */
     public async uNISWAPV3ETHEREUMActiveAccountsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMActiveAccountDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/activeAccounts/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/activeAccounts/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -237,10 +237,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @summary Deposits (current)
      */
     public async uNISWAPV3ETHEREUMDepositsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMDepositDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/deposits/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/deposits/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -299,10 +299,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @summary DexAmmProtocols (current)
      */
     public async uNISWAPV3ETHEREUMDexAmmProtocolsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMDexAmmProtocolDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/dexAmmProtocols/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -361,10 +361,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @summary FinancialsDailySnapshots (current)
      */
     public async uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -424,10 +424,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @param id Smart contract address of the pool.
      */
     public async uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent (id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -491,10 +491,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @param pool Pool this snapshot belongs to.
      */
     public async uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent (pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -557,10 +557,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @summary LiquidityPoolFees (current)
      */
     public async uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/liquidityPoolFees/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -620,10 +620,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @param pool The pool this snapshot belongs to
      */
     public async uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent (pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -687,10 +687,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @param id Smart contract address of the pool.
      */
     public async uNISWAPV3ETHEREUMLiquidityPoolsCurrent (id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMLiquidityPoolDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/liquidityPools/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/liquidityPools/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -753,10 +753,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @summary PositionSnapshots (current)
      */
     public async uNISWAPV3ETHEREUMPositionSnapshotsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMPositionSnapshotDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/positionSnapshots/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -816,10 +816,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @param pool The liquidity pool in which this position was opened
      */
     public async uNISWAPV3ETHEREUMPositionsCurrent (pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMPositionDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/positions/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/positions/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -882,10 +882,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @summary RewardTokens (current)
      */
     public async uNISWAPV3ETHEREUMRewardTokensCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMRewardTokenDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/rewardTokens/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/rewardTokens/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -944,10 +944,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @summary Swaps (current)
      */
     public async uNISWAPV3ETHEREUMSwapsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMSwapDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/swaps/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/swaps/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -1007,10 +1007,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @param pool liquidity pool this tick belongs to
      */
     public async uNISWAPV3ETHEREUMTickDailySnapshotsCurrent (pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/tickDailySnapshots/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -1074,10 +1074,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @param pool liquidity pool this tick belongs to
      */
     public async uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent (pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -1141,10 +1141,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @param pool Liquidity pool this tick belongs to
      */
     public async uNISWAPV3ETHEREUMTicksCurrent (pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMTickDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/ticks/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/ticks/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -1207,10 +1207,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @summary TokenWhiteListSymbols (current)
      */
     public async uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -1269,10 +1269,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @summary TokenWhiteLists (current)
      */
     public async uNISWAPV3ETHEREUMTokenWhiteListsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMTokenWhiteListDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/tokenWhiteLists/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -1332,10 +1332,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @param id Smart contract address of the token.
      */
     public async uNISWAPV3ETHEREUMTokensCurrent (id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMTokenDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/tokens/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/tokens/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -1398,10 +1398,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @summary UsageMetricsDailySnapshots (current)
      */
     public async uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -1460,10 +1460,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @summary UsageMetricsHourlySnapshots (current)
      */
     public async uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -1522,10 +1522,10 @@ export class UNISWAPV3ETHEREUMApi {
      * @summary Withdraws (current)
      */
     public async uNISWAPV3ETHEREUMWithdrawsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMWithdrawDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswap_v3_ethereum/withdraws/current';
+        const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/withdraws/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';

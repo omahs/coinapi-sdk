@@ -71,14 +71,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_accounts__current()
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/accounts/current",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/accounts/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -120,14 +120,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_active_accounts__current()
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/activeAccounts/current",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/activeAccounts/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -169,14 +169,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_deposits__current()
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/deposits/current",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/deposits/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -218,14 +218,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_dex_amm_protocols__current()
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/dexAmmProtocols/current",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -267,14 +267,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_financials_daily_snapshots__
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -316,14 +316,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_liquidity_pool_amounts__curr
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current?id=%s",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current?id=%s",
 			self.basePath, http_util.encodeURIComponent(id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -365,14 +365,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_liquidity_pool_daily_snapsho
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current?pool=%s",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current?pool=%s",
 			self.basePath, http_util.encodeURIComponent(pool));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -414,14 +414,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_liquidity_pool_fees__current
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/liquidityPoolFees/current",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -463,14 +463,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_liquidity_pool_hourly_snapsh
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current?pool=%s",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current?pool=%s",
 			self.basePath, http_util.encodeURIComponent(pool));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -512,14 +512,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_liquidity_pools__current(id)
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/liquidityPools/current?id=%s",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/liquidityPools/current?id=%s",
 			self.basePath, http_util.encodeURIComponent(id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -561,14 +561,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_position_snapshots__current(
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/positionSnapshots/current",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -610,14 +610,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_positions__current(pool)
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/positions/current?pool=%s",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/positions/current?pool=%s",
 			self.basePath, http_util.encodeURIComponent(pool));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -659,14 +659,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_reward_tokens__current()
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/rewardTokens/current",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/rewardTokens/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -708,14 +708,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_swaps__current()
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/swaps/current",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/swaps/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -757,14 +757,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_tick_daily_snapshots__curren
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/tickDailySnapshots/current?pool=%s",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current?pool=%s",
 			self.basePath, http_util.encodeURIComponent(pool));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -806,14 +806,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_tick_hourly_snapshots__curre
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current?pool=%s",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current?pool=%s",
 			self.basePath, http_util.encodeURIComponent(pool));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -855,14 +855,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_ticks__current(pool)
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/ticks/current?pool=%s",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/ticks/current?pool=%s",
 			self.basePath, http_util.encodeURIComponent(pool));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -904,14 +904,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_token_white_list_symbols__cu
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -953,14 +953,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_token_white_lists__current()
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/tokenWhiteLists/current",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -1002,14 +1002,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_tokens__current(id)
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/tokens/current?id=%s",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/tokens/current?id=%s",
 			self.basePath, http_util.encodeURIComponent(id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -1051,14 +1051,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_usage_metrics_daily_snapshot
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -1100,14 +1100,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_usage_metrics_hourly_snapsho
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 
@@ -1149,14 +1149,14 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_withdraws__current()
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswap_v3_ethereum/withdraws/current",
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/withdraws/current",
 			self.basePath);
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
+	--local var_accept = { "text/plain", "application/json", "text/json", "application/x-msgpack" }
 	req.headers:upsert("content-type", "text/plain")
 
 

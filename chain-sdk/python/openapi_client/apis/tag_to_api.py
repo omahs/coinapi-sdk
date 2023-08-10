@@ -11,6 +11,7 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.CRYPTOPUNKS: CRYPTOPUNKSApi,
         TagValues.UNISWAP_V3_ETHEREUM: UNISWAPV3ETHEREUMApi,
         TagValues.METADATA: MetadataApi,
+        TagValues.UNISWAPV3ETHEREUM: UNISWAPV3ETHEREUMApi,
     }
 )
 
@@ -19,5 +20,6 @@ tag_to_api = TagToApi(
         TagValues.CRYPTOPUNKS: CRYPTOPUNKSApi,
         TagValues.UNISWAP_V3_ETHEREUM: UNISWAPV3ETHEREUMApi,
         TagValues.METADATA: MetadataApi,
+        TagValues.UNISWAPV3ETHEREUM: UNISWAPV3ETHEREUMApi,
     }
 )

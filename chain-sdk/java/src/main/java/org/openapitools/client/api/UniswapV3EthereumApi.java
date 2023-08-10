@@ -123,7 +123,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/accounts/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/accounts/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -134,7 +134,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -238,7 +239,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/activeAccounts/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/activeAccounts/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -249,7 +250,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -353,7 +355,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/deposits/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/deposits/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -364,7 +366,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -468,7 +471,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -479,7 +482,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -583,7 +587,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -594,7 +598,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -699,7 +704,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -714,7 +719,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -822,7 +828,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -837,7 +843,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -944,7 +951,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -955,7 +962,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1060,7 +1068,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1075,7 +1083,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1183,7 +1192,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPools/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/liquidityPools/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1198,7 +1207,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1305,7 +1315,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/positionSnapshots/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1316,7 +1326,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1421,7 +1432,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/positions/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/positions/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1436,7 +1447,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1543,7 +1555,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/rewardTokens/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/rewardTokens/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1554,7 +1566,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1658,7 +1671,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/swaps/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/swaps/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1669,7 +1682,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1774,7 +1788,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1789,7 +1803,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1897,7 +1912,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1912,7 +1927,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2020,7 +2036,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/ticks/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/ticks/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2035,7 +2051,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2142,7 +2159,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2153,7 +2170,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2257,7 +2275,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2268,7 +2286,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2373,7 +2392,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/tokens/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/tokens/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2388,7 +2407,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2495,7 +2515,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2506,7 +2526,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2610,7 +2631,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2621,7 +2642,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2725,7 +2747,7 @@ public class UniswapV3EthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswap_v3_ethereum/withdraws/current";
+        String localVarPath = "/v1/dapps/uniswap-v3-ethereum/withdraws/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2736,7 +2758,8 @@ public class UniswapV3EthereumApi {
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
-            "text/json"
+            "text/json",
+            "application/x-msgpack"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {

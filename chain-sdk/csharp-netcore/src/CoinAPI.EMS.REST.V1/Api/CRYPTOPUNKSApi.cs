@@ -581,7 +581,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -602,7 +603,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<CRYPTOPUNKSBidDTO>>("/dapps/cryptopunks/bids/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<CRYPTOPUNKSBidDTO>>("/v1/dapps/cryptopunks/bids/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CRYPTOPUNKSBidsCurrent", localVarResponse);
@@ -647,7 +648,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -668,7 +670,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CRYPTOPUNKSBidDTO>>("/dapps/cryptopunks/bids/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CRYPTOPUNKSBidDTO>>("/v1/dapps/cryptopunks/bids/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -711,7 +713,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -732,7 +735,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<CRYPTOPUNKSCollectionDailySnapshotDTO>>("/dapps/cryptopunks/collectionDailySnapshots/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<CRYPTOPUNKSCollectionDailySnapshotDTO>>("/v1/dapps/cryptopunks/collectionDailySnapshots/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CRYPTOPUNKSCollectionDailySnapshotsCurrent", localVarResponse);
@@ -777,7 +780,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -798,7 +802,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CRYPTOPUNKSCollectionDailySnapshotDTO>>("/dapps/cryptopunks/collectionDailySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CRYPTOPUNKSCollectionDailySnapshotDTO>>("/v1/dapps/cryptopunks/collectionDailySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -841,7 +845,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -862,7 +867,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<CRYPTOPUNKSCollectionDTO>>("/dapps/cryptopunks/collections/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<CRYPTOPUNKSCollectionDTO>>("/v1/dapps/cryptopunks/collections/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CRYPTOPUNKSCollectionsCurrent", localVarResponse);
@@ -907,7 +912,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -928,7 +934,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CRYPTOPUNKSCollectionDTO>>("/dapps/cryptopunks/collections/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CRYPTOPUNKSCollectionDTO>>("/v1/dapps/cryptopunks/collections/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -971,7 +977,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -992,7 +999,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<CRYPTOPUNKSDataSourcesDTO>>("/dapps/cryptopunks/dataSources/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<CRYPTOPUNKSDataSourcesDTO>>("/v1/dapps/cryptopunks/dataSources/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CRYPTOPUNKSDataSourcesCurrent", localVarResponse);
@@ -1037,7 +1044,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1058,7 +1066,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CRYPTOPUNKSDataSourcesDTO>>("/dapps/cryptopunks/dataSources/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CRYPTOPUNKSDataSourcesDTO>>("/v1/dapps/cryptopunks/dataSources/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1101,7 +1109,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1122,7 +1131,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<CRYPTOPUNKSItemDTO>>("/dapps/cryptopunks/items/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<CRYPTOPUNKSItemDTO>>("/v1/dapps/cryptopunks/items/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CRYPTOPUNKSItemsCurrent", localVarResponse);
@@ -1167,7 +1176,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1188,7 +1198,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CRYPTOPUNKSItemDTO>>("/dapps/cryptopunks/items/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CRYPTOPUNKSItemDTO>>("/v1/dapps/cryptopunks/items/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1231,7 +1241,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1252,7 +1263,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<CRYPTOPUNKSMarketPlaceDTO>>("/dapps/cryptopunks/marketPlaces/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<CRYPTOPUNKSMarketPlaceDTO>>("/v1/dapps/cryptopunks/marketPlaces/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CRYPTOPUNKSMarketPlacesCurrent", localVarResponse);
@@ -1297,7 +1308,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1318,7 +1330,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CRYPTOPUNKSMarketPlaceDTO>>("/dapps/cryptopunks/marketPlaces/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CRYPTOPUNKSMarketPlaceDTO>>("/v1/dapps/cryptopunks/marketPlaces/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1361,7 +1373,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1382,7 +1395,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>("/dapps/cryptopunks/marketplaceDailySnapshots/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>("/v1/dapps/cryptopunks/marketplaceDailySnapshots/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CRYPTOPUNKSMarketplaceDailySnapshotsCurrent", localVarResponse);
@@ -1427,7 +1440,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1448,7 +1462,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>("/dapps/cryptopunks/marketplaceDailySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>("/v1/dapps/cryptopunks/marketplaceDailySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1491,7 +1505,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1512,7 +1527,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<CRYPTOPUNKSTradeDTO>>("/dapps/cryptopunks/trades/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<CRYPTOPUNKSTradeDTO>>("/v1/dapps/cryptopunks/trades/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CRYPTOPUNKSTradesCurrent", localVarResponse);
@@ -1557,7 +1572,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1578,7 +1594,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CRYPTOPUNKSTradeDTO>>("/dapps/cryptopunks/trades/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CRYPTOPUNKSTradeDTO>>("/v1/dapps/cryptopunks/trades/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1621,7 +1637,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1642,7 +1659,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<CRYPTOPUNKSUserDTO>>("/dapps/cryptopunks/users/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<CRYPTOPUNKSUserDTO>>("/v1/dapps/cryptopunks/users/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CRYPTOPUNKSUsersCurrent", localVarResponse);
@@ -1687,7 +1704,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1708,7 +1726,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CRYPTOPUNKSUserDTO>>("/dapps/cryptopunks/users/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CRYPTOPUNKSUserDTO>>("/v1/dapps/cryptopunks/users/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

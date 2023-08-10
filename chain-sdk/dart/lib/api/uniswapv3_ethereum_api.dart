@@ -23,7 +23,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> uNISWAPV3ETHEREUMAccountsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/accounts/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/accounts/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -74,7 +74,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> uNISWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/activeAccounts/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/activeAccounts/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -125,7 +125,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> uNISWAPV3ETHEREUMDepositsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/deposits/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/deposits/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -176,7 +176,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> uNISWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/dexAmmProtocols/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -227,7 +227,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -283,7 +283,7 @@ class UNISWAPV3ETHEREUMApi {
   ///   Smart contract address of the pool.
   Future<Response> uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo({ String? id, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -348,7 +348,7 @@ class UNISWAPV3ETHEREUMApi {
   ///   Pool this snapshot belongs to.
   Future<Response> uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo({ String? pool, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -408,7 +408,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> uNISWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/liquidityPoolFees/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -464,7 +464,7 @@ class UNISWAPV3ETHEREUMApi {
   ///   The pool this snapshot belongs to
   Future<Response> uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo({ String? pool, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -529,7 +529,7 @@ class UNISWAPV3ETHEREUMApi {
   ///   Smart contract address of the pool.
   Future<Response> uNISWAPV3ETHEREUMLiquidityPoolsCurrentWithHttpInfo({ String? id, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/liquidityPools/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/liquidityPools/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -589,7 +589,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> uNISWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/positionSnapshots/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -645,7 +645,7 @@ class UNISWAPV3ETHEREUMApi {
   ///   The liquidity pool in which this position was opened
   Future<Response> uNISWAPV3ETHEREUMPositionsCurrentWithHttpInfo({ String? pool, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/positions/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/positions/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -705,7 +705,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> uNISWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/rewardTokens/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/rewardTokens/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -756,7 +756,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> uNISWAPV3ETHEREUMSwapsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/swaps/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/swaps/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -812,7 +812,7 @@ class UNISWAPV3ETHEREUMApi {
   ///   liquidity pool this tick belongs to
   Future<Response> uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo({ String? pool, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/tickDailySnapshots/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -877,7 +877,7 @@ class UNISWAPV3ETHEREUMApi {
   ///   liquidity pool this tick belongs to
   Future<Response> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo({ String? pool, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -942,7 +942,7 @@ class UNISWAPV3ETHEREUMApi {
   ///   Liquidity pool this tick belongs to
   Future<Response> uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo({ String? pool, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/ticks/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/ticks/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1002,7 +1002,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1053,7 +1053,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> uNISWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/tokenWhiteLists/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1109,7 +1109,7 @@ class UNISWAPV3ETHEREUMApi {
   ///   Smart contract address of the token.
   Future<Response> uNISWAPV3ETHEREUMTokensCurrentWithHttpInfo({ String? id, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/tokens/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/tokens/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1169,7 +1169,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1220,7 +1220,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1271,7 +1271,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Note: This method returns the HTTP [Response].
   Future<Response> uNISWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswap_v3_ethereum/withdraws/current';
+    final path = r'/v1/dapps/uniswap-v3-ethereum/withdraws/current';
 
     // ignore: prefer_final_locals
     Object? postBody;

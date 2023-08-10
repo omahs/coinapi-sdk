@@ -37,7 +37,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CRYPTOPUNKSApi.c_ryptopunks_bids__current ...'
       end
       # resource path
-      local_var_path = '/dapps/cryptopunks/bids/current'
+      local_var_path = '/v1/dapps/cryptopunks/bids/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -45,7 +45,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -94,7 +94,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CRYPTOPUNKSApi.c_ryptopunks_collection_daily_snapshots__current ...'
       end
       # resource path
-      local_var_path = '/dapps/cryptopunks/collectionDailySnapshots/current'
+      local_var_path = '/v1/dapps/cryptopunks/collectionDailySnapshots/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -102,7 +102,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -151,7 +151,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CRYPTOPUNKSApi.c_ryptopunks_collections__current ...'
       end
       # resource path
-      local_var_path = '/dapps/cryptopunks/collections/current'
+      local_var_path = '/v1/dapps/cryptopunks/collections/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -159,7 +159,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -208,7 +208,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CRYPTOPUNKSApi.c_ryptopunks_data_sources__current ...'
       end
       # resource path
-      local_var_path = '/dapps/cryptopunks/dataSources/current'
+      local_var_path = '/v1/dapps/cryptopunks/dataSources/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -216,7 +216,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -265,7 +265,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CRYPTOPUNKSApi.c_ryptopunks_items__current ...'
       end
       # resource path
-      local_var_path = '/dapps/cryptopunks/items/current'
+      local_var_path = '/v1/dapps/cryptopunks/items/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -273,7 +273,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -322,7 +322,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CRYPTOPUNKSApi.c_ryptopunks_market_places__current ...'
       end
       # resource path
-      local_var_path = '/dapps/cryptopunks/marketPlaces/current'
+      local_var_path = '/v1/dapps/cryptopunks/marketPlaces/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -330,7 +330,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -379,7 +379,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CRYPTOPUNKSApi.c_ryptopunks_marketplace_daily_snapshots__current ...'
       end
       # resource path
-      local_var_path = '/dapps/cryptopunks/marketplaceDailySnapshots/current'
+      local_var_path = '/v1/dapps/cryptopunks/marketplaceDailySnapshots/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -387,7 +387,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -436,7 +436,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CRYPTOPUNKSApi.c_ryptopunks_trades__current ...'
       end
       # resource path
-      local_var_path = '/dapps/cryptopunks/trades/current'
+      local_var_path = '/v1/dapps/cryptopunks/trades/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -444,7 +444,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -493,7 +493,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CRYPTOPUNKSApi.c_ryptopunks_users__current ...'
       end
       # resource path
-      local_var_path = '/dapps/cryptopunks/users/current'
+      local_var_path = '/v1/dapps/cryptopunks/users/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -501,7 +501,7 @@ module OpenapiClient
       # header parameters
       header_params = opts[:header_params] || {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
 
       # form parameters
       form_params = opts[:form_params] || {}

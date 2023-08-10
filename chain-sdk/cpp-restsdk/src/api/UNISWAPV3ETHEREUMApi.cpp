@@ -41,7 +41,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_AccountDTO>>> UNISWAP
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/accounts/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/accounts/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -52,6 +52,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_AccountDTO>>> UNISWAP
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -169,7 +170,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_ActiveAccountDTO>>> U
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/activeAccounts/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/activeAccounts/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -180,6 +181,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_ActiveAccountDTO>>> U
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -297,7 +299,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_DepositDTO>>> UNISWAP
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/deposits/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/deposits/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -308,6 +310,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_DepositDTO>>> UNISWAP
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -425,7 +428,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_DexAmmProtocolDTO>>> 
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/dexAmmProtocols/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -436,6 +439,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_DexAmmProtocolDTO>>> 
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -553,7 +557,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_FinancialsDailySnapsh
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -564,6 +568,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_FinancialsDailySnapsh
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -681,7 +686,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_LiquidityPoolAmountDT
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -692,6 +697,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_LiquidityPoolAmountDT
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -813,7 +819,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_LiquidityPoolDailySna
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -824,6 +830,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_LiquidityPoolDailySna
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -945,7 +952,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_LiquidityPoolFeeDTO>>
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/liquidityPoolFees/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -956,6 +963,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_LiquidityPoolFeeDTO>>
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1073,7 +1081,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_LiquidityPoolHourlySn
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1084,6 +1092,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_LiquidityPoolHourlySn
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1205,7 +1214,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_LiquidityPoolDTO>>> U
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/liquidityPools/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/liquidityPools/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1216,6 +1225,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_LiquidityPoolDTO>>> U
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1337,7 +1347,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_PositionSnapshotDTO>>
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/positionSnapshots/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1348,6 +1358,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_PositionSnapshotDTO>>
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1465,7 +1476,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_PositionDTO>>> UNISWA
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/positions/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/positions/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1476,6 +1487,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_PositionDTO>>> UNISWA
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1597,7 +1609,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_RewardTokenDTO>>> UNI
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/rewardTokens/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/rewardTokens/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1608,6 +1620,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_RewardTokenDTO>>> UNI
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1725,7 +1738,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_SwapDTO>>> UNISWAPV3E
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/swaps/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/swaps/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1736,6 +1749,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_SwapDTO>>> UNISWAPV3E
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1853,7 +1867,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickDailySnapshotDTO>
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/tickDailySnapshots/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1864,6 +1878,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickDailySnapshotDTO>
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1985,7 +2000,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickHourlySnapshotDTO
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1996,6 +2011,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickHourlySnapshotDTO
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -2117,7 +2133,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickDTO>>> UNISWAPV3E
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/ticks/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/ticks/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -2128,6 +2144,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickDTO>>> UNISWAPV3E
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -2249,7 +2266,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TokenWhiteListSymbolD
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -2260,6 +2277,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TokenWhiteListSymbolD
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -2377,7 +2395,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TokenWhiteListDTO>>> 
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/tokenWhiteLists/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -2388,6 +2406,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TokenWhiteListDTO>>> 
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -2505,7 +2524,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TokenDTO>>> UNISWAPV3
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/tokens/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/tokens/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -2516,6 +2535,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TokenDTO>>> UNISWAPV3
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -2637,7 +2657,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_UsageMetricsDailySnap
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -2648,6 +2668,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_UsageMetricsDailySnap
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -2765,7 +2786,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_UsageMetricsHourlySna
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -2776,6 +2797,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_UsageMetricsHourlySna
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -2893,7 +2915,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_WithdrawDTO>>> UNISWA
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswap_v3_ethereum/withdraws/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/v1/dapps/uniswap-v3-ethereum/withdraws/current");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -2904,6 +2926,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_WithdrawDTO>>> UNISWA
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/x-msgpack") );
 
     utility::string_t localVarResponseHttpContentType;
 

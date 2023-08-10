@@ -28,7 +28,7 @@ defmodule OnChainDapps-RESTAPI.Api.CRYPTOPUNKS do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/cryptopunks/bids/current")
+      |> url("/v1/dapps/cryptopunks/bids/current")
       |> Enum.into([])
 
     connection
@@ -57,7 +57,7 @@ defmodule OnChainDapps-RESTAPI.Api.CRYPTOPUNKS do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/cryptopunks/collectionDailySnapshots/current")
+      |> url("/v1/dapps/cryptopunks/collectionDailySnapshots/current")
       |> Enum.into([])
 
     connection
@@ -86,7 +86,7 @@ defmodule OnChainDapps-RESTAPI.Api.CRYPTOPUNKS do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/cryptopunks/collections/current")
+      |> url("/v1/dapps/cryptopunks/collections/current")
       |> Enum.into([])
 
     connection
@@ -115,7 +115,7 @@ defmodule OnChainDapps-RESTAPI.Api.CRYPTOPUNKS do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/cryptopunks/dataSources/current")
+      |> url("/v1/dapps/cryptopunks/dataSources/current")
       |> Enum.into([])
 
     connection
@@ -144,7 +144,7 @@ defmodule OnChainDapps-RESTAPI.Api.CRYPTOPUNKS do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/cryptopunks/items/current")
+      |> url("/v1/dapps/cryptopunks/items/current")
       |> Enum.into([])
 
     connection
@@ -173,7 +173,7 @@ defmodule OnChainDapps-RESTAPI.Api.CRYPTOPUNKS do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/cryptopunks/marketPlaces/current")
+      |> url("/v1/dapps/cryptopunks/marketPlaces/current")
       |> Enum.into([])
 
     connection
@@ -202,7 +202,7 @@ defmodule OnChainDapps-RESTAPI.Api.CRYPTOPUNKS do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/cryptopunks/marketplaceDailySnapshots/current")
+      |> url("/v1/dapps/cryptopunks/marketplaceDailySnapshots/current")
       |> Enum.into([])
 
     connection
@@ -231,7 +231,7 @@ defmodule OnChainDapps-RESTAPI.Api.CRYPTOPUNKS do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/cryptopunks/trades/current")
+      |> url("/v1/dapps/cryptopunks/trades/current")
       |> Enum.into([])
 
     connection
@@ -260,7 +260,7 @@ defmodule OnChainDapps-RESTAPI.Api.CRYPTOPUNKS do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/cryptopunks/users/current")
+      |> url("/v1/dapps/cryptopunks/users/current")
       |> Enum.into([])
 
     connection

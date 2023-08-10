@@ -62,7 +62,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/accounts/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/accounts/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -135,7 +135,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/activeAccounts/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/activeAccounts/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -208,7 +208,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/deposits/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/deposits/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -281,7 +281,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/dexAmmProtocols/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -354,7 +354,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -429,7 +429,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -509,7 +509,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -587,7 +587,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/liquidityPoolFees/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -662,7 +662,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -742,7 +742,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/liquidityPools/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/liquidityPools/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -820,7 +820,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/positionSnapshots/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -895,7 +895,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/positions/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/positions/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -973,7 +973,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/rewardTokens/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/rewardTokens/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1046,7 +1046,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/swaps/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/swaps/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1121,7 +1121,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/tickDailySnapshots/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1201,7 +1201,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1281,7 +1281,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/ticks/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/ticks/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1359,7 +1359,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1432,7 +1432,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/tokenWhiteLists/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1507,7 +1507,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/tokens/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/tokens/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1585,7 +1585,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1658,7 +1658,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1731,7 +1731,7 @@ class UNISWAPV3ETHEREUMApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswap_v3_ethereum/withdraws/current';
+    final _path = r'/v1/dapps/uniswap-v3-ethereum/withdraws/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{

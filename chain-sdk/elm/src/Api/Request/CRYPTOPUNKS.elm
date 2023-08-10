@@ -39,7 +39,7 @@ cRYPTOPUNKSBidsCurrent : Api.Request (List Api.Data.CRYPTOPUNKSBidDTO)
 cRYPTOPUNKSBidsCurrent =
     Api.request
         "GET"
-        "/dapps/cryptopunks/bids/current"
+        "/v1/dapps/cryptopunks/bids/current"
         []
         []
         []
@@ -53,7 +53,7 @@ cRYPTOPUNKSCollectionDailySnapshotsCurrent : Api.Request (List Api.Data.CRYPTOPU
 cRYPTOPUNKSCollectionDailySnapshotsCurrent =
     Api.request
         "GET"
-        "/dapps/cryptopunks/collectionDailySnapshots/current"
+        "/v1/dapps/cryptopunks/collectionDailySnapshots/current"
         []
         []
         []
@@ -67,7 +67,7 @@ cRYPTOPUNKSCollectionsCurrent : Api.Request (List Api.Data.CRYPTOPUNKSCollection
 cRYPTOPUNKSCollectionsCurrent =
     Api.request
         "GET"
-        "/dapps/cryptopunks/collections/current"
+        "/v1/dapps/cryptopunks/collections/current"
         []
         []
         []
@@ -81,7 +81,7 @@ cRYPTOPUNKSDataSourcesCurrent : Api.Request (List Api.Data.CRYPTOPUNKSDataSource
 cRYPTOPUNKSDataSourcesCurrent =
     Api.request
         "GET"
-        "/dapps/cryptopunks/dataSources/current"
+        "/v1/dapps/cryptopunks/dataSources/current"
         []
         []
         []
@@ -95,7 +95,7 @@ cRYPTOPUNKSItemsCurrent : Api.Request (List Api.Data.CRYPTOPUNKSItemDTO)
 cRYPTOPUNKSItemsCurrent =
     Api.request
         "GET"
-        "/dapps/cryptopunks/items/current"
+        "/v1/dapps/cryptopunks/items/current"
         []
         []
         []
@@ -109,7 +109,7 @@ cRYPTOPUNKSMarketPlacesCurrent : Api.Request (List Api.Data.CRYPTOPUNKSMarketPla
 cRYPTOPUNKSMarketPlacesCurrent =
     Api.request
         "GET"
-        "/dapps/cryptopunks/marketPlaces/current"
+        "/v1/dapps/cryptopunks/marketPlaces/current"
         []
         []
         []
@@ -123,7 +123,7 @@ cRYPTOPUNKSMarketplaceDailySnapshotsCurrent : Api.Request (List Api.Data.CRYPTOP
 cRYPTOPUNKSMarketplaceDailySnapshotsCurrent =
     Api.request
         "GET"
-        "/dapps/cryptopunks/marketplaceDailySnapshots/current"
+        "/v1/dapps/cryptopunks/marketplaceDailySnapshots/current"
         []
         []
         []
@@ -137,7 +137,7 @@ cRYPTOPUNKSTradesCurrent : Api.Request (List Api.Data.CRYPTOPUNKSTradeDTO)
 cRYPTOPUNKSTradesCurrent =
     Api.request
         "GET"
-        "/dapps/cryptopunks/trades/current"
+        "/v1/dapps/cryptopunks/trades/current"
         []
         []
         []
@@ -151,7 +151,7 @@ cRYPTOPUNKSUsersCurrent : Api.Request (List Api.Data.CRYPTOPUNKSUserDTO)
 cRYPTOPUNKSUsersCurrent =
     Api.request
         "GET"
-        "/dapps/cryptopunks/users/current"
+        "/v1/dapps/cryptopunks/users/current"
         []
         []
         []

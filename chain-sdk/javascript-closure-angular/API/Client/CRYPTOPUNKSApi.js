@@ -59,7 +59,7 @@ API.Client.CRYPTOPUNKSApi.$inject = ['$http', '$httpParamSerializer', '$injector
  */
 API.Client.CRYPTOPUNKSApi.prototype.cRYPTOPUNKSBidsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/cryptopunks/bids/current';
+  var path = this.basePath_ + '/v1/dapps/cryptopunks/bids/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -90,7 +90,7 @@ API.Client.CRYPTOPUNKSApi.prototype.cRYPTOPUNKSBidsCurrent = function(opt_extraH
  */
 API.Client.CRYPTOPUNKSApi.prototype.cRYPTOPUNKSCollectionDailySnapshotsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/cryptopunks/collectionDailySnapshots/current';
+  var path = this.basePath_ + '/v1/dapps/cryptopunks/collectionDailySnapshots/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -121,7 +121,7 @@ API.Client.CRYPTOPUNKSApi.prototype.cRYPTOPUNKSCollectionDailySnapshotsCurrent =
  */
 API.Client.CRYPTOPUNKSApi.prototype.cRYPTOPUNKSCollectionsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/cryptopunks/collections/current';
+  var path = this.basePath_ + '/v1/dapps/cryptopunks/collections/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -152,7 +152,7 @@ API.Client.CRYPTOPUNKSApi.prototype.cRYPTOPUNKSCollectionsCurrent = function(opt
  */
 API.Client.CRYPTOPUNKSApi.prototype.cRYPTOPUNKSDataSourcesCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/cryptopunks/dataSources/current';
+  var path = this.basePath_ + '/v1/dapps/cryptopunks/dataSources/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -183,7 +183,7 @@ API.Client.CRYPTOPUNKSApi.prototype.cRYPTOPUNKSDataSourcesCurrent = function(opt
  */
 API.Client.CRYPTOPUNKSApi.prototype.cRYPTOPUNKSItemsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/cryptopunks/items/current';
+  var path = this.basePath_ + '/v1/dapps/cryptopunks/items/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -214,7 +214,7 @@ API.Client.CRYPTOPUNKSApi.prototype.cRYPTOPUNKSItemsCurrent = function(opt_extra
  */
 API.Client.CRYPTOPUNKSApi.prototype.cRYPTOPUNKSMarketPlacesCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/cryptopunks/marketPlaces/current';
+  var path = this.basePath_ + '/v1/dapps/cryptopunks/marketPlaces/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -245,7 +245,7 @@ API.Client.CRYPTOPUNKSApi.prototype.cRYPTOPUNKSMarketPlacesCurrent = function(op
  */
 API.Client.CRYPTOPUNKSApi.prototype.cRYPTOPUNKSMarketplaceDailySnapshotsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/cryptopunks/marketplaceDailySnapshots/current';
+  var path = this.basePath_ + '/v1/dapps/cryptopunks/marketplaceDailySnapshots/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -276,7 +276,7 @@ API.Client.CRYPTOPUNKSApi.prototype.cRYPTOPUNKSMarketplaceDailySnapshotsCurrent 
  */
 API.Client.CRYPTOPUNKSApi.prototype.cRYPTOPUNKSTradesCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/cryptopunks/trades/current';
+  var path = this.basePath_ + '/v1/dapps/cryptopunks/trades/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -307,7 +307,7 @@ API.Client.CRYPTOPUNKSApi.prototype.cRYPTOPUNKSTradesCurrent = function(opt_extr
  */
 API.Client.CRYPTOPUNKSApi.prototype.cRYPTOPUNKSUsersCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/cryptopunks/users/current';
+  var path = this.basePath_ + '/v1/dapps/cryptopunks/users/current';
 
   /** @type {!Object} */
   var queryParameters = {};

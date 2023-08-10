@@ -84,10 +84,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMAccountDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/accounts/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/accounts/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -121,10 +121,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMActiveAccountDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/activeAccounts/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/activeAccounts/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -158,10 +158,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMDepositDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/deposits/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/deposits/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -195,10 +195,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMDexAmmProtocolDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/dexAmmProtocols/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -232,10 +232,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -273,10 +273,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMLiquidityPoolAmountDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -314,10 +314,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -351,10 +351,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMLiquidityPoolFeeDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/liquidityPoolFees/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -392,10 +392,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -433,10 +433,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMLiquidityPoolDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/liquidityPools/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/liquidityPools/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -470,10 +470,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMPositionSnapshotDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/positionSnapshots/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -511,10 +511,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMPositionDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/positions/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/positions/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -548,10 +548,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMRewardTokenDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/rewardTokens/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/rewardTokens/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -585,10 +585,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMSwapDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/swaps/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/swaps/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -626,10 +626,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMTickDailySnapshotDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/tickDailySnapshots/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -667,10 +667,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMTickHourlySnapshotDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -708,10 +708,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMTickDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/ticks/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/ticks/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -745,10 +745,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -782,10 +782,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMTokenWhiteListDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/tokenWhiteLists/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -823,10 +823,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMTokenDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/tokens/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/tokens/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -860,10 +860,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -897,10 +897,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -934,10 +934,10 @@ export default class UNISWAPV3ETHEREUMApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV3ETHEREUMWithdrawDTO];
       return this.apiClient.callApi(
-        '/dapps/uniswap_v3_ethereum/withdraws/current', 'GET',
+        '/v1/dapps/uniswap-v3-ethereum/withdraws/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

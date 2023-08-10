@@ -23,9 +23,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/cryptopunks/bids/current");
+      URI.Set_Path ("/v1/dapps/cryptopunks/bids/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end C_RYPTOPUNKS_Bids__current;
@@ -40,9 +41,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/cryptopunks/collectionDailySnapshots/current");
+      URI.Set_Path ("/v1/dapps/cryptopunks/collectionDailySnapshots/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end C_RYPTOPUNKS_Collection_Daily_Snapshots__current;
@@ -57,9 +59,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/cryptopunks/collections/current");
+      URI.Set_Path ("/v1/dapps/cryptopunks/collections/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end C_RYPTOPUNKS_Collections__current;
@@ -74,9 +77,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/cryptopunks/dataSources/current");
+      URI.Set_Path ("/v1/dapps/cryptopunks/dataSources/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end C_RYPTOPUNKS_Data_Sources__current;
@@ -91,9 +95,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/cryptopunks/items/current");
+      URI.Set_Path ("/v1/dapps/cryptopunks/items/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end C_RYPTOPUNKS_Items__current;
@@ -108,9 +113,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/cryptopunks/marketPlaces/current");
+      URI.Set_Path ("/v1/dapps/cryptopunks/marketPlaces/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end C_RYPTOPUNKS_Market_Places__current;
@@ -125,9 +131,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/cryptopunks/marketplaceDailySnapshots/current");
+      URI.Set_Path ("/v1/dapps/cryptopunks/marketplaceDailySnapshots/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end C_RYPTOPUNKS_Marketplace_Daily_Snapshots__current;
@@ -142,9 +149,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/cryptopunks/trades/current");
+      URI.Set_Path ("/v1/dapps/cryptopunks/trades/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end C_RYPTOPUNKS_Trades__current;
@@ -159,9 +167,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/cryptopunks/users/current");
+      URI.Set_Path ("/v1/dapps/cryptopunks/users/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end C_RYPTOPUNKS_Users__current;
@@ -211,9 +220,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/accounts/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/accounts/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Accounts__current;
@@ -228,9 +238,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/activeAccounts/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/activeAccounts/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Active_Accounts__current;
@@ -245,9 +256,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/deposits/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/deposits/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Deposits__current;
@@ -262,9 +274,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/dexAmmProtocols/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Dex_Amm_Protocols__current;
@@ -279,9 +292,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Financials_Daily_Snapshots__current;
@@ -297,10 +311,11 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
       URI.Add_Param ("id", Id);
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Liquidity_Pool_Amounts__current;
@@ -316,10 +331,11 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
       URI.Add_Param ("pool", Pool);
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Liquidity_Pool_Daily_Snapshots__current;
@@ -334,9 +350,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/liquidityPoolFees/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Liquidity_Pool_Fees__current;
@@ -352,10 +369,11 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
       URI.Add_Param ("pool", Pool);
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Liquidity_Pool_Hourly_Snapshots__current;
@@ -371,10 +389,11 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
       URI.Add_Param ("id", Id);
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/liquidityPools/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/liquidityPools/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Liquidity_Pools__current;
@@ -389,9 +408,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/positionSnapshots/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Position_Snapshots__current;
@@ -407,10 +427,11 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
       URI.Add_Param ("pool", Pool);
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/positions/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/positions/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Positions__current;
@@ -425,9 +446,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/rewardTokens/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/rewardTokens/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Reward_Tokens__current;
@@ -442,9 +464,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/swaps/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/swaps/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Swaps__current;
@@ -460,10 +483,11 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
       URI.Add_Param ("pool", Pool);
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/tickDailySnapshots/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Tick_Daily_Snapshots__current;
@@ -479,10 +503,11 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
       URI.Add_Param ("pool", Pool);
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Tick_Hourly_Snapshots__current;
@@ -498,10 +523,11 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
       URI.Add_Param ("pool", Pool);
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/ticks/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/ticks/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Ticks__current;
@@ -516,9 +542,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Token_White_List_Symbols__current;
@@ -533,9 +560,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/tokenWhiteLists/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Token_White_Lists__current;
@@ -551,10 +579,11 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
       URI.Add_Param ("id", Id);
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/tokens/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/tokens/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Tokens__current;
@@ -569,9 +598,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Usage_Metrics_Daily_Snapshots__current;
@@ -586,9 +616,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Usage_Metrics_Hourly_Snapshots__current;
@@ -603,9 +634,10 @@ package body .Clients is
    begin
       Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
                           Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
 
-      URI.Set_Path ("/dapps/uniswap_v3_ethereum/withdraws/current");
+      URI.Set_Path ("/v1/dapps/uniswap-v3-ethereum/withdraws/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end U_NISWAPV3ETHEREUM_Withdraws__current;

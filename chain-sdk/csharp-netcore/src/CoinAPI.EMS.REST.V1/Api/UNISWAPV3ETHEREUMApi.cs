@@ -1233,7 +1233,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1254,7 +1255,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMAccountDTO>>("/dapps/uniswap_v3_ethereum/accounts/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMAccountDTO>>("/v1/dapps/uniswap-v3-ethereum/accounts/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMAccountsCurrent", localVarResponse);
@@ -1299,7 +1300,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1320,7 +1322,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMAccountDTO>>("/dapps/uniswap_v3_ethereum/accounts/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMAccountDTO>>("/v1/dapps/uniswap-v3-ethereum/accounts/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1363,7 +1365,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1384,7 +1387,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMActiveAccountDTO>>("/dapps/uniswap_v3_ethereum/activeAccounts/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMActiveAccountDTO>>("/v1/dapps/uniswap-v3-ethereum/activeAccounts/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMActiveAccountsCurrent", localVarResponse);
@@ -1429,7 +1432,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1450,7 +1454,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMActiveAccountDTO>>("/dapps/uniswap_v3_ethereum/activeAccounts/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMActiveAccountDTO>>("/v1/dapps/uniswap-v3-ethereum/activeAccounts/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1493,7 +1497,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1514,7 +1519,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMDepositDTO>>("/dapps/uniswap_v3_ethereum/deposits/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMDepositDTO>>("/v1/dapps/uniswap-v3-ethereum/deposits/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMDepositsCurrent", localVarResponse);
@@ -1559,7 +1564,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1580,7 +1586,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMDepositDTO>>("/dapps/uniswap_v3_ethereum/deposits/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMDepositDTO>>("/v1/dapps/uniswap-v3-ethereum/deposits/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1623,7 +1629,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1644,7 +1651,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>("/dapps/uniswap_v3_ethereum/dexAmmProtocols/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>("/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMDexAmmProtocolsCurrent", localVarResponse);
@@ -1689,7 +1696,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1710,7 +1718,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>("/dapps/uniswap_v3_ethereum/dexAmmProtocols/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>("/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1753,7 +1761,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1774,7 +1783,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>("/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>("/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent", localVarResponse);
@@ -1819,7 +1828,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1840,7 +1850,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>("/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>("/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1885,7 +1895,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1910,7 +1921,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>("/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>("/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent", localVarResponse);
@@ -1957,7 +1968,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1982,7 +1994,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>("/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>("/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2027,7 +2039,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2052,7 +2065,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>("/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>("/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent", localVarResponse);
@@ -2099,7 +2112,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2124,7 +2138,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>("/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>("/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2167,7 +2181,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2188,7 +2203,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>("/dapps/uniswap_v3_ethereum/liquidityPoolFees/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>("/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent", localVarResponse);
@@ -2233,7 +2248,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2254,7 +2270,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>("/dapps/uniswap_v3_ethereum/liquidityPoolFees/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>("/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2299,7 +2315,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2324,7 +2341,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>("/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>("/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent", localVarResponse);
@@ -2371,7 +2388,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2396,7 +2414,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>("/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>("/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2441,7 +2459,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2466,7 +2485,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>>("/dapps/uniswap_v3_ethereum/liquidityPools/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>>("/v1/dapps/uniswap-v3-ethereum/liquidityPools/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMLiquidityPoolsCurrent", localVarResponse);
@@ -2513,7 +2532,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2538,7 +2558,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>>("/dapps/uniswap_v3_ethereum/liquidityPools/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>>("/v1/dapps/uniswap-v3-ethereum/liquidityPools/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2581,7 +2601,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2602,7 +2623,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>>("/dapps/uniswap_v3_ethereum/positionSnapshots/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>>("/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMPositionSnapshotsCurrent", localVarResponse);
@@ -2647,7 +2668,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2668,7 +2690,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>>("/dapps/uniswap_v3_ethereum/positionSnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>>("/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2713,7 +2735,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2738,7 +2761,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMPositionDTO>>("/dapps/uniswap_v3_ethereum/positions/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMPositionDTO>>("/v1/dapps/uniswap-v3-ethereum/positions/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMPositionsCurrent", localVarResponse);
@@ -2785,7 +2808,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2810,7 +2834,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMPositionDTO>>("/dapps/uniswap_v3_ethereum/positions/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMPositionDTO>>("/v1/dapps/uniswap-v3-ethereum/positions/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2853,7 +2877,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2874,7 +2899,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMRewardTokenDTO>>("/dapps/uniswap_v3_ethereum/rewardTokens/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMRewardTokenDTO>>("/v1/dapps/uniswap-v3-ethereum/rewardTokens/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMRewardTokensCurrent", localVarResponse);
@@ -2919,7 +2944,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2940,7 +2966,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMRewardTokenDTO>>("/dapps/uniswap_v3_ethereum/rewardTokens/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMRewardTokenDTO>>("/v1/dapps/uniswap-v3-ethereum/rewardTokens/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2983,7 +3009,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3004,7 +3031,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMSwapDTO>>("/dapps/uniswap_v3_ethereum/swaps/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMSwapDTO>>("/v1/dapps/uniswap-v3-ethereum/swaps/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMSwapsCurrent", localVarResponse);
@@ -3049,7 +3076,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3070,7 +3098,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMSwapDTO>>("/dapps/uniswap_v3_ethereum/swaps/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMSwapDTO>>("/v1/dapps/uniswap-v3-ethereum/swaps/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3115,7 +3143,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3140,7 +3169,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>("/dapps/uniswap_v3_ethereum/tickDailySnapshots/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>("/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMTickDailySnapshotsCurrent", localVarResponse);
@@ -3187,7 +3216,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3212,7 +3242,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>("/dapps/uniswap_v3_ethereum/tickDailySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>("/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3257,7 +3287,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3282,7 +3313,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>("/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>("/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent", localVarResponse);
@@ -3329,7 +3360,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3354,7 +3386,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>("/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>("/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3399,7 +3431,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3424,7 +3457,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMTickDTO>>("/dapps/uniswap_v3_ethereum/ticks/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMTickDTO>>("/v1/dapps/uniswap-v3-ethereum/ticks/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMTicksCurrent", localVarResponse);
@@ -3471,7 +3504,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3496,7 +3530,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMTickDTO>>("/dapps/uniswap_v3_ethereum/ticks/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMTickDTO>>("/v1/dapps/uniswap-v3-ethereum/ticks/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3539,7 +3573,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3560,7 +3595,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>("/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>("/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent", localVarResponse);
@@ -3605,7 +3640,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3626,7 +3662,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>("/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>("/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3669,7 +3705,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3690,7 +3727,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>>("/dapps/uniswap_v3_ethereum/tokenWhiteLists/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>>("/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMTokenWhiteListsCurrent", localVarResponse);
@@ -3735,7 +3772,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3756,7 +3794,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>>("/dapps/uniswap_v3_ethereum/tokenWhiteLists/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>>("/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3801,7 +3839,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3826,7 +3865,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMTokenDTO>>("/dapps/uniswap_v3_ethereum/tokens/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMTokenDTO>>("/v1/dapps/uniswap-v3-ethereum/tokens/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMTokensCurrent", localVarResponse);
@@ -3873,7 +3912,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3898,7 +3938,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMTokenDTO>>("/dapps/uniswap_v3_ethereum/tokens/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMTokenDTO>>("/v1/dapps/uniswap-v3-ethereum/tokens/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3941,7 +3981,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3962,7 +4003,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>("/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>("/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent", localVarResponse);
@@ -4007,7 +4048,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -4028,7 +4070,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>("/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>("/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4071,7 +4113,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -4092,7 +4135,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>("/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>("/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent", localVarResponse);
@@ -4137,7 +4180,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -4158,7 +4202,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>("/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>("/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4201,7 +4245,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -4222,7 +4267,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMWithdrawDTO>>("/dapps/uniswap_v3_ethereum/withdraws/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UNISWAPV3ETHEREUMWithdrawDTO>>("/v1/dapps/uniswap-v3-ethereum/withdraws/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UNISWAPV3ETHEREUMWithdrawsCurrent", localVarResponse);
@@ -4267,7 +4312,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             string[] _accepts = new string[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
 
             var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -4288,7 +4334,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMWithdrawDTO>>("/dapps/uniswap_v3_ethereum/withdraws/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UNISWAPV3ETHEREUMWithdrawDTO>>("/v1/dapps/uniswap-v3-ethereum/withdraws/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

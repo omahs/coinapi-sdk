@@ -17,7 +17,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -31,7 +31,7 @@ function Invoke-UNISWAPV3ETHEREUMAccountsCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -52,14 +52,14 @@ function Invoke-UNISWAPV3ETHEREUMAccountsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/accounts/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/accounts/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -92,7 +92,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -106,7 +106,7 @@ function Invoke-UNISWAPV3ETHEREUMActiveAccountsCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -127,14 +127,14 @@ function Invoke-UNISWAPV3ETHEREUMActiveAccountsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/activeAccounts/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/activeAccounts/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -167,7 +167,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -181,7 +181,7 @@ function Invoke-UNISWAPV3ETHEREUMDepositsCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -202,14 +202,14 @@ function Invoke-UNISWAPV3ETHEREUMDepositsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/deposits/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/deposits/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -242,7 +242,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -256,7 +256,7 @@ function Invoke-UNISWAPV3ETHEREUMDexAmmProtocolsCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -277,14 +277,14 @@ function Invoke-UNISWAPV3ETHEREUMDexAmmProtocolsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/dexAmmProtocols/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -317,7 +317,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -331,7 +331,7 @@ function Invoke-UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -352,14 +352,14 @@ function Invoke-UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -395,7 +395,7 @@ Smart contract address of the pool.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -412,7 +412,7 @@ function Invoke-UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent {
         [String]
         ${Id},
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -433,14 +433,14 @@ function Invoke-UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current'
 
         if ($Id) {
             $LocalVarQueryParameters['id'] = $Id
@@ -480,7 +480,7 @@ Pool this snapshot belongs to.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -497,7 +497,7 @@ function Invoke-UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent {
         [String]
         ${Pool},
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -518,14 +518,14 @@ function Invoke-UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current'
 
         if ($Pool) {
             $LocalVarQueryParameters['pool'] = $Pool
@@ -562,7 +562,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -576,7 +576,7 @@ function Invoke-UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -597,14 +597,14 @@ function Invoke-UNISWAPV3ETHEREUMLiquidityPoolFeesCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/liquidityPoolFees/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -640,7 +640,7 @@ The pool this snapshot belongs to
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -657,7 +657,7 @@ function Invoke-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent {
         [String]
         ${Pool},
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -678,14 +678,14 @@ function Invoke-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current'
 
         if ($Pool) {
             $LocalVarQueryParameters['pool'] = $Pool
@@ -725,7 +725,7 @@ Smart contract address of the pool.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -742,7 +742,7 @@ function Invoke-UNISWAPV3ETHEREUMLiquidityPoolsCurrent {
         [String]
         ${Id},
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -763,14 +763,14 @@ function Invoke-UNISWAPV3ETHEREUMLiquidityPoolsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/liquidityPools/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/liquidityPools/current'
 
         if ($Id) {
             $LocalVarQueryParameters['id'] = $Id
@@ -807,7 +807,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -821,7 +821,7 @@ function Invoke-UNISWAPV3ETHEREUMPositionSnapshotsCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -842,14 +842,14 @@ function Invoke-UNISWAPV3ETHEREUMPositionSnapshotsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/positionSnapshots/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -885,7 +885,7 @@ The liquidity pool in which this position was opened
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -902,7 +902,7 @@ function Invoke-UNISWAPV3ETHEREUMPositionsCurrent {
         [String]
         ${Pool},
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -923,14 +923,14 @@ function Invoke-UNISWAPV3ETHEREUMPositionsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/positions/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/positions/current'
 
         if ($Pool) {
             $LocalVarQueryParameters['pool'] = $Pool
@@ -967,7 +967,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -981,7 +981,7 @@ function Invoke-UNISWAPV3ETHEREUMRewardTokensCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -1002,14 +1002,14 @@ function Invoke-UNISWAPV3ETHEREUMRewardTokensCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/rewardTokens/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/rewardTokens/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -1042,7 +1042,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -1056,7 +1056,7 @@ function Invoke-UNISWAPV3ETHEREUMSwapsCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -1077,14 +1077,14 @@ function Invoke-UNISWAPV3ETHEREUMSwapsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/swaps/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/swaps/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -1120,7 +1120,7 @@ liquidity pool this tick belongs to
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -1137,7 +1137,7 @@ function Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent {
         [String]
         ${Pool},
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -1158,14 +1158,14 @@ function Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/tickDailySnapshots/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current'
 
         if ($Pool) {
             $LocalVarQueryParameters['pool'] = $Pool
@@ -1205,7 +1205,7 @@ liquidity pool this tick belongs to
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -1222,7 +1222,7 @@ function Invoke-UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent {
         [String]
         ${Pool},
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -1243,14 +1243,14 @@ function Invoke-UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current'
 
         if ($Pool) {
             $LocalVarQueryParameters['pool'] = $Pool
@@ -1290,7 +1290,7 @@ Liquidity pool this tick belongs to
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -1307,7 +1307,7 @@ function Invoke-UNISWAPV3ETHEREUMTicksCurrent {
         [String]
         ${Pool},
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -1328,14 +1328,14 @@ function Invoke-UNISWAPV3ETHEREUMTicksCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/ticks/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/ticks/current'
 
         if ($Pool) {
             $LocalVarQueryParameters['pool'] = $Pool
@@ -1372,7 +1372,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -1386,7 +1386,7 @@ function Invoke-UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -1407,14 +1407,14 @@ function Invoke-UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -1447,7 +1447,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -1461,7 +1461,7 @@ function Invoke-UNISWAPV3ETHEREUMTokenWhiteListsCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -1482,14 +1482,14 @@ function Invoke-UNISWAPV3ETHEREUMTokenWhiteListsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/tokenWhiteLists/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -1525,7 +1525,7 @@ Smart contract address of the token.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -1542,7 +1542,7 @@ function Invoke-UNISWAPV3ETHEREUMTokensCurrent {
         [String]
         ${Id},
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -1563,14 +1563,14 @@ function Invoke-UNISWAPV3ETHEREUMTokensCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/tokens/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/tokens/current'
 
         if ($Id) {
             $LocalVarQueryParameters['id'] = $Id
@@ -1607,7 +1607,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -1621,7 +1621,7 @@ function Invoke-UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -1642,14 +1642,14 @@ function Invoke-UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -1682,7 +1682,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -1696,7 +1696,7 @@ function Invoke-UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -1717,14 +1717,14 @@ function Invoke-UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -1757,7 +1757,7 @@ No description available.
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, application/json, text/json
+Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
 
 .PARAMETER WithHttpInfo
 
@@ -1771,7 +1771,7 @@ function Invoke-UNISWAPV3ETHEREUMWithdrawsCurrent {
     [CmdletBinding()]
     Param (
         [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
+        [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -1792,14 +1792,14 @@ function Invoke-UNISWAPV3ETHEREUMWithdrawsCurrent {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json', 'application/x-msgpack')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswap_v3_ethereum/withdraws/current'
+        $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/withdraws/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `

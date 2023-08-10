@@ -388,7 +388,7 @@ class UNISWAPV3ETHEREUMApi
     {
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/accounts/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/accounts/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -400,7 +400,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -651,7 +651,7 @@ class UNISWAPV3ETHEREUMApi
     {
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/activeAccounts/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/activeAccounts/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -663,7 +663,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -914,7 +914,7 @@ class UNISWAPV3ETHEREUMApi
     {
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/deposits/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/deposits/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -926,7 +926,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -1177,7 +1177,7 @@ class UNISWAPV3ETHEREUMApi
     {
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/dexAmmProtocols/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1189,7 +1189,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -1440,7 +1440,7 @@ class UNISWAPV3ETHEREUMApi
     {
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1452,7 +1452,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -1709,7 +1709,7 @@ class UNISWAPV3ETHEREUMApi
 
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1730,7 +1730,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -1987,7 +1987,7 @@ class UNISWAPV3ETHEREUMApi
 
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2008,7 +2008,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -2259,7 +2259,7 @@ class UNISWAPV3ETHEREUMApi
     {
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/liquidityPoolFees/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2271,7 +2271,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -2528,7 +2528,7 @@ class UNISWAPV3ETHEREUMApi
 
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2549,7 +2549,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -2806,7 +2806,7 @@ class UNISWAPV3ETHEREUMApi
 
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/liquidityPools/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/liquidityPools/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2827,7 +2827,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -3078,7 +3078,7 @@ class UNISWAPV3ETHEREUMApi
     {
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/positionSnapshots/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3090,7 +3090,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -3347,7 +3347,7 @@ class UNISWAPV3ETHEREUMApi
 
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/positions/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/positions/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3368,7 +3368,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -3619,7 +3619,7 @@ class UNISWAPV3ETHEREUMApi
     {
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/rewardTokens/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/rewardTokens/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3631,7 +3631,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -3882,7 +3882,7 @@ class UNISWAPV3ETHEREUMApi
     {
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/swaps/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/swaps/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3894,7 +3894,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -4151,7 +4151,7 @@ class UNISWAPV3ETHEREUMApi
 
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/tickDailySnapshots/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4172,7 +4172,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -4429,7 +4429,7 @@ class UNISWAPV3ETHEREUMApi
 
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4450,7 +4450,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -4707,7 +4707,7 @@ class UNISWAPV3ETHEREUMApi
 
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/ticks/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/ticks/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4728,7 +4728,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -4979,7 +4979,7 @@ class UNISWAPV3ETHEREUMApi
     {
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4991,7 +4991,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -5242,7 +5242,7 @@ class UNISWAPV3ETHEREUMApi
     {
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/tokenWhiteLists/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -5254,7 +5254,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -5511,7 +5511,7 @@ class UNISWAPV3ETHEREUMApi
 
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/tokens/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/tokens/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -5532,7 +5532,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -5783,7 +5783,7 @@ class UNISWAPV3ETHEREUMApi
     {
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -5795,7 +5795,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -6046,7 +6046,7 @@ class UNISWAPV3ETHEREUMApi
     {
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -6058,7 +6058,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );
@@ -6309,7 +6309,7 @@ class UNISWAPV3ETHEREUMApi
     {
 
 
-        $resourcePath = '/dapps/uniswap_v3_ethereum/withdraws/current';
+        $resourcePath = '/v1/dapps/uniswap-v3-ethereum/withdraws/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -6321,7 +6321,7 @@ class UNISWAPV3ETHEREUMApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
             $contentType,
             $multipart
         );

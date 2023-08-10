@@ -1113,7 +1113,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMAccountDTO>> UNISWAPV3ETHEREUMAccountsCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/accounts/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/accounts/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1130,7 +1130,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1178,7 +1179,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMAccountDTO>>> UNISWAPV3ETHEREUMAccountsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/accounts/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/accounts/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1195,7 +1196,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1240,7 +1242,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMActiveAccountDTO>> UNISWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/activeAccounts/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/activeAccounts/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1257,7 +1259,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1305,7 +1308,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMActiveAccountDTO>>> UNISWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/activeAccounts/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/activeAccounts/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1322,7 +1325,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1367,7 +1371,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMDepositDTO>> UNISWAPV3ETHEREUMDepositsCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/deposits/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/deposits/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1384,7 +1388,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1432,7 +1437,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMDepositDTO>>> UNISWAPV3ETHEREUMDepositsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/deposits/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/deposits/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1449,7 +1454,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1494,7 +1500,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>> UNISWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1511,7 +1517,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1559,7 +1566,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMDexAmmProtocolDTO>>> UNISWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1576,7 +1583,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1621,7 +1629,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>> UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1638,7 +1646,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1686,7 +1695,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>> UNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1703,7 +1712,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1750,7 +1760,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo (string id = default(string))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1767,7 +1777,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1818,7 +1829,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolAmountDTO>>> UNISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfoAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1835,7 +1846,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1883,7 +1895,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo (string pool = default(string))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1900,7 +1912,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1951,7 +1964,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>> UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1968,7 +1981,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2014,7 +2028,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>> UNISWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2031,7 +2045,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2079,7 +2094,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolFeeDTO>>> UNISWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2096,7 +2111,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2143,7 +2159,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo (string pool = default(string))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2160,7 +2176,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2211,7 +2228,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2228,7 +2245,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2276,7 +2294,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>> UNISWAPV3ETHEREUMLiquidityPoolsCurrentWithHttpInfo (string id = default(string))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPools/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/liquidityPools/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2293,7 +2311,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2344,7 +2363,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMLiquidityPoolDTO>>> UNISWAPV3ETHEREUMLiquidityPoolsCurrentWithHttpInfoAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/liquidityPools/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/liquidityPools/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2361,7 +2380,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2407,7 +2427,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>> UNISWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/positionSnapshots/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2424,7 +2444,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2472,7 +2493,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMPositionSnapshotDTO>>> UNISWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/positionSnapshots/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2489,7 +2510,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2536,7 +2558,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMPositionDTO>> UNISWAPV3ETHEREUMPositionsCurrentWithHttpInfo (string pool = default(string))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/positions/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/positions/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2553,7 +2575,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2604,7 +2627,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMPositionDTO>>> UNISWAPV3ETHEREUMPositionsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/positions/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/positions/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2621,7 +2644,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2667,7 +2691,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMRewardTokenDTO>> UNISWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/rewardTokens/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/rewardTokens/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2684,7 +2708,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2732,7 +2757,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMRewardTokenDTO>>> UNISWAPV3ETHEREUMRewardTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/rewardTokens/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/rewardTokens/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2749,7 +2774,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2794,7 +2820,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMSwapDTO>> UNISWAPV3ETHEREUMSwapsCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/swaps/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/swaps/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2811,7 +2837,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2859,7 +2886,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMSwapDTO>>> UNISWAPV3ETHEREUMSwapsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/swaps/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/swaps/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2876,7 +2903,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2923,7 +2951,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo (string pool = default(string))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2940,7 +2968,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2991,7 +3020,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>> UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3008,7 +3037,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3056,7 +3086,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo (string pool = default(string))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3073,7 +3103,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3124,7 +3155,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>> UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3141,7 +3172,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3189,7 +3221,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMTickDTO>> UNISWAPV3ETHEREUMTicksCurrentWithHttpInfo (string pool = default(string))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/ticks/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/ticks/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3206,7 +3238,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3257,7 +3290,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTickDTO>>> UNISWAPV3ETHEREUMTicksCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/ticks/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/ticks/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3274,7 +3307,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3320,7 +3354,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>> UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3337,7 +3371,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3385,7 +3420,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>> UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3402,7 +3437,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3447,7 +3483,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>> UNISWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3464,7 +3500,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3512,7 +3549,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTokenWhiteListDTO>>> UNISWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3529,7 +3566,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3576,7 +3614,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMTokenDTO>> UNISWAPV3ETHEREUMTokensCurrentWithHttpInfo (string id = default(string))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/tokens/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/tokens/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3593,7 +3631,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3644,7 +3683,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMTokenDTO>>> UNISWAPV3ETHEREUMTokensCurrentWithHttpInfoAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/tokens/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/tokens/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3661,7 +3700,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3707,7 +3747,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3724,7 +3764,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3772,7 +3813,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>> UNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3789,7 +3830,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3834,7 +3876,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3851,7 +3893,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3899,7 +3942,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>> UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3916,7 +3959,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3961,7 +4005,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<UNISWAPV3ETHEREUMWithdrawDTO>> UNISWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/withdraws/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/withdraws/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3978,7 +4022,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4026,7 +4071,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<UNISWAPV3ETHEREUMWithdrawDTO>>> UNISWAPV3ETHEREUMWithdrawsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswap_v3_ethereum/withdraws/current";
+            var localVarPath = "/v1/dapps/uniswap-v3-ethereum/withdraws/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4043,7 +4088,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             String[] localVarHttpHeaderAccepts = new String[] {
                 "text/plain",
                 "application/json",
-                "text/json"
+                "text/json",
+                "application/x-msgpack"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)

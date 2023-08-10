@@ -86,7 +86,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/accounts/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/accounts/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -143,7 +143,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/accounts/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/accounts/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -202,7 +202,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/activeAccounts/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/activeAccounts/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -259,7 +259,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/activeAccounts/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/activeAccounts/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -318,7 +318,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/deposits/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/deposits/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -375,7 +375,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/deposits/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/deposits/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -434,7 +434,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -491,7 +491,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -550,7 +550,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -607,7 +607,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -667,7 +667,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -725,7 +725,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -786,7 +786,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -844,7 +844,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -904,7 +904,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -961,7 +961,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1021,7 +1021,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1079,7 +1079,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1140,7 +1140,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/liquidityPools/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/liquidityPools/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1198,7 +1198,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/liquidityPools/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/liquidityPools/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1258,7 +1258,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/positionSnapshots/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1315,7 +1315,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/positionSnapshots/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1375,7 +1375,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/positions/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/positions/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1433,7 +1433,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/positions/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/positions/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1493,7 +1493,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/rewardTokens/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/rewardTokens/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1550,7 +1550,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/rewardTokens/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/rewardTokens/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1609,7 +1609,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/swaps/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/swaps/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1666,7 +1666,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/swaps/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/swaps/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1726,7 +1726,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1784,7 +1784,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1845,7 +1845,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1903,7 +1903,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1964,7 +1964,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/ticks/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/ticks/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2022,7 +2022,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/ticks/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/ticks/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2082,7 +2082,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2139,7 +2139,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2198,7 +2198,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2255,7 +2255,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2315,7 +2315,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/tokens/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/tokens/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2373,7 +2373,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/tokens/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/tokens/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2433,7 +2433,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2490,7 +2490,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2549,7 +2549,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2606,7 +2606,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2665,7 +2665,7 @@ public class UNISWAPV3ETHEREUMApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/withdraws/current";
+    String path = "/v1/dapps/uniswap-v3-ethereum/withdraws/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2722,7 +2722,7 @@ public class UNISWAPV3ETHEREUMApi {
 
 
     // create path and map variables
-    String path = "/dapps/uniswap_v3_ethereum/withdraws/current".replaceAll("\\{format\\}","json");
+    String path = "/v1/dapps/uniswap-v3-ethereum/withdraws/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

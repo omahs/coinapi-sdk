@@ -62,7 +62,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMAccountsCurrentExecute(r 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/accounts/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/accounts/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -78,7 +78,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMAccountsCurrentExecute(r 
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -161,7 +161,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMActiveAccountsCurrentExec
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/activeAccounts/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/activeAccounts/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -177,7 +177,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMActiveAccountsCurrentExec
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -260,7 +260,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMDepositsCurrentExecute(r 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/deposits/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/deposits/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -276,7 +276,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMDepositsCurrentExecute(r 
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -359,7 +359,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMDexAmmProtocolsCurrentExe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/dexAmmProtocols/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -375,7 +375,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMDexAmmProtocolsCurrentExe
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -458,7 +458,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMFinancialsDailySnapshotsC
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -474,7 +474,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMFinancialsDailySnapshotsC
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -564,7 +564,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolAmountsCurre
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -583,7 +583,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolAmountsCurre
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -673,7 +673,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolDailySnapsho
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -692,7 +692,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolDailySnapsho
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -775,7 +775,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolFeesCurrentE
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/liquidityPoolFees/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -791,7 +791,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolFeesCurrentE
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -881,7 +881,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolHourlySnapsh
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -900,7 +900,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolHourlySnapsh
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -990,7 +990,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolsCurrentExec
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/liquidityPools/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/liquidityPools/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1009,7 +1009,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMLiquidityPoolsCurrentExec
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1092,7 +1092,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMPositionSnapshotsCurrentE
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/positionSnapshots/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1108,7 +1108,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMPositionSnapshotsCurrentE
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1198,7 +1198,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMPositionsCurrentExecute(r
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/positions/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/positions/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1217,7 +1217,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMPositionsCurrentExecute(r
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1300,7 +1300,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMRewardTokensCurrentExecut
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/rewardTokens/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/rewardTokens/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1316,7 +1316,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMRewardTokensCurrentExecut
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1399,7 +1399,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMSwapsCurrentExecute(r Api
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/swaps/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/swaps/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1415,7 +1415,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMSwapsCurrentExecute(r Api
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1505,7 +1505,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTickDailySnapshotsCurrent
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/tickDailySnapshots/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1524,7 +1524,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTickDailySnapshotsCurrent
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1614,7 +1614,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTickHourlySnapshotsCurren
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1633,7 +1633,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTickHourlySnapshotsCurren
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1723,7 +1723,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTicksCurrentExecute(r Api
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/ticks/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/ticks/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1742,7 +1742,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTicksCurrentExecute(r Api
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1825,7 +1825,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurr
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1841,7 +1841,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTokenWhiteListSymbolsCurr
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1924,7 +1924,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTokenWhiteListsCurrentExe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/tokenWhiteLists/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1940,7 +1940,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTokenWhiteListsCurrentExe
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -2030,7 +2030,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTokensCurrentExecute(r Ap
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/tokens/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/tokens/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2049,7 +2049,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTokensCurrentExecute(r Ap
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -2132,7 +2132,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMUsageMetricsDailySnapshot
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2148,7 +2148,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMUsageMetricsDailySnapshot
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -2231,7 +2231,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMUsageMetricsHourlySnapsho
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2247,7 +2247,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMUsageMetricsHourlySnapsho
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -2330,7 +2330,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMWithdrawsCurrentExecute(r
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/uniswap_v3_ethereum/withdraws/current"
+	localVarPath := localBasePath + "/v1/dapps/uniswap-v3-ethereum/withdraws/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2346,7 +2346,7 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMWithdrawsCurrentExecute(r
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)

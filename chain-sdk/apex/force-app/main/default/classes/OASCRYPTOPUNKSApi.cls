@@ -36,11 +36,11 @@ public class OASCRYPTOPUNKSApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASCRYPTOPUNKSBidDTO>) client.invoke(
-            'GET', '/dapps/cryptopunks/bids/current', '',
+            'GET', '/v1/dapps/cryptopunks/bids/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASCRYPTOPUNKSBidDTO>.class
@@ -57,11 +57,11 @@ public class OASCRYPTOPUNKSApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASCRYPTOPUNKSCollectionDailySnapsho>) client.invoke(
-            'GET', '/dapps/cryptopunks/collectionDailySnapshots/current', '',
+            'GET', '/v1/dapps/cryptopunks/collectionDailySnapshots/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASCRYPTOPUNKSCollectionDailySnapsho>.class
@@ -78,11 +78,11 @@ public class OASCRYPTOPUNKSApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASCRYPTOPUNKSCollectionDTO>) client.invoke(
-            'GET', '/dapps/cryptopunks/collections/current', '',
+            'GET', '/v1/dapps/cryptopunks/collections/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASCRYPTOPUNKSCollectionDTO>.class
@@ -99,11 +99,11 @@ public class OASCRYPTOPUNKSApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASCRYPTOPUNKSDataSourcesDTO>) client.invoke(
-            'GET', '/dapps/cryptopunks/dataSources/current', '',
+            'GET', '/v1/dapps/cryptopunks/dataSources/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASCRYPTOPUNKSDataSourcesDTO>.class
@@ -120,11 +120,11 @@ public class OASCRYPTOPUNKSApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASCRYPTOPUNKSItemDTO>) client.invoke(
-            'GET', '/dapps/cryptopunks/items/current', '',
+            'GET', '/v1/dapps/cryptopunks/items/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASCRYPTOPUNKSItemDTO>.class
@@ -141,11 +141,11 @@ public class OASCRYPTOPUNKSApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASCRYPTOPUNKSMarketPlaceDTO>) client.invoke(
-            'GET', '/dapps/cryptopunks/marketPlaces/current', '',
+            'GET', '/v1/dapps/cryptopunks/marketPlaces/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASCRYPTOPUNKSMarketPlaceDTO>.class
@@ -162,11 +162,11 @@ public class OASCRYPTOPUNKSApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASCRYPTOPUNKSMarketplaceDailySnapsh>) client.invoke(
-            'GET', '/dapps/cryptopunks/marketplaceDailySnapshots/current', '',
+            'GET', '/v1/dapps/cryptopunks/marketplaceDailySnapshots/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASCRYPTOPUNKSMarketplaceDailySnapsh>.class
@@ -183,11 +183,11 @@ public class OASCRYPTOPUNKSApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASCRYPTOPUNKSTradeDTO>) client.invoke(
-            'GET', '/dapps/cryptopunks/trades/current', '',
+            'GET', '/v1/dapps/cryptopunks/trades/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASCRYPTOPUNKSTradeDTO>.class
@@ -204,11 +204,11 @@ public class OASCRYPTOPUNKSApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASCRYPTOPUNKSUserDTO>) client.invoke(
-            'GET', '/dapps/cryptopunks/users/current', '',
+            'GET', '/v1/dapps/cryptopunks/users/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
             new List<String>(),
             new List<String>(),
             List<OASCRYPTOPUNKSUserDTO>.class

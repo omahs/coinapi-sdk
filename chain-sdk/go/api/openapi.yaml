@@ -37,7 +37,7 @@ paths:
       summary: List all chains.
       tags:
       - Metadata
-  /dapps/cryptopunks/bids/current:
+  /v1/dapps/cryptopunks/bids/current:
     get:
       description: Gets bids.
       operationId: CRYPTOPUNKS.Bids (current)
@@ -59,11 +59,16 @@ paths:
                 items:
                   $ref: '#/components/schemas/CRYPTOPUNKS.BidDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.BidDTO'
+                type: array
           description: successful operation
       summary: Bids (current)
       tags:
       - CRYPTOPUNKS
-  /dapps/cryptopunks/collectionDailySnapshots/current:
+  /v1/dapps/cryptopunks/collectionDailySnapshots/current:
     get:
       description: Gets collectionDailySnapshots.
       operationId: CRYPTOPUNKS.CollectionDailySnapshots (current)
@@ -85,11 +90,16 @@ paths:
                 items:
                   $ref: '#/components/schemas/CRYPTOPUNKS.CollectionDailySnapshotDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.CollectionDailySnapshotDTO'
+                type: array
           description: successful operation
       summary: CollectionDailySnapshots (current)
       tags:
       - CRYPTOPUNKS
-  /dapps/cryptopunks/collections/current:
+  /v1/dapps/cryptopunks/collections/current:
     get:
       description: Gets collections.
       operationId: CRYPTOPUNKS.Collections (current)
@@ -111,11 +121,16 @@ paths:
                 items:
                   $ref: '#/components/schemas/CRYPTOPUNKS.CollectionDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.CollectionDTO'
+                type: array
           description: successful operation
       summary: Collections (current)
       tags:
       - CRYPTOPUNKS
-  /dapps/cryptopunks/dataSources/current:
+  /v1/dapps/cryptopunks/dataSources/current:
     get:
       description: Gets dataSources.
       operationId: CRYPTOPUNKS.DataSources (current)
@@ -137,11 +152,16 @@ paths:
                 items:
                   $ref: '#/components/schemas/CRYPTOPUNKS.DataSourcesDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.DataSourcesDTO'
+                type: array
           description: successful operation
       summary: DataSources (current)
       tags:
       - CRYPTOPUNKS
-  /dapps/cryptopunks/items/current:
+  /v1/dapps/cryptopunks/items/current:
     get:
       description: Gets items.
       operationId: CRYPTOPUNKS.Items (current)
@@ -163,11 +183,16 @@ paths:
                 items:
                   $ref: '#/components/schemas/CRYPTOPUNKS.ItemDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.ItemDTO'
+                type: array
           description: successful operation
       summary: Items (current)
       tags:
       - CRYPTOPUNKS
-  /dapps/cryptopunks/marketplaceDailySnapshots/current:
+  /v1/dapps/cryptopunks/marketplaceDailySnapshots/current:
     get:
       description: Gets marketplaceDailySnapshots.
       operationId: CRYPTOPUNKS.MarketplaceDailySnapshots (current)
@@ -189,11 +214,16 @@ paths:
                 items:
                   $ref: '#/components/schemas/CRYPTOPUNKS.MarketplaceDailySnapshotDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.MarketplaceDailySnapshotDTO'
+                type: array
           description: successful operation
       summary: MarketplaceDailySnapshots (current)
       tags:
       - CRYPTOPUNKS
-  /dapps/cryptopunks/marketPlaces/current:
+  /v1/dapps/cryptopunks/marketPlaces/current:
     get:
       description: Gets marketPlaces.
       operationId: CRYPTOPUNKS.MarketPlaces (current)
@@ -215,11 +245,16 @@ paths:
                 items:
                   $ref: '#/components/schemas/CRYPTOPUNKS.MarketPlaceDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.MarketPlaceDTO'
+                type: array
           description: successful operation
       summary: MarketPlaces (current)
       tags:
       - CRYPTOPUNKS
-  /dapps/cryptopunks/trades/current:
+  /v1/dapps/cryptopunks/trades/current:
     get:
       description: Gets trades.
       operationId: CRYPTOPUNKS.Trades (current)
@@ -241,11 +276,16 @@ paths:
                 items:
                   $ref: '#/components/schemas/CRYPTOPUNKS.TradeDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.TradeDTO'
+                type: array
           description: successful operation
       summary: Trades (current)
       tags:
       - CRYPTOPUNKS
-  /dapps/cryptopunks/users/current:
+  /v1/dapps/cryptopunks/users/current:
     get:
       description: Gets users.
       operationId: CRYPTOPUNKS.Users (current)
@@ -263,6 +303,11 @@ paths:
                   $ref: '#/components/schemas/CRYPTOPUNKS.UserDTO'
                 type: array
             text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.UserDTO'
+                type: array
+            application/x-msgpack:
               schema:
                 items:
                   $ref: '#/components/schemas/CRYPTOPUNKS.UserDTO'
@@ -296,10 +341,10 @@ paths:
       summary: Gets dapp by name.
       tags:
       - Metadata
-  /dapps/uniswap_v3_ethereum/accounts/current:
+  /v1/dapps/uniswap-v3-ethereum/accounts/current:
     get:
       description: Gets accounts.
-      operationId: UNISWAP_V3_ETHEREUM.Accounts (current)
+      operationId: UNISWAP-V3-ETHEREUM.Accounts (current)
       responses:
         "200":
           content:
@@ -314,6 +359,11 @@ paths:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.AccountDTO'
                 type: array
             text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.AccountDTO'
+                type: array
+            application/x-msgpack:
               schema:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.AccountDTO'
@@ -321,11 +371,11 @@ paths:
           description: successful operation
       summary: Accounts (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/activeAccounts/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/activeAccounts/current:
     get:
       description: Gets activeAccounts.
-      operationId: UNISWAP_V3_ETHEREUM.ActiveAccounts (current)
+      operationId: UNISWAP-V3-ETHEREUM.ActiveAccounts (current)
       responses:
         "200":
           content:
@@ -340,6 +390,11 @@ paths:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.ActiveAccountDTO'
                 type: array
             text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.ActiveAccountDTO'
+                type: array
+            application/x-msgpack:
               schema:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.ActiveAccountDTO'
@@ -347,11 +402,11 @@ paths:
           description: successful operation
       summary: ActiveAccounts (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/deposits/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/deposits/current:
     get:
       description: Gets deposits.
-      operationId: UNISWAP_V3_ETHEREUM.Deposits (current)
+      operationId: UNISWAP-V3-ETHEREUM.Deposits (current)
       responses:
         "200":
           content:
@@ -366,6 +421,11 @@ paths:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.DepositDTO'
                 type: array
             text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.DepositDTO'
+                type: array
+            application/x-msgpack:
               schema:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.DepositDTO'
@@ -373,11 +433,11 @@ paths:
           description: successful operation
       summary: Deposits (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/dexAmmProtocols/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current:
     get:
       description: Gets dexAmmProtocols.
-      operationId: UNISWAP_V3_ETHEREUM.DexAmmProtocols (current)
+      operationId: UNISWAP-V3-ETHEREUM.DexAmmProtocols (current)
       responses:
         "200":
           content:
@@ -392,6 +452,11 @@ paths:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.DexAmmProtocolDTO'
                 type: array
             text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.DexAmmProtocolDTO'
+                type: array
+            application/x-msgpack:
               schema:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.DexAmmProtocolDTO'
@@ -399,11 +464,11 @@ paths:
           description: successful operation
       summary: DexAmmProtocols (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/financialsDailySnapshots/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current:
     get:
       description: Gets financialsDailySnapshots.
-      operationId: UNISWAP_V3_ETHEREUM.FinancialsDailySnapshots (current)
+      operationId: UNISWAP-V3-ETHEREUM.FinancialsDailySnapshots (current)
       responses:
         "200":
           content:
@@ -422,14 +487,19 @@ paths:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.FinancialsDailySnapshotDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.FinancialsDailySnapshotDTO'
+                type: array
           description: successful operation
       summary: FinancialsDailySnapshots (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current:
     get:
       description: Gets liquidityPoolAmounts.
-      operationId: UNISWAP_V3_ETHEREUM.LiquidityPoolAmounts (current)
+      operationId: UNISWAP-V3-ETHEREUM.LiquidityPoolAmounts (current)
       parameters:
       - description: Smart contract address of the pool.
         explode: true
@@ -457,14 +527,19 @@ paths:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.LiquidityPoolAmountDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.LiquidityPoolAmountDTO'
+                type: array
           description: successful operation
       summary: LiquidityPoolAmounts (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current:
     get:
       description: Gets liquidityPoolDailySnapshots.
-      operationId: UNISWAP_V3_ETHEREUM.LiquidityPoolDailySnapshots (current)
+      operationId: UNISWAP-V3-ETHEREUM.LiquidityPoolDailySnapshots (current)
       parameters:
       - description: Pool this snapshot belongs to.
         explode: true
@@ -492,14 +567,19 @@ paths:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO'
+                type: array
           description: successful operation
       summary: LiquidityPoolDailySnapshots (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/liquidityPools/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/liquidityPools/current:
     get:
       description: Gets liquidityPools.
-      operationId: UNISWAP_V3_ETHEREUM.LiquidityPools (current)
+      operationId: UNISWAP-V3-ETHEREUM.LiquidityPools (current)
       parameters:
       - description: Smart contract address of the pool.
         explode: true
@@ -527,14 +607,19 @@ paths:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.LiquidityPoolDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.LiquidityPoolDTO'
+                type: array
           description: successful operation
       summary: LiquidityPools (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/liquidityPoolFees/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current:
     get:
       description: Gets liquidityPoolFees.
-      operationId: UNISWAP_V3_ETHEREUM.LiquidityPoolFees (current)
+      operationId: UNISWAP-V3-ETHEREUM.LiquidityPoolFees (current)
       responses:
         "200":
           content:
@@ -553,14 +638,19 @@ paths:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.LiquidityPoolFeeDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.LiquidityPoolFeeDTO'
+                type: array
           description: successful operation
       summary: LiquidityPoolFees (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current:
     get:
       description: Gets liquidityPoolHourlySnapshots.
-      operationId: UNISWAP_V3_ETHEREUM.LiquidityPoolHourlySnapshots (current)
+      operationId: UNISWAP-V3-ETHEREUM.LiquidityPoolHourlySnapshots (current)
       parameters:
       - description: The pool this snapshot belongs to
         explode: true
@@ -588,14 +678,19 @@ paths:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.LiquidityPoolHourlySnapshotDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.LiquidityPoolHourlySnapshotDTO'
+                type: array
           description: successful operation
       summary: LiquidityPoolHourlySnapshots (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/positions/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/positions/current:
     get:
       description: Gets positions.
-      operationId: UNISWAP_V3_ETHEREUM.Positions (current)
+      operationId: UNISWAP-V3-ETHEREUM.Positions (current)
       parameters:
       - description: The liquidity pool in which this position was opened
         explode: true
@@ -623,14 +718,19 @@ paths:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.PositionDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.PositionDTO'
+                type: array
           description: successful operation
       summary: Positions (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/positionSnapshots/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/positionSnapshots/current:
     get:
       description: Gets positionSnapshots.
-      operationId: UNISWAP_V3_ETHEREUM.PositionSnapshots (current)
+      operationId: UNISWAP-V3-ETHEREUM.PositionSnapshots (current)
       responses:
         "200":
           content:
@@ -645,6 +745,11 @@ paths:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.PositionSnapshotDTO'
                 type: array
             text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.PositionSnapshotDTO'
+                type: array
+            application/x-msgpack:
               schema:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.PositionSnapshotDTO'
@@ -652,11 +757,11 @@ paths:
           description: successful operation
       summary: PositionSnapshots (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/rewardTokens/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/rewardTokens/current:
     get:
       description: Gets rewardTokens.
-      operationId: UNISWAP_V3_ETHEREUM.RewardTokens (current)
+      operationId: UNISWAP-V3-ETHEREUM.RewardTokens (current)
       responses:
         "200":
           content:
@@ -671,6 +776,11 @@ paths:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.RewardTokenDTO'
                 type: array
             text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.RewardTokenDTO'
+                type: array
+            application/x-msgpack:
               schema:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.RewardTokenDTO'
@@ -678,11 +788,11 @@ paths:
           description: successful operation
       summary: RewardTokens (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/swaps/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/swaps/current:
     get:
       description: Gets swaps.
-      operationId: UNISWAP_V3_ETHEREUM.Swaps (current)
+      operationId: UNISWAP-V3-ETHEREUM.Swaps (current)
       responses:
         "200":
           content:
@@ -701,14 +811,19 @@ paths:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.SwapDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.SwapDTO'
+                type: array
           description: successful operation
       summary: Swaps (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/tickDailySnapshots/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current:
     get:
       description: Gets tickDailySnapshots.
-      operationId: UNISWAP_V3_ETHEREUM.TickDailySnapshots (current)
+      operationId: UNISWAP-V3-ETHEREUM.TickDailySnapshots (current)
       parameters:
       - description: liquidity pool this tick belongs to
         explode: true
@@ -736,14 +851,19 @@ paths:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.TickDailySnapshotDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.TickDailySnapshotDTO'
+                type: array
           description: successful operation
       summary: TickDailySnapshots (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/ticks/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/ticks/current:
     get:
       description: Gets ticks.
-      operationId: UNISWAP_V3_ETHEREUM.Ticks (current)
+      operationId: UNISWAP-V3-ETHEREUM.Ticks (current)
       parameters:
       - description: Liquidity pool this tick belongs to
         explode: true
@@ -771,14 +891,19 @@ paths:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.TickDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.TickDTO'
+                type: array
           description: successful operation
       summary: Ticks (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/tickHourlySnapshots/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current:
     get:
       description: Gets tickHourlySnapshots.
-      operationId: UNISWAP_V3_ETHEREUM.TickHourlySnapshots (current)
+      operationId: UNISWAP-V3-ETHEREUM.TickHourlySnapshots (current)
       parameters:
       - description: liquidity pool this tick belongs to
         explode: true
@@ -806,14 +931,19 @@ paths:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.TickHourlySnapshotDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.TickHourlySnapshotDTO'
+                type: array
           description: successful operation
       summary: TickHourlySnapshots (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/tokens/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/tokens/current:
     get:
       description: Gets tokens.
-      operationId: UNISWAP_V3_ETHEREUM.Tokens (current)
+      operationId: UNISWAP-V3-ETHEREUM.Tokens (current)
       parameters:
       - description: Smart contract address of the token.
         explode: true
@@ -841,14 +971,19 @@ paths:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.TokenDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.TokenDTO'
+                type: array
           description: successful operation
       summary: Tokens (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/tokenWhiteLists/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current:
     get:
       description: Gets tokenWhiteLists.
-      operationId: UNISWAP_V3_ETHEREUM.TokenWhiteLists (current)
+      operationId: UNISWAP-V3-ETHEREUM.TokenWhiteLists (current)
       responses:
         "200":
           content:
@@ -863,6 +998,11 @@ paths:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.TokenWhiteListDTO'
                 type: array
             text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.TokenWhiteListDTO'
+                type: array
+            application/x-msgpack:
               schema:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.TokenWhiteListDTO'
@@ -870,11 +1010,11 @@ paths:
           description: successful operation
       summary: TokenWhiteLists (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current:
     get:
       description: Gets tokenWhiteListSymbols.
-      operationId: UNISWAP_V3_ETHEREUM.TokenWhiteListSymbols (current)
+      operationId: UNISWAP-V3-ETHEREUM.TokenWhiteListSymbols (current)
       responses:
         "200":
           content:
@@ -889,6 +1029,11 @@ paths:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.TokenWhiteListSymbolDTO'
                 type: array
             text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.TokenWhiteListSymbolDTO'
+                type: array
+            application/x-msgpack:
               schema:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.TokenWhiteListSymbolDTO'
@@ -896,11 +1041,11 @@ paths:
           description: successful operation
       summary: TokenWhiteListSymbols (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current:
     get:
       description: Gets usageMetricsDailySnapshots.
-      operationId: UNISWAP_V3_ETHEREUM.UsageMetricsDailySnapshots (current)
+      operationId: UNISWAP-V3-ETHEREUM.UsageMetricsDailySnapshots (current)
       responses:
         "200":
           content:
@@ -915,6 +1060,11 @@ paths:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.UsageMetricsDailySnapshotDTO'
                 type: array
             text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.UsageMetricsDailySnapshotDTO'
+                type: array
+            application/x-msgpack:
               schema:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.UsageMetricsDailySnapshotDTO'
@@ -922,11 +1072,11 @@ paths:
           description: successful operation
       summary: UsageMetricsDailySnapshots (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current:
     get:
       description: Gets usageMetricsHourlySnapshots.
-      operationId: UNISWAP_V3_ETHEREUM.UsageMetricsHourlySnapshots (current)
+      operationId: UNISWAP-V3-ETHEREUM.UsageMetricsHourlySnapshots (current)
       responses:
         "200":
           content:
@@ -941,6 +1091,11 @@ paths:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.UsageMetricsHourlySnapshotDTO'
                 type: array
             text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.UsageMetricsHourlySnapshotDTO'
+                type: array
+            application/x-msgpack:
               schema:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.UsageMetricsHourlySnapshotDTO'
@@ -948,11 +1103,11 @@ paths:
           description: successful operation
       summary: UsageMetricsHourlySnapshots (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
-  /dapps/uniswap_v3_ethereum/withdraws/current:
+      - UNISWAP-V3-ETHEREUM
+  /v1/dapps/uniswap-v3-ethereum/withdraws/current:
     get:
       description: Gets withdraws.
-      operationId: UNISWAP_V3_ETHEREUM.Withdraws (current)
+      operationId: UNISWAP-V3-ETHEREUM.Withdraws (current)
       responses:
         "200":
           content:
@@ -971,10 +1126,15 @@ paths:
                 items:
                   $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.WithdrawDTO'
                 type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V3_ETHEREUM.WithdrawDTO'
+                type: array
           description: successful operation
       summary: Withdraws (current)
       tags:
-      - UNISWAP_V3_ETHEREUM
+      - UNISWAP-V3-ETHEREUM
 components:
   schemas:
     CRYPTOPUNKS.BidDTO:

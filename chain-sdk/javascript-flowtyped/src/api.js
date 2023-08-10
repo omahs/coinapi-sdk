@@ -3722,7 +3722,7 @@ export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configu
          * @throws {RequiredError}
          */
         cRYPTOPUNKSBidsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cryptopunks/bids/current`;
+            const localVarPath = `/v1/dapps/cryptopunks/bids/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -3744,7 +3744,7 @@ export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configu
          * @throws {RequiredError}
          */
         cRYPTOPUNKSCollectionDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cryptopunks/collectionDailySnapshots/current`;
+            const localVarPath = `/v1/dapps/cryptopunks/collectionDailySnapshots/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -3766,7 +3766,7 @@ export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configu
          * @throws {RequiredError}
          */
         cRYPTOPUNKSCollectionsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cryptopunks/collections/current`;
+            const localVarPath = `/v1/dapps/cryptopunks/collections/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -3788,7 +3788,7 @@ export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configu
          * @throws {RequiredError}
          */
         cRYPTOPUNKSDataSourcesCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cryptopunks/dataSources/current`;
+            const localVarPath = `/v1/dapps/cryptopunks/dataSources/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -3810,7 +3810,7 @@ export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configu
          * @throws {RequiredError}
          */
         cRYPTOPUNKSItemsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cryptopunks/items/current`;
+            const localVarPath = `/v1/dapps/cryptopunks/items/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -3832,7 +3832,7 @@ export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configu
          * @throws {RequiredError}
          */
         cRYPTOPUNKSMarketPlacesCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cryptopunks/marketPlaces/current`;
+            const localVarPath = `/v1/dapps/cryptopunks/marketPlaces/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -3854,7 +3854,7 @@ export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configu
          * @throws {RequiredError}
          */
         cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cryptopunks/marketplaceDailySnapshots/current`;
+            const localVarPath = `/v1/dapps/cryptopunks/marketplaceDailySnapshots/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -3876,7 +3876,7 @@ export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configu
          * @throws {RequiredError}
          */
         cRYPTOPUNKSTradesCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cryptopunks/trades/current`;
+            const localVarPath = `/v1/dapps/cryptopunks/trades/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -3898,7 +3898,7 @@ export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configu
          * @throws {RequiredError}
          */
         cRYPTOPUNKSUsersCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cryptopunks/users/current`;
+            const localVarPath = `/v1/dapps/cryptopunks/users/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4239,7 +4239,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMAccountsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/accounts/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/accounts/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4261,7 +4261,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMActiveAccountsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/activeAccounts/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/activeAccounts/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4283,7 +4283,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMDepositsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/deposits/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/deposits/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4305,7 +4305,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMDexAmmProtocolsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/dexAmmProtocols/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/dexAmmProtocols/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4327,7 +4327,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/financialsDailySnapshots/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/financialsDailySnapshots/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4349,7 +4349,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/liquidityPoolAmounts/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/liquidityPoolAmounts/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4375,7 +4375,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/liquidityPoolDailySnapshots/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/liquidityPoolDailySnapshots/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4401,7 +4401,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMLiquidityPoolFeesCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/liquidityPoolFees/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/liquidityPoolFees/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4423,7 +4423,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/liquidityPoolHourlySnapshots/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/liquidityPoolHourlySnapshots/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4449,7 +4449,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMLiquidityPoolsCurrent(id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/liquidityPools/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/liquidityPools/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4475,7 +4475,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMPositionSnapshotsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/positionSnapshots/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/positionSnapshots/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4497,7 +4497,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMPositionsCurrent(pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/positions/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/positions/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4523,7 +4523,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMRewardTokensCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/rewardTokens/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/rewardTokens/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4545,7 +4545,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMSwapsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/swaps/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/swaps/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4567,7 +4567,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/tickDailySnapshots/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4593,7 +4593,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/tickHourlySnapshots/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4619,7 +4619,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMTicksCurrent(pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/ticks/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/ticks/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4645,7 +4645,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/tokenWhiteListSymbols/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/tokenWhiteListSymbols/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4667,7 +4667,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMTokenWhiteListsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/tokenWhiteLists/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/tokenWhiteLists/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4689,7 +4689,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMTokensCurrent(id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/tokens/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/tokens/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4715,7 +4715,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/usageMetricsDailySnapshots/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/usageMetricsDailySnapshots/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4737,7 +4737,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/usageMetricsHourlySnapshots/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/usageMetricsHourlySnapshots/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -4759,7 +4759,7 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         uNISWAPV3ETHEREUMWithdrawsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswap_v3_ethereum/withdraws/current`;
+            const localVarPath = `/v1/dapps/uniswap-v3-ethereum/withdraws/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};

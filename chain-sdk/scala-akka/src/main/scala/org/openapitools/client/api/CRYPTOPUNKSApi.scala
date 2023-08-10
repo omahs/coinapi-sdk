@@ -38,7 +38,7 @@ class CRYPTOPUNKSApi(baseUrl: String) {
    *   code 200 : Seq[BidDTO] (successful operation)
    */
   def cRYPTOPUNKSBidsCurrent(): ApiRequest[Seq[BidDTO]] =
-    ApiRequest[Seq[BidDTO]](ApiMethods.GET, baseUrl, "/dapps/cryptopunks/bids/current", "application/json")
+    ApiRequest[Seq[BidDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/cryptopunks/bids/current", "application/json")
       .withSuccessResponse[Seq[BidDTO]](200)
       
 
@@ -49,7 +49,7 @@ class CRYPTOPUNKSApi(baseUrl: String) {
    *   code 200 : Seq[CollectionDailySnapshotDTO] (successful operation)
    */
   def cRYPTOPUNKSCollectionDailySnapshotsCurrent(): ApiRequest[Seq[CollectionDailySnapshotDTO]] =
-    ApiRequest[Seq[CollectionDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/dapps/cryptopunks/collectionDailySnapshots/current", "application/json")
+    ApiRequest[Seq[CollectionDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/cryptopunks/collectionDailySnapshots/current", "application/json")
       .withSuccessResponse[Seq[CollectionDailySnapshotDTO]](200)
       
 
@@ -60,7 +60,7 @@ class CRYPTOPUNKSApi(baseUrl: String) {
    *   code 200 : Seq[CollectionDTO] (successful operation)
    */
   def cRYPTOPUNKSCollectionsCurrent(): ApiRequest[Seq[CollectionDTO]] =
-    ApiRequest[Seq[CollectionDTO]](ApiMethods.GET, baseUrl, "/dapps/cryptopunks/collections/current", "application/json")
+    ApiRequest[Seq[CollectionDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/cryptopunks/collections/current", "application/json")
       .withSuccessResponse[Seq[CollectionDTO]](200)
       
 
@@ -71,7 +71,7 @@ class CRYPTOPUNKSApi(baseUrl: String) {
    *   code 200 : Seq[DataSourcesDTO] (successful operation)
    */
   def cRYPTOPUNKSDataSourcesCurrent(): ApiRequest[Seq[DataSourcesDTO]] =
-    ApiRequest[Seq[DataSourcesDTO]](ApiMethods.GET, baseUrl, "/dapps/cryptopunks/dataSources/current", "application/json")
+    ApiRequest[Seq[DataSourcesDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/cryptopunks/dataSources/current", "application/json")
       .withSuccessResponse[Seq[DataSourcesDTO]](200)
       
 
@@ -82,7 +82,7 @@ class CRYPTOPUNKSApi(baseUrl: String) {
    *   code 200 : Seq[ItemDTO] (successful operation)
    */
   def cRYPTOPUNKSItemsCurrent(): ApiRequest[Seq[ItemDTO]] =
-    ApiRequest[Seq[ItemDTO]](ApiMethods.GET, baseUrl, "/dapps/cryptopunks/items/current", "application/json")
+    ApiRequest[Seq[ItemDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/cryptopunks/items/current", "application/json")
       .withSuccessResponse[Seq[ItemDTO]](200)
       
 
@@ -93,7 +93,7 @@ class CRYPTOPUNKSApi(baseUrl: String) {
    *   code 200 : Seq[MarketPlaceDTO] (successful operation)
    */
   def cRYPTOPUNKSMarketPlacesCurrent(): ApiRequest[Seq[MarketPlaceDTO]] =
-    ApiRequest[Seq[MarketPlaceDTO]](ApiMethods.GET, baseUrl, "/dapps/cryptopunks/marketPlaces/current", "application/json")
+    ApiRequest[Seq[MarketPlaceDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/cryptopunks/marketPlaces/current", "application/json")
       .withSuccessResponse[Seq[MarketPlaceDTO]](200)
       
 
@@ -104,7 +104,7 @@ class CRYPTOPUNKSApi(baseUrl: String) {
    *   code 200 : Seq[MarketplaceDailySnapshotDTO] (successful operation)
    */
   def cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(): ApiRequest[Seq[MarketplaceDailySnapshotDTO]] =
-    ApiRequest[Seq[MarketplaceDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/dapps/cryptopunks/marketplaceDailySnapshots/current", "application/json")
+    ApiRequest[Seq[MarketplaceDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/cryptopunks/marketplaceDailySnapshots/current", "application/json")
       .withSuccessResponse[Seq[MarketplaceDailySnapshotDTO]](200)
       
 
@@ -115,7 +115,7 @@ class CRYPTOPUNKSApi(baseUrl: String) {
    *   code 200 : Seq[TradeDTO] (successful operation)
    */
   def cRYPTOPUNKSTradesCurrent(): ApiRequest[Seq[TradeDTO]] =
-    ApiRequest[Seq[TradeDTO]](ApiMethods.GET, baseUrl, "/dapps/cryptopunks/trades/current", "application/json")
+    ApiRequest[Seq[TradeDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/cryptopunks/trades/current", "application/json")
       .withSuccessResponse[Seq[TradeDTO]](200)
       
 
@@ -126,7 +126,7 @@ class CRYPTOPUNKSApi(baseUrl: String) {
    *   code 200 : Seq[UserDTO] (successful operation)
    */
   def cRYPTOPUNKSUsersCurrent(): ApiRequest[Seq[UserDTO]] =
-    ApiRequest[Seq[UserDTO]](ApiMethods.GET, baseUrl, "/dapps/cryptopunks/users/current", "application/json")
+    ApiRequest[Seq[UserDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/cryptopunks/users/current", "application/json")
       .withSuccessResponse[Seq[UserDTO]](200)
       
 

@@ -17,7 +17,7 @@ class CryptopunksApi {
     ApiUtils apiUtils = new ApiUtils();
 
     def cRYPTOPUNKSBidsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cryptopunks/bids/current"
+        String resourcePath = "/v1/dapps/cryptopunks/bids/current"
 
         // params
         def queryParams = [:]
@@ -37,7 +37,7 @@ class CryptopunksApi {
     }
 
     def cRYPTOPUNKSCollectionDailySnapshotsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cryptopunks/collectionDailySnapshots/current"
+        String resourcePath = "/v1/dapps/cryptopunks/collectionDailySnapshots/current"
 
         // params
         def queryParams = [:]
@@ -57,7 +57,7 @@ class CryptopunksApi {
     }
 
     def cRYPTOPUNKSCollectionsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cryptopunks/collections/current"
+        String resourcePath = "/v1/dapps/cryptopunks/collections/current"
 
         // params
         def queryParams = [:]
@@ -77,7 +77,7 @@ class CryptopunksApi {
     }
 
     def cRYPTOPUNKSDataSourcesCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cryptopunks/dataSources/current"
+        String resourcePath = "/v1/dapps/cryptopunks/dataSources/current"
 
         // params
         def queryParams = [:]
@@ -97,7 +97,7 @@ class CryptopunksApi {
     }
 
     def cRYPTOPUNKSItemsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cryptopunks/items/current"
+        String resourcePath = "/v1/dapps/cryptopunks/items/current"
 
         // params
         def queryParams = [:]
@@ -117,7 +117,7 @@ class CryptopunksApi {
     }
 
     def cRYPTOPUNKSMarketPlacesCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cryptopunks/marketPlaces/current"
+        String resourcePath = "/v1/dapps/cryptopunks/marketPlaces/current"
 
         // params
         def queryParams = [:]
@@ -137,7 +137,7 @@ class CryptopunksApi {
     }
 
     def cRYPTOPUNKSMarketplaceDailySnapshotsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cryptopunks/marketplaceDailySnapshots/current"
+        String resourcePath = "/v1/dapps/cryptopunks/marketplaceDailySnapshots/current"
 
         // params
         def queryParams = [:]
@@ -157,7 +157,7 @@ class CryptopunksApi {
     }
 
     def cRYPTOPUNKSTradesCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cryptopunks/trades/current"
+        String resourcePath = "/v1/dapps/cryptopunks/trades/current"
 
         // params
         def queryParams = [:]
@@ -177,7 +177,7 @@ class CryptopunksApi {
     }
 
     def cRYPTOPUNKSUsersCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cryptopunks/users/current"
+        String resourcePath = "/v1/dapps/cryptopunks/users/current"
 
         // params
         def queryParams = [:]

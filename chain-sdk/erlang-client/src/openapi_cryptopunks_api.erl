@@ -24,7 +24,7 @@ c_ryptopunks_bids_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/cryptopunks/bids/current"],
+    Path = [?BASE_URL, "/v1/dapps/cryptopunks/bids/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -45,7 +45,7 @@ c_ryptopunks_collection_daily_snapshots_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/cryptopunks/collectionDailySnapshots/current"],
+    Path = [?BASE_URL, "/v1/dapps/cryptopunks/collectionDailySnapshots/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -66,7 +66,7 @@ c_ryptopunks_collections_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/cryptopunks/collections/current"],
+    Path = [?BASE_URL, "/v1/dapps/cryptopunks/collections/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -87,7 +87,7 @@ c_ryptopunks_data_sources_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/cryptopunks/dataSources/current"],
+    Path = [?BASE_URL, "/v1/dapps/cryptopunks/dataSources/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -108,7 +108,7 @@ c_ryptopunks_items_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/cryptopunks/items/current"],
+    Path = [?BASE_URL, "/v1/dapps/cryptopunks/items/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -129,7 +129,7 @@ c_ryptopunks_market_places_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/cryptopunks/marketPlaces/current"],
+    Path = [?BASE_URL, "/v1/dapps/cryptopunks/marketPlaces/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -150,7 +150,7 @@ c_ryptopunks_marketplace_daily_snapshots_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/cryptopunks/marketplaceDailySnapshots/current"],
+    Path = [?BASE_URL, "/v1/dapps/cryptopunks/marketplaceDailySnapshots/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -171,7 +171,7 @@ c_ryptopunks_trades_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/cryptopunks/trades/current"],
+    Path = [?BASE_URL, "/v1/dapps/cryptopunks/trades/current"],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -192,7 +192,7 @@ c_ryptopunks_users_(current)(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/dapps/cryptopunks/users/current"],
+    Path = [?BASE_URL, "/v1/dapps/cryptopunks/users/current"],
     QS = [],
     Headers = [],
     Body1 = [],

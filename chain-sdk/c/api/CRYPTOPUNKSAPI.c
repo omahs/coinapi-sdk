@@ -27,15 +27,16 @@ CRYPTOPUNKSAPI_cRYPTOPUNKSBidsCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/cryptopunks/bids/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/cryptopunks/bids/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/cryptopunks/bids/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/cryptopunks/bids/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -102,15 +103,16 @@ CRYPTOPUNKSAPI_cRYPTOPUNKSCollectionDailySnapshotsCurrent(apiClient_t *apiClient
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/cryptopunks/collectionDailySnapshots/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/cryptopunks/collectionDailySnapshots/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/cryptopunks/collectionDailySnapshots/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/cryptopunks/collectionDailySnapshots/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -177,15 +179,16 @@ CRYPTOPUNKSAPI_cRYPTOPUNKSCollectionsCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/cryptopunks/collections/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/cryptopunks/collections/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/cryptopunks/collections/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/cryptopunks/collections/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -252,15 +255,16 @@ CRYPTOPUNKSAPI_cRYPTOPUNKSDataSourcesCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/cryptopunks/dataSources/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/cryptopunks/dataSources/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/cryptopunks/dataSources/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/cryptopunks/dataSources/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -327,15 +331,16 @@ CRYPTOPUNKSAPI_cRYPTOPUNKSItemsCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/cryptopunks/items/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/cryptopunks/items/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/cryptopunks/items/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/cryptopunks/items/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -402,15 +407,16 @@ CRYPTOPUNKSAPI_cRYPTOPUNKSMarketPlacesCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/cryptopunks/marketPlaces/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/cryptopunks/marketPlaces/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/cryptopunks/marketPlaces/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/cryptopunks/marketPlaces/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -477,15 +483,16 @@ CRYPTOPUNKSAPI_cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(apiClient_t *apiClien
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/cryptopunks/marketplaceDailySnapshots/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/cryptopunks/marketplaceDailySnapshots/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/cryptopunks/marketplaceDailySnapshots/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/cryptopunks/marketplaceDailySnapshots/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -552,15 +559,16 @@ CRYPTOPUNKSAPI_cRYPTOPUNKSTradesCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/cryptopunks/trades/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/cryptopunks/trades/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/cryptopunks/trades/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/cryptopunks/trades/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -627,15 +635,16 @@ CRYPTOPUNKSAPI_cRYPTOPUNKSUsersCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/cryptopunks/users/current")+1;
+    long sizeOfPath = strlen("/v1/dapps/cryptopunks/users/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/cryptopunks/users/current");
+    snprintf(localVarPath, sizeOfPath, "/v1/dapps/cryptopunks/users/current");
 
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
