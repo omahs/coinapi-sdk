@@ -22,10 +22,10 @@ info:
 servers:
 - url: https://onchain.coinapi.io
 tags:
-- description: CRYPTOPUNKS tag descriptor ...
-  name: CRYPTOPUNKS
-- description: UniswapV3 tag descriptor ...
-  name: UNISWAP_V3_ETHEREUM
+- description: Uniswap V3 Ethereum
+  name: UNISWAP-V3-ETHEREUM
+- description: Uniswap V2 Ethereum
+  name: UNISWAP-V2-ETHEREUM
 - description: Metadata tag descriptor ...
   name: Metadata
 paths:
