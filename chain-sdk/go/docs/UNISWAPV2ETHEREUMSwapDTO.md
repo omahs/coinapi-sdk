@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
-**BlockNumber** | Pointer to **NullableString** | Block number of this event | [optional] 
+**BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
 **Block** | Pointer to **int32** |  | [optional] 
-**Id** | Pointer to **NullableString** | swap-{ Transaction hash }-{ Log index } | [optional] 
+**Id** | Pointer to **NullableString** | swap-(Transaction hash)-(Log index) | [optional] 
 **Hash** | Pointer to **NullableString** | Transaction hash of the transaction that emitted this event | [optional] 
 **LogIndex** | Pointer to **int32** | Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0 | [optional] 
 **Protocol** | Pointer to **NullableString** | The protocol this transaction belongs to | [optional] 
@@ -101,20 +101,20 @@ HasRecvTime returns a boolean if a field has been set.
 
 ### GetBlockNumber
 
-`func (o *UNISWAPV2ETHEREUMSwapDTO) GetBlockNumber() string`
+`func (o *UNISWAPV2ETHEREUMSwapDTO) GetBlockNumber() int64`
 
 GetBlockNumber returns the BlockNumber field if non-nil, zero value otherwise.
 
 ### GetBlockNumberOk
 
-`func (o *UNISWAPV2ETHEREUMSwapDTO) GetBlockNumberOk() (*string, bool)`
+`func (o *UNISWAPV2ETHEREUMSwapDTO) GetBlockNumberOk() (*int64, bool)`
 
 GetBlockNumberOk returns a tuple with the BlockNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBlockNumber
 
-`func (o *UNISWAPV2ETHEREUMSwapDTO) SetBlockNumber(v string)`
+`func (o *UNISWAPV2ETHEREUMSwapDTO) SetBlockNumber(v int64)`
 
 SetBlockNumber sets BlockNumber field to given value.
 
@@ -124,16 +124,6 @@ SetBlockNumber sets BlockNumber field to given value.
 
 HasBlockNumber returns a boolean if a field has been set.
 
-### SetBlockNumberNil
-
-`func (o *UNISWAPV2ETHEREUMSwapDTO) SetBlockNumberNil(b bool)`
-
- SetBlockNumberNil sets the value for BlockNumber to be an explicit nil
-
-### UnsetBlockNumber
-`func (o *UNISWAPV2ETHEREUMSwapDTO) UnsetBlockNumber()`
-
-UnsetBlockNumber ensures that no value is present for BlockNumber, not even an explicit nil
 ### GetBlock
 
 `func (o *UNISWAPV2ETHEREUMSwapDTO) GetBlock() int32`

@@ -27,10 +27,10 @@ public class OASUNISWAPV2ETHEREUMSwapDTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * Block number of this event
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
-    public String blockNumber { get; set; }
+    public Long blockNumber { get; set; }
 
     /**
      * 
@@ -39,7 +39,7 @@ public class OASUNISWAPV2ETHEREUMSwapDTO implements OAS.MappedProperties {
     public Integer block { get; set; }
 
     /**
-     * swap-{ Transaction hash }-{ Log index }
+     * swap-(Transaction hash)-(Log index)
      * @return id
      */
     public String id { get; set; }
@@ -666,7 +666,7 @@ public class OASUNISWAPV2ETHEREUMSwapDTO implements OAS.MappedProperties {
         OASUNISWAPV2ETHEREUMSwapDTO unISWAPV2ETHEREUMSwapDTO = new OASUNISWAPV2ETHEREUMSwapDTO();
           unISWAPV2ETHEREUMSwapDTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           unISWAPV2ETHEREUMSwapDTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
-          unISWAPV2ETHEREUMSwapDTO.blockNumber = '';
+          unISWAPV2ETHEREUMSwapDTO.blockNumber = 123456789L;
           unISWAPV2ETHEREUMSwapDTO.block = 0;
           unISWAPV2ETHEREUMSwapDTO.id = '';
           unISWAPV2ETHEREUMSwapDTO.hash = '';

@@ -2054,10 +2054,10 @@ components:
       additionalProperties: false
       description: Trade (swap) event which occurred in a pool.
       example:
-        block_number: block_number
-        block_: 0
+        block_number: 0
+        block_: 6
         protocol: protocol
-        evaluated_amount: 5.962133916683182
+        evaluated_amount: 5.637376656633329
         evaluated_aggressor: null
         from: from
         id: id
@@ -2074,9 +2074,9 @@ components:
         amount_out_usd: amount_out_usd
         pool: pool
         pool_id: pool_id
-        log_index: 6
+        log_index: 1
         amount_out: amount_out
-        evaluated_price: 1.4658129805029452
+        evaluated_price: 5.962133916683182
         amount_in_usd: amount_in_usd
         to: to
         token_out: token_out
@@ -2089,15 +2089,15 @@ components:
           format: date-time
           type: string
         block_number:
-          description: Block number of this event
-          nullable: true
-          type: string
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
         block_:
           description: ""
           format: int32
           type: integer
         id:
-          description: "swap-{ Transaction hash }-{ Log index }"
+          description: swap-(Transaction hash)-(Log index)
           nullable: true
           type: string
         hash:

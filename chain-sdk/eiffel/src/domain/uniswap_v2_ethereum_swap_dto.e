@@ -23,12 +23,12 @@ feature --Access
       
     recv_time: detachable DATE_TIME
       
-    block_number: detachable STRING_32
-      -- Block number of this event
+ 	block_number: INTEGER_64
+    	 -- Number of block in which entity was recorded.
  	block_: INTEGER_32
     	 -- 
     id: detachable STRING_32
-      -- swap-{ Transaction hash }-{ Log index }
+      -- swap-(Transaction hash)-(Log index)
     hash: detachable STRING_32
       -- Transaction hash of the transaction that emitted this event
  	log_index: INTEGER_32

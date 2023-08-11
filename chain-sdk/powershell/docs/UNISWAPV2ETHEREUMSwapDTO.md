@@ -5,9 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
-**BlockNumber** | **String** | Block number of this event | [optional] 
+**BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
 **Block** | **Int32** |  | [optional] 
-**Id** | **String** | swap-{ Transaction hash }-{ Log index } | [optional] 
+**Id** | **String** | swap-(Transaction hash)-(Log index) | [optional] 
 **Hash** | **String** | Transaction hash of the transaction that emitted this event | [optional] 
 **LogIndex** | **Int32** | Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0 | [optional] 
 **Protocol** | **String** | The protocol this transaction belongs to | [optional] 

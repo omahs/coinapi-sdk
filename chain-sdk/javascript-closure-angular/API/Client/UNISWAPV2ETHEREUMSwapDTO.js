@@ -19,8 +19,8 @@ API.Client.UNISWAPV2ETHEREUMSwapDTO.prototype.entryTime;
 API.Client.UNISWAPV2ETHEREUMSwapDTO.prototype.recvTime;
 
 /**
- * Block number of this event
- * @type {!string}
+ * Number of block in which entity was recorded.
+ * @type {!number}
  * @export
  */
 API.Client.UNISWAPV2ETHEREUMSwapDTO.prototype.blockNumber;
@@ -33,7 +33,7 @@ API.Client.UNISWAPV2ETHEREUMSwapDTO.prototype.blockNumber;
 API.Client.UNISWAPV2ETHEREUMSwapDTO.prototype.block;
 
 /**
- * swap-{ Transaction hash }-{ Log index }
+ * swap-(Transaction hash)-(Log index)
  * @type {!string}
  * @export
  */

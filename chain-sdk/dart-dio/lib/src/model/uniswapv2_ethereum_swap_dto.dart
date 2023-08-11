@@ -15,9 +15,9 @@ part 'uniswapv2_ethereum_swap_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - Block number of this event
+/// * [blockNumber] - Number of block in which entity was recorded.
 /// * [block] - 
-/// * [id] - swap-{ Transaction hash }-{ Log index }
+/// * [id] - swap-(Transaction hash)-(Log index)
 /// * [hash] - Transaction hash of the transaction that emitted this event
 /// * [logIndex] - Event log index. For transactions that don't emit event, create arbitrary index starting from 0
 /// * [protocol] - The protocol this transaction belongs to
@@ -46,15 +46,15 @@ abstract class UNISWAPV2ETHEREUMSwapDTO implements Built<UNISWAPV2ETHEREUMSwapDT
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// Block number of this event
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
-  String? get blockNumber;
+  int? get blockNumber;
 
   /// 
   @BuiltValueField(wireName: r'block_')
   int? get block;
 
-  /// swap-{ Transaction hash }-{ Log index }
+  /// swap-(Transaction hash)-(Log index)
   @BuiltValueField(wireName: r'id')
   String? get id;
 
@@ -174,7 +174,7 @@ class _$UNISWAPV2ETHEREUMSwapDTOSerializer implements PrimitiveSerializer<UNISWA
       yield r'block_number';
       yield serializers.serialize(
         object.blockNumber,
-        specifiedType: const FullType.nullable(String),
+        specifiedType: const FullType(int),
       );
     }
     if (object.block != null) {
@@ -371,9 +371,8 @@ class _$UNISWAPV2ETHEREUMSwapDTOSerializer implements PrimitiveSerializer<UNISWA
         case r'block_number':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(int),
+          ) as int;
           result.blockNumber = valueDes;
           break;
         case r'block_':

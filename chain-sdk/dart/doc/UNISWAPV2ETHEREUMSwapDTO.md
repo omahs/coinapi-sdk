@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entryTime** | [**DateTime**](DateTime.md) |  | [optional] 
 **recvTime** | [**DateTime**](DateTime.md) |  | [optional] 
-**blockNumber** | **String** | Block number of this event | [optional] 
+**blockNumber** | **int** | Number of block in which entity was recorded. | [optional] 
 **block** | **int** |  | [optional] 
-**id** | **String** | swap-{ Transaction hash }-{ Log index } | [optional] 
+**id** | **String** | swap-(Transaction hash)-(Log index) | [optional] 
 **hash** | **String** | Transaction hash of the transaction that emitted this event | [optional] 
 **logIndex** | **int** | Event log index. For transactions that don't emit event, create arbitrary index starting from 0 | [optional] 
 **protocol** | **String** | The protocol this transaction belongs to | [optional] 

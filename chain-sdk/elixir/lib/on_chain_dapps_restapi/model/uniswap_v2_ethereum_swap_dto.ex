@@ -38,7 +38,7 @@ defmodule OnChainDapps-RESTAPI.Model.UniswapV2EthereumSwapDto do
   @type t :: %__MODULE__{
     :entry_time => DateTime.t | nil,
     :recv_time => DateTime.t | nil,
-    :block_number => String.t | nil,
+    :block_number => integer() | nil,
     :block_ => integer() | nil,
     :id => String.t | nil,
     :hash => String.t | nil,

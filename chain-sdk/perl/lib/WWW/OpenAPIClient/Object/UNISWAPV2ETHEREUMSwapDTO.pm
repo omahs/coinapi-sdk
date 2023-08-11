@@ -235,9 +235,9 @@ __PACKAGE__->method_documentation({
         read_only => '',
             },
     'block_number' => {
-        datatype => 'string',
+        datatype => 'int',
         base_name => 'block_number',
-        description => 'Block number of this event',
+        description => 'Number of block in which entity was recorded.',
         format => '',
         read_only => '',
             },
@@ -251,7 +251,7 @@ __PACKAGE__->method_documentation({
     'id' => {
         datatype => 'string',
         base_name => 'id',
-        description => 'swap-{ Transaction hash }-{ Log index }',
+        description => 'swap-(Transaction hash)-(Log index)',
         format => '',
         read_only => '',
             },
@@ -400,7 +400,7 @@ __PACKAGE__->method_documentation({
 __PACKAGE__->openapi_types( {
     'entry_time' => 'DATE_TIME',
     'recv_time' => 'DATE_TIME',
-    'block_number' => 'string',
+    'block_number' => 'int',
     'block_' => 'int',
     'id' => 'string',
     'hash' => 'string',

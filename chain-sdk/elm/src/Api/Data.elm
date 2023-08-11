@@ -350,7 +350,7 @@ type alias UNISWAPV2ETHEREUMLiquidityPoolDTO =
 type alias UNISWAPV2ETHEREUMSwapDTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
-    , blockNumber : Maybe String
+    , blockNumber : Maybe Int
     , block : Maybe Int
     , id : Maybe String
     , hash : Maybe String
@@ -1362,7 +1362,7 @@ encodeUNISWAPV2ETHEREUMSwapDTOPairs model =
         pairs =
             [ maybeEncode "entry_time" Api.Time.encodeDateTime model.entryTime
             , maybeEncode "recv_time" Api.Time.encodeDateTime model.recvTime
-            , maybeEncodeNullable "block_number" Json.Encode.string model.blockNumber
+            , maybeEncode "block_number" Json.Encode.int model.blockNumber
             , maybeEncode "block_" Json.Encode.int model.block
             , maybeEncodeNullable "id" Json.Encode.string model.id
             , maybeEncodeNullable "hash" Json.Encode.string model.hash
@@ -2541,7 +2541,7 @@ uNISWAPV2ETHEREUMSwapDTODecoder =
     Json.Decode.succeed UNISWAPV2ETHEREUMSwapDTO
         |> maybeDecode "entry_time" Api.Time.dateTimeDecoder Nothing
         |> maybeDecode "recv_time" Api.Time.dateTimeDecoder Nothing
-        |> maybeDecodeNullable "block_number" Json.Decode.string Nothing
+        |> maybeDecode "block_number" Json.Decode.int Nothing
         |> maybeDecode "block_" Json.Decode.int Nothing
         |> maybeDecodeNullable "id" Json.Decode.string Nothing
         |> maybeDecodeNullable "hash" Json.Decode.string Nothing

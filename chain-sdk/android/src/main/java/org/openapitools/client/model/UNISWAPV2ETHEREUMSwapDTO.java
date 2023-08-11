@@ -29,7 +29,7 @@ public class UNISWAPV2ETHEREUMSwapDTO {
   @SerializedName("recv_time")
   private Date recvTime = null;
   @SerializedName("block_number")
-  private String blockNumber = null;
+  private Long blockNumber = null;
   @SerializedName("block_")
   private Integer block = null;
   @SerializedName("id")
@@ -96,13 +96,13 @@ public class UNISWAPV2ETHEREUMSwapDTO {
   }
 
   /**
-   * Block number of this event
+   * Number of block in which entity was recorded.
    **/
-  @ApiModelProperty(value = "Block number of this event")
-  public String getBlockNumber() {
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
+  public Long getBlockNumber() {
     return blockNumber;
   }
-  public void setBlockNumber(String blockNumber) {
+  public void setBlockNumber(Long blockNumber) {
     this.blockNumber = blockNumber;
   }
 
@@ -118,9 +118,9 @@ public class UNISWAPV2ETHEREUMSwapDTO {
   }
 
   /**
-   * swap-{ Transaction hash }-{ Log index }
+   * swap-(Transaction hash)-(Log index)
    **/
-  @ApiModelProperty(value = "swap-{ Transaction hash }-{ Log index }")
+  @ApiModelProperty(value = "swap-(Transaction hash)-(Log index)")
   public String getId() {
     return id;
   }

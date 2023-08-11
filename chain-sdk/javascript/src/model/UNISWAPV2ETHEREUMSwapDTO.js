@@ -56,7 +56,7 @@ class UNISWAPV2ETHEREUMSwapDTO {
                 obj['recv_time'] = ApiClient.convertToType(data['recv_time'], 'Date');
             }
             if (data.hasOwnProperty('block_number')) {
-                obj['block_number'] = ApiClient.convertToType(data['block_number'], 'String');
+                obj['block_number'] = ApiClient.convertToType(data['block_number'], 'Number');
             }
             if (data.hasOwnProperty('block_')) {
                 obj['block_'] = ApiClient.convertToType(data['block_'], 'Number');
@@ -134,10 +134,6 @@ class UNISWAPV2ETHEREUMSwapDTO {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UNISWAPV2ETHEREUMSwapDTO</code>.
      */
     static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['block_number'] && !(typeof data['block_number'] === 'string' || data['block_number'] instanceof String)) {
-            throw new Error("Expected the field `block_number` to be a primitive type in the JSON string but got " + data['block_number']);
-        }
         // ensure the json data is a string
         if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
             throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
@@ -226,8 +222,8 @@ UNISWAPV2ETHEREUMSwapDTO.prototype['entry_time'] = undefined;
 UNISWAPV2ETHEREUMSwapDTO.prototype['recv_time'] = undefined;
 
 /**
- * Block number of this event
- * @member {String} block_number
+ * Number of block in which entity was recorded.
+ * @member {Number} block_number
  */
 UNISWAPV2ETHEREUMSwapDTO.prototype['block_number'] = undefined;
 
@@ -238,7 +234,7 @@ UNISWAPV2ETHEREUMSwapDTO.prototype['block_number'] = undefined;
 UNISWAPV2ETHEREUMSwapDTO.prototype['block_'] = undefined;
 
 /**
- * swap-{ Transaction hash }-{ Log index }
+ * swap-(Transaction hash)-(Log index)
  * @member {String} id
  */
 UNISWAPV2ETHEREUMSwapDTO.prototype['id'] = undefined;

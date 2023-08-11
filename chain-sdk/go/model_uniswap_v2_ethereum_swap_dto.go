@@ -23,11 +23,11 @@ var _ MappedNullable = &UNISWAPV2ETHEREUMSwapDTO{}
 type UNISWAPV2ETHEREUMSwapDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
-	// Block number of this event
-	BlockNumber NullableString `json:"block_number,omitempty"`
+	// Number of block in which entity was recorded.
+	BlockNumber *int64 `json:"block_number,omitempty"`
 	// 
 	Block *int32 `json:"block_,omitempty"`
-	// swap-{ Transaction hash }-{ Log index }
+	// swap-(Transaction hash)-(Log index)
 	Id NullableString `json:"id,omitempty"`
 	// Transaction hash of the transaction that emitted this event
 	Hash NullableString `json:"hash,omitempty"`
@@ -146,46 +146,36 @@ func (o *UNISWAPV2ETHEREUMSwapDTO) SetRecvTime(v time.Time) {
 	o.RecvTime = &v
 }
 
-// GetBlockNumber returns the BlockNumber field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *UNISWAPV2ETHEREUMSwapDTO) GetBlockNumber() string {
-	if o == nil || IsNil(o.BlockNumber.Get()) {
-		var ret string
+// GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
+func (o *UNISWAPV2ETHEREUMSwapDTO) GetBlockNumber() int64 {
+	if o == nil || IsNil(o.BlockNumber) {
+		var ret int64
 		return ret
 	}
-	return *o.BlockNumber.Get()
+	return *o.BlockNumber
 }
 
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *UNISWAPV2ETHEREUMSwapDTO) GetBlockNumberOk() (*string, bool) {
-	if o == nil {
+func (o *UNISWAPV2ETHEREUMSwapDTO) GetBlockNumberOk() (*int64, bool) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
-	return o.BlockNumber.Get(), o.BlockNumber.IsSet()
+	return o.BlockNumber, true
 }
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *UNISWAPV2ETHEREUMSwapDTO) HasBlockNumber() bool {
-	if o != nil && o.BlockNumber.IsSet() {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
 	return false
 }
 
-// SetBlockNumber gets a reference to the given NullableString and assigns it to the BlockNumber field.
-func (o *UNISWAPV2ETHEREUMSwapDTO) SetBlockNumber(v string) {
-	o.BlockNumber.Set(&v)
-}
-// SetBlockNumberNil sets the value for BlockNumber to be an explicit nil
-func (o *UNISWAPV2ETHEREUMSwapDTO) SetBlockNumberNil() {
-	o.BlockNumber.Set(nil)
-}
-
-// UnsetBlockNumber ensures that no value is present for BlockNumber, not even an explicit nil
-func (o *UNISWAPV2ETHEREUMSwapDTO) UnsetBlockNumber() {
-	o.BlockNumber.Unset()
+// SetBlockNumber gets a reference to the given int64 and assigns it to the BlockNumber field.
+func (o *UNISWAPV2ETHEREUMSwapDTO) SetBlockNumber(v int64) {
+	o.BlockNumber = &v
 }
 
 // GetBlock returns the Block field value if set, zero value otherwise.
@@ -1069,8 +1059,8 @@ func (o UNISWAPV2ETHEREUMSwapDTO) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if o.BlockNumber.IsSet() {
-		toSerialize["block_number"] = o.BlockNumber.Get()
+	if !IsNil(o.BlockNumber) {
+		toSerialize["block_number"] = o.BlockNumber
 	}
 	if !IsNil(o.Block) {
 		toSerialize["block_"] = o.Block

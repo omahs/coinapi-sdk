@@ -20,8 +20,8 @@ test_that("recv_time", {
 })
 
 test_that("block_number", {
-  # tests for the property `block_number` (character)
-  # Block number of this event
+  # tests for the property `block_number` (integer)
+  # Number of block in which entity was recorded.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`block_number`, "EXPECTED_RESULT")
@@ -37,7 +37,7 @@ test_that("block_", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # swap-{ Transaction hash }-{ Log index }
+  # swap-(Transaction hash)-(Log index)
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")

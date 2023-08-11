@@ -922,9 +922,9 @@ mkUNISWAPV2ETHEREUMLiquidityPoolDTO =
 data UNISWAPV2ETHEREUMSwapDTO = UNISWAPV2ETHEREUMSwapDTO
   { uNISWAPV2ETHEREUMSwapDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , uNISWAPV2ETHEREUMSwapDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uNISWAPV2ETHEREUMSwapDTOBlockNumber :: !(Maybe Text) -- ^ "block_number" - Block number of this event
+  , uNISWAPV2ETHEREUMSwapDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , uNISWAPV2ETHEREUMSwapDTOBlock :: !(Maybe Int) -- ^ "block_" - 
-  , uNISWAPV2ETHEREUMSwapDTOId :: !(Maybe Text) -- ^ "id" - swap-{ Transaction hash }-{ Log index }
+  , uNISWAPV2ETHEREUMSwapDTOId :: !(Maybe Text) -- ^ "id" - swap-(Transaction hash)-(Log index)
   , uNISWAPV2ETHEREUMSwapDTOHash :: !(Maybe Text) -- ^ "hash" - Transaction hash of the transaction that emitted this event
   , uNISWAPV2ETHEREUMSwapDTOLogIndex :: !(Maybe Int) -- ^ "log_index" - Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0
   , uNISWAPV2ETHEREUMSwapDTOProtocol :: !(Maybe Text) -- ^ "protocol" - The protocol this transaction belongs to

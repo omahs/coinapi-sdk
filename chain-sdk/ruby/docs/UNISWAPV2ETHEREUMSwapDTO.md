@@ -6,9 +6,9 @@
 | ---- | ---- | ----------- | ----- |
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
-| **block_number** | **String** | Block number of this event | [optional] |
+| **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
 | **block_** | **Integer** |  | [optional] |
-| **id** | **String** | swap-{ Transaction hash }-{ Log index } | [optional] |
+| **id** | **String** | swap-(Transaction hash)-(Log index) | [optional] |
 | **hash** | **String** | Transaction hash of the transaction that emitted this event | [optional] |
 | **log_index** | **Integer** | Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0 | [optional] |
 | **protocol** | **String** | The protocol this transaction belongs to | [optional] |

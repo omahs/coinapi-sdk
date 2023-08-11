@@ -7,9 +7,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entry_time** | **character** |  | [optional] 
 **recv_time** | **character** |  | [optional] 
-**block_number** | **character** | Block number of this event | [optional] 
+**block_number** | **integer** | Number of block in which entity was recorded. | [optional] 
 **block_** | **integer** |  | [optional] 
-**id** | **character** | swap-{ Transaction hash }-{ Log index } | [optional] 
+**id** | **character** | swap-(Transaction hash)-(Log index) | [optional] 
 **hash** | **character** | Transaction hash of the transaction that emitted this event | [optional] 
 **log_index** | **integer** | Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0 | [optional] 
 **protocol** | **character** | The protocol this transaction belongs to | [optional] 

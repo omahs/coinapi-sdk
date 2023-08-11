@@ -19,15 +19,15 @@ export interface UNISWAPV2ETHEREUMSwapDTO {
     entry_time?: string;
     recv_time?: string;
     /**
-     * Block number of this event
+     * Number of block in which entity was recorded.
      */
-    block_number?: string | null;
+    block_number?: number;
     /**
      * 
      */
     block_?: number;
     /**
-     * swap-{ Transaction hash }-{ Log index }
+     * swap-(Transaction hash)-(Log index)
      */
     id?: string | null;
     /**

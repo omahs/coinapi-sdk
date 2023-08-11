@@ -25,7 +25,7 @@ UNISWAP_V2_ETHEREUM.SwapDTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
-	//block_number = std::string();
+	//block_number = long(0);
 	//block_ = int(0);
 	//id = std::string();
 	//hash = std::string();
@@ -213,8 +213,8 @@ UNISWAP_V2_ETHEREUM.SwapDTO::fromJson(char* jsonStr)
 	if (node !=NULL) {
 	
 
-		if (isprimitive("std::string")) {
-			jsonToValue(&block_number, node, "std::string", "");
+		if (isprimitive("long long")) {
+			jsonToValue(&block_number, node, "long long", "");
 		} else {
 			
 		}
@@ -505,9 +505,9 @@ UNISWAP_V2_ETHEREUM.SwapDTO::toJson()
 	}
 	const gchar *recv_timeKey = "recv_time";
 	json_object_set_member(pJsonObject, recv_timeKey, node);
-	if (isprimitive("std::string")) {
-		std::string obj = getBlockNumber();
-		node = converttoJson(&obj, "std::string", "");
+	if (isprimitive("long long")) {
+		long long obj = getBlockNumber();
+		node = converttoJson(&obj, "long long", "");
 	}
 	else {
 		
@@ -755,14 +755,14 @@ UNISWAP_V2_ETHEREUM.SwapDTO::setRecvTime(std::string  recv_time)
 	this->recv_time = recv_time;
 }
 
-std::string
+long long
 UNISWAP_V2_ETHEREUM.SwapDTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-UNISWAP_V2_ETHEREUM.SwapDTO::setBlockNumber(std::string  block_number)
+UNISWAP_V2_ETHEREUM.SwapDTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }

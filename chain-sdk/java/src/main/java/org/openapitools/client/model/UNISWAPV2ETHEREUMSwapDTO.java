@@ -55,7 +55,7 @@ import org.openapitools.client.JSON;
 /**
  * Trade (swap) event which occurred in a pool.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-11T13:17:43.222666Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-11T14:26:35.722653Z[Etc/UTC]")
 public class UNISWAPV2ETHEREUMSwapDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -67,7 +67,7 @@ public class UNISWAPV2ETHEREUMSwapDTO {
 
   public static final String SERIALIZED_NAME_BLOCK_NUMBER = "block_number";
   @SerializedName(SERIALIZED_NAME_BLOCK_NUMBER)
-  private String blockNumber;
+  private Long blockNumber;
 
   public static final String SERIALIZED_NAME_BLOCK = "block_";
   @SerializedName(SERIALIZED_NAME_BLOCK)
@@ -218,23 +218,23 @@ public class UNISWAPV2ETHEREUMSwapDTO {
   }
 
 
-  public UNISWAPV2ETHEREUMSwapDTO blockNumber(String blockNumber) {
+  public UNISWAPV2ETHEREUMSwapDTO blockNumber(Long blockNumber) {
     
     this.blockNumber = blockNumber;
     return this;
   }
 
    /**
-   * Block number of this event
+   * Number of block in which entity was recorded.
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  public String getBlockNumber() {
+  public Long getBlockNumber() {
     return blockNumber;
   }
 
 
-  public void setBlockNumber(String blockNumber) {
+  public void setBlockNumber(Long blockNumber) {
     this.blockNumber = blockNumber;
   }
 
@@ -267,7 +267,7 @@ public class UNISWAPV2ETHEREUMSwapDTO {
   }
 
    /**
-   * swap-{ Transaction hash }-{ Log index }
+   * swap-(Transaction hash)-(Log index)
    * @return id
   **/
   @javax.annotation.Nullable
@@ -817,9 +817,6 @@ public class UNISWAPV2ETHEREUMSwapDTO {
         if (!UNISWAPV2ETHEREUMSwapDTO.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UNISWAPV2ETHEREUMSwapDTO` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
-      }
-      if ((jsonObj.get("block_number") != null && !jsonObj.get("block_number").isJsonNull()) && !jsonObj.get("block_number").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `block_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("block_number").toString()));
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));

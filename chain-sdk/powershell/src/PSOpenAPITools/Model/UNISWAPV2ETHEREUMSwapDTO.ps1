@@ -20,11 +20,11 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-Block number of this event
+Number of block in which entity was recorded.
 .PARAMETER Block
 
 .PARAMETER Id
-swap-{ Transaction hash }-{ Log index }
+swap-(Transaction hash)-(Log index)
 .PARAMETER Hash
 Transaction hash of the transaction that emitted this event
 .PARAMETER LogIndex
@@ -80,7 +80,7 @@ function Initialize-UNISWAPV2ETHEREUMSwapDTO {
         [System.Nullable[System.DateTime]]
         ${RecvTime},
         [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true)]
-        [String]
+        [System.Nullable[Int64]]
         ${BlockNumber},
         [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]

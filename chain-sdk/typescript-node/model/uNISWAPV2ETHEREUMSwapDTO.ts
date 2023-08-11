@@ -20,15 +20,15 @@ export class UNISWAPV2ETHEREUMSwapDTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
     /**
-    * Block number of this event
+    * Number of block in which entity was recorded.
     */
-    'blockNumber'?: string | null;
+    'blockNumber'?: number;
     /**
     * 
     */
     'block'?: number;
     /**
-    * swap-{ Transaction hash }-{ Log index }
+    * swap-(Transaction hash)-(Log index)
     */
     'id'?: string | null;
     /**
@@ -110,7 +110,7 @@ export class UNISWAPV2ETHEREUMSwapDTO {
         {
             "name": "blockNumber",
             "baseName": "block_number",
-            "type": "string"
+            "type": "number"
         },
         {
             "name": "block",

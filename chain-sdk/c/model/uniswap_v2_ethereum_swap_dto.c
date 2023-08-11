@@ -25,7 +25,7 @@ on_chain_dapps___rest_api_uniswap_v2_ethereum_swap_dto__e evaluated_aggressoruni
 uniswap_v2_ethereum_swap_dto_t *uniswap_v2_ethereum_swap_dto_create(
     char *entry_time,
     char *recv_time,
-    char *block_number,
+    long block_number,
     int block_,
     char *id,
     char *hash,
@@ -95,10 +95,6 @@ void uniswap_v2_ethereum_swap_dto_free(uniswap_v2_ethereum_swap_dto_t *uniswap_v
     if (uniswap_v2_ethereum_swap_dto->recv_time) {
         free(uniswap_v2_ethereum_swap_dto->recv_time);
         uniswap_v2_ethereum_swap_dto->recv_time = NULL;
-    }
-    if (uniswap_v2_ethereum_swap_dto->block_number) {
-        free(uniswap_v2_ethereum_swap_dto->block_number);
-        uniswap_v2_ethereum_swap_dto->block_number = NULL;
     }
     if (uniswap_v2_ethereum_swap_dto->id) {
         free(uniswap_v2_ethereum_swap_dto->id);
@@ -199,8 +195,8 @@ cJSON *uniswap_v2_ethereum_swap_dto_convertToJSON(uniswap_v2_ethereum_swap_dto_t
 
     // uniswap_v2_ethereum_swap_dto->block_number
     if(uniswap_v2_ethereum_swap_dto->block_number) {
-    if(cJSON_AddStringToObject(item, "block_number", uniswap_v2_ethereum_swap_dto->block_number) == NULL) {
-    goto fail; //String
+    if(cJSON_AddNumberToObject(item, "block_number", uniswap_v2_ethereum_swap_dto->block_number) == NULL) {
+    goto fail; //Numeric
     }
     }
 
@@ -433,9 +429,9 @@ uniswap_v2_ethereum_swap_dto_t *uniswap_v2_ethereum_swap_dto_parseFromJSON(cJSON
     // uniswap_v2_ethereum_swap_dto->block_number
     cJSON *block_number = cJSON_GetObjectItemCaseSensitive(uniswap_v2_ethereum_swap_dtoJSON, "block_number");
     if (block_number) { 
-    if(!cJSON_IsString(block_number) && !cJSON_IsNull(block_number))
+    if(!cJSON_IsNumber(block_number))
     {
-    goto end; //String
+    goto end; //Numeric
     }
     }
 
@@ -648,7 +644,7 @@ uniswap_v2_ethereum_swap_dto_t *uniswap_v2_ethereum_swap_dto_parseFromJSON(cJSON
     uniswap_v2_ethereum_swap_dto_local_var = uniswap_v2_ethereum_swap_dto_create (
         entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
         recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
-        block_number && !cJSON_IsNull(block_number) ? strdup(block_number->valuestring) : NULL,
+        block_number ? block_number->valuedouble : 0,
         block_ ? block_->valuedouble : 0,
         id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
         hash && !cJSON_IsNull(hash) ? strdup(hash->valuestring) : NULL,

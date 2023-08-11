@@ -14,11 +14,11 @@ class UNISWAPV2ETHEREUMSwapDTO {
     Date entryTime
     
     Date recvTime
-    /* Block number of this event */
-    String blockNumber
+    /* Number of block in which entity was recorded. */
+    Long blockNumber
     /*  */
     Integer block
-    /* swap-{ Transaction hash }-{ Log index } */
+    /* swap-(Transaction hash)-(Log index) */
     String id
     /* Transaction hash of the transaction that emitted this event */
     String hash

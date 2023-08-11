@@ -7,7 +7,7 @@
 -type openapi_uniswap_v2_ethereum_swap_dto() ::
     #{ 'entry_time' => openapi_date_time:openapi_date_time(),
        'recv_time' => openapi_date_time:openapi_date_time(),
-       'block_number' => binary(),
+       'block_number' => integer(),
        'block_' => integer(),
        'id' => binary(),
        'hash' => binary(),

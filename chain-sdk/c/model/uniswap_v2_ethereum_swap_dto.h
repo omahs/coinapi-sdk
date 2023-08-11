@@ -30,7 +30,7 @@ on_chain_dapps___rest_api_uniswap_v2_ethereum_swap_dto__e uniswap_v2_ethereum_sw
 typedef struct uniswap_v2_ethereum_swap_dto_t {
     char *entry_time; //date time
     char *recv_time; //date time
-    char *block_number; // string
+    long block_number; //numeric
     int block_; //numeric
     char *id; // string
     char *hash; // string
@@ -59,7 +59,7 @@ typedef struct uniswap_v2_ethereum_swap_dto_t {
 uniswap_v2_ethereum_swap_dto_t *uniswap_v2_ethereum_swap_dto_create(
     char *entry_time,
     char *recv_time,
-    char *block_number,
+    long block_number,
     int block_,
     char *id,
     char *hash,

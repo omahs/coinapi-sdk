@@ -24,7 +24,7 @@ uniswap_v2_ethereum_swap_dto_t* instantiate_uniswap_v2_ethereum_swap_dto(int inc
     uniswap_v2_ethereum_swap_dto = uniswap_v2_ethereum_swap_dto_create(
       "2013-10-20T19:20:30+01:00",
       "2013-10-20T19:20:30+01:00",
-      "0",
+      56,
       56,
       "0",
       "0",
@@ -52,7 +52,7 @@ uniswap_v2_ethereum_swap_dto_t* instantiate_uniswap_v2_ethereum_swap_dto(int inc
     uniswap_v2_ethereum_swap_dto = uniswap_v2_ethereum_swap_dto_create(
       "2013-10-20T19:20:30+01:00",
       "2013-10-20T19:20:30+01:00",
-      "0",
+      56,
       56,
       "0",
       "0",

@@ -10,9 +10,9 @@ Trade (swap) event which occurred in a pool.
 |------------ | ------------- | ------------- | -------------|
 |**entryTime** | **OffsetDateTime** |  |  [optional] |
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
-|**blockNumber** | **String** | Block number of this event |  [optional] |
+|**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional] |
 |**block** | **Integer** |  |  [optional] |
-|**id** | **String** | swap-{ Transaction hash }-{ Log index } |  [optional] |
+|**id** | **String** | swap-(Transaction hash)-(Log index) |  [optional] |
 |**hash** | **String** | Transaction hash of the transaction that emitted this event |  [optional] |
 |**logIndex** | **Integer** | Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0 |  [optional] |
 |**protocol** | **String** | The protocol this transaction belongs to |  [optional] |

@@ -27,7 +27,7 @@ UNISWAP_V2_ETHEREUM_SwapDTO::UNISWAP_V2_ETHEREUM_SwapDTO()
     m_Entry_timeIsSet = false;
     m_Recv_time = utility::datetime();
     m_Recv_timeIsSet = false;
-    m_Block_number = utility::conversions::to_string_t("");
+    m_Block_number = 0L;
     m_Block_numberIsSet = false;
     m_Block_ = 0;
     m_Block_IsSet = false;
@@ -220,7 +220,7 @@ bool UNISWAP_V2_ETHEREUM_SwapDTO::fromJson(const web::json::value& val)
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(U("block_number")));
         if(!fieldValue.is_null())
         {
-            utility::string_t refVal_setBlockNumber;
+            int64_t refVal_setBlockNumber;
             ok &= ModelBase::fromJson(fieldValue, refVal_setBlockNumber);
             setBlockNumber(refVal_setBlockNumber);
         }
@@ -580,7 +580,7 @@ bool UNISWAP_V2_ETHEREUM_SwapDTO::fromMultiPart(std::shared_ptr<MultipartFormDat
     }
     if(multipart->hasContent(utility::conversions::to_string_t(U("block_number"))))
     {
-        utility::string_t refVal_setBlockNumber;
+        int64_t refVal_setBlockNumber;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(U("block_number"))), refVal_setBlockNumber );
         setBlockNumber(refVal_setBlockNumber);
     }
@@ -759,12 +759,12 @@ void UNISWAP_V2_ETHEREUM_SwapDTO::unsetRecv_time()
 {
     m_Recv_timeIsSet = false;
 }
-utility::string_t UNISWAP_V2_ETHEREUM_SwapDTO::getBlockNumber() const
+int64_t UNISWAP_V2_ETHEREUM_SwapDTO::getBlockNumber() const
 {
     return m_Block_number;
 }
 
-void UNISWAP_V2_ETHEREUM_SwapDTO::setBlockNumber(const utility::string_t& value)
+void UNISWAP_V2_ETHEREUM_SwapDTO::setBlockNumber(int64_t value)
 {
     m_Block_number = value;
     m_Block_numberIsSet = true;

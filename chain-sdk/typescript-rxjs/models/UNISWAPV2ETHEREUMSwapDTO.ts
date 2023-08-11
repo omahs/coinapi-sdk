@@ -32,11 +32,11 @@ export interface UNISWAPV2ETHEREUMSwapDTO {
      */
     recv_time?: string;
     /**
-     * Block number of this event
-     * @type {string}
+     * Number of block in which entity was recorded.
+     * @type {number}
      * @memberof UNISWAPV2ETHEREUMSwapDTO
      */
-    block_number?: string | null;
+    block_number?: number;
     /**
      * 
      * @type {number}
@@ -44,7 +44,7 @@ export interface UNISWAPV2ETHEREUMSwapDTO {
      */
     block_?: number;
     /**
-     * swap-{ Transaction hash }-{ Log index }
+     * swap-(Transaction hash)-(Log index)
      * @type {string}
      * @memberof UNISWAPV2ETHEREUMSwapDTO
      */

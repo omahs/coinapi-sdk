@@ -41,26 +41,7 @@ class UNISWAPV2ETHEREUMSwapDTO(
         class properties:
             entry_time = schemas.DateTimeSchema
             recv_time = schemas.DateTimeSchema
-            
-            
-            class block_number(
-                schemas.StrBase,
-                schemas.NoneBase,
-                schemas.Schema,
-                schemas.NoneStrMixin
-            ):
-            
-            
-                def __new__(
-                    cls,
-                    *_args: typing.Union[None, str, ],
-                    _configuration: typing.Optional[schemas.Configuration] = None,
-                ) -> 'block_number':
-                    return super().__new__(
-                        cls,
-                        *_args,
-                        _configuration=_configuration,
-                    )
+            block_number = schemas.Int64Schema
             block_ = schemas.Int32Schema
             
             
@@ -604,7 +585,7 @@ class UNISWAPV2ETHEREUMSwapDTO(
         *_args: typing.Union[dict, frozendict.frozendict, ],
         entry_time: typing.Union[MetaOapg.properties.entry_time, str, datetime, schemas.Unset] = schemas.unset,
         recv_time: typing.Union[MetaOapg.properties.recv_time, str, datetime, schemas.Unset] = schemas.unset,
-        block_number: typing.Union[MetaOapg.properties.block_number, None, str, schemas.Unset] = schemas.unset,
+        block_number: typing.Union[MetaOapg.properties.block_number, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         block_: typing.Union[MetaOapg.properties.block_, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         id: typing.Union[MetaOapg.properties.id, None, str, schemas.Unset] = schemas.unset,
         hash: typing.Union[MetaOapg.properties.hash, None, str, schemas.Unset] = schemas.unset,

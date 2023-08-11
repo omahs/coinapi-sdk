@@ -340,7 +340,7 @@ genUNISWAPV2ETHEREUMSwapDTO n =
   UNISWAPV2ETHEREUMSwapDTO
     <$> arbitraryReducedMaybe n -- uNISWAPV2ETHEREUMSwapDTOEntryTime :: Maybe DateTime
     <*> arbitraryReducedMaybe n -- uNISWAPV2ETHEREUMSwapDTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- uNISWAPV2ETHEREUMSwapDTOBlockNumber :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uNISWAPV2ETHEREUMSwapDTOBlockNumber :: Maybe Integer
     <*> arbitraryReducedMaybe n -- uNISWAPV2ETHEREUMSwapDTOBlock :: Maybe Int
     <*> arbitraryReducedMaybe n -- uNISWAPV2ETHEREUMSwapDTOId :: Maybe Text
     <*> arbitraryReducedMaybe n -- uNISWAPV2ETHEREUMSwapDTOHash :: Maybe Text

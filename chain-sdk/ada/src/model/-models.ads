@@ -584,7 +584,7 @@ package .Models is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
-       Block_Number : Swagger.Nullable_UString;
+       Block_Number : Swagger.Nullable_Long;
        Block_ : Swagger.Nullable_Integer;
        Id : Swagger.Nullable_UString;
        Hash : Swagger.Nullable_UString;

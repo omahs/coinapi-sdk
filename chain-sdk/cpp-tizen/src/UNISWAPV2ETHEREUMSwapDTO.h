@@ -61,13 +61,13 @@ public:
 	/*! \brief Set 
 	 */
 	void setRecvTime(std::string  recv_time);
-	/*! \brief Get Block number of this event
+	/*! \brief Get Number of block in which entity was recorded.
 	 */
-	std::string getBlockNumber();
+	long long getBlockNumber();
 
-	/*! \brief Set Block number of this event
+	/*! \brief Set Number of block in which entity was recorded.
 	 */
-	void setBlockNumber(std::string  block_number);
+	void setBlockNumber(long long  block_number);
 	/*! \brief Get 
 	 */
 	int getBlock();
@@ -75,11 +75,11 @@ public:
 	/*! \brief Set 
 	 */
 	void setBlock(int  block_);
-	/*! \brief Get swap-{ Transaction hash }-{ Log index }
+	/*! \brief Get swap-(Transaction hash)-(Log index)
 	 */
 	std::string getId();
 
-	/*! \brief Set swap-{ Transaction hash }-{ Log index }
+	/*! \brief Set swap-(Transaction hash)-(Log index)
 	 */
 	void setId(std::string  id);
 	/*! \brief Get Transaction hash of the transaction that emitted this event
@@ -226,7 +226,7 @@ public:
 private:
 	std::string entry_time;
 	std::string recv_time;
-	std::string block_number;
+	long long block_number;
 	int block_;
 	std::string id;
 	std::string hash;

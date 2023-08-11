@@ -12,9 +12,9 @@ Key | Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | ------------- | -------------
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
-**block_number** | None, str,  | NoneClass, str,  | Block number of this event | [optional] 
+**block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
 **block_** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 32 bit integer
-**id** | None, str,  | NoneClass, str,  | swap-{ Transaction hash }-{ Log index } | [optional] 
+**id** | None, str,  | NoneClass, str,  | swap-(Transaction hash)-(Log index) | [optional] 
 **hash** | None, str,  | NoneClass, str,  | Transaction hash of the transaction that emitted this event | [optional] 
 **log_index** | decimal.Decimal, int,  | decimal.Decimal,  | Event log index. For transactions that don&#x27;t emit event, create arbitrary index starting from 0 | [optional] value must be a 32 bit integer
 **protocol** | None, str,  | NoneClass, str,  | The protocol this transaction belongs to | [optional] 

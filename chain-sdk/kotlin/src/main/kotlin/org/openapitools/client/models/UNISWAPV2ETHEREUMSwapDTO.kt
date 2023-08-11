@@ -25,9 +25,9 @@ import com.squareup.moshi.JsonClass
  *
  * @param entryTime 
  * @param recvTime 
- * @param blockNumber Block number of this event
+ * @param blockNumber Number of block in which entity was recorded.
  * @param block 
- * @param id swap-{ Transaction hash }-{ Log index }
+ * @param id swap-(Transaction hash)-(Log index)
  * @param hash Transaction hash of the transaction that emitted this event
  * @param logIndex Event log index. For transactions that don't emit event, create arbitrary index starting from 0
  * @param protocol The protocol this transaction belongs to
@@ -59,15 +59,15 @@ data class UNISWAPV2ETHEREUMSwapDTO (
     @Json(name = "recv_time")
     val recvTime: java.time.OffsetDateTime? = null,
 
-    /* Block number of this event */
+    /* Number of block in which entity was recorded. */
     @Json(name = "block_number")
-    val blockNumber: kotlin.String? = null,
+    val blockNumber: kotlin.Long? = null,
 
     /*  */
     @Json(name = "block_")
     val block: kotlin.Int? = null,
 
-    /* swap-{ Transaction hash }-{ Log index } */
+    /* swap-(Transaction hash)-(Log index) */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
