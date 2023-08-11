@@ -14,7 +14,7 @@ require 'date'
 require 'time'
 
 module OpenapiClient
-  # Trade (swap) event occurred in a pool.
+  # Trade (swap) event which occurred in a pool.
   class UNISWAPV3ETHEREUMSwapDTO
     attr_accessor :entry_time
 

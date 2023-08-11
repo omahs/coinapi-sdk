@@ -1,7 +1,7 @@
 goog.provide('API.Client.UNISWAP_V3_ETHEREUM.LiquidityPoolDTO');
 
 /**
- * All Uniswap V3 pools.
+ * Pool-level metadata.
  * @record
  */
 API.Client.UNISWAPV3ETHEREUMLiquidityPoolDTO = function() {}

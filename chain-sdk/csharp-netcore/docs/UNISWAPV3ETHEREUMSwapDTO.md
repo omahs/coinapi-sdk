@@ -1,5 +1,5 @@
 # CoinAPI.EMS.REST.V1.Model.UNISWAPV3ETHEREUMSwapDTO
-Trade (swap) event occurred in a pool.
+Trade (swap) event which occurred in a pool.
 
 ## Properties
 

@@ -19,9 +19,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Trade (swap) event occurred in a pool.
+ * Trade (swap) event which occurred in a pool.
  **/
-@ApiModel(description = "Trade (swap) event occurred in a pool.")
+@ApiModel(description = "Trade (swap) event which occurred in a pool.")
 public class UNISWAPV3ETHEREUMSwapDTO {
   
   @SerializedName("entry_time")

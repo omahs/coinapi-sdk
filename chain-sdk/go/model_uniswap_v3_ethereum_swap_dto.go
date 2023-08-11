@@ -19,7 +19,7 @@ import (
 // checks if the UNISWAPV3ETHEREUMSwapDTO type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &UNISWAPV3ETHEREUMSwapDTO{}
 
-// UNISWAPV3ETHEREUMSwapDTO Trade (swap) event occurred in a pool.
+// UNISWAPV3ETHEREUMSwapDTO Trade (swap) event which occurred in a pool.
 type UNISWAPV3ETHEREUMSwapDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`

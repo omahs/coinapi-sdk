@@ -38,6 +38,9 @@ Class | Method | HTTP request | Description
 *METADATA_API* | [**metadata_chains_get**](docs/METADATA_API.md#metadata_chains_get) | **Get** /metadata/chains | List all chains.
 *METADATA_API* | [**metadata_dapps_dapp_name_get**](docs/METADATA_API.md#metadata_dapps_dapp_name_get) | **Get** /metadata/dapps/{dappName} | Gets dapp by name.
 *METADATA_API* | [**metadata_dapps_get**](docs/METADATA_API.md#metadata_dapps_get) | **Get** /metadata/dapps | List all decentralized applications.
+*UNISWAPV2ETHEREUM_API* | [**u_ni_sw_ap_v2_et_he_re_um_liquidity_pools_current**](docs/UNISWAPV2ETHEREUM_API.md#u_ni_sw_ap_v2_et_he_re_um_liquidity_pools_current) | **Get** /v1/dapps/uniswap-v2-ethereum/liquidityPools/current | LiquidityPools (current)
+*UNISWAPV2ETHEREUM_API* | [**u_ni_sw_ap_v2_et_he_re_um_swaps_current**](docs/UNISWAPV2ETHEREUM_API.md#u_ni_sw_ap_v2_et_he_re_um_swaps_current) | **Get** /v1/dapps/uniswap-v2-ethereum/swaps/current | Swaps (current)
+*UNISWAPV2ETHEREUM_API* | [**u_ni_sw_ap_v2_et_he_re_um_tokens_current**](docs/UNISWAPV2ETHEREUM_API.md#u_ni_sw_ap_v2_et_he_re_um_tokens_current) | **Get** /v1/dapps/uniswap-v2-ethereum/tokens/current | Tokens (current)
 *UNISWAPV3ETHEREUM_API* | [**u_ni_sw_ap_v3_et_he_re_um_accounts_current**](docs/UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_accounts_current) | **Get** /v1/dapps/uniswap-v3-ethereum/accounts/current | Accounts (current)
 *UNISWAPV3ETHEREUM_API* | [**u_ni_sw_ap_v3_et_he_re_um_active_accounts_current**](docs/UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_active_accounts_current) | **Get** /v1/dapps/uniswap-v3-ethereum/activeAccounts/current | ActiveAccounts (current)
 *UNISWAPV3ETHEREUM_API* | [**u_ni_sw_ap_v3_et_he_re_um_deposits_current**](docs/UNISWAPV3ETHEREUM_API.md#u_ni_sw_ap_v3_et_he_re_um_deposits_current) | **Get** /v1/dapps/uniswap-v3-ethereum/deposits/current | Deposits (current)
@@ -75,6 +78,9 @@ Class | Method | HTTP request | Description
  - [CRYPTOPUNKS_TRADE_DTO](docs/CRYPTOPUNKS_TRADE_DTO.md)
  - [CRYPTOPUNKS_USER_DTO](docs/CRYPTOPUNKS_USER_DTO.md)
  - [TRANSACTIONS_E_TRADE_AGGRESSIVE_SIDE](docs/TRANSACTIONS_E_TRADE_AGGRESSIVE_SIDE.md)
+ - [UNISWAP_V2_ETHEREUM_LIQUIDITY_POOL_DTO](docs/UNISWAP_V2_ETHEREUM_LIQUIDITY_POOL_DTO.md)
+ - [UNISWAP_V2_ETHEREUM_SWAP_DTO](docs/UNISWAP_V2_ETHEREUM_SWAP_DTO.md)
+ - [UNISWAP_V2_ETHEREUM_TOKEN_DTO](docs/UNISWAP_V2_ETHEREUM_TOKEN_DTO.md)
  - [UNISWAP_V3_ETHEREUM_ACCOUNT_DTO](docs/UNISWAP_V3_ETHEREUM_ACCOUNT_DTO.md)
  - [UNISWAP_V3_ETHEREUM_ACTIVE_ACCOUNT_DTO](docs/UNISWAP_V3_ETHEREUM_ACTIVE_ACCOUNT_DTO.md)
  - [UNISWAP_V3_ETHEREUM_DEPOSIT_DTO](docs/UNISWAP_V3_ETHEREUM_DEPOSIT_DTO.md)

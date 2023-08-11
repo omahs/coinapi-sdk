@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Reward tokens awarded to lenders and borrowers.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-11T08:59:46.345876Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-11T13:17:43.222666Z[Etc/UTC]")
 public class UNISWAPV3ETHEREUMRewardTokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)

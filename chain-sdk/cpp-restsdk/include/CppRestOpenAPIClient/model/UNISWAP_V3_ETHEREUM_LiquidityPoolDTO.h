@@ -13,7 +13,7 @@
 /*
  * UNISWAP_V3_ETHEREUM_LiquidityPoolDTO.h
  *
- * All Uniswap V3 pools.
+ * Pool-level metadata.
  */
 
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_UNISWAP_V3_ETHEREUM_LiquidityPoolDTO_H_
@@ -32,7 +32,7 @@ namespace model {
 
 
 /// <summary>
-/// All Uniswap V3 pools.
+/// Pool-level metadata.
 /// </summary>
 class  UNISWAP_V3_ETHEREUM_LiquidityPoolDTO
     : public ModelBase

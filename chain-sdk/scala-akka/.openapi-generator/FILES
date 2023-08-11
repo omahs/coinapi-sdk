@@ -13,6 +13,10 @@ docs/CRYPTOPUNKSTradeDTO.md
 docs/CRYPTOPUNKSUserDTO.md
 docs/MetadataApi.md
 docs/TransactionsETradeAggressiveSide.md
+docs/UNISWAPV2ETHEREUMApi.md
+docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
+docs/UNISWAPV2ETHEREUMSwapDTO.md
+docs/UNISWAPV2ETHEREUMTokenDTO.md
 docs/UNISWAPV3ETHEREUMAccountDTO.md
 docs/UNISWAPV3ETHEREUMActiveAccountDTO.md
 docs/UNISWAPV3ETHEREUMApi.md
@@ -20,18 +24,15 @@ docs/UNISWAPV3ETHEREUMDepositDTO.md
 docs/UNISWAPV3ETHEREUMDexAmmProtocolDTO.md
 docs/UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolAmountDTO.md
-docs/UNISWAPV3ETHEREUMLiquidityPoolDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolFeeDTO.md
 docs/UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMPositionDTO.md
 docs/UNISWAPV3ETHEREUMPositionSnapshotDTO.md
 docs/UNISWAPV3ETHEREUMRewardTokenDTO.md
-docs/UNISWAPV3ETHEREUMSwapDTO.md
 docs/UNISWAPV3ETHEREUMTickDTO.md
 docs/UNISWAPV3ETHEREUMTickDailySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMTickHourlySnapshotDTO.md
-docs/UNISWAPV3ETHEREUMTokenDTO.md
 docs/UNISWAPV3ETHEREUMTokenWhiteListDTO.md
 docs/UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO.md
 docs/UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO.md
@@ -43,6 +44,7 @@ src/main/resources/reference.conf
 src/main/scala/org/openapitools/client/api/CRYPTOPUNKSApi.scala
 src/main/scala/org/openapitools/client/api/EnumsSerializers.scala
 src/main/scala/org/openapitools/client/api/MetadataApi.scala
+src/main/scala/org/openapitools/client/api/UNISWAPV2ETHEREUMApi.scala
 src/main/scala/org/openapitools/client/api/UNISWAPV3ETHEREUMApi.scala
 src/main/scala/org/openapitools/client/core/ApiInvoker.scala
 src/main/scala/org/openapitools/client/core/ApiRequest.scala

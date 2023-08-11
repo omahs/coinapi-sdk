@@ -13,7 +13,7 @@ No summary available.
 
 .DESCRIPTION
 
-Trade (swap) event occurred in a pool.
+Trade (swap) event which occurred in a pool.
 
 .PARAMETER EntryTime
 No description available.

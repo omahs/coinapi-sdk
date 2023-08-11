@@ -10,7 +10,7 @@ import 'package:built_value/serializer.dart';
 
 part 'uniswapv3_ethereum_swap_dto.g.dart';
 
-/// Trade (swap) event occurred in a pool.
+/// Trade (swap) event which occurred in a pool.
 ///
 /// Properties:
 /// * [entryTime] 

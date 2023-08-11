@@ -16,9 +16,11 @@ Module : OnChainDapps-REST.API
 module OnChainDapps-REST.API
   ( module OnChainDapps-REST.API.CRYPTOPUNKS
   , module OnChainDapps-REST.API.Metadata
+  , module OnChainDapps-REST.API.UNISWAPV2ETHEREUM
   , module OnChainDapps-REST.API.UNISWAPV3ETHEREUM
   ) where
 
 import OnChainDapps-REST.API.CRYPTOPUNKS
 import OnChainDapps-REST.API.Metadata
+import OnChainDapps-REST.API.UNISWAPV2ETHEREUM
 import OnChainDapps-REST.API.UNISWAPV3ETHEREUM

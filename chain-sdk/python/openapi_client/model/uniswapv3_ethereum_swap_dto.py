@@ -32,7 +32,7 @@ class UNISWAPV3ETHEREUMSwapDTO(
 
     Do not edit the class manually.
 
-    Trade (swap) event occurred in a pool.
+    Trade (swap) event which occurred in a pool.
     """
 
 

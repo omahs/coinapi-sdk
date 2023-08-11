@@ -73,6 +73,17 @@ Method | HTTP request | Description
 *metadataDappsGetASync* | *GET* /metadata/dapps | List all decentralized applications..
 
 
+### UNISWAPV2ETHEREUMManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*uNISWAPV2ETHEREUMLiquidityPools (current)Sync* | *GET* /v1/dapps/uniswap-v2-ethereum/liquidityPools/current | LiquidityPools (current).
+*uNISWAPV2ETHEREUMLiquidityPools (current)ASync* | *GET* /v1/dapps/uniswap-v2-ethereum/liquidityPools/current | LiquidityPools (current).
+*uNISWAPV2ETHEREUMSwaps (current)Sync* | *GET* /v1/dapps/uniswap-v2-ethereum/swaps/current | Swaps (current).
+*uNISWAPV2ETHEREUMSwaps (current)ASync* | *GET* /v1/dapps/uniswap-v2-ethereum/swaps/current | Swaps (current).
+*uNISWAPV2ETHEREUMTokens (current)Sync* | *GET* /v1/dapps/uniswap-v2-ethereum/tokens/current | Tokens (current).
+*uNISWAPV2ETHEREUMTokens (current)ASync* | *GET* /v1/dapps/uniswap-v2-ethereum/tokens/current | Tokens (current).
+
+
 ### UNISWAPV3ETHEREUMManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -137,20 +148,23 @@ Class | Description
  *CRYPTOPUNKS.TradeDTO* | 
  *CRYPTOPUNKS.UserDTO* | 
  *Transactions.ETradeAggressiveSide* | 
+ *UNISWAP_V2_ETHEREUM.LiquidityPoolDTO* | Pool-level metadata.
+ *UNISWAP_V2_ETHEREUM.SwapDTO* | Trade (swap) event which occurred in a pool.
+ *UNISWAP_V2_ETHEREUM.TokenDTO* | Stores aggregated information for a specific token across all pairs that token is included in.
  *UNISWAP_V3_ETHEREUM.AccountDTO* | 
  *UNISWAP_V3_ETHEREUM.ActiveAccountDTO* | Entity for calculating daily/hourly active users.
  *UNISWAP_V3_ETHEREUM.DepositDTO* | Entity represents a user action in the protocol involving the addition of funds to a liquidity pool.
  *UNISWAP_V3_ETHEREUM.DexAmmProtocolDTO* |  Decentralized exchange (Dex) automated market maker (Amm) protocol. It's an entity that represents a protocol involving a smart contract that use automated market makers.
  *UNISWAP_V3_ETHEREUM.FinancialsDailySnapshotDTO* | Daily financial metrics for Uniswap V3.
  *UNISWAP_V3_ETHEREUM.LiquidityPoolAmountDTO* | 
- *UNISWAP_V3_ETHEREUM.LiquidityPoolDTO* | All Uniswap V3 pools.
+ *UNISWAP_V3_ETHEREUM.LiquidityPoolDTO* | Pool-level metadata.
  *UNISWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO* | Represents a liquidity pool daily snapshot for Uniswap V3.
  *UNISWAP_V3_ETHEREUM.LiquidityPoolFeeDTO* | 
  *UNISWAP_V3_ETHEREUM.LiquidityPoolHourlySnapshotDTO* | 
  *UNISWAP_V3_ETHEREUM.PositionDTO* | 
  *UNISWAP_V3_ETHEREUM.PositionSnapshotDTO* | 
  *UNISWAP_V3_ETHEREUM.RewardTokenDTO* | Reward tokens awarded to lenders and borrowers.
- *UNISWAP_V3_ETHEREUM.SwapDTO* | Trade (swap) event occurred in a pool.
+ *UNISWAP_V3_ETHEREUM.SwapDTO* | Trade (swap) event which occurred in a pool.
  *UNISWAP_V3_ETHEREUM.TickDTO* | 
  *UNISWAP_V3_ETHEREUM.TickDailySnapshotDTO* | 
  *UNISWAP_V3_ETHEREUM.TickHourlySnapshotDTO* | 

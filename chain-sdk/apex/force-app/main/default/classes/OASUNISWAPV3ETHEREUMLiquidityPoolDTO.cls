@@ -11,7 +11,7 @@
  */
 
 /**
- * All Uniswap V3 pools.
+ * Pool-level metadata.
  */
 public class OASUNISWAPV3ETHEREUMLiquidityPoolDTO implements OAS.MappedProperties {
     /**

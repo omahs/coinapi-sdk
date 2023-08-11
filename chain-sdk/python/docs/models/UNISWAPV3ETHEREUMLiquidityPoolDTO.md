@@ -1,11 +1,11 @@
 # openapi_client.model.uniswapv3_ethereum_liquidity_pool_dto.UNISWAPV3ETHEREUMLiquidityPoolDTO
 
-All Uniswap V3 pools.
+Pool-level metadata.
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  | All Uniswap V3 pools. | 
+dict, frozendict.frozendict,  | frozendict.frozendict,  | Pool-level metadata. | 
 
 ### Dictionary Keys
 Key | Input Type | Accessed Type | Description | Notes

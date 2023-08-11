@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { TransactionsETradeAggressiveSide } from './transactionsETradeAggressiveSide';
 
 /**
-* Trade (swap) event occurred in a pool.
+* Trade (swap) event which occurred in a pool.
 */
 export class UNISWAPV3ETHEREUMSwapDTO {
     'entryTime'?: Date;

@@ -77,6 +77,9 @@ Category | Method | HTTP request | Description
 *MetadataAPI* | [**MetadataAPI_metadataChainsGet**](docs/MetadataAPI.md#MetadataAPI_metadataChainsGet) | **GET** /metadata/chains | List all chains.
 *MetadataAPI* | [**MetadataAPI_metadataDappsDappNameGet**](docs/MetadataAPI.md#MetadataAPI_metadataDappsDappNameGet) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
 *MetadataAPI* | [**MetadataAPI_metadataDappsGet**](docs/MetadataAPI.md#MetadataAPI_metadataDappsGet) | **GET** /metadata/dapps | List all decentralized applications.
+*UNISWAPV2ETHEREUMAPI* | [**UNISWAPV2ETHEREUMAPI_uNISWAPV2ETHEREUMLiquidityPoolsCurrent**](docs/UNISWAPV2ETHEREUMAPI.md#UNISWAPV2ETHEREUMAPI_uNISWAPV2ETHEREUMLiquidityPoolsCurrent) | **GET** /v1/dapps/uniswap-v2-ethereum/liquidityPools/current | LiquidityPools (current)
+*UNISWAPV2ETHEREUMAPI* | [**UNISWAPV2ETHEREUMAPI_uNISWAPV2ETHEREUMSwapsCurrent**](docs/UNISWAPV2ETHEREUMAPI.md#UNISWAPV2ETHEREUMAPI_uNISWAPV2ETHEREUMSwapsCurrent) | **GET** /v1/dapps/uniswap-v2-ethereum/swaps/current | Swaps (current)
+*UNISWAPV2ETHEREUMAPI* | [**UNISWAPV2ETHEREUMAPI_uNISWAPV2ETHEREUMTokensCurrent**](docs/UNISWAPV2ETHEREUMAPI.md#UNISWAPV2ETHEREUMAPI_uNISWAPV2ETHEREUMTokensCurrent) | **GET** /v1/dapps/uniswap-v2-ethereum/tokens/current | Tokens (current)
 *UNISWAPV3ETHEREUMAPI* | [**UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMAccountsCurrent**](docs/UNISWAPV3ETHEREUMAPI.md#UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMAccountsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/accounts/current | Accounts (current)
 *UNISWAPV3ETHEREUMAPI* | [**UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMActiveAccountsCurrent**](docs/UNISWAPV3ETHEREUMAPI.md#UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMActiveAccountsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/activeAccounts/current | ActiveAccounts (current)
 *UNISWAPV3ETHEREUMAPI* | [**UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMDepositsCurrent**](docs/UNISWAPV3ETHEREUMAPI.md#UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMDepositsCurrent) | **GET** /v1/dapps/uniswap-v3-ethereum/deposits/current | Deposits (current)
@@ -114,6 +117,9 @@ Category | Method | HTTP request | Description
  - [cryptopunks_trade_dto_t](docs/cryptopunks_trade_dto.md)
  - [cryptopunks_user_dto_t](docs/cryptopunks_user_dto.md)
  - [transactions_e_trade_aggressive_side_t](docs/transactions_e_trade_aggressive_side.md)
+ - [uniswap_v2_ethereum_liquidity_pool_dto_t](docs/uniswap_v2_ethereum_liquidity_pool_dto.md)
+ - [uniswap_v2_ethereum_swap_dto_t](docs/uniswap_v2_ethereum_swap_dto.md)
+ - [uniswap_v2_ethereum_token_dto_t](docs/uniswap_v2_ethereum_token_dto.md)
  - [uniswap_v3_ethereum_account_dto_t](docs/uniswap_v3_ethereum_account_dto.md)
  - [uniswap_v3_ethereum_active_account_dto_t](docs/uniswap_v3_ethereum_active_account_dto.md)
  - [uniswap_v3_ethereum_deposit_dto_t](docs/uniswap_v3_ethereum_deposit_dto.md)

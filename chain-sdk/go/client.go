@@ -54,6 +54,8 @@ type APIClient struct {
 
 	MetadataApi *MetadataApiService
 
+	UNISWAPV2ETHEREUMApi *UNISWAPV2ETHEREUMApiService
+
 	UNISWAPV3ETHEREUMApi *UNISWAPV3ETHEREUMApiService
 }
 
@@ -75,6 +77,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	// API Services
 	c.CRYPTOPUNKSApi = (*CRYPTOPUNKSApiService)(&c.common)
 	c.MetadataApi = (*MetadataApiService)(&c.common)
+	c.UNISWAPV2ETHEREUMApi = (*UNISWAPV2ETHEREUMApiService)(&c.common)
 	c.UNISWAPV3ETHEREUMApi = (*UNISWAPV3ETHEREUMApiService)(&c.common)
 
 	return c

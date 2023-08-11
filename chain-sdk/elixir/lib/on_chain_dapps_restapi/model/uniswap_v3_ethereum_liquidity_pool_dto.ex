@@ -3,7 +3,7 @@
 
 defmodule OnChainDapps-RESTAPI.Model.UniswapV3EthereumLiquidityPoolDto do
   @moduledoc """
-  All Uniswap V3 pools.
+  Pool-level metadata.
   """
 
   @derive [Poison.Encoder]

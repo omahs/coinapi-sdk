@@ -19,8 +19,11 @@
             [on-chain-dapps-rest-api.specs.transactions/e-trade-aggressive-side :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/financials-daily-snapshot-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/token-dto :refer :all]
+            [on-chain-dapps-rest-api.specs.uniswap-v2-ethereum/token-dto :refer :all]
+            [on-chain-dapps-rest-api.specs.uniswap-v2-ethereum/swap-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/position-snapshot-dto :refer :all]
             [on-chain-dapps-rest-api.specs.cryptopunks/market-place-dto :refer :all]
+            [on-chain-dapps-rest-api.specs.uniswap-v2-ethereum/liquidity-pool-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/account-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/liquidity-pool-hourly-snapshot-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/withdraw-dto :refer :all]
@@ -38,6 +41,75 @@
             [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/swap-dto :refer :all]
             )
   (:import (java.io File)))
+
+
+(defn-spec u-niswapv2-ethereum-liquidity-pools-current-with-http-info any?
+  "LiquidityPools (current)
+  Gets liquidityPools."
+  []
+  (call-api "/v1/dapps/uniswap-v2-ethereum/liquidityPools/current" :get
+            {:path-params   {}
+             :header-params {}
+             :query-params  {}
+             :form-params   {}
+             :content-types []
+             :accepts       ["text/plain" "application/json" "text/json" "application/x-msgpack"]
+             :auth-names    []}))
+
+(defn-spec u-niswapv2-ethereum-liquidity-pools-current (s/coll-of uniswap-v2-ethereum/liquidity-pool-dto-spec)
+  "LiquidityPools (current)
+  Gets liquidityPools."
+  []
+  (let [res (:data (u-niswapv2-ethereum-liquidity-pools-current-with-http-info))]
+    (if (:decode-models *api-context*)
+       (st/decode (s/coll-of uniswap-v2-ethereum/liquidity-pool-dto-spec) res st/string-transformer)
+       res)))
+
+
+(defn-spec u-niswapv2-ethereum-swaps-current-with-http-info any?
+  "Swaps (current)
+  Gets swaps."
+  []
+  (call-api "/v1/dapps/uniswap-v2-ethereum/swaps/current" :get
+            {:path-params   {}
+             :header-params {}
+             :query-params  {}
+             :form-params   {}
+             :content-types []
+             :accepts       ["text/plain" "application/json" "text/json" "application/x-msgpack"]
+             :auth-names    []}))
+
+(defn-spec u-niswapv2-ethereum-swaps-current (s/coll-of uniswap-v2-ethereum/swap-dto-spec)
+  "Swaps (current)
+  Gets swaps."
+  []
+  (let [res (:data (u-niswapv2-ethereum-swaps-current-with-http-info))]
+    (if (:decode-models *api-context*)
+       (st/decode (s/coll-of uniswap-v2-ethereum/swap-dto-spec) res st/string-transformer)
+       res)))
+
+
+(defn-spec u-niswapv2-ethereum-tokens-current-with-http-info any?
+  "Tokens (current)
+  Gets tokens."
+  []
+  (call-api "/v1/dapps/uniswap-v2-ethereum/tokens/current" :get
+            {:path-params   {}
+             :header-params {}
+             :query-params  {}
+             :form-params   {}
+             :content-types []
+             :accepts       ["text/plain" "application/json" "text/json" "application/x-msgpack"]
+             :auth-names    []}))
+
+(defn-spec u-niswapv2-ethereum-tokens-current (s/coll-of uniswap-v2-ethereum/token-dto-spec)
+  "Tokens (current)
+  Gets tokens."
+  []
+  (let [res (:data (u-niswapv2-ethereum-tokens-current-with-http-info))]
+    (if (:decode-models *api-context*)
+       (st/decode (s/coll-of uniswap-v2-ethereum/token-dto-spec) res st/string-transformer)
+       res)))
 
 
 (defn-spec u-niswapv3-ethereum-accounts-current-with-http-info any?

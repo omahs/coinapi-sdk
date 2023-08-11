@@ -94,6 +94,9 @@ Class | Method | HTTP request | Description
 *MetadataApi* | [**MetadataChainsGet**](docs/MetadataApi.md#metadatachainsget) | **Get** /metadata/chains | List all chains.
 *MetadataApi* | [**MetadataDappsDappNameGet**](docs/MetadataApi.md#metadatadappsdappnameget) | **Get** /metadata/dapps/{dappName} | Gets dapp by name.
 *MetadataApi* | [**MetadataDappsGet**](docs/MetadataApi.md#metadatadappsget) | **Get** /metadata/dapps | List all decentralized applications.
+*UNISWAPV2ETHEREUMApi* | [**UNISWAPV2ETHEREUMLiquidityPoolsCurrent**](docs/UNISWAPV2ETHEREUMApi.md#uniswapv2ethereumliquiditypoolscurrent) | **Get** /v1/dapps/uniswap-v2-ethereum/liquidityPools/current | LiquidityPools (current)
+*UNISWAPV2ETHEREUMApi* | [**UNISWAPV2ETHEREUMSwapsCurrent**](docs/UNISWAPV2ETHEREUMApi.md#uniswapv2ethereumswapscurrent) | **Get** /v1/dapps/uniswap-v2-ethereum/swaps/current | Swaps (current)
+*UNISWAPV2ETHEREUMApi* | [**UNISWAPV2ETHEREUMTokensCurrent**](docs/UNISWAPV2ETHEREUMApi.md#uniswapv2ethereumtokenscurrent) | **Get** /v1/dapps/uniswap-v2-ethereum/tokens/current | Tokens (current)
 *UNISWAPV3ETHEREUMApi* | [**UNISWAPV3ETHEREUMAccountsCurrent**](docs/UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumaccountscurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/accounts/current | Accounts (current)
 *UNISWAPV3ETHEREUMApi* | [**UNISWAPV3ETHEREUMActiveAccountsCurrent**](docs/UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumactiveaccountscurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/activeAccounts/current | ActiveAccounts (current)
 *UNISWAPV3ETHEREUMApi* | [**UNISWAPV3ETHEREUMDepositsCurrent**](docs/UNISWAPV3ETHEREUMApi.md#uniswapv3ethereumdepositscurrent) | **Get** /v1/dapps/uniswap-v3-ethereum/deposits/current | Deposits (current)
@@ -131,6 +134,9 @@ Class | Method | HTTP request | Description
  - [CRYPTOPUNKSTradeDTO](docs/CRYPTOPUNKSTradeDTO.md)
  - [CRYPTOPUNKSUserDTO](docs/CRYPTOPUNKSUserDTO.md)
  - [TransactionsETradeAggressiveSide](docs/TransactionsETradeAggressiveSide.md)
+ - [UNISWAPV2ETHEREUMLiquidityPoolDTO](docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md)
+ - [UNISWAPV2ETHEREUMSwapDTO](docs/UNISWAPV2ETHEREUMSwapDTO.md)
+ - [UNISWAPV2ETHEREUMTokenDTO](docs/UNISWAPV2ETHEREUMTokenDTO.md)
  - [UNISWAPV3ETHEREUMAccountDTO](docs/UNISWAPV3ETHEREUMAccountDTO.md)
  - [UNISWAPV3ETHEREUMActiveAccountDTO](docs/UNISWAPV3ETHEREUMActiveAccountDTO.md)
  - [UNISWAPV3ETHEREUMDepositDTO](docs/UNISWAPV3ETHEREUMDepositDTO.md)

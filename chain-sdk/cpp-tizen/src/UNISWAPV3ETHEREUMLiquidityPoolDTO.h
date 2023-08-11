@@ -1,7 +1,7 @@
 /*
  * UNISWAP_V3_ETHEREUM.LiquidityPoolDTO.h
  *
- * All Uniswap V3 pools.
+ * Pool-level metadata.
  */
 
 #ifndef _UNISWAP_V3_ETHEREUM.LiquidityPoolDTO_H_
@@ -21,7 +21,7 @@ namespace Tizen {
 namespace ArtikCloud {
 
 
-/*! \brief All Uniswap V3 pools.
+/*! \brief Pool-level metadata.
  *
  *  \ingroup Models
  *

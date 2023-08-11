@@ -15,6 +15,10 @@ doc/CRYPTOPUNKSTradeDTO.md
 doc/CRYPTOPUNKSUserDTO.md
 doc/MetadataApi.md
 doc/TransactionsETradeAggressiveSide.md
+doc/UNISWAPV2ETHEREUMApi.md
+doc/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
+doc/UNISWAPV2ETHEREUMSwapDTO.md
+doc/UNISWAPV2ETHEREUMTokenDTO.md
 doc/UNISWAPV3ETHEREUMAccountDTO.md
 doc/UNISWAPV3ETHEREUMActiveAccountDTO.md
 doc/UNISWAPV3ETHEREUMApi.md
@@ -43,6 +47,7 @@ git_push.sh
 lib/api.dart
 lib/api/cryptopunks_api.dart
 lib/api/metadata_api.dart
+lib/api/uniswapv2_ethereum_api.dart
 lib/api/uniswapv3_ethereum_api.dart
 lib/api_client.dart
 lib/api_exception.dart
@@ -62,6 +67,9 @@ lib/model/cryptopunks_marketplace_daily_snapshot_dto.dart
 lib/model/cryptopunks_trade_dto.dart
 lib/model/cryptopunks_user_dto.dart
 lib/model/transactions_e_trade_aggressive_side.dart
+lib/model/uniswapv2_ethereum_liquidity_pool_dto.dart
+lib/model/uniswapv2_ethereum_swap_dto.dart
+lib/model/uniswapv2_ethereum_token_dto.dart
 lib/model/uniswapv3_ethereum_account_dto.dart
 lib/model/uniswapv3_ethereum_active_account_dto.dart
 lib/model/uniswapv3_ethereum_deposit_dto.dart
@@ -98,6 +106,10 @@ test/cryptopunks_trade_dto_test.dart
 test/cryptopunks_user_dto_test.dart
 test/metadata_api_test.dart
 test/transactions_e_trade_aggressive_side_test.dart
+test/uniswapv2_ethereum_api_test.dart
+test/uniswapv2_ethereum_liquidity_pool_dto_test.dart
+test/uniswapv2_ethereum_swap_dto_test.dart
+test/uniswapv2_ethereum_token_dto_test.dart
 test/uniswapv3_ethereum_account_dto_test.dart
 test/uniswapv3_ethereum_active_account_dto_test.dart
 test/uniswapv3_ethereum_api_test.dart

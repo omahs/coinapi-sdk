@@ -2,6 +2,8 @@ export * from './cRYPTOPUNKSApi';
 import { CRYPTOPUNKSApi } from './cRYPTOPUNKSApi';
 export * from './metadataApi';
 import { MetadataApi } from './metadataApi';
+export * from './uNISWAPV2ETHEREUMApi';
+import { UNISWAPV2ETHEREUMApi } from './uNISWAPV2ETHEREUMApi';
 export * from './uNISWAPV3ETHEREUMApi';
 import { UNISWAPV3ETHEREUMApi } from './uNISWAPV3ETHEREUMApi';
 import * as http from 'http';
@@ -15,4 +17,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [CRYPTOPUNKSApi, MetadataApi, UNISWAPV3ETHEREUMApi];
+export const APIS = [CRYPTOPUNKSApi, MetadataApi, UNISWAPV2ETHEREUMApi, UNISWAPV3ETHEREUMApi];

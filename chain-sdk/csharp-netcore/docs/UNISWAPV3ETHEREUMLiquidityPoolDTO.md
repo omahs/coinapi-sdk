@@ -1,5 +1,5 @@
 # CoinAPI.EMS.REST.V1.Model.UNISWAPV3ETHEREUMLiquidityPoolDTO
-All Uniswap V3 pools.
+Pool-level metadata.
 
 ## Properties
 

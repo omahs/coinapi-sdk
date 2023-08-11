@@ -82,6 +82,24 @@ package .Clients is
    procedure Metadata_Dapps_Get
       (Client : in out Client_Type);
 
+   --  LiquidityPools (current)
+   --  Gets liquidityPools.
+   procedure U_NISWAPV2ETHEREUM_Liquidity_Pools__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV2ETHEREUMLiquidityPoolDTO_Type_Vectors.Vector);
+
+   --  Swaps (current)
+   --  Gets swaps.
+   procedure U_NISWAPV2ETHEREUM_Swaps__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV2ETHEREUMSwapDTO_Type_Vectors.Vector);
+
+   --  Tokens (current)
+   --  Gets tokens.
+   procedure U_NISWAPV2ETHEREUM_Tokens__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV2ETHEREUMTokenDTO_Type_Vectors.Vector);
+
    --  Accounts (current)
    --  Gets accounts.
    procedure U_NISWAPV3ETHEREUM_Accounts__current

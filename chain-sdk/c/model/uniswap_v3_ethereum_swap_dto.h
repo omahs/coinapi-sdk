@@ -1,7 +1,7 @@
 /*
  * uniswap_v3_ethereum_swap_dto.h
  *
- * Trade (swap) event occurred in a pool.
+ * Trade (swap) event which occurred in a pool.
  */
 
 #ifndef _uniswap_v3_ethereum_swap_dto_H_

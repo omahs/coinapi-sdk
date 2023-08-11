@@ -34,6 +34,14 @@ src/Object.h
 src/RequestInfo.h
 src/TransactionsETradeAggressiveSide.cpp
 src/TransactionsETradeAggressiveSide.h
+src/UNISWAPV2ETHEREUMLiquidityPoolDTO.cpp
+src/UNISWAPV2ETHEREUMLiquidityPoolDTO.h
+src/UNISWAPV2ETHEREUMManager.cpp
+src/UNISWAPV2ETHEREUMManager.h
+src/UNISWAPV2ETHEREUMSwapDTO.cpp
+src/UNISWAPV2ETHEREUMSwapDTO.h
+src/UNISWAPV2ETHEREUMTokenDTO.cpp
+src/UNISWAPV2ETHEREUMTokenDTO.h
 src/UNISWAPV3ETHEREUMAccountDTO.cpp
 src/UNISWAPV3ETHEREUMAccountDTO.h
 src/UNISWAPV3ETHEREUMActiveAccountDTO.cpp

@@ -1,7 +1,7 @@
 /*
  * UNISWAP_V3_ETHEREUM.SwapDTO.h
  *
- * Trade (swap) event occurred in a pool.
+ * Trade (swap) event which occurred in a pool.
  */
 
 #ifndef _UNISWAP_V3_ETHEREUM.SwapDTO_H_
@@ -22,7 +22,7 @@ namespace Tizen {
 namespace ArtikCloud {
 
 
-/*! \brief Trade (swap) event occurred in a pool.
+/*! \brief Trade (swap) event which occurred in a pool.
  *
  *  \ingroup Models
  *

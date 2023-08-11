@@ -2,7 +2,7 @@
 
 # LiquidityPoolDTO
 
-All Uniswap V3 pools.
+Pool-level metadata.
 
 ## Properties
 

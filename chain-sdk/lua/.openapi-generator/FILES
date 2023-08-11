@@ -4,6 +4,7 @@ git_push.sh
 openapiclient-1.0.0-1.rockspec
 openapiclient/api/cryptopunks_api.lua
 openapiclient/api/metadata_api.lua
+openapiclient/api/uniswapv2_ethereum_api.lua
 openapiclient/api/uniswapv3_ethereum_api.lua
 openapiclient/model/cryptopunks_bid_dto.lua
 openapiclient/model/cryptopunks_collection_daily_snapshot_dto.lua
@@ -15,6 +16,9 @@ openapiclient/model/cryptopunks_marketplace_daily_snapshot_dto.lua
 openapiclient/model/cryptopunks_trade_dto.lua
 openapiclient/model/cryptopunks_user_dto.lua
 openapiclient/model/transactions_e_trade_aggressive_side.lua
+openapiclient/model/uniswap_v2_ethereum_liquidity_pool_dto.lua
+openapiclient/model/uniswap_v2_ethereum_swap_dto.lua
+openapiclient/model/uniswap_v2_ethereum_token_dto.lua
 openapiclient/model/uniswap_v3_ethereum_account_dto.lua
 openapiclient/model/uniswap_v3_ethereum_active_account_dto.lua
 openapiclient/model/uniswap_v3_ethereum_deposit_dto.lua
@@ -50,6 +54,9 @@ spec/cryptopunks_trade_dto_spec.lua
 spec/cryptopunks_user_dto_spec.lua
 spec/metadata_api_spec.lua
 spec/transactions_e_trade_aggressive_side_spec.lua
+spec/uniswap_v2_ethereum_liquidity_pool_dto_spec.lua
+spec/uniswap_v2_ethereum_swap_dto_spec.lua
+spec/uniswap_v2_ethereum_token_dto_spec.lua
 spec/uniswap_v3_ethereum_account_dto_spec.lua
 spec/uniswap_v3_ethereum_active_account_dto_spec.lua
 spec/uniswap_v3_ethereum_deposit_dto_spec.lua
@@ -73,4 +80,5 @@ spec/uniswap_v3_ethereum_token_white_list_symbol_dto_spec.lua
 spec/uniswap_v3_ethereum_usage_metrics_daily_snapshot_dto_spec.lua
 spec/uniswap_v3_ethereum_usage_metrics_hourly_snapshot_dto_spec.lua
 spec/uniswap_v3_ethereum_withdraw_dto_spec.lua
+spec/uniswapv2_ethereum_api_spec.lua
 spec/uniswapv3_ethereum_api_spec.lua

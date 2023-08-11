@@ -36,7 +36,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * UNISWAPV3ETHEREUMSwapDTO Class Doc Comment
  *
  * @category Class
- * @description Trade (swap) event occurred in a pool.
+ * @description Trade (swap) event which occurred in a pool.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

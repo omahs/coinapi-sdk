@@ -1,11 +1,11 @@
 # openapi_client.model.uniswapv3_ethereum_swap_dto.UNISWAPV3ETHEREUMSwapDTO
 
-Trade (swap) event occurred in a pool.
+Trade (swap) event which occurred in a pool.
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  | Trade (swap) event occurred in a pool. | 
+dict, frozendict.frozendict,  | frozendict.frozendict,  | Trade (swap) event which occurred in a pool. | 
 
 ### Dictionary Keys
 Key | Input Type | Accessed Type | Description | Notes

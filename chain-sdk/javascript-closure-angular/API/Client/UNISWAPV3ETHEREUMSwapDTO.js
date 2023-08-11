@@ -1,7 +1,7 @@
 goog.provide('API.Client.UNISWAP_V3_ETHEREUM.SwapDTO');
 
 /**
- * Trade (swap) event occurred in a pool.
+ * Trade (swap) event which occurred in a pool.
  * @record
  */
 API.Client.UNISWAPV3ETHEREUMSwapDTO = function() {}

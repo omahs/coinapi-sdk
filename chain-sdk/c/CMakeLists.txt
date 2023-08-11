@@ -64,6 +64,9 @@ set(SRCS
     model/cryptopunks_trade_dto.c
     model/cryptopunks_user_dto.c
     model/transactions_e_trade_aggressive_side.c
+    model/uniswap_v2_ethereum_liquidity_pool_dto.c
+    model/uniswap_v2_ethereum_swap_dto.c
+    model/uniswap_v2_ethereum_token_dto.c
     model/uniswap_v3_ethereum_account_dto.c
     model/uniswap_v3_ethereum_active_account_dto.c
     model/uniswap_v3_ethereum_deposit_dto.c
@@ -89,6 +92,7 @@ set(SRCS
     model/uniswap_v3_ethereum_withdraw_dto.c
     api/CRYPTOPUNKSAPI.c
     api/MetadataAPI.c
+    api/UNISWAPV2ETHEREUMAPI.c
     api/UNISWAPV3ETHEREUMAPI.c
 
 )
@@ -110,6 +114,9 @@ set(HDRS
     model/cryptopunks_trade_dto.h
     model/cryptopunks_user_dto.h
     model/transactions_e_trade_aggressive_side.h
+    model/uniswap_v2_ethereum_liquidity_pool_dto.h
+    model/uniswap_v2_ethereum_swap_dto.h
+    model/uniswap_v2_ethereum_token_dto.h
     model/uniswap_v3_ethereum_account_dto.h
     model/uniswap_v3_ethereum_active_account_dto.h
     model/uniswap_v3_ethereum_deposit_dto.h
@@ -135,6 +142,7 @@ set(HDRS
     model/uniswap_v3_ethereum_withdraw_dto.h
     api/CRYPTOPUNKSAPI.h
     api/MetadataAPI.h
+    api/UNISWAPV2ETHEREUMAPI.h
     api/UNISWAPV3ETHEREUMAPI.h
 
 )
@@ -219,6 +227,7 @@ set(HDRS "")
 #set(SRCS
 #    unit-tests/manual-CRYPTOPUNKSAPI.c
 #    unit-tests/manual-MetadataAPI.c
+#    unit-tests/manual-UNISWAPV2ETHEREUMAPI.c
 #    unit-tests/manual-UNISWAPV3ETHEREUMAPI.c
 #)
 

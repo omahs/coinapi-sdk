@@ -25,7 +25,7 @@ using OpenAPIDateConverter = CoinAPI.EMS.REST.V1.Client.OpenAPIDateConverter;
 namespace CoinAPI.EMS.REST.V1.Model
 {
     /// <summary>
-    /// Trade (swap) event occurred in a pool.
+    /// Trade (swap) event which occurred in a pool.
     /// </summary>
     [DataContract]
     public partial class UNISWAPV3ETHEREUMSwapDTO :  IEquatable<UNISWAPV3ETHEREUMSwapDTO>, IValidatableObject

@@ -3,7 +3,7 @@
 
 defmodule OnChainDapps-RESTAPI.Model.UniswapV3EthereumSwapDto do
   @moduledoc """
-  Trade (swap) event occurred in a pool.
+  Trade (swap) event which occurred in a pool.
   """
 
   @derive [Poison.Encoder]

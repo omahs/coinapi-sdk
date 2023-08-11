@@ -91,6 +91,9 @@ Class | Method | HTTP request | Description
 *OpenapiClient::MetadataApi* | [**metadata_chains_get**](docs/MetadataApi.md#metadata_chains_get) | **GET** /metadata/chains | List all chains.
 *OpenapiClient::MetadataApi* | [**metadata_dapps_dapp_name_get**](docs/MetadataApi.md#metadata_dapps_dapp_name_get) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
 *OpenapiClient::MetadataApi* | [**metadata_dapps_get**](docs/MetadataApi.md#metadata_dapps_get) | **GET** /metadata/dapps | List all decentralized applications.
+*OpenapiClient::UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_liquidity_pools__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_liquidity_pools__current) | **GET** /v1/dapps/uniswap-v2-ethereum/liquidityPools/current | LiquidityPools (current)
+*OpenapiClient::UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_swaps__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_swaps__current) | **GET** /v1/dapps/uniswap-v2-ethereum/swaps/current | Swaps (current)
+*OpenapiClient::UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_tokens__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_tokens__current) | **GET** /v1/dapps/uniswap-v2-ethereum/tokens/current | Tokens (current)
 *OpenapiClient::UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_accounts__current**](docs/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_accounts__current) | **GET** /v1/dapps/uniswap-v3-ethereum/accounts/current | Accounts (current)
 *OpenapiClient::UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_active_accounts__current**](docs/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_active_accounts__current) | **GET** /v1/dapps/uniswap-v3-ethereum/activeAccounts/current | ActiveAccounts (current)
 *OpenapiClient::UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_deposits__current**](docs/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_deposits__current) | **GET** /v1/dapps/uniswap-v3-ethereum/deposits/current | Deposits (current)
@@ -128,6 +131,9 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::CRYPTOPUNKSTradeDTO](docs/CRYPTOPUNKSTradeDTO.md)
  - [OpenapiClient::CRYPTOPUNKSUserDTO](docs/CRYPTOPUNKSUserDTO.md)
  - [OpenapiClient::TransactionsETradeAggressiveSide](docs/TransactionsETradeAggressiveSide.md)
+ - [OpenapiClient::UNISWAPV2ETHEREUMLiquidityPoolDTO](docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md)
+ - [OpenapiClient::UNISWAPV2ETHEREUMSwapDTO](docs/UNISWAPV2ETHEREUMSwapDTO.md)
+ - [OpenapiClient::UNISWAPV2ETHEREUMTokenDTO](docs/UNISWAPV2ETHEREUMTokenDTO.md)
  - [OpenapiClient::UNISWAPV3ETHEREUMAccountDTO](docs/UNISWAPV3ETHEREUMAccountDTO.md)
  - [OpenapiClient::UNISWAPV3ETHEREUMActiveAccountDTO](docs/UNISWAPV3ETHEREUMActiveAccountDTO.md)
  - [OpenapiClient::UNISWAPV3ETHEREUMDepositDTO](docs/UNISWAPV3ETHEREUMDepositDTO.md)

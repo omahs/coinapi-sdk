@@ -15,6 +15,10 @@ docs/CRYPTOPUNKSTradeDTO.md
 docs/CRYPTOPUNKSUserDTO.md
 docs/MetadataApi.md
 docs/TransactionsETradeAggressiveSide.md
+docs/UNISWAPV2ETHEREUMApi.md
+docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
+docs/UNISWAPV2ETHEREUMSwapDTO.md
+docs/UNISWAPV2ETHEREUMTokenDTO.md
 docs/UNISWAPV3ETHEREUMAccountDTO.md
 docs/UNISWAPV3ETHEREUMActiveAccountDTO.md
 docs/UNISWAPV3ETHEREUMApi.md
@@ -45,6 +49,7 @@ package.json
 src/ApiClient.js
 src/api/CRYPTOPUNKSApi.js
 src/api/MetadataApi.js
+src/api/UNISWAPV2ETHEREUMApi.js
 src/api/UNISWAPV3ETHEREUMApi.js
 src/index.js
 src/model/CRYPTOPUNKSBidDTO.js
@@ -57,6 +62,9 @@ src/model/CRYPTOPUNKSMarketplaceDailySnapshotDTO.js
 src/model/CRYPTOPUNKSTradeDTO.js
 src/model/CRYPTOPUNKSUserDTO.js
 src/model/TransactionsETradeAggressiveSide.js
+src/model/UNISWAPV2ETHEREUMLiquidityPoolDTO.js
+src/model/UNISWAPV2ETHEREUMSwapDTO.js
+src/model/UNISWAPV2ETHEREUMTokenDTO.js
 src/model/UNISWAPV3ETHEREUMAccountDTO.js
 src/model/UNISWAPV3ETHEREUMActiveAccountDTO.js
 src/model/UNISWAPV3ETHEREUMDepositDTO.js
@@ -82,6 +90,7 @@ src/model/UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.js
 src/model/UNISWAPV3ETHEREUMWithdrawDTO.js
 test/api/CRYPTOPUNKSApi.spec.js
 test/api/MetadataApi.spec.js
+test/api/UNISWAPV2ETHEREUMApi.spec.js
 test/api/UNISWAPV3ETHEREUMApi.spec.js
 test/model/CRYPTOPUNKSBidDTO.spec.js
 test/model/CRYPTOPUNKSCollectionDTO.spec.js
@@ -93,6 +102,9 @@ test/model/CRYPTOPUNKSMarketplaceDailySnapshotDTO.spec.js
 test/model/CRYPTOPUNKSTradeDTO.spec.js
 test/model/CRYPTOPUNKSUserDTO.spec.js
 test/model/TransactionsETradeAggressiveSide.spec.js
+test/model/UNISWAPV2ETHEREUMLiquidityPoolDTO.spec.js
+test/model/UNISWAPV2ETHEREUMSwapDTO.spec.js
+test/model/UNISWAPV2ETHEREUMTokenDTO.spec.js
 test/model/UNISWAPV3ETHEREUMAccountDTO.spec.js
 test/model/UNISWAPV3ETHEREUMActiveAccountDTO.spec.js
 test/model/UNISWAPV3ETHEREUMDepositDTO.spec.js

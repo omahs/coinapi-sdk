@@ -19,6 +19,10 @@ docs/CRYPTOPUNKSTradeDTO.md
 docs/CRYPTOPUNKSUserDTO.md
 docs/MetadataApi.md
 docs/TransactionsETradeAggressiveSide.md
+docs/UNISWAPV2ETHEREUMApi.md
+docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
+docs/UNISWAPV2ETHEREUMSwapDTO.md
+docs/UNISWAPV2ETHEREUMTokenDTO.md
 docs/UNISWAPV3ETHEREUMAccountDTO.md
 docs/UNISWAPV3ETHEREUMActiveAccountDTO.md
 docs/UNISWAPV3ETHEREUMApi.md
@@ -47,6 +51,7 @@ git_push.sh
 lib/openapi_client.rb
 lib/openapi_client/api/cryptopunks_api.rb
 lib/openapi_client/api/metadata_api.rb
+lib/openapi_client/api/uniswapv2_ethereum_api.rb
 lib/openapi_client/api/uniswapv3_ethereum_api.rb
 lib/openapi_client/api_client.rb
 lib/openapi_client/api_error.rb
@@ -61,6 +66,9 @@ lib/openapi_client/models/cryptopunks_marketplace_daily_snapshot_dto.rb
 lib/openapi_client/models/cryptopunks_trade_dto.rb
 lib/openapi_client/models/cryptopunks_user_dto.rb
 lib/openapi_client/models/transactions_e_trade_aggressive_side.rb
+lib/openapi_client/models/uniswapv2_ethereum_liquidity_pool_dto.rb
+lib/openapi_client/models/uniswapv2_ethereum_swap_dto.rb
+lib/openapi_client/models/uniswapv2_ethereum_token_dto.rb
 lib/openapi_client/models/uniswapv3_ethereum_account_dto.rb
 lib/openapi_client/models/uniswapv3_ethereum_active_account_dto.rb
 lib/openapi_client/models/uniswapv3_ethereum_deposit_dto.rb
@@ -88,6 +96,7 @@ lib/openapi_client/version.rb
 openapi_client.gemspec
 spec/api/cryptopunks_api_spec.rb
 spec/api/metadata_api_spec.rb
+spec/api/uniswapv2_ethereum_api_spec.rb
 spec/api/uniswapv3_ethereum_api_spec.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
@@ -101,6 +110,9 @@ spec/models/cryptopunks_marketplace_daily_snapshot_dto_spec.rb
 spec/models/cryptopunks_trade_dto_spec.rb
 spec/models/cryptopunks_user_dto_spec.rb
 spec/models/transactions_e_trade_aggressive_side_spec.rb
+spec/models/uniswapv2_ethereum_liquidity_pool_dto_spec.rb
+spec/models/uniswapv2_ethereum_swap_dto_spec.rb
+spec/models/uniswapv2_ethereum_token_dto_spec.rb
 spec/models/uniswapv3_ethereum_account_dto_spec.rb
 spec/models/uniswapv3_ethereum_active_account_dto_spec.rb
 spec/models/uniswapv3_ethereum_deposit_dto_spec.rb

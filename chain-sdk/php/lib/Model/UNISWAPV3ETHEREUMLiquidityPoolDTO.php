@@ -36,7 +36,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * UNISWAPV3ETHEREUMLiquidityPoolDTO Class Doc Comment
  *
  * @category Class
- * @description All Uniswap V3 pools.
+ * @description Pool-level metadata.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

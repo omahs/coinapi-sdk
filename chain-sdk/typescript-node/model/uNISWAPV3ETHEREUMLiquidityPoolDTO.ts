@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 /**
-* All Uniswap V3 pools.
+* Pool-level metadata.
 */
 export class UNISWAPV3ETHEREUMLiquidityPoolDTO {
     'entryTime'?: Date;

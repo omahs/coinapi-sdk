@@ -6,6 +6,7 @@ README.md
 composer.json
 docs/Api/CRYPTOPUNKSApi.md
 docs/Api/MetadataApi.md
+docs/Api/UNISWAPV2ETHEREUMApi.md
 docs/Api/UNISWAPV3ETHEREUMApi.md
 docs/Model/CRYPTOPUNKSBidDTO.md
 docs/Model/CRYPTOPUNKSCollectionDTO.md
@@ -17,6 +18,9 @@ docs/Model/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md
 docs/Model/CRYPTOPUNKSTradeDTO.md
 docs/Model/CRYPTOPUNKSUserDTO.md
 docs/Model/TransactionsETradeAggressiveSide.md
+docs/Model/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
+docs/Model/UNISWAPV2ETHEREUMSwapDTO.md
+docs/Model/UNISWAPV2ETHEREUMTokenDTO.md
 docs/Model/UNISWAPV3ETHEREUMAccountDTO.md
 docs/Model/UNISWAPV3ETHEREUMActiveAccountDTO.md
 docs/Model/UNISWAPV3ETHEREUMDepositDTO.md
@@ -43,6 +47,7 @@ docs/Model/UNISWAPV3ETHEREUMWithdrawDTO.md
 git_push.sh
 lib/Api/CRYPTOPUNKSApi.php
 lib/Api/MetadataApi.php
+lib/Api/UNISWAPV2ETHEREUMApi.php
 lib/Api/UNISWAPV3ETHEREUMApi.php
 lib/ApiException.php
 lib/Configuration.php
@@ -58,6 +63,9 @@ lib/Model/CRYPTOPUNKSTradeDTO.php
 lib/Model/CRYPTOPUNKSUserDTO.php
 lib/Model/ModelInterface.php
 lib/Model/TransactionsETradeAggressiveSide.php
+lib/Model/UNISWAPV2ETHEREUMLiquidityPoolDTO.php
+lib/Model/UNISWAPV2ETHEREUMSwapDTO.php
+lib/Model/UNISWAPV2ETHEREUMTokenDTO.php
 lib/Model/UNISWAPV3ETHEREUMAccountDTO.php
 lib/Model/UNISWAPV3ETHEREUMActiveAccountDTO.php
 lib/Model/UNISWAPV3ETHEREUMDepositDTO.php
@@ -85,6 +93,7 @@ lib/ObjectSerializer.php
 phpunit.xml.dist
 test/Api/CRYPTOPUNKSApiTest.php
 test/Api/MetadataApiTest.php
+test/Api/UNISWAPV2ETHEREUMApiTest.php
 test/Api/UNISWAPV3ETHEREUMApiTest.php
 test/Model/CRYPTOPUNKSBidDTOTest.php
 test/Model/CRYPTOPUNKSCollectionDTOTest.php
@@ -96,6 +105,9 @@ test/Model/CRYPTOPUNKSMarketplaceDailySnapshotDTOTest.php
 test/Model/CRYPTOPUNKSTradeDTOTest.php
 test/Model/CRYPTOPUNKSUserDTOTest.php
 test/Model/TransactionsETradeAggressiveSideTest.php
+test/Model/UNISWAPV2ETHEREUMLiquidityPoolDTOTest.php
+test/Model/UNISWAPV2ETHEREUMSwapDTOTest.php
+test/Model/UNISWAPV2ETHEREUMTokenDTOTest.php
 test/Model/UNISWAPV3ETHEREUMAccountDTOTest.php
 test/Model/UNISWAPV3ETHEREUMActiveAccountDTOTest.php
 test/Model/UNISWAPV3ETHEREUMDepositDTOTest.php

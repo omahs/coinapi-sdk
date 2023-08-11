@@ -1,6 +1,6 @@
 # openapi::UNISWAPV3ETHEREUMLiquidityPoolDTO
 
-All Uniswap V3 pools.
+Pool-level metadata.
 
 ## Properties
 Name | Type | Description | Notes

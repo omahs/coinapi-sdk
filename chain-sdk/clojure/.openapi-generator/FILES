@@ -16,6 +16,9 @@ src/on_chain_dapps_rest_api/specs/cryptopunks/marketplace_daily_snapshot_dto.clj
 src/on_chain_dapps_rest_api/specs/cryptopunks/trade_dto.clj
 src/on_chain_dapps_rest_api/specs/cryptopunks/user_dto.clj
 src/on_chain_dapps_rest_api/specs/transactions/e_trade_aggressive_side.clj
+src/on_chain_dapps_rest_api/specs/uniswap_v2_ethereum/liquidity_pool_dto.clj
+src/on_chain_dapps_rest_api/specs/uniswap_v2_ethereum/swap_dto.clj
+src/on_chain_dapps_rest_api/specs/uniswap_v2_ethereum/token_dto.clj
 src/on_chain_dapps_rest_api/specs/uniswap_v3_ethereum/account_dto.clj
 src/on_chain_dapps_rest_api/specs/uniswap_v3_ethereum/active_account_dto.clj
 src/on_chain_dapps_rest_api/specs/uniswap_v3_ethereum/deposit_dto.clj

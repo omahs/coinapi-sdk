@@ -1,7 +1,7 @@
 #' Create a new UNISWAPV3ETHEREUMSwapDTO
 #'
 #' @description
-#' Trade (swap) event occurred in a pool.
+#' Trade (swap) event which occurred in a pool.
 #'
 #' @docType class
 #' @title UNISWAPV3ETHEREUMSwapDTO

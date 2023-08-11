@@ -13,7 +13,7 @@
 import * as models from './models';
 
 /**
- * All Uniswap V3 pools.
+ * Pool-level metadata.
  */
 export interface UNISWAPV3ETHEREUMLiquidityPoolDTO {
     entry_time?: string;

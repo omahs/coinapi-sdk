@@ -15,6 +15,10 @@ docs/CRYPTOPUNKSTradeDTO.md
 docs/CRYPTOPUNKSUserDTO.md
 docs/MetadataApi.md
 docs/TransactionsETradeAggressiveSide.md
+docs/UNISWAPV2ETHEREUMApi.md
+docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
+docs/UNISWAPV2ETHEREUMSwapDTO.md
+docs/UNISWAPV2ETHEREUMTokenDTO.md
 docs/UNISWAPV3ETHEREUMAccountDTO.md
 docs/UNISWAPV3ETHEREUMActiveAccountDTO.md
 docs/UNISWAPV3ETHEREUMApi.md
@@ -55,6 +59,9 @@ lib/WWW/OpenAPIClient/Object/CRYPTOPUNKSMarketplaceDailySnapshotDTO.pm
 lib/WWW/OpenAPIClient/Object/CRYPTOPUNKSTradeDTO.pm
 lib/WWW/OpenAPIClient/Object/CRYPTOPUNKSUserDTO.pm
 lib/WWW/OpenAPIClient/Object/TransactionsETradeAggressiveSide.pm
+lib/WWW/OpenAPIClient/Object/UNISWAPV2ETHEREUMLiquidityPoolDTO.pm
+lib/WWW/OpenAPIClient/Object/UNISWAPV2ETHEREUMSwapDTO.pm
+lib/WWW/OpenAPIClient/Object/UNISWAPV2ETHEREUMTokenDTO.pm
 lib/WWW/OpenAPIClient/Object/UNISWAPV3ETHEREUMAccountDTO.pm
 lib/WWW/OpenAPIClient/Object/UNISWAPV3ETHEREUMActiveAccountDTO.pm
 lib/WWW/OpenAPIClient/Object/UNISWAPV3ETHEREUMDepositDTO.pm
@@ -80,6 +87,7 @@ lib/WWW/OpenAPIClient/Object/UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.pm
 lib/WWW/OpenAPIClient/Object/UNISWAPV3ETHEREUMWithdrawDTO.pm
 lib/WWW/OpenAPIClient/Role.pm
 lib/WWW/OpenAPIClient/Role/AutoDoc.pm
+lib/WWW/OpenAPIClient/UNISWAPV2ETHEREUMApi.pm
 lib/WWW/OpenAPIClient/UNISWAPV3ETHEREUMApi.pm
 t/CRYPTOPUNKSApiTest.t
 t/CRYPTOPUNKSBidDTOTest.t
@@ -93,6 +101,10 @@ t/CRYPTOPUNKSTradeDTOTest.t
 t/CRYPTOPUNKSUserDTOTest.t
 t/MetadataApiTest.t
 t/TransactionsETradeAggressiveSideTest.t
+t/UNISWAPV2ETHEREUMApiTest.t
+t/UNISWAPV2ETHEREUMLiquidityPoolDTOTest.t
+t/UNISWAPV2ETHEREUMSwapDTOTest.t
+t/UNISWAPV2ETHEREUMTokenDTOTest.t
 t/UNISWAPV3ETHEREUMAccountDTOTest.t
 t/UNISWAPV3ETHEREUMActiveAccountDTOTest.t
 t/UNISWAPV3ETHEREUMApiTest.t

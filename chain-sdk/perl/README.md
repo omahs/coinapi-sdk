@@ -237,6 +237,7 @@ To load the API packages:
 ```perl
 use WWW::OpenAPIClient::CRYPTOPUNKSApi;
 use WWW::OpenAPIClient::MetadataApi;
+use WWW::OpenAPIClient::UNISWAPV2ETHEREUMApi;
 use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
 
 ```
@@ -253,6 +254,9 @@ use WWW::OpenAPIClient::Object::CRYPTOPUNKSMarketplaceDailySnapshotDTO;
 use WWW::OpenAPIClient::Object::CRYPTOPUNKSTradeDTO;
 use WWW::OpenAPIClient::Object::CRYPTOPUNKSUserDTO;
 use WWW::OpenAPIClient::Object::TransactionsETradeAggressiveSide;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMSwapDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMTokenDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMAccountDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMActiveAccountDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMDepositDTO;
@@ -289,6 +293,7 @@ use warnings;
 # load the API package
 use WWW::OpenAPIClient::CRYPTOPUNKSApi;
 use WWW::OpenAPIClient::MetadataApi;
+use WWW::OpenAPIClient::UNISWAPV2ETHEREUMApi;
 use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
 
 # load the models
@@ -302,6 +307,9 @@ use WWW::OpenAPIClient::Object::CRYPTOPUNKSMarketplaceDailySnapshotDTO;
 use WWW::OpenAPIClient::Object::CRYPTOPUNKSTradeDTO;
 use WWW::OpenAPIClient::Object::CRYPTOPUNKSUserDTO;
 use WWW::OpenAPIClient::Object::TransactionsETradeAggressiveSide;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMSwapDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMTokenDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMAccountDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMActiveAccountDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMDepositDTO;
@@ -362,6 +370,9 @@ Class | Method | HTTP request | Description
 *MetadataApi* | [**metadata_chains_get**](docs/MetadataApi.md#metadata_chains_get) | **GET** /metadata/chains | List all chains.
 *MetadataApi* | [**metadata_dapps_dapp_name_get**](docs/MetadataApi.md#metadata_dapps_dapp_name_get) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
 *MetadataApi* | [**metadata_dapps_get**](docs/MetadataApi.md#metadata_dapps_get) | **GET** /metadata/dapps | List all decentralized applications.
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_liquidity_pools__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_liquidity_pools__current) | **GET** /v1/dapps/uniswap-v2-ethereum/liquidityPools/current | LiquidityPools (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_swaps__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_swaps__current) | **GET** /v1/dapps/uniswap-v2-ethereum/swaps/current | Swaps (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_tokens__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_tokens__current) | **GET** /v1/dapps/uniswap-v2-ethereum/tokens/current | Tokens (current)
 *UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_accounts__current**](docs/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_accounts__current) | **GET** /v1/dapps/uniswap-v3-ethereum/accounts/current | Accounts (current)
 *UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_active_accounts__current**](docs/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_active_accounts__current) | **GET** /v1/dapps/uniswap-v3-ethereum/activeAccounts/current | ActiveAccounts (current)
 *UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_deposits__current**](docs/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_deposits__current) | **GET** /v1/dapps/uniswap-v3-ethereum/deposits/current | Deposits (current)
@@ -398,6 +409,9 @@ Class | Method | HTTP request | Description
  - [WWW::OpenAPIClient::Object::CRYPTOPUNKSTradeDTO](docs/CRYPTOPUNKSTradeDTO.md)
  - [WWW::OpenAPIClient::Object::CRYPTOPUNKSUserDTO](docs/CRYPTOPUNKSUserDTO.md)
  - [WWW::OpenAPIClient::Object::TransactionsETradeAggressiveSide](docs/TransactionsETradeAggressiveSide.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolDTO](docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMSwapDTO](docs/UNISWAPV2ETHEREUMSwapDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMTokenDTO](docs/UNISWAPV2ETHEREUMTokenDTO.md)
  - [WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMAccountDTO](docs/UNISWAPV3ETHEREUMAccountDTO.md)
  - [WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMActiveAccountDTO](docs/UNISWAPV3ETHEREUMActiveAccountDTO.md)
  - [WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMDepositDTO](docs/UNISWAPV3ETHEREUMDepositDTO.md)

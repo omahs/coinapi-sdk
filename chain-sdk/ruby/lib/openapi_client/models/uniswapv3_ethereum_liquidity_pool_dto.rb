@@ -14,7 +14,7 @@ require 'date'
 require 'time'
 
 module OpenapiClient
-  # All Uniswap V3 pools.
+  # Pool-level metadata.
   class UNISWAPV3ETHEREUMLiquidityPoolDTO
     attr_accessor :entry_time
 

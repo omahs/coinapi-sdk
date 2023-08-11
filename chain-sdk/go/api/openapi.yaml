@@ -341,6 +341,99 @@ paths:
       summary: Gets dapp by name.
       tags:
       - Metadata
+  /v1/dapps/uniswap-v2-ethereum/liquidityPools/current:
+    get:
+      description: Gets liquidityPools.
+      operationId: UNISWAP-V2-ETHEREUM.LiquidityPools (current)
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V2_ETHEREUM.LiquidityPoolDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V2_ETHEREUM.LiquidityPoolDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V2_ETHEREUM.LiquidityPoolDTO'
+                type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V2_ETHEREUM.LiquidityPoolDTO'
+                type: array
+          description: successful operation
+      summary: LiquidityPools (current)
+      tags:
+      - UNISWAP-V2-ETHEREUM
+  /v1/dapps/uniswap-v2-ethereum/swaps/current:
+    get:
+      description: Gets swaps.
+      operationId: UNISWAP-V2-ETHEREUM.Swaps (current)
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V2_ETHEREUM.SwapDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V2_ETHEREUM.SwapDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V2_ETHEREUM.SwapDTO'
+                type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V2_ETHEREUM.SwapDTO'
+                type: array
+          description: successful operation
+      summary: Swaps (current)
+      tags:
+      - UNISWAP-V2-ETHEREUM
+  /v1/dapps/uniswap-v2-ethereum/tokens/current:
+    get:
+      description: Gets tokens.
+      operationId: UNISWAP-V2-ETHEREUM.Tokens (current)
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V2_ETHEREUM.TokenDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V2_ETHEREUM.TokenDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V2_ETHEREUM.TokenDTO'
+                type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UNISWAP_V2_ETHEREUM.TokenDTO'
+                type: array
+          description: successful operation
+      summary: Tokens (current)
+      tags:
+      - UNISWAP-V2-ETHEREUM
   /v1/dapps/uniswap-v3-ethereum/accounts/current:
     get:
       description: Gets accounts.
@@ -1778,6 +1871,399 @@ components:
       - EstimatedSell
       - Unknown
       type: string
+    UNISWAP_V2_ETHEREUM.LiquidityPoolDTO:
+      additionalProperties: false
+      description: Pool-level metadata.
+      example:
+        symbol: symbol
+        fees:
+        - fees
+        - fees
+        cumulative_total_revenue_usd: cumulative_total_revenue_usd
+        cumulative_supply_side_revenue_usd: cumulative_supply_side_revenue_usd
+        output_token: output_token
+        block_number: 0
+        input_token_weights:
+        - input_token_weights
+        - input_token_weights
+        is_single_sided: true
+        created_block_number: created_block_number
+        evaluated_ask: 1.4658129805029452
+        vid: 6
+        reward_token_emissions_amount:
+        - reward_token_emissions_amount
+        - reward_token_emissions_amount
+        cumulative_volume_usd: cumulative_volume_usd
+        protocol: protocol
+        total_value_locked_usd: total_value_locked_usd
+        output_token_supply: output_token_supply
+        id: id
+        reward_tokens:
+        - reward_tokens
+        - reward_tokens
+        output_token_price_usd: output_token_price_usd
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        input_token_balances:
+        - input_token_balances
+        - input_token_balances
+        created_timestamp: created_timestamp
+        input_tokens:
+        - input_tokens
+        - input_tokens
+        reward_token_emissions_usd:
+        - reward_token_emissions_usd
+        - reward_token_emissions_usd
+        staked_output_token_amount: staked_output_token_amount
+        cumulative_protocol_side_revenue_usd: cumulative_protocol_side_revenue_usd
+        name: name
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        vid:
+          description: "."
+          format: int64
+          type: integer
+        id:
+          description: Smart contract address of the pool
+          nullable: true
+          type: string
+        protocol:
+          description: The protocol this pool belongs to
+          nullable: true
+          type: string
+        name:
+          description: Name of liquidity pool (e.g. Curve.fi DAI/USDC/USDT)
+          nullable: true
+          type: string
+        symbol:
+          description: Symbol of liquidity pool (e.g. 3CRV)
+          nullable: true
+          type: string
+        input_tokens:
+          description: Tokens that need to be deposited to take a position in the
+            protocol
+          items:
+            type: string
+          nullable: true
+          type: array
+        output_token:
+          description: Token that is minted to track ownership of position in protocol
+          nullable: true
+          type: string
+        reward_tokens:
+          description: Aditional tokens that are given as reward for position in a
+            protocol
+          items:
+            type: string
+          nullable: true
+          type: array
+        fees:
+          description: Fees per trade incurred to the user
+          items:
+            type: string
+          nullable: true
+          type: array
+        is_single_sided:
+          description: Whether this pool is single-sided
+          type: boolean
+        created_timestamp:
+          description: Creation timestamp
+          nullable: true
+          type: string
+        created_block_number:
+          description: Creation block number
+          nullable: true
+          type: string
+        total_value_locked_usd:
+          description: Current TVL (Total Value Locked) of this pool in USD
+          nullable: true
+          type: string
+        cumulative_supply_side_revenue_usd:
+          description: "All revenue generated by the liquidity pool, accrued to the\
+            \ supply side"
+          nullable: true
+          type: string
+        cumulative_protocol_side_revenue_usd:
+          description: "All revenue generated by the liquidity pool, accrued to the\
+            \ protocol"
+          nullable: true
+          type: string
+        cumulative_total_revenue_usd:
+          description: All revenue generated by the liquidity pool
+          nullable: true
+          type: string
+        cumulative_volume_usd:
+          description: "All historical trade volume occurred in this pool, in USD"
+          nullable: true
+          type: string
+        input_token_balances:
+          description: Amount of input tokens in the pool
+          items:
+            type: string
+          nullable: true
+          type: array
+        input_token_weights:
+          description: Weights of input tokens in the liquidity pool in percentage
+            values
+          items:
+            type: string
+          nullable: true
+          type: array
+        output_token_supply:
+          description: Total supply of output token
+          nullable: true
+          type: string
+        output_token_price_usd:
+          description: Price per share of output token in USD
+          nullable: true
+          type: string
+        staked_output_token_amount:
+          description: Total supply of output tokens that are staked
+          nullable: true
+          type: string
+        reward_token_emissions_amount:
+          description: "Per-block reward token emission as of the current block normalized\
+            \ to a day, in token's native amount"
+          items:
+            type: string
+          nullable: true
+          type: array
+        reward_token_emissions_usd:
+          description: "Per-block reward token emission as of the current block normalized\
+            \ to a day, in USD value"
+          items:
+            type: string
+          nullable: true
+          type: array
+        evaluated_ask:
+          description: Evaluated ask value of the liquidity pool.
+          format: double
+          readOnly: true
+          type: number
+      type: object
+    UNISWAP_V2_ETHEREUM.SwapDTO:
+      additionalProperties: false
+      description: Trade (swap) event which occurred in a pool.
+      example:
+        block_number: block_number
+        block_: 0
+        protocol: protocol
+        evaluated_amount: 5.962133916683182
+        evaluated_aggressor: null
+        from: from
+        id: id
+        token_in: token_in
+        timestamp: timestamp
+        block_range: block_range
+        reserve_amounts:
+        - reserve_amounts
+        - reserve_amounts
+        transaction_id: transaction_id
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        amount_in: amount_in
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        amount_out_usd: amount_out_usd
+        pool: pool
+        pool_id: pool_id
+        log_index: 6
+        amount_out: amount_out
+        evaluated_price: 1.4658129805029452
+        amount_in_usd: amount_in_usd
+        to: to
+        token_out: token_out
+        hash: hash
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Block number of this event
+          nullable: true
+          type: string
+        block_:
+          description: ""
+          format: int32
+          type: integer
+        id:
+          description: "swap-{ Transaction hash }-{ Log index }"
+          nullable: true
+          type: string
+        hash:
+          description: Transaction hash of the transaction that emitted this event
+          nullable: true
+          type: string
+        log_index:
+          description: "Event log index. For transactions that don't emit event, create\
+            \ arbitrary index starting from 0"
+          format: int32
+          type: integer
+        protocol:
+          description: The protocol this transaction belongs to
+          nullable: true
+          type: string
+        to:
+          description: Address that received the tokens
+          nullable: true
+          type: string
+        from:
+          description: Address that sent the tokens
+          nullable: true
+          type: string
+        timestamp:
+          description: Timestamp of this event
+          nullable: true
+          type: string
+        token_in:
+          description: Token deposited into pool
+          nullable: true
+          type: string
+        amount_in:
+          description: Amount of token deposited into pool in native units
+          nullable: true
+          type: string
+        amount_in_usd:
+          description: Amount of token deposited into pool in USD
+          nullable: true
+          type: string
+        token_out:
+          description: Token withdrawn from pool
+          nullable: true
+          type: string
+        amount_out:
+          description: Amount of token withdrawn from pool in native units
+          nullable: true
+          type: string
+        amount_out_usd:
+          description: Amount of token withdrawn from pool in USD
+          nullable: true
+          type: string
+        reserve_amounts:
+          description: Amount of input tokens in the liquidity pool
+          items:
+            type: string
+          nullable: true
+          type: array
+        pool:
+          description: The pool involving this transaction
+          nullable: true
+          type: string
+        block_range:
+          nullable: true
+          readOnly: true
+          type: string
+        pool_id:
+          nullable: true
+          readOnly: true
+          type: string
+        transaction_id:
+          nullable: true
+          readOnly: true
+          type: string
+        evaluated_price:
+          format: double
+          readOnly: true
+          type: number
+        evaluated_amount:
+          format: double
+          readOnly: true
+          type: number
+        evaluated_aggressor:
+          $ref: '#/components/schemas/Transactions.ETradeAggressiveSide'
+      type: object
+    UNISWAP_V2_ETHEREUM.TokenDTO:
+      additionalProperties: false
+      description: Stores aggregated information for a specific token across all pairs
+        that token is included in.
+      example:
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        symbol: symbol
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        total_supply: total_supply
+        large_price_change_buffer: 5
+        block_number: 0
+        last_price_block_number: last_price_block_number
+        large_tvl_impact_buffer: 5
+        vid: 6
+        last_price_usd: last_price_usd
+        total_value_locked_usd: total_value_locked_usd
+        decimals: 1
+        name: name
+        id: id
+        token_symbol: token_symbol
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        vid:
+          description: "."
+          format: int64
+          type: integer
+        id:
+          description: Smart contract address of the token
+          nullable: true
+          type: string
+        name:
+          description: "Name of the token, mirrored from the smart contract"
+          nullable: true
+          type: string
+        symbol:
+          description: "Symbol of the token, mirrored from the smart contract"
+          nullable: true
+          type: string
+        decimals:
+          description: "The number of decimal places this token uses, default to 18"
+          format: int32
+          type: integer
+        last_price_usd:
+          description: "Optional field to track the price of a token, mostly for caching\
+            \ purposes"
+          nullable: true
+          type: string
+        last_price_block_number:
+          description: Optional field to track the block number of the last token
+            price
+          nullable: true
+          type: string
+        total_supply:
+          description: amount of tokens in the protocol
+          nullable: true
+          type: string
+        total_value_locked_usd:
+          description: Total value locked in the protocol
+          nullable: true
+          type: string
+        large_price_change_buffer:
+          description: Buffer for large price changes
+          format: int32
+          type: integer
+        large_tvl_impact_buffer:
+          description: Buffer for large TVL impacts
+          format: int32
+          type: integer
+        token_symbol:
+          nullable: true
+          readOnly: true
+          type: string
+      type: object
     UNISWAP_V3_ETHEREUM.AccountDTO:
       additionalProperties: false
       example:
@@ -2365,7 +2851,7 @@ components:
       type: object
     UNISWAP_V3_ETHEREUM.LiquidityPoolDTO:
       additionalProperties: false
-      description: All Uniswap V3 pools.
+      description: Pool-level metadata.
       example:
         symbol: symbol
         fees:
@@ -3674,7 +4160,7 @@ components:
       type: object
     UNISWAP_V3_ETHEREUM.SwapDTO:
       additionalProperties: false
-      description: Trade (swap) event occurred in a pool.
+      description: Trade (swap) event which occurred in a pool.
       example:
         block_number: 0
         block_: 6

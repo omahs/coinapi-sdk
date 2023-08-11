@@ -1,0 +1,39 @@
+# openapi.model.UNISWAPV2ETHEREUMSwapDTO
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**entryTime** | [**DateTime**](DateTime.md) |  | [optional] 
+**recvTime** | [**DateTime**](DateTime.md) |  | [optional] 
+**blockNumber** | **String** | Block number of this event | [optional] 
+**block** | **int** |  | [optional] 
+**id** | **String** | swap-{ Transaction hash }-{ Log index } | [optional] 
+**hash** | **String** | Transaction hash of the transaction that emitted this event | [optional] 
+**logIndex** | **int** | Event log index. For transactions that don't emit event, create arbitrary index starting from 0 | [optional] 
+**protocol** | **String** | The protocol this transaction belongs to | [optional] 
+**to** | **String** | Address that received the tokens | [optional] 
+**from** | **String** | Address that sent the tokens | [optional] 
+**timestamp** | **String** | Timestamp of this event | [optional] 
+**tokenIn** | **String** | Token deposited into pool | [optional] 
+**amountIn** | **String** | Amount of token deposited into pool in native units | [optional] 
+**amountInUsd** | **String** | Amount of token deposited into pool in USD | [optional] 
+**tokenOut** | **String** | Token withdrawn from pool | [optional] 
+**amountOut** | **String** | Amount of token withdrawn from pool in native units | [optional] 
+**amountOutUsd** | **String** | Amount of token withdrawn from pool in USD | [optional] 
+**reserveAmounts** | **BuiltList&lt;String&gt;** | Amount of input tokens in the liquidity pool | [optional] 
+**pool** | **String** | The pool involving this transaction | [optional] 
+**blockRange** | **String** |  | [optional] 
+**poolId** | **String** |  | [optional] 
+**transactionId** | **String** |  | [optional] 
+**evaluatedPrice** | **double** |  | [optional] 
+**evaluatedAmount** | **double** |  | [optional] 
+**evaluatedAggressor** | [**TransactionsETradeAggressiveSide**](TransactionsETradeAggressiveSide.md) |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

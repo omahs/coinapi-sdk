@@ -5,6 +5,7 @@ README.md
 api/openapi.yaml
 api_cryptopunks.go
 api_metadata.go
+api_uniswapv2_ethereum.go
 api_uniswapv3_ethereum.go
 client.go
 configuration.go
@@ -20,6 +21,10 @@ docs/CRYPTOPUNKSTradeDTO.md
 docs/CRYPTOPUNKSUserDTO.md
 docs/MetadataApi.md
 docs/TransactionsETradeAggressiveSide.md
+docs/UNISWAPV2ETHEREUMApi.md
+docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
+docs/UNISWAPV2ETHEREUMSwapDTO.md
+docs/UNISWAPV2ETHEREUMTokenDTO.md
 docs/UNISWAPV3ETHEREUMAccountDTO.md
 docs/UNISWAPV3ETHEREUMActiveAccountDTO.md
 docs/UNISWAPV3ETHEREUMApi.md
@@ -57,6 +62,9 @@ model_cryptopunks_marketplace_daily_snapshot_dto.go
 model_cryptopunks_trade_dto.go
 model_cryptopunks_user_dto.go
 model_transactions_e_trade_aggressive_side.go
+model_uniswap_v2_ethereum_liquidity_pool_dto.go
+model_uniswap_v2_ethereum_swap_dto.go
+model_uniswap_v2_ethereum_token_dto.go
 model_uniswap_v3_ethereum_account_dto.go
 model_uniswap_v3_ethereum_active_account_dto.go
 model_uniswap_v3_ethereum_deposit_dto.go
@@ -83,5 +91,6 @@ model_uniswap_v3_ethereum_withdraw_dto.go
 response.go
 test/api_cryptopunks_test.go
 test/api_metadata_test.go
+test/api_uniswapv2_ethereum_test.go
 test/api_uniswapv3_ethereum_test.go
 utils.go

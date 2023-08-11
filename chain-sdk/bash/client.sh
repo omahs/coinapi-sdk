@@ -542,6 +542,14 @@ read -r -d '' ops <<EOF
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
+    echo -e "${BOLD}${WHITE}[uNISWAPV2ETHEREUM]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}uNISWAPV2ETHEREUMLiquidityPoolsCurrent${OFF};LiquidityPools (current)
+  ${CYAN}uNISWAPV2ETHEREUMSwapsCurrent${OFF};Swaps (current)
+  ${CYAN}uNISWAPV2ETHEREUMTokensCurrent${OFF};Tokens (current)
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
     echo -e "${BOLD}${WHITE}[uNISWAPV3ETHEREUM]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}uNISWAPV3ETHEREUMAccountsCurrent${OFF};Accounts (current)
@@ -809,6 +817,54 @@ print_metadataDappsGet_help() {
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uNISWAPV2ETHEREUMLiquidityPoolsCurrent operation
+#
+##############################################################################
+print_uNISWAPV2ETHEREUMLiquidityPoolsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV2ETHEREUMLiquidityPoolsCurrent - LiquidityPools (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets liquidityPools." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uNISWAPV2ETHEREUMSwapsCurrent operation
+#
+##############################################################################
+print_uNISWAPV2ETHEREUMSwapsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV2ETHEREUMSwapsCurrent - Swaps (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets swaps." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uNISWAPV2ETHEREUMTokensCurrent operation
+#
+##############################################################################
+print_uNISWAPV2ETHEREUMTokensCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uNISWAPV2ETHEREUMTokensCurrent - Tokens (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1618,6 +1674,114 @@ call_metadataDappsGet() {
     local path
 
     if ! path=$(build_request_path "/metadata/dapps" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uNISWAPV2ETHEREUMLiquidityPoolsCurrent operation
+#
+##############################################################################
+call_uNISWAPV2ETHEREUMLiquidityPoolsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v2-ethereum/liquidityPools/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uNISWAPV2ETHEREUMSwapsCurrent operation
+#
+##############################################################################
+call_uNISWAPV2ETHEREUMSwapsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v2-ethereum/swaps/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uNISWAPV2ETHEREUMTokensCurrent operation
+#
+##############################################################################
+call_uNISWAPV2ETHEREUMTokensCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/v1/dapps/uniswap-v2-ethereum/tokens/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -2600,6 +2764,15 @@ case $key in
     metadataDappsGet)
     operation="metadataDappsGet"
     ;;
+    uNISWAPV2ETHEREUMLiquidityPoolsCurrent)
+    operation="uNISWAPV2ETHEREUMLiquidityPoolsCurrent"
+    ;;
+    uNISWAPV2ETHEREUMSwapsCurrent)
+    operation="uNISWAPV2ETHEREUMSwapsCurrent"
+    ;;
+    uNISWAPV2ETHEREUMTokensCurrent)
+    operation="uNISWAPV2ETHEREUMTokensCurrent"
+    ;;
     uNISWAPV3ETHEREUMAccountsCurrent)
     operation="uNISWAPV3ETHEREUMAccountsCurrent"
     ;;
@@ -2781,6 +2954,15 @@ case $operation in
     ;;
     metadataDappsGet)
     call_metadataDappsGet
+    ;;
+    uNISWAPV2ETHEREUMLiquidityPoolsCurrent)
+    call_uNISWAPV2ETHEREUMLiquidityPoolsCurrent
+    ;;
+    uNISWAPV2ETHEREUMSwapsCurrent)
+    call_uNISWAPV2ETHEREUMSwapsCurrent
+    ;;
+    uNISWAPV2ETHEREUMTokensCurrent)
+    call_uNISWAPV2ETHEREUMTokensCurrent
     ;;
     uNISWAPV3ETHEREUMAccountsCurrent)
     call_uNISWAPV3ETHEREUMAccountsCurrent

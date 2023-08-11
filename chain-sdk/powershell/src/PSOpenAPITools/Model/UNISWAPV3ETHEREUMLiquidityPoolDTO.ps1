@@ -13,7 +13,7 @@ No summary available.
 
 .DESCRIPTION
 
-All Uniswap V3 pools.
+Pool-level metadata.
 
 .PARAMETER EntryTime
 No description available.

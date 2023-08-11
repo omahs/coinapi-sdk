@@ -306,7 +306,9 @@ case $state in
             "cRYPTOPUNKSTradesCurrent[Trades (current)]" \
             "cRYPTOPUNKSUsersCurrent[Users (current)]"             "metadataChainsGet[List all chains.]" \
             "metadataDappsDappNameGet[Gets dapp by name.]" \
-            "metadataDappsGet[List all decentralized applications.]"             "uNISWAPV3ETHEREUMAccountsCurrent[Accounts (current)]" \
+            "metadataDappsGet[List all decentralized applications.]"             "uNISWAPV2ETHEREUMLiquidityPoolsCurrent[LiquidityPools (current)]" \
+            "uNISWAPV2ETHEREUMSwapsCurrent[Swaps (current)]" \
+            "uNISWAPV2ETHEREUMTokensCurrent[Tokens (current)]"             "uNISWAPV3ETHEREUMAccountsCurrent[Accounts (current)]" \
             "uNISWAPV3ETHEREUMActiveAccountsCurrent[ActiveAccounts (current)]" \
             "uNISWAPV3ETHEREUMDepositsCurrent[Deposits (current)]" \
             "uNISWAPV3ETHEREUMDexAmmProtocolsCurrent[DexAmmProtocols (current)]" \
@@ -404,6 +406,24 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       metadataDappsGet)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMLiquidityPoolsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMSwapsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMTokensCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )

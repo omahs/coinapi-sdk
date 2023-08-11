@@ -11,7 +11,7 @@
  */
 
 /**
- * Trade (swap) event occurred in a pool.
+ * Trade (swap) event which occurred in a pool.
  */
 public class OASUNISWAPV3ETHEREUMSwapDTO implements OAS.MappedProperties {
     /**

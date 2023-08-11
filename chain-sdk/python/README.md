@@ -193,6 +193,9 @@ Class | Method | HTTP request | Description
 *MetadataApi* | [**metadata_chains_get**](docs/apis/tags/MetadataApi.md#metadata_chains_get) | **get** /metadata/chains | List all chains.
 *MetadataApi* | [**metadata_dapps_dapp_name_get**](docs/apis/tags/MetadataApi.md#metadata_dapps_dapp_name_get) | **get** /metadata/dapps/{dappName} | Gets dapp by name.
 *MetadataApi* | [**metadata_dapps_get**](docs/apis/tags/MetadataApi.md#metadata_dapps_get) | **get** /metadata/dapps | List all decentralized applications.
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_liquidity_pools__current**](docs/apis/tags/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_liquidity_pools__current) | **get** /v1/dapps/uniswap-v2-ethereum/liquidityPools/current | LiquidityPools (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_swaps__current**](docs/apis/tags/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_swaps__current) | **get** /v1/dapps/uniswap-v2-ethereum/swaps/current | Swaps (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_tokens__current**](docs/apis/tags/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_tokens__current) | **get** /v1/dapps/uniswap-v2-ethereum/tokens/current | Tokens (current)
 *UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_accounts__current**](docs/apis/tags/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_accounts__current) | **get** /v1/dapps/uniswap-v3-ethereum/accounts/current | Accounts (current)
 *UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_active_accounts__current**](docs/apis/tags/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_active_accounts__current) | **get** /v1/dapps/uniswap-v3-ethereum/activeAccounts/current | ActiveAccounts (current)
 *UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_deposits__current**](docs/apis/tags/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_deposits__current) | **get** /v1/dapps/uniswap-v3-ethereum/deposits/current | Deposits (current)
@@ -229,6 +232,9 @@ Class | Method | HTTP request | Description
  - [CRYPTOPUNKSTradeDTO](docs/models/CRYPTOPUNKSTradeDTO.md)
  - [CRYPTOPUNKSUserDTO](docs/models/CRYPTOPUNKSUserDTO.md)
  - [TransactionsETradeAggressiveSide](docs/models/TransactionsETradeAggressiveSide.md)
+ - [UNISWAPV2ETHEREUMLiquidityPoolDTO](docs/models/UNISWAPV2ETHEREUMLiquidityPoolDTO.md)
+ - [UNISWAPV2ETHEREUMSwapDTO](docs/models/UNISWAPV2ETHEREUMSwapDTO.md)
+ - [UNISWAPV2ETHEREUMTokenDTO](docs/models/UNISWAPV2ETHEREUMTokenDTO.md)
  - [UNISWAPV3ETHEREUMAccountDTO](docs/models/UNISWAPV3ETHEREUMAccountDTO.md)
  - [UNISWAPV3ETHEREUMActiveAccountDTO](docs/models/UNISWAPV3ETHEREUMActiveAccountDTO.md)
  - [UNISWAPV3ETHEREUMDepositDTO](docs/models/UNISWAPV3ETHEREUMDepositDTO.md)
@@ -260,6 +266,7 @@ Class | Method | HTTP request | Description
 
 ## Author
 
+support@coinapi.io
 support@coinapi.io
 support@coinapi.io
 support@coinapi.io

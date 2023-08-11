@@ -8,6 +8,7 @@ lib/OnChainDapps-REST.hs
 lib/OnChainDapps-REST/API.hs
 lib/OnChainDapps-REST/API/CRYPTOPUNKS.hs
 lib/OnChainDapps-REST/API/Metadata.hs
+lib/OnChainDapps-REST/API/UNISWAPV2ETHEREUM.hs
 lib/OnChainDapps-REST/API/UNISWAPV3ETHEREUM.hs
 lib/OnChainDapps-REST/Client.hs
 lib/OnChainDapps-REST/Core.hs

@@ -23,6 +23,9 @@ import CRYPTOPUNKSMarketplaceDailySnapshotDTO from './model/CRYPTOPUNKSMarketpla
 import CRYPTOPUNKSTradeDTO from './model/CRYPTOPUNKSTradeDTO';
 import CRYPTOPUNKSUserDTO from './model/CRYPTOPUNKSUserDTO';
 import TransactionsETradeAggressiveSide from './model/TransactionsETradeAggressiveSide';
+import UNISWAPV2ETHEREUMLiquidityPoolDTO from './model/UNISWAPV2ETHEREUMLiquidityPoolDTO';
+import UNISWAPV2ETHEREUMSwapDTO from './model/UNISWAPV2ETHEREUMSwapDTO';
+import UNISWAPV2ETHEREUMTokenDTO from './model/UNISWAPV2ETHEREUMTokenDTO';
 import UNISWAPV3ETHEREUMAccountDTO from './model/UNISWAPV3ETHEREUMAccountDTO';
 import UNISWAPV3ETHEREUMActiveAccountDTO from './model/UNISWAPV3ETHEREUMActiveAccountDTO';
 import UNISWAPV3ETHEREUMDepositDTO from './model/UNISWAPV3ETHEREUMDepositDTO';
@@ -48,6 +51,7 @@ import UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO from './model/UNISWAPV3ETH
 import UNISWAPV3ETHEREUMWithdrawDTO from './model/UNISWAPV3ETHEREUMWithdrawDTO';
 import CRYPTOPUNKSApi from './api/CRYPTOPUNKSApi';
 import MetadataApi from './api/MetadataApi';
+import UNISWAPV2ETHEREUMApi from './api/UNISWAPV2ETHEREUMApi';
 import UNISWAPV3ETHEREUMApi from './api/UNISWAPV3ETHEREUMApi';
 
 
@@ -148,6 +152,24 @@ export {
      * @property {module:model/TransactionsETradeAggressiveSide}
      */
     TransactionsETradeAggressiveSide,
+
+    /**
+     * The UNISWAPV2ETHEREUMLiquidityPoolDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMLiquidityPoolDTO}
+     */
+    UNISWAPV2ETHEREUMLiquidityPoolDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMSwapDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMSwapDTO}
+     */
+    UNISWAPV2ETHEREUMSwapDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMTokenDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMTokenDTO}
+     */
+    UNISWAPV2ETHEREUMTokenDTO,
 
     /**
      * The UNISWAPV3ETHEREUMAccountDTO model constructor.
@@ -298,6 +320,12 @@ export {
     * @property {module:api/MetadataApi}
     */
     MetadataApi,
+
+    /**
+    * The UNISWAPV2ETHEREUMApi service constructor.
+    * @property {module:api/UNISWAPV2ETHEREUMApi}
+    */
+    UNISWAPV2ETHEREUMApi,
 
     /**
     * The UNISWAPV3ETHEREUMApi service constructor.

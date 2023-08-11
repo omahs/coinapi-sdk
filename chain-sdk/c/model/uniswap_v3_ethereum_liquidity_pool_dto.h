@@ -1,7 +1,7 @@
 /*
  * uniswap_v3_ethereum_liquidity_pool_dto.h
  *
- * All Uniswap V3 pools.
+ * Pool-level metadata.
  */
 
 #ifndef _uniswap_v3_ethereum_liquidity_pool_dto_H_

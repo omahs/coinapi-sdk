@@ -21,7 +21,7 @@ import ApiClient from '../ApiClient';
 class UNISWAPV3ETHEREUMLiquidityPoolDTO {
     /**
      * Constructs a new <code>UNISWAPV3ETHEREUMLiquidityPoolDTO</code>.
-     * All Uniswap V3 pools.
+     * Pool-level metadata.
      * @alias module:model/UNISWAPV3ETHEREUMLiquidityPoolDTO
      */
     constructor() { 

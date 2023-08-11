@@ -12,7 +12,7 @@
  */
 
 /**
- * All Uniswap V3 pools.
+ * Pool-level metadata.
  * @export
  * @interface UNISWAPV3ETHEREUMLiquidityPoolDTO
  */

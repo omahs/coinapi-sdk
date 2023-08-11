@@ -27,7 +27,7 @@ using OpenAPIDateConverter = CoinAPI.EMS.REST.V1.Client.OpenAPIDateConverter;
 namespace CoinAPI.EMS.REST.V1.Model
 {
     /// <summary>
-    /// All Uniswap V3 pools.
+    /// Pool-level metadata.
     /// </summary>
     [DataContract(Name = "UNISWAP_V3_ETHEREUM.LiquidityPoolDTO")]
     public partial class UNISWAPV3ETHEREUMLiquidityPoolDTO : IEquatable<UNISWAPV3ETHEREUMLiquidityPoolDTO>, IValidatableObject

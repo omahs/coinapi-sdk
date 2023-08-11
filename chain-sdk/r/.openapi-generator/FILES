@@ -20,6 +20,10 @@ R/cryptopunks_trade_dto.R
 R/cryptopunks_user_dto.R
 R/metadata_api.R
 R/transactions_e_trade_aggressive_side.R
+R/uniswapv2_ethereum_api.R
+R/uniswapv2_ethereum_liquidity_pool_dto.R
+R/uniswapv2_ethereum_swap_dto.R
+R/uniswapv2_ethereum_token_dto.R
 R/uniswapv3_ethereum_account_dto.R
 R/uniswapv3_ethereum_active_account_dto.R
 R/uniswapv3_ethereum_api.R
@@ -57,6 +61,10 @@ docs/CRYPTOPUNKSTradeDTO.md
 docs/CRYPTOPUNKSUserDTO.md
 docs/MetadataApi.md
 docs/TransactionsETradeAggressiveSide.md
+docs/UNISWAPV2ETHEREUMApi.md
+docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
+docs/UNISWAPV2ETHEREUMSwapDTO.md
+docs/UNISWAPV2ETHEREUMTokenDTO.md
 docs/UNISWAPV3ETHEREUMAccountDTO.md
 docs/UNISWAPV3ETHEREUMActiveAccountDTO.md
 docs/UNISWAPV3ETHEREUMApi.md
@@ -95,6 +103,10 @@ tests/testthat/test_cryptopunks_trade_dto.R
 tests/testthat/test_cryptopunks_user_dto.R
 tests/testthat/test_metadata_api.R
 tests/testthat/test_transactions_e_trade_aggressive_side.R
+tests/testthat/test_uniswapv2_ethereum_api.R
+tests/testthat/test_uniswapv2_ethereum_liquidity_pool_dto.R
+tests/testthat/test_uniswapv2_ethereum_swap_dto.R
+tests/testthat/test_uniswapv2_ethereum_token_dto.R
 tests/testthat/test_uniswapv3_ethereum_account_dto.R
 tests/testthat/test_uniswapv3_ethereum_active_account_dto.R
 tests/testthat/test_uniswapv3_ethereum_api.R

@@ -24,6 +24,9 @@ import 'package:openapi/src/model/cryptopunks_marketplace_daily_snapshot_dto.dar
 import 'package:openapi/src/model/cryptopunks_trade_dto.dart';
 import 'package:openapi/src/model/cryptopunks_user_dto.dart';
 import 'package:openapi/src/model/transactions_e_trade_aggressive_side.dart';
+import 'package:openapi/src/model/uniswapv2_ethereum_liquidity_pool_dto.dart';
+import 'package:openapi/src/model/uniswapv2_ethereum_swap_dto.dart';
+import 'package:openapi/src/model/uniswapv2_ethereum_token_dto.dart';
 import 'package:openapi/src/model/uniswapv3_ethereum_account_dto.dart';
 import 'package:openapi/src/model/uniswapv3_ethereum_active_account_dto.dart';
 import 'package:openapi/src/model/uniswapv3_ethereum_deposit_dto.dart';
@@ -61,6 +64,9 @@ part 'serializers.g.dart';
   CRYPTOPUNKSTradeDTO,
   CRYPTOPUNKSUserDTO,
   TransactionsETradeAggressiveSide,
+  UNISWAPV2ETHEREUMLiquidityPoolDTO,
+  UNISWAPV2ETHEREUMSwapDTO,
+  UNISWAPV2ETHEREUMTokenDTO,
   UNISWAPV3ETHEREUMAccountDTO,
   UNISWAPV3ETHEREUMActiveAccountDTO,
   UNISWAPV3ETHEREUMDepositDTO,
@@ -87,8 +93,16 @@ part 'serializers.g.dart';
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV2ETHEREUMTokenDTO)]),
+        () => ListBuilder<UNISWAPV2ETHEREUMTokenDTO>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CRYPTOPUNKSCollectionDailySnapshotDTO)]),
         () => ListBuilder<CRYPTOPUNKSCollectionDailySnapshotDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV2ETHEREUMLiquidityPoolDTO)]),
+        () => ListBuilder<UNISWAPV2ETHEREUMLiquidityPoolDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMPositionDTO)]),
@@ -169,6 +183,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMWithdrawDTO)]),
         () => ListBuilder<UNISWAPV3ETHEREUMWithdrawDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UNISWAPV2ETHEREUMSwapDTO)]),
+        () => ListBuilder<UNISWAPV2ETHEREUMSwapDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMLiquidityPoolAmountDTO)]),

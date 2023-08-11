@@ -13,6 +13,10 @@ docs/CRYPTOPUNKSTradeDTO.md
 docs/CRYPTOPUNKSUserDTO.md
 docs/MetadataApi.md
 docs/TransactionsETradeAggressiveSide.md
+docs/UNISWAPV2ETHEREUMApi.md
+docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
+docs/UNISWAPV2ETHEREUMSwapDTO.md
+docs/UNISWAPV2ETHEREUMTokenDTO.md
 docs/UNISWAPV3ETHEREUMAccountDTO.md
 docs/UNISWAPV3ETHEREUMActiveAccountDTO.md
 docs/UNISWAPV3ETHEREUMApi.md
@@ -44,6 +48,7 @@ gradlew.bat
 settings.gradle
 src/main/kotlin/org/openapitools/client/apis/CRYPTOPUNKSApi.kt
 src/main/kotlin/org/openapitools/client/apis/MetadataApi.kt
+src/main/kotlin/org/openapitools/client/apis/UNISWAPV2ETHEREUMApi.kt
 src/main/kotlin/org/openapitools/client/apis/UNISWAPV3ETHEREUMApi.kt
 src/main/kotlin/org/openapitools/client/infrastructure/ApiAbstractions.kt
 src/main/kotlin/org/openapitools/client/infrastructure/ApiClient.kt
@@ -72,6 +77,9 @@ src/main/kotlin/org/openapitools/client/models/CRYPTOPUNKSMarketplaceDailySnapsh
 src/main/kotlin/org/openapitools/client/models/CRYPTOPUNKSTradeDTO.kt
 src/main/kotlin/org/openapitools/client/models/CRYPTOPUNKSUserDTO.kt
 src/main/kotlin/org/openapitools/client/models/TransactionsETradeAggressiveSide.kt
+src/main/kotlin/org/openapitools/client/models/UNISWAPV2ETHEREUMLiquidityPoolDTO.kt
+src/main/kotlin/org/openapitools/client/models/UNISWAPV2ETHEREUMSwapDTO.kt
+src/main/kotlin/org/openapitools/client/models/UNISWAPV2ETHEREUMTokenDTO.kt
 src/main/kotlin/org/openapitools/client/models/UNISWAPV3ETHEREUMAccountDTO.kt
 src/main/kotlin/org/openapitools/client/models/UNISWAPV3ETHEREUMActiveAccountDTO.kt
 src/main/kotlin/org/openapitools/client/models/UNISWAPV3ETHEREUMDepositDTO.kt

@@ -13,7 +13,7 @@
 /*
  * UNISWAP_V3_ETHEREUM_SwapDTO.h
  *
- * Trade (swap) event occurred in a pool.
+ * Trade (swap) event which occurred in a pool.
  */
 
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_UNISWAP_V3_ETHEREUM_SwapDTO_H_
@@ -33,7 +33,7 @@ namespace model {
 
 
 /// <summary>
-/// Trade (swap) event occurred in a pool.
+/// Trade (swap) event which occurred in a pool.
 /// </summary>
 class  UNISWAP_V3_ETHEREUM_SwapDTO
     : public ModelBase

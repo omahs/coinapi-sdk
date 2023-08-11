@@ -210,6 +210,60 @@ package body .Clients is
       Client.Call (Swagger.Clients.GET, URI);
    end Metadata_Dapps_Get;
 
+   --  LiquidityPools (current)
+   --  Gets liquidityPools.
+   procedure U_NISWAPV2ETHEREUM_Liquidity_Pools__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV2ETHEREUMLiquidityPoolDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
+
+      URI.Set_Path ("/v1/dapps/uniswap-v2-ethereum/liquidityPools/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV2ETHEREUM_Liquidity_Pools__current;
+
+   --  Swaps (current)
+   --  Gets swaps.
+   procedure U_NISWAPV2ETHEREUM_Swaps__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV2ETHEREUMSwapDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
+
+      URI.Set_Path ("/v1/dapps/uniswap-v2-ethereum/swaps/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV2ETHEREUM_Swaps__current;
+
+   --  Tokens (current)
+   --  Gets tokens.
+   procedure U_NISWAPV2ETHEREUM_Tokens__current
+      (Client : in out Client_Type;
+       Result : out .Models.UNISWAPV2ETHEREUMTokenDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
+
+      URI.Set_Path ("/v1/dapps/uniswap-v2-ethereum/tokens/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end U_NISWAPV2ETHEREUM_Tokens__current;
+
    --  Accounts (current)
    --  Gets accounts.
    procedure U_NISWAPV3ETHEREUM_Accounts__current

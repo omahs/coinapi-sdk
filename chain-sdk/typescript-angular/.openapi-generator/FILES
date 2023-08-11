@@ -5,6 +5,7 @@ api.module.ts
 api/api.ts
 api/cRYPTOPUNKS.service.ts
 api/metadata.service.ts
+api/uNISWAPV2ETHEREUM.service.ts
 api/uNISWAPV3ETHEREUM.service.ts
 configuration.ts
 encoder.ts
@@ -21,6 +22,9 @@ model/cRYPTOPUNKSTradeDTO.ts
 model/cRYPTOPUNKSUserDTO.ts
 model/models.ts
 model/transactionsETradeAggressiveSide.ts
+model/uNISWAPV2ETHEREUMLiquidityPoolDTO.ts
+model/uNISWAPV2ETHEREUMSwapDTO.ts
+model/uNISWAPV2ETHEREUMTokenDTO.ts
 model/uNISWAPV3ETHEREUMAccountDTO.ts
 model/uNISWAPV3ETHEREUMActiveAccountDTO.ts
 model/uNISWAPV3ETHEREUMDepositDTO.ts

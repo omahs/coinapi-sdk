@@ -1,7 +1,7 @@
 #' Create a new UNISWAPV3ETHEREUMLiquidityPoolDTO
 #'
 #' @description
-#' All Uniswap V3 pools.
+#' Pool-level metadata.
 #'
 #' @docType class
 #' @title UNISWAPV3ETHEREUMLiquidityPoolDTO

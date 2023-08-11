@@ -11,6 +11,9 @@ src/model/openapi_cryptopunks_marketplace_daily_snapshot_dto.erl
 src/model/openapi_cryptopunks_trade_dto.erl
 src/model/openapi_cryptopunks_user_dto.erl
 src/model/openapi_transactions_e_trade_aggressive_side.erl
+src/model/openapi_uniswap_v2_ethereum_liquidity_pool_dto.erl
+src/model/openapi_uniswap_v2_ethereum_swap_dto.erl
+src/model/openapi_uniswap_v2_ethereum_token_dto.erl
 src/model/openapi_uniswap_v3_ethereum_account_dto.erl
 src/model/openapi_uniswap_v3_ethereum_active_account_dto.erl
 src/model/openapi_uniswap_v3_ethereum_deposit_dto.erl
@@ -39,7 +42,9 @@ src/openapi.hrl
 src/openapi_api.erl
 src/openapi_api.erl
 src/openapi_api.erl
+src/openapi_api.erl
 src/openapi_gen.erl
+src/openapi_statem.erl
 src/openapi_statem.erl
 src/openapi_statem.erl
 src/openapi_statem.erl

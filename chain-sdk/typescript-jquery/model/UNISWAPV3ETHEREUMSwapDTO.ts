@@ -13,7 +13,7 @@
 import * as models from './models';
 
 /**
- * Trade (swap) event occurred in a pool.
+ * Trade (swap) event which occurred in a pool.
  */
 export interface UNISWAPV3ETHEREUMSwapDTO {
     entry_time?: string;

@@ -2,6 +2,7 @@
 .openapi-generator-ignore
 apis/CRYPTOPUNKSApi.ts
 apis/MetadataApi.ts
+apis/UNISWAPV2ETHEREUMApi.ts
 apis/UNISWAPV3ETHEREUMApi.ts
 apis/index.ts
 index.ts
@@ -15,6 +16,9 @@ models/CRYPTOPUNKSMarketplaceDailySnapshotDTO.ts
 models/CRYPTOPUNKSTradeDTO.ts
 models/CRYPTOPUNKSUserDTO.ts
 models/TransactionsETradeAggressiveSide.ts
+models/UNISWAPV2ETHEREUMLiquidityPoolDTO.ts
+models/UNISWAPV2ETHEREUMSwapDTO.ts
+models/UNISWAPV2ETHEREUMTokenDTO.ts
 models/UNISWAPV3ETHEREUMAccountDTO.ts
 models/UNISWAPV3ETHEREUMActiveAccountDTO.ts
 models/UNISWAPV3ETHEREUMDepositDTO.ts

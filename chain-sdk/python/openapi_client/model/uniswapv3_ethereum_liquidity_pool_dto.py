@@ -32,7 +32,7 @@ class UNISWAPV3ETHEREUMLiquidityPoolDTO(
 
     Do not edit the class manually.
 
-    All Uniswap V3 pools.
+    Pool-level metadata.
     """
 
 

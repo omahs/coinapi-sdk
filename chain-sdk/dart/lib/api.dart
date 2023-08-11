@@ -29,6 +29,7 @@ part 'auth/http_bearer_auth.dart';
 
 part 'api/cryptopunks_api.dart';
 part 'api/metadata_api.dart';
+part 'api/uniswapv2_ethereum_api.dart';
 part 'api/uniswapv3_ethereum_api.dart';
 
 part 'model/cryptopunks_bid_dto.dart';
@@ -41,6 +42,9 @@ part 'model/cryptopunks_marketplace_daily_snapshot_dto.dart';
 part 'model/cryptopunks_trade_dto.dart';
 part 'model/cryptopunks_user_dto.dart';
 part 'model/transactions_e_trade_aggressive_side.dart';
+part 'model/uniswapv2_ethereum_liquidity_pool_dto.dart';
+part 'model/uniswapv2_ethereum_swap_dto.dart';
+part 'model/uniswapv2_ethereum_token_dto.dart';
 part 'model/uniswapv3_ethereum_account_dto.dart';
 part 'model/uniswapv3_ethereum_active_account_dto.dart';
 part 'model/uniswapv3_ethereum_deposit_dto.dart';

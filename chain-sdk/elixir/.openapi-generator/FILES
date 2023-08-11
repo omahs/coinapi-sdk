@@ -6,6 +6,7 @@ config/config.exs
 config/runtime.exs
 lib/on_chain_dapps_restapi/api/cryptopunks.ex
 lib/on_chain_dapps_restapi/api/metadata.ex
+lib/on_chain_dapps_restapi/api/uniswapv2_ethereum.ex
 lib/on_chain_dapps_restapi/api/uniswapv3_ethereum.ex
 lib/on_chain_dapps_restapi/connection.ex
 lib/on_chain_dapps_restapi/deserializer.ex
@@ -19,6 +20,9 @@ lib/on_chain_dapps_restapi/model/cryptopunks_marketplace_daily_snapshot_dto.ex
 lib/on_chain_dapps_restapi/model/cryptopunks_trade_dto.ex
 lib/on_chain_dapps_restapi/model/cryptopunks_user_dto.ex
 lib/on_chain_dapps_restapi/model/transactions_e_trade_aggressive_side.ex
+lib/on_chain_dapps_restapi/model/uniswap_v2_ethereum_liquidity_pool_dto.ex
+lib/on_chain_dapps_restapi/model/uniswap_v2_ethereum_swap_dto.ex
+lib/on_chain_dapps_restapi/model/uniswap_v2_ethereum_token_dto.ex
 lib/on_chain_dapps_restapi/model/uniswap_v3_ethereum_account_dto.ex
 lib/on_chain_dapps_restapi/model/uniswap_v3_ethereum_active_account_dto.ex
 lib/on_chain_dapps_restapi/model/uniswap_v3_ethereum_deposit_dto.ex

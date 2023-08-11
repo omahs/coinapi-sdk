@@ -66,6 +66,7 @@ library
       OnChainDapps-REST.API
       OnChainDapps-REST.API.CRYPTOPUNKS
       OnChainDapps-REST.API.Metadata
+      OnChainDapps-REST.API.UNISWAPV2ETHEREUM
       OnChainDapps-REST.API.UNISWAPV3ETHEREUM
       OnChainDapps-REST.Client
       OnChainDapps-REST.Core

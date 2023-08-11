@@ -201,6 +201,12 @@ class ApiClient {
           return CRYPTOPUNKSUserDTO.fromJson(value);
         case 'TransactionsETradeAggressiveSide':
           return TransactionsETradeAggressiveSideTypeTransformer().decode(value);
+        case 'UNISWAPV2ETHEREUMLiquidityPoolDTO':
+          return UNISWAPV2ETHEREUMLiquidityPoolDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMSwapDTO':
+          return UNISWAPV2ETHEREUMSwapDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMTokenDTO':
+          return UNISWAPV2ETHEREUMTokenDTO.fromJson(value);
         case 'UNISWAPV3ETHEREUMAccountDTO':
           return UNISWAPV3ETHEREUMAccountDTO.fromJson(value);
         case 'UNISWAPV3ETHEREUMActiveAccountDTO':

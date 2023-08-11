@@ -27,6 +27,9 @@ require 'openapi_client/models/cryptopunks_marketplace_daily_snapshot_dto'
 require 'openapi_client/models/cryptopunks_trade_dto'
 require 'openapi_client/models/cryptopunks_user_dto'
 require 'openapi_client/models/transactions_e_trade_aggressive_side'
+require 'openapi_client/models/uniswapv2_ethereum_liquidity_pool_dto'
+require 'openapi_client/models/uniswapv2_ethereum_swap_dto'
+require 'openapi_client/models/uniswapv2_ethereum_token_dto'
 require 'openapi_client/models/uniswapv3_ethereum_account_dto'
 require 'openapi_client/models/uniswapv3_ethereum_active_account_dto'
 require 'openapi_client/models/uniswapv3_ethereum_deposit_dto'
@@ -54,6 +57,7 @@ require 'openapi_client/models/uniswapv3_ethereum_withdraw_dto'
 # APIs
 require 'openapi_client/api/cryptopunks_api'
 require 'openapi_client/api/metadata_api'
+require 'openapi_client/api/uniswapv2_ethereum_api'
 require 'openapi_client/api/uniswapv3_ethereum_api'
 
 module OpenapiClient

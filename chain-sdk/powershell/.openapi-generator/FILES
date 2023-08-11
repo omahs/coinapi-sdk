@@ -14,6 +14,10 @@ docs/CRYPTOPUNKSTradeDTO.md
 docs/CRYPTOPUNKSUserDTO.md
 docs/MetadataApi.md
 docs/TransactionsETradeAggressiveSide.md
+docs/UNISWAPV2ETHEREUMApi.md
+docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
+docs/UNISWAPV2ETHEREUMSwapDTO.md
+docs/UNISWAPV2ETHEREUMTokenDTO.md
 docs/UNISWAPV3ETHEREUMAccountDTO.md
 docs/UNISWAPV3ETHEREUMActiveAccountDTO.md
 docs/UNISWAPV3ETHEREUMApi.md
@@ -40,6 +44,7 @@ docs/UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMWithdrawDTO.md
 src/PSOpenAPITools/Api/CRYPTOPUNKSApi.ps1
 src/PSOpenAPITools/Api/MetadataApi.ps1
+src/PSOpenAPITools/Api/UNISWAPV2ETHEREUMApi.ps1
 src/PSOpenAPITools/Api/UNISWAPV3ETHEREUMApi.ps1
 src/PSOpenAPITools/Client/Configuration.ps1
 src/PSOpenAPITools/Model/CRYPTOPUNKSBidDTO.ps1
@@ -52,6 +57,9 @@ src/PSOpenAPITools/Model/CRYPTOPUNKSMarketplaceDailySnapshotDTO.ps1
 src/PSOpenAPITools/Model/CRYPTOPUNKSTradeDTO.ps1
 src/PSOpenAPITools/Model/CRYPTOPUNKSUserDTO.ps1
 src/PSOpenAPITools/Model/TransactionsETradeAggressiveSide.ps1
+src/PSOpenAPITools/Model/UNISWAPV2ETHEREUMLiquidityPoolDTO.ps1
+src/PSOpenAPITools/Model/UNISWAPV2ETHEREUMSwapDTO.ps1
+src/PSOpenAPITools/Model/UNISWAPV2ETHEREUMTokenDTO.ps1
 src/PSOpenAPITools/Model/UNISWAPV3ETHEREUMAccountDTO.ps1
 src/PSOpenAPITools/Model/UNISWAPV3ETHEREUMActiveAccountDTO.ps1
 src/PSOpenAPITools/Model/UNISWAPV3ETHEREUMDepositDTO.ps1
@@ -84,6 +92,7 @@ src/PSOpenAPITools/Private/RSAEncryptionProvider.cs
 src/PSOpenAPITools/en-US/about_PSOpenAPITools.help.txt
 tests/Api/CRYPTOPUNKSApi.Tests.ps1
 tests/Api/MetadataApi.Tests.ps1
+tests/Api/UNISWAPV2ETHEREUMApi.Tests.ps1
 tests/Api/UNISWAPV3ETHEREUMApi.Tests.ps1
 tests/Model/CRYPTOPUNKSBidDTO.Tests.ps1
 tests/Model/CRYPTOPUNKSCollectionDTO.Tests.ps1
@@ -95,6 +104,9 @@ tests/Model/CRYPTOPUNKSMarketplaceDailySnapshotDTO.Tests.ps1
 tests/Model/CRYPTOPUNKSTradeDTO.Tests.ps1
 tests/Model/CRYPTOPUNKSUserDTO.Tests.ps1
 tests/Model/TransactionsETradeAggressiveSide.Tests.ps1
+tests/Model/UNISWAPV2ETHEREUMLiquidityPoolDTO.Tests.ps1
+tests/Model/UNISWAPV2ETHEREUMSwapDTO.Tests.ps1
+tests/Model/UNISWAPV2ETHEREUMTokenDTO.Tests.ps1
 tests/Model/UNISWAPV3ETHEREUMAccountDTO.Tests.ps1
 tests/Model/UNISWAPV3ETHEREUMActiveAccountDTO.Tests.ps1
 tests/Model/UNISWAPV3ETHEREUMDepositDTO.Tests.ps1

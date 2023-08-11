@@ -9,7 +9,7 @@ import 'package:built_value/serializer.dart';
 
 part 'uniswapv3_ethereum_liquidity_pool_dto.g.dart';
 
-/// All Uniswap V3 pools.
+/// Pool-level metadata.
 ///
 /// Properties:
 /// * [entryTime] 

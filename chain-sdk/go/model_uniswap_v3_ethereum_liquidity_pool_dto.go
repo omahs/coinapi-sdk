@@ -19,7 +19,7 @@ import (
 // checks if the UNISWAPV3ETHEREUMLiquidityPoolDTO type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &UNISWAPV3ETHEREUMLiquidityPoolDTO{}
 
-// UNISWAPV3ETHEREUMLiquidityPoolDTO All Uniswap V3 pools.
+// UNISWAPV3ETHEREUMLiquidityPoolDTO Pool-level metadata.
 type UNISWAPV3ETHEREUMLiquidityPoolDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`

@@ -21,7 +21,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * Trade (swap) event occurred in a pool.
+ * Trade (swap) event which occurred in a pool.
  *
  * @param entryTime 
  * @param recvTime 

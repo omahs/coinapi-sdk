@@ -14,6 +14,10 @@ docs/CRYPTOPUNKSTradeDTO.md
 docs/CRYPTOPUNKSUserDTO.md
 docs/MetadataApi.md
 docs/TransactionsETradeAggressiveSide.md
+docs/UNISWAPV2ETHEREUMApi.md
+docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
+docs/UNISWAPV2ETHEREUMSwapDTO.md
+docs/UNISWAPV2ETHEREUMTokenDTO.md
 docs/UNISWAPV3ETHEREUMAccountDTO.md
 docs/UNISWAPV3ETHEREUMActiveAccountDTO.md
 docs/UNISWAPV3ETHEREUMApi.md
@@ -51,6 +55,7 @@ src/main/java/org/openapitools/client/JsonUtil.java
 src/main/java/org/openapitools/client/Pair.java
 src/main/java/org/openapitools/client/api/CRYPTOPUNKSApi.java
 src/main/java/org/openapitools/client/api/MetadataApi.java
+src/main/java/org/openapitools/client/api/UNISWAPV2ETHEREUMApi.java
 src/main/java/org/openapitools/client/api/UNISWAPV3ETHEREUMApi.java
 src/main/java/org/openapitools/client/auth/ApiKeyAuth.java
 src/main/java/org/openapitools/client/auth/Authentication.java
@@ -65,6 +70,9 @@ src/main/java/org/openapitools/client/model/CRYPTOPUNKSMarketplaceDailySnapshotD
 src/main/java/org/openapitools/client/model/CRYPTOPUNKSTradeDTO.java
 src/main/java/org/openapitools/client/model/CRYPTOPUNKSUserDTO.java
 src/main/java/org/openapitools/client/model/TransactionsETradeAggressiveSide.java
+src/main/java/org/openapitools/client/model/UNISWAPV2ETHEREUMLiquidityPoolDTO.java
+src/main/java/org/openapitools/client/model/UNISWAPV2ETHEREUMSwapDTO.java
+src/main/java/org/openapitools/client/model/UNISWAPV2ETHEREUMTokenDTO.java
 src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMAccountDTO.java
 src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMActiveAccountDTO.java
 src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMDepositDTO.java

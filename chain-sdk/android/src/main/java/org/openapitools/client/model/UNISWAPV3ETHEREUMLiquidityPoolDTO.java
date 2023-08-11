@@ -18,9 +18,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * All Uniswap V3 pools.
+ * Pool-level metadata.
  **/
-@ApiModel(description = "All Uniswap V3 pools.")
+@ApiModel(description = "Pool-level metadata.")
 public class UNISWAPV3ETHEREUMLiquidityPoolDTO {
   
   @SerializedName("entry_time")

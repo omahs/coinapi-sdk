@@ -4,6 +4,7 @@ api.ts
 api/apis.ts
 api/cRYPTOPUNKSApi.ts
 api/metadataApi.ts
+api/uNISWAPV2ETHEREUMApi.ts
 api/uNISWAPV3ETHEREUMApi.ts
 git_push.sh
 model/cRYPTOPUNKSBidDTO.ts
@@ -17,6 +18,9 @@ model/cRYPTOPUNKSTradeDTO.ts
 model/cRYPTOPUNKSUserDTO.ts
 model/models.ts
 model/transactionsETradeAggressiveSide.ts
+model/uNISWAPV2ETHEREUMLiquidityPoolDTO.ts
+model/uNISWAPV2ETHEREUMSwapDTO.ts
+model/uNISWAPV2ETHEREUMTokenDTO.ts
 model/uNISWAPV3ETHEREUMAccountDTO.ts
 model/uNISWAPV3ETHEREUMActiveAccountDTO.ts
 model/uNISWAPV3ETHEREUMDepositDTO.ts

@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  * UNISWAPV3ETHEREUMLiquidityPoolDTOTest Class Doc Comment
  *
  * @category    Class
- * @description All Uniswap V3 pools.
+ * @description Pool-level metadata.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
