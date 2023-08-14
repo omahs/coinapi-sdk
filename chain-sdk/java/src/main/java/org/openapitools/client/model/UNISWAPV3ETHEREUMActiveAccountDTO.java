@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Entity for calculating daily/hourly active users.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-14T09:56:50.244801Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-14T11:43:43.985277Z[Etc/UTC]")
 public class UNISWAPV3ETHEREUMActiveAccountDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
