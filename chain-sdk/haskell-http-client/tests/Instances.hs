@@ -382,6 +382,121 @@ genCURVEFINANCEETHEREUMTokenDTO n =
     <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMTokenDTOLastPriceBlockNumber :: Maybe Text
     <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMTokenDTOTokenSymbol :: Maybe Text
   
+instance Arbitrary PANCAKESWAPV3ETHEREUMLiquidityPoolDTO where
+  arbitrary = sized genPANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+
+genPANCAKESWAPV3ETHEREUMLiquidityPoolDTO :: Int -> Gen PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+genPANCAKESWAPV3ETHEREUMLiquidityPoolDTO n =
+  PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+    <$> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOBlockRange :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOProtocol :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOName :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOSymbol :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLiquidityToken :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOInputTokens :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTORewardTokens :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOFees :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOIsSingleSided :: Maybe Bool
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCreatedTimestamp :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCreatedBlockNumber :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOTick :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOTotalValueLockedUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOTotalLiquidity :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOTotalLiquidityUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOActiveLiquidity :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOActiveLiquidityUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOUncollectedProtocolSideTokenAmounts :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOUncollectedProtocolSideValuesUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOUncollectedSupplySideTokenAmounts :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOUncollectedSupplySideValuesUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeSupplySideRevenueUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeProtocolSideRevenueUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeTotalRevenueUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeByTokenAmount :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeByTokenUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOInputTokenBalances :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOInputTokenBalancesUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOInputTokenWeights :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOStakedOutputTokenAmount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTORewardTokenEmissionsAmount :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTORewardTokenEmissionsUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeDepositCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeWithdrawCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeSwapCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOPositionCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOOpenPositionCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOClosedPositionCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLastSnapshotDayId :: Maybe Int
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLastSnapshotHourId :: Maybe Int
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLastUpdateTimestamp :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLastUpdateBlockNumber :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMLiquidityPoolDTOEvaluatedAsk :: Maybe Double
+  
+instance Arbitrary PANCAKESWAPV3ETHEREUMSwapDTO where
+  arbitrary = sized genPANCAKESWAPV3ETHEREUMSwapDTO
+
+genPANCAKESWAPV3ETHEREUMSwapDTO :: Int -> Gen PANCAKESWAPV3ETHEREUMSwapDTO
+genPANCAKESWAPV3ETHEREUMSwapDTO n =
+  PANCAKESWAPV3ETHEREUMSwapDTO
+    <$> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOBlock :: Maybe Int
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOHash :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTONonce :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOLogIndex :: Maybe Int
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOGasLimit :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOGasUsed :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOGasPrice :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOProtocol :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOAccount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOPool :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOTimestamp :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOTick :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOTokenIn :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOAmountIn :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOAmountInUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOTokenOut :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOAmountOut :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOAmountOutUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOReserveAmounts :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOPoolId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOTransactionId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOEvaluatedPrice :: Maybe Double
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOEvaluatedAmount :: Maybe Double
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMSwapDTOEvaluatedAggressor :: Maybe TransactionsETradeAggressiveSide
+  
+instance Arbitrary PANCAKESWAPV3ETHEREUMTokenDTO where
+  arbitrary = sized genPANCAKESWAPV3ETHEREUMTokenDTO
+
+genPANCAKESWAPV3ETHEREUMTokenDTO :: Int -> Gen PANCAKESWAPV3ETHEREUMTokenDTO
+genPANCAKESWAPV3ETHEREUMTokenDTO n =
+  PANCAKESWAPV3ETHEREUMTokenDTO
+    <$> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMTokenDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMTokenDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMTokenDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMTokenDTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMTokenDTOBlockRange :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMTokenDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMTokenDTOName :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMTokenDTOSymbol :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMTokenDTODecimals :: Maybe Int
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMTokenDTOLastPriceUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMTokenDTOLastPriceBlockNumber :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMTokenDTOLastPricePool :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMTokenDTOTotalSupply :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMTokenDTOTotalValueLockedUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMTokenDTOLargePriceChangeBuffer :: Maybe Int
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMTokenDTOLargeTvlImpactBuffer :: Maybe Int
+    <*> arbitraryReducedMaybe n -- pANCAKESWAPV3ETHEREUMTokenDTOTokenSymbol :: Maybe Text
+  
 instance Arbitrary SUSHISWAPV3ETHEREUMLiquidityPoolDTO where
   arbitrary = sized genSUSHISWAPV3ETHEREUMLiquidityPoolDTO
 

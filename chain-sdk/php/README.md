@@ -91,6 +91,9 @@ Class | Method | HTTP request | Description
 *MetadataApi* | [**metadataChainsGet**](docs/Api/MetadataApi.md#metadatachainsget) | **GET** /metadata/chains | List all chains.
 *MetadataApi* | [**metadataDappsDappNameGet**](docs/Api/MetadataApi.md#metadatadappsdappnameget) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
 *MetadataApi* | [**metadataDappsGet**](docs/Api/MetadataApi.md#metadatadappsget) | **GET** /metadata/dapps | List all decentralized applications.
+*PANCAKESWAPV3ETHEREUMApi* | [**pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent**](docs/Api/PANCAKESWAPV3ETHEREUMApi.md#pancakeswapv3ethereumliquiditypoolscurrent) | **GET** /v1/dapps/pancakeswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**pANCAKESWAPV3ETHEREUMSwapsCurrent**](docs/Api/PANCAKESWAPV3ETHEREUMApi.md#pancakeswapv3ethereumswapscurrent) | **GET** /v1/dapps/pancakeswap-v3-ethereum/swaps/current | Swaps (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**pANCAKESWAPV3ETHEREUMTokensCurrent**](docs/Api/PANCAKESWAPV3ETHEREUMApi.md#pancakeswapv3ethereumtokenscurrent) | **GET** /v1/dapps/pancakeswap-v3-ethereum/tokens/current | Tokens (current)
 *SUSHISWAPV3ETHEREUMApi* | [**sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent**](docs/Api/SUSHISWAPV3ETHEREUMApi.md#sushiswapv3ethereumliquiditypoolscurrent) | **GET** /v1/dapps/sushiswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
 *SUSHISWAPV3ETHEREUMApi* | [**sUSHISWAPV3ETHEREUMSwapsCurrent**](docs/Api/SUSHISWAPV3ETHEREUMApi.md#sushiswapv3ethereumswapscurrent) | **GET** /v1/dapps/sushiswap-v3-ethereum/swaps/current | Swaps (current)
 *SUSHISWAPV3ETHEREUMApi* | [**sUSHISWAPV3ETHEREUMTokensCurrent**](docs/Api/SUSHISWAPV3ETHEREUMApi.md#sushiswapv3ethereumtokenscurrent) | **GET** /v1/dapps/sushiswap-v3-ethereum/tokens/current | Tokens (current)
@@ -135,6 +138,9 @@ Class | Method | HTTP request | Description
 - [CURVEFINANCEETHEREUMLiquidityPoolDTO](docs/Model/CURVEFINANCEETHEREUMLiquidityPoolDTO.md)
 - [CURVEFINANCEETHEREUMSwapDTO](docs/Model/CURVEFINANCEETHEREUMSwapDTO.md)
 - [CURVEFINANCEETHEREUMTokenDTO](docs/Model/CURVEFINANCEETHEREUMTokenDTO.md)
+- [PANCAKESWAPV3ETHEREUMLiquidityPoolDTO](docs/Model/PANCAKESWAPV3ETHEREUMLiquidityPoolDTO.md)
+- [PANCAKESWAPV3ETHEREUMSwapDTO](docs/Model/PANCAKESWAPV3ETHEREUMSwapDTO.md)
+- [PANCAKESWAPV3ETHEREUMTokenDTO](docs/Model/PANCAKESWAPV3ETHEREUMTokenDTO.md)
 - [SUSHISWAPV3ETHEREUMLiquidityPoolDTO](docs/Model/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.md)
 - [SUSHISWAPV3ETHEREUMSwapDTO](docs/Model/SUSHISWAPV3ETHEREUMSwapDTO.md)
 - [SUSHISWAPV3ETHEREUMTokenDTO](docs/Model/SUSHISWAPV3ETHEREUMTokenDTO.md)

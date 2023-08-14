@@ -26,6 +26,8 @@ tags:
   name: UNISWAP-V3-ETHEREUM
 - description: Sushiswap V3 Ethereum
   name: SUSHISWAP-V3-ETHEREUM
+- description: PancakeSwap V3 Ethereum
+  name: PANCAKESWAP-V3-ETHEREUM
 - description: Uniswap V2 Ethereum
   name: UNISWAP-V2-ETHEREUM
 - description: Curve Finance Ethereum
@@ -452,6 +454,120 @@ paths:
       summary: Gets dapp by name.
       tags:
       - Metadata
+      x-accepts: application/json
+  /v1/dapps/pancakeswap-v3-ethereum/liquidityPools/current:
+    get:
+      description: Gets liquidityPools.
+      operationId: PANCAKESWAP-V3-ETHEREUM.LiquidityPools (current)
+      parameters:
+      - description: Smart contract address of the pool.
+        explode: true
+        in: query
+        name: id
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PANCAKESWAP_V3_ETHEREUM.LiquidityPoolDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PANCAKESWAP_V3_ETHEREUM.LiquidityPoolDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PANCAKESWAP_V3_ETHEREUM.LiquidityPoolDTO'
+                type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PANCAKESWAP_V3_ETHEREUM.LiquidityPoolDTO'
+                type: array
+          description: successful operation
+      summary: LiquidityPools (current)
+      tags:
+      - PANCAKESWAP-V3-ETHEREUM
+      x-accepts: application/json
+  /v1/dapps/pancakeswap-v3-ethereum/swaps/current:
+    get:
+      description: Gets swaps.
+      operationId: PANCAKESWAP-V3-ETHEREUM.Swaps (current)
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PANCAKESWAP_V3_ETHEREUM.SwapDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PANCAKESWAP_V3_ETHEREUM.SwapDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PANCAKESWAP_V3_ETHEREUM.SwapDTO'
+                type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PANCAKESWAP_V3_ETHEREUM.SwapDTO'
+                type: array
+          description: successful operation
+      summary: Swaps (current)
+      tags:
+      - PANCAKESWAP-V3-ETHEREUM
+      x-accepts: application/json
+  /v1/dapps/pancakeswap-v3-ethereum/tokens/current:
+    get:
+      description: Gets tokens.
+      operationId: PANCAKESWAP-V3-ETHEREUM.Tokens (current)
+      parameters:
+      - description: Smart contract address of the token.
+        explode: true
+        in: query
+        name: id
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PANCAKESWAP_V3_ETHEREUM.TokenDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PANCAKESWAP_V3_ETHEREUM.TokenDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PANCAKESWAP_V3_ETHEREUM.TokenDTO'
+                type: array
+            application/x-msgpack:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PANCAKESWAP_V3_ETHEREUM.TokenDTO'
+                type: array
+          description: successful operation
+      summary: Tokens (current)
+      tags:
+      - PANCAKESWAP-V3-ETHEREUM
       x-accepts: application/json
   /v1/dapps/sushiswap-v3-ethereum/liquidityPools/current:
     get:
@@ -2489,6 +2605,585 @@ components:
             price '
           nullable: true
           type: string
+        token_symbol:
+          nullable: true
+          readOnly: true
+          type: string
+      type: object
+    PANCAKESWAP_V3_ETHEREUM.LiquidityPoolDTO:
+      additionalProperties: false
+      description: Pool-level metadata.
+      example:
+        symbol: symbol
+        fees:
+        - fees
+        - fees
+        cumulative_total_revenue_usd: cumulative_total_revenue_usd
+        cumulative_supply_side_revenue_usd: cumulative_supply_side_revenue_usd
+        total_liquidity_usd: total_liquidity_usd
+        block_number: 0
+        input_token_weights:
+        - input_token_weights
+        - input_token_weights
+        last_snapshot_hour_id: 2
+        evaluated_ask: 4.145608029883936
+        vid: 6
+        protocol: protocol
+        last_update_timestamp: last_update_timestamp
+        id: id
+        reward_tokens:
+        - reward_tokens
+        - reward_tokens
+        uncollected_protocol_side_values_usd:
+        - uncollected_protocol_side_values_usd
+        - uncollected_protocol_side_values_usd
+        block_range: block_range
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        input_token_balances_usd:
+        - input_token_balances_usd
+        - input_token_balances_usd
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        input_token_balances:
+        - input_token_balances
+        - input_token_balances
+        cumulative_withdraw_count: 5
+        tick: tick
+        reward_token_emissions_usd:
+        - reward_token_emissions_usd
+        - reward_token_emissions_usd
+        staked_output_token_amount: staked_output_token_amount
+        cumulative_swap_count: 5
+        cumulative_protocol_side_revenue_usd: cumulative_protocol_side_revenue_usd
+        name: name
+        last_update_block_number: last_update_block_number
+        active_liquidity_usd: active_liquidity_usd
+        uncollected_protocol_side_token_amounts:
+        - uncollected_protocol_side_token_amounts
+        - uncollected_protocol_side_token_amounts
+        cumulative_volume_by_token_amount:
+        - cumulative_volume_by_token_amount
+        - cumulative_volume_by_token_amount
+        liquidity_token: liquidity_token
+        active_liquidity: active_liquidity
+        is_single_sided: true
+        created_block_number: created_block_number
+        cumulative_deposit_count: 1
+        closed_position_count: 9
+        last_snapshot_day_id: 3
+        total_liquidity: total_liquidity
+        reward_token_emissions_amount:
+        - reward_token_emissions_amount
+        - reward_token_emissions_amount
+        cumulative_volume_usd: cumulative_volume_usd
+        total_value_locked_usd: total_value_locked_usd
+        uncollected_supply_side_token_amounts:
+        - uncollected_supply_side_token_amounts
+        - uncollected_supply_side_token_amounts
+        uncollected_supply_side_values_usd:
+        - uncollected_supply_side_values_usd
+        - uncollected_supply_side_values_usd
+        position_count: 2
+        created_timestamp: created_timestamp
+        input_tokens:
+        - input_tokens
+        - input_tokens
+        cumulative_volume_by_token_usd:
+        - cumulative_volume_by_token_usd
+        - cumulative_volume_by_token_usd
+        open_position_count: 7
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        vid:
+          description: "."
+          format: int64
+          type: integer
+        block_range:
+          description: Block range of the liquidity pool.
+          nullable: true
+          type: string
+        id:
+          description: Smart contract address of the pool.
+          nullable: true
+          type: string
+        protocol:
+          description: Protocol this pool belongs to.
+          nullable: true
+          type: string
+        name:
+          description: Name of liquidity pool (e.g. Curve.fi DAI/USDC/USDT).
+          nullable: true
+          type: string
+        symbol:
+          description: Symbol of liquidity pool (e.g. 3CRV).
+          nullable: true
+          type: string
+        liquidity_token:
+          description: Token that is to represent ownership of liquidity.
+          nullable: true
+          type: string
+        input_tokens:
+          description: Tokens that need to be deposited to take a position in protocol.
+            e.g. WETH and USDC to deposit into the WETH-USDC pool. Array to account
+            for multi-asset pools like Curve and Balancer.
+          items:
+            type: string
+          nullable: true
+          type: array
+        reward_tokens:
+          description: "Additional tokens that are given as reward for position in\
+            \ a protocol, usually in liquidity mining programs. e.g. SUSHI in the\
+            \ Onsen program, MATIC for Aave Polygon, usually in liquidity mining programs.\
+            \ e.g. SUSHI in the Onsen program, MATIC for Aave Polygon."
+          items:
+            type: string
+          nullable: true
+          type: array
+        fees:
+          description: "Fees per trade incurred to the user. Should include all fees\
+            \ that apply to a pool (e.g. Curve has a trading fee AND an admin fee,\
+            \ which is a portion of the trading fee. Uniswap only has a trading fee\
+            \ and no protocol fee.)."
+          items:
+            type: string
+          nullable: true
+          type: array
+        is_single_sided:
+          description: "Specifies whether this pool is single-sided (e.g. Bancor,\
+            \ Platypus's Alternative Pool). The specifics of the implementation depends\
+            \ on the protocol."
+          type: boolean
+        created_timestamp:
+          description: Timestamp when the liquidity pool was created.
+          nullable: true
+          type: string
+        created_block_number:
+          description: Block number when the liquidity pool was created.
+          nullable: true
+          type: string
+        tick:
+          description: Current tick representing the price of token0/token1.
+          nullable: true
+          type: string
+        total_value_locked_usd:
+          description: Current TVL (Total Value Locked) of this pool in USD.
+          nullable: true
+          type: string
+        total_liquidity:
+          description: Sum of all active and non-active liquidity for this pool.
+          nullable: true
+          type: string
+        total_liquidity_usd:
+          description: Sum of all active and non-active liquidity in USD for this
+            pool.
+          nullable: true
+          type: string
+        active_liquidity:
+          description: All liquidity `k` that is active. Will be equal to totalLiquidity
+            except for in concentrated liquidity - where activeLiquidity is all liquidity
+            positions that contain the pools current tick.
+          nullable: true
+          type: string
+        active_liquidity_usd:
+          description: All liquidity in USD that is active. Will be equal to totalLiquidity
+            except for in concentrated liquidity - where activeLiquidity is all liquidity
+            positions that contain the pools current tick.
+          nullable: true
+          type: string
+        uncollected_protocol_side_token_amounts:
+          description: All protocol-side value locked in token amounts that remains
+            uncollected and unused in the pool.
+          items:
+            type: string
+          nullable: true
+          type: array
+        uncollected_protocol_side_values_usd:
+          description: All protocol-side value locking in USD that remains uncollected
+            and unused in the pool.
+          items:
+            type: string
+          nullable: true
+          type: array
+        uncollected_supply_side_token_amounts:
+          description: All supply-side value locked in token amounts that remains
+            uncollected and unused in the pool.
+          items:
+            type: string
+          nullable: true
+          type: array
+        uncollected_supply_side_values_usd:
+          description: All supply-side value locked in USD that remains uncollected
+            and unused in the pool.
+          items:
+            type: string
+          nullable: true
+          type: array
+        cumulative_supply_side_revenue_usd:
+          description: "All revenue generated by the liquidity pool, accrued to the\
+            \ supply side."
+          nullable: true
+          type: string
+        cumulative_protocol_side_revenue_usd:
+          description: "All revenue generated by the liquidity pool, accrued to the\
+            \ protocol."
+          nullable: true
+          type: string
+        cumulative_total_revenue_usd:
+          description: ' All revenue generated by the liquidity pool.'
+          nullable: true
+          type: string
+        cumulative_volume_by_token_amount:
+          description: "All trade volume occurred for a specific input token, in native\
+            \ amount. The ordering should be the same as the pool's `inputTokens`\
+            \ field."
+          items:
+            type: string
+          nullable: true
+          type: array
+        cumulative_volume_by_token_usd:
+          description: "All trade volume occurred for a specific input token, in USD.\
+            \ The ordering should be the same as the pool's `inputTokens` field."
+          items:
+            type: string
+          nullable: true
+          type: array
+        cumulative_volume_usd:
+          description: "All trade volume occurred for a specific input token, in USD.\
+            \ The ordering should be the same as the pool's `inputTokens` field."
+          nullable: true
+          type: string
+        input_token_balances:
+          description: Amount of input tokens in the pool. The ordering should be
+            the same as the pool's `inputTokens` field.
+          items:
+            type: string
+          nullable: true
+          type: array
+        input_token_balances_usd:
+          description: Amount of input tokens in USD in the pool. The ordering should
+            be the same as the pool's `inputTokens` field.
+          items:
+            type: string
+          nullable: true
+          type: array
+        input_token_weights:
+          description: "Weights of input tokens in the liquidity pool in percentage\
+            \ values. For example, 50/50 for Uniswap pools, 48.2/51.8 for a Curve\
+            \ pool, 10/10/80 for a Balancer pool."
+          items:
+            type: string
+          nullable: true
+          type: array
+        staked_output_token_amount:
+          description: Total supply of output tokens that are staked (usually in the
+            MasterChef contract). Used to calculate reward APY.
+          nullable: true
+          type: string
+        reward_token_emissions_amount:
+          description: "Per-block reward token emission as of the current block normalized\
+            \ to a day, in token's native amount. This should be ideally calculated\
+            \ as the theoretical rate instead of the realized amount."
+          items:
+            type: string
+          nullable: true
+          type: array
+        reward_token_emissions_usd:
+          description: "Per-block reward token emission as of the current block normalized\
+            \ to a day, in USD value. This should be ideally calculated as the theoretical\
+            \ rate instead of the realized amount."
+          items:
+            type: string
+          nullable: true
+          type: array
+        cumulative_deposit_count:
+          description: Total number of deposits (add liquidity).
+          format: int32
+          type: integer
+        cumulative_withdraw_count:
+          description: Total number of withdrawals (remove liquidity).
+          format: int32
+          type: integer
+        cumulative_swap_count:
+          description: Total number of trades (swaps).
+          format: int32
+          type: integer
+        position_count:
+          description: Number of positions in this market.
+          format: int32
+          type: integer
+        open_position_count:
+          description: Number of open positions in this market.
+          format: int32
+          type: integer
+        closed_position_count:
+          description: Number of closed positions in this market.
+          format: int32
+          type: integer
+        last_snapshot_day_id:
+          description: Day ID of the most recent daily snapshot.
+          format: int32
+          type: integer
+        last_snapshot_hour_id:
+          description: Hour ID of the most recent hourly snapshot.
+          format: int32
+          type: integer
+        last_update_timestamp:
+          description: Timestamp of the last time this entity was updated.
+          nullable: true
+          type: string
+        last_update_block_number:
+          description: Block number of the last time this entity was updated.
+          nullable: true
+          type: string
+        evaluated_ask:
+          description: ""
+          format: double
+          readOnly: true
+          type: number
+      type: object
+    PANCAKESWAP_V3_ETHEREUM.SwapDTO:
+      additionalProperties: false
+      description: Trade (swap) event which occurred in a pool.
+      example:
+        block_number: 0
+        block_: 6
+        protocol: protocol
+        evaluated_amount: 5.637376656633329
+        evaluated_aggressor: null
+        gas_limit: gas_limit
+        id: id
+        token_in: token_in
+        timestamp: timestamp
+        gas_price: gas_price
+        reserve_amounts:
+        - reserve_amounts
+        - reserve_amounts
+        transaction_id: transaction_id
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        amount_in: amount_in
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        amount_out_usd: amount_out_usd
+        gas_used: gas_used
+        pool: pool
+        tick: tick
+        pool_id: pool_id
+        nonce: nonce
+        log_index: 1
+        amount_out: amount_out
+        evaluated_price: 5.962133916683182
+        amount_in_usd: amount_in_usd
+        token_out: token_out
+        hash: hash
+        account: account
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        block_:
+          description: Block number in which the swap operation was recorded.
+          format: int32
+          type: integer
+        id:
+          description: "Unique string identifier of the swap operation, format: (transaction\
+            \ hash)-(log index)."
+          nullable: true
+          type: string
+        hash:
+          description: Transaction hash of the transaction that emitted this event.
+          nullable: true
+          type: string
+        nonce:
+          description: Nonce of the transaction that emitted this event.
+          nullable: true
+          type: string
+        log_index:
+          description: "Event log index. For transactions that don't emit event, create\
+            \ arbitrary index starting from 0."
+          format: int32
+          type: integer
+        gas_limit:
+          description: Gas limit of the transaction that emitted this event.
+          nullable: true
+          type: string
+        gas_used:
+          description: Gas used in this transaction.
+          nullable: true
+          type: string
+        gas_price:
+          description: Gas price of the transaction that emitted this event.
+          nullable: true
+          type: string
+        protocol:
+          description: The protocol this transaction belongs to.
+          nullable: true
+          type: string
+        account:
+          description: Account that emitted this event.
+          nullable: true
+          type: string
+        pool:
+          description: The pool involving this event.
+          nullable: true
+          type: string
+        timestamp:
+          description: Timestamp of this event.
+          nullable: true
+          type: string
+        tick:
+          description: Tick of the swap operation.
+          nullable: true
+          type: string
+        token_in:
+          description: Token deposited into pool.
+          nullable: true
+          type: string
+        amount_in:
+          description: Amount of token deposited into pool in native units.
+          nullable: true
+          type: string
+        amount_in_usd:
+          description: Amount of token deposited into pool in USD.
+          nullable: true
+          type: string
+        token_out:
+          description: Token withdrawn from pool.
+          nullable: true
+          type: string
+        amount_out:
+          description: Amount of token withdrawn from pool in native units.
+          nullable: true
+          type: string
+        amount_out_usd:
+          description: Amount of token withdrawn from pool in USD.
+          nullable: true
+          type: string
+        reserve_amounts:
+          description: Amount of input tokens in the liquidity pool.
+          items:
+            type: string
+          nullable: true
+          type: array
+        pool_id:
+          nullable: true
+          readOnly: true
+          type: string
+        transaction_id:
+          nullable: true
+          readOnly: true
+          type: string
+        evaluated_price:
+          format: double
+          readOnly: true
+          type: number
+        evaluated_amount:
+          format: double
+          readOnly: true
+          type: number
+        evaluated_aggressor:
+          $ref: '#/components/schemas/Transactions.ETradeAggressiveSide'
+      type: object
+    PANCAKESWAP_V3_ETHEREUM.TokenDTO:
+      additionalProperties: false
+      description: Stores aggregated information for a specific token across all pairs
+        that token is included in.
+      example:
+        last_price_pool: last_price_pool
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        symbol: symbol
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        total_supply: total_supply
+        large_price_change_buffer: 5
+        block_number: 0
+        last_price_block_number: last_price_block_number
+        large_tvl_impact_buffer: 5
+        vid: 6
+        last_price_usd: last_price_usd
+        total_value_locked_usd: total_value_locked_usd
+        decimals: 1
+        name: name
+        id: id
+        token_symbol: token_symbol
+        block_range: block_range
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        vid:
+          description: "."
+          format: int64
+          type: integer
+        block_range:
+          description: ""
+          nullable: true
+          type: string
+        id:
+          description: Smart contract address of the token.
+          nullable: true
+          type: string
+        name:
+          description: "Name of the token, mirrored from the smart contract."
+          nullable: true
+          type: string
+        symbol:
+          description: "Symbol of the token, mirrored from the smart contract."
+          nullable: true
+          type: string
+        decimals:
+          description: "The number of decimal places this token uses, default to 18."
+          format: int32
+          type: integer
+        last_price_usd:
+          description: "Optional field to track the price of a token, mostly for caching\
+            \ purposes."
+          nullable: true
+          type: string
+        last_price_block_number:
+          description: Optional field to track the block number of the last token
+            price.
+          nullable: true
+          type: string
+        last_price_pool:
+          description: Last pool that gave this token a price.
+          nullable: true
+          type: string
+        total_supply:
+          description: Amount of tokens in the protocol.
+          nullable: true
+          type: string
+        total_value_locked_usd:
+          description: Total value locked in the protocol.
+          nullable: true
+          type: string
+        large_price_change_buffer:
+          description: The buffer for detecting large price changes.
+          format: int32
+          type: integer
+        large_tvl_impact_buffer:
+          description: The buffer for detecting large TVL (Total Value Locked) impact.
+          format: int32
+          type: integer
         token_symbol:
           nullable: true
           readOnly: true

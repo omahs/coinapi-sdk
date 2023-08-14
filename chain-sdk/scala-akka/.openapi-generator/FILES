@@ -16,6 +16,7 @@ docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
 docs/CURVEFINANCEETHEREUMSwapDTO.md
 docs/CURVEFINANCEETHEREUMTokenDTO.md
 docs/MetadataApi.md
+docs/PANCAKESWAPV3ETHEREUMApi.md
 docs/SUSHISWAPV3ETHEREUMApi.md
 docs/TransactionsETradeAggressiveSide.md
 docs/UNISWAPV2ETHEREUMApi.md
@@ -47,6 +48,7 @@ src/main/scala/org/openapitools/client/api/CRYPTOPUNKSApi.scala
 src/main/scala/org/openapitools/client/api/CURVEFINANCEETHEREUMApi.scala
 src/main/scala/org/openapitools/client/api/EnumsSerializers.scala
 src/main/scala/org/openapitools/client/api/MetadataApi.scala
+src/main/scala/org/openapitools/client/api/PANCAKESWAPV3ETHEREUMApi.scala
 src/main/scala/org/openapitools/client/api/SUSHISWAPV3ETHEREUMApi.scala
 src/main/scala/org/openapitools/client/api/UNISWAPV2ETHEREUMApi.scala
 src/main/scala/org/openapitools/client/api/UNISWAPV3ETHEREUMApi.scala

@@ -6,6 +6,7 @@ api/openapi.yaml
 api_cryptopunks.go
 api_curvefinanceethereum.go
 api_metadata.go
+api_pancakeswapv3_ethereum.go
 api_sushiswapv3_ethereum.go
 api_uniswapv2_ethereum.go
 api_uniswapv3_ethereum.go
@@ -26,6 +27,10 @@ docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
 docs/CURVEFINANCEETHEREUMSwapDTO.md
 docs/CURVEFINANCEETHEREUMTokenDTO.md
 docs/MetadataApi.md
+docs/PANCAKESWAPV3ETHEREUMApi.md
+docs/PANCAKESWAPV3ETHEREUMLiquidityPoolDTO.md
+docs/PANCAKESWAPV3ETHEREUMSwapDTO.md
+docs/PANCAKESWAPV3ETHEREUMTokenDTO.md
 docs/SUSHISWAPV3ETHEREUMApi.md
 docs/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.md
 docs/SUSHISWAPV3ETHEREUMSwapDTO.md
@@ -74,6 +79,9 @@ model_cryptopunks_user_dto.go
 model_curve_finance_ethereum_liquidity_pool_dto.go
 model_curve_finance_ethereum_swap_dto.go
 model_curve_finance_ethereum_token_dto.go
+model_pancakeswap_v3_ethereum_liquidity_pool_dto.go
+model_pancakeswap_v3_ethereum_swap_dto.go
+model_pancakeswap_v3_ethereum_token_dto.go
 model_sushiswap_v3_ethereum_liquidity_pool_dto.go
 model_sushiswap_v3_ethereum_swap_dto.go
 model_sushiswap_v3_ethereum_token_dto.go
@@ -108,6 +116,7 @@ response.go
 test/api_cryptopunks_test.go
 test/api_curvefinanceethereum_test.go
 test/api_metadata_test.go
+test/api_pancakeswapv3_ethereum_test.go
 test/api_sushiswapv3_ethereum_test.go
 test/api_uniswapv2_ethereum_test.go
 test/api_uniswapv3_ethereum_test.go

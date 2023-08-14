@@ -5,6 +5,7 @@ openapiclient-1.0.0-1.rockspec
 openapiclient/api/cryptopunks_api.lua
 openapiclient/api/curvefinanceethereum_api.lua
 openapiclient/api/metadata_api.lua
+openapiclient/api/pancakeswapv3_ethereum_api.lua
 openapiclient/api/sushiswapv3_ethereum_api.lua
 openapiclient/api/uniswapv2_ethereum_api.lua
 openapiclient/api/uniswapv3_ethereum_api.lua
@@ -20,6 +21,9 @@ openapiclient/model/cryptopunks_user_dto.lua
 openapiclient/model/curve_finance_ethereum_liquidity_pool_dto.lua
 openapiclient/model/curve_finance_ethereum_swap_dto.lua
 openapiclient/model/curve_finance_ethereum_token_dto.lua
+openapiclient/model/pancakeswap_v3_ethereum_liquidity_pool_dto.lua
+openapiclient/model/pancakeswap_v3_ethereum_swap_dto.lua
+openapiclient/model/pancakeswap_v3_ethereum_token_dto.lua
 openapiclient/model/sushiswap_v3_ethereum_liquidity_pool_dto.lua
 openapiclient/model/sushiswap_v3_ethereum_swap_dto.lua
 openapiclient/model/sushiswap_v3_ethereum_token_dto.lua
@@ -65,6 +69,10 @@ spec/curve_finance_ethereum_swap_dto_spec.lua
 spec/curve_finance_ethereum_token_dto_spec.lua
 spec/curvefinanceethereum_api_spec.lua
 spec/metadata_api_spec.lua
+spec/pancakeswap_v3_ethereum_liquidity_pool_dto_spec.lua
+spec/pancakeswap_v3_ethereum_swap_dto_spec.lua
+spec/pancakeswap_v3_ethereum_token_dto_spec.lua
+spec/pancakeswapv3_ethereum_api_spec.lua
 spec/sushiswap_v3_ethereum_liquidity_pool_dto_spec.lua
 spec/sushiswap_v3_ethereum_swap_dto_spec.lua
 spec/sushiswap_v3_ethereum_token_dto_spec.lua

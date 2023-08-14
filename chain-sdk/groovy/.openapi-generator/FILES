@@ -5,6 +5,7 @@ src/main/groovy/org/openapitools/api/ApiUtils.groovy
 src/main/groovy/org/openapitools/api/CryptopunksApi.groovy
 src/main/groovy/org/openapitools/api/CurveFinanceEthereumApi.groovy
 src/main/groovy/org/openapitools/api/MetadataApi.groovy
+src/main/groovy/org/openapitools/api/PancakeswapV3EthereumApi.groovy
 src/main/groovy/org/openapitools/api/SushiswapV3EthereumApi.groovy
 src/main/groovy/org/openapitools/api/UniswapV2EthereumApi.groovy
 src/main/groovy/org/openapitools/api/UniswapV3EthereumApi.groovy
@@ -20,6 +21,9 @@ src/main/groovy/org/openapitools/model/CRYPTOPUNKSUserDTO.groovy
 src/main/groovy/org/openapitools/model/CURVEFINANCEETHEREUMLiquidityPoolDTO.groovy
 src/main/groovy/org/openapitools/model/CURVEFINANCEETHEREUMSwapDTO.groovy
 src/main/groovy/org/openapitools/model/CURVEFINANCEETHEREUMTokenDTO.groovy
+src/main/groovy/org/openapitools/model/PANCAKESWAPV3ETHEREUMLiquidityPoolDTO.groovy
+src/main/groovy/org/openapitools/model/PANCAKESWAPV3ETHEREUMSwapDTO.groovy
+src/main/groovy/org/openapitools/model/PANCAKESWAPV3ETHEREUMTokenDTO.groovy
 src/main/groovy/org/openapitools/model/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.groovy
 src/main/groovy/org/openapitools/model/SUSHISWAPV3ETHEREUMSwapDTO.groovy
 src/main/groovy/org/openapitools/model/SUSHISWAPV3ETHEREUMTokenDTO.groovy

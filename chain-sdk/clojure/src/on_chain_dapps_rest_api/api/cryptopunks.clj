@@ -6,6 +6,7 @@
             [on-chain-dapps-rest-api.specs.sushiswap-v3-ethereum/swap-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/usage-metrics-daily-snapshot-dto :refer :all]
             [on-chain-dapps-rest-api.specs.cryptopunks/collection-dto :refer :all]
+            [on-chain-dapps-rest-api.specs.pancakeswap-v3-ethereum/liquidity-pool-dto :refer :all]
             [on-chain-dapps-rest-api.specs.cryptopunks/data-sources-dto :refer :all]
             [on-chain-dapps-rest-api.specs.cryptopunks/trade-dto :refer :all]
             [on-chain-dapps-rest-api.specs.sushiswap-v3-ethereum/token-dto :refer :all]
@@ -30,6 +31,7 @@
             [on-chain-dapps-rest-api.specs.cryptopunks/market-place-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v2-ethereum/liquidity-pool-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/account-dto :refer :all]
+            [on-chain-dapps-rest-api.specs.pancakeswap-v3-ethereum/swap-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/liquidity-pool-hourly-snapshot-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/withdraw-dto :refer :all]
             [on-chain-dapps-rest-api.specs.cryptopunks/item-dto :refer :all]
@@ -45,6 +47,7 @@
             [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/position-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/tick-hourly-snapshot-dto :refer :all]
             [on-chain-dapps-rest-api.specs.uniswap-v3-ethereum/swap-dto :refer :all]
+            [on-chain-dapps-rest-api.specs.pancakeswap-v3-ethereum/token-dto :refer :all]
             )
   (:import (java.io File)))
 

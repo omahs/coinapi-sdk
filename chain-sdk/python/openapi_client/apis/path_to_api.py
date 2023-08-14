@@ -16,6 +16,9 @@ from openapi_client.apis.paths.v1_dapps_curve_finance_ethereum_swaps_current imp
 from openapi_client.apis.paths.v1_dapps_curve_finance_ethereum_tokens_current import V1DappsCurveFinanceEthereumTokensCurrent
 from openapi_client.apis.paths.metadata_dapps import MetadataDapps
 from openapi_client.apis.paths.metadata_dapps_dapp_name import MetadataDappsDappName
+from openapi_client.apis.paths.v1_dapps_pancakeswap_v3_ethereum_liquidity_pools_current import V1DappsPancakeswapV3EthereumLiquidityPoolsCurrent
+from openapi_client.apis.paths.v1_dapps_pancakeswap_v3_ethereum_swaps_current import V1DappsPancakeswapV3EthereumSwapsCurrent
+from openapi_client.apis.paths.v1_dapps_pancakeswap_v3_ethereum_tokens_current import V1DappsPancakeswapV3EthereumTokensCurrent
 from openapi_client.apis.paths.v1_dapps_sushiswap_v3_ethereum_liquidity_pools_current import V1DappsSushiswapV3EthereumLiquidityPoolsCurrent
 from openapi_client.apis.paths.v1_dapps_sushiswap_v3_ethereum_swaps_current import V1DappsSushiswapV3EthereumSwapsCurrent
 from openapi_client.apis.paths.v1_dapps_sushiswap_v3_ethereum_tokens_current import V1DappsSushiswapV3EthereumTokensCurrent
@@ -64,6 +67,9 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.V1_DAPPS_CURVEFINANCEETHEREUM_TOKENS_CURRENT: V1DappsCurveFinanceEthereumTokensCurrent,
         PathValues.METADATA_DAPPS: MetadataDapps,
         PathValues.METADATA_DAPPS_DAPP_NAME: MetadataDappsDappName,
+        PathValues.V1_DAPPS_PANCAKESWAPV3ETHEREUM_LIQUIDITY_POOLS_CURRENT: V1DappsPancakeswapV3EthereumLiquidityPoolsCurrent,
+        PathValues.V1_DAPPS_PANCAKESWAPV3ETHEREUM_SWAPS_CURRENT: V1DappsPancakeswapV3EthereumSwapsCurrent,
+        PathValues.V1_DAPPS_PANCAKESWAPV3ETHEREUM_TOKENS_CURRENT: V1DappsPancakeswapV3EthereumTokensCurrent,
         PathValues.V1_DAPPS_SUSHISWAPV3ETHEREUM_LIQUIDITY_POOLS_CURRENT: V1DappsSushiswapV3EthereumLiquidityPoolsCurrent,
         PathValues.V1_DAPPS_SUSHISWAPV3ETHEREUM_SWAPS_CURRENT: V1DappsSushiswapV3EthereumSwapsCurrent,
         PathValues.V1_DAPPS_SUSHISWAPV3ETHEREUM_TOKENS_CURRENT: V1DappsSushiswapV3EthereumTokensCurrent,
@@ -113,6 +119,9 @@ path_to_api = PathToApi(
         PathValues.V1_DAPPS_CURVEFINANCEETHEREUM_TOKENS_CURRENT: V1DappsCurveFinanceEthereumTokensCurrent,
         PathValues.METADATA_DAPPS: MetadataDapps,
         PathValues.METADATA_DAPPS_DAPP_NAME: MetadataDappsDappName,
+        PathValues.V1_DAPPS_PANCAKESWAPV3ETHEREUM_LIQUIDITY_POOLS_CURRENT: V1DappsPancakeswapV3EthereumLiquidityPoolsCurrent,
+        PathValues.V1_DAPPS_PANCAKESWAPV3ETHEREUM_SWAPS_CURRENT: V1DappsPancakeswapV3EthereumSwapsCurrent,
+        PathValues.V1_DAPPS_PANCAKESWAPV3ETHEREUM_TOKENS_CURRENT: V1DappsPancakeswapV3EthereumTokensCurrent,
         PathValues.V1_DAPPS_SUSHISWAPV3ETHEREUM_LIQUIDITY_POOLS_CURRENT: V1DappsSushiswapV3EthereumLiquidityPoolsCurrent,
         PathValues.V1_DAPPS_SUSHISWAPV3ETHEREUM_SWAPS_CURRENT: V1DappsSushiswapV3EthereumSwapsCurrent,
         PathValues.V1_DAPPS_SUSHISWAPV3ETHEREUM_TOKENS_CURRENT: V1DappsSushiswapV3EthereumTokensCurrent,

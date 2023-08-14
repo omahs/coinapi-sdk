@@ -4,6 +4,8 @@ export * from './cURVEFINANCEETHEREUMApi';
 import { CURVEFINANCEETHEREUMApi } from './cURVEFINANCEETHEREUMApi';
 export * from './metadataApi';
 import { MetadataApi } from './metadataApi';
+export * from './pANCAKESWAPV3ETHEREUMApi';
+import { PANCAKESWAPV3ETHEREUMApi } from './pANCAKESWAPV3ETHEREUMApi';
 export * from './sUSHISWAPV3ETHEREUMApi';
 import { SUSHISWAPV3ETHEREUMApi } from './sUSHISWAPV3ETHEREUMApi';
 export * from './uNISWAPV2ETHEREUMApi';
@@ -21,4 +23,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [CRYPTOPUNKSApi, CURVEFINANCEETHEREUMApi, MetadataApi, SUSHISWAPV3ETHEREUMApi, UNISWAPV2ETHEREUMApi, UNISWAPV3ETHEREUMApi];
+export const APIS = [CRYPTOPUNKSApi, CURVEFINANCEETHEREUMApi, MetadataApi, PANCAKESWAPV3ETHEREUMApi, SUSHISWAPV3ETHEREUMApi, UNISWAPV2ETHEREUMApi, UNISWAPV3ETHEREUMApi];

@@ -1267,6 +1267,591 @@ export type CURVEFINANCEETHEREUMTokenDTO = {
  * Pool-level metadata.
  * @export
  */
+export type PANCAKESWAPV3ETHEREUMLiquidityPoolDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    block_number?: number;
+    /**
+     * .
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    vid?: number;
+    /**
+     * Block range of the liquidity pool.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    block_range?: string;
+    /**
+     * Smart contract address of the pool.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    id?: string;
+    /**
+     * Protocol this pool belongs to.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    protocol?: string;
+    /**
+     * Name of liquidity pool (e.g. Curve.fi DAI/USDC/USDT).
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    name?: string;
+    /**
+     * Symbol of liquidity pool (e.g. 3CRV).
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    symbol?: string;
+    /**
+     * Token that is to represent ownership of liquidity.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    liquidity_token?: string;
+    /**
+     * Tokens that need to be deposited to take a position in protocol. e.g. WETH and USDC to deposit into the WETH-USDC pool. Array to account for multi-asset pools like Curve and Balancer.
+     * @type {Array<string>}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    input_tokens?: Array<string>;
+    /**
+     * Additional tokens that are given as reward for position in a protocol, usually in liquidity mining programs. e.g. SUSHI in the Onsen program, MATIC for Aave Polygon, usually in liquidity mining programs. e.g. SUSHI in the Onsen program, MATIC for Aave Polygon.
+     * @type {Array<string>}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    reward_tokens?: Array<string>;
+    /**
+     * Fees per trade incurred to the user. Should include all fees that apply to a pool (e.g. Curve has a trading fee AND an admin fee, which is a portion of the trading fee. Uniswap only has a trading fee and no protocol fee.).
+     * @type {Array<string>}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    fees?: Array<string>;
+    /**
+     * Specifies whether this pool is single-sided (e.g. Bancor, Platypus\'s Alternative Pool). The specifics of the implementation depends on the protocol.
+     * @type {boolean}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    is_single_sided?: boolean;
+    /**
+     * Timestamp when the liquidity pool was created.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    created_timestamp?: string;
+    /**
+     * Block number when the liquidity pool was created.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    created_block_number?: string;
+    /**
+     * Current tick representing the price of token0/token1.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    tick?: string;
+    /**
+     * Current TVL (Total Value Locked) of this pool in USD.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    total_value_locked_usd?: string;
+    /**
+     * Sum of all active and non-active liquidity for this pool.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    total_liquidity?: string;
+    /**
+     * Sum of all active and non-active liquidity in USD for this pool.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    total_liquidity_usd?: string;
+    /**
+     * All liquidity `k` that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pools current tick.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    active_liquidity?: string;
+    /**
+     * All liquidity in USD that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pools current tick.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    active_liquidity_usd?: string;
+    /**
+     * All protocol-side value locked in token amounts that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    uncollected_protocol_side_token_amounts?: Array<string>;
+    /**
+     * All protocol-side value locking in USD that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    uncollected_protocol_side_values_usd?: Array<string>;
+    /**
+     * All supply-side value locked in token amounts that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    uncollected_supply_side_token_amounts?: Array<string>;
+    /**
+     * All supply-side value locked in USD that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    uncollected_supply_side_values_usd?: Array<string>;
+    /**
+     * All revenue generated by the liquidity pool, accrued to the supply side.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    cumulative_supply_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool, accrued to the protocol.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    cumulative_protocol_side_revenue_usd?: string;
+    /**
+     *  All revenue generated by the liquidity pool.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    cumulative_total_revenue_usd?: string;
+    /**
+     * All trade volume occurred for a specific input token, in native amount. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    cumulative_volume_by_token_amount?: Array<string>;
+    /**
+     * All trade volume occurred for a specific input token, in USD. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    cumulative_volume_by_token_usd?: Array<string>;
+    /**
+     * All trade volume occurred for a specific input token, in USD. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    cumulative_volume_usd?: string;
+    /**
+     * Amount of input tokens in the pool. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    input_token_balances?: Array<string>;
+    /**
+     * Amount of input tokens in USD in the pool. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    input_token_balances_usd?: Array<string>;
+    /**
+     * Weights of input tokens in the liquidity pool in percentage values. For example, 50/50 for Uniswap pools, 48.2/51.8 for a Curve pool, 10/10/80 for a Balancer pool.
+     * @type {Array<string>}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    input_token_weights?: Array<string>;
+    /**
+     * Total supply of output tokens that are staked (usually in the MasterChef contract). Used to calculate reward APY.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    staked_output_token_amount?: string;
+    /**
+     * Per-block reward token emission as of the current block normalized to a day, in token\'s native amount. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * @type {Array<string>}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    reward_token_emissions_amount?: Array<string>;
+    /**
+     * Per-block reward token emission as of the current block normalized to a day, in USD value. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * @type {Array<string>}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    reward_token_emissions_usd?: Array<string>;
+    /**
+     * Total number of deposits (add liquidity).
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    cumulative_deposit_count?: number;
+    /**
+     * Total number of withdrawals (remove liquidity).
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    cumulative_withdraw_count?: number;
+    /**
+     * Total number of trades (swaps).
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    cumulative_swap_count?: number;
+    /**
+     * Number of positions in this market.
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    position_count?: number;
+    /**
+     * Number of open positions in this market.
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    open_position_count?: number;
+    /**
+     * Number of closed positions in this market.
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    closed_position_count?: number;
+    /**
+     * Day ID of the most recent daily snapshot.
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    last_snapshot_day_id?: number;
+    /**
+     * Hour ID of the most recent hourly snapshot.
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    last_snapshot_hour_id?: number;
+    /**
+     * Timestamp of the last time this entity was updated.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    last_update_timestamp?: string;
+    /**
+     * Block number of the last time this entity was updated.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    last_update_block_number?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+     */
+    evaluated_ask?: number;
+}
+
+/**
+ * Trade (swap) event which occurred in a pool.
+ * @export
+ */
+export type PANCAKESWAPV3ETHEREUMSwapDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    block_number?: number;
+    /**
+     * Block number in which the swap operation was recorded.
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    block_?: number;
+    /**
+     * Unique string identifier of the swap operation, format: (transaction hash)-(log index).
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    id?: string;
+    /**
+     * Transaction hash of the transaction that emitted this event.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    hash?: string;
+    /**
+     * Nonce of the transaction that emitted this event.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    nonce?: string;
+    /**
+     * Event log index. For transactions that don\'t emit event, create arbitrary index starting from 0.
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    log_index?: number;
+    /**
+     * Gas limit of the transaction that emitted this event.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    gas_limit?: string;
+    /**
+     * Gas used in this transaction.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    gas_used?: string;
+    /**
+     * Gas price of the transaction that emitted this event.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    gas_price?: string;
+    /**
+     * The protocol this transaction belongs to.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    protocol?: string;
+    /**
+     * Account that emitted this event.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    account?: string;
+    /**
+     * The pool involving this event.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    pool?: string;
+    /**
+     * Timestamp of this event.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    timestamp?: string;
+    /**
+     * Tick of the swap operation.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    tick?: string;
+    /**
+     * Token deposited into pool.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    token_in?: string;
+    /**
+     * Amount of token deposited into pool in native units.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    amount_in?: string;
+    /**
+     * Amount of token deposited into pool in USD.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    amount_in_usd?: string;
+    /**
+     * Token withdrawn from pool.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    token_out?: string;
+    /**
+     * Amount of token withdrawn from pool in native units.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    amount_out?: string;
+    /**
+     * Amount of token withdrawn from pool in USD.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    amount_out_usd?: string;
+    /**
+     * Amount of input tokens in the liquidity pool.
+     * @type {Array<string>}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    reserve_amounts?: Array<string>;
+    /**
+     * 
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    pool_id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    transaction_id?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    evaluated_price?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    evaluated_amount?: number;
+    /**
+     * 
+     * @type {TransactionsETradeAggressiveSide}
+     * @memberof PANCAKESWAPV3ETHEREUMSwapDTO
+     */
+    evaluated_aggressor?: TransactionsETradeAggressiveSide;
+}
+
+/**
+ * Stores aggregated information for a specific token across all pairs that token is included in.
+ * @export
+ */
+export type PANCAKESWAPV3ETHEREUMTokenDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof PANCAKESWAPV3ETHEREUMTokenDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof PANCAKESWAPV3ETHEREUMTokenDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMTokenDTO
+     */
+    block_number?: number;
+    /**
+     * .
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMTokenDTO
+     */
+    vid?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMTokenDTO
+     */
+    block_range?: string;
+    /**
+     * Smart contract address of the token.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMTokenDTO
+     */
+    id?: string;
+    /**
+     * Name of the token, mirrored from the smart contract.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMTokenDTO
+     */
+    name?: string;
+    /**
+     * Symbol of the token, mirrored from the smart contract.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMTokenDTO
+     */
+    symbol?: string;
+    /**
+     * The number of decimal places this token uses, default to 18.
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMTokenDTO
+     */
+    decimals?: number;
+    /**
+     * Optional field to track the price of a token, mostly for caching purposes.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMTokenDTO
+     */
+    last_price_usd?: string;
+    /**
+     * Optional field to track the block number of the last token price.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMTokenDTO
+     */
+    last_price_block_number?: string;
+    /**
+     * Last pool that gave this token a price.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMTokenDTO
+     */
+    last_price_pool?: string;
+    /**
+     * Amount of tokens in the protocol.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMTokenDTO
+     */
+    total_supply?: string;
+    /**
+     * Total value locked in the protocol.
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMTokenDTO
+     */
+    total_value_locked_usd?: string;
+    /**
+     * The buffer for detecting large price changes.
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMTokenDTO
+     */
+    large_price_change_buffer?: number;
+    /**
+     * The buffer for detecting large TVL (Total Value Locked) impact.
+     * @type {number}
+     * @memberof PANCAKESWAPV3ETHEREUMTokenDTO
+     */
+    large_tvl_impact_buffer?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof PANCAKESWAPV3ETHEREUMTokenDTO
+     */
+    token_symbol?: string;
+}
+
+/**
+ * Pool-level metadata.
+ * @export
+ */
 export type SUSHISWAPV3ETHEREUMLiquidityPoolDTO = {
     /**
      * 
@@ -5786,6 +6371,153 @@ export const MetadataApi = function(configuration?: Configuration, fetch: FetchA
 
 
 /**
+ * PANCAKESWAPV3ETHEREUMApi - fetch parameter creator
+ * @export
+ */
+export const PANCAKESWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Gets liquidityPools.
+         * @summary LiquidityPools (current)
+         * @throws {RequiredError}
+         */
+        pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent(id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/pancakeswap-v3-ethereum/liquidityPools/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets swaps.
+         * @summary Swaps (current)
+         * @throws {RequiredError}
+         */
+        pANCAKESWAPV3ETHEREUMSwapsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/pancakeswap-v3-ethereum/swaps/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tokens.
+         * @summary Tokens (current)
+         * @throws {RequiredError}
+         */
+        pANCAKESWAPV3ETHEREUMTokensCurrent(id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/pancakeswap-v3-ethereum/tokens/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+export type PANCAKESWAPV3ETHEREUMApiType = { 
+    pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent(id?: string, options?: RequestOptions): Promise<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDTO>>,
+
+    pANCAKESWAPV3ETHEREUMSwapsCurrent(options?: RequestOptions): Promise<Array<PANCAKESWAPV3ETHEREUMSwapDTO>>,
+
+    pANCAKESWAPV3ETHEREUMTokensCurrent(id?: string, options?: RequestOptions): Promise<Array<PANCAKESWAPV3ETHEREUMTokenDTO>>,
+}
+
+/**
+ * PANCAKESWAPV3ETHEREUMApi - factory function to inject configuration 
+ * @export
+ */
+export const PANCAKESWAPV3ETHEREUMApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): PANCAKESWAPV3ETHEREUMApiType {
+    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
+    return {
+        /**
+         * Gets liquidityPools.
+         * @summary LiquidityPools (current)
+         * @throws {RequiredError}
+         */
+        pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent(id?: string, options?: RequestOptions = {}): Promise<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDTO>> {
+            const localVarFetchArgs = PANCAKESWAPV3ETHEREUMApiFetchParamCreator(configuration).pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent(id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets swaps.
+         * @summary Swaps (current)
+         * @throws {RequiredError}
+         */
+        pANCAKESWAPV3ETHEREUMSwapsCurrent(options?: RequestOptions = {}): Promise<Array<PANCAKESWAPV3ETHEREUMSwapDTO>> {
+            const localVarFetchArgs = PANCAKESWAPV3ETHEREUMApiFetchParamCreator(configuration).pANCAKESWAPV3ETHEREUMSwapsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets tokens.
+         * @summary Tokens (current)
+         * @throws {RequiredError}
+         */
+        pANCAKESWAPV3ETHEREUMTokensCurrent(id?: string, options?: RequestOptions = {}): Promise<Array<PANCAKESWAPV3ETHEREUMTokenDTO>> {
+            const localVarFetchArgs = PANCAKESWAPV3ETHEREUMApiFetchParamCreator(configuration).pANCAKESWAPV3ETHEREUMTokensCurrent(id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+    }
+};
+
+
+/**
  * SUSHISWAPV3ETHEREUMApi - fetch parameter creator
  * @export
  */
@@ -7032,6 +7764,8 @@ export type ApiTypes = {
     CURVEFINANCEETHEREUMApi: CURVEFINANCEETHEREUMApiType,
 
     MetadataApi: MetadataApiType,
+
+    PANCAKESWAPV3ETHEREUMApi: PANCAKESWAPV3ETHEREUMApiType,
 
     SUSHISWAPV3ETHEREUMApi: SUSHISWAPV3ETHEREUMApiType,
 

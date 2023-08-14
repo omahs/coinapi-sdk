@@ -16,6 +16,10 @@ docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
 docs/CURVEFINANCEETHEREUMSwapDTO.md
 docs/CURVEFINANCEETHEREUMTokenDTO.md
 docs/MetadataApi.md
+docs/PANCAKESWAPV3ETHEREUMApi.md
+docs/PANCAKESWAPV3ETHEREUMLiquidityPoolDTO.md
+docs/PANCAKESWAPV3ETHEREUMSwapDTO.md
+docs/PANCAKESWAPV3ETHEREUMTokenDTO.md
 docs/SUSHISWAPV3ETHEREUMApi.md
 docs/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.md
 docs/SUSHISWAPV3ETHEREUMSwapDTO.md
@@ -57,6 +61,7 @@ settings.gradle
 src/main/kotlin/org/openapitools/client/apis/CRYPTOPUNKSApi.kt
 src/main/kotlin/org/openapitools/client/apis/CURVEFINANCEETHEREUMApi.kt
 src/main/kotlin/org/openapitools/client/apis/MetadataApi.kt
+src/main/kotlin/org/openapitools/client/apis/PANCAKESWAPV3ETHEREUMApi.kt
 src/main/kotlin/org/openapitools/client/apis/SUSHISWAPV3ETHEREUMApi.kt
 src/main/kotlin/org/openapitools/client/apis/UNISWAPV2ETHEREUMApi.kt
 src/main/kotlin/org/openapitools/client/apis/UNISWAPV3ETHEREUMApi.kt
@@ -89,6 +94,9 @@ src/main/kotlin/org/openapitools/client/models/CRYPTOPUNKSUserDTO.kt
 src/main/kotlin/org/openapitools/client/models/CURVEFINANCEETHEREUMLiquidityPoolDTO.kt
 src/main/kotlin/org/openapitools/client/models/CURVEFINANCEETHEREUMSwapDTO.kt
 src/main/kotlin/org/openapitools/client/models/CURVEFINANCEETHEREUMTokenDTO.kt
+src/main/kotlin/org/openapitools/client/models/PANCAKESWAPV3ETHEREUMLiquidityPoolDTO.kt
+src/main/kotlin/org/openapitools/client/models/PANCAKESWAPV3ETHEREUMSwapDTO.kt
+src/main/kotlin/org/openapitools/client/models/PANCAKESWAPV3ETHEREUMTokenDTO.kt
 src/main/kotlin/org/openapitools/client/models/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.kt
 src/main/kotlin/org/openapitools/client/models/SUSHISWAPV3ETHEREUMSwapDTO.kt
 src/main/kotlin/org/openapitools/client/models/SUSHISWAPV3ETHEREUMTokenDTO.kt

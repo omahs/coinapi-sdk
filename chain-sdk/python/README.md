@@ -196,6 +196,9 @@ Class | Method | HTTP request | Description
 *MetadataApi* | [**metadata_chains_get**](docs/apis/tags/MetadataApi.md#metadata_chains_get) | **get** /metadata/chains | List all chains.
 *MetadataApi* | [**metadata_dapps_dapp_name_get**](docs/apis/tags/MetadataApi.md#metadata_dapps_dapp_name_get) | **get** /metadata/dapps/{dappName} | Gets dapp by name.
 *MetadataApi* | [**metadata_dapps_get**](docs/apis/tags/MetadataApi.md#metadata_dapps_get) | **get** /metadata/dapps | List all decentralized applications.
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_liquidity_pools__current**](docs/apis/tags/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_liquidity_pools__current) | **get** /v1/dapps/pancakeswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_swaps__current**](docs/apis/tags/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_swaps__current) | **get** /v1/dapps/pancakeswap-v3-ethereum/swaps/current | Swaps (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_tokens__current**](docs/apis/tags/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_tokens__current) | **get** /v1/dapps/pancakeswap-v3-ethereum/tokens/current | Tokens (current)
 *SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_liquidity_pools__current**](docs/apis/tags/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_liquidity_pools__current) | **get** /v1/dapps/sushiswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
 *SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_swaps__current**](docs/apis/tags/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_swaps__current) | **get** /v1/dapps/sushiswap-v3-ethereum/swaps/current | Swaps (current)
 *SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_tokens__current**](docs/apis/tags/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_tokens__current) | **get** /v1/dapps/sushiswap-v3-ethereum/tokens/current | Tokens (current)
@@ -240,6 +243,9 @@ Class | Method | HTTP request | Description
  - [CURVEFINANCEETHEREUMLiquidityPoolDTO](docs/models/CURVEFINANCEETHEREUMLiquidityPoolDTO.md)
  - [CURVEFINANCEETHEREUMSwapDTO](docs/models/CURVEFINANCEETHEREUMSwapDTO.md)
  - [CURVEFINANCEETHEREUMTokenDTO](docs/models/CURVEFINANCEETHEREUMTokenDTO.md)
+ - [PANCAKESWAPV3ETHEREUMLiquidityPoolDTO](docs/models/PANCAKESWAPV3ETHEREUMLiquidityPoolDTO.md)
+ - [PANCAKESWAPV3ETHEREUMSwapDTO](docs/models/PANCAKESWAPV3ETHEREUMSwapDTO.md)
+ - [PANCAKESWAPV3ETHEREUMTokenDTO](docs/models/PANCAKESWAPV3ETHEREUMTokenDTO.md)
  - [SUSHISWAPV3ETHEREUMLiquidityPoolDTO](docs/models/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.md)
  - [SUSHISWAPV3ETHEREUMSwapDTO](docs/models/SUSHISWAPV3ETHEREUMSwapDTO.md)
  - [SUSHISWAPV3ETHEREUMTokenDTO](docs/models/SUSHISWAPV3ETHEREUMTokenDTO.md)
@@ -278,6 +284,7 @@ Class | Method | HTTP request | Description
 
 ## Author
 
+support@coinapi.io
 support@coinapi.io
 support@coinapi.io
 support@coinapi.io

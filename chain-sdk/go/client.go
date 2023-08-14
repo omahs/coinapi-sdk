@@ -56,6 +56,8 @@ type APIClient struct {
 
 	MetadataApi *MetadataApiService
 
+	PANCAKESWAPV3ETHEREUMApi *PANCAKESWAPV3ETHEREUMApiService
+
 	SUSHISWAPV3ETHEREUMApi *SUSHISWAPV3ETHEREUMApiService
 
 	UNISWAPV2ETHEREUMApi *UNISWAPV2ETHEREUMApiService
@@ -82,6 +84,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.CRYPTOPUNKSApi = (*CRYPTOPUNKSApiService)(&c.common)
 	c.CURVEFINANCEETHEREUMApi = (*CURVEFINANCEETHEREUMApiService)(&c.common)
 	c.MetadataApi = (*MetadataApiService)(&c.common)
+	c.PANCAKESWAPV3ETHEREUMApi = (*PANCAKESWAPV3ETHEREUMApiService)(&c.common)
 	c.SUSHISWAPV3ETHEREUMApi = (*SUSHISWAPV3ETHEREUMApiService)(&c.common)
 	c.UNISWAPV2ETHEREUMApi = (*UNISWAPV2ETHEREUMApiService)(&c.common)
 	c.UNISWAPV3ETHEREUMApi = (*UNISWAPV3ETHEREUMApiService)(&c.common)

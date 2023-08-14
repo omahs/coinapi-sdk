@@ -74,6 +74,9 @@ Class | Method | HTTP request | Description
 *OASMetadataApi* | [**metadataChainsGet**](OASMetadataApi.md#metadataChainsGet) | **GET** /metadata/chains | List all chains.
 *OASMetadataApi* | [**metadataDappsDappNameGet**](OASMetadataApi.md#metadataDappsDappNameGet) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
 *OASMetadataApi* | [**metadataDappsGet**](OASMetadataApi.md#metadataDappsGet) | **GET** /metadata/dapps | List all decentralized applications.
+*OASPANCAKESWAPV3ETHEREUMApi* | [**pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent**](OASPANCAKESWAPV3ETHEREUMApi.md#pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent) | **GET** /v1/dapps/pancakeswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
+*OASPANCAKESWAPV3ETHEREUMApi* | [**pANCAKESWAPV3ETHEREUMSwapsCurrent**](OASPANCAKESWAPV3ETHEREUMApi.md#pANCAKESWAPV3ETHEREUMSwapsCurrent) | **GET** /v1/dapps/pancakeswap-v3-ethereum/swaps/current | Swaps (current)
+*OASPANCAKESWAPV3ETHEREUMApi* | [**pANCAKESWAPV3ETHEREUMTokensCurrent**](OASPANCAKESWAPV3ETHEREUMApi.md#pANCAKESWAPV3ETHEREUMTokensCurrent) | **GET** /v1/dapps/pancakeswap-v3-ethereum/tokens/current | Tokens (current)
 *OASSUSHISWAPV3ETHEREUMApi* | [**sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent**](OASSUSHISWAPV3ETHEREUMApi.md#sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent) | **GET** /v1/dapps/sushiswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
 *OASSUSHISWAPV3ETHEREUMApi* | [**sUSHISWAPV3ETHEREUMSwapsCurrent**](OASSUSHISWAPV3ETHEREUMApi.md#sUSHISWAPV3ETHEREUMSwapsCurrent) | **GET** /v1/dapps/sushiswap-v3-ethereum/swaps/current | Swaps (current)
 *OASSUSHISWAPV3ETHEREUMApi* | [**sUSHISWAPV3ETHEREUMTokensCurrent**](OASSUSHISWAPV3ETHEREUMApi.md#sUSHISWAPV3ETHEREUMTokensCurrent) | **GET** /v1/dapps/sushiswap-v3-ethereum/tokens/current | Tokens (current)
@@ -119,6 +122,9 @@ Class | Method | HTTP request | Description
  - [OASCURVEFINANCEETHEREUMLiquidityPool](OASCURVEFINANCEETHEREUMLiquidityPool.md)
  - [OASCURVEFINANCEETHEREUMSwapDTO](OASCURVEFINANCEETHEREUMSwapDTO.md)
  - [OASCURVEFINANCEETHEREUMTokenDTO](OASCURVEFINANCEETHEREUMTokenDTO.md)
+ - [OASPANCAKESWAPV3ETHEREUMLiquidityPoo](OASPANCAKESWAPV3ETHEREUMLiquidityPoo.md)
+ - [OASPANCAKESWAPV3ETHEREUMSwapDTO](OASPANCAKESWAPV3ETHEREUMSwapDTO.md)
+ - [OASPANCAKESWAPV3ETHEREUMTokenDTO](OASPANCAKESWAPV3ETHEREUMTokenDTO.md)
  - [OASSUSHISWAPV3ETHEREUMLiquidityPoolD](OASSUSHISWAPV3ETHEREUMLiquidityPoolD.md)
  - [OASSUSHISWAPV3ETHEREUMSwapDTO](OASSUSHISWAPV3ETHEREUMSwapDTO.md)
  - [OASSUSHISWAPV3ETHEREUMTokenDTO](OASSUSHISWAPV3ETHEREUMTokenDTO.md)

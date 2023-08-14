@@ -308,7 +308,9 @@ case $state in
             "cURVEFINANCEETHEREUMSwapsCurrent[Swaps (current)]" \
             "cURVEFINANCEETHEREUMTokensCurrent[Tokens (current)]"             "metadataChainsGet[List all chains.]" \
             "metadataDappsDappNameGet[Gets dapp by name.]" \
-            "metadataDappsGet[List all decentralized applications.]"             "sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent[LiquidityPools (current)]" \
+            "metadataDappsGet[List all decentralized applications.]"             "pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent[LiquidityPools (current)]" \
+            "pANCAKESWAPV3ETHEREUMSwapsCurrent[Swaps (current)]" \
+            "pANCAKESWAPV3ETHEREUMTokensCurrent[Tokens (current)]"             "sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent[LiquidityPools (current)]" \
             "sUSHISWAPV3ETHEREUMSwapsCurrent[Swaps (current)]" \
             "sUSHISWAPV3ETHEREUMTokensCurrent[Tokens (current)]"             "uNISWAPV2ETHEREUMLiquidityPoolsCurrent[LiquidityPools (current)]" \
             "uNISWAPV2ETHEREUMSwapsCurrent[Swaps (current)]" \
@@ -431,6 +433,26 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
                               )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "id=:[QUERY] Smart contract address of the pool."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMSwapsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMTokensCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "id=:[QUERY] Smart contract address of the token."
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent)

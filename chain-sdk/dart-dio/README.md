@@ -83,6 +83,9 @@ Class | Method | HTTP request | Description
 [*MetadataApi*](doc/MetadataApi.md) | [**metadataChainsGet**](doc/MetadataApi.md#metadatachainsget) | **GET** /metadata/chains | List all chains.
 [*MetadataApi*](doc/MetadataApi.md) | [**metadataDappsDappNameGet**](doc/MetadataApi.md#metadatadappsdappnameget) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
 [*MetadataApi*](doc/MetadataApi.md) | [**metadataDappsGet**](doc/MetadataApi.md#metadatadappsget) | **GET** /metadata/dapps | List all decentralized applications.
+[*PANCAKESWAPV3ETHEREUMApi*](doc/PANCAKESWAPV3ETHEREUMApi.md) | [**pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent**](doc/PANCAKESWAPV3ETHEREUMApi.md#pancakeswapv3ethereumliquiditypoolscurrent) | **GET** /v1/dapps/pancakeswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
+[*PANCAKESWAPV3ETHEREUMApi*](doc/PANCAKESWAPV3ETHEREUMApi.md) | [**pANCAKESWAPV3ETHEREUMSwapsCurrent**](doc/PANCAKESWAPV3ETHEREUMApi.md#pancakeswapv3ethereumswapscurrent) | **GET** /v1/dapps/pancakeswap-v3-ethereum/swaps/current | Swaps (current)
+[*PANCAKESWAPV3ETHEREUMApi*](doc/PANCAKESWAPV3ETHEREUMApi.md) | [**pANCAKESWAPV3ETHEREUMTokensCurrent**](doc/PANCAKESWAPV3ETHEREUMApi.md#pancakeswapv3ethereumtokenscurrent) | **GET** /v1/dapps/pancakeswap-v3-ethereum/tokens/current | Tokens (current)
 [*SUSHISWAPV3ETHEREUMApi*](doc/SUSHISWAPV3ETHEREUMApi.md) | [**sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent**](doc/SUSHISWAPV3ETHEREUMApi.md#sushiswapv3ethereumliquiditypoolscurrent) | **GET** /v1/dapps/sushiswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
 [*SUSHISWAPV3ETHEREUMApi*](doc/SUSHISWAPV3ETHEREUMApi.md) | [**sUSHISWAPV3ETHEREUMSwapsCurrent**](doc/SUSHISWAPV3ETHEREUMApi.md#sushiswapv3ethereumswapscurrent) | **GET** /v1/dapps/sushiswap-v3-ethereum/swaps/current | Swaps (current)
 [*SUSHISWAPV3ETHEREUMApi*](doc/SUSHISWAPV3ETHEREUMApi.md) | [**sUSHISWAPV3ETHEREUMTokensCurrent**](doc/SUSHISWAPV3ETHEREUMApi.md#sushiswapv3ethereumtokenscurrent) | **GET** /v1/dapps/sushiswap-v3-ethereum/tokens/current | Tokens (current)
@@ -128,6 +131,9 @@ Class | Method | HTTP request | Description
  - [CURVEFINANCEETHEREUMLiquidityPoolDTO](doc/CURVEFINANCEETHEREUMLiquidityPoolDTO.md)
  - [CURVEFINANCEETHEREUMSwapDTO](doc/CURVEFINANCEETHEREUMSwapDTO.md)
  - [CURVEFINANCEETHEREUMTokenDTO](doc/CURVEFINANCEETHEREUMTokenDTO.md)
+ - [PANCAKESWAPV3ETHEREUMLiquidityPoolDTO](doc/PANCAKESWAPV3ETHEREUMLiquidityPoolDTO.md)
+ - [PANCAKESWAPV3ETHEREUMSwapDTO](doc/PANCAKESWAPV3ETHEREUMSwapDTO.md)
+ - [PANCAKESWAPV3ETHEREUMTokenDTO](doc/PANCAKESWAPV3ETHEREUMTokenDTO.md)
  - [SUSHISWAPV3ETHEREUMLiquidityPoolDTO](doc/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.md)
  - [SUSHISWAPV3ETHEREUMSwapDTO](doc/SUSHISWAPV3ETHEREUMSwapDTO.md)
  - [SUSHISWAPV3ETHEREUMTokenDTO](doc/SUSHISWAPV3ETHEREUMTokenDTO.md)

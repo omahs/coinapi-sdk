@@ -205,6 +205,12 @@ class ApiClient {
           return CURVEFINANCEETHEREUMSwapDTO.fromJson(value);
         case 'CURVEFINANCEETHEREUMTokenDTO':
           return CURVEFINANCEETHEREUMTokenDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMLiquidityPoolDTO':
+          return PANCAKESWAPV3ETHEREUMLiquidityPoolDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMSwapDTO':
+          return PANCAKESWAPV3ETHEREUMSwapDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMTokenDTO':
+          return PANCAKESWAPV3ETHEREUMTokenDTO.fromJson(value);
         case 'SUSHISWAPV3ETHEREUMLiquidityPoolDTO':
           return SUSHISWAPV3ETHEREUMLiquidityPoolDTO.fromJson(value);
         case 'SUSHISWAPV3ETHEREUMSwapDTO':

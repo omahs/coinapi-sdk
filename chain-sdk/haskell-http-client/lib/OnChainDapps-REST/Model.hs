@@ -1110,6 +1110,457 @@ mkCURVEFINANCEETHEREUMTokenDTO =
   , cURVEFINANCEETHEREUMTokenDTOTokenSymbol = Nothing
   }
 
+-- ** PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+-- | PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+-- Pool-level metadata.
+data PANCAKESWAPV3ETHEREUMLiquidityPoolDTO = PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+  { pANCAKESWAPV3ETHEREUMLiquidityPoolDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOVid :: !(Maybe Integer) -- ^ "vid" - .
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - Block range of the liquidity pool.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOId :: !(Maybe Text) -- ^ "id" - Smart contract address of the pool.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOProtocol :: !(Maybe Text) -- ^ "protocol" - Protocol this pool belongs to.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOName :: !(Maybe Text) -- ^ "name" - Name of liquidity pool (e.g. Curve.fi DAI/USDC/USDT).
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOSymbol :: !(Maybe Text) -- ^ "symbol" - Symbol of liquidity pool (e.g. 3CRV).
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLiquidityToken :: !(Maybe Text) -- ^ "liquidity_token" - Token that is to represent ownership of liquidity.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOInputTokens :: !(Maybe [Text]) -- ^ "input_tokens" - Tokens that need to be deposited to take a position in protocol. e.g. WETH and USDC to deposit into the WETH-USDC pool. Array to account for multi-asset pools like Curve and Balancer.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTORewardTokens :: !(Maybe [Text]) -- ^ "reward_tokens" - Additional tokens that are given as reward for position in a protocol, usually in liquidity mining programs. e.g. SUSHI in the Onsen program, MATIC for Aave Polygon, usually in liquidity mining programs. e.g. SUSHI in the Onsen program, MATIC for Aave Polygon.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOFees :: !(Maybe [Text]) -- ^ "fees" - Fees per trade incurred to the user. Should include all fees that apply to a pool (e.g. Curve has a trading fee AND an admin fee, which is a portion of the trading fee. Uniswap only has a trading fee and no protocol fee.).
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOIsSingleSided :: !(Maybe Bool) -- ^ "is_single_sided" - Specifies whether this pool is single-sided (e.g. Bancor, Platypus&#39;s Alternative Pool). The specifics of the implementation depends on the protocol.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCreatedTimestamp :: !(Maybe Text) -- ^ "created_timestamp" - Timestamp when the liquidity pool was created.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCreatedBlockNumber :: !(Maybe Text) -- ^ "created_block_number" - Block number when the liquidity pool was created.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOTick :: !(Maybe Text) -- ^ "tick" - Current tick representing the price of token0/token1.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Current TVL (Total Value Locked) of this pool in USD.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOTotalLiquidity :: !(Maybe Text) -- ^ "total_liquidity" - Sum of all active and non-active liquidity for this pool.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOTotalLiquidityUsd :: !(Maybe Text) -- ^ "total_liquidity_usd" - Sum of all active and non-active liquidity in USD for this pool.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOActiveLiquidity :: !(Maybe Text) -- ^ "active_liquidity" - All liquidity &#x60;k&#x60; that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pools current tick.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOActiveLiquidityUsd :: !(Maybe Text) -- ^ "active_liquidity_usd" - All liquidity in USD that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pools current tick.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOUncollectedProtocolSideTokenAmounts :: !(Maybe [Text]) -- ^ "uncollected_protocol_side_token_amounts" - All protocol-side value locked in token amounts that remains uncollected and unused in the pool.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOUncollectedProtocolSideValuesUsd :: !(Maybe [Text]) -- ^ "uncollected_protocol_side_values_usd" - All protocol-side value locking in USD that remains uncollected and unused in the pool.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOUncollectedSupplySideTokenAmounts :: !(Maybe [Text]) -- ^ "uncollected_supply_side_token_amounts" - All supply-side value locked in token amounts that remains uncollected and unused in the pool.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOUncollectedSupplySideValuesUsd :: !(Maybe [Text]) -- ^ "uncollected_supply_side_values_usd" - All supply-side value locked in USD that remains uncollected and unused in the pool.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeSupplySideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_supply_side_revenue_usd" - All revenue generated by the liquidity pool, accrued to the supply side.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_protocol_side_revenue_usd" - All revenue generated by the liquidity pool, accrued to the protocol.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeTotalRevenueUsd :: !(Maybe Text) -- ^ "cumulative_total_revenue_usd" -  All revenue generated by the liquidity pool.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeByTokenAmount :: !(Maybe [Text]) -- ^ "cumulative_volume_by_token_amount" - All trade volume occurred for a specific input token, in native amount. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeByTokenUsd :: !(Maybe [Text]) -- ^ "cumulative_volume_by_token_usd" - All trade volume occurred for a specific input token, in USD. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeUsd :: !(Maybe Text) -- ^ "cumulative_volume_usd" - All trade volume occurred for a specific input token, in USD. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOInputTokenBalances :: !(Maybe [Text]) -- ^ "input_token_balances" - Amount of input tokens in the pool. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOInputTokenBalancesUsd :: !(Maybe [Text]) -- ^ "input_token_balances_usd" - Amount of input tokens in USD in the pool. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOInputTokenWeights :: !(Maybe [Text]) -- ^ "input_token_weights" - Weights of input tokens in the liquidity pool in percentage values. For example, 50/50 for Uniswap pools, 48.2/51.8 for a Curve pool, 10/10/80 for a Balancer pool.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOStakedOutputTokenAmount :: !(Maybe Text) -- ^ "staked_output_token_amount" - Total supply of output tokens that are staked (usually in the MasterChef contract). Used to calculate reward APY.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTORewardTokenEmissionsAmount :: !(Maybe [Text]) -- ^ "reward_token_emissions_amount" - Per-block reward token emission as of the current block normalized to a day, in token&#39;s native amount. This should be ideally calculated as the theoretical rate instead of the realized amount.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTORewardTokenEmissionsUsd :: !(Maybe [Text]) -- ^ "reward_token_emissions_usd" - Per-block reward token emission as of the current block normalized to a day, in USD value. This should be ideally calculated as the theoretical rate instead of the realized amount.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeDepositCount :: !(Maybe Int) -- ^ "cumulative_deposit_count" - Total number of deposits (add liquidity).
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeWithdrawCount :: !(Maybe Int) -- ^ "cumulative_withdraw_count" - Total number of withdrawals (remove liquidity).
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeSwapCount :: !(Maybe Int) -- ^ "cumulative_swap_count" - Total number of trades (swaps).
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOPositionCount :: !(Maybe Int) -- ^ "position_count" - Number of positions in this market.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOOpenPositionCount :: !(Maybe Int) -- ^ "open_position_count" - Number of open positions in this market.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOClosedPositionCount :: !(Maybe Int) -- ^ "closed_position_count" - Number of closed positions in this market.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLastSnapshotDayId :: !(Maybe Int) -- ^ "last_snapshot_day_id" - Day ID of the most recent daily snapshot.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLastSnapshotHourId :: !(Maybe Int) -- ^ "last_snapshot_hour_id" - Hour ID of the most recent hourly snapshot.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLastUpdateTimestamp :: !(Maybe Text) -- ^ "last_update_timestamp" - Timestamp of the last time this entity was updated.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLastUpdateBlockNumber :: !(Maybe Text) -- ^ "last_update_block_number" - Block number of the last time this entity was updated.
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOEvaluatedAsk :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_ask" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+instance A.FromJSON PANCAKESWAPV3ETHEREUMLiquidityPoolDTO where
+  parseJSON = A.withObject "PANCAKESWAPV3ETHEREUMLiquidityPoolDTO" $ \o ->
+    PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "vid")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "protocol")
+      <*> (o .:? "name")
+      <*> (o .:? "symbol")
+      <*> (o .:? "liquidity_token")
+      <*> (o .:? "input_tokens")
+      <*> (o .:? "reward_tokens")
+      <*> (o .:? "fees")
+      <*> (o .:? "is_single_sided")
+      <*> (o .:? "created_timestamp")
+      <*> (o .:? "created_block_number")
+      <*> (o .:? "tick")
+      <*> (o .:? "total_value_locked_usd")
+      <*> (o .:? "total_liquidity")
+      <*> (o .:? "total_liquidity_usd")
+      <*> (o .:? "active_liquidity")
+      <*> (o .:? "active_liquidity_usd")
+      <*> (o .:? "uncollected_protocol_side_token_amounts")
+      <*> (o .:? "uncollected_protocol_side_values_usd")
+      <*> (o .:? "uncollected_supply_side_token_amounts")
+      <*> (o .:? "uncollected_supply_side_values_usd")
+      <*> (o .:? "cumulative_supply_side_revenue_usd")
+      <*> (o .:? "cumulative_protocol_side_revenue_usd")
+      <*> (o .:? "cumulative_total_revenue_usd")
+      <*> (o .:? "cumulative_volume_by_token_amount")
+      <*> (o .:? "cumulative_volume_by_token_usd")
+      <*> (o .:? "cumulative_volume_usd")
+      <*> (o .:? "input_token_balances")
+      <*> (o .:? "input_token_balances_usd")
+      <*> (o .:? "input_token_weights")
+      <*> (o .:? "staked_output_token_amount")
+      <*> (o .:? "reward_token_emissions_amount")
+      <*> (o .:? "reward_token_emissions_usd")
+      <*> (o .:? "cumulative_deposit_count")
+      <*> (o .:? "cumulative_withdraw_count")
+      <*> (o .:? "cumulative_swap_count")
+      <*> (o .:? "position_count")
+      <*> (o .:? "open_position_count")
+      <*> (o .:? "closed_position_count")
+      <*> (o .:? "last_snapshot_day_id")
+      <*> (o .:? "last_snapshot_hour_id")
+      <*> (o .:? "last_update_timestamp")
+      <*> (o .:? "last_update_block_number")
+      <*> (o .:? "evaluated_ask")
+
+-- | ToJSON PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+instance A.ToJSON PANCAKESWAPV3ETHEREUMLiquidityPoolDTO where
+  toJSON PANCAKESWAPV3ETHEREUMLiquidityPoolDTO {..} =
+   _omitNulls
+      [ "entry_time" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOEntryTime
+      , "recv_time" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTORecvTime
+      , "block_number" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOBlockNumber
+      , "vid" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOVid
+      , "block_range" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOBlockRange
+      , "id" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOId
+      , "protocol" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOProtocol
+      , "name" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOName
+      , "symbol" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOSymbol
+      , "liquidity_token" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLiquidityToken
+      , "input_tokens" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOInputTokens
+      , "reward_tokens" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTORewardTokens
+      , "fees" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOFees
+      , "is_single_sided" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOIsSingleSided
+      , "created_timestamp" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCreatedTimestamp
+      , "created_block_number" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCreatedBlockNumber
+      , "tick" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOTick
+      , "total_value_locked_usd" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOTotalValueLockedUsd
+      , "total_liquidity" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOTotalLiquidity
+      , "total_liquidity_usd" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOTotalLiquidityUsd
+      , "active_liquidity" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOActiveLiquidity
+      , "active_liquidity_usd" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOActiveLiquidityUsd
+      , "uncollected_protocol_side_token_amounts" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOUncollectedProtocolSideTokenAmounts
+      , "uncollected_protocol_side_values_usd" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOUncollectedProtocolSideValuesUsd
+      , "uncollected_supply_side_token_amounts" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOUncollectedSupplySideTokenAmounts
+      , "uncollected_supply_side_values_usd" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOUncollectedSupplySideValuesUsd
+      , "cumulative_supply_side_revenue_usd" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeSupplySideRevenueUsd
+      , "cumulative_protocol_side_revenue_usd" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeProtocolSideRevenueUsd
+      , "cumulative_total_revenue_usd" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeTotalRevenueUsd
+      , "cumulative_volume_by_token_amount" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeByTokenAmount
+      , "cumulative_volume_by_token_usd" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeByTokenUsd
+      , "cumulative_volume_usd" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeUsd
+      , "input_token_balances" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOInputTokenBalances
+      , "input_token_balances_usd" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOInputTokenBalancesUsd
+      , "input_token_weights" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOInputTokenWeights
+      , "staked_output_token_amount" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOStakedOutputTokenAmount
+      , "reward_token_emissions_amount" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTORewardTokenEmissionsAmount
+      , "reward_token_emissions_usd" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTORewardTokenEmissionsUsd
+      , "cumulative_deposit_count" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeDepositCount
+      , "cumulative_withdraw_count" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeWithdrawCount
+      , "cumulative_swap_count" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeSwapCount
+      , "position_count" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOPositionCount
+      , "open_position_count" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOOpenPositionCount
+      , "closed_position_count" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOClosedPositionCount
+      , "last_snapshot_day_id" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLastSnapshotDayId
+      , "last_snapshot_hour_id" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLastSnapshotHourId
+      , "last_update_timestamp" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLastUpdateTimestamp
+      , "last_update_block_number" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLastUpdateBlockNumber
+      , "evaluated_ask" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDTOEvaluatedAsk
+      ]
+
+
+-- | Construct a value of type 'PANCAKESWAPV3ETHEREUMLiquidityPoolDTO' (by applying it's required fields, if any)
+mkPANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+  :: PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+mkPANCAKESWAPV3ETHEREUMLiquidityPoolDTO =
+  PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+  { pANCAKESWAPV3ETHEREUMLiquidityPoolDTOEntryTime = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTORecvTime = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOBlockNumber = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOVid = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOBlockRange = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOId = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOProtocol = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOName = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOSymbol = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLiquidityToken = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOInputTokens = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTORewardTokens = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOFees = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOIsSingleSided = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCreatedTimestamp = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCreatedBlockNumber = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOTick = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOTotalValueLockedUsd = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOTotalLiquidity = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOTotalLiquidityUsd = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOActiveLiquidity = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOActiveLiquidityUsd = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOUncollectedProtocolSideTokenAmounts = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOUncollectedProtocolSideValuesUsd = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOUncollectedSupplySideTokenAmounts = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOUncollectedSupplySideValuesUsd = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeSupplySideRevenueUsd = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeProtocolSideRevenueUsd = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeTotalRevenueUsd = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeByTokenAmount = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeByTokenUsd = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeUsd = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOInputTokenBalances = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOInputTokenBalancesUsd = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOInputTokenWeights = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOStakedOutputTokenAmount = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTORewardTokenEmissionsAmount = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTORewardTokenEmissionsUsd = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeDepositCount = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeWithdrawCount = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOCumulativeSwapCount = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOPositionCount = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOOpenPositionCount = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOClosedPositionCount = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLastSnapshotDayId = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLastSnapshotHourId = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLastUpdateTimestamp = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOLastUpdateBlockNumber = Nothing
+  , pANCAKESWAPV3ETHEREUMLiquidityPoolDTOEvaluatedAsk = Nothing
+  }
+
+-- ** PANCAKESWAPV3ETHEREUMSwapDTO
+-- | PANCAKESWAPV3ETHEREUMSwapDTO
+-- Trade (swap) event which occurred in a pool.
+data PANCAKESWAPV3ETHEREUMSwapDTO = PANCAKESWAPV3ETHEREUMSwapDTO
+  { pANCAKESWAPV3ETHEREUMSwapDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , pANCAKESWAPV3ETHEREUMSwapDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , pANCAKESWAPV3ETHEREUMSwapDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , pANCAKESWAPV3ETHEREUMSwapDTOBlock :: !(Maybe Int) -- ^ "block_" - Block number in which the swap operation was recorded.
+  , pANCAKESWAPV3ETHEREUMSwapDTOId :: !(Maybe Text) -- ^ "id" - Unique string identifier of the swap operation, format: (transaction hash)-(log index).
+  , pANCAKESWAPV3ETHEREUMSwapDTOHash :: !(Maybe Text) -- ^ "hash" - Transaction hash of the transaction that emitted this event.
+  , pANCAKESWAPV3ETHEREUMSwapDTONonce :: !(Maybe Text) -- ^ "nonce" - Nonce of the transaction that emitted this event.
+  , pANCAKESWAPV3ETHEREUMSwapDTOLogIndex :: !(Maybe Int) -- ^ "log_index" - Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0.
+  , pANCAKESWAPV3ETHEREUMSwapDTOGasLimit :: !(Maybe Text) -- ^ "gas_limit" - Gas limit of the transaction that emitted this event.
+  , pANCAKESWAPV3ETHEREUMSwapDTOGasUsed :: !(Maybe Text) -- ^ "gas_used" - Gas used in this transaction.
+  , pANCAKESWAPV3ETHEREUMSwapDTOGasPrice :: !(Maybe Text) -- ^ "gas_price" - Gas price of the transaction that emitted this event.
+  , pANCAKESWAPV3ETHEREUMSwapDTOProtocol :: !(Maybe Text) -- ^ "protocol" - The protocol this transaction belongs to.
+  , pANCAKESWAPV3ETHEREUMSwapDTOAccount :: !(Maybe Text) -- ^ "account" - Account that emitted this event.
+  , pANCAKESWAPV3ETHEREUMSwapDTOPool :: !(Maybe Text) -- ^ "pool" - The pool involving this event.
+  , pANCAKESWAPV3ETHEREUMSwapDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of this event.
+  , pANCAKESWAPV3ETHEREUMSwapDTOTick :: !(Maybe Text) -- ^ "tick" - Tick of the swap operation.
+  , pANCAKESWAPV3ETHEREUMSwapDTOTokenIn :: !(Maybe Text) -- ^ "token_in" - Token deposited into pool.
+  , pANCAKESWAPV3ETHEREUMSwapDTOAmountIn :: !(Maybe Text) -- ^ "amount_in" - Amount of token deposited into pool in native units.
+  , pANCAKESWAPV3ETHEREUMSwapDTOAmountInUsd :: !(Maybe Text) -- ^ "amount_in_usd" - Amount of token deposited into pool in USD.
+  , pANCAKESWAPV3ETHEREUMSwapDTOTokenOut :: !(Maybe Text) -- ^ "token_out" - Token withdrawn from pool.
+  , pANCAKESWAPV3ETHEREUMSwapDTOAmountOut :: !(Maybe Text) -- ^ "amount_out" - Amount of token withdrawn from pool in native units.
+  , pANCAKESWAPV3ETHEREUMSwapDTOAmountOutUsd :: !(Maybe Text) -- ^ "amount_out_usd" - Amount of token withdrawn from pool in USD.
+  , pANCAKESWAPV3ETHEREUMSwapDTOReserveAmounts :: !(Maybe [Text]) -- ^ "reserve_amounts" - Amount of input tokens in the liquidity pool.
+  , pANCAKESWAPV3ETHEREUMSwapDTOPoolId :: !(Maybe Text) -- ^ /ReadOnly/ "pool_id"
+  , pANCAKESWAPV3ETHEREUMSwapDTOTransactionId :: !(Maybe Text) -- ^ /ReadOnly/ "transaction_id"
+  , pANCAKESWAPV3ETHEREUMSwapDTOEvaluatedPrice :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_price"
+  , pANCAKESWAPV3ETHEREUMSwapDTOEvaluatedAmount :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_amount"
+  , pANCAKESWAPV3ETHEREUMSwapDTOEvaluatedAggressor :: !(Maybe TransactionsETradeAggressiveSide) -- ^ "evaluated_aggressor"
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON PANCAKESWAPV3ETHEREUMSwapDTO
+instance A.FromJSON PANCAKESWAPV3ETHEREUMSwapDTO where
+  parseJSON = A.withObject "PANCAKESWAPV3ETHEREUMSwapDTO" $ \o ->
+    PANCAKESWAPV3ETHEREUMSwapDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_")
+      <*> (o .:? "id")
+      <*> (o .:? "hash")
+      <*> (o .:? "nonce")
+      <*> (o .:? "log_index")
+      <*> (o .:? "gas_limit")
+      <*> (o .:? "gas_used")
+      <*> (o .:? "gas_price")
+      <*> (o .:? "protocol")
+      <*> (o .:? "account")
+      <*> (o .:? "pool")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "tick")
+      <*> (o .:? "token_in")
+      <*> (o .:? "amount_in")
+      <*> (o .:? "amount_in_usd")
+      <*> (o .:? "token_out")
+      <*> (o .:? "amount_out")
+      <*> (o .:? "amount_out_usd")
+      <*> (o .:? "reserve_amounts")
+      <*> (o .:? "pool_id")
+      <*> (o .:? "transaction_id")
+      <*> (o .:? "evaluated_price")
+      <*> (o .:? "evaluated_amount")
+      <*> (o .:? "evaluated_aggressor")
+
+-- | ToJSON PANCAKESWAPV3ETHEREUMSwapDTO
+instance A.ToJSON PANCAKESWAPV3ETHEREUMSwapDTO where
+  toJSON PANCAKESWAPV3ETHEREUMSwapDTO {..} =
+   _omitNulls
+      [ "entry_time" .= pANCAKESWAPV3ETHEREUMSwapDTOEntryTime
+      , "recv_time" .= pANCAKESWAPV3ETHEREUMSwapDTORecvTime
+      , "block_number" .= pANCAKESWAPV3ETHEREUMSwapDTOBlockNumber
+      , "block_" .= pANCAKESWAPV3ETHEREUMSwapDTOBlock
+      , "id" .= pANCAKESWAPV3ETHEREUMSwapDTOId
+      , "hash" .= pANCAKESWAPV3ETHEREUMSwapDTOHash
+      , "nonce" .= pANCAKESWAPV3ETHEREUMSwapDTONonce
+      , "log_index" .= pANCAKESWAPV3ETHEREUMSwapDTOLogIndex
+      , "gas_limit" .= pANCAKESWAPV3ETHEREUMSwapDTOGasLimit
+      , "gas_used" .= pANCAKESWAPV3ETHEREUMSwapDTOGasUsed
+      , "gas_price" .= pANCAKESWAPV3ETHEREUMSwapDTOGasPrice
+      , "protocol" .= pANCAKESWAPV3ETHEREUMSwapDTOProtocol
+      , "account" .= pANCAKESWAPV3ETHEREUMSwapDTOAccount
+      , "pool" .= pANCAKESWAPV3ETHEREUMSwapDTOPool
+      , "timestamp" .= pANCAKESWAPV3ETHEREUMSwapDTOTimestamp
+      , "tick" .= pANCAKESWAPV3ETHEREUMSwapDTOTick
+      , "token_in" .= pANCAKESWAPV3ETHEREUMSwapDTOTokenIn
+      , "amount_in" .= pANCAKESWAPV3ETHEREUMSwapDTOAmountIn
+      , "amount_in_usd" .= pANCAKESWAPV3ETHEREUMSwapDTOAmountInUsd
+      , "token_out" .= pANCAKESWAPV3ETHEREUMSwapDTOTokenOut
+      , "amount_out" .= pANCAKESWAPV3ETHEREUMSwapDTOAmountOut
+      , "amount_out_usd" .= pANCAKESWAPV3ETHEREUMSwapDTOAmountOutUsd
+      , "reserve_amounts" .= pANCAKESWAPV3ETHEREUMSwapDTOReserveAmounts
+      , "pool_id" .= pANCAKESWAPV3ETHEREUMSwapDTOPoolId
+      , "transaction_id" .= pANCAKESWAPV3ETHEREUMSwapDTOTransactionId
+      , "evaluated_price" .= pANCAKESWAPV3ETHEREUMSwapDTOEvaluatedPrice
+      , "evaluated_amount" .= pANCAKESWAPV3ETHEREUMSwapDTOEvaluatedAmount
+      , "evaluated_aggressor" .= pANCAKESWAPV3ETHEREUMSwapDTOEvaluatedAggressor
+      ]
+
+
+-- | Construct a value of type 'PANCAKESWAPV3ETHEREUMSwapDTO' (by applying it's required fields, if any)
+mkPANCAKESWAPV3ETHEREUMSwapDTO
+  :: PANCAKESWAPV3ETHEREUMSwapDTO
+mkPANCAKESWAPV3ETHEREUMSwapDTO =
+  PANCAKESWAPV3ETHEREUMSwapDTO
+  { pANCAKESWAPV3ETHEREUMSwapDTOEntryTime = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTORecvTime = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOBlockNumber = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOBlock = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOId = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOHash = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTONonce = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOLogIndex = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOGasLimit = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOGasUsed = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOGasPrice = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOProtocol = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOAccount = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOPool = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOTimestamp = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOTick = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOTokenIn = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOAmountIn = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOAmountInUsd = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOTokenOut = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOAmountOut = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOAmountOutUsd = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOReserveAmounts = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOPoolId = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOTransactionId = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOEvaluatedPrice = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOEvaluatedAmount = Nothing
+  , pANCAKESWAPV3ETHEREUMSwapDTOEvaluatedAggressor = Nothing
+  }
+
+-- ** PANCAKESWAPV3ETHEREUMTokenDTO
+-- | PANCAKESWAPV3ETHEREUMTokenDTO
+-- Stores aggregated information for a specific token across all pairs that token is included in.
+data PANCAKESWAPV3ETHEREUMTokenDTO = PANCAKESWAPV3ETHEREUMTokenDTO
+  { pANCAKESWAPV3ETHEREUMTokenDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , pANCAKESWAPV3ETHEREUMTokenDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , pANCAKESWAPV3ETHEREUMTokenDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , pANCAKESWAPV3ETHEREUMTokenDTOVid :: !(Maybe Integer) -- ^ "vid" - .
+  , pANCAKESWAPV3ETHEREUMTokenDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , pANCAKESWAPV3ETHEREUMTokenDTOId :: !(Maybe Text) -- ^ "id" - Smart contract address of the token.
+  , pANCAKESWAPV3ETHEREUMTokenDTOName :: !(Maybe Text) -- ^ "name" - Name of the token, mirrored from the smart contract.
+  , pANCAKESWAPV3ETHEREUMTokenDTOSymbol :: !(Maybe Text) -- ^ "symbol" - Symbol of the token, mirrored from the smart contract.
+  , pANCAKESWAPV3ETHEREUMTokenDTODecimals :: !(Maybe Int) -- ^ "decimals" - The number of decimal places this token uses, default to 18.
+  , pANCAKESWAPV3ETHEREUMTokenDTOLastPriceUsd :: !(Maybe Text) -- ^ "last_price_usd" - Optional field to track the price of a token, mostly for caching purposes.
+  , pANCAKESWAPV3ETHEREUMTokenDTOLastPriceBlockNumber :: !(Maybe Text) -- ^ "last_price_block_number" - Optional field to track the block number of the last token price.
+  , pANCAKESWAPV3ETHEREUMTokenDTOLastPricePool :: !(Maybe Text) -- ^ "last_price_pool" - Last pool that gave this token a price.
+  , pANCAKESWAPV3ETHEREUMTokenDTOTotalSupply :: !(Maybe Text) -- ^ "total_supply" - Amount of tokens in the protocol.
+  , pANCAKESWAPV3ETHEREUMTokenDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Total value locked in the protocol.
+  , pANCAKESWAPV3ETHEREUMTokenDTOLargePriceChangeBuffer :: !(Maybe Int) -- ^ "large_price_change_buffer" - The buffer for detecting large price changes.
+  , pANCAKESWAPV3ETHEREUMTokenDTOLargeTvlImpactBuffer :: !(Maybe Int) -- ^ "large_tvl_impact_buffer" - The buffer for detecting large TVL (Total Value Locked) impact.
+  , pANCAKESWAPV3ETHEREUMTokenDTOTokenSymbol :: !(Maybe Text) -- ^ /ReadOnly/ "token_symbol"
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON PANCAKESWAPV3ETHEREUMTokenDTO
+instance A.FromJSON PANCAKESWAPV3ETHEREUMTokenDTO where
+  parseJSON = A.withObject "PANCAKESWAPV3ETHEREUMTokenDTO" $ \o ->
+    PANCAKESWAPV3ETHEREUMTokenDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "vid")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "name")
+      <*> (o .:? "symbol")
+      <*> (o .:? "decimals")
+      <*> (o .:? "last_price_usd")
+      <*> (o .:? "last_price_block_number")
+      <*> (o .:? "last_price_pool")
+      <*> (o .:? "total_supply")
+      <*> (o .:? "total_value_locked_usd")
+      <*> (o .:? "large_price_change_buffer")
+      <*> (o .:? "large_tvl_impact_buffer")
+      <*> (o .:? "token_symbol")
+
+-- | ToJSON PANCAKESWAPV3ETHEREUMTokenDTO
+instance A.ToJSON PANCAKESWAPV3ETHEREUMTokenDTO where
+  toJSON PANCAKESWAPV3ETHEREUMTokenDTO {..} =
+   _omitNulls
+      [ "entry_time" .= pANCAKESWAPV3ETHEREUMTokenDTOEntryTime
+      , "recv_time" .= pANCAKESWAPV3ETHEREUMTokenDTORecvTime
+      , "block_number" .= pANCAKESWAPV3ETHEREUMTokenDTOBlockNumber
+      , "vid" .= pANCAKESWAPV3ETHEREUMTokenDTOVid
+      , "block_range" .= pANCAKESWAPV3ETHEREUMTokenDTOBlockRange
+      , "id" .= pANCAKESWAPV3ETHEREUMTokenDTOId
+      , "name" .= pANCAKESWAPV3ETHEREUMTokenDTOName
+      , "symbol" .= pANCAKESWAPV3ETHEREUMTokenDTOSymbol
+      , "decimals" .= pANCAKESWAPV3ETHEREUMTokenDTODecimals
+      , "last_price_usd" .= pANCAKESWAPV3ETHEREUMTokenDTOLastPriceUsd
+      , "last_price_block_number" .= pANCAKESWAPV3ETHEREUMTokenDTOLastPriceBlockNumber
+      , "last_price_pool" .= pANCAKESWAPV3ETHEREUMTokenDTOLastPricePool
+      , "total_supply" .= pANCAKESWAPV3ETHEREUMTokenDTOTotalSupply
+      , "total_value_locked_usd" .= pANCAKESWAPV3ETHEREUMTokenDTOTotalValueLockedUsd
+      , "large_price_change_buffer" .= pANCAKESWAPV3ETHEREUMTokenDTOLargePriceChangeBuffer
+      , "large_tvl_impact_buffer" .= pANCAKESWAPV3ETHEREUMTokenDTOLargeTvlImpactBuffer
+      , "token_symbol" .= pANCAKESWAPV3ETHEREUMTokenDTOTokenSymbol
+      ]
+
+
+-- | Construct a value of type 'PANCAKESWAPV3ETHEREUMTokenDTO' (by applying it's required fields, if any)
+mkPANCAKESWAPV3ETHEREUMTokenDTO
+  :: PANCAKESWAPV3ETHEREUMTokenDTO
+mkPANCAKESWAPV3ETHEREUMTokenDTO =
+  PANCAKESWAPV3ETHEREUMTokenDTO
+  { pANCAKESWAPV3ETHEREUMTokenDTOEntryTime = Nothing
+  , pANCAKESWAPV3ETHEREUMTokenDTORecvTime = Nothing
+  , pANCAKESWAPV3ETHEREUMTokenDTOBlockNumber = Nothing
+  , pANCAKESWAPV3ETHEREUMTokenDTOVid = Nothing
+  , pANCAKESWAPV3ETHEREUMTokenDTOBlockRange = Nothing
+  , pANCAKESWAPV3ETHEREUMTokenDTOId = Nothing
+  , pANCAKESWAPV3ETHEREUMTokenDTOName = Nothing
+  , pANCAKESWAPV3ETHEREUMTokenDTOSymbol = Nothing
+  , pANCAKESWAPV3ETHEREUMTokenDTODecimals = Nothing
+  , pANCAKESWAPV3ETHEREUMTokenDTOLastPriceUsd = Nothing
+  , pANCAKESWAPV3ETHEREUMTokenDTOLastPriceBlockNumber = Nothing
+  , pANCAKESWAPV3ETHEREUMTokenDTOLastPricePool = Nothing
+  , pANCAKESWAPV3ETHEREUMTokenDTOTotalSupply = Nothing
+  , pANCAKESWAPV3ETHEREUMTokenDTOTotalValueLockedUsd = Nothing
+  , pANCAKESWAPV3ETHEREUMTokenDTOLargePriceChangeBuffer = Nothing
+  , pANCAKESWAPV3ETHEREUMTokenDTOLargeTvlImpactBuffer = Nothing
+  , pANCAKESWAPV3ETHEREUMTokenDTOTokenSymbol = Nothing
+  }
+
 -- ** SUSHISWAPV3ETHEREUMLiquidityPoolDTO
 -- | SUSHISWAPV3ETHEREUMLiquidityPoolDTO
 -- Pool-level metadata.

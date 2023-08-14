@@ -96,6 +96,8 @@ declare -a result_color_table=( "$WHITE" "$WHITE" "$GREEN" "$YELLOW" "$WHITE" "$
 # 1 - required
 declare -A operation_parameters_minimum_occurrences
 operation_parameters_minimum_occurrences["metadataDappsDappNameGet:::dappName"]=1
+operation_parameters_minimum_occurrences["pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent:::id"]=0
+operation_parameters_minimum_occurrences["pANCAKESWAPV3ETHEREUMTokensCurrent:::id"]=0
 operation_parameters_minimum_occurrences["sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent:::id"]=0
 operation_parameters_minimum_occurrences["sUSHISWAPV3ETHEREUMTokensCurrent:::id"]=0
 operation_parameters_minimum_occurrences["uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent:::id"]=0
@@ -116,6 +118,8 @@ operation_parameters_minimum_occurrences["uNISWAPV3ETHEREUMTokensCurrent:::id"]=
 # 0 - unlimited
 declare -A operation_parameters_maximum_occurrences
 operation_parameters_maximum_occurrences["metadataDappsDappNameGet:::dappName"]=0
+operation_parameters_maximum_occurrences["pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent:::id"]=0
+operation_parameters_maximum_occurrences["pANCAKESWAPV3ETHEREUMTokensCurrent:::id"]=0
 operation_parameters_maximum_occurrences["sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent:::id"]=0
 operation_parameters_maximum_occurrences["sUSHISWAPV3ETHEREUMTokensCurrent:::id"]=0
 operation_parameters_maximum_occurrences["uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent:::id"]=0
@@ -133,6 +137,8 @@ operation_parameters_maximum_occurrences["uNISWAPV3ETHEREUMTokensCurrent:::id"]=
 # - multi, csv, ssv, tsv
 declare -A operation_parameters_collection_type
 operation_parameters_collection_type["metadataDappsDappNameGet:::dappName"]=""
+operation_parameters_collection_type["pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent:::id"]=""
+operation_parameters_collection_type["pANCAKESWAPV3ETHEREUMTokensCurrent:::id"]=""
 operation_parameters_collection_type["sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent:::id"]=""
 operation_parameters_collection_type["sUSHISWAPV3ETHEREUMTokensCurrent:::id"]=""
 operation_parameters_collection_type["uNISWAPV3ETHEREUMLiquidityPoolAmountsCurrent:::id"]=""
@@ -556,6 +562,14 @@ read -r -d '' ops <<EOF
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
+    echo -e "${BOLD}${WHITE}[pANCAKESWAPV3ETHEREUM]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent${OFF};LiquidityPools (current)
+  ${CYAN}pANCAKESWAPV3ETHEREUMSwapsCurrent${OFF};Swaps (current)
+  ${CYAN}pANCAKESWAPV3ETHEREUMTokensCurrent${OFF};Tokens (current)
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
     echo -e "${BOLD}${WHITE}[sUSHISWAPV3ETHEREUM]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent${OFF};LiquidityPools (current)
@@ -887,6 +901,60 @@ print_metadataDappsGet_help() {
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent operation
+#
+##############################################################################
+print_pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent - LiquidityPools (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets liquidityPools." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Smart contract address of the pool.${YELLOW} Specify as: id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for pANCAKESWAPV3ETHEREUMSwapsCurrent operation
+#
+##############################################################################
+print_pANCAKESWAPV3ETHEREUMSwapsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}pANCAKESWAPV3ETHEREUMSwapsCurrent - Swaps (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets swaps." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for pANCAKESWAPV3ETHEREUMTokensCurrent operation
+#
+##############################################################################
+print_pANCAKESWAPV3ETHEREUMTokensCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}pANCAKESWAPV3ETHEREUMTokensCurrent - Tokens (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Smart contract address of the token.${YELLOW} Specify as: id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1906,6 +1974,114 @@ call_metadataDappsGet() {
     local path
 
     if ! path=$(build_request_path "/metadata/dapps" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent operation
+#
+##############################################################################
+call_pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(id)
+    local path
+
+    if ! path=$(build_request_path "/v1/dapps/pancakeswap-v3-ethereum/liquidityPools/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call pANCAKESWAPV3ETHEREUMSwapsCurrent operation
+#
+##############################################################################
+call_pANCAKESWAPV3ETHEREUMSwapsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/v1/dapps/pancakeswap-v3-ethereum/swaps/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call pANCAKESWAPV3ETHEREUMTokensCurrent operation
+#
+##############################################################################
+call_pANCAKESWAPV3ETHEREUMTokensCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(id)
+    local path
+
+    if ! path=$(build_request_path "/v1/dapps/pancakeswap-v3-ethereum/tokens/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -3113,6 +3289,15 @@ case $key in
     metadataDappsGet)
     operation="metadataDappsGet"
     ;;
+    pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent)
+    operation="pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent"
+    ;;
+    pANCAKESWAPV3ETHEREUMSwapsCurrent)
+    operation="pANCAKESWAPV3ETHEREUMSwapsCurrent"
+    ;;
+    pANCAKESWAPV3ETHEREUMTokensCurrent)
+    operation="pANCAKESWAPV3ETHEREUMTokensCurrent"
+    ;;
     sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent)
     operation="sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent"
     ;;
@@ -3321,6 +3506,15 @@ case $operation in
     ;;
     metadataDappsGet)
     call_metadataDappsGet
+    ;;
+    pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent)
+    call_pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent
+    ;;
+    pANCAKESWAPV3ETHEREUMSwapsCurrent)
+    call_pANCAKESWAPV3ETHEREUMSwapsCurrent
+    ;;
+    pANCAKESWAPV3ETHEREUMTokensCurrent)
+    call_pANCAKESWAPV3ETHEREUMTokensCurrent
     ;;
     sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent)
     call_sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent

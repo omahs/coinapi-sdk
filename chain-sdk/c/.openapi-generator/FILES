@@ -8,6 +8,8 @@ api/CURVEFINANCEETHEREUMAPI.c
 api/CURVEFINANCEETHEREUMAPI.h
 api/MetadataAPI.c
 api/MetadataAPI.h
+api/PANCAKESWAPV3ETHEREUMAPI.c
+api/PANCAKESWAPV3ETHEREUMAPI.h
 api/SUSHISWAPV3ETHEREUMAPI.c
 api/SUSHISWAPV3ETHEREUMAPI.h
 api/UNISWAPV2ETHEREUMAPI.c
@@ -17,6 +19,7 @@ api/UNISWAPV3ETHEREUMAPI.h
 docs/CRYPTOPUNKSAPI.md
 docs/CURVEFINANCEETHEREUMAPI.md
 docs/MetadataAPI.md
+docs/PANCAKESWAPV3ETHEREUMAPI.md
 docs/SUSHISWAPV3ETHEREUMAPI.md
 docs/UNISWAPV2ETHEREUMAPI.md
 docs/UNISWAPV3ETHEREUMAPI.md
@@ -32,6 +35,9 @@ docs/cryptopunks_user_dto.md
 docs/curve_finance_ethereum_liquidity_pool_dto.md
 docs/curve_finance_ethereum_swap_dto.md
 docs/curve_finance_ethereum_token_dto.md
+docs/pancakeswap_v3_ethereum_liquidity_pool_dto.md
+docs/pancakeswap_v3_ethereum_swap_dto.md
+docs/pancakeswap_v3_ethereum_token_dto.md
 docs/sushiswap_v3_ethereum_liquidity_pool_dto.md
 docs/sushiswap_v3_ethereum_swap_dto.md
 docs/sushiswap_v3_ethereum_token_dto.md
@@ -96,6 +102,12 @@ model/curve_finance_ethereum_token_dto.c
 model/curve_finance_ethereum_token_dto.h
 model/object.c
 model/object.h
+model/pancakeswap_v3_ethereum_liquidity_pool_dto.c
+model/pancakeswap_v3_ethereum_liquidity_pool_dto.h
+model/pancakeswap_v3_ethereum_swap_dto.c
+model/pancakeswap_v3_ethereum_swap_dto.h
+model/pancakeswap_v3_ethereum_token_dto.c
+model/pancakeswap_v3_ethereum_token_dto.h
 model/sushiswap_v3_ethereum_liquidity_pool_dto.c
 model/sushiswap_v3_ethereum_liquidity_pool_dto.h
 model/sushiswap_v3_ethereum_swap_dto.c
@@ -173,6 +185,9 @@ unit-test/test_cryptopunks_user_dto.c
 unit-test/test_curve_finance_ethereum_liquidity_pool_dto.c
 unit-test/test_curve_finance_ethereum_swap_dto.c
 unit-test/test_curve_finance_ethereum_token_dto.c
+unit-test/test_pancakeswap_v3_ethereum_liquidity_pool_dto.c
+unit-test/test_pancakeswap_v3_ethereum_swap_dto.c
+unit-test/test_pancakeswap_v3_ethereum_token_dto.c
 unit-test/test_sushiswap_v3_ethereum_liquidity_pool_dto.c
 unit-test/test_sushiswap_v3_ethereum_swap_dto.c
 unit-test/test_sushiswap_v3_ethereum_token_dto.c

@@ -84,6 +84,17 @@ Method | HTTP request | Description
 *metadataDappsGetASync* | *GET* /metadata/dapps | List all decentralized applications..
 
 
+### PANCAKESWAPV3ETHEREUMManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*pANCAKESWAPV3ETHEREUMLiquidityPools (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/liquidityPools/current | LiquidityPools (current).
+*pANCAKESWAPV3ETHEREUMLiquidityPools (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/liquidityPools/current | LiquidityPools (current).
+*pANCAKESWAPV3ETHEREUMSwaps (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/swaps/current | Swaps (current).
+*pANCAKESWAPV3ETHEREUMSwaps (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/swaps/current | Swaps (current).
+*pANCAKESWAPV3ETHEREUMTokens (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/tokens/current | Tokens (current).
+*pANCAKESWAPV3ETHEREUMTokens (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/tokens/current | Tokens (current).
+
+
 ### SUSHISWAPV3ETHEREUMManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -172,6 +183,9 @@ Class | Description
  *CURVE_FINANCE_ETHEREUM.LiquidityPoolDTO* | 
  *CURVE_FINANCE_ETHEREUM.SwapDTO* | 
  *CURVE_FINANCE_ETHEREUM.TokenDTO* | 
+ *PANCAKESWAP_V3_ETHEREUM.LiquidityPoolDTO* | Pool-level metadata.
+ *PANCAKESWAP_V3_ETHEREUM.SwapDTO* | Trade (swap) event which occurred in a pool.
+ *PANCAKESWAP_V3_ETHEREUM.TokenDTO* | Stores aggregated information for a specific token across all pairs that token is included in.
  *SUSHISWAP_V3_ETHEREUM.LiquidityPoolDTO* | Pool-level metadata.
  *SUSHISWAP_V3_ETHEREUM.SwapDTO* | Trade (swap) event which occurred in a pool.
  *SUSHISWAP_V3_ETHEREUM.TokenDTO* | Stores aggregated information for a specific token across all pairs that token is included in.

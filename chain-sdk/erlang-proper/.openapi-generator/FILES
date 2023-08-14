@@ -13,6 +13,9 @@ src/model/openapi_cryptopunks_user_dto.erl
 src/model/openapi_curve_finance_ethereum_liquidity_pool_dto.erl
 src/model/openapi_curve_finance_ethereum_swap_dto.erl
 src/model/openapi_curve_finance_ethereum_token_dto.erl
+src/model/openapi_pancakeswap_v3_ethereum_liquidity_pool_dto.erl
+src/model/openapi_pancakeswap_v3_ethereum_swap_dto.erl
+src/model/openapi_pancakeswap_v3_ethereum_token_dto.erl
 src/model/openapi_sushiswap_v3_ethereum_liquidity_pool_dto.erl
 src/model/openapi_sushiswap_v3_ethereum_swap_dto.erl
 src/model/openapi_sushiswap_v3_ethereum_token_dto.erl
@@ -51,7 +54,9 @@ src/openapi_api.erl
 src/openapi_api.erl
 src/openapi_api.erl
 src/openapi_api.erl
+src/openapi_api.erl
 src/openapi_gen.erl
+src/openapi_statem.erl
 src/openapi_statem.erl
 src/openapi_statem.erl
 src/openapi_statem.erl

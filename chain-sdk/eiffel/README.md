@@ -41,6 +41,9 @@ Class | Method | HTTP request | Description
 *METADATA_API* | [**metadata_chains_get**](docs/METADATA_API.md#metadata_chains_get) | **Get** /metadata/chains | List all chains.
 *METADATA_API* | [**metadata_dapps_dapp_name_get**](docs/METADATA_API.md#metadata_dapps_dapp_name_get) | **Get** /metadata/dapps/{dappName} | Gets dapp by name.
 *METADATA_API* | [**metadata_dapps_get**](docs/METADATA_API.md#metadata_dapps_get) | **Get** /metadata/dapps | List all decentralized applications.
+*PANCAKESWAPV3ETHEREUM_API* | [**p_an_ca_ke_sw_ap_v3_et_he_re_um_liquidity_pools_current**](docs/PANCAKESWAPV3ETHEREUM_API.md#p_an_ca_ke_sw_ap_v3_et_he_re_um_liquidity_pools_current) | **Get** /v1/dapps/pancakeswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
+*PANCAKESWAPV3ETHEREUM_API* | [**p_an_ca_ke_sw_ap_v3_et_he_re_um_swaps_current**](docs/PANCAKESWAPV3ETHEREUM_API.md#p_an_ca_ke_sw_ap_v3_et_he_re_um_swaps_current) | **Get** /v1/dapps/pancakeswap-v3-ethereum/swaps/current | Swaps (current)
+*PANCAKESWAPV3ETHEREUM_API* | [**p_an_ca_ke_sw_ap_v3_et_he_re_um_tokens_current**](docs/PANCAKESWAPV3ETHEREUM_API.md#p_an_ca_ke_sw_ap_v3_et_he_re_um_tokens_current) | **Get** /v1/dapps/pancakeswap-v3-ethereum/tokens/current | Tokens (current)
 *SUSHISWAPV3ETHEREUM_API* | [**s_us_hi_sw_ap_v3_et_he_re_um_liquidity_pools_current**](docs/SUSHISWAPV3ETHEREUM_API.md#s_us_hi_sw_ap_v3_et_he_re_um_liquidity_pools_current) | **Get** /v1/dapps/sushiswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
 *SUSHISWAPV3ETHEREUM_API* | [**s_us_hi_sw_ap_v3_et_he_re_um_swaps_current**](docs/SUSHISWAPV3ETHEREUM_API.md#s_us_hi_sw_ap_v3_et_he_re_um_swaps_current) | **Get** /v1/dapps/sushiswap-v3-ethereum/swaps/current | Swaps (current)
 *SUSHISWAPV3ETHEREUM_API* | [**s_us_hi_sw_ap_v3_et_he_re_um_tokens_current**](docs/SUSHISWAPV3ETHEREUM_API.md#s_us_hi_sw_ap_v3_et_he_re_um_tokens_current) | **Get** /v1/dapps/sushiswap-v3-ethereum/tokens/current | Tokens (current)
@@ -86,6 +89,9 @@ Class | Method | HTTP request | Description
  - [CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_DTO](docs/CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_DTO.md)
  - [CURVE_FINANCE_ETHEREUM_SWAP_DTO](docs/CURVE_FINANCE_ETHEREUM_SWAP_DTO.md)
  - [CURVE_FINANCE_ETHEREUM_TOKEN_DTO](docs/CURVE_FINANCE_ETHEREUM_TOKEN_DTO.md)
+ - [PANCAKESWAP_V3_ETHEREUM_LIQUIDITY_POOL_DTO](docs/PANCAKESWAP_V3_ETHEREUM_LIQUIDITY_POOL_DTO.md)
+ - [PANCAKESWAP_V3_ETHEREUM_SWAP_DTO](docs/PANCAKESWAP_V3_ETHEREUM_SWAP_DTO.md)
+ - [PANCAKESWAP_V3_ETHEREUM_TOKEN_DTO](docs/PANCAKESWAP_V3_ETHEREUM_TOKEN_DTO.md)
  - [SUSHISWAP_V3_ETHEREUM_LIQUIDITY_POOL_DTO](docs/SUSHISWAP_V3_ETHEREUM_LIQUIDITY_POOL_DTO.md)
  - [SUSHISWAP_V3_ETHEREUM_SWAP_DTO](docs/SUSHISWAP_V3_ETHEREUM_SWAP_DTO.md)
  - [SUSHISWAP_V3_ETHEREUM_TOKEN_DTO](docs/SUSHISWAP_V3_ETHEREUM_TOKEN_DTO.md)

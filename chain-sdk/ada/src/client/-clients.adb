@@ -266,6 +266,64 @@ package body .Clients is
 
    --  LiquidityPools (current)
    --  Gets liquidityPools.
+   procedure P_ANCAKESWAPV3ETHEREUM_Liquidity_Pools__current
+      (Client : in out Client_Type;
+       Id : in Swagger.Nullable_UString;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMLiquidityPoolDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
+
+      URI.Add_Param ("id", Id);
+      URI.Set_Path ("/v1/dapps/pancakeswap-v3-ethereum/liquidityPools/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end P_ANCAKESWAPV3ETHEREUM_Liquidity_Pools__current;
+
+   --  Swaps (current)
+   --  Gets swaps.
+   procedure P_ANCAKESWAPV3ETHEREUM_Swaps__current
+      (Client : in out Client_Type;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMSwapDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
+
+      URI.Set_Path ("/v1/dapps/pancakeswap-v3-ethereum/swaps/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end P_ANCAKESWAPV3ETHEREUM_Swaps__current;
+
+   --  Tokens (current)
+   --  Gets tokens.
+   procedure P_ANCAKESWAPV3ETHEREUM_Tokens__current
+      (Client : in out Client_Type;
+       Id : in Swagger.Nullable_UString;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMTokenDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
+
+      URI.Add_Param ("id", Id);
+      URI.Set_Path ("/v1/dapps/pancakeswap-v3-ethereum/tokens/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end P_ANCAKESWAPV3ETHEREUM_Tokens__current;
+
+   --  LiquidityPools (current)
+   --  Gets liquidityPools.
    procedure S_USHISWAPV3ETHEREUM_Liquidity_Pools__current
       (Client : in out Client_Type;
        Id : in Swagger.Nullable_UString;

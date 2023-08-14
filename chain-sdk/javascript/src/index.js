@@ -25,6 +25,9 @@ import CRYPTOPUNKSUserDTO from './model/CRYPTOPUNKSUserDTO';
 import CURVEFINANCEETHEREUMLiquidityPoolDTO from './model/CURVEFINANCEETHEREUMLiquidityPoolDTO';
 import CURVEFINANCEETHEREUMSwapDTO from './model/CURVEFINANCEETHEREUMSwapDTO';
 import CURVEFINANCEETHEREUMTokenDTO from './model/CURVEFINANCEETHEREUMTokenDTO';
+import PANCAKESWAPV3ETHEREUMLiquidityPoolDTO from './model/PANCAKESWAPV3ETHEREUMLiquidityPoolDTO';
+import PANCAKESWAPV3ETHEREUMSwapDTO from './model/PANCAKESWAPV3ETHEREUMSwapDTO';
+import PANCAKESWAPV3ETHEREUMTokenDTO from './model/PANCAKESWAPV3ETHEREUMTokenDTO';
 import SUSHISWAPV3ETHEREUMLiquidityPoolDTO from './model/SUSHISWAPV3ETHEREUMLiquidityPoolDTO';
 import SUSHISWAPV3ETHEREUMSwapDTO from './model/SUSHISWAPV3ETHEREUMSwapDTO';
 import SUSHISWAPV3ETHEREUMTokenDTO from './model/SUSHISWAPV3ETHEREUMTokenDTO';
@@ -58,6 +61,7 @@ import UNISWAPV3ETHEREUMWithdrawDTO from './model/UNISWAPV3ETHEREUMWithdrawDTO';
 import CRYPTOPUNKSApi from './api/CRYPTOPUNKSApi';
 import CURVEFINANCEETHEREUMApi from './api/CURVEFINANCEETHEREUMApi';
 import MetadataApi from './api/MetadataApi';
+import PANCAKESWAPV3ETHEREUMApi from './api/PANCAKESWAPV3ETHEREUMApi';
 import SUSHISWAPV3ETHEREUMApi from './api/SUSHISWAPV3ETHEREUMApi';
 import UNISWAPV2ETHEREUMApi from './api/UNISWAPV2ETHEREUMApi';
 import UNISWAPV3ETHEREUMApi from './api/UNISWAPV3ETHEREUMApi';
@@ -172,6 +176,24 @@ export {
      * @property {module:model/CURVEFINANCEETHEREUMTokenDTO}
      */
     CURVEFINANCEETHEREUMTokenDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMLiquidityPoolDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMLiquidityPoolDTO}
+     */
+    PANCAKESWAPV3ETHEREUMLiquidityPoolDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMSwapDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMSwapDTO}
+     */
+    PANCAKESWAPV3ETHEREUMSwapDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMTokenDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMTokenDTO}
+     */
+    PANCAKESWAPV3ETHEREUMTokenDTO,
 
     /**
      * The SUSHISWAPV3ETHEREUMLiquidityPoolDTO model constructor.
@@ -370,6 +392,12 @@ export {
     * @property {module:api/MetadataApi}
     */
     MetadataApi,
+
+    /**
+    * The PANCAKESWAPV3ETHEREUMApi service constructor.
+    * @property {module:api/PANCAKESWAPV3ETHEREUMApi}
+    */
+    PANCAKESWAPV3ETHEREUMApi,
 
     /**
     * The SUSHISWAPV3ETHEREUMApi service constructor.

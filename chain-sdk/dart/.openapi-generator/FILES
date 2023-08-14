@@ -18,6 +18,10 @@ doc/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
 doc/CURVEFINANCEETHEREUMSwapDTO.md
 doc/CURVEFINANCEETHEREUMTokenDTO.md
 doc/MetadataApi.md
+doc/PANCAKESWAPV3ETHEREUMApi.md
+doc/PANCAKESWAPV3ETHEREUMLiquidityPoolDTO.md
+doc/PANCAKESWAPV3ETHEREUMSwapDTO.md
+doc/PANCAKESWAPV3ETHEREUMTokenDTO.md
 doc/SUSHISWAPV3ETHEREUMApi.md
 doc/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.md
 doc/SUSHISWAPV3ETHEREUMSwapDTO.md
@@ -56,6 +60,7 @@ lib/api.dart
 lib/api/cryptopunks_api.dart
 lib/api/curvefinanceethereum_api.dart
 lib/api/metadata_api.dart
+lib/api/pancakeswapv3_ethereum_api.dart
 lib/api/sushiswapv3_ethereum_api.dart
 lib/api/uniswapv2_ethereum_api.dart
 lib/api/uniswapv3_ethereum_api.dart
@@ -79,6 +84,9 @@ lib/model/cryptopunks_user_dto.dart
 lib/model/curvefinanceethereum_liquidity_pool_dto.dart
 lib/model/curvefinanceethereum_swap_dto.dart
 lib/model/curvefinanceethereum_token_dto.dart
+lib/model/pancakeswapv3_ethereum_liquidity_pool_dto.dart
+lib/model/pancakeswapv3_ethereum_swap_dto.dart
+lib/model/pancakeswapv3_ethereum_token_dto.dart
 lib/model/sushiswapv3_ethereum_liquidity_pool_dto.dart
 lib/model/sushiswapv3_ethereum_swap_dto.dart
 lib/model/sushiswapv3_ethereum_token_dto.dart
@@ -125,6 +133,10 @@ test/curvefinanceethereum_liquidity_pool_dto_test.dart
 test/curvefinanceethereum_swap_dto_test.dart
 test/curvefinanceethereum_token_dto_test.dart
 test/metadata_api_test.dart
+test/pancakeswapv3_ethereum_api_test.dart
+test/pancakeswapv3_ethereum_liquidity_pool_dto_test.dart
+test/pancakeswapv3_ethereum_swap_dto_test.dart
+test/pancakeswapv3_ethereum_token_dto_test.dart
 test/sushiswapv3_ethereum_api_test.dart
 test/sushiswapv3_ethereum_liquidity_pool_dto_test.dart
 test/sushiswapv3_ethereum_swap_dto_test.dart
