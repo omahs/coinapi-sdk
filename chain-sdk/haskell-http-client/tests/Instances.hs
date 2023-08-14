@@ -297,6 +297,91 @@ genCRYPTOPUNKSUserDTO n =
     <*> arbitraryReducedMaybe n -- cRYPTOPUNKSUserDTOBlockRange :: Maybe Text
     <*> arbitraryReducedMaybe n -- cRYPTOPUNKSUserDTOId :: Maybe Text
   
+instance Arbitrary CURVEFINANCEETHEREUMLiquidityPoolDTO where
+  arbitrary = sized genCURVEFINANCEETHEREUMLiquidityPoolDTO
+
+genCURVEFINANCEETHEREUMLiquidityPoolDTO :: Int -> Gen CURVEFINANCEETHEREUMLiquidityPoolDTO
+genCURVEFINANCEETHEREUMLiquidityPoolDTO n =
+  CURVEFINANCEETHEREUMLiquidityPoolDTO
+    <$> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOProtocol :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOName :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOSymbol :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOInputTokens :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOInputTokensOrdered :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOOutputToken :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTORewardTokens :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOFees :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOIsSingleSided :: Maybe Bool
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOCreatedTimestamp :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOCreatedBlockNumber :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOTotalValueLockedUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOCumulativeSupplySideRevenueUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOCumulativeProtocolSideRevenueUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOCumulativeTotalRevenueUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOCumulativeVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOInputTokenBalances :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOInputTokenWeights :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOOutputTokenSupply :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOOutputTokenPriceUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOStakedOutputTokenAmount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTORewardTokenEmissionsAmount :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTORewardTokenEmissionsUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTORegistryAddress :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOGaugeAddress :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMLiquidityPoolDTOEvaluatedAsk :: Maybe Double
+  
+instance Arbitrary CURVEFINANCEETHEREUMSwapDTO where
+  arbitrary = sized genCURVEFINANCEETHEREUMSwapDTO
+
+genCURVEFINANCEETHEREUMSwapDTO :: Int -> Gen CURVEFINANCEETHEREUMSwapDTO
+genCURVEFINANCEETHEREUMSwapDTO n =
+  CURVEFINANCEETHEREUMSwapDTO
+    <$> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOBlockNumber :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOHash :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOLogIndex :: Maybe Int
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOProtocol :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOTo :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOFrom :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOTimestamp :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOTokenIn :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOAmountIn :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOAmountInUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOTokenOut :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOAmountOut :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOAmountOutUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOPool :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOPoolId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOTransactionId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOEvaluatedPrice :: Maybe Double
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOEvaluatedAmount :: Maybe Double
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMSwapDTOEvaluatedAggressor :: Maybe TransactionsETradeAggressiveSide
+  
+instance Arbitrary CURVEFINANCEETHEREUMTokenDTO where
+  arbitrary = sized genCURVEFINANCEETHEREUMTokenDTO
+
+genCURVEFINANCEETHEREUMTokenDTO :: Int -> Gen CURVEFINANCEETHEREUMTokenDTO
+genCURVEFINANCEETHEREUMTokenDTO n =
+  CURVEFINANCEETHEREUMTokenDTO
+    <$> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMTokenDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMTokenDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMTokenDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMTokenDTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMTokenDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMTokenDTOName :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMTokenDTOSymbol :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMTokenDTODecimals :: Maybe Int
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMTokenDTOLastPriceUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMTokenDTOLastPriceBlockNumber :: Maybe Text
+    <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMTokenDTOTokenSymbol :: Maybe Text
+  
 instance Arbitrary UNISWAPV2ETHEREUMLiquidityPoolDTO where
   arbitrary = sized genUNISWAPV2ETHEREUMLiquidityPoolDTO
 

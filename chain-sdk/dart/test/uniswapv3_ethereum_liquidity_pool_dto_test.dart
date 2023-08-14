@@ -302,7 +302,7 @@ void main() {
       // TODO
     });
 
-    // Evaluated ask value of the liquidity pool.
+    // 
     // double evaluatedAsk
     test('to test the property `evaluatedAsk`', () async {
       // TODO

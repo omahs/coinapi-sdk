@@ -93,6 +93,18 @@ public class JsonUtil {
       return new TypeToken<List<CRYPTOPUNKSUserDTO>>(){}.getType();
     }
     
+    if ("CURVEFINANCEETHEREUMLiquidityPoolDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>>(){}.getType();
+    }
+    
+    if ("CURVEFINANCEETHEREUMSwapDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CURVEFINANCEETHEREUMSwapDTO>>(){}.getType();
+    }
+    
+    if ("CURVEFINANCEETHEREUMTokenDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CURVEFINANCEETHEREUMTokenDTO>>(){}.getType();
+    }
+    
     if ("TransactionsETradeAggressiveSide".equalsIgnoreCase(className)) {
       return new TypeToken<List<TransactionsETradeAggressiveSide>>(){}.getType();
     }
@@ -241,6 +253,18 @@ public class JsonUtil {
     
     if ("CRYPTOPUNKSUserDTO".equalsIgnoreCase(className)) {
       return new TypeToken<CRYPTOPUNKSUserDTO>(){}.getType();
+    }
+    
+    if ("CURVEFINANCEETHEREUMLiquidityPoolDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<CURVEFINANCEETHEREUMLiquidityPoolDTO>(){}.getType();
+    }
+    
+    if ("CURVEFINANCEETHEREUMSwapDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<CURVEFINANCEETHEREUMSwapDTO>(){}.getType();
+    }
+    
+    if ("CURVEFINANCEETHEREUMTokenDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<CURVEFINANCEETHEREUMTokenDTO>(){}.getType();
     }
     
     if ("TransactionsETradeAggressiveSide".equalsIgnoreCase(className)) {

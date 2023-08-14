@@ -236,6 +236,7 @@ cpanm --quiet --no-interactive Class::Accessor Test::Exception Test::More Log::A
 To load the API packages:
 ```perl
 use WWW::OpenAPIClient::CRYPTOPUNKSApi;
+use WWW::OpenAPIClient::CURVEFINANCEETHEREUMApi;
 use WWW::OpenAPIClient::MetadataApi;
 use WWW::OpenAPIClient::UNISWAPV2ETHEREUMApi;
 use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
@@ -253,6 +254,9 @@ use WWW::OpenAPIClient::Object::CRYPTOPUNKSMarketPlaceDTO;
 use WWW::OpenAPIClient::Object::CRYPTOPUNKSMarketplaceDailySnapshotDTO;
 use WWW::OpenAPIClient::Object::CRYPTOPUNKSTradeDTO;
 use WWW::OpenAPIClient::Object::CRYPTOPUNKSUserDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityPoolDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMSwapDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMTokenDTO;
 use WWW::OpenAPIClient::Object::TransactionsETradeAggressiveSide;
 use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMSwapDTO;
@@ -292,6 +296,7 @@ use strict;
 use warnings;
 # load the API package
 use WWW::OpenAPIClient::CRYPTOPUNKSApi;
+use WWW::OpenAPIClient::CURVEFINANCEETHEREUMApi;
 use WWW::OpenAPIClient::MetadataApi;
 use WWW::OpenAPIClient::UNISWAPV2ETHEREUMApi;
 use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
@@ -306,6 +311,9 @@ use WWW::OpenAPIClient::Object::CRYPTOPUNKSMarketPlaceDTO;
 use WWW::OpenAPIClient::Object::CRYPTOPUNKSMarketplaceDailySnapshotDTO;
 use WWW::OpenAPIClient::Object::CRYPTOPUNKSTradeDTO;
 use WWW::OpenAPIClient::Object::CRYPTOPUNKSUserDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityPoolDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMSwapDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMTokenDTO;
 use WWW::OpenAPIClient::Object::TransactionsETradeAggressiveSide;
 use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMSwapDTO;
@@ -367,6 +375,9 @@ Class | Method | HTTP request | Description
 *CRYPTOPUNKSApi* | [**c_ryptopunks_marketplace_daily_snapshots__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_marketplace_daily_snapshots__current) | **GET** /v1/dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
 *CRYPTOPUNKSApi* | [**c_ryptopunks_trades__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_trades__current) | **GET** /v1/dapps/cryptopunks/trades/current | Trades (current)
 *CRYPTOPUNKSApi* | [**c_ryptopunks_users__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_users__current) | **GET** /v1/dapps/cryptopunks/users/current | Users (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_liquidity_pools__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_liquidity_pools__current) | **GET** /v1/dapps/curve-finance-ethereum/liquidityPools/current | LiquidityPools (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_swaps__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_swaps__current) | **GET** /v1/dapps/curve-finance-ethereum/swaps/current | Swaps (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_tokens__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_tokens__current) | **GET** /v1/dapps/curve-finance-ethereum/tokens/current | Tokens (current)
 *MetadataApi* | [**metadata_chains_get**](docs/MetadataApi.md#metadata_chains_get) | **GET** /metadata/chains | List all chains.
 *MetadataApi* | [**metadata_dapps_dapp_name_get**](docs/MetadataApi.md#metadata_dapps_dapp_name_get) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
 *MetadataApi* | [**metadata_dapps_get**](docs/MetadataApi.md#metadata_dapps_get) | **GET** /metadata/dapps | List all decentralized applications.
@@ -408,6 +419,9 @@ Class | Method | HTTP request | Description
  - [WWW::OpenAPIClient::Object::CRYPTOPUNKSMarketplaceDailySnapshotDTO](docs/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md)
  - [WWW::OpenAPIClient::Object::CRYPTOPUNKSTradeDTO](docs/CRYPTOPUNKSTradeDTO.md)
  - [WWW::OpenAPIClient::Object::CRYPTOPUNKSUserDTO](docs/CRYPTOPUNKSUserDTO.md)
+ - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityPoolDTO](docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md)
+ - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMSwapDTO](docs/CURVEFINANCEETHEREUMSwapDTO.md)
+ - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMTokenDTO](docs/CURVEFINANCEETHEREUMTokenDTO.md)
  - [WWW::OpenAPIClient::Object::TransactionsETradeAggressiveSide](docs/TransactionsETradeAggressiveSide.md)
  - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolDTO](docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md)
  - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMSwapDTO](docs/UNISWAPV2ETHEREUMSwapDTO.md)

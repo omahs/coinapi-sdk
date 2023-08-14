@@ -52,7 +52,7 @@ Name | Type | Description | Notes
 **LastSnapshotHourId** | Pointer to **int32** | Hour ID of the most recent hourly snapshot. | [optional] 
 **LastUpdateTimestamp** | Pointer to **NullableString** | Timestamp of the last time this entity was updated. | [optional] 
 **LastUpdateBlockNumber** | Pointer to **NullableString** | Block number of the last time this entity was updated. | [optional] 
-**EvaluatedAsk** | Pointer to **float64** | Evaluated ask value of the liquidity pool. | [optional] [readonly] 
+**EvaluatedAsk** | Pointer to **float64** |  | [optional] [readonly] 
 
 ## Methods
 

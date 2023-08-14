@@ -190,6 +190,9 @@ Class | Method | HTTP request | Description
 *CRYPTOPUNKSApi* | [**c_ryptopunks_marketplace_daily_snapshots__current**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_marketplace_daily_snapshots__current) | **get** /v1/dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
 *CRYPTOPUNKSApi* | [**c_ryptopunks_trades__current**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_trades__current) | **get** /v1/dapps/cryptopunks/trades/current | Trades (current)
 *CRYPTOPUNKSApi* | [**c_ryptopunks_users__current**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_users__current) | **get** /v1/dapps/cryptopunks/users/current | Users (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_liquidity_pools__current**](docs/apis/tags/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_liquidity_pools__current) | **get** /v1/dapps/curve-finance-ethereum/liquidityPools/current | LiquidityPools (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_swaps__current**](docs/apis/tags/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_swaps__current) | **get** /v1/dapps/curve-finance-ethereum/swaps/current | Swaps (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_tokens__current**](docs/apis/tags/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_tokens__current) | **get** /v1/dapps/curve-finance-ethereum/tokens/current | Tokens (current)
 *MetadataApi* | [**metadata_chains_get**](docs/apis/tags/MetadataApi.md#metadata_chains_get) | **get** /metadata/chains | List all chains.
 *MetadataApi* | [**metadata_dapps_dapp_name_get**](docs/apis/tags/MetadataApi.md#metadata_dapps_dapp_name_get) | **get** /metadata/dapps/{dappName} | Gets dapp by name.
 *MetadataApi* | [**metadata_dapps_get**](docs/apis/tags/MetadataApi.md#metadata_dapps_get) | **get** /metadata/dapps | List all decentralized applications.
@@ -231,6 +234,9 @@ Class | Method | HTTP request | Description
  - [CRYPTOPUNKSMarketplaceDailySnapshotDTO](docs/models/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md)
  - [CRYPTOPUNKSTradeDTO](docs/models/CRYPTOPUNKSTradeDTO.md)
  - [CRYPTOPUNKSUserDTO](docs/models/CRYPTOPUNKSUserDTO.md)
+ - [CURVEFINANCEETHEREUMLiquidityPoolDTO](docs/models/CURVEFINANCEETHEREUMLiquidityPoolDTO.md)
+ - [CURVEFINANCEETHEREUMSwapDTO](docs/models/CURVEFINANCEETHEREUMSwapDTO.md)
+ - [CURVEFINANCEETHEREUMTokenDTO](docs/models/CURVEFINANCEETHEREUMTokenDTO.md)
  - [TransactionsETradeAggressiveSide](docs/models/TransactionsETradeAggressiveSide.md)
  - [UNISWAPV2ETHEREUMLiquidityPoolDTO](docs/models/UNISWAPV2ETHEREUMLiquidityPoolDTO.md)
  - [UNISWAPV2ETHEREUMSwapDTO](docs/models/UNISWAPV2ETHEREUMSwapDTO.md)
@@ -266,6 +272,7 @@ Class | Method | HTTP request | Description
 
 ## Author
 
+support@coinapi.io
 support@coinapi.io
 support@coinapi.io
 support@coinapi.io

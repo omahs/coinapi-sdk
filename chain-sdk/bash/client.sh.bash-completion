@@ -77,6 +77,9 @@ _()
     operations["cRYPTOPUNKSMarketplaceDailySnapshotsCurrent"]=1
     operations["cRYPTOPUNKSTradesCurrent"]=1
     operations["cRYPTOPUNKSUsersCurrent"]=1
+    operations["cURVEFINANCEETHEREUMLiquidityPoolsCurrent"]=1
+    operations["cURVEFINANCEETHEREUMSwapsCurrent"]=1
+    operations["cURVEFINANCEETHEREUMTokensCurrent"]=1
     operations["metadataChainsGet"]=1
     operations["metadataDappsDappNameGet"]=1
     operations["metadataDappsGet"]=1
@@ -119,6 +122,9 @@ _()
     operation_parameters["cRYPTOPUNKSMarketplaceDailySnapshotsCurrent"]=""
     operation_parameters["cRYPTOPUNKSTradesCurrent"]=""
     operation_parameters["cRYPTOPUNKSUsersCurrent"]=""
+    operation_parameters["cURVEFINANCEETHEREUMLiquidityPoolsCurrent"]=""
+    operation_parameters["cURVEFINANCEETHEREUMSwapsCurrent"]=""
+    operation_parameters["cURVEFINANCEETHEREUMTokensCurrent"]=""
     operation_parameters["metadataChainsGet"]=""
     operation_parameters["metadataDappsDappNameGet"]="dappName= "
     operation_parameters["metadataDappsGet"]=""

@@ -303,7 +303,7 @@ public class OASUNISWAPV3ETHEREUMLiquidityPoolDTO implements OAS.MappedPropertie
     public String lastUpdateBlockNumber { get; set; }
 
     /**
-     * Evaluated ask value of the liquidity pool.
+     * 
      * @return evaluatedAsk
      */
     public Double evaluatedAsk { get; private set; }

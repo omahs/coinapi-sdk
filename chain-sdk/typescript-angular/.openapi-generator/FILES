@@ -4,6 +4,7 @@ README.md
 api.module.ts
 api/api.ts
 api/cRYPTOPUNKS.service.ts
+api/cURVEFINANCEETHEREUM.service.ts
 api/metadata.service.ts
 api/uNISWAPV2ETHEREUM.service.ts
 api/uNISWAPV3ETHEREUM.service.ts
@@ -20,6 +21,9 @@ model/cRYPTOPUNKSMarketPlaceDTO.ts
 model/cRYPTOPUNKSMarketplaceDailySnapshotDTO.ts
 model/cRYPTOPUNKSTradeDTO.ts
 model/cRYPTOPUNKSUserDTO.ts
+model/cURVEFINANCEETHEREUMLiquidityPoolDTO.ts
+model/cURVEFINANCEETHEREUMSwapDTO.ts
+model/cURVEFINANCEETHEREUMTokenDTO.ts
 model/models.ts
 model/transactionsETradeAggressiveSide.ts
 model/uNISWAPV2ETHEREUMLiquidityPoolDTO.ts

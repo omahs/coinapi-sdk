@@ -649,9 +649,9 @@ public class UNISWAPV3ETHEREUMLiquidityPoolDTO {
   }
 
   /**
-   * Evaluated ask value of the liquidity pool.
+   * 
    **/
-  @ApiModelProperty(value = "Evaluated ask value of the liquidity pool.")
+  @ApiModelProperty(value = "")
   public Double getEvaluatedAsk() {
     return evaluatedAsk;
   }

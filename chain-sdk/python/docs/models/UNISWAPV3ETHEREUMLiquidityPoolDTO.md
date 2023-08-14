@@ -58,7 +58,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **last_snapshot_hour_id** | decimal.Decimal, int,  | decimal.Decimal,  | Hour ID of the most recent hourly snapshot. | [optional] value must be a 32 bit integer
 **last_update_timestamp** | None, str,  | NoneClass, str,  | Timestamp of the last time this entity was updated. | [optional] 
 **last_update_block_number** | None, str,  | NoneClass, str,  | Block number of the last time this entity was updated. | [optional] 
-**evaluated_ask** | decimal.Decimal, int, float,  | decimal.Decimal,  | Evaluated ask value of the liquidity pool. | [optional] value must be a 64 bit float
+**evaluated_ask** | decimal.Decimal, int, float,  | decimal.Decimal,  |  | [optional] value must be a 64 bit float
 
 # input_tokens
 

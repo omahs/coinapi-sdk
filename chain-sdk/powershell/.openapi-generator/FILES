@@ -12,6 +12,10 @@ docs/CRYPTOPUNKSMarketPlaceDTO.md
 docs/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md
 docs/CRYPTOPUNKSTradeDTO.md
 docs/CRYPTOPUNKSUserDTO.md
+docs/CURVEFINANCEETHEREUMApi.md
+docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
+docs/CURVEFINANCEETHEREUMSwapDTO.md
+docs/CURVEFINANCEETHEREUMTokenDTO.md
 docs/MetadataApi.md
 docs/TransactionsETradeAggressiveSide.md
 docs/UNISWAPV2ETHEREUMApi.md
@@ -43,6 +47,7 @@ docs/UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMWithdrawDTO.md
 src/PSOpenAPITools/Api/CRYPTOPUNKSApi.ps1
+src/PSOpenAPITools/Api/CURVEFINANCEETHEREUMApi.ps1
 src/PSOpenAPITools/Api/MetadataApi.ps1
 src/PSOpenAPITools/Api/UNISWAPV2ETHEREUMApi.ps1
 src/PSOpenAPITools/Api/UNISWAPV3ETHEREUMApi.ps1
@@ -56,6 +61,9 @@ src/PSOpenAPITools/Model/CRYPTOPUNKSMarketPlaceDTO.ps1
 src/PSOpenAPITools/Model/CRYPTOPUNKSMarketplaceDailySnapshotDTO.ps1
 src/PSOpenAPITools/Model/CRYPTOPUNKSTradeDTO.ps1
 src/PSOpenAPITools/Model/CRYPTOPUNKSUserDTO.ps1
+src/PSOpenAPITools/Model/CURVEFINANCEETHEREUMLiquidityPoolDTO.ps1
+src/PSOpenAPITools/Model/CURVEFINANCEETHEREUMSwapDTO.ps1
+src/PSOpenAPITools/Model/CURVEFINANCEETHEREUMTokenDTO.ps1
 src/PSOpenAPITools/Model/TransactionsETradeAggressiveSide.ps1
 src/PSOpenAPITools/Model/UNISWAPV2ETHEREUMLiquidityPoolDTO.ps1
 src/PSOpenAPITools/Model/UNISWAPV2ETHEREUMSwapDTO.ps1
@@ -91,6 +99,7 @@ src/PSOpenAPITools/Private/Out-DebugParameter.ps1
 src/PSOpenAPITools/Private/RSAEncryptionProvider.cs
 src/PSOpenAPITools/en-US/about_PSOpenAPITools.help.txt
 tests/Api/CRYPTOPUNKSApi.Tests.ps1
+tests/Api/CURVEFINANCEETHEREUMApi.Tests.ps1
 tests/Api/MetadataApi.Tests.ps1
 tests/Api/UNISWAPV2ETHEREUMApi.Tests.ps1
 tests/Api/UNISWAPV3ETHEREUMApi.Tests.ps1
@@ -103,6 +112,9 @@ tests/Model/CRYPTOPUNKSMarketPlaceDTO.Tests.ps1
 tests/Model/CRYPTOPUNKSMarketplaceDailySnapshotDTO.Tests.ps1
 tests/Model/CRYPTOPUNKSTradeDTO.Tests.ps1
 tests/Model/CRYPTOPUNKSUserDTO.Tests.ps1
+tests/Model/CURVEFINANCEETHEREUMLiquidityPoolDTO.Tests.ps1
+tests/Model/CURVEFINANCEETHEREUMSwapDTO.Tests.ps1
+tests/Model/CURVEFINANCEETHEREUMTokenDTO.Tests.ps1
 tests/Model/TransactionsETradeAggressiveSide.Tests.ps1
 tests/Model/UNISWAPV2ETHEREUMLiquidityPoolDTO.Tests.ps1
 tests/Model/UNISWAPV2ETHEREUMSwapDTO.Tests.ps1

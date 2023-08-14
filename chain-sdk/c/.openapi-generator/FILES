@@ -4,6 +4,8 @@ Packing.cmake
 README.md
 api/CRYPTOPUNKSAPI.c
 api/CRYPTOPUNKSAPI.h
+api/CURVEFINANCEETHEREUMAPI.c
+api/CURVEFINANCEETHEREUMAPI.h
 api/MetadataAPI.c
 api/MetadataAPI.h
 api/UNISWAPV2ETHEREUMAPI.c
@@ -11,6 +13,7 @@ api/UNISWAPV2ETHEREUMAPI.h
 api/UNISWAPV3ETHEREUMAPI.c
 api/UNISWAPV3ETHEREUMAPI.h
 docs/CRYPTOPUNKSAPI.md
+docs/CURVEFINANCEETHEREUMAPI.md
 docs/MetadataAPI.md
 docs/UNISWAPV2ETHEREUMAPI.md
 docs/UNISWAPV3ETHEREUMAPI.md
@@ -23,6 +26,9 @@ docs/cryptopunks_market_place_dto.md
 docs/cryptopunks_marketplace_daily_snapshot_dto.md
 docs/cryptopunks_trade_dto.md
 docs/cryptopunks_user_dto.md
+docs/curve_finance_ethereum_liquidity_pool_dto.md
+docs/curve_finance_ethereum_swap_dto.md
+docs/curve_finance_ethereum_token_dto.md
 docs/transactions_e_trade_aggressive_side.md
 docs/uniswap_v2_ethereum_liquidity_pool_dto.md
 docs/uniswap_v2_ethereum_swap_dto.md
@@ -76,6 +82,12 @@ model/cryptopunks_trade_dto.c
 model/cryptopunks_trade_dto.h
 model/cryptopunks_user_dto.c
 model/cryptopunks_user_dto.h
+model/curve_finance_ethereum_liquidity_pool_dto.c
+model/curve_finance_ethereum_liquidity_pool_dto.h
+model/curve_finance_ethereum_swap_dto.c
+model/curve_finance_ethereum_swap_dto.h
+model/curve_finance_ethereum_token_dto.c
+model/curve_finance_ethereum_token_dto.h
 model/object.c
 model/object.h
 model/transactions_e_trade_aggressive_side.c
@@ -146,6 +158,9 @@ unit-test/test_cryptopunks_market_place_dto.c
 unit-test/test_cryptopunks_marketplace_daily_snapshot_dto.c
 unit-test/test_cryptopunks_trade_dto.c
 unit-test/test_cryptopunks_user_dto.c
+unit-test/test_curve_finance_ethereum_liquidity_pool_dto.c
+unit-test/test_curve_finance_ethereum_swap_dto.c
+unit-test/test_curve_finance_ethereum_token_dto.c
 unit-test/test_transactions_e_trade_aggressive_side.c
 unit-test/test_uniswap_v2_ethereum_liquidity_pool_dto.c
 unit-test/test_uniswap_v2_ethereum_swap_dto.c

@@ -35,6 +35,9 @@ Class | Method | HTTP request | Description
 *CRYPTOPUNKS_API* | [**c_ry_pt_op_un_ks_marketplace_daily_snapshots_current**](docs/CRYPTOPUNKS_API.md#c_ry_pt_op_un_ks_marketplace_daily_snapshots_current) | **Get** /v1/dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
 *CRYPTOPUNKS_API* | [**c_ry_pt_op_un_ks_trades_current**](docs/CRYPTOPUNKS_API.md#c_ry_pt_op_un_ks_trades_current) | **Get** /v1/dapps/cryptopunks/trades/current | Trades (current)
 *CRYPTOPUNKS_API* | [**c_ry_pt_op_un_ks_users_current**](docs/CRYPTOPUNKS_API.md#c_ry_pt_op_un_ks_users_current) | **Get** /v1/dapps/cryptopunks/users/current | Users (current)
+*CURVEFINANCEETHEREUM_API* | [**c_ur_ve_fi_na_nc_ee_th_er_eu_mliquidity_pools_current**](docs/CURVEFINANCEETHEREUM_API.md#c_ur_ve_fi_na_nc_ee_th_er_eu_mliquidity_pools_current) | **Get** /v1/dapps/curve-finance-ethereum/liquidityPools/current | LiquidityPools (current)
+*CURVEFINANCEETHEREUM_API* | [**c_ur_ve_fi_na_nc_ee_th_er_eu_mswaps_current**](docs/CURVEFINANCEETHEREUM_API.md#c_ur_ve_fi_na_nc_ee_th_er_eu_mswaps_current) | **Get** /v1/dapps/curve-finance-ethereum/swaps/current | Swaps (current)
+*CURVEFINANCEETHEREUM_API* | [**c_ur_ve_fi_na_nc_ee_th_er_eu_mtokens_current**](docs/CURVEFINANCEETHEREUM_API.md#c_ur_ve_fi_na_nc_ee_th_er_eu_mtokens_current) | **Get** /v1/dapps/curve-finance-ethereum/tokens/current | Tokens (current)
 *METADATA_API* | [**metadata_chains_get**](docs/METADATA_API.md#metadata_chains_get) | **Get** /metadata/chains | List all chains.
 *METADATA_API* | [**metadata_dapps_dapp_name_get**](docs/METADATA_API.md#metadata_dapps_dapp_name_get) | **Get** /metadata/dapps/{dappName} | Gets dapp by name.
 *METADATA_API* | [**metadata_dapps_get**](docs/METADATA_API.md#metadata_dapps_get) | **Get** /metadata/dapps | List all decentralized applications.
@@ -77,6 +80,9 @@ Class | Method | HTTP request | Description
  - [CRYPTOPUNKS_MARKET_PLACE_DTO](docs/CRYPTOPUNKS_MARKET_PLACE_DTO.md)
  - [CRYPTOPUNKS_TRADE_DTO](docs/CRYPTOPUNKS_TRADE_DTO.md)
  - [CRYPTOPUNKS_USER_DTO](docs/CRYPTOPUNKS_USER_DTO.md)
+ - [CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_DTO](docs/CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_DTO.md)
+ - [CURVE_FINANCE_ETHEREUM_SWAP_DTO](docs/CURVE_FINANCE_ETHEREUM_SWAP_DTO.md)
+ - [CURVE_FINANCE_ETHEREUM_TOKEN_DTO](docs/CURVE_FINANCE_ETHEREUM_TOKEN_DTO.md)
  - [TRANSACTIONS_E_TRADE_AGGRESSIVE_SIDE](docs/TRANSACTIONS_E_TRADE_AGGRESSIVE_SIDE.md)
  - [UNISWAP_V2_ETHEREUM_LIQUIDITY_POOL_DTO](docs/UNISWAP_V2_ETHEREUM_LIQUIDITY_POOL_DTO.md)
  - [UNISWAP_V2_ETHEREUM_SWAP_DTO](docs/UNISWAP_V2_ETHEREUM_SWAP_DTO.md)

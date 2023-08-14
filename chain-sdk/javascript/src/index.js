@@ -22,6 +22,9 @@ import CRYPTOPUNKSMarketPlaceDTO from './model/CRYPTOPUNKSMarketPlaceDTO';
 import CRYPTOPUNKSMarketplaceDailySnapshotDTO from './model/CRYPTOPUNKSMarketplaceDailySnapshotDTO';
 import CRYPTOPUNKSTradeDTO from './model/CRYPTOPUNKSTradeDTO';
 import CRYPTOPUNKSUserDTO from './model/CRYPTOPUNKSUserDTO';
+import CURVEFINANCEETHEREUMLiquidityPoolDTO from './model/CURVEFINANCEETHEREUMLiquidityPoolDTO';
+import CURVEFINANCEETHEREUMSwapDTO from './model/CURVEFINANCEETHEREUMSwapDTO';
+import CURVEFINANCEETHEREUMTokenDTO from './model/CURVEFINANCEETHEREUMTokenDTO';
 import TransactionsETradeAggressiveSide from './model/TransactionsETradeAggressiveSide';
 import UNISWAPV2ETHEREUMLiquidityPoolDTO from './model/UNISWAPV2ETHEREUMLiquidityPoolDTO';
 import UNISWAPV2ETHEREUMSwapDTO from './model/UNISWAPV2ETHEREUMSwapDTO';
@@ -50,6 +53,7 @@ import UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO from './model/UNISWAPV3ETHE
 import UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO from './model/UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO';
 import UNISWAPV3ETHEREUMWithdrawDTO from './model/UNISWAPV3ETHEREUMWithdrawDTO';
 import CRYPTOPUNKSApi from './api/CRYPTOPUNKSApi';
+import CURVEFINANCEETHEREUMApi from './api/CURVEFINANCEETHEREUMApi';
 import MetadataApi from './api/MetadataApi';
 import UNISWAPV2ETHEREUMApi from './api/UNISWAPV2ETHEREUMApi';
 import UNISWAPV3ETHEREUMApi from './api/UNISWAPV3ETHEREUMApi';
@@ -146,6 +150,24 @@ export {
      * @property {module:model/CRYPTOPUNKSUserDTO}
      */
     CRYPTOPUNKSUserDTO,
+
+    /**
+     * The CURVEFINANCEETHEREUMLiquidityPoolDTO model constructor.
+     * @property {module:model/CURVEFINANCEETHEREUMLiquidityPoolDTO}
+     */
+    CURVEFINANCEETHEREUMLiquidityPoolDTO,
+
+    /**
+     * The CURVEFINANCEETHEREUMSwapDTO model constructor.
+     * @property {module:model/CURVEFINANCEETHEREUMSwapDTO}
+     */
+    CURVEFINANCEETHEREUMSwapDTO,
+
+    /**
+     * The CURVEFINANCEETHEREUMTokenDTO model constructor.
+     * @property {module:model/CURVEFINANCEETHEREUMTokenDTO}
+     */
+    CURVEFINANCEETHEREUMTokenDTO,
 
     /**
      * The TransactionsETradeAggressiveSide model constructor.
@@ -314,6 +336,12 @@ export {
     * @property {module:api/CRYPTOPUNKSApi}
     */
     CRYPTOPUNKSApi,
+
+    /**
+    * The CURVEFINANCEETHEREUMApi service constructor.
+    * @property {module:api/CURVEFINANCEETHEREUMApi}
+    */
+    CURVEFINANCEETHEREUMApi,
 
     /**
     * The MetadataApi service constructor.

@@ -68,6 +68,9 @@ Class | Method | HTTP request | Description
 *OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSMarketplaceDailySnapshotsCurrent**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSMarketplaceDailySnapshotsCurrent) | **GET** /v1/dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
 *OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSTradesCurrent**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSTradesCurrent) | **GET** /v1/dapps/cryptopunks/trades/current | Trades (current)
 *OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSUsersCurrent**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSUsersCurrent) | **GET** /v1/dapps/cryptopunks/users/current | Users (current)
+*OASCURVEFINANCEETHEREUMApi* | [**cURVEFINANCEETHEREUMLiquidityPoolsCurrent**](OASCURVEFINANCEETHEREUMApi.md#cURVEFINANCEETHEREUMLiquidityPoolsCurrent) | **GET** /v1/dapps/curve-finance-ethereum/liquidityPools/current | LiquidityPools (current)
+*OASCURVEFINANCEETHEREUMApi* | [**cURVEFINANCEETHEREUMSwapsCurrent**](OASCURVEFINANCEETHEREUMApi.md#cURVEFINANCEETHEREUMSwapsCurrent) | **GET** /v1/dapps/curve-finance-ethereum/swaps/current | Swaps (current)
+*OASCURVEFINANCEETHEREUMApi* | [**cURVEFINANCEETHEREUMTokensCurrent**](OASCURVEFINANCEETHEREUMApi.md#cURVEFINANCEETHEREUMTokensCurrent) | **GET** /v1/dapps/curve-finance-ethereum/tokens/current | Tokens (current)
 *OASMetadataApi* | [**metadataChainsGet**](OASMetadataApi.md#metadataChainsGet) | **GET** /metadata/chains | List all chains.
 *OASMetadataApi* | [**metadataDappsDappNameGet**](OASMetadataApi.md#metadataDappsDappNameGet) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
 *OASMetadataApi* | [**metadataDappsGet**](OASMetadataApi.md#metadataDappsGet) | **GET** /metadata/dapps | List all decentralized applications.
@@ -110,6 +113,9 @@ Class | Method | HTTP request | Description
  - [OASCRYPTOPUNKSMarketplaceDailySnapsh](OASCRYPTOPUNKSMarketplaceDailySnapsh.md)
  - [OASCRYPTOPUNKSTradeDTO](OASCRYPTOPUNKSTradeDTO.md)
  - [OASCRYPTOPUNKSUserDTO](OASCRYPTOPUNKSUserDTO.md)
+ - [OASCURVEFINANCEETHEREUMLiquidityPool](OASCURVEFINANCEETHEREUMLiquidityPool.md)
+ - [OASCURVEFINANCEETHEREUMSwapDTO](OASCURVEFINANCEETHEREUMSwapDTO.md)
+ - [OASCURVEFINANCEETHEREUMTokenDTO](OASCURVEFINANCEETHEREUMTokenDTO.md)
  - [OASTransactionsETradeAggressiveSide](OASTransactionsETradeAggressiveSide.md)
  - [OASUNISWAPV2ETHEREUMLiquidityPoolDTO](OASUNISWAPV2ETHEREUMLiquidityPoolDTO.md)
  - [OASUNISWAPV2ETHEREUMSwapDTO](OASUNISWAPV2ETHEREUMSwapDTO.md)

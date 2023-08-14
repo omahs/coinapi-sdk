@@ -199,6 +199,12 @@ class ApiClient {
           return CRYPTOPUNKSTradeDTO.fromJson(value);
         case 'CRYPTOPUNKSUserDTO':
           return CRYPTOPUNKSUserDTO.fromJson(value);
+        case 'CURVEFINANCEETHEREUMLiquidityPoolDTO':
+          return CURVEFINANCEETHEREUMLiquidityPoolDTO.fromJson(value);
+        case 'CURVEFINANCEETHEREUMSwapDTO':
+          return CURVEFINANCEETHEREUMSwapDTO.fromJson(value);
+        case 'CURVEFINANCEETHEREUMTokenDTO':
+          return CURVEFINANCEETHEREUMTokenDTO.fromJson(value);
         case 'TransactionsETradeAggressiveSide':
           return TransactionsETradeAggressiveSideTypeTransformer().decode(value);
         case 'UNISWAPV2ETHEREUMLiquidityPoolDTO':

@@ -389,7 +389,7 @@ test_that("last_update_block_number", {
 
 test_that("evaluated_ask", {
   # tests for the property `evaluated_ask` (numeric)
-  # Evaluated ask value of the liquidity pool.
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`evaluated_ask`, "EXPECTED_RESULT")

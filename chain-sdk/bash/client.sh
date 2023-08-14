@@ -534,6 +534,14 @@ read -r -d '' ops <<EOF
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
+    echo -e "${BOLD}${WHITE}[cURVEFINANCEETHEREUM]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}cURVEFINANCEETHEREUMLiquidityPoolsCurrent${OFF};LiquidityPools (current)
+  ${CYAN}cURVEFINANCEETHEREUMSwapsCurrent${OFF};Swaps (current)
+  ${CYAN}cURVEFINANCEETHEREUMTokensCurrent${OFF};Tokens (current)
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
     echo -e "${BOLD}${WHITE}[metadata]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}metadataChainsGet${OFF};List all chains.
@@ -768,6 +776,54 @@ print_cRYPTOPUNKSUsersCurrent_help() {
     echo -e "${BOLD}${WHITE}cRYPTOPUNKSUsersCurrent - Users (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets users." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cURVEFINANCEETHEREUMLiquidityPoolsCurrent operation
+#
+##############################################################################
+print_cURVEFINANCEETHEREUMLiquidityPoolsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cURVEFINANCEETHEREUMLiquidityPoolsCurrent - LiquidityPools (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets liquidityPools." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cURVEFINANCEETHEREUMSwapsCurrent operation
+#
+##############################################################################
+print_cURVEFINANCEETHEREUMSwapsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cURVEFINANCEETHEREUMSwapsCurrent - Swaps (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets swaps." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cURVEFINANCEETHEREUMTokensCurrent operation
+#
+##############################################################################
+print_cURVEFINANCEETHEREUMTokensCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cURVEFINANCEETHEREUMTokensCurrent - Tokens (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -1566,6 +1622,114 @@ call_cRYPTOPUNKSUsersCurrent() {
     local path
 
     if ! path=$(build_request_path "/v1/dapps/cryptopunks/users/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cURVEFINANCEETHEREUMLiquidityPoolsCurrent operation
+#
+##############################################################################
+call_cURVEFINANCEETHEREUMLiquidityPoolsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/v1/dapps/curve-finance-ethereum/liquidityPools/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cURVEFINANCEETHEREUMSwapsCurrent operation
+#
+##############################################################################
+call_cURVEFINANCEETHEREUMSwapsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/v1/dapps/curve-finance-ethereum/swaps/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cURVEFINANCEETHEREUMTokensCurrent operation
+#
+##############################################################################
+call_cURVEFINANCEETHEREUMTokensCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/v1/dapps/curve-finance-ethereum/tokens/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -2755,6 +2919,15 @@ case $key in
     cRYPTOPUNKSUsersCurrent)
     operation="cRYPTOPUNKSUsersCurrent"
     ;;
+    cURVEFINANCEETHEREUMLiquidityPoolsCurrent)
+    operation="cURVEFINANCEETHEREUMLiquidityPoolsCurrent"
+    ;;
+    cURVEFINANCEETHEREUMSwapsCurrent)
+    operation="cURVEFINANCEETHEREUMSwapsCurrent"
+    ;;
+    cURVEFINANCEETHEREUMTokensCurrent)
+    operation="cURVEFINANCEETHEREUMTokensCurrent"
+    ;;
     metadataChainsGet)
     operation="metadataChainsGet"
     ;;
@@ -2945,6 +3118,15 @@ case $operation in
     ;;
     cRYPTOPUNKSUsersCurrent)
     call_cRYPTOPUNKSUsersCurrent
+    ;;
+    cURVEFINANCEETHEREUMLiquidityPoolsCurrent)
+    call_cURVEFINANCEETHEREUMLiquidityPoolsCurrent
+    ;;
+    cURVEFINANCEETHEREUMSwapsCurrent)
+    call_cURVEFINANCEETHEREUMSwapsCurrent
+    ;;
+    cURVEFINANCEETHEREUMTokensCurrent)
+    call_cURVEFINANCEETHEREUMTokensCurrent
     ;;
     metadataChainsGet)
     call_metadataChainsGet

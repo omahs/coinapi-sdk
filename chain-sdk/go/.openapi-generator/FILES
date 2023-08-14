@@ -4,6 +4,7 @@
 README.md
 api/openapi.yaml
 api_cryptopunks.go
+api_curvefinanceethereum.go
 api_metadata.go
 api_uniswapv2_ethereum.go
 api_uniswapv3_ethereum.go
@@ -19,6 +20,10 @@ docs/CRYPTOPUNKSMarketPlaceDTO.md
 docs/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md
 docs/CRYPTOPUNKSTradeDTO.md
 docs/CRYPTOPUNKSUserDTO.md
+docs/CURVEFINANCEETHEREUMApi.md
+docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
+docs/CURVEFINANCEETHEREUMSwapDTO.md
+docs/CURVEFINANCEETHEREUMTokenDTO.md
 docs/MetadataApi.md
 docs/TransactionsETradeAggressiveSide.md
 docs/UNISWAPV2ETHEREUMApi.md
@@ -61,6 +66,9 @@ model_cryptopunks_market_place_dto.go
 model_cryptopunks_marketplace_daily_snapshot_dto.go
 model_cryptopunks_trade_dto.go
 model_cryptopunks_user_dto.go
+model_curve_finance_ethereum_liquidity_pool_dto.go
+model_curve_finance_ethereum_swap_dto.go
+model_curve_finance_ethereum_token_dto.go
 model_transactions_e_trade_aggressive_side.go
 model_uniswap_v2_ethereum_liquidity_pool_dto.go
 model_uniswap_v2_ethereum_swap_dto.go
@@ -90,6 +98,7 @@ model_uniswap_v3_ethereum_usage_metrics_hourly_snapshot_dto.go
 model_uniswap_v3_ethereum_withdraw_dto.go
 response.go
 test/api_cryptopunks_test.go
+test/api_curvefinanceethereum_test.go
 test/api_metadata_test.go
 test/api_uniswapv2_ethereum_test.go
 test/api_uniswapv3_ethereum_test.go

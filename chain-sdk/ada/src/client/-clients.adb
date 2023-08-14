@@ -175,6 +175,60 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end C_RYPTOPUNKS_Users__current;
 
+   --  LiquidityPools (current)
+   --  Gets liquidityPools.
+   procedure C_URVEFINANCEETHEREUM_Liquidity_Pools__current
+      (Client : in out Client_Type;
+       Result : out .Models.CURVEFINANCEETHEREUMLiquidityPoolDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
+
+      URI.Set_Path ("/v1/dapps/curve-finance-ethereum/liquidityPools/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end C_URVEFINANCEETHEREUM_Liquidity_Pools__current;
+
+   --  Swaps (current)
+   --  Gets swaps.
+   procedure C_URVEFINANCEETHEREUM_Swaps__current
+      (Client : in out Client_Type;
+       Result : out .Models.CURVEFINANCEETHEREUMSwapDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
+
+      URI.Set_Path ("/v1/dapps/curve-finance-ethereum/swaps/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end C_URVEFINANCEETHEREUM_Swaps__current;
+
+   --  Tokens (current)
+   --  Gets tokens.
+   procedure C_URVEFINANCEETHEREUM_Tokens__current
+      (Client : in out Client_Type;
+       Result : out .Models.CURVEFINANCEETHEREUMTokenDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON,
+                          Swagger.Clients.APPLICATION_X-MSGPACK));
+
+      URI.Set_Path ("/v1/dapps/curve-finance-ethereum/tokens/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end C_URVEFINANCEETHEREUM_Tokens__current;
+
    --  List all chains.
    procedure Metadata_Chains_Get
       (Client : in out Client_Type) is

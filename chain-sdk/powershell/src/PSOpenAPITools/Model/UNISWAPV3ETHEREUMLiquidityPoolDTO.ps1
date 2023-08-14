@@ -112,7 +112,7 @@ Timestamp of the last time this entity was updated.
 .PARAMETER LastUpdateBlockNumber
 Block number of the last time this entity was updated.
 .PARAMETER EvaluatedAsk
-Evaluated ask value of the liquidity pool.
+
 .OUTPUTS
 
 UNISWAPV3ETHEREUMLiquidityPoolDTO<PSCustomObject>

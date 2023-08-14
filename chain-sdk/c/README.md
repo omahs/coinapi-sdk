@@ -74,6 +74,9 @@ Category | Method | HTTP request | Description
 *CRYPTOPUNKSAPI* | [**CRYPTOPUNKSAPI_cRYPTOPUNKSMarketplaceDailySnapshotsCurrent**](docs/CRYPTOPUNKSAPI.md#CRYPTOPUNKSAPI_cRYPTOPUNKSMarketplaceDailySnapshotsCurrent) | **GET** /v1/dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
 *CRYPTOPUNKSAPI* | [**CRYPTOPUNKSAPI_cRYPTOPUNKSTradesCurrent**](docs/CRYPTOPUNKSAPI.md#CRYPTOPUNKSAPI_cRYPTOPUNKSTradesCurrent) | **GET** /v1/dapps/cryptopunks/trades/current | Trades (current)
 *CRYPTOPUNKSAPI* | [**CRYPTOPUNKSAPI_cRYPTOPUNKSUsersCurrent**](docs/CRYPTOPUNKSAPI.md#CRYPTOPUNKSAPI_cRYPTOPUNKSUsersCurrent) | **GET** /v1/dapps/cryptopunks/users/current | Users (current)
+*CURVEFINANCEETHEREUMAPI* | [**CURVEFINANCEETHEREUMAPI_cURVEFINANCEETHEREUMLiquidityPoolsCurrent**](docs/CURVEFINANCEETHEREUMAPI.md#CURVEFINANCEETHEREUMAPI_cURVEFINANCEETHEREUMLiquidityPoolsCurrent) | **GET** /v1/dapps/curve-finance-ethereum/liquidityPools/current | LiquidityPools (current)
+*CURVEFINANCEETHEREUMAPI* | [**CURVEFINANCEETHEREUMAPI_cURVEFINANCEETHEREUMSwapsCurrent**](docs/CURVEFINANCEETHEREUMAPI.md#CURVEFINANCEETHEREUMAPI_cURVEFINANCEETHEREUMSwapsCurrent) | **GET** /v1/dapps/curve-finance-ethereum/swaps/current | Swaps (current)
+*CURVEFINANCEETHEREUMAPI* | [**CURVEFINANCEETHEREUMAPI_cURVEFINANCEETHEREUMTokensCurrent**](docs/CURVEFINANCEETHEREUMAPI.md#CURVEFINANCEETHEREUMAPI_cURVEFINANCEETHEREUMTokensCurrent) | **GET** /v1/dapps/curve-finance-ethereum/tokens/current | Tokens (current)
 *MetadataAPI* | [**MetadataAPI_metadataChainsGet**](docs/MetadataAPI.md#MetadataAPI_metadataChainsGet) | **GET** /metadata/chains | List all chains.
 *MetadataAPI* | [**MetadataAPI_metadataDappsDappNameGet**](docs/MetadataAPI.md#MetadataAPI_metadataDappsDappNameGet) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
 *MetadataAPI* | [**MetadataAPI_metadataDappsGet**](docs/MetadataAPI.md#MetadataAPI_metadataDappsGet) | **GET** /metadata/dapps | List all decentralized applications.
@@ -116,6 +119,9 @@ Category | Method | HTTP request | Description
  - [cryptopunks_marketplace_daily_snapshot_dto_t](docs/cryptopunks_marketplace_daily_snapshot_dto.md)
  - [cryptopunks_trade_dto_t](docs/cryptopunks_trade_dto.md)
  - [cryptopunks_user_dto_t](docs/cryptopunks_user_dto.md)
+ - [curve_finance_ethereum_liquidity_pool_dto_t](docs/curve_finance_ethereum_liquidity_pool_dto.md)
+ - [curve_finance_ethereum_swap_dto_t](docs/curve_finance_ethereum_swap_dto.md)
+ - [curve_finance_ethereum_token_dto_t](docs/curve_finance_ethereum_token_dto.md)
  - [transactions_e_trade_aggressive_side_t](docs/transactions_e_trade_aggressive_side.md)
  - [uniswap_v2_ethereum_liquidity_pool_dto_t](docs/uniswap_v2_ethereum_liquidity_pool_dto.md)
  - [uniswap_v2_ethereum_swap_dto_t](docs/uniswap_v2_ethereum_swap_dto.md)

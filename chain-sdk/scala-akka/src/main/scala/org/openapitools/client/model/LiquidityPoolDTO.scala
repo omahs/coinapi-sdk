@@ -109,7 +109,7 @@ case class LiquidityPoolDTO (
   lastUpdateTimestamp: Option[String] = None,
   /* Block number of the last time this entity was updated. */
   lastUpdateBlockNumber: Option[String] = None,
-  /* Evaluated ask value of the liquidity pool. */
+  /*  */
   evaluatedAsk: Option[Double] = None
 ) extends ApiModel
 

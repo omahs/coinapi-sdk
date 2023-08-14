@@ -51,7 +51,7 @@ Name | Type | Description | Notes
 **last_snapshot_hour_id** | **INTEGER_32** | Hour ID of the most recent hourly snapshot. | [optional] [default to null]
 **last_update_timestamp** | [**STRING_32**](STRING_32.md) | Timestamp of the last time this entity was updated. | [optional] [default to null]
 **last_update_block_number** | [**STRING_32**](STRING_32.md) | Block number of the last time this entity was updated. | [optional] [default to null]
-**evaluated_ask** | **REAL_64** | Evaluated ask value of the liquidity pool. | [optional] [readonly] [default to null]
+**evaluated_ask** | **REAL_64** |  | [optional] [readonly] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

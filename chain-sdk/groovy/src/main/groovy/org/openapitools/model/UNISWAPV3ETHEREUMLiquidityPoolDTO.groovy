@@ -105,6 +105,6 @@ class UNISWAPV3ETHEREUMLiquidityPoolDTO {
     String lastUpdateTimestamp
     /* Block number of the last time this entity was updated. */
     String lastUpdateBlockNumber
-    /* Evaluated ask value of the liquidity pool. */
+    /*  */
     Double evaluatedAsk
 }

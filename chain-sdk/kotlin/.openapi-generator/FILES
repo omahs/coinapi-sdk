@@ -11,6 +11,10 @@ docs/CRYPTOPUNKSMarketPlaceDTO.md
 docs/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md
 docs/CRYPTOPUNKSTradeDTO.md
 docs/CRYPTOPUNKSUserDTO.md
+docs/CURVEFINANCEETHEREUMApi.md
+docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
+docs/CURVEFINANCEETHEREUMSwapDTO.md
+docs/CURVEFINANCEETHEREUMTokenDTO.md
 docs/MetadataApi.md
 docs/TransactionsETradeAggressiveSide.md
 docs/UNISWAPV2ETHEREUMApi.md
@@ -47,6 +51,7 @@ gradlew
 gradlew.bat
 settings.gradle
 src/main/kotlin/org/openapitools/client/apis/CRYPTOPUNKSApi.kt
+src/main/kotlin/org/openapitools/client/apis/CURVEFINANCEETHEREUMApi.kt
 src/main/kotlin/org/openapitools/client/apis/MetadataApi.kt
 src/main/kotlin/org/openapitools/client/apis/UNISWAPV2ETHEREUMApi.kt
 src/main/kotlin/org/openapitools/client/apis/UNISWAPV3ETHEREUMApi.kt
@@ -76,6 +81,9 @@ src/main/kotlin/org/openapitools/client/models/CRYPTOPUNKSMarketPlaceDTO.kt
 src/main/kotlin/org/openapitools/client/models/CRYPTOPUNKSMarketplaceDailySnapshotDTO.kt
 src/main/kotlin/org/openapitools/client/models/CRYPTOPUNKSTradeDTO.kt
 src/main/kotlin/org/openapitools/client/models/CRYPTOPUNKSUserDTO.kt
+src/main/kotlin/org/openapitools/client/models/CURVEFINANCEETHEREUMLiquidityPoolDTO.kt
+src/main/kotlin/org/openapitools/client/models/CURVEFINANCEETHEREUMSwapDTO.kt
+src/main/kotlin/org/openapitools/client/models/CURVEFINANCEETHEREUMTokenDTO.kt
 src/main/kotlin/org/openapitools/client/models/TransactionsETradeAggressiveSide.kt
 src/main/kotlin/org/openapitools/client/models/UNISWAPV2ETHEREUMLiquidityPoolDTO.kt
 src/main/kotlin/org/openapitools/client/models/UNISWAPV2ETHEREUMSwapDTO.kt

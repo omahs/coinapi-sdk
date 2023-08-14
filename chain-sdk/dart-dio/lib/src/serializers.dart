@@ -23,6 +23,9 @@ import 'package:openapi/src/model/cryptopunks_market_place_dto.dart';
 import 'package:openapi/src/model/cryptopunks_marketplace_daily_snapshot_dto.dart';
 import 'package:openapi/src/model/cryptopunks_trade_dto.dart';
 import 'package:openapi/src/model/cryptopunks_user_dto.dart';
+import 'package:openapi/src/model/curvefinanceethereum_liquidity_pool_dto.dart';
+import 'package:openapi/src/model/curvefinanceethereum_swap_dto.dart';
+import 'package:openapi/src/model/curvefinanceethereum_token_dto.dart';
 import 'package:openapi/src/model/transactions_e_trade_aggressive_side.dart';
 import 'package:openapi/src/model/uniswapv2_ethereum_liquidity_pool_dto.dart';
 import 'package:openapi/src/model/uniswapv2_ethereum_swap_dto.dart';
@@ -63,6 +66,9 @@ part 'serializers.g.dart';
   CRYPTOPUNKSMarketplaceDailySnapshotDTO,
   CRYPTOPUNKSTradeDTO,
   CRYPTOPUNKSUserDTO,
+  CURVEFINANCEETHEREUMLiquidityPoolDTO,
+  CURVEFINANCEETHEREUMSwapDTO,
+  CURVEFINANCEETHEREUMTokenDTO,
   TransactionsETradeAggressiveSide,
   UNISWAPV2ETHEREUMLiquidityPoolDTO,
   UNISWAPV2ETHEREUMSwapDTO,
@@ -149,6 +155,10 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<CRYPTOPUNKSTradeDTO>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(CURVEFINANCEETHEREUMTokenDTO)]),
+        () => ListBuilder<CURVEFINANCEETHEREUMTokenDTO>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMActiveAccountDTO)]),
         () => ListBuilder<UNISWAPV3ETHEREUMActiveAccountDTO>(),
       )
@@ -159,6 +169,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMSwapDTO)]),
         () => ListBuilder<UNISWAPV3ETHEREUMSwapDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(CURVEFINANCEETHEREUMSwapDTO)]),
+        () => ListBuilder<CURVEFINANCEETHEREUMSwapDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMRewardTokenDTO)]),
@@ -195,6 +209,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UNISWAPV3ETHEREUMDepositDTO)]),
         () => ListBuilder<UNISWAPV3ETHEREUMDepositDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(CURVEFINANCEETHEREUMLiquidityPoolDTO)]),
+        () => ListBuilder<CURVEFINANCEETHEREUMLiquidityPoolDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CRYPTOPUNKSBidDTO)]),

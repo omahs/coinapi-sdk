@@ -12,6 +12,10 @@ doc/CRYPTOPUNKSMarketPlaceDTO.md
 doc/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md
 doc/CRYPTOPUNKSTradeDTO.md
 doc/CRYPTOPUNKSUserDTO.md
+doc/CURVEFINANCEETHEREUMApi.md
+doc/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
+doc/CURVEFINANCEETHEREUMSwapDTO.md
+doc/CURVEFINANCEETHEREUMTokenDTO.md
 doc/MetadataApi.md
 doc/TransactionsETradeAggressiveSide.md
 doc/UNISWAPV2ETHEREUMApi.md
@@ -45,6 +49,7 @@ doc/UNISWAPV3ETHEREUMWithdrawDTO.md
 lib/openapi.dart
 lib/src/api.dart
 lib/src/api/cryptopunks_api.dart
+lib/src/api/curvefinanceethereum_api.dart
 lib/src/api/metadata_api.dart
 lib/src/api/uniswapv2_ethereum_api.dart
 lib/src/api/uniswapv3_ethereum_api.dart
@@ -64,6 +69,9 @@ lib/src/model/cryptopunks_market_place_dto.dart
 lib/src/model/cryptopunks_marketplace_daily_snapshot_dto.dart
 lib/src/model/cryptopunks_trade_dto.dart
 lib/src/model/cryptopunks_user_dto.dart
+lib/src/model/curvefinanceethereum_liquidity_pool_dto.dart
+lib/src/model/curvefinanceethereum_swap_dto.dart
+lib/src/model/curvefinanceethereum_token_dto.dart
 lib/src/model/date.dart
 lib/src/model/transactions_e_trade_aggressive_side.dart
 lib/src/model/uniswapv2_ethereum_liquidity_pool_dto.dart
@@ -104,6 +112,10 @@ test/cryptopunks_market_place_dto_test.dart
 test/cryptopunks_marketplace_daily_snapshot_dto_test.dart
 test/cryptopunks_trade_dto_test.dart
 test/cryptopunks_user_dto_test.dart
+test/curvefinanceethereum_api_test.dart
+test/curvefinanceethereum_liquidity_pool_dto_test.dart
+test/curvefinanceethereum_swap_dto_test.dart
+test/curvefinanceethereum_token_dto_test.dart
 test/metadata_api_test.dart
 test/transactions_e_trade_aggressive_side_test.dart
 test/uniswapv2_ethereum_api_test.dart

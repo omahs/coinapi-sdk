@@ -304,7 +304,7 @@ export interface UNISWAPV3ETHEREUMLiquidityPoolDTO {
      */
     last_update_block_number?: string | null;
     /**
-     * Evaluated ask value of the liquidity pool.
+     * 
      * @type {number}
      * @memberof UNISWAPV3ETHEREUMLiquidityPoolDTO
      */

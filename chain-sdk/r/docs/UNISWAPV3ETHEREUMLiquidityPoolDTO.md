@@ -53,6 +53,6 @@ Name | Type | Description | Notes
 **last_snapshot_hour_id** | **integer** | Hour ID of the most recent hourly snapshot. | [optional] 
 **last_update_timestamp** | **character** | Timestamp of the last time this entity was updated. | [optional] 
 **last_update_block_number** | **character** | Block number of the last time this entity was updated. | [optional] 
-**evaluated_ask** | **numeric** | Evaluated ask value of the liquidity pool. | [optional] [readonly] 
+**evaluated_ask** | **numeric** |  | [optional] [readonly] 
 
 

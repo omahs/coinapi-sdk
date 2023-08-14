@@ -115,7 +115,7 @@ type UNISWAPV3ETHEREUMLiquidityPoolDTO struct {
 	LastUpdateTimestamp NullableString `json:"last_update_timestamp,omitempty"`
 	// Block number of the last time this entity was updated.
 	LastUpdateBlockNumber NullableString `json:"last_update_block_number,omitempty"`
-	// Evaluated ask value of the liquidity pool.
+	// 
 	EvaluatedAsk *float64 `json:"evaluated_ask,omitempty"`
 }
 

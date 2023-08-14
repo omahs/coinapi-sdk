@@ -1,6 +1,7 @@
 .gitignore
 .openapi-generator-ignore
 apis/CRYPTOPUNKSApi.ts
+apis/CURVEFINANCEETHEREUMApi.ts
 apis/MetadataApi.ts
 apis/UNISWAPV2ETHEREUMApi.ts
 apis/UNISWAPV3ETHEREUMApi.ts
@@ -15,6 +16,9 @@ models/CRYPTOPUNKSMarketPlaceDTO.ts
 models/CRYPTOPUNKSMarketplaceDailySnapshotDTO.ts
 models/CRYPTOPUNKSTradeDTO.ts
 models/CRYPTOPUNKSUserDTO.ts
+models/CURVEFINANCEETHEREUMLiquidityPoolDTO.ts
+models/CURVEFINANCEETHEREUMSwapDTO.ts
+models/CURVEFINANCEETHEREUMTokenDTO.ts
 models/TransactionsETradeAggressiveSide.ts
 models/UNISWAPV2ETHEREUMLiquidityPoolDTO.ts
 models/UNISWAPV2ETHEREUMSwapDTO.ts

@@ -5,6 +5,7 @@
 README.md
 composer.json
 docs/Api/CRYPTOPUNKSApi.md
+docs/Api/CURVEFINANCEETHEREUMApi.md
 docs/Api/MetadataApi.md
 docs/Api/UNISWAPV2ETHEREUMApi.md
 docs/Api/UNISWAPV3ETHEREUMApi.md
@@ -17,6 +18,9 @@ docs/Model/CRYPTOPUNKSMarketPlaceDTO.md
 docs/Model/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md
 docs/Model/CRYPTOPUNKSTradeDTO.md
 docs/Model/CRYPTOPUNKSUserDTO.md
+docs/Model/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
+docs/Model/CURVEFINANCEETHEREUMSwapDTO.md
+docs/Model/CURVEFINANCEETHEREUMTokenDTO.md
 docs/Model/TransactionsETradeAggressiveSide.md
 docs/Model/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
 docs/Model/UNISWAPV2ETHEREUMSwapDTO.md
@@ -46,6 +50,7 @@ docs/Model/UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.md
 docs/Model/UNISWAPV3ETHEREUMWithdrawDTO.md
 git_push.sh
 lib/Api/CRYPTOPUNKSApi.php
+lib/Api/CURVEFINANCEETHEREUMApi.php
 lib/Api/MetadataApi.php
 lib/Api/UNISWAPV2ETHEREUMApi.php
 lib/Api/UNISWAPV3ETHEREUMApi.php
@@ -61,6 +66,9 @@ lib/Model/CRYPTOPUNKSMarketPlaceDTO.php
 lib/Model/CRYPTOPUNKSMarketplaceDailySnapshotDTO.php
 lib/Model/CRYPTOPUNKSTradeDTO.php
 lib/Model/CRYPTOPUNKSUserDTO.php
+lib/Model/CURVEFINANCEETHEREUMLiquidityPoolDTO.php
+lib/Model/CURVEFINANCEETHEREUMSwapDTO.php
+lib/Model/CURVEFINANCEETHEREUMTokenDTO.php
 lib/Model/ModelInterface.php
 lib/Model/TransactionsETradeAggressiveSide.php
 lib/Model/UNISWAPV2ETHEREUMLiquidityPoolDTO.php
@@ -92,6 +100,7 @@ lib/Model/UNISWAPV3ETHEREUMWithdrawDTO.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
 test/Api/CRYPTOPUNKSApiTest.php
+test/Api/CURVEFINANCEETHEREUMApiTest.php
 test/Api/MetadataApiTest.php
 test/Api/UNISWAPV2ETHEREUMApiTest.php
 test/Api/UNISWAPV3ETHEREUMApiTest.php
@@ -104,6 +113,9 @@ test/Model/CRYPTOPUNKSMarketPlaceDTOTest.php
 test/Model/CRYPTOPUNKSMarketplaceDailySnapshotDTOTest.php
 test/Model/CRYPTOPUNKSTradeDTOTest.php
 test/Model/CRYPTOPUNKSUserDTOTest.php
+test/Model/CURVEFINANCEETHEREUMLiquidityPoolDTOTest.php
+test/Model/CURVEFINANCEETHEREUMSwapDTOTest.php
+test/Model/CURVEFINANCEETHEREUMTokenDTOTest.php
 test/Model/TransactionsETradeAggressiveSideTest.php
 test/Model/UNISWAPV2ETHEREUMLiquidityPoolDTOTest.php
 test/Model/UNISWAPV2ETHEREUMSwapDTOTest.php

@@ -24,6 +24,9 @@ module Api.Data exposing
     , CRYPTOPUNKSMarketplaceDailySnapshotDTO
     , CRYPTOPUNKSTradeDTO
     , CRYPTOPUNKSUserDTO
+    , CURVEFINANCEETHEREUMLiquidityPoolDTO
+    , CURVEFINANCEETHEREUMSwapDTO
+    , CURVEFINANCEETHEREUMTokenDTO
     , TransactionsETradeAggressiveSide(..), transactionsETradeAggressiveSideVariants
     , UNISWAPV2ETHEREUMLiquidityPoolDTO
     , UNISWAPV2ETHEREUMSwapDTO
@@ -60,6 +63,9 @@ module Api.Data exposing
     , encodeCRYPTOPUNKSMarketplaceDailySnapshotDTO
     , encodeCRYPTOPUNKSTradeDTO
     , encodeCRYPTOPUNKSUserDTO
+    , encodeCURVEFINANCEETHEREUMLiquidityPoolDTO
+    , encodeCURVEFINANCEETHEREUMSwapDTO
+    , encodeCURVEFINANCEETHEREUMTokenDTO
     , encodeTransactionsETradeAggressiveSide
     , encodeUNISWAPV2ETHEREUMLiquidityPoolDTO
     , encodeUNISWAPV2ETHEREUMSwapDTO
@@ -97,6 +103,9 @@ module Api.Data exposing
     , cRYPTOPUNKSMarketplaceDailySnapshotDTODecoder
     , cRYPTOPUNKSTradeDTODecoder
     , cRYPTOPUNKSUserDTODecoder
+    , cURVEFINANCEETHEREUMLiquidityPoolDTODecoder
+    , cURVEFINANCEETHEREUMSwapDTODecoder
+    , cURVEFINANCEETHEREUMTokenDTODecoder
     , transactionsETradeAggressiveSideDecoder
     , uNISWAPV2ETHEREUMLiquidityPoolDTODecoder
     , uNISWAPV2ETHEREUMSwapDTODecoder
@@ -290,6 +299,88 @@ type alias CRYPTOPUNKSUserDTO =
     , vid : Maybe Int
     , blockRange : Maybe String
     , id : Maybe String
+    }
+
+
+{-| 
+-}
+type alias CURVEFINANCEETHEREUMLiquidityPoolDTO =
+    { entryTime : Maybe Posix
+    , recvTime : Maybe Posix
+    , blockNumber : Maybe Int
+    , vid : Maybe Int
+    , id : Maybe String
+    , protocol : Maybe String
+    , name : Maybe String
+    , symbol : Maybe String
+    , inputTokens : Maybe ( List String )
+    , inputTokensOrdered : Maybe ( List String )
+    , outputToken : Maybe String
+    , rewardTokens : Maybe ( List String )
+    , fees : Maybe ( List String )
+    , isSingleSided : Maybe Bool
+    , createdTimestamp : Maybe String
+    , createdBlockNumber : Maybe String
+    , totalValueLockedUsd : Maybe String
+    , cumulativeSupplySideRevenueUsd : Maybe String
+    , cumulativeProtocolSideRevenueUsd : Maybe String
+    , cumulativeTotalRevenueUsd : Maybe String
+    , cumulativeVolumeUsd : Maybe String
+    , inputTokenBalances : Maybe ( List String )
+    , inputTokenWeights : Maybe ( List String )
+    , outputTokenSupply : Maybe String
+    , outputTokenPriceUsd : Maybe String
+    , stakedOutputTokenAmount : Maybe String
+    , rewardTokenEmissionsAmount : Maybe ( List String )
+    , rewardTokenEmissionsUsd : Maybe ( List String )
+    , registryAddress : Maybe String
+    , gaugeAddress : Maybe String
+    , evaluatedAsk : Maybe Float
+    }
+
+
+{-| 
+-}
+type alias CURVEFINANCEETHEREUMSwapDTO =
+    { entryTime : Maybe Posix
+    , recvTime : Maybe Posix
+    , blockNumber : Maybe String
+    , id : Maybe String
+    , hash : Maybe String
+    , logIndex : Maybe Int
+    , protocol : Maybe String
+    , to : Maybe String
+    , from : Maybe String
+    , timestamp : Maybe String
+    , tokenIn : Maybe String
+    , amountIn : Maybe String
+    , amountInUsd : Maybe String
+    , tokenOut : Maybe String
+    , amountOut : Maybe String
+    , amountOutUsd : Maybe String
+    , pool : Maybe String
+    , poolId : Maybe String
+    , transactionId : Maybe String
+    , evaluatedPrice : Maybe Float
+    , evaluatedAmount : Maybe Float
+    , evaluatedAggressor : Maybe TransactionsETradeAggressiveSide
+    }
+
+
+{-| 
+-}
+type alias CURVEFINANCEETHEREUMTokenDTO =
+    { entryTime : Maybe Posix
+    , recvTime : Maybe Posix
+    , blockNumber : Maybe Int
+    , vid : Maybe Int
+    , id : Maybe String
+    , name : Maybe String
+    , symbol : Maybe String
+    , decimals : Maybe Int
+    , lastPriceUsd : Maybe String
+    , lastPriceBlockNumber : Maybe String
+    , tokenSymbol : Maybe String
     }
 
 
@@ -1270,6 +1361,127 @@ encodeCRYPTOPUNKSUserDTOPairs model =
             , maybeEncode "vid" Json.Encode.int model.vid
             , maybeEncodeNullable "block_range" Json.Encode.string model.blockRange
             , maybeEncodeNullable "id" Json.Encode.string model.id
+            ]
+    in
+    pairs
+
+
+encodeCURVEFINANCEETHEREUMLiquidityPoolDTO : CURVEFINANCEETHEREUMLiquidityPoolDTO -> Json.Encode.Value
+encodeCURVEFINANCEETHEREUMLiquidityPoolDTO =
+    encodeObject << encodeCURVEFINANCEETHEREUMLiquidityPoolDTOPairs
+
+
+encodeCURVEFINANCEETHEREUMLiquidityPoolDTOWithTag : ( String, String ) -> CURVEFINANCEETHEREUMLiquidityPoolDTO -> Json.Encode.Value
+encodeCURVEFINANCEETHEREUMLiquidityPoolDTOWithTag (tagField, tag) model =
+    encodeObject (encodeCURVEFINANCEETHEREUMLiquidityPoolDTOPairs model ++ [ encode tagField Json.Encode.string tag ])
+
+
+encodeCURVEFINANCEETHEREUMLiquidityPoolDTOPairs : CURVEFINANCEETHEREUMLiquidityPoolDTO -> List EncodedField
+encodeCURVEFINANCEETHEREUMLiquidityPoolDTOPairs model =
+    let
+        pairs =
+            [ maybeEncode "entry_time" Api.Time.encodeDateTime model.entryTime
+            , maybeEncode "recv_time" Api.Time.encodeDateTime model.recvTime
+            , maybeEncode "block_number" Json.Encode.int model.blockNumber
+            , maybeEncode "vid" Json.Encode.int model.vid
+            , maybeEncodeNullable "id" Json.Encode.string model.id
+            , maybeEncodeNullable "protocol" Json.Encode.string model.protocol
+            , maybeEncodeNullable "name" Json.Encode.string model.name
+            , maybeEncodeNullable "symbol" Json.Encode.string model.symbol
+            , maybeEncodeNullable "input_tokens" (Json.Encode.list Json.Encode.string) model.inputTokens
+            , maybeEncodeNullable "input_tokens_ordered" (Json.Encode.list Json.Encode.string) model.inputTokensOrdered
+            , maybeEncodeNullable "output_token" Json.Encode.string model.outputToken
+            , maybeEncodeNullable "reward_tokens" (Json.Encode.list Json.Encode.string) model.rewardTokens
+            , maybeEncodeNullable "fees" (Json.Encode.list Json.Encode.string) model.fees
+            , maybeEncode "is_single_sided" Json.Encode.bool model.isSingleSided
+            , maybeEncodeNullable "created_timestamp" Json.Encode.string model.createdTimestamp
+            , maybeEncodeNullable "created_block_number" Json.Encode.string model.createdBlockNumber
+            , maybeEncodeNullable "total_value_locked_usd" Json.Encode.string model.totalValueLockedUsd
+            , maybeEncodeNullable "cumulative_supply_side_revenue_usd" Json.Encode.string model.cumulativeSupplySideRevenueUsd
+            , maybeEncodeNullable "cumulative_protocol_side_revenue_usd" Json.Encode.string model.cumulativeProtocolSideRevenueUsd
+            , maybeEncodeNullable "cumulative_total_revenue_usd" Json.Encode.string model.cumulativeTotalRevenueUsd
+            , maybeEncodeNullable "cumulative_volume_usd" Json.Encode.string model.cumulativeVolumeUsd
+            , maybeEncodeNullable "input_token_balances" (Json.Encode.list Json.Encode.string) model.inputTokenBalances
+            , maybeEncodeNullable "input_token_weights" (Json.Encode.list Json.Encode.string) model.inputTokenWeights
+            , maybeEncodeNullable "output_token_supply" Json.Encode.string model.outputTokenSupply
+            , maybeEncodeNullable "output_token_price_usd" Json.Encode.string model.outputTokenPriceUsd
+            , maybeEncodeNullable "staked_output_token_amount" Json.Encode.string model.stakedOutputTokenAmount
+            , maybeEncodeNullable "reward_token_emissions_amount" (Json.Encode.list Json.Encode.string) model.rewardTokenEmissionsAmount
+            , maybeEncodeNullable "reward_token_emissions_usd" (Json.Encode.list Json.Encode.string) model.rewardTokenEmissionsUsd
+            , maybeEncodeNullable "registry_address" Json.Encode.string model.registryAddress
+            , maybeEncodeNullable "gauge_address" Json.Encode.string model.gaugeAddress
+            , maybeEncode "evaluated_ask" Json.Encode.float model.evaluatedAsk
+            ]
+    in
+    pairs
+
+
+encodeCURVEFINANCEETHEREUMSwapDTO : CURVEFINANCEETHEREUMSwapDTO -> Json.Encode.Value
+encodeCURVEFINANCEETHEREUMSwapDTO =
+    encodeObject << encodeCURVEFINANCEETHEREUMSwapDTOPairs
+
+
+encodeCURVEFINANCEETHEREUMSwapDTOWithTag : ( String, String ) -> CURVEFINANCEETHEREUMSwapDTO -> Json.Encode.Value
+encodeCURVEFINANCEETHEREUMSwapDTOWithTag (tagField, tag) model =
+    encodeObject (encodeCURVEFINANCEETHEREUMSwapDTOPairs model ++ [ encode tagField Json.Encode.string tag ])
+
+
+encodeCURVEFINANCEETHEREUMSwapDTOPairs : CURVEFINANCEETHEREUMSwapDTO -> List EncodedField
+encodeCURVEFINANCEETHEREUMSwapDTOPairs model =
+    let
+        pairs =
+            [ maybeEncode "entry_time" Api.Time.encodeDateTime model.entryTime
+            , maybeEncode "recv_time" Api.Time.encodeDateTime model.recvTime
+            , maybeEncodeNullable "block_number" Json.Encode.string model.blockNumber
+            , maybeEncodeNullable "id" Json.Encode.string model.id
+            , maybeEncodeNullable "hash" Json.Encode.string model.hash
+            , maybeEncode "log_index" Json.Encode.int model.logIndex
+            , maybeEncodeNullable "protocol" Json.Encode.string model.protocol
+            , maybeEncodeNullable "to" Json.Encode.string model.to
+            , maybeEncodeNullable "from" Json.Encode.string model.from
+            , maybeEncodeNullable "timestamp" Json.Encode.string model.timestamp
+            , maybeEncodeNullable "token_in" Json.Encode.string model.tokenIn
+            , maybeEncodeNullable "amount_in" Json.Encode.string model.amountIn
+            , maybeEncodeNullable "amount_in_usd" Json.Encode.string model.amountInUsd
+            , maybeEncodeNullable "token_out" Json.Encode.string model.tokenOut
+            , maybeEncodeNullable "amount_out" Json.Encode.string model.amountOut
+            , maybeEncodeNullable "amount_out_usd" Json.Encode.string model.amountOutUsd
+            , maybeEncodeNullable "pool" Json.Encode.string model.pool
+            , maybeEncodeNullable "pool_id" Json.Encode.string model.poolId
+            , maybeEncodeNullable "transaction_id" Json.Encode.string model.transactionId
+            , maybeEncode "evaluated_price" Json.Encode.float model.evaluatedPrice
+            , maybeEncode "evaluated_amount" Json.Encode.float model.evaluatedAmount
+            , maybeEncode "evaluated_aggressor" encodeTransactionsETradeAggressiveSide model.evaluatedAggressor
+            ]
+    in
+    pairs
+
+
+encodeCURVEFINANCEETHEREUMTokenDTO : CURVEFINANCEETHEREUMTokenDTO -> Json.Encode.Value
+encodeCURVEFINANCEETHEREUMTokenDTO =
+    encodeObject << encodeCURVEFINANCEETHEREUMTokenDTOPairs
+
+
+encodeCURVEFINANCEETHEREUMTokenDTOWithTag : ( String, String ) -> CURVEFINANCEETHEREUMTokenDTO -> Json.Encode.Value
+encodeCURVEFINANCEETHEREUMTokenDTOWithTag (tagField, tag) model =
+    encodeObject (encodeCURVEFINANCEETHEREUMTokenDTOPairs model ++ [ encode tagField Json.Encode.string tag ])
+
+
+encodeCURVEFINANCEETHEREUMTokenDTOPairs : CURVEFINANCEETHEREUMTokenDTO -> List EncodedField
+encodeCURVEFINANCEETHEREUMTokenDTOPairs model =
+    let
+        pairs =
+            [ maybeEncode "entry_time" Api.Time.encodeDateTime model.entryTime
+            , maybeEncode "recv_time" Api.Time.encodeDateTime model.recvTime
+            , maybeEncode "block_number" Json.Encode.int model.blockNumber
+            , maybeEncode "vid" Json.Encode.int model.vid
+            , maybeEncodeNullable "id" Json.Encode.string model.id
+            , maybeEncodeNullable "name" Json.Encode.string model.name
+            , maybeEncodeNullable "symbol" Json.Encode.string model.symbol
+            , maybeEncode "decimals" Json.Encode.int model.decimals
+            , maybeEncodeNullable "last_price_usd" Json.Encode.string model.lastPriceUsd
+            , maybeEncodeNullable "last_price_block_number" Json.Encode.string model.lastPriceBlockNumber
+            , maybeEncodeNullable "token_symbol" Json.Encode.string model.tokenSymbol
             ]
     in
     pairs
@@ -2475,6 +2687,85 @@ cRYPTOPUNKSUserDTODecoder =
         |> maybeDecode "vid" Json.Decode.int Nothing
         |> maybeDecodeNullable "block_range" Json.Decode.string Nothing
         |> maybeDecodeNullable "id" Json.Decode.string Nothing
+
+
+cURVEFINANCEETHEREUMLiquidityPoolDTODecoder : Json.Decode.Decoder CURVEFINANCEETHEREUMLiquidityPoolDTO
+cURVEFINANCEETHEREUMLiquidityPoolDTODecoder =
+    Json.Decode.succeed CURVEFINANCEETHEREUMLiquidityPoolDTO
+        |> maybeDecode "entry_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecode "recv_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecode "block_number" Json.Decode.int Nothing
+        |> maybeDecode "vid" Json.Decode.int Nothing
+        |> maybeDecodeNullable "id" Json.Decode.string Nothing
+        |> maybeDecodeNullable "protocol" Json.Decode.string Nothing
+        |> maybeDecodeNullable "name" Json.Decode.string Nothing
+        |> maybeDecodeNullable "symbol" Json.Decode.string Nothing
+        |> maybeDecodeNullable "input_tokens" (Json.Decode.list Json.Decode.string) Nothing
+        |> maybeDecodeNullable "input_tokens_ordered" (Json.Decode.list Json.Decode.string) Nothing
+        |> maybeDecodeNullable "output_token" Json.Decode.string Nothing
+        |> maybeDecodeNullable "reward_tokens" (Json.Decode.list Json.Decode.string) Nothing
+        |> maybeDecodeNullable "fees" (Json.Decode.list Json.Decode.string) Nothing
+        |> maybeDecode "is_single_sided" Json.Decode.bool Nothing
+        |> maybeDecodeNullable "created_timestamp" Json.Decode.string Nothing
+        |> maybeDecodeNullable "created_block_number" Json.Decode.string Nothing
+        |> maybeDecodeNullable "total_value_locked_usd" Json.Decode.string Nothing
+        |> maybeDecodeNullable "cumulative_supply_side_revenue_usd" Json.Decode.string Nothing
+        |> maybeDecodeNullable "cumulative_protocol_side_revenue_usd" Json.Decode.string Nothing
+        |> maybeDecodeNullable "cumulative_total_revenue_usd" Json.Decode.string Nothing
+        |> maybeDecodeNullable "cumulative_volume_usd" Json.Decode.string Nothing
+        |> maybeDecodeNullable "input_token_balances" (Json.Decode.list Json.Decode.string) Nothing
+        |> maybeDecodeNullable "input_token_weights" (Json.Decode.list Json.Decode.string) Nothing
+        |> maybeDecodeNullable "output_token_supply" Json.Decode.string Nothing
+        |> maybeDecodeNullable "output_token_price_usd" Json.Decode.string Nothing
+        |> maybeDecodeNullable "staked_output_token_amount" Json.Decode.string Nothing
+        |> maybeDecodeNullable "reward_token_emissions_amount" (Json.Decode.list Json.Decode.string) Nothing
+        |> maybeDecodeNullable "reward_token_emissions_usd" (Json.Decode.list Json.Decode.string) Nothing
+        |> maybeDecodeNullable "registry_address" Json.Decode.string Nothing
+        |> maybeDecodeNullable "gauge_address" Json.Decode.string Nothing
+        |> maybeDecode "evaluated_ask" Json.Decode.float Nothing
+
+
+cURVEFINANCEETHEREUMSwapDTODecoder : Json.Decode.Decoder CURVEFINANCEETHEREUMSwapDTO
+cURVEFINANCEETHEREUMSwapDTODecoder =
+    Json.Decode.succeed CURVEFINANCEETHEREUMSwapDTO
+        |> maybeDecode "entry_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecode "recv_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecodeNullable "block_number" Json.Decode.string Nothing
+        |> maybeDecodeNullable "id" Json.Decode.string Nothing
+        |> maybeDecodeNullable "hash" Json.Decode.string Nothing
+        |> maybeDecode "log_index" Json.Decode.int Nothing
+        |> maybeDecodeNullable "protocol" Json.Decode.string Nothing
+        |> maybeDecodeNullable "to" Json.Decode.string Nothing
+        |> maybeDecodeNullable "from" Json.Decode.string Nothing
+        |> maybeDecodeNullable "timestamp" Json.Decode.string Nothing
+        |> maybeDecodeNullable "token_in" Json.Decode.string Nothing
+        |> maybeDecodeNullable "amount_in" Json.Decode.string Nothing
+        |> maybeDecodeNullable "amount_in_usd" Json.Decode.string Nothing
+        |> maybeDecodeNullable "token_out" Json.Decode.string Nothing
+        |> maybeDecodeNullable "amount_out" Json.Decode.string Nothing
+        |> maybeDecodeNullable "amount_out_usd" Json.Decode.string Nothing
+        |> maybeDecodeNullable "pool" Json.Decode.string Nothing
+        |> maybeDecodeNullable "pool_id" Json.Decode.string Nothing
+        |> maybeDecodeNullable "transaction_id" Json.Decode.string Nothing
+        |> maybeDecode "evaluated_price" Json.Decode.float Nothing
+        |> maybeDecode "evaluated_amount" Json.Decode.float Nothing
+        |> maybeDecode "evaluated_aggressor" transactionsETradeAggressiveSideDecoder Nothing
+
+
+cURVEFINANCEETHEREUMTokenDTODecoder : Json.Decode.Decoder CURVEFINANCEETHEREUMTokenDTO
+cURVEFINANCEETHEREUMTokenDTODecoder =
+    Json.Decode.succeed CURVEFINANCEETHEREUMTokenDTO
+        |> maybeDecode "entry_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecode "recv_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecode "block_number" Json.Decode.int Nothing
+        |> maybeDecode "vid" Json.Decode.int Nothing
+        |> maybeDecodeNullable "id" Json.Decode.string Nothing
+        |> maybeDecodeNullable "name" Json.Decode.string Nothing
+        |> maybeDecodeNullable "symbol" Json.Decode.string Nothing
+        |> maybeDecode "decimals" Json.Decode.int Nothing
+        |> maybeDecodeNullable "last_price_usd" Json.Decode.string Nothing
+        |> maybeDecodeNullable "last_price_block_number" Json.Decode.string Nothing
+        |> maybeDecodeNullable "token_symbol" Json.Decode.string Nothing
 
 
 transactionsETradeAggressiveSideDecoder : Json.Decode.Decoder TransactionsETradeAggressiveSide

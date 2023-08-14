@@ -9,6 +9,9 @@ export * from './cRYPTOPUNKSMarketPlaceDTO';
 export * from './cRYPTOPUNKSMarketplaceDailySnapshotDTO';
 export * from './cRYPTOPUNKSTradeDTO';
 export * from './cRYPTOPUNKSUserDTO';
+export * from './cURVEFINANCEETHEREUMLiquidityPoolDTO';
+export * from './cURVEFINANCEETHEREUMSwapDTO';
+export * from './cURVEFINANCEETHEREUMTokenDTO';
 export * from './transactionsETradeAggressiveSide';
 export * from './uNISWAPV2ETHEREUMLiquidityPoolDTO';
 export * from './uNISWAPV2ETHEREUMSwapDTO';
@@ -59,6 +62,9 @@ import { CRYPTOPUNKSMarketPlaceDTO } from './cRYPTOPUNKSMarketPlaceDTO';
 import { CRYPTOPUNKSMarketplaceDailySnapshotDTO } from './cRYPTOPUNKSMarketplaceDailySnapshotDTO';
 import { CRYPTOPUNKSTradeDTO } from './cRYPTOPUNKSTradeDTO';
 import { CRYPTOPUNKSUserDTO } from './cRYPTOPUNKSUserDTO';
+import { CURVEFINANCEETHEREUMLiquidityPoolDTO } from './cURVEFINANCEETHEREUMLiquidityPoolDTO';
+import { CURVEFINANCEETHEREUMSwapDTO } from './cURVEFINANCEETHEREUMSwapDTO';
+import { CURVEFINANCEETHEREUMTokenDTO } from './cURVEFINANCEETHEREUMTokenDTO';
 import { TransactionsETradeAggressiveSide } from './transactionsETradeAggressiveSide';
 import { UNISWAPV2ETHEREUMLiquidityPoolDTO } from './uNISWAPV2ETHEREUMLiquidityPoolDTO';
 import { UNISWAPV2ETHEREUMSwapDTO } from './uNISWAPV2ETHEREUMSwapDTO';
@@ -113,6 +119,9 @@ let typeMap: {[index: string]: any} = {
     "CRYPTOPUNKSMarketplaceDailySnapshotDTO": CRYPTOPUNKSMarketplaceDailySnapshotDTO,
     "CRYPTOPUNKSTradeDTO": CRYPTOPUNKSTradeDTO,
     "CRYPTOPUNKSUserDTO": CRYPTOPUNKSUserDTO,
+    "CURVEFINANCEETHEREUMLiquidityPoolDTO": CURVEFINANCEETHEREUMLiquidityPoolDTO,
+    "CURVEFINANCEETHEREUMSwapDTO": CURVEFINANCEETHEREUMSwapDTO,
+    "CURVEFINANCEETHEREUMTokenDTO": CURVEFINANCEETHEREUMTokenDTO,
     "UNISWAPV2ETHEREUMLiquidityPoolDTO": UNISWAPV2ETHEREUMLiquidityPoolDTO,
     "UNISWAPV2ETHEREUMSwapDTO": UNISWAPV2ETHEREUMSwapDTO,
     "UNISWAPV2ETHEREUMTokenDTO": UNISWAPV2ETHEREUMTokenDTO,

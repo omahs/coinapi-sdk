@@ -15,7 +15,11 @@ docs/CRYPTOPUNKSMarketPlaceDTO.md
 docs/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md
 docs/CRYPTOPUNKSTradeDTO.md
 docs/CRYPTOPUNKSUserDTO.md
+docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
+docs/CURVEFINANCEETHEREUMSwapDTO.md
+docs/CURVEFINANCEETHEREUMTokenDTO.md
 docs/CryptopunksApi.md
+docs/CurveFinanceEthereumApi.md
 docs/MetadataApi.md
 docs/TransactionsETradeAggressiveSide.md
 docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
@@ -69,6 +73,7 @@ src/main/java/org/openapitools/client/ServerConfiguration.java
 src/main/java/org/openapitools/client/ServerVariable.java
 src/main/java/org/openapitools/client/StringUtil.java
 src/main/java/org/openapitools/client/api/CryptopunksApi.java
+src/main/java/org/openapitools/client/api/CurveFinanceEthereumApi.java
 src/main/java/org/openapitools/client/api/MetadataApi.java
 src/main/java/org/openapitools/client/api/UniswapV2EthereumApi.java
 src/main/java/org/openapitools/client/api/UniswapV3EthereumApi.java
@@ -86,6 +91,9 @@ src/main/java/org/openapitools/client/model/CRYPTOPUNKSMarketPlaceDTO.java
 src/main/java/org/openapitools/client/model/CRYPTOPUNKSMarketplaceDailySnapshotDTO.java
 src/main/java/org/openapitools/client/model/CRYPTOPUNKSTradeDTO.java
 src/main/java/org/openapitools/client/model/CRYPTOPUNKSUserDTO.java
+src/main/java/org/openapitools/client/model/CURVEFINANCEETHEREUMLiquidityPoolDTO.java
+src/main/java/org/openapitools/client/model/CURVEFINANCEETHEREUMSwapDTO.java
+src/main/java/org/openapitools/client/model/CURVEFINANCEETHEREUMTokenDTO.java
 src/main/java/org/openapitools/client/model/TransactionsETradeAggressiveSide.java
 src/main/java/org/openapitools/client/model/UNISWAPV2ETHEREUMLiquidityPoolDTO.java
 src/main/java/org/openapitools/client/model/UNISWAPV2ETHEREUMSwapDTO.java
@@ -114,6 +122,7 @@ src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMUsageMetricsDailySn
 src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.java
 src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMWithdrawDTO.java
 src/test/java/org/openapitools/client/api/CryptopunksApiTest.java
+src/test/java/org/openapitools/client/api/CurveFinanceEthereumApiTest.java
 src/test/java/org/openapitools/client/api/MetadataApiTest.java
 src/test/java/org/openapitools/client/api/UniswapV2EthereumApiTest.java
 src/test/java/org/openapitools/client/api/UniswapV3EthereumApiTest.java
@@ -126,6 +135,9 @@ src/test/java/org/openapitools/client/model/CRYPTOPUNKSMarketPlaceDTOTest.java
 src/test/java/org/openapitools/client/model/CRYPTOPUNKSMarketplaceDailySnapshotDTOTest.java
 src/test/java/org/openapitools/client/model/CRYPTOPUNKSTradeDTOTest.java
 src/test/java/org/openapitools/client/model/CRYPTOPUNKSUserDTOTest.java
+src/test/java/org/openapitools/client/model/CURVEFINANCEETHEREUMLiquidityPoolDTOTest.java
+src/test/java/org/openapitools/client/model/CURVEFINANCEETHEREUMSwapDTOTest.java
+src/test/java/org/openapitools/client/model/CURVEFINANCEETHEREUMTokenDTOTest.java
 src/test/java/org/openapitools/client/model/TransactionsETradeAggressiveSideTest.java
 src/test/java/org/openapitools/client/model/UNISWAPV2ETHEREUMLiquidityPoolDTOTest.java
 src/test/java/org/openapitools/client/model/UNISWAPV2ETHEREUMSwapDTOTest.java

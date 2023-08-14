@@ -11,12 +11,13 @@ docs/CRYPTOPUNKSMarketPlaceDTO.md
 docs/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md
 docs/CRYPTOPUNKSTradeDTO.md
 docs/CRYPTOPUNKSUserDTO.md
+docs/CURVEFINANCEETHEREUMApi.md
+docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
+docs/CURVEFINANCEETHEREUMSwapDTO.md
+docs/CURVEFINANCEETHEREUMTokenDTO.md
 docs/MetadataApi.md
 docs/TransactionsETradeAggressiveSide.md
 docs/UNISWAPV2ETHEREUMApi.md
-docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
-docs/UNISWAPV2ETHEREUMSwapDTO.md
-docs/UNISWAPV2ETHEREUMTokenDTO.md
 docs/UNISWAPV3ETHEREUMAccountDTO.md
 docs/UNISWAPV3ETHEREUMActiveAccountDTO.md
 docs/UNISWAPV3ETHEREUMApi.md
@@ -42,6 +43,7 @@ pom.xml
 project/build.properties
 src/main/resources/reference.conf
 src/main/scala/org/openapitools/client/api/CRYPTOPUNKSApi.scala
+src/main/scala/org/openapitools/client/api/CURVEFINANCEETHEREUMApi.scala
 src/main/scala/org/openapitools/client/api/EnumsSerializers.scala
 src/main/scala/org/openapitools/client/api/MetadataApi.scala
 src/main/scala/org/openapitools/client/api/UNISWAPV2ETHEREUMApi.scala

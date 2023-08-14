@@ -382,11 +382,11 @@ public:
 	/*! \brief Set Block number of the last time this entity was updated.
 	 */
 	void setLastUpdateBlockNumber(std::string  last_update_block_number);
-	/*! \brief Get Evaluated ask value of the liquidity pool.
+	/*! \brief Get 
 	 */
 	double getEvaluatedAsk();
 
-	/*! \brief Set Evaluated ask value of the liquidity pool.
+	/*! \brief Set 
 	 */
 	void setEvaluatedAsk(double  evaluated_ask);
 

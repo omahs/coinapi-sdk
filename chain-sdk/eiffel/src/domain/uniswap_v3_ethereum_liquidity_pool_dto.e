@@ -116,7 +116,7 @@ feature --Access
     last_update_block_number: detachable STRING_32
       -- Block number of the last time this entity was updated.
  	evaluated_ask: REAL_64
-    	 -- Evaluated ask value of the liquidity pool.
+    	 -- 
 
 feature -- Change Element
 

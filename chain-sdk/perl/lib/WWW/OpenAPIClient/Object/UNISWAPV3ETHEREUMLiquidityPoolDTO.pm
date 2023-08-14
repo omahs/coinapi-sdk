@@ -558,7 +558,7 @@ __PACKAGE__->method_documentation({
     'evaluated_ask' => {
         datatype => 'double',
         base_name => 'evaluated_ask',
-        description => 'Evaluated ask value of the liquidity pool.',
+        description => '',
         format => '',
         read_only => '',
             },

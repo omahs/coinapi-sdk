@@ -2181,7 +2181,7 @@ class UNISWAPV3ETHEREUMLiquidityPoolDTO implements ModelInterface, ArrayAccess, 
     /**
      * Sets evaluated_ask
      *
-     * @param float|null $evaluated_ask Evaluated ask value of the liquidity pool.
+     * @param float|null $evaluated_ask 
      *
      * @return self
      */

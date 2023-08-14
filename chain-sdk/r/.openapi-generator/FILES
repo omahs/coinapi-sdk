@@ -18,6 +18,10 @@ R/cryptopunks_market_place_dto.R
 R/cryptopunks_marketplace_daily_snapshot_dto.R
 R/cryptopunks_trade_dto.R
 R/cryptopunks_user_dto.R
+R/curvefinanceethereum_api.R
+R/curvefinanceethereum_liquidity_pool_dto.R
+R/curvefinanceethereum_swap_dto.R
+R/curvefinanceethereum_token_dto.R
 R/metadata_api.R
 R/transactions_e_trade_aggressive_side.R
 R/uniswapv2_ethereum_api.R
@@ -59,6 +63,10 @@ docs/CRYPTOPUNKSMarketPlaceDTO.md
 docs/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md
 docs/CRYPTOPUNKSTradeDTO.md
 docs/CRYPTOPUNKSUserDTO.md
+docs/CURVEFINANCEETHEREUMApi.md
+docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
+docs/CURVEFINANCEETHEREUMSwapDTO.md
+docs/CURVEFINANCEETHEREUMTokenDTO.md
 docs/MetadataApi.md
 docs/TransactionsETradeAggressiveSide.md
 docs/UNISWAPV2ETHEREUMApi.md
@@ -101,6 +109,10 @@ tests/testthat/test_cryptopunks_market_place_dto.R
 tests/testthat/test_cryptopunks_marketplace_daily_snapshot_dto.R
 tests/testthat/test_cryptopunks_trade_dto.R
 tests/testthat/test_cryptopunks_user_dto.R
+tests/testthat/test_curvefinanceethereum_api.R
+tests/testthat/test_curvefinanceethereum_liquidity_pool_dto.R
+tests/testthat/test_curvefinanceethereum_swap_dto.R
+tests/testthat/test_curvefinanceethereum_token_dto.R
 tests/testthat/test_metadata_api.R
 tests/testthat/test_transactions_e_trade_aggressive_side.R
 tests/testthat/test_uniswapv2_ethereum_api.R

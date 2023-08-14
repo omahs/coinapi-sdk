@@ -2,7 +2,7 @@
 
 On Chain Dapps - REST API
 - API version: v1
-  - Build date: 2023-08-11T15:43:36.623001Z[Etc/UTC]
+  - Build date: 2023-08-14T09:56:50.244801Z[Etc/UTC]
 
 
 This section will provide necessary information about the `OnChain API` protocol. 
@@ -127,6 +127,9 @@ Class | Method | HTTP request | Description
 *CryptopunksApi* | [**cRYPTOPUNKSMarketplaceDailySnapshotsCurrent**](docs/CryptopunksApi.md#cRYPTOPUNKSMarketplaceDailySnapshotsCurrent) | **GET** /v1/dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
 *CryptopunksApi* | [**cRYPTOPUNKSTradesCurrent**](docs/CryptopunksApi.md#cRYPTOPUNKSTradesCurrent) | **GET** /v1/dapps/cryptopunks/trades/current | Trades (current)
 *CryptopunksApi* | [**cRYPTOPUNKSUsersCurrent**](docs/CryptopunksApi.md#cRYPTOPUNKSUsersCurrent) | **GET** /v1/dapps/cryptopunks/users/current | Users (current)
+*CurveFinanceEthereumApi* | [**cURVEFINANCEETHEREUMLiquidityPoolsCurrent**](docs/CurveFinanceEthereumApi.md#cURVEFINANCEETHEREUMLiquidityPoolsCurrent) | **GET** /v1/dapps/curve-finance-ethereum/liquidityPools/current | LiquidityPools (current)
+*CurveFinanceEthereumApi* | [**cURVEFINANCEETHEREUMSwapsCurrent**](docs/CurveFinanceEthereumApi.md#cURVEFINANCEETHEREUMSwapsCurrent) | **GET** /v1/dapps/curve-finance-ethereum/swaps/current | Swaps (current)
+*CurveFinanceEthereumApi* | [**cURVEFINANCEETHEREUMTokensCurrent**](docs/CurveFinanceEthereumApi.md#cURVEFINANCEETHEREUMTokensCurrent) | **GET** /v1/dapps/curve-finance-ethereum/tokens/current | Tokens (current)
 *MetadataApi* | [**metadataChainsGet**](docs/MetadataApi.md#metadataChainsGet) | **GET** /metadata/chains | List all chains.
 *MetadataApi* | [**metadataDappsDappNameGet**](docs/MetadataApi.md#metadataDappsDappNameGet) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
 *MetadataApi* | [**metadataDappsGet**](docs/MetadataApi.md#metadataDappsGet) | **GET** /metadata/dapps | List all decentralized applications.
@@ -169,6 +172,9 @@ Class | Method | HTTP request | Description
  - [CRYPTOPUNKSMarketplaceDailySnapshotDTO](docs/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md)
  - [CRYPTOPUNKSTradeDTO](docs/CRYPTOPUNKSTradeDTO.md)
  - [CRYPTOPUNKSUserDTO](docs/CRYPTOPUNKSUserDTO.md)
+ - [CURVEFINANCEETHEREUMLiquidityPoolDTO](docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md)
+ - [CURVEFINANCEETHEREUMSwapDTO](docs/CURVEFINANCEETHEREUMSwapDTO.md)
+ - [CURVEFINANCEETHEREUMTokenDTO](docs/CURVEFINANCEETHEREUMTokenDTO.md)
  - [TransactionsETradeAggressiveSide](docs/TransactionsETradeAggressiveSide.md)
  - [UNISWAPV2ETHEREUMLiquidityPoolDTO](docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md)
  - [UNISWAPV2ETHEREUMSwapDTO](docs/UNISWAPV2ETHEREUMSwapDTO.md)

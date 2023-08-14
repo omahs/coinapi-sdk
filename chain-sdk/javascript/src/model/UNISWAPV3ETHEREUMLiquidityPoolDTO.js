@@ -641,7 +641,7 @@ UNISWAPV3ETHEREUMLiquidityPoolDTO.prototype['last_update_timestamp'] = undefined
 UNISWAPV3ETHEREUMLiquidityPoolDTO.prototype['last_update_block_number'] = undefined;
 
 /**
- * Evaluated ask value of the liquidity pool.
+ * 
  * @member {Number} evaluated_ask
  */
 UNISWAPV3ETHEREUMLiquidityPoolDTO.prototype['evaluated_ask'] = undefined;

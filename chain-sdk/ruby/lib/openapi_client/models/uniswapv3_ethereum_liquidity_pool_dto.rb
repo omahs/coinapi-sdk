@@ -158,7 +158,7 @@ module OpenapiClient
     # Block number of the last time this entity was updated.
     attr_accessor :last_update_block_number
 
-    # Evaluated ask value of the liquidity pool.
+    # 
     attr_accessor :evaluated_ask
 
     # Attribute mapping from ruby-style variable name to JSON key.

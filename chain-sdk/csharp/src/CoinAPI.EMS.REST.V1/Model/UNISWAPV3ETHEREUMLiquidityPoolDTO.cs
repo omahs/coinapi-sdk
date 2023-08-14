@@ -503,9 +503,8 @@ namespace CoinAPI.EMS.REST.V1.Model
         public string LastUpdateBlockNumber { get; set; }
 
         /// <summary>
-        /// Evaluated ask value of the liquidity pool.
+        /// Gets or Sets EvaluatedAsk
         /// </summary>
-        /// <value>Evaluated ask value of the liquidity pool.</value>
         [DataMember(Name="evaluated_ask", EmitDefaultValue=false)]
         public double EvaluatedAsk { get; private set; }
 

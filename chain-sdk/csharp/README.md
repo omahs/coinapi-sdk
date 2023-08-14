@@ -118,6 +118,9 @@ Class | Method | HTTP request | Description
 *CRYPTOPUNKSApi* | [**CRYPTOPUNKSMarketplaceDailySnapshotsCurrent**](docs/CRYPTOPUNKSApi.md#cryptopunksmarketplacedailysnapshotscurrent) | **GET** /v1/dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
 *CRYPTOPUNKSApi* | [**CRYPTOPUNKSTradesCurrent**](docs/CRYPTOPUNKSApi.md#cryptopunkstradescurrent) | **GET** /v1/dapps/cryptopunks/trades/current | Trades (current)
 *CRYPTOPUNKSApi* | [**CRYPTOPUNKSUsersCurrent**](docs/CRYPTOPUNKSApi.md#cryptopunksuserscurrent) | **GET** /v1/dapps/cryptopunks/users/current | Users (current)
+*CURVEFINANCEETHEREUMApi* | [**CURVEFINANCEETHEREUMLiquidityPoolsCurrent**](docs/CURVEFINANCEETHEREUMApi.md#curvefinanceethereumliquiditypoolscurrent) | **GET** /v1/dapps/curve-finance-ethereum/liquidityPools/current | LiquidityPools (current)
+*CURVEFINANCEETHEREUMApi* | [**CURVEFINANCEETHEREUMSwapsCurrent**](docs/CURVEFINANCEETHEREUMApi.md#curvefinanceethereumswapscurrent) | **GET** /v1/dapps/curve-finance-ethereum/swaps/current | Swaps (current)
+*CURVEFINANCEETHEREUMApi* | [**CURVEFINANCEETHEREUMTokensCurrent**](docs/CURVEFINANCEETHEREUMApi.md#curvefinanceethereumtokenscurrent) | **GET** /v1/dapps/curve-finance-ethereum/tokens/current | Tokens (current)
 *MetadataApi* | [**MetadataChainsGet**](docs/MetadataApi.md#metadatachainsget) | **GET** /metadata/chains | List all chains.
 *MetadataApi* | [**MetadataDappsDappNameGet**](docs/MetadataApi.md#metadatadappsdappnameget) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
 *MetadataApi* | [**MetadataDappsGet**](docs/MetadataApi.md#metadatadappsget) | **GET** /metadata/dapps | List all decentralized applications.
@@ -160,6 +163,9 @@ Class | Method | HTTP request | Description
  - [Model.CRYPTOPUNKSMarketplaceDailySnapshotDTO](docs/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md)
  - [Model.CRYPTOPUNKSTradeDTO](docs/CRYPTOPUNKSTradeDTO.md)
  - [Model.CRYPTOPUNKSUserDTO](docs/CRYPTOPUNKSUserDTO.md)
+ - [Model.CURVEFINANCEETHEREUMLiquidityPoolDTO](docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md)
+ - [Model.CURVEFINANCEETHEREUMSwapDTO](docs/CURVEFINANCEETHEREUMSwapDTO.md)
+ - [Model.CURVEFINANCEETHEREUMTokenDTO](docs/CURVEFINANCEETHEREUMTokenDTO.md)
  - [Model.TransactionsETradeAggressiveSide](docs/TransactionsETradeAggressiveSide.md)
  - [Model.UNISWAPV2ETHEREUMLiquidityPoolDTO](docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md)
  - [Model.UNISWAPV2ETHEREUMSwapDTO](docs/UNISWAPV2ETHEREUMSwapDTO.md)

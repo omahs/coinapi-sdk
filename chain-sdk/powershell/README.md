@@ -65,6 +65,9 @@ Class | Method | HTTP request | Description
 *CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSMarketplaceDailySnapshotsCurrent**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSMarketplaceDailySnapshotsCurrent) | **GET** /v1/dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
 *CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSTradesCurrent**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSTradesCurrent) | **GET** /v1/dapps/cryptopunks/trades/current | Trades (current)
 *CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSUsersCurrent**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSUsersCurrent) | **GET** /v1/dapps/cryptopunks/users/current | Users (current)
+*CURVEFINANCEETHEREUMApi* | [**Invoke-CURVEFINANCEETHEREUMLiquidityPoolsCurrent**](docs/CURVEFINANCEETHEREUMApi.md#Invoke-CURVEFINANCEETHEREUMLiquidityPoolsCurrent) | **GET** /v1/dapps/curve-finance-ethereum/liquidityPools/current | LiquidityPools (current)
+*CURVEFINANCEETHEREUMApi* | [**Invoke-CURVEFINANCEETHEREUMSwapsCurrent**](docs/CURVEFINANCEETHEREUMApi.md#Invoke-CURVEFINANCEETHEREUMSwapsCurrent) | **GET** /v1/dapps/curve-finance-ethereum/swaps/current | Swaps (current)
+*CURVEFINANCEETHEREUMApi* | [**Invoke-CURVEFINANCEETHEREUMTokensCurrent**](docs/CURVEFINANCEETHEREUMApi.md#Invoke-CURVEFINANCEETHEREUMTokensCurrent) | **GET** /v1/dapps/curve-finance-ethereum/tokens/current | Tokens (current)
 *MetadataApi* | [**Invoke-MetadataChainsGet**](docs/MetadataApi.md#Invoke-MetadataChainsGet) | **GET** /metadata/chains | List all chains.
 *MetadataApi* | [**Invoke-MetadataDappsDappNameGet**](docs/MetadataApi.md#Invoke-MetadataDappsDappNameGet) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
 *MetadataApi* | [**Invoke-MetadataDappsGet**](docs/MetadataApi.md#Invoke-MetadataDappsGet) | **GET** /metadata/dapps | List all decentralized applications.
@@ -107,6 +110,9 @@ Class | Method | HTTP request | Description
  - [PSOpenAPITools/Model.CRYPTOPUNKSMarketplaceDailySnapshotDTO](docs/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md)
  - [PSOpenAPITools/Model.CRYPTOPUNKSTradeDTO](docs/CRYPTOPUNKSTradeDTO.md)
  - [PSOpenAPITools/Model.CRYPTOPUNKSUserDTO](docs/CRYPTOPUNKSUserDTO.md)
+ - [PSOpenAPITools/Model.CURVEFINANCEETHEREUMLiquidityPoolDTO](docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md)
+ - [PSOpenAPITools/Model.CURVEFINANCEETHEREUMSwapDTO](docs/CURVEFINANCEETHEREUMSwapDTO.md)
+ - [PSOpenAPITools/Model.CURVEFINANCEETHEREUMTokenDTO](docs/CURVEFINANCEETHEREUMTokenDTO.md)
  - [PSOpenAPITools/Model.TransactionsETradeAggressiveSide](docs/TransactionsETradeAggressiveSide.md)
  - [PSOpenAPITools/Model.UNISWAPV2ETHEREUMLiquidityPoolDTO](docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md)
  - [PSOpenAPITools/Model.UNISWAPV2ETHEREUMSwapDTO](docs/UNISWAPV2ETHEREUMSwapDTO.md)

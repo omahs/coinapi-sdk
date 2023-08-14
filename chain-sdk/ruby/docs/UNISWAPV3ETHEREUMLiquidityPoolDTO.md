@@ -52,7 +52,7 @@
 | **last_snapshot_hour_id** | **Integer** | Hour ID of the most recent hourly snapshot. | [optional] |
 | **last_update_timestamp** | **String** | Timestamp of the last time this entity was updated. | [optional] |
 | **last_update_block_number** | **String** | Block number of the last time this entity was updated. | [optional] |
-| **evaluated_ask** | **Float** | Evaluated ask value of the liquidity pool. | [optional][readonly] |
+| **evaluated_ask** | **Float** |  | [optional][readonly] |
 
 ## Example
 

@@ -102,6 +102,9 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.CRYPTOPUNKSMarketplaceDailySnapshotDTO.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.CRYPTOPUNKSTradeDTO.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.CRYPTOPUNKSUserDTO.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.CURVEFINANCEETHEREUMLiquidityPoolDTO.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.CURVEFINANCEETHEREUMSwapDTO.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.CURVEFINANCEETHEREUMTokenDTO.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.UNISWAPV2ETHEREUMLiquidityPoolDTO.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.UNISWAPV2ETHEREUMSwapDTO.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.UNISWAPV2ETHEREUMTokenDTO.CustomTypeAdapterFactory());

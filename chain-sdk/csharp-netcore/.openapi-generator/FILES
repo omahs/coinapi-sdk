@@ -14,6 +14,10 @@ docs/CRYPTOPUNKSMarketPlaceDTO.md
 docs/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md
 docs/CRYPTOPUNKSTradeDTO.md
 docs/CRYPTOPUNKSUserDTO.md
+docs/CURVEFINANCEETHEREUMApi.md
+docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
+docs/CURVEFINANCEETHEREUMSwapDTO.md
+docs/CURVEFINANCEETHEREUMTokenDTO.md
 docs/MetadataApi.md
 docs/TransactionsETradeAggressiveSide.md
 docs/UNISWAPV2ETHEREUMApi.md
@@ -46,6 +50,7 @@ docs/UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.md
 docs/UNISWAPV3ETHEREUMWithdrawDTO.md
 git_push.sh
 src/CoinAPI.EMS.REST.V1.Test/Api/CRYPTOPUNKSApiTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Api/CURVEFINANCEETHEREUMApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/MetadataApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/UNISWAPV2ETHEREUMApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/UNISWAPV3ETHEREUMApiTests.cs
@@ -59,6 +64,9 @@ src/CoinAPI.EMS.REST.V1.Test/Model/CRYPTOPUNKSMarketPlaceDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/CRYPTOPUNKSMarketplaceDailySnapshotDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/CRYPTOPUNKSTradeDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/CRYPTOPUNKSUserDTOTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Model/CURVEFINANCEETHEREUMLiquidityPoolDTOTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Model/CURVEFINANCEETHEREUMSwapDTOTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Model/CURVEFINANCEETHEREUMTokenDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/TransactionsETradeAggressiveSideTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/UNISWAPV2ETHEREUMLiquidityPoolDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/UNISWAPV2ETHEREUMSwapDTOTests.cs
@@ -87,6 +95,7 @@ src/CoinAPI.EMS.REST.V1.Test/Model/UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
 src/CoinAPI.EMS.REST.V1.Test/Model/UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/UNISWAPV3ETHEREUMWithdrawDTOTests.cs
 src/CoinAPI.EMS.REST.V1/Api/CRYPTOPUNKSApi.cs
+src/CoinAPI.EMS.REST.V1/Api/CURVEFINANCEETHEREUMApi.cs
 src/CoinAPI.EMS.REST.V1/Api/MetadataApi.cs
 src/CoinAPI.EMS.REST.V1/Api/UNISWAPV2ETHEREUMApi.cs
 src/CoinAPI.EMS.REST.V1/Api/UNISWAPV3ETHEREUMApi.cs
@@ -117,6 +126,9 @@ src/CoinAPI.EMS.REST.V1/Model/CRYPTOPUNKSMarketPlaceDTO.cs
 src/CoinAPI.EMS.REST.V1/Model/CRYPTOPUNKSMarketplaceDailySnapshotDTO.cs
 src/CoinAPI.EMS.REST.V1/Model/CRYPTOPUNKSTradeDTO.cs
 src/CoinAPI.EMS.REST.V1/Model/CRYPTOPUNKSUserDTO.cs
+src/CoinAPI.EMS.REST.V1/Model/CURVEFINANCEETHEREUMLiquidityPoolDTO.cs
+src/CoinAPI.EMS.REST.V1/Model/CURVEFINANCEETHEREUMSwapDTO.cs
+src/CoinAPI.EMS.REST.V1/Model/CURVEFINANCEETHEREUMTokenDTO.cs
 src/CoinAPI.EMS.REST.V1/Model/TransactionsETradeAggressiveSide.cs
 src/CoinAPI.EMS.REST.V1/Model/UNISWAPV2ETHEREUMLiquidityPoolDTO.cs
 src/CoinAPI.EMS.REST.V1/Model/UNISWAPV2ETHEREUMSwapDTO.cs

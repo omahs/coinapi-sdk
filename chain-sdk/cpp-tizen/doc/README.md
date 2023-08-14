@@ -62,6 +62,17 @@ Method | HTTP request | Description
 *cRYPTOPUNKSUsers (current)ASync* | *GET* /v1/dapps/cryptopunks/users/current | Users (current).
 
 
+### CURVEFINANCEETHEREUMManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*cURVEFINANCEETHEREUMLiquidityPools (current)Sync* | *GET* /v1/dapps/curve-finance-ethereum/liquidityPools/current | LiquidityPools (current).
+*cURVEFINANCEETHEREUMLiquidityPools (current)ASync* | *GET* /v1/dapps/curve-finance-ethereum/liquidityPools/current | LiquidityPools (current).
+*cURVEFINANCEETHEREUMSwaps (current)Sync* | *GET* /v1/dapps/curve-finance-ethereum/swaps/current | Swaps (current).
+*cURVEFINANCEETHEREUMSwaps (current)ASync* | *GET* /v1/dapps/curve-finance-ethereum/swaps/current | Swaps (current).
+*cURVEFINANCEETHEREUMTokens (current)Sync* | *GET* /v1/dapps/curve-finance-ethereum/tokens/current | Tokens (current).
+*cURVEFINANCEETHEREUMTokens (current)ASync* | *GET* /v1/dapps/curve-finance-ethereum/tokens/current | Tokens (current).
+
+
 ### MetadataManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -147,6 +158,9 @@ Class | Description
  *CRYPTOPUNKS.MarketplaceDailySnapshotDTO* | 
  *CRYPTOPUNKS.TradeDTO* | 
  *CRYPTOPUNKS.UserDTO* | 
+ *CURVE_FINANCE_ETHEREUM.LiquidityPoolDTO* | 
+ *CURVE_FINANCE_ETHEREUM.SwapDTO* | 
+ *CURVE_FINANCE_ETHEREUM.TokenDTO* | 
  *Transactions.ETradeAggressiveSide* | 
  *UNISWAP_V2_ETHEREUM.LiquidityPoolDTO* | Pool-level metadata.
  *UNISWAP_V2_ETHEREUM.SwapDTO* | Trade (swap) event which occurred in a pool.

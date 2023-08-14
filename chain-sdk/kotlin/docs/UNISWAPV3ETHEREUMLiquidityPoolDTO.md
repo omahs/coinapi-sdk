@@ -52,7 +52,7 @@ Name | Type | Description | Notes
 **lastSnapshotHourId** | **kotlin.Int** | Hour ID of the most recent hourly snapshot. |  [optional]
 **lastUpdateTimestamp** | **kotlin.String** | Timestamp of the last time this entity was updated. |  [optional]
 **lastUpdateBlockNumber** | **kotlin.String** | Block number of the last time this entity was updated. |  [optional]
-**evaluatedAsk** | **kotlin.Double** | Evaluated ask value of the liquidity pool. |  [optional] [readonly]
+**evaluatedAsk** | **kotlin.Double** |  |  [optional] [readonly]
 
 
 

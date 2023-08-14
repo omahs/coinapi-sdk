@@ -13,6 +13,10 @@ docs/CRYPTOPUNKSMarketPlaceDTO.md
 docs/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md
 docs/CRYPTOPUNKSTradeDTO.md
 docs/CRYPTOPUNKSUserDTO.md
+docs/CURVEFINANCEETHEREUMApi.md
+docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
+docs/CURVEFINANCEETHEREUMSwapDTO.md
+docs/CURVEFINANCEETHEREUMTokenDTO.md
 docs/MetadataApi.md
 docs/TransactionsETradeAggressiveSide.md
 docs/UNISWAPV2ETHEREUMApi.md
@@ -47,6 +51,7 @@ git_push.sh
 lib/WWW/OpenAPIClient/ApiClient.pm
 lib/WWW/OpenAPIClient/ApiFactory.pm
 lib/WWW/OpenAPIClient/CRYPTOPUNKSApi.pm
+lib/WWW/OpenAPIClient/CURVEFINANCEETHEREUMApi.pm
 lib/WWW/OpenAPIClient/Configuration.pm
 lib/WWW/OpenAPIClient/MetadataApi.pm
 lib/WWW/OpenAPIClient/Object/CRYPTOPUNKSBidDTO.pm
@@ -58,6 +63,9 @@ lib/WWW/OpenAPIClient/Object/CRYPTOPUNKSMarketPlaceDTO.pm
 lib/WWW/OpenAPIClient/Object/CRYPTOPUNKSMarketplaceDailySnapshotDTO.pm
 lib/WWW/OpenAPIClient/Object/CRYPTOPUNKSTradeDTO.pm
 lib/WWW/OpenAPIClient/Object/CRYPTOPUNKSUserDTO.pm
+lib/WWW/OpenAPIClient/Object/CURVEFINANCEETHEREUMLiquidityPoolDTO.pm
+lib/WWW/OpenAPIClient/Object/CURVEFINANCEETHEREUMSwapDTO.pm
+lib/WWW/OpenAPIClient/Object/CURVEFINANCEETHEREUMTokenDTO.pm
 lib/WWW/OpenAPIClient/Object/TransactionsETradeAggressiveSide.pm
 lib/WWW/OpenAPIClient/Object/UNISWAPV2ETHEREUMLiquidityPoolDTO.pm
 lib/WWW/OpenAPIClient/Object/UNISWAPV2ETHEREUMSwapDTO.pm
@@ -99,6 +107,10 @@ t/CRYPTOPUNKSMarketPlaceDTOTest.t
 t/CRYPTOPUNKSMarketplaceDailySnapshotDTOTest.t
 t/CRYPTOPUNKSTradeDTOTest.t
 t/CRYPTOPUNKSUserDTOTest.t
+t/CURVEFINANCEETHEREUMApiTest.t
+t/CURVEFINANCEETHEREUMLiquidityPoolDTOTest.t
+t/CURVEFINANCEETHEREUMSwapDTOTest.t
+t/CURVEFINANCEETHEREUMTokenDTOTest.t
 t/MetadataApiTest.t
 t/TransactionsETradeAggressiveSideTest.t
 t/UNISWAPV2ETHEREUMApiTest.t

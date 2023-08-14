@@ -11,6 +11,9 @@ from openapi_client.apis.paths.v1_dapps_cryptopunks_marketplace_daily_snapshots_
 from openapi_client.apis.paths.v1_dapps_cryptopunks_market_places_current import V1DappsCryptopunksMarketPlacesCurrent
 from openapi_client.apis.paths.v1_dapps_cryptopunks_trades_current import V1DappsCryptopunksTradesCurrent
 from openapi_client.apis.paths.v1_dapps_cryptopunks_users_current import V1DappsCryptopunksUsersCurrent
+from openapi_client.apis.paths.v1_dapps_curve_finance_ethereum_liquidity_pools_current import V1DappsCurveFinanceEthereumLiquidityPoolsCurrent
+from openapi_client.apis.paths.v1_dapps_curve_finance_ethereum_swaps_current import V1DappsCurveFinanceEthereumSwapsCurrent
+from openapi_client.apis.paths.v1_dapps_curve_finance_ethereum_tokens_current import V1DappsCurveFinanceEthereumTokensCurrent
 from openapi_client.apis.paths.metadata_dapps import MetadataDapps
 from openapi_client.apis.paths.metadata_dapps_dapp_name import MetadataDappsDappName
 from openapi_client.apis.paths.v1_dapps_uniswap_v2_ethereum_liquidity_pools_current import V1DappsUniswapV2EthereumLiquidityPoolsCurrent
@@ -53,6 +56,9 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.V1_DAPPS_CRYPTOPUNKS_MARKET_PLACES_CURRENT: V1DappsCryptopunksMarketPlacesCurrent,
         PathValues.V1_DAPPS_CRYPTOPUNKS_TRADES_CURRENT: V1DappsCryptopunksTradesCurrent,
         PathValues.V1_DAPPS_CRYPTOPUNKS_USERS_CURRENT: V1DappsCryptopunksUsersCurrent,
+        PathValues.V1_DAPPS_CURVEFINANCEETHEREUM_LIQUIDITY_POOLS_CURRENT: V1DappsCurveFinanceEthereumLiquidityPoolsCurrent,
+        PathValues.V1_DAPPS_CURVEFINANCEETHEREUM_SWAPS_CURRENT: V1DappsCurveFinanceEthereumSwapsCurrent,
+        PathValues.V1_DAPPS_CURVEFINANCEETHEREUM_TOKENS_CURRENT: V1DappsCurveFinanceEthereumTokensCurrent,
         PathValues.METADATA_DAPPS: MetadataDapps,
         PathValues.METADATA_DAPPS_DAPP_NAME: MetadataDappsDappName,
         PathValues.V1_DAPPS_UNISWAPV2ETHEREUM_LIQUIDITY_POOLS_CURRENT: V1DappsUniswapV2EthereumLiquidityPoolsCurrent,
@@ -96,6 +102,9 @@ path_to_api = PathToApi(
         PathValues.V1_DAPPS_CRYPTOPUNKS_MARKET_PLACES_CURRENT: V1DappsCryptopunksMarketPlacesCurrent,
         PathValues.V1_DAPPS_CRYPTOPUNKS_TRADES_CURRENT: V1DappsCryptopunksTradesCurrent,
         PathValues.V1_DAPPS_CRYPTOPUNKS_USERS_CURRENT: V1DappsCryptopunksUsersCurrent,
+        PathValues.V1_DAPPS_CURVEFINANCEETHEREUM_LIQUIDITY_POOLS_CURRENT: V1DappsCurveFinanceEthereumLiquidityPoolsCurrent,
+        PathValues.V1_DAPPS_CURVEFINANCEETHEREUM_SWAPS_CURRENT: V1DappsCurveFinanceEthereumSwapsCurrent,
+        PathValues.V1_DAPPS_CURVEFINANCEETHEREUM_TOKENS_CURRENT: V1DappsCurveFinanceEthereumTokensCurrent,
         PathValues.METADATA_DAPPS: MetadataDapps,
         PathValues.METADATA_DAPPS_DAPP_NAME: MetadataDappsDappName,
         PathValues.V1_DAPPS_UNISWAPV2ETHEREUM_LIQUIDITY_POOLS_CURRENT: V1DappsUniswapV2EthereumLiquidityPoolsCurrent,

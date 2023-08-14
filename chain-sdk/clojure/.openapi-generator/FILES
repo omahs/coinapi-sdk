@@ -3,6 +3,7 @@
 git_push.sh
 project.clj
 src/on_chain_dapps_rest_api/api/cryptopunks.clj
+src/on_chain_dapps_rest_api/api/curve_finance_ethereum.clj
 src/on_chain_dapps_rest_api/api/metadata.clj
 src/on_chain_dapps_rest_api/api/uniswap_v_ethereum.clj
 src/on_chain_dapps_rest_api/core.clj
@@ -15,6 +16,9 @@ src/on_chain_dapps_rest_api/specs/cryptopunks/market_place_dto.clj
 src/on_chain_dapps_rest_api/specs/cryptopunks/marketplace_daily_snapshot_dto.clj
 src/on_chain_dapps_rest_api/specs/cryptopunks/trade_dto.clj
 src/on_chain_dapps_rest_api/specs/cryptopunks/user_dto.clj
+src/on_chain_dapps_rest_api/specs/curve_finance_ethereum/liquidity_pool_dto.clj
+src/on_chain_dapps_rest_api/specs/curve_finance_ethereum/swap_dto.clj
+src/on_chain_dapps_rest_api/specs/curve_finance_ethereum/token_dto.clj
 src/on_chain_dapps_rest_api/specs/transactions/e_trade_aggressive_side.clj
 src/on_chain_dapps_rest_api/specs/uniswap_v2_ethereum/liquidity_pool_dto.clj
 src/on_chain_dapps_rest_api/specs/uniswap_v2_ethereum/swap_dto.clj

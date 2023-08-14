@@ -55,7 +55,7 @@
 #' @field last_snapshot_hour_id Hour ID of the most recent hourly snapshot. integer [optional]
 #' @field last_update_timestamp Timestamp of the last time this entity was updated. character [optional]
 #' @field last_update_block_number Block number of the last time this entity was updated. character [optional]
-#' @field evaluated_ask Evaluated ask value of the liquidity pool. numeric [optional]
+#' @field evaluated_ask  numeric [optional]
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
@@ -164,7 +164,7 @@ UNISWAPV3ETHEREUMLiquidityPoolDTO <- R6::R6Class(
     #' @param last_snapshot_hour_id Hour ID of the most recent hourly snapshot.
     #' @param last_update_timestamp Timestamp of the last time this entity was updated.
     #' @param last_update_block_number Block number of the last time this entity was updated.
-    #' @param evaluated_ask Evaluated ask value of the liquidity pool.
+    #' @param evaluated_ask 
     #' @param ... Other optional arguments.
     #' @export
     initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `vid` = NULL, `block_range` = NULL, `id` = NULL, `protocol` = NULL, `name` = NULL, `symbol` = NULL, `liquidity_token` = NULL, `input_tokens` = NULL, `reward_tokens` = NULL, `fees` = NULL, `is_single_sided` = NULL, `created_timestamp` = NULL, `created_block_number` = NULL, `tick` = NULL, `total_value_locked_usd` = NULL, `total_liquidity` = NULL, `total_liquidity_usd` = NULL, `active_liquidity` = NULL, `active_liquidity_usd` = NULL, `uncollected_protocol_side_token_amounts` = NULL, `uncollected_protocol_side_values_usd` = NULL, `uncollected_supply_side_token_amounts` = NULL, `uncollected_supply_side_values_usd` = NULL, `cumulative_supply_side_revenue_usd` = NULL, `cumulative_protocol_side_revenue_usd` = NULL, `cumulative_total_revenue_usd` = NULL, `cumulative_volume_by_token_amount` = NULL, `cumulative_volume_by_token_usd` = NULL, `cumulative_volume_usd` = NULL, `input_token_balances` = NULL, `input_token_balances_usd` = NULL, `input_token_weights` = NULL, `staked_output_token_amount` = NULL, `reward_token_emissions_amount` = NULL, `reward_token_emissions_usd` = NULL, `cumulative_deposit_count` = NULL, `cumulative_withdraw_count` = NULL, `cumulative_swap_count` = NULL, `position_count` = NULL, `open_position_count` = NULL, `closed_position_count` = NULL, `last_snapshot_day_id` = NULL, `last_snapshot_hour_id` = NULL, `last_update_timestamp` = NULL, `last_update_block_number` = NULL, `evaluated_ask` = NULL, ...) {

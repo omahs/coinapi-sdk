@@ -14,6 +14,7 @@ include/CppRestOpenAPIClient/ModelBase.h
 include/CppRestOpenAPIClient/MultipartFormData.h
 include/CppRestOpenAPIClient/Object.h
 include/CppRestOpenAPIClient/api/CRYPTOPUNKSApi.h
+include/CppRestOpenAPIClient/api/CURVEFINANCEETHEREUMApi.h
 include/CppRestOpenAPIClient/api/MetadataApi.h
 include/CppRestOpenAPIClient/api/UNISWAPV2ETHEREUMApi.h
 include/CppRestOpenAPIClient/api/UNISWAPV3ETHEREUMApi.h
@@ -26,6 +27,9 @@ include/CppRestOpenAPIClient/model/CRYPTOPUNKS_MarketPlaceDTO.h
 include/CppRestOpenAPIClient/model/CRYPTOPUNKS_MarketplaceDailySnapshotDTO.h
 include/CppRestOpenAPIClient/model/CRYPTOPUNKS_TradeDTO.h
 include/CppRestOpenAPIClient/model/CRYPTOPUNKS_UserDTO.h
+include/CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_LiquidityPoolDTO.h
+include/CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_SwapDTO.h
+include/CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_TokenDTO.h
 include/CppRestOpenAPIClient/model/Transactions_ETradeAggressiveSide.h
 include/CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_LiquidityPoolDTO.h
 include/CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_SwapDTO.h
@@ -62,6 +66,7 @@ src/ModelBase.cpp
 src/MultipartFormData.cpp
 src/Object.cpp
 src/api/CRYPTOPUNKSApi.cpp
+src/api/CURVEFINANCEETHEREUMApi.cpp
 src/api/MetadataApi.cpp
 src/api/UNISWAPV2ETHEREUMApi.cpp
 src/api/UNISWAPV3ETHEREUMApi.cpp
@@ -74,6 +79,9 @@ src/model/CRYPTOPUNKS_MarketPlaceDTO.cpp
 src/model/CRYPTOPUNKS_MarketplaceDailySnapshotDTO.cpp
 src/model/CRYPTOPUNKS_TradeDTO.cpp
 src/model/CRYPTOPUNKS_UserDTO.cpp
+src/model/CURVE_FINANCE_ETHEREUM_LiquidityPoolDTO.cpp
+src/model/CURVE_FINANCE_ETHEREUM_SwapDTO.cpp
+src/model/CURVE_FINANCE_ETHEREUM_TokenDTO.cpp
 src/model/Transactions_ETradeAggressiveSide.cpp
 src/model/UNISWAP_V2_ETHEREUM_LiquidityPoolDTO.cpp
 src/model/UNISWAP_V2_ETHEREUM_SwapDTO.cpp

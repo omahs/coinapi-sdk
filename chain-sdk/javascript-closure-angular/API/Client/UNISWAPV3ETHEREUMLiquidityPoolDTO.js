@@ -341,7 +341,7 @@ API.Client.UNISWAPV3ETHEREUMLiquidityPoolDTO.prototype.lastUpdateTimestamp;
 API.Client.UNISWAPV3ETHEREUMLiquidityPoolDTO.prototype.lastUpdateBlockNumber;
 
 /**
- * Evaluated ask value of the liquidity pool.
+ * 
  * @type {!number}
  * @export
  */

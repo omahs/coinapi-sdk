@@ -9,6 +9,10 @@ API/Client/CRYPTOPUNKSMarketPlaceDTO.js
 API/Client/CRYPTOPUNKSMarketplaceDailySnapshotDTO.js
 API/Client/CRYPTOPUNKSTradeDTO.js
 API/Client/CRYPTOPUNKSUserDTO.js
+API/Client/CURVEFINANCEETHEREUMApi.js
+API/Client/CURVEFINANCEETHEREUMLiquidityPoolDTO.js
+API/Client/CURVEFINANCEETHEREUMSwapDTO.js
+API/Client/CURVEFINANCEETHEREUMTokenDTO.js
 API/Client/MetadataApi.js
 API/Client/TransactionsETradeAggressiveSide.js
 API/Client/UNISWAPV2ETHEREUMApi.js

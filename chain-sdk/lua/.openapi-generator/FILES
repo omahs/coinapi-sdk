@@ -3,6 +3,7 @@
 git_push.sh
 openapiclient-1.0.0-1.rockspec
 openapiclient/api/cryptopunks_api.lua
+openapiclient/api/curvefinanceethereum_api.lua
 openapiclient/api/metadata_api.lua
 openapiclient/api/uniswapv2_ethereum_api.lua
 openapiclient/api/uniswapv3_ethereum_api.lua
@@ -15,6 +16,9 @@ openapiclient/model/cryptopunks_market_place_dto.lua
 openapiclient/model/cryptopunks_marketplace_daily_snapshot_dto.lua
 openapiclient/model/cryptopunks_trade_dto.lua
 openapiclient/model/cryptopunks_user_dto.lua
+openapiclient/model/curve_finance_ethereum_liquidity_pool_dto.lua
+openapiclient/model/curve_finance_ethereum_swap_dto.lua
+openapiclient/model/curve_finance_ethereum_token_dto.lua
 openapiclient/model/transactions_e_trade_aggressive_side.lua
 openapiclient/model/uniswap_v2_ethereum_liquidity_pool_dto.lua
 openapiclient/model/uniswap_v2_ethereum_swap_dto.lua
@@ -52,6 +56,10 @@ spec/cryptopunks_market_place_dto_spec.lua
 spec/cryptopunks_marketplace_daily_snapshot_dto_spec.lua
 spec/cryptopunks_trade_dto_spec.lua
 spec/cryptopunks_user_dto_spec.lua
+spec/curve_finance_ethereum_liquidity_pool_dto_spec.lua
+spec/curve_finance_ethereum_swap_dto_spec.lua
+spec/curve_finance_ethereum_token_dto_spec.lua
+spec/curvefinanceethereum_api_spec.lua
 spec/metadata_api_spec.lua
 spec/transactions_e_trade_aggressive_side_spec.lua
 spec/uniswap_v2_ethereum_liquidity_pool_dto_spec.lua

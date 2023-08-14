@@ -70,7 +70,7 @@ import com.squareup.moshi.JsonClass
  * @param lastSnapshotHourId Hour ID of the most recent hourly snapshot.
  * @param lastUpdateTimestamp Timestamp of the last time this entity was updated.
  * @param lastUpdateBlockNumber Block number of the last time this entity was updated.
- * @param evaluatedAsk Evaluated ask value of the liquidity pool.
+ * @param evaluatedAsk 
  */
 
 
@@ -266,7 +266,7 @@ data class UNISWAPV3ETHEREUMLiquidityPoolDTO (
     @Json(name = "last_update_block_number")
     val lastUpdateBlockNumber: kotlin.String? = null,
 
-    /* Evaluated ask value of the liquidity pool. */
+    /*  */
     @Json(name = "evaluated_ask")
     val evaluatedAsk: kotlin.Double? = null
 

@@ -3,6 +3,7 @@ README.md
 build.gradle
 src/main/groovy/org/openapitools/api/ApiUtils.groovy
 src/main/groovy/org/openapitools/api/CryptopunksApi.groovy
+src/main/groovy/org/openapitools/api/CurveFinanceEthereumApi.groovy
 src/main/groovy/org/openapitools/api/MetadataApi.groovy
 src/main/groovy/org/openapitools/api/UniswapV2EthereumApi.groovy
 src/main/groovy/org/openapitools/api/UniswapV3EthereumApi.groovy
@@ -15,6 +16,9 @@ src/main/groovy/org/openapitools/model/CRYPTOPUNKSMarketPlaceDTO.groovy
 src/main/groovy/org/openapitools/model/CRYPTOPUNKSMarketplaceDailySnapshotDTO.groovy
 src/main/groovy/org/openapitools/model/CRYPTOPUNKSTradeDTO.groovy
 src/main/groovy/org/openapitools/model/CRYPTOPUNKSUserDTO.groovy
+src/main/groovy/org/openapitools/model/CURVEFINANCEETHEREUMLiquidityPoolDTO.groovy
+src/main/groovy/org/openapitools/model/CURVEFINANCEETHEREUMSwapDTO.groovy
+src/main/groovy/org/openapitools/model/CURVEFINANCEETHEREUMTokenDTO.groovy
 src/main/groovy/org/openapitools/model/TransactionsETradeAggressiveSide.groovy
 src/main/groovy/org/openapitools/model/UNISWAPV2ETHEREUMLiquidityPoolDTO.groovy
 src/main/groovy/org/openapitools/model/UNISWAPV2ETHEREUMSwapDTO.groovy

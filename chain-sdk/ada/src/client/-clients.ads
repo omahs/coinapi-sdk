@@ -69,6 +69,24 @@ package .Clients is
       (Client : in out Client_Type;
        Result : out .Models.CRYPTOPUNKSUserDTO_Type_Vectors.Vector);
 
+   --  LiquidityPools (current)
+   --  Gets liquidityPools.
+   procedure C_URVEFINANCEETHEREUM_Liquidity_Pools__current
+      (Client : in out Client_Type;
+       Result : out .Models.CURVEFINANCEETHEREUMLiquidityPoolDTO_Type_Vectors.Vector);
+
+   --  Swaps (current)
+   --  Gets swaps.
+   procedure C_URVEFINANCEETHEREUM_Swaps__current
+      (Client : in out Client_Type;
+       Result : out .Models.CURVEFINANCEETHEREUMSwapDTO_Type_Vectors.Vector);
+
+   --  Tokens (current)
+   --  Gets tokens.
+   procedure C_URVEFINANCEETHEREUM_Tokens__current
+      (Client : in out Client_Type;
+       Result : out .Models.CURVEFINANCEETHEREUMTokenDTO_Type_Vectors.Vector);
+
    --  List all chains.
    procedure Metadata_Chains_Get
       (Client : in out Client_Type);

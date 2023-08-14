@@ -60,7 +60,7 @@ part 'uniswapv3_ethereum_liquidity_pool_dto.g.dart';
 /// * [lastSnapshotHourId] - Hour ID of the most recent hourly snapshot.
 /// * [lastUpdateTimestamp] - Timestamp of the last time this entity was updated.
 /// * [lastUpdateBlockNumber] - Block number of the last time this entity was updated.
-/// * [evaluatedAsk] - Evaluated ask value of the liquidity pool.
+/// * [evaluatedAsk] - 
 @BuiltValue()
 abstract class UNISWAPV3ETHEREUMLiquidityPoolDTO implements Built<UNISWAPV3ETHEREUMLiquidityPoolDTO, UNISWAPV3ETHEREUMLiquidityPoolDTOBuilder> {
   @BuiltValueField(wireName: r'entry_time')
@@ -253,7 +253,7 @@ abstract class UNISWAPV3ETHEREUMLiquidityPoolDTO implements Built<UNISWAPV3ETHER
   @BuiltValueField(wireName: r'last_update_block_number')
   String? get lastUpdateBlockNumber;
 
-  /// Evaluated ask value of the liquidity pool.
+  /// 
   @BuiltValueField(wireName: r'evaluated_ask')
   double? get evaluatedAsk;
 

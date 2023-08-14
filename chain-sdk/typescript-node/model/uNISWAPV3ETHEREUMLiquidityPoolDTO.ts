@@ -203,7 +203,7 @@ export class UNISWAPV3ETHEREUMLiquidityPoolDTO {
     */
     'lastUpdateBlockNumber'?: string | null;
     /**
-    * Evaluated ask value of the liquidity pool.
+    * 
     */
     'evaluatedAsk'?: number;
 

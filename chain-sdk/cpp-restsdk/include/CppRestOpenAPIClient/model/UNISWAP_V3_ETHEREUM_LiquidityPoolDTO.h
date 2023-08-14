@@ -488,7 +488,7 @@ public:
     void setLastUpdateBlockNumber(const utility::string_t& value);
 
     /// <summary>
-    /// Evaluated ask value of the liquidity pool.
+    /// 
     /// </summary>
     double getEvaluatedAsk() const;
     bool evaluatedAskIsSet() const;
