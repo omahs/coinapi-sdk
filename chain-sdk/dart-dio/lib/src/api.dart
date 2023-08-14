@@ -12,6 +12,7 @@ import 'package:openapi/src/auth/oauth.dart';
 import 'package:openapi/src/api/cryptopunks_api.dart';
 import 'package:openapi/src/api/curvefinanceethereum_api.dart';
 import 'package:openapi/src/api/metadata_api.dart';
+import 'package:openapi/src/api/sushiswapv3_ethereum_api.dart';
 import 'package:openapi/src/api/uniswapv2_ethereum_api.dart';
 import 'package:openapi/src/api/uniswapv3_ethereum_api.dart';
 
@@ -85,6 +86,12 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   MetadataApi getMetadataApi() {
     return MetadataApi(dio, serializers);
+  }
+
+  /// Get SUSHISWAPV3ETHEREUMApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  SUSHISWAPV3ETHEREUMApi getSUSHISWAPV3ETHEREUMApi() {
+    return SUSHISWAPV3ETHEREUMApi(dio, serializers);
   }
 
   /// Get UNISWAPV2ETHEREUMApi instance, base route and serializer can be overridden by a given but be careful,

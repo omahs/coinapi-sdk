@@ -17,6 +17,10 @@ src/openapi_curve_finance_ethereum_swap_dto.erl
 src/openapi_curve_finance_ethereum_token_dto.erl
 src/openapi_curvefinanceethereum_api.erl
 src/openapi_metadata_api.erl
+src/openapi_sushiswap_v3_ethereum_liquidity_pool_dto.erl
+src/openapi_sushiswap_v3_ethereum_swap_dto.erl
+src/openapi_sushiswap_v3_ethereum_token_dto.erl
+src/openapi_sushiswapv3_ethereum_api.erl
 src/openapi_transactions_e_trade_aggressive_side.erl
 src/openapi_uniswap_v2_ethereum_liquidity_pool_dto.erl
 src/openapi_uniswap_v2_ethereum_swap_dto.erl

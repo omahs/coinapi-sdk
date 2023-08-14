@@ -7,6 +7,7 @@ src/Api/Data.elm
 src/Api/Request/CRYPTOPUNKS.elm
 src/Api/Request/CURVEFINANCEETHEREUM.elm
 src/Api/Request/Metadata.elm
+src/Api/Request/SUSHISWAPV3ETHEREUM.elm
 src/Api/Request/UNISWAPV2ETHEREUM.elm
 src/Api/Request/UNISWAPV3ETHEREUM.elm
 src/Api/Time.elm

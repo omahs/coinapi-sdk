@@ -7,6 +7,7 @@ composer.json
 docs/Api/CRYPTOPUNKSApi.md
 docs/Api/CURVEFINANCEETHEREUMApi.md
 docs/Api/MetadataApi.md
+docs/Api/SUSHISWAPV3ETHEREUMApi.md
 docs/Api/UNISWAPV2ETHEREUMApi.md
 docs/Api/UNISWAPV3ETHEREUMApi.md
 docs/Model/CRYPTOPUNKSBidDTO.md
@@ -21,6 +22,9 @@ docs/Model/CRYPTOPUNKSUserDTO.md
 docs/Model/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
 docs/Model/CURVEFINANCEETHEREUMSwapDTO.md
 docs/Model/CURVEFINANCEETHEREUMTokenDTO.md
+docs/Model/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.md
+docs/Model/SUSHISWAPV3ETHEREUMSwapDTO.md
+docs/Model/SUSHISWAPV3ETHEREUMTokenDTO.md
 docs/Model/TransactionsETradeAggressiveSide.md
 docs/Model/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
 docs/Model/UNISWAPV2ETHEREUMSwapDTO.md
@@ -52,6 +56,7 @@ git_push.sh
 lib/Api/CRYPTOPUNKSApi.php
 lib/Api/CURVEFINANCEETHEREUMApi.php
 lib/Api/MetadataApi.php
+lib/Api/SUSHISWAPV3ETHEREUMApi.php
 lib/Api/UNISWAPV2ETHEREUMApi.php
 lib/Api/UNISWAPV3ETHEREUMApi.php
 lib/ApiException.php
@@ -70,6 +75,9 @@ lib/Model/CURVEFINANCEETHEREUMLiquidityPoolDTO.php
 lib/Model/CURVEFINANCEETHEREUMSwapDTO.php
 lib/Model/CURVEFINANCEETHEREUMTokenDTO.php
 lib/Model/ModelInterface.php
+lib/Model/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.php
+lib/Model/SUSHISWAPV3ETHEREUMSwapDTO.php
+lib/Model/SUSHISWAPV3ETHEREUMTokenDTO.php
 lib/Model/TransactionsETradeAggressiveSide.php
 lib/Model/UNISWAPV2ETHEREUMLiquidityPoolDTO.php
 lib/Model/UNISWAPV2ETHEREUMSwapDTO.php
@@ -102,6 +110,7 @@ phpunit.xml.dist
 test/Api/CRYPTOPUNKSApiTest.php
 test/Api/CURVEFINANCEETHEREUMApiTest.php
 test/Api/MetadataApiTest.php
+test/Api/SUSHISWAPV3ETHEREUMApiTest.php
 test/Api/UNISWAPV2ETHEREUMApiTest.php
 test/Api/UNISWAPV3ETHEREUMApiTest.php
 test/Model/CRYPTOPUNKSBidDTOTest.php
@@ -116,6 +125,9 @@ test/Model/CRYPTOPUNKSUserDTOTest.php
 test/Model/CURVEFINANCEETHEREUMLiquidityPoolDTOTest.php
 test/Model/CURVEFINANCEETHEREUMSwapDTOTest.php
 test/Model/CURVEFINANCEETHEREUMTokenDTOTest.php
+test/Model/SUSHISWAPV3ETHEREUMLiquidityPoolDTOTest.php
+test/Model/SUSHISWAPV3ETHEREUMSwapDTOTest.php
+test/Model/SUSHISWAPV3ETHEREUMTokenDTOTest.php
 test/Model/TransactionsETradeAggressiveSideTest.php
 test/Model/UNISWAPV2ETHEREUMLiquidityPoolDTOTest.php
 test/Model/UNISWAPV2ETHEREUMSwapDTOTest.php

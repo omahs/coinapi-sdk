@@ -17,6 +17,10 @@ docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
 docs/CURVEFINANCEETHEREUMSwapDTO.md
 docs/CURVEFINANCEETHEREUMTokenDTO.md
 docs/MetadataApi.md
+docs/SUSHISWAPV3ETHEREUMApi.md
+docs/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.md
+docs/SUSHISWAPV3ETHEREUMSwapDTO.md
+docs/SUSHISWAPV3ETHEREUMTokenDTO.md
 docs/TransactionsETradeAggressiveSide.md
 docs/UNISWAPV2ETHEREUMApi.md
 docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
@@ -60,6 +64,7 @@ src/main/java/org/openapitools/client/Pair.java
 src/main/java/org/openapitools/client/api/CRYPTOPUNKSApi.java
 src/main/java/org/openapitools/client/api/CURVEFINANCEETHEREUMApi.java
 src/main/java/org/openapitools/client/api/MetadataApi.java
+src/main/java/org/openapitools/client/api/SUSHISWAPV3ETHEREUMApi.java
 src/main/java/org/openapitools/client/api/UNISWAPV2ETHEREUMApi.java
 src/main/java/org/openapitools/client/api/UNISWAPV3ETHEREUMApi.java
 src/main/java/org/openapitools/client/auth/ApiKeyAuth.java
@@ -77,6 +82,9 @@ src/main/java/org/openapitools/client/model/CRYPTOPUNKSUserDTO.java
 src/main/java/org/openapitools/client/model/CURVEFINANCEETHEREUMLiquidityPoolDTO.java
 src/main/java/org/openapitools/client/model/CURVEFINANCEETHEREUMSwapDTO.java
 src/main/java/org/openapitools/client/model/CURVEFINANCEETHEREUMTokenDTO.java
+src/main/java/org/openapitools/client/model/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.java
+src/main/java/org/openapitools/client/model/SUSHISWAPV3ETHEREUMSwapDTO.java
+src/main/java/org/openapitools/client/model/SUSHISWAPV3ETHEREUMTokenDTO.java
 src/main/java/org/openapitools/client/model/TransactionsETradeAggressiveSide.java
 src/main/java/org/openapitools/client/model/UNISWAPV2ETHEREUMLiquidityPoolDTO.java
 src/main/java/org/openapitools/client/model/UNISWAPV2ETHEREUMSwapDTO.java

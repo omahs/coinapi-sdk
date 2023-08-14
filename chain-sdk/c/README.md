@@ -80,6 +80,9 @@ Category | Method | HTTP request | Description
 *MetadataAPI* | [**MetadataAPI_metadataChainsGet**](docs/MetadataAPI.md#MetadataAPI_metadataChainsGet) | **GET** /metadata/chains | List all chains.
 *MetadataAPI* | [**MetadataAPI_metadataDappsDappNameGet**](docs/MetadataAPI.md#MetadataAPI_metadataDappsDappNameGet) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
 *MetadataAPI* | [**MetadataAPI_metadataDappsGet**](docs/MetadataAPI.md#MetadataAPI_metadataDappsGet) | **GET** /metadata/dapps | List all decentralized applications.
+*SUSHISWAPV3ETHEREUMAPI* | [**SUSHISWAPV3ETHEREUMAPI_sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent**](docs/SUSHISWAPV3ETHEREUMAPI.md#SUSHISWAPV3ETHEREUMAPI_sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent) | **GET** /v1/dapps/sushiswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
+*SUSHISWAPV3ETHEREUMAPI* | [**SUSHISWAPV3ETHEREUMAPI_sUSHISWAPV3ETHEREUMSwapsCurrent**](docs/SUSHISWAPV3ETHEREUMAPI.md#SUSHISWAPV3ETHEREUMAPI_sUSHISWAPV3ETHEREUMSwapsCurrent) | **GET** /v1/dapps/sushiswap-v3-ethereum/swaps/current | Swaps (current)
+*SUSHISWAPV3ETHEREUMAPI* | [**SUSHISWAPV3ETHEREUMAPI_sUSHISWAPV3ETHEREUMTokensCurrent**](docs/SUSHISWAPV3ETHEREUMAPI.md#SUSHISWAPV3ETHEREUMAPI_sUSHISWAPV3ETHEREUMTokensCurrent) | **GET** /v1/dapps/sushiswap-v3-ethereum/tokens/current | Tokens (current)
 *UNISWAPV2ETHEREUMAPI* | [**UNISWAPV2ETHEREUMAPI_uNISWAPV2ETHEREUMLiquidityPoolsCurrent**](docs/UNISWAPV2ETHEREUMAPI.md#UNISWAPV2ETHEREUMAPI_uNISWAPV2ETHEREUMLiquidityPoolsCurrent) | **GET** /v1/dapps/uniswap-v2-ethereum/liquidityPools/current | LiquidityPools (current)
 *UNISWAPV2ETHEREUMAPI* | [**UNISWAPV2ETHEREUMAPI_uNISWAPV2ETHEREUMSwapsCurrent**](docs/UNISWAPV2ETHEREUMAPI.md#UNISWAPV2ETHEREUMAPI_uNISWAPV2ETHEREUMSwapsCurrent) | **GET** /v1/dapps/uniswap-v2-ethereum/swaps/current | Swaps (current)
 *UNISWAPV2ETHEREUMAPI* | [**UNISWAPV2ETHEREUMAPI_uNISWAPV2ETHEREUMTokensCurrent**](docs/UNISWAPV2ETHEREUMAPI.md#UNISWAPV2ETHEREUMAPI_uNISWAPV2ETHEREUMTokensCurrent) | **GET** /v1/dapps/uniswap-v2-ethereum/tokens/current | Tokens (current)
@@ -122,6 +125,9 @@ Category | Method | HTTP request | Description
  - [curve_finance_ethereum_liquidity_pool_dto_t](docs/curve_finance_ethereum_liquidity_pool_dto.md)
  - [curve_finance_ethereum_swap_dto_t](docs/curve_finance_ethereum_swap_dto.md)
  - [curve_finance_ethereum_token_dto_t](docs/curve_finance_ethereum_token_dto.md)
+ - [sushiswap_v3_ethereum_liquidity_pool_dto_t](docs/sushiswap_v3_ethereum_liquidity_pool_dto.md)
+ - [sushiswap_v3_ethereum_swap_dto_t](docs/sushiswap_v3_ethereum_swap_dto.md)
+ - [sushiswap_v3_ethereum_token_dto_t](docs/sushiswap_v3_ethereum_token_dto.md)
  - [transactions_e_trade_aggressive_side_t](docs/transactions_e_trade_aggressive_side.md)
  - [uniswap_v2_ethereum_liquidity_pool_dto_t](docs/uniswap_v2_ethereum_liquidity_pool_dto.md)
  - [uniswap_v2_ethereum_swap_dto_t](docs/uniswap_v2_ethereum_swap_dto.md)

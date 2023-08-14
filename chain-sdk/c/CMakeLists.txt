@@ -66,6 +66,9 @@ set(SRCS
     model/curve_finance_ethereum_liquidity_pool_dto.c
     model/curve_finance_ethereum_swap_dto.c
     model/curve_finance_ethereum_token_dto.c
+    model/sushiswap_v3_ethereum_liquidity_pool_dto.c
+    model/sushiswap_v3_ethereum_swap_dto.c
+    model/sushiswap_v3_ethereum_token_dto.c
     model/transactions_e_trade_aggressive_side.c
     model/uniswap_v2_ethereum_liquidity_pool_dto.c
     model/uniswap_v2_ethereum_swap_dto.c
@@ -96,6 +99,7 @@ set(SRCS
     api/CRYPTOPUNKSAPI.c
     api/CURVEFINANCEETHEREUMAPI.c
     api/MetadataAPI.c
+    api/SUSHISWAPV3ETHEREUMAPI.c
     api/UNISWAPV2ETHEREUMAPI.c
     api/UNISWAPV3ETHEREUMAPI.c
 
@@ -120,6 +124,9 @@ set(HDRS
     model/curve_finance_ethereum_liquidity_pool_dto.h
     model/curve_finance_ethereum_swap_dto.h
     model/curve_finance_ethereum_token_dto.h
+    model/sushiswap_v3_ethereum_liquidity_pool_dto.h
+    model/sushiswap_v3_ethereum_swap_dto.h
+    model/sushiswap_v3_ethereum_token_dto.h
     model/transactions_e_trade_aggressive_side.h
     model/uniswap_v2_ethereum_liquidity_pool_dto.h
     model/uniswap_v2_ethereum_swap_dto.h
@@ -150,6 +157,7 @@ set(HDRS
     api/CRYPTOPUNKSAPI.h
     api/CURVEFINANCEETHEREUMAPI.h
     api/MetadataAPI.h
+    api/SUSHISWAPV3ETHEREUMAPI.h
     api/UNISWAPV2ETHEREUMAPI.h
     api/UNISWAPV3ETHEREUMAPI.h
 
@@ -236,6 +244,7 @@ set(HDRS "")
 #    unit-tests/manual-CRYPTOPUNKSAPI.c
 #    unit-tests/manual-CURVEFINANCEETHEREUMAPI.c
 #    unit-tests/manual-MetadataAPI.c
+#    unit-tests/manual-SUSHISWAPV3ETHEREUMAPI.c
 #    unit-tests/manual-UNISWAPV2ETHEREUMAPI.c
 #    unit-tests/manual-UNISWAPV3ETHEREUMAPI.c
 #)

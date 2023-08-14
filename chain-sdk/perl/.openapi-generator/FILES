@@ -18,6 +18,10 @@ docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
 docs/CURVEFINANCEETHEREUMSwapDTO.md
 docs/CURVEFINANCEETHEREUMTokenDTO.md
 docs/MetadataApi.md
+docs/SUSHISWAPV3ETHEREUMApi.md
+docs/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.md
+docs/SUSHISWAPV3ETHEREUMSwapDTO.md
+docs/SUSHISWAPV3ETHEREUMTokenDTO.md
 docs/TransactionsETradeAggressiveSide.md
 docs/UNISWAPV2ETHEREUMApi.md
 docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
@@ -66,6 +70,9 @@ lib/WWW/OpenAPIClient/Object/CRYPTOPUNKSUserDTO.pm
 lib/WWW/OpenAPIClient/Object/CURVEFINANCEETHEREUMLiquidityPoolDTO.pm
 lib/WWW/OpenAPIClient/Object/CURVEFINANCEETHEREUMSwapDTO.pm
 lib/WWW/OpenAPIClient/Object/CURVEFINANCEETHEREUMTokenDTO.pm
+lib/WWW/OpenAPIClient/Object/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.pm
+lib/WWW/OpenAPIClient/Object/SUSHISWAPV3ETHEREUMSwapDTO.pm
+lib/WWW/OpenAPIClient/Object/SUSHISWAPV3ETHEREUMTokenDTO.pm
 lib/WWW/OpenAPIClient/Object/TransactionsETradeAggressiveSide.pm
 lib/WWW/OpenAPIClient/Object/UNISWAPV2ETHEREUMLiquidityPoolDTO.pm
 lib/WWW/OpenAPIClient/Object/UNISWAPV2ETHEREUMSwapDTO.pm
@@ -95,6 +102,7 @@ lib/WWW/OpenAPIClient/Object/UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.pm
 lib/WWW/OpenAPIClient/Object/UNISWAPV3ETHEREUMWithdrawDTO.pm
 lib/WWW/OpenAPIClient/Role.pm
 lib/WWW/OpenAPIClient/Role/AutoDoc.pm
+lib/WWW/OpenAPIClient/SUSHISWAPV3ETHEREUMApi.pm
 lib/WWW/OpenAPIClient/UNISWAPV2ETHEREUMApi.pm
 lib/WWW/OpenAPIClient/UNISWAPV3ETHEREUMApi.pm
 t/CRYPTOPUNKSApiTest.t
@@ -112,6 +120,10 @@ t/CURVEFINANCEETHEREUMLiquidityPoolDTOTest.t
 t/CURVEFINANCEETHEREUMSwapDTOTest.t
 t/CURVEFINANCEETHEREUMTokenDTOTest.t
 t/MetadataApiTest.t
+t/SUSHISWAPV3ETHEREUMApiTest.t
+t/SUSHISWAPV3ETHEREUMLiquidityPoolDTOTest.t
+t/SUSHISWAPV3ETHEREUMSwapDTOTest.t
+t/SUSHISWAPV3ETHEREUMTokenDTOTest.t
 t/TransactionsETradeAggressiveSideTest.t
 t/UNISWAPV2ETHEREUMApiTest.t
 t/UNISWAPV2ETHEREUMLiquidityPoolDTOTest.t

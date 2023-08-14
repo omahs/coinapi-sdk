@@ -6,6 +6,7 @@ README.md
 docs/apis/tags/CRYPTOPUNKSApi.md
 docs/apis/tags/CURVEFINANCEETHEREUMApi.md
 docs/apis/tags/MetadataApi.md
+docs/apis/tags/SUSHISWAPV3ETHEREUMApi.md
 docs/apis/tags/UNISWAPV2ETHEREUMApi.md
 docs/apis/tags/UNISWAPV3ETHEREUMApi.md
 docs/models/CRYPTOPUNKSBidDTO.md
@@ -20,6 +21,9 @@ docs/models/CRYPTOPUNKSUserDTO.md
 docs/models/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
 docs/models/CURVEFINANCEETHEREUMSwapDTO.md
 docs/models/CURVEFINANCEETHEREUMTokenDTO.md
+docs/models/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.md
+docs/models/SUSHISWAPV3ETHEREUMSwapDTO.md
+docs/models/SUSHISWAPV3ETHEREUMTokenDTO.md
 docs/models/TransactionsETradeAggressiveSide.md
 docs/models/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
 docs/models/UNISWAPV2ETHEREUMSwapDTO.md
@@ -54,6 +58,7 @@ openapi_client/apis/__init__.py
 openapi_client/apis/tags/cryptopunks_api.py
 openapi_client/apis/tags/curvefinanceethereum_api.py
 openapi_client/apis/tags/metadata_api.py
+openapi_client/apis/tags/sushiswapv3_ethereum_api.py
 openapi_client/apis/tags/uniswapv2_ethereum_api.py
 openapi_client/apis/tags/uniswapv3_ethereum_api.py
 openapi_client/configuration.py
@@ -83,6 +88,12 @@ openapi_client/model/curvefinanceethereum_swap_dto.py
 openapi_client/model/curvefinanceethereum_swap_dto.pyi
 openapi_client/model/curvefinanceethereum_token_dto.py
 openapi_client/model/curvefinanceethereum_token_dto.pyi
+openapi_client/model/sushiswapv3_ethereum_liquidity_pool_dto.py
+openapi_client/model/sushiswapv3_ethereum_liquidity_pool_dto.pyi
+openapi_client/model/sushiswapv3_ethereum_swap_dto.py
+openapi_client/model/sushiswapv3_ethereum_swap_dto.pyi
+openapi_client/model/sushiswapv3_ethereum_token_dto.py
+openapi_client/model/sushiswapv3_ethereum_token_dto.pyi
 openapi_client/model/transactions_e_trade_aggressive_side.py
 openapi_client/model/transactions_e_trade_aggressive_side.pyi
 openapi_client/model/uniswapv2_ethereum_liquidity_pool_dto.py
@@ -158,6 +169,9 @@ test/test_models/test_cryptopunks_user_dto.py
 test/test_models/test_curvefinanceethereum_liquidity_pool_dto.py
 test/test_models/test_curvefinanceethereum_swap_dto.py
 test/test_models/test_curvefinanceethereum_token_dto.py
+test/test_models/test_sushiswapv3_ethereum_liquidity_pool_dto.py
+test/test_models/test_sushiswapv3_ethereum_swap_dto.py
+test/test_models/test_sushiswapv3_ethereum_token_dto.py
 test/test_models/test_transactions_e_trade_aggressive_side.py
 test/test_models/test_uniswapv2_ethereum_liquidity_pool_dto.py
 test/test_models/test_uniswapv2_ethereum_swap_dto.py

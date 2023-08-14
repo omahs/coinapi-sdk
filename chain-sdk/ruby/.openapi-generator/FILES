@@ -22,6 +22,10 @@ docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
 docs/CURVEFINANCEETHEREUMSwapDTO.md
 docs/CURVEFINANCEETHEREUMTokenDTO.md
 docs/MetadataApi.md
+docs/SUSHISWAPV3ETHEREUMApi.md
+docs/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.md
+docs/SUSHISWAPV3ETHEREUMSwapDTO.md
+docs/SUSHISWAPV3ETHEREUMTokenDTO.md
 docs/TransactionsETradeAggressiveSide.md
 docs/UNISWAPV2ETHEREUMApi.md
 docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
@@ -56,6 +60,7 @@ lib/openapi_client.rb
 lib/openapi_client/api/cryptopunks_api.rb
 lib/openapi_client/api/curvefinanceethereum_api.rb
 lib/openapi_client/api/metadata_api.rb
+lib/openapi_client/api/sushiswapv3_ethereum_api.rb
 lib/openapi_client/api/uniswapv2_ethereum_api.rb
 lib/openapi_client/api/uniswapv3_ethereum_api.rb
 lib/openapi_client/api_client.rb
@@ -73,6 +78,9 @@ lib/openapi_client/models/cryptopunks_user_dto.rb
 lib/openapi_client/models/curvefinanceethereum_liquidity_pool_dto.rb
 lib/openapi_client/models/curvefinanceethereum_swap_dto.rb
 lib/openapi_client/models/curvefinanceethereum_token_dto.rb
+lib/openapi_client/models/sushiswapv3_ethereum_liquidity_pool_dto.rb
+lib/openapi_client/models/sushiswapv3_ethereum_swap_dto.rb
+lib/openapi_client/models/sushiswapv3_ethereum_token_dto.rb
 lib/openapi_client/models/transactions_e_trade_aggressive_side.rb
 lib/openapi_client/models/uniswapv2_ethereum_liquidity_pool_dto.rb
 lib/openapi_client/models/uniswapv2_ethereum_swap_dto.rb
@@ -105,6 +113,7 @@ openapi_client.gemspec
 spec/api/cryptopunks_api_spec.rb
 spec/api/curvefinanceethereum_api_spec.rb
 spec/api/metadata_api_spec.rb
+spec/api/sushiswapv3_ethereum_api_spec.rb
 spec/api/uniswapv2_ethereum_api_spec.rb
 spec/api/uniswapv3_ethereum_api_spec.rb
 spec/api_client_spec.rb
@@ -121,6 +130,9 @@ spec/models/cryptopunks_user_dto_spec.rb
 spec/models/curvefinanceethereum_liquidity_pool_dto_spec.rb
 spec/models/curvefinanceethereum_swap_dto_spec.rb
 spec/models/curvefinanceethereum_token_dto_spec.rb
+spec/models/sushiswapv3_ethereum_liquidity_pool_dto_spec.rb
+spec/models/sushiswapv3_ethereum_swap_dto_spec.rb
+spec/models/sushiswapv3_ethereum_token_dto_spec.rb
 spec/models/transactions_e_trade_aggressive_side_spec.rb
 spec/models/uniswapv2_ethereum_liquidity_pool_dto_spec.rb
 spec/models/uniswapv2_ethereum_swap_dto_spec.rb

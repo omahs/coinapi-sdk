@@ -74,6 +74,9 @@ Class | Method | HTTP request | Description
 *OASMetadataApi* | [**metadataChainsGet**](OASMetadataApi.md#metadataChainsGet) | **GET** /metadata/chains | List all chains.
 *OASMetadataApi* | [**metadataDappsDappNameGet**](OASMetadataApi.md#metadataDappsDappNameGet) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
 *OASMetadataApi* | [**metadataDappsGet**](OASMetadataApi.md#metadataDappsGet) | **GET** /metadata/dapps | List all decentralized applications.
+*OASSUSHISWAPV3ETHEREUMApi* | [**sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent**](OASSUSHISWAPV3ETHEREUMApi.md#sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent) | **GET** /v1/dapps/sushiswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
+*OASSUSHISWAPV3ETHEREUMApi* | [**sUSHISWAPV3ETHEREUMSwapsCurrent**](OASSUSHISWAPV3ETHEREUMApi.md#sUSHISWAPV3ETHEREUMSwapsCurrent) | **GET** /v1/dapps/sushiswap-v3-ethereum/swaps/current | Swaps (current)
+*OASSUSHISWAPV3ETHEREUMApi* | [**sUSHISWAPV3ETHEREUMTokensCurrent**](OASSUSHISWAPV3ETHEREUMApi.md#sUSHISWAPV3ETHEREUMTokensCurrent) | **GET** /v1/dapps/sushiswap-v3-ethereum/tokens/current | Tokens (current)
 *OASUNISWAPV2ETHEREUMApi* | [**uNISWAPV2ETHEREUMLiquidityPoolsCurrent**](OASUNISWAPV2ETHEREUMApi.md#uNISWAPV2ETHEREUMLiquidityPoolsCurrent) | **GET** /v1/dapps/uniswap-v2-ethereum/liquidityPools/current | LiquidityPools (current)
 *OASUNISWAPV2ETHEREUMApi* | [**uNISWAPV2ETHEREUMSwapsCurrent**](OASUNISWAPV2ETHEREUMApi.md#uNISWAPV2ETHEREUMSwapsCurrent) | **GET** /v1/dapps/uniswap-v2-ethereum/swaps/current | Swaps (current)
 *OASUNISWAPV2ETHEREUMApi* | [**uNISWAPV2ETHEREUMTokensCurrent**](OASUNISWAPV2ETHEREUMApi.md#uNISWAPV2ETHEREUMTokensCurrent) | **GET** /v1/dapps/uniswap-v2-ethereum/tokens/current | Tokens (current)
@@ -116,6 +119,9 @@ Class | Method | HTTP request | Description
  - [OASCURVEFINANCEETHEREUMLiquidityPool](OASCURVEFINANCEETHEREUMLiquidityPool.md)
  - [OASCURVEFINANCEETHEREUMSwapDTO](OASCURVEFINANCEETHEREUMSwapDTO.md)
  - [OASCURVEFINANCEETHEREUMTokenDTO](OASCURVEFINANCEETHEREUMTokenDTO.md)
+ - [OASSUSHISWAPV3ETHEREUMLiquidityPoolD](OASSUSHISWAPV3ETHEREUMLiquidityPoolD.md)
+ - [OASSUSHISWAPV3ETHEREUMSwapDTO](OASSUSHISWAPV3ETHEREUMSwapDTO.md)
+ - [OASSUSHISWAPV3ETHEREUMTokenDTO](OASSUSHISWAPV3ETHEREUMTokenDTO.md)
  - [OASTransactionsETradeAggressiveSide](OASTransactionsETradeAggressiveSide.md)
  - [OASUNISWAPV2ETHEREUMLiquidityPoolDTO](OASUNISWAPV2ETHEREUMLiquidityPoolDTO.md)
  - [OASUNISWAPV2ETHEREUMSwapDTO](OASUNISWAPV2ETHEREUMSwapDTO.md)

@@ -382,6 +382,121 @@ genCURVEFINANCEETHEREUMTokenDTO n =
     <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMTokenDTOLastPriceBlockNumber :: Maybe Text
     <*> arbitraryReducedMaybe n -- cURVEFINANCEETHEREUMTokenDTOTokenSymbol :: Maybe Text
   
+instance Arbitrary SUSHISWAPV3ETHEREUMLiquidityPoolDTO where
+  arbitrary = sized genSUSHISWAPV3ETHEREUMLiquidityPoolDTO
+
+genSUSHISWAPV3ETHEREUMLiquidityPoolDTO :: Int -> Gen SUSHISWAPV3ETHEREUMLiquidityPoolDTO
+genSUSHISWAPV3ETHEREUMLiquidityPoolDTO n =
+  SUSHISWAPV3ETHEREUMLiquidityPoolDTO
+    <$> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOBlockRange :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOProtocol :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOName :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOSymbol :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOLiquidityToken :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOInputTokens :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTORewardTokens :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOFees :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOIsSingleSided :: Maybe Bool
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOCreatedTimestamp :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOCreatedBlockNumber :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOTick :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOTotalValueLockedUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOTotalLiquidity :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOTotalLiquidityUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOActiveLiquidity :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOActiveLiquidityUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOUncollectedProtocolSideTokenAmounts :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOUncollectedProtocolSideValuesUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOUncollectedSupplySideTokenAmounts :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOUncollectedSupplySideValuesUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeSupplySideRevenueUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeProtocolSideRevenueUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeTotalRevenueUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeByTokenAmount :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeByTokenUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOInputTokenBalances :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOInputTokenBalancesUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOInputTokenWeights :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOStakedOutputTokenAmount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTORewardTokenEmissionsAmount :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTORewardTokenEmissionsUsd :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeDepositCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeWithdrawCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeSwapCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOPositionCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOOpenPositionCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOClosedPositionCount :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOLastSnapshotDayId :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOLastSnapshotHourId :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOLastUpdateTimestamp :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOLastUpdateBlockNumber :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMLiquidityPoolDTOEvaluatedAsk :: Maybe Double
+  
+instance Arbitrary SUSHISWAPV3ETHEREUMSwapDTO where
+  arbitrary = sized genSUSHISWAPV3ETHEREUMSwapDTO
+
+genSUSHISWAPV3ETHEREUMSwapDTO :: Int -> Gen SUSHISWAPV3ETHEREUMSwapDTO
+genSUSHISWAPV3ETHEREUMSwapDTO n =
+  SUSHISWAPV3ETHEREUMSwapDTO
+    <$> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOBlock :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOHash :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTONonce :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOLogIndex :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOGasLimit :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOGasUsed :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOGasPrice :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOProtocol :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOAccount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOPool :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOTimestamp :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOTick :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOTokenIn :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOAmountIn :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOAmountInUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOTokenOut :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOAmountOut :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOAmountOutUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOReserveAmounts :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOPoolId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOTransactionId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOEvaluatedPrice :: Maybe Double
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOEvaluatedAmount :: Maybe Double
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMSwapDTOEvaluatedAggressor :: Maybe TransactionsETradeAggressiveSide
+  
+instance Arbitrary SUSHISWAPV3ETHEREUMTokenDTO where
+  arbitrary = sized genSUSHISWAPV3ETHEREUMTokenDTO
+
+genSUSHISWAPV3ETHEREUMTokenDTO :: Int -> Gen SUSHISWAPV3ETHEREUMTokenDTO
+genSUSHISWAPV3ETHEREUMTokenDTO n =
+  SUSHISWAPV3ETHEREUMTokenDTO
+    <$> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMTokenDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMTokenDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMTokenDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMTokenDTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMTokenDTOBlockRange :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMTokenDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMTokenDTOName :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMTokenDTOSymbol :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMTokenDTODecimals :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMTokenDTOLastPriceUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMTokenDTOLastPriceBlockNumber :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMTokenDTOLastPricePool :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMTokenDTOTotalSupply :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMTokenDTOTotalValueLockedUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMTokenDTOLargePriceChangeBuffer :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMTokenDTOLargeTvlImpactBuffer :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sUSHISWAPV3ETHEREUMTokenDTOTokenSymbol :: Maybe Text
+  
 instance Arbitrary UNISWAPV2ETHEREUMLiquidityPoolDTO where
   arbitrary = sized genUNISWAPV2ETHEREUMLiquidityPoolDTO
 

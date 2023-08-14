@@ -21,6 +21,10 @@ docs/CURVEFINANCEETHEREUMTokenDTO.md
 docs/CryptopunksApi.md
 docs/CurveFinanceEthereumApi.md
 docs/MetadataApi.md
+docs/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.md
+docs/SUSHISWAPV3ETHEREUMSwapDTO.md
+docs/SUSHISWAPV3ETHEREUMTokenDTO.md
+docs/SushiswapV3EthereumApi.md
 docs/TransactionsETradeAggressiveSide.md
 docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
 docs/UNISWAPV2ETHEREUMSwapDTO.md
@@ -75,6 +79,7 @@ src/main/java/org/openapitools/client/StringUtil.java
 src/main/java/org/openapitools/client/api/CryptopunksApi.java
 src/main/java/org/openapitools/client/api/CurveFinanceEthereumApi.java
 src/main/java/org/openapitools/client/api/MetadataApi.java
+src/main/java/org/openapitools/client/api/SushiswapV3EthereumApi.java
 src/main/java/org/openapitools/client/api/UniswapV2EthereumApi.java
 src/main/java/org/openapitools/client/api/UniswapV3EthereumApi.java
 src/main/java/org/openapitools/client/auth/ApiKeyAuth.java
@@ -94,6 +99,9 @@ src/main/java/org/openapitools/client/model/CRYPTOPUNKSUserDTO.java
 src/main/java/org/openapitools/client/model/CURVEFINANCEETHEREUMLiquidityPoolDTO.java
 src/main/java/org/openapitools/client/model/CURVEFINANCEETHEREUMSwapDTO.java
 src/main/java/org/openapitools/client/model/CURVEFINANCEETHEREUMTokenDTO.java
+src/main/java/org/openapitools/client/model/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.java
+src/main/java/org/openapitools/client/model/SUSHISWAPV3ETHEREUMSwapDTO.java
+src/main/java/org/openapitools/client/model/SUSHISWAPV3ETHEREUMTokenDTO.java
 src/main/java/org/openapitools/client/model/TransactionsETradeAggressiveSide.java
 src/main/java/org/openapitools/client/model/UNISWAPV2ETHEREUMLiquidityPoolDTO.java
 src/main/java/org/openapitools/client/model/UNISWAPV2ETHEREUMSwapDTO.java
@@ -124,6 +132,7 @@ src/main/java/org/openapitools/client/model/UNISWAPV3ETHEREUMWithdrawDTO.java
 src/test/java/org/openapitools/client/api/CryptopunksApiTest.java
 src/test/java/org/openapitools/client/api/CurveFinanceEthereumApiTest.java
 src/test/java/org/openapitools/client/api/MetadataApiTest.java
+src/test/java/org/openapitools/client/api/SushiswapV3EthereumApiTest.java
 src/test/java/org/openapitools/client/api/UniswapV2EthereumApiTest.java
 src/test/java/org/openapitools/client/api/UniswapV3EthereumApiTest.java
 src/test/java/org/openapitools/client/model/CRYPTOPUNKSBidDTOTest.java
@@ -138,6 +147,9 @@ src/test/java/org/openapitools/client/model/CRYPTOPUNKSUserDTOTest.java
 src/test/java/org/openapitools/client/model/CURVEFINANCEETHEREUMLiquidityPoolDTOTest.java
 src/test/java/org/openapitools/client/model/CURVEFINANCEETHEREUMSwapDTOTest.java
 src/test/java/org/openapitools/client/model/CURVEFINANCEETHEREUMTokenDTOTest.java
+src/test/java/org/openapitools/client/model/SUSHISWAPV3ETHEREUMLiquidityPoolDTOTest.java
+src/test/java/org/openapitools/client/model/SUSHISWAPV3ETHEREUMSwapDTOTest.java
+src/test/java/org/openapitools/client/model/SUSHISWAPV3ETHEREUMTokenDTOTest.java
 src/test/java/org/openapitools/client/model/TransactionsETradeAggressiveSideTest.java
 src/test/java/org/openapitools/client/model/UNISWAPV2ETHEREUMLiquidityPoolDTOTest.java
 src/test/java/org/openapitools/client/model/UNISWAPV2ETHEREUMSwapDTOTest.java

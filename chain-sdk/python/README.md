@@ -196,6 +196,9 @@ Class | Method | HTTP request | Description
 *MetadataApi* | [**metadata_chains_get**](docs/apis/tags/MetadataApi.md#metadata_chains_get) | **get** /metadata/chains | List all chains.
 *MetadataApi* | [**metadata_dapps_dapp_name_get**](docs/apis/tags/MetadataApi.md#metadata_dapps_dapp_name_get) | **get** /metadata/dapps/{dappName} | Gets dapp by name.
 *MetadataApi* | [**metadata_dapps_get**](docs/apis/tags/MetadataApi.md#metadata_dapps_get) | **get** /metadata/dapps | List all decentralized applications.
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_liquidity_pools__current**](docs/apis/tags/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_liquidity_pools__current) | **get** /v1/dapps/sushiswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_swaps__current**](docs/apis/tags/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_swaps__current) | **get** /v1/dapps/sushiswap-v3-ethereum/swaps/current | Swaps (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_tokens__current**](docs/apis/tags/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_tokens__current) | **get** /v1/dapps/sushiswap-v3-ethereum/tokens/current | Tokens (current)
 *UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_liquidity_pools__current**](docs/apis/tags/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_liquidity_pools__current) | **get** /v1/dapps/uniswap-v2-ethereum/liquidityPools/current | LiquidityPools (current)
 *UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_swaps__current**](docs/apis/tags/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_swaps__current) | **get** /v1/dapps/uniswap-v2-ethereum/swaps/current | Swaps (current)
 *UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_tokens__current**](docs/apis/tags/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_tokens__current) | **get** /v1/dapps/uniswap-v2-ethereum/tokens/current | Tokens (current)
@@ -237,6 +240,9 @@ Class | Method | HTTP request | Description
  - [CURVEFINANCEETHEREUMLiquidityPoolDTO](docs/models/CURVEFINANCEETHEREUMLiquidityPoolDTO.md)
  - [CURVEFINANCEETHEREUMSwapDTO](docs/models/CURVEFINANCEETHEREUMSwapDTO.md)
  - [CURVEFINANCEETHEREUMTokenDTO](docs/models/CURVEFINANCEETHEREUMTokenDTO.md)
+ - [SUSHISWAPV3ETHEREUMLiquidityPoolDTO](docs/models/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.md)
+ - [SUSHISWAPV3ETHEREUMSwapDTO](docs/models/SUSHISWAPV3ETHEREUMSwapDTO.md)
+ - [SUSHISWAPV3ETHEREUMTokenDTO](docs/models/SUSHISWAPV3ETHEREUMTokenDTO.md)
  - [TransactionsETradeAggressiveSide](docs/models/TransactionsETradeAggressiveSide.md)
  - [UNISWAPV2ETHEREUMLiquidityPoolDTO](docs/models/UNISWAPV2ETHEREUMLiquidityPoolDTO.md)
  - [UNISWAPV2ETHEREUMSwapDTO](docs/models/UNISWAPV2ETHEREUMSwapDTO.md)
@@ -272,6 +278,7 @@ Class | Method | HTTP request | Description
 
 ## Author
 
+support@coinapi.io
 support@coinapi.io
 support@coinapi.io
 support@coinapi.io

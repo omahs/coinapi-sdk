@@ -1110,6 +1110,457 @@ mkCURVEFINANCEETHEREUMTokenDTO =
   , cURVEFINANCEETHEREUMTokenDTOTokenSymbol = Nothing
   }
 
+-- ** SUSHISWAPV3ETHEREUMLiquidityPoolDTO
+-- | SUSHISWAPV3ETHEREUMLiquidityPoolDTO
+-- Pool-level metadata.
+data SUSHISWAPV3ETHEREUMLiquidityPoolDTO = SUSHISWAPV3ETHEREUMLiquidityPoolDTO
+  { sUSHISWAPV3ETHEREUMLiquidityPoolDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOVid :: !(Maybe Integer) -- ^ "vid" - .
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - Block range of the liquidity pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOId :: !(Maybe Text) -- ^ "id" - Smart contract address of the pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOProtocol :: !(Maybe Text) -- ^ "protocol" - Protocol this pool belongs to.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOName :: !(Maybe Text) -- ^ "name" - Name of liquidity pool (e.g. Curve.fi DAI/USDC/USDT).
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOSymbol :: !(Maybe Text) -- ^ "symbol" - Symbol of liquidity pool (e.g. 3CRV).
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOLiquidityToken :: !(Maybe Text) -- ^ "liquidity_token" - Token that is to represent ownership of liquidity.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOInputTokens :: !(Maybe [Text]) -- ^ "input_tokens" - Tokens that need to be deposited to take a position in protocol. e.g. WETH and USDC to deposit into the WETH-USDC pool. Array to account for multi-asset pools like Curve and Balancer.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTORewardTokens :: !(Maybe [Text]) -- ^ "reward_tokens" - Additional tokens that are given as reward for position in a protocol, usually in liquidity mining programs. e.g. SUSHI in the Onsen program, MATIC for Aave Polygon, usually in liquidity mining programs. e.g. SUSHI in the Onsen program, MATIC for Aave Polygon.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOFees :: !(Maybe [Text]) -- ^ "fees" - Fees per trade incurred to the user. Should include all fees that apply to a pool (e.g. Curve has a trading fee AND an admin fee, which is a portion of the trading fee. Uniswap only has a trading fee and no protocol fee.).
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOIsSingleSided :: !(Maybe Bool) -- ^ "is_single_sided" - Specifies whether this pool is single-sided (e.g. Bancor, Platypus&#39;s Alternative Pool). The specifics of the implementation depends on the protocol.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCreatedTimestamp :: !(Maybe Text) -- ^ "created_timestamp" - Timestamp when the liquidity pool was created.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCreatedBlockNumber :: !(Maybe Text) -- ^ "created_block_number" - Block number when the liquidity pool was created.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOTick :: !(Maybe Text) -- ^ "tick" - Current tick representing the price of token0/token1.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Current TVL (Total Value Locked) of this pool in USD.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOTotalLiquidity :: !(Maybe Text) -- ^ "total_liquidity" - Sum of all active and non-active liquidity for this pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOTotalLiquidityUsd :: !(Maybe Text) -- ^ "total_liquidity_usd" - Sum of all active and non-active liquidity in USD for this pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOActiveLiquidity :: !(Maybe Text) -- ^ "active_liquidity" - All liquidity &#x60;k&#x60; that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pools current tick.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOActiveLiquidityUsd :: !(Maybe Text) -- ^ "active_liquidity_usd" - All liquidity in USD that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pools current tick.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOUncollectedProtocolSideTokenAmounts :: !(Maybe [Text]) -- ^ "uncollected_protocol_side_token_amounts" - All protocol-side value locked in token amounts that remains uncollected and unused in the pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOUncollectedProtocolSideValuesUsd :: !(Maybe [Text]) -- ^ "uncollected_protocol_side_values_usd" - All protocol-side value locking in USD that remains uncollected and unused in the pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOUncollectedSupplySideTokenAmounts :: !(Maybe [Text]) -- ^ "uncollected_supply_side_token_amounts" - All supply-side value locked in token amounts that remains uncollected and unused in the pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOUncollectedSupplySideValuesUsd :: !(Maybe [Text]) -- ^ "uncollected_supply_side_values_usd" - All supply-side value locked in USD that remains uncollected and unused in the pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeSupplySideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_supply_side_revenue_usd" - All revenue generated by the liquidity pool, accrued to the supply side.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_protocol_side_revenue_usd" - All revenue generated by the liquidity pool, accrued to the protocol.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeTotalRevenueUsd :: !(Maybe Text) -- ^ "cumulative_total_revenue_usd" -  All revenue generated by the liquidity pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeByTokenAmount :: !(Maybe [Text]) -- ^ "cumulative_volume_by_token_amount" - All trade volume occurred for a specific input token, in native amount. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeByTokenUsd :: !(Maybe [Text]) -- ^ "cumulative_volume_by_token_usd" - All trade volume occurred for a specific input token, in USD. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeUsd :: !(Maybe Text) -- ^ "cumulative_volume_usd" - All trade volume occurred for a specific input token, in USD. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOInputTokenBalances :: !(Maybe [Text]) -- ^ "input_token_balances" - Amount of input tokens in the pool. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOInputTokenBalancesUsd :: !(Maybe [Text]) -- ^ "input_token_balances_usd" - Amount of input tokens in USD in the pool. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOInputTokenWeights :: !(Maybe [Text]) -- ^ "input_token_weights" - Weights of input tokens in the liquidity pool in percentage values. For example, 50/50 for Uniswap pools, 48.2/51.8 for a Curve pool, 10/10/80 for a Balancer pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOStakedOutputTokenAmount :: !(Maybe Text) -- ^ "staked_output_token_amount" - Total supply of output tokens that are staked (usually in the MasterChef contract). Used to calculate reward APY.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTORewardTokenEmissionsAmount :: !(Maybe [Text]) -- ^ "reward_token_emissions_amount" - Per-block reward token emission as of the current block normalized to a day, in token&#39;s native amount. This should be ideally calculated as the theoretical rate instead of the realized amount.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTORewardTokenEmissionsUsd :: !(Maybe [Text]) -- ^ "reward_token_emissions_usd" - Per-block reward token emission as of the current block normalized to a day, in USD value. This should be ideally calculated as the theoretical rate instead of the realized amount.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeDepositCount :: !(Maybe Int) -- ^ "cumulative_deposit_count" - Total number of deposits (add liquidity).
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeWithdrawCount :: !(Maybe Int) -- ^ "cumulative_withdraw_count" - Total number of withdrawals (remove liquidity).
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeSwapCount :: !(Maybe Int) -- ^ "cumulative_swap_count" - Total number of trades (swaps).
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOPositionCount :: !(Maybe Int) -- ^ "position_count" - Number of positions in this market.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOOpenPositionCount :: !(Maybe Int) -- ^ "open_position_count" - Number of open positions in this market.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOClosedPositionCount :: !(Maybe Int) -- ^ "closed_position_count" - Number of closed positions in this market.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOLastSnapshotDayId :: !(Maybe Int) -- ^ "last_snapshot_day_id" - Day ID of the most recent daily snapshot.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOLastSnapshotHourId :: !(Maybe Int) -- ^ "last_snapshot_hour_id" - Hour ID of the most recent hourly snapshot.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOLastUpdateTimestamp :: !(Maybe Text) -- ^ "last_update_timestamp" - Timestamp of the last time this entity was updated.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOLastUpdateBlockNumber :: !(Maybe Text) -- ^ "last_update_block_number" - Block number of the last time this entity was updated.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOEvaluatedAsk :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_ask" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMLiquidityPoolDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMLiquidityPoolDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMLiquidityPoolDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMLiquidityPoolDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "vid")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "protocol")
+      <*> (o .:? "name")
+      <*> (o .:? "symbol")
+      <*> (o .:? "liquidity_token")
+      <*> (o .:? "input_tokens")
+      <*> (o .:? "reward_tokens")
+      <*> (o .:? "fees")
+      <*> (o .:? "is_single_sided")
+      <*> (o .:? "created_timestamp")
+      <*> (o .:? "created_block_number")
+      <*> (o .:? "tick")
+      <*> (o .:? "total_value_locked_usd")
+      <*> (o .:? "total_liquidity")
+      <*> (o .:? "total_liquidity_usd")
+      <*> (o .:? "active_liquidity")
+      <*> (o .:? "active_liquidity_usd")
+      <*> (o .:? "uncollected_protocol_side_token_amounts")
+      <*> (o .:? "uncollected_protocol_side_values_usd")
+      <*> (o .:? "uncollected_supply_side_token_amounts")
+      <*> (o .:? "uncollected_supply_side_values_usd")
+      <*> (o .:? "cumulative_supply_side_revenue_usd")
+      <*> (o .:? "cumulative_protocol_side_revenue_usd")
+      <*> (o .:? "cumulative_total_revenue_usd")
+      <*> (o .:? "cumulative_volume_by_token_amount")
+      <*> (o .:? "cumulative_volume_by_token_usd")
+      <*> (o .:? "cumulative_volume_usd")
+      <*> (o .:? "input_token_balances")
+      <*> (o .:? "input_token_balances_usd")
+      <*> (o .:? "input_token_weights")
+      <*> (o .:? "staked_output_token_amount")
+      <*> (o .:? "reward_token_emissions_amount")
+      <*> (o .:? "reward_token_emissions_usd")
+      <*> (o .:? "cumulative_deposit_count")
+      <*> (o .:? "cumulative_withdraw_count")
+      <*> (o .:? "cumulative_swap_count")
+      <*> (o .:? "position_count")
+      <*> (o .:? "open_position_count")
+      <*> (o .:? "closed_position_count")
+      <*> (o .:? "last_snapshot_day_id")
+      <*> (o .:? "last_snapshot_hour_id")
+      <*> (o .:? "last_update_timestamp")
+      <*> (o .:? "last_update_block_number")
+      <*> (o .:? "evaluated_ask")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMLiquidityPoolDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMLiquidityPoolDTO where
+  toJSON SUSHISWAPV3ETHEREUMLiquidityPoolDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOBlockNumber
+      , "vid" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOVid
+      , "block_range" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOBlockRange
+      , "id" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOId
+      , "protocol" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOProtocol
+      , "name" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOName
+      , "symbol" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOSymbol
+      , "liquidity_token" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOLiquidityToken
+      , "input_tokens" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOInputTokens
+      , "reward_tokens" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTORewardTokens
+      , "fees" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOFees
+      , "is_single_sided" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOIsSingleSided
+      , "created_timestamp" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOCreatedTimestamp
+      , "created_block_number" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOCreatedBlockNumber
+      , "tick" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOTick
+      , "total_value_locked_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOTotalValueLockedUsd
+      , "total_liquidity" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOTotalLiquidity
+      , "total_liquidity_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOTotalLiquidityUsd
+      , "active_liquidity" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOActiveLiquidity
+      , "active_liquidity_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOActiveLiquidityUsd
+      , "uncollected_protocol_side_token_amounts" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOUncollectedProtocolSideTokenAmounts
+      , "uncollected_protocol_side_values_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOUncollectedProtocolSideValuesUsd
+      , "uncollected_supply_side_token_amounts" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOUncollectedSupplySideTokenAmounts
+      , "uncollected_supply_side_values_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOUncollectedSupplySideValuesUsd
+      , "cumulative_supply_side_revenue_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeSupplySideRevenueUsd
+      , "cumulative_protocol_side_revenue_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeProtocolSideRevenueUsd
+      , "cumulative_total_revenue_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeTotalRevenueUsd
+      , "cumulative_volume_by_token_amount" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeByTokenAmount
+      , "cumulative_volume_by_token_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeByTokenUsd
+      , "cumulative_volume_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeUsd
+      , "input_token_balances" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOInputTokenBalances
+      , "input_token_balances_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOInputTokenBalancesUsd
+      , "input_token_weights" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOInputTokenWeights
+      , "staked_output_token_amount" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOStakedOutputTokenAmount
+      , "reward_token_emissions_amount" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTORewardTokenEmissionsAmount
+      , "reward_token_emissions_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTORewardTokenEmissionsUsd
+      , "cumulative_deposit_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeDepositCount
+      , "cumulative_withdraw_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeWithdrawCount
+      , "cumulative_swap_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeSwapCount
+      , "position_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOPositionCount
+      , "open_position_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOOpenPositionCount
+      , "closed_position_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOClosedPositionCount
+      , "last_snapshot_day_id" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOLastSnapshotDayId
+      , "last_snapshot_hour_id" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOLastSnapshotHourId
+      , "last_update_timestamp" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOLastUpdateTimestamp
+      , "last_update_block_number" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOLastUpdateBlockNumber
+      , "evaluated_ask" .= sUSHISWAPV3ETHEREUMLiquidityPoolDTOEvaluatedAsk
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMLiquidityPoolDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMLiquidityPoolDTO
+  :: SUSHISWAPV3ETHEREUMLiquidityPoolDTO
+mkSUSHISWAPV3ETHEREUMLiquidityPoolDTO =
+  SUSHISWAPV3ETHEREUMLiquidityPoolDTO
+  { sUSHISWAPV3ETHEREUMLiquidityPoolDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOVid = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOBlockRange = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOProtocol = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOName = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOSymbol = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOLiquidityToken = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOInputTokens = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTORewardTokens = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOFees = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOIsSingleSided = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCreatedTimestamp = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCreatedBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOTick = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOTotalValueLockedUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOTotalLiquidity = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOTotalLiquidityUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOActiveLiquidity = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOActiveLiquidityUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOUncollectedProtocolSideTokenAmounts = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOUncollectedProtocolSideValuesUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOUncollectedSupplySideTokenAmounts = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOUncollectedSupplySideValuesUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeSupplySideRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeProtocolSideRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeTotalRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeByTokenAmount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeByTokenUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeVolumeUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOInputTokenBalances = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOInputTokenBalancesUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOInputTokenWeights = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOStakedOutputTokenAmount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTORewardTokenEmissionsAmount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTORewardTokenEmissionsUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeDepositCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeWithdrawCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOCumulativeSwapCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOPositionCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOOpenPositionCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOClosedPositionCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOLastSnapshotDayId = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOLastSnapshotHourId = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOLastUpdateTimestamp = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOLastUpdateBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDTOEvaluatedAsk = Nothing
+  }
+
+-- ** SUSHISWAPV3ETHEREUMSwapDTO
+-- | SUSHISWAPV3ETHEREUMSwapDTO
+-- Trade (swap) event which occurred in a pool.
+data SUSHISWAPV3ETHEREUMSwapDTO = SUSHISWAPV3ETHEREUMSwapDTO
+  { sUSHISWAPV3ETHEREUMSwapDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMSwapDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMSwapDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMSwapDTOBlock :: !(Maybe Int) -- ^ "block_" - Block number in which the swap operation was recorded.
+  , sUSHISWAPV3ETHEREUMSwapDTOId :: !(Maybe Text) -- ^ "id" - Unique string identifier of the swap operation, format: (transaction hash)-(log index).
+  , sUSHISWAPV3ETHEREUMSwapDTOHash :: !(Maybe Text) -- ^ "hash" - Transaction hash of the transaction that emitted this event.
+  , sUSHISWAPV3ETHEREUMSwapDTONonce :: !(Maybe Text) -- ^ "nonce" - Nonce of the transaction that emitted this event.
+  , sUSHISWAPV3ETHEREUMSwapDTOLogIndex :: !(Maybe Int) -- ^ "log_index" - Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0.
+  , sUSHISWAPV3ETHEREUMSwapDTOGasLimit :: !(Maybe Text) -- ^ "gas_limit" - Gas limit of the transaction that emitted this event.
+  , sUSHISWAPV3ETHEREUMSwapDTOGasUsed :: !(Maybe Text) -- ^ "gas_used" - Gas used in this transaction.
+  , sUSHISWAPV3ETHEREUMSwapDTOGasPrice :: !(Maybe Text) -- ^ "gas_price" - Gas price of the transaction that emitted this event.
+  , sUSHISWAPV3ETHEREUMSwapDTOProtocol :: !(Maybe Text) -- ^ "protocol" - The protocol this transaction belongs to.
+  , sUSHISWAPV3ETHEREUMSwapDTOAccount :: !(Maybe Text) -- ^ "account" - Account that emitted this event.
+  , sUSHISWAPV3ETHEREUMSwapDTOPool :: !(Maybe Text) -- ^ "pool" - The pool involving this event.
+  , sUSHISWAPV3ETHEREUMSwapDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of this event.
+  , sUSHISWAPV3ETHEREUMSwapDTOTick :: !(Maybe Text) -- ^ "tick" - Tick of the swap operation.
+  , sUSHISWAPV3ETHEREUMSwapDTOTokenIn :: !(Maybe Text) -- ^ "token_in" - Token deposited into pool.
+  , sUSHISWAPV3ETHEREUMSwapDTOAmountIn :: !(Maybe Text) -- ^ "amount_in" - Amount of token deposited into pool in native units.
+  , sUSHISWAPV3ETHEREUMSwapDTOAmountInUsd :: !(Maybe Text) -- ^ "amount_in_usd" - Amount of token deposited into pool in USD.
+  , sUSHISWAPV3ETHEREUMSwapDTOTokenOut :: !(Maybe Text) -- ^ "token_out" - Token withdrawn from pool.
+  , sUSHISWAPV3ETHEREUMSwapDTOAmountOut :: !(Maybe Text) -- ^ "amount_out" - Amount of token withdrawn from pool in native units.
+  , sUSHISWAPV3ETHEREUMSwapDTOAmountOutUsd :: !(Maybe Text) -- ^ "amount_out_usd" - Amount of token withdrawn from pool in USD.
+  , sUSHISWAPV3ETHEREUMSwapDTOReserveAmounts :: !(Maybe [Text]) -- ^ "reserve_amounts" - Amount of input tokens in the liquidity pool.
+  , sUSHISWAPV3ETHEREUMSwapDTOPoolId :: !(Maybe Text) -- ^ /ReadOnly/ "pool_id"
+  , sUSHISWAPV3ETHEREUMSwapDTOTransactionId :: !(Maybe Text) -- ^ /ReadOnly/ "transaction_id"
+  , sUSHISWAPV3ETHEREUMSwapDTOEvaluatedPrice :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_price"
+  , sUSHISWAPV3ETHEREUMSwapDTOEvaluatedAmount :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_amount"
+  , sUSHISWAPV3ETHEREUMSwapDTOEvaluatedAggressor :: !(Maybe TransactionsETradeAggressiveSide) -- ^ "evaluated_aggressor"
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMSwapDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMSwapDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMSwapDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMSwapDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_")
+      <*> (o .:? "id")
+      <*> (o .:? "hash")
+      <*> (o .:? "nonce")
+      <*> (o .:? "log_index")
+      <*> (o .:? "gas_limit")
+      <*> (o .:? "gas_used")
+      <*> (o .:? "gas_price")
+      <*> (o .:? "protocol")
+      <*> (o .:? "account")
+      <*> (o .:? "pool")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "tick")
+      <*> (o .:? "token_in")
+      <*> (o .:? "amount_in")
+      <*> (o .:? "amount_in_usd")
+      <*> (o .:? "token_out")
+      <*> (o .:? "amount_out")
+      <*> (o .:? "amount_out_usd")
+      <*> (o .:? "reserve_amounts")
+      <*> (o .:? "pool_id")
+      <*> (o .:? "transaction_id")
+      <*> (o .:? "evaluated_price")
+      <*> (o .:? "evaluated_amount")
+      <*> (o .:? "evaluated_aggressor")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMSwapDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMSwapDTO where
+  toJSON SUSHISWAPV3ETHEREUMSwapDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMSwapDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMSwapDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMSwapDTOBlockNumber
+      , "block_" .= sUSHISWAPV3ETHEREUMSwapDTOBlock
+      , "id" .= sUSHISWAPV3ETHEREUMSwapDTOId
+      , "hash" .= sUSHISWAPV3ETHEREUMSwapDTOHash
+      , "nonce" .= sUSHISWAPV3ETHEREUMSwapDTONonce
+      , "log_index" .= sUSHISWAPV3ETHEREUMSwapDTOLogIndex
+      , "gas_limit" .= sUSHISWAPV3ETHEREUMSwapDTOGasLimit
+      , "gas_used" .= sUSHISWAPV3ETHEREUMSwapDTOGasUsed
+      , "gas_price" .= sUSHISWAPV3ETHEREUMSwapDTOGasPrice
+      , "protocol" .= sUSHISWAPV3ETHEREUMSwapDTOProtocol
+      , "account" .= sUSHISWAPV3ETHEREUMSwapDTOAccount
+      , "pool" .= sUSHISWAPV3ETHEREUMSwapDTOPool
+      , "timestamp" .= sUSHISWAPV3ETHEREUMSwapDTOTimestamp
+      , "tick" .= sUSHISWAPV3ETHEREUMSwapDTOTick
+      , "token_in" .= sUSHISWAPV3ETHEREUMSwapDTOTokenIn
+      , "amount_in" .= sUSHISWAPV3ETHEREUMSwapDTOAmountIn
+      , "amount_in_usd" .= sUSHISWAPV3ETHEREUMSwapDTOAmountInUsd
+      , "token_out" .= sUSHISWAPV3ETHEREUMSwapDTOTokenOut
+      , "amount_out" .= sUSHISWAPV3ETHEREUMSwapDTOAmountOut
+      , "amount_out_usd" .= sUSHISWAPV3ETHEREUMSwapDTOAmountOutUsd
+      , "reserve_amounts" .= sUSHISWAPV3ETHEREUMSwapDTOReserveAmounts
+      , "pool_id" .= sUSHISWAPV3ETHEREUMSwapDTOPoolId
+      , "transaction_id" .= sUSHISWAPV3ETHEREUMSwapDTOTransactionId
+      , "evaluated_price" .= sUSHISWAPV3ETHEREUMSwapDTOEvaluatedPrice
+      , "evaluated_amount" .= sUSHISWAPV3ETHEREUMSwapDTOEvaluatedAmount
+      , "evaluated_aggressor" .= sUSHISWAPV3ETHEREUMSwapDTOEvaluatedAggressor
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMSwapDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMSwapDTO
+  :: SUSHISWAPV3ETHEREUMSwapDTO
+mkSUSHISWAPV3ETHEREUMSwapDTO =
+  SUSHISWAPV3ETHEREUMSwapDTO
+  { sUSHISWAPV3ETHEREUMSwapDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOBlock = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOHash = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTONonce = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOLogIndex = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOGasLimit = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOGasUsed = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOGasPrice = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOProtocol = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOAccount = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOPool = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOTimestamp = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOTick = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOTokenIn = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOAmountIn = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOAmountInUsd = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOTokenOut = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOAmountOut = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOAmountOutUsd = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOReserveAmounts = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOPoolId = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOTransactionId = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOEvaluatedPrice = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOEvaluatedAmount = Nothing
+  , sUSHISWAPV3ETHEREUMSwapDTOEvaluatedAggressor = Nothing
+  }
+
+-- ** SUSHISWAPV3ETHEREUMTokenDTO
+-- | SUSHISWAPV3ETHEREUMTokenDTO
+-- Stores aggregated information for a specific token across all pairs that token is included in.
+data SUSHISWAPV3ETHEREUMTokenDTO = SUSHISWAPV3ETHEREUMTokenDTO
+  { sUSHISWAPV3ETHEREUMTokenDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMTokenDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMTokenDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMTokenDTOVid :: !(Maybe Integer) -- ^ "vid" - .
+  , sUSHISWAPV3ETHEREUMTokenDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , sUSHISWAPV3ETHEREUMTokenDTOId :: !(Maybe Text) -- ^ "id" - Smart contract address of the token.
+  , sUSHISWAPV3ETHEREUMTokenDTOName :: !(Maybe Text) -- ^ "name" - Name of the token, mirrored from the smart contract.
+  , sUSHISWAPV3ETHEREUMTokenDTOSymbol :: !(Maybe Text) -- ^ "symbol" - Symbol of the token, mirrored from the smart contract.
+  , sUSHISWAPV3ETHEREUMTokenDTODecimals :: !(Maybe Int) -- ^ "decimals" - The number of decimal places this token uses, default to 18.
+  , sUSHISWAPV3ETHEREUMTokenDTOLastPriceUsd :: !(Maybe Text) -- ^ "last_price_usd" - Optional field to track the price of a token, mostly for caching purposes.
+  , sUSHISWAPV3ETHEREUMTokenDTOLastPriceBlockNumber :: !(Maybe Text) -- ^ "last_price_block_number" - Optional field to track the block number of the last token price.
+  , sUSHISWAPV3ETHEREUMTokenDTOLastPricePool :: !(Maybe Text) -- ^ "last_price_pool" - Last pool that gave this token a price.
+  , sUSHISWAPV3ETHEREUMTokenDTOTotalSupply :: !(Maybe Text) -- ^ "total_supply" - Amount of tokens in the protocol.
+  , sUSHISWAPV3ETHEREUMTokenDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Total value locked in the protocol.
+  , sUSHISWAPV3ETHEREUMTokenDTOLargePriceChangeBuffer :: !(Maybe Int) -- ^ "large_price_change_buffer" - The buffer for detecting large price changes.
+  , sUSHISWAPV3ETHEREUMTokenDTOLargeTvlImpactBuffer :: !(Maybe Int) -- ^ "large_tvl_impact_buffer" - The buffer for detecting large TVL (Total Value Locked) impact.
+  , sUSHISWAPV3ETHEREUMTokenDTOTokenSymbol :: !(Maybe Text) -- ^ /ReadOnly/ "token_symbol"
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMTokenDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMTokenDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMTokenDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMTokenDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "vid")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "name")
+      <*> (o .:? "symbol")
+      <*> (o .:? "decimals")
+      <*> (o .:? "last_price_usd")
+      <*> (o .:? "last_price_block_number")
+      <*> (o .:? "last_price_pool")
+      <*> (o .:? "total_supply")
+      <*> (o .:? "total_value_locked_usd")
+      <*> (o .:? "large_price_change_buffer")
+      <*> (o .:? "large_tvl_impact_buffer")
+      <*> (o .:? "token_symbol")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMTokenDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMTokenDTO where
+  toJSON SUSHISWAPV3ETHEREUMTokenDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMTokenDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMTokenDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMTokenDTOBlockNumber
+      , "vid" .= sUSHISWAPV3ETHEREUMTokenDTOVid
+      , "block_range" .= sUSHISWAPV3ETHEREUMTokenDTOBlockRange
+      , "id" .= sUSHISWAPV3ETHEREUMTokenDTOId
+      , "name" .= sUSHISWAPV3ETHEREUMTokenDTOName
+      , "symbol" .= sUSHISWAPV3ETHEREUMTokenDTOSymbol
+      , "decimals" .= sUSHISWAPV3ETHEREUMTokenDTODecimals
+      , "last_price_usd" .= sUSHISWAPV3ETHEREUMTokenDTOLastPriceUsd
+      , "last_price_block_number" .= sUSHISWAPV3ETHEREUMTokenDTOLastPriceBlockNumber
+      , "last_price_pool" .= sUSHISWAPV3ETHEREUMTokenDTOLastPricePool
+      , "total_supply" .= sUSHISWAPV3ETHEREUMTokenDTOTotalSupply
+      , "total_value_locked_usd" .= sUSHISWAPV3ETHEREUMTokenDTOTotalValueLockedUsd
+      , "large_price_change_buffer" .= sUSHISWAPV3ETHEREUMTokenDTOLargePriceChangeBuffer
+      , "large_tvl_impact_buffer" .= sUSHISWAPV3ETHEREUMTokenDTOLargeTvlImpactBuffer
+      , "token_symbol" .= sUSHISWAPV3ETHEREUMTokenDTOTokenSymbol
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMTokenDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMTokenDTO
+  :: SUSHISWAPV3ETHEREUMTokenDTO
+mkSUSHISWAPV3ETHEREUMTokenDTO =
+  SUSHISWAPV3ETHEREUMTokenDTO
+  { sUSHISWAPV3ETHEREUMTokenDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMTokenDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMTokenDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMTokenDTOVid = Nothing
+  , sUSHISWAPV3ETHEREUMTokenDTOBlockRange = Nothing
+  , sUSHISWAPV3ETHEREUMTokenDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMTokenDTOName = Nothing
+  , sUSHISWAPV3ETHEREUMTokenDTOSymbol = Nothing
+  , sUSHISWAPV3ETHEREUMTokenDTODecimals = Nothing
+  , sUSHISWAPV3ETHEREUMTokenDTOLastPriceUsd = Nothing
+  , sUSHISWAPV3ETHEREUMTokenDTOLastPriceBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMTokenDTOLastPricePool = Nothing
+  , sUSHISWAPV3ETHEREUMTokenDTOTotalSupply = Nothing
+  , sUSHISWAPV3ETHEREUMTokenDTOTotalValueLockedUsd = Nothing
+  , sUSHISWAPV3ETHEREUMTokenDTOLargePriceChangeBuffer = Nothing
+  , sUSHISWAPV3ETHEREUMTokenDTOLargeTvlImpactBuffer = Nothing
+  , sUSHISWAPV3ETHEREUMTokenDTOTokenSymbol = Nothing
+  }
+
 -- ** UNISWAPV2ETHEREUMLiquidityPoolDTO
 -- | UNISWAPV2ETHEREUMLiquidityPoolDTO
 -- Pool-level metadata.

@@ -25,6 +25,9 @@ import CRYPTOPUNKSUserDTO from './model/CRYPTOPUNKSUserDTO';
 import CURVEFINANCEETHEREUMLiquidityPoolDTO from './model/CURVEFINANCEETHEREUMLiquidityPoolDTO';
 import CURVEFINANCEETHEREUMSwapDTO from './model/CURVEFINANCEETHEREUMSwapDTO';
 import CURVEFINANCEETHEREUMTokenDTO from './model/CURVEFINANCEETHEREUMTokenDTO';
+import SUSHISWAPV3ETHEREUMLiquidityPoolDTO from './model/SUSHISWAPV3ETHEREUMLiquidityPoolDTO';
+import SUSHISWAPV3ETHEREUMSwapDTO from './model/SUSHISWAPV3ETHEREUMSwapDTO';
+import SUSHISWAPV3ETHEREUMTokenDTO from './model/SUSHISWAPV3ETHEREUMTokenDTO';
 import TransactionsETradeAggressiveSide from './model/TransactionsETradeAggressiveSide';
 import UNISWAPV2ETHEREUMLiquidityPoolDTO from './model/UNISWAPV2ETHEREUMLiquidityPoolDTO';
 import UNISWAPV2ETHEREUMSwapDTO from './model/UNISWAPV2ETHEREUMSwapDTO';
@@ -55,6 +58,7 @@ import UNISWAPV3ETHEREUMWithdrawDTO from './model/UNISWAPV3ETHEREUMWithdrawDTO';
 import CRYPTOPUNKSApi from './api/CRYPTOPUNKSApi';
 import CURVEFINANCEETHEREUMApi from './api/CURVEFINANCEETHEREUMApi';
 import MetadataApi from './api/MetadataApi';
+import SUSHISWAPV3ETHEREUMApi from './api/SUSHISWAPV3ETHEREUMApi';
 import UNISWAPV2ETHEREUMApi from './api/UNISWAPV2ETHEREUMApi';
 import UNISWAPV3ETHEREUMApi from './api/UNISWAPV3ETHEREUMApi';
 
@@ -168,6 +172,24 @@ export {
      * @property {module:model/CURVEFINANCEETHEREUMTokenDTO}
      */
     CURVEFINANCEETHEREUMTokenDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMLiquidityPoolDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMLiquidityPoolDTO}
+     */
+    SUSHISWAPV3ETHEREUMLiquidityPoolDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMSwapDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMSwapDTO}
+     */
+    SUSHISWAPV3ETHEREUMSwapDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMTokenDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMTokenDTO}
+     */
+    SUSHISWAPV3ETHEREUMTokenDTO,
 
     /**
      * The TransactionsETradeAggressiveSide model constructor.
@@ -348,6 +370,12 @@ export {
     * @property {module:api/MetadataApi}
     */
     MetadataApi,
+
+    /**
+    * The SUSHISWAPV3ETHEREUMApi service constructor.
+    * @property {module:api/SUSHISWAPV3ETHEREUMApi}
+    */
+    SUSHISWAPV3ETHEREUMApi,
 
     /**
     * The UNISWAPV2ETHEREUMApi service constructor.

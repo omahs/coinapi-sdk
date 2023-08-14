@@ -83,6 +83,9 @@ _()
     operations["metadataChainsGet"]=1
     operations["metadataDappsDappNameGet"]=1
     operations["metadataDappsGet"]=1
+    operations["sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMSwapsCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMTokensCurrent"]=1
     operations["uNISWAPV2ETHEREUMLiquidityPoolsCurrent"]=1
     operations["uNISWAPV2ETHEREUMSwapsCurrent"]=1
     operations["uNISWAPV2ETHEREUMTokensCurrent"]=1
@@ -128,6 +131,9 @@ _()
     operation_parameters["metadataChainsGet"]=""
     operation_parameters["metadataDappsDappNameGet"]="dappName= "
     operation_parameters["metadataDappsGet"]=""
+    operation_parameters["sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent"]="id= "
+    operation_parameters["sUSHISWAPV3ETHEREUMSwapsCurrent"]=""
+    operation_parameters["sUSHISWAPV3ETHEREUMTokensCurrent"]="id= "
     operation_parameters["uNISWAPV2ETHEREUMLiquidityPoolsCurrent"]=""
     operation_parameters["uNISWAPV2ETHEREUMSwapsCurrent"]=""
     operation_parameters["uNISWAPV2ETHEREUMTokensCurrent"]=""

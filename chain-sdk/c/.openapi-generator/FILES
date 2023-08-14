@@ -8,6 +8,8 @@ api/CURVEFINANCEETHEREUMAPI.c
 api/CURVEFINANCEETHEREUMAPI.h
 api/MetadataAPI.c
 api/MetadataAPI.h
+api/SUSHISWAPV3ETHEREUMAPI.c
+api/SUSHISWAPV3ETHEREUMAPI.h
 api/UNISWAPV2ETHEREUMAPI.c
 api/UNISWAPV2ETHEREUMAPI.h
 api/UNISWAPV3ETHEREUMAPI.c
@@ -15,6 +17,7 @@ api/UNISWAPV3ETHEREUMAPI.h
 docs/CRYPTOPUNKSAPI.md
 docs/CURVEFINANCEETHEREUMAPI.md
 docs/MetadataAPI.md
+docs/SUSHISWAPV3ETHEREUMAPI.md
 docs/UNISWAPV2ETHEREUMAPI.md
 docs/UNISWAPV3ETHEREUMAPI.md
 docs/cryptopunks_bid_dto.md
@@ -29,6 +32,9 @@ docs/cryptopunks_user_dto.md
 docs/curve_finance_ethereum_liquidity_pool_dto.md
 docs/curve_finance_ethereum_swap_dto.md
 docs/curve_finance_ethereum_token_dto.md
+docs/sushiswap_v3_ethereum_liquidity_pool_dto.md
+docs/sushiswap_v3_ethereum_swap_dto.md
+docs/sushiswap_v3_ethereum_token_dto.md
 docs/transactions_e_trade_aggressive_side.md
 docs/uniswap_v2_ethereum_liquidity_pool_dto.md
 docs/uniswap_v2_ethereum_swap_dto.md
@@ -90,6 +96,12 @@ model/curve_finance_ethereum_token_dto.c
 model/curve_finance_ethereum_token_dto.h
 model/object.c
 model/object.h
+model/sushiswap_v3_ethereum_liquidity_pool_dto.c
+model/sushiswap_v3_ethereum_liquidity_pool_dto.h
+model/sushiswap_v3_ethereum_swap_dto.c
+model/sushiswap_v3_ethereum_swap_dto.h
+model/sushiswap_v3_ethereum_token_dto.c
+model/sushiswap_v3_ethereum_token_dto.h
 model/transactions_e_trade_aggressive_side.c
 model/transactions_e_trade_aggressive_side.h
 model/uniswap_v2_ethereum_liquidity_pool_dto.c
@@ -161,6 +173,9 @@ unit-test/test_cryptopunks_user_dto.c
 unit-test/test_curve_finance_ethereum_liquidity_pool_dto.c
 unit-test/test_curve_finance_ethereum_swap_dto.c
 unit-test/test_curve_finance_ethereum_token_dto.c
+unit-test/test_sushiswap_v3_ethereum_liquidity_pool_dto.c
+unit-test/test_sushiswap_v3_ethereum_swap_dto.c
+unit-test/test_sushiswap_v3_ethereum_token_dto.c
 unit-test/test_transactions_e_trade_aggressive_side.c
 unit-test/test_uniswap_v2_ethereum_liquidity_pool_dto.c
 unit-test/test_uniswap_v2_ethereum_swap_dto.c

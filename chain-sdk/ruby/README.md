@@ -94,6 +94,9 @@ Class | Method | HTTP request | Description
 *OpenapiClient::MetadataApi* | [**metadata_chains_get**](docs/MetadataApi.md#metadata_chains_get) | **GET** /metadata/chains | List all chains.
 *OpenapiClient::MetadataApi* | [**metadata_dapps_dapp_name_get**](docs/MetadataApi.md#metadata_dapps_dapp_name_get) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
 *OpenapiClient::MetadataApi* | [**metadata_dapps_get**](docs/MetadataApi.md#metadata_dapps_get) | **GET** /metadata/dapps | List all decentralized applications.
+*OpenapiClient::SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_liquidity_pools__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_liquidity_pools__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
+*OpenapiClient::SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_swaps__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_swaps__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/swaps/current | Swaps (current)
+*OpenapiClient::SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_tokens__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_tokens__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/tokens/current | Tokens (current)
 *OpenapiClient::UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_liquidity_pools__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_liquidity_pools__current) | **GET** /v1/dapps/uniswap-v2-ethereum/liquidityPools/current | LiquidityPools (current)
 *OpenapiClient::UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_swaps__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_swaps__current) | **GET** /v1/dapps/uniswap-v2-ethereum/swaps/current | Swaps (current)
 *OpenapiClient::UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_tokens__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_tokens__current) | **GET** /v1/dapps/uniswap-v2-ethereum/tokens/current | Tokens (current)
@@ -136,6 +139,9 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::CURVEFINANCEETHEREUMLiquidityPoolDTO](docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md)
  - [OpenapiClient::CURVEFINANCEETHEREUMSwapDTO](docs/CURVEFINANCEETHEREUMSwapDTO.md)
  - [OpenapiClient::CURVEFINANCEETHEREUMTokenDTO](docs/CURVEFINANCEETHEREUMTokenDTO.md)
+ - [OpenapiClient::SUSHISWAPV3ETHEREUMLiquidityPoolDTO](docs/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.md)
+ - [OpenapiClient::SUSHISWAPV3ETHEREUMSwapDTO](docs/SUSHISWAPV3ETHEREUMSwapDTO.md)
+ - [OpenapiClient::SUSHISWAPV3ETHEREUMTokenDTO](docs/SUSHISWAPV3ETHEREUMTokenDTO.md)
  - [OpenapiClient::TransactionsETradeAggressiveSide](docs/TransactionsETradeAggressiveSide.md)
  - [OpenapiClient::UNISWAPV2ETHEREUMLiquidityPoolDTO](docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md)
  - [OpenapiClient::UNISWAPV2ETHEREUMSwapDTO](docs/UNISWAPV2ETHEREUMSwapDTO.md)

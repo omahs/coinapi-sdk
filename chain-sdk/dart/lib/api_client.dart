@@ -205,6 +205,12 @@ class ApiClient {
           return CURVEFINANCEETHEREUMSwapDTO.fromJson(value);
         case 'CURVEFINANCEETHEREUMTokenDTO':
           return CURVEFINANCEETHEREUMTokenDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMLiquidityPoolDTO':
+          return SUSHISWAPV3ETHEREUMLiquidityPoolDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMSwapDTO':
+          return SUSHISWAPV3ETHEREUMSwapDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMTokenDTO':
+          return SUSHISWAPV3ETHEREUMTokenDTO.fromJson(value);
         case 'TransactionsETradeAggressiveSide':
           return TransactionsETradeAggressiveSideTypeTransformer().decode(value);
         case 'UNISWAPV2ETHEREUMLiquidityPoolDTO':

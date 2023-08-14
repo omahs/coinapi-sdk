@@ -102,6 +102,26 @@ package .Clients is
 
    --  LiquidityPools (current)
    --  Gets liquidityPools.
+   procedure S_USHISWAPV3ETHEREUM_Liquidity_Pools__current
+      (Client : in out Client_Type;
+       Id : in Swagger.Nullable_UString;
+       Result : out .Models.SUSHISWAPV3ETHEREUMLiquidityPoolDTO_Type_Vectors.Vector);
+
+   --  Swaps (current)
+   --  Gets swaps.
+   procedure S_USHISWAPV3ETHEREUM_Swaps__current
+      (Client : in out Client_Type;
+       Result : out .Models.SUSHISWAPV3ETHEREUMSwapDTO_Type_Vectors.Vector);
+
+   --  Tokens (current)
+   --  Gets tokens.
+   procedure S_USHISWAPV3ETHEREUM_Tokens__current
+      (Client : in out Client_Type;
+       Id : in Swagger.Nullable_UString;
+       Result : out .Models.SUSHISWAPV3ETHEREUMTokenDTO_Type_Vectors.Vector);
+
+   --  LiquidityPools (current)
+   --  Gets liquidityPools.
    procedure U_NISWAPV2ETHEREUM_Liquidity_Pools__current
       (Client : in out Client_Type;
        Result : out .Models.UNISWAPV2ETHEREUMLiquidityPoolDTO_Type_Vectors.Vector);

@@ -3,6 +3,7 @@
 apis/CRYPTOPUNKSApi.ts
 apis/CURVEFINANCEETHEREUMApi.ts
 apis/MetadataApi.ts
+apis/SUSHISWAPV3ETHEREUMApi.ts
 apis/UNISWAPV2ETHEREUMApi.ts
 apis/UNISWAPV3ETHEREUMApi.ts
 apis/index.ts
@@ -19,6 +20,9 @@ models/CRYPTOPUNKSUserDTO.ts
 models/CURVEFINANCEETHEREUMLiquidityPoolDTO.ts
 models/CURVEFINANCEETHEREUMSwapDTO.ts
 models/CURVEFINANCEETHEREUMTokenDTO.ts
+models/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.ts
+models/SUSHISWAPV3ETHEREUMSwapDTO.ts
+models/SUSHISWAPV3ETHEREUMTokenDTO.ts
 models/TransactionsETradeAggressiveSide.ts
 models/UNISWAPV2ETHEREUMLiquidityPoolDTO.ts
 models/UNISWAPV2ETHEREUMSwapDTO.ts

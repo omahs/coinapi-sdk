@@ -84,6 +84,17 @@ Method | HTTP request | Description
 *metadataDappsGetASync* | *GET* /metadata/dapps | List all decentralized applications..
 
 
+### SUSHISWAPV3ETHEREUMManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*sUSHISWAPV3ETHEREUMLiquidityPools (current)Sync* | *GET* /v1/dapps/sushiswap-v3-ethereum/liquidityPools/current | LiquidityPools (current).
+*sUSHISWAPV3ETHEREUMLiquidityPools (current)ASync* | *GET* /v1/dapps/sushiswap-v3-ethereum/liquidityPools/current | LiquidityPools (current).
+*sUSHISWAPV3ETHEREUMSwaps (current)Sync* | *GET* /v1/dapps/sushiswap-v3-ethereum/swaps/current | Swaps (current).
+*sUSHISWAPV3ETHEREUMSwaps (current)ASync* | *GET* /v1/dapps/sushiswap-v3-ethereum/swaps/current | Swaps (current).
+*sUSHISWAPV3ETHEREUMTokens (current)Sync* | *GET* /v1/dapps/sushiswap-v3-ethereum/tokens/current | Tokens (current).
+*sUSHISWAPV3ETHEREUMTokens (current)ASync* | *GET* /v1/dapps/sushiswap-v3-ethereum/tokens/current | Tokens (current).
+
+
 ### UNISWAPV2ETHEREUMManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -161,6 +172,9 @@ Class | Description
  *CURVE_FINANCE_ETHEREUM.LiquidityPoolDTO* | 
  *CURVE_FINANCE_ETHEREUM.SwapDTO* | 
  *CURVE_FINANCE_ETHEREUM.TokenDTO* | 
+ *SUSHISWAP_V3_ETHEREUM.LiquidityPoolDTO* | Pool-level metadata.
+ *SUSHISWAP_V3_ETHEREUM.SwapDTO* | Trade (swap) event which occurred in a pool.
+ *SUSHISWAP_V3_ETHEREUM.TokenDTO* | Stores aggregated information for a specific token across all pairs that token is included in.
  *Transactions.ETradeAggressiveSide* | 
  *UNISWAP_V2_ETHEREUM.LiquidityPoolDTO* | Pool-level metadata.
  *UNISWAP_V2_ETHEREUM.SwapDTO* | Trade (swap) event which occurred in a pool.

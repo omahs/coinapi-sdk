@@ -6,6 +6,7 @@ api/api.ts
 api/cRYPTOPUNKS.service.ts
 api/cURVEFINANCEETHEREUM.service.ts
 api/metadata.service.ts
+api/sUSHISWAPV3ETHEREUM.service.ts
 api/uNISWAPV2ETHEREUM.service.ts
 api/uNISWAPV3ETHEREUM.service.ts
 configuration.ts
@@ -25,6 +26,9 @@ model/cURVEFINANCEETHEREUMLiquidityPoolDTO.ts
 model/cURVEFINANCEETHEREUMSwapDTO.ts
 model/cURVEFINANCEETHEREUMTokenDTO.ts
 model/models.ts
+model/sUSHISWAPV3ETHEREUMLiquidityPoolDTO.ts
+model/sUSHISWAPV3ETHEREUMSwapDTO.ts
+model/sUSHISWAPV3ETHEREUMTokenDTO.ts
 model/transactionsETradeAggressiveSide.ts
 model/uNISWAPV2ETHEREUMLiquidityPoolDTO.ts
 model/uNISWAPV2ETHEREUMSwapDTO.ts

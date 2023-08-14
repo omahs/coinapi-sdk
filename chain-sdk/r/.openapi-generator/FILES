@@ -23,6 +23,10 @@ R/curvefinanceethereum_liquidity_pool_dto.R
 R/curvefinanceethereum_swap_dto.R
 R/curvefinanceethereum_token_dto.R
 R/metadata_api.R
+R/sushiswapv3_ethereum_api.R
+R/sushiswapv3_ethereum_liquidity_pool_dto.R
+R/sushiswapv3_ethereum_swap_dto.R
+R/sushiswapv3_ethereum_token_dto.R
 R/transactions_e_trade_aggressive_side.R
 R/uniswapv2_ethereum_api.R
 R/uniswapv2_ethereum_liquidity_pool_dto.R
@@ -68,6 +72,10 @@ docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md
 docs/CURVEFINANCEETHEREUMSwapDTO.md
 docs/CURVEFINANCEETHEREUMTokenDTO.md
 docs/MetadataApi.md
+docs/SUSHISWAPV3ETHEREUMApi.md
+docs/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.md
+docs/SUSHISWAPV3ETHEREUMSwapDTO.md
+docs/SUSHISWAPV3ETHEREUMTokenDTO.md
 docs/TransactionsETradeAggressiveSide.md
 docs/UNISWAPV2ETHEREUMApi.md
 docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md
@@ -114,6 +122,10 @@ tests/testthat/test_curvefinanceethereum_liquidity_pool_dto.R
 tests/testthat/test_curvefinanceethereum_swap_dto.R
 tests/testthat/test_curvefinanceethereum_token_dto.R
 tests/testthat/test_metadata_api.R
+tests/testthat/test_sushiswapv3_ethereum_api.R
+tests/testthat/test_sushiswapv3_ethereum_liquidity_pool_dto.R
+tests/testthat/test_sushiswapv3_ethereum_swap_dto.R
+tests/testthat/test_sushiswapv3_ethereum_token_dto.R
 tests/testthat/test_transactions_e_trade_aggressive_side.R
 tests/testthat/test_uniswapv2_ethereum_api.R
 tests/testthat/test_uniswapv2_ethereum_liquidity_pool_dto.R

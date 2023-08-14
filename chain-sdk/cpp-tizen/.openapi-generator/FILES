@@ -40,6 +40,14 @@ src/NetClient.cpp
 src/NetClient.h
 src/Object.h
 src/RequestInfo.h
+src/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.cpp
+src/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.h
+src/SUSHISWAPV3ETHEREUMManager.cpp
+src/SUSHISWAPV3ETHEREUMManager.h
+src/SUSHISWAPV3ETHEREUMSwapDTO.cpp
+src/SUSHISWAPV3ETHEREUMSwapDTO.h
+src/SUSHISWAPV3ETHEREUMTokenDTO.cpp
+src/SUSHISWAPV3ETHEREUMTokenDTO.h
 src/TransactionsETradeAggressiveSide.cpp
 src/TransactionsETradeAggressiveSide.h
 src/UNISWAPV2ETHEREUMLiquidityPoolDTO.cpp
