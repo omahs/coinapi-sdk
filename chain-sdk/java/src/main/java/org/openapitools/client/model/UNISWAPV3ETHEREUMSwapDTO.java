@@ -55,7 +55,7 @@ import org.openapitools.client.JSON;
 /**
  * Trade (swap) event which occurred in a pool.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-14T14:53:38.450626Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-17T10:52:52.396921Z[Etc/UTC]")
 public class UNISWAPV3ETHEREUMSwapDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
