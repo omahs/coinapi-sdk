@@ -14,6 +14,153 @@
 #'
 #' @section Methods:
 #' \describe{
+#' \strong{ PANCAKESWAPV3ETHEREUMAccountsCurrent } \emph{ Accounts (current) }
+#' Gets accounts.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.AccountDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMAccountDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ PANCAKESWAPV3ETHEREUMActiveAccountsCurrent } \emph{ ActiveAccounts (current) }
+#' Gets activeAccounts.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.ActiveAccountDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMActiveAccountDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ PANCAKESWAPV3ETHEREUMDepositsCurrent } \emph{ Deposits (current) }
+#' Gets deposits.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.DepositDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMDepositDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent } \emph{ DexAmmProtocols (current) }
+#' Gets dexAmmProtocols.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.DexAmmProtocolDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent } \emph{ FinancialsDailySnapshots (current) }
+#' Gets financialsDailySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.FinancialsDailySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent } \emph{ LiquidityPoolAmounts (current) }
+#' Gets liquidityPoolAmounts.
+#'
+#' \itemize{
+#' \item \emph{ @param } id character
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.LiquidityPoolAmountDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent } \emph{ LiquidityPoolDailySnapshots (current) }
+#' Gets liquidityPoolDailySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @param } pool character
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent } \emph{ LiquidityPoolFees (current) }
+#' Gets liquidityPoolFees.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.LiquidityPoolFeeDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent } \emph{ LiquidityPoolHourlySnapshots (current) }
+#' Gets liquidityPoolHourlySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @param } pool character
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.LiquidityPoolHourlySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
 #' \strong{ PANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent } \emph{ LiquidityPools (current) }
 #' Gets liquidityPools.
 #'
@@ -31,6 +178,55 @@
 #' }
 #' }
 #'
+#' \strong{ PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent } \emph{ PositionSnapshots (current) }
+#' Gets positionSnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.PositionSnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMPositionSnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ PANCAKESWAPV3ETHEREUMPositionsCurrent } \emph{ Positions (current) }
+#' Gets positions.
+#'
+#' \itemize{
+#' \item \emph{ @param } pool character
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.PositionDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMPositionDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ PANCAKESWAPV3ETHEREUMRewardTokensCurrent } \emph{ RewardTokens (current) }
+#' Gets rewardTokens.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.RewardTokenDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMRewardTokenDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
 #' \strong{ PANCAKESWAPV3ETHEREUMSwapsCurrent } \emph{ Swaps (current) }
 #' Gets swaps.
 #'
@@ -41,6 +237,89 @@
 #' \item status code : 200 | successful operation
 #'
 #' \item return type : array[PANCAKESWAPV3ETHEREUMSwapDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent } \emph{ TickDailySnapshots (current) }
+#' Gets tickDailySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @param } pool character
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.TickDailySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent } \emph{ TickHourlySnapshots (current) }
+#' Gets tickHourlySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @param } pool character
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.TickHourlySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ PANCAKESWAPV3ETHEREUMTicksCurrent } \emph{ Ticks (current) }
+#' Gets ticks.
+#'
+#' \itemize{
+#' \item \emph{ @param } pool character
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.TickDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMTickDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent } \emph{ TokenWhiteListSymbols (current) }
+#' Gets tokenWhiteListSymbols.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.TokenWhiteListSymbolDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent } \emph{ TokenWhiteLists (current) }
+#' Gets tokenWhiteLists.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.TokenWhiteListDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMTokenWhiteListDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -64,11 +343,179 @@
 #' }
 #' }
 #'
+#' \strong{ PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent } \emph{ UsageMetricsDailySnapshots (current) }
+#' Gets usageMetricsDailySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.UsageMetricsDailySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent } \emph{ UsageMetricsHourlySnapshots (current) }
+#' Gets usageMetricsHourlySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.UsageMetricsHourlySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ PANCAKESWAPV3ETHEREUMWithdrawsCurrent } \emph{ Withdraws (current) }
+#' Gets withdraws.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.WithdrawDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[PANCAKESWAPV3ETHEREUMWithdrawDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
 #' }
 #'
 #'
 #' @examples
 #' \dontrun{
+#' ####################  PANCAKESWAPV3ETHEREUMAccountsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Accounts (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMAccountsCurrent(data_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMAccountsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  PANCAKESWAPV3ETHEREUMActiveAccountsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #ActiveAccounts (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMActiveAccountsCurrent(data_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMActiveAccountsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  PANCAKESWAPV3ETHEREUMDepositsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Deposits (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMDepositsCurrent(data_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMDepositsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #DexAmmProtocols (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent(data_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #FinancialsDailySnapshots (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent  ####################
+#'
+#' library(openapi)
+#' var_id <- "id_example" # character | Smart contract address of the pool. (Optional)
+#'
+#' #LiquidityPoolAmounts (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id = var_iddata_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id = var_id)
+#' dput(result)
+#'
+#'
+#' ####################  PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#' var_pool <- "pool_example" # character | Pool this snapshot belongs to. (Optional)
+#'
+#' #LiquidityPoolDailySnapshots (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool = var_pooldata_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool = var_pool)
+#' dput(result)
+#'
+#'
+#' ####################  PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #LiquidityPoolFees (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent(data_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#' var_pool <- "pool_example" # character | The pool this snapshot belongs to (Optional)
+#'
+#' #LiquidityPoolHourlySnapshots (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool = var_pooldata_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool = var_pool)
+#' dput(result)
+#'
+#'
 #' ####################  PANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent  ####################
 #'
 #' library(openapi)
@@ -80,6 +527,46 @@
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$PANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent(id = var_iddata_file = "result.txt")
 #' result <- api_instance$PANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent(id = var_id)
+#' dput(result)
+#'
+#'
+#' ####################  PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #PositionSnapshots (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  PANCAKESWAPV3ETHEREUMPositionsCurrent  ####################
+#'
+#' library(openapi)
+#' var_pool <- "pool_example" # character | The liquidity pool in which this position was opened (Optional)
+#'
+#' #Positions (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMPositionsCurrent(pool = var_pooldata_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMPositionsCurrent(pool = var_pool)
+#' dput(result)
+#'
+#'
+#' ####################  PANCAKESWAPV3ETHEREUMRewardTokensCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #RewardTokens (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMRewardTokensCurrent(data_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMRewardTokensCurrent()
 #' dput(result)
 #'
 #'
@@ -96,6 +583,74 @@
 #' dput(result)
 #'
 #'
+#' ####################  PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#' var_pool <- "pool_example" # character | liquidity pool this tick belongs to (Optional)
+#'
+#' #TickDailySnapshots (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent(pool = var_pooldata_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent(pool = var_pool)
+#' dput(result)
+#'
+#'
+#' ####################  PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#' var_pool <- "pool_example" # character | liquidity pool this tick belongs to (Optional)
+#'
+#' #TickHourlySnapshots (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool = var_pooldata_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool = var_pool)
+#' dput(result)
+#'
+#'
+#' ####################  PANCAKESWAPV3ETHEREUMTicksCurrent  ####################
+#'
+#' library(openapi)
+#' var_pool <- "pool_example" # character | Liquidity pool this tick belongs to (Optional)
+#'
+#' #Ticks (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMTicksCurrent(pool = var_pooldata_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMTicksCurrent(pool = var_pool)
+#' dput(result)
+#'
+#'
+#' ####################  PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #TokenWhiteListSymbols (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(data_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #TokenWhiteLists (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent(data_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent()
+#' dput(result)
+#'
+#'
 #' ####################  PANCAKESWAPV3ETHEREUMTokensCurrent  ####################
 #'
 #' library(openapi)
@@ -107,6 +662,45 @@
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$PANCAKESWAPV3ETHEREUMTokensCurrent(id = var_iddata_file = "result.txt")
 #' result <- api_instance$PANCAKESWAPV3ETHEREUMTokensCurrent(id = var_id)
+#' dput(result)
+#'
+#'
+#' ####################  PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #UsageMetricsDailySnapshots (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #UsageMetricsHourlySnapshots (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  PANCAKESWAPV3ETHEREUMWithdrawsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Withdraws (current)
+#' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMWithdrawsCurrent(data_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMWithdrawsCurrent()
 #' dput(result)
 #'
 #'
@@ -130,6 +724,795 @@ PANCAKESWAPV3ETHEREUMApi <- R6::R6Class(
         self$api_client <- api_client
       } else {
         self$api_client <- ApiClient$new()
+      }
+    },
+    #' Accounts (current)
+    #'
+    #' @description
+    #' Accounts (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMAccountDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMAccountsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMAccountsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Accounts (current)
+    #'
+    #' @description
+    #' Accounts (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMAccountDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMAccountsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/accounts/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMAccountDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' ActiveAccounts (current)
+    #'
+    #' @description
+    #' ActiveAccounts (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMActiveAccountDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMActiveAccountsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' ActiveAccounts (current)
+    #'
+    #' @description
+    #' ActiveAccounts (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMActiveAccountDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMActiveAccountDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Deposits (current)
+    #'
+    #' @description
+    #' Deposits (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMDepositDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMDepositsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMDepositsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Deposits (current)
+    #'
+    #' @description
+    #' Deposits (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMDepositDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMDepositsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/deposits/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMDepositDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' DexAmmProtocols (current)
+    #'
+    #' @description
+    #' DexAmmProtocols (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' DexAmmProtocols (current)
+    #'
+    #' @description
+    #' DexAmmProtocols (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/dexAmmProtocols/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' FinancialsDailySnapshots (current)
+    #'
+    #' @description
+    #' FinancialsDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' FinancialsDailySnapshots (current)
+    #'
+    #' @description
+    #' FinancialsDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/financialsDailySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' LiquidityPoolAmounts (current)
+    #'
+    #' @description
+    #' LiquidityPoolAmounts (current)
+    #'
+    #' @param id (optional) Smart contract address of the pool.
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent = function(id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo(id, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' LiquidityPoolAmounts (current)
+    #'
+    #' @description
+    #' LiquidityPoolAmounts (current)
+    #'
+    #' @param id (optional) Smart contract address of the pool.
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo = function(id = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+      query_params[["id"]] <- `id`
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolAmounts/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @description
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @param pool (optional) Pool this snapshot belongs to.
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent = function(pool = NULL, data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(pool, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @description
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @param pool (optional) Pool this snapshot belongs to.
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo = function(pool = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+      query_params[["pool"]] <- `pool`
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' LiquidityPoolFees (current)
+    #'
+    #' @description
+    #' LiquidityPoolFees (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' LiquidityPoolFees (current)
+    #'
+    #' @description
+    #' LiquidityPoolFees (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolFees/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' LiquidityPoolHourlySnapshots (current)
+    #'
+    #' @description
+    #' LiquidityPoolHourlySnapshots (current)
+    #'
+    #' @param pool (optional) The pool this snapshot belongs to
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent = function(pool = NULL, data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo(pool, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' LiquidityPoolHourlySnapshots (current)
+    #'
+    #' @description
+    #' LiquidityPoolHourlySnapshots (current)
+    #'
+    #' @param pool (optional) The pool this snapshot belongs to
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo = function(pool = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+      query_params[["pool"]] <- `pool`
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolHourlySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
       }
     },
     #' LiquidityPools (current)
@@ -206,6 +1589,269 @@ PANCAKESWAPV3ETHEREUMApi <- R6::R6Class(
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMLiquidityPoolDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' PositionSnapshots (current)
+    #'
+    #' @description
+    #' PositionSnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMPositionSnapshotDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' PositionSnapshots (current)
+    #'
+    #' @description
+    #' PositionSnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMPositionSnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/positionSnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMPositionSnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Positions (current)
+    #'
+    #' @description
+    #' Positions (current)
+    #'
+    #' @param pool (optional) The liquidity pool in which this position was opened
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMPositionDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMPositionsCurrent = function(pool = NULL, data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMPositionsCurrentWithHttpInfo(pool, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Positions (current)
+    #'
+    #' @description
+    #' Positions (current)
+    #'
+    #' @param pool (optional) The liquidity pool in which this position was opened
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMPositionDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMPositionsCurrentWithHttpInfo = function(pool = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+      query_params[["pool"]] <- `pool`
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/positions/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMPositionDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' RewardTokens (current)
+    #'
+    #' @description
+    #' RewardTokens (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMRewardTokenDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMRewardTokensCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' RewardTokens (current)
+    #'
+    #' @description
+    #' RewardTokens (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMRewardTokenDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/rewardTokens/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMRewardTokenDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -309,6 +1955,451 @@ PANCAKESWAPV3ETHEREUMApi <- R6::R6Class(
         local_var_resp
       }
     },
+    #' TickDailySnapshots (current)
+    #'
+    #' @description
+    #' TickDailySnapshots (current)
+    #'
+    #' @param pool (optional) liquidity pool this tick belongs to
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent = function(pool = NULL, data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo(pool, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' TickDailySnapshots (current)
+    #'
+    #' @description
+    #' TickDailySnapshots (current)
+    #'
+    #' @param pool (optional) liquidity pool this tick belongs to
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo = function(pool = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+      query_params[["pool"]] <- `pool`
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/tickDailySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' TickHourlySnapshots (current)
+    #'
+    #' @description
+    #' TickHourlySnapshots (current)
+    #'
+    #' @param pool (optional) liquidity pool this tick belongs to
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent = function(pool = NULL, data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(pool, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' TickHourlySnapshots (current)
+    #'
+    #' @description
+    #' TickHourlySnapshots (current)
+    #'
+    #' @param pool (optional) liquidity pool this tick belongs to
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo = function(pool = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+      query_params[["pool"]] <- `pool`
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/tickHourlySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Ticks (current)
+    #'
+    #' @description
+    #' Ticks (current)
+    #'
+    #' @param pool (optional) Liquidity pool this tick belongs to
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMTickDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMTicksCurrent = function(pool = NULL, data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMTicksCurrentWithHttpInfo(pool, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Ticks (current)
+    #'
+    #' @description
+    #' Ticks (current)
+    #'
+    #' @param pool (optional) Liquidity pool this tick belongs to
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMTickDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMTicksCurrentWithHttpInfo = function(pool = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+      query_params[["pool"]] <- `pool`
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/ticks/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMTickDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' TokenWhiteListSymbols (current)
+    #'
+    #' @description
+    #' TokenWhiteListSymbols (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' TokenWhiteListSymbols (current)
+    #'
+    #' @description
+    #' TokenWhiteListSymbols (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteListSymbols/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' TokenWhiteLists (current)
+    #'
+    #' @description
+    #' TokenWhiteLists (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMTokenWhiteListDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' TokenWhiteLists (current)
+    #'
+    #' @description
+    #' TokenWhiteLists (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMTokenWhiteListDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteLists/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMTokenWhiteListDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
     #' Tokens (current)
     #'
     #' @description
@@ -383,6 +2474,264 @@ PANCAKESWAPV3ETHEREUMApi <- R6::R6Class(
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMTokenDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' UsageMetricsDailySnapshots (current)
+    #'
+    #' @description
+    #' UsageMetricsDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' UsageMetricsDailySnapshots (current)
+    #'
+    #' @description
+    #' UsageMetricsDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/usageMetricsDailySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' UsageMetricsHourlySnapshots (current)
+    #'
+    #' @description
+    #' UsageMetricsHourlySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' UsageMetricsHourlySnapshots (current)
+    #'
+    #' @description
+    #' UsageMetricsHourlySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/usageMetricsHourlySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Withdraws (current)
+    #'
+    #' @description
+    #' Withdraws (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[PANCAKESWAPV3ETHEREUMWithdrawDTO]
+    #' @export
+    PANCAKESWAPV3ETHEREUMWithdrawsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Withdraws (current)
+    #'
+    #' @description
+    #' Withdraws (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[PANCAKESWAPV3ETHEREUMWithdrawDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    PANCAKESWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/withdraws/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[PANCAKESWAPV3ETHEREUMWithdrawDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }

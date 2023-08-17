@@ -15,9 +15,29 @@
 
 
 module Api.Request.PANCAKESWAPV3ETHEREUM exposing
-    ( pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent
+    ( pANCAKESWAPV3ETHEREUMAccountsCurrent
+    , pANCAKESWAPV3ETHEREUMActiveAccountsCurrent
+    , pANCAKESWAPV3ETHEREUMDepositsCurrent
+    , pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent
+    , pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
+    , pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+    , pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+    , pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent
+    , pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+    , pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent
+    , pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent
+    , pANCAKESWAPV3ETHEREUMPositionsCurrent
+    , pANCAKESWAPV3ETHEREUMRewardTokensCurrent
     , pANCAKESWAPV3ETHEREUMSwapsCurrent
+    , pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent
+    , pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent
+    , pANCAKESWAPV3ETHEREUMTicksCurrent
+    , pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
+    , pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent
     , pANCAKESWAPV3ETHEREUMTokensCurrent
+    , pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
+    , pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
+    , pANCAKESWAPV3ETHEREUMWithdrawsCurrent
     )
 
 import Api
@@ -26,6 +46,132 @@ import Dict
 import Http
 import Json.Decode
 import Json.Encode
+
+{-| Gets accounts.
+-}
+pANCAKESWAPV3ETHEREUMAccountsCurrent : Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMAccountDTO)
+pANCAKESWAPV3ETHEREUMAccountsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/accounts/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMAccountDTODecoder)
+
+
+{-| Gets activeAccounts.
+-}
+pANCAKESWAPV3ETHEREUMActiveAccountsCurrent : Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMActiveAccountDTO)
+pANCAKESWAPV3ETHEREUMActiveAccountsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMActiveAccountDTODecoder)
+
+
+{-| Gets deposits.
+-}
+pANCAKESWAPV3ETHEREUMDepositsCurrent : Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMDepositDTO)
+pANCAKESWAPV3ETHEREUMDepositsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/deposits/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMDepositDTODecoder)
+
+
+{-| Gets dexAmmProtocols.
+-}
+pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent : Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO)
+pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/dexAmmProtocols/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMDexAmmProtocolDTODecoder)
+
+
+{-| Gets financialsDailySnapshots.
+-}
+pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent : Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO)
+pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/financialsDailySnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTODecoder)
+
+
+{-| Gets liquidityPoolAmounts.
+-}
+pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent : Maybe String -> Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO)
+pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent id_query =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolAmounts/current"
+        []
+        [ ( "id", Maybe.map identity id_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTODecoder)
+
+
+{-| Gets liquidityPoolDailySnapshots.
+-}
+pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent : Maybe String -> Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO)
+pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent pool_query =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current"
+        []
+        [ ( "pool", Maybe.map identity pool_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODecoder)
+
+
+{-| Gets liquidityPoolFees.
+-}
+pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent : Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO)
+pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolFees/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTODecoder)
+
+
+{-| Gets liquidityPoolHourlySnapshots.
+-}
+pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent : Maybe String -> Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO)
+pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent pool_query =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolHourlySnapshots/current"
+        []
+        [ ( "pool", Maybe.map identity pool_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTODecoder)
+
 
 {-| Gets liquidityPools.
 -}
@@ -39,6 +185,48 @@ pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent id_query =
         []
         Nothing
         (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMLiquidityPoolDTODecoder)
+
+
+{-| Gets positionSnapshots.
+-}
+pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent : Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMPositionSnapshotDTO)
+pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/positionSnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMPositionSnapshotDTODecoder)
+
+
+{-| Gets positions.
+-}
+pANCAKESWAPV3ETHEREUMPositionsCurrent : Maybe String -> Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMPositionDTO)
+pANCAKESWAPV3ETHEREUMPositionsCurrent pool_query =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/positions/current"
+        []
+        [ ( "pool", Maybe.map identity pool_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMPositionDTODecoder)
+
+
+{-| Gets rewardTokens.
+-}
+pANCAKESWAPV3ETHEREUMRewardTokensCurrent : Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMRewardTokenDTO)
+pANCAKESWAPV3ETHEREUMRewardTokensCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/rewardTokens/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMRewardTokenDTODecoder)
 
 
 {-| Gets swaps.
@@ -55,6 +243,76 @@ pANCAKESWAPV3ETHEREUMSwapsCurrent =
         (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMSwapDTODecoder)
 
 
+{-| Gets tickDailySnapshots.
+-}
+pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent : Maybe String -> Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO)
+pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent pool_query =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/tickDailySnapshots/current"
+        []
+        [ ( "pool", Maybe.map identity pool_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMTickDailySnapshotDTODecoder)
+
+
+{-| Gets tickHourlySnapshots.
+-}
+pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent : Maybe String -> Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO)
+pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent pool_query =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/tickHourlySnapshots/current"
+        []
+        [ ( "pool", Maybe.map identity pool_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTODecoder)
+
+
+{-| Gets ticks.
+-}
+pANCAKESWAPV3ETHEREUMTicksCurrent : Maybe String -> Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMTickDTO)
+pANCAKESWAPV3ETHEREUMTicksCurrent pool_query =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/ticks/current"
+        []
+        [ ( "pool", Maybe.map identity pool_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMTickDTODecoder)
+
+
+{-| Gets tokenWhiteListSymbols.
+-}
+pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent : Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO)
+pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteListSymbols/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTODecoder)
+
+
+{-| Gets tokenWhiteLists.
+-}
+pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent : Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMTokenWhiteListDTO)
+pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteLists/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMTokenWhiteListDTODecoder)
+
+
 {-| Gets tokens.
 -}
 pANCAKESWAPV3ETHEREUMTokensCurrent : Maybe String -> Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMTokenDTO)
@@ -67,4 +325,46 @@ pANCAKESWAPV3ETHEREUMTokensCurrent id_query =
         []
         Nothing
         (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMTokenDTODecoder)
+
+
+{-| Gets usageMetricsDailySnapshots.
+-}
+pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent : Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO)
+pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/usageMetricsDailySnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTODecoder)
+
+
+{-| Gets usageMetricsHourlySnapshots.
+-}
+pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent : Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO)
+pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/usageMetricsHourlySnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTODecoder)
+
+
+{-| Gets withdraws.
+-}
+pANCAKESWAPV3ETHEREUMWithdrawsCurrent : Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMWithdrawDTO)
+pANCAKESWAPV3ETHEREUMWithdrawsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/pancakeswap-v3-ethereum/withdraws/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMWithdrawDTODecoder)
 

@@ -49,6 +49,480 @@ sub new {
 
 
 #
+# p_ancakeswapv3_ethereum_accounts__current
+#
+# Accounts (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_accounts__current' } = {
+        summary => 'Accounts (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMAccountDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMAccountDTO]
+#
+sub p_ancakeswapv3_ethereum_accounts__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/accounts/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMAccountDTO]', $response);
+    return $_response_object;
+}
+
+#
+# p_ancakeswapv3_ethereum_active_accounts__current
+#
+# ActiveAccounts (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_active_accounts__current' } = {
+        summary => 'ActiveAccounts (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMActiveAccountDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMActiveAccountDTO]
+#
+sub p_ancakeswapv3_ethereum_active_accounts__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMActiveAccountDTO]', $response);
+    return $_response_object;
+}
+
+#
+# p_ancakeswapv3_ethereum_deposits__current
+#
+# Deposits (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_deposits__current' } = {
+        summary => 'Deposits (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMDepositDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMDepositDTO]
+#
+sub p_ancakeswapv3_ethereum_deposits__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/deposits/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMDepositDTO]', $response);
+    return $_response_object;
+}
+
+#
+# p_ancakeswapv3_ethereum_dex_amm_protocols__current
+#
+# DexAmmProtocols (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_dex_amm_protocols__current' } = {
+        summary => 'DexAmmProtocols (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO]
+#
+sub p_ancakeswapv3_ethereum_dex_amm_protocols__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/dexAmmProtocols/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO]', $response);
+    return $_response_object;
+}
+
+#
+# p_ancakeswapv3_ethereum_financials_daily_snapshots__current
+#
+# FinancialsDailySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_financials_daily_snapshots__current' } = {
+        summary => 'FinancialsDailySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO]
+#
+sub p_ancakeswapv3_ethereum_financials_daily_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/financialsDailySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# p_ancakeswapv3_ethereum_liquidity_pool_amounts__current
+#
+# LiquidityPoolAmounts (current)
+#
+# @param string $id Smart contract address of the pool. (optional)
+{
+    my $params = {
+    'id' => {
+        data_type => 'string',
+        description => 'Smart contract address of the pool.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_liquidity_pool_amounts__current' } = {
+        summary => 'LiquidityPoolAmounts (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO]
+#
+sub p_ancakeswapv3_ethereum_liquidity_pool_amounts__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolAmounts/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO]', $response);
+    return $_response_object;
+}
+
+#
+# p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current
+#
+# LiquidityPoolDailySnapshots (current)
+#
+# @param string $pool Pool this snapshot belongs to. (optional)
+{
+    my $params = {
+    'pool' => {
+        data_type => 'string',
+        description => 'Pool this snapshot belongs to.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current' } = {
+        summary => 'LiquidityPoolDailySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]
+#
+sub p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# p_ancakeswapv3_ethereum_liquidity_pool_fees__current
+#
+# LiquidityPoolFees (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_liquidity_pool_fees__current' } = {
+        summary => 'LiquidityPoolFees (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO]
+#
+sub p_ancakeswapv3_ethereum_liquidity_pool_fees__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolFees/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO]', $response);
+    return $_response_object;
+}
+
+#
+# p_ancakeswapv3_ethereum_liquidity_pool_hourly_snapshots__current
+#
+# LiquidityPoolHourlySnapshots (current)
+#
+# @param string $pool The pool this snapshot belongs to (optional)
+{
+    my $params = {
+    'pool' => {
+        data_type => 'string',
+        description => 'The pool this snapshot belongs to',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_liquidity_pool_hourly_snapshots__current' } = {
+        summary => 'LiquidityPoolHourlySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]
+#
+sub p_ancakeswapv3_ethereum_liquidity_pool_hourly_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolHourlySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
 # p_ancakeswapv3_ethereum_liquidity_pools__current
 #
 # LiquidityPools (current)
@@ -109,6 +583,164 @@ sub p_ancakeswapv3_ethereum_liquidity_pools__current {
 }
 
 #
+# p_ancakeswapv3_ethereum_position_snapshots__current
+#
+# PositionSnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_position_snapshots__current' } = {
+        summary => 'PositionSnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMPositionSnapshotDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMPositionSnapshotDTO]
+#
+sub p_ancakeswapv3_ethereum_position_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/positionSnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMPositionSnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# p_ancakeswapv3_ethereum_positions__current
+#
+# Positions (current)
+#
+# @param string $pool The liquidity pool in which this position was opened (optional)
+{
+    my $params = {
+    'pool' => {
+        data_type => 'string',
+        description => 'The liquidity pool in which this position was opened',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_positions__current' } = {
+        summary => 'Positions (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMPositionDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMPositionDTO]
+#
+sub p_ancakeswapv3_ethereum_positions__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/positions/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMPositionDTO]', $response);
+    return $_response_object;
+}
+
+#
+# p_ancakeswapv3_ethereum_reward_tokens__current
+#
+# RewardTokens (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_reward_tokens__current' } = {
+        summary => 'RewardTokens (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMRewardTokenDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMRewardTokenDTO]
+#
+sub p_ancakeswapv3_ethereum_reward_tokens__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/rewardTokens/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMRewardTokenDTO]', $response);
+    return $_response_object;
+}
+
+#
 # p_ancakeswapv3_ethereum_swaps__current
 #
 # Swaps (current)
@@ -154,6 +786,284 @@ sub p_ancakeswapv3_ethereum_swaps__current {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMSwapDTO]', $response);
+    return $_response_object;
+}
+
+#
+# p_ancakeswapv3_ethereum_tick_daily_snapshots__current
+#
+# TickDailySnapshots (current)
+#
+# @param string $pool liquidity pool this tick belongs to (optional)
+{
+    my $params = {
+    'pool' => {
+        data_type => 'string',
+        description => 'liquidity pool this tick belongs to',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_tick_daily_snapshots__current' } = {
+        summary => 'TickDailySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO]
+#
+sub p_ancakeswapv3_ethereum_tick_daily_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/tickDailySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# p_ancakeswapv3_ethereum_tick_hourly_snapshots__current
+#
+# TickHourlySnapshots (current)
+#
+# @param string $pool liquidity pool this tick belongs to (optional)
+{
+    my $params = {
+    'pool' => {
+        data_type => 'string',
+        description => 'liquidity pool this tick belongs to',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_tick_hourly_snapshots__current' } = {
+        summary => 'TickHourlySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO]
+#
+sub p_ancakeswapv3_ethereum_tick_hourly_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/tickHourlySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# p_ancakeswapv3_ethereum_ticks__current
+#
+# Ticks (current)
+#
+# @param string $pool Liquidity pool this tick belongs to (optional)
+{
+    my $params = {
+    'pool' => {
+        data_type => 'string',
+        description => 'Liquidity pool this tick belongs to',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_ticks__current' } = {
+        summary => 'Ticks (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMTickDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMTickDTO]
+#
+sub p_ancakeswapv3_ethereum_ticks__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/ticks/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMTickDTO]', $response);
+    return $_response_object;
+}
+
+#
+# p_ancakeswapv3_ethereum_token_white_list_symbols__current
+#
+# TokenWhiteListSymbols (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_token_white_list_symbols__current' } = {
+        summary => 'TokenWhiteListSymbols (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO]
+#
+sub p_ancakeswapv3_ethereum_token_white_list_symbols__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteListSymbols/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO]', $response);
+    return $_response_object;
+}
+
+#
+# p_ancakeswapv3_ethereum_token_white_lists__current
+#
+# TokenWhiteLists (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_token_white_lists__current' } = {
+        summary => 'TokenWhiteLists (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMTokenWhiteListDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMTokenWhiteListDTO]
+#
+sub p_ancakeswapv3_ethereum_token_white_lists__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteLists/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMTokenWhiteListDTO]', $response);
     return $_response_object;
 }
 
@@ -214,6 +1124,153 @@ sub p_ancakeswapv3_ethereum_tokens__current {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMTokenDTO]', $response);
+    return $_response_object;
+}
+
+#
+# p_ancakeswapv3_ethereum_usage_metrics_daily_snapshots__current
+#
+# UsageMetricsDailySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_usage_metrics_daily_snapshots__current' } = {
+        summary => 'UsageMetricsDailySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]
+#
+sub p_ancakeswapv3_ethereum_usage_metrics_daily_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/usageMetricsDailySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# p_ancakeswapv3_ethereum_usage_metrics_hourly_snapshots__current
+#
+# UsageMetricsHourlySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_usage_metrics_hourly_snapshots__current' } = {
+        summary => 'UsageMetricsHourlySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]
+#
+sub p_ancakeswapv3_ethereum_usage_metrics_hourly_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/usageMetricsHourlySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# p_ancakeswapv3_ethereum_withdraws__current
+#
+# Withdraws (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_withdraws__current' } = {
+        summary => 'Withdraws (current)',
+        params => $params,
+        returns => 'ARRAY[PANCAKESWAPV3ETHEREUMWithdrawDTO]',
+        };
+}
+# @return ARRAY[PANCAKESWAPV3ETHEREUMWithdrawDTO]
+#
+sub p_ancakeswapv3_ethereum_withdraws__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/pancakeswap-v3-ethereum/withdraws/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[PANCAKESWAPV3ETHEREUMWithdrawDTO]', $response);
     return $_response_object;
 }
 

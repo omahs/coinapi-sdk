@@ -1,0 +1,161 @@
+/*
+ * PANCAKESWAP_V3_ETHEREUM.UsageMetricsHourlySnapshotDTO.h
+ *
+ * 
+ */
+
+#ifndef _PANCAKESWAP_V3_ETHEREUM.UsageMetricsHourlySnapshotDTO_H_
+#define _PANCAKESWAP_V3_ETHEREUM.UsageMetricsHourlySnapshotDTO_H_
+
+
+#include <string>
+#include "Object.h"
+
+/** \defgroup Models Data Structures for API
+ *  Classes containing all the Data Structures needed for calling/returned by API endpoints
+ *
+ */
+
+namespace Tizen {
+namespace ArtikCloud {
+
+
+/*! \brief 
+ *
+ *  \ingroup Models
+ *
+ */
+
+class PANCAKESWAP_V3_ETHEREUM.UsageMetricsHourlySnapshotDTO : public Object {
+public:
+	/*! \brief Constructor.
+	 */
+	PANCAKESWAP_V3_ETHEREUM.UsageMetricsHourlySnapshotDTO();
+	PANCAKESWAP_V3_ETHEREUM.UsageMetricsHourlySnapshotDTO(char* str);
+
+	/*! \brief Destructor.
+	 */
+	virtual ~PANCAKESWAP_V3_ETHEREUM.UsageMetricsHourlySnapshotDTO();
+
+	/*! \brief Retrieve a string JSON representation of this class.
+	 */
+	char* toJson();
+
+	/*! \brief Fills in members of this class from JSON string representing it.
+	 */
+	void fromJson(char* jsonStr);
+
+	/*! \brief Get 
+	 */
+	std::string getEntryTime();
+
+	/*! \brief Set 
+	 */
+	void setEntryTime(std::string  entry_time);
+	/*! \brief Get 
+	 */
+	std::string getRecvTime();
+
+	/*! \brief Set 
+	 */
+	void setRecvTime(std::string  recv_time);
+	/*! \brief Get Number of block in which entity was recorded.
+	 */
+	long long getBlockNumber();
+
+	/*! \brief Set Number of block in which entity was recorded.
+	 */
+	void setBlockNumber(long long  block_number);
+	/*! \brief Get (# of hours since Unix epoch time)
+	 */
+	std::string getId();
+
+	/*! \brief Set (# of hours since Unix epoch time)
+	 */
+	void setId(std::string  id);
+	/*! \brief Get Number of hours since Unix epoch time
+	 */
+	int getHour();
+
+	/*! \brief Set Number of hours since Unix epoch time
+	 */
+	void setHour(int  hour);
+	/*! \brief Get Protocol this snapshot is associated with
+	 */
+	std::string getProtocol();
+
+	/*! \brief Set Protocol this snapshot is associated with
+	 */
+	void setProtocol(std::string  protocol);
+	/*! \brief Get Number of unique hourly active users
+	 */
+	int getHourlyActiveUsers();
+
+	/*! \brief Set Number of unique hourly active users
+	 */
+	void setHourlyActiveUsers(int  hourly_active_users);
+	/*! \brief Get Number of cumulative unique users
+	 */
+	int getCumulativeUniqueUsers();
+
+	/*! \brief Set Number of cumulative unique users
+	 */
+	void setCumulativeUniqueUsers(int  cumulative_unique_users);
+	/*! \brief Get Total number of transactions occurred in an hour. Transactions include all entities that implement the Event interface.
+	 */
+	int getHourlyTransactionCount();
+
+	/*! \brief Set Total number of transactions occurred in an hour. Transactions include all entities that implement the Event interface.
+	 */
+	void setHourlyTransactionCount(int  hourly_transaction_count);
+	/*! \brief Get Total number of deposits (add liquidity) in an hour
+	 */
+	int getHourlyDepositCount();
+
+	/*! \brief Set Total number of deposits (add liquidity) in an hour
+	 */
+	void setHourlyDepositCount(int  hourly_deposit_count);
+	/*! \brief Get Total number of withdrawals (remove liquidity) in an hour
+	 */
+	int getHourlyWithdrawCount();
+
+	/*! \brief Set Total number of withdrawals (remove liquidity) in an hour
+	 */
+	void setHourlyWithdrawCount(int  hourly_withdraw_count);
+	/*! \brief Get Total number of trades (swaps) in an hour
+	 */
+	int getHourlySwapCount();
+
+	/*! \brief Set Total number of trades (swaps) in an hour
+	 */
+	void setHourlySwapCount(int  hourly_swap_count);
+	/*! \brief Get Timestamp of when this snapshot was taken/last modified (May be taken after interval has passed)
+	 */
+	std::string getTimestamp();
+
+	/*! \brief Set Timestamp of when this snapshot was taken/last modified (May be taken after interval has passed)
+	 */
+	void setTimestamp(std::string  timestamp);
+
+private:
+	std::string entry_time;
+	std::string recv_time;
+	long long block_number;
+	std::string id;
+	int hour;
+	std::string protocol;
+	int hourly_active_users;
+	int cumulative_unique_users;
+	int hourly_transaction_count;
+	int hourly_deposit_count;
+	int hourly_withdraw_count;
+	int hourly_swap_count;
+	std::string timestamp;
+	void __init();
+	void __cleanup();
+
+};
+}
+}
+
+#endif /* _PANCAKESWAP_V3_ETHEREUM.UsageMetricsHourlySnapshotDTO_H_ */

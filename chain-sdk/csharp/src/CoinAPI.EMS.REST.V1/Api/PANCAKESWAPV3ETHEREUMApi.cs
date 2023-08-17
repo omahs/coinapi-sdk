@@ -26,6 +26,183 @@ namespace CoinAPI.EMS.REST.V1.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Accounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets accounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMAccountDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMAccountDTO> PANCAKESWAPV3ETHEREUMAccountsCurrent ();
+
+        /// <summary>
+        /// Accounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets accounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMAccountDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMAccountDTO>> PANCAKESWAPV3ETHEREUMAccountsCurrentWithHttpInfo ();
+        /// <summary>
+        /// ActiveAccounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets activeAccounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMActiveAccountDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMActiveAccountDTO> PANCAKESWAPV3ETHEREUMActiveAccountsCurrent ();
+
+        /// <summary>
+        /// ActiveAccounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets activeAccounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMActiveAccountDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>> PANCAKESWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo ();
+        /// <summary>
+        /// Deposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets deposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMDepositDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMDepositDTO> PANCAKESWAPV3ETHEREUMDepositsCurrent ();
+
+        /// <summary>
+        /// Deposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets deposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMDepositDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMDepositDTO>> PANCAKESWAPV3ETHEREUMDepositsCurrentWithHttpInfo ();
+        /// <summary>
+        /// DexAmmProtocols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dexAmmProtocols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO> PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent ();
+
+        /// <summary>
+        /// DexAmmProtocols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dexAmmProtocols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>> PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo ();
+        /// <summary>
+        /// FinancialsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets financialsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO> PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent ();
+
+        /// <summary>
+        /// FinancialsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets financialsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo ();
+        /// <summary>
+        /// LiquidityPoolAmounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolAmounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO> PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent (string id = default(string));
+
+        /// <summary>
+        /// LiquidityPoolAmounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolAmounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo (string id = default(string));
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent (string pool = default(string));
+
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo (string pool = default(string));
+        /// <summary>
+        /// LiquidityPoolFees (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolFees.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO> PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent ();
+
+        /// <summary>
+        /// LiquidityPoolFees (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolFees.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo ();
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The pool this snapshot belongs to (optional)</param>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent (string pool = default(string));
+
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The pool this snapshot belongs to (optional)</param>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo (string pool = default(string));
+        /// <summary>
         /// LiquidityPools (current)
         /// </summary>
         /// <remarks>
@@ -47,6 +224,65 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMLiquidityPoolDTO></returns>
         ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolsCurrentWithHttpInfo (string id = default(string));
         /// <summary>
+        /// PositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets positionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO> PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent ();
+
+        /// <summary>
+        /// PositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets positionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>> PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo ();
+        /// <summary>
+        /// Positions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets positions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The liquidity pool in which this position was opened (optional)</param>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMPositionDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMPositionDTO> PANCAKESWAPV3ETHEREUMPositionsCurrent (string pool = default(string));
+
+        /// <summary>
+        /// Positions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets positions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The liquidity pool in which this position was opened (optional)</param>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMPositionDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionDTO>> PANCAKESWAPV3ETHEREUMPositionsCurrentWithHttpInfo (string pool = default(string));
+        /// <summary>
+        /// RewardTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets rewardTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMRewardTokenDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMRewardTokenDTO> PANCAKESWAPV3ETHEREUMRewardTokensCurrent ();
+
+        /// <summary>
+        /// RewardTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets rewardTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMRewardTokenDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>> PANCAKESWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo ();
+        /// <summary>
         /// Swaps (current)
         /// </summary>
         /// <remarks>
@@ -65,6 +301,107 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMSwapDTO></returns>
         ApiResponse<List<PANCAKESWAPV3ETHEREUMSwapDTO>> PANCAKESWAPV3ETHEREUMSwapsCurrentWithHttpInfo ();
+        /// <summary>
+        /// TickDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tickDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO> PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent (string pool = default(string));
+
+        /// <summary>
+        /// TickDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tickDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo (string pool = default(string));
+        /// <summary>
+        /// TickHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tickHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO> PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent (string pool = default(string));
+
+        /// <summary>
+        /// TickHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tickHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>> PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo (string pool = default(string));
+        /// <summary>
+        /// Ticks (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets ticks.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Liquidity pool this tick belongs to (optional)</param>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMTickDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMTickDTO> PANCAKESWAPV3ETHEREUMTicksCurrent (string pool = default(string));
+
+        /// <summary>
+        /// Ticks (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets ticks.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Liquidity pool this tick belongs to (optional)</param>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMTickDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDTO>> PANCAKESWAPV3ETHEREUMTicksCurrentWithHttpInfo (string pool = default(string));
+        /// <summary>
+        /// TokenWhiteListSymbols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenWhiteListSymbols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO> PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent ();
+
+        /// <summary>
+        /// TokenWhiteListSymbols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenWhiteListSymbols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>> PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo ();
+        /// <summary>
+        /// TokenWhiteLists (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenWhiteLists.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO> PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent ();
+
+        /// <summary>
+        /// TokenWhiteLists (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenWhiteLists.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>> PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo ();
         /// <summary>
         /// Tokens (current)
         /// </summary>
@@ -86,8 +423,260 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Smart contract address of the token. (optional)</param>
         /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMTokenDTO></returns>
         ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenDTO>> PANCAKESWAPV3ETHEREUMTokensCurrentWithHttpInfo (string id = default(string));
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO> PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent ();
+
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo ();
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO> PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent ();
+
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo ();
+        /// <summary>
+        /// Withdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMWithdrawDTO></returns>
+        List<PANCAKESWAPV3ETHEREUMWithdrawDTO> PANCAKESWAPV3ETHEREUMWithdrawsCurrent ();
+
+        /// <summary>
+        /// Withdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMWithdrawDTO></returns>
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMWithdrawDTO>> PANCAKESWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Accounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets accounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMAccountDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMAccountDTO>> PANCAKESWAPV3ETHEREUMAccountsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Accounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets accounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMAccountDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMAccountDTO>>> PANCAKESWAPV3ETHEREUMAccountsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// ActiveAccounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets activeAccounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMActiveAccountDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>> PANCAKESWAPV3ETHEREUMActiveAccountsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// ActiveAccounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets activeAccounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMActiveAccountDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>>> PANCAKESWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Deposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets deposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMDepositDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMDepositDTO>> PANCAKESWAPV3ETHEREUMDepositsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Deposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets deposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMDepositDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMDepositDTO>>> PANCAKESWAPV3ETHEREUMDepositsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// DexAmmProtocols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dexAmmProtocols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>> PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// DexAmmProtocols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dexAmmProtocols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>>> PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// FinancialsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets financialsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// FinancialsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets financialsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>>> PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// LiquidityPoolAmounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolAmounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// LiquidityPoolAmounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolAmounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>>> PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfoAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// LiquidityPoolFees (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolFees.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// LiquidityPoolFees (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolFees.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>>> PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The pool this snapshot belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The pool this snapshot belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>> PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// LiquidityPools (current)
         /// </summary>
@@ -112,6 +701,71 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDTO>>> PANCAKESWAPV3ETHEREUMLiquidityPoolsCurrentWithHttpInfoAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
+        /// PositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets positionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>> PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// PositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets positionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMPositionSnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>>> PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Positions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets positions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The liquidity pool in which this position was opened (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMPositionDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMPositionDTO>> PANCAKESWAPV3ETHEREUMPositionsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Positions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets positions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The liquidity pool in which this position was opened (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMPositionDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionDTO>>> PANCAKESWAPV3ETHEREUMPositionsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// RewardTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets rewardTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMRewardTokenDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>> PANCAKESWAPV3ETHEREUMRewardTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// RewardTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets rewardTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMRewardTokenDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>>> PANCAKESWAPV3ETHEREUMRewardTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
         /// Swaps (current)
         /// </summary>
         /// <remarks>
@@ -132,6 +786,117 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMSwapDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMSwapDTO>>> PANCAKESWAPV3ETHEREUMSwapsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// TickDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tickDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// TickDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tickDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>>> PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// TickHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tickHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>> PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// TickHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tickHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>>> PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Ticks (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets ticks.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMTickDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMTickDTO>> PANCAKESWAPV3ETHEREUMTicksCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Ticks (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets ticks.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMTickDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDTO>>> PANCAKESWAPV3ETHEREUMTicksCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// TokenWhiteListSymbols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenWhiteListSymbols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>> PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// TokenWhiteListSymbols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenWhiteListSymbols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>>> PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// TokenWhiteLists (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenWhiteLists.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>> PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// TokenWhiteLists (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenWhiteLists.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMTokenWhiteListDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>>> PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Tokens (current)
         /// </summary>
@@ -155,6 +920,69 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMTokenDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenDTO>>> PANCAKESWAPV3ETHEREUMTokensCurrentWithHttpInfoAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>> PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>> PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Withdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMWithdrawDTO></returns>
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMWithdrawDTO>> PANCAKESWAPV3ETHEREUMWithdrawsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Withdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMWithdrawDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMWithdrawDTO>>> PANCAKESWAPV3ETHEREUMWithdrawsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -264,6 +1092,1185 @@ namespace CoinAPI.EMS.REST.V1.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Accounts (current) Gets accounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMAccountDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMAccountDTO> PANCAKESWAPV3ETHEREUMAccountsCurrent ()
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMAccountDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMAccountsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Accounts (current) Gets accounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMAccountDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMAccountDTO>> PANCAKESWAPV3ETHEREUMAccountsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/accounts/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMAccountsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMAccountDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMAccountDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMAccountDTO>)));
+        }
+
+        /// <summary>
+        /// Accounts (current) Gets accounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMAccountDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMAccountDTO>> PANCAKESWAPV3ETHEREUMAccountsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMAccountDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMAccountsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Accounts (current) Gets accounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMAccountDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMAccountDTO>>> PANCAKESWAPV3ETHEREUMAccountsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/accounts/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMAccountsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMAccountDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMAccountDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMAccountDTO>)));
+        }
+
+        /// <summary>
+        /// ActiveAccounts (current) Gets activeAccounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMActiveAccountDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMActiveAccountDTO> PANCAKESWAPV3ETHEREUMActiveAccountsCurrent ()
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// ActiveAccounts (current) Gets activeAccounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMActiveAccountDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>> PANCAKESWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMActiveAccountsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>)));
+        }
+
+        /// <summary>
+        /// ActiveAccounts (current) Gets activeAccounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMActiveAccountDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>> PANCAKESWAPV3ETHEREUMActiveAccountsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// ActiveAccounts (current) Gets activeAccounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMActiveAccountDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>>> PANCAKESWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMActiveAccountsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>)));
+        }
+
+        /// <summary>
+        /// Deposits (current) Gets deposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMDepositDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMDepositDTO> PANCAKESWAPV3ETHEREUMDepositsCurrent ()
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMDepositDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMDepositsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Deposits (current) Gets deposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMDepositDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMDepositDTO>> PANCAKESWAPV3ETHEREUMDepositsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/deposits/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMDepositsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMDepositDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMDepositDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMDepositDTO>)));
+        }
+
+        /// <summary>
+        /// Deposits (current) Gets deposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMDepositDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMDepositDTO>> PANCAKESWAPV3ETHEREUMDepositsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMDepositDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMDepositsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Deposits (current) Gets deposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMDepositDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMDepositDTO>>> PANCAKESWAPV3ETHEREUMDepositsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/deposits/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMDepositsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMDepositDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMDepositDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMDepositDTO>)));
+        }
+
+        /// <summary>
+        /// DexAmmProtocols (current) Gets dexAmmProtocols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO> PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent ()
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// DexAmmProtocols (current) Gets dexAmmProtocols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>> PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/dexAmmProtocols/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>)));
+        }
+
+        /// <summary>
+        /// DexAmmProtocols (current) Gets dexAmmProtocols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>> PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// DexAmmProtocols (current) Gets dexAmmProtocols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>>> PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/dexAmmProtocols/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>)));
+        }
+
+        /// <summary>
+        /// FinancialsDailySnapshots (current) Gets financialsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO> PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent ()
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// FinancialsDailySnapshots (current) Gets financialsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/financialsDailySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// FinancialsDailySnapshots (current) Gets financialsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// FinancialsDailySnapshots (current) Gets financialsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>>> PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/financialsDailySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPoolAmounts (current) Gets liquidityPoolAmounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO> PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent (string id = default(string))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPoolAmounts (current) Gets liquidityPoolAmounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo (string id = default(string))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolAmounts/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPoolAmounts (current) Gets liquidityPoolAmounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfoAsync(id, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// LiquidityPoolAmounts (current) Gets liquidityPoolAmounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>>> PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfoAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolAmounts/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current) Gets liquidityPoolDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent (string pool = default(string))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(pool);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current) Gets liquidityPoolDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo (string pool = default(string))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current) Gets liquidityPoolDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfoAsync(pool, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current) Gets liquidityPoolDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPoolFees (current) Gets liquidityPoolFees.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO> PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent ()
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPoolFees (current) Gets liquidityPoolFees.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolFees/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPoolFees (current) Gets liquidityPoolFees.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// LiquidityPoolFees (current) Gets liquidityPoolFees.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>>> PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolFees/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current) Gets liquidityPoolHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The pool this snapshot belongs to (optional)</param>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent (string pool = default(string))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo(pool);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current) Gets liquidityPoolHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The pool this snapshot belongs to (optional)</param>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo (string pool = default(string))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolHourlySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current) Gets liquidityPoolHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The pool this snapshot belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfoAsync(pool, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current) Gets liquidityPoolHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The pool this snapshot belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>> PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolHourlySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>)));
         }
 
         /// <summary>
@@ -402,6 +2409,399 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
+        /// PositionSnapshots (current) Gets positionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO> PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent ()
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// PositionSnapshots (current) Gets positionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>> PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/positionSnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// PositionSnapshots (current) Gets positionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>> PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// PositionSnapshots (current) Gets positionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMPositionSnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>>> PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/positionSnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// Positions (current) Gets positions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The liquidity pool in which this position was opened (optional)</param>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMPositionDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMPositionDTO> PANCAKESWAPV3ETHEREUMPositionsCurrent (string pool = default(string))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMPositionsCurrentWithHttpInfo(pool);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Positions (current) Gets positions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The liquidity pool in which this position was opened (optional)</param>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMPositionDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionDTO>> PANCAKESWAPV3ETHEREUMPositionsCurrentWithHttpInfo (string pool = default(string))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/positions/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMPositionsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMPositionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMPositionDTO>)));
+        }
+
+        /// <summary>
+        /// Positions (current) Gets positions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The liquidity pool in which this position was opened (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMPositionDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMPositionDTO>> PANCAKESWAPV3ETHEREUMPositionsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMPositionsCurrentWithHttpInfoAsync(pool, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Positions (current) Gets positions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">The liquidity pool in which this position was opened (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMPositionDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionDTO>>> PANCAKESWAPV3ETHEREUMPositionsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/positions/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMPositionsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMPositionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMPositionDTO>)));
+        }
+
+        /// <summary>
+        /// RewardTokens (current) Gets rewardTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMRewardTokenDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMRewardTokenDTO> PANCAKESWAPV3ETHEREUMRewardTokensCurrent ()
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// RewardTokens (current) Gets rewardTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMRewardTokenDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>> PANCAKESWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/rewardTokens/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMRewardTokensCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>)));
+        }
+
+        /// <summary>
+        /// RewardTokens (current) Gets rewardTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMRewardTokenDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>> PANCAKESWAPV3ETHEREUMRewardTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMRewardTokensCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// RewardTokens (current) Gets rewardTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMRewardTokenDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>>> PANCAKESWAPV3ETHEREUMRewardTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/rewardTokens/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMRewardTokensCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>)));
+        }
+
+        /// <summary>
         /// Swaps (current) Gets swaps.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
@@ -528,6 +2928,669 @@ namespace CoinAPI.EMS.REST.V1.Api
             return new ApiResponse<List<PANCAKESWAPV3ETHEREUMSwapDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<PANCAKESWAPV3ETHEREUMSwapDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMSwapDTO>)));
+        }
+
+        /// <summary>
+        /// TickDailySnapshots (current) Gets tickDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO> PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent (string pool = default(string))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo(pool);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// TickDailySnapshots (current) Gets tickDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo (string pool = default(string))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/tickDailySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// TickDailySnapshots (current) Gets tickDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfoAsync(pool, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// TickDailySnapshots (current) Gets tickDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>>> PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/tickDailySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// TickHourlySnapshots (current) Gets tickHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO> PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent (string pool = default(string))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(pool);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// TickHourlySnapshots (current) Gets tickHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>> PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo (string pool = default(string))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/tickHourlySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// TickHourlySnapshots (current) Gets tickHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>> PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfoAsync(pool, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// TickHourlySnapshots (current) Gets tickHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>>> PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/tickHourlySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// Ticks (current) Gets ticks.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Liquidity pool this tick belongs to (optional)</param>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMTickDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMTickDTO> PANCAKESWAPV3ETHEREUMTicksCurrent (string pool = default(string))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMTicksCurrentWithHttpInfo(pool);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Ticks (current) Gets ticks.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Liquidity pool this tick belongs to (optional)</param>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMTickDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDTO>> PANCAKESWAPV3ETHEREUMTicksCurrentWithHttpInfo (string pool = default(string))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/ticks/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMTicksCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMTickDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMTickDTO>)));
+        }
+
+        /// <summary>
+        /// Ticks (current) Gets ticks.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMTickDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMTickDTO>> PANCAKESWAPV3ETHEREUMTicksCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMTicksCurrentWithHttpInfoAsync(pool, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Ticks (current) Gets ticks.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool">Liquidity pool this tick belongs to (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMTickDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDTO>>> PANCAKESWAPV3ETHEREUMTicksCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/ticks/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMTicksCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMTickDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMTickDTO>)));
+        }
+
+        /// <summary>
+        /// TokenWhiteListSymbols (current) Gets tokenWhiteListSymbols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO> PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent ()
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// TokenWhiteListSymbols (current) Gets tokenWhiteListSymbols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>> PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteListSymbols/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>)));
+        }
+
+        /// <summary>
+        /// TokenWhiteListSymbols (current) Gets tokenWhiteListSymbols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>> PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// TokenWhiteListSymbols (current) Gets tokenWhiteListSymbols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>>> PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteListSymbols/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>)));
+        }
+
+        /// <summary>
+        /// TokenWhiteLists (current) Gets tokenWhiteLists.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO> PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent ()
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// TokenWhiteLists (current) Gets tokenWhiteLists.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>> PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteLists/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>)));
+        }
+
+        /// <summary>
+        /// TokenWhiteLists (current) Gets tokenWhiteLists.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>> PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// TokenWhiteLists (current) Gets tokenWhiteLists.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMTokenWhiteListDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>>> PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteLists/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>)));
         }
 
         /// <summary>
@@ -663,6 +3726,393 @@ namespace CoinAPI.EMS.REST.V1.Api
             return new ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<PANCAKESWAPV3ETHEREUMTokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMTokenDTO>)));
+        }
+
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current) Gets usageMetricsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO> PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent ()
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current) Gets usageMetricsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/usageMetricsDailySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current) Gets usageMetricsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current) Gets usageMetricsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>> PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/usageMetricsDailySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current) Gets usageMetricsHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO> PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent ()
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current) Gets usageMetricsHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/usageMetricsHourlySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current) Gets usageMetricsHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current) Gets usageMetricsHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>> PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/usageMetricsHourlySnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// Withdraws (current) Gets withdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<PANCAKESWAPV3ETHEREUMWithdrawDTO></returns>
+        public List<PANCAKESWAPV3ETHEREUMWithdrawDTO> PANCAKESWAPV3ETHEREUMWithdrawsCurrent ()
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMWithdrawDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Withdraws (current) Gets withdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMWithdrawDTO></returns>
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMWithdrawDTO>> PANCAKESWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/withdraws/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMWithdrawsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMWithdrawDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMWithdrawDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMWithdrawDTO>)));
+        }
+
+        /// <summary>
+        /// Withdraws (current) Gets withdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<PANCAKESWAPV3ETHEREUMWithdrawDTO></returns>
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMWithdrawDTO>> PANCAKESWAPV3ETHEREUMWithdrawsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMWithdrawDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMWithdrawsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Withdraws (current) Gets withdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMWithdrawDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMWithdrawDTO>>> PANCAKESWAPV3ETHEREUMWithdrawsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/withdraws/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PANCAKESWAPV3ETHEREUMWithdrawsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<PANCAKESWAPV3ETHEREUMWithdrawDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<PANCAKESWAPV3ETHEREUMWithdrawDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PANCAKESWAPV3ETHEREUMWithdrawDTO>)));
         }
 
     }

@@ -73,12 +73,156 @@ class PANCAKESWAPV3ETHEREUMApiTest extends TestCase
     }
 
     /**
+     * Test case for pANCAKESWAPV3ETHEREUMAccountsCurrent
+     *
+     * Accounts (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMAccountsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for pANCAKESWAPV3ETHEREUMActiveAccountsCurrent
+     *
+     * ActiveAccounts (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMActiveAccountsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for pANCAKESWAPV3ETHEREUMDepositsCurrent
+     *
+     * Deposits (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMDepositsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent
+     *
+     * DexAmmProtocols (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
+     *
+     * FinancialsDailySnapshots (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+     *
+     * LiquidityPoolAmounts (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+     *
+     * LiquidityPoolDailySnapshots (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent
+     *
+     * LiquidityPoolFees (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+     *
+     * LiquidityPoolHourlySnapshots (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent
      *
      * LiquidityPools (current).
      *
      */
     public function testPANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent
+     *
+     * PositionSnapshots (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for pANCAKESWAPV3ETHEREUMPositionsCurrent
+     *
+     * Positions (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMPositionsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for pANCAKESWAPV3ETHEREUMRewardTokensCurrent
+     *
+     * RewardTokens (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMRewardTokensCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -97,12 +241,108 @@ class PANCAKESWAPV3ETHEREUMApiTest extends TestCase
     }
 
     /**
+     * Test case for pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent
+     *
+     * TickDailySnapshots (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent
+     *
+     * TickHourlySnapshots (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for pANCAKESWAPV3ETHEREUMTicksCurrent
+     *
+     * Ticks (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMTicksCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
+     *
+     * TokenWhiteListSymbols (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent
+     *
+     * TokenWhiteLists (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for pANCAKESWAPV3ETHEREUMTokensCurrent
      *
      * Tokens (current).
      *
      */
     public function testPANCAKESWAPV3ETHEREUMTokensCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
+     *
+     * UsageMetricsDailySnapshots (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
+     *
+     * UsageMetricsHourlySnapshots (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for pANCAKESWAPV3ETHEREUMWithdrawsCurrent
+     *
+     * Withdraws (current).
+     *
+     */
+    public function testPANCAKESWAPV3ETHEREUMWithdrawsCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

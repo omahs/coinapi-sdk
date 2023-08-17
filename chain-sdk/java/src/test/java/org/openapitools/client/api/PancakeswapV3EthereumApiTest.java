@@ -14,9 +14,29 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMAccountDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMActiveAccountDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMDepositDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO;
 import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMLiquidityPoolDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMPositionDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMPositionSnapshotDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMRewardTokenDTO;
 import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMSwapDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMTickDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO;
 import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMTokenDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMTokenWhiteListDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMWithdrawDTO;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -34,6 +54,126 @@ public class PancakeswapV3EthereumApiTest {
     private final PancakeswapV3EthereumApi api = new PancakeswapV3EthereumApi();
 
     /**
+     * Accounts (current)
+     *
+     * Gets accounts.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMAccountsCurrentTest() throws ApiException {
+        List<PANCAKESWAPV3ETHEREUMAccountDTO> response = api.pANCAKESWAPV3ETHEREUMAccountsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * ActiveAccounts (current)
+     *
+     * Gets activeAccounts.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMActiveAccountsCurrentTest() throws ApiException {
+        List<PANCAKESWAPV3ETHEREUMActiveAccountDTO> response = api.pANCAKESWAPV3ETHEREUMActiveAccountsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Deposits (current)
+     *
+     * Gets deposits.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMDepositsCurrentTest() throws ApiException {
+        List<PANCAKESWAPV3ETHEREUMDepositDTO> response = api.pANCAKESWAPV3ETHEREUMDepositsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * DexAmmProtocols (current)
+     *
+     * Gets dexAmmProtocols.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentTest() throws ApiException {
+        List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO> response = api.pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * FinancialsDailySnapshots (current)
+     *
+     * Gets financialsDailySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentTest() throws ApiException {
+        List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO> response = api.pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * LiquidityPoolAmounts (current)
+     *
+     * Gets liquidityPoolAmounts.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentTest() throws ApiException {
+        String id = null;
+        List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO> response = api.pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id);
+        // TODO: test validations
+    }
+
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     *
+     * Gets liquidityPoolDailySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentTest() throws ApiException {
+        String pool = null;
+        List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> response = api.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool);
+        // TODO: test validations
+    }
+
+    /**
+     * LiquidityPoolFees (current)
+     *
+     * Gets liquidityPoolFees.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentTest() throws ApiException {
+        List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO> response = api.pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     *
+     * Gets liquidityPoolHourlySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentTest() throws ApiException {
+        String pool = null;
+        List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> response = api.pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool);
+        // TODO: test validations
+    }
+
+    /**
      * LiquidityPools (current)
      *
      * Gets liquidityPools.
@@ -44,6 +184,46 @@ public class PancakeswapV3EthereumApiTest {
     public void pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrentTest() throws ApiException {
         String id = null;
         List<PANCAKESWAPV3ETHEREUMLiquidityPoolDTO> response = api.pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent(id);
+        // TODO: test validations
+    }
+
+    /**
+     * PositionSnapshots (current)
+     *
+     * Gets positionSnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentTest() throws ApiException {
+        List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO> response = api.pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Positions (current)
+     *
+     * Gets positions.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMPositionsCurrentTest() throws ApiException {
+        String pool = null;
+        List<PANCAKESWAPV3ETHEREUMPositionDTO> response = api.pANCAKESWAPV3ETHEREUMPositionsCurrent(pool);
+        // TODO: test validations
+    }
+
+    /**
+     * RewardTokens (current)
+     *
+     * Gets rewardTokens.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMRewardTokensCurrentTest() throws ApiException {
+        List<PANCAKESWAPV3ETHEREUMRewardTokenDTO> response = api.pANCAKESWAPV3ETHEREUMRewardTokensCurrent();
         // TODO: test validations
     }
 
@@ -61,6 +241,74 @@ public class PancakeswapV3EthereumApiTest {
     }
 
     /**
+     * TickDailySnapshots (current)
+     *
+     * Gets tickDailySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentTest() throws ApiException {
+        String pool = null;
+        List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO> response = api.pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent(pool);
+        // TODO: test validations
+    }
+
+    /**
+     * TickHourlySnapshots (current)
+     *
+     * Gets tickHourlySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentTest() throws ApiException {
+        String pool = null;
+        List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO> response = api.pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool);
+        // TODO: test validations
+    }
+
+    /**
+     * Ticks (current)
+     *
+     * Gets ticks.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMTicksCurrentTest() throws ApiException {
+        String pool = null;
+        List<PANCAKESWAPV3ETHEREUMTickDTO> response = api.pANCAKESWAPV3ETHEREUMTicksCurrent(pool);
+        // TODO: test validations
+    }
+
+    /**
+     * TokenWhiteListSymbols (current)
+     *
+     * Gets tokenWhiteListSymbols.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentTest() throws ApiException {
+        List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO> response = api.pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * TokenWhiteLists (current)
+     *
+     * Gets tokenWhiteLists.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentTest() throws ApiException {
+        List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO> response = api.pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent();
+        // TODO: test validations
+    }
+
+    /**
      * Tokens (current)
      *
      * Gets tokens.
@@ -71,6 +319,45 @@ public class PancakeswapV3EthereumApiTest {
     public void pANCAKESWAPV3ETHEREUMTokensCurrentTest() throws ApiException {
         String id = null;
         List<PANCAKESWAPV3ETHEREUMTokenDTO> response = api.pANCAKESWAPV3ETHEREUMTokensCurrent(id);
+        // TODO: test validations
+    }
+
+    /**
+     * UsageMetricsDailySnapshots (current)
+     *
+     * Gets usageMetricsDailySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentTest() throws ApiException {
+        List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO> response = api.pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     *
+     * Gets usageMetricsHourlySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentTest() throws ApiException {
+        List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO> response = api.pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Withdraws (current)
+     *
+     * Gets withdraws.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void pANCAKESWAPV3ETHEREUMWithdrawsCurrentTest() throws ApiException {
+        List<PANCAKESWAPV3ETHEREUMWithdrawDTO> response = api.pANCAKESWAPV3ETHEREUMWithdrawsCurrent();
         // TODO: test validations
     }
 

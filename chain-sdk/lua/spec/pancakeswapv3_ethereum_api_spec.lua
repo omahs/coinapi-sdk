@@ -15,8 +15,92 @@ Please update as you see appropriate
 ]]
 describe("pancakeswapv3_ethereum_api", function()
   local openapiclient_pancakeswapv3_ethereum_api = require "openapiclient.api.pancakeswapv3_ethereum_api"
+  -- unit tests for p_ancakeswapv3_ethereum_accounts__current
+  describe("p_ancakeswapv3_ethereum_accounts__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for p_ancakeswapv3_ethereum_active_accounts__current
+  describe("p_ancakeswapv3_ethereum_active_accounts__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for p_ancakeswapv3_ethereum_deposits__current
+  describe("p_ancakeswapv3_ethereum_deposits__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for p_ancakeswapv3_ethereum_dex_amm_protocols__current
+  describe("p_ancakeswapv3_ethereum_dex_amm_protocols__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for p_ancakeswapv3_ethereum_financials_daily_snapshots__current
+  describe("p_ancakeswapv3_ethereum_financials_daily_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for p_ancakeswapv3_ethereum_liquidity_pool_amounts__current
+  describe("p_ancakeswapv3_ethereum_liquidity_pool_amounts__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current
+  describe("p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for p_ancakeswapv3_ethereum_liquidity_pool_fees__current
+  describe("p_ancakeswapv3_ethereum_liquidity_pool_fees__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for p_ancakeswapv3_ethereum_liquidity_pool_hourly_snapshots__current
+  describe("p_ancakeswapv3_ethereum_liquidity_pool_hourly_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for p_ancakeswapv3_ethereum_liquidity_pools__current
   describe("p_ancakeswapv3_ethereum_liquidity_pools__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for p_ancakeswapv3_ethereum_position_snapshots__current
+  describe("p_ancakeswapv3_ethereum_position_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for p_ancakeswapv3_ethereum_positions__current
+  describe("p_ancakeswapv3_ethereum_positions__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for p_ancakeswapv3_ethereum_reward_tokens__current
+  describe("p_ancakeswapv3_ethereum_reward_tokens__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -29,8 +113,64 @@ describe("pancakeswapv3_ethereum_api", function()
     end)
   end)
 
+  -- unit tests for p_ancakeswapv3_ethereum_tick_daily_snapshots__current
+  describe("p_ancakeswapv3_ethereum_tick_daily_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for p_ancakeswapv3_ethereum_tick_hourly_snapshots__current
+  describe("p_ancakeswapv3_ethereum_tick_hourly_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for p_ancakeswapv3_ethereum_ticks__current
+  describe("p_ancakeswapv3_ethereum_ticks__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for p_ancakeswapv3_ethereum_token_white_list_symbols__current
+  describe("p_ancakeswapv3_ethereum_token_white_list_symbols__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for p_ancakeswapv3_ethereum_token_white_lists__current
+  describe("p_ancakeswapv3_ethereum_token_white_lists__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for p_ancakeswapv3_ethereum_tokens__current
   describe("p_ancakeswapv3_ethereum_tokens__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for p_ancakeswapv3_ethereum_usage_metrics_daily_snapshots__current
+  describe("p_ancakeswapv3_ethereum_usage_metrics_daily_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for p_ancakeswapv3_ethereum_usage_metrics_hourly_snapshots__current
+  describe("p_ancakeswapv3_ethereum_usage_metrics_hourly_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for p_ancakeswapv3_ethereum_withdraws__current
+  describe("p_ancakeswapv3_ethereum_withdraws__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

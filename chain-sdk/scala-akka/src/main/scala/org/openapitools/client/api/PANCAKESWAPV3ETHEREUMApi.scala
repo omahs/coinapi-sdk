@@ -11,9 +11,29 @@
  */
 package org.openapitools.client.api
 
+import org.openapitools.client.model.AccountDTO
+import org.openapitools.client.model.ActiveAccountDTO
+import org.openapitools.client.model.DepositDTO
+import org.openapitools.client.model.DexAmmProtocolDTO
+import org.openapitools.client.model.FinancialsDailySnapshotDTO
+import org.openapitools.client.model.LiquidityPoolAmountDTO
 import org.openapitools.client.model.LiquidityPoolDTO
+import org.openapitools.client.model.LiquidityPoolDailySnapshotDTO
+import org.openapitools.client.model.LiquidityPoolFeeDTO
+import org.openapitools.client.model.LiquidityPoolHourlySnapshotDTO
+import org.openapitools.client.model.PositionDTO
+import org.openapitools.client.model.PositionSnapshotDTO
+import org.openapitools.client.model.RewardTokenDTO
 import org.openapitools.client.model.SwapDTO
+import org.openapitools.client.model.TickDTO
+import org.openapitools.client.model.TickDailySnapshotDTO
+import org.openapitools.client.model.TickHourlySnapshotDTO
 import org.openapitools.client.model.TokenDTO
+import org.openapitools.client.model.TokenWhiteListDTO
+import org.openapitools.client.model.TokenWhiteListSymbolDTO
+import org.openapitools.client.model.UsageMetricsDailySnapshotDTO
+import org.openapitools.client.model.UsageMetricsHourlySnapshotDTO
+import org.openapitools.client.model.WithdrawDTO
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
 import org.openapitools.client.core.ApiKeyLocations._
@@ -24,6 +44,114 @@ object PANCAKESWAPV3ETHEREUMApi {
 }
 
 class PANCAKESWAPV3ETHEREUMApi(baseUrl: String) {
+
+  /**
+   * Gets accounts.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[AccountDTO] (successful operation)
+   */
+  def pANCAKESWAPV3ETHEREUMAccountsCurrent(): ApiRequest[Seq[AccountDTO]] =
+    ApiRequest[Seq[AccountDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/accounts/current", "application/json")
+      .withSuccessResponse[Seq[AccountDTO]](200)
+      
+
+  /**
+   * Gets activeAccounts.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[ActiveAccountDTO] (successful operation)
+   */
+  def pANCAKESWAPV3ETHEREUMActiveAccountsCurrent(): ApiRequest[Seq[ActiveAccountDTO]] =
+    ApiRequest[Seq[ActiveAccountDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current", "application/json")
+      .withSuccessResponse[Seq[ActiveAccountDTO]](200)
+      
+
+  /**
+   * Gets deposits.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[DepositDTO] (successful operation)
+   */
+  def pANCAKESWAPV3ETHEREUMDepositsCurrent(): ApiRequest[Seq[DepositDTO]] =
+    ApiRequest[Seq[DepositDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/deposits/current", "application/json")
+      .withSuccessResponse[Seq[DepositDTO]](200)
+      
+
+  /**
+   * Gets dexAmmProtocols.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[DexAmmProtocolDTO] (successful operation)
+   */
+  def pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent(): ApiRequest[Seq[DexAmmProtocolDTO]] =
+    ApiRequest[Seq[DexAmmProtocolDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/dexAmmProtocols/current", "application/json")
+      .withSuccessResponse[Seq[DexAmmProtocolDTO]](200)
+      
+
+  /**
+   * Gets financialsDailySnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[FinancialsDailySnapshotDTO] (successful operation)
+   */
+  def pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(): ApiRequest[Seq[FinancialsDailySnapshotDTO]] =
+    ApiRequest[Seq[FinancialsDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/financialsDailySnapshots/current", "application/json")
+      .withSuccessResponse[Seq[FinancialsDailySnapshotDTO]](200)
+      
+
+  /**
+   * Gets liquidityPoolAmounts.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LiquidityPoolAmountDTO] (successful operation)
+   * 
+   * @param id Smart contract address of the pool.
+   */
+  def pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id: Option[String] = None): ApiRequest[Seq[LiquidityPoolAmountDTO]] =
+    ApiRequest[Seq[LiquidityPoolAmountDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolAmounts/current", "application/json")
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[LiquidityPoolAmountDTO]](200)
+      
+
+  /**
+   * Gets liquidityPoolDailySnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LiquidityPoolDailySnapshotDTO] (successful operation)
+   * 
+   * @param pool Pool this snapshot belongs to.
+   */
+  def pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool: Option[String] = None): ApiRequest[Seq[LiquidityPoolDailySnapshotDTO]] =
+    ApiRequest[Seq[LiquidityPoolDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current", "application/json")
+      .withQueryParam("pool", pool)
+      .withSuccessResponse[Seq[LiquidityPoolDailySnapshotDTO]](200)
+      
+
+  /**
+   * Gets liquidityPoolFees.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LiquidityPoolFeeDTO] (successful operation)
+   */
+  def pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent(): ApiRequest[Seq[LiquidityPoolFeeDTO]] =
+    ApiRequest[Seq[LiquidityPoolFeeDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolFees/current", "application/json")
+      .withSuccessResponse[Seq[LiquidityPoolFeeDTO]](200)
+      
+
+  /**
+   * Gets liquidityPoolHourlySnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LiquidityPoolHourlySnapshotDTO] (successful operation)
+   * 
+   * @param pool The pool this snapshot belongs to
+   */
+  def pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool: Option[String] = None): ApiRequest[Seq[LiquidityPoolHourlySnapshotDTO]] =
+    ApiRequest[Seq[LiquidityPoolHourlySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolHourlySnapshots/current", "application/json")
+      .withQueryParam("pool", pool)
+      .withSuccessResponse[Seq[LiquidityPoolHourlySnapshotDTO]](200)
+      
 
   /**
    * Gets liquidityPools.
@@ -40,6 +168,42 @@ class PANCAKESWAPV3ETHEREUMApi(baseUrl: String) {
       
 
   /**
+   * Gets positionSnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[PositionSnapshotDTO] (successful operation)
+   */
+  def pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent(): ApiRequest[Seq[PositionSnapshotDTO]] =
+    ApiRequest[Seq[PositionSnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/positionSnapshots/current", "application/json")
+      .withSuccessResponse[Seq[PositionSnapshotDTO]](200)
+      
+
+  /**
+   * Gets positions.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[PositionDTO] (successful operation)
+   * 
+   * @param pool The liquidity pool in which this position was opened
+   */
+  def pANCAKESWAPV3ETHEREUMPositionsCurrent(pool: Option[String] = None): ApiRequest[Seq[PositionDTO]] =
+    ApiRequest[Seq[PositionDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/positions/current", "application/json")
+      .withQueryParam("pool", pool)
+      .withSuccessResponse[Seq[PositionDTO]](200)
+      
+
+  /**
+   * Gets rewardTokens.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[RewardTokenDTO] (successful operation)
+   */
+  def pANCAKESWAPV3ETHEREUMRewardTokensCurrent(): ApiRequest[Seq[RewardTokenDTO]] =
+    ApiRequest[Seq[RewardTokenDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/rewardTokens/current", "application/json")
+      .withSuccessResponse[Seq[RewardTokenDTO]](200)
+      
+
+  /**
    * Gets swaps.
    * 
    * Expected answers:
@@ -48,6 +212,70 @@ class PANCAKESWAPV3ETHEREUMApi(baseUrl: String) {
   def pANCAKESWAPV3ETHEREUMSwapsCurrent(): ApiRequest[Seq[SwapDTO]] =
     ApiRequest[Seq[SwapDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/swaps/current", "application/json")
       .withSuccessResponse[Seq[SwapDTO]](200)
+      
+
+  /**
+   * Gets tickDailySnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TickDailySnapshotDTO] (successful operation)
+   * 
+   * @param pool liquidity pool this tick belongs to
+   */
+  def pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent(pool: Option[String] = None): ApiRequest[Seq[TickDailySnapshotDTO]] =
+    ApiRequest[Seq[TickDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/tickDailySnapshots/current", "application/json")
+      .withQueryParam("pool", pool)
+      .withSuccessResponse[Seq[TickDailySnapshotDTO]](200)
+      
+
+  /**
+   * Gets tickHourlySnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TickHourlySnapshotDTO] (successful operation)
+   * 
+   * @param pool liquidity pool this tick belongs to
+   */
+  def pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool: Option[String] = None): ApiRequest[Seq[TickHourlySnapshotDTO]] =
+    ApiRequest[Seq[TickHourlySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/tickHourlySnapshots/current", "application/json")
+      .withQueryParam("pool", pool)
+      .withSuccessResponse[Seq[TickHourlySnapshotDTO]](200)
+      
+
+  /**
+   * Gets ticks.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TickDTO] (successful operation)
+   * 
+   * @param pool Liquidity pool this tick belongs to
+   */
+  def pANCAKESWAPV3ETHEREUMTicksCurrent(pool: Option[String] = None): ApiRequest[Seq[TickDTO]] =
+    ApiRequest[Seq[TickDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/ticks/current", "application/json")
+      .withQueryParam("pool", pool)
+      .withSuccessResponse[Seq[TickDTO]](200)
+      
+
+  /**
+   * Gets tokenWhiteListSymbols.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TokenWhiteListSymbolDTO] (successful operation)
+   */
+  def pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(): ApiRequest[Seq[TokenWhiteListSymbolDTO]] =
+    ApiRequest[Seq[TokenWhiteListSymbolDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteListSymbols/current", "application/json")
+      .withSuccessResponse[Seq[TokenWhiteListSymbolDTO]](200)
+      
+
+  /**
+   * Gets tokenWhiteLists.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TokenWhiteListDTO] (successful operation)
+   */
+  def pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent(): ApiRequest[Seq[TokenWhiteListDTO]] =
+    ApiRequest[Seq[TokenWhiteListDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteLists/current", "application/json")
+      .withSuccessResponse[Seq[TokenWhiteListDTO]](200)
       
 
   /**
@@ -62,6 +290,39 @@ class PANCAKESWAPV3ETHEREUMApi(baseUrl: String) {
     ApiRequest[Seq[TokenDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/tokens/current", "application/json")
       .withQueryParam("id", id)
       .withSuccessResponse[Seq[TokenDTO]](200)
+      
+
+  /**
+   * Gets usageMetricsDailySnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[UsageMetricsDailySnapshotDTO] (successful operation)
+   */
+  def pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(): ApiRequest[Seq[UsageMetricsDailySnapshotDTO]] =
+    ApiRequest[Seq[UsageMetricsDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/usageMetricsDailySnapshots/current", "application/json")
+      .withSuccessResponse[Seq[UsageMetricsDailySnapshotDTO]](200)
+      
+
+  /**
+   * Gets usageMetricsHourlySnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[UsageMetricsHourlySnapshotDTO] (successful operation)
+   */
+  def pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(): ApiRequest[Seq[UsageMetricsHourlySnapshotDTO]] =
+    ApiRequest[Seq[UsageMetricsHourlySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/usageMetricsHourlySnapshots/current", "application/json")
+      .withSuccessResponse[Seq[UsageMetricsHourlySnapshotDTO]](200)
+      
+
+  /**
+   * Gets withdraws.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[WithdrawDTO] (successful operation)
+   */
+  def pANCAKESWAPV3ETHEREUMWithdrawsCurrent(): ApiRequest[Seq[WithdrawDTO]] =
+    ApiRequest[Seq[WithdrawDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/withdraws/current", "application/json")
+      .withSuccessResponse[Seq[WithdrawDTO]](200)
       
 
 

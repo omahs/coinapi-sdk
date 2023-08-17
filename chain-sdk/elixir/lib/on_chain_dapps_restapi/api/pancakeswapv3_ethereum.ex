@@ -10,6 +10,285 @@ defmodule OnChainDapps-RESTAPI.Api.PANCAKESWAPV3ETHEREUM do
   import OnChainDapps-RESTAPI.RequestBuilder
 
   @doc """
+  Accounts (current)
+  Gets accounts.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumAccountDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_accounts__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumAccountDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_accounts__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/accounts/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumAccountDto{}]}
+    ])
+  end
+
+  @doc """
+  ActiveAccounts (current)
+  Gets activeAccounts.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumActiveAccountDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_active_accounts__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumActiveAccountDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_active_accounts__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumActiveAccountDto{}]}
+    ])
+  end
+
+  @doc """
+  Deposits (current)
+  Gets deposits.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumDepositDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_deposits__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumDepositDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_deposits__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/deposits/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumDepositDto{}]}
+    ])
+  end
+
+  @doc """
+  DexAmmProtocols (current)
+  Gets dexAmmProtocols.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumDexAmmProtocolDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_dex_amm_protocols__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumDexAmmProtocolDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_dex_amm_protocols__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/dexAmmProtocols/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumDexAmmProtocolDto{}]}
+    ])
+  end
+
+  @doc """
+  FinancialsDailySnapshots (current)
+  Gets financialsDailySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumFinancialsDailySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_financials_daily_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumFinancialsDailySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_financials_daily_snapshots__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/financialsDailySnapshots/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumFinancialsDailySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  LiquidityPoolAmounts (current)
+  Gets liquidityPoolAmounts.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:id` (String.t): Smart contract address of the pool.
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumLiquidityPoolAmountDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_liquidity_pool_amounts__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumLiquidityPoolAmountDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_liquidity_pool_amounts__current(connection, opts \\ []) do
+    optional_params = %{
+      :id => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolAmounts/current")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumLiquidityPoolAmountDto{}]}
+    ])
+  end
+
+  @doc """
+  LiquidityPoolDailySnapshots (current)
+  Gets liquidityPoolDailySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:pool` (String.t): Pool this snapshot belongs to.
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumLiquidityPoolDailySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumLiquidityPoolDailySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current(connection, opts \\ []) do
+    optional_params = %{
+      :pool => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumLiquidityPoolDailySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  LiquidityPoolFees (current)
+  Gets liquidityPoolFees.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumLiquidityPoolFeeDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_liquidity_pool_fees__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumLiquidityPoolFeeDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_liquidity_pool_fees__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolFees/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumLiquidityPoolFeeDto{}]}
+    ])
+  end
+
+  @doc """
+  LiquidityPoolHourlySnapshots (current)
+  Gets liquidityPoolHourlySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:pool` (String.t): The pool this snapshot belongs to
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumLiquidityPoolHourlySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_liquidity_pool_hourly_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumLiquidityPoolHourlySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_liquidity_pool_hourly_snapshots__current(connection, opts \\ []) do
+    optional_params = %{
+      :pool => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolHourlySnapshots/current")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumLiquidityPoolHourlySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
   LiquidityPools (current)
   Gets liquidityPools.
 
@@ -45,6 +324,99 @@ defmodule OnChainDapps-RESTAPI.Api.PANCAKESWAPV3ETHEREUM do
   end
 
   @doc """
+  PositionSnapshots (current)
+  Gets positionSnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumPositionSnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_position_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumPositionSnapshotDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_position_snapshots__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/positionSnapshots/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumPositionSnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  Positions (current)
+  Gets positions.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:pool` (String.t): The liquidity pool in which this position was opened
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumPositionDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_positions__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumPositionDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_positions__current(connection, opts \\ []) do
+    optional_params = %{
+      :pool => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/positions/current")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumPositionDto{}]}
+    ])
+  end
+
+  @doc """
+  RewardTokens (current)
+  Gets rewardTokens.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumRewardTokenDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_reward_tokens__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumRewardTokenDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_reward_tokens__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/rewardTokens/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumRewardTokenDto{}]}
+    ])
+  end
+
+  @doc """
   Swaps (current)
   Gets swaps.
 
@@ -70,6 +442,169 @@ defmodule OnChainDapps-RESTAPI.Api.PANCAKESWAPV3ETHEREUM do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumSwapDto{}]}
+    ])
+  end
+
+  @doc """
+  TickDailySnapshots (current)
+  Gets tickDailySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:pool` (String.t): liquidity pool this tick belongs to
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumTickDailySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_tick_daily_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumTickDailySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_tick_daily_snapshots__current(connection, opts \\ []) do
+    optional_params = %{
+      :pool => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/tickDailySnapshots/current")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumTickDailySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  TickHourlySnapshots (current)
+  Gets tickHourlySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:pool` (String.t): liquidity pool this tick belongs to
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumTickHourlySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_tick_hourly_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumTickHourlySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_tick_hourly_snapshots__current(connection, opts \\ []) do
+    optional_params = %{
+      :pool => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/tickHourlySnapshots/current")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumTickHourlySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  Ticks (current)
+  Gets ticks.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:pool` (String.t): Liquidity pool this tick belongs to
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumTickDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_ticks__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumTickDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_ticks__current(connection, opts \\ []) do
+    optional_params = %{
+      :pool => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/ticks/current")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumTickDto{}]}
+    ])
+  end
+
+  @doc """
+  TokenWhiteListSymbols (current)
+  Gets tokenWhiteListSymbols.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumTokenWhiteListSymbolDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_token_white_list_symbols__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumTokenWhiteListSymbolDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_token_white_list_symbols__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteListSymbols/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumTokenWhiteListSymbolDto{}]}
+    ])
+  end
+
+  @doc """
+  TokenWhiteLists (current)
+  Gets tokenWhiteLists.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumTokenWhiteListDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_token_white_lists__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumTokenWhiteListDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_token_white_lists__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteLists/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumTokenWhiteListDto{}]}
     ])
   end
 
@@ -105,6 +640,93 @@ defmodule OnChainDapps-RESTAPI.Api.PANCAKESWAPV3ETHEREUM do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumTokenDto{}]}
+    ])
+  end
+
+  @doc """
+  UsageMetricsDailySnapshots (current)
+  Gets usageMetricsDailySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumUsageMetricsDailySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_usage_metrics_daily_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumUsageMetricsDailySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_usage_metrics_daily_snapshots__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/usageMetricsDailySnapshots/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumUsageMetricsDailySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  UsageMetricsHourlySnapshots (current)
+  Gets usageMetricsHourlySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumUsageMetricsHourlySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_usage_metrics_hourly_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumUsageMetricsHourlySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_usage_metrics_hourly_snapshots__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/usageMetricsHourlySnapshots/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumUsageMetricsHourlySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  Withdraws (current)
+  Gets withdraws.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%PancakeswapV3EthereumWithdrawDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec p_ancakeswapv3_ethereum_withdraws__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumWithdrawDto.t)} | {:error, Tesla.Env.t}
+  def p_ancakeswapv3_ethereum_withdraws__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/pancakeswap-v3-ethereum/withdraws/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumWithdrawDto{}]}
     ])
   end
 end

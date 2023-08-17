@@ -87,12 +87,52 @@ Method | HTTP request | Description
 ### PANCAKESWAPV3ETHEREUMManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+*pANCAKESWAPV3ETHEREUMAccounts (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/accounts/current | Accounts (current).
+*pANCAKESWAPV3ETHEREUMAccounts (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/accounts/current | Accounts (current).
+*pANCAKESWAPV3ETHEREUMActiveAccounts (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current | ActiveAccounts (current).
+*pANCAKESWAPV3ETHEREUMActiveAccounts (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current | ActiveAccounts (current).
+*pANCAKESWAPV3ETHEREUMDeposits (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/deposits/current | Deposits (current).
+*pANCAKESWAPV3ETHEREUMDeposits (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/deposits/current | Deposits (current).
+*pANCAKESWAPV3ETHEREUMDexAmmProtocols (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/dexAmmProtocols/current | DexAmmProtocols (current).
+*pANCAKESWAPV3ETHEREUMDexAmmProtocols (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/dexAmmProtocols/current | DexAmmProtocols (current).
+*pANCAKESWAPV3ETHEREUMFinancialsDailySnapshots (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current).
+*pANCAKESWAPV3ETHEREUMFinancialsDailySnapshots (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current).
+*pANCAKESWAPV3ETHEREUMLiquidityPoolAmounts (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current).
+*pANCAKESWAPV3ETHEREUMLiquidityPoolAmounts (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current).
+*pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current).
+*pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current).
+*pANCAKESWAPV3ETHEREUMLiquidityPoolFees (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/liquidityPoolFees/current | LiquidityPoolFees (current).
+*pANCAKESWAPV3ETHEREUMLiquidityPoolFees (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/liquidityPoolFees/current | LiquidityPoolFees (current).
+*pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshots (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current).
+*pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshots (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current).
 *pANCAKESWAPV3ETHEREUMLiquidityPools (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/liquidityPools/current | LiquidityPools (current).
 *pANCAKESWAPV3ETHEREUMLiquidityPools (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/liquidityPools/current | LiquidityPools (current).
+*pANCAKESWAPV3ETHEREUMPositionSnapshots (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/positionSnapshots/current | PositionSnapshots (current).
+*pANCAKESWAPV3ETHEREUMPositionSnapshots (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/positionSnapshots/current | PositionSnapshots (current).
+*pANCAKESWAPV3ETHEREUMPositions (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/positions/current | Positions (current).
+*pANCAKESWAPV3ETHEREUMPositions (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/positions/current | Positions (current).
+*pANCAKESWAPV3ETHEREUMRewardTokens (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/rewardTokens/current | RewardTokens (current).
+*pANCAKESWAPV3ETHEREUMRewardTokens (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/rewardTokens/current | RewardTokens (current).
 *pANCAKESWAPV3ETHEREUMSwaps (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/swaps/current | Swaps (current).
 *pANCAKESWAPV3ETHEREUMSwaps (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/swaps/current | Swaps (current).
+*pANCAKESWAPV3ETHEREUMTickDailySnapshots (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/tickDailySnapshots/current | TickDailySnapshots (current).
+*pANCAKESWAPV3ETHEREUMTickDailySnapshots (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/tickDailySnapshots/current | TickDailySnapshots (current).
+*pANCAKESWAPV3ETHEREUMTickHourlySnapshots (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/tickHourlySnapshots/current | TickHourlySnapshots (current).
+*pANCAKESWAPV3ETHEREUMTickHourlySnapshots (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/tickHourlySnapshots/current | TickHourlySnapshots (current).
+*pANCAKESWAPV3ETHEREUMTicks (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/ticks/current | Ticks (current).
+*pANCAKESWAPV3ETHEREUMTicks (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/ticks/current | Ticks (current).
+*pANCAKESWAPV3ETHEREUMTokenWhiteListSymbols (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/tokenWhiteListSymbols/current | TokenWhiteListSymbols (current).
+*pANCAKESWAPV3ETHEREUMTokenWhiteListSymbols (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/tokenWhiteListSymbols/current | TokenWhiteListSymbols (current).
+*pANCAKESWAPV3ETHEREUMTokenWhiteLists (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/tokenWhiteLists/current | TokenWhiteLists (current).
+*pANCAKESWAPV3ETHEREUMTokenWhiteLists (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/tokenWhiteLists/current | TokenWhiteLists (current).
 *pANCAKESWAPV3ETHEREUMTokens (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/tokens/current | Tokens (current).
 *pANCAKESWAPV3ETHEREUMTokens (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/tokens/current | Tokens (current).
+*pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshots (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current).
+*pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshots (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current).
+*pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshots (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current).
+*pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshots (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current).
+*pANCAKESWAPV3ETHEREUMWithdraws (current)Sync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/withdraws/current | Withdraws (current).
+*pANCAKESWAPV3ETHEREUMWithdraws (current)ASync* | *GET* /v1/dapps/pancakeswap-v3-ethereum/withdraws/current | Withdraws (current).
 
 
 ### SUSHISWAPV3ETHEREUMManager
@@ -183,9 +223,29 @@ Class | Description
  *CURVE_FINANCE_ETHEREUM.LiquidityPoolDTO* | 
  *CURVE_FINANCE_ETHEREUM.SwapDTO* | 
  *CURVE_FINANCE_ETHEREUM.TokenDTO* | 
+ *PANCAKESWAP_V3_ETHEREUM.AccountDTO* | 
+ *PANCAKESWAP_V3_ETHEREUM.ActiveAccountDTO* | Entity for calculating daily/hourly active users.
+ *PANCAKESWAP_V3_ETHEREUM.DepositDTO* | Entity represents a user action in the protocol involving the addition of funds to a liquidity pool.
+ *PANCAKESWAP_V3_ETHEREUM.DexAmmProtocolDTO* |  Decentralized exchange (Dex) automated market maker (Amm) protocol. It's an entity that represents a protocol involving a smart contract that use automated market makers.
+ *PANCAKESWAP_V3_ETHEREUM.FinancialsDailySnapshotDTO* | Daily financial metrics for PancakeSwap V3.
+ *PANCAKESWAP_V3_ETHEREUM.LiquidityPoolAmountDTO* | 
  *PANCAKESWAP_V3_ETHEREUM.LiquidityPoolDTO* | Pool-level metadata.
+ *PANCAKESWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO* | Represents a liquidity pool daily snapshot for PancakeSwap V3.
+ *PANCAKESWAP_V3_ETHEREUM.LiquidityPoolFeeDTO* | 
+ *PANCAKESWAP_V3_ETHEREUM.LiquidityPoolHourlySnapshotDTO* | 
+ *PANCAKESWAP_V3_ETHEREUM.PositionDTO* | 
+ *PANCAKESWAP_V3_ETHEREUM.PositionSnapshotDTO* | 
+ *PANCAKESWAP_V3_ETHEREUM.RewardTokenDTO* | Reward tokens awarded to lenders and borrowers.
  *PANCAKESWAP_V3_ETHEREUM.SwapDTO* | Trade (swap) event which occurred in a pool.
+ *PANCAKESWAP_V3_ETHEREUM.TickDTO* | 
+ *PANCAKESWAP_V3_ETHEREUM.TickDailySnapshotDTO* | 
+ *PANCAKESWAP_V3_ETHEREUM.TickHourlySnapshotDTO* | 
  *PANCAKESWAP_V3_ETHEREUM.TokenDTO* | Stores aggregated information for a specific token across all pairs that token is included in.
+ *PANCAKESWAP_V3_ETHEREUM.TokenWhiteListDTO* | 
+ *PANCAKESWAP_V3_ETHEREUM.TokenWhiteListSymbolDTO* | 
+ *PANCAKESWAP_V3_ETHEREUM.UsageMetricsDailySnapshotDTO* | 
+ *PANCAKESWAP_V3_ETHEREUM.UsageMetricsHourlySnapshotDTO* | 
+ *PANCAKESWAP_V3_ETHEREUM.WithdrawDTO* | 
  *SUSHISWAP_V3_ETHEREUM.LiquidityPoolDTO* | Pool-level metadata.
  *SUSHISWAP_V3_ETHEREUM.SwapDTO* | Trade (swap) event which occurred in a pool.
  *SUSHISWAP_V3_ETHEREUM.TokenDTO* | Stores aggregated information for a specific token across all pairs that token is included in.

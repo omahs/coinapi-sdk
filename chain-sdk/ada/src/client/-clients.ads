@@ -100,6 +100,63 @@ package .Clients is
    procedure Metadata_Dapps_Get
       (Client : in out Client_Type);
 
+   --  Accounts (current)
+   --  Gets accounts.
+   procedure P_ANCAKESWAPV3ETHEREUM_Accounts__current
+      (Client : in out Client_Type;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMAccountDTO_Type_Vectors.Vector);
+
+   --  ActiveAccounts (current)
+   --  Gets activeAccounts.
+   procedure P_ANCAKESWAPV3ETHEREUM_Active_Accounts__current
+      (Client : in out Client_Type;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMActiveAccountDTO_Type_Vectors.Vector);
+
+   --  Deposits (current)
+   --  Gets deposits.
+   procedure P_ANCAKESWAPV3ETHEREUM_Deposits__current
+      (Client : in out Client_Type;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMDepositDTO_Type_Vectors.Vector);
+
+   --  DexAmmProtocols (current)
+   --  Gets dexAmmProtocols.
+   procedure P_ANCAKESWAPV3ETHEREUM_Dex_Amm_Protocols__current
+      (Client : in out Client_Type;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO_Type_Vectors.Vector);
+
+   --  FinancialsDailySnapshots (current)
+   --  Gets financialsDailySnapshots.
+   procedure P_ANCAKESWAPV3ETHEREUM_Financials_Daily_Snapshots__current
+      (Client : in out Client_Type;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO_Type_Vectors.Vector);
+
+   --  LiquidityPoolAmounts (current)
+   --  Gets liquidityPoolAmounts.
+   procedure P_ANCAKESWAPV3ETHEREUM_Liquidity_Pool_Amounts__current
+      (Client : in out Client_Type;
+       Id : in Swagger.Nullable_UString;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO_Type_Vectors.Vector);
+
+   --  LiquidityPoolDailySnapshots (current)
+   --  Gets liquidityPoolDailySnapshots.
+   procedure P_ANCAKESWAPV3ETHEREUM_Liquidity_Pool_Daily_Snapshots__current
+      (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO_Type_Vectors.Vector);
+
+   --  LiquidityPoolFees (current)
+   --  Gets liquidityPoolFees.
+   procedure P_ANCAKESWAPV3ETHEREUM_Liquidity_Pool_Fees__current
+      (Client : in out Client_Type;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO_Type_Vectors.Vector);
+
+   --  LiquidityPoolHourlySnapshots (current)
+   --  Gets liquidityPoolHourlySnapshots.
+   procedure P_ANCAKESWAPV3ETHEREUM_Liquidity_Pool_Hourly_Snapshots__current
+      (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO_Type_Vectors.Vector);
+
    --  LiquidityPools (current)
    --  Gets liquidityPools.
    procedure P_ANCAKESWAPV3ETHEREUM_Liquidity_Pools__current
@@ -107,11 +164,63 @@ package .Clients is
        Id : in Swagger.Nullable_UString;
        Result : out .Models.PANCAKESWAPV3ETHEREUMLiquidityPoolDTO_Type_Vectors.Vector);
 
+   --  PositionSnapshots (current)
+   --  Gets positionSnapshots.
+   procedure P_ANCAKESWAPV3ETHEREUM_Position_Snapshots__current
+      (Client : in out Client_Type;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMPositionSnapshotDTO_Type_Vectors.Vector);
+
+   --  Positions (current)
+   --  Gets positions.
+   procedure P_ANCAKESWAPV3ETHEREUM_Positions__current
+      (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMPositionDTO_Type_Vectors.Vector);
+
+   --  RewardTokens (current)
+   --  Gets rewardTokens.
+   procedure P_ANCAKESWAPV3ETHEREUM_Reward_Tokens__current
+      (Client : in out Client_Type;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMRewardTokenDTO_Type_Vectors.Vector);
+
    --  Swaps (current)
    --  Gets swaps.
    procedure P_ANCAKESWAPV3ETHEREUM_Swaps__current
       (Client : in out Client_Type;
        Result : out .Models.PANCAKESWAPV3ETHEREUMSwapDTO_Type_Vectors.Vector);
+
+   --  TickDailySnapshots (current)
+   --  Gets tickDailySnapshots.
+   procedure P_ANCAKESWAPV3ETHEREUM_Tick_Daily_Snapshots__current
+      (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO_Type_Vectors.Vector);
+
+   --  TickHourlySnapshots (current)
+   --  Gets tickHourlySnapshots.
+   procedure P_ANCAKESWAPV3ETHEREUM_Tick_Hourly_Snapshots__current
+      (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO_Type_Vectors.Vector);
+
+   --  Ticks (current)
+   --  Gets ticks.
+   procedure P_ANCAKESWAPV3ETHEREUM_Ticks__current
+      (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMTickDTO_Type_Vectors.Vector);
+
+   --  TokenWhiteListSymbols (current)
+   --  Gets tokenWhiteListSymbols.
+   procedure P_ANCAKESWAPV3ETHEREUM_Token_White_List_Symbols__current
+      (Client : in out Client_Type;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO_Type_Vectors.Vector);
+
+   --  TokenWhiteLists (current)
+   --  Gets tokenWhiteLists.
+   procedure P_ANCAKESWAPV3ETHEREUM_Token_White_Lists__current
+      (Client : in out Client_Type;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMTokenWhiteListDTO_Type_Vectors.Vector);
 
    --  Tokens (current)
    --  Gets tokens.
@@ -119,6 +228,24 @@ package .Clients is
       (Client : in out Client_Type;
        Id : in Swagger.Nullable_UString;
        Result : out .Models.PANCAKESWAPV3ETHEREUMTokenDTO_Type_Vectors.Vector);
+
+   --  UsageMetricsDailySnapshots (current)
+   --  Gets usageMetricsDailySnapshots.
+   procedure P_ANCAKESWAPV3ETHEREUM_Usage_Metrics_Daily_Snapshots__current
+      (Client : in out Client_Type;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO_Type_Vectors.Vector);
+
+   --  UsageMetricsHourlySnapshots (current)
+   --  Gets usageMetricsHourlySnapshots.
+   procedure P_ANCAKESWAPV3ETHEREUM_Usage_Metrics_Hourly_Snapshots__current
+      (Client : in out Client_Type;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO_Type_Vectors.Vector);
+
+   --  Withdraws (current)
+   --  Gets withdraws.
+   procedure P_ANCAKESWAPV3ETHEREUM_Withdraws__current
+      (Client : in out Client_Type;
+       Result : out .Models.PANCAKESWAPV3ETHEREUMWithdrawDTO_Type_Vectors.Vector);
 
    --  LiquidityPools (current)
    --  Gets liquidityPools.

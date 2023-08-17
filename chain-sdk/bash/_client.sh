@@ -308,9 +308,29 @@ case $state in
             "cURVEFINANCEETHEREUMSwapsCurrent[Swaps (current)]" \
             "cURVEFINANCEETHEREUMTokensCurrent[Tokens (current)]"             "metadataChainsGet[List all chains.]" \
             "metadataDappsDappNameGet[Gets dapp by name.]" \
-            "metadataDappsGet[List all decentralized applications.]"             "pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent[LiquidityPools (current)]" \
+            "metadataDappsGet[List all decentralized applications.]"             "pANCAKESWAPV3ETHEREUMAccountsCurrent[Accounts (current)]" \
+            "pANCAKESWAPV3ETHEREUMActiveAccountsCurrent[ActiveAccounts (current)]" \
+            "pANCAKESWAPV3ETHEREUMDepositsCurrent[Deposits (current)]" \
+            "pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent[DexAmmProtocols (current)]" \
+            "pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent[FinancialsDailySnapshots (current)]" \
+            "pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent[LiquidityPoolAmounts (current)]" \
+            "pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent[LiquidityPoolDailySnapshots (current)]" \
+            "pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent[LiquidityPoolFees (current)]" \
+            "pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent[LiquidityPoolHourlySnapshots (current)]" \
+            "pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent[LiquidityPools (current)]" \
+            "pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent[PositionSnapshots (current)]" \
+            "pANCAKESWAPV3ETHEREUMPositionsCurrent[Positions (current)]" \
+            "pANCAKESWAPV3ETHEREUMRewardTokensCurrent[RewardTokens (current)]" \
             "pANCAKESWAPV3ETHEREUMSwapsCurrent[Swaps (current)]" \
-            "pANCAKESWAPV3ETHEREUMTokensCurrent[Tokens (current)]"             "sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent[LiquidityPools (current)]" \
+            "pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent[TickDailySnapshots (current)]" \
+            "pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent[TickHourlySnapshots (current)]" \
+            "pANCAKESWAPV3ETHEREUMTicksCurrent[Ticks (current)]" \
+            "pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent[TokenWhiteListSymbols (current)]" \
+            "pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent[TokenWhiteLists (current)]" \
+            "pANCAKESWAPV3ETHEREUMTokensCurrent[Tokens (current)]" \
+            "pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent[UsageMetricsDailySnapshots (current)]" \
+            "pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent[UsageMetricsHourlySnapshots (current)]" \
+            "pANCAKESWAPV3ETHEREUMWithdrawsCurrent[Withdraws (current)]"             "sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent[LiquidityPools (current)]" \
             "sUSHISWAPV3ETHEREUMSwapsCurrent[Swaps (current)]" \
             "sUSHISWAPV3ETHEREUMTokensCurrent[Tokens (current)]"             "uNISWAPV2ETHEREUMLiquidityPoolsCurrent[LiquidityPools (current)]" \
             "uNISWAPV2ETHEREUMSwapsCurrent[Swaps (current)]" \
@@ -435,6 +455,63 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      pANCAKESWAPV3ETHEREUMAccountsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMActiveAccountsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMDepositsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "id=:[QUERY] Smart contract address of the pool."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "pool=:[QUERY] Pool this snapshot belongs to."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "pool=:[QUERY] The pool this snapshot belongs to"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent)
         local -a _op_arguments
         _op_arguments=(
@@ -442,7 +519,59 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMPositionsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "pool=:[QUERY] The liquidity pool in which this position was opened"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMRewardTokensCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       pANCAKESWAPV3ETHEREUMSwapsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "pool=:[QUERY] liquidity pool this tick belongs to"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "pool=:[QUERY] liquidity pool this tick belongs to"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMTicksCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "pool=:[QUERY] Liquidity pool this tick belongs to"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -453,6 +582,24 @@ case $state in
         _op_arguments=(
                     "id=:[QUERY] Smart contract address of the token."
           )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pANCAKESWAPV3ETHEREUMWithdrawsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent)

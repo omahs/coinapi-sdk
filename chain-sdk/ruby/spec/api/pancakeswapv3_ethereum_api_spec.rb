@@ -32,6 +32,108 @@ describe 'PANCAKESWAPV3ETHEREUMApi' do
     end
   end
 
+  # unit tests for p_ancakeswapv3_ethereum_accounts__current
+  # Accounts (current)
+  # Gets accounts.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<PANCAKESWAPV3ETHEREUMAccountDTO>]
+  describe 'p_ancakeswapv3_ethereum_accounts__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for p_ancakeswapv3_ethereum_active_accounts__current
+  # ActiveAccounts (current)
+  # Gets activeAccounts.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<PANCAKESWAPV3ETHEREUMActiveAccountDTO>]
+  describe 'p_ancakeswapv3_ethereum_active_accounts__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for p_ancakeswapv3_ethereum_deposits__current
+  # Deposits (current)
+  # Gets deposits.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<PANCAKESWAPV3ETHEREUMDepositDTO>]
+  describe 'p_ancakeswapv3_ethereum_deposits__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for p_ancakeswapv3_ethereum_dex_amm_protocols__current
+  # DexAmmProtocols (current)
+  # Gets dexAmmProtocols.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>]
+  describe 'p_ancakeswapv3_ethereum_dex_amm_protocols__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for p_ancakeswapv3_ethereum_financials_daily_snapshots__current
+  # FinancialsDailySnapshots (current)
+  # Gets financialsDailySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>]
+  describe 'p_ancakeswapv3_ethereum_financials_daily_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for p_ancakeswapv3_ethereum_liquidity_pool_amounts__current
+  # LiquidityPoolAmounts (current)
+  # Gets liquidityPoolAmounts.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :id Smart contract address of the pool.
+  # @return [Array<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>]
+  describe 'p_ancakeswapv3_ethereum_liquidity_pool_amounts__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current
+  # LiquidityPoolDailySnapshots (current)
+  # Gets liquidityPoolDailySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :pool Pool this snapshot belongs to.
+  # @return [Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>]
+  describe 'p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for p_ancakeswapv3_ethereum_liquidity_pool_fees__current
+  # LiquidityPoolFees (current)
+  # Gets liquidityPoolFees.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>]
+  describe 'p_ancakeswapv3_ethereum_liquidity_pool_fees__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for p_ancakeswapv3_ethereum_liquidity_pool_hourly_snapshots__current
+  # LiquidityPoolHourlySnapshots (current)
+  # Gets liquidityPoolHourlySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :pool The pool this snapshot belongs to
+  # @return [Array<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>]
+  describe 'p_ancakeswapv3_ethereum_liquidity_pool_hourly_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
   # unit tests for p_ancakeswapv3_ethereum_liquidity_pools__current
   # LiquidityPools (current)
   # Gets liquidityPools.
@@ -39,6 +141,40 @@ describe 'PANCAKESWAPV3ETHEREUMApi' do
   # @option opts [String] :id Smart contract address of the pool.
   # @return [Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDTO>]
   describe 'p_ancakeswapv3_ethereum_liquidity_pools__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for p_ancakeswapv3_ethereum_position_snapshots__current
+  # PositionSnapshots (current)
+  # Gets positionSnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>]
+  describe 'p_ancakeswapv3_ethereum_position_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for p_ancakeswapv3_ethereum_positions__current
+  # Positions (current)
+  # Gets positions.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :pool The liquidity pool in which this position was opened
+  # @return [Array<PANCAKESWAPV3ETHEREUMPositionDTO>]
+  describe 'p_ancakeswapv3_ethereum_positions__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for p_ancakeswapv3_ethereum_reward_tokens__current
+  # RewardTokens (current)
+  # Gets rewardTokens.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<PANCAKESWAPV3ETHEREUMRewardTokenDTO>]
+  describe 'p_ancakeswapv3_ethereum_reward_tokens__current test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
@@ -55,6 +191,64 @@ describe 'PANCAKESWAPV3ETHEREUMApi' do
     end
   end
 
+  # unit tests for p_ancakeswapv3_ethereum_tick_daily_snapshots__current
+  # TickDailySnapshots (current)
+  # Gets tickDailySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :pool liquidity pool this tick belongs to
+  # @return [Array<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>]
+  describe 'p_ancakeswapv3_ethereum_tick_daily_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for p_ancakeswapv3_ethereum_tick_hourly_snapshots__current
+  # TickHourlySnapshots (current)
+  # Gets tickHourlySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :pool liquidity pool this tick belongs to
+  # @return [Array<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>]
+  describe 'p_ancakeswapv3_ethereum_tick_hourly_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for p_ancakeswapv3_ethereum_ticks__current
+  # Ticks (current)
+  # Gets ticks.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :pool Liquidity pool this tick belongs to
+  # @return [Array<PANCAKESWAPV3ETHEREUMTickDTO>]
+  describe 'p_ancakeswapv3_ethereum_ticks__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for p_ancakeswapv3_ethereum_token_white_list_symbols__current
+  # TokenWhiteListSymbols (current)
+  # Gets tokenWhiteListSymbols.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>]
+  describe 'p_ancakeswapv3_ethereum_token_white_list_symbols__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for p_ancakeswapv3_ethereum_token_white_lists__current
+  # TokenWhiteLists (current)
+  # Gets tokenWhiteLists.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>]
+  describe 'p_ancakeswapv3_ethereum_token_white_lists__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
   # unit tests for p_ancakeswapv3_ethereum_tokens__current
   # Tokens (current)
   # Gets tokens.
@@ -62,6 +256,39 @@ describe 'PANCAKESWAPV3ETHEREUMApi' do
   # @option opts [String] :id Smart contract address of the token.
   # @return [Array<PANCAKESWAPV3ETHEREUMTokenDTO>]
   describe 'p_ancakeswapv3_ethereum_tokens__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for p_ancakeswapv3_ethereum_usage_metrics_daily_snapshots__current
+  # UsageMetricsDailySnapshots (current)
+  # Gets usageMetricsDailySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>]
+  describe 'p_ancakeswapv3_ethereum_usage_metrics_daily_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for p_ancakeswapv3_ethereum_usage_metrics_hourly_snapshots__current
+  # UsageMetricsHourlySnapshots (current)
+  # Gets usageMetricsHourlySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>]
+  describe 'p_ancakeswapv3_ethereum_usage_metrics_hourly_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for p_ancakeswapv3_ethereum_withdraws__current
+  # Withdraws (current)
+  # Gets withdraws.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<PANCAKESWAPV3ETHEREUMWithdrawDTO>]
+  describe 'p_ancakeswapv3_ethereum_withdraws__current test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end

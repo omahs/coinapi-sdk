@@ -19,9 +19,29 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMAccountDTO
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMActiveAccountDTO
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMDepositDTO
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO
 import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMLiquidityPoolDTO
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMPositionDTO
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMPositionSnapshotDTO
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMRewardTokenDTO
 import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMSwapDTO
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMTickDTO
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO
 import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMTokenDTO
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMTokenWhiteListDTO
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+import org.openapitools.client.models.PANCAKESWAPV3ETHEREUMWithdrawDTO
 
 import com.squareup.moshi.Json
 
@@ -45,6 +65,642 @@ class PANCAKESWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.baseUrlKey, "https://onchain.coinapi.io")
         }
+    }
+
+    /**
+     * Accounts (current)
+     * Gets accounts.
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMAccountDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMAccountsCurrent() : kotlin.collections.List<PANCAKESWAPV3ETHEREUMAccountDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMAccountsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMAccountDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Accounts (current)
+     * Gets accounts.
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMAccountDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMAccountsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMAccountDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMAccountsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMAccountDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMAccountsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMAccountsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/accounts/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * ActiveAccounts (current)
+     * Gets activeAccounts.
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMActiveAccountsCurrent() : kotlin.collections.List<PANCAKESWAPV3ETHEREUMActiveAccountDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * ActiveAccounts (current)
+     * Gets activeAccounts.
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMActiveAccountsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMActiveAccountsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMActiveAccountsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMDepositDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMDepositsCurrent() : kotlin.collections.List<PANCAKESWAPV3ETHEREUMDepositDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMDepositsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMDepositDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMDepositDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMDepositsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMDepositDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMDepositsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMDepositDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMDepositsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMDepositsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/deposits/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * DexAmmProtocols (current)
+     * Gets dexAmmProtocols.
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent() : kotlin.collections.List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * DexAmmProtocols (current)
+     * Gets dexAmmProtocols.
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/dexAmmProtocols/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * FinancialsDailySnapshots (current)
+     * Gets financialsDailySnapshots.
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent() : kotlin.collections.List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * FinancialsDailySnapshots (current)
+     * Gets financialsDailySnapshots.
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/financialsDailySnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * LiquidityPoolAmounts (current)
+     * Gets liquidityPoolAmounts.
+     * @param id Smart contract address of the pool. (optional)
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id: kotlin.String? = null) : kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo(id = id)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * LiquidityPoolAmounts (current)
+     * Gets liquidityPoolAmounts.
+     * @param id Smart contract address of the pool. (optional)
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo(id: kotlin.String?) : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequestConfig(id = id)
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+     *
+     * @param id Smart contract address of the pool. (optional)
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequestConfig(id: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (id != null) {
+                    put("id", listOf(id.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolAmounts/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     * Gets liquidityPoolDailySnapshots.
+     * @param pool Pool this snapshot belongs to. (optional)
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool: kotlin.String? = null) : kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(pool = pool)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     * Gets liquidityPoolDailySnapshots.
+     * @param pool Pool this snapshot belongs to. (optional)
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(pool: kotlin.String?) : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequestConfig(pool = pool)
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+     *
+     * @param pool Pool this snapshot belongs to. (optional)
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequestConfig(pool: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (pool != null) {
+                    put("pool", listOf(pool.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * LiquidityPoolFees (current)
+     * Gets liquidityPoolFees.
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent() : kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * LiquidityPoolFees (current)
+     * Gets liquidityPoolFees.
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent
+     *
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolFees/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     * Gets liquidityPoolHourlySnapshots.
+     * @param pool The pool this snapshot belongs to (optional)
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool: kotlin.String? = null) : kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo(pool = pool)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     * Gets liquidityPoolHourlySnapshots.
+     * @param pool The pool this snapshot belongs to (optional)
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo(pool: kotlin.String?) : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequestConfig(pool = pool)
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+     *
+     * @param pool The pool this snapshot belongs to (optional)
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequestConfig(pool: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (pool != null) {
+                    put("pool", listOf(pool.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolHourlySnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
     }
 
     /**
@@ -124,6 +780,218 @@ class PANCAKESWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * PositionSnapshots (current)
+     * Gets positionSnapshots.
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent() : kotlin.collections.List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * PositionSnapshots (current)
+     * Gets positionSnapshots.
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/positionSnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Positions (current)
+     * Gets positions.
+     * @param pool The liquidity pool in which this position was opened (optional)
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMPositionDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMPositionsCurrent(pool: kotlin.String? = null) : kotlin.collections.List<PANCAKESWAPV3ETHEREUMPositionDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMPositionsCurrentWithHttpInfo(pool = pool)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMPositionDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Positions (current)
+     * Gets positions.
+     * @param pool The liquidity pool in which this position was opened (optional)
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMPositionDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMPositionsCurrentWithHttpInfo(pool: kotlin.String?) : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMPositionDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMPositionsCurrentRequestConfig(pool = pool)
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMPositionDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMPositionsCurrent
+     *
+     * @param pool The liquidity pool in which this position was opened (optional)
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMPositionsCurrentRequestConfig(pool: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (pool != null) {
+                    put("pool", listOf(pool.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/positions/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * RewardTokens (current)
+     * Gets rewardTokens.
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMRewardTokensCurrent() : kotlin.collections.List<PANCAKESWAPV3ETHEREUMRewardTokenDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * RewardTokens (current)
+     * Gets rewardTokens.
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMRewardTokensCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMRewardTokensCurrent
+     *
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMRewardTokensCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/rewardTokens/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * Swaps (current)
      * Gets swaps.
      * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMSwapDTO>
@@ -184,6 +1052,370 @@ class PANCAKESWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/v1/dapps/pancakeswap-v3-ethereum/swaps/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * TickDailySnapshots (current)
+     * Gets tickDailySnapshots.
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent(pool: kotlin.String? = null) : kotlin.collections.List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo(pool = pool)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * TickDailySnapshots (current)
+     * Gets tickDailySnapshots.
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo(pool: kotlin.String?) : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentRequestConfig(pool = pool)
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent
+     *
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentRequestConfig(pool: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (pool != null) {
+                    put("pool", listOf(pool.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/tickDailySnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * TickHourlySnapshots (current)
+     * Gets tickHourlySnapshots.
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool: kotlin.String? = null) : kotlin.collections.List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(pool = pool)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * TickHourlySnapshots (current)
+     * Gets tickHourlySnapshots.
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(pool: kotlin.String?) : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentRequestConfig(pool = pool)
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent
+     *
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentRequestConfig(pool: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (pool != null) {
+                    put("pool", listOf(pool.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/tickHourlySnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Ticks (current)
+     * Gets ticks.
+     * @param pool Liquidity pool this tick belongs to (optional)
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMTickDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMTicksCurrent(pool: kotlin.String? = null) : kotlin.collections.List<PANCAKESWAPV3ETHEREUMTickDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMTicksCurrentWithHttpInfo(pool = pool)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMTickDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Ticks (current)
+     * Gets ticks.
+     * @param pool Liquidity pool this tick belongs to (optional)
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMTickDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMTicksCurrentWithHttpInfo(pool: kotlin.String?) : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMTickDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMTicksCurrentRequestConfig(pool = pool)
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMTickDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMTicksCurrent
+     *
+     * @param pool Liquidity pool this tick belongs to (optional)
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMTicksCurrentRequestConfig(pool: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (pool != null) {
+                    put("pool", listOf(pool.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/ticks/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * TokenWhiteListSymbols (current)
+     * Gets tokenWhiteListSymbols.
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent() : kotlin.collections.List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * TokenWhiteListSymbols (current)
+     * Gets tokenWhiteListSymbols.
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteListSymbols/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * TokenWhiteLists (current)
+     * Gets tokenWhiteLists.
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent() : kotlin.collections.List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * TokenWhiteLists (current)
+     * Gets tokenWhiteLists.
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteLists/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -260,6 +1492,210 @@ class PANCAKESWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/v1/dapps/pancakeswap-v3-ethereum/tokens/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * UsageMetricsDailySnapshots (current)
+     * Gets usageMetricsDailySnapshots.
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent() : kotlin.collections.List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * UsageMetricsDailySnapshots (current)
+     * Gets usageMetricsDailySnapshots.
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/usageMetricsDailySnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     * Gets usageMetricsHourlySnapshots.
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent() : kotlin.collections.List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     * Gets usageMetricsHourlySnapshots.
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/usageMetricsHourlySnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMWithdrawDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun pANCAKESWAPV3ETHEREUMWithdrawsCurrent() : kotlin.collections.List<PANCAKESWAPV3ETHEREUMWithdrawDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMWithdrawDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMWithdrawDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun pANCAKESWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMWithdrawDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMWithdrawsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMWithdrawDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMWithdrawsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun pANCAKESWAPV3ETHEREUMWithdrawsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/pancakeswap-v3-ethereum/withdraws/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,

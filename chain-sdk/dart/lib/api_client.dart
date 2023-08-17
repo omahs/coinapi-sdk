@@ -205,12 +205,52 @@ class ApiClient {
           return CURVEFINANCEETHEREUMSwapDTO.fromJson(value);
         case 'CURVEFINANCEETHEREUMTokenDTO':
           return CURVEFINANCEETHEREUMTokenDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMAccountDTO':
+          return PANCAKESWAPV3ETHEREUMAccountDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMActiveAccountDTO':
+          return PANCAKESWAPV3ETHEREUMActiveAccountDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMDepositDTO':
+          return PANCAKESWAPV3ETHEREUMDepositDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO':
+          return PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO':
+          return PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO':
+          return PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO.fromJson(value);
         case 'PANCAKESWAPV3ETHEREUMLiquidityPoolDTO':
           return PANCAKESWAPV3ETHEREUMLiquidityPoolDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO':
+          return PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO':
+          return PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO':
+          return PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMPositionDTO':
+          return PANCAKESWAPV3ETHEREUMPositionDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMPositionSnapshotDTO':
+          return PANCAKESWAPV3ETHEREUMPositionSnapshotDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMRewardTokenDTO':
+          return PANCAKESWAPV3ETHEREUMRewardTokenDTO.fromJson(value);
         case 'PANCAKESWAPV3ETHEREUMSwapDTO':
           return PANCAKESWAPV3ETHEREUMSwapDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMTickDTO':
+          return PANCAKESWAPV3ETHEREUMTickDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO':
+          return PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO':
+          return PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO.fromJson(value);
         case 'PANCAKESWAPV3ETHEREUMTokenDTO':
           return PANCAKESWAPV3ETHEREUMTokenDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMTokenWhiteListDTO':
+          return PANCAKESWAPV3ETHEREUMTokenWhiteListDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO':
+          return PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO':
+          return PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO':
+          return PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.fromJson(value);
+        case 'PANCAKESWAPV3ETHEREUMWithdrawDTO':
+          return PANCAKESWAPV3ETHEREUMWithdrawDTO.fromJson(value);
         case 'SUSHISWAPV3ETHEREUMLiquidityPoolDTO':
           return SUSHISWAPV3ETHEREUMLiquidityPoolDTO.fromJson(value);
         case 'SUSHISWAPV3ETHEREUMSwapDTO':

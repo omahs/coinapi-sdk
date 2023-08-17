@@ -22,11 +22,155 @@ func Test_openapi_PANCAKESWAPV3ETHEREUMApiService(t *testing.T) {
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
 
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMAccountsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMAccountsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMActiveAccountsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMActiveAccountsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMDepositsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMDepositsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMPositionsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMPositionsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMRewardTokensCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMRewardTokensCurrent(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -46,11 +190,107 @@ func Test_openapi_PANCAKESWAPV3ETHEREUMApiService(t *testing.T) {
 
 	})
 
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMTicksCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMTicksCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMTokensCurrent", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMTokensCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMWithdrawsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMWithdrawsCurrent(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)

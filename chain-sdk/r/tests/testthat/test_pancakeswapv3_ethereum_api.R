@@ -5,6 +5,108 @@ context("Test PANCAKESWAPV3ETHEREUMApi")
 
 api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
 
+test_that("PANCAKESWAPV3ETHEREUMAccountsCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMAccountsCurrent
+  # base path: https://onchain.coinapi.io
+  # Accounts (current)
+  # Gets accounts.
+  # @return [array[PANCAKESWAPV3ETHEREUMAccountDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("PANCAKESWAPV3ETHEREUMActiveAccountsCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMActiveAccountsCurrent
+  # base path: https://onchain.coinapi.io
+  # ActiveAccounts (current)
+  # Gets activeAccounts.
+  # @return [array[PANCAKESWAPV3ETHEREUMActiveAccountDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("PANCAKESWAPV3ETHEREUMDepositsCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMDepositsCurrent
+  # base path: https://onchain.coinapi.io
+  # Deposits (current)
+  # Gets deposits.
+  # @return [array[PANCAKESWAPV3ETHEREUMDepositDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent
+  # base path: https://onchain.coinapi.io
+  # DexAmmProtocols (current)
+  # Gets dexAmmProtocols.
+  # @return [array[PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # FinancialsDailySnapshots (current)
+  # Gets financialsDailySnapshots.
+  # @return [array[PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+  # base path: https://onchain.coinapi.io
+  # LiquidityPoolAmounts (current)
+  # Gets liquidityPoolAmounts.
+  # @param id character Smart contract address of the pool. (optional)
+  # @return [array[PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # LiquidityPoolDailySnapshots (current)
+  # Gets liquidityPoolDailySnapshots.
+  # @param pool character Pool this snapshot belongs to. (optional)
+  # @return [array[PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent
+  # base path: https://onchain.coinapi.io
+  # LiquidityPoolFees (current)
+  # Gets liquidityPoolFees.
+  # @return [array[PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # LiquidityPoolHourlySnapshots (current)
+  # Gets liquidityPoolHourlySnapshots.
+  # @param pool character The pool this snapshot belongs to (optional)
+  # @return [array[PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("PANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent", {
   # tests for PANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent
   # base path: https://onchain.coinapi.io
@@ -12,6 +114,40 @@ test_that("PANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent", {
   # Gets liquidityPools.
   # @param id character Smart contract address of the pool. (optional)
   # @return [array[PANCAKESWAPV3ETHEREUMLiquidityPoolDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # PositionSnapshots (current)
+  # Gets positionSnapshots.
+  # @return [array[PANCAKESWAPV3ETHEREUMPositionSnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("PANCAKESWAPV3ETHEREUMPositionsCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMPositionsCurrent
+  # base path: https://onchain.coinapi.io
+  # Positions (current)
+  # Gets positions.
+  # @param pool character The liquidity pool in which this position was opened (optional)
+  # @return [array[PANCAKESWAPV3ETHEREUMPositionDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("PANCAKESWAPV3ETHEREUMRewardTokensCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMRewardTokensCurrent
+  # base path: https://onchain.coinapi.io
+  # RewardTokens (current)
+  # Gets rewardTokens.
+  # @return [array[PANCAKESWAPV3ETHEREUMRewardTokenDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -28,6 +164,64 @@ test_that("PANCAKESWAPV3ETHEREUMSwapsCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
+test_that("PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # TickDailySnapshots (current)
+  # Gets tickDailySnapshots.
+  # @param pool character liquidity pool this tick belongs to (optional)
+  # @return [array[PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # TickHourlySnapshots (current)
+  # Gets tickHourlySnapshots.
+  # @param pool character liquidity pool this tick belongs to (optional)
+  # @return [array[PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("PANCAKESWAPV3ETHEREUMTicksCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMTicksCurrent
+  # base path: https://onchain.coinapi.io
+  # Ticks (current)
+  # Gets ticks.
+  # @param pool character Liquidity pool this tick belongs to (optional)
+  # @return [array[PANCAKESWAPV3ETHEREUMTickDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
+  # base path: https://onchain.coinapi.io
+  # TokenWhiteListSymbols (current)
+  # Gets tokenWhiteListSymbols.
+  # @return [array[PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent
+  # base path: https://onchain.coinapi.io
+  # TokenWhiteLists (current)
+  # Gets tokenWhiteLists.
+  # @return [array[PANCAKESWAPV3ETHEREUMTokenWhiteListDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("PANCAKESWAPV3ETHEREUMTokensCurrent", {
   # tests for PANCAKESWAPV3ETHEREUMTokensCurrent
   # base path: https://onchain.coinapi.io
@@ -35,6 +229,39 @@ test_that("PANCAKESWAPV3ETHEREUMTokensCurrent", {
   # Gets tokens.
   # @param id character Smart contract address of the token. (optional)
   # @return [array[PANCAKESWAPV3ETHEREUMTokenDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # UsageMetricsDailySnapshots (current)
+  # Gets usageMetricsDailySnapshots.
+  # @return [array[PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # UsageMetricsHourlySnapshots (current)
+  # Gets usageMetricsHourlySnapshots.
+  # @return [array[PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("PANCAKESWAPV3ETHEREUMWithdrawsCurrent", {
+  # tests for PANCAKESWAPV3ETHEREUMWithdrawsCurrent
+  # base path: https://onchain.coinapi.io
+  # Withdraws (current)
+  # Gets withdraws.
+  # @return [array[PANCAKESWAPV3ETHEREUMWithdrawDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")

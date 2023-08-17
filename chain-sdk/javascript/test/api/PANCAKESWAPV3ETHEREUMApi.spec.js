@@ -48,10 +48,130 @@
   }
 
   describe('PANCAKESWAPV3ETHEREUMApi', function() {
+    describe('pANCAKESWAPV3ETHEREUMAccountsCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMAccountsCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMAccountsCurrent
+        //instance.pANCAKESWAPV3ETHEREUMAccountsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('pANCAKESWAPV3ETHEREUMActiveAccountsCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMActiveAccountsCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMActiveAccountsCurrent
+        //instance.pANCAKESWAPV3ETHEREUMActiveAccountsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('pANCAKESWAPV3ETHEREUMDepositsCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMDepositsCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMDepositsCurrent
+        //instance.pANCAKESWAPV3ETHEREUMDepositsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent
+        //instance.pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
+        //instance.pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+        //instance.pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+        //instance.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent
+        //instance.pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+        //instance.pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent', function() {
       it('should call pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent successfully', function(done) {
         //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent
         //instance.pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent
+        //instance.pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('pANCAKESWAPV3ETHEREUMPositionsCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMPositionsCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMPositionsCurrent
+        //instance.pANCAKESWAPV3ETHEREUMPositionsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('pANCAKESWAPV3ETHEREUMRewardTokensCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMRewardTokensCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMRewardTokensCurrent
+        //instance.pANCAKESWAPV3ETHEREUMRewardTokensCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -68,10 +188,90 @@
         done();
       });
     });
+    describe('pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent
+        //instance.pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent
+        //instance.pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('pANCAKESWAPV3ETHEREUMTicksCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMTicksCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMTicksCurrent
+        //instance.pANCAKESWAPV3ETHEREUMTicksCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
+        //instance.pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent
+        //instance.pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('pANCAKESWAPV3ETHEREUMTokensCurrent', function() {
       it('should call pANCAKESWAPV3ETHEREUMTokensCurrent successfully', function(done) {
         //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMTokensCurrent
         //instance.pANCAKESWAPV3ETHEREUMTokensCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
+        //instance.pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
+        //instance.pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('pANCAKESWAPV3ETHEREUMWithdrawsCurrent', function() {
+      it('should call pANCAKESWAPV3ETHEREUMWithdrawsCurrent successfully', function(done) {
+        //uncomment below and update the code to test pANCAKESWAPV3ETHEREUMWithdrawsCurrent
+        //instance.pANCAKESWAPV3ETHEREUMWithdrawsCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

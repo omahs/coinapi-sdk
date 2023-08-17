@@ -56,6 +56,108 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMAccountsCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMAccountsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.PANCAKESWAPV3ETHEREUMAccountsCurrent();
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMAccountDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMActiveAccountsCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMActiveAccountsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.PANCAKESWAPV3ETHEREUMActiveAccountsCurrent();
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMDepositsCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMDepositsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.PANCAKESWAPV3ETHEREUMDepositsCurrent();
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMDepositDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent();
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent();
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //var response = instance.PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id);
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pool = null;
+            //var response = instance.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool);
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent();
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pool = null;
+            //var response = instance.PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool);
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>(response);
+        }
+
+        /// <summary>
         /// Test PANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent
         /// </summary>
         [Fact]
@@ -65,6 +167,40 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //string id = null;
             //var response = instance.PANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent(id);
             //Assert.IsType<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent();
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMPositionsCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMPositionsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pool = null;
+            //var response = instance.PANCAKESWAPV3ETHEREUMPositionsCurrent(pool);
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMPositionDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMRewardTokensCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMRewardTokensCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.PANCAKESWAPV3ETHEREUMRewardTokensCurrent();
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>>(response);
         }
 
         /// <summary>
@@ -79,6 +215,64 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pool = null;
+            //var response = instance.PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent(pool);
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pool = null;
+            //var response = instance.PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool);
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMTicksCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMTicksCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pool = null;
+            //var response = instance.PANCAKESWAPV3ETHEREUMTicksCurrent(pool);
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMTickDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent();
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent();
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>>(response);
+        }
+
+        /// <summary>
         /// Test PANCAKESWAPV3ETHEREUMTokensCurrent
         /// </summary>
         [Fact]
@@ -88,6 +282,39 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //string id = null;
             //var response = instance.PANCAKESWAPV3ETHEREUMTokensCurrent(id);
             //Assert.IsType<List<PANCAKESWAPV3ETHEREUMTokenDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent();
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent();
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test PANCAKESWAPV3ETHEREUMWithdrawsCurrent
+        /// </summary>
+        [Fact]
+        public void PANCAKESWAPV3ETHEREUMWithdrawsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.PANCAKESWAPV3ETHEREUMWithdrawsCurrent();
+            //Assert.IsType<List<PANCAKESWAPV3ETHEREUMWithdrawDTO>>(response);
         }
     }
 }

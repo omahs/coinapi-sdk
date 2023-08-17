@@ -26,6 +26,210 @@ public class OASPANCAKESWAPV3ETHEREUMApi {
     }
 
     /**
+     * Accounts (current)
+     * Gets accounts.
+     * @return List<OASPANCAKESWAPV3ETHEREUMAccountDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMAccountDTO> pANCAKESWAPV3ETHEREUMAccountsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMAccountDTO>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/accounts/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMAccountDTO>.class
+        );
+    }
+    /**
+     * ActiveAccounts (current)
+     * Gets activeAccounts.
+     * @return List<OASPANCAKESWAPV3ETHEREUMActiveAccoun>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMActiveAccoun> pANCAKESWAPV3ETHEREUMActiveAccountsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMActiveAccoun>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMActiveAccoun>.class
+        );
+    }
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @return List<OASPANCAKESWAPV3ETHEREUMDepositDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMDepositDTO> pANCAKESWAPV3ETHEREUMDepositsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMDepositDTO>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/deposits/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMDepositDTO>.class
+        );
+    }
+    /**
+     * DexAmmProtocols (current)
+     * Gets dexAmmProtocols.
+     * @return List<OASPANCAKESWAPV3ETHEREUMDexAmmProtoc>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMDexAmmProtoc> pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMDexAmmProtoc>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/dexAmmProtocols/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMDexAmmProtoc>.class
+        );
+    }
+    /**
+     * FinancialsDailySnapshots (current)
+     * Gets financialsDailySnapshots.
+     * @return List<OASPANCAKESWAPV3ETHEREUMFinancialsDa>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMFinancialsDa> pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMFinancialsDa>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/financialsDailySnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMFinancialsDa>.class
+        );
+    }
+    /**
+     * LiquidityPoolAmounts (current)
+     * Gets liquidityPoolAmounts.
+     * @param id Smart contract address of the pool. (optional)
+     * @return List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo> pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('id', (String) params.get('id')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolAmounts/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo>.class
+        );
+    }
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     * Gets liquidityPoolDailySnapshots.
+     * @param pool Pool this snapshot belongs to. (optional)
+     * @return List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('pool', (String) params.get('pool')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo>.class
+        );
+    }
+    /**
+     * LiquidityPoolFees (current)
+     * Gets liquidityPoolFees.
+     * @return List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo> pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolFees/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo>.class
+        );
+    }
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     * Gets liquidityPoolHourlySnapshots.
+     * @param pool The pool this snapshot belongs to (optional)
+     * @return List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo> pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('pool', (String) params.get('pool')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolHourlySnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo>.class
+        );
+    }
+    /**
      * LiquidityPools (current)
      * Gets liquidityPools.
      * @param id Smart contract address of the pool. (optional)
@@ -52,6 +256,74 @@ public class OASPANCAKESWAPV3ETHEREUMApi {
         );
     }
     /**
+     * PositionSnapshots (current)
+     * Gets positionSnapshots.
+     * @return List<OASPANCAKESWAPV3ETHEREUMPositionSnap>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMPositionSnap> pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMPositionSnap>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/positionSnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMPositionSnap>.class
+        );
+    }
+    /**
+     * Positions (current)
+     * Gets positions.
+     * @param pool The liquidity pool in which this position was opened (optional)
+     * @return List<OASPANCAKESWAPV3ETHEREUMPositionDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMPositionDTO> pANCAKESWAPV3ETHEREUMPositionsCurrent(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('pool', (String) params.get('pool')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMPositionDTO>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/positions/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMPositionDTO>.class
+        );
+    }
+    /**
+     * RewardTokens (current)
+     * Gets rewardTokens.
+     * @return List<OASPANCAKESWAPV3ETHEREUMRewardTokenD>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMRewardTokenD> pANCAKESWAPV3ETHEREUMRewardTokensCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMRewardTokenD>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/rewardTokens/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMRewardTokenD>.class
+        );
+    }
+    /**
      * Swaps (current)
      * Gets swaps.
      * @return List<OASPANCAKESWAPV3ETHEREUMSwapDTO>
@@ -70,6 +342,126 @@ public class OASPANCAKESWAPV3ETHEREUMApi {
             new List<String>(),
             new List<String>(),
             List<OASPANCAKESWAPV3ETHEREUMSwapDTO>.class
+        );
+    }
+    /**
+     * TickDailySnapshots (current)
+     * Gets tickDailySnapshots.
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @return List<OASPANCAKESWAPV3ETHEREUMTickDailySna>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMTickDailySna> pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('pool', (String) params.get('pool')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMTickDailySna>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/tickDailySnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMTickDailySna>.class
+        );
+    }
+    /**
+     * TickHourlySnapshots (current)
+     * Gets tickHourlySnapshots.
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @return List<OASPANCAKESWAPV3ETHEREUMTickHourlySn>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMTickHourlySn> pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('pool', (String) params.get('pool')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMTickHourlySn>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/tickHourlySnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMTickHourlySn>.class
+        );
+    }
+    /**
+     * Ticks (current)
+     * Gets ticks.
+     * @param pool Liquidity pool this tick belongs to (optional)
+     * @return List<OASPANCAKESWAPV3ETHEREUMTickDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMTickDTO> pANCAKESWAPV3ETHEREUMTicksCurrent(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('pool', (String) params.get('pool')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMTickDTO>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/ticks/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMTickDTO>.class
+        );
+    }
+    /**
+     * TokenWhiteListSymbols (current)
+     * Gets tokenWhiteListSymbols.
+     * @return List<OASPANCAKESWAPV3ETHEREUMTokenWhiteLi>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMTokenWhiteLi> pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMTokenWhiteLi>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteListSymbols/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMTokenWhiteLi>.class
+        );
+    }
+    /**
+     * TokenWhiteLists (current)
+     * Gets tokenWhiteLists.
+     * @return List<OASPANCAKESWAPV3ETHEREUMTokenWhiteLi>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMTokenWhiteLi> pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMTokenWhiteLi>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteLists/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMTokenWhiteLi>.class
         );
     }
     /**
@@ -96,6 +488,69 @@ public class OASPANCAKESWAPV3ETHEREUMApi {
             new List<String>(),
             new List<String>(),
             List<OASPANCAKESWAPV3ETHEREUMTokenDTO>.class
+        );
+    }
+    /**
+     * UsageMetricsDailySnapshots (current)
+     * Gets usageMetricsDailySnapshots.
+     * @return List<OASPANCAKESWAPV3ETHEREUMUsageMetrics>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMUsageMetrics> pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMUsageMetrics>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/usageMetricsDailySnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMUsageMetrics>.class
+        );
+    }
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     * Gets usageMetricsHourlySnapshots.
+     * @return List<OASPANCAKESWAPV3ETHEREUMUsageMetrics>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMUsageMetrics> pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMUsageMetrics>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/usageMetricsHourlySnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMUsageMetrics>.class
+        );
+    }
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @return List<OASPANCAKESWAPV3ETHEREUMWithdrawDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASPANCAKESWAPV3ETHEREUMWithdrawDTO> pANCAKESWAPV3ETHEREUMWithdrawsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASPANCAKESWAPV3ETHEREUMWithdrawDTO>) client.invoke(
+            'GET', '/v1/dapps/pancakeswap-v3-ethereum/withdraws/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASPANCAKESWAPV3ETHEREUMWithdrawDTO>.class
         );
     }
 }

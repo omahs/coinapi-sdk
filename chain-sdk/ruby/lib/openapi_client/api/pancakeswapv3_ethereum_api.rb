@@ -19,6 +19,528 @@ module OpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
+    # Accounts (current)
+    # Gets accounts.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<PANCAKESWAPV3ETHEREUMAccountDTO>]
+    def p_ancakeswapv3_ethereum_accounts__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_accounts__current_with_http_info(opts)
+      data
+    end
+
+    # Accounts (current)
+    # Gets accounts.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMAccountDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMAccountDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_accounts__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_accounts__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/accounts/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMAccountDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_accounts__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_accounts__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # ActiveAccounts (current)
+    # Gets activeAccounts.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<PANCAKESWAPV3ETHEREUMActiveAccountDTO>]
+    def p_ancakeswapv3_ethereum_active_accounts__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_active_accounts__current_with_http_info(opts)
+      data
+    end
+
+    # ActiveAccounts (current)
+    # Gets activeAccounts.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMActiveAccountDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMActiveAccountDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_active_accounts__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_active_accounts__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMActiveAccountDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_active_accounts__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_active_accounts__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Deposits (current)
+    # Gets deposits.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<PANCAKESWAPV3ETHEREUMDepositDTO>]
+    def p_ancakeswapv3_ethereum_deposits__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_deposits__current_with_http_info(opts)
+      data
+    end
+
+    # Deposits (current)
+    # Gets deposits.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMDepositDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMDepositDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_deposits__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_deposits__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/deposits/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMDepositDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_deposits__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_deposits__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # DexAmmProtocols (current)
+    # Gets dexAmmProtocols.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>]
+    def p_ancakeswapv3_ethereum_dex_amm_protocols__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_dex_amm_protocols__current_with_http_info(opts)
+      data
+    end
+
+    # DexAmmProtocols (current)
+    # Gets dexAmmProtocols.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_dex_amm_protocols__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_dex_amm_protocols__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/dexAmmProtocols/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_dex_amm_protocols__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_dex_amm_protocols__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # FinancialsDailySnapshots (current)
+    # Gets financialsDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>]
+    def p_ancakeswapv3_ethereum_financials_daily_snapshots__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_financials_daily_snapshots__current_with_http_info(opts)
+      data
+    end
+
+    # FinancialsDailySnapshots (current)
+    # Gets financialsDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_financials_daily_snapshots__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_financials_daily_snapshots__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/financialsDailySnapshots/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_financials_daily_snapshots__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_financials_daily_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # LiquidityPoolAmounts (current)
+    # Gets liquidityPoolAmounts.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :id Smart contract address of the pool.
+    # @return [Array<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>]
+    def p_ancakeswapv3_ethereum_liquidity_pool_amounts__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_liquidity_pool_amounts__current_with_http_info(opts)
+      data
+    end
+
+    # LiquidityPoolAmounts (current)
+    # Gets liquidityPoolAmounts.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :id Smart contract address of the pool.
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_liquidity_pool_amounts__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_liquidity_pool_amounts__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolAmounts/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_liquidity_pool_amounts__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_liquidity_pool_amounts__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # LiquidityPoolDailySnapshots (current)
+    # Gets liquidityPoolDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool Pool this snapshot belongs to.
+    # @return [Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>]
+    def p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current_with_http_info(opts)
+      data
+    end
+
+    # LiquidityPoolDailySnapshots (current)
+    # Gets liquidityPoolDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool Pool this snapshot belongs to.
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'pool'] = opts[:'pool'] if !opts[:'pool'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # LiquidityPoolFees (current)
+    # Gets liquidityPoolFees.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>]
+    def p_ancakeswapv3_ethereum_liquidity_pool_fees__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_liquidity_pool_fees__current_with_http_info(opts)
+      data
+    end
+
+    # LiquidityPoolFees (current)
+    # Gets liquidityPoolFees.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_liquidity_pool_fees__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_liquidity_pool_fees__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolFees/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_liquidity_pool_fees__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_liquidity_pool_fees__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # LiquidityPoolHourlySnapshots (current)
+    # Gets liquidityPoolHourlySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool The pool this snapshot belongs to
+    # @return [Array<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>]
+    def p_ancakeswapv3_ethereum_liquidity_pool_hourly_snapshots__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_liquidity_pool_hourly_snapshots__current_with_http_info(opts)
+      data
+    end
+
+    # LiquidityPoolHourlySnapshots (current)
+    # Gets liquidityPoolHourlySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool The pool this snapshot belongs to
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_liquidity_pool_hourly_snapshots__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_liquidity_pool_hourly_snapshots__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolHourlySnapshots/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'pool'] = opts[:'pool'] if !opts[:'pool'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_liquidity_pool_hourly_snapshots__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_liquidity_pool_hourly_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # LiquidityPools (current)
     # Gets liquidityPools.
     # @param [Hash] opts the optional parameters
@@ -75,6 +597,180 @@ module OpenapiClient
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_liquidity_pools__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # PositionSnapshots (current)
+    # Gets positionSnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>]
+    def p_ancakeswapv3_ethereum_position_snapshots__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_position_snapshots__current_with_http_info(opts)
+      data
+    end
+
+    # PositionSnapshots (current)
+    # Gets positionSnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_position_snapshots__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_position_snapshots__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/positionSnapshots/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_position_snapshots__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_position_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Positions (current)
+    # Gets positions.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool The liquidity pool in which this position was opened
+    # @return [Array<PANCAKESWAPV3ETHEREUMPositionDTO>]
+    def p_ancakeswapv3_ethereum_positions__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_positions__current_with_http_info(opts)
+      data
+    end
+
+    # Positions (current)
+    # Gets positions.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool The liquidity pool in which this position was opened
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMPositionDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMPositionDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_positions__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_positions__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/positions/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'pool'] = opts[:'pool'] if !opts[:'pool'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMPositionDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_positions__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_positions__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # RewardTokens (current)
+    # Gets rewardTokens.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<PANCAKESWAPV3ETHEREUMRewardTokenDTO>]
+    def p_ancakeswapv3_ethereum_reward_tokens__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_reward_tokens__current_with_http_info(opts)
+      data
+    end
+
+    # RewardTokens (current)
+    # Gets rewardTokens.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMRewardTokenDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMRewardTokenDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_reward_tokens__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_reward_tokens__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/rewardTokens/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMRewardTokenDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_reward_tokens__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_reward_tokens__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -136,6 +832,300 @@ module OpenapiClient
       return data, status_code, headers
     end
 
+    # TickDailySnapshots (current)
+    # Gets tickDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool liquidity pool this tick belongs to
+    # @return [Array<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>]
+    def p_ancakeswapv3_ethereum_tick_daily_snapshots__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_tick_daily_snapshots__current_with_http_info(opts)
+      data
+    end
+
+    # TickDailySnapshots (current)
+    # Gets tickDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool liquidity pool this tick belongs to
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_tick_daily_snapshots__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_tick_daily_snapshots__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/tickDailySnapshots/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'pool'] = opts[:'pool'] if !opts[:'pool'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_tick_daily_snapshots__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_tick_daily_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # TickHourlySnapshots (current)
+    # Gets tickHourlySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool liquidity pool this tick belongs to
+    # @return [Array<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>]
+    def p_ancakeswapv3_ethereum_tick_hourly_snapshots__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_tick_hourly_snapshots__current_with_http_info(opts)
+      data
+    end
+
+    # TickHourlySnapshots (current)
+    # Gets tickHourlySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool liquidity pool this tick belongs to
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_tick_hourly_snapshots__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_tick_hourly_snapshots__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/tickHourlySnapshots/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'pool'] = opts[:'pool'] if !opts[:'pool'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_tick_hourly_snapshots__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_tick_hourly_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Ticks (current)
+    # Gets ticks.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool Liquidity pool this tick belongs to
+    # @return [Array<PANCAKESWAPV3ETHEREUMTickDTO>]
+    def p_ancakeswapv3_ethereum_ticks__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_ticks__current_with_http_info(opts)
+      data
+    end
+
+    # Ticks (current)
+    # Gets ticks.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool Liquidity pool this tick belongs to
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMTickDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMTickDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_ticks__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_ticks__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/ticks/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'pool'] = opts[:'pool'] if !opts[:'pool'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMTickDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_ticks__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_ticks__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # TokenWhiteListSymbols (current)
+    # Gets tokenWhiteListSymbols.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>]
+    def p_ancakeswapv3_ethereum_token_white_list_symbols__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_token_white_list_symbols__current_with_http_info(opts)
+      data
+    end
+
+    # TokenWhiteListSymbols (current)
+    # Gets tokenWhiteListSymbols.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_token_white_list_symbols__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_token_white_list_symbols__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteListSymbols/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_token_white_list_symbols__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_token_white_list_symbols__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # TokenWhiteLists (current)
+    # Gets tokenWhiteLists.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>]
+    def p_ancakeswapv3_ethereum_token_white_lists__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_token_white_lists__current_with_http_info(opts)
+      data
+    end
+
+    # TokenWhiteLists (current)
+    # Gets tokenWhiteLists.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_token_white_lists__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_token_white_lists__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteLists/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_token_white_lists__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_token_white_lists__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Tokens (current)
     # Gets tokens.
     # @param [Hash] opts the optional parameters
@@ -192,6 +1182,177 @@ module OpenapiClient
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_tokens__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # UsageMetricsDailySnapshots (current)
+    # Gets usageMetricsDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>]
+    def p_ancakeswapv3_ethereum_usage_metrics_daily_snapshots__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_usage_metrics_daily_snapshots__current_with_http_info(opts)
+      data
+    end
+
+    # UsageMetricsDailySnapshots (current)
+    # Gets usageMetricsDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_usage_metrics_daily_snapshots__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_usage_metrics_daily_snapshots__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/usageMetricsDailySnapshots/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_usage_metrics_daily_snapshots__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_usage_metrics_daily_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # UsageMetricsHourlySnapshots (current)
+    # Gets usageMetricsHourlySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>]
+    def p_ancakeswapv3_ethereum_usage_metrics_hourly_snapshots__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_usage_metrics_hourly_snapshots__current_with_http_info(opts)
+      data
+    end
+
+    # UsageMetricsHourlySnapshots (current)
+    # Gets usageMetricsHourlySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_usage_metrics_hourly_snapshots__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_usage_metrics_hourly_snapshots__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/usageMetricsHourlySnapshots/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_usage_metrics_hourly_snapshots__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_usage_metrics_hourly_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Withdraws (current)
+    # Gets withdraws.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<PANCAKESWAPV3ETHEREUMWithdrawDTO>]
+    def p_ancakeswapv3_ethereum_withdraws__current(opts = {})
+      data, _status_code, _headers = p_ancakeswapv3_ethereum_withdraws__current_with_http_info(opts)
+      data
+    end
+
+    # Withdraws (current)
+    # Gets withdraws.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<PANCAKESWAPV3ETHEREUMWithdrawDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMWithdrawDTO> data, response status code and response headers
+    def p_ancakeswapv3_ethereum_withdraws__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_withdraws__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/pancakeswap-v3-ethereum/withdraws/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<PANCAKESWAPV3ETHEREUMWithdrawDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"PANCAKESWAPV3ETHEREUMApi.p_ancakeswapv3_ethereum_withdraws__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PANCAKESWAPV3ETHEREUMApi#p_ancakeswapv3_ethereum_withdraws__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

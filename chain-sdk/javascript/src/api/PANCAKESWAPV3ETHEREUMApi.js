@@ -13,9 +13,29 @@
 
 
 import ApiClient from "../ApiClient";
+import PANCAKESWAPV3ETHEREUMAccountDTO from '../model/PANCAKESWAPV3ETHEREUMAccountDTO';
+import PANCAKESWAPV3ETHEREUMActiveAccountDTO from '../model/PANCAKESWAPV3ETHEREUMActiveAccountDTO';
+import PANCAKESWAPV3ETHEREUMDepositDTO from '../model/PANCAKESWAPV3ETHEREUMDepositDTO';
+import PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO from '../model/PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO';
+import PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO from '../model/PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO';
+import PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO from '../model/PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO';
 import PANCAKESWAPV3ETHEREUMLiquidityPoolDTO from '../model/PANCAKESWAPV3ETHEREUMLiquidityPoolDTO';
+import PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO from '../model/PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO';
+import PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO from '../model/PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO';
+import PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO from '../model/PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO';
+import PANCAKESWAPV3ETHEREUMPositionDTO from '../model/PANCAKESWAPV3ETHEREUMPositionDTO';
+import PANCAKESWAPV3ETHEREUMPositionSnapshotDTO from '../model/PANCAKESWAPV3ETHEREUMPositionSnapshotDTO';
+import PANCAKESWAPV3ETHEREUMRewardTokenDTO from '../model/PANCAKESWAPV3ETHEREUMRewardTokenDTO';
 import PANCAKESWAPV3ETHEREUMSwapDTO from '../model/PANCAKESWAPV3ETHEREUMSwapDTO';
+import PANCAKESWAPV3ETHEREUMTickDTO from '../model/PANCAKESWAPV3ETHEREUMTickDTO';
+import PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO from '../model/PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO';
+import PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO from '../model/PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO';
 import PANCAKESWAPV3ETHEREUMTokenDTO from '../model/PANCAKESWAPV3ETHEREUMTokenDTO';
+import PANCAKESWAPV3ETHEREUMTokenWhiteListDTO from '../model/PANCAKESWAPV3ETHEREUMTokenWhiteListDTO';
+import PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO from '../model/PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO';
+import PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO from '../model/PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO';
+import PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO from '../model/PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO';
+import PANCAKESWAPV3ETHEREUMWithdrawDTO from '../model/PANCAKESWAPV3ETHEREUMWithdrawDTO';
 
 /**
 * PANCAKESWAPV3ETHEREUM service.
@@ -35,6 +55,351 @@ export default class PANCAKESWAPV3ETHEREUMApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMAccountsCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMAccountsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMAccountDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Accounts (current)
+     * Gets accounts.
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMAccountsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMAccountDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMAccountsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMAccountDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/accounts/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMActiveAccountsCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMActiveAccountsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMActiveAccountDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * ActiveAccounts (current)
+     * Gets activeAccounts.
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMActiveAccountsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMActiveAccountDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMActiveAccountsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMActiveAccountDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMDepositsCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMDepositsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMDepositDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMDepositsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMDepositDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMDepositsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMDepositDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/deposits/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * DexAmmProtocols (current)
+     * Gets dexAmmProtocols.
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/dexAmmProtocols/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * FinancialsDailySnapshots (current)
+     * Gets financialsDailySnapshots.
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/financialsDailySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPoolAmounts (current)
+     * Gets liquidityPoolAmounts.
+     * @param {Object} opts Optional parameters
+     * @param {String} [id] Smart contract address of the pool.
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolAmounts/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     * Gets liquidityPoolDailySnapshots.
+     * @param {Object} opts Optional parameters
+     * @param {String} [pool] Pool this snapshot belongs to.
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'pool': opts['pool']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPoolFees (current)
+     * Gets liquidityPoolFees.
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolFees/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     * Gets liquidityPoolHourlySnapshots.
+     * @param {Object} opts Optional parameters
+     * @param {String} [pool] The pool this snapshot belongs to
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'pool': opts['pool']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolHourlySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent operation.
@@ -78,6 +443,121 @@ export default class PANCAKESWAPV3ETHEREUMApi {
     }
 
     /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PositionSnapshots (current)
+     * Gets positionSnapshots.
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMPositionSnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/positionSnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMPositionsCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMPositionsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMPositionDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Positions (current)
+     * Gets positions.
+     * @param {Object} opts Optional parameters
+     * @param {String} [pool] The liquidity pool in which this position was opened
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMPositionsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMPositionDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMPositionsCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'pool': opts['pool']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMPositionDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/positions/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMRewardTokensCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMRewardTokensCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMRewardTokenDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * RewardTokens (current)
+     * Gets rewardTokens.
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMRewardTokensCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMRewardTokenDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMRewardTokensCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMRewardTokenDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/rewardTokens/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMSwapsCurrent operation.
      * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMSwapsCurrentCallback
      * @param {String} error Error message, if any.
@@ -109,6 +589,203 @@ export default class PANCAKESWAPV3ETHEREUMApi {
       let returnType = [PANCAKESWAPV3ETHEREUMSwapDTO];
       return this.apiClient.callApi(
         '/v1/dapps/pancakeswap-v3-ethereum/swaps/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * TickDailySnapshots (current)
+     * Gets tickDailySnapshots.
+     * @param {Object} opts Optional parameters
+     * @param {String} [pool] liquidity pool this tick belongs to
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'pool': opts['pool']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/tickDailySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * TickHourlySnapshots (current)
+     * Gets tickHourlySnapshots.
+     * @param {Object} opts Optional parameters
+     * @param {String} [pool] liquidity pool this tick belongs to
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'pool': opts['pool']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/tickHourlySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMTicksCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMTicksCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMTickDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Ticks (current)
+     * Gets ticks.
+     * @param {Object} opts Optional parameters
+     * @param {String} [pool] Liquidity pool this tick belongs to
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMTicksCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMTickDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMTicksCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'pool': opts['pool']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMTickDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/ticks/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * TokenWhiteListSymbols (current)
+     * Gets tokenWhiteListSymbols.
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteListSymbols/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * TokenWhiteLists (current)
+     * Gets tokenWhiteLists.
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMTokenWhiteListDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteLists/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -150,6 +827,117 @@ export default class PANCAKESWAPV3ETHEREUMApi {
       let returnType = [PANCAKESWAPV3ETHEREUMTokenDTO];
       return this.apiClient.callApi(
         '/v1/dapps/pancakeswap-v3-ethereum/tokens/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * UsageMetricsDailySnapshots (current)
+     * Gets usageMetricsDailySnapshots.
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/usageMetricsDailySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     * Gets usageMetricsHourlySnapshots.
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/usageMetricsHourlySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the pANCAKESWAPV3ETHEREUMWithdrawsCurrent operation.
+     * @callback module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMWithdrawsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PANCAKESWAPV3ETHEREUMWithdrawDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMWithdrawsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMWithdrawDTO>}
+     */
+    pANCAKESWAPV3ETHEREUMWithdrawsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [PANCAKESWAPV3ETHEREUMWithdrawDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/pancakeswap-v3-ethereum/withdraws/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

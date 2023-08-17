@@ -11,7 +11,7 @@
  */
 
 /**
- * Pool-level metadata.
+ * 
  */
 public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedProperties {
     /**
@@ -33,115 +33,67 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
     public Long blockNumber { get; set; }
 
     /**
-     * .
+     * 
      * @return vid
      */
     public Long vid { get; set; }
 
     /**
-     * Block range of the liquidity pool.
-     * @return blockRange
-     */
-    public String blockRange { get; set; }
-
-    /**
-     * Smart contract address of the pool.
+     * (Smart contract address of the pool)-( # of hours since Unix epoch time)
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * Protocol this pool belongs to.
+     * Number of hours since Unix epoch time
+     * @return hour
+     */
+    public Integer hour { get; set; }
+
+    /**
+     * The protocol this snapshot belongs to
      * @return protocol
      */
     public String protocol { get; set; }
 
     /**
-     * Name of liquidity pool (e.g. Curve.fi DAI/USDC/USDT).
-     * @return name
+     * The pool this snapshot belongs to
+     * @return pool
      */
-    public String name { get; set; }
+    public String pool { get; set; }
 
     /**
-     * Symbol of liquidity pool (e.g. 3CRV).
-     * @return symbol
-     */
-    public String symbol { get; set; }
-
-    /**
-     * Token that is to represent ownership of liquidity.
-     * @return liquidityToken
-     */
-    public String liquidityToken { get; set; }
-
-    /**
-     * Tokens that need to be deposited to take a position in protocol. e.g. WETH and USDC to deposit into the WETH-USDC pool. Array to account for multi-asset pools like Curve and Balancer.
-     * @return inputTokens
-     */
-    public List<String> inputTokens { get; set; }
-
-    /**
-     * Additional tokens that are given as reward for position in a protocol, usually in liquidity mining programs. e.g. SUSHI in the Onsen program, MATIC for Aave Polygon, usually in liquidity mining programs. e.g. SUSHI in the Onsen program, MATIC for Aave Polygon.
-     * @return rewardTokens
-     */
-    public List<String> rewardTokens { get; set; }
-
-    /**
-     * Fees per trade incurred to the user. Should include all fees that apply to a pool (e.g. Curve has a trading fee AND an admin fee, which is a portion of the trading fee. Uniswap only has a trading fee and no protocol fee.).
-     * @return fees
-     */
-    public List<String> fees { get; set; }
-
-    /**
-     * Specifies whether this pool is single-sided (e.g. Bancor, Platypus\'s Alternative Pool). The specifics of the implementation depends on the protocol.
-     * @return isSingleSided
-     */
-    public Boolean isSingleSided { get; set; }
-
-    /**
-     * Timestamp when the liquidity pool was created.
-     * @return createdTimestamp
-     */
-    public String createdTimestamp { get; set; }
-
-    /**
-     * Block number when the liquidity pool was created.
-     * @return createdBlockNumber
-     */
-    public String createdBlockNumber { get; set; }
-
-    /**
-     * Current tick representing the price of token0/token1.
+     * Current tick representing the price of token0/token1
      * @return tick
      */
     public String tick { get; set; }
 
     /**
-     * Current TVL (Total Value Locked) of this pool in USD.
+     * Current TVL (Total Value Locked) of this pool
      * @return totalValueLockedUsd
      */
     public String totalValueLockedUsd { get; set; }
 
     /**
-     * Sum of all active and non-active liquidity for this pool.
+     * The sum of all active and non-active liquidity for this pool.
      * @return totalLiquidity
      */
     public String totalLiquidity { get; set; }
 
     /**
-     * Sum of all active and non-active liquidity in USD for this pool.
+     * The sum of all active and non-active liquidity in USD for this pool.
      * @return totalLiquidityUsd
      */
     public String totalLiquidityUsd { get; set; }
 
     /**
-     * All liquidity `k` that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pools current tick.
+     * All liquidity `k` that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pool\'s current tick.
      * @return activeLiquidity
      */
     public String activeLiquidity { get; set; }
 
     /**
-     * All liquidity in USD that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pools current tick.
+     * All liquidity in USD that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pool\'s current tick.
      * @return activeLiquidityUsd
      */
     public String activeLiquidityUsd { get; set; }
@@ -177,34 +129,70 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
     public String cumulativeSupplySideRevenueUsd { get; set; }
 
     /**
+     * Hourly revenue generated by the liquidity pool, accrued to the supply side.
+     * @return hourlySupplySideRevenueUsd
+     */
+    public String hourlySupplySideRevenueUsd { get; set; }
+
+    /**
      * All revenue generated by the liquidity pool, accrued to the protocol.
      * @return cumulativeProtocolSideRevenueUsd
      */
     public String cumulativeProtocolSideRevenueUsd { get; set; }
 
     /**
-     *  All revenue generated by the liquidity pool.
+     * Hourly revenue generated by the liquidity pool, accrued to the protocol.
+     * @return hourlyProtocolSideRevenueUsd
+     */
+    public String hourlyProtocolSideRevenueUsd { get; set; }
+
+    /**
+     * All revenue generated by the liquidity pool.
      * @return cumulativeTotalRevenueUsd
      */
     public String cumulativeTotalRevenueUsd { get; set; }
 
     /**
-     * All trade volume occurred for a specific input token, in native amount. The ordering should be the same as the pool\'s `inputTokens` field.
+     * Hourly revenue generated by the liquidity pool.
+     * @return hourlyTotalRevenueUsd
+     */
+    public String hourlyTotalRevenueUsd { get; set; }
+
+    /**
+     * All historical trade volume occurred in this pool, in USD.
+     * @return cumulativeVolumeUsd
+     */
+    public String cumulativeVolumeUsd { get; set; }
+
+    /**
+     * All trade volume occurred in a given hour, in USD.
+     * @return hourlyVolumeUsd
+     */
+    public String hourlyVolumeUsd { get; set; }
+
+    /**
+     * All trade volume, in native amount. The ordering should be the same as the pool\'s `inputTokens` field.
      * @return cumulativeVolumeByTokenAmount
      */
     public List<String> cumulativeVolumeByTokenAmount { get; set; }
 
     /**
-     * All trade volume occurred for a specific input token, in USD. The ordering should be the same as the pool\'s `inputTokens` field.
+     * All trade volume occurred in a given hour for a specific input token, in native amount. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @return hourlyVolumeByTokenAmount
+     */
+    public List<String> hourlyVolumeByTokenAmount { get; set; }
+
+    /**
+     * All trade volume, in USD. The ordering should be the same as the pool\'s `inputTokens` field.
      * @return cumulativeVolumeByTokenUsd
      */
     public List<String> cumulativeVolumeByTokenUsd { get; set; }
 
     /**
-     * All trade volume occurred for a specific input token, in USD. The ordering should be the same as the pool\'s `inputTokens` field.
-     * @return cumulativeVolumeUsd
+     * All trade volume occurred in a given hour for a specific input token, in USD. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @return hourlyVolumeByTokenUsd
      */
-    public String cumulativeVolumeUsd { get; set; }
+    public List<String> hourlyVolumeByTokenUsd { get; set; }
 
     /**
      * Amount of input tokens in the pool. The ordering should be the same as the pool\'s `inputTokens` field.
@@ -231,94 +219,81 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
     public String stakedOutputTokenAmount { get; set; }
 
     /**
-     * Per-block reward token emission as of the current block normalized to a day, in token\'s native amount. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * Per-block reward token emission as of the current block normalized to a day (not hour), in token\'s native amount. This should be ideally calculated as the theoretical rate instead of the realized amount.
      * @return rewardTokenEmissionsAmount
      */
     public List<String> rewardTokenEmissionsAmount { get; set; }
 
     /**
-     * Per-block reward token emission as of the current block normalized to a day, in USD value. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * Per-block reward token emission as of the current block normalized to a day (not hour), in USD value. This should be ideally calculated as the theoretical rate instead of the realized amount.
      * @return rewardTokenEmissionsUsd
      */
     public List<String> rewardTokenEmissionsUsd { get; set; }
 
     /**
-     * Total number of deposits (add liquidity).
+     * Total number of deposits (add liquidity)
      * @return cumulativeDepositCount
      */
     public Integer cumulativeDepositCount { get; set; }
 
     /**
-     * Total number of withdrawals (remove liquidity).
+     * Total number of deposits (add liquidity) in an hour
+     * @return hourlyDepositCount
+     */
+    public Integer hourlyDepositCount { get; set; }
+
+    /**
+     * Total number of withdrawals (remove liquidity)
      * @return cumulativeWithdrawCount
      */
     public Integer cumulativeWithdrawCount { get; set; }
 
     /**
-     * Total number of trades (swaps).
+     * Total number of withdrawals (remove liquidity) in an hour
+     * @return hourlyWithdrawCount
+     */
+    public Integer hourlyWithdrawCount { get; set; }
+
+    /**
+     * Total number of trades (swaps)
      * @return cumulativeSwapCount
      */
     public Integer cumulativeSwapCount { get; set; }
 
     /**
-     * Number of positions in this market.
+     * Total number of trades (swaps) in an hour
+     * @return hourlySwapCount
+     */
+    public Integer hourlySwapCount { get; set; }
+
+    /**
+     * Number of positions in this market
      * @return positionCount
      */
     public Integer positionCount { get; set; }
 
     /**
-     * Number of open positions in this market.
+     * Number of open positions in this market
      * @return openPositionCount
      */
     public Integer openPositionCount { get; set; }
 
     /**
-     * Number of closed positions in this market.
+     * Number of closed positions in this market
      * @return closedPositionCount
      */
     public Integer closedPositionCount { get; set; }
 
     /**
-     * Day ID of the most recent daily snapshot.
-     * @return lastSnapshotDayId
+     * Timestamp of when this snapshot was taken/last modified (May be taken after interval has passed)
+     * @return timestamp
      */
-    public Integer lastSnapshotDayId { get; set; }
-
-    /**
-     * Hour ID of the most recent hourly snapshot.
-     * @return lastSnapshotHourId
-     */
-    public Integer lastSnapshotHourId { get; set; }
-
-    /**
-     * Timestamp of the last time this entity was updated.
-     * @return lastUpdateTimestamp
-     */
-    public String lastUpdateTimestamp { get; set; }
-
-    /**
-     * Block number of the last time this entity was updated.
-     * @return lastUpdateBlockNumber
-     */
-    public String lastUpdateBlockNumber { get; set; }
-
-    /**
-     * 
-     * @return evaluatedAsk
-     */
-    public Double evaluatedAsk { get; private set; }
+    public String timestamp { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -329,11 +304,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -341,16 +322,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -361,13 +340,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -378,11 +350,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -390,16 +368,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -410,13 +386,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -427,11 +396,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -439,16 +414,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -459,13 +432,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -476,11 +442,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -488,16 +460,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -508,13 +478,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -525,11 +488,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -537,16 +506,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -557,13 +524,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -574,11 +534,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -586,16 +552,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -606,13 +570,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -623,11 +580,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -635,16 +598,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -655,13 +616,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -672,11 +626,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -684,16 +644,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -704,13 +662,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -721,11 +672,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -733,16 +690,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -753,13 +708,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -770,11 +718,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -782,16 +736,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -802,13 +754,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -819,11 +764,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -831,16 +782,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -851,13 +800,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -868,11 +810,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -880,16 +828,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -900,13 +846,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -917,11 +856,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -929,16 +874,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -949,13 +892,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -966,11 +902,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -978,16 +920,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -998,13 +938,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1015,11 +948,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1027,16 +966,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1047,13 +984,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1064,11 +994,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1076,16 +1012,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1096,13 +1030,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1113,11 +1040,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1125,16 +1058,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1145,13 +1076,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1162,11 +1086,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1174,16 +1104,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1194,13 +1122,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1211,11 +1132,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1223,16 +1150,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1243,13 +1168,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1260,11 +1178,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1272,16 +1196,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1292,13 +1214,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1309,11 +1224,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1321,16 +1242,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1341,13 +1260,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1358,11 +1270,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1370,16 +1288,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1390,13 +1306,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1407,11 +1316,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1419,16 +1334,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1439,13 +1352,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1456,11 +1362,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1468,16 +1380,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1488,13 +1398,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1505,11 +1408,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1517,16 +1426,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1537,13 +1444,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1554,11 +1454,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1566,16 +1472,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1586,13 +1490,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1603,11 +1500,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1615,16 +1518,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1635,13 +1536,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1652,11 +1546,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1664,16 +1564,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1684,13 +1582,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1701,11 +1592,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1713,16 +1610,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1733,13 +1628,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1750,11 +1638,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1762,16 +1656,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1782,13 +1674,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1799,11 +1684,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1811,16 +1702,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1831,13 +1720,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1848,11 +1730,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1860,16 +1748,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1880,13 +1766,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1897,11 +1776,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1909,16 +1794,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1929,13 +1812,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1946,11 +1822,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -1958,16 +1840,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -1978,13 +1858,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -1995,11 +1868,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -2007,16 +1886,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -2027,13 +1904,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -2044,11 +1914,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -2056,16 +1932,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -2076,13 +1950,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -2093,11 +1960,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -2105,16 +1978,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -2125,13 +1996,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -2142,11 +2006,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -2154,16 +2024,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -2174,13 +2042,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'entry_time' => 'entryTime',
         'recv_time' => 'recvTime',
         'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
         'total_value_locked_usd' => 'totalValueLockedUsd',
         'total_liquidity' => 'totalLiquidity',
         'total_liquidity_usd' => 'totalLiquidityUsd',
@@ -2191,11 +2052,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
         'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
         'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
+        'hourly_supply_side_revenue_usd' => 'hourlySupplySideRevenueUsd',
         'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
+        'hourly_protocol_side_revenue_usd' => 'hourlyProtocolSideRevenueUsd',
         'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_total_revenue_usd' => 'hourlyTotalRevenueUsd',
         'cumulative_volume_usd' => 'cumulativeVolumeUsd',
+        'hourly_volume_usd' => 'hourlyVolumeUsd',
+        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
+        'hourly_volume_by_token_amount' => 'hourlyVolumeByTokenAmount',
+        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
+        'hourly_volume_by_token_usd' => 'hourlyVolumeByTokenUsd',
         'input_token_balances' => 'inputTokenBalances',
         'input_token_balances_usd' => 'inputTokenBalancesUsd',
         'input_token_weights' => 'inputTokenWeights',
@@ -2203,163 +2070,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
         'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
         'cumulative_deposit_count' => 'cumulativeDepositCount',
+        'hourly_deposit_count' => 'hourlyDepositCount',
         'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
+        'hourly_withdraw_count' => 'hourlyWithdrawCount',
         'cumulative_swap_count' => 'cumulativeSwapCount',
+        'hourly_swap_count' => 'hourlySwapCount',
         'position_count' => 'positionCount',
         'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
-    };
-
-    public Map<String, String> getPropertyMappings() {
-        return propertyMappings;
-    }
-
-    private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'entry_time' => 'entryTime',
-        'recv_time' => 'recvTime',
-        'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
-        'total_value_locked_usd' => 'totalValueLockedUsd',
-        'total_liquidity' => 'totalLiquidity',
-        'total_liquidity_usd' => 'totalLiquidityUsd',
-        'active_liquidity' => 'activeLiquidity',
-        'active_liquidity_usd' => 'activeLiquidityUsd',
-        'uncollected_protocol_side_token_amounts' => 'uncollectedProtocolSideTokenAmounts',
-        'uncollected_protocol_side_values_usd' => 'uncollectedProtocolSideValuesUsd',
-        'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
-        'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
-        'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
-        'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
-        'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
-        'cumulative_volume_usd' => 'cumulativeVolumeUsd',
-        'input_token_balances' => 'inputTokenBalances',
-        'input_token_balances_usd' => 'inputTokenBalancesUsd',
-        'input_token_weights' => 'inputTokenWeights',
-        'staked_output_token_amount' => 'stakedOutputTokenAmount',
-        'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
-        'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
-        'cumulative_deposit_count' => 'cumulativeDepositCount',
-        'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
-        'cumulative_swap_count' => 'cumulativeSwapCount',
-        'position_count' => 'positionCount',
-        'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
-    };
-
-    public Map<String, String> getPropertyMappings() {
-        return propertyMappings;
-    }
-
-    private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'entry_time' => 'entryTime',
-        'recv_time' => 'recvTime',
-        'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
-        'total_value_locked_usd' => 'totalValueLockedUsd',
-        'total_liquidity' => 'totalLiquidity',
-        'total_liquidity_usd' => 'totalLiquidityUsd',
-        'active_liquidity' => 'activeLiquidity',
-        'active_liquidity_usd' => 'activeLiquidityUsd',
-        'uncollected_protocol_side_token_amounts' => 'uncollectedProtocolSideTokenAmounts',
-        'uncollected_protocol_side_values_usd' => 'uncollectedProtocolSideValuesUsd',
-        'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
-        'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
-        'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
-        'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
-        'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
-        'cumulative_volume_usd' => 'cumulativeVolumeUsd',
-        'input_token_balances' => 'inputTokenBalances',
-        'input_token_balances_usd' => 'inputTokenBalancesUsd',
-        'input_token_weights' => 'inputTokenWeights',
-        'staked_output_token_amount' => 'stakedOutputTokenAmount',
-        'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
-        'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
-        'cumulative_deposit_count' => 'cumulativeDepositCount',
-        'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
-        'cumulative_swap_count' => 'cumulativeSwapCount',
-        'position_count' => 'positionCount',
-        'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
-    };
-
-    public Map<String, String> getPropertyMappings() {
-        return propertyMappings;
-    }
-
-    private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'entry_time' => 'entryTime',
-        'recv_time' => 'recvTime',
-        'block_number' => 'blockNumber',
-        'block_range' => 'blockRange',
-        'liquidity_token' => 'liquidityToken',
-        'input_tokens' => 'inputTokens',
-        'reward_tokens' => 'rewardTokens',
-        'is_single_sided' => 'isSingleSided',
-        'created_timestamp' => 'createdTimestamp',
-        'created_block_number' => 'createdBlockNumber',
-        'total_value_locked_usd' => 'totalValueLockedUsd',
-        'total_liquidity' => 'totalLiquidity',
-        'total_liquidity_usd' => 'totalLiquidityUsd',
-        'active_liquidity' => 'activeLiquidity',
-        'active_liquidity_usd' => 'activeLiquidityUsd',
-        'uncollected_protocol_side_token_amounts' => 'uncollectedProtocolSideTokenAmounts',
-        'uncollected_protocol_side_values_usd' => 'uncollectedProtocolSideValuesUsd',
-        'uncollected_supply_side_token_amounts' => 'uncollectedSupplySideTokenAmounts',
-        'uncollected_supply_side_values_usd' => 'uncollectedSupplySideValuesUsd',
-        'cumulative_supply_side_revenue_usd' => 'cumulativeSupplySideRevenueUsd',
-        'cumulative_protocol_side_revenue_usd' => 'cumulativeProtocolSideRevenueUsd',
-        'cumulative_total_revenue_usd' => 'cumulativeTotalRevenueUsd',
-        'cumulative_volume_by_token_amount' => 'cumulativeVolumeByTokenAmount',
-        'cumulative_volume_by_token_usd' => 'cumulativeVolumeByTokenUsd',
-        'cumulative_volume_usd' => 'cumulativeVolumeUsd',
-        'input_token_balances' => 'inputTokenBalances',
-        'input_token_balances_usd' => 'inputTokenBalancesUsd',
-        'input_token_weights' => 'inputTokenWeights',
-        'staked_output_token_amount' => 'stakedOutputTokenAmount',
-        'reward_token_emissions_amount' => 'rewardTokenEmissionsAmount',
-        'reward_token_emissions_usd' => 'rewardTokenEmissionsUsd',
-        'cumulative_deposit_count' => 'cumulativeDepositCount',
-        'cumulative_withdraw_count' => 'cumulativeWithdrawCount',
-        'cumulative_swap_count' => 'cumulativeSwapCount',
-        'position_count' => 'positionCount',
-        'open_position_count' => 'openPositionCount',
-        'closed_position_count' => 'closedPositionCount',
-        'last_snapshot_day_id' => 'lastSnapshotDayId',
-        'last_snapshot_hour_id' => 'lastSnapshotHourId',
-        'last_update_timestamp' => 'lastUpdateTimestamp',
-        'last_update_block_number' => 'lastUpdateBlockNumber',
-        'evaluated_ask' => 'evaluatedAsk'
+        'closed_position_count' => 'closedPositionCount'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -2367,15 +2085,14 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
     }
 
     public OASPANCAKESWAPV3ETHEREUMLiquidityPoo() {
-        inputTokens = new List<String>();
-        rewardTokens = new List<String>();
-        fees = new List<String>();
         uncollectedProtocolSideTokenAmounts = new List<String>();
         uncollectedProtocolSideValuesUsd = new List<String>();
         uncollectedSupplySideTokenAmounts = new List<String>();
         uncollectedSupplySideValuesUsd = new List<String>();
         cumulativeVolumeByTokenAmount = new List<String>();
+        hourlyVolumeByTokenAmount = new List<String>();
         cumulativeVolumeByTokenUsd = new List<String>();
+        hourlyVolumeByTokenUsd = new List<String>();
         inputTokenBalances = new List<String>();
         inputTokenBalancesUsd = new List<String>();
         inputTokenWeights = new List<String>();
@@ -2384,111 +2101,105 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
     }
 
     public static OASPANCAKESWAPV3ETHEREUMLiquidityPoo getExample() {
-        OASPANCAKESWAPV3ETHEREUMLiquidityPoo paNCAKESWAPV3ETHEREUMLiquidityPoolDTO = new OASPANCAKESWAPV3ETHEREUMLiquidityPoo();
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.blockNumber = 123456789L;
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.vid = 123456789L;
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.blockRange = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.id = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.protocol = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.name = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.symbol = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.liquidityToken = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.inputTokens = new List<String>{''};
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.rewardTokens = new List<String>{''};
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.fees = new List<String>{''};
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.isSingleSided = true;
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.createdTimestamp = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.createdBlockNumber = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.tick = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.totalValueLockedUsd = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.totalLiquidity = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.totalLiquidityUsd = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.activeLiquidity = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.activeLiquidityUsd = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.uncollectedProtocolSideTokenAmounts = new List<String>{''};
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.uncollectedProtocolSideValuesUsd = new List<String>{''};
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.uncollectedSupplySideTokenAmounts = new List<String>{''};
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.uncollectedSupplySideValuesUsd = new List<String>{''};
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.cumulativeSupplySideRevenueUsd = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.cumulativeProtocolSideRevenueUsd = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.cumulativeTotalRevenueUsd = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.cumulativeVolumeByTokenAmount = new List<String>{''};
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.cumulativeVolumeByTokenUsd = new List<String>{''};
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.cumulativeVolumeUsd = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.inputTokenBalances = new List<String>{''};
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.inputTokenBalancesUsd = new List<String>{''};
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.inputTokenWeights = new List<String>{''};
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.stakedOutputTokenAmount = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.rewardTokenEmissionsAmount = new List<String>{''};
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.rewardTokenEmissionsUsd = new List<String>{''};
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.cumulativeDepositCount = 0;
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.cumulativeWithdrawCount = 0;
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.cumulativeSwapCount = 0;
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.positionCount = 0;
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.openPositionCount = 0;
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.closedPositionCount = 0;
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.lastSnapshotDayId = 0;
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.lastSnapshotHourId = 0;
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.lastUpdateTimestamp = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.lastUpdateBlockNumber = '';
-          paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.evaluatedAsk = 1.3579;
-        return paNCAKESWAPV3ETHEREUMLiquidityPoolDTO;
+        OASPANCAKESWAPV3ETHEREUMLiquidityPoo paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO = new OASPANCAKESWAPV3ETHEREUMLiquidityPoo();
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.blockNumber = 123456789L;
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.vid = 123456789L;
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.id = '';
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hour = 0;
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.protocol = '';
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.pool = '';
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.tick = '';
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.totalValueLockedUsd = '';
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.totalLiquidity = '';
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.totalLiquidityUsd = '';
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.activeLiquidity = '';
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.activeLiquidityUsd = '';
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.uncollectedProtocolSideTokenAmounts = new List<String>{''};
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.uncollectedProtocolSideValuesUsd = new List<String>{''};
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.uncollectedSupplySideTokenAmounts = new List<String>{''};
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.uncollectedSupplySideValuesUsd = new List<String>{''};
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.cumulativeSupplySideRevenueUsd = '';
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hourlySupplySideRevenueUsd = '';
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.cumulativeProtocolSideRevenueUsd = '';
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hourlyProtocolSideRevenueUsd = '';
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.cumulativeTotalRevenueUsd = '';
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hourlyTotalRevenueUsd = '';
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.cumulativeVolumeUsd = '';
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hourlyVolumeUsd = '';
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.cumulativeVolumeByTokenAmount = new List<String>{''};
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hourlyVolumeByTokenAmount = new List<String>{''};
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.cumulativeVolumeByTokenUsd = new List<String>{''};
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hourlyVolumeByTokenUsd = new List<String>{''};
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.inputTokenBalances = new List<String>{''};
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.inputTokenBalancesUsd = new List<String>{''};
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.inputTokenWeights = new List<String>{''};
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.stakedOutputTokenAmount = '';
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.rewardTokenEmissionsAmount = new List<String>{''};
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.rewardTokenEmissionsUsd = new List<String>{''};
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.cumulativeDepositCount = 0;
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hourlyDepositCount = 0;
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.cumulativeWithdrawCount = 0;
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hourlyWithdrawCount = 0;
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.cumulativeSwapCount = 0;
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hourlySwapCount = 0;
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.positionCount = 0;
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.openPositionCount = 0;
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.closedPositionCount = 0;
+          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.timestamp = '';
+        return paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASPANCAKESWAPV3ETHEREUMLiquidityPoo) {           
-            OASPANCAKESWAPV3ETHEREUMLiquidityPoo paNCAKESWAPV3ETHEREUMLiquidityPoolDTO = (OASPANCAKESWAPV3ETHEREUMLiquidityPoo) obj;
-            return this.entryTime == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.entryTime
-                && this.recvTime == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.recvTime
-                && this.blockNumber == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.blockNumber
-                && this.vid == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.vid
-                && this.blockRange == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.blockRange
-                && this.id == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.id
-                && this.protocol == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.protocol
-                && this.name == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.name
-                && this.symbol == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.symbol
-                && this.liquidityToken == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.liquidityToken
-                && this.inputTokens == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.inputTokens
-                && this.rewardTokens == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.rewardTokens
-                && this.fees == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.fees
-                && this.isSingleSided == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.isSingleSided
-                && this.createdTimestamp == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.createdTimestamp
-                && this.createdBlockNumber == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.createdBlockNumber
-                && this.tick == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.tick
-                && this.totalValueLockedUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.totalValueLockedUsd
-                && this.totalLiquidity == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.totalLiquidity
-                && this.totalLiquidityUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.totalLiquidityUsd
-                && this.activeLiquidity == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.activeLiquidity
-                && this.activeLiquidityUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.activeLiquidityUsd
-                && this.uncollectedProtocolSideTokenAmounts == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.uncollectedProtocolSideTokenAmounts
-                && this.uncollectedProtocolSideValuesUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.uncollectedProtocolSideValuesUsd
-                && this.uncollectedSupplySideTokenAmounts == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.uncollectedSupplySideTokenAmounts
-                && this.uncollectedSupplySideValuesUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.uncollectedSupplySideValuesUsd
-                && this.cumulativeSupplySideRevenueUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.cumulativeSupplySideRevenueUsd
-                && this.cumulativeProtocolSideRevenueUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.cumulativeProtocolSideRevenueUsd
-                && this.cumulativeTotalRevenueUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.cumulativeTotalRevenueUsd
-                && this.cumulativeVolumeByTokenAmount == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.cumulativeVolumeByTokenAmount
-                && this.cumulativeVolumeByTokenUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.cumulativeVolumeByTokenUsd
-                && this.cumulativeVolumeUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.cumulativeVolumeUsd
-                && this.inputTokenBalances == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.inputTokenBalances
-                && this.inputTokenBalancesUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.inputTokenBalancesUsd
-                && this.inputTokenWeights == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.inputTokenWeights
-                && this.stakedOutputTokenAmount == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.stakedOutputTokenAmount
-                && this.rewardTokenEmissionsAmount == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.rewardTokenEmissionsAmount
-                && this.rewardTokenEmissionsUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.rewardTokenEmissionsUsd
-                && this.cumulativeDepositCount == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.cumulativeDepositCount
-                && this.cumulativeWithdrawCount == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.cumulativeWithdrawCount
-                && this.cumulativeSwapCount == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.cumulativeSwapCount
-                && this.positionCount == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.positionCount
-                && this.openPositionCount == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.openPositionCount
-                && this.closedPositionCount == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.closedPositionCount
-                && this.lastSnapshotDayId == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.lastSnapshotDayId
-                && this.lastSnapshotHourId == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.lastSnapshotHourId
-                && this.lastUpdateTimestamp == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.lastUpdateTimestamp
-                && this.lastUpdateBlockNumber == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.lastUpdateBlockNumber
-                && this.evaluatedAsk == paNCAKESWAPV3ETHEREUMLiquidityPoolDTO.evaluatedAsk;
+            OASPANCAKESWAPV3ETHEREUMLiquidityPoo paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO = (OASPANCAKESWAPV3ETHEREUMLiquidityPoo) obj;
+            return this.entryTime == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.entryTime
+                && this.recvTime == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.recvTime
+                && this.blockNumber == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.blockNumber
+                && this.vid == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.vid
+                && this.id == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.id
+                && this.hour == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hour
+                && this.protocol == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.protocol
+                && this.pool == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.pool
+                && this.tick == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.tick
+                && this.totalValueLockedUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.totalValueLockedUsd
+                && this.totalLiquidity == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.totalLiquidity
+                && this.totalLiquidityUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.totalLiquidityUsd
+                && this.activeLiquidity == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.activeLiquidity
+                && this.activeLiquidityUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.activeLiquidityUsd
+                && this.uncollectedProtocolSideTokenAmounts == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.uncollectedProtocolSideTokenAmounts
+                && this.uncollectedProtocolSideValuesUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.uncollectedProtocolSideValuesUsd
+                && this.uncollectedSupplySideTokenAmounts == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.uncollectedSupplySideTokenAmounts
+                && this.uncollectedSupplySideValuesUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.uncollectedSupplySideValuesUsd
+                && this.cumulativeSupplySideRevenueUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.cumulativeSupplySideRevenueUsd
+                && this.hourlySupplySideRevenueUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hourlySupplySideRevenueUsd
+                && this.cumulativeProtocolSideRevenueUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.cumulativeProtocolSideRevenueUsd
+                && this.hourlyProtocolSideRevenueUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hourlyProtocolSideRevenueUsd
+                && this.cumulativeTotalRevenueUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.cumulativeTotalRevenueUsd
+                && this.hourlyTotalRevenueUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hourlyTotalRevenueUsd
+                && this.cumulativeVolumeUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.cumulativeVolumeUsd
+                && this.hourlyVolumeUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hourlyVolumeUsd
+                && this.cumulativeVolumeByTokenAmount == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.cumulativeVolumeByTokenAmount
+                && this.hourlyVolumeByTokenAmount == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hourlyVolumeByTokenAmount
+                && this.cumulativeVolumeByTokenUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.cumulativeVolumeByTokenUsd
+                && this.hourlyVolumeByTokenUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hourlyVolumeByTokenUsd
+                && this.inputTokenBalances == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.inputTokenBalances
+                && this.inputTokenBalancesUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.inputTokenBalancesUsd
+                && this.inputTokenWeights == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.inputTokenWeights
+                && this.stakedOutputTokenAmount == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.stakedOutputTokenAmount
+                && this.rewardTokenEmissionsAmount == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.rewardTokenEmissionsAmount
+                && this.rewardTokenEmissionsUsd == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.rewardTokenEmissionsUsd
+                && this.cumulativeDepositCount == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.cumulativeDepositCount
+                && this.hourlyDepositCount == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hourlyDepositCount
+                && this.cumulativeWithdrawCount == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.cumulativeWithdrawCount
+                && this.hourlyWithdrawCount == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hourlyWithdrawCount
+                && this.cumulativeSwapCount == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.cumulativeSwapCount
+                && this.hourlySwapCount == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hourlySwapCount
+                && this.positionCount == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.positionCount
+                && this.openPositionCount == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.openPositionCount
+                && this.closedPositionCount == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.closedPositionCount
+                && this.timestamp == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.timestamp;
         }
         return false;
     }
@@ -2499,18 +2210,10 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         hashCode = (17 * hashCode) + (recvTime == null ? 0 : System.hashCode(recvTime));
         hashCode = (17 * hashCode) + (blockNumber == null ? 0 : System.hashCode(blockNumber));
         hashCode = (17 * hashCode) + (vid == null ? 0 : System.hashCode(vid));
-        hashCode = (17 * hashCode) + (blockRange == null ? 0 : System.hashCode(blockRange));
         hashCode = (17 * hashCode) + (id == null ? 0 : System.hashCode(id));
+        hashCode = (17 * hashCode) + (hour == null ? 0 : System.hashCode(hour));
         hashCode = (17 * hashCode) + (protocol == null ? 0 : System.hashCode(protocol));
-        hashCode = (17 * hashCode) + (name == null ? 0 : System.hashCode(name));
-        hashCode = (17 * hashCode) + (symbol == null ? 0 : System.hashCode(symbol));
-        hashCode = (17 * hashCode) + (liquidityToken == null ? 0 : System.hashCode(liquidityToken));
-        hashCode = (17 * hashCode) + (inputTokens == null ? 0 : System.hashCode(inputTokens));
-        hashCode = (17 * hashCode) + (rewardTokens == null ? 0 : System.hashCode(rewardTokens));
-        hashCode = (17 * hashCode) + (fees == null ? 0 : System.hashCode(fees));
-        hashCode = (17 * hashCode) + (isSingleSided == null ? 0 : System.hashCode(isSingleSided));
-        hashCode = (17 * hashCode) + (createdTimestamp == null ? 0 : System.hashCode(createdTimestamp));
-        hashCode = (17 * hashCode) + (createdBlockNumber == null ? 0 : System.hashCode(createdBlockNumber));
+        hashCode = (17 * hashCode) + (pool == null ? 0 : System.hashCode(pool));
         hashCode = (17 * hashCode) + (tick == null ? 0 : System.hashCode(tick));
         hashCode = (17 * hashCode) + (totalValueLockedUsd == null ? 0 : System.hashCode(totalValueLockedUsd));
         hashCode = (17 * hashCode) + (totalLiquidity == null ? 0 : System.hashCode(totalLiquidity));
@@ -2522,11 +2225,17 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         hashCode = (17 * hashCode) + (uncollectedSupplySideTokenAmounts == null ? 0 : System.hashCode(uncollectedSupplySideTokenAmounts));
         hashCode = (17 * hashCode) + (uncollectedSupplySideValuesUsd == null ? 0 : System.hashCode(uncollectedSupplySideValuesUsd));
         hashCode = (17 * hashCode) + (cumulativeSupplySideRevenueUsd == null ? 0 : System.hashCode(cumulativeSupplySideRevenueUsd));
+        hashCode = (17 * hashCode) + (hourlySupplySideRevenueUsd == null ? 0 : System.hashCode(hourlySupplySideRevenueUsd));
         hashCode = (17 * hashCode) + (cumulativeProtocolSideRevenueUsd == null ? 0 : System.hashCode(cumulativeProtocolSideRevenueUsd));
+        hashCode = (17 * hashCode) + (hourlyProtocolSideRevenueUsd == null ? 0 : System.hashCode(hourlyProtocolSideRevenueUsd));
         hashCode = (17 * hashCode) + (cumulativeTotalRevenueUsd == null ? 0 : System.hashCode(cumulativeTotalRevenueUsd));
-        hashCode = (17 * hashCode) + (cumulativeVolumeByTokenAmount == null ? 0 : System.hashCode(cumulativeVolumeByTokenAmount));
-        hashCode = (17 * hashCode) + (cumulativeVolumeByTokenUsd == null ? 0 : System.hashCode(cumulativeVolumeByTokenUsd));
+        hashCode = (17 * hashCode) + (hourlyTotalRevenueUsd == null ? 0 : System.hashCode(hourlyTotalRevenueUsd));
         hashCode = (17 * hashCode) + (cumulativeVolumeUsd == null ? 0 : System.hashCode(cumulativeVolumeUsd));
+        hashCode = (17 * hashCode) + (hourlyVolumeUsd == null ? 0 : System.hashCode(hourlyVolumeUsd));
+        hashCode = (17 * hashCode) + (cumulativeVolumeByTokenAmount == null ? 0 : System.hashCode(cumulativeVolumeByTokenAmount));
+        hashCode = (17 * hashCode) + (hourlyVolumeByTokenAmount == null ? 0 : System.hashCode(hourlyVolumeByTokenAmount));
+        hashCode = (17 * hashCode) + (cumulativeVolumeByTokenUsd == null ? 0 : System.hashCode(cumulativeVolumeByTokenUsd));
+        hashCode = (17 * hashCode) + (hourlyVolumeByTokenUsd == null ? 0 : System.hashCode(hourlyVolumeByTokenUsd));
         hashCode = (17 * hashCode) + (inputTokenBalances == null ? 0 : System.hashCode(inputTokenBalances));
         hashCode = (17 * hashCode) + (inputTokenBalancesUsd == null ? 0 : System.hashCode(inputTokenBalancesUsd));
         hashCode = (17 * hashCode) + (inputTokenWeights == null ? 0 : System.hashCode(inputTokenWeights));
@@ -2534,16 +2243,15 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         hashCode = (17 * hashCode) + (rewardTokenEmissionsAmount == null ? 0 : System.hashCode(rewardTokenEmissionsAmount));
         hashCode = (17 * hashCode) + (rewardTokenEmissionsUsd == null ? 0 : System.hashCode(rewardTokenEmissionsUsd));
         hashCode = (17 * hashCode) + (cumulativeDepositCount == null ? 0 : System.hashCode(cumulativeDepositCount));
+        hashCode = (17 * hashCode) + (hourlyDepositCount == null ? 0 : System.hashCode(hourlyDepositCount));
         hashCode = (17 * hashCode) + (cumulativeWithdrawCount == null ? 0 : System.hashCode(cumulativeWithdrawCount));
+        hashCode = (17 * hashCode) + (hourlyWithdrawCount == null ? 0 : System.hashCode(hourlyWithdrawCount));
         hashCode = (17 * hashCode) + (cumulativeSwapCount == null ? 0 : System.hashCode(cumulativeSwapCount));
+        hashCode = (17 * hashCode) + (hourlySwapCount == null ? 0 : System.hashCode(hourlySwapCount));
         hashCode = (17 * hashCode) + (positionCount == null ? 0 : System.hashCode(positionCount));
         hashCode = (17 * hashCode) + (openPositionCount == null ? 0 : System.hashCode(openPositionCount));
         hashCode = (17 * hashCode) + (closedPositionCount == null ? 0 : System.hashCode(closedPositionCount));
-        hashCode = (17 * hashCode) + (lastSnapshotDayId == null ? 0 : System.hashCode(lastSnapshotDayId));
-        hashCode = (17 * hashCode) + (lastSnapshotHourId == null ? 0 : System.hashCode(lastSnapshotHourId));
-        hashCode = (17 * hashCode) + (lastUpdateTimestamp == null ? 0 : System.hashCode(lastUpdateTimestamp));
-        hashCode = (17 * hashCode) + (lastUpdateBlockNumber == null ? 0 : System.hashCode(lastUpdateBlockNumber));
-        hashCode = (17 * hashCode) + (evaluatedAsk == null ? 0 : System.hashCode(evaluatedAsk));
+        hashCode = (17 * hashCode) + (timestamp == null ? 0 : System.hashCode(timestamp));
         return hashCode;
     }
 }

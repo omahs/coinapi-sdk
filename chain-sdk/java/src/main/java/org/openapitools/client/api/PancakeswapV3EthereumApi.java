@@ -27,9 +27,29 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMAccountDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMActiveAccountDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMDepositDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO;
 import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMLiquidityPoolDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMPositionDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMPositionSnapshotDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMRewardTokenDTO;
 import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMSwapDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMTickDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO;
 import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMTokenDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMTokenWhiteListDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO;
+import org.openapitools.client.model.PANCAKESWAPV3ETHEREUMWithdrawDTO;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -75,6 +95,1074 @@ public class PancakeswapV3EthereumApi {
         this.localCustomBaseUrl = customBaseUrl;
     }
 
+    /**
+     * Build call for pANCAKESWAPV3ETHEREUMAccountsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMAccountsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/accounts/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMAccountsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMAccountsCurrentCall(_callback);
+
+    }
+
+    /**
+     * Accounts (current)
+     * Gets accounts.
+     * @return List&lt;PANCAKESWAPV3ETHEREUMAccountDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMAccountDTO> pANCAKESWAPV3ETHEREUMAccountsCurrent() throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMAccountDTO>> localVarResp = pANCAKESWAPV3ETHEREUMAccountsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Accounts (current)
+     * Gets accounts.
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMAccountDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMAccountDTO>> pANCAKESWAPV3ETHEREUMAccountsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMAccountsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMAccountDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Accounts (current) (asynchronously)
+     * Gets accounts.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMAccountsCurrentAsync(final ApiCallback<List<PANCAKESWAPV3ETHEREUMAccountDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMAccountsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMAccountDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for pANCAKESWAPV3ETHEREUMActiveAccountsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMActiveAccountsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMActiveAccountsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMActiveAccountsCurrentCall(_callback);
+
+    }
+
+    /**
+     * ActiveAccounts (current)
+     * Gets activeAccounts.
+     * @return List&lt;PANCAKESWAPV3ETHEREUMActiveAccountDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMActiveAccountDTO> pANCAKESWAPV3ETHEREUMActiveAccountsCurrent() throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>> localVarResp = pANCAKESWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * ActiveAccounts (current)
+     * Gets activeAccounts.
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMActiveAccountDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>> pANCAKESWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMActiveAccountsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * ActiveAccounts (current) (asynchronously)
+     * Gets activeAccounts.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMActiveAccountsCurrentAsync(final ApiCallback<List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMActiveAccountsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMActiveAccountDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for pANCAKESWAPV3ETHEREUMDepositsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMDepositsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/deposits/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMDepositsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMDepositsCurrentCall(_callback);
+
+    }
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @return List&lt;PANCAKESWAPV3ETHEREUMDepositDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMDepositDTO> pANCAKESWAPV3ETHEREUMDepositsCurrent() throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMDepositDTO>> localVarResp = pANCAKESWAPV3ETHEREUMDepositsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMDepositDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMDepositDTO>> pANCAKESWAPV3ETHEREUMDepositsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMDepositsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMDepositDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Deposits (current) (asynchronously)
+     * Gets deposits.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMDepositsCurrentAsync(final ApiCallback<List<PANCAKESWAPV3ETHEREUMDepositDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMDepositsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMDepositDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/dexAmmProtocols/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentCall(_callback);
+
+    }
+
+    /**
+     * DexAmmProtocols (current)
+     * Gets dexAmmProtocols.
+     * @return List&lt;PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO> pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent() throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>> localVarResp = pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * DexAmmProtocols (current)
+     * Gets dexAmmProtocols.
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>> pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * DexAmmProtocols (current) (asynchronously)
+     * Gets dexAmmProtocols.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentAsync(final ApiCallback<List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/financialsDailySnapshots/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentCall(_callback);
+
+    }
+
+    /**
+     * FinancialsDailySnapshots (current)
+     * Gets financialsDailySnapshots.
+     * @return List&lt;PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO> pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent() throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>> localVarResp = pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * FinancialsDailySnapshots (current)
+     * Gets financialsDailySnapshots.
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>> pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * FinancialsDailySnapshots (current) (asynchronously)
+     * Gets financialsDailySnapshots.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentAsync(final ApiCallback<List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+     * @param id Smart contract address of the pool. (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentCall(String id, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolAmounts/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (id != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("id", id));
+        }
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentValidateBeforeCall(String id, final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentCall(id, _callback);
+
+    }
+
+    /**
+     * LiquidityPoolAmounts (current)
+     * Gets liquidityPoolAmounts.
+     * @param id Smart contract address of the pool. (optional)
+     * @return List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO> pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent(String id) throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>> localVarResp = pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo(id);
+        return localVarResp.getData();
+    }
+
+    /**
+     * LiquidityPoolAmounts (current)
+     * Gets liquidityPoolAmounts.
+     * @param id Smart contract address of the pool. (optional)
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>> pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo(String id) throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentValidateBeforeCall(id, null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * LiquidityPoolAmounts (current) (asynchronously)
+     * Gets liquidityPoolAmounts.
+     * @param id Smart contract address of the pool. (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentAsync(String id, final ApiCallback<List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentValidateBeforeCall(id, _callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+     * @param pool Pool this snapshot belongs to. (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentCall(String pool, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (pool != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pool", pool));
+        }
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentValidateBeforeCall(String pool, final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentCall(pool, _callback);
+
+    }
+
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     * Gets liquidityPoolDailySnapshots.
+     * @param pool Pool this snapshot belongs to. (optional)
+     * @return List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(String pool) throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> localVarResp = pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(pool);
+        return localVarResp.getData();
+    }
+
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     * Gets liquidityPoolDailySnapshots.
+     * @param pool Pool this snapshot belongs to. (optional)
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(String pool) throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentValidateBeforeCall(pool, null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * LiquidityPoolDailySnapshots (current) (asynchronously)
+     * Gets liquidityPoolDailySnapshots.
+     * @param pool Pool this snapshot belongs to. (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsync(String pool, final ApiCallback<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentValidateBeforeCall(pool, _callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolFees/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentCall(_callback);
+
+    }
+
+    /**
+     * LiquidityPoolFees (current)
+     * Gets liquidityPoolFees.
+     * @return List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO> pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent() throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>> localVarResp = pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * LiquidityPoolFees (current)
+     * Gets liquidityPoolFees.
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>> pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * LiquidityPoolFees (current) (asynchronously)
+     * Gets liquidityPoolFees.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentAsync(final ApiCallback<List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+     * @param pool The pool this snapshot belongs to (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentCall(String pool, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolHourlySnapshots/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (pool != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pool", pool));
+        }
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentValidateBeforeCall(String pool, final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentCall(pool, _callback);
+
+    }
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     * Gets liquidityPoolHourlySnapshots.
+     * @param pool The pool this snapshot belongs to (optional)
+     * @return List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(String pool) throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> localVarResp = pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo(pool);
+        return localVarResp.getData();
+    }
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     * Gets liquidityPoolHourlySnapshots.
+     * @param pool The pool this snapshot belongs to (optional)
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo(String pool) throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentValidateBeforeCall(pool, null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * LiquidityPoolHourlySnapshots (current) (asynchronously)
+     * Gets liquidityPoolHourlySnapshots.
+     * @param pool The pool this snapshot belongs to (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentAsync(String pool, final ApiCallback<List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentValidateBeforeCall(pool, _callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
     /**
      * Build call for pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent
      * @param id Smart contract address of the pool. (optional)
@@ -200,6 +1288,362 @@ public class PancakeswapV3EthereumApi {
         return localVarCall;
     }
     /**
+     * Build call for pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/positionSnapshots/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentCall(_callback);
+
+    }
+
+    /**
+     * PositionSnapshots (current)
+     * Gets positionSnapshots.
+     * @return List&lt;PANCAKESWAPV3ETHEREUMPositionSnapshotDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO> pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent() throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>> localVarResp = pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * PositionSnapshots (current)
+     * Gets positionSnapshots.
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMPositionSnapshotDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>> pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * PositionSnapshots (current) (asynchronously)
+     * Gets positionSnapshots.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentAsync(final ApiCallback<List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for pANCAKESWAPV3ETHEREUMPositionsCurrent
+     * @param pool The liquidity pool in which this position was opened (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMPositionsCurrentCall(String pool, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/positions/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (pool != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pool", pool));
+        }
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMPositionsCurrentValidateBeforeCall(String pool, final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMPositionsCurrentCall(pool, _callback);
+
+    }
+
+    /**
+     * Positions (current)
+     * Gets positions.
+     * @param pool The liquidity pool in which this position was opened (optional)
+     * @return List&lt;PANCAKESWAPV3ETHEREUMPositionDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMPositionDTO> pANCAKESWAPV3ETHEREUMPositionsCurrent(String pool) throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionDTO>> localVarResp = pANCAKESWAPV3ETHEREUMPositionsCurrentWithHttpInfo(pool);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Positions (current)
+     * Gets positions.
+     * @param pool The liquidity pool in which this position was opened (optional)
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMPositionDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMPositionDTO>> pANCAKESWAPV3ETHEREUMPositionsCurrentWithHttpInfo(String pool) throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMPositionsCurrentValidateBeforeCall(pool, null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMPositionDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Positions (current) (asynchronously)
+     * Gets positions.
+     * @param pool The liquidity pool in which this position was opened (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMPositionsCurrentAsync(String pool, final ApiCallback<List<PANCAKESWAPV3ETHEREUMPositionDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMPositionsCurrentValidateBeforeCall(pool, _callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMPositionDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for pANCAKESWAPV3ETHEREUMRewardTokensCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMRewardTokensCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/rewardTokens/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMRewardTokensCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMRewardTokensCurrentCall(_callback);
+
+    }
+
+    /**
+     * RewardTokens (current)
+     * Gets rewardTokens.
+     * @return List&lt;PANCAKESWAPV3ETHEREUMRewardTokenDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMRewardTokenDTO> pANCAKESWAPV3ETHEREUMRewardTokensCurrent() throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>> localVarResp = pANCAKESWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * RewardTokens (current)
+     * Gets rewardTokens.
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMRewardTokenDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>> pANCAKESWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMRewardTokensCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * RewardTokens (current) (asynchronously)
+     * Gets rewardTokens.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMRewardTokensCurrentAsync(final ApiCallback<List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMRewardTokensCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMRewardTokenDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for pANCAKESWAPV3ETHEREUMSwapsCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -312,6 +1756,610 @@ public class PancakeswapV3EthereumApi {
 
         okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMSwapsCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMSwapDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentCall(String pool, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/tickDailySnapshots/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (pool != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pool", pool));
+        }
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentValidateBeforeCall(String pool, final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentCall(pool, _callback);
+
+    }
+
+    /**
+     * TickDailySnapshots (current)
+     * Gets tickDailySnapshots.
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @return List&lt;PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO> pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent(String pool) throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>> localVarResp = pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo(pool);
+        return localVarResp.getData();
+    }
+
+    /**
+     * TickDailySnapshots (current)
+     * Gets tickDailySnapshots.
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>> pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo(String pool) throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentValidateBeforeCall(pool, null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * TickDailySnapshots (current) (asynchronously)
+     * Gets tickDailySnapshots.
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentAsync(String pool, final ApiCallback<List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentValidateBeforeCall(pool, _callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentCall(String pool, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/tickHourlySnapshots/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (pool != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pool", pool));
+        }
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentValidateBeforeCall(String pool, final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentCall(pool, _callback);
+
+    }
+
+    /**
+     * TickHourlySnapshots (current)
+     * Gets tickHourlySnapshots.
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @return List&lt;PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO> pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent(String pool) throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>> localVarResp = pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(pool);
+        return localVarResp.getData();
+    }
+
+    /**
+     * TickHourlySnapshots (current)
+     * Gets tickHourlySnapshots.
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>> pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(String pool) throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentValidateBeforeCall(pool, null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * TickHourlySnapshots (current) (asynchronously)
+     * Gets tickHourlySnapshots.
+     * @param pool liquidity pool this tick belongs to (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentAsync(String pool, final ApiCallback<List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentValidateBeforeCall(pool, _callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for pANCAKESWAPV3ETHEREUMTicksCurrent
+     * @param pool Liquidity pool this tick belongs to (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMTicksCurrentCall(String pool, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/ticks/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (pool != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pool", pool));
+        }
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMTicksCurrentValidateBeforeCall(String pool, final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMTicksCurrentCall(pool, _callback);
+
+    }
+
+    /**
+     * Ticks (current)
+     * Gets ticks.
+     * @param pool Liquidity pool this tick belongs to (optional)
+     * @return List&lt;PANCAKESWAPV3ETHEREUMTickDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMTickDTO> pANCAKESWAPV3ETHEREUMTicksCurrent(String pool) throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDTO>> localVarResp = pANCAKESWAPV3ETHEREUMTicksCurrentWithHttpInfo(pool);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Ticks (current)
+     * Gets ticks.
+     * @param pool Liquidity pool this tick belongs to (optional)
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMTickDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMTickDTO>> pANCAKESWAPV3ETHEREUMTicksCurrentWithHttpInfo(String pool) throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMTicksCurrentValidateBeforeCall(pool, null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMTickDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Ticks (current) (asynchronously)
+     * Gets ticks.
+     * @param pool Liquidity pool this tick belongs to (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMTicksCurrentAsync(String pool, final ApiCallback<List<PANCAKESWAPV3ETHEREUMTickDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMTicksCurrentValidateBeforeCall(pool, _callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMTickDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteListSymbols/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentCall(_callback);
+
+    }
+
+    /**
+     * TokenWhiteListSymbols (current)
+     * Gets tokenWhiteListSymbols.
+     * @return List&lt;PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO> pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent() throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>> localVarResp = pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * TokenWhiteListSymbols (current)
+     * Gets tokenWhiteListSymbols.
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>> pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * TokenWhiteListSymbols (current) (asynchronously)
+     * Gets tokenWhiteListSymbols.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentAsync(final ApiCallback<List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteLists/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentCall(_callback);
+
+    }
+
+    /**
+     * TokenWhiteLists (current)
+     * Gets tokenWhiteLists.
+     * @return List&lt;PANCAKESWAPV3ETHEREUMTokenWhiteListDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO> pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent() throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>> localVarResp = pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * TokenWhiteLists (current)
+     * Gets tokenWhiteLists.
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMTokenWhiteListDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>> pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * TokenWhiteLists (current) (asynchronously)
+     * Gets tokenWhiteLists.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentAsync(final ApiCallback<List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -436,6 +2484,354 @@ public class PancakeswapV3EthereumApi {
 
         okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMTokensCurrentValidateBeforeCall(id, _callback);
         Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMTokenDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/usageMetricsDailySnapshots/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentCall(_callback);
+
+    }
+
+    /**
+     * UsageMetricsDailySnapshots (current)
+     * Gets usageMetricsDailySnapshots.
+     * @return List&lt;PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO> pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent() throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> localVarResp = pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * UsageMetricsDailySnapshots (current)
+     * Gets usageMetricsDailySnapshots.
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * UsageMetricsDailySnapshots (current) (asynchronously)
+     * Gets usageMetricsDailySnapshots.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentAsync(final ApiCallback<List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/usageMetricsHourlySnapshots/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentCall(_callback);
+
+    }
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     * Gets usageMetricsHourlySnapshots.
+     * @return List&lt;PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO> pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent() throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> localVarResp = pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     * Gets usageMetricsHourlySnapshots.
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * UsageMetricsHourlySnapshots (current) (asynchronously)
+     * Gets usageMetricsHourlySnapshots.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentAsync(final ApiCallback<List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for pANCAKESWAPV3ETHEREUMWithdrawsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMWithdrawsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/withdraws/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMWithdrawsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMWithdrawsCurrentCall(_callback);
+
+    }
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @return List&lt;PANCAKESWAPV3ETHEREUMWithdrawDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<PANCAKESWAPV3ETHEREUMWithdrawDTO> pANCAKESWAPV3ETHEREUMWithdrawsCurrent() throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMWithdrawDTO>> localVarResp = pANCAKESWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMWithdrawDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMWithdrawDTO>> pANCAKESWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMWithdrawsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMWithdrawDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Withdraws (current) (asynchronously)
+     * Gets withdraws.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMWithdrawsCurrentAsync(final ApiCallback<List<PANCAKESWAPV3ETHEREUMWithdrawDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMWithdrawsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMWithdrawDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

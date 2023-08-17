@@ -259,9 +259,29 @@ use WWW::OpenAPIClient::Object::CRYPTOPUNKSUserDTO;
 use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityPoolDTO;
 use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMSwapDTO;
 use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMTokenDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMAccountDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMActiveAccountDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMDepositDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO;
 use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMLiquidityPoolDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMPositionDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMPositionSnapshotDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMRewardTokenDTO;
 use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMSwapDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTickDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO;
 use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTokenDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTokenWhiteListDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMWithdrawDTO;
 use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMLiquidityPoolDTO;
 use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMSwapDTO;
 use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTokenDTO;
@@ -324,9 +344,29 @@ use WWW::OpenAPIClient::Object::CRYPTOPUNKSUserDTO;
 use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityPoolDTO;
 use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMSwapDTO;
 use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMTokenDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMAccountDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMActiveAccountDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMDepositDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO;
 use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMLiquidityPoolDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMPositionDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMPositionSnapshotDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMRewardTokenDTO;
 use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMSwapDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTickDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO;
 use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTokenDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTokenWhiteListDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO;
+use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMWithdrawDTO;
 use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMLiquidityPoolDTO;
 use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMSwapDTO;
 use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTokenDTO;
@@ -397,9 +437,29 @@ Class | Method | HTTP request | Description
 *MetadataApi* | [**metadata_chains_get**](docs/MetadataApi.md#metadata_chains_get) | **GET** /metadata/chains | List all chains.
 *MetadataApi* | [**metadata_dapps_dapp_name_get**](docs/MetadataApi.md#metadata_dapps_dapp_name_get) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
 *MetadataApi* | [**metadata_dapps_get**](docs/MetadataApi.md#metadata_dapps_get) | **GET** /metadata/dapps | List all decentralized applications.
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_accounts__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_accounts__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/accounts/current | Accounts (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_active_accounts__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_active_accounts__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current | ActiveAccounts (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_deposits__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_deposits__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/deposits/current | Deposits (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_dex_amm_protocols__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_dex_amm_protocols__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_financials_daily_snapshots__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_financials_daily_snapshots__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_liquidity_pool_amounts__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_liquidity_pool_amounts__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_liquidity_pool_fees__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_liquidity_pool_fees__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_liquidity_pool_hourly_snapshots__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_liquidity_pool_hourly_snapshots__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
 *PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_liquidity_pools__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_liquidity_pools__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_position_snapshots__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_position_snapshots__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/positionSnapshots/current | PositionSnapshots (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_positions__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_positions__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/positions/current | Positions (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_reward_tokens__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_reward_tokens__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/rewardTokens/current | RewardTokens (current)
 *PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_swaps__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_swaps__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/swaps/current | Swaps (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_tick_daily_snapshots__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_tick_daily_snapshots__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/tickDailySnapshots/current | TickDailySnapshots (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_tick_hourly_snapshots__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_tick_hourly_snapshots__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/tickHourlySnapshots/current | TickHourlySnapshots (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_ticks__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_ticks__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/ticks/current | Ticks (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_token_white_list_symbols__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_token_white_list_symbols__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/tokenWhiteListSymbols/current | TokenWhiteListSymbols (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_token_white_lists__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_token_white_lists__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/tokenWhiteLists/current | TokenWhiteLists (current)
 *PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_tokens__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_tokens__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/tokens/current | Tokens (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_usage_metrics_daily_snapshots__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_usage_metrics_daily_snapshots__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_usage_metrics_hourly_snapshots__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_usage_metrics_hourly_snapshots__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current)
+*PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_withdraws__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_withdraws__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/withdraws/current | Withdraws (current)
 *SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_liquidity_pools__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_liquidity_pools__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
 *SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_swaps__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_swaps__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/swaps/current | Swaps (current)
 *SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_tokens__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_tokens__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/tokens/current | Tokens (current)
@@ -444,9 +504,29 @@ Class | Method | HTTP request | Description
  - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityPoolDTO](docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md)
  - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMSwapDTO](docs/CURVEFINANCEETHEREUMSwapDTO.md)
  - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMTokenDTO](docs/CURVEFINANCEETHEREUMTokenDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMAccountDTO](docs/PANCAKESWAPV3ETHEREUMAccountDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMActiveAccountDTO](docs/PANCAKESWAPV3ETHEREUMActiveAccountDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMDepositDTO](docs/PANCAKESWAPV3ETHEREUMDepositDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO](docs/PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO](docs/PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO](docs/PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO.md)
  - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMLiquidityPoolDTO](docs/PANCAKESWAPV3ETHEREUMLiquidityPoolDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO](docs/PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO](docs/PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO](docs/PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMPositionDTO](docs/PANCAKESWAPV3ETHEREUMPositionDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMPositionSnapshotDTO](docs/PANCAKESWAPV3ETHEREUMPositionSnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMRewardTokenDTO](docs/PANCAKESWAPV3ETHEREUMRewardTokenDTO.md)
  - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMSwapDTO](docs/PANCAKESWAPV3ETHEREUMSwapDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTickDTO](docs/PANCAKESWAPV3ETHEREUMTickDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO](docs/PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO](docs/PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO.md)
  - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTokenDTO](docs/PANCAKESWAPV3ETHEREUMTokenDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTokenWhiteListDTO](docs/PANCAKESWAPV3ETHEREUMTokenWhiteListDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO](docs/PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO](docs/PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO](docs/PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMWithdrawDTO](docs/PANCAKESWAPV3ETHEREUMWithdrawDTO.md)
  - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMLiquidityPoolDTO](docs/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.md)
  - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMSwapDTO](docs/SUSHISWAPV3ETHEREUMSwapDTO.md)
  - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTokenDTO](docs/SUSHISWAPV3ETHEREUMTokenDTO.md)

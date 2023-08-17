@@ -72,13 +72,73 @@ class PANCAKESWAPV3ETHEREUMApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
+        'pANCAKESWAPV3ETHEREUMAccountsCurrent' => [
+            'application/json',
+        ],
+        'pANCAKESWAPV3ETHEREUMActiveAccountsCurrent' => [
+            'application/json',
+        ],
+        'pANCAKESWAPV3ETHEREUMDepositsCurrent' => [
+            'application/json',
+        ],
+        'pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent' => [
+            'application/json',
+        ],
+        'pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent' => [
+            'application/json',
+        ],
+        'pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent' => [
+            'application/json',
+        ],
+        'pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent' => [
+            'application/json',
+        ],
+        'pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent' => [
+            'application/json',
+        ],
+        'pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent' => [
+            'application/json',
+        ],
         'pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent' => [
+            'application/json',
+        ],
+        'pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent' => [
+            'application/json',
+        ],
+        'pANCAKESWAPV3ETHEREUMPositionsCurrent' => [
+            'application/json',
+        ],
+        'pANCAKESWAPV3ETHEREUMRewardTokensCurrent' => [
             'application/json',
         ],
         'pANCAKESWAPV3ETHEREUMSwapsCurrent' => [
             'application/json',
         ],
+        'pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent' => [
+            'application/json',
+        ],
+        'pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent' => [
+            'application/json',
+        ],
+        'pANCAKESWAPV3ETHEREUMTicksCurrent' => [
+            'application/json',
+        ],
+        'pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent' => [
+            'application/json',
+        ],
+        'pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent' => [
+            'application/json',
+        ],
         'pANCAKESWAPV3ETHEREUMTokensCurrent' => [
+            'application/json',
+        ],
+        'pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent' => [
+            'application/json',
+        ],
+        'pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent' => [
+            'application/json',
+        ],
+        'pANCAKESWAPV3ETHEREUMWithdrawsCurrent' => [
             'application/json',
         ],
     ];
@@ -127,6 +187,2418 @@ class PANCAKESWAPV3ETHEREUMApi
     public function getConfig()
     {
         return $this->config;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMAccountsCurrent
+     *
+     * Accounts (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMAccountDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMAccountsCurrent(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMAccountsCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMAccountsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMAccountsCurrentWithHttpInfo
+     *
+     * Accounts (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMAccountDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMAccountsCurrentWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMAccountsCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMAccountsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMAccountDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMAccountDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMAccountDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMAccountDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMAccountDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMAccountsCurrentAsync
+     *
+     * Accounts (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMAccountsCurrentAsync(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMAccountsCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMAccountsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMAccountsCurrentAsyncWithHttpInfo
+     *
+     * Accounts (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMAccountsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMAccountsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMAccountDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMAccountsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMAccountsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMAccountsCurrentRequest(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMAccountsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/accounts/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMActiveAccountsCurrent
+     *
+     * ActiveAccounts (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMActiveAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMActiveAccountDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMActiveAccountsCurrent(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMActiveAccountsCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo
+     *
+     * ActiveAccounts (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMActiveAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMActiveAccountDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMActiveAccountsCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMActiveAccountsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMActiveAccountDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMActiveAccountDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMActiveAccountDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMActiveAccountDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMActiveAccountDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMActiveAccountsCurrentAsync
+     *
+     * ActiveAccounts (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMActiveAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMActiveAccountsCurrentAsync(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMActiveAccountsCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMActiveAccountsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMActiveAccountsCurrentAsyncWithHttpInfo
+     *
+     * ActiveAccounts (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMActiveAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMActiveAccountsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMActiveAccountsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMActiveAccountDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMActiveAccountsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMActiveAccountsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMActiveAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMActiveAccountsCurrentRequest(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMActiveAccountsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMDepositsCurrent
+     *
+     * Deposits (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMDepositsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMDepositDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMDepositsCurrent(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMDepositsCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMDepositsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMDepositsCurrentWithHttpInfo
+     *
+     * Deposits (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMDepositsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMDepositDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMDepositsCurrentWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMDepositsCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMDepositsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMDepositDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMDepositDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMDepositDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMDepositDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMDepositDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMDepositsCurrentAsync
+     *
+     * Deposits (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMDepositsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMDepositsCurrentAsync(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMDepositsCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMDepositsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMDepositsCurrentAsyncWithHttpInfo
+     *
+     * Deposits (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMDepositsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMDepositsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMDepositsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMDepositDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMDepositsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMDepositsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMDepositsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMDepositsCurrentRequest(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMDepositsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/deposits/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent
+     *
+     * DexAmmProtocols (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo
+     *
+     * DexAmmProtocols (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentAsync
+     *
+     * DexAmmProtocols (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentAsync(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentAsyncWithHttpInfo
+     *
+     * DexAmmProtocols (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentRequest(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/dexAmmProtocols/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
+     *
+     * FinancialsDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo
+     *
+     * FinancialsDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentAsync
+     *
+     * FinancialsDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentAsync(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentAsyncWithHttpInfo
+     *
+     * FinancialsDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentRequest(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/financialsDailySnapshots/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+     *
+     * LiquidityPoolAmounts (current)
+     *
+     * @param  string $id Smart contract address of the pool. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent($id = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo($id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo
+     *
+     * LiquidityPoolAmounts (current)
+     *
+     * @param  string $id Smart contract address of the pool. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo($id = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest($id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentAsync
+     *
+     * LiquidityPoolAmounts (current)
+     *
+     * @param  string $id Smart contract address of the pool. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentAsync($id = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentAsyncWithHttpInfo($id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentAsyncWithHttpInfo
+     *
+     * LiquidityPoolAmounts (current)
+     *
+     * @param  string $id Smart contract address of the pool. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentAsyncWithHttpInfo($id = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest($id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent'
+     *
+     * @param  string $id Smart contract address of the pool. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest($id = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent'][0])
+    {
+
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolAmounts/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+     *
+     * LiquidityPoolDailySnapshots (current)
+     *
+     * @param  string $pool Pool this snapshot belongs to. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo($pool, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo
+     *
+     * LiquidityPoolDailySnapshots (current)
+     *
+     * @param  string $pool Pool this snapshot belongs to. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest($pool, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsync
+     *
+     * LiquidityPoolDailySnapshots (current)
+     *
+     * @param  string $pool Pool this snapshot belongs to. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsync($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsyncWithHttpInfo($pool, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsyncWithHttpInfo
+     *
+     * LiquidityPoolDailySnapshots (current)
+     *
+     * @param  string $pool Pool this snapshot belongs to. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsyncWithHttpInfo($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest($pool, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'
+     *
+     * @param  string $pool Pool this snapshot belongs to. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
+    {
+
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool,
+            'pool', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent
+     *
+     * LiquidityPoolFees (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo
+     *
+     * LiquidityPoolFees (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentAsync
+     *
+     * LiquidityPoolFees (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentAsync(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentAsyncWithHttpInfo
+     *
+     * LiquidityPoolFees (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentRequest(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolFees/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+     *
+     * LiquidityPoolHourlySnapshots (current)
+     *
+     * @param  string $pool The pool this snapshot belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo($pool, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo
+     *
+     * LiquidityPoolHourlySnapshots (current)
+     *
+     * @param  string $pool The pool this snapshot belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest($pool, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentAsync
+     *
+     * LiquidityPoolHourlySnapshots (current)
+     *
+     * @param  string $pool The pool this snapshot belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentAsync($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentAsyncWithHttpInfo($pool, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentAsyncWithHttpInfo
+     *
+     * LiquidityPoolHourlySnapshots (current)
+     *
+     * @param  string $pool The pool this snapshot belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentAsyncWithHttpInfo($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest($pool, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent'
+     *
+     * @param  string $pool The pool this snapshot belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent'][0])
+    {
+
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolHourlySnapshots/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool,
+            'pool', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
     }
 
     /**
@@ -350,6 +2822,810 @@ class PANCAKESWAPV3ETHEREUMApi
             true, // explode
             false // required
         ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent
+     *
+     * PositionSnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMPositionSnapshotDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo
+     *
+     * PositionSnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMPositionSnapshotDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMPositionSnapshotDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMPositionSnapshotDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMPositionSnapshotDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMPositionSnapshotDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMPositionSnapshotDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentAsync
+     *
+     * PositionSnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentAsync(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentAsyncWithHttpInfo
+     *
+     * PositionSnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMPositionSnapshotDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentRequest(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/positionSnapshots/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMPositionsCurrent
+     *
+     * Positions (current)
+     *
+     * @param  string $pool The liquidity pool in which this position was opened (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMPositionsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMPositionDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMPositionsCurrent($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMPositionsCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMPositionsCurrentWithHttpInfo($pool, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMPositionsCurrentWithHttpInfo
+     *
+     * Positions (current)
+     *
+     * @param  string $pool The liquidity pool in which this position was opened (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMPositionsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMPositionDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMPositionsCurrentWithHttpInfo($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMPositionsCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMPositionsCurrentRequest($pool, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMPositionDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMPositionDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMPositionDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMPositionDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMPositionDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMPositionsCurrentAsync
+     *
+     * Positions (current)
+     *
+     * @param  string $pool The liquidity pool in which this position was opened (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMPositionsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMPositionsCurrentAsync($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMPositionsCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMPositionsCurrentAsyncWithHttpInfo($pool, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMPositionsCurrentAsyncWithHttpInfo
+     *
+     * Positions (current)
+     *
+     * @param  string $pool The liquidity pool in which this position was opened (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMPositionsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMPositionsCurrentAsyncWithHttpInfo($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMPositionsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMPositionDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMPositionsCurrentRequest($pool, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMPositionsCurrent'
+     *
+     * @param  string $pool The liquidity pool in which this position was opened (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMPositionsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMPositionsCurrentRequest($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMPositionsCurrent'][0])
+    {
+
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/positions/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool,
+            'pool', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMRewardTokensCurrent
+     *
+     * RewardTokens (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMRewardTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMRewardTokenDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMRewardTokensCurrent(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMRewardTokensCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo
+     *
+     * RewardTokens (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMRewardTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMRewardTokenDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMRewardTokensCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMRewardTokensCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMRewardTokenDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMRewardTokenDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMRewardTokenDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMRewardTokenDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMRewardTokenDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMRewardTokensCurrentAsync
+     *
+     * RewardTokens (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMRewardTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMRewardTokensCurrentAsync(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMRewardTokensCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMRewardTokensCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMRewardTokensCurrentAsyncWithHttpInfo
+     *
+     * RewardTokens (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMRewardTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMRewardTokensCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMRewardTokensCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMRewardTokenDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMRewardTokensCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMRewardTokensCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMRewardTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMRewardTokensCurrentRequest(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMRewardTokensCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/rewardTokens/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
 
 
 
@@ -671,6 +3947,1366 @@ class PANCAKESWAPV3ETHEREUMApi
     }
 
     /**
+     * Operation pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent
+     *
+     * TickDailySnapshots (current)
+     *
+     * @param  string $pool liquidity pool this tick belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo($pool, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo
+     *
+     * TickDailySnapshots (current)
+     *
+     * @param  string $pool liquidity pool this tick belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentRequest($pool, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentAsync
+     *
+     * TickDailySnapshots (current)
+     *
+     * @param  string $pool liquidity pool this tick belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentAsync($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentAsyncWithHttpInfo($pool, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentAsyncWithHttpInfo
+     *
+     * TickDailySnapshots (current)
+     *
+     * @param  string $pool liquidity pool this tick belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentAsyncWithHttpInfo($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentRequest($pool, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent'
+     *
+     * @param  string $pool liquidity pool this tick belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentRequest($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent'][0])
+    {
+
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/tickDailySnapshots/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool,
+            'pool', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent
+     *
+     * TickHourlySnapshots (current)
+     *
+     * @param  string $pool liquidity pool this tick belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo($pool, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo
+     *
+     * TickHourlySnapshots (current)
+     *
+     * @param  string $pool liquidity pool this tick belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest($pool, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentAsync
+     *
+     * TickHourlySnapshots (current)
+     *
+     * @param  string $pool liquidity pool this tick belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentAsync($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentAsyncWithHttpInfo($pool, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentAsyncWithHttpInfo
+     *
+     * TickHourlySnapshots (current)
+     *
+     * @param  string $pool liquidity pool this tick belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentAsyncWithHttpInfo($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest($pool, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent'
+     *
+     * @param  string $pool liquidity pool this tick belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent'][0])
+    {
+
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/tickHourlySnapshots/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool,
+            'pool', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMTicksCurrent
+     *
+     * Ticks (current)
+     *
+     * @param  string $pool Liquidity pool this tick belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTicksCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMTicksCurrent($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTicksCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMTicksCurrentWithHttpInfo($pool, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMTicksCurrentWithHttpInfo
+     *
+     * Ticks (current)
+     *
+     * @param  string $pool Liquidity pool this tick belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTicksCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMTicksCurrentWithHttpInfo($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTicksCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMTicksCurrentRequest($pool, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMTicksCurrentAsync
+     *
+     * Ticks (current)
+     *
+     * @param  string $pool Liquidity pool this tick belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTicksCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMTicksCurrentAsync($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTicksCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMTicksCurrentAsyncWithHttpInfo($pool, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMTicksCurrentAsyncWithHttpInfo
+     *
+     * Ticks (current)
+     *
+     * @param  string $pool Liquidity pool this tick belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTicksCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMTicksCurrentAsyncWithHttpInfo($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTicksCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTickDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMTicksCurrentRequest($pool, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMTicksCurrent'
+     *
+     * @param  string $pool Liquidity pool this tick belongs to (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTicksCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMTicksCurrentRequest($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTicksCurrent'][0])
+    {
+
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/ticks/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool,
+            'pool', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
+     *
+     * TokenWhiteListSymbols (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo
+     *
+     * TokenWhiteListSymbols (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentAsync
+     *
+     * TokenWhiteListSymbols (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentAsync(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentAsyncWithHttpInfo
+     *
+     * TokenWhiteListSymbols (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentRequest(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteListSymbols/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent
+     *
+     * TokenWhiteLists (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTokenWhiteListDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo
+     *
+     * TokenWhiteLists (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTokenWhiteListDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTokenWhiteListDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTokenWhiteListDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTokenWhiteListDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTokenWhiteListDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTokenWhiteListDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentAsync
+     *
+     * TokenWhiteLists (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentAsync(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentAsyncWithHttpInfo
+     *
+     * TokenWhiteLists (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMTokenWhiteListDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentRequest(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteLists/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation pANCAKESWAPV3ETHEREUMTokensCurrent
      *
      * Tokens (current)
@@ -891,6 +5527,795 @@ class PANCAKESWAPV3ETHEREUMApi
             true, // explode
             false // required
         ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
+     *
+     * UsageMetricsDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo
+     *
+     * UsageMetricsDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentAsync
+     *
+     * UsageMetricsDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentAsync(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentAsyncWithHttpInfo
+     *
+     * UsageMetricsDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentRequest(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/usageMetricsDailySnapshots/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
+     *
+     * UsageMetricsHourlySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo
+     *
+     * UsageMetricsHourlySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentAsync
+     *
+     * UsageMetricsHourlySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentAsync(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentAsyncWithHttpInfo
+     *
+     * UsageMetricsHourlySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentRequest(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/usageMetricsHourlySnapshots/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMWithdrawsCurrent
+     *
+     * Withdraws (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMWithdrawsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMWithdrawDTO[]
+     */
+    public function pANCAKESWAPV3ETHEREUMWithdrawsCurrent(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMWithdrawsCurrent'][0])
+    {
+        list($response) = $this->pANCAKESWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo
+     *
+     * Withdraws (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMWithdrawsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMWithdrawDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function pANCAKESWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMWithdrawsCurrent'][0])
+    {
+        $request = $this->pANCAKESWAPV3ETHEREUMWithdrawsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMWithdrawDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMWithdrawDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMWithdrawDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMWithdrawDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMWithdrawDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMWithdrawsCurrentAsync
+     *
+     * Withdraws (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMWithdrawsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMWithdrawsCurrentAsync(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMWithdrawsCurrent'][0])
+    {
+        return $this->pANCAKESWAPV3ETHEREUMWithdrawsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation pANCAKESWAPV3ETHEREUMWithdrawsCurrentAsyncWithHttpInfo
+     *
+     * Withdraws (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMWithdrawsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function pANCAKESWAPV3ETHEREUMWithdrawsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMWithdrawsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMWithdrawDTO[]';
+        $request = $this->pANCAKESWAPV3ETHEREUMWithdrawsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'pANCAKESWAPV3ETHEREUMWithdrawsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMWithdrawsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function pANCAKESWAPV3ETHEREUMWithdrawsCurrentRequest(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMWithdrawsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/withdraws/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
 
 
 

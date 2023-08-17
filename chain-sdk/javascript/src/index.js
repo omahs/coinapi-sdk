@@ -25,9 +25,29 @@ import CRYPTOPUNKSUserDTO from './model/CRYPTOPUNKSUserDTO';
 import CURVEFINANCEETHEREUMLiquidityPoolDTO from './model/CURVEFINANCEETHEREUMLiquidityPoolDTO';
 import CURVEFINANCEETHEREUMSwapDTO from './model/CURVEFINANCEETHEREUMSwapDTO';
 import CURVEFINANCEETHEREUMTokenDTO from './model/CURVEFINANCEETHEREUMTokenDTO';
+import PANCAKESWAPV3ETHEREUMAccountDTO from './model/PANCAKESWAPV3ETHEREUMAccountDTO';
+import PANCAKESWAPV3ETHEREUMActiveAccountDTO from './model/PANCAKESWAPV3ETHEREUMActiveAccountDTO';
+import PANCAKESWAPV3ETHEREUMDepositDTO from './model/PANCAKESWAPV3ETHEREUMDepositDTO';
+import PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO from './model/PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO';
+import PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO from './model/PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO';
+import PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO from './model/PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO';
 import PANCAKESWAPV3ETHEREUMLiquidityPoolDTO from './model/PANCAKESWAPV3ETHEREUMLiquidityPoolDTO';
+import PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO from './model/PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO';
+import PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO from './model/PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO';
+import PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO from './model/PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO';
+import PANCAKESWAPV3ETHEREUMPositionDTO from './model/PANCAKESWAPV3ETHEREUMPositionDTO';
+import PANCAKESWAPV3ETHEREUMPositionSnapshotDTO from './model/PANCAKESWAPV3ETHEREUMPositionSnapshotDTO';
+import PANCAKESWAPV3ETHEREUMRewardTokenDTO from './model/PANCAKESWAPV3ETHEREUMRewardTokenDTO';
 import PANCAKESWAPV3ETHEREUMSwapDTO from './model/PANCAKESWAPV3ETHEREUMSwapDTO';
+import PANCAKESWAPV3ETHEREUMTickDTO from './model/PANCAKESWAPV3ETHEREUMTickDTO';
+import PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO from './model/PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO';
+import PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO from './model/PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO';
 import PANCAKESWAPV3ETHEREUMTokenDTO from './model/PANCAKESWAPV3ETHEREUMTokenDTO';
+import PANCAKESWAPV3ETHEREUMTokenWhiteListDTO from './model/PANCAKESWAPV3ETHEREUMTokenWhiteListDTO';
+import PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO from './model/PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO';
+import PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO from './model/PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO';
+import PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO from './model/PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO';
+import PANCAKESWAPV3ETHEREUMWithdrawDTO from './model/PANCAKESWAPV3ETHEREUMWithdrawDTO';
 import SUSHISWAPV3ETHEREUMLiquidityPoolDTO from './model/SUSHISWAPV3ETHEREUMLiquidityPoolDTO';
 import SUSHISWAPV3ETHEREUMSwapDTO from './model/SUSHISWAPV3ETHEREUMSwapDTO';
 import SUSHISWAPV3ETHEREUMTokenDTO from './model/SUSHISWAPV3ETHEREUMTokenDTO';
@@ -178,10 +198,82 @@ export {
     CURVEFINANCEETHEREUMTokenDTO,
 
     /**
+     * The PANCAKESWAPV3ETHEREUMAccountDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMAccountDTO}
+     */
+    PANCAKESWAPV3ETHEREUMAccountDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMActiveAccountDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMActiveAccountDTO}
+     */
+    PANCAKESWAPV3ETHEREUMActiveAccountDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMDepositDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMDepositDTO}
+     */
+    PANCAKESWAPV3ETHEREUMDepositDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO}
+     */
+    PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO}
+     */
+    PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO}
+     */
+    PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO,
+
+    /**
      * The PANCAKESWAPV3ETHEREUMLiquidityPoolDTO model constructor.
      * @property {module:model/PANCAKESWAPV3ETHEREUMLiquidityPoolDTO}
      */
     PANCAKESWAPV3ETHEREUMLiquidityPoolDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO}
+     */
+    PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO}
+     */
+    PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO}
+     */
+    PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMPositionDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMPositionDTO}
+     */
+    PANCAKESWAPV3ETHEREUMPositionDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMPositionSnapshotDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMPositionSnapshotDTO}
+     */
+    PANCAKESWAPV3ETHEREUMPositionSnapshotDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMRewardTokenDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMRewardTokenDTO}
+     */
+    PANCAKESWAPV3ETHEREUMRewardTokenDTO,
 
     /**
      * The PANCAKESWAPV3ETHEREUMSwapDTO model constructor.
@@ -190,10 +282,58 @@ export {
     PANCAKESWAPV3ETHEREUMSwapDTO,
 
     /**
+     * The PANCAKESWAPV3ETHEREUMTickDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMTickDTO}
+     */
+    PANCAKESWAPV3ETHEREUMTickDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO}
+     */
+    PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO}
+     */
+    PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO,
+
+    /**
      * The PANCAKESWAPV3ETHEREUMTokenDTO model constructor.
      * @property {module:model/PANCAKESWAPV3ETHEREUMTokenDTO}
      */
     PANCAKESWAPV3ETHEREUMTokenDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMTokenWhiteListDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMTokenWhiteListDTO}
+     */
+    PANCAKESWAPV3ETHEREUMTokenWhiteListDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO}
+     */
+    PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO}
+     */
+    PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO}
+     */
+    PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO,
+
+    /**
+     * The PANCAKESWAPV3ETHEREUMWithdrawDTO model constructor.
+     * @property {module:model/PANCAKESWAPV3ETHEREUMWithdrawDTO}
+     */
+    PANCAKESWAPV3ETHEREUMWithdrawDTO,
 
     /**
      * The SUSHISWAPV3ETHEREUMLiquidityPoolDTO model constructor.

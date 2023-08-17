@@ -23,6 +23,927 @@ import (
 // PANCAKESWAPV3ETHEREUMApiService PANCAKESWAPV3ETHEREUMApi service
 type PANCAKESWAPV3ETHEREUMApiService service
 
+type ApiPANCAKESWAPV3ETHEREUMAccountsCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMAccountsCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMAccountDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMAccountsCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMAccountsCurrent Accounts (current)
+
+Gets accounts.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMAccountsCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMAccountsCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMAccountsCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMAccountsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMAccountDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMAccountsCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMAccountsCurrentRequest) ([]PANCAKESWAPV3ETHEREUMAccountDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMAccountDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMAccountsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/accounts/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiPANCAKESWAPV3ETHEREUMActiveAccountsCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMActiveAccountsCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMActiveAccountDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMActiveAccountsCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMActiveAccountsCurrent ActiveAccounts (current)
+
+Gets activeAccounts.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMActiveAccountsCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMActiveAccountsCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMActiveAccountsCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMActiveAccountsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMActiveAccountDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMActiveAccountsCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMActiveAccountsCurrentRequest) ([]PANCAKESWAPV3ETHEREUMActiveAccountDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMActiveAccountDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMActiveAccountsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiPANCAKESWAPV3ETHEREUMDepositsCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMDepositsCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMDepositDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMDepositsCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMDepositsCurrent Deposits (current)
+
+Gets deposits.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMDepositsCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMDepositsCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMDepositsCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMDepositsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMDepositDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMDepositsCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMDepositsCurrentRequest) ([]PANCAKESWAPV3ETHEREUMDepositDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMDepositDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMDepositsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/deposits/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiPANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent DexAmmProtocols (current)
+
+Gets dexAmmProtocols.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrentRequest) ([]PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/dexAmmProtocols/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiPANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent FinancialsDailySnapshots (current)
+
+Gets financialsDailySnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrentRequest) ([]PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/financialsDailySnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiPANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+	id *string
+}
+
+// Smart contract address of the pool.
+func (r ApiPANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest) Id(id string) ApiPANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest {
+	r.id = &id
+	return r
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent LiquidityPoolAmounts (current)
+
+Gets liquidityPoolAmounts.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest) ([]PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolAmounts/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.id != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiPANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+	pool *string
+}
+
+// Pool this snapshot belongs to.
+func (r ApiPANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest) Pool(pool string) ApiPANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest {
+	r.pool = &pool
+	return r
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent LiquidityPoolDailySnapshots (current)
+
+Gets liquidityPoolDailySnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest) ([]PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.pool != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pool", r.pool, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiPANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent LiquidityPoolFees (current)
+
+Gets liquidityPoolFees.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrentRequest) ([]PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolFees/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiPANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+	pool *string
+}
+
+// The pool this snapshot belongs to
+func (r ApiPANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest) Pool(pool string) ApiPANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest {
+	r.pool = &pool
+	return r
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent LiquidityPoolHourlySnapshots (current)
+
+Gets liquidityPoolHourlySnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest) ([]PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolHourlySnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.pool != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pool", r.pool, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiPANCAKESWAPV3ETHEREUMLiquidityPoolsCurrentRequest struct {
 	ctx context.Context
 	ApiService *PANCAKESWAPV3ETHEREUMApiService
@@ -78,6 +999,313 @@ func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMLiquidityPoolsCur
 	if r.id != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiPANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMPositionSnapshotDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent PositionSnapshots (current)
+
+Gets positionSnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMPositionSnapshotDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMPositionSnapshotsCurrentRequest) ([]PANCAKESWAPV3ETHEREUMPositionSnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMPositionSnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/positionSnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiPANCAKESWAPV3ETHEREUMPositionsCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+	pool *string
+}
+
+// The liquidity pool in which this position was opened
+func (r ApiPANCAKESWAPV3ETHEREUMPositionsCurrentRequest) Pool(pool string) ApiPANCAKESWAPV3ETHEREUMPositionsCurrentRequest {
+	r.pool = &pool
+	return r
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMPositionsCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMPositionDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMPositionsCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMPositionsCurrent Positions (current)
+
+Gets positions.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMPositionsCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMPositionsCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMPositionsCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMPositionsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMPositionDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMPositionsCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMPositionsCurrentRequest) ([]PANCAKESWAPV3ETHEREUMPositionDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMPositionDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMPositionsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/positions/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.pool != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pool", r.pool, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiPANCAKESWAPV3ETHEREUMRewardTokensCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMRewardTokensCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMRewardTokenDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMRewardTokensCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMRewardTokensCurrent RewardTokens (current)
+
+Gets rewardTokens.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMRewardTokensCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMRewardTokensCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMRewardTokensCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMRewardTokensCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMRewardTokenDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMRewardTokensCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMRewardTokensCurrentRequest) ([]PANCAKESWAPV3ETHEREUMRewardTokenDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMRewardTokenDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMRewardTokensCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/rewardTokens/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -231,6 +1459,531 @@ func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMSwapsCurrentExecu
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiPANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+	pool *string
+}
+
+// liquidity pool this tick belongs to
+func (r ApiPANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentRequest) Pool(pool string) ApiPANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentRequest {
+	r.pool = &pool
+	return r
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent TickDailySnapshots (current)
+
+Gets tickDailySnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentRequest) ([]PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/tickDailySnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.pool != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pool", r.pool, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiPANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+	pool *string
+}
+
+// liquidity pool this tick belongs to
+func (r ApiPANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest) Pool(pool string) ApiPANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest {
+	r.pool = &pool
+	return r
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent TickHourlySnapshots (current)
+
+Gets tickHourlySnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest) ([]PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/tickHourlySnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.pool != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pool", r.pool, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiPANCAKESWAPV3ETHEREUMTicksCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+	pool *string
+}
+
+// Liquidity pool this tick belongs to
+func (r ApiPANCAKESWAPV3ETHEREUMTicksCurrentRequest) Pool(pool string) ApiPANCAKESWAPV3ETHEREUMTicksCurrentRequest {
+	r.pool = &pool
+	return r
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMTicksCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMTickDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMTicksCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMTicksCurrent Ticks (current)
+
+Gets ticks.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMTicksCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMTicksCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMTicksCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMTicksCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMTickDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMTicksCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMTicksCurrentRequest) ([]PANCAKESWAPV3ETHEREUMTickDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMTickDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMTicksCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/ticks/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.pool != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pool", r.pool, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiPANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent TokenWhiteListSymbols (current)
+
+Gets tokenWhiteListSymbols.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrentRequest) ([]PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteListSymbols/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiPANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMTokenWhiteListDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent TokenWhiteLists (current)
+
+Gets tokenWhiteLists.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMTokenWhiteListDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMTokenWhiteListsCurrentRequest) ([]PANCAKESWAPV3ETHEREUMTokenWhiteListDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMTokenWhiteListDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteLists/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiPANCAKESWAPV3ETHEREUMTokensCurrentRequest struct {
 	ctx context.Context
 	ApiService *PANCAKESWAPV3ETHEREUMApiService
@@ -286,6 +2039,303 @@ func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMTokensCurrentExec
 	if r.id != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiPANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent UsageMetricsDailySnapshots (current)
+
+Gets usageMetricsDailySnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentRequest) ([]PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/usageMetricsDailySnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiPANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent UsageMetricsHourlySnapshots (current)
+
+Gets usageMetricsHourlySnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentRequest) ([]PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/usageMetricsHourlySnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiPANCAKESWAPV3ETHEREUMWithdrawsCurrentRequest struct {
+	ctx context.Context
+	ApiService *PANCAKESWAPV3ETHEREUMApiService
+}
+
+func (r ApiPANCAKESWAPV3ETHEREUMWithdrawsCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMWithdrawDTO, *http.Response, error) {
+	return r.ApiService.PANCAKESWAPV3ETHEREUMWithdrawsCurrentExecute(r)
+}
+
+/*
+PANCAKESWAPV3ETHEREUMWithdrawsCurrent Withdraws (current)
+
+Gets withdraws.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPANCAKESWAPV3ETHEREUMWithdrawsCurrentRequest
+*/
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMWithdrawsCurrent(ctx context.Context) ApiPANCAKESWAPV3ETHEREUMWithdrawsCurrentRequest {
+	return ApiPANCAKESWAPV3ETHEREUMWithdrawsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []PANCAKESWAPV3ETHEREUMWithdrawDTO
+func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMWithdrawsCurrentExecute(r ApiPANCAKESWAPV3ETHEREUMWithdrawsCurrentRequest) ([]PANCAKESWAPV3ETHEREUMWithdrawDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []PANCAKESWAPV3ETHEREUMWithdrawDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PANCAKESWAPV3ETHEREUMApiService.PANCAKESWAPV3ETHEREUMWithdrawsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/pancakeswap-v3-ethereum/withdraws/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 

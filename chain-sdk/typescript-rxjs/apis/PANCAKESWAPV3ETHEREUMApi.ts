@@ -16,13 +16,61 @@ import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI } from '../runtime';
 import type { OperationOpts, HttpQuery } from '../runtime';
 import type {
+    PANCAKESWAPV3ETHEREUMAccountDTO,
+    PANCAKESWAPV3ETHEREUMActiveAccountDTO,
+    PANCAKESWAPV3ETHEREUMDepositDTO,
+    PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO,
+    PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO,
+    PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO,
     PANCAKESWAPV3ETHEREUMLiquidityPoolDTO,
+    PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO,
+    PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO,
+    PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO,
+    PANCAKESWAPV3ETHEREUMPositionDTO,
+    PANCAKESWAPV3ETHEREUMPositionSnapshotDTO,
+    PANCAKESWAPV3ETHEREUMRewardTokenDTO,
     PANCAKESWAPV3ETHEREUMSwapDTO,
+    PANCAKESWAPV3ETHEREUMTickDTO,
+    PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO,
+    PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO,
     PANCAKESWAPV3ETHEREUMTokenDTO,
+    PANCAKESWAPV3ETHEREUMTokenWhiteListDTO,
+    PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO,
+    PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO,
+    PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO,
+    PANCAKESWAPV3ETHEREUMWithdrawDTO,
 } from '../models';
+
+export interface PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest {
+    id?: string;
+}
+
+export interface PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest {
+    pool?: string;
+}
+
+export interface PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest {
+    pool?: string;
+}
 
 export interface PANCAKESWAPV3ETHEREUMLiquidityPoolsCurrentRequest {
     id?: string;
+}
+
+export interface PANCAKESWAPV3ETHEREUMPositionsCurrentRequest {
+    pool?: string;
+}
+
+export interface PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentRequest {
+    pool?: string;
+}
+
+export interface PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest {
+    pool?: string;
+}
+
+export interface PANCAKESWAPV3ETHEREUMTicksCurrentRequest {
+    pool?: string;
 }
 
 export interface PANCAKESWAPV3ETHEREUMTokensCurrentRequest {
@@ -33,6 +81,141 @@ export interface PANCAKESWAPV3ETHEREUMTokensCurrentRequest {
  * no description
  */
 export class PANCAKESWAPV3ETHEREUMApi extends BaseAPI {
+
+    /**
+     * Gets accounts.
+     * Accounts (current)
+     */
+    pANCAKESWAPV3ETHEREUMAccountsCurrent(): Observable<Array<PANCAKESWAPV3ETHEREUMAccountDTO>>
+    pANCAKESWAPV3ETHEREUMAccountsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMAccountDTO>>>
+    pANCAKESWAPV3ETHEREUMAccountsCurrent(opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMAccountDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMAccountDTO>>> {
+        return this.request<Array<PANCAKESWAPV3ETHEREUMAccountDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/accounts/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets activeAccounts.
+     * ActiveAccounts (current)
+     */
+    pANCAKESWAPV3ETHEREUMActiveAccountsCurrent(): Observable<Array<PANCAKESWAPV3ETHEREUMActiveAccountDTO>>
+    pANCAKESWAPV3ETHEREUMActiveAccountsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMActiveAccountDTO>>>
+    pANCAKESWAPV3ETHEREUMActiveAccountsCurrent(opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMActiveAccountDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMActiveAccountDTO>>> {
+        return this.request<Array<PANCAKESWAPV3ETHEREUMActiveAccountDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets deposits.
+     * Deposits (current)
+     */
+    pANCAKESWAPV3ETHEREUMDepositsCurrent(): Observable<Array<PANCAKESWAPV3ETHEREUMDepositDTO>>
+    pANCAKESWAPV3ETHEREUMDepositsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMDepositDTO>>>
+    pANCAKESWAPV3ETHEREUMDepositsCurrent(opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMDepositDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMDepositDTO>>> {
+        return this.request<Array<PANCAKESWAPV3ETHEREUMDepositDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/deposits/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets dexAmmProtocols.
+     * DexAmmProtocols (current)
+     */
+    pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent(): Observable<Array<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>>
+    pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>>>
+    pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent(opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>>> {
+        return this.request<Array<PANCAKESWAPV3ETHEREUMDexAmmProtocolDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/dexAmmProtocols/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets financialsDailySnapshots.
+     * FinancialsDailySnapshots (current)
+     */
+    pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(): Observable<Array<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>>
+    pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>>>
+    pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>>> {
+        return this.request<Array<PANCAKESWAPV3ETHEREUMFinancialsDailySnapshotDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/financialsDailySnapshots/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets liquidityPoolAmounts.
+     * LiquidityPoolAmounts (current)
+     */
+    pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent({ id }: PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest): Observable<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>>
+    pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent({ id }: PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>>>
+    pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent({ id }: PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest, opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (id != null) { query['id'] = id; }
+
+        return this.request<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolAmounts/current',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets liquidityPoolDailySnapshots.
+     * LiquidityPoolDailySnapshots (current)
+     */
+    pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent({ pool }: PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest): Observable<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>
+    pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent({ pool }: PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>>
+    pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent({ pool }: PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest, opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (pool != null) { query['pool'] = pool; }
+
+        return this.request<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets liquidityPoolFees.
+     * LiquidityPoolFees (current)
+     */
+    pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent(): Observable<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>>
+    pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>>>
+    pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent(opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>>> {
+        return this.request<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolFees/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets liquidityPoolHourlySnapshots.
+     * LiquidityPoolHourlySnapshots (current)
+     */
+    pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent({ pool }: PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest): Observable<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>
+    pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent({ pool }: PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>>
+    pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent({ pool }: PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest, opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (pool != null) { query['pool'] = pool; }
+
+        return this.request<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolHourlySnapshots/current',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
 
     /**
      * Gets liquidityPools.
@@ -54,6 +237,51 @@ export class PANCAKESWAPV3ETHEREUMApi extends BaseAPI {
     };
 
     /**
+     * Gets positionSnapshots.
+     * PositionSnapshots (current)
+     */
+    pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent(): Observable<Array<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>>
+    pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>>>
+    pANCAKESWAPV3ETHEREUMPositionSnapshotsCurrent(opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>>> {
+        return this.request<Array<PANCAKESWAPV3ETHEREUMPositionSnapshotDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/positionSnapshots/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets positions.
+     * Positions (current)
+     */
+    pANCAKESWAPV3ETHEREUMPositionsCurrent({ pool }: PANCAKESWAPV3ETHEREUMPositionsCurrentRequest): Observable<Array<PANCAKESWAPV3ETHEREUMPositionDTO>>
+    pANCAKESWAPV3ETHEREUMPositionsCurrent({ pool }: PANCAKESWAPV3ETHEREUMPositionsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMPositionDTO>>>
+    pANCAKESWAPV3ETHEREUMPositionsCurrent({ pool }: PANCAKESWAPV3ETHEREUMPositionsCurrentRequest, opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMPositionDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMPositionDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (pool != null) { query['pool'] = pool; }
+
+        return this.request<Array<PANCAKESWAPV3ETHEREUMPositionDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/positions/current',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets rewardTokens.
+     * RewardTokens (current)
+     */
+    pANCAKESWAPV3ETHEREUMRewardTokensCurrent(): Observable<Array<PANCAKESWAPV3ETHEREUMRewardTokenDTO>>
+    pANCAKESWAPV3ETHEREUMRewardTokensCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMRewardTokenDTO>>>
+    pANCAKESWAPV3ETHEREUMRewardTokensCurrent(opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMRewardTokenDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMRewardTokenDTO>>> {
+        return this.request<Array<PANCAKESWAPV3ETHEREUMRewardTokenDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/rewardTokens/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets swaps.
      * Swaps (current)
      */
@@ -62,6 +290,89 @@ export class PANCAKESWAPV3ETHEREUMApi extends BaseAPI {
     pANCAKESWAPV3ETHEREUMSwapsCurrent(opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMSwapDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMSwapDTO>>> {
         return this.request<Array<PANCAKESWAPV3ETHEREUMSwapDTO>>({
             url: '/v1/dapps/pancakeswap-v3-ethereum/swaps/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets tickDailySnapshots.
+     * TickDailySnapshots (current)
+     */
+    pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent({ pool }: PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentRequest): Observable<Array<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>>
+    pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent({ pool }: PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>>>
+    pANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrent({ pool }: PANCAKESWAPV3ETHEREUMTickDailySnapshotsCurrentRequest, opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (pool != null) { query['pool'] = pool; }
+
+        return this.request<Array<PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/tickDailySnapshots/current',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets tickHourlySnapshots.
+     * TickHourlySnapshots (current)
+     */
+    pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent({ pool }: PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest): Observable<Array<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>>
+    pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent({ pool }: PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>>>
+    pANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrent({ pool }: PANCAKESWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest, opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (pool != null) { query['pool'] = pool; }
+
+        return this.request<Array<PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/tickHourlySnapshots/current',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets ticks.
+     * Ticks (current)
+     */
+    pANCAKESWAPV3ETHEREUMTicksCurrent({ pool }: PANCAKESWAPV3ETHEREUMTicksCurrentRequest): Observable<Array<PANCAKESWAPV3ETHEREUMTickDTO>>
+    pANCAKESWAPV3ETHEREUMTicksCurrent({ pool }: PANCAKESWAPV3ETHEREUMTicksCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMTickDTO>>>
+    pANCAKESWAPV3ETHEREUMTicksCurrent({ pool }: PANCAKESWAPV3ETHEREUMTicksCurrentRequest, opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMTickDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMTickDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (pool != null) { query['pool'] = pool; }
+
+        return this.request<Array<PANCAKESWAPV3ETHEREUMTickDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/ticks/current',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets tokenWhiteListSymbols.
+     * TokenWhiteListSymbols (current)
+     */
+    pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(): Observable<Array<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>>
+    pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>>>
+    pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>>> {
+        return this.request<Array<PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteListSymbols/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets tokenWhiteLists.
+     * TokenWhiteLists (current)
+     */
+    pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent(): Observable<Array<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>>
+    pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>>>
+    pANCAKESWAPV3ETHEREUMTokenWhiteListsCurrent(opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>>> {
+        return this.request<Array<PANCAKESWAPV3ETHEREUMTokenWhiteListDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/tokenWhiteLists/current',
             method: 'GET',
         }, opts?.responseOpts);
     };
@@ -82,6 +393,45 @@ export class PANCAKESWAPV3ETHEREUMApi extends BaseAPI {
             url: '/v1/dapps/pancakeswap-v3-ethereum/tokens/current',
             method: 'GET',
             query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets usageMetricsDailySnapshots.
+     * UsageMetricsDailySnapshots (current)
+     */
+    pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(): Observable<Array<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>
+    pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>>
+    pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>> {
+        return this.request<Array<PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/usageMetricsDailySnapshots/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets usageMetricsHourlySnapshots.
+     * UsageMetricsHourlySnapshots (current)
+     */
+    pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(): Observable<Array<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>
+    pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>>
+    pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>> {
+        return this.request<Array<PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/usageMetricsHourlySnapshots/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets withdraws.
+     * Withdraws (current)
+     */
+    pANCAKESWAPV3ETHEREUMWithdrawsCurrent(): Observable<Array<PANCAKESWAPV3ETHEREUMWithdrawDTO>>
+    pANCAKESWAPV3ETHEREUMWithdrawsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMWithdrawDTO>>>
+    pANCAKESWAPV3ETHEREUMWithdrawsCurrent(opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMWithdrawDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMWithdrawDTO>>> {
+        return this.request<Array<PANCAKESWAPV3ETHEREUMWithdrawDTO>>({
+            url: '/v1/dapps/pancakeswap-v3-ethereum/withdraws/current',
+            method: 'GET',
         }, opts?.responseOpts);
     };
 
