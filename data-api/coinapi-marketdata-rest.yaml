@@ -697,6 +697,41 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/v1.Metric'
+  '/v1/metrics/{exchange_id}/all':
+    get:
+      tags:
+        - Metrics
+      summary: Get all data metrics.
+      parameters:
+        - name: exchange_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            text/plain:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.Metric'
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.Metric'
+            text/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.Metric'
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.Metric'
   '/v1/metrics/exchange/{exchange_id}/current':
     get:
       tags:
@@ -2174,12 +2209,6 @@ components:
           description: Gets or sets the maximum supply of the asset.
           format: double
           nullable: true
-        metric_id:
-          type: array
-          items:
-            type: string
-          description: Gets or sets the metric IDs associated with the asset.
-          nullable: true
         data_start:
           type: string
           nullable: true
@@ -2864,12 +2893,6 @@ components:
           type: number
           description: The size precision.
           format: double
-          nullable: true
-        metric_id:
-          type: array
-          items:
-            type: string
-          description: The list of metric identifiers.
           nullable: true
       additionalProperties: false
       description: Represents a symbol data model.
