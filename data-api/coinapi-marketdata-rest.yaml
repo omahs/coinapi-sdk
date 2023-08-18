@@ -697,7 +697,7 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/v1.Metric'
-  '/v1/metrics/{exchange_id}/all':
+  '/v1/metrics/by-exchange/{exchange_id}':
     get:
       tags:
         - Metrics
