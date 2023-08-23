@@ -20,7 +20,7 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-
+Number of block in which entity was recorded.
 .PARAMETER Vid
 
 .PARAMETER BlockRange
@@ -50,7 +50,7 @@ function Initialize-CRYPTOPUNKSBidDTO {
         [System.Nullable[System.DateTime]]
         ${RecvTime},
         [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true)]
-        [String]
+        [System.Nullable[Int64]]
         ${BlockNumber},
         [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int64]]

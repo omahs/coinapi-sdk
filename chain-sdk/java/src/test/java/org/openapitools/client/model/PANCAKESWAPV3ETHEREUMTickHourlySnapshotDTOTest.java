@@ -64,14 +64,6 @@ public class PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOTest {
     }
 
     /**
-     * Test the property 'vid'
-     */
-    @Test
-    public void vidTest() {
-        // TODO: test vid
-    }
-
-    /**
      * Test the property 'id'
      */
     @Test

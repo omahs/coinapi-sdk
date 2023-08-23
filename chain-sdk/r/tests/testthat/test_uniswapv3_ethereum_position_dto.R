@@ -27,14 +27,6 @@ test_that("block_number", {
   #expect_equal(model.instance$`block_number`, "EXPECTED_RESULT")
 })
 
-test_that("vid", {
-  # tests for the property `vid` (integer)
-  # 
-
-  # uncomment below to test the property
-  #expect_equal(model.instance$`vid`, "EXPECTED_RESULT")
-})
-
 test_that("id", {
   # tests for the property `id` (character)
   # (account address)-(market address)-(count)

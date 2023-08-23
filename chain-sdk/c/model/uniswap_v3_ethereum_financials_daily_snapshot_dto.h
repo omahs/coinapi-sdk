@@ -21,7 +21,7 @@ typedef struct uniswap_v3_ethereum_financials_daily_snapshot_dto_t uniswap_v3_et
 typedef struct uniswap_v3_ethereum_financials_daily_snapshot_dto_t {
     char *entry_time; //date time
     char *recv_time; //date time
-    int block_number; //numeric
+    long block_number; //numeric
     char *id; // string
     int day; //numeric
     char *protocol; // string
@@ -46,7 +46,7 @@ typedef struct uniswap_v3_ethereum_financials_daily_snapshot_dto_t {
 uniswap_v3_ethereum_financials_daily_snapshot_dto_t *uniswap_v3_ethereum_financials_daily_snapshot_dto_create(
     char *entry_time,
     char *recv_time,
-    int block_number,
+    long block_number,
     char *id,
     int day,
     char *protocol,

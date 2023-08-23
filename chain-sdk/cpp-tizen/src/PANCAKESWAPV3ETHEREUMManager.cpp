@@ -931,7 +931,7 @@ static bool pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)Processor(
 }
 
 static bool pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)Helper(char * accessToken,
-	std::string pool, 
+	
 	void(* handler)(std::list<PANCAKESWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -948,13 +948,6 @@ static bool pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)Helper(cha
 	map <string, string> queryParams;
 	string itemAtq;
 	
-
-	itemAtq = stringify(&pool, "std::string");
-	queryParams.insert(pair<string, string>("pool", itemAtq));
-	if( itemAtq.empty()==true){
-		queryParams.erase("pool");
-	}
-
 	string mBody = "";
 	JsonNode* node;
 	JsonArray* json_array;
@@ -1009,22 +1002,22 @@ static bool pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)Helper(cha
 
 
 bool PANCAKESWAPV3ETHEREUMManager::pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)Async(char * accessToken,
-	std::string pool, 
+	
 	void(* handler)(std::list<PANCAKESWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO>, Error, void* )
 	, void* userData)
 {
 	return pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)Helper(accessToken,
-	pool, 
+	
 	handler, userData, true);
 }
 
 bool PANCAKESWAPV3ETHEREUMManager::pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)Sync(char * accessToken,
-	std::string pool, 
+	
 	void(* handler)(std::list<PANCAKESWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO>, Error, void* )
 	, void* userData)
 {
 	return pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshots (current)Helper(accessToken,
-	pool, 
+	
 	handler, userData, false);
 }
 

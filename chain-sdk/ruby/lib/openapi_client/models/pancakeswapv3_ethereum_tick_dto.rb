@@ -23,9 +23,6 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # 
-    attr_accessor :vid
-
     # (pool address)-(tick index)
     attr_accessor :id
 
@@ -74,7 +71,6 @@ module OpenapiClient
         :'entry_time' => :'entry_time',
         :'recv_time' => :'recv_time',
         :'block_number' => :'block_number',
-        :'vid' => :'vid',
         :'id' => :'id',
         :'index' => :'index',
         :'pool' => :'pool',
@@ -103,7 +99,6 @@ module OpenapiClient
         :'entry_time' => :'Time',
         :'recv_time' => :'Time',
         :'block_number' => :'Integer',
-        :'vid' => :'Integer',
         :'id' => :'String',
         :'index' => :'String',
         :'pool' => :'String',
@@ -164,10 +159,6 @@ module OpenapiClient
 
       if attributes.key?(:'block_number')
         self.block_number = attributes[:'block_number']
-      end
-
-      if attributes.key?(:'vid')
-        self.vid = attributes[:'vid']
       end
 
       if attributes.key?(:'id')
@@ -250,7 +241,6 @@ module OpenapiClient
           entry_time == o.entry_time &&
           recv_time == o.recv_time &&
           block_number == o.block_number &&
-          vid == o.vid &&
           id == o.id &&
           index == o.index &&
           pool == o.pool &&
@@ -276,7 +266,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [entry_time, recv_time, block_number, vid, id, index, pool, created_timestamp, created_block_number, prices, liquidity_gross, liquidity_gross_usd, liquidity_net, liquidity_net_usd, last_snapshot_day_id, last_snapshot_hour_id, last_update_timestamp, last_update_block_number].hash
+      [entry_time, recv_time, block_number, id, index, pool, created_timestamp, created_block_number, prices, liquidity_gross, liquidity_gross_usd, liquidity_net, liquidity_net_usd, last_snapshot_day_id, last_snapshot_hour_id, last_update_timestamp, last_update_block_number].hash
     end
 
     # Builds the object from hash

@@ -41,7 +41,7 @@ class UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO(
         class properties:
             entry_time = schemas.DateTimeSchema
             recv_time = schemas.DateTimeSchema
-            block_number = schemas.Int32Schema
+            block_number = schemas.Int64Schema
             
             
             class id(

@@ -23,9 +23,6 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # 
-    attr_accessor :vid
-
     # (account address)-(market address)-(count)
     attr_accessor :id
 
@@ -98,7 +95,6 @@ module OpenapiClient
         :'entry_time' => :'entry_time',
         :'recv_time' => :'recv_time',
         :'block_number' => :'block_number',
-        :'vid' => :'vid',
         :'id' => :'id',
         :'account' => :'account',
         :'pool' => :'pool',
@@ -135,7 +131,6 @@ module OpenapiClient
         :'entry_time' => :'Time',
         :'recv_time' => :'Time',
         :'block_number' => :'Integer',
-        :'vid' => :'Integer',
         :'id' => :'String',
         :'account' => :'String',
         :'pool' => :'String',
@@ -212,10 +207,6 @@ module OpenapiClient
 
       if attributes.key?(:'block_number')
         self.block_number = attributes[:'block_number']
-      end
-
-      if attributes.key?(:'vid')
-        self.vid = attributes[:'vid']
       end
 
       if attributes.key?(:'id')
@@ -334,7 +325,6 @@ module OpenapiClient
           entry_time == o.entry_time &&
           recv_time == o.recv_time &&
           block_number == o.block_number &&
-          vid == o.vid &&
           id == o.id &&
           account == o.account &&
           pool == o.pool &&
@@ -368,7 +358,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [entry_time, recv_time, block_number, vid, id, account, pool, hash_opened, hash_closed, block_number_opened, timestamp_opened, block_number_closed, timestamp_closed, tick_lower, tick_upper, liquidity_token, liquidity_token_type, liquidity, liquidity_usd, cumulative_deposit_token_amounts, cumulative_deposit_usd, cumulative_withdraw_token_amounts, cumulative_withdraw_usd, cumulative_reward_usd, deposit_count, withdraw_count].hash
+      [entry_time, recv_time, block_number, id, account, pool, hash_opened, hash_closed, block_number_opened, timestamp_opened, block_number_closed, timestamp_closed, tick_lower, tick_upper, liquidity_token, liquidity_token_type, liquidity, liquidity_usd, cumulative_deposit_token_amounts, cumulative_deposit_usd, cumulative_withdraw_token_amounts, cumulative_withdraw_usd, cumulative_reward_usd, deposit_count, withdraw_count].hash
     end
 
     # Builds the object from hash

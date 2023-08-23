@@ -7,9 +7,129 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'UNISWAPV2ETHEREUMApi' {
+    Context 'Invoke-UNISWAPV2ETHEREUMAccountsCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMAccountsCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMAccountsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV2ETHEREUMActiveAccountsCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMActiveAccountsCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMActiveAccountsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV2ETHEREUMDepositsCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMDepositsCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMDepositsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV2ETHEREUMDexAmmProtocolsCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMDexAmmProtocolsCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMDexAmmProtocolsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent -Id "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV2ETHEREUMLiquidityPoolFeesCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMLiquidityPoolFeesCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMLiquidityPoolFeesCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-UNISWAPV2ETHEREUMLiquidityPoolsCurrent' {
         It 'Test Invoke-UNISWAPV2ETHEREUMLiquidityPoolsCurrent' {
-            #$TestResult = Invoke-UNISWAPV2ETHEREUMLiquidityPoolsCurrent
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMLiquidityPoolsCurrent -Id "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV2ETHEREUMMasterChefRewardersCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMMasterChefRewardersCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMMasterChefRewardersCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV2ETHEREUMMasterChefsCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMMasterChefsCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMMasterChefsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV2ETHEREUMRewardTokensCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMRewardTokensCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMRewardTokensCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV2ETHEREUMRewarderProbesCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMRewarderProbesCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMRewarderProbesCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -23,9 +143,49 @@ Describe -tag 'PSOpenAPITools' -name 'UNISWAPV2ETHEREUMApi' {
         }
     }
 
+    Context 'Invoke-UNISWAPV2ETHEREUMTokenWhiteListsCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMTokenWhiteListsCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMTokenWhiteListsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-UNISWAPV2ETHEREUMTokensCurrent' {
         It 'Test Invoke-UNISWAPV2ETHEREUMTokensCurrent' {
             #$TestResult = Invoke-UNISWAPV2ETHEREUMTokensCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV2ETHEREUMTransfersCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMTransfersCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMTransfersCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UNISWAPV2ETHEREUMWithdrawsCurrent' {
+        It 'Test Invoke-UNISWAPV2ETHEREUMWithdrawsCurrent' {
+            #$TestResult = Invoke-UNISWAPV2ETHEREUMWithdrawsCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

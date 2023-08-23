@@ -653,7 +653,7 @@ No authorization required
 
 <a id="uNISWAPV3ETHEREUMTickDailySnapshotsCurrent"></a>
 # **uNISWAPV3ETHEREUMTickDailySnapshotsCurrent**
-> kotlin.collections.List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt; uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool)
+> kotlin.collections.List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt; uNISWAPV3ETHEREUMTickDailySnapshotsCurrent()
 
 TickDailySnapshots (current)
 
@@ -666,9 +666,8 @@ Gets tickDailySnapshots.
 //import org.openapitools.client.models.*
 
 val apiInstance = UNISWAPV3ETHEREUMApi()
-val pool : kotlin.String = pool_example // kotlin.String | liquidity pool this tick belongs to
 try {
-    val result : kotlin.collections.List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> = apiInstance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool)
+    val result : kotlin.collections.List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> = apiInstance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UNISWAPV3ETHEREUMApi#uNISWAPV3ETHEREUMTickDailySnapshotsCurrent")
@@ -680,10 +679,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **kotlin.String**| liquidity pool this tick belongs to | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -700,7 +696,7 @@ No authorization required
 
 <a id="uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent"></a>
 # **uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent**
-> kotlin.collections.List&lt;UNISWAPV3ETHEREUMTickHourlySnapshotDTO&gt; uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool)
+> kotlin.collections.List&lt;UNISWAPV3ETHEREUMTickHourlySnapshotDTO&gt; uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent()
 
 TickHourlySnapshots (current)
 
@@ -713,9 +709,8 @@ Gets tickHourlySnapshots.
 //import org.openapitools.client.models.*
 
 val apiInstance = UNISWAPV3ETHEREUMApi()
-val pool : kotlin.String = pool_example // kotlin.String | liquidity pool this tick belongs to
 try {
-    val result : kotlin.collections.List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> = apiInstance.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool)
+    val result : kotlin.collections.List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> = apiInstance.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UNISWAPV3ETHEREUMApi#uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent")
@@ -727,10 +722,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **kotlin.String**| liquidity pool this tick belongs to | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -747,7 +739,7 @@ No authorization required
 
 <a id="uNISWAPV3ETHEREUMTicksCurrent"></a>
 # **uNISWAPV3ETHEREUMTicksCurrent**
-> kotlin.collections.List&lt;UNISWAPV3ETHEREUMTickDTO&gt; uNISWAPV3ETHEREUMTicksCurrent(pool)
+> kotlin.collections.List&lt;UNISWAPV3ETHEREUMTickDTO&gt; uNISWAPV3ETHEREUMTicksCurrent()
 
 Ticks (current)
 
@@ -760,9 +752,8 @@ Gets ticks.
 //import org.openapitools.client.models.*
 
 val apiInstance = UNISWAPV3ETHEREUMApi()
-val pool : kotlin.String = pool_example // kotlin.String | Liquidity pool this tick belongs to
 try {
-    val result : kotlin.collections.List<UNISWAPV3ETHEREUMTickDTO> = apiInstance.uNISWAPV3ETHEREUMTicksCurrent(pool)
+    val result : kotlin.collections.List<UNISWAPV3ETHEREUMTickDTO> = apiInstance.uNISWAPV3ETHEREUMTicksCurrent()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UNISWAPV3ETHEREUMApi#uNISWAPV3ETHEREUMTicksCurrent")
@@ -774,10 +765,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **kotlin.String**| Liquidity pool this tick belongs to | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 

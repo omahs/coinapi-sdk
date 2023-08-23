@@ -25,7 +25,6 @@ import com.squareup.moshi.JsonClass
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param vid 
  * @param id (Smart contract address of the pool)-( # of hours since Unix epoch time)
  * @param hour Number of hours since Unix epoch time
  * @param protocol The protocol this snapshot belongs to
@@ -82,10 +81,6 @@ data class PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (
     /* Number of block in which entity was recorded. */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
-
-    /*  */
-    @Json(name = "vid")
-    val vid: kotlin.Long? = null,
 
     /* (Smart contract address of the pool)-( # of hours since Unix epoch time) */
     @Json(name = "id")

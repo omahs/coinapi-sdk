@@ -32,12 +32,179 @@ describe 'UNISWAPV2ETHEREUMApi' do
     end
   end
 
+  # unit tests for u_niswapv2_ethereum_accounts__current
+  # Accounts (current)
+  # Gets accounts.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UNISWAPV2ETHEREUMAccountDTO>]
+  describe 'u_niswapv2_ethereum_accounts__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv2_ethereum_active_accounts__current
+  # ActiveAccounts (current)
+  # Gets activeAccounts.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UNISWAPV2ETHEREUMActiveAccountDTO>]
+  describe 'u_niswapv2_ethereum_active_accounts__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv2_ethereum_deposits__current
+  # Deposits (current)
+  # Gets deposits.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UNISWAPV2ETHEREUMDepositDTO>]
+  describe 'u_niswapv2_ethereum_deposits__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv2_ethereum_dex_amm_protocols__current
+  # DexAmmProtocols (current)
+  # Gets dexAmmProtocols.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UNISWAPV2ETHEREUMDexAmmProtocolDTO>]
+  describe 'u_niswapv2_ethereum_dex_amm_protocols__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv2_ethereum_financials_daily_snapshots__current
+  # FinancialsDailySnapshots (current)
+  # Gets financialsDailySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO>]
+  describe 'u_niswapv2_ethereum_financials_daily_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv2_ethereum_liquidity_pool_amounts__current
+  # LiquidityPoolAmounts (current)
+  # Gets liquidityPoolAmounts.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :id Smart contract address of the pool
+  # @return [Array<UNISWAPV2ETHEREUMLiquidityPoolAmountDTO>]
+  describe 'u_niswapv2_ethereum_liquidity_pool_amounts__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current
+  # LiquidityPoolDailySnapshots (current)
+  # Gets liquidityPoolDailySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO>]
+  describe 'u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv2_ethereum_liquidity_pool_fees__current
+  # LiquidityPoolFees (current)
+  # Gets liquidityPoolFees.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UNISWAPV2ETHEREUMLiquidityPoolFeeDTO>]
+  describe 'u_niswapv2_ethereum_liquidity_pool_fees__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current
+  # LiquidityPoolHourlySnapshots (current)
+  # Gets liquidityPoolHourlySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO>]
+  describe 'u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
   # unit tests for u_niswapv2_ethereum_liquidity_pools__current
   # LiquidityPools (current)
   # Gets liquidityPools.
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :id Smart contract address of the pool
   # @return [Array<UNISWAPV2ETHEREUMLiquidityPoolDTO>]
   describe 'u_niswapv2_ethereum_liquidity_pools__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv2_ethereum_master_chef_address_to_pids__current
+  # MasterChefAddressToPids (current)
+  # Gets masterChefAddressToPids.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UNISWAPV2ETHEREUMMasterChefAddressToPidDTO>]
+  describe 'u_niswapv2_ethereum_master_chef_address_to_pids__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv2_ethereum_master_chef_rewarders__current
+  # MasterChefRewarders (current)
+  # Gets masterChefRewarders.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UNISWAPV2ETHEREUMMasterChefRewarderDTO>]
+  describe 'u_niswapv2_ethereum_master_chef_rewarders__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv2_ethereum_master_chef_staking_pools__current
+  # MasterChefStakingPools (current)
+  # Gets masterChefStakingPools.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UNISWAPV2ETHEREUMMasterChefStakingPoolDTO>]
+  describe 'u_niswapv2_ethereum_master_chef_staking_pools__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv2_ethereum_master_chefs__current
+  # MasterChefs (current)
+  # Gets masterChefs.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UNISWAPV2ETHEREUMMasterChefDTO>]
+  describe 'u_niswapv2_ethereum_master_chefs__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv2_ethereum_reward_tokens__current
+  # RewardTokens (current)
+  # Gets rewardTokens.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UNISWAPV2ETHEREUMRewardTokenDTO>]
+  describe 'u_niswapv2_ethereum_reward_tokens__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv2_ethereum_rewarder_probes__current
+  # RewarderProbes (current)
+  # Gets rewarderProbes.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UNISWAPV2ETHEREUMRewarderProbeDTO>]
+  describe 'u_niswapv2_ethereum_rewarder_probes__current test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
@@ -54,12 +221,67 @@ describe 'UNISWAPV2ETHEREUMApi' do
     end
   end
 
+  # unit tests for u_niswapv2_ethereum_token_white_lists__current
+  # TokenWhiteLists (current)
+  # Gets tokenWhiteLists.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UNISWAPV2ETHEREUMTokenWhiteListDTO>]
+  describe 'u_niswapv2_ethereum_token_white_lists__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
   # unit tests for u_niswapv2_ethereum_tokens__current
   # Tokens (current)
   # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @return [Array<UNISWAPV2ETHEREUMTokenDTO>]
   describe 'u_niswapv2_ethereum_tokens__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv2_ethereum_transfers__current
+  # Transfers (current)
+  # Gets transfers.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UNISWAPV2ETHEREUMTransferDTO>]
+  describe 'u_niswapv2_ethereum_transfers__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv2_ethereum_usage_metrics_daily_snapshots__current
+  # UsageMetricsDailySnapshots (current)
+  # Gets usageMetricsDailySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO>]
+  describe 'u_niswapv2_ethereum_usage_metrics_daily_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current
+  # UsageMetricsHourlySnapshots (current)
+  # Gets usageMetricsHourlySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO>]
+  describe 'u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for u_niswapv2_ethereum_withdraws__current
+  # Withdraws (current)
+  # Gets withdraws.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UNISWAPV2ETHEREUMWithdrawDTO>]
+  describe 'u_niswapv2_ethereum_withdraws__current test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end

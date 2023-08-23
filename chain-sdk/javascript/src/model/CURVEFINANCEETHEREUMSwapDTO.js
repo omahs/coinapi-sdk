@@ -56,7 +56,7 @@ class CURVEFINANCEETHEREUMSwapDTO {
                 obj['recv_time'] = ApiClient.convertToType(data['recv_time'], 'Date');
             }
             if (data.hasOwnProperty('block_number')) {
-                obj['block_number'] = ApiClient.convertToType(data['block_number'], 'String');
+                obj['block_number'] = ApiClient.convertToType(data['block_number'], 'Number');
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -125,10 +125,6 @@ class CURVEFINANCEETHEREUMSwapDTO {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CURVEFINANCEETHEREUMSwapDTO</code>.
      */
     static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['block_number'] && !(typeof data['block_number'] === 'string' || data['block_number'] instanceof String)) {
-            throw new Error("Expected the field `block_number` to be a primitive type in the JSON string but got " + data['block_number']);
-        }
         // ensure the json data is a string
         if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
             throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
@@ -209,8 +205,8 @@ CURVEFINANCEETHEREUMSwapDTO.prototype['entry_time'] = undefined;
 CURVEFINANCEETHEREUMSwapDTO.prototype['recv_time'] = undefined;
 
 /**
- * Block number of this event
- * @member {String} block_number
+ * Number of block in which entity was recorded.
+ * @member {Number} block_number
  */
 CURVEFINANCEETHEREUMSwapDTO.prototype['block_number'] = undefined;
 

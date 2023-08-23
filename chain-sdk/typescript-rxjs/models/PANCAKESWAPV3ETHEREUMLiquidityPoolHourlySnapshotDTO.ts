@@ -34,12 +34,6 @@ export interface PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
      */
     block_number?: number;
     /**
-     * 
-     * @type {number}
-     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
-     */
-    vid?: number;
-    /**
      * (Smart contract address of the pool)-( # of hours since Unix epoch time)
      * @type {string}
      * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO

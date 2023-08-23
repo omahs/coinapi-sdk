@@ -16,13 +16,57 @@ import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI } from '../runtime';
 import type { OperationOpts, HttpQuery } from '../runtime';
 import type {
+    SUSHISWAPV3ETHEREUMAccountDTO,
+    SUSHISWAPV3ETHEREUMActiveAccountDTO,
+    SUSHISWAPV3ETHEREUMDepositDTO,
+    SUSHISWAPV3ETHEREUMDexAmmProtocolDTO,
+    SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO,
+    SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO,
     SUSHISWAPV3ETHEREUMLiquidityPoolDTO,
+    SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO,
+    SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO,
+    SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO,
+    SUSHISWAPV3ETHEREUMPositionDTO,
+    SUSHISWAPV3ETHEREUMPositionSnapshotDTO,
+    SUSHISWAPV3ETHEREUMRewardTokenDTO,
     SUSHISWAPV3ETHEREUMSwapDTO,
+    SUSHISWAPV3ETHEREUMTickDTO,
+    SUSHISWAPV3ETHEREUMTickDailySnapshotDTO,
+    SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO,
     SUSHISWAPV3ETHEREUMTokenDTO,
+    SUSHISWAPV3ETHEREUMTokenWhiteListDTO,
+    SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO,
+    SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO,
+    SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO,
+    SUSHISWAPV3ETHEREUMWithdrawDTO,
 } from '../models';
+
+export interface SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest {
+    id?: string;
+}
+
+export interface SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest {
+    pool?: string;
+}
 
 export interface SUSHISWAPV3ETHEREUMLiquidityPoolsCurrentRequest {
     id?: string;
+}
+
+export interface SUSHISWAPV3ETHEREUMPositionsCurrentRequest {
+    pool?: string;
+}
+
+export interface SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest {
+    pool?: string;
+}
+
+export interface SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest {
+    pool?: string;
+}
+
+export interface SUSHISWAPV3ETHEREUMTicksCurrentRequest {
+    pool?: string;
 }
 
 export interface SUSHISWAPV3ETHEREUMTokensCurrentRequest {
@@ -33,6 +77,135 @@ export interface SUSHISWAPV3ETHEREUMTokensCurrentRequest {
  * no description
  */
 export class SUSHISWAPV3ETHEREUMApi extends BaseAPI {
+
+    /**
+     * Gets accounts.
+     * Accounts (current)
+     */
+    sUSHISWAPV3ETHEREUMAccountsCurrent(): Observable<Array<SUSHISWAPV3ETHEREUMAccountDTO>>
+    sUSHISWAPV3ETHEREUMAccountsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMAccountDTO>>>
+    sUSHISWAPV3ETHEREUMAccountsCurrent(opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMAccountDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMAccountDTO>>> {
+        return this.request<Array<SUSHISWAPV3ETHEREUMAccountDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/accounts/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets activeAccounts.
+     * ActiveAccounts (current)
+     */
+    sUSHISWAPV3ETHEREUMActiveAccountsCurrent(): Observable<Array<SUSHISWAPV3ETHEREUMActiveAccountDTO>>
+    sUSHISWAPV3ETHEREUMActiveAccountsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMActiveAccountDTO>>>
+    sUSHISWAPV3ETHEREUMActiveAccountsCurrent(opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMActiveAccountDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMActiveAccountDTO>>> {
+        return this.request<Array<SUSHISWAPV3ETHEREUMActiveAccountDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/activeAccounts/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets deposits.
+     * Deposits (current)
+     */
+    sUSHISWAPV3ETHEREUMDepositsCurrent(): Observable<Array<SUSHISWAPV3ETHEREUMDepositDTO>>
+    sUSHISWAPV3ETHEREUMDepositsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMDepositDTO>>>
+    sUSHISWAPV3ETHEREUMDepositsCurrent(opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMDepositDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMDepositDTO>>> {
+        return this.request<Array<SUSHISWAPV3ETHEREUMDepositDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/deposits/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets dexAmmProtocols.
+     * DexAmmProtocols (current)
+     */
+    sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent(): Observable<Array<SUSHISWAPV3ETHEREUMDexAmmProtocolDTO>>
+    sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMDexAmmProtocolDTO>>>
+    sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent(opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMDexAmmProtocolDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMDexAmmProtocolDTO>>> {
+        return this.request<Array<SUSHISWAPV3ETHEREUMDexAmmProtocolDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/dexAmmProtocols/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets financialsDailySnapshots.
+     * FinancialsDailySnapshots (current)
+     */
+    sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(): Observable<Array<SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>
+    sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>>
+    sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>> {
+        return this.request<Array<SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/financialsDailySnapshots/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets liquidityPoolAmounts.
+     * LiquidityPoolAmounts (current)
+     */
+    sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent({ id }: SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest): Observable<Array<SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO>>
+    sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent({ id }: SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO>>>
+    sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent({ id }: SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest, opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (id != null) { query['id'] = id; }
+
+        return this.request<Array<SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/liquidityPoolAmounts/current',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets liquidityPoolDailySnapshots.
+     * LiquidityPoolDailySnapshots (current)
+     */
+    sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(): Observable<Array<SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>
+    sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>>
+    sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>> {
+        return this.request<Array<SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/liquidityPoolDailySnapshots/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets liquidityPoolFees.
+     * LiquidityPoolFees (current)
+     */
+    sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent(): Observable<Array<SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO>>
+    sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO>>>
+    sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent(opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO>>> {
+        return this.request<Array<SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/liquidityPoolFees/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets liquidityPoolHourlySnapshots.
+     * LiquidityPoolHourlySnapshots (current)
+     */
+    sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent({ pool }: SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest): Observable<Array<SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>
+    sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent({ pool }: SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>>
+    sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent({ pool }: SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest, opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (pool != null) { query['pool'] = pool; }
+
+        return this.request<Array<SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/liquidityPoolHourlySnapshots/current',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
 
     /**
      * Gets liquidityPools.
@@ -54,6 +227,51 @@ export class SUSHISWAPV3ETHEREUMApi extends BaseAPI {
     };
 
     /**
+     * Gets positionSnapshots.
+     * PositionSnapshots (current)
+     */
+    sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent(): Observable<Array<SUSHISWAPV3ETHEREUMPositionSnapshotDTO>>
+    sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMPositionSnapshotDTO>>>
+    sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent(opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMPositionSnapshotDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMPositionSnapshotDTO>>> {
+        return this.request<Array<SUSHISWAPV3ETHEREUMPositionSnapshotDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/positionSnapshots/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets positions.
+     * Positions (current)
+     */
+    sUSHISWAPV3ETHEREUMPositionsCurrent({ pool }: SUSHISWAPV3ETHEREUMPositionsCurrentRequest): Observable<Array<SUSHISWAPV3ETHEREUMPositionDTO>>
+    sUSHISWAPV3ETHEREUMPositionsCurrent({ pool }: SUSHISWAPV3ETHEREUMPositionsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMPositionDTO>>>
+    sUSHISWAPV3ETHEREUMPositionsCurrent({ pool }: SUSHISWAPV3ETHEREUMPositionsCurrentRequest, opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMPositionDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMPositionDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (pool != null) { query['pool'] = pool; }
+
+        return this.request<Array<SUSHISWAPV3ETHEREUMPositionDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/positions/current',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets rewardTokens.
+     * RewardTokens (current)
+     */
+    sUSHISWAPV3ETHEREUMRewardTokensCurrent(): Observable<Array<SUSHISWAPV3ETHEREUMRewardTokenDTO>>
+    sUSHISWAPV3ETHEREUMRewardTokensCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMRewardTokenDTO>>>
+    sUSHISWAPV3ETHEREUMRewardTokensCurrent(opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMRewardTokenDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMRewardTokenDTO>>> {
+        return this.request<Array<SUSHISWAPV3ETHEREUMRewardTokenDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/rewardTokens/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets swaps.
      * Swaps (current)
      */
@@ -62,6 +280,89 @@ export class SUSHISWAPV3ETHEREUMApi extends BaseAPI {
     sUSHISWAPV3ETHEREUMSwapsCurrent(opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMSwapDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMSwapDTO>>> {
         return this.request<Array<SUSHISWAPV3ETHEREUMSwapDTO>>({
             url: '/v1/dapps/sushiswap-v3-ethereum/swaps/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets tickDailySnapshots.
+     * TickDailySnapshots (current)
+     */
+    sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent({ pool }: SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest): Observable<Array<SUSHISWAPV3ETHEREUMTickDailySnapshotDTO>>
+    sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent({ pool }: SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMTickDailySnapshotDTO>>>
+    sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent({ pool }: SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest, opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMTickDailySnapshotDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMTickDailySnapshotDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (pool != null) { query['pool'] = pool; }
+
+        return this.request<Array<SUSHISWAPV3ETHEREUMTickDailySnapshotDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/tickDailySnapshots/current',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets tickHourlySnapshots.
+     * TickHourlySnapshots (current)
+     */
+    sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent({ pool }: SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest): Observable<Array<SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO>>
+    sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent({ pool }: SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO>>>
+    sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent({ pool }: SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest, opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (pool != null) { query['pool'] = pool; }
+
+        return this.request<Array<SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/tickHourlySnapshots/current',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets ticks.
+     * Ticks (current)
+     */
+    sUSHISWAPV3ETHEREUMTicksCurrent({ pool }: SUSHISWAPV3ETHEREUMTicksCurrentRequest): Observable<Array<SUSHISWAPV3ETHEREUMTickDTO>>
+    sUSHISWAPV3ETHEREUMTicksCurrent({ pool }: SUSHISWAPV3ETHEREUMTicksCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMTickDTO>>>
+    sUSHISWAPV3ETHEREUMTicksCurrent({ pool }: SUSHISWAPV3ETHEREUMTicksCurrentRequest, opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMTickDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMTickDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (pool != null) { query['pool'] = pool; }
+
+        return this.request<Array<SUSHISWAPV3ETHEREUMTickDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/ticks/current',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets tokenWhiteListSymbols.
+     * TokenWhiteListSymbols (current)
+     */
+    sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(): Observable<Array<SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>
+    sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>>
+    sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>> {
+        return this.request<Array<SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/tokenWhiteListSymbols/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets tokenWhiteLists.
+     * TokenWhiteLists (current)
+     */
+    sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent(): Observable<Array<SUSHISWAPV3ETHEREUMTokenWhiteListDTO>>
+    sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMTokenWhiteListDTO>>>
+    sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent(opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMTokenWhiteListDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMTokenWhiteListDTO>>> {
+        return this.request<Array<SUSHISWAPV3ETHEREUMTokenWhiteListDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/tokenWhiteLists/current',
             method: 'GET',
         }, opts?.responseOpts);
     };
@@ -82,6 +383,45 @@ export class SUSHISWAPV3ETHEREUMApi extends BaseAPI {
             url: '/v1/dapps/sushiswap-v3-ethereum/tokens/current',
             method: 'GET',
             query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets usageMetricsDailySnapshots.
+     * UsageMetricsDailySnapshots (current)
+     */
+    sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(): Observable<Array<SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>
+    sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>>
+    sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>> {
+        return this.request<Array<SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/usageMetricsDailySnapshots/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets usageMetricsHourlySnapshots.
+     * UsageMetricsHourlySnapshots (current)
+     */
+    sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(): Observable<Array<SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>
+    sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>>
+    sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>> {
+        return this.request<Array<SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/usageMetricsHourlySnapshots/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets withdraws.
+     * Withdraws (current)
+     */
+    sUSHISWAPV3ETHEREUMWithdrawsCurrent(): Observable<Array<SUSHISWAPV3ETHEREUMWithdrawDTO>>
+    sUSHISWAPV3ETHEREUMWithdrawsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<SUSHISWAPV3ETHEREUMWithdrawDTO>>>
+    sUSHISWAPV3ETHEREUMWithdrawsCurrent(opts?: OperationOpts): Observable<Array<SUSHISWAPV3ETHEREUMWithdrawDTO> | AjaxResponse<Array<SUSHISWAPV3ETHEREUMWithdrawDTO>>> {
+        return this.request<Array<SUSHISWAPV3ETHEREUMWithdrawDTO>>({
+            url: '/v1/dapps/sushiswap-v3-ethereum/withdraws/current',
+            method: 'GET',
         }, opts?.responseOpts);
     };
 

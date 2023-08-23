@@ -24,9 +24,308 @@ inherit
 feature -- API Access
 
 
-	c_ur_ve_fi_na_nc_ee_th_er_eu_mliquidity_pools_current : detachable LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_DTO]
+	c_ur_ve_fi_na_nc_ee_th_er_eu_maccounts_current : detachable LIST [CURVE_FINANCE_ETHEREUM_ACCOUNT_DTO]
+			-- Accounts (current)
+			-- Gets accounts.
+			-- 
+			-- 
+			-- Result LIST [CURVE_FINANCE_ETHEREUM_ACCOUNT_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/v1/dapps/curve-finance-ethereum/accounts/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [CURVE_FINANCE_ETHEREUM_ACCOUNT_DTO] } l_response.data ({ LIST [CURVE_FINANCE_ETHEREUM_ACCOUNT_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	c_ur_ve_fi_na_nc_ee_th_er_eu_mactive_accounts_current : detachable LIST [CURVE_FINANCE_ETHEREUM_ACTIVE_ACCOUNT_DTO]
+			-- ActiveAccounts (current)
+			-- Gets activeAccounts.
+			-- 
+			-- 
+			-- Result LIST [CURVE_FINANCE_ETHEREUM_ACTIVE_ACCOUNT_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/v1/dapps/curve-finance-ethereum/activeAccounts/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [CURVE_FINANCE_ETHEREUM_ACTIVE_ACCOUNT_DTO] } l_response.data ({ LIST [CURVE_FINANCE_ETHEREUM_ACTIVE_ACCOUNT_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	c_ur_ve_fi_na_nc_ee_th_er_eu_mdeposits_current : detachable LIST [CURVE_FINANCE_ETHEREUM_DEPOSIT_DTO]
+			-- Deposits (current)
+			-- Gets deposits.
+			-- 
+			-- 
+			-- Result LIST [CURVE_FINANCE_ETHEREUM_DEPOSIT_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/v1/dapps/curve-finance-ethereum/deposits/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [CURVE_FINANCE_ETHEREUM_DEPOSIT_DTO] } l_response.data ({ LIST [CURVE_FINANCE_ETHEREUM_DEPOSIT_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	c_ur_ve_fi_na_nc_ee_th_er_eu_mdex_amm_protocols_current : detachable LIST [CURVE_FINANCE_ETHEREUM_DEX_AMM_PROTOCOL_DTO]
+			-- DexAmmProtocols (current)
+			-- Gets dexAmmProtocols.
+			-- 
+			-- 
+			-- Result LIST [CURVE_FINANCE_ETHEREUM_DEX_AMM_PROTOCOL_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/v1/dapps/curve-finance-ethereum/dexAmmProtocols/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [CURVE_FINANCE_ETHEREUM_DEX_AMM_PROTOCOL_DTO] } l_response.data ({ LIST [CURVE_FINANCE_ETHEREUM_DEX_AMM_PROTOCOL_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	c_ur_ve_fi_na_nc_ee_th_er_eu_mfinancials_daily_snapshots_current : detachable LIST [CURVE_FINANCE_ETHEREUM_FINANCIALS_DAILY_SNAPSHOT_DTO]
+			-- FinancialsDailySnapshots (current)
+			-- Gets financialsDailySnapshots.
+			-- 
+			-- 
+			-- Result LIST [CURVE_FINANCE_ETHEREUM_FINANCIALS_DAILY_SNAPSHOT_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/v1/dapps/curve-finance-ethereum/financialsDailySnapshots/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [CURVE_FINANCE_ETHEREUM_FINANCIALS_DAILY_SNAPSHOT_DTO] } l_response.data ({ LIST [CURVE_FINANCE_ETHEREUM_FINANCIALS_DAILY_SNAPSHOT_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	c_ur_ve_fi_na_nc_ee_th_er_eu_mliquidity_gauges_current : detachable LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_GAUGE_DTO]
+			-- LiquidityGauges (current)
+			-- Gets liquidityGauges.
+			-- 
+			-- 
+			-- Result LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_GAUGE_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/v1/dapps/curve-finance-ethereum/liquidityGauges/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_GAUGE_DTO] } l_response.data ({ LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_GAUGE_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	c_ur_ve_fi_na_nc_ee_th_er_eu_mliquidity_pool_daily_snapshots_current : detachable LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOT_DTO]
+			-- LiquidityPoolDailySnapshots (current)
+			-- Gets liquidityPoolDailySnapshots.
+			-- 
+			-- 
+			-- Result LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOT_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/v1/dapps/curve-finance-ethereum/liquidityPoolDailySnapshots/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOT_DTO] } l_response.data ({ LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOT_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	c_ur_ve_fi_na_nc_ee_th_er_eu_mliquidity_pool_fees_current : detachable LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_FEE_DTO]
+			-- LiquidityPoolFees (current)
+			-- Gets liquidityPoolFees.
+			-- 
+			-- 
+			-- Result LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_FEE_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/v1/dapps/curve-finance-ethereum/liquidityPoolFees/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_FEE_DTO] } l_response.data ({ LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_FEE_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	c_ur_ve_fi_na_nc_ee_th_er_eu_mliquidity_pool_hourly_snapshots_current : detachable LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_HOURLY_SNAPSHOT_DTO]
+			-- LiquidityPoolHourlySnapshots (current)
+			-- Gets liquidityPoolHourlySnapshots.
+			-- 
+			-- 
+			-- Result LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_HOURLY_SNAPSHOT_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/v1/dapps/curve-finance-ethereum/liquidityPoolHourlySnapshots/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_HOURLY_SNAPSHOT_DTO] } l_response.data ({ LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_HOURLY_SNAPSHOT_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	c_ur_ve_fi_na_nc_ee_th_er_eu_mliquidity_pools_current (id: STRING_32): detachable LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_DTO]
 			-- LiquidityPools (current)
 			-- Gets liquidityPools.
+			-- 
+			-- argument: id Smart contract address of the pool (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_DTO]
@@ -40,6 +339,7 @@ feature -- API Access
 			create l_request
 			
 			l_path := "/v1/dapps/curve-finance-ethereum/liquidityPools/current"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "id", id));
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
@@ -51,6 +351,72 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_DTO] } l_response.data ({ LIST [CURVE_FINANCE_ETHEREUM_LIQUIDITY_POOL_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	c_ur_ve_fi_na_nc_ee_th_er_eu_mlp_tokens_current : detachable LIST [CURVE_FINANCE_ETHEREUM_LP_TOKEN_DTO]
+			-- LpTokens (current)
+			-- Gets lpTokens.
+			-- 
+			-- 
+			-- Result LIST [CURVE_FINANCE_ETHEREUM_LP_TOKEN_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/v1/dapps/curve-finance-ethereum/lpTokens/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [CURVE_FINANCE_ETHEREUM_LP_TOKEN_DTO] } l_response.data ({ LIST [CURVE_FINANCE_ETHEREUM_LP_TOKEN_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	c_ur_ve_fi_na_nc_ee_th_er_eu_mreward_tokens_current : detachable LIST [CURVE_FINANCE_ETHEREUM_REWARD_TOKEN_DTO]
+			-- RewardTokens (current)
+			-- Gets rewardTokens.
+			-- 
+			-- 
+			-- Result LIST [CURVE_FINANCE_ETHEREUM_REWARD_TOKEN_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/v1/dapps/curve-finance-ethereum/rewardTokens/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [CURVE_FINANCE_ETHEREUM_REWARD_TOKEN_DTO] } l_response.data ({ LIST [CURVE_FINANCE_ETHEREUM_REWARD_TOKEN_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -90,9 +456,11 @@ feature -- API Access
 			end
 		end
 
-	c_ur_ve_fi_na_nc_ee_th_er_eu_mtokens_current : detachable LIST [CURVE_FINANCE_ETHEREUM_TOKEN_DTO]
+	c_ur_ve_fi_na_nc_ee_th_er_eu_mtokens_current (id: STRING_32): detachable LIST [CURVE_FINANCE_ETHEREUM_TOKEN_DTO]
 			-- Tokens (current)
 			-- Gets tokens.
+			-- 
+			-- argument: id Smart contract address of the token (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [CURVE_FINANCE_ETHEREUM_TOKEN_DTO]
@@ -106,6 +474,7 @@ feature -- API Access
 			create l_request
 			
 			l_path := "/v1/dapps/curve-finance-ethereum/tokens/current"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "id", id));
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
@@ -117,6 +486,105 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_FINANCE_ETHEREUM_TOKEN_DTO] } l_response.data ({ LIST [CURVE_FINANCE_ETHEREUM_TOKEN_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	c_ur_ve_fi_na_nc_ee_th_er_eu_musage_metrics_daily_snapshots_current : detachable LIST [CURVE_FINANCE_ETHEREUM_USAGE_METRICS_DAILY_SNAPSHOT_DTO]
+			-- UsageMetricsDailySnapshots (current)
+			-- Gets usageMetricsDailySnapshots.
+			-- 
+			-- 
+			-- Result LIST [CURVE_FINANCE_ETHEREUM_USAGE_METRICS_DAILY_SNAPSHOT_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [CURVE_FINANCE_ETHEREUM_USAGE_METRICS_DAILY_SNAPSHOT_DTO] } l_response.data ({ LIST [CURVE_FINANCE_ETHEREUM_USAGE_METRICS_DAILY_SNAPSHOT_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	c_ur_ve_fi_na_nc_ee_th_er_eu_musage_metrics_hourly_snapshots_current : detachable LIST [CURVE_FINANCE_ETHEREUM_USAGE_METRICS_HOURLY_SNAPSHOT_DTO]
+			-- UsageMetricsHourlySnapshots (current)
+			-- Gets usageMetricsHourlySnapshots.
+			-- 
+			-- 
+			-- Result LIST [CURVE_FINANCE_ETHEREUM_USAGE_METRICS_HOURLY_SNAPSHOT_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [CURVE_FINANCE_ETHEREUM_USAGE_METRICS_HOURLY_SNAPSHOT_DTO] } l_response.data ({ LIST [CURVE_FINANCE_ETHEREUM_USAGE_METRICS_HOURLY_SNAPSHOT_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	c_ur_ve_fi_na_nc_ee_th_er_eu_mwithdraws_current : detachable LIST [CURVE_FINANCE_ETHEREUM_WITHDRAW_DTO]
+			-- Withdraws (current)
+			-- Gets withdraws.
+			-- 
+			-- 
+			-- Result LIST [CURVE_FINANCE_ETHEREUM_WITHDRAW_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/v1/dapps/curve-finance-ethereum/withdraws/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [CURVE_FINANCE_ETHEREUM_WITHDRAW_DTO] } l_response.data ({ LIST [CURVE_FINANCE_ETHEREUM_WITHDRAW_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")

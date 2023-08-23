@@ -73,13 +73,13 @@ public:
     void setRecvTime(const utility::datetime& value);
 
     /// <summary>
-    /// Block number of when this snapshot was taken/last modified.)
+    /// Number of block in which entity was recorded.
     /// </summary>
-    int32_t getBlockNumber() const;
+    int64_t getBlockNumber() const;
     bool blockNumberIsSet() const;
     void unsetBlock_number();
 
-    void setBlockNumber(int32_t value);
+    void setBlockNumber(int64_t value);
 
     /// <summary>
     /// ID is # of days since Unix epoch time.
@@ -249,7 +249,7 @@ protected:
     bool m_Entry_timeIsSet;
     utility::datetime m_Recv_time;
     bool m_Recv_timeIsSet;
-    int32_t m_Block_number;
+    int64_t m_Block_number;
     bool m_Block_numberIsSet;
     utility::string_t m_Id;
     bool m_IdIsSet;

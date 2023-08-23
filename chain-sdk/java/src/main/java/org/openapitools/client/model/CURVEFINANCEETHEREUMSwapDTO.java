@@ -53,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-21T11:20:49.157876Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-23T15:16:19.303862Z[Etc/UTC]")
 public class CURVEFINANCEETHEREUMSwapDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -65,7 +65,7 @@ public class CURVEFINANCEETHEREUMSwapDTO {
 
   public static final String SERIALIZED_NAME_BLOCK_NUMBER = "block_number";
   @SerializedName(SERIALIZED_NAME_BLOCK_NUMBER)
-  private String blockNumber;
+  private Long blockNumber;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -202,23 +202,23 @@ public class CURVEFINANCEETHEREUMSwapDTO {
   }
 
 
-  public CURVEFINANCEETHEREUMSwapDTO blockNumber(String blockNumber) {
+  public CURVEFINANCEETHEREUMSwapDTO blockNumber(Long blockNumber) {
     
     this.blockNumber = blockNumber;
     return this;
   }
 
    /**
-   * Block number of this event
+   * Number of block in which entity was recorded.
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  public String getBlockNumber() {
+  public Long getBlockNumber() {
     return blockNumber;
   }
 
 
-  public void setBlockNumber(String blockNumber) {
+  public void setBlockNumber(Long blockNumber) {
     this.blockNumber = blockNumber;
   }
 
@@ -730,9 +730,6 @@ public class CURVEFINANCEETHEREUMSwapDTO {
         if (!CURVEFINANCEETHEREUMSwapDTO.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CURVEFINANCEETHEREUMSwapDTO` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
-      }
-      if ((jsonObj.get("block_number") != null && !jsonObj.get("block_number").isJsonNull()) && !jsonObj.get("block_number").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `block_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("block_number").toString()));
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));

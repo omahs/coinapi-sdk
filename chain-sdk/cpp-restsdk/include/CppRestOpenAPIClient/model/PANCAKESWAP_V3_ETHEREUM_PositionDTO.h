@@ -83,15 +83,6 @@ public:
     void setBlockNumber(int64_t value);
 
     /// <summary>
-    /// 
-    /// </summary>
-    int64_t getVid() const;
-    bool vidIsSet() const;
-    void unsetVid();
-
-    void setVid(int64_t value);
-
-    /// <summary>
     /// (account address)-(market address)-(count)
     /// </summary>
     utility::string_t getId() const;
@@ -297,8 +288,6 @@ protected:
     bool m_Recv_timeIsSet;
     int64_t m_Block_number;
     bool m_Block_numberIsSet;
-    int64_t m_Vid;
-    bool m_VidIsSet;
     utility::string_t m_Id;
     bool m_IdIsSet;
     utility::string_t m_Account;

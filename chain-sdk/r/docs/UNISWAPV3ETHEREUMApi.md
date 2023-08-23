@@ -643,7 +643,7 @@ No authorization required
 | **200** | successful operation |  -  |
 
 # **UNISWAPV3ETHEREUMTickDailySnapshotsCurrent**
-> array[UNISWAPV3ETHEREUMTickDailySnapshotDTO] UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool = var.pool)
+> array[UNISWAPV3ETHEREUMTickDailySnapshotDTO] UNISWAPV3ETHEREUMTickDailySnapshotsCurrent()
 
 TickDailySnapshots (current)
 
@@ -655,21 +655,16 @@ library(openapi)
 
 # TickDailySnapshots (current)
 #
-# prepare function argument(s)
-var_pool <- "pool_example" # character | liquidity pool this tick belongs to (Optional)
 
 api_instance <- UNISWAPV3ETHEREUMApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool = var_pooldata_file = "result.txt")
-result <- api_instance$UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool = var_pool)
+# result <- api_instance$UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(data_file = "result.txt")
+result <- api_instance$UNISWAPV3ETHEREUMTickDailySnapshotsCurrent()
 dput(result)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **character**| liquidity pool this tick belongs to | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -690,7 +685,7 @@ No authorization required
 | **200** | successful operation |  -  |
 
 # **UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent**
-> array[UNISWAPV3ETHEREUMTickHourlySnapshotDTO] UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool = var.pool)
+> array[UNISWAPV3ETHEREUMTickHourlySnapshotDTO] UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent()
 
 TickHourlySnapshots (current)
 
@@ -702,21 +697,16 @@ library(openapi)
 
 # TickHourlySnapshots (current)
 #
-# prepare function argument(s)
-var_pool <- "pool_example" # character | liquidity pool this tick belongs to (Optional)
 
 api_instance <- UNISWAPV3ETHEREUMApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool = var_pooldata_file = "result.txt")
-result <- api_instance$UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool = var_pool)
+# result <- api_instance$UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(data_file = "result.txt")
+result <- api_instance$UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent()
 dput(result)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **character**| liquidity pool this tick belongs to | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -737,7 +727,7 @@ No authorization required
 | **200** | successful operation |  -  |
 
 # **UNISWAPV3ETHEREUMTicksCurrent**
-> array[UNISWAPV3ETHEREUMTickDTO] UNISWAPV3ETHEREUMTicksCurrent(pool = var.pool)
+> array[UNISWAPV3ETHEREUMTickDTO] UNISWAPV3ETHEREUMTicksCurrent()
 
 Ticks (current)
 
@@ -749,21 +739,16 @@ library(openapi)
 
 # Ticks (current)
 #
-# prepare function argument(s)
-var_pool <- "pool_example" # character | Liquidity pool this tick belongs to (Optional)
 
 api_instance <- UNISWAPV3ETHEREUMApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UNISWAPV3ETHEREUMTicksCurrent(pool = var_pooldata_file = "result.txt")
-result <- api_instance$UNISWAPV3ETHEREUMTicksCurrent(pool = var_pool)
+# result <- api_instance$UNISWAPV3ETHEREUMTicksCurrent(data_file = "result.txt")
+result <- api_instance$UNISWAPV3ETHEREUMTicksCurrent()
 dput(result)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **character**| Liquidity pool this tick belongs to | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 

@@ -407,9 +407,8 @@ export class PANCAKESWAPV3ETHEREUMApi {
     /**
      * Gets liquidityPoolDailySnapshots.
      * @summary LiquidityPoolDailySnapshots (current)
-     * @param pool Pool this snapshot belongs to.
      */
-    public pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
@@ -417,9 +416,6 @@ export class PANCAKESWAPV3ETHEREUMApi {
 
         let queryParameters: any = {};
         let headerParams: any = {};
-        if (pool !== null && pool !== undefined) {
-            queryParameters['pool'] = <string><any>pool;
-        }
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
         // to determine the Content-Type header

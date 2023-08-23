@@ -895,9 +895,8 @@ export class UNISWAPV3ETHEREUMApi {
     /**
      * Gets tickDailySnapshots.
      * @summary TickDailySnapshots (current)
-     * @param pool liquidity pool this tick belongs to
      */
-    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMTickDailySnapshotDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
@@ -905,9 +904,6 @@ export class UNISWAPV3ETHEREUMApi {
 
         let queryParameters: any = {};
         let headerParams: any = {};
-        if (pool !== null && pool !== undefined) {
-            queryParameters['pool'] = <string><any>pool;
-        }
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
         // to determine the Content-Type header
@@ -958,9 +954,8 @@ export class UNISWAPV3ETHEREUMApi {
     /**
      * Gets tickHourlySnapshots.
      * @summary TickHourlySnapshots (current)
-     * @param pool liquidity pool this tick belongs to
      */
-    public uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMTickHourlySnapshotDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
@@ -968,9 +963,6 @@ export class UNISWAPV3ETHEREUMApi {
 
         let queryParameters: any = {};
         let headerParams: any = {};
-        if (pool !== null && pool !== undefined) {
-            queryParameters['pool'] = <string><any>pool;
-        }
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
         // to determine the Content-Type header
@@ -1021,9 +1013,8 @@ export class UNISWAPV3ETHEREUMApi {
     /**
      * Gets ticks.
      * @summary Ticks (current)
-     * @param pool Liquidity pool this tick belongs to
      */
-    public uNISWAPV3ETHEREUMTicksCurrent(pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uNISWAPV3ETHEREUMTicksCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UNISWAPV3ETHEREUMTickDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
@@ -1031,9 +1022,6 @@ export class UNISWAPV3ETHEREUMApi {
 
         let queryParameters: any = {};
         let headerParams: any = {};
-        if (pool !== null && pool !== undefined) {
-            queryParameters['pool'] = <string><any>pool;
-        }
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
         // to determine the Content-Type header

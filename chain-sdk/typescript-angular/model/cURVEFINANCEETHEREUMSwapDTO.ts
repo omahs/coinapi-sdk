@@ -19,9 +19,9 @@ export interface CURVEFINANCEETHEREUMSwapDTO {
     entry_time?: string;
     recv_time?: string;
     /**
-     * Block number of this event
+     * Number of block in which entity was recorded.
      */
-    block_number?: string | null;
+    block_number?: number;
     /**
      * Swap-(transaction hash)-(log index)
      */

@@ -14,9 +14,23 @@
 
 goog.provide('API.Client.CURVEFINANCEETHEREUMApi');
 
+goog.require('API.Client.CURVE_FINANCE_ETHEREUM.AccountDTO');
+goog.require('API.Client.CURVE_FINANCE_ETHEREUM.ActiveAccountDTO');
+goog.require('API.Client.CURVE_FINANCE_ETHEREUM.DepositDTO');
+goog.require('API.Client.CURVE_FINANCE_ETHEREUM.DexAmmProtocolDTO');
+goog.require('API.Client.CURVE_FINANCE_ETHEREUM.FinancialsDailySnapshotDTO');
+goog.require('API.Client.CURVE_FINANCE_ETHEREUM.LiquidityGaugeDTO');
 goog.require('API.Client.CURVE_FINANCE_ETHEREUM.LiquidityPoolDTO');
+goog.require('API.Client.CURVE_FINANCE_ETHEREUM.LiquidityPoolDailySnapshotDTO');
+goog.require('API.Client.CURVE_FINANCE_ETHEREUM.LiquidityPoolFeeDTO');
+goog.require('API.Client.CURVE_FINANCE_ETHEREUM.LiquidityPoolHourlySnapshotDTO');
+goog.require('API.Client.CURVE_FINANCE_ETHEREUM.LpTokenDTO');
+goog.require('API.Client.CURVE_FINANCE_ETHEREUM.RewardTokenDTO');
 goog.require('API.Client.CURVE_FINANCE_ETHEREUM.SwapDTO');
 goog.require('API.Client.CURVE_FINANCE_ETHEREUM.TokenDTO');
+goog.require('API.Client.CURVE_FINANCE_ETHEREUM.UsageMetricsDailySnapshotDTO');
+goog.require('API.Client.CURVE_FINANCE_ETHEREUM.UsageMetricsHourlySnapshotDTO');
+goog.require('API.Client.CURVE_FINANCE_ETHEREUM.WithdrawDTO');
 
 /**
  * @constructor
@@ -46,14 +60,360 @@ API.Client.CURVEFINANCEETHEREUMApi = function($http, $httpParamSerializer, $inje
 API.Client.CURVEFINANCEETHEREUMApi.$inject = ['$http', '$httpParamSerializer', '$injector'];
 
 /**
+ * Accounts (current)
+ * Gets accounts.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.CURVE_FINANCE_ETHEREUM.AccountDTO>>}
+ */
+API.Client.CURVEFINANCEETHEREUMApi.prototype.cURVEFINANCEETHEREUMAccountsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/curve-finance-ethereum/accounts/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * ActiveAccounts (current)
+ * Gets activeAccounts.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.CURVE_FINANCE_ETHEREUM.ActiveAccountDTO>>}
+ */
+API.Client.CURVEFINANCEETHEREUMApi.prototype.cURVEFINANCEETHEREUMActiveAccountsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/curve-finance-ethereum/activeAccounts/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Deposits (current)
+ * Gets deposits.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.CURVE_FINANCE_ETHEREUM.DepositDTO>>}
+ */
+API.Client.CURVEFINANCEETHEREUMApi.prototype.cURVEFINANCEETHEREUMDepositsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/curve-finance-ethereum/deposits/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * DexAmmProtocols (current)
+ * Gets dexAmmProtocols.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.CURVE_FINANCE_ETHEREUM.DexAmmProtocolDTO>>}
+ */
+API.Client.CURVEFINANCEETHEREUMApi.prototype.cURVEFINANCEETHEREUMDexAmmProtocolsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/curve-finance-ethereum/dexAmmProtocols/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * FinancialsDailySnapshots (current)
+ * Gets financialsDailySnapshots.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.CURVE_FINANCE_ETHEREUM.FinancialsDailySnapshotDTO>>}
+ */
+API.Client.CURVEFINANCEETHEREUMApi.prototype.cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/curve-finance-ethereum/financialsDailySnapshots/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * LiquidityGauges (current)
+ * Gets liquidityGauges.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.CURVE_FINANCE_ETHEREUM.LiquidityGaugeDTO>>}
+ */
+API.Client.CURVEFINANCEETHEREUMApi.prototype.cURVEFINANCEETHEREUMLiquidityGaugesCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/curve-finance-ethereum/liquidityGauges/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * LiquidityPoolDailySnapshots (current)
+ * Gets liquidityPoolDailySnapshots.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.CURVE_FINANCE_ETHEREUM.LiquidityPoolDailySnapshotDTO>>}
+ */
+API.Client.CURVEFINANCEETHEREUMApi.prototype.cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/curve-finance-ethereum/liquidityPoolDailySnapshots/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * LiquidityPoolFees (current)
+ * Gets liquidityPoolFees.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.CURVE_FINANCE_ETHEREUM.LiquidityPoolFeeDTO>>}
+ */
+API.Client.CURVEFINANCEETHEREUMApi.prototype.cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/curve-finance-ethereum/liquidityPoolFees/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * LiquidityPoolHourlySnapshots (current)
+ * Gets liquidityPoolHourlySnapshots.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.CURVE_FINANCE_ETHEREUM.LiquidityPoolHourlySnapshotDTO>>}
+ */
+API.Client.CURVEFINANCEETHEREUMApi.prototype.cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/curve-finance-ethereum/liquidityPoolHourlySnapshots/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
  * LiquidityPools (current)
  * Gets liquidityPools.
+ * @param {!string=} opt_id Smart contract address of the pool
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.CURVE_FINANCE_ETHEREUM.LiquidityPoolDTO>>}
  */
-API.Client.CURVEFINANCEETHEREUMApi.prototype.cURVEFINANCEETHEREUMLiquidityPoolsCurrent = function(opt_extraHttpRequestParams) {
+API.Client.CURVEFINANCEETHEREUMApi.prototype.cURVEFINANCEETHEREUMLiquidityPoolsCurrent = function(opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/v1/dapps/curve-finance-ethereum/liquidityPools/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_id !== undefined) {
+    queryParameters['id'] = opt_id;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * LpTokens (current)
+ * Gets lpTokens.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.CURVE_FINANCE_ETHEREUM.LpTokenDTO>>}
+ */
+API.Client.CURVEFINANCEETHEREUMApi.prototype.cURVEFINANCEETHEREUMLpTokensCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/curve-finance-ethereum/lpTokens/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * RewardTokens (current)
+ * Gets rewardTokens.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.CURVE_FINANCE_ETHEREUM.RewardTokenDTO>>}
+ */
+API.Client.CURVEFINANCEETHEREUMApi.prototype.cURVEFINANCEETHEREUMRewardTokensCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/curve-finance-ethereum/rewardTokens/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -110,12 +470,110 @@ API.Client.CURVEFINANCEETHEREUMApi.prototype.cURVEFINANCEETHEREUMSwapsCurrent = 
 /**
  * Tokens (current)
  * Gets tokens.
+ * @param {!string=} opt_id Smart contract address of the token
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.CURVE_FINANCE_ETHEREUM.TokenDTO>>}
  */
-API.Client.CURVEFINANCEETHEREUMApi.prototype.cURVEFINANCEETHEREUMTokensCurrent = function(opt_extraHttpRequestParams) {
+API.Client.CURVEFINANCEETHEREUMApi.prototype.cURVEFINANCEETHEREUMTokensCurrent = function(opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/v1/dapps/curve-finance-ethereum/tokens/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_id !== undefined) {
+    queryParameters['id'] = opt_id;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * UsageMetricsDailySnapshots (current)
+ * Gets usageMetricsDailySnapshots.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.CURVE_FINANCE_ETHEREUM.UsageMetricsDailySnapshotDTO>>}
+ */
+API.Client.CURVEFINANCEETHEREUMApi.prototype.cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * UsageMetricsHourlySnapshots (current)
+ * Gets usageMetricsHourlySnapshots.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.CURVE_FINANCE_ETHEREUM.UsageMetricsHourlySnapshotDTO>>}
+ */
+API.Client.CURVEFINANCEETHEREUMApi.prototype.cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Withdraws (current)
+ * Gets withdraws.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.CURVE_FINANCE_ETHEREUM.WithdrawDTO>>}
+ */
+API.Client.CURVEFINANCEETHEREUMApi.prototype.cURVEFINANCEETHEREUMWithdrawsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/curve-finance-ethereum/withdraws/current';
 
   /** @type {!Object} */
   var queryParameters = {};

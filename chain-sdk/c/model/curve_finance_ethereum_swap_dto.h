@@ -30,7 +30,7 @@ on_chain_dapps___rest_api_curve_finance_ethereum_swap_dto__e curve_finance_ether
 typedef struct curve_finance_ethereum_swap_dto_t {
     char *entry_time; //date time
     char *recv_time; //date time
-    char *block_number; // string
+    long block_number; //numeric
     char *id; // string
     char *hash; // string
     int log_index; //numeric
@@ -56,7 +56,7 @@ typedef struct curve_finance_ethereum_swap_dto_t {
 curve_finance_ethereum_swap_dto_t *curve_finance_ethereum_swap_dto_create(
     char *entry_time,
     char *recv_time,
-    char *block_number,
+    long block_number,
     char *id,
     char *hash,
     int log_index,

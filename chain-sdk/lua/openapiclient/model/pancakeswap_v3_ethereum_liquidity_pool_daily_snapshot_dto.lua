@@ -19,12 +19,11 @@ local function cast_pancakeswap_v3_ethereum_liquidity_pool_daily_snapshot_dto(t)
 	return setmetatable(t, pancakeswap_v3_ethereum_liquidity_pool_daily_snapshot_dto_mt)
 end
 
-local function new_pancakeswap_v3_ethereum_liquidity_pool_daily_snapshot_dto(entry_time, recv_time, block_number, vid, block_, id, day, protocol, pool, tick, total_value_locked_usd, total_liquidity, total_liquidity_usd, active_liquidity, active_liquidity_usd, uncollected_protocol_side_token_amounts, uncollected_protocol_side_values_usd, uncollected_supply_side_token_amounts, uncollected_supply_side_values_usd, cumulative_supply_side_revenue_usd, daily_supply_side_revenue_usd, cumulative_protocol_side_revenue_usd, daily_protocol_side_revenue_usd, cumulative_total_revenue_usd, daily_total_revenue_usd, cumulative_volume_usd, daily_volume_usd, cumulative_volume_by_token_amount, daily_volume_by_token_amount, cumulative_volume_by_token_usd, daily_volume_by_token_usd, input_token_balances, input_token_balances_usd, input_token_weights, staked_output_token_amount, reward_token_emissions_amount, reward_token_emissions_usd, cumulative_deposit_count, daily_deposit_count, cumulative_withdraw_count, daily_withdraw_count, cumulative_swap_count, daily_swap_count, position_count, open_position_count, closed_position_count, timestamp)
+local function new_pancakeswap_v3_ethereum_liquidity_pool_daily_snapshot_dto(entry_time, recv_time, block_number, block_, id, day, protocol, pool, tick, total_value_locked_usd, total_liquidity, total_liquidity_usd, active_liquidity, active_liquidity_usd, uncollected_protocol_side_token_amounts, uncollected_protocol_side_values_usd, uncollected_supply_side_token_amounts, uncollected_supply_side_values_usd, cumulative_supply_side_revenue_usd, daily_supply_side_revenue_usd, cumulative_protocol_side_revenue_usd, daily_protocol_side_revenue_usd, cumulative_total_revenue_usd, daily_total_revenue_usd, cumulative_volume_usd, daily_volume_usd, cumulative_volume_by_token_amount, daily_volume_by_token_amount, cumulative_volume_by_token_usd, daily_volume_by_token_usd, input_token_balances, input_token_balances_usd, input_token_weights, staked_output_token_amount, reward_token_emissions_amount, reward_token_emissions_usd, cumulative_deposit_count, daily_deposit_count, cumulative_withdraw_count, daily_withdraw_count, cumulative_swap_count, daily_swap_count, position_count, open_position_count, closed_position_count, timestamp)
 	return cast_pancakeswap_v3_ethereum_liquidity_pool_daily_snapshot_dto({
 		["entry_time"] = entry_time;
 		["recv_time"] = recv_time;
 		["block_number"] = block_number;
-		["vid"] = vid;
 		["block_"] = block_;
 		["id"] = id;
 		["day"] = day;

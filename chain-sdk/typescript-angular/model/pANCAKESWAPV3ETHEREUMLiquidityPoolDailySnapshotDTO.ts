@@ -22,10 +22,6 @@ export interface PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO {
      */
     block_number?: number;
     /**
-     * .
-     */
-    vid?: number;
-    /**
      * The Ethereum block number associated with the liquidity pool daily snapshot.
      */
     block_?: number;

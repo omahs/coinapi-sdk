@@ -84,7 +84,7 @@ newtype Pool = Pool { unPool :: Text } deriving (P.Eq, P.Show)
 data CRYPTOPUNKSBidDTO = CRYPTOPUNKSBidDTO
   { cRYPTOPUNKSBidDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , cRYPTOPUNKSBidDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , cRYPTOPUNKSBidDTOBlockNumber :: !(Maybe Text) -- ^ "block_number" - 
+  , cRYPTOPUNKSBidDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , cRYPTOPUNKSBidDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , cRYPTOPUNKSBidDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
   , cRYPTOPUNKSBidDTOId :: !(Maybe Text) -- ^ "id" - 
@@ -240,7 +240,7 @@ mkCRYPTOPUNKSCollectionDTO =
 data CRYPTOPUNKSCollectionDailySnapshotDTO = CRYPTOPUNKSCollectionDailySnapshotDTO
   { cRYPTOPUNKSCollectionDailySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , cRYPTOPUNKSCollectionDailySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumber :: !(Maybe Text) -- ^ "block_number" - 
+  , cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , cRYPTOPUNKSCollectionDailySnapshotDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , cRYPTOPUNKSCollectionDailySnapshotDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
   , cRYPTOPUNKSCollectionDailySnapshotDTOId :: !(Maybe Text) -- ^ "id" - 
@@ -648,7 +648,7 @@ mkCRYPTOPUNKSMarketplaceDailySnapshotDTO =
 data CRYPTOPUNKSTradeDTO = CRYPTOPUNKSTradeDTO
   { cRYPTOPUNKSTradeDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , cRYPTOPUNKSTradeDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , cRYPTOPUNKSTradeDTOBlockNumber :: !(Maybe Text) -- ^ "block_number" - 
+  , cRYPTOPUNKSTradeDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , cRYPTOPUNKSTradeDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , cRYPTOPUNKSTradeDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
   , cRYPTOPUNKSTradeDTOId :: !(Maybe Text) -- ^ "id" - 
@@ -777,6 +777,432 @@ mkCRYPTOPUNKSUserDTO =
   , cRYPTOPUNKSUserDTOVid = Nothing
   , cRYPTOPUNKSUserDTOBlockRange = Nothing
   , cRYPTOPUNKSUserDTOId = Nothing
+  }
+
+-- ** CURVEFINANCEETHEREUMAccountDTO
+-- | CURVEFINANCEETHEREUMAccountDTO
+-- Entity to accumulate total unique users.
+data CURVEFINANCEETHEREUMAccountDTO = CURVEFINANCEETHEREUMAccountDTO
+  { cURVEFINANCEETHEREUMAccountDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cURVEFINANCEETHEREUMAccountDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cURVEFINANCEETHEREUMAccountDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , cURVEFINANCEETHEREUMAccountDTOId :: !(Maybe Text) -- ^ "id" - Address of the account
+  , cURVEFINANCEETHEREUMAccountDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CURVEFINANCEETHEREUMAccountDTO
+instance A.FromJSON CURVEFINANCEETHEREUMAccountDTO where
+  parseJSON = A.withObject "CURVEFINANCEETHEREUMAccountDTO" $ \o ->
+    CURVEFINANCEETHEREUMAccountDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "block_range")
+
+-- | ToJSON CURVEFINANCEETHEREUMAccountDTO
+instance A.ToJSON CURVEFINANCEETHEREUMAccountDTO where
+  toJSON CURVEFINANCEETHEREUMAccountDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cURVEFINANCEETHEREUMAccountDTOEntryTime
+      , "recv_time" .= cURVEFINANCEETHEREUMAccountDTORecvTime
+      , "block_number" .= cURVEFINANCEETHEREUMAccountDTOBlockNumber
+      , "id" .= cURVEFINANCEETHEREUMAccountDTOId
+      , "block_range" .= cURVEFINANCEETHEREUMAccountDTOBlockRange
+      ]
+
+
+-- | Construct a value of type 'CURVEFINANCEETHEREUMAccountDTO' (by applying it's required fields, if any)
+mkCURVEFINANCEETHEREUMAccountDTO
+  :: CURVEFINANCEETHEREUMAccountDTO
+mkCURVEFINANCEETHEREUMAccountDTO =
+  CURVEFINANCEETHEREUMAccountDTO
+  { cURVEFINANCEETHEREUMAccountDTOEntryTime = Nothing
+  , cURVEFINANCEETHEREUMAccountDTORecvTime = Nothing
+  , cURVEFINANCEETHEREUMAccountDTOBlockNumber = Nothing
+  , cURVEFINANCEETHEREUMAccountDTOId = Nothing
+  , cURVEFINANCEETHEREUMAccountDTOBlockRange = Nothing
+  }
+
+-- ** CURVEFINANCEETHEREUMActiveAccountDTO
+-- | CURVEFINANCEETHEREUMActiveAccountDTO
+-- Entity for calculating daily/hourly active users.
+data CURVEFINANCEETHEREUMActiveAccountDTO = CURVEFINANCEETHEREUMActiveAccountDTO
+  { cURVEFINANCEETHEREUMActiveAccountDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cURVEFINANCEETHEREUMActiveAccountDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cURVEFINANCEETHEREUMActiveAccountDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , cURVEFINANCEETHEREUMActiveAccountDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cURVEFINANCEETHEREUMActiveAccountDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (daily/hourly)-(address of the account)-(days/hours since Unix epoch)
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CURVEFINANCEETHEREUMActiveAccountDTO
+instance A.FromJSON CURVEFINANCEETHEREUMActiveAccountDTO where
+  parseJSON = A.withObject "CURVEFINANCEETHEREUMActiveAccountDTO" $ \o ->
+    CURVEFINANCEETHEREUMActiveAccountDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+
+-- | ToJSON CURVEFINANCEETHEREUMActiveAccountDTO
+instance A.ToJSON CURVEFINANCEETHEREUMActiveAccountDTO where
+  toJSON CURVEFINANCEETHEREUMActiveAccountDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cURVEFINANCEETHEREUMActiveAccountDTOEntryTime
+      , "recv_time" .= cURVEFINANCEETHEREUMActiveAccountDTORecvTime
+      , "block_number" .= cURVEFINANCEETHEREUMActiveAccountDTOBlockNumber
+      , "block_range" .= cURVEFINANCEETHEREUMActiveAccountDTOBlockRange
+      , "id" .= cURVEFINANCEETHEREUMActiveAccountDTOId
+      ]
+
+
+-- | Construct a value of type 'CURVEFINANCEETHEREUMActiveAccountDTO' (by applying it's required fields, if any)
+mkCURVEFINANCEETHEREUMActiveAccountDTO
+  :: CURVEFINANCEETHEREUMActiveAccountDTO
+mkCURVEFINANCEETHEREUMActiveAccountDTO =
+  CURVEFINANCEETHEREUMActiveAccountDTO
+  { cURVEFINANCEETHEREUMActiveAccountDTOEntryTime = Nothing
+  , cURVEFINANCEETHEREUMActiveAccountDTORecvTime = Nothing
+  , cURVEFINANCEETHEREUMActiveAccountDTOBlockNumber = Nothing
+  , cURVEFINANCEETHEREUMActiveAccountDTOBlockRange = Nothing
+  , cURVEFINANCEETHEREUMActiveAccountDTOId = Nothing
+  }
+
+-- ** CURVEFINANCEETHEREUMDepositDTO
+-- | CURVEFINANCEETHEREUMDepositDTO
+-- Entity represents a user action in the protocol involving the addition of funds to a liquidity pool.
+data CURVEFINANCEETHEREUMDepositDTO = CURVEFINANCEETHEREUMDepositDTO
+  { cURVEFINANCEETHEREUMDepositDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cURVEFINANCEETHEREUMDepositDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cURVEFINANCEETHEREUMDepositDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , cURVEFINANCEETHEREUMDepositDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cURVEFINANCEETHEREUMDepositDTOId :: !(Maybe Text) -- ^ "id" - deposit-(Transaction hash)-(log index)
+  , cURVEFINANCEETHEREUMDepositDTOHash :: !(Maybe Text) -- ^ "hash" - Transaction hash of the transaction that emitted this event
+  , cURVEFINANCEETHEREUMDepositDTOLogIndex :: !(Maybe Int) -- ^ "log_index" - Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0
+  , cURVEFINANCEETHEREUMDepositDTOProtocol :: !(Maybe Text) -- ^ "protocol" - The protocol this transaction belongs to
+  , cURVEFINANCEETHEREUMDepositDTOTo :: !(Maybe Text) -- ^ "to" - Address that received the tokens
+  , cURVEFINANCEETHEREUMDepositDTOFrom :: !(Maybe Text) -- ^ "from" - Address that sent the tokens
+  , cURVEFINANCEETHEREUMDepositDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of this event
+  , cURVEFINANCEETHEREUMDepositDTOInputTokens :: !(Maybe [Text]) -- ^ "input_tokens" - Input tokens of the pool. E.g. WETH and USDC to a WETH-USDC pool
+  , cURVEFINANCEETHEREUMDepositDTOOutputToken :: !(Maybe Text) -- ^ "output_token" - Output token of the pool. E.g. the UNI-LP token
+  , cURVEFINANCEETHEREUMDepositDTOInputTokenAmounts :: !(Maybe [Text]) -- ^ "input_token_amounts" - Amount of input tokens in the token&#39;s native unit
+  , cURVEFINANCEETHEREUMDepositDTOOutputTokenAmount :: !(Maybe Text) -- ^ "output_token_amount" - Amount of output tokens in the token&#39;s native unit
+  , cURVEFINANCEETHEREUMDepositDTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - USD-normalized value of the transaction of the underlying (e.g. sum of tokens deposited into a pool)
+  , cURVEFINANCEETHEREUMDepositDTOPool :: !(Maybe Text) -- ^ "pool" - The pool involving this transaction
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CURVEFINANCEETHEREUMDepositDTO
+instance A.FromJSON CURVEFINANCEETHEREUMDepositDTO where
+  parseJSON = A.withObject "CURVEFINANCEETHEREUMDepositDTO" $ \o ->
+    CURVEFINANCEETHEREUMDepositDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "hash")
+      <*> (o .:? "log_index")
+      <*> (o .:? "protocol")
+      <*> (o .:? "to")
+      <*> (o .:? "from")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "input_tokens")
+      <*> (o .:? "output_token")
+      <*> (o .:? "input_token_amounts")
+      <*> (o .:? "output_token_amount")
+      <*> (o .:? "amount_usd")
+      <*> (o .:? "pool")
+
+-- | ToJSON CURVEFINANCEETHEREUMDepositDTO
+instance A.ToJSON CURVEFINANCEETHEREUMDepositDTO where
+  toJSON CURVEFINANCEETHEREUMDepositDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cURVEFINANCEETHEREUMDepositDTOEntryTime
+      , "recv_time" .= cURVEFINANCEETHEREUMDepositDTORecvTime
+      , "block_number" .= cURVEFINANCEETHEREUMDepositDTOBlockNumber
+      , "block_range" .= cURVEFINANCEETHEREUMDepositDTOBlockRange
+      , "id" .= cURVEFINANCEETHEREUMDepositDTOId
+      , "hash" .= cURVEFINANCEETHEREUMDepositDTOHash
+      , "log_index" .= cURVEFINANCEETHEREUMDepositDTOLogIndex
+      , "protocol" .= cURVEFINANCEETHEREUMDepositDTOProtocol
+      , "to" .= cURVEFINANCEETHEREUMDepositDTOTo
+      , "from" .= cURVEFINANCEETHEREUMDepositDTOFrom
+      , "timestamp" .= cURVEFINANCEETHEREUMDepositDTOTimestamp
+      , "input_tokens" .= cURVEFINANCEETHEREUMDepositDTOInputTokens
+      , "output_token" .= cURVEFINANCEETHEREUMDepositDTOOutputToken
+      , "input_token_amounts" .= cURVEFINANCEETHEREUMDepositDTOInputTokenAmounts
+      , "output_token_amount" .= cURVEFINANCEETHEREUMDepositDTOOutputTokenAmount
+      , "amount_usd" .= cURVEFINANCEETHEREUMDepositDTOAmountUsd
+      , "pool" .= cURVEFINANCEETHEREUMDepositDTOPool
+      ]
+
+
+-- | Construct a value of type 'CURVEFINANCEETHEREUMDepositDTO' (by applying it's required fields, if any)
+mkCURVEFINANCEETHEREUMDepositDTO
+  :: CURVEFINANCEETHEREUMDepositDTO
+mkCURVEFINANCEETHEREUMDepositDTO =
+  CURVEFINANCEETHEREUMDepositDTO
+  { cURVEFINANCEETHEREUMDepositDTOEntryTime = Nothing
+  , cURVEFINANCEETHEREUMDepositDTORecvTime = Nothing
+  , cURVEFINANCEETHEREUMDepositDTOBlockNumber = Nothing
+  , cURVEFINANCEETHEREUMDepositDTOBlockRange = Nothing
+  , cURVEFINANCEETHEREUMDepositDTOId = Nothing
+  , cURVEFINANCEETHEREUMDepositDTOHash = Nothing
+  , cURVEFINANCEETHEREUMDepositDTOLogIndex = Nothing
+  , cURVEFINANCEETHEREUMDepositDTOProtocol = Nothing
+  , cURVEFINANCEETHEREUMDepositDTOTo = Nothing
+  , cURVEFINANCEETHEREUMDepositDTOFrom = Nothing
+  , cURVEFINANCEETHEREUMDepositDTOTimestamp = Nothing
+  , cURVEFINANCEETHEREUMDepositDTOInputTokens = Nothing
+  , cURVEFINANCEETHEREUMDepositDTOOutputToken = Nothing
+  , cURVEFINANCEETHEREUMDepositDTOInputTokenAmounts = Nothing
+  , cURVEFINANCEETHEREUMDepositDTOOutputTokenAmount = Nothing
+  , cURVEFINANCEETHEREUMDepositDTOAmountUsd = Nothing
+  , cURVEFINANCEETHEREUMDepositDTOPool = Nothing
+  }
+
+-- ** CURVEFINANCEETHEREUMDexAmmProtocolDTO
+-- | CURVEFINANCEETHEREUMDexAmmProtocolDTO
+-- Entity for calculating daily/hourly active users.
+data CURVEFINANCEETHEREUMDexAmmProtocolDTO = CURVEFINANCEETHEREUMDexAmmProtocolDTO
+  { cURVEFINANCEETHEREUMDexAmmProtocolDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOId :: !(Maybe Text) -- ^ "id" - Smart contract address of the protocol&#39;s main contract (Factory, Registry, etc)
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOName :: !(Maybe Text) -- ^ "name" - Name of the protocol, including version.
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOSlug :: !(Maybe Text) -- ^ "slug" - Slug of protocol, including version.
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOSchemaVersion :: !(Maybe Text) -- ^ "schema_version" - Version of the subgraph schema, in SemVer format (e.g. 1.0.0)
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOSubgraphVersion :: !(Maybe Text) -- ^ "subgraph_version" - Version of the subgraph implementation, in SemVer format (e.g. 1.0.0)
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOMethodologyVersion :: !(Maybe Text) -- ^ "methodology_version" - Version of the methodology used to compute metrics, loosely based on SemVer format (e.g. 1.0.0)
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Current TVL (Total Value Locked) of the entire protocol
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd :: !(Maybe Text) -- ^ "protocol_controlled_value_usd" - Current PCV (Protocol Controlled Value). Only relevant for protocols with PCV.
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd :: !(Maybe Text) -- ^ "cumulative_volume_usd" - All historical volume in USD
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_supply_side_revenue_usd" - Revenue claimed by suppliers to the protocol. LPs on DEXs (e.g. 0.25% of the swap fee in Sushiswap). Depositors on Lending Protocols. NFT sellers on OpenSea.
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_protocol_side_revenue_usd" - Gross revenue for the protocol (revenue claimed by protocol). Examples: AMM protocol fee (Sushi’s 0.05%). OpenSea 10% sell fee.
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd :: !(Maybe Text) -- ^ "cumulative_total_revenue_usd" - All revenue generated by the protocol. e.g. 0.30% of swap fee in Sushiswap, all yield generated by Yearn.
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers :: !(Maybe Int) -- ^ "cumulative_unique_users" - Number of cumulative unique users
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalPoolCount :: !(Maybe Int) -- ^ "total_pool_count" - Total number of pools
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOPoolIds :: !(Maybe [Text]) -- ^ "pool_ids" - All pools that belong to this protocol
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CURVEFINANCEETHEREUMDexAmmProtocolDTO
+instance A.FromJSON CURVEFINANCEETHEREUMDexAmmProtocolDTO where
+  parseJSON = A.withObject "CURVEFINANCEETHEREUMDexAmmProtocolDTO" $ \o ->
+    CURVEFINANCEETHEREUMDexAmmProtocolDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "name")
+      <*> (o .:? "slug")
+      <*> (o .:? "schema_version")
+      <*> (o .:? "subgraph_version")
+      <*> (o .:? "methodology_version")
+      <*> (o .:? "total_value_locked_usd")
+      <*> (o .:? "protocol_controlled_value_usd")
+      <*> (o .:? "cumulative_volume_usd")
+      <*> (o .:? "cumulative_supply_side_revenue_usd")
+      <*> (o .:? "cumulative_protocol_side_revenue_usd")
+      <*> (o .:? "cumulative_total_revenue_usd")
+      <*> (o .:? "cumulative_unique_users")
+      <*> (o .:? "total_pool_count")
+      <*> (o .:? "pool_ids")
+
+-- | ToJSON CURVEFINANCEETHEREUMDexAmmProtocolDTO
+instance A.ToJSON CURVEFINANCEETHEREUMDexAmmProtocolDTO where
+  toJSON CURVEFINANCEETHEREUMDexAmmProtocolDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cURVEFINANCEETHEREUMDexAmmProtocolDTOEntryTime
+      , "recv_time" .= cURVEFINANCEETHEREUMDexAmmProtocolDTORecvTime
+      , "block_number" .= cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockNumber
+      , "block_range" .= cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockRange
+      , "id" .= cURVEFINANCEETHEREUMDexAmmProtocolDTOId
+      , "name" .= cURVEFINANCEETHEREUMDexAmmProtocolDTOName
+      , "slug" .= cURVEFINANCEETHEREUMDexAmmProtocolDTOSlug
+      , "schema_version" .= cURVEFINANCEETHEREUMDexAmmProtocolDTOSchemaVersion
+      , "subgraph_version" .= cURVEFINANCEETHEREUMDexAmmProtocolDTOSubgraphVersion
+      , "methodology_version" .= cURVEFINANCEETHEREUMDexAmmProtocolDTOMethodologyVersion
+      , "total_value_locked_usd" .= cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalValueLockedUsd
+      , "protocol_controlled_value_usd" .= cURVEFINANCEETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd
+      , "cumulative_volume_usd" .= cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd
+      , "cumulative_supply_side_revenue_usd" .= cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd
+      , "cumulative_protocol_side_revenue_usd" .= cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd
+      , "cumulative_total_revenue_usd" .= cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd
+      , "cumulative_unique_users" .= cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers
+      , "total_pool_count" .= cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalPoolCount
+      , "pool_ids" .= cURVEFINANCEETHEREUMDexAmmProtocolDTOPoolIds
+      ]
+
+
+-- | Construct a value of type 'CURVEFINANCEETHEREUMDexAmmProtocolDTO' (by applying it's required fields, if any)
+mkCURVEFINANCEETHEREUMDexAmmProtocolDTO
+  :: CURVEFINANCEETHEREUMDexAmmProtocolDTO
+mkCURVEFINANCEETHEREUMDexAmmProtocolDTO =
+  CURVEFINANCEETHEREUMDexAmmProtocolDTO
+  { cURVEFINANCEETHEREUMDexAmmProtocolDTOEntryTime = Nothing
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTORecvTime = Nothing
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockNumber = Nothing
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockRange = Nothing
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOId = Nothing
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOName = Nothing
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOSlug = Nothing
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOSchemaVersion = Nothing
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOSubgraphVersion = Nothing
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOMethodologyVersion = Nothing
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalValueLockedUsd = Nothing
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd = Nothing
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd = Nothing
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers = Nothing
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalPoolCount = Nothing
+  , cURVEFINANCEETHEREUMDexAmmProtocolDTOPoolIds = Nothing
+  }
+
+-- ** CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+-- | CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+-- Daily financial metrics for Curve finance.
+data CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO = CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+  { cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOId :: !(Maybe Text) -- ^ "id" - ID is # of days since Unix epoch time
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocol :: !(Maybe Text) -- ^ "protocol" - Protocol this snapshot is associated with
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Current TVL (Total Value Locked) of the entire protocol
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd :: !(Maybe Text) -- ^ "protocol_controlled_value_usd" - Current PCV (Protocol Controlled Value). Only relevant for protocols with PCV.
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd :: !(Maybe Text) -- ^ "daily_volume_usd" - All trade volume occurred in a given day, in USD
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd :: !(Maybe Text) -- ^ "cumulative_volume_usd" - All historical trade volume in USD
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd :: !(Maybe Text) -- ^ "daily_supply_side_revenue_usd" - Revenue claimed by suppliers to the protocol. LPs on DEXs (e.g. 0.25% of the swap fee in Sushiswap). Depositors on Lending Protocols. NFT sellers on OpenSea.
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_supply_side_revenue_usd" - Revenue claimed by suppliers to the protocol. LPs on DEXs (e.g. 0.25% of the swap fee in Sushiswap). Depositors on Lending Protocols. NFT sellers on OpenSea.
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "daily_protocol_side_revenue_usd" - Gross revenue for the protocol (revenue claimed by protocol). Examples: AMM protocol fee (Sushi’s 0.05%). OpenSea 10% sell fee.
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_protocol_side_revenue_usd" - Gross revenue for the protocol (revenue claimed by protocol). Examples: AMM protocol fee (Sushi’s 0.05%). OpenSea 10% sell fee.
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd :: !(Maybe Text) -- ^ "daily_total_revenue_usd" - All revenue generated by the protocol. e.g. 0.30% of swap fee in Sushiswap, all yield generated by Yearn.
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd :: !(Maybe Text) -- ^ "cumulative_total_revenue_usd" - All revenue generated by the protocol. e.g. 0.30% of swap fee in Sushiswap, all yield generated by Yearn.
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of this snapshot
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+instance A.FromJSON CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO where
+  parseJSON = A.withObject "CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO" $ \o ->
+    CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "protocol")
+      <*> (o .:? "total_value_locked_usd")
+      <*> (o .:? "protocol_controlled_value_usd")
+      <*> (o .:? "daily_volume_usd")
+      <*> (o .:? "cumulative_volume_usd")
+      <*> (o .:? "daily_supply_side_revenue_usd")
+      <*> (o .:? "cumulative_supply_side_revenue_usd")
+      <*> (o .:? "daily_protocol_side_revenue_usd")
+      <*> (o .:? "cumulative_protocol_side_revenue_usd")
+      <*> (o .:? "daily_total_revenue_usd")
+      <*> (o .:? "cumulative_total_revenue_usd")
+      <*> (o .:? "timestamp")
+
+-- | ToJSON CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+instance A.ToJSON CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO where
+  toJSON CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOEntryTime
+      , "recv_time" .= cURVEFINANCEETHEREUMFinancialsDailySnapshotDTORecvTime
+      , "block_number" .= cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockNumber
+      , "block_range" .= cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockRange
+      , "id" .= cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOId
+      , "protocol" .= cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocol
+      , "total_value_locked_usd" .= cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd
+      , "protocol_controlled_value_usd" .= cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd
+      , "daily_volume_usd" .= cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd
+      , "cumulative_volume_usd" .= cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd
+      , "daily_supply_side_revenue_usd" .= cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd
+      , "cumulative_supply_side_revenue_usd" .= cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd
+      , "daily_protocol_side_revenue_usd" .= cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd
+      , "cumulative_protocol_side_revenue_usd" .= cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd
+      , "daily_total_revenue_usd" .= cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd
+      , "cumulative_total_revenue_usd" .= cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd
+      , "timestamp" .= cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTimestamp
+      ]
+
+
+-- | Construct a value of type 'CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO' (by applying it's required fields, if any)
+mkCURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+  :: CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+mkCURVEFINANCEETHEREUMFinancialsDailySnapshotDTO =
+  CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+  { cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOEntryTime = Nothing
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTORecvTime = Nothing
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockNumber = Nothing
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockRange = Nothing
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOId = Nothing
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocol = Nothing
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd = Nothing
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd = Nothing
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd = Nothing
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd = Nothing
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTimestamp = Nothing
+  }
+
+-- ** CURVEFINANCEETHEREUMLiquidityGaugeDTO
+-- | CURVEFINANCEETHEREUMLiquidityGaugeDTO
+-- 
+data CURVEFINANCEETHEREUMLiquidityGaugeDTO = CURVEFINANCEETHEREUMLiquidityGaugeDTO
+  { cURVEFINANCEETHEREUMLiquidityGaugeDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cURVEFINANCEETHEREUMLiquidityGaugeDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cURVEFINANCEETHEREUMLiquidityGaugeDTOId :: !(Maybe Text) -- ^ "id" - Address of the Liquidity Gauge
+  , cURVEFINANCEETHEREUMLiquidityGaugeDTOPoolAddress :: !(Maybe Text) -- ^ "pool_address" - Address of the pool associated with this liquidity gauge
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CURVEFINANCEETHEREUMLiquidityGaugeDTO
+instance A.FromJSON CURVEFINANCEETHEREUMLiquidityGaugeDTO where
+  parseJSON = A.withObject "CURVEFINANCEETHEREUMLiquidityGaugeDTO" $ \o ->
+    CURVEFINANCEETHEREUMLiquidityGaugeDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "pool_address")
+
+-- | ToJSON CURVEFINANCEETHEREUMLiquidityGaugeDTO
+instance A.ToJSON CURVEFINANCEETHEREUMLiquidityGaugeDTO where
+  toJSON CURVEFINANCEETHEREUMLiquidityGaugeDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cURVEFINANCEETHEREUMLiquidityGaugeDTOEntryTime
+      , "recv_time" .= cURVEFINANCEETHEREUMLiquidityGaugeDTORecvTime
+      , "block_number" .= cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockNumber
+      , "block_range" .= cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockRange
+      , "id" .= cURVEFINANCEETHEREUMLiquidityGaugeDTOId
+      , "pool_address" .= cURVEFINANCEETHEREUMLiquidityGaugeDTOPoolAddress
+      ]
+
+
+-- | Construct a value of type 'CURVEFINANCEETHEREUMLiquidityGaugeDTO' (by applying it's required fields, if any)
+mkCURVEFINANCEETHEREUMLiquidityGaugeDTO
+  :: CURVEFINANCEETHEREUMLiquidityGaugeDTO
+mkCURVEFINANCEETHEREUMLiquidityGaugeDTO =
+  CURVEFINANCEETHEREUMLiquidityGaugeDTO
+  { cURVEFINANCEETHEREUMLiquidityGaugeDTOEntryTime = Nothing
+  , cURVEFINANCEETHEREUMLiquidityGaugeDTORecvTime = Nothing
+  , cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockNumber = Nothing
+  , cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockRange = Nothing
+  , cURVEFINANCEETHEREUMLiquidityGaugeDTOId = Nothing
+  , cURVEFINANCEETHEREUMLiquidityGaugeDTOPoolAddress = Nothing
   }
 
 -- ** CURVEFINANCEETHEREUMLiquidityPoolDTO
@@ -928,13 +1354,418 @@ mkCURVEFINANCEETHEREUMLiquidityPoolDTO =
   , cURVEFINANCEETHEREUMLiquidityPoolDTOEvaluatedAsk = Nothing
   }
 
+-- ** CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+-- | CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+-- 
+data CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO = CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+  { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (smart contract address of the pool)-(# of days since Unix epoch time)
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOProtocol :: !(Maybe Text) -- ^ "protocol" - The protocol this snapshot belongs to
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOPool :: !(Maybe Text) -- ^ "pool" - The pool this snapshot belongs to
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of this snapshot
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Current TVL (Total Value Locked) of this pool
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_supply_side_revenue_usd" - All revenue generated by the liquidity pool, accrued to the supply side.
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd :: !(Maybe Text) -- ^ "daily_supply_side_revenue_usd" - 
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_protocol_side_revenue_usd" - Daily revenue generated by the liquidity pool, accrued to the supply side.
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "daily_protocol_side_revenue_usd" - All revenue generated by the liquidity pool, accrued to the protocol.
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd :: !(Maybe Text) -- ^ "cumulative_total_revenue_usd" - All revenue generated by the liquidity pool.
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd :: !(Maybe Text) -- ^ "daily_total_revenue_usd" - Daily revenue generated by the liquidity pool.
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd :: !(Maybe Text) -- ^ "daily_volume_usd" - All trade volume occurred in a given day, in USD
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount :: !(Maybe [Text]) -- ^ "daily_volume_by_token_amount" - 
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd :: !(Maybe [Text]) -- ^ "daily_volume_by_token_usd" - All trade volume occurred in a given day for a specific input token, in native amount. The ordering should be the same as the pool&#39;s &#39;inputTokens&#39; field.
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd :: !(Maybe Text) -- ^ "cumulative_volume_usd" - All trade volume occurred in a given day for a specific input token, in USD. The ordering should be the same as the pool&#39;s &#39;inputTokens&#39; field.
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances :: !(Maybe [Text]) -- ^ "input_token_balances" - Amount of input tokens in the pool. The ordering should be the same as the pool&#39;s &#39;inputTokens&#39; field.
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights :: !(Maybe [Text]) -- ^ "input_token_weights" - Weights of input tokens in the liquidity pool in percentage values. For example, 50/50 for Uniswap pools, 48.2/51.8 for a Curve pool, 10/10/80 for a Balancer pool
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupply :: !(Maybe Text) -- ^ "output_token_supply" - Total supply of output token. Note that certain DEXes don&#39;t have an output token (e.g. Bancor)
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsd :: !(Maybe Text) -- ^ "output_token_price_usd" - Price per share of output token in USD
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount :: !(Maybe Text) -- ^ "staked_output_token_amount" - Total supply of output tokens that are staked (usually in the MasterChef contract). Used to calculate reward APY.
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount :: !(Maybe [Text]) -- ^ "reward_token_emissions_amount" - Per-block reward token emission as of the current block normalized to a day, in token&#39;s native amount. This should be ideally calculated as the theoretical rate instead of the realized amount.
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd :: !(Maybe [Text]) -- ^ "reward_token_emissions_usd" - Per-block reward token emission as of the current block normalized to a day, in USD value. This should be ideally calculated as the theoretical rate instead of the realized amount.
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+instance A.FromJSON CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO where
+  parseJSON = A.withObject "CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO" $ \o ->
+    CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "protocol")
+      <*> (o .:? "pool")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "total_value_locked_usd")
+      <*> (o .:? "cumulative_supply_side_revenue_usd")
+      <*> (o .:? "daily_supply_side_revenue_usd")
+      <*> (o .:? "cumulative_protocol_side_revenue_usd")
+      <*> (o .:? "daily_protocol_side_revenue_usd")
+      <*> (o .:? "cumulative_total_revenue_usd")
+      <*> (o .:? "daily_total_revenue_usd")
+      <*> (o .:? "daily_volume_usd")
+      <*> (o .:? "daily_volume_by_token_amount")
+      <*> (o .:? "daily_volume_by_token_usd")
+      <*> (o .:? "cumulative_volume_usd")
+      <*> (o .:? "input_token_balances")
+      <*> (o .:? "input_token_weights")
+      <*> (o .:? "output_token_supply")
+      <*> (o .:? "output_token_price_usd")
+      <*> (o .:? "staked_output_token_amount")
+      <*> (o .:? "reward_token_emissions_amount")
+      <*> (o .:? "reward_token_emissions_usd")
+
+-- | ToJSON CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+instance A.ToJSON CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO where
+  toJSON CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOEntryTime
+      , "recv_time" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORecvTime
+      , "block_number" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber
+      , "block_range" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockRange
+      , "id" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOId
+      , "protocol" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOProtocol
+      , "pool" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOPool
+      , "timestamp" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTimestamp
+      , "total_value_locked_usd" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd
+      , "cumulative_supply_side_revenue_usd" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd
+      , "daily_supply_side_revenue_usd" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd
+      , "cumulative_protocol_side_revenue_usd" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd
+      , "daily_protocol_side_revenue_usd" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd
+      , "cumulative_total_revenue_usd" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd
+      , "daily_total_revenue_usd" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd
+      , "daily_volume_usd" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd
+      , "daily_volume_by_token_amount" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount
+      , "daily_volume_by_token_usd" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd
+      , "cumulative_volume_usd" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd
+      , "input_token_balances" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances
+      , "input_token_weights" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights
+      , "output_token_supply" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupply
+      , "output_token_price_usd" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsd
+      , "staked_output_token_amount" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount
+      , "reward_token_emissions_amount" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount
+      , "reward_token_emissions_usd" .= cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd
+      ]
+
+
+-- | Construct a value of type 'CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO' (by applying it's required fields, if any)
+mkCURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+  :: CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+mkCURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO =
+  CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+  { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOEntryTime = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORecvTime = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockRange = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOId = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOProtocol = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOPool = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTimestamp = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupply = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd = Nothing
+  }
+
+-- ** CURVEFINANCEETHEREUMLiquidityPoolFeeDTO
+-- | CURVEFINANCEETHEREUMLiquidityPoolFeeDTO
+-- 
+data CURVEFINANCEETHEREUMLiquidityPoolFeeDTO = CURVEFINANCEETHEREUMLiquidityPoolFeeDTO
+  { cURVEFINANCEETHEREUMLiquidityPoolFeeDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cURVEFINANCEETHEREUMLiquidityPoolFeeDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cURVEFINANCEETHEREUMLiquidityPoolFeeDTOId :: !(Maybe Text) -- ^ "id" - (fee type)-(pool address)
+  , cURVEFINANCEETHEREUMLiquidityPoolFeeDTOFeePercentage :: !(Maybe Text) -- ^ "fee_percentage" - Fee as a percentage of the trade (swap) amount. Does not always apply
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CURVEFINANCEETHEREUMLiquidityPoolFeeDTO
+instance A.FromJSON CURVEFINANCEETHEREUMLiquidityPoolFeeDTO where
+  parseJSON = A.withObject "CURVEFINANCEETHEREUMLiquidityPoolFeeDTO" $ \o ->
+    CURVEFINANCEETHEREUMLiquidityPoolFeeDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "fee_percentage")
+
+-- | ToJSON CURVEFINANCEETHEREUMLiquidityPoolFeeDTO
+instance A.ToJSON CURVEFINANCEETHEREUMLiquidityPoolFeeDTO where
+  toJSON CURVEFINANCEETHEREUMLiquidityPoolFeeDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cURVEFINANCEETHEREUMLiquidityPoolFeeDTOEntryTime
+      , "recv_time" .= cURVEFINANCEETHEREUMLiquidityPoolFeeDTORecvTime
+      , "block_number" .= cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockNumber
+      , "block_range" .= cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockRange
+      , "id" .= cURVEFINANCEETHEREUMLiquidityPoolFeeDTOId
+      , "fee_percentage" .= cURVEFINANCEETHEREUMLiquidityPoolFeeDTOFeePercentage
+      ]
+
+
+-- | Construct a value of type 'CURVEFINANCEETHEREUMLiquidityPoolFeeDTO' (by applying it's required fields, if any)
+mkCURVEFINANCEETHEREUMLiquidityPoolFeeDTO
+  :: CURVEFINANCEETHEREUMLiquidityPoolFeeDTO
+mkCURVEFINANCEETHEREUMLiquidityPoolFeeDTO =
+  CURVEFINANCEETHEREUMLiquidityPoolFeeDTO
+  { cURVEFINANCEETHEREUMLiquidityPoolFeeDTOEntryTime = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolFeeDTORecvTime = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockNumber = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockRange = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolFeeDTOId = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolFeeDTOFeePercentage = Nothing
+  }
+
+-- ** CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+-- | CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+-- 
+data CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO = CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+  { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOId :: !(Maybe Text) -- ^ "id" - (smart contract address of the pool)-(# of hours since unix epoch time)
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOProtocol :: !(Maybe Text) -- ^ "protocol" - The protocol this snapshot belongs to
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOPool :: !(Maybe Text) -- ^ "pool" - The pool this snapshot belongs to
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of this snapshot
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Current TVL (Total Value Locked) of this pool
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_supply_side_revenue_usd" - All revenue generated by the liquidity pool, accrued to the supply side.
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd :: !(Maybe Text) -- ^ "hourly_supply_side_revenue_usd" - Hourly revenue generated by the liquidity pool, accrued to the supply side.
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_protocol_side_revenue_usd" - All revenue generated by the liquidity pool, accrued to the protocol.
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "hourly_protocol_side_revenue_usd" - Hourly revenue generated by the liquidity pool, accrued to the protocol.
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd :: !(Maybe Text) -- ^ "cumulative_total_revenue_usd" - All revenue generated by the liquidity pool.
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd :: !(Maybe Text) -- ^ "hourly_total_revenue_usd" - Hourly revenue generated by the liquidity pool.
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd :: !(Maybe Text) -- ^ "hourly_volume_usd" - All trade volume occurred in a given hour, in USD
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount :: !(Maybe [Text]) -- ^ "hourly_volume_by_token_amount" - All trade volume occurred in a given hour for a specific input token, in native amount. The ordering should be the same as the pool&#39;s &#39;inputTokens&#39; field.
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd :: !(Maybe [Text]) -- ^ "hourly_volume_by_token_usd" - All trade volume occurred in a given hour for a specific input token, in USD. The ordering should be the same as the pool&#39;s &#39;inputTokens&#39; field.
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd :: !(Maybe Text) -- ^ "cumulative_volume_usd" - All historical trade volume occurred in this pool, in USD
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances :: !(Maybe [Text]) -- ^ "input_token_balances" - Amount of input tokens in the pool. The ordering should be the same as the pool&#39;s &#39;inputTokens&#39; field.
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights :: !(Maybe [Text]) -- ^ "input_token_weights" - Weights of input tokens in the liquidity pool in percentage values. For example, 50/50 for Uniswap pools, 48.2/51.8 for a Curve pool, 10/10/80 for a Balancer pool
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupply :: !(Maybe Text) -- ^ "output_token_supply" - Total supply of output token. Note that certain DEXes don&#39;t have an output token (e.g. Bancor)
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsd :: !(Maybe Text) -- ^ "output_token_price_usd" - Price per share of output token in USD
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount :: !(Maybe Text) -- ^ "staked_output_token_amount" - Total supply of output tokens that are staked (usually in the MasterChef contract). Used to calculate reward APY.
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount :: !(Maybe [Text]) -- ^ "reward_token_emissions_amount" - Per-block reward token emission as of the current block normalized to a day (not hour), in token&#39;s native amount. This should be ideally calculated as the theoretical rate instead of the realized amount.
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd :: !(Maybe [Text]) -- ^ "reward_token_emissions_usd" - Per-block reward token emission as of the current block normalized to a day (not hour), in USD value. This should be ideally calculated as the theoretical rate instead of the realized amount.
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+instance A.FromJSON CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO where
+  parseJSON = A.withObject "CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO" $ \o ->
+    CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "protocol")
+      <*> (o .:? "pool")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "total_value_locked_usd")
+      <*> (o .:? "cumulative_supply_side_revenue_usd")
+      <*> (o .:? "hourly_supply_side_revenue_usd")
+      <*> (o .:? "cumulative_protocol_side_revenue_usd")
+      <*> (o .:? "hourly_protocol_side_revenue_usd")
+      <*> (o .:? "cumulative_total_revenue_usd")
+      <*> (o .:? "hourly_total_revenue_usd")
+      <*> (o .:? "hourly_volume_usd")
+      <*> (o .:? "hourly_volume_by_token_amount")
+      <*> (o .:? "hourly_volume_by_token_usd")
+      <*> (o .:? "cumulative_volume_usd")
+      <*> (o .:? "input_token_balances")
+      <*> (o .:? "input_token_weights")
+      <*> (o .:? "output_token_supply")
+      <*> (o .:? "output_token_price_usd")
+      <*> (o .:? "staked_output_token_amount")
+      <*> (o .:? "reward_token_emissions_amount")
+      <*> (o .:? "reward_token_emissions_usd")
+
+-- | ToJSON CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+instance A.ToJSON CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO where
+  toJSON CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime
+      , "recv_time" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORecvTime
+      , "block_number" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber
+      , "block_range" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockRange
+      , "id" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOId
+      , "protocol" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOProtocol
+      , "pool" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOPool
+      , "timestamp" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp
+      , "total_value_locked_usd" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd
+      , "cumulative_supply_side_revenue_usd" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd
+      , "hourly_supply_side_revenue_usd" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd
+      , "cumulative_protocol_side_revenue_usd" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd
+      , "hourly_protocol_side_revenue_usd" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd
+      , "cumulative_total_revenue_usd" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd
+      , "hourly_total_revenue_usd" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd
+      , "hourly_volume_usd" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd
+      , "hourly_volume_by_token_amount" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount
+      , "hourly_volume_by_token_usd" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd
+      , "cumulative_volume_usd" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd
+      , "input_token_balances" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances
+      , "input_token_weights" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights
+      , "output_token_supply" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupply
+      , "output_token_price_usd" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsd
+      , "staked_output_token_amount" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount
+      , "reward_token_emissions_amount" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount
+      , "reward_token_emissions_usd" .= cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd
+      ]
+
+
+-- | Construct a value of type 'CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO' (by applying it's required fields, if any)
+mkCURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+  :: CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+mkCURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO =
+  CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+  { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORecvTime = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockRange = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOId = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOProtocol = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOPool = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupply = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsd = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount = Nothing
+  , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd = Nothing
+  }
+
+-- ** CURVEFINANCEETHEREUMLpTokenDTO
+-- | CURVEFINANCEETHEREUMLpTokenDTO
+-- Entity for fetching the pool address from lpToken.
+data CURVEFINANCEETHEREUMLpTokenDTO = CURVEFINANCEETHEREUMLpTokenDTO
+  { cURVEFINANCEETHEREUMLpTokenDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cURVEFINANCEETHEREUMLpTokenDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cURVEFINANCEETHEREUMLpTokenDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , cURVEFINANCEETHEREUMLpTokenDTOId :: !(Maybe Text) -- ^ "id" - Address of the LP Token.
+  , cURVEFINANCEETHEREUMLpTokenDTOPoolAddress :: !(Maybe Text) -- ^ "pool_address" - Address of the pool associated with this token.
+  , cURVEFINANCEETHEREUMLpTokenDTORegistryAddress :: !(Maybe Text) -- ^ "registry_address" - Address of the registry associated with this token.
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CURVEFINANCEETHEREUMLpTokenDTO
+instance A.FromJSON CURVEFINANCEETHEREUMLpTokenDTO where
+  parseJSON = A.withObject "CURVEFINANCEETHEREUMLpTokenDTO" $ \o ->
+    CURVEFINANCEETHEREUMLpTokenDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "pool_address")
+      <*> (o .:? "registry_address")
+
+-- | ToJSON CURVEFINANCEETHEREUMLpTokenDTO
+instance A.ToJSON CURVEFINANCEETHEREUMLpTokenDTO where
+  toJSON CURVEFINANCEETHEREUMLpTokenDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cURVEFINANCEETHEREUMLpTokenDTOEntryTime
+      , "recv_time" .= cURVEFINANCEETHEREUMLpTokenDTORecvTime
+      , "block_number" .= cURVEFINANCEETHEREUMLpTokenDTOBlockNumber
+      , "id" .= cURVEFINANCEETHEREUMLpTokenDTOId
+      , "pool_address" .= cURVEFINANCEETHEREUMLpTokenDTOPoolAddress
+      , "registry_address" .= cURVEFINANCEETHEREUMLpTokenDTORegistryAddress
+      ]
+
+
+-- | Construct a value of type 'CURVEFINANCEETHEREUMLpTokenDTO' (by applying it's required fields, if any)
+mkCURVEFINANCEETHEREUMLpTokenDTO
+  :: CURVEFINANCEETHEREUMLpTokenDTO
+mkCURVEFINANCEETHEREUMLpTokenDTO =
+  CURVEFINANCEETHEREUMLpTokenDTO
+  { cURVEFINANCEETHEREUMLpTokenDTOEntryTime = Nothing
+  , cURVEFINANCEETHEREUMLpTokenDTORecvTime = Nothing
+  , cURVEFINANCEETHEREUMLpTokenDTOBlockNumber = Nothing
+  , cURVEFINANCEETHEREUMLpTokenDTOId = Nothing
+  , cURVEFINANCEETHEREUMLpTokenDTOPoolAddress = Nothing
+  , cURVEFINANCEETHEREUMLpTokenDTORegistryAddress = Nothing
+  }
+
+-- ** CURVEFINANCEETHEREUMRewardTokenDTO
+-- | CURVEFINANCEETHEREUMRewardTokenDTO
+-- 
+data CURVEFINANCEETHEREUMRewardTokenDTO = CURVEFINANCEETHEREUMRewardTokenDTO
+  { cURVEFINANCEETHEREUMRewardTokenDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cURVEFINANCEETHEREUMRewardTokenDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cURVEFINANCEETHEREUMRewardTokenDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , cURVEFINANCEETHEREUMRewardTokenDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cURVEFINANCEETHEREUMRewardTokenDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (reward token type)-(smart contract address of the reward token)
+  , cURVEFINANCEETHEREUMRewardTokenDTOToken :: !(Maybe Text) -- ^ "token" - Reference to the actual token.
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CURVEFINANCEETHEREUMRewardTokenDTO
+instance A.FromJSON CURVEFINANCEETHEREUMRewardTokenDTO where
+  parseJSON = A.withObject "CURVEFINANCEETHEREUMRewardTokenDTO" $ \o ->
+    CURVEFINANCEETHEREUMRewardTokenDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "token")
+
+-- | ToJSON CURVEFINANCEETHEREUMRewardTokenDTO
+instance A.ToJSON CURVEFINANCEETHEREUMRewardTokenDTO where
+  toJSON CURVEFINANCEETHEREUMRewardTokenDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cURVEFINANCEETHEREUMRewardTokenDTOEntryTime
+      , "recv_time" .= cURVEFINANCEETHEREUMRewardTokenDTORecvTime
+      , "block_number" .= cURVEFINANCEETHEREUMRewardTokenDTOBlockNumber
+      , "block_range" .= cURVEFINANCEETHEREUMRewardTokenDTOBlockRange
+      , "id" .= cURVEFINANCEETHEREUMRewardTokenDTOId
+      , "token" .= cURVEFINANCEETHEREUMRewardTokenDTOToken
+      ]
+
+
+-- | Construct a value of type 'CURVEFINANCEETHEREUMRewardTokenDTO' (by applying it's required fields, if any)
+mkCURVEFINANCEETHEREUMRewardTokenDTO
+  :: CURVEFINANCEETHEREUMRewardTokenDTO
+mkCURVEFINANCEETHEREUMRewardTokenDTO =
+  CURVEFINANCEETHEREUMRewardTokenDTO
+  { cURVEFINANCEETHEREUMRewardTokenDTOEntryTime = Nothing
+  , cURVEFINANCEETHEREUMRewardTokenDTORecvTime = Nothing
+  , cURVEFINANCEETHEREUMRewardTokenDTOBlockNumber = Nothing
+  , cURVEFINANCEETHEREUMRewardTokenDTOBlockRange = Nothing
+  , cURVEFINANCEETHEREUMRewardTokenDTOId = Nothing
+  , cURVEFINANCEETHEREUMRewardTokenDTOToken = Nothing
+  }
+
 -- ** CURVEFINANCEETHEREUMSwapDTO
 -- | CURVEFINANCEETHEREUMSwapDTO
 -- 
 data CURVEFINANCEETHEREUMSwapDTO = CURVEFINANCEETHEREUMSwapDTO
   { cURVEFINANCEETHEREUMSwapDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , cURVEFINANCEETHEREUMSwapDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , cURVEFINANCEETHEREUMSwapDTOBlockNumber :: !(Maybe Text) -- ^ "block_number" - Block number of this event
+  , cURVEFINANCEETHEREUMSwapDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , cURVEFINANCEETHEREUMSwapDTOId :: !(Maybe Text) -- ^ "id" - Swap-(transaction hash)-(log index)
   , cURVEFINANCEETHEREUMSwapDTOHash :: !(Maybe Text) -- ^ "hash" - Transaction hash of the transaction that emitted this event
   , cURVEFINANCEETHEREUMSwapDTOLogIndex :: !(Maybe Int) -- ^ "log_index" - Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0
@@ -1108,6 +1939,253 @@ mkCURVEFINANCEETHEREUMTokenDTO =
   , cURVEFINANCEETHEREUMTokenDTOLastPriceUsd = Nothing
   , cURVEFINANCEETHEREUMTokenDTOLastPriceBlockNumber = Nothing
   , cURVEFINANCEETHEREUMTokenDTOTokenSymbol = Nothing
+  }
+
+-- ** CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+-- | CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+-- 
+data CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO = CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+  { cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOId :: !(Maybe Text) -- ^ "id" - ID is # of days since Unix epoch time
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOProtocol :: !(Maybe Text) -- ^ "protocol" - Protocol this snapshot is associated with
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers :: !(Maybe Int) -- ^ "daily_active_users" - Number of unique daily active users
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers :: !(Maybe Int) -- ^ "cumulative_unique_users" - Number of cumulative unique users
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount :: !(Maybe Int) -- ^ "daily_transaction_count" - Total number of transactions occurred in a day. Transactions include all entities that implement the Event interface
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount :: !(Maybe Int) -- ^ "daily_deposit_count" - Total number of deposits (add liquidity) in a day
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount :: !(Maybe Int) -- ^ "daily_withdraw_count" - Total number of withdrawals (remove liquidity) in a day
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailySwapCount :: !(Maybe Int) -- ^ "daily_swap_count" - Total number of trades (swaps) in a day
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount :: !(Maybe Int) -- ^ "total_pool_count" - Total number of pools
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of this snapshot
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+instance A.FromJSON CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO where
+  parseJSON = A.withObject "CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO" $ \o ->
+    CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "protocol")
+      <*> (o .:? "daily_active_users")
+      <*> (o .:? "cumulative_unique_users")
+      <*> (o .:? "daily_transaction_count")
+      <*> (o .:? "daily_deposit_count")
+      <*> (o .:? "daily_withdraw_count")
+      <*> (o .:? "daily_swap_count")
+      <*> (o .:? "total_pool_count")
+      <*> (o .:? "timestamp")
+
+-- | ToJSON CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+instance A.ToJSON CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO where
+  toJSON CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOEntryTime
+      , "recv_time" .= cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTORecvTime
+      , "block_number" .= cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOBlockNumber
+      , "id" .= cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOId
+      , "protocol" .= cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOProtocol
+      , "daily_active_users" .= cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers
+      , "cumulative_unique_users" .= cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers
+      , "daily_transaction_count" .= cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount
+      , "daily_deposit_count" .= cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount
+      , "daily_withdraw_count" .= cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount
+      , "daily_swap_count" .= cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailySwapCount
+      , "total_pool_count" .= cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount
+      , "timestamp" .= cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTimestamp
+      ]
+
+
+-- | Construct a value of type 'CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO' (by applying it's required fields, if any)
+mkCURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+  :: CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+mkCURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO =
+  CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+  { cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOEntryTime = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTORecvTime = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOBlockNumber = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOId = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOProtocol = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailySwapCount = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTimestamp = Nothing
+  }
+
+-- ** CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+-- | CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+-- 
+data CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO = CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+  { cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOId :: !(Maybe Text) -- ^ "id" - ID is # of days since Unix epoch time
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOProtocol :: !(Maybe Text) -- ^ "protocol" - Protocol this snapshot is associated with
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers :: !(Maybe Int) -- ^ "hourly_active_users" - Number of unique daily active users
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers :: !(Maybe Int) -- ^ "cumulative_unique_users" - Number of cumulative unique users
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount :: !(Maybe Int) -- ^ "hourly_transaction_count" - Total number of transactions occurred in an hour. Transactions include all entities that implement the Event interface.
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount :: !(Maybe Int) -- ^ "hourly_deposit_count" - Total number of deposits (add liquidity) in an hour
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount :: !(Maybe Int) -- ^ "hourly_withdraw_count" - Total number of withdrawals (remove liquidity) in an hour
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount :: !(Maybe Int) -- ^ "hourly_swap_count" - Total number of trades (swaps) in an hour
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of this snapshot
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+instance A.FromJSON CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO where
+  parseJSON = A.withObject "CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO" $ \o ->
+    CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "protocol")
+      <*> (o .:? "hourly_active_users")
+      <*> (o .:? "cumulative_unique_users")
+      <*> (o .:? "hourly_transaction_count")
+      <*> (o .:? "hourly_deposit_count")
+      <*> (o .:? "hourly_withdraw_count")
+      <*> (o .:? "hourly_swap_count")
+      <*> (o .:? "timestamp")
+
+-- | ToJSON CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+instance A.ToJSON CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO where
+  toJSON CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOEntryTime
+      , "recv_time" .= cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTORecvTime
+      , "block_number" .= cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber
+      , "block_range" .= cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockRange
+      , "id" .= cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOId
+      , "protocol" .= cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOProtocol
+      , "hourly_active_users" .= cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers
+      , "cumulative_unique_users" .= cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers
+      , "hourly_transaction_count" .= cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount
+      , "hourly_deposit_count" .= cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount
+      , "hourly_withdraw_count" .= cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount
+      , "hourly_swap_count" .= cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount
+      , "timestamp" .= cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOTimestamp
+      ]
+
+
+-- | Construct a value of type 'CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO' (by applying it's required fields, if any)
+mkCURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+  :: CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+mkCURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO =
+  CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+  { cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOEntryTime = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTORecvTime = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockRange = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOId = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOProtocol = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount = Nothing
+  , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOTimestamp = Nothing
+  }
+
+-- ** CURVEFINANCEETHEREUMWithdrawDTO
+-- | CURVEFINANCEETHEREUMWithdrawDTO
+-- Remove liquidity events.
+data CURVEFINANCEETHEREUMWithdrawDTO = CURVEFINANCEETHEREUMWithdrawDTO
+  { cURVEFINANCEETHEREUMWithdrawDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cURVEFINANCEETHEREUMWithdrawDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cURVEFINANCEETHEREUMWithdrawDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , cURVEFINANCEETHEREUMWithdrawDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cURVEFINANCEETHEREUMWithdrawDTOId :: !(Maybe Text) -- ^ "id" - withdraw-(transaction hash)-(log index)
+  , cURVEFINANCEETHEREUMWithdrawDTOHash :: !(Maybe Text) -- ^ "hash" - Transaction hash of the transaction that emitted this event
+  , cURVEFINANCEETHEREUMWithdrawDTOLogIndex :: !(Maybe Int) -- ^ "log_index" - Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0
+  , cURVEFINANCEETHEREUMWithdrawDTOProtocol :: !(Maybe Text) -- ^ "protocol" - The protocol this transaction belongs to
+  , cURVEFINANCEETHEREUMWithdrawDTOTo :: !(Maybe Text) -- ^ "to" - Address that received the tokens
+  , cURVEFINANCEETHEREUMWithdrawDTOFrom :: !(Maybe Text) -- ^ "from" - Address that sent the tokens
+  , cURVEFINANCEETHEREUMWithdrawDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of this event
+  , cURVEFINANCEETHEREUMWithdrawDTOInputTokens :: !(Maybe [Text]) -- ^ "input_tokens" - Input tokens of the pool (not input tokens of the event/transaction). E.g. WETH and USDC from a WETH-USDC pool
+  , cURVEFINANCEETHEREUMWithdrawDTOOutputToken :: !(Maybe Text) -- ^ "output_token" - Output token of the pool (not output token of the event/transaction). E.g. the UNI-LP token
+  , cURVEFINANCEETHEREUMWithdrawDTOInputTokenAmounts :: !(Maybe [Text]) -- ^ "input_token_amounts" - Amount of input tokens in the token&#39;s native unit
+  , cURVEFINANCEETHEREUMWithdrawDTOOutputTokenAmount :: !(Maybe Text) -- ^ "output_token_amount" - Amount of output tokens in the token&#39;s native unit
+  , cURVEFINANCEETHEREUMWithdrawDTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - USD-normalized value of the transaction of the underlying (e.g. sum of tokens withdrawn from a pool)
+  , cURVEFINANCEETHEREUMWithdrawDTOPool :: !(Maybe Text) -- ^ "pool" - The pool involving this transaction
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CURVEFINANCEETHEREUMWithdrawDTO
+instance A.FromJSON CURVEFINANCEETHEREUMWithdrawDTO where
+  parseJSON = A.withObject "CURVEFINANCEETHEREUMWithdrawDTO" $ \o ->
+    CURVEFINANCEETHEREUMWithdrawDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "hash")
+      <*> (o .:? "log_index")
+      <*> (o .:? "protocol")
+      <*> (o .:? "to")
+      <*> (o .:? "from")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "input_tokens")
+      <*> (o .:? "output_token")
+      <*> (o .:? "input_token_amounts")
+      <*> (o .:? "output_token_amount")
+      <*> (o .:? "amount_usd")
+      <*> (o .:? "pool")
+
+-- | ToJSON CURVEFINANCEETHEREUMWithdrawDTO
+instance A.ToJSON CURVEFINANCEETHEREUMWithdrawDTO where
+  toJSON CURVEFINANCEETHEREUMWithdrawDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cURVEFINANCEETHEREUMWithdrawDTOEntryTime
+      , "recv_time" .= cURVEFINANCEETHEREUMWithdrawDTORecvTime
+      , "block_number" .= cURVEFINANCEETHEREUMWithdrawDTOBlockNumber
+      , "block_range" .= cURVEFINANCEETHEREUMWithdrawDTOBlockRange
+      , "id" .= cURVEFINANCEETHEREUMWithdrawDTOId
+      , "hash" .= cURVEFINANCEETHEREUMWithdrawDTOHash
+      , "log_index" .= cURVEFINANCEETHEREUMWithdrawDTOLogIndex
+      , "protocol" .= cURVEFINANCEETHEREUMWithdrawDTOProtocol
+      , "to" .= cURVEFINANCEETHEREUMWithdrawDTOTo
+      , "from" .= cURVEFINANCEETHEREUMWithdrawDTOFrom
+      , "timestamp" .= cURVEFINANCEETHEREUMWithdrawDTOTimestamp
+      , "input_tokens" .= cURVEFINANCEETHEREUMWithdrawDTOInputTokens
+      , "output_token" .= cURVEFINANCEETHEREUMWithdrawDTOOutputToken
+      , "input_token_amounts" .= cURVEFINANCEETHEREUMWithdrawDTOInputTokenAmounts
+      , "output_token_amount" .= cURVEFINANCEETHEREUMWithdrawDTOOutputTokenAmount
+      , "amount_usd" .= cURVEFINANCEETHEREUMWithdrawDTOAmountUsd
+      , "pool" .= cURVEFINANCEETHEREUMWithdrawDTOPool
+      ]
+
+
+-- | Construct a value of type 'CURVEFINANCEETHEREUMWithdrawDTO' (by applying it's required fields, if any)
+mkCURVEFINANCEETHEREUMWithdrawDTO
+  :: CURVEFINANCEETHEREUMWithdrawDTO
+mkCURVEFINANCEETHEREUMWithdrawDTO =
+  CURVEFINANCEETHEREUMWithdrawDTO
+  { cURVEFINANCEETHEREUMWithdrawDTOEntryTime = Nothing
+  , cURVEFINANCEETHEREUMWithdrawDTORecvTime = Nothing
+  , cURVEFINANCEETHEREUMWithdrawDTOBlockNumber = Nothing
+  , cURVEFINANCEETHEREUMWithdrawDTOBlockRange = Nothing
+  , cURVEFINANCEETHEREUMWithdrawDTOId = Nothing
+  , cURVEFINANCEETHEREUMWithdrawDTOHash = Nothing
+  , cURVEFINANCEETHEREUMWithdrawDTOLogIndex = Nothing
+  , cURVEFINANCEETHEREUMWithdrawDTOProtocol = Nothing
+  , cURVEFINANCEETHEREUMWithdrawDTOTo = Nothing
+  , cURVEFINANCEETHEREUMWithdrawDTOFrom = Nothing
+  , cURVEFINANCEETHEREUMWithdrawDTOTimestamp = Nothing
+  , cURVEFINANCEETHEREUMWithdrawDTOInputTokens = Nothing
+  , cURVEFINANCEETHEREUMWithdrawDTOOutputToken = Nothing
+  , cURVEFINANCEETHEREUMWithdrawDTOInputTokenAmounts = Nothing
+  , cURVEFINANCEETHEREUMWithdrawDTOOutputTokenAmount = Nothing
+  , cURVEFINANCEETHEREUMWithdrawDTOAmountUsd = Nothing
+  , cURVEFINANCEETHEREUMWithdrawDTOPool = Nothing
   }
 
 -- ** PANCAKESWAPV3ETHEREUMAccountDTO
@@ -1887,7 +2965,6 @@ data PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO = PANCAKESWAPV3ETHEREUML
   { pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVid :: !(Maybe Integer) -- ^ "vid" - .
   , pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock :: !(Maybe Int) -- ^ "block_" - The Ethereum block number associated with the liquidity pool daily snapshot.
   , pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (smart contract address of the pool)-(# of days since Unix epoch time).
   , pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODay :: !(Maybe Int) -- ^ "day" - Number of days since Unix epoch time.
@@ -1940,7 +3017,6 @@ instance A.FromJSON PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO where
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
-      <*> (o .:? "vid")
       <*> (o .:? "block_")
       <*> (o .:? "id")
       <*> (o .:? "day")
@@ -1992,7 +3068,6 @@ instance A.ToJSON PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO where
       [ "entry_time" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime
       , "recv_time" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORecvTime
       , "block_number" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber
-      , "vid" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVid
       , "block_" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock
       , "id" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOId
       , "day" .= pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODay
@@ -2047,7 +3122,6 @@ mkPANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO =
   { pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime = Nothing
   , pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORecvTime = Nothing
   , pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber = Nothing
-  , pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVid = Nothing
   , pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock = Nothing
   , pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOId = Nothing
   , pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODay = Nothing
@@ -2149,7 +3223,6 @@ data PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO = PANCAKESWAPV3ETHEREUM
   { pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId :: !(Maybe Text) -- ^ "id" - (Smart contract address of the pool)-( # of hours since Unix epoch time)
   , pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHour :: !(Maybe Int) -- ^ "hour" - Number of hours since Unix epoch time
   , pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol :: !(Maybe Text) -- ^ "protocol" - The protocol this snapshot belongs to
@@ -2201,7 +3274,6 @@ instance A.FromJSON PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO where
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
-      <*> (o .:? "vid")
       <*> (o .:? "id")
       <*> (o .:? "hour")
       <*> (o .:? "protocol")
@@ -2252,7 +3324,6 @@ instance A.ToJSON PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO where
       [ "entry_time" .= pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime
       , "recv_time" .= pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime
       , "block_number" .= pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber
-      , "vid" .= pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVid
       , "id" .= pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId
       , "hour" .= pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHour
       , "protocol" .= pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol
@@ -2306,7 +3377,6 @@ mkPANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO =
   { pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime = Nothing
   , pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime = Nothing
   , pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber = Nothing
-  , pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVid = Nothing
   , pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId = Nothing
   , pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHour = Nothing
   , pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol = Nothing
@@ -2358,7 +3428,6 @@ data PANCAKESWAPV3ETHEREUMPositionDTO = PANCAKESWAPV3ETHEREUMPositionDTO
   { pANCAKESWAPV3ETHEREUMPositionDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , pANCAKESWAPV3ETHEREUMPositionDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , pANCAKESWAPV3ETHEREUMPositionDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , pANCAKESWAPV3ETHEREUMPositionDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , pANCAKESWAPV3ETHEREUMPositionDTOId :: !(Maybe Text) -- ^ "id" - (account address)-(market address)-(count)
   , pANCAKESWAPV3ETHEREUMPositionDTOAccount :: !(Maybe Text) -- ^ "account" - Account that owns this position
   , pANCAKESWAPV3ETHEREUMPositionDTOPool :: !(Maybe Text) -- ^ "pool" - The liquidity pool in which this position was opened
@@ -2390,7 +3459,6 @@ instance A.FromJSON PANCAKESWAPV3ETHEREUMPositionDTO where
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
-      <*> (o .:? "vid")
       <*> (o .:? "id")
       <*> (o .:? "account")
       <*> (o .:? "pool")
@@ -2421,7 +3489,6 @@ instance A.ToJSON PANCAKESWAPV3ETHEREUMPositionDTO where
       [ "entry_time" .= pANCAKESWAPV3ETHEREUMPositionDTOEntryTime
       , "recv_time" .= pANCAKESWAPV3ETHEREUMPositionDTORecvTime
       , "block_number" .= pANCAKESWAPV3ETHEREUMPositionDTOBlockNumber
-      , "vid" .= pANCAKESWAPV3ETHEREUMPositionDTOVid
       , "id" .= pANCAKESWAPV3ETHEREUMPositionDTOId
       , "account" .= pANCAKESWAPV3ETHEREUMPositionDTOAccount
       , "pool" .= pANCAKESWAPV3ETHEREUMPositionDTOPool
@@ -2455,7 +3522,6 @@ mkPANCAKESWAPV3ETHEREUMPositionDTO =
   { pANCAKESWAPV3ETHEREUMPositionDTOEntryTime = Nothing
   , pANCAKESWAPV3ETHEREUMPositionDTORecvTime = Nothing
   , pANCAKESWAPV3ETHEREUMPositionDTOBlockNumber = Nothing
-  , pANCAKESWAPV3ETHEREUMPositionDTOVid = Nothing
   , pANCAKESWAPV3ETHEREUMPositionDTOId = Nothing
   , pANCAKESWAPV3ETHEREUMPositionDTOAccount = Nothing
   , pANCAKESWAPV3ETHEREUMPositionDTOPool = Nothing
@@ -2774,7 +3840,6 @@ data PANCAKESWAPV3ETHEREUMTickDTO = PANCAKESWAPV3ETHEREUMTickDTO
   { pANCAKESWAPV3ETHEREUMTickDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , pANCAKESWAPV3ETHEREUMTickDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , pANCAKESWAPV3ETHEREUMTickDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , pANCAKESWAPV3ETHEREUMTickDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , pANCAKESWAPV3ETHEREUMTickDTOId :: !(Maybe Text) -- ^ "id" - (pool address)-(tick index)
   , pANCAKESWAPV3ETHEREUMTickDTOIndex :: !(Maybe Text) -- ^ "index" - tick index
   , pANCAKESWAPV3ETHEREUMTickDTOPool :: !(Maybe Text) -- ^ "pool" - Liquidity pool this tick belongs to
@@ -2798,7 +3863,6 @@ instance A.FromJSON PANCAKESWAPV3ETHEREUMTickDTO where
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
-      <*> (o .:? "vid")
       <*> (o .:? "id")
       <*> (o .:? "index")
       <*> (o .:? "pool")
@@ -2821,7 +3885,6 @@ instance A.ToJSON PANCAKESWAPV3ETHEREUMTickDTO where
       [ "entry_time" .= pANCAKESWAPV3ETHEREUMTickDTOEntryTime
       , "recv_time" .= pANCAKESWAPV3ETHEREUMTickDTORecvTime
       , "block_number" .= pANCAKESWAPV3ETHEREUMTickDTOBlockNumber
-      , "vid" .= pANCAKESWAPV3ETHEREUMTickDTOVid
       , "id" .= pANCAKESWAPV3ETHEREUMTickDTOId
       , "index" .= pANCAKESWAPV3ETHEREUMTickDTOIndex
       , "pool" .= pANCAKESWAPV3ETHEREUMTickDTOPool
@@ -2847,7 +3910,6 @@ mkPANCAKESWAPV3ETHEREUMTickDTO =
   { pANCAKESWAPV3ETHEREUMTickDTOEntryTime = Nothing
   , pANCAKESWAPV3ETHEREUMTickDTORecvTime = Nothing
   , pANCAKESWAPV3ETHEREUMTickDTOBlockNumber = Nothing
-  , pANCAKESWAPV3ETHEREUMTickDTOVid = Nothing
   , pANCAKESWAPV3ETHEREUMTickDTOId = Nothing
   , pANCAKESWAPV3ETHEREUMTickDTOIndex = Nothing
   , pANCAKESWAPV3ETHEREUMTickDTOPool = Nothing
@@ -2871,7 +3933,6 @@ data PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO = PANCAKESWAPV3ETHEREUMTickDailyS
   { pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , pANCAKESWAPV3ETHEREUMTickDailySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (pool address)-(tick index)-(day ID)
   , pANCAKESWAPV3ETHEREUMTickDailySnapshotDTODayId :: !(Maybe Int) -- ^ "day_id" - Number of days since Unix epoch time
   , pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOTick :: !(Maybe Text) -- ^ "tick" - tick index
@@ -2890,7 +3951,6 @@ instance A.FromJSON PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO where
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
-      <*> (o .:? "vid")
       <*> (o .:? "id")
       <*> (o .:? "day_id")
       <*> (o .:? "tick")
@@ -2908,7 +3968,6 @@ instance A.ToJSON PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO where
       [ "entry_time" .= pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOEntryTime
       , "recv_time" .= pANCAKESWAPV3ETHEREUMTickDailySnapshotDTORecvTime
       , "block_number" .= pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOBlockNumber
-      , "vid" .= pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOVid
       , "id" .= pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOId
       , "day_id" .= pANCAKESWAPV3ETHEREUMTickDailySnapshotDTODayId
       , "tick" .= pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOTick
@@ -2929,7 +3988,6 @@ mkPANCAKESWAPV3ETHEREUMTickDailySnapshotDTO =
   { pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOEntryTime = Nothing
   , pANCAKESWAPV3ETHEREUMTickDailySnapshotDTORecvTime = Nothing
   , pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOBlockNumber = Nothing
-  , pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOVid = Nothing
   , pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOId = Nothing
   , pANCAKESWAPV3ETHEREUMTickDailySnapshotDTODayId = Nothing
   , pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOTick = Nothing
@@ -2948,7 +4006,6 @@ data PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO = PANCAKESWAPV3ETHEREUMTickHourl
   { pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOId :: !(Maybe Text) -- ^ "id" - (pool address)-(tick index)-(hour ID)
   , pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOHourId :: !(Maybe Int) -- ^ "hour_id" - Number of hours since Unix epoch time
   , pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOTick :: !(Maybe Text) -- ^ "tick" - tick index
@@ -2967,7 +4024,6 @@ instance A.FromJSON PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO where
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
-      <*> (o .:? "vid")
       <*> (o .:? "id")
       <*> (o .:? "hour_id")
       <*> (o .:? "tick")
@@ -2985,7 +4041,6 @@ instance A.ToJSON PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO where
       [ "entry_time" .= pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOEntryTime
       , "recv_time" .= pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTORecvTime
       , "block_number" .= pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumber
-      , "vid" .= pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOVid
       , "id" .= pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOId
       , "hour_id" .= pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOHourId
       , "tick" .= pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOTick
@@ -3006,7 +4061,6 @@ mkPANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO =
   { pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOEntryTime = Nothing
   , pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTORecvTime = Nothing
   , pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumber = Nothing
-  , pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOVid = Nothing
   , pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOId = Nothing
   , pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOHourId = Nothing
   , pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOTick = Nothing
@@ -3472,6 +4526,555 @@ mkPANCAKESWAPV3ETHEREUMWithdrawDTO =
   , pANCAKESWAPV3ETHEREUMWithdrawDTOAmountUsd = Nothing
   }
 
+-- ** SUSHISWAPV3ETHEREUMAccountDTO
+-- | SUSHISWAPV3ETHEREUMAccountDTO
+data SUSHISWAPV3ETHEREUMAccountDTO = SUSHISWAPV3ETHEREUMAccountDTO
+  { sUSHISWAPV3ETHEREUMAccountDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMAccountDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMAccountDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMAccountDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , sUSHISWAPV3ETHEREUMAccountDTOId :: !(Maybe Text) -- ^ "id" - Account address.
+  , sUSHISWAPV3ETHEREUMAccountDTOPositionCount :: !(Maybe Int) -- ^ "position_count" - Number of positions this account has.
+  , sUSHISWAPV3ETHEREUMAccountDTOOpenPositionCount :: !(Maybe Int) -- ^ "open_position_count" - Number of open positions this account has.
+  , sUSHISWAPV3ETHEREUMAccountDTOClosedPositionCount :: !(Maybe Int) -- ^ "closed_position_count" - Number of closed positions this account has.
+  , sUSHISWAPV3ETHEREUMAccountDTODepositCount :: !(Maybe Int) -- ^ "deposit_count" - Number of deposits this account made.
+  , sUSHISWAPV3ETHEREUMAccountDTOWithdrawCount :: !(Maybe Int) -- ^ "withdraw_count" - Number of withdrawals this account made.
+  , sUSHISWAPV3ETHEREUMAccountDTOSwapCount :: !(Maybe Int) -- ^ "swap_count" - Number of times this account has traded/swapped.
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMAccountDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMAccountDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMAccountDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMAccountDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "position_count")
+      <*> (o .:? "open_position_count")
+      <*> (o .:? "closed_position_count")
+      <*> (o .:? "deposit_count")
+      <*> (o .:? "withdraw_count")
+      <*> (o .:? "swap_count")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMAccountDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMAccountDTO where
+  toJSON SUSHISWAPV3ETHEREUMAccountDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMAccountDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMAccountDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMAccountDTOBlockNumber
+      , "block_range" .= sUSHISWAPV3ETHEREUMAccountDTOBlockRange
+      , "id" .= sUSHISWAPV3ETHEREUMAccountDTOId
+      , "position_count" .= sUSHISWAPV3ETHEREUMAccountDTOPositionCount
+      , "open_position_count" .= sUSHISWAPV3ETHEREUMAccountDTOOpenPositionCount
+      , "closed_position_count" .= sUSHISWAPV3ETHEREUMAccountDTOClosedPositionCount
+      , "deposit_count" .= sUSHISWAPV3ETHEREUMAccountDTODepositCount
+      , "withdraw_count" .= sUSHISWAPV3ETHEREUMAccountDTOWithdrawCount
+      , "swap_count" .= sUSHISWAPV3ETHEREUMAccountDTOSwapCount
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMAccountDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMAccountDTO
+  :: SUSHISWAPV3ETHEREUMAccountDTO
+mkSUSHISWAPV3ETHEREUMAccountDTO =
+  SUSHISWAPV3ETHEREUMAccountDTO
+  { sUSHISWAPV3ETHEREUMAccountDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMAccountDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMAccountDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMAccountDTOBlockRange = Nothing
+  , sUSHISWAPV3ETHEREUMAccountDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMAccountDTOPositionCount = Nothing
+  , sUSHISWAPV3ETHEREUMAccountDTOOpenPositionCount = Nothing
+  , sUSHISWAPV3ETHEREUMAccountDTOClosedPositionCount = Nothing
+  , sUSHISWAPV3ETHEREUMAccountDTODepositCount = Nothing
+  , sUSHISWAPV3ETHEREUMAccountDTOWithdrawCount = Nothing
+  , sUSHISWAPV3ETHEREUMAccountDTOSwapCount = Nothing
+  }
+
+-- ** SUSHISWAPV3ETHEREUMActiveAccountDTO
+-- | SUSHISWAPV3ETHEREUMActiveAccountDTO
+-- Entity for calculating daily/hourly active users.
+data SUSHISWAPV3ETHEREUMActiveAccountDTO = SUSHISWAPV3ETHEREUMActiveAccountDTO
+  { sUSHISWAPV3ETHEREUMActiveAccountDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMActiveAccountDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMActiveAccountDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMActiveAccountDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (daily/hourly)-(address of the account)-(days/hours since unix epoch)
+  , sUSHISWAPV3ETHEREUMActiveAccountDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMActiveAccountDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMActiveAccountDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMActiveAccountDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMActiveAccountDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "block_range")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMActiveAccountDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMActiveAccountDTO where
+  toJSON SUSHISWAPV3ETHEREUMActiveAccountDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMActiveAccountDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMActiveAccountDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMActiveAccountDTOBlockNumber
+      , "id" .= sUSHISWAPV3ETHEREUMActiveAccountDTOId
+      , "block_range" .= sUSHISWAPV3ETHEREUMActiveAccountDTOBlockRange
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMActiveAccountDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMActiveAccountDTO
+  :: SUSHISWAPV3ETHEREUMActiveAccountDTO
+mkSUSHISWAPV3ETHEREUMActiveAccountDTO =
+  SUSHISWAPV3ETHEREUMActiveAccountDTO
+  { sUSHISWAPV3ETHEREUMActiveAccountDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMActiveAccountDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMActiveAccountDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMActiveAccountDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMActiveAccountDTOBlockRange = Nothing
+  }
+
+-- ** SUSHISWAPV3ETHEREUMDepositDTO
+-- | SUSHISWAPV3ETHEREUMDepositDTO
+-- Entity represents a user action in the protocol involving the addition of funds to a liquidity pool.
+data SUSHISWAPV3ETHEREUMDepositDTO = SUSHISWAPV3ETHEREUMDepositDTO
+  { sUSHISWAPV3ETHEREUMDepositDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMDepositDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMDepositDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMDepositDTOBlock :: !(Maybe Int) -- ^ "block_" - 
+  , sUSHISWAPV3ETHEREUMDepositDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (transaction hash)-(log index)
+  , sUSHISWAPV3ETHEREUMDepositDTOHash :: !(Maybe Text) -- ^ "hash" - Transaction hash of the transaction that emitted this event.
+  , sUSHISWAPV3ETHEREUMDepositDTONonce :: !(Maybe Text) -- ^ "nonce" - Nonce of the transaction that emitted this event.
+  , sUSHISWAPV3ETHEREUMDepositDTOLogIndex :: !(Maybe Int) -- ^ "log_index" - Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0.
+  , sUSHISWAPV3ETHEREUMDepositDTOGasLimit :: !(Maybe Text) -- ^ "gas_limit" - Gas limit of the transaction that emitted this event.
+  , sUSHISWAPV3ETHEREUMDepositDTOGasUsed :: !(Maybe Text) -- ^ "gas_used" - Gas used in this transaction. (Optional because not every chain will support this).
+  , sUSHISWAPV3ETHEREUMDepositDTOGasPrice :: !(Maybe Text) -- ^ "gas_price" - Gas price of the transaction that emitted this event.
+  , sUSHISWAPV3ETHEREUMDepositDTOProtocol :: !(Maybe Text) -- ^ "protocol" - The protocol this transaction belongs to.
+  , sUSHISWAPV3ETHEREUMDepositDTOAccount :: !(Maybe Text) -- ^ "account" - Account that emitted this event.
+  , sUSHISWAPV3ETHEREUMDepositDTOPosition :: !(Maybe Text) -- ^ "position" - The user position changed by this event.
+  , sUSHISWAPV3ETHEREUMDepositDTOPool :: !(Maybe Text) -- ^ "pool" - The pool involving this event.
+  , sUSHISWAPV3ETHEREUMDepositDTOTickLower :: !(Maybe Text) -- ^ "tick_lower" - Lower tick of position.
+  , sUSHISWAPV3ETHEREUMDepositDTOTickUpper :: !(Maybe Text) -- ^ "tick_upper" - Upper tick of position.
+  , sUSHISWAPV3ETHEREUMDepositDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of this event.
+  , sUSHISWAPV3ETHEREUMDepositDTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - Amount of liquidity minted.
+  , sUSHISWAPV3ETHEREUMDepositDTOInputTokens :: !(Maybe [Text]) -- ^ "input_tokens" - Input tokens of the pool. E.g. WETH and USDC to a WETH-USDC pool.
+  , sUSHISWAPV3ETHEREUMDepositDTOInputTokenAmounts :: !(Maybe [Text]) -- ^ "input_token_amounts" - Amount of input tokens in the token&#39;s native unit.
+  , sUSHISWAPV3ETHEREUMDepositDTOReserveAmounts :: !(Maybe [Text]) -- ^ "reserve_amounts" - Amount of input tokens in the liquidity pool.
+  , sUSHISWAPV3ETHEREUMDepositDTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - USD-normalized value of the transaction of the underlying (e.g. sum of tokens deposited into a pool).
+  , sUSHISWAPV3ETHEREUMDepositDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMDepositDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMDepositDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMDepositDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMDepositDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_")
+      <*> (o .:? "id")
+      <*> (o .:? "hash")
+      <*> (o .:? "nonce")
+      <*> (o .:? "log_index")
+      <*> (o .:? "gas_limit")
+      <*> (o .:? "gas_used")
+      <*> (o .:? "gas_price")
+      <*> (o .:? "protocol")
+      <*> (o .:? "account")
+      <*> (o .:? "position")
+      <*> (o .:? "pool")
+      <*> (o .:? "tick_lower")
+      <*> (o .:? "tick_upper")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "liquidity")
+      <*> (o .:? "input_tokens")
+      <*> (o .:? "input_token_amounts")
+      <*> (o .:? "reserve_amounts")
+      <*> (o .:? "amount_usd")
+      <*> (o .:? "block_range")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMDepositDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMDepositDTO where
+  toJSON SUSHISWAPV3ETHEREUMDepositDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMDepositDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMDepositDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMDepositDTOBlockNumber
+      , "block_" .= sUSHISWAPV3ETHEREUMDepositDTOBlock
+      , "id" .= sUSHISWAPV3ETHEREUMDepositDTOId
+      , "hash" .= sUSHISWAPV3ETHEREUMDepositDTOHash
+      , "nonce" .= sUSHISWAPV3ETHEREUMDepositDTONonce
+      , "log_index" .= sUSHISWAPV3ETHEREUMDepositDTOLogIndex
+      , "gas_limit" .= sUSHISWAPV3ETHEREUMDepositDTOGasLimit
+      , "gas_used" .= sUSHISWAPV3ETHEREUMDepositDTOGasUsed
+      , "gas_price" .= sUSHISWAPV3ETHEREUMDepositDTOGasPrice
+      , "protocol" .= sUSHISWAPV3ETHEREUMDepositDTOProtocol
+      , "account" .= sUSHISWAPV3ETHEREUMDepositDTOAccount
+      , "position" .= sUSHISWAPV3ETHEREUMDepositDTOPosition
+      , "pool" .= sUSHISWAPV3ETHEREUMDepositDTOPool
+      , "tick_lower" .= sUSHISWAPV3ETHEREUMDepositDTOTickLower
+      , "tick_upper" .= sUSHISWAPV3ETHEREUMDepositDTOTickUpper
+      , "timestamp" .= sUSHISWAPV3ETHEREUMDepositDTOTimestamp
+      , "liquidity" .= sUSHISWAPV3ETHEREUMDepositDTOLiquidity
+      , "input_tokens" .= sUSHISWAPV3ETHEREUMDepositDTOInputTokens
+      , "input_token_amounts" .= sUSHISWAPV3ETHEREUMDepositDTOInputTokenAmounts
+      , "reserve_amounts" .= sUSHISWAPV3ETHEREUMDepositDTOReserveAmounts
+      , "amount_usd" .= sUSHISWAPV3ETHEREUMDepositDTOAmountUsd
+      , "block_range" .= sUSHISWAPV3ETHEREUMDepositDTOBlockRange
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMDepositDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMDepositDTO
+  :: SUSHISWAPV3ETHEREUMDepositDTO
+mkSUSHISWAPV3ETHEREUMDepositDTO =
+  SUSHISWAPV3ETHEREUMDepositDTO
+  { sUSHISWAPV3ETHEREUMDepositDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOBlock = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOHash = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTONonce = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOLogIndex = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOGasLimit = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOGasUsed = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOGasPrice = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOProtocol = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOAccount = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOPosition = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOPool = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOTickLower = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOTickUpper = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOTimestamp = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOLiquidity = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOInputTokens = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOInputTokenAmounts = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOReserveAmounts = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOAmountUsd = Nothing
+  , sUSHISWAPV3ETHEREUMDepositDTOBlockRange = Nothing
+  }
+
+-- ** SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+-- | SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+--  Decentralized exchange (Dex) automated market maker (Amm) protocol. It's an entity that represents a protocol involving a smart contract that use automated market makers.
+data SUSHISWAPV3ETHEREUMDexAmmProtocolDTO = SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+  { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOId :: !(Maybe Text) -- ^ "id" - Smart contract address of the protocol&#39;s main contract (Factory, Registry, etc).
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOName :: !(Maybe Text) -- ^ "name" - Name of the protocol, including version. e.g. Uniswap v3.
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSlug :: !(Maybe Text) -- ^ "slug" - Slug of protocol, including version. e.g. uniswap-v3.
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSchemaVersion :: !(Maybe Text) -- ^ "schema_version" - Version of the subgraph schema, in SemVer format (e.g. 1.0.0).
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSubgraphVersion :: !(Maybe Text) -- ^ "subgraph_version" - Version of the subgraph implementation, in SemVer format (e.g. 1.0.0).
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOMethodologyVersion :: !(Maybe Text) -- ^ "methodology_version" - Version of the methodology used to compute metrics, loosely based on SemVer format (e.g. 1.0.0).
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Current TVL (Total Value Locked) of the entire protocol.
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalLiquidityUsd :: !(Maybe Text) -- ^ "total_liquidity_usd" - The sum of all active and non-active liquidity in USD for this pool.
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOActiveLiquidityUsd :: !(Maybe Text) -- ^ "active_liquidity_usd" - All liquidity in USD that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pools current tick.
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedProtocolSideValueUsd :: !(Maybe Text) -- ^ "uncollected_protocol_side_value_usd" - All protocol-side value locking in USD that remains uncollected and unused in the protocol.
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedSupplySideValueUsd :: !(Maybe Text) -- ^ "uncollected_supply_side_value_usd" - All supply-side value locking in USD that remains uncollected and unused in the protocol.
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd :: !(Maybe Text) -- ^ "protocol_controlled_value_usd" - Current PCV (Protocol Controlled Value). Only relevant for protocols with PCV.
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd :: !(Maybe Text) -- ^ "cumulative_volume_usd" - All historical volume in USD.
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_supply_side_revenue_usd" - Revenue claimed by suppliers to the protocol. LPs on DEXs (e.g. 0.25% of the swap fee in Sushiswap). Depositors on Lending Protocols. NFT sellers on OpenSea.
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_protocol_side_revenue_usd" - Gross revenue for the protocol (revenue claimed by protocol). Examples: AMM protocol fee (Sushi’s 0.05%). OpenSea 10% sell fee.
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd :: !(Maybe Text) -- ^ "cumulative_total_revenue_usd" - All revenue generated by the protocol. e.g. 0.30% of swap fee in Sushiswap, all yield generated by Yearn.
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers :: !(Maybe Int) -- ^ "cumulative_unique_users" - Number of cumulative unique users.
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueLps :: !(Maybe Int) -- ^ "cumulative_unique_l_ps" - Number of cumulative liquidity providers.
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueTraders :: !(Maybe Int) -- ^ "cumulative_unique_traders" - Number of cumulative traders
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalPoolCount :: !(Maybe Int) -- ^ "total_pool_count" - Total number of pools.
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOOpenPositionCount :: !(Maybe Int) -- ^ "open_position_count" - Total number of open positions.
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativePositionCount :: !(Maybe Int) -- ^ "cumulative_position_count" - Total number of positions (open and closed).
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastSnapshotDayId :: !(Maybe Int) -- ^ "last_snapshot_day_id" - Day ID of the most recent daily snapshot.
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateTimestamp :: !(Maybe Text) -- ^ "last_update_timestamp" - Timestamp of the last time this entity was updated
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateBlockNumber :: !(Maybe Text) -- ^ "last_update_block_number" - Block number of the last time this entity was updated.
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTORegenesis :: !(Maybe Bool) -- ^ "regenesis" - This is a boolean to indicate whether or not the pools have been instantiated the were initialized before Optimism regenesis.
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMDexAmmProtocolDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMDexAmmProtocolDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "name")
+      <*> (o .:? "slug")
+      <*> (o .:? "schema_version")
+      <*> (o .:? "subgraph_version")
+      <*> (o .:? "methodology_version")
+      <*> (o .:? "total_value_locked_usd")
+      <*> (o .:? "total_liquidity_usd")
+      <*> (o .:? "active_liquidity_usd")
+      <*> (o .:? "uncollected_protocol_side_value_usd")
+      <*> (o .:? "uncollected_supply_side_value_usd")
+      <*> (o .:? "protocol_controlled_value_usd")
+      <*> (o .:? "cumulative_volume_usd")
+      <*> (o .:? "cumulative_supply_side_revenue_usd")
+      <*> (o .:? "cumulative_protocol_side_revenue_usd")
+      <*> (o .:? "cumulative_total_revenue_usd")
+      <*> (o .:? "cumulative_unique_users")
+      <*> (o .:? "cumulative_unique_l_ps")
+      <*> (o .:? "cumulative_unique_traders")
+      <*> (o .:? "total_pool_count")
+      <*> (o .:? "open_position_count")
+      <*> (o .:? "cumulative_position_count")
+      <*> (o .:? "last_snapshot_day_id")
+      <*> (o .:? "last_update_timestamp")
+      <*> (o .:? "last_update_block_number")
+      <*> (o .:? "regenesis")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMDexAmmProtocolDTO where
+  toJSON SUSHISWAPV3ETHEREUMDexAmmProtocolDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockNumber
+      , "block_range" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockRange
+      , "id" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOId
+      , "name" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOName
+      , "slug" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSlug
+      , "schema_version" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSchemaVersion
+      , "subgraph_version" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSubgraphVersion
+      , "methodology_version" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOMethodologyVersion
+      , "total_value_locked_usd" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalValueLockedUsd
+      , "total_liquidity_usd" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalLiquidityUsd
+      , "active_liquidity_usd" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOActiveLiquidityUsd
+      , "uncollected_protocol_side_value_usd" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedProtocolSideValueUsd
+      , "uncollected_supply_side_value_usd" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedSupplySideValueUsd
+      , "protocol_controlled_value_usd" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd
+      , "cumulative_volume_usd" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd
+      , "cumulative_supply_side_revenue_usd" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd
+      , "cumulative_protocol_side_revenue_usd" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd
+      , "cumulative_total_revenue_usd" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd
+      , "cumulative_unique_users" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers
+      , "cumulative_unique_l_ps" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueLps
+      , "cumulative_unique_traders" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueTraders
+      , "total_pool_count" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalPoolCount
+      , "open_position_count" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOOpenPositionCount
+      , "cumulative_position_count" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativePositionCount
+      , "last_snapshot_day_id" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastSnapshotDayId
+      , "last_update_timestamp" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateTimestamp
+      , "last_update_block_number" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateBlockNumber
+      , "regenesis" .= sUSHISWAPV3ETHEREUMDexAmmProtocolDTORegenesis
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMDexAmmProtocolDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+  :: SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+mkSUSHISWAPV3ETHEREUMDexAmmProtocolDTO =
+  SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+  { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockRange = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOName = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSlug = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSchemaVersion = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSubgraphVersion = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOMethodologyVersion = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalValueLockedUsd = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalLiquidityUsd = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOActiveLiquidityUsd = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedProtocolSideValueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedSupplySideValueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueLps = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueTraders = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalPoolCount = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOOpenPositionCount = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativePositionCount = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastSnapshotDayId = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateTimestamp = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMDexAmmProtocolDTORegenesis = Nothing
+  }
+
+-- ** SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+-- | SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+-- Daily financial metrics for Sushiswap V3.
+data SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO = SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+  { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumber :: !(Maybe Int) -- ^ "block_number" - Block number of when this snapshot was taken/last modified.)
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOId :: !(Maybe Text) -- ^ "id" - ID is # of days since Unix epoch time.
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODay :: !(Maybe Int) -- ^ "day" - Number of days since Unix epoch time.
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocol :: !(Maybe Text) -- ^ "protocol" - Protocol this snapshot is associated with.
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Current TVL (Total Value Locked) of the entire protocol.
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalLiquidityUsd :: !(Maybe Text) -- ^ "total_liquidity_usd" - The sum of all active and non-active liquidity in USD for this pool.
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOActiveLiquidityUsd :: !(Maybe Text) -- ^ "active_liquidity_usd" - All liquidity in USD that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pool&#39;s current tick.
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedProtocolSideValueUsd :: !(Maybe Text) -- ^ "uncollected_protocol_side_value_usd" - All protocol-side value locking in USD that remains uncollected and unused in the protocol.
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedSupplySideValueUsd :: !(Maybe Text) -- ^ "uncollected_supply_side_value_usd" - All supply-side value locking in USD that remains uncollected and unused in the protocol.
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd :: !(Maybe Text) -- ^ "protocol_controlled_value_usd" - Current PCV (Protocol Controlled Value). Only relevant for protocols with PCV.
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd :: !(Maybe Text) -- ^ "daily_volume_usd" - All trade volume occurred in a given day, in USD
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd :: !(Maybe Text) -- ^ "cumulative_volume_usd" - All historical trade volume in USD
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd :: !(Maybe Text) -- ^ "daily_supply_side_revenue_usd" - Revenue claimed by suppliers to the protocol. LPs on DEXs (e.g. 0.25% of the swap fee in Sushiswap). Depositors on Lending Protocols. NFT sellers on OpenSea.
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_supply_side_revenue_usd" - Revenue claimed by suppliers to the protocol. LPs on DEXs (e.g. 0.25% of the swap fee in Sushiswap). Depositors on Lending Protocols. NFT sellers on OpenSea.
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "daily_protocol_side_revenue_usd" - Gross revenue for the protocol (revenue claimed by the protocol). Examples: AMM protocol fee (Sushi’s 0.05%). OpenSea 10% sell fee.
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_protocol_side_revenue_usd" - Gross revenue for the protocol (revenue claimed by the protocol). Examples: AMM protocol fee (Sushi’s 0.05%). OpenSea 10% sell fee.
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd :: !(Maybe Text) -- ^ "daily_total_revenue_usd" - All revenue generated by the protocol. e.g. 0.30% of swap fee in Sushiswap, all yield generated by Yearn.
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd :: !(Maybe Text) -- ^ "cumulative_total_revenue_usd" - All revenue generated by the protocol. e.g. 0.30% of swap fee in Sushiswap, all yield generated by Yearn.
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of when this snapshot was taken/last modified (May be taken after the interval has passed).
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "day")
+      <*> (o .:? "protocol")
+      <*> (o .:? "total_value_locked_usd")
+      <*> (o .:? "total_liquidity_usd")
+      <*> (o .:? "active_liquidity_usd")
+      <*> (o .:? "uncollected_protocol_side_value_usd")
+      <*> (o .:? "uncollected_supply_side_value_usd")
+      <*> (o .:? "protocol_controlled_value_usd")
+      <*> (o .:? "daily_volume_usd")
+      <*> (o .:? "cumulative_volume_usd")
+      <*> (o .:? "daily_supply_side_revenue_usd")
+      <*> (o .:? "cumulative_supply_side_revenue_usd")
+      <*> (o .:? "daily_protocol_side_revenue_usd")
+      <*> (o .:? "cumulative_protocol_side_revenue_usd")
+      <*> (o .:? "daily_total_revenue_usd")
+      <*> (o .:? "cumulative_total_revenue_usd")
+      <*> (o .:? "timestamp")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO where
+  toJSON SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumber
+      , "id" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOId
+      , "day" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODay
+      , "protocol" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocol
+      , "total_value_locked_usd" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd
+      , "total_liquidity_usd" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalLiquidityUsd
+      , "active_liquidity_usd" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOActiveLiquidityUsd
+      , "uncollected_protocol_side_value_usd" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedProtocolSideValueUsd
+      , "uncollected_supply_side_value_usd" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedSupplySideValueUsd
+      , "protocol_controlled_value_usd" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd
+      , "daily_volume_usd" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd
+      , "cumulative_volume_usd" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd
+      , "daily_supply_side_revenue_usd" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd
+      , "cumulative_supply_side_revenue_usd" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd
+      , "daily_protocol_side_revenue_usd" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd
+      , "cumulative_protocol_side_revenue_usd" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd
+      , "daily_total_revenue_usd" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd
+      , "cumulative_total_revenue_usd" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd
+      , "timestamp" .= sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTimestamp
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+  :: SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+mkSUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO =
+  SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+  { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODay = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocol = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalLiquidityUsd = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOActiveLiquidityUsd = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedProtocolSideValueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedSupplySideValueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTimestamp = Nothing
+  }
+
+-- ** SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO
+-- | SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO
+-- 
+data SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO = SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO
+  { sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOVid :: !(Maybe Integer) -- ^ "vid" - .
+  , sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOId :: !(Maybe Text) -- ^ "id" - Smart contract address of the pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokens :: !(Maybe [Text]) -- ^ "input_tokens" - Input tokens of the pool (not input tokens of the event/transaction). E.g. WETH and USDC from a WETH-USDC pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokenBalances :: !(Maybe [Text]) -- ^ "input_token_balances" - Amount of input tokens in the pool. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOTokenPrices :: !(Maybe [Text]) -- ^ "token_prices" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "vid")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "input_tokens")
+      <*> (o .:? "input_token_balances")
+      <*> (o .:? "token_prices")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO where
+  toJSON SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockNumber
+      , "vid" .= sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOVid
+      , "block_range" .= sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockRange
+      , "id" .= sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOId
+      , "input_tokens" .= sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokens
+      , "input_token_balances" .= sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokenBalances
+      , "token_prices" .= sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOTokenPrices
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO
+  :: SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO
+mkSUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO =
+  SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO
+  { sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOVid = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockRange = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokens = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokenBalances = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOTokenPrices = Nothing
+  }
+
 -- ** SUSHISWAPV3ETHEREUMLiquidityPoolDTO
 -- | SUSHISWAPV3ETHEREUMLiquidityPoolDTO
 -- Pool-level metadata.
@@ -3693,6 +5296,744 @@ mkSUSHISWAPV3ETHEREUMLiquidityPoolDTO =
   , sUSHISWAPV3ETHEREUMLiquidityPoolDTOEvaluatedAsk = Nothing
   }
 
+-- ** SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+-- | SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+-- Represents a liquidity pool daily snapshot for Sushiswap V3.
+data SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO = SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+  { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock :: !(Maybe Int) -- ^ "block_" - The Ethereum block number associated with the liquidity pool daily snapshot.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (smart contract address of the pool)-(# of days since Unix epoch time).
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODay :: !(Maybe Int) -- ^ "day" - Number of days since Unix epoch time.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOProtocol :: !(Maybe Text) -- ^ "protocol" - Protocol associated with the liquidity pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPool :: !(Maybe Text) -- ^ "pool" - Pool this snapshot belongs to.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTick :: !(Maybe Text) -- ^ "tick" - Current tick representing the price of token0/token1.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Current TVL (Total Value Locked) of this pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidity :: !(Maybe Text) -- ^ "total_liquidity" - The sum of all active and non-active liquidity for this pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidityUsd :: !(Maybe Text) -- ^ "total_liquidity_usd" - Sum of all active and non-active liquidity in USD for this pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidity :: !(Maybe Text) -- ^ "active_liquidity" - All liquidity &#x60;k&#x60; that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pools current tick.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidityUsd :: !(Maybe Text) -- ^ "active_liquidity_usd" - All liquidity in USD that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pools current tick.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideTokenAmounts :: !(Maybe [Text]) -- ^ "uncollected_protocol_side_token_amounts" - All protocol-side value locked in token amounts that remains uncollected and unused in the pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideValuesUsd :: !(Maybe [Text]) -- ^ "uncollected_protocol_side_values_usd" - All protocol-side value locking in USD that remains uncollected and unused in the pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideTokenAmounts :: !(Maybe [Text]) -- ^ "uncollected_supply_side_token_amounts" - All supply-side value locked in token amounts that remains uncollected and unused in the pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideValuesUsd :: !(Maybe [Text]) -- ^ "uncollected_supply_side_values_usd" - All supply-side value locked in USD that remains uncollected and unused in the pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_supply_side_revenue_usd" - All revenue generated by the liquidity pool, accrued to the supply side.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd :: !(Maybe Text) -- ^ "daily_supply_side_revenue_usd" - Daily revenue generated by the liquidity pool, accrued to the supply side.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_protocol_side_revenue_usd" - All revenue generated by the liquidity pool, accrued to the protocol.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "daily_protocol_side_revenue_usd" - Daily revenue generated by the liquidity pool, accrued to the protocol.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd :: !(Maybe Text) -- ^ "cumulative_total_revenue_usd" - All revenue generated by the liquidity pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd :: !(Maybe Text) -- ^ "daily_total_revenue_usd" - Daily revenue generated by the liquidity pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd :: !(Maybe Text) -- ^ "cumulative_volume_usd" - All historical trade volume occurred in this pool, in USD.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd :: !(Maybe Text) -- ^ "daily_volume_usd" - All trade volume occurred in a given day, in USD.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenAmount :: !(Maybe [Text]) -- ^ "cumulative_volume_by_token_amount" - All trade volume , in native amount. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount :: !(Maybe [Text]) -- ^ "daily_volume_by_token_amount" - All trade volume occurred in a given day for a specific input token, in native amount. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenUsd :: !(Maybe [Text]) -- ^ "cumulative_volume_by_token_usd" - All trade volume, in USD. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd :: !(Maybe [Text]) -- ^ "daily_volume_by_token_usd" -  All trade volume occurred in a given day for a specific input token, in USD. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances :: !(Maybe [Text]) -- ^ "input_token_balances" - Amount of input tokens in the pool. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesUsd :: !(Maybe [Text]) -- ^ "input_token_balances_usd" - Amount of input tokens in USD in the pool. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights :: !(Maybe [Text]) -- ^ "input_token_weights" - Weights of input tokens in the liquidity pool in percentage values. For example, 50/50 for Uniswap pools, 48.2/51.8 for a Curve pool, 10/10/80 for a Balancer pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount :: !(Maybe Text) -- ^ "staked_output_token_amount" - Total supply of output tokens that are staked (usually in the MasterChef contract). Used to calculate reward APY.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount :: !(Maybe [Text]) -- ^ "reward_token_emissions_amount" - Per-block reward token emission as of the current block normalized to a day, in token&#39;s native amount. This should be ideally calculated as the theoretical rate instead of the realized amount.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd :: !(Maybe [Text]) -- ^ "reward_token_emissions_usd" - Per-block reward token emission as of the current block normalized to a day, in USD value. This should be ideally calculated as the theoretical rate instead of the realized amount.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeDepositCount :: !(Maybe Int) -- ^ "cumulative_deposit_count" - Total number of deposits (add liquidity).
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyDepositCount :: !(Maybe Int) -- ^ "daily_deposit_count" - Total number of deposits (add liquidity) in a day.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeWithdrawCount :: !(Maybe Int) -- ^ "cumulative_withdraw_count" - Total number of withdrawals (remove liquidity).
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyWithdrawCount :: !(Maybe Int) -- ^ "daily_withdraw_count" - Total number of withdrawals (remove liquidity) in a day.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSwapCount :: !(Maybe Int) -- ^ "cumulative_swap_count" - Total number of trades (swaps).
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySwapCount :: !(Maybe Int) -- ^ "daily_swap_count" - Total number of trades (swaps) in a day.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPositionCount :: !(Maybe Int) -- ^ "position_count" - Number of positions in this market.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOOpenPositionCount :: !(Maybe Int) -- ^ "open_position_count" - Number of open positions in this market.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOClosedPositionCount :: !(Maybe Int) -- ^ "closed_position_count" - Number of closed positions in this market.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of when this snapshot was taken/last modified (May be taken after interval has passed).
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_")
+      <*> (o .:? "id")
+      <*> (o .:? "day")
+      <*> (o .:? "protocol")
+      <*> (o .:? "pool")
+      <*> (o .:? "tick")
+      <*> (o .:? "total_value_locked_usd")
+      <*> (o .:? "total_liquidity")
+      <*> (o .:? "total_liquidity_usd")
+      <*> (o .:? "active_liquidity")
+      <*> (o .:? "active_liquidity_usd")
+      <*> (o .:? "uncollected_protocol_side_token_amounts")
+      <*> (o .:? "uncollected_protocol_side_values_usd")
+      <*> (o .:? "uncollected_supply_side_token_amounts")
+      <*> (o .:? "uncollected_supply_side_values_usd")
+      <*> (o .:? "cumulative_supply_side_revenue_usd")
+      <*> (o .:? "daily_supply_side_revenue_usd")
+      <*> (o .:? "cumulative_protocol_side_revenue_usd")
+      <*> (o .:? "daily_protocol_side_revenue_usd")
+      <*> (o .:? "cumulative_total_revenue_usd")
+      <*> (o .:? "daily_total_revenue_usd")
+      <*> (o .:? "cumulative_volume_usd")
+      <*> (o .:? "daily_volume_usd")
+      <*> (o .:? "cumulative_volume_by_token_amount")
+      <*> (o .:? "daily_volume_by_token_amount")
+      <*> (o .:? "cumulative_volume_by_token_usd")
+      <*> (o .:? "daily_volume_by_token_usd")
+      <*> (o .:? "input_token_balances")
+      <*> (o .:? "input_token_balances_usd")
+      <*> (o .:? "input_token_weights")
+      <*> (o .:? "staked_output_token_amount")
+      <*> (o .:? "reward_token_emissions_amount")
+      <*> (o .:? "reward_token_emissions_usd")
+      <*> (o .:? "cumulative_deposit_count")
+      <*> (o .:? "daily_deposit_count")
+      <*> (o .:? "cumulative_withdraw_count")
+      <*> (o .:? "daily_withdraw_count")
+      <*> (o .:? "cumulative_swap_count")
+      <*> (o .:? "daily_swap_count")
+      <*> (o .:? "position_count")
+      <*> (o .:? "open_position_count")
+      <*> (o .:? "closed_position_count")
+      <*> (o .:? "timestamp")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO where
+  toJSON SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber
+      , "block_" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock
+      , "id" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOId
+      , "day" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODay
+      , "protocol" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOProtocol
+      , "pool" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPool
+      , "tick" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTick
+      , "total_value_locked_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd
+      , "total_liquidity" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidity
+      , "total_liquidity_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidityUsd
+      , "active_liquidity" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidity
+      , "active_liquidity_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidityUsd
+      , "uncollected_protocol_side_token_amounts" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideTokenAmounts
+      , "uncollected_protocol_side_values_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideValuesUsd
+      , "uncollected_supply_side_token_amounts" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideTokenAmounts
+      , "uncollected_supply_side_values_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideValuesUsd
+      , "cumulative_supply_side_revenue_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd
+      , "daily_supply_side_revenue_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd
+      , "cumulative_protocol_side_revenue_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd
+      , "daily_protocol_side_revenue_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd
+      , "cumulative_total_revenue_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd
+      , "daily_total_revenue_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd
+      , "cumulative_volume_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd
+      , "daily_volume_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd
+      , "cumulative_volume_by_token_amount" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenAmount
+      , "daily_volume_by_token_amount" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount
+      , "cumulative_volume_by_token_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenUsd
+      , "daily_volume_by_token_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd
+      , "input_token_balances" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances
+      , "input_token_balances_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesUsd
+      , "input_token_weights" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights
+      , "staked_output_token_amount" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount
+      , "reward_token_emissions_amount" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount
+      , "reward_token_emissions_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd
+      , "cumulative_deposit_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeDepositCount
+      , "daily_deposit_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyDepositCount
+      , "cumulative_withdraw_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeWithdrawCount
+      , "daily_withdraw_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyWithdrawCount
+      , "cumulative_swap_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSwapCount
+      , "daily_swap_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySwapCount
+      , "position_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPositionCount
+      , "open_position_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOOpenPositionCount
+      , "closed_position_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOClosedPositionCount
+      , "timestamp" .= sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTimestamp
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+  :: SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+mkSUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO =
+  SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+  { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODay = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOProtocol = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPool = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTick = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidity = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidityUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidity = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidityUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideTokenAmounts = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideValuesUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideTokenAmounts = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideValuesUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenAmount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeDepositCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyDepositCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeWithdrawCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyWithdrawCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSwapCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySwapCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPositionCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOOpenPositionCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOClosedPositionCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTimestamp = Nothing
+  }
+
+-- ** SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO
+-- | SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO
+-- 
+data SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO = SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO
+  { sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (fee type)-(pool address)
+  , sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOFeePercentage :: !(Maybe Text) -- ^ "fee_percentage" - Fee as a percentage of the trade (swap) amount. Does not always apply 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "fee_percentage")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO where
+  toJSON SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockNumber
+      , "block_range" .= sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockRange
+      , "id" .= sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOId
+      , "fee_percentage" .= sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOFeePercentage
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO
+  :: SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO
+mkSUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO =
+  SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO
+  { sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockRange = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOFeePercentage = Nothing
+  }
+
+-- ** SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+-- | SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+-- 
+data SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO = SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+  { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId :: !(Maybe Text) -- ^ "id" - (Smart contract address of the pool)-( # of hours since Unix epoch time)
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHour :: !(Maybe Int) -- ^ "hour" - Number of hours since Unix epoch time
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol :: !(Maybe Text) -- ^ "protocol" - The protocol this snapshot belongs to
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPool :: !(Maybe Text) -- ^ "pool" - The pool this snapshot belongs to
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTick :: !(Maybe Text) -- ^ "tick" - Current tick representing the price of token0/token1
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Current TVL (Total Value Locked) of this pool
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidity :: !(Maybe Text) -- ^ "total_liquidity" - The sum of all active and non-active liquidity for this pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidityUsd :: !(Maybe Text) -- ^ "total_liquidity_usd" - The sum of all active and non-active liquidity in USD for this pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidity :: !(Maybe Text) -- ^ "active_liquidity" - All liquidity &#x60;k&#x60; that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pool&#39;s current tick.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidityUsd :: !(Maybe Text) -- ^ "active_liquidity_usd" - All liquidity in USD that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pool&#39;s current tick.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideTokenAmounts :: !(Maybe [Text]) -- ^ "uncollected_protocol_side_token_amounts" - All protocol-side value locked in token amounts that remains uncollected and unused in the pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideValuesUsd :: !(Maybe [Text]) -- ^ "uncollected_protocol_side_values_usd" - All protocol-side value locking in USD that remains uncollected and unused in the pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideTokenAmounts :: !(Maybe [Text]) -- ^ "uncollected_supply_side_token_amounts" - All supply-side value locked in token amounts that remains uncollected and unused in the pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideValuesUsd :: !(Maybe [Text]) -- ^ "uncollected_supply_side_values_usd" - All supply-side value locked in USD that remains uncollected and unused in the pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_supply_side_revenue_usd" - All revenue generated by the liquidity pool, accrued to the supply side.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd :: !(Maybe Text) -- ^ "hourly_supply_side_revenue_usd" - Hourly revenue generated by the liquidity pool, accrued to the supply side.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_protocol_side_revenue_usd" - All revenue generated by the liquidity pool, accrued to the protocol.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "hourly_protocol_side_revenue_usd" - Hourly revenue generated by the liquidity pool, accrued to the protocol.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd :: !(Maybe Text) -- ^ "cumulative_total_revenue_usd" - All revenue generated by the liquidity pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd :: !(Maybe Text) -- ^ "hourly_total_revenue_usd" - Hourly revenue generated by the liquidity pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd :: !(Maybe Text) -- ^ "cumulative_volume_usd" - All historical trade volume occurred in this pool, in USD.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd :: !(Maybe Text) -- ^ "hourly_volume_usd" - All trade volume occurred in a given hour, in USD.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenAmount :: !(Maybe [Text]) -- ^ "cumulative_volume_by_token_amount" - All trade volume, in native amount. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount :: !(Maybe [Text]) -- ^ "hourly_volume_by_token_amount" - All trade volume occurred in a given hour for a specific input token, in native amount. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenUsd :: !(Maybe [Text]) -- ^ "cumulative_volume_by_token_usd" - All trade volume, in USD. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd :: !(Maybe [Text]) -- ^ "hourly_volume_by_token_usd" - All trade volume occurred in a given hour for a specific input token, in USD. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances :: !(Maybe [Text]) -- ^ "input_token_balances" - Amount of input tokens in the pool. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalancesUsd :: !(Maybe [Text]) -- ^ "input_token_balances_usd" - Amount of input tokens in USD in the pool. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights :: !(Maybe [Text]) -- ^ "input_token_weights" - Weights of input tokens in the liquidity pool in percentage values. For example, 50/50 for Uniswap pools, 48.2/51.8 for a Curve pool, 10/10/80 for a Balancer pool.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount :: !(Maybe Text) -- ^ "staked_output_token_amount" - Total supply of output tokens that are staked (usually in the MasterChef contract). Used to calculate reward APY.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount :: !(Maybe [Text]) -- ^ "reward_token_emissions_amount" - Per-block reward token emission as of the current block normalized to a day (not hour), in token&#39;s native amount. This should be ideally calculated as the theoretical rate instead of the realized amount.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd :: !(Maybe [Text]) -- ^ "reward_token_emissions_usd" - Per-block reward token emission as of the current block normalized to a day (not hour), in USD value. This should be ideally calculated as the theoretical rate instead of the realized amount.
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeDepositCount :: !(Maybe Int) -- ^ "cumulative_deposit_count" - Total number of deposits (add liquidity)
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyDepositCount :: !(Maybe Int) -- ^ "hourly_deposit_count" - Total number of deposits (add liquidity) in an hour
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeWithdrawCount :: !(Maybe Int) -- ^ "cumulative_withdraw_count" - Total number of withdrawals (remove liquidity)
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyWithdrawCount :: !(Maybe Int) -- ^ "hourly_withdraw_count" - Total number of withdrawals (remove liquidity) in an hour
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSwapCount :: !(Maybe Int) -- ^ "cumulative_swap_count" - Total number of trades (swaps)
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySwapCount :: !(Maybe Int) -- ^ "hourly_swap_count" - Total number of trades (swaps) in an hour
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPositionCount :: !(Maybe Int) -- ^ "position_count" - Number of positions in this market
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOOpenPositionCount :: !(Maybe Int) -- ^ "open_position_count" - Number of open positions in this market
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOClosedPositionCount :: !(Maybe Int) -- ^ "closed_position_count" - Number of closed positions in this market
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of when this snapshot was taken/last modified (May be taken after interval has passed)
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "hour")
+      <*> (o .:? "protocol")
+      <*> (o .:? "pool")
+      <*> (o .:? "tick")
+      <*> (o .:? "total_value_locked_usd")
+      <*> (o .:? "total_liquidity")
+      <*> (o .:? "total_liquidity_usd")
+      <*> (o .:? "active_liquidity")
+      <*> (o .:? "active_liquidity_usd")
+      <*> (o .:? "uncollected_protocol_side_token_amounts")
+      <*> (o .:? "uncollected_protocol_side_values_usd")
+      <*> (o .:? "uncollected_supply_side_token_amounts")
+      <*> (o .:? "uncollected_supply_side_values_usd")
+      <*> (o .:? "cumulative_supply_side_revenue_usd")
+      <*> (o .:? "hourly_supply_side_revenue_usd")
+      <*> (o .:? "cumulative_protocol_side_revenue_usd")
+      <*> (o .:? "hourly_protocol_side_revenue_usd")
+      <*> (o .:? "cumulative_total_revenue_usd")
+      <*> (o .:? "hourly_total_revenue_usd")
+      <*> (o .:? "cumulative_volume_usd")
+      <*> (o .:? "hourly_volume_usd")
+      <*> (o .:? "cumulative_volume_by_token_amount")
+      <*> (o .:? "hourly_volume_by_token_amount")
+      <*> (o .:? "cumulative_volume_by_token_usd")
+      <*> (o .:? "hourly_volume_by_token_usd")
+      <*> (o .:? "input_token_balances")
+      <*> (o .:? "input_token_balances_usd")
+      <*> (o .:? "input_token_weights")
+      <*> (o .:? "staked_output_token_amount")
+      <*> (o .:? "reward_token_emissions_amount")
+      <*> (o .:? "reward_token_emissions_usd")
+      <*> (o .:? "cumulative_deposit_count")
+      <*> (o .:? "hourly_deposit_count")
+      <*> (o .:? "cumulative_withdraw_count")
+      <*> (o .:? "hourly_withdraw_count")
+      <*> (o .:? "cumulative_swap_count")
+      <*> (o .:? "hourly_swap_count")
+      <*> (o .:? "position_count")
+      <*> (o .:? "open_position_count")
+      <*> (o .:? "closed_position_count")
+      <*> (o .:? "timestamp")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO where
+  toJSON SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber
+      , "id" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId
+      , "hour" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHour
+      , "protocol" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol
+      , "pool" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPool
+      , "tick" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTick
+      , "total_value_locked_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd
+      , "total_liquidity" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidity
+      , "total_liquidity_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidityUsd
+      , "active_liquidity" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidity
+      , "active_liquidity_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidityUsd
+      , "uncollected_protocol_side_token_amounts" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideTokenAmounts
+      , "uncollected_protocol_side_values_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideValuesUsd
+      , "uncollected_supply_side_token_amounts" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideTokenAmounts
+      , "uncollected_supply_side_values_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideValuesUsd
+      , "cumulative_supply_side_revenue_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd
+      , "hourly_supply_side_revenue_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd
+      , "cumulative_protocol_side_revenue_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd
+      , "hourly_protocol_side_revenue_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd
+      , "cumulative_total_revenue_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd
+      , "hourly_total_revenue_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd
+      , "cumulative_volume_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd
+      , "hourly_volume_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd
+      , "cumulative_volume_by_token_amount" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenAmount
+      , "hourly_volume_by_token_amount" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount
+      , "cumulative_volume_by_token_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenUsd
+      , "hourly_volume_by_token_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd
+      , "input_token_balances" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances
+      , "input_token_balances_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalancesUsd
+      , "input_token_weights" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights
+      , "staked_output_token_amount" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount
+      , "reward_token_emissions_amount" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount
+      , "reward_token_emissions_usd" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd
+      , "cumulative_deposit_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeDepositCount
+      , "hourly_deposit_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyDepositCount
+      , "cumulative_withdraw_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeWithdrawCount
+      , "hourly_withdraw_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyWithdrawCount
+      , "cumulative_swap_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSwapCount
+      , "hourly_swap_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySwapCount
+      , "position_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPositionCount
+      , "open_position_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOOpenPositionCount
+      , "closed_position_count" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOClosedPositionCount
+      , "timestamp" .= sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+  :: SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+mkSUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO =
+  SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+  { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHour = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPool = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTick = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidity = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidityUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidity = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidityUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideTokenAmounts = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideValuesUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideTokenAmounts = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideValuesUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenAmount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalancesUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeDepositCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyDepositCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeWithdrawCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyWithdrawCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSwapCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySwapCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPositionCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOOpenPositionCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOClosedPositionCount = Nothing
+  , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp = Nothing
+  }
+
+-- ** SUSHISWAPV3ETHEREUMPositionDTO
+-- | SUSHISWAPV3ETHEREUMPositionDTO
+-- 
+data SUSHISWAPV3ETHEREUMPositionDTO = SUSHISWAPV3ETHEREUMPositionDTO
+  { sUSHISWAPV3ETHEREUMPositionDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMPositionDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMPositionDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMPositionDTOId :: !(Maybe Text) -- ^ "id" - (account address)-(market address)-(count)
+  , sUSHISWAPV3ETHEREUMPositionDTOAccount :: !(Maybe Text) -- ^ "account" - Account that owns this position
+  , sUSHISWAPV3ETHEREUMPositionDTOPool :: !(Maybe Text) -- ^ "pool" - The liquidity pool in which this position was opened
+  , sUSHISWAPV3ETHEREUMPositionDTOHashOpened :: !(Maybe Text) -- ^ "hash_opened" - The hash of the transaction that opened this position
+  , sUSHISWAPV3ETHEREUMPositionDTOHashClosed :: !(Maybe Text) -- ^ "hash_closed" - The hash of the transaction that closed this position
+  , sUSHISWAPV3ETHEREUMPositionDTOBlockNumberOpened :: !(Maybe Text) -- ^ "block_number_opened" - Block number of when the position was opened
+  , sUSHISWAPV3ETHEREUMPositionDTOTimestampOpened :: !(Maybe Text) -- ^ "timestamp_opened" - Timestamp when the position was opened
+  , sUSHISWAPV3ETHEREUMPositionDTOBlockNumberClosed :: !(Maybe Text) -- ^ "block_number_closed" - Block number of when the position was closed (0 if still open)
+  , sUSHISWAPV3ETHEREUMPositionDTOTimestampClosed :: !(Maybe Text) -- ^ "timestamp_closed" - Timestamp when the position was closed (0 if still open)
+  , sUSHISWAPV3ETHEREUMPositionDTOTickLower :: !(Maybe Text) -- ^ "tick_lower" - lower tick of the position
+  , sUSHISWAPV3ETHEREUMPositionDTOTickUpper :: !(Maybe Text) -- ^ "tick_upper" - upper tick of the position
+  , sUSHISWAPV3ETHEREUMPositionDTOLiquidityToken :: !(Maybe Text) -- ^ "liquidity_token" - Token that is to represent ownership of liquidity
+  , sUSHISWAPV3ETHEREUMPositionDTOLiquidityTokenType :: !(Maybe Text) -- ^ "liquidity_token_type" - Type of token used to track liquidity
+  , sUSHISWAPV3ETHEREUMPositionDTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - total position liquidity
+  , sUSHISWAPV3ETHEREUMPositionDTOLiquidityUsd :: !(Maybe Text) -- ^ "liquidity_usd" - total position liquidity in USD
+  , sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositTokenAmounts :: !(Maybe [Text]) -- ^ "cumulative_deposit_token_amounts" - amount of tokens ever deposited to position
+  , sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositUsd :: !(Maybe Text) -- ^ "cumulative_deposit_usd" - amount of tokens in USD deposited to position
+  , sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawTokenAmounts :: !(Maybe [Text]) -- ^ "cumulative_withdraw_token_amounts" - amount of tokens ever withdrawn from position (without fees)
+  , sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawUsd :: !(Maybe Text) -- ^ "cumulative_withdraw_usd" - amount of tokens in USD withdrawn from position (without fees)
+  , sUSHISWAPV3ETHEREUMPositionDTOCumulativeRewardUsd :: !(Maybe [Text]) -- ^ "cumulative_reward_usd" - Total reward token accumulated under this position, in USD
+  , sUSHISWAPV3ETHEREUMPositionDTODepositCount :: !(Maybe Int) -- ^ "deposit_count" - Number of deposits related to this position
+  , sUSHISWAPV3ETHEREUMPositionDTOWithdrawCount :: !(Maybe Int) -- ^ "withdraw_count" - Number of withdrawals related to this position
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMPositionDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMPositionDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMPositionDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMPositionDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "account")
+      <*> (o .:? "pool")
+      <*> (o .:? "hash_opened")
+      <*> (o .:? "hash_closed")
+      <*> (o .:? "block_number_opened")
+      <*> (o .:? "timestamp_opened")
+      <*> (o .:? "block_number_closed")
+      <*> (o .:? "timestamp_closed")
+      <*> (o .:? "tick_lower")
+      <*> (o .:? "tick_upper")
+      <*> (o .:? "liquidity_token")
+      <*> (o .:? "liquidity_token_type")
+      <*> (o .:? "liquidity")
+      <*> (o .:? "liquidity_usd")
+      <*> (o .:? "cumulative_deposit_token_amounts")
+      <*> (o .:? "cumulative_deposit_usd")
+      <*> (o .:? "cumulative_withdraw_token_amounts")
+      <*> (o .:? "cumulative_withdraw_usd")
+      <*> (o .:? "cumulative_reward_usd")
+      <*> (o .:? "deposit_count")
+      <*> (o .:? "withdraw_count")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMPositionDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMPositionDTO where
+  toJSON SUSHISWAPV3ETHEREUMPositionDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMPositionDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMPositionDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMPositionDTOBlockNumber
+      , "id" .= sUSHISWAPV3ETHEREUMPositionDTOId
+      , "account" .= sUSHISWAPV3ETHEREUMPositionDTOAccount
+      , "pool" .= sUSHISWAPV3ETHEREUMPositionDTOPool
+      , "hash_opened" .= sUSHISWAPV3ETHEREUMPositionDTOHashOpened
+      , "hash_closed" .= sUSHISWAPV3ETHEREUMPositionDTOHashClosed
+      , "block_number_opened" .= sUSHISWAPV3ETHEREUMPositionDTOBlockNumberOpened
+      , "timestamp_opened" .= sUSHISWAPV3ETHEREUMPositionDTOTimestampOpened
+      , "block_number_closed" .= sUSHISWAPV3ETHEREUMPositionDTOBlockNumberClosed
+      , "timestamp_closed" .= sUSHISWAPV3ETHEREUMPositionDTOTimestampClosed
+      , "tick_lower" .= sUSHISWAPV3ETHEREUMPositionDTOTickLower
+      , "tick_upper" .= sUSHISWAPV3ETHEREUMPositionDTOTickUpper
+      , "liquidity_token" .= sUSHISWAPV3ETHEREUMPositionDTOLiquidityToken
+      , "liquidity_token_type" .= sUSHISWAPV3ETHEREUMPositionDTOLiquidityTokenType
+      , "liquidity" .= sUSHISWAPV3ETHEREUMPositionDTOLiquidity
+      , "liquidity_usd" .= sUSHISWAPV3ETHEREUMPositionDTOLiquidityUsd
+      , "cumulative_deposit_token_amounts" .= sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositTokenAmounts
+      , "cumulative_deposit_usd" .= sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositUsd
+      , "cumulative_withdraw_token_amounts" .= sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawTokenAmounts
+      , "cumulative_withdraw_usd" .= sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawUsd
+      , "cumulative_reward_usd" .= sUSHISWAPV3ETHEREUMPositionDTOCumulativeRewardUsd
+      , "deposit_count" .= sUSHISWAPV3ETHEREUMPositionDTODepositCount
+      , "withdraw_count" .= sUSHISWAPV3ETHEREUMPositionDTOWithdrawCount
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMPositionDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMPositionDTO
+  :: SUSHISWAPV3ETHEREUMPositionDTO
+mkSUSHISWAPV3ETHEREUMPositionDTO =
+  SUSHISWAPV3ETHEREUMPositionDTO
+  { sUSHISWAPV3ETHEREUMPositionDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOAccount = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOPool = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOHashOpened = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOHashClosed = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOBlockNumberOpened = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOTimestampOpened = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOBlockNumberClosed = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOTimestampClosed = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOTickLower = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOTickUpper = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOLiquidityToken = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOLiquidityTokenType = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOLiquidity = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOLiquidityUsd = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositTokenAmounts = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositUsd = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawTokenAmounts = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawUsd = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOCumulativeRewardUsd = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTODepositCount = Nothing
+  , sUSHISWAPV3ETHEREUMPositionDTOWithdrawCount = Nothing
+  }
+
+-- ** SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+-- | SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+-- 
+data SUSHISWAPV3ETHEREUMPositionSnapshotDTO = SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+  { sUSHISWAPV3ETHEREUMPositionSnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOId :: !(Maybe Text) -- ^ "id" -  (position id )-( transaction hash )-( log index ) 
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOHash :: !(Maybe Text) -- ^ "hash" - Transaction hash of the transaction that triggered this snapshot
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOLogIndex :: !(Maybe Int) -- ^ "log_index" - Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTONonce :: !(Maybe Text) -- ^ "nonce" - Nonce of the transaction that triggered this snapshot
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOPosition :: !(Maybe Text) -- ^ "position" - Position of this snapshot
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityTokenType :: !(Maybe Text) -- ^ "liquidity_token_type" - Type of token used to track liquidity
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - total position liquidity
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityUsd :: !(Maybe Text) -- ^ "liquidity_usd" - total position liquidity in USD
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositTokenAmounts :: !(Maybe [Text]) -- ^ "cumulative_deposit_token_amounts" - amount of tokens ever deposited to position
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositUsd :: !(Maybe Text) -- ^ "cumulative_deposit_usd" - amount of tokens in USD deposited to position
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawTokenAmounts :: !(Maybe [Text]) -- ^ "cumulative_withdraw_token_amounts" - amount of tokens ever withdrawn from position (without fees)
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawUsd :: !(Maybe Text) -- ^ "cumulative_withdraw_usd" - amount of tokens in USD withdrawn from position (without fees)
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardTokenAmounts :: !(Maybe [Text]) -- ^ "cumulative_reward_token_amounts" - Total reward token accumulated under this position, in native amounts
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardUsd :: !(Maybe [Text]) -- ^ "cumulative_reward_usd" - Total reward token accumulated under this position, in USD
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTODepositCount :: !(Maybe Int) -- ^ "deposit_count" - Number of deposits related to this position
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOWithdrawCount :: !(Maybe Int) -- ^ "withdraw_count" - Number of withdrawals related to this position
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of this snapshot
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMPositionSnapshotDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMPositionSnapshotDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "hash")
+      <*> (o .:? "log_index")
+      <*> (o .:? "nonce")
+      <*> (o .:? "position")
+      <*> (o .:? "liquidity_token_type")
+      <*> (o .:? "liquidity")
+      <*> (o .:? "liquidity_usd")
+      <*> (o .:? "cumulative_deposit_token_amounts")
+      <*> (o .:? "cumulative_deposit_usd")
+      <*> (o .:? "cumulative_withdraw_token_amounts")
+      <*> (o .:? "cumulative_withdraw_usd")
+      <*> (o .:? "cumulative_reward_token_amounts")
+      <*> (o .:? "cumulative_reward_usd")
+      <*> (o .:? "deposit_count")
+      <*> (o .:? "withdraw_count")
+      <*> (o .:? "timestamp")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMPositionSnapshotDTO where
+  toJSON SUSHISWAPV3ETHEREUMPositionSnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTOBlockNumber
+      , "id" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTOId
+      , "hash" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTOHash
+      , "log_index" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTOLogIndex
+      , "nonce" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTONonce
+      , "position" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTOPosition
+      , "liquidity_token_type" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityTokenType
+      , "liquidity" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidity
+      , "liquidity_usd" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityUsd
+      , "cumulative_deposit_token_amounts" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositTokenAmounts
+      , "cumulative_deposit_usd" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositUsd
+      , "cumulative_withdraw_token_amounts" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawTokenAmounts
+      , "cumulative_withdraw_usd" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawUsd
+      , "cumulative_reward_token_amounts" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardTokenAmounts
+      , "cumulative_reward_usd" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardUsd
+      , "deposit_count" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTODepositCount
+      , "withdraw_count" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTOWithdrawCount
+      , "timestamp" .= sUSHISWAPV3ETHEREUMPositionSnapshotDTOTimestamp
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMPositionSnapshotDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMPositionSnapshotDTO
+  :: SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+mkSUSHISWAPV3ETHEREUMPositionSnapshotDTO =
+  SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+  { sUSHISWAPV3ETHEREUMPositionSnapshotDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOHash = Nothing
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOLogIndex = Nothing
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTONonce = Nothing
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOPosition = Nothing
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityTokenType = Nothing
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidity = Nothing
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityUsd = Nothing
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositTokenAmounts = Nothing
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositUsd = Nothing
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawTokenAmounts = Nothing
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawUsd = Nothing
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardTokenAmounts = Nothing
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardUsd = Nothing
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTODepositCount = Nothing
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOWithdrawCount = Nothing
+  , sUSHISWAPV3ETHEREUMPositionSnapshotDTOTimestamp = Nothing
+  }
+
+-- ** SUSHISWAPV3ETHEREUMRewardTokenDTO
+-- | SUSHISWAPV3ETHEREUMRewardTokenDTO
+-- Reward tokens awarded to lenders and borrowers.
+data SUSHISWAPV3ETHEREUMRewardTokenDTO = SUSHISWAPV3ETHEREUMRewardTokenDTO
+  { sUSHISWAPV3ETHEREUMRewardTokenDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMRewardTokenDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMRewardTokenDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMRewardTokenDTOId :: !(Maybe Text) -- ^ "id" - (reward token type)-(smart contract address of the reward token)
+  , sUSHISWAPV3ETHEREUMRewardTokenDTOToken :: !(Maybe Text) -- ^ "token" - Reference to the actual token
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMRewardTokenDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMRewardTokenDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMRewardTokenDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMRewardTokenDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "token")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMRewardTokenDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMRewardTokenDTO where
+  toJSON SUSHISWAPV3ETHEREUMRewardTokenDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMRewardTokenDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMRewardTokenDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMRewardTokenDTOBlockNumber
+      , "id" .= sUSHISWAPV3ETHEREUMRewardTokenDTOId
+      , "token" .= sUSHISWAPV3ETHEREUMRewardTokenDTOToken
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMRewardTokenDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMRewardTokenDTO
+  :: SUSHISWAPV3ETHEREUMRewardTokenDTO
+mkSUSHISWAPV3ETHEREUMRewardTokenDTO =
+  SUSHISWAPV3ETHEREUMRewardTokenDTO
+  { sUSHISWAPV3ETHEREUMRewardTokenDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMRewardTokenDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMRewardTokenDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMRewardTokenDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMRewardTokenDTOToken = Nothing
+  }
+
 -- ** SUSHISWAPV3ETHEREUMSwapDTO
 -- | SUSHISWAPV3ETHEREUMSwapDTO
 -- Trade (swap) event which occurred in a pool.
@@ -3830,6 +6171,245 @@ mkSUSHISWAPV3ETHEREUMSwapDTO =
   , sUSHISWAPV3ETHEREUMSwapDTOEvaluatedAggressor = Nothing
   }
 
+-- ** SUSHISWAPV3ETHEREUMTickDTO
+-- | SUSHISWAPV3ETHEREUMTickDTO
+-- 
+data SUSHISWAPV3ETHEREUMTickDTO = SUSHISWAPV3ETHEREUMTickDTO
+  { sUSHISWAPV3ETHEREUMTickDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMTickDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMTickDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMTickDTOId :: !(Maybe Text) -- ^ "id" - (pool address)-(tick index)
+  , sUSHISWAPV3ETHEREUMTickDTOIndex :: !(Maybe Text) -- ^ "index" - tick index
+  , sUSHISWAPV3ETHEREUMTickDTOPool :: !(Maybe Text) -- ^ "pool" - Liquidity pool this tick belongs to
+  , sUSHISWAPV3ETHEREUMTickDTOCreatedTimestamp :: !(Maybe Text) -- ^ "created_timestamp" - Creation timestamp
+  , sUSHISWAPV3ETHEREUMTickDTOCreatedBlockNumber :: !(Maybe Text) -- ^ "created_block_number" - Creation block number
+  , sUSHISWAPV3ETHEREUMTickDTOPrices :: !(Maybe [Text]) -- ^ "prices" - calculated price of token0 of tick within this pool - constant
+  , sUSHISWAPV3ETHEREUMTickDTOLiquidityGross :: !(Maybe Text) -- ^ "liquidity_gross" - total liquidity pool has as tick lower or upper
+  , sUSHISWAPV3ETHEREUMTickDTOLiquidityGrossUsd :: !(Maybe Text) -- ^ "liquidity_gross_usd" - total liquidity in USD pool has as tick lower or upper
+  , sUSHISWAPV3ETHEREUMTickDTOLiquidityNet :: !(Maybe Text) -- ^ "liquidity_net" - how much liquidity changes when tick crossed
+  , sUSHISWAPV3ETHEREUMTickDTOLiquidityNetUsd :: !(Maybe Text) -- ^ "liquidity_net_usd" - how much liquidity in USD changes when tick crossed
+  , sUSHISWAPV3ETHEREUMTickDTOLastSnapshotDayId :: !(Maybe Int) -- ^ "last_snapshot_day_id" - Day ID of the most recent daily snapshot
+  , sUSHISWAPV3ETHEREUMTickDTOLastSnapshotHourId :: !(Maybe Int) -- ^ "last_snapshot_hour_id" - Hour ID of the most recent hourly snapshot
+  , sUSHISWAPV3ETHEREUMTickDTOLastUpdateTimestamp :: !(Maybe Text) -- ^ "last_update_timestamp" - Timestamp of the last time this entity was updated
+  , sUSHISWAPV3ETHEREUMTickDTOLastUpdateBlockNumber :: !(Maybe Text) -- ^ "last_update_block_number" - Block number of the last time this entity was updated
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMTickDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMTickDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMTickDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMTickDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "index")
+      <*> (o .:? "pool")
+      <*> (o .:? "created_timestamp")
+      <*> (o .:? "created_block_number")
+      <*> (o .:? "prices")
+      <*> (o .:? "liquidity_gross")
+      <*> (o .:? "liquidity_gross_usd")
+      <*> (o .:? "liquidity_net")
+      <*> (o .:? "liquidity_net_usd")
+      <*> (o .:? "last_snapshot_day_id")
+      <*> (o .:? "last_snapshot_hour_id")
+      <*> (o .:? "last_update_timestamp")
+      <*> (o .:? "last_update_block_number")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMTickDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMTickDTO where
+  toJSON SUSHISWAPV3ETHEREUMTickDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMTickDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMTickDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMTickDTOBlockNumber
+      , "id" .= sUSHISWAPV3ETHEREUMTickDTOId
+      , "index" .= sUSHISWAPV3ETHEREUMTickDTOIndex
+      , "pool" .= sUSHISWAPV3ETHEREUMTickDTOPool
+      , "created_timestamp" .= sUSHISWAPV3ETHEREUMTickDTOCreatedTimestamp
+      , "created_block_number" .= sUSHISWAPV3ETHEREUMTickDTOCreatedBlockNumber
+      , "prices" .= sUSHISWAPV3ETHEREUMTickDTOPrices
+      , "liquidity_gross" .= sUSHISWAPV3ETHEREUMTickDTOLiquidityGross
+      , "liquidity_gross_usd" .= sUSHISWAPV3ETHEREUMTickDTOLiquidityGrossUsd
+      , "liquidity_net" .= sUSHISWAPV3ETHEREUMTickDTOLiquidityNet
+      , "liquidity_net_usd" .= sUSHISWAPV3ETHEREUMTickDTOLiquidityNetUsd
+      , "last_snapshot_day_id" .= sUSHISWAPV3ETHEREUMTickDTOLastSnapshotDayId
+      , "last_snapshot_hour_id" .= sUSHISWAPV3ETHEREUMTickDTOLastSnapshotHourId
+      , "last_update_timestamp" .= sUSHISWAPV3ETHEREUMTickDTOLastUpdateTimestamp
+      , "last_update_block_number" .= sUSHISWAPV3ETHEREUMTickDTOLastUpdateBlockNumber
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMTickDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMTickDTO
+  :: SUSHISWAPV3ETHEREUMTickDTO
+mkSUSHISWAPV3ETHEREUMTickDTO =
+  SUSHISWAPV3ETHEREUMTickDTO
+  { sUSHISWAPV3ETHEREUMTickDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMTickDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMTickDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMTickDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMTickDTOIndex = Nothing
+  , sUSHISWAPV3ETHEREUMTickDTOPool = Nothing
+  , sUSHISWAPV3ETHEREUMTickDTOCreatedTimestamp = Nothing
+  , sUSHISWAPV3ETHEREUMTickDTOCreatedBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMTickDTOPrices = Nothing
+  , sUSHISWAPV3ETHEREUMTickDTOLiquidityGross = Nothing
+  , sUSHISWAPV3ETHEREUMTickDTOLiquidityGrossUsd = Nothing
+  , sUSHISWAPV3ETHEREUMTickDTOLiquidityNet = Nothing
+  , sUSHISWAPV3ETHEREUMTickDTOLiquidityNetUsd = Nothing
+  , sUSHISWAPV3ETHEREUMTickDTOLastSnapshotDayId = Nothing
+  , sUSHISWAPV3ETHEREUMTickDTOLastSnapshotHourId = Nothing
+  , sUSHISWAPV3ETHEREUMTickDTOLastUpdateTimestamp = Nothing
+  , sUSHISWAPV3ETHEREUMTickDTOLastUpdateBlockNumber = Nothing
+  }
+
+-- ** SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+-- | SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+-- 
+data SUSHISWAPV3ETHEREUMTickDailySnapshotDTO = SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+  { sUSHISWAPV3ETHEREUMTickDailySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (pool address)-(tick index)-(day ID)
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTODayId :: !(Maybe Int) -- ^ "day_id" - Number of days since Unix epoch time
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTick :: !(Maybe Text) -- ^ "tick" - tick index
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTOPool :: !(Maybe Text) -- ^ "pool" - liquidity pool this tick belongs to
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGross :: !(Maybe Text) -- ^ "liquidity_gross" - total liquidity pool has as tick lower or upper
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGrossUsd :: !(Maybe Text) -- ^ "liquidity_gross_usd" - total liquidity in USD pool has as tick lower or upper
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNet :: !(Maybe Text) -- ^ "liquidity_net" - how much liquidity changes when tick crossed
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNetUsd :: !(Maybe Text) -- ^ "liquidity_net_usd" - how much liquidity in USD changes when tick crossed
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of when this snapshot was taken/last modified (May be taken after interval has passed)
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMTickDailySnapshotDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMTickDailySnapshotDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "day_id")
+      <*> (o .:? "tick")
+      <*> (o .:? "pool")
+      <*> (o .:? "liquidity_gross")
+      <*> (o .:? "liquidity_gross_usd")
+      <*> (o .:? "liquidity_net")
+      <*> (o .:? "liquidity_net_usd")
+      <*> (o .:? "timestamp")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMTickDailySnapshotDTO where
+  toJSON SUSHISWAPV3ETHEREUMTickDailySnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMTickDailySnapshotDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMTickDailySnapshotDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMTickDailySnapshotDTOBlockNumber
+      , "id" .= sUSHISWAPV3ETHEREUMTickDailySnapshotDTOId
+      , "day_id" .= sUSHISWAPV3ETHEREUMTickDailySnapshotDTODayId
+      , "tick" .= sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTick
+      , "pool" .= sUSHISWAPV3ETHEREUMTickDailySnapshotDTOPool
+      , "liquidity_gross" .= sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGross
+      , "liquidity_gross_usd" .= sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGrossUsd
+      , "liquidity_net" .= sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNet
+      , "liquidity_net_usd" .= sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNetUsd
+      , "timestamp" .= sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTimestamp
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMTickDailySnapshotDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+  :: SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+mkSUSHISWAPV3ETHEREUMTickDailySnapshotDTO =
+  SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+  { sUSHISWAPV3ETHEREUMTickDailySnapshotDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTODayId = Nothing
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTick = Nothing
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTOPool = Nothing
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGross = Nothing
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGrossUsd = Nothing
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNet = Nothing
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNetUsd = Nothing
+  , sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTimestamp = Nothing
+  }
+
+-- ** SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+-- | SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+-- 
+data SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO = SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+  { sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOId :: !(Maybe Text) -- ^ "id" - (pool address)-(tick index)-(hour ID)
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOHourId :: !(Maybe Int) -- ^ "hour_id" - Number of hours since Unix epoch time
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTick :: !(Maybe Text) -- ^ "tick" - tick index
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOPool :: !(Maybe Text) -- ^ "pool" - liquidity pool this tick belongs to
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGross :: !(Maybe Text) -- ^ "liquidity_gross" - total liquidity pool has as tick lower or upper
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGrossUsd :: !(Maybe Text) -- ^ "liquidity_gross_usd" - total liquidity in USD pool has as tick lower or upper
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNet :: !(Maybe Text) -- ^ "liquidity_net" - how much liquidity changes when tick crossed
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNetUsd :: !(Maybe Text) -- ^ "liquidity_net_usd" - how much liquidity in USD changes when tick crossed
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of when this snapshot was taken/last modified (May be taken after interval has passed)
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "hour_id")
+      <*> (o .:? "tick")
+      <*> (o .:? "pool")
+      <*> (o .:? "liquidity_gross")
+      <*> (o .:? "liquidity_gross_usd")
+      <*> (o .:? "liquidity_net")
+      <*> (o .:? "liquidity_net_usd")
+      <*> (o .:? "timestamp")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO where
+  toJSON SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMTickHourlySnapshotDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumber
+      , "id" .= sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOId
+      , "hour_id" .= sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOHourId
+      , "tick" .= sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTick
+      , "pool" .= sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOPool
+      , "liquidity_gross" .= sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGross
+      , "liquidity_gross_usd" .= sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGrossUsd
+      , "liquidity_net" .= sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNet
+      , "liquidity_net_usd" .= sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNetUsd
+      , "timestamp" .= sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTimestamp
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+  :: SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+mkSUSHISWAPV3ETHEREUMTickHourlySnapshotDTO =
+  SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+  { sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOHourId = Nothing
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTick = Nothing
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOPool = Nothing
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGross = Nothing
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGrossUsd = Nothing
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNet = Nothing
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNetUsd = Nothing
+  , sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTimestamp = Nothing
+  }
+
 -- ** SUSHISWAPV3ETHEREUMTokenDTO
 -- | SUSHISWAPV3ETHEREUMTokenDTO
 -- Stores aggregated information for a specific token across all pairs that token is included in.
@@ -3921,6 +6501,812 @@ mkSUSHISWAPV3ETHEREUMTokenDTO =
   , sUSHISWAPV3ETHEREUMTokenDTOLargePriceChangeBuffer = Nothing
   , sUSHISWAPV3ETHEREUMTokenDTOLargeTvlImpactBuffer = Nothing
   , sUSHISWAPV3ETHEREUMTokenDTOTokenSymbol = Nothing
+  }
+
+-- ** SUSHISWAPV3ETHEREUMTokenWhiteListDTO
+-- | SUSHISWAPV3ETHEREUMTokenWhiteListDTO
+-- 
+data SUSHISWAPV3ETHEREUMTokenWhiteListDTO = SUSHISWAPV3ETHEREUMTokenWhiteListDTO
+  { sUSHISWAPV3ETHEREUMTokenWhiteListDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMTokenWhiteListDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMTokenWhiteListDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMTokenWhiteListDTOId :: !(Maybe Text) -- ^ "id" - Token Address
+  , sUSHISWAPV3ETHEREUMTokenWhiteListDTOWhitelistPools :: !(Maybe [Text]) -- ^ "whitelist_pools" - pools token is in that are white listed for USD pricing
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMTokenWhiteListDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMTokenWhiteListDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMTokenWhiteListDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMTokenWhiteListDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "whitelist_pools")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMTokenWhiteListDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMTokenWhiteListDTO where
+  toJSON SUSHISWAPV3ETHEREUMTokenWhiteListDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMTokenWhiteListDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMTokenWhiteListDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMTokenWhiteListDTOBlockNumber
+      , "id" .= sUSHISWAPV3ETHEREUMTokenWhiteListDTOId
+      , "whitelist_pools" .= sUSHISWAPV3ETHEREUMTokenWhiteListDTOWhitelistPools
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMTokenWhiteListDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMTokenWhiteListDTO
+  :: SUSHISWAPV3ETHEREUMTokenWhiteListDTO
+mkSUSHISWAPV3ETHEREUMTokenWhiteListDTO =
+  SUSHISWAPV3ETHEREUMTokenWhiteListDTO
+  { sUSHISWAPV3ETHEREUMTokenWhiteListDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMTokenWhiteListDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMTokenWhiteListDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMTokenWhiteListDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMTokenWhiteListDTOWhitelistPools = Nothing
+  }
+
+-- ** SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO
+-- | SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO
+-- 
+data SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO = SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO
+  { sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOId :: !(Maybe Text) -- ^ "id" - Whitelist Token Symbol
+  , sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOAddress :: !(Maybe Text) -- ^ "address" - Whitelist Token Address
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "address")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO where
+  toJSON SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOBlockNumber
+      , "id" .= sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOId
+      , "address" .= sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOAddress
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO
+  :: SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO
+mkSUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO =
+  SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO
+  { sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOAddress = Nothing
+  }
+
+-- ** SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+-- | SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+-- 
+data SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO = SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+  { sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOId :: !(Maybe Text) -- ^ "id" - ID is # of days since Unix epoch time
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODay :: !(Maybe Int) -- ^ "day" - Number of days since Unix epoch time
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOProtocol :: !(Maybe Text) -- ^ "protocol" - Protocol this snapshot is associated with
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers :: !(Maybe Int) -- ^ "daily_active_users" - Number of unique daily active users
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers :: !(Maybe Int) -- ^ "cumulative_unique_users" - Number of cumulative unique users
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount :: !(Maybe Int) -- ^ "daily_transaction_count" - Total number of transactions occurred in a day. Transactions include all entities that implement the Event interface.
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount :: !(Maybe Int) -- ^ "total_pool_count" - Total number of pools
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount :: !(Maybe Int) -- ^ "daily_deposit_count" - Total number of deposits (add liquidity) in an day
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount :: !(Maybe Int) -- ^ "daily_withdraw_count" - Total number of withdrawals (remove liquidity) in an day
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailySwapCount :: !(Maybe Int) -- ^ "daily_swap_count" - Total number of trades (swaps) in an day
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of when this snapshot was taken/last modified (May be taken after interval has passed)
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "day")
+      <*> (o .:? "protocol")
+      <*> (o .:? "daily_active_users")
+      <*> (o .:? "cumulative_unique_users")
+      <*> (o .:? "daily_transaction_count")
+      <*> (o .:? "total_pool_count")
+      <*> (o .:? "daily_deposit_count")
+      <*> (o .:? "daily_withdraw_count")
+      <*> (o .:? "daily_swap_count")
+      <*> (o .:? "timestamp")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO where
+  toJSON SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOBlockNumber
+      , "id" .= sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOId
+      , "day" .= sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODay
+      , "protocol" .= sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOProtocol
+      , "daily_active_users" .= sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers
+      , "cumulative_unique_users" .= sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers
+      , "daily_transaction_count" .= sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount
+      , "total_pool_count" .= sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount
+      , "daily_deposit_count" .= sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount
+      , "daily_withdraw_count" .= sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount
+      , "daily_swap_count" .= sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailySwapCount
+      , "timestamp" .= sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTimestamp
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+  :: SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+mkSUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO =
+  SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+  { sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODay = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOProtocol = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailySwapCount = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTimestamp = Nothing
+  }
+
+-- ** SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+-- | SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+-- 
+data SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO = SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+  { sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOId :: !(Maybe Text) -- ^ "id" - (# of hours since Unix epoch time)
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHour :: !(Maybe Int) -- ^ "hour" - Number of hours since Unix epoch time
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOProtocol :: !(Maybe Text) -- ^ "protocol" - Protocol this snapshot is associated with
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers :: !(Maybe Int) -- ^ "hourly_active_users" - Number of unique hourly active users
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers :: !(Maybe Int) -- ^ "cumulative_unique_users" - Number of cumulative unique users
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount :: !(Maybe Int) -- ^ "hourly_transaction_count" - Total number of transactions occurred in an hour. Transactions include all entities that implement the Event interface.
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount :: !(Maybe Int) -- ^ "hourly_deposit_count" - Total number of deposits (add liquidity) in an hour
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount :: !(Maybe Int) -- ^ "hourly_withdraw_count" - Total number of withdrawals (remove liquidity) in an hour
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount :: !(Maybe Int) -- ^ "hourly_swap_count" - Total number of trades (swaps) in an hour
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of when this snapshot was taken/last modified (May be taken after interval has passed)
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "hour")
+      <*> (o .:? "protocol")
+      <*> (o .:? "hourly_active_users")
+      <*> (o .:? "cumulative_unique_users")
+      <*> (o .:? "hourly_transaction_count")
+      <*> (o .:? "hourly_deposit_count")
+      <*> (o .:? "hourly_withdraw_count")
+      <*> (o .:? "hourly_swap_count")
+      <*> (o .:? "timestamp")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO where
+  toJSON SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber
+      , "id" .= sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOId
+      , "hour" .= sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHour
+      , "protocol" .= sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOProtocol
+      , "hourly_active_users" .= sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers
+      , "cumulative_unique_users" .= sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers
+      , "hourly_transaction_count" .= sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount
+      , "hourly_deposit_count" .= sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount
+      , "hourly_withdraw_count" .= sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount
+      , "hourly_swap_count" .= sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount
+      , "timestamp" .= sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOTimestamp
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+  :: SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+mkSUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO =
+  SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+  { sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHour = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOProtocol = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount = Nothing
+  , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOTimestamp = Nothing
+  }
+
+-- ** SUSHISWAPV3ETHEREUMWithdrawDTO
+-- | SUSHISWAPV3ETHEREUMWithdrawDTO
+-- 
+data SUSHISWAPV3ETHEREUMWithdrawDTO = SUSHISWAPV3ETHEREUMWithdrawDTO
+  { sUSHISWAPV3ETHEREUMWithdrawDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sUSHISWAPV3ETHEREUMWithdrawDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sUSHISWAPV3ETHEREUMWithdrawDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sUSHISWAPV3ETHEREUMWithdrawDTOId :: !(Maybe Text) -- ^ "id" - (transaction hash)-(log index)
+  , sUSHISWAPV3ETHEREUMWithdrawDTOHash :: !(Maybe Text) -- ^ "hash" - Transaction hash of the transaction that emitted this event
+  , sUSHISWAPV3ETHEREUMWithdrawDTONonce :: !(Maybe Text) -- ^ "nonce" - Nonce of the transaction that emitted this event
+  , sUSHISWAPV3ETHEREUMWithdrawDTOLogIndex :: !(Maybe Int) -- ^ "log_index" - Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0
+  , sUSHISWAPV3ETHEREUMWithdrawDTOGasLimit :: !(Maybe Text) -- ^ "gas_limit" - Gas limit of the transaction that emitted this event
+  , sUSHISWAPV3ETHEREUMWithdrawDTOGasUsed :: !(Maybe Text) -- ^ "gas_used" - Gas used in this transaction. (Optional because not every chain will support this)
+  , sUSHISWAPV3ETHEREUMWithdrawDTOGasPrice :: !(Maybe Text) -- ^ "gas_price" - Gas price of the transaction that emitted this event
+  , sUSHISWAPV3ETHEREUMWithdrawDTOProtocol :: !(Maybe Text) -- ^ "protocol" - The protocol this transaction belongs to
+  , sUSHISWAPV3ETHEREUMWithdrawDTOAccount :: !(Maybe Text) -- ^ "account" - Account that emitted this event
+  , sUSHISWAPV3ETHEREUMWithdrawDTOPosition :: !(Maybe Text) -- ^ "position" - The user position changed by this event
+  , sUSHISWAPV3ETHEREUMWithdrawDTOTickLower :: !(Maybe Text) -- ^ "tick_lower" - lower tick of position
+  , sUSHISWAPV3ETHEREUMWithdrawDTOTickUpper :: !(Maybe Text) -- ^ "tick_upper" - upper tick of position
+  , sUSHISWAPV3ETHEREUMWithdrawDTOPool :: !(Maybe Text) -- ^ "pool" - The pool involving this event
+  , sUSHISWAPV3ETHEREUMWithdrawDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of this event
+  , sUSHISWAPV3ETHEREUMWithdrawDTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - Amount of liquidity burned
+  , sUSHISWAPV3ETHEREUMWithdrawDTOInputTokens :: !(Maybe [Text]) -- ^ "input_tokens" - Input tokens of the pool (not input tokens of the event/transaction). E.g. WETH and USDC from a WETH-USDC pool
+  , sUSHISWAPV3ETHEREUMWithdrawDTOInputTokenAmounts :: !(Maybe [Text]) -- ^ "input_token_amounts" - Amount of input tokens in the token&#39;s native unit
+  , sUSHISWAPV3ETHEREUMWithdrawDTOReserveAmounts :: !(Maybe [Text]) -- ^ "reserve_amounts" - Amount of input tokens in the liquidity pool
+  , sUSHISWAPV3ETHEREUMWithdrawDTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - USD-normalized value of the transaction of the underlying (e.g. sum of tokens withdrawn from a pool)
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SUSHISWAPV3ETHEREUMWithdrawDTO
+instance A.FromJSON SUSHISWAPV3ETHEREUMWithdrawDTO where
+  parseJSON = A.withObject "SUSHISWAPV3ETHEREUMWithdrawDTO" $ \o ->
+    SUSHISWAPV3ETHEREUMWithdrawDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "hash")
+      <*> (o .:? "nonce")
+      <*> (o .:? "log_index")
+      <*> (o .:? "gas_limit")
+      <*> (o .:? "gas_used")
+      <*> (o .:? "gas_price")
+      <*> (o .:? "protocol")
+      <*> (o .:? "account")
+      <*> (o .:? "position")
+      <*> (o .:? "tick_lower")
+      <*> (o .:? "tick_upper")
+      <*> (o .:? "pool")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "liquidity")
+      <*> (o .:? "input_tokens")
+      <*> (o .:? "input_token_amounts")
+      <*> (o .:? "reserve_amounts")
+      <*> (o .:? "amount_usd")
+
+-- | ToJSON SUSHISWAPV3ETHEREUMWithdrawDTO
+instance A.ToJSON SUSHISWAPV3ETHEREUMWithdrawDTO where
+  toJSON SUSHISWAPV3ETHEREUMWithdrawDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sUSHISWAPV3ETHEREUMWithdrawDTOEntryTime
+      , "recv_time" .= sUSHISWAPV3ETHEREUMWithdrawDTORecvTime
+      , "block_number" .= sUSHISWAPV3ETHEREUMWithdrawDTOBlockNumber
+      , "id" .= sUSHISWAPV3ETHEREUMWithdrawDTOId
+      , "hash" .= sUSHISWAPV3ETHEREUMWithdrawDTOHash
+      , "nonce" .= sUSHISWAPV3ETHEREUMWithdrawDTONonce
+      , "log_index" .= sUSHISWAPV3ETHEREUMWithdrawDTOLogIndex
+      , "gas_limit" .= sUSHISWAPV3ETHEREUMWithdrawDTOGasLimit
+      , "gas_used" .= sUSHISWAPV3ETHEREUMWithdrawDTOGasUsed
+      , "gas_price" .= sUSHISWAPV3ETHEREUMWithdrawDTOGasPrice
+      , "protocol" .= sUSHISWAPV3ETHEREUMWithdrawDTOProtocol
+      , "account" .= sUSHISWAPV3ETHEREUMWithdrawDTOAccount
+      , "position" .= sUSHISWAPV3ETHEREUMWithdrawDTOPosition
+      , "tick_lower" .= sUSHISWAPV3ETHEREUMWithdrawDTOTickLower
+      , "tick_upper" .= sUSHISWAPV3ETHEREUMWithdrawDTOTickUpper
+      , "pool" .= sUSHISWAPV3ETHEREUMWithdrawDTOPool
+      , "timestamp" .= sUSHISWAPV3ETHEREUMWithdrawDTOTimestamp
+      , "liquidity" .= sUSHISWAPV3ETHEREUMWithdrawDTOLiquidity
+      , "input_tokens" .= sUSHISWAPV3ETHEREUMWithdrawDTOInputTokens
+      , "input_token_amounts" .= sUSHISWAPV3ETHEREUMWithdrawDTOInputTokenAmounts
+      , "reserve_amounts" .= sUSHISWAPV3ETHEREUMWithdrawDTOReserveAmounts
+      , "amount_usd" .= sUSHISWAPV3ETHEREUMWithdrawDTOAmountUsd
+      ]
+
+
+-- | Construct a value of type 'SUSHISWAPV3ETHEREUMWithdrawDTO' (by applying it's required fields, if any)
+mkSUSHISWAPV3ETHEREUMWithdrawDTO
+  :: SUSHISWAPV3ETHEREUMWithdrawDTO
+mkSUSHISWAPV3ETHEREUMWithdrawDTO =
+  SUSHISWAPV3ETHEREUMWithdrawDTO
+  { sUSHISWAPV3ETHEREUMWithdrawDTOEntryTime = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTORecvTime = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTOBlockNumber = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTOId = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTOHash = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTONonce = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTOLogIndex = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTOGasLimit = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTOGasUsed = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTOGasPrice = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTOProtocol = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTOAccount = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTOPosition = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTOTickLower = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTOTickUpper = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTOPool = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTOTimestamp = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTOLiquidity = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTOInputTokens = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTOInputTokenAmounts = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTOReserveAmounts = Nothing
+  , sUSHISWAPV3ETHEREUMWithdrawDTOAmountUsd = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMAccountDTO
+-- | UNISWAPV2ETHEREUMAccountDTO
+data UNISWAPV2ETHEREUMAccountDTO = UNISWAPV2ETHEREUMAccountDTO
+  { uNISWAPV2ETHEREUMAccountDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMAccountDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMAccountDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMAccountDTOBlock :: !(Maybe Int) -- ^ "block_" - 
+  , uNISWAPV2ETHEREUMAccountDTOId :: !(Maybe Text) -- ^ "id" - Account address.
+  , uNISWAPV2ETHEREUMAccountDTOBlockRange :: !(Maybe Text) -- ^ /ReadOnly/ "block_range" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMAccountDTO
+instance A.FromJSON UNISWAPV2ETHEREUMAccountDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMAccountDTO" $ \o ->
+    UNISWAPV2ETHEREUMAccountDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_")
+      <*> (o .:? "id")
+      <*> (o .:? "block_range")
+
+-- | ToJSON UNISWAPV2ETHEREUMAccountDTO
+instance A.ToJSON UNISWAPV2ETHEREUMAccountDTO where
+  toJSON UNISWAPV2ETHEREUMAccountDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMAccountDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMAccountDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMAccountDTOBlockNumber
+      , "block_" .= uNISWAPV2ETHEREUMAccountDTOBlock
+      , "id" .= uNISWAPV2ETHEREUMAccountDTOId
+      , "block_range" .= uNISWAPV2ETHEREUMAccountDTOBlockRange
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMAccountDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMAccountDTO
+  :: UNISWAPV2ETHEREUMAccountDTO
+mkUNISWAPV2ETHEREUMAccountDTO =
+  UNISWAPV2ETHEREUMAccountDTO
+  { uNISWAPV2ETHEREUMAccountDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMAccountDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMAccountDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMAccountDTOBlock = Nothing
+  , uNISWAPV2ETHEREUMAccountDTOId = Nothing
+  , uNISWAPV2ETHEREUMAccountDTOBlockRange = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMActiveAccountDTO
+-- | UNISWAPV2ETHEREUMActiveAccountDTO
+-- Entity for calculating daily/hourly active users.
+data UNISWAPV2ETHEREUMActiveAccountDTO = UNISWAPV2ETHEREUMActiveAccountDTO
+  { uNISWAPV2ETHEREUMActiveAccountDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMActiveAccountDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMActiveAccountDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMActiveAccountDTOBlock :: !(Maybe Int) -- ^ "block_" - 
+  , uNISWAPV2ETHEREUMActiveAccountDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (daily/hourly)-(address of the account)-(days/hours since unix epoch)
+  , uNISWAPV2ETHEREUMActiveAccountDTOBlockRange :: !(Maybe Text) -- ^ /ReadOnly/ "block_range" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMActiveAccountDTO
+instance A.FromJSON UNISWAPV2ETHEREUMActiveAccountDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMActiveAccountDTO" $ \o ->
+    UNISWAPV2ETHEREUMActiveAccountDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_")
+      <*> (o .:? "id")
+      <*> (o .:? "block_range")
+
+-- | ToJSON UNISWAPV2ETHEREUMActiveAccountDTO
+instance A.ToJSON UNISWAPV2ETHEREUMActiveAccountDTO where
+  toJSON UNISWAPV2ETHEREUMActiveAccountDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMActiveAccountDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMActiveAccountDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMActiveAccountDTOBlockNumber
+      , "block_" .= uNISWAPV2ETHEREUMActiveAccountDTOBlock
+      , "id" .= uNISWAPV2ETHEREUMActiveAccountDTOId
+      , "block_range" .= uNISWAPV2ETHEREUMActiveAccountDTOBlockRange
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMActiveAccountDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMActiveAccountDTO
+  :: UNISWAPV2ETHEREUMActiveAccountDTO
+mkUNISWAPV2ETHEREUMActiveAccountDTO =
+  UNISWAPV2ETHEREUMActiveAccountDTO
+  { uNISWAPV2ETHEREUMActiveAccountDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMActiveAccountDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMActiveAccountDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMActiveAccountDTOBlock = Nothing
+  , uNISWAPV2ETHEREUMActiveAccountDTOId = Nothing
+  , uNISWAPV2ETHEREUMActiveAccountDTOBlockRange = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMDepositDTO
+-- | UNISWAPV2ETHEREUMDepositDTO
+-- Entity represents a user action in the protocol involving the addition of funds to a liquidity pool.
+data UNISWAPV2ETHEREUMDepositDTO = UNISWAPV2ETHEREUMDepositDTO
+  { uNISWAPV2ETHEREUMDepositDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMDepositDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMDepositDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMDepositDTOBlock :: !(Maybe Int) -- ^ "block_" - 
+  , uNISWAPV2ETHEREUMDepositDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (transaction hash)-(log index)
+  , uNISWAPV2ETHEREUMDepositDTOHash :: !(Maybe Text) -- ^ "hash" - Transaction hash of the transaction that emitted this event.
+  , uNISWAPV2ETHEREUMDepositDTOLogIndex :: !(Maybe Int) -- ^ "log_index" - Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0.
+  , uNISWAPV2ETHEREUMDepositDTOProtocol :: !(Maybe Text) -- ^ "protocol" - The protocol this transaction belongs to.
+  , uNISWAPV2ETHEREUMDepositDTOTo :: !(Maybe Text) -- ^ "to" - Address that received the tokens.
+  , uNISWAPV2ETHEREUMDepositDTOFrom :: !(Maybe Text) -- ^ "from" - Address that sent the tokens
+  , uNISWAPV2ETHEREUMDepositDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of this event
+  , uNISWAPV2ETHEREUMDepositDTOInputTokens :: !(Maybe [Text]) -- ^ "input_tokens" - Input tokens of the pool. E.g. WETH and USDC to a WETH-USDC pool
+  , uNISWAPV2ETHEREUMDepositDTOOutputToken :: !(Maybe Text) -- ^ "output_token" - Output token of the pool. E.g. the UNI-LP token
+  , uNISWAPV2ETHEREUMDepositDTOInputTokenAmounts :: !(Maybe [Text]) -- ^ "input_token_amounts" - Amount of input tokens in the token&#39;s native unit
+  , uNISWAPV2ETHEREUMDepositDTOOutputTokenAmount :: !(Maybe Text) -- ^ "output_token_amount" - Amount of output tokens in the token&#39;s native unit
+  , uNISWAPV2ETHEREUMDepositDTOReserveAmounts :: !(Maybe [Text]) -- ^ "reserve_amounts" - Amount of input tokens in the liquidity pool
+  , uNISWAPV2ETHEREUMDepositDTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - USD-normalized value of the transaction of the underlying (e.g. sum of tokens deposited into a pool)
+  , uNISWAPV2ETHEREUMDepositDTOPool :: !(Maybe Text) -- ^ "pool" - The pool involving this transaction
+  , uNISWAPV2ETHEREUMDepositDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMDepositDTO
+instance A.FromJSON UNISWAPV2ETHEREUMDepositDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMDepositDTO" $ \o ->
+    UNISWAPV2ETHEREUMDepositDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_")
+      <*> (o .:? "id")
+      <*> (o .:? "hash")
+      <*> (o .:? "log_index")
+      <*> (o .:? "protocol")
+      <*> (o .:? "to")
+      <*> (o .:? "from")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "input_tokens")
+      <*> (o .:? "output_token")
+      <*> (o .:? "input_token_amounts")
+      <*> (o .:? "output_token_amount")
+      <*> (o .:? "reserve_amounts")
+      <*> (o .:? "amount_usd")
+      <*> (o .:? "pool")
+      <*> (o .:? "block_range")
+
+-- | ToJSON UNISWAPV2ETHEREUMDepositDTO
+instance A.ToJSON UNISWAPV2ETHEREUMDepositDTO where
+  toJSON UNISWAPV2ETHEREUMDepositDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMDepositDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMDepositDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMDepositDTOBlockNumber
+      , "block_" .= uNISWAPV2ETHEREUMDepositDTOBlock
+      , "id" .= uNISWAPV2ETHEREUMDepositDTOId
+      , "hash" .= uNISWAPV2ETHEREUMDepositDTOHash
+      , "log_index" .= uNISWAPV2ETHEREUMDepositDTOLogIndex
+      , "protocol" .= uNISWAPV2ETHEREUMDepositDTOProtocol
+      , "to" .= uNISWAPV2ETHEREUMDepositDTOTo
+      , "from" .= uNISWAPV2ETHEREUMDepositDTOFrom
+      , "timestamp" .= uNISWAPV2ETHEREUMDepositDTOTimestamp
+      , "input_tokens" .= uNISWAPV2ETHEREUMDepositDTOInputTokens
+      , "output_token" .= uNISWAPV2ETHEREUMDepositDTOOutputToken
+      , "input_token_amounts" .= uNISWAPV2ETHEREUMDepositDTOInputTokenAmounts
+      , "output_token_amount" .= uNISWAPV2ETHEREUMDepositDTOOutputTokenAmount
+      , "reserve_amounts" .= uNISWAPV2ETHEREUMDepositDTOReserveAmounts
+      , "amount_usd" .= uNISWAPV2ETHEREUMDepositDTOAmountUsd
+      , "pool" .= uNISWAPV2ETHEREUMDepositDTOPool
+      , "block_range" .= uNISWAPV2ETHEREUMDepositDTOBlockRange
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMDepositDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMDepositDTO
+  :: UNISWAPV2ETHEREUMDepositDTO
+mkUNISWAPV2ETHEREUMDepositDTO =
+  UNISWAPV2ETHEREUMDepositDTO
+  { uNISWAPV2ETHEREUMDepositDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMDepositDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMDepositDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMDepositDTOBlock = Nothing
+  , uNISWAPV2ETHEREUMDepositDTOId = Nothing
+  , uNISWAPV2ETHEREUMDepositDTOHash = Nothing
+  , uNISWAPV2ETHEREUMDepositDTOLogIndex = Nothing
+  , uNISWAPV2ETHEREUMDepositDTOProtocol = Nothing
+  , uNISWAPV2ETHEREUMDepositDTOTo = Nothing
+  , uNISWAPV2ETHEREUMDepositDTOFrom = Nothing
+  , uNISWAPV2ETHEREUMDepositDTOTimestamp = Nothing
+  , uNISWAPV2ETHEREUMDepositDTOInputTokens = Nothing
+  , uNISWAPV2ETHEREUMDepositDTOOutputToken = Nothing
+  , uNISWAPV2ETHEREUMDepositDTOInputTokenAmounts = Nothing
+  , uNISWAPV2ETHEREUMDepositDTOOutputTokenAmount = Nothing
+  , uNISWAPV2ETHEREUMDepositDTOReserveAmounts = Nothing
+  , uNISWAPV2ETHEREUMDepositDTOAmountUsd = Nothing
+  , uNISWAPV2ETHEREUMDepositDTOPool = Nothing
+  , uNISWAPV2ETHEREUMDepositDTOBlockRange = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMDexAmmProtocolDTO
+-- | UNISWAPV2ETHEREUMDexAmmProtocolDTO
+--  Decentralized exchange (Dex) automated market maker (Amm) protocol. It's an entity that represents a protocol involving a smart contract that use automated market makers.
+data UNISWAPV2ETHEREUMDexAmmProtocolDTO = UNISWAPV2ETHEREUMDexAmmProtocolDTO
+  { uNISWAPV2ETHEREUMDexAmmProtocolDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOId :: !(Maybe Text) -- ^ "id" - Smart contract address of the protocol&#39;s main contract (Factory, Registry, etc)
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOName :: !(Maybe Text) -- ^ "name" - Name of the protocol, including version. e.g. Uniswap v3
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOSlug :: !(Maybe Text) -- ^ "slug" - Slug of protocol, including version. e.g. uniswap-v3
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOSchemaVersion :: !(Maybe Text) -- ^ "schema_version" -  Version of the subgraph schema, in SemVer format (e.g. 1.0.0)
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOSubgraphVersion :: !(Maybe Text) -- ^ "subgraph_version" - Version of the subgraph implementation, in SemVer format (e.g. 1.0.0)
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOMethodologyVersion :: !(Maybe Text) -- ^ "methodology_version" - Version of the methodology used to compute metrics, loosely based on SemVer format (e.g. 1.0.0)
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Current TVL (Total Value Locked) of the entire protocol
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd :: !(Maybe Text) -- ^ "protocol_controlled_value_usd" - Current PCV (Protocol Controlled Value). Only relevant for protocols with PCV
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd :: !(Maybe Text) -- ^ "cumulative_volume_usd" - All historical volume in USD
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_supply_side_revenue_usd" - Revenue claimed by suppliers to the protocol. LPs on DEXs (e.g. 0.25% of the swap fee in Sushiswap). Depositors on Lending Protocols. NFT sellers on OpenSea.
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_protocol_side_revenue_usd" - Gross revenue for the protocol (revenue claimed by protocol). Examples: AMM protocol fee (Sushi’s 0.05%). OpenSea 10% sell fee.
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd :: !(Maybe Text) -- ^ "cumulative_total_revenue_usd" - All revenue generated by the protocol. e.g. 0.30% of swap fee in Sushiswap, all yield generated by Yearn.
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers :: !(Maybe Int) -- ^ "cumulative_unique_users" - Number of cumulative unique users
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalPoolCount :: !(Maybe Int) -- ^ "total_pool_count" - Total number of pools
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMDexAmmProtocolDTO
+instance A.FromJSON UNISWAPV2ETHEREUMDexAmmProtocolDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMDexAmmProtocolDTO" $ \o ->
+    UNISWAPV2ETHEREUMDexAmmProtocolDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "name")
+      <*> (o .:? "slug")
+      <*> (o .:? "schema_version")
+      <*> (o .:? "subgraph_version")
+      <*> (o .:? "methodology_version")
+      <*> (o .:? "total_value_locked_usd")
+      <*> (o .:? "protocol_controlled_value_usd")
+      <*> (o .:? "cumulative_volume_usd")
+      <*> (o .:? "cumulative_supply_side_revenue_usd")
+      <*> (o .:? "cumulative_protocol_side_revenue_usd")
+      <*> (o .:? "cumulative_total_revenue_usd")
+      <*> (o .:? "cumulative_unique_users")
+      <*> (o .:? "total_pool_count")
+
+-- | ToJSON UNISWAPV2ETHEREUMDexAmmProtocolDTO
+instance A.ToJSON UNISWAPV2ETHEREUMDexAmmProtocolDTO where
+  toJSON UNISWAPV2ETHEREUMDexAmmProtocolDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMDexAmmProtocolDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMDexAmmProtocolDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockNumber
+      , "block_range" .= uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockRange
+      , "id" .= uNISWAPV2ETHEREUMDexAmmProtocolDTOId
+      , "name" .= uNISWAPV2ETHEREUMDexAmmProtocolDTOName
+      , "slug" .= uNISWAPV2ETHEREUMDexAmmProtocolDTOSlug
+      , "schema_version" .= uNISWAPV2ETHEREUMDexAmmProtocolDTOSchemaVersion
+      , "subgraph_version" .= uNISWAPV2ETHEREUMDexAmmProtocolDTOSubgraphVersion
+      , "methodology_version" .= uNISWAPV2ETHEREUMDexAmmProtocolDTOMethodologyVersion
+      , "total_value_locked_usd" .= uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalValueLockedUsd
+      , "protocol_controlled_value_usd" .= uNISWAPV2ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd
+      , "cumulative_volume_usd" .= uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd
+      , "cumulative_supply_side_revenue_usd" .= uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd
+      , "cumulative_protocol_side_revenue_usd" .= uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd
+      , "cumulative_total_revenue_usd" .= uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd
+      , "cumulative_unique_users" .= uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers
+      , "total_pool_count" .= uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalPoolCount
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMDexAmmProtocolDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMDexAmmProtocolDTO
+  :: UNISWAPV2ETHEREUMDexAmmProtocolDTO
+mkUNISWAPV2ETHEREUMDexAmmProtocolDTO =
+  UNISWAPV2ETHEREUMDexAmmProtocolDTO
+  { uNISWAPV2ETHEREUMDexAmmProtocolDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockRange = Nothing
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOId = Nothing
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOName = Nothing
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOSlug = Nothing
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOSchemaVersion = Nothing
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOSubgraphVersion = Nothing
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOMethodologyVersion = Nothing
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalValueLockedUsd = Nothing
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd = Nothing
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd = Nothing
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers = Nothing
+  , uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalPoolCount = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+-- | UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+-- Daily financial metrics for Uniswap V2.
+data UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO = UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+  { uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOId :: !(Maybe Text) -- ^ "id" - ID is # of days since Unix epoch time
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocol :: !(Maybe Text) -- ^ "protocol" - Protocol this snapshot is associated with
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Current TVL (Total Value Locked) of the entire protocol
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd :: !(Maybe Text) -- ^ "protocol_controlled_value_usd" - Current PCV (Protocol Controlled Value). Only relevant for protocols with PCV.
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd :: !(Maybe Text) -- ^ "daily_volume_usd" - All trade volume occurred in a given day, in USD
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd :: !(Maybe Text) -- ^ "cumulative_volume_usd" - All historical trade volume in USD
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd :: !(Maybe Text) -- ^ "daily_supply_side_revenue_usd" - Revenue claimed by suppliers to the protocol. LPs on DEXs (e.g. 0.25% of the swap fee in Sushiswap). Depositors on Lending Protocols. NFT sellers on OpenSea.
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_supply_side_revenue_usd" - Revenue claimed by suppliers to the protocol. LPs on DEXs (e.g. 0.25% of the swap fee in Sushiswap). Depositors on Lending Protocols. NFT sellers on OpenSea.
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "daily_protocol_side_revenue_usd" - Gross revenue for the protocol (revenue claimed by protocol). Examples: AMM protocol fee (Sushi’s 0.05%). OpenSea 10% sell fee.
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_protocol_side_revenue_usd" - Gross revenue for the protocol (revenue claimed by protocol). Examples: AMM protocol fee (Sushi’s 0.05%). OpenSea 10% sell fee.
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd :: !(Maybe Text) -- ^ "daily_total_revenue_usd" - ll revenue generated by the protocol. e.g. 0.30% of swap fee in Sushiswap, all yield generated by Yearn.
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd :: !(Maybe Text) -- ^ "cumulative_total_revenue_usd" - All revenue generated by the protocol. e.g. 0.30% of swap fee in Sushiswap, all yield generated by Yearn.
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of this snapshot
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+instance A.FromJSON UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO" $ \o ->
+    UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "protocol")
+      <*> (o .:? "total_value_locked_usd")
+      <*> (o .:? "protocol_controlled_value_usd")
+      <*> (o .:? "daily_volume_usd")
+      <*> (o .:? "cumulative_volume_usd")
+      <*> (o .:? "daily_supply_side_revenue_usd")
+      <*> (o .:? "cumulative_supply_side_revenue_usd")
+      <*> (o .:? "daily_protocol_side_revenue_usd")
+      <*> (o .:? "cumulative_protocol_side_revenue_usd")
+      <*> (o .:? "daily_total_revenue_usd")
+      <*> (o .:? "cumulative_total_revenue_usd")
+      <*> (o .:? "timestamp")
+
+-- | ToJSON UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+instance A.ToJSON UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO where
+  toJSON UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMFinancialsDailySnapshotDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockNumber
+      , "block_range" .= uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockRange
+      , "id" .= uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOId
+      , "protocol" .= uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocol
+      , "total_value_locked_usd" .= uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd
+      , "protocol_controlled_value_usd" .= uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd
+      , "daily_volume_usd" .= uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd
+      , "cumulative_volume_usd" .= uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd
+      , "daily_supply_side_revenue_usd" .= uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd
+      , "cumulative_supply_side_revenue_usd" .= uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd
+      , "daily_protocol_side_revenue_usd" .= uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd
+      , "cumulative_protocol_side_revenue_usd" .= uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd
+      , "daily_total_revenue_usd" .= uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd
+      , "cumulative_total_revenue_usd" .= uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd
+      , "timestamp" .= uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTimestamp
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+  :: UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+mkUNISWAPV2ETHEREUMFinancialsDailySnapshotDTO =
+  UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+  { uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockRange = Nothing
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOId = Nothing
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocol = Nothing
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd = Nothing
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd = Nothing
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd = Nothing
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd = Nothing
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTimestamp = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+-- | UNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+-- 
+data UNISWAPV2ETHEREUMLiquidityPoolAmountDTO = UNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+  { uNISWAPV2ETHEREUMLiquidityPoolAmountDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMLiquidityPoolAmountDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMLiquidityPoolAmountDTOVid :: !(Maybe Integer) -- ^ "vid" - .
+  , uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - .
+  , uNISWAPV2ETHEREUMLiquidityPoolAmountDTOId :: !(Maybe Text) -- ^ "id" - Smart contract address of the pool
+  , uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokens :: !(Maybe [Text]) -- ^ "input_tokens" - Input tokens of the pool (not input tokens of the event/transaction). E.g. WETH and USDC from a WETH-USDC pool
+  , uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokenBalances :: !(Maybe [Text]) -- ^ "input_token_balances" - Amount of input tokens in the pool. The ordering is the same as the pool&#39;s &#39;inputTokens&#39; field.
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+instance A.FromJSON UNISWAPV2ETHEREUMLiquidityPoolAmountDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMLiquidityPoolAmountDTO" $ \o ->
+    UNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "vid")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "input_tokens")
+      <*> (o .:? "input_token_balances")
+
+-- | ToJSON UNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+instance A.ToJSON UNISWAPV2ETHEREUMLiquidityPoolAmountDTO where
+  toJSON UNISWAPV2ETHEREUMLiquidityPoolAmountDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMLiquidityPoolAmountDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMLiquidityPoolAmountDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockNumber
+      , "vid" .= uNISWAPV2ETHEREUMLiquidityPoolAmountDTOVid
+      , "block_range" .= uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockRange
+      , "id" .= uNISWAPV2ETHEREUMLiquidityPoolAmountDTOId
+      , "input_tokens" .= uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokens
+      , "input_token_balances" .= uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokenBalances
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMLiquidityPoolAmountDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+  :: UNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+mkUNISWAPV2ETHEREUMLiquidityPoolAmountDTO =
+  UNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+  { uNISWAPV2ETHEREUMLiquidityPoolAmountDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolAmountDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolAmountDTOVid = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockRange = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolAmountDTOId = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokens = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokenBalances = Nothing
   }
 
 -- ** UNISWAPV2ETHEREUMLiquidityPoolDTO
@@ -4058,6 +7444,691 @@ mkUNISWAPV2ETHEREUMLiquidityPoolDTO =
   , uNISWAPV2ETHEREUMLiquidityPoolDTORewardTokenEmissionsAmount = Nothing
   , uNISWAPV2ETHEREUMLiquidityPoolDTORewardTokenEmissionsUsd = Nothing
   , uNISWAPV2ETHEREUMLiquidityPoolDTOEvaluatedAsk = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+-- | UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+-- Represents a liquidity pool daily snapshot for Uniswap V2.
+data UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO = UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+  { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - .
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOId :: !(Maybe Text) -- ^ "id" - (smart contract address of the pool)-(# of days since Unix epoch time)
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOProtocol :: !(Maybe Text) -- ^ "protocol" - The protocol this snapshot belongs to
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOPool :: !(Maybe Text) -- ^ "pool" - The pool this snapshot belongs to
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of this snapshot
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Current TVL (Total Value Locked) of this pool
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_supply_side_revenue_usd" - All revenue generated by the liquidity pool, accrued to the supply side.
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd :: !(Maybe Text) -- ^ "daily_supply_side_revenue_usd" - Daily revenue generated by the liquidity pool, accrued to the supply side.
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_protocol_side_revenue_usd" - All revenue generated by the liquidity pool, accrued to the protocol.
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "daily_protocol_side_revenue_usd" - Daily revenue generated by the liquidity pool, accrued to the protocol.
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd :: !(Maybe Text) -- ^ "cumulative_total_revenue_usd" - All revenue generated by the liquidity pool.
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd :: !(Maybe Text) -- ^ "daily_total_revenue_usd" - Daily revenue generated by the liquidity pool.
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd :: !(Maybe Text) -- ^ "daily_volume_usd" - All trade volume occurred in a given day, in USD.
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount :: !(Maybe [Text]) -- ^ "daily_volume_by_token_amount" - All trade volume occurred in a given day for a specific input token, in native amount. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd :: !(Maybe [Text]) -- ^ "daily_volume_by_token_usd" - All trade volume occurred in a given day for a specific input token, in USD. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field..
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd :: !(Maybe Text) -- ^ "cumulative_volume_usd" - All historical trade volume occurred in this pool, in USD.
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances :: !(Maybe [Text]) -- ^ "input_token_balances" - Amount of input tokens in the pool. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field.
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights :: !(Maybe [Text]) -- ^ "input_token_weights" - Weights of input tokens in the liquidity pool in percentage values. For example, 50/50 for Uniswap pools, 48.2/51.8 for a Curve pool, 10/10/80 for a Balancer pool.
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupply :: !(Maybe Text) -- ^ "output_token_supply" - Total supply of output token. Note that certain DEXes don&#39;t have an output token (e.g. Bancor).
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsd :: !(Maybe Text) -- ^ "output_token_price_usd" - Price per share of output token in USD.
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount :: !(Maybe Text) -- ^ "staked_output_token_amount" - Total supply of output tokens that are staked (usually in the MasterChef contract). Used to calculate reward APY..
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount :: !(Maybe [Text]) -- ^ "reward_token_emissions_amount" - Per-block reward token emission as of the current block normalized to a day, in token&#39;s native amount. This should be ideally calculated as the theoretical rate instead of the realized amount.
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd :: !(Maybe [Text]) -- ^ "reward_token_emissions_usd" - Per-block reward token emission as of the current block normalized to a day, in USD value. This should be ideally calculated as the theoretical rate instead of the realized amount.
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+instance A.FromJSON UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO" $ \o ->
+    UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "protocol")
+      <*> (o .:? "pool")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "total_value_locked_usd")
+      <*> (o .:? "cumulative_supply_side_revenue_usd")
+      <*> (o .:? "daily_supply_side_revenue_usd")
+      <*> (o .:? "cumulative_protocol_side_revenue_usd")
+      <*> (o .:? "daily_protocol_side_revenue_usd")
+      <*> (o .:? "cumulative_total_revenue_usd")
+      <*> (o .:? "daily_total_revenue_usd")
+      <*> (o .:? "daily_volume_usd")
+      <*> (o .:? "daily_volume_by_token_amount")
+      <*> (o .:? "daily_volume_by_token_usd")
+      <*> (o .:? "cumulative_volume_usd")
+      <*> (o .:? "input_token_balances")
+      <*> (o .:? "input_token_weights")
+      <*> (o .:? "output_token_supply")
+      <*> (o .:? "output_token_price_usd")
+      <*> (o .:? "staked_output_token_amount")
+      <*> (o .:? "reward_token_emissions_amount")
+      <*> (o .:? "reward_token_emissions_usd")
+
+-- | ToJSON UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+instance A.ToJSON UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO where
+  toJSON UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber
+      , "block_range" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockRange
+      , "id" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOId
+      , "protocol" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOProtocol
+      , "pool" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOPool
+      , "timestamp" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTimestamp
+      , "total_value_locked_usd" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd
+      , "cumulative_supply_side_revenue_usd" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd
+      , "daily_supply_side_revenue_usd" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd
+      , "cumulative_protocol_side_revenue_usd" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd
+      , "daily_protocol_side_revenue_usd" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd
+      , "cumulative_total_revenue_usd" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd
+      , "daily_total_revenue_usd" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd
+      , "daily_volume_usd" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd
+      , "daily_volume_by_token_amount" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount
+      , "daily_volume_by_token_usd" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd
+      , "cumulative_volume_usd" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd
+      , "input_token_balances" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances
+      , "input_token_weights" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights
+      , "output_token_supply" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupply
+      , "output_token_price_usd" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsd
+      , "staked_output_token_amount" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount
+      , "reward_token_emissions_amount" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount
+      , "reward_token_emissions_usd" .= uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+  :: UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+mkUNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO =
+  UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+  { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockRange = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOId = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOProtocol = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOPool = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTimestamp = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupply = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMLiquidityPoolFeeDTO
+-- | UNISWAPV2ETHEREUMLiquidityPoolFeeDTO
+-- 
+data UNISWAPV2ETHEREUMLiquidityPoolFeeDTO = UNISWAPV2ETHEREUMLiquidityPoolFeeDTO
+  { uNISWAPV2ETHEREUMLiquidityPoolFeeDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMLiquidityPoolFeeDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , uNISWAPV2ETHEREUMLiquidityPoolFeeDTOId :: !(Maybe Text) -- ^ "id" - (fee type)-(pool address)
+  , uNISWAPV2ETHEREUMLiquidityPoolFeeDTOFeePercentage :: !(Maybe Text) -- ^ "fee_percentage" - Fee as a percentage of the trade (swap) amount. Does not always apply
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMLiquidityPoolFeeDTO
+instance A.FromJSON UNISWAPV2ETHEREUMLiquidityPoolFeeDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMLiquidityPoolFeeDTO" $ \o ->
+    UNISWAPV2ETHEREUMLiquidityPoolFeeDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "fee_percentage")
+
+-- | ToJSON UNISWAPV2ETHEREUMLiquidityPoolFeeDTO
+instance A.ToJSON UNISWAPV2ETHEREUMLiquidityPoolFeeDTO where
+  toJSON UNISWAPV2ETHEREUMLiquidityPoolFeeDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMLiquidityPoolFeeDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMLiquidityPoolFeeDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockNumber
+      , "block_range" .= uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockRange
+      , "id" .= uNISWAPV2ETHEREUMLiquidityPoolFeeDTOId
+      , "fee_percentage" .= uNISWAPV2ETHEREUMLiquidityPoolFeeDTOFeePercentage
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMLiquidityPoolFeeDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMLiquidityPoolFeeDTO
+  :: UNISWAPV2ETHEREUMLiquidityPoolFeeDTO
+mkUNISWAPV2ETHEREUMLiquidityPoolFeeDTO =
+  UNISWAPV2ETHEREUMLiquidityPoolFeeDTO
+  { uNISWAPV2ETHEREUMLiquidityPoolFeeDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolFeeDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockRange = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolFeeDTOId = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolFeeDTOFeePercentage = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+-- | UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+-- 
+data UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO = UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+  { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOId :: !(Maybe Text) -- ^ "id" - (smart contract address of the pool)-(# of hours since Unix epoch time)
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol :: !(Maybe Text) -- ^ "protocol" - The protocol this snapshot belongs to
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOPool :: !(Maybe Text) -- ^ "pool" - The pool this snapshot belongs to
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of this snapshot
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Current TVL (Total Value Locked) of this pool
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_supply_side_revenue_usd" - All revenue generated by the liquidity pool, accrued to the supply side.
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd :: !(Maybe Text) -- ^ "hourly_supply_side_revenue_usd" - Hourly revenue generated by the liquidity pool, accrued to the supply side.
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "cumulative_protocol_side_revenue_usd" - All revenue generated by the liquidity pool, accrued to the protocol.
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd :: !(Maybe Text) -- ^ "hourly_protocol_side_revenue_usd" - Hourly revenue generated by the liquidity pool, accrued to the protocol.
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd :: !(Maybe Text) -- ^ "cumulative_total_revenue_usd" - All revenue generated by the liquidity pool.
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd :: !(Maybe Text) -- ^ "hourly_total_revenue_usd" - Hourly revenue generated by the liquidity pool.
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd :: !(Maybe Text) -- ^ "hourly_volume_usd" - All trade volume occurred in a given hour, in USD
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount :: !(Maybe [Text]) -- ^ "hourly_volume_by_token_amount" - All trade volume occurred in a given hour for a specific input token, in native amount. The ordering should be the same as the pool&#39;s &#39;inputTokens&#39; field.
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd :: !(Maybe [Text]) -- ^ "hourly_volume_by_token_usd" - All trade volume occurred in a given hour for a specific input token, in native amount. The ordering should be the same as the pool&#39;s &#39;inputTokens&#39; field.
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd :: !(Maybe Text) -- ^ "cumulative_volume_usd" - All historical trade volume occurred in this pool, in USD
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances :: !(Maybe [Text]) -- ^ "input_token_balances" - Amount of input tokens in the pool. The ordering should be the same as the pool&#39;s &#x60;inputTokens&#x60; field
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights :: !(Maybe [Text]) -- ^ "input_token_weights" - Weights of input tokens in the liquidity pool in percentage values. For example, 50/50 for Uniswap pools, 48.2/51.8 for a Curve pool, 10/10/80 for a Balancer pool
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupply :: !(Maybe Text) -- ^ "output_token_supply" - Total supply of output token. Note that certain DEXes don&#39;t have an output token (e.g. Bancor)
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsd :: !(Maybe Text) -- ^ "output_token_price_usd" - Price per share of output token in USD
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount :: !(Maybe Text) -- ^ "staked_output_token_amount" - Total supply of output tokens that are staked (usually in the MasterChef contract). Used to calculate reward APY.
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount :: !(Maybe [Text]) -- ^ "reward_token_emissions_amount" - Per-block reward token emission as of the current block normalized to a day (not hour), in token&#39;s native amount. This should be ideally calculated as the theoretical rate instead of the realized amount.
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd :: !(Maybe [Text]) -- ^ "reward_token_emissions_usd" - Per-block reward token emission as of the current block normalized to a day (not hour), in USD value. This should be ideally calculated as the theoretical rate instead of the realized amount.
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+instance A.FromJSON UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO" $ \o ->
+    UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "protocol")
+      <*> (o .:? "pool")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "total_value_locked_usd")
+      <*> (o .:? "cumulative_supply_side_revenue_usd")
+      <*> (o .:? "hourly_supply_side_revenue_usd")
+      <*> (o .:? "cumulative_protocol_side_revenue_usd")
+      <*> (o .:? "hourly_protocol_side_revenue_usd")
+      <*> (o .:? "cumulative_total_revenue_usd")
+      <*> (o .:? "hourly_total_revenue_usd")
+      <*> (o .:? "hourly_volume_usd")
+      <*> (o .:? "hourly_volume_by_token_amount")
+      <*> (o .:? "hourly_volume_by_token_usd")
+      <*> (o .:? "cumulative_volume_usd")
+      <*> (o .:? "input_token_balances")
+      <*> (o .:? "input_token_weights")
+      <*> (o .:? "output_token_supply")
+      <*> (o .:? "output_token_price_usd")
+      <*> (o .:? "staked_output_token_amount")
+      <*> (o .:? "reward_token_emissions_amount")
+      <*> (o .:? "reward_token_emissions_usd")
+
+-- | ToJSON UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+instance A.ToJSON UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO where
+  toJSON UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber
+      , "block_range" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockRange
+      , "id" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOId
+      , "protocol" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol
+      , "pool" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOPool
+      , "timestamp" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp
+      , "total_value_locked_usd" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd
+      , "cumulative_supply_side_revenue_usd" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd
+      , "hourly_supply_side_revenue_usd" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd
+      , "cumulative_protocol_side_revenue_usd" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd
+      , "hourly_protocol_side_revenue_usd" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd
+      , "cumulative_total_revenue_usd" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd
+      , "hourly_total_revenue_usd" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd
+      , "hourly_volume_usd" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd
+      , "hourly_volume_by_token_amount" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount
+      , "hourly_volume_by_token_usd" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd
+      , "cumulative_volume_usd" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd
+      , "input_token_balances" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances
+      , "input_token_weights" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights
+      , "output_token_supply" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupply
+      , "output_token_price_usd" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsd
+      , "staked_output_token_amount" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount
+      , "reward_token_emissions_amount" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount
+      , "reward_token_emissions_usd" .= uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+  :: UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+mkUNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO =
+  UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+  { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockRange = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOId = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOPool = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupply = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsd = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount = Nothing
+  , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMMasterChefAddressToPidDTO
+-- | UNISWAPV2ETHEREUMMasterChefAddressToPidDTO
+-- .
+data UNISWAPV2ETHEREUMMasterChefAddressToPidDTO = UNISWAPV2ETHEREUMMasterChefAddressToPidDTO
+  { uNISWAPV2ETHEREUMMasterChefAddressToPidDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMMasterChefAddressToPidDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , uNISWAPV2ETHEREUMMasterChefAddressToPidDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (masterchef type) - (address of the staking pool per the masterchef pid)
+  , uNISWAPV2ETHEREUMMasterChefAddressToPidDTOPid :: !(Maybe Text) -- ^ "pid" - Pid referenced in the MasterChef Contract
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMMasterChefAddressToPidDTO
+instance A.FromJSON UNISWAPV2ETHEREUMMasterChefAddressToPidDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMMasterChefAddressToPidDTO" $ \o ->
+    UNISWAPV2ETHEREUMMasterChefAddressToPidDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "pid")
+
+-- | ToJSON UNISWAPV2ETHEREUMMasterChefAddressToPidDTO
+instance A.ToJSON UNISWAPV2ETHEREUMMasterChefAddressToPidDTO where
+  toJSON UNISWAPV2ETHEREUMMasterChefAddressToPidDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMMasterChefAddressToPidDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMMasterChefAddressToPidDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockNumber
+      , "block_range" .= uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockRange
+      , "id" .= uNISWAPV2ETHEREUMMasterChefAddressToPidDTOId
+      , "pid" .= uNISWAPV2ETHEREUMMasterChefAddressToPidDTOPid
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMMasterChefAddressToPidDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMMasterChefAddressToPidDTO
+  :: UNISWAPV2ETHEREUMMasterChefAddressToPidDTO
+mkUNISWAPV2ETHEREUMMasterChefAddressToPidDTO =
+  UNISWAPV2ETHEREUMMasterChefAddressToPidDTO
+  { uNISWAPV2ETHEREUMMasterChefAddressToPidDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMMasterChefAddressToPidDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockRange = Nothing
+  , uNISWAPV2ETHEREUMMasterChefAddressToPidDTOId = Nothing
+  , uNISWAPV2ETHEREUMMasterChefAddressToPidDTOPid = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMMasterChefDTO
+-- | UNISWAPV2ETHEREUMMasterChefDTO
+-- Smart contract that is used to manage the liquidity mining program on Uniswap V2.
+data UNISWAPV2ETHEREUMMasterChefDTO = UNISWAPV2ETHEREUMMasterChefDTO
+  { uNISWAPV2ETHEREUMMasterChefDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMMasterChefDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMMasterChefDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMMasterChefDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , uNISWAPV2ETHEREUMMasterChefDTOId :: !(Maybe Text) -- ^ "id" - (masterChef type) - (pid referenced in the masterchef contract)
+  , uNISWAPV2ETHEREUMMasterChefDTOAddress :: !(Maybe Text) -- ^ "address" - Address of the masterchef contract
+  , uNISWAPV2ETHEREUMMasterChefDTOTotalAllocPoint :: !(Maybe Text) -- ^ "total_alloc_point" - Total allocation point of all staking pools
+  , uNISWAPV2ETHEREUMMasterChefDTORewardTokenRate :: !(Maybe Text) -- ^ "reward_token_rate" - Amount of reward tokens emitted per block or timestamp
+  , uNISWAPV2ETHEREUMMasterChefDTORewardTokenInterval :: !(Maybe Text) -- ^ "reward_token_interval" - Indicates whether rewards are indicated by block or timestamp
+  , uNISWAPV2ETHEREUMMasterChefDTOAdjustedRewardTokenRate :: !(Maybe Text) -- ^ "adjusted_reward_token_rate" - Reward token rate given after you adjust for allocations either burned or not applicable
+  , uNISWAPV2ETHEREUMMasterChefDTOLastUpdatedRewardRate :: !(Maybe Text) -- ^ "last_updated_reward_rate" - Last time the adjusted reward token rate was updated
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMMasterChefDTO
+instance A.FromJSON UNISWAPV2ETHEREUMMasterChefDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMMasterChefDTO" $ \o ->
+    UNISWAPV2ETHEREUMMasterChefDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "address")
+      <*> (o .:? "total_alloc_point")
+      <*> (o .:? "reward_token_rate")
+      <*> (o .:? "reward_token_interval")
+      <*> (o .:? "adjusted_reward_token_rate")
+      <*> (o .:? "last_updated_reward_rate")
+
+-- | ToJSON UNISWAPV2ETHEREUMMasterChefDTO
+instance A.ToJSON UNISWAPV2ETHEREUMMasterChefDTO where
+  toJSON UNISWAPV2ETHEREUMMasterChefDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMMasterChefDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMMasterChefDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMMasterChefDTOBlockNumber
+      , "block_range" .= uNISWAPV2ETHEREUMMasterChefDTOBlockRange
+      , "id" .= uNISWAPV2ETHEREUMMasterChefDTOId
+      , "address" .= uNISWAPV2ETHEREUMMasterChefDTOAddress
+      , "total_alloc_point" .= uNISWAPV2ETHEREUMMasterChefDTOTotalAllocPoint
+      , "reward_token_rate" .= uNISWAPV2ETHEREUMMasterChefDTORewardTokenRate
+      , "reward_token_interval" .= uNISWAPV2ETHEREUMMasterChefDTORewardTokenInterval
+      , "adjusted_reward_token_rate" .= uNISWAPV2ETHEREUMMasterChefDTOAdjustedRewardTokenRate
+      , "last_updated_reward_rate" .= uNISWAPV2ETHEREUMMasterChefDTOLastUpdatedRewardRate
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMMasterChefDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMMasterChefDTO
+  :: UNISWAPV2ETHEREUMMasterChefDTO
+mkUNISWAPV2ETHEREUMMasterChefDTO =
+  UNISWAPV2ETHEREUMMasterChefDTO
+  { uNISWAPV2ETHEREUMMasterChefDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMMasterChefDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMMasterChefDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMMasterChefDTOBlockRange = Nothing
+  , uNISWAPV2ETHEREUMMasterChefDTOId = Nothing
+  , uNISWAPV2ETHEREUMMasterChefDTOAddress = Nothing
+  , uNISWAPV2ETHEREUMMasterChefDTOTotalAllocPoint = Nothing
+  , uNISWAPV2ETHEREUMMasterChefDTORewardTokenRate = Nothing
+  , uNISWAPV2ETHEREUMMasterChefDTORewardTokenInterval = Nothing
+  , uNISWAPV2ETHEREUMMasterChefDTOAdjustedRewardTokenRate = Nothing
+  , uNISWAPV2ETHEREUMMasterChefDTOLastUpdatedRewardRate = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMMasterChefRewarderDTO
+-- | UNISWAPV2ETHEREUMMasterChefRewarderDTO
+-- 
+data UNISWAPV2ETHEREUMMasterChefRewarderDTO = UNISWAPV2ETHEREUMMasterChefRewarderDTO
+  { uNISWAPV2ETHEREUMMasterChefRewarderDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTOId :: !(Maybe Text) -- ^ "id" - Address of the rewarder contract associated to some staking pool
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTOPool :: !(Maybe Text) -- ^ "pool" - Staking pool to which this rewarder is associated
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTORewardToken :: !(Maybe Text) -- ^ "reward_token" - Address of the token given by this rewarder
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTOTokenPerSec :: !(Maybe Text) -- ^ "token_per_sec" - Number of tokens rewarded per second per LP staked in pool by this rewarder
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTORateCalculatedAt :: !(Maybe Text) -- ^ "rate_calculated_at" - Timestamp from the last time tokenPerSec was calculated
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFunds :: !(Maybe Bool) -- ^ "has_funds" - A field to keep track if there are any funds to give away in the rewarder
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFundsAt :: !(Maybe Text) -- ^ "has_funds_at" - When it was last checked that there were funds in the rewarder
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTOCanRetrieveRate :: !(Maybe Bool) -- ^ "can_retrieve_rate" - If true it means the rewardRate can be retrieved directly from the contract, without crazy math
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTORewardRateCalculationInProgress :: !(Maybe Bool) -- ^ "reward_rate_calculation_in_progress" - Utility field to calculate the rewarder reward rate
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTOProbes :: !(Maybe [Text]) -- ^ "probes" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMMasterChefRewarderDTO
+instance A.FromJSON UNISWAPV2ETHEREUMMasterChefRewarderDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMMasterChefRewarderDTO" $ \o ->
+    UNISWAPV2ETHEREUMMasterChefRewarderDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "pool")
+      <*> (o .:? "reward_token")
+      <*> (o .:? "token_per_sec")
+      <*> (o .:? "rate_calculated_at")
+      <*> (o .:? "has_funds")
+      <*> (o .:? "has_funds_at")
+      <*> (o .:? "can_retrieve_rate")
+      <*> (o .:? "reward_rate_calculation_in_progress")
+      <*> (o .:? "probes")
+
+-- | ToJSON UNISWAPV2ETHEREUMMasterChefRewarderDTO
+instance A.ToJSON UNISWAPV2ETHEREUMMasterChefRewarderDTO where
+  toJSON UNISWAPV2ETHEREUMMasterChefRewarderDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMMasterChefRewarderDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMMasterChefRewarderDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockNumber
+      , "block_range" .= uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockRange
+      , "id" .= uNISWAPV2ETHEREUMMasterChefRewarderDTOId
+      , "pool" .= uNISWAPV2ETHEREUMMasterChefRewarderDTOPool
+      , "reward_token" .= uNISWAPV2ETHEREUMMasterChefRewarderDTORewardToken
+      , "token_per_sec" .= uNISWAPV2ETHEREUMMasterChefRewarderDTOTokenPerSec
+      , "rate_calculated_at" .= uNISWAPV2ETHEREUMMasterChefRewarderDTORateCalculatedAt
+      , "has_funds" .= uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFunds
+      , "has_funds_at" .= uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFundsAt
+      , "can_retrieve_rate" .= uNISWAPV2ETHEREUMMasterChefRewarderDTOCanRetrieveRate
+      , "reward_rate_calculation_in_progress" .= uNISWAPV2ETHEREUMMasterChefRewarderDTORewardRateCalculationInProgress
+      , "probes" .= uNISWAPV2ETHEREUMMasterChefRewarderDTOProbes
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMMasterChefRewarderDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMMasterChefRewarderDTO
+  :: UNISWAPV2ETHEREUMMasterChefRewarderDTO
+mkUNISWAPV2ETHEREUMMasterChefRewarderDTO =
+  UNISWAPV2ETHEREUMMasterChefRewarderDTO
+  { uNISWAPV2ETHEREUMMasterChefRewarderDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockRange = Nothing
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTOId = Nothing
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTOPool = Nothing
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTORewardToken = Nothing
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTOTokenPerSec = Nothing
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTORateCalculatedAt = Nothing
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFunds = Nothing
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFundsAt = Nothing
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTOCanRetrieveRate = Nothing
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTORewardRateCalculationInProgress = Nothing
+  , uNISWAPV2ETHEREUMMasterChefRewarderDTOProbes = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+-- | UNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+-- 
+data UNISWAPV2ETHEREUMMasterChefStakingPoolDTO = UNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+  { uNISWAPV2ETHEREUMMasterChefStakingPoolDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMMasterChefStakingPoolDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , uNISWAPV2ETHEREUMMasterChefStakingPoolDTOId :: !(Maybe Text) -- ^ "id" - (masterchef type) - (pid referenced in the masterchef contract)
+  , uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAddress :: !(Maybe Text) -- ^ "pool_address" - Staking pool to which this rewarder is associated
+  , uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAllocPoint :: !(Maybe Text) -- ^ "pool_alloc_point" - Allocation point of this MasterChef Staking pool
+  , uNISWAPV2ETHEREUMMasterChefStakingPoolDTOMultiplier :: !(Maybe Text) -- ^ "multiplier" - Reward Multiplier for a given staking pool
+  , uNISWAPV2ETHEREUMMasterChefStakingPoolDTOLastRewardBlock :: !(Maybe Text) -- ^ "last_reward_block" - Last block where rewards were given out
+  , uNISWAPV2ETHEREUMMasterChefStakingPoolDTORewarder :: !(Maybe Text) -- ^ "rewarder" - Optional address of a bonus rewarder, to give additional tokens on top of masterchefs
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+instance A.FromJSON UNISWAPV2ETHEREUMMasterChefStakingPoolDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMMasterChefStakingPoolDTO" $ \o ->
+    UNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "pool_address")
+      <*> (o .:? "pool_alloc_point")
+      <*> (o .:? "multiplier")
+      <*> (o .:? "last_reward_block")
+      <*> (o .:? "rewarder")
+
+-- | ToJSON UNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+instance A.ToJSON UNISWAPV2ETHEREUMMasterChefStakingPoolDTO where
+  toJSON UNISWAPV2ETHEREUMMasterChefStakingPoolDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMMasterChefStakingPoolDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMMasterChefStakingPoolDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockNumber
+      , "block_range" .= uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockRange
+      , "id" .= uNISWAPV2ETHEREUMMasterChefStakingPoolDTOId
+      , "pool_address" .= uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAddress
+      , "pool_alloc_point" .= uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAllocPoint
+      , "multiplier" .= uNISWAPV2ETHEREUMMasterChefStakingPoolDTOMultiplier
+      , "last_reward_block" .= uNISWAPV2ETHEREUMMasterChefStakingPoolDTOLastRewardBlock
+      , "rewarder" .= uNISWAPV2ETHEREUMMasterChefStakingPoolDTORewarder
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMMasterChefStakingPoolDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+  :: UNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+mkUNISWAPV2ETHEREUMMasterChefStakingPoolDTO =
+  UNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+  { uNISWAPV2ETHEREUMMasterChefStakingPoolDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMMasterChefStakingPoolDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockRange = Nothing
+  , uNISWAPV2ETHEREUMMasterChefStakingPoolDTOId = Nothing
+  , uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAddress = Nothing
+  , uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAllocPoint = Nothing
+  , uNISWAPV2ETHEREUMMasterChefStakingPoolDTOMultiplier = Nothing
+  , uNISWAPV2ETHEREUMMasterChefStakingPoolDTOLastRewardBlock = Nothing
+  , uNISWAPV2ETHEREUMMasterChefStakingPoolDTORewarder = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMRewardTokenDTO
+-- | UNISWAPV2ETHEREUMRewardTokenDTO
+-- 
+data UNISWAPV2ETHEREUMRewardTokenDTO = UNISWAPV2ETHEREUMRewardTokenDTO
+  { uNISWAPV2ETHEREUMRewardTokenDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMRewardTokenDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMRewardTokenDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMRewardTokenDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , uNISWAPV2ETHEREUMRewardTokenDTOId :: !(Maybe Text) -- ^ "id" - (reward token type)-(smart contract address of the reward token)
+  , uNISWAPV2ETHEREUMRewardTokenDTOToken :: !(Maybe Text) -- ^ "token" - Reference to the actual token
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMRewardTokenDTO
+instance A.FromJSON UNISWAPV2ETHEREUMRewardTokenDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMRewardTokenDTO" $ \o ->
+    UNISWAPV2ETHEREUMRewardTokenDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "token")
+
+-- | ToJSON UNISWAPV2ETHEREUMRewardTokenDTO
+instance A.ToJSON UNISWAPV2ETHEREUMRewardTokenDTO where
+  toJSON UNISWAPV2ETHEREUMRewardTokenDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMRewardTokenDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMRewardTokenDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMRewardTokenDTOBlockNumber
+      , "block_range" .= uNISWAPV2ETHEREUMRewardTokenDTOBlockRange
+      , "id" .= uNISWAPV2ETHEREUMRewardTokenDTOId
+      , "token" .= uNISWAPV2ETHEREUMRewardTokenDTOToken
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMRewardTokenDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMRewardTokenDTO
+  :: UNISWAPV2ETHEREUMRewardTokenDTO
+mkUNISWAPV2ETHEREUMRewardTokenDTO =
+  UNISWAPV2ETHEREUMRewardTokenDTO
+  { uNISWAPV2ETHEREUMRewardTokenDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMRewardTokenDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMRewardTokenDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMRewardTokenDTOBlockRange = Nothing
+  , uNISWAPV2ETHEREUMRewardTokenDTOId = Nothing
+  , uNISWAPV2ETHEREUMRewardTokenDTOToken = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMRewarderProbeDTO
+-- | UNISWAPV2ETHEREUMRewarderProbeDTO
+-- 
+data UNISWAPV2ETHEREUMRewarderProbeDTO = UNISWAPV2ETHEREUMRewarderProbeDTO
+  { uNISWAPV2ETHEREUMRewarderProbeDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMRewarderProbeDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMRewarderProbeDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMRewarderProbeDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , uNISWAPV2ETHEREUMRewarderProbeDTOId :: !(Maybe Text) -- ^ "id" - (rewarder)-(probeNum)
+  , uNISWAPV2ETHEREUMRewarderProbeDTOUser :: !(Maybe Text) -- ^ "user" - The address being probed
+  , uNISWAPV2ETHEREUMRewarderProbeDTOPending :: !(Maybe Text) -- ^ "pending" - The value from the last probe
+  , uNISWAPV2ETHEREUMRewarderProbeDTOBlockNum :: !(Maybe Text) -- ^ "block_num" - Block at which the probe was made
+  , uNISWAPV2ETHEREUMRewarderProbeDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Block timestamp at whihc the probe was taken
+  , uNISWAPV2ETHEREUMRewarderProbeDTOLpStaked :: !(Maybe Text) -- ^ "lp_staked" - Total LP staked in pool at the time of the probe
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMRewarderProbeDTO
+instance A.FromJSON UNISWAPV2ETHEREUMRewarderProbeDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMRewarderProbeDTO" $ \o ->
+    UNISWAPV2ETHEREUMRewarderProbeDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "user")
+      <*> (o .:? "pending")
+      <*> (o .:? "block_num")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "lp_staked")
+
+-- | ToJSON UNISWAPV2ETHEREUMRewarderProbeDTO
+instance A.ToJSON UNISWAPV2ETHEREUMRewarderProbeDTO where
+  toJSON UNISWAPV2ETHEREUMRewarderProbeDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMRewarderProbeDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMRewarderProbeDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMRewarderProbeDTOBlockNumber
+      , "block_range" .= uNISWAPV2ETHEREUMRewarderProbeDTOBlockRange
+      , "id" .= uNISWAPV2ETHEREUMRewarderProbeDTOId
+      , "user" .= uNISWAPV2ETHEREUMRewarderProbeDTOUser
+      , "pending" .= uNISWAPV2ETHEREUMRewarderProbeDTOPending
+      , "block_num" .= uNISWAPV2ETHEREUMRewarderProbeDTOBlockNum
+      , "timestamp" .= uNISWAPV2ETHEREUMRewarderProbeDTOTimestamp
+      , "lp_staked" .= uNISWAPV2ETHEREUMRewarderProbeDTOLpStaked
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMRewarderProbeDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMRewarderProbeDTO
+  :: UNISWAPV2ETHEREUMRewarderProbeDTO
+mkUNISWAPV2ETHEREUMRewarderProbeDTO =
+  UNISWAPV2ETHEREUMRewarderProbeDTO
+  { uNISWAPV2ETHEREUMRewarderProbeDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMRewarderProbeDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMRewarderProbeDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMRewarderProbeDTOBlockRange = Nothing
+  , uNISWAPV2ETHEREUMRewarderProbeDTOId = Nothing
+  , uNISWAPV2ETHEREUMRewarderProbeDTOUser = Nothing
+  , uNISWAPV2ETHEREUMRewarderProbeDTOPending = Nothing
+  , uNISWAPV2ETHEREUMRewarderProbeDTOBlockNum = Nothing
+  , uNISWAPV2ETHEREUMRewarderProbeDTOTimestamp = Nothing
+  , uNISWAPV2ETHEREUMRewarderProbeDTOLpStaked = Nothing
   }
 
 -- ** UNISWAPV2ETHEREUMSwapDTO
@@ -4268,6 +8339,375 @@ mkUNISWAPV2ETHEREUMTokenDTO =
   , uNISWAPV2ETHEREUMTokenDTOLargePriceChangeBuffer = Nothing
   , uNISWAPV2ETHEREUMTokenDTOLargeTvlImpactBuffer = Nothing
   , uNISWAPV2ETHEREUMTokenDTOTokenSymbol = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMTokenWhiteListDTO
+-- | UNISWAPV2ETHEREUMTokenWhiteListDTO
+-- 
+data UNISWAPV2ETHEREUMTokenWhiteListDTO = UNISWAPV2ETHEREUMTokenWhiteListDTO
+  { uNISWAPV2ETHEREUMTokenWhiteListDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMTokenWhiteListDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMTokenWhiteListDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMTokenWhiteListDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , uNISWAPV2ETHEREUMTokenWhiteListDTOId :: !(Maybe Text) -- ^ "id" - Token Address
+  , uNISWAPV2ETHEREUMTokenWhiteListDTOWhitelistPools :: !(Maybe [Text]) -- ^ "whitelist_pools" - pools token is in that are white listed for USD pricing
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMTokenWhiteListDTO
+instance A.FromJSON UNISWAPV2ETHEREUMTokenWhiteListDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMTokenWhiteListDTO" $ \o ->
+    UNISWAPV2ETHEREUMTokenWhiteListDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "whitelist_pools")
+
+-- | ToJSON UNISWAPV2ETHEREUMTokenWhiteListDTO
+instance A.ToJSON UNISWAPV2ETHEREUMTokenWhiteListDTO where
+  toJSON UNISWAPV2ETHEREUMTokenWhiteListDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMTokenWhiteListDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMTokenWhiteListDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMTokenWhiteListDTOBlockNumber
+      , "block_range" .= uNISWAPV2ETHEREUMTokenWhiteListDTOBlockRange
+      , "id" .= uNISWAPV2ETHEREUMTokenWhiteListDTOId
+      , "whitelist_pools" .= uNISWAPV2ETHEREUMTokenWhiteListDTOWhitelistPools
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMTokenWhiteListDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMTokenWhiteListDTO
+  :: UNISWAPV2ETHEREUMTokenWhiteListDTO
+mkUNISWAPV2ETHEREUMTokenWhiteListDTO =
+  UNISWAPV2ETHEREUMTokenWhiteListDTO
+  { uNISWAPV2ETHEREUMTokenWhiteListDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMTokenWhiteListDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMTokenWhiteListDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMTokenWhiteListDTOBlockRange = Nothing
+  , uNISWAPV2ETHEREUMTokenWhiteListDTOId = Nothing
+  , uNISWAPV2ETHEREUMTokenWhiteListDTOWhitelistPools = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMTransferDTO
+-- | UNISWAPV2ETHEREUMTransferDTO
+-- 
+data UNISWAPV2ETHEREUMTransferDTO = UNISWAPV2ETHEREUMTransferDTO
+  { uNISWAPV2ETHEREUMTransferDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMTransferDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMTransferDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMTransferDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - Entity is used to track data from the transfer events (execution of: deposit/withdraw, mint/burn).
+  , uNISWAPV2ETHEREUMTransferDTOId :: !(Maybe Text) -- ^ "id" - Transaction hash.
+  , uNISWAPV2ETHEREUMTransferDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - 
+  , uNISWAPV2ETHEREUMTransferDTOSender :: !(Maybe Text) -- ^ "sender" - 
+  , uNISWAPV2ETHEREUMTransferDTOType :: !(Maybe Text) -- ^ "type" - 
+  , uNISWAPV2ETHEREUMTransferDTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMTransferDTO
+instance A.FromJSON UNISWAPV2ETHEREUMTransferDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMTransferDTO" $ \o ->
+    UNISWAPV2ETHEREUMTransferDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "sender")
+      <*> (o .:? "type")
+      <*> (o .:? "liquidity")
+
+-- | ToJSON UNISWAPV2ETHEREUMTransferDTO
+instance A.ToJSON UNISWAPV2ETHEREUMTransferDTO where
+  toJSON UNISWAPV2ETHEREUMTransferDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMTransferDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMTransferDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMTransferDTOBlockNumber
+      , "block_range" .= uNISWAPV2ETHEREUMTransferDTOBlockRange
+      , "id" .= uNISWAPV2ETHEREUMTransferDTOId
+      , "timestamp" .= uNISWAPV2ETHEREUMTransferDTOTimestamp
+      , "sender" .= uNISWAPV2ETHEREUMTransferDTOSender
+      , "type" .= uNISWAPV2ETHEREUMTransferDTOType
+      , "liquidity" .= uNISWAPV2ETHEREUMTransferDTOLiquidity
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMTransferDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMTransferDTO
+  :: UNISWAPV2ETHEREUMTransferDTO
+mkUNISWAPV2ETHEREUMTransferDTO =
+  UNISWAPV2ETHEREUMTransferDTO
+  { uNISWAPV2ETHEREUMTransferDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMTransferDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMTransferDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMTransferDTOBlockRange = Nothing
+  , uNISWAPV2ETHEREUMTransferDTOId = Nothing
+  , uNISWAPV2ETHEREUMTransferDTOTimestamp = Nothing
+  , uNISWAPV2ETHEREUMTransferDTOSender = Nothing
+  , uNISWAPV2ETHEREUMTransferDTOType = Nothing
+  , uNISWAPV2ETHEREUMTransferDTOLiquidity = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+-- | UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+-- 
+data UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO = UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+  { uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOId :: !(Maybe Text) -- ^ "id" - ID is # of days since Unix epoch time
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOProtocol :: !(Maybe Text) -- ^ "protocol" - Protocol this snapshot is associated with
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers :: !(Maybe Int) -- ^ "daily_active_users" - Number of unique daily active users
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers :: !(Maybe Int) -- ^ "cumulative_unique_users" - Number of cumulative unique users
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount :: !(Maybe Int) -- ^ "daily_transaction_count" - Total number of transactions occurred in a day. Transactions include all entities that implement the Event interface.
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount :: !(Maybe Int) -- ^ "daily_deposit_count" - Total number of deposits (add liquidity) in a day
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount :: !(Maybe Int) -- ^ "daily_withdraw_count" - Total number of withdrawals (remove liquidity) in a day
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailySwapCount :: !(Maybe Int) -- ^ "daily_swap_count" - Total number of trades (swaps) in a day
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount :: !(Maybe Int) -- ^ "total_pool_count" - Total number of pools
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of this snapshot
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+instance A.FromJSON UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO" $ \o ->
+    UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "protocol")
+      <*> (o .:? "daily_active_users")
+      <*> (o .:? "cumulative_unique_users")
+      <*> (o .:? "daily_transaction_count")
+      <*> (o .:? "daily_deposit_count")
+      <*> (o .:? "daily_withdraw_count")
+      <*> (o .:? "daily_swap_count")
+      <*> (o .:? "total_pool_count")
+      <*> (o .:? "timestamp")
+
+-- | ToJSON UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+instance A.ToJSON UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO where
+  toJSON UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockNumber
+      , "block_range" .= uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockRange
+      , "id" .= uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOId
+      , "protocol" .= uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOProtocol
+      , "daily_active_users" .= uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers
+      , "cumulative_unique_users" .= uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers
+      , "daily_transaction_count" .= uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount
+      , "daily_deposit_count" .= uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount
+      , "daily_withdraw_count" .= uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount
+      , "daily_swap_count" .= uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailySwapCount
+      , "total_pool_count" .= uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount
+      , "timestamp" .= uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTimestamp
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+  :: UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+mkUNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO =
+  UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+  { uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockRange = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOId = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOProtocol = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailySwapCount = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTimestamp = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+-- | UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+-- 
+data UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO = UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+  { uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOId :: !(Maybe Text) -- ^ "id" - # of hours since Unix epoch time
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOProtocol :: !(Maybe Text) -- ^ "protocol" - Protocol this snapshot is associated with
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers :: !(Maybe Int) -- ^ "hourly_active_users" - Number of unique hourly active users
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers :: !(Maybe Int) -- ^ "cumulative_unique_users" - Number of cumulative unique users
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount :: !(Maybe Int) -- ^ "hourly_transaction_count" - Total number of transactions occurred in an hour. Transactions include all entities that implement the Event interface.
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount :: !(Maybe Int) -- ^ "hourly_deposit_count" -  Total number of deposits (add liquidity) in an hour
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount :: !(Maybe Int) -- ^ "hourly_withdraw_count" - Total number of withdrawals (remove liquidity) in an hour
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount :: !(Maybe Int) -- ^ "hourly_swap_count" - Total number of trades (swaps) in an hour
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of this snapshot
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+instance A.FromJSON UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO" $ \o ->
+    UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "protocol")
+      <*> (o .:? "hourly_active_users")
+      <*> (o .:? "cumulative_unique_users")
+      <*> (o .:? "hourly_transaction_count")
+      <*> (o .:? "hourly_deposit_count")
+      <*> (o .:? "hourly_withdraw_count")
+      <*> (o .:? "hourly_swap_count")
+      <*> (o .:? "timestamp")
+
+-- | ToJSON UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+instance A.ToJSON UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO where
+  toJSON UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber
+      , "block_range" .= uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockRange
+      , "id" .= uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOId
+      , "protocol" .= uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOProtocol
+      , "hourly_active_users" .= uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers
+      , "cumulative_unique_users" .= uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers
+      , "hourly_transaction_count" .= uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount
+      , "hourly_deposit_count" .= uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount
+      , "hourly_withdraw_count" .= uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount
+      , "hourly_swap_count" .= uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount
+      , "timestamp" .= uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOTimestamp
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+  :: UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+mkUNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO =
+  UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+  { uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockRange = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOId = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOProtocol = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount = Nothing
+  , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOTimestamp = Nothing
+  }
+
+-- ** UNISWAPV2ETHEREUMWithdrawDTO
+-- | UNISWAPV2ETHEREUMWithdrawDTO
+-- 
+data UNISWAPV2ETHEREUMWithdrawDTO = UNISWAPV2ETHEREUMWithdrawDTO
+  { uNISWAPV2ETHEREUMWithdrawDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uNISWAPV2ETHEREUMWithdrawDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uNISWAPV2ETHEREUMWithdrawDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uNISWAPV2ETHEREUMWithdrawDTOBlock :: !(Maybe Int) -- ^ "block_" - 
+  , uNISWAPV2ETHEREUMWithdrawDTOId :: !(Maybe Text) -- ^ "id" - Withdraw-(transaction hash)-(log index)
+  , uNISWAPV2ETHEREUMWithdrawDTOHash :: !(Maybe Text) -- ^ "hash" - Transaction hash of the transaction that emitted this event
+  , uNISWAPV2ETHEREUMWithdrawDTOLogIndex :: !(Maybe Int) -- ^ "log_index" - Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0
+  , uNISWAPV2ETHEREUMWithdrawDTOProtocol :: !(Maybe Text) -- ^ "protocol" - The protocol this transaction belongs to
+  , uNISWAPV2ETHEREUMWithdrawDTOTo :: !(Maybe Text) -- ^ "to" - Address that received the tokens
+  , uNISWAPV2ETHEREUMWithdrawDTOFrom :: !(Maybe Text) -- ^ "from" - Address that sent the tokens
+  , uNISWAPV2ETHEREUMWithdrawDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of this event
+  , uNISWAPV2ETHEREUMWithdrawDTOInputTokens :: !(Maybe [Text]) -- ^ "input_tokens" - Input tokens of the pool (not input tokens of the event/transaction). E.g. WETH and USDC from a WETH-USDC pool
+  , uNISWAPV2ETHEREUMWithdrawDTOOutputToken :: !(Maybe Text) -- ^ "output_token" - Output token of the pool (not output token of the event/transaction). E.g. the UNI-LP token
+  , uNISWAPV2ETHEREUMWithdrawDTOInputTokenAmounts :: !(Maybe [Text]) -- ^ "input_token_amounts" - Amount of input tokens in the token&#39;s native unit
+  , uNISWAPV2ETHEREUMWithdrawDTOOutputTokenAmount :: !(Maybe Text) -- ^ "output_token_amount" - Amount of output tokens in the token&#39;s native unit
+  , uNISWAPV2ETHEREUMWithdrawDTOReserveAmounts :: !(Maybe [Text]) -- ^ "reserve_amounts" - Amount of input tokens in the liquidity pool
+  , uNISWAPV2ETHEREUMWithdrawDTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - USD-normalized value of the transaction of the underlying (e.g. sum of tokens withdrawn from a pool)
+  , uNISWAPV2ETHEREUMWithdrawDTOPool :: !(Maybe Text) -- ^ "pool" - The pool involving this transaction
+  , uNISWAPV2ETHEREUMWithdrawDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UNISWAPV2ETHEREUMWithdrawDTO
+instance A.FromJSON UNISWAPV2ETHEREUMWithdrawDTO where
+  parseJSON = A.withObject "UNISWAPV2ETHEREUMWithdrawDTO" $ \o ->
+    UNISWAPV2ETHEREUMWithdrawDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "block_")
+      <*> (o .:? "id")
+      <*> (o .:? "hash")
+      <*> (o .:? "log_index")
+      <*> (o .:? "protocol")
+      <*> (o .:? "to")
+      <*> (o .:? "from")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "input_tokens")
+      <*> (o .:? "output_token")
+      <*> (o .:? "input_token_amounts")
+      <*> (o .:? "output_token_amount")
+      <*> (o .:? "reserve_amounts")
+      <*> (o .:? "amount_usd")
+      <*> (o .:? "pool")
+      <*> (o .:? "block_range")
+
+-- | ToJSON UNISWAPV2ETHEREUMWithdrawDTO
+instance A.ToJSON UNISWAPV2ETHEREUMWithdrawDTO where
+  toJSON UNISWAPV2ETHEREUMWithdrawDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uNISWAPV2ETHEREUMWithdrawDTOEntryTime
+      , "recv_time" .= uNISWAPV2ETHEREUMWithdrawDTORecvTime
+      , "block_number" .= uNISWAPV2ETHEREUMWithdrawDTOBlockNumber
+      , "block_" .= uNISWAPV2ETHEREUMWithdrawDTOBlock
+      , "id" .= uNISWAPV2ETHEREUMWithdrawDTOId
+      , "hash" .= uNISWAPV2ETHEREUMWithdrawDTOHash
+      , "log_index" .= uNISWAPV2ETHEREUMWithdrawDTOLogIndex
+      , "protocol" .= uNISWAPV2ETHEREUMWithdrawDTOProtocol
+      , "to" .= uNISWAPV2ETHEREUMWithdrawDTOTo
+      , "from" .= uNISWAPV2ETHEREUMWithdrawDTOFrom
+      , "timestamp" .= uNISWAPV2ETHEREUMWithdrawDTOTimestamp
+      , "input_tokens" .= uNISWAPV2ETHEREUMWithdrawDTOInputTokens
+      , "output_token" .= uNISWAPV2ETHEREUMWithdrawDTOOutputToken
+      , "input_token_amounts" .= uNISWAPV2ETHEREUMWithdrawDTOInputTokenAmounts
+      , "output_token_amount" .= uNISWAPV2ETHEREUMWithdrawDTOOutputTokenAmount
+      , "reserve_amounts" .= uNISWAPV2ETHEREUMWithdrawDTOReserveAmounts
+      , "amount_usd" .= uNISWAPV2ETHEREUMWithdrawDTOAmountUsd
+      , "pool" .= uNISWAPV2ETHEREUMWithdrawDTOPool
+      , "block_range" .= uNISWAPV2ETHEREUMWithdrawDTOBlockRange
+      ]
+
+
+-- | Construct a value of type 'UNISWAPV2ETHEREUMWithdrawDTO' (by applying it's required fields, if any)
+mkUNISWAPV2ETHEREUMWithdrawDTO
+  :: UNISWAPV2ETHEREUMWithdrawDTO
+mkUNISWAPV2ETHEREUMWithdrawDTO =
+  UNISWAPV2ETHEREUMWithdrawDTO
+  { uNISWAPV2ETHEREUMWithdrawDTOEntryTime = Nothing
+  , uNISWAPV2ETHEREUMWithdrawDTORecvTime = Nothing
+  , uNISWAPV2ETHEREUMWithdrawDTOBlockNumber = Nothing
+  , uNISWAPV2ETHEREUMWithdrawDTOBlock = Nothing
+  , uNISWAPV2ETHEREUMWithdrawDTOId = Nothing
+  , uNISWAPV2ETHEREUMWithdrawDTOHash = Nothing
+  , uNISWAPV2ETHEREUMWithdrawDTOLogIndex = Nothing
+  , uNISWAPV2ETHEREUMWithdrawDTOProtocol = Nothing
+  , uNISWAPV2ETHEREUMWithdrawDTOTo = Nothing
+  , uNISWAPV2ETHEREUMWithdrawDTOFrom = Nothing
+  , uNISWAPV2ETHEREUMWithdrawDTOTimestamp = Nothing
+  , uNISWAPV2ETHEREUMWithdrawDTOInputTokens = Nothing
+  , uNISWAPV2ETHEREUMWithdrawDTOOutputToken = Nothing
+  , uNISWAPV2ETHEREUMWithdrawDTOInputTokenAmounts = Nothing
+  , uNISWAPV2ETHEREUMWithdrawDTOOutputTokenAmount = Nothing
+  , uNISWAPV2ETHEREUMWithdrawDTOReserveAmounts = Nothing
+  , uNISWAPV2ETHEREUMWithdrawDTOAmountUsd = Nothing
+  , uNISWAPV2ETHEREUMWithdrawDTOPool = Nothing
+  , uNISWAPV2ETHEREUMWithdrawDTOBlockRange = Nothing
   }
 
 -- ** UNISWAPV3ETHEREUMAccountDTO
@@ -4655,7 +9095,7 @@ mkUNISWAPV3ETHEREUMDexAmmProtocolDTO =
 data UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO = UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO
   { uNISWAPV3ETHEREUMFinancialsDailySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , uNISWAPV3ETHEREUMFinancialsDailySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uNISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumber :: !(Maybe Int) -- ^ "block_number" - Block number of when this snapshot was taken/last modified.)
+  , uNISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , uNISWAPV3ETHEREUMFinancialsDailySnapshotDTOId :: !(Maybe Text) -- ^ "id" - ID is # of days since Unix epoch time.
   , uNISWAPV3ETHEREUMFinancialsDailySnapshotDTODay :: !(Maybe Int) -- ^ "day" - Number of days since Unix epoch time.
   , uNISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocol :: !(Maybe Text) -- ^ "protocol" - Protocol this snapshot is associated with.
@@ -5047,7 +9487,6 @@ data UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO = UNISWAPV3ETHEREUMLiquidity
   { uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVid :: !(Maybe Integer) -- ^ "vid" - .
   , uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock :: !(Maybe Int) -- ^ "block_" - The Ethereum block number associated with the liquidity pool daily snapshot.
   , uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (smart contract address of the pool)-(# of days since Unix epoch time).
   , uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODay :: !(Maybe Int) -- ^ "day" - Number of days since Unix epoch time.
@@ -5100,7 +9539,6 @@ instance A.FromJSON UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO where
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
-      <*> (o .:? "vid")
       <*> (o .:? "block_")
       <*> (o .:? "id")
       <*> (o .:? "day")
@@ -5152,7 +9590,6 @@ instance A.ToJSON UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO where
       [ "entry_time" .= uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime
       , "recv_time" .= uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORecvTime
       , "block_number" .= uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber
-      , "vid" .= uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVid
       , "block_" .= uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock
       , "id" .= uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOId
       , "day" .= uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODay
@@ -5207,7 +9644,6 @@ mkUNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO =
   { uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime = Nothing
   , uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORecvTime = Nothing
   , uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber = Nothing
-  , uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVid = Nothing
   , uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock = Nothing
   , uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOId = Nothing
   , uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODay = Nothing
@@ -5309,7 +9745,6 @@ data UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO = UNISWAPV3ETHEREUMLiquidit
   { uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId :: !(Maybe Text) -- ^ "id" - (Smart contract address of the pool)-( # of hours since Unix epoch time)
   , uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHour :: !(Maybe Int) -- ^ "hour" - Number of hours since Unix epoch time
   , uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol :: !(Maybe Text) -- ^ "protocol" - The protocol this snapshot belongs to
@@ -5361,7 +9796,6 @@ instance A.FromJSON UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO where
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
-      <*> (o .:? "vid")
       <*> (o .:? "id")
       <*> (o .:? "hour")
       <*> (o .:? "protocol")
@@ -5412,7 +9846,6 @@ instance A.ToJSON UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO where
       [ "entry_time" .= uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime
       , "recv_time" .= uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime
       , "block_number" .= uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber
-      , "vid" .= uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVid
       , "id" .= uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId
       , "hour" .= uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHour
       , "protocol" .= uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol
@@ -5466,7 +9899,6 @@ mkUNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO =
   { uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime = Nothing
   , uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime = Nothing
   , uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber = Nothing
-  , uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVid = Nothing
   , uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId = Nothing
   , uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHour = Nothing
   , uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol = Nothing
@@ -5518,7 +9950,6 @@ data UNISWAPV3ETHEREUMPositionDTO = UNISWAPV3ETHEREUMPositionDTO
   { uNISWAPV3ETHEREUMPositionDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , uNISWAPV3ETHEREUMPositionDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , uNISWAPV3ETHEREUMPositionDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uNISWAPV3ETHEREUMPositionDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , uNISWAPV3ETHEREUMPositionDTOId :: !(Maybe Text) -- ^ "id" - (account address)-(market address)-(count)
   , uNISWAPV3ETHEREUMPositionDTOAccount :: !(Maybe Text) -- ^ "account" - Account that owns this position
   , uNISWAPV3ETHEREUMPositionDTOPool :: !(Maybe Text) -- ^ "pool" - The liquidity pool in which this position was opened
@@ -5550,7 +9981,6 @@ instance A.FromJSON UNISWAPV3ETHEREUMPositionDTO where
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
-      <*> (o .:? "vid")
       <*> (o .:? "id")
       <*> (o .:? "account")
       <*> (o .:? "pool")
@@ -5581,7 +10011,6 @@ instance A.ToJSON UNISWAPV3ETHEREUMPositionDTO where
       [ "entry_time" .= uNISWAPV3ETHEREUMPositionDTOEntryTime
       , "recv_time" .= uNISWAPV3ETHEREUMPositionDTORecvTime
       , "block_number" .= uNISWAPV3ETHEREUMPositionDTOBlockNumber
-      , "vid" .= uNISWAPV3ETHEREUMPositionDTOVid
       , "id" .= uNISWAPV3ETHEREUMPositionDTOId
       , "account" .= uNISWAPV3ETHEREUMPositionDTOAccount
       , "pool" .= uNISWAPV3ETHEREUMPositionDTOPool
@@ -5615,7 +10044,6 @@ mkUNISWAPV3ETHEREUMPositionDTO =
   { uNISWAPV3ETHEREUMPositionDTOEntryTime = Nothing
   , uNISWAPV3ETHEREUMPositionDTORecvTime = Nothing
   , uNISWAPV3ETHEREUMPositionDTOBlockNumber = Nothing
-  , uNISWAPV3ETHEREUMPositionDTOVid = Nothing
   , uNISWAPV3ETHEREUMPositionDTOId = Nothing
   , uNISWAPV3ETHEREUMPositionDTOAccount = Nothing
   , uNISWAPV3ETHEREUMPositionDTOPool = Nothing
@@ -5934,7 +10362,6 @@ data UNISWAPV3ETHEREUMTickDTO = UNISWAPV3ETHEREUMTickDTO
   { uNISWAPV3ETHEREUMTickDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , uNISWAPV3ETHEREUMTickDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , uNISWAPV3ETHEREUMTickDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uNISWAPV3ETHEREUMTickDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , uNISWAPV3ETHEREUMTickDTOId :: !(Maybe Text) -- ^ "id" - (pool address)-(tick index)
   , uNISWAPV3ETHEREUMTickDTOIndex :: !(Maybe Text) -- ^ "index" - tick index
   , uNISWAPV3ETHEREUMTickDTOPool :: !(Maybe Text) -- ^ "pool" - Liquidity pool this tick belongs to
@@ -5958,7 +10385,6 @@ instance A.FromJSON UNISWAPV3ETHEREUMTickDTO where
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
-      <*> (o .:? "vid")
       <*> (o .:? "id")
       <*> (o .:? "index")
       <*> (o .:? "pool")
@@ -5981,7 +10407,6 @@ instance A.ToJSON UNISWAPV3ETHEREUMTickDTO where
       [ "entry_time" .= uNISWAPV3ETHEREUMTickDTOEntryTime
       , "recv_time" .= uNISWAPV3ETHEREUMTickDTORecvTime
       , "block_number" .= uNISWAPV3ETHEREUMTickDTOBlockNumber
-      , "vid" .= uNISWAPV3ETHEREUMTickDTOVid
       , "id" .= uNISWAPV3ETHEREUMTickDTOId
       , "index" .= uNISWAPV3ETHEREUMTickDTOIndex
       , "pool" .= uNISWAPV3ETHEREUMTickDTOPool
@@ -6007,7 +10432,6 @@ mkUNISWAPV3ETHEREUMTickDTO =
   { uNISWAPV3ETHEREUMTickDTOEntryTime = Nothing
   , uNISWAPV3ETHEREUMTickDTORecvTime = Nothing
   , uNISWAPV3ETHEREUMTickDTOBlockNumber = Nothing
-  , uNISWAPV3ETHEREUMTickDTOVid = Nothing
   , uNISWAPV3ETHEREUMTickDTOId = Nothing
   , uNISWAPV3ETHEREUMTickDTOIndex = Nothing
   , uNISWAPV3ETHEREUMTickDTOPool = Nothing
@@ -6031,7 +10455,6 @@ data UNISWAPV3ETHEREUMTickDailySnapshotDTO = UNISWAPV3ETHEREUMTickDailySnapshotD
   { uNISWAPV3ETHEREUMTickDailySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , uNISWAPV3ETHEREUMTickDailySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , uNISWAPV3ETHEREUMTickDailySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uNISWAPV3ETHEREUMTickDailySnapshotDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , uNISWAPV3ETHEREUMTickDailySnapshotDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (pool address)-(tick index)-(day ID)
   , uNISWAPV3ETHEREUMTickDailySnapshotDTODayId :: !(Maybe Int) -- ^ "day_id" - Number of days since Unix epoch time
   , uNISWAPV3ETHEREUMTickDailySnapshotDTOTick :: !(Maybe Text) -- ^ "tick" - tick index
@@ -6050,7 +10473,6 @@ instance A.FromJSON UNISWAPV3ETHEREUMTickDailySnapshotDTO where
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
-      <*> (o .:? "vid")
       <*> (o .:? "id")
       <*> (o .:? "day_id")
       <*> (o .:? "tick")
@@ -6068,7 +10490,6 @@ instance A.ToJSON UNISWAPV3ETHEREUMTickDailySnapshotDTO where
       [ "entry_time" .= uNISWAPV3ETHEREUMTickDailySnapshotDTOEntryTime
       , "recv_time" .= uNISWAPV3ETHEREUMTickDailySnapshotDTORecvTime
       , "block_number" .= uNISWAPV3ETHEREUMTickDailySnapshotDTOBlockNumber
-      , "vid" .= uNISWAPV3ETHEREUMTickDailySnapshotDTOVid
       , "id" .= uNISWAPV3ETHEREUMTickDailySnapshotDTOId
       , "day_id" .= uNISWAPV3ETHEREUMTickDailySnapshotDTODayId
       , "tick" .= uNISWAPV3ETHEREUMTickDailySnapshotDTOTick
@@ -6089,7 +10510,6 @@ mkUNISWAPV3ETHEREUMTickDailySnapshotDTO =
   { uNISWAPV3ETHEREUMTickDailySnapshotDTOEntryTime = Nothing
   , uNISWAPV3ETHEREUMTickDailySnapshotDTORecvTime = Nothing
   , uNISWAPV3ETHEREUMTickDailySnapshotDTOBlockNumber = Nothing
-  , uNISWAPV3ETHEREUMTickDailySnapshotDTOVid = Nothing
   , uNISWAPV3ETHEREUMTickDailySnapshotDTOId = Nothing
   , uNISWAPV3ETHEREUMTickDailySnapshotDTODayId = Nothing
   , uNISWAPV3ETHEREUMTickDailySnapshotDTOTick = Nothing
@@ -6108,7 +10528,6 @@ data UNISWAPV3ETHEREUMTickHourlySnapshotDTO = UNISWAPV3ETHEREUMTickHourlySnapsho
   { uNISWAPV3ETHEREUMTickHourlySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , uNISWAPV3ETHEREUMTickHourlySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , uNISWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uNISWAPV3ETHEREUMTickHourlySnapshotDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , uNISWAPV3ETHEREUMTickHourlySnapshotDTOId :: !(Maybe Text) -- ^ "id" - (pool address)-(tick index)-(hour ID)
   , uNISWAPV3ETHEREUMTickHourlySnapshotDTOHourId :: !(Maybe Int) -- ^ "hour_id" - Number of hours since Unix epoch time
   , uNISWAPV3ETHEREUMTickHourlySnapshotDTOTick :: !(Maybe Text) -- ^ "tick" - tick index
@@ -6127,7 +10546,6 @@ instance A.FromJSON UNISWAPV3ETHEREUMTickHourlySnapshotDTO where
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
-      <*> (o .:? "vid")
       <*> (o .:? "id")
       <*> (o .:? "hour_id")
       <*> (o .:? "tick")
@@ -6145,7 +10563,6 @@ instance A.ToJSON UNISWAPV3ETHEREUMTickHourlySnapshotDTO where
       [ "entry_time" .= uNISWAPV3ETHEREUMTickHourlySnapshotDTOEntryTime
       , "recv_time" .= uNISWAPV3ETHEREUMTickHourlySnapshotDTORecvTime
       , "block_number" .= uNISWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumber
-      , "vid" .= uNISWAPV3ETHEREUMTickHourlySnapshotDTOVid
       , "id" .= uNISWAPV3ETHEREUMTickHourlySnapshotDTOId
       , "hour_id" .= uNISWAPV3ETHEREUMTickHourlySnapshotDTOHourId
       , "tick" .= uNISWAPV3ETHEREUMTickHourlySnapshotDTOTick
@@ -6166,7 +10583,6 @@ mkUNISWAPV3ETHEREUMTickHourlySnapshotDTO =
   { uNISWAPV3ETHEREUMTickHourlySnapshotDTOEntryTime = Nothing
   , uNISWAPV3ETHEREUMTickHourlySnapshotDTORecvTime = Nothing
   , uNISWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumber = Nothing
-  , uNISWAPV3ETHEREUMTickHourlySnapshotDTOVid = Nothing
   , uNISWAPV3ETHEREUMTickHourlySnapshotDTOId = Nothing
   , uNISWAPV3ETHEREUMTickHourlySnapshotDTOHourId = Nothing
   , uNISWAPV3ETHEREUMTickHourlySnapshotDTOTick = Nothing

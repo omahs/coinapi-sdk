@@ -19,9 +19,526 @@ module OpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
+    # Accounts (current)
+    # Gets accounts.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UNISWAPV2ETHEREUMAccountDTO>]
+    def u_niswapv2_ethereum_accounts__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_accounts__current_with_http_info(opts)
+      data
+    end
+
+    # Accounts (current)
+    # Gets accounts.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UNISWAPV2ETHEREUMAccountDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMAccountDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_accounts__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_accounts__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/accounts/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMAccountDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_accounts__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_accounts__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # ActiveAccounts (current)
+    # Gets activeAccounts.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UNISWAPV2ETHEREUMActiveAccountDTO>]
+    def u_niswapv2_ethereum_active_accounts__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_active_accounts__current_with_http_info(opts)
+      data
+    end
+
+    # ActiveAccounts (current)
+    # Gets activeAccounts.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UNISWAPV2ETHEREUMActiveAccountDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMActiveAccountDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_active_accounts__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_active_accounts__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/activeAccounts/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMActiveAccountDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_active_accounts__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_active_accounts__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Deposits (current)
+    # Gets deposits.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UNISWAPV2ETHEREUMDepositDTO>]
+    def u_niswapv2_ethereum_deposits__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_deposits__current_with_http_info(opts)
+      data
+    end
+
+    # Deposits (current)
+    # Gets deposits.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UNISWAPV2ETHEREUMDepositDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMDepositDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_deposits__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_deposits__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/deposits/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMDepositDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_deposits__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_deposits__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # DexAmmProtocols (current)
+    # Gets dexAmmProtocols.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UNISWAPV2ETHEREUMDexAmmProtocolDTO>]
+    def u_niswapv2_ethereum_dex_amm_protocols__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_dex_amm_protocols__current_with_http_info(opts)
+      data
+    end
+
+    # DexAmmProtocols (current)
+    # Gets dexAmmProtocols.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UNISWAPV2ETHEREUMDexAmmProtocolDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMDexAmmProtocolDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_dex_amm_protocols__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_dex_amm_protocols__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/dexAmmProtocols/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMDexAmmProtocolDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_dex_amm_protocols__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_dex_amm_protocols__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # FinancialsDailySnapshots (current)
+    # Gets financialsDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO>]
+    def u_niswapv2_ethereum_financials_daily_snapshots__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_financials_daily_snapshots__current_with_http_info(opts)
+      data
+    end
+
+    # FinancialsDailySnapshots (current)
+    # Gets financialsDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_financials_daily_snapshots__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_financials_daily_snapshots__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/financialsDailySnapshots/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_financials_daily_snapshots__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_financials_daily_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # LiquidityPoolAmounts (current)
+    # Gets liquidityPoolAmounts.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :id Smart contract address of the pool
+    # @return [Array<UNISWAPV2ETHEREUMLiquidityPoolAmountDTO>]
+    def u_niswapv2_ethereum_liquidity_pool_amounts__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_liquidity_pool_amounts__current_with_http_info(opts)
+      data
+    end
+
+    # LiquidityPoolAmounts (current)
+    # Gets liquidityPoolAmounts.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :id Smart contract address of the pool
+    # @return [Array<(Array<UNISWAPV2ETHEREUMLiquidityPoolAmountDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMLiquidityPoolAmountDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_liquidity_pool_amounts__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_liquidity_pool_amounts__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/liquidityPoolAmounts/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMLiquidityPoolAmountDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_liquidity_pool_amounts__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_liquidity_pool_amounts__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # LiquidityPoolDailySnapshots (current)
+    # Gets liquidityPoolDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO>]
+    def u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current_with_http_info(opts)
+      data
+    end
+
+    # LiquidityPoolDailySnapshots (current)
+    # Gets liquidityPoolDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/liquidityPoolDailySnapshots/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # LiquidityPoolFees (current)
+    # Gets liquidityPoolFees.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UNISWAPV2ETHEREUMLiquidityPoolFeeDTO>]
+    def u_niswapv2_ethereum_liquidity_pool_fees__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_liquidity_pool_fees__current_with_http_info(opts)
+      data
+    end
+
+    # LiquidityPoolFees (current)
+    # Gets liquidityPoolFees.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UNISWAPV2ETHEREUMLiquidityPoolFeeDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMLiquidityPoolFeeDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_liquidity_pool_fees__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_liquidity_pool_fees__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/liquidityPoolFees/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMLiquidityPoolFeeDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_liquidity_pool_fees__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_liquidity_pool_fees__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # LiquidityPoolHourlySnapshots (current)
+    # Gets liquidityPoolHourlySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO>]
+    def u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current_with_http_info(opts)
+      data
+    end
+
+    # LiquidityPoolHourlySnapshots (current)
+    # Gets liquidityPoolHourlySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/liquidityPoolHourlySnapshots/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # LiquidityPools (current)
     # Gets liquidityPools.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :id Smart contract address of the pool
     # @return [Array<UNISWAPV2ETHEREUMLiquidityPoolDTO>]
     def u_niswapv2_ethereum_liquidity_pools__current(opts = {})
       data, _status_code, _headers = u_niswapv2_ethereum_liquidity_pools__current_with_http_info(opts)
@@ -31,6 +548,7 @@ module OpenapiClient
     # LiquidityPools (current)
     # Gets liquidityPools.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :id Smart contract address of the pool
     # @return [Array<(Array<UNISWAPV2ETHEREUMLiquidityPoolDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMLiquidityPoolDTO> data, response status code and response headers
     def u_niswapv2_ethereum_liquidity_pools__current_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -41,6 +559,7 @@ module OpenapiClient
 
       # query parameters
       query_params = opts[:query_params] || {}
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -72,6 +591,348 @@ module OpenapiClient
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_liquidity_pools__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # MasterChefAddressToPids (current)
+    # Gets masterChefAddressToPids.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UNISWAPV2ETHEREUMMasterChefAddressToPidDTO>]
+    def u_niswapv2_ethereum_master_chef_address_to_pids__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_master_chef_address_to_pids__current_with_http_info(opts)
+      data
+    end
+
+    # MasterChefAddressToPids (current)
+    # Gets masterChefAddressToPids.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UNISWAPV2ETHEREUMMasterChefAddressToPidDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMMasterChefAddressToPidDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_master_chef_address_to_pids__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_master_chef_address_to_pids__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/masterChefAddressToPids/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMMasterChefAddressToPidDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_master_chef_address_to_pids__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_master_chef_address_to_pids__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # MasterChefRewarders (current)
+    # Gets masterChefRewarders.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UNISWAPV2ETHEREUMMasterChefRewarderDTO>]
+    def u_niswapv2_ethereum_master_chef_rewarders__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_master_chef_rewarders__current_with_http_info(opts)
+      data
+    end
+
+    # MasterChefRewarders (current)
+    # Gets masterChefRewarders.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UNISWAPV2ETHEREUMMasterChefRewarderDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMMasterChefRewarderDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_master_chef_rewarders__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_master_chef_rewarders__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/masterChefRewarders/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMMasterChefRewarderDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_master_chef_rewarders__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_master_chef_rewarders__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # MasterChefStakingPools (current)
+    # Gets masterChefStakingPools.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UNISWAPV2ETHEREUMMasterChefStakingPoolDTO>]
+    def u_niswapv2_ethereum_master_chef_staking_pools__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_master_chef_staking_pools__current_with_http_info(opts)
+      data
+    end
+
+    # MasterChefStakingPools (current)
+    # Gets masterChefStakingPools.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UNISWAPV2ETHEREUMMasterChefStakingPoolDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMMasterChefStakingPoolDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_master_chef_staking_pools__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_master_chef_staking_pools__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/masterChefStakingPools/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMMasterChefStakingPoolDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_master_chef_staking_pools__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_master_chef_staking_pools__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # MasterChefs (current)
+    # Gets masterChefs.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UNISWAPV2ETHEREUMMasterChefDTO>]
+    def u_niswapv2_ethereum_master_chefs__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_master_chefs__current_with_http_info(opts)
+      data
+    end
+
+    # MasterChefs (current)
+    # Gets masterChefs.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UNISWAPV2ETHEREUMMasterChefDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMMasterChefDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_master_chefs__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_master_chefs__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/masterChefs/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMMasterChefDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_master_chefs__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_master_chefs__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # RewardTokens (current)
+    # Gets rewardTokens.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UNISWAPV2ETHEREUMRewardTokenDTO>]
+    def u_niswapv2_ethereum_reward_tokens__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_reward_tokens__current_with_http_info(opts)
+      data
+    end
+
+    # RewardTokens (current)
+    # Gets rewardTokens.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UNISWAPV2ETHEREUMRewardTokenDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMRewardTokenDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_reward_tokens__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_reward_tokens__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/rewardTokens/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMRewardTokenDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_reward_tokens__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_reward_tokens__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # RewarderProbes (current)
+    # Gets rewarderProbes.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UNISWAPV2ETHEREUMRewarderProbeDTO>]
+    def u_niswapv2_ethereum_rewarder_probes__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_rewarder_probes__current_with_http_info(opts)
+      data
+    end
+
+    # RewarderProbes (current)
+    # Gets rewarderProbes.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UNISWAPV2ETHEREUMRewarderProbeDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMRewarderProbeDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_rewarder_probes__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_rewarder_probes__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/rewarderProbes/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMRewarderProbeDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_rewarder_probes__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_rewarder_probes__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -133,6 +994,63 @@ module OpenapiClient
       return data, status_code, headers
     end
 
+    # TokenWhiteLists (current)
+    # Gets tokenWhiteLists.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UNISWAPV2ETHEREUMTokenWhiteListDTO>]
+    def u_niswapv2_ethereum_token_white_lists__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_token_white_lists__current_with_http_info(opts)
+      data
+    end
+
+    # TokenWhiteLists (current)
+    # Gets tokenWhiteLists.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UNISWAPV2ETHEREUMTokenWhiteListDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMTokenWhiteListDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_token_white_lists__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_token_white_lists__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/tokenWhiteLists/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMTokenWhiteListDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_token_white_lists__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_token_white_lists__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Tokens (current)
     # Gets tokens.
     # @param [Hash] opts the optional parameters
@@ -186,6 +1104,234 @@ module OpenapiClient
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_tokens__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Transfers (current)
+    # Gets transfers.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UNISWAPV2ETHEREUMTransferDTO>]
+    def u_niswapv2_ethereum_transfers__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_transfers__current_with_http_info(opts)
+      data
+    end
+
+    # Transfers (current)
+    # Gets transfers.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UNISWAPV2ETHEREUMTransferDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMTransferDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_transfers__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_transfers__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/transfers/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMTransferDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_transfers__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_transfers__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # UsageMetricsDailySnapshots (current)
+    # Gets usageMetricsDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO>]
+    def u_niswapv2_ethereum_usage_metrics_daily_snapshots__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_usage_metrics_daily_snapshots__current_with_http_info(opts)
+      data
+    end
+
+    # UsageMetricsDailySnapshots (current)
+    # Gets usageMetricsDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_usage_metrics_daily_snapshots__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_usage_metrics_daily_snapshots__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/usageMetricsDailySnapshots/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_usage_metrics_daily_snapshots__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_usage_metrics_daily_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # UsageMetricsHourlySnapshots (current)
+    # Gets usageMetricsHourlySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO>]
+    def u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current_with_http_info(opts)
+      data
+    end
+
+    # UsageMetricsHourlySnapshots (current)
+    # Gets usageMetricsHourlySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/usageMetricsHourlySnapshots/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Withdraws (current)
+    # Gets withdraws.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UNISWAPV2ETHEREUMWithdrawDTO>]
+    def u_niswapv2_ethereum_withdraws__current(opts = {})
+      data, _status_code, _headers = u_niswapv2_ethereum_withdraws__current_with_http_info(opts)
+      data
+    end
+
+    # Withdraws (current)
+    # Gets withdraws.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UNISWAPV2ETHEREUMWithdrawDTO>, Integer, Hash)>] Array<UNISWAPV2ETHEREUMWithdrawDTO> data, response status code and response headers
+    def u_niswapv2_ethereum_withdraws__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_withdraws__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/uniswap-v2-ethereum/withdraws/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UNISWAPV2ETHEREUMWithdrawDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UNISWAPV2ETHEREUMApi.u_niswapv2_ethereum_withdraws__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UNISWAPV2ETHEREUMApi#u_niswapv2_ethereum_withdraws__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

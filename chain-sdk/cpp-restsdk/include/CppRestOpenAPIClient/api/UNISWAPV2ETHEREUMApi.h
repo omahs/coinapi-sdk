@@ -23,9 +23,30 @@
 
 #include "CppRestOpenAPIClient/ApiClient.h"
 
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_AccountDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_ActiveAccountDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_DepositDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_DexAmmProtocolDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_FinancialsDailySnapshotDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_LiquidityPoolAmountDTO.h"
 #include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_LiquidityPoolDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_LiquidityPoolDailySnapshotDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_LiquidityPoolFeeDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_LiquidityPoolHourlySnapshotDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_MasterChefAddressToPidDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_MasterChefDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_MasterChefRewarderDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_MasterChefStakingPoolDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_RewardTokenDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_RewarderProbeDTO.h"
 #include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_SwapDTO.h"
 #include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_TokenDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_TokenWhiteListDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_TransferDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_UsageMetricsDailySnapshotDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_UsageMetricsHourlySnapshotDTO.h"
+#include "CppRestOpenAPIClient/model/UNISWAP_V2_ETHEREUM_WithdrawDTO.h"
+#include <cpprest/details/basic_types.h>
 #include <boost/optional.hpp>
 
 namespace org {
@@ -46,12 +67,136 @@ public:
     virtual ~UNISWAPV2ETHEREUMApi();
 
     /// <summary>
+    /// Accounts (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets accounts.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_AccountDTO>>> uNISWAPV2ETHEREUM_Accounts__current(
+    ) const;
+    /// <summary>
+    /// ActiveAccounts (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets activeAccounts.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_ActiveAccountDTO>>> uNISWAPV2ETHEREUM_ActiveAccounts__current(
+    ) const;
+    /// <summary>
+    /// Deposits (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets deposits.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_DepositDTO>>> uNISWAPV2ETHEREUM_Deposits__current(
+    ) const;
+    /// <summary>
+    /// DexAmmProtocols (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets dexAmmProtocols.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_DexAmmProtocolDTO>>> uNISWAPV2ETHEREUM_DexAmmProtocols__current(
+    ) const;
+    /// <summary>
+    /// FinancialsDailySnapshots (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets financialsDailySnapshots.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_FinancialsDailySnapshotDTO>>> uNISWAPV2ETHEREUM_FinancialsDailySnapshots__current(
+    ) const;
+    /// <summary>
+    /// LiquidityPoolAmounts (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets liquidityPoolAmounts.
+    /// </remarks>
+    /// <param name="id">Smart contract address of the pool (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_LiquidityPoolAmountDTO>>> uNISWAPV2ETHEREUM_LiquidityPoolAmounts__current(
+        boost::optional<utility::string_t> id
+    ) const;
+    /// <summary>
+    /// LiquidityPoolDailySnapshots (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets liquidityPoolDailySnapshots.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_LiquidityPoolDailySnapshotDTO>>> uNISWAPV2ETHEREUM_LiquidityPoolDailySnapshots__current(
+    ) const;
+    /// <summary>
+    /// LiquidityPoolFees (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets liquidityPoolFees.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_LiquidityPoolFeeDTO>>> uNISWAPV2ETHEREUM_LiquidityPoolFees__current(
+    ) const;
+    /// <summary>
+    /// LiquidityPoolHourlySnapshots (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets liquidityPoolHourlySnapshots.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_LiquidityPoolHourlySnapshotDTO>>> uNISWAPV2ETHEREUM_LiquidityPoolHourlySnapshots__current(
+    ) const;
+    /// <summary>
     /// LiquidityPools (current)
     /// </summary>
     /// <remarks>
     /// Gets liquidityPools.
     /// </remarks>
+    /// <param name="id">Smart contract address of the pool (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_LiquidityPoolDTO>>> uNISWAPV2ETHEREUM_LiquidityPools__current(
+        boost::optional<utility::string_t> id
+    ) const;
+    /// <summary>
+    /// MasterChefAddressToPids (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets masterChefAddressToPids.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_MasterChefAddressToPidDTO>>> uNISWAPV2ETHEREUM_MasterChefAddressToPids__current(
+    ) const;
+    /// <summary>
+    /// MasterChefRewarders (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets masterChefRewarders.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_MasterChefRewarderDTO>>> uNISWAPV2ETHEREUM_MasterChefRewarders__current(
+    ) const;
+    /// <summary>
+    /// MasterChefStakingPools (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets masterChefStakingPools.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_MasterChefStakingPoolDTO>>> uNISWAPV2ETHEREUM_MasterChefStakingPools__current(
+    ) const;
+    /// <summary>
+    /// MasterChefs (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets masterChefs.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_MasterChefDTO>>> uNISWAPV2ETHEREUM_MasterChefs__current(
+    ) const;
+    /// <summary>
+    /// RewardTokens (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets rewardTokens.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_RewardTokenDTO>>> uNISWAPV2ETHEREUM_RewardTokens__current(
+    ) const;
+    /// <summary>
+    /// RewarderProbes (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets rewarderProbes.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_RewarderProbeDTO>>> uNISWAPV2ETHEREUM_RewarderProbes__current(
     ) const;
     /// <summary>
     /// Swaps (current)
@@ -62,12 +207,52 @@ public:
     pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_SwapDTO>>> uNISWAPV2ETHEREUM_Swaps__current(
     ) const;
     /// <summary>
+    /// TokenWhiteLists (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets tokenWhiteLists.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_TokenWhiteListDTO>>> uNISWAPV2ETHEREUM_TokenWhiteLists__current(
+    ) const;
+    /// <summary>
     /// Tokens (current)
     /// </summary>
     /// <remarks>
     /// Gets tokens.
     /// </remarks>
     pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_TokenDTO>>> uNISWAPV2ETHEREUM_Tokens__current(
+    ) const;
+    /// <summary>
+    /// Transfers (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets transfers.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_TransferDTO>>> uNISWAPV2ETHEREUM_Transfers__current(
+    ) const;
+    /// <summary>
+    /// UsageMetricsDailySnapshots (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets usageMetricsDailySnapshots.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_UsageMetricsDailySnapshotDTO>>> uNISWAPV2ETHEREUM_UsageMetricsDailySnapshots__current(
+    ) const;
+    /// <summary>
+    /// UsageMetricsHourlySnapshots (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets usageMetricsHourlySnapshots.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_UsageMetricsHourlySnapshotDTO>>> uNISWAPV2ETHEREUM_UsageMetricsHourlySnapshots__current(
+    ) const;
+    /// <summary>
+    /// Withdraws (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets withdraws.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UNISWAP_V2_ETHEREUM_WithdrawDTO>>> uNISWAPV2ETHEREUM_Withdraws__current(
     ) const;
 
 protected:

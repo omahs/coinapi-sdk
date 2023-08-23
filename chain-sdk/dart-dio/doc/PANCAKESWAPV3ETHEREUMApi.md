@@ -273,7 +273,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**
-> BuiltList<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool)
+> BuiltList<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent()
 
 LiquidityPoolDailySnapshots (current)
 
@@ -284,10 +284,9 @@ Gets liquidityPoolDailySnapshots.
 import 'package:openapi/api.dart';
 
 final api = Openapi().getPANCAKESWAPV3ETHEREUMApi();
-final String pool = pool_example; // String | Pool this snapshot belongs to.
 
 try {
-    final response = api.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool);
+    final response = api.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent();
     print(response);
 } catch on DioError (e) {
     print('Exception when calling PANCAKESWAPV3ETHEREUMApi->pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent: $e\n');
@@ -295,10 +294,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **String**| Pool this snapshot belongs to. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 

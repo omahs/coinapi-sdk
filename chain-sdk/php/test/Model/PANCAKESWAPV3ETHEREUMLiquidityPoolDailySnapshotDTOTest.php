@@ -108,15 +108,6 @@ class PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "vid"
-     */
-    public function testPropertyVid()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "block_"
      */
     public function testPropertyBlock()

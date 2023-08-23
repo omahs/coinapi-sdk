@@ -33,12 +33,6 @@ public class OASUNISWAPV3ETHEREUMTickHourlySnapsh implements OAS.MappedPropertie
     public Long blockNumber { get; set; }
 
     /**
-     * 
-     * @return vid
-     */
-    public Long vid { get; set; }
-
-    /**
      * (pool address)-(tick index)-(hour ID)
      * @return id
      */
@@ -217,7 +211,6 @@ public class OASUNISWAPV3ETHEREUMTickHourlySnapsh implements OAS.MappedPropertie
           unISWAPV3ETHEREUMTickHourlySnapshotDTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           unISWAPV3ETHEREUMTickHourlySnapshotDTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           unISWAPV3ETHEREUMTickHourlySnapshotDTO.blockNumber = 123456789L;
-          unISWAPV3ETHEREUMTickHourlySnapshotDTO.vid = 123456789L;
           unISWAPV3ETHEREUMTickHourlySnapshotDTO.id = '';
           unISWAPV3ETHEREUMTickHourlySnapshotDTO.hourId = 0;
           unISWAPV3ETHEREUMTickHourlySnapshotDTO.tick = '';
@@ -236,7 +229,6 @@ public class OASUNISWAPV3ETHEREUMTickHourlySnapsh implements OAS.MappedPropertie
             return this.entryTime == unISWAPV3ETHEREUMTickHourlySnapshotDTO.entryTime
                 && this.recvTime == unISWAPV3ETHEREUMTickHourlySnapshotDTO.recvTime
                 && this.blockNumber == unISWAPV3ETHEREUMTickHourlySnapshotDTO.blockNumber
-                && this.vid == unISWAPV3ETHEREUMTickHourlySnapshotDTO.vid
                 && this.id == unISWAPV3ETHEREUMTickHourlySnapshotDTO.id
                 && this.hourId == unISWAPV3ETHEREUMTickHourlySnapshotDTO.hourId
                 && this.tick == unISWAPV3ETHEREUMTickHourlySnapshotDTO.tick
@@ -255,7 +247,6 @@ public class OASUNISWAPV3ETHEREUMTickHourlySnapsh implements OAS.MappedPropertie
         hashCode = (17 * hashCode) + (entryTime == null ? 0 : System.hashCode(entryTime));
         hashCode = (17 * hashCode) + (recvTime == null ? 0 : System.hashCode(recvTime));
         hashCode = (17 * hashCode) + (blockNumber == null ? 0 : System.hashCode(blockNumber));
-        hashCode = (17 * hashCode) + (vid == null ? 0 : System.hashCode(vid));
         hashCode = (17 * hashCode) + (id == null ? 0 : System.hashCode(id));
         hashCode = (17 * hashCode) + (hourId == null ? 0 : System.hashCode(hourId));
         hashCode = (17 * hashCode) + (tick == null ? 0 : System.hashCode(tick));

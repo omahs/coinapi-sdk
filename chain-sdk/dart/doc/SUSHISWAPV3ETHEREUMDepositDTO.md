@@ -1,0 +1,38 @@
+# openapi.model.SUSHISWAPV3ETHEREUMDepositDTO
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**entryTime** | [**DateTime**](DateTime.md) |  | [optional] 
+**recvTime** | [**DateTime**](DateTime.md) |  | [optional] 
+**blockNumber** | **int** | Number of block in which entity was recorded. | [optional] 
+**block** | **int** |  | [optional] 
+**id** | **String** | Identifier, format: (transaction hash)-(log index) | [optional] 
+**hash** | **String** | Transaction hash of the transaction that emitted this event. | [optional] 
+**nonce** | **String** | Nonce of the transaction that emitted this event. | [optional] 
+**logIndex** | **int** | Event log index. For transactions that don't emit event, create arbitrary index starting from 0. | [optional] 
+**gasLimit** | **String** | Gas limit of the transaction that emitted this event. | [optional] 
+**gasUsed** | **String** | Gas used in this transaction. (Optional because not every chain will support this). | [optional] 
+**gasPrice** | **String** | Gas price of the transaction that emitted this event. | [optional] 
+**protocol** | **String** | The protocol this transaction belongs to. | [optional] 
+**account** | **String** | Account that emitted this event. | [optional] 
+**position** | **String** | The user position changed by this event. | [optional] 
+**pool** | **String** | The pool involving this event. | [optional] 
+**tickLower** | **String** | Lower tick of position. | [optional] 
+**tickUpper** | **String** | Upper tick of position. | [optional] 
+**timestamp** | **String** | Timestamp of this event. | [optional] 
+**liquidity** | **String** | Amount of liquidity minted. | [optional] 
+**inputTokens** | **List<String>** | Input tokens of the pool. E.g. WETH and USDC to a WETH-USDC pool. | [optional] [default to const []]
+**inputTokenAmounts** | **List<String>** | Amount of input tokens in the token's native unit. | [optional] [default to const []]
+**reserveAmounts** | **List<String>** | Amount of input tokens in the liquidity pool. | [optional] [default to const []]
+**amountUsd** | **String** | USD-normalized value of the transaction of the underlying (e.g. sum of tokens deposited into a pool). | [optional] 
+**blockRange** | **String** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

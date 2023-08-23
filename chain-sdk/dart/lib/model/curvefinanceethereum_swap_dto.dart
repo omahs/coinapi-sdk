@@ -53,8 +53,14 @@ class CURVEFINANCEETHEREUMSwapDTO {
   ///
   DateTime? recvTime;
 
-  /// Block number of this event
-  String? blockNumber;
+  /// Number of block in which entity was recorded.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? blockNumber;
 
   /// Swap-(transaction hash)-(log index)
   String? id;
@@ -322,7 +328,7 @@ class CURVEFINANCEETHEREUMSwapDTO {
       return CURVEFINANCEETHEREUMSwapDTO(
         entryTime: mapDateTime(json, r'entry_time', ''),
         recvTime: mapDateTime(json, r'recv_time', ''),
-        blockNumber: mapValueOfType<String>(json, r'block_number'),
+        blockNumber: mapValueOfType<int>(json, r'block_number'),
         id: mapValueOfType<String>(json, r'id'),
         hash: mapValueOfType<String>(json, r'hash'),
         logIndex: mapValueOfType<int>(json, r'log_index'),

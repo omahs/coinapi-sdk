@@ -35,7 +35,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// </summary>
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
-        /// <param name="blockNumber">blockNumber.</param>
+        /// <param name="blockNumber">Number of block in which entity was recorded..</param>
         /// <param name="vid">vid.</param>
         /// <param name="blockRange">blockRange.</param>
         /// <param name="id">id.</param>
@@ -43,9 +43,8 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="tokenId">tokenId.</param>
         /// <param name="timestamp">timestamp.</param>
         /// <param name="bidder">bidder.</param>
-        public CRYPTOPUNKSBidDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), string blockNumber = default(string), long vid = default(long), string blockRange = default(string), string id = default(string), string tokensBid = default(string), string tokenId = default(string), string timestamp = default(string), string bidder = default(string))
+        public CRYPTOPUNKSBidDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), long vid = default(long), string blockRange = default(string), string id = default(string), string tokensBid = default(string), string tokenId = default(string), string timestamp = default(string), string bidder = default(string))
         {
-            this.BlockNumber = blockNumber;
             this.BlockRange = blockRange;
             this.Id = id;
             this.TokensBid = tokensBid;
@@ -77,10 +76,11 @@ namespace CoinAPI.EMS.REST.V1.Model
         public DateTime RecvTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets BlockNumber
+        /// Number of block in which entity was recorded.
         /// </summary>
-        [DataMember(Name="block_number", EmitDefaultValue=true)]
-        public string BlockNumber { get; set; }
+        /// <value>Number of block in which entity was recorded.</value>
+        [DataMember(Name="block_number", EmitDefaultValue=false)]
+        public long BlockNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets Vid

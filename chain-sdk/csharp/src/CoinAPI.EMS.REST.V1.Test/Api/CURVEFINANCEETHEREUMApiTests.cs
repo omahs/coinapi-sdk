@@ -64,14 +64,136 @@ namespace CoinAPI.EMS.REST.V1.Test
 
         
         /// <summary>
+        /// Test CURVEFINANCEETHEREUMAccountsCurrent
+        /// </summary>
+        [Test]
+        public void CURVEFINANCEETHEREUMAccountsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMAccountsCurrent();
+            //Assert.IsInstanceOf(typeof(List<CURVEFINANCEETHEREUMAccountDTO>), response, "response is List<CURVEFINANCEETHEREUMAccountDTO>");
+        }
+        
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMActiveAccountsCurrent
+        /// </summary>
+        [Test]
+        public void CURVEFINANCEETHEREUMActiveAccountsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMActiveAccountsCurrent();
+            //Assert.IsInstanceOf(typeof(List<CURVEFINANCEETHEREUMActiveAccountDTO>), response, "response is List<CURVEFINANCEETHEREUMActiveAccountDTO>");
+        }
+        
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMDepositsCurrent
+        /// </summary>
+        [Test]
+        public void CURVEFINANCEETHEREUMDepositsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMDepositsCurrent();
+            //Assert.IsInstanceOf(typeof(List<CURVEFINANCEETHEREUMDepositDTO>), response, "response is List<CURVEFINANCEETHEREUMDepositDTO>");
+        }
+        
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMDexAmmProtocolsCurrent
+        /// </summary>
+        [Test]
+        public void CURVEFINANCEETHEREUMDexAmmProtocolsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMDexAmmProtocolsCurrent();
+            //Assert.IsInstanceOf(typeof(List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>), response, "response is List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>");
+        }
+        
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent
+        /// </summary>
+        [Test]
+        public void CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent();
+            //Assert.IsInstanceOf(typeof(List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>), response, "response is List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>");
+        }
+        
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMLiquidityGaugesCurrent
+        /// </summary>
+        [Test]
+        public void CURVEFINANCEETHEREUMLiquidityGaugesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMLiquidityGaugesCurrent();
+            //Assert.IsInstanceOf(typeof(List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>), response, "response is List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>");
+        }
+        
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent
+        /// </summary>
+        [Test]
+        public void CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent();
+            //Assert.IsInstanceOf(typeof(List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>), response, "response is List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>");
+        }
+        
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent
+        /// </summary>
+        [Test]
+        public void CURVEFINANCEETHEREUMLiquidityPoolFeesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent();
+            //Assert.IsInstanceOf(typeof(List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>), response, "response is List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>");
+        }
+        
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent
+        /// </summary>
+        [Test]
+        public void CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent();
+            //Assert.IsInstanceOf(typeof(List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>), response, "response is List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>");
+        }
+        
+        /// <summary>
         /// Test CURVEFINANCEETHEREUMLiquidityPoolsCurrent
         /// </summary>
         [Test]
         public void CURVEFINANCEETHEREUMLiquidityPoolsCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.CURVEFINANCEETHEREUMLiquidityPoolsCurrent();
+            //string id = null;
+            //var response = instance.CURVEFINANCEETHEREUMLiquidityPoolsCurrent(id);
             //Assert.IsInstanceOf(typeof(List<CURVEFINANCEETHEREUMLiquidityPoolDTO>), response, "response is List<CURVEFINANCEETHEREUMLiquidityPoolDTO>");
+        }
+        
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMLpTokensCurrent
+        /// </summary>
+        [Test]
+        public void CURVEFINANCEETHEREUMLpTokensCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMLpTokensCurrent();
+            //Assert.IsInstanceOf(typeof(List<CURVEFINANCEETHEREUMLpTokenDTO>), response, "response is List<CURVEFINANCEETHEREUMLpTokenDTO>");
+        }
+        
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMRewardTokensCurrent
+        /// </summary>
+        [Test]
+        public void CURVEFINANCEETHEREUMRewardTokensCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMRewardTokensCurrent();
+            //Assert.IsInstanceOf(typeof(List<CURVEFINANCEETHEREUMRewardTokenDTO>), response, "response is List<CURVEFINANCEETHEREUMRewardTokenDTO>");
         }
         
         /// <summary>
@@ -92,8 +214,42 @@ namespace CoinAPI.EMS.REST.V1.Test
         public void CURVEFINANCEETHEREUMTokensCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.CURVEFINANCEETHEREUMTokensCurrent();
+            //string id = null;
+            //var response = instance.CURVEFINANCEETHEREUMTokensCurrent(id);
             //Assert.IsInstanceOf(typeof(List<CURVEFINANCEETHEREUMTokenDTO>), response, "response is List<CURVEFINANCEETHEREUMTokenDTO>");
+        }
+        
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent
+        /// </summary>
+        [Test]
+        public void CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent();
+            //Assert.IsInstanceOf(typeof(List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>), response, "response is List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>");
+        }
+        
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent
+        /// </summary>
+        [Test]
+        public void CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent();
+            //Assert.IsInstanceOf(typeof(List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>), response, "response is List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>");
+        }
+        
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMWithdrawsCurrent
+        /// </summary>
+        [Test]
+        public void CURVEFINANCEETHEREUMWithdrawsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMWithdrawsCurrent();
+            //Assert.IsInstanceOf(typeof(List<CURVEFINANCEETHEREUMWithdrawDTO>), response, "response is List<CURVEFINANCEETHEREUMWithdrawDTO>");
         }
         
     }

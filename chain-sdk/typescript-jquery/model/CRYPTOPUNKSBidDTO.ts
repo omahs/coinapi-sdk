@@ -18,9 +18,9 @@ export interface CRYPTOPUNKSBidDTO {
     recv_time?: string;
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      */
-    block_number?: string;
+    block_number?: number;
 
     /**
      * 

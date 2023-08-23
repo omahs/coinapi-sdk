@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **entryTime** | **Date** |  | [optional] 
 **recvTime** | **Date** |  | [optional] 
 **blockNumber** | **Number** | Number of block in which entity was recorded. | [optional] 
-**vid** | **Number** |  | [optional] 
 **id** | **String** | (pool address)-(tick index) | [optional] 
 **index** | **String** | tick index | [optional] 
 **pool** | **String** | Liquidity pool this tick belongs to | [optional] 

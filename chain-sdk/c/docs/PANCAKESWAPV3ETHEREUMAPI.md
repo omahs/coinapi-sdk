@@ -216,14 +216,13 @@ No authorization required
 //
 // Gets liquidityPoolDailySnapshots.
 //
-list_t* PANCAKESWAPV3ETHEREUMAPI_pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(apiClient_t *apiClient, char * pool);
+list_t* PANCAKESWAPV3ETHEREUMAPI_pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(apiClient_t *apiClient);
 ```
 
 ### Parameters
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**pool** | **char \*** | Pool this snapshot belongs to. | [optional] 
 
 ### Return type
 

@@ -33,12 +33,6 @@ public class OASUNISWAPV3ETHEREUMTickDTO implements OAS.MappedProperties {
     public Long blockNumber { get; set; }
 
     /**
-     * 
-     * @return vid
-     */
-    public Long vid { get; set; }
-
-    /**
      * (pool address)-(tick index)
      * @return id
      */
@@ -391,7 +385,6 @@ public class OASUNISWAPV3ETHEREUMTickDTO implements OAS.MappedProperties {
           unISWAPV3ETHEREUMTickDTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           unISWAPV3ETHEREUMTickDTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           unISWAPV3ETHEREUMTickDTO.blockNumber = 123456789L;
-          unISWAPV3ETHEREUMTickDTO.vid = 123456789L;
           unISWAPV3ETHEREUMTickDTO.id = '';
           unISWAPV3ETHEREUMTickDTO.index = '';
           unISWAPV3ETHEREUMTickDTO.pool = '';
@@ -415,7 +408,6 @@ public class OASUNISWAPV3ETHEREUMTickDTO implements OAS.MappedProperties {
             return this.entryTime == unISWAPV3ETHEREUMTickDTO.entryTime
                 && this.recvTime == unISWAPV3ETHEREUMTickDTO.recvTime
                 && this.blockNumber == unISWAPV3ETHEREUMTickDTO.blockNumber
-                && this.vid == unISWAPV3ETHEREUMTickDTO.vid
                 && this.id == unISWAPV3ETHEREUMTickDTO.id
                 && this.index == unISWAPV3ETHEREUMTickDTO.index
                 && this.pool == unISWAPV3ETHEREUMTickDTO.pool
@@ -439,7 +431,6 @@ public class OASUNISWAPV3ETHEREUMTickDTO implements OAS.MappedProperties {
         hashCode = (17 * hashCode) + (entryTime == null ? 0 : System.hashCode(entryTime));
         hashCode = (17 * hashCode) + (recvTime == null ? 0 : System.hashCode(recvTime));
         hashCode = (17 * hashCode) + (blockNumber == null ? 0 : System.hashCode(blockNumber));
-        hashCode = (17 * hashCode) + (vid == null ? 0 : System.hashCode(vid));
         hashCode = (17 * hashCode) + (id == null ? 0 : System.hashCode(id));
         hashCode = (17 * hashCode) + (index == null ? 0 : System.hashCode(index));
         hashCode = (17 * hashCode) + (pool == null ? 0 : System.hashCode(pool));

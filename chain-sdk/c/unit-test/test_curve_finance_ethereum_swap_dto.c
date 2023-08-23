@@ -24,7 +24,7 @@ curve_finance_ethereum_swap_dto_t* instantiate_curve_finance_ethereum_swap_dto(i
     curve_finance_ethereum_swap_dto = curve_finance_ethereum_swap_dto_create(
       "2013-10-20T19:20:30+01:00",
       "2013-10-20T19:20:30+01:00",
-      "0",
+      56,
       "0",
       "0",
       56,
@@ -49,7 +49,7 @@ curve_finance_ethereum_swap_dto_t* instantiate_curve_finance_ethereum_swap_dto(i
     curve_finance_ethereum_swap_dto = curve_finance_ethereum_swap_dto_create(
       "2013-10-20T19:20:30+01:00",
       "2013-10-20T19:20:30+01:00",
-      "0",
+      56,
       "0",
       "0",
       56,

@@ -13,9 +13,29 @@
 
 
 import ApiClient from "../ApiClient";
+import SUSHISWAPV3ETHEREUMAccountDTO from '../model/SUSHISWAPV3ETHEREUMAccountDTO';
+import SUSHISWAPV3ETHEREUMActiveAccountDTO from '../model/SUSHISWAPV3ETHEREUMActiveAccountDTO';
+import SUSHISWAPV3ETHEREUMDepositDTO from '../model/SUSHISWAPV3ETHEREUMDepositDTO';
+import SUSHISWAPV3ETHEREUMDexAmmProtocolDTO from '../model/SUSHISWAPV3ETHEREUMDexAmmProtocolDTO';
+import SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO from '../model/SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO';
+import SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO from '../model/SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO';
 import SUSHISWAPV3ETHEREUMLiquidityPoolDTO from '../model/SUSHISWAPV3ETHEREUMLiquidityPoolDTO';
+import SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO from '../model/SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO';
+import SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO from '../model/SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO';
+import SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO from '../model/SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO';
+import SUSHISWAPV3ETHEREUMPositionDTO from '../model/SUSHISWAPV3ETHEREUMPositionDTO';
+import SUSHISWAPV3ETHEREUMPositionSnapshotDTO from '../model/SUSHISWAPV3ETHEREUMPositionSnapshotDTO';
+import SUSHISWAPV3ETHEREUMRewardTokenDTO from '../model/SUSHISWAPV3ETHEREUMRewardTokenDTO';
 import SUSHISWAPV3ETHEREUMSwapDTO from '../model/SUSHISWAPV3ETHEREUMSwapDTO';
+import SUSHISWAPV3ETHEREUMTickDTO from '../model/SUSHISWAPV3ETHEREUMTickDTO';
+import SUSHISWAPV3ETHEREUMTickDailySnapshotDTO from '../model/SUSHISWAPV3ETHEREUMTickDailySnapshotDTO';
+import SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO from '../model/SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO';
 import SUSHISWAPV3ETHEREUMTokenDTO from '../model/SUSHISWAPV3ETHEREUMTokenDTO';
+import SUSHISWAPV3ETHEREUMTokenWhiteListDTO from '../model/SUSHISWAPV3ETHEREUMTokenWhiteListDTO';
+import SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO from '../model/SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO';
+import SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO from '../model/SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO';
+import SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO from '../model/SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO';
+import SUSHISWAPV3ETHEREUMWithdrawDTO from '../model/SUSHISWAPV3ETHEREUMWithdrawDTO';
 
 /**
 * SUSHISWAPV3ETHEREUM service.
@@ -35,6 +55,347 @@ export default class SUSHISWAPV3ETHEREUMApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMAccountsCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMAccountsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMAccountDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Accounts (current)
+     * Gets accounts.
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMAccountsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMAccountDTO>}
+     */
+    sUSHISWAPV3ETHEREUMAccountsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMAccountDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/accounts/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMActiveAccountsCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMActiveAccountsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMActiveAccountDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * ActiveAccounts (current)
+     * Gets activeAccounts.
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMActiveAccountsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMActiveAccountDTO>}
+     */
+    sUSHISWAPV3ETHEREUMActiveAccountsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMActiveAccountDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/activeAccounts/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMDepositsCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMDepositsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMDepositDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMDepositsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMDepositDTO>}
+     */
+    sUSHISWAPV3ETHEREUMDepositsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMDepositDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/deposits/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMDexAmmProtocolDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * DexAmmProtocols (current)
+     * Gets dexAmmProtocols.
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMDexAmmProtocolDTO>}
+     */
+    sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMDexAmmProtocolDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/dexAmmProtocols/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * FinancialsDailySnapshots (current)
+     * Gets financialsDailySnapshots.
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO>}
+     */
+    sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/financialsDailySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPoolAmounts (current)
+     * Gets liquidityPoolAmounts.
+     * @param {Object} opts Optional parameters
+     * @param {String} [id] Smart contract address of the pool.
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO>}
+     */
+    sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/liquidityPoolAmounts/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     * Gets liquidityPoolDailySnapshots.
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>}
+     */
+    sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/liquidityPoolDailySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPoolFees (current)
+     * Gets liquidityPoolFees.
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO>}
+     */
+    sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/liquidityPoolFees/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     * Gets liquidityPoolHourlySnapshots.
+     * @param {Object} opts Optional parameters
+     * @param {String} [pool] The pool this snapshot belongs to
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>}
+     */
+    sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'pool': opts['pool']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/liquidityPoolHourlySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent operation.
@@ -78,6 +439,121 @@ export default class SUSHISWAPV3ETHEREUMApi {
     }
 
     /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMPositionSnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMPositionSnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PositionSnapshots (current)
+     * Gets positionSnapshots.
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMPositionSnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMPositionSnapshotDTO>}
+     */
+    sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMPositionSnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/positionSnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMPositionsCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMPositionsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMPositionDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Positions (current)
+     * Gets positions.
+     * @param {Object} opts Optional parameters
+     * @param {String} [pool] The liquidity pool in which this position was opened
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMPositionsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMPositionDTO>}
+     */
+    sUSHISWAPV3ETHEREUMPositionsCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'pool': opts['pool']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMPositionDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/positions/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMRewardTokensCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMRewardTokensCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMRewardTokenDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * RewardTokens (current)
+     * Gets rewardTokens.
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMRewardTokensCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMRewardTokenDTO>}
+     */
+    sUSHISWAPV3ETHEREUMRewardTokensCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMRewardTokenDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/rewardTokens/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the sUSHISWAPV3ETHEREUMSwapsCurrent operation.
      * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMSwapsCurrentCallback
      * @param {String} error Error message, if any.
@@ -109,6 +585,203 @@ export default class SUSHISWAPV3ETHEREUMApi {
       let returnType = [SUSHISWAPV3ETHEREUMSwapDTO];
       return this.apiClient.callApi(
         '/v1/dapps/sushiswap-v3-ethereum/swaps/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMTickDailySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * TickDailySnapshots (current)
+     * Gets tickDailySnapshots.
+     * @param {Object} opts Optional parameters
+     * @param {String} [pool] liquidity pool this tick belongs to
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMTickDailySnapshotDTO>}
+     */
+    sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'pool': opts['pool']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMTickDailySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/tickDailySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * TickHourlySnapshots (current)
+     * Gets tickHourlySnapshots.
+     * @param {Object} opts Optional parameters
+     * @param {String} [pool] liquidity pool this tick belongs to
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO>}
+     */
+    sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'pool': opts['pool']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/tickHourlySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMTicksCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMTicksCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMTickDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Ticks (current)
+     * Gets ticks.
+     * @param {Object} opts Optional parameters
+     * @param {String} [pool] Liquidity pool this tick belongs to
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMTicksCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMTickDTO>}
+     */
+    sUSHISWAPV3ETHEREUMTicksCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'pool': opts['pool']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMTickDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/ticks/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * TokenWhiteListSymbols (current)
+     * Gets tokenWhiteListSymbols.
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO>}
+     */
+    sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/tokenWhiteListSymbols/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMTokenWhiteListsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMTokenWhiteListDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * TokenWhiteLists (current)
+     * Gets tokenWhiteLists.
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMTokenWhiteListsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMTokenWhiteListDTO>}
+     */
+    sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMTokenWhiteListDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/tokenWhiteLists/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -150,6 +823,117 @@ export default class SUSHISWAPV3ETHEREUMApi {
       let returnType = [SUSHISWAPV3ETHEREUMTokenDTO];
       return this.apiClient.callApi(
         '/v1/dapps/sushiswap-v3-ethereum/tokens/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * UsageMetricsDailySnapshots (current)
+     * Gets usageMetricsDailySnapshots.
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>}
+     */
+    sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/usageMetricsDailySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     * Gets usageMetricsHourlySnapshots.
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>}
+     */
+    sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/usageMetricsHourlySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sUSHISWAPV3ETHEREUMWithdrawsCurrent operation.
+     * @callback module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMWithdrawsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SUSHISWAPV3ETHEREUMWithdrawDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @param {module:api/SUSHISWAPV3ETHEREUMApi~sUSHISWAPV3ETHEREUMWithdrawsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SUSHISWAPV3ETHEREUMWithdrawDTO>}
+     */
+    sUSHISWAPV3ETHEREUMWithdrawsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [SUSHISWAPV3ETHEREUMWithdrawDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/sushiswap-v3-ethereum/withdraws/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -27,7 +27,7 @@ UNISWAP_V3_ETHEREUM_FinancialsDailySnapshotDTO::UNISWAP_V3_ETHEREUM_FinancialsDa
     m_Entry_timeIsSet = false;
     m_Recv_time = utility::datetime();
     m_Recv_timeIsSet = false;
-    m_Block_number = 0;
+    m_Block_number = 0L;
     m_Block_numberIsSet = false;
     m_Id = utility::conversions::to_string_t("");
     m_IdIsSet = false;
@@ -198,7 +198,7 @@ bool UNISWAP_V3_ETHEREUM_FinancialsDailySnapshotDTO::fromJson(const web::json::v
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(U("block_number")));
         if(!fieldValue.is_null())
         {
-            int32_t refVal_setBlockNumber;
+            int64_t refVal_setBlockNumber;
             ok &= ModelBase::fromJson(fieldValue, refVal_setBlockNumber);
             setBlockNumber(refVal_setBlockNumber);
         }
@@ -502,7 +502,7 @@ bool UNISWAP_V3_ETHEREUM_FinancialsDailySnapshotDTO::fromMultiPart(std::shared_p
     }
     if(multipart->hasContent(utility::conversions::to_string_t(U("block_number"))))
     {
-        int32_t refVal_setBlockNumber;
+        int64_t refVal_setBlockNumber;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(U("block_number"))), refVal_setBlockNumber );
         setBlockNumber(refVal_setBlockNumber);
     }
@@ -657,12 +657,12 @@ void UNISWAP_V3_ETHEREUM_FinancialsDailySnapshotDTO::unsetRecv_time()
 {
     m_Recv_timeIsSet = false;
 }
-int32_t UNISWAP_V3_ETHEREUM_FinancialsDailySnapshotDTO::getBlockNumber() const
+int64_t UNISWAP_V3_ETHEREUM_FinancialsDailySnapshotDTO::getBlockNumber() const
 {
     return m_Block_number;
 }
 
-void UNISWAP_V3_ETHEREUM_FinancialsDailySnapshotDTO::setBlockNumber(int32_t value)
+void UNISWAP_V3_ETHEREUM_FinancialsDailySnapshotDTO::setBlockNumber(int64_t value)
 {
     m_Block_number = value;
     m_Block_numberIsSet = true;

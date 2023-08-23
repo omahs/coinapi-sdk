@@ -38,7 +38,6 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
-        /// <param name="vid">vid.</param>
         /// <param name="id">(account address)-(market address)-(count).</param>
         /// <param name="account">Account that owns this position.</param>
         /// <param name="pool">The liquidity pool in which this position was opened.</param>
@@ -61,12 +60,11 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="cumulativeRewardUsd">Total reward token accumulated under this position, in USD.</param>
         /// <param name="depositCount">Number of deposits related to this position.</param>
         /// <param name="withdrawCount">Number of withdrawals related to this position.</param>
-        public UNISWAPV3ETHEREUMPositionDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), long vid = default(long), string id = default(string), string account = default(string), string pool = default(string), string hashOpened = default(string), string hashClosed = default(string), string blockNumberOpened = default(string), string timestampOpened = default(string), string blockNumberClosed = default(string), string timestampClosed = default(string), string tickLower = default(string), string tickUpper = default(string), string liquidityToken = default(string), string liquidityTokenType = default(string), string liquidity = default(string), string liquidityUsd = default(string), List<string> cumulativeDepositTokenAmounts = default(List<string>), string cumulativeDepositUsd = default(string), List<string> cumulativeWithdrawTokenAmounts = default(List<string>), string cumulativeWithdrawUsd = default(string), List<string> cumulativeRewardUsd = default(List<string>), int depositCount = default(int), int withdrawCount = default(int))
+        public UNISWAPV3ETHEREUMPositionDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), string id = default(string), string account = default(string), string pool = default(string), string hashOpened = default(string), string hashClosed = default(string), string blockNumberOpened = default(string), string timestampOpened = default(string), string blockNumberClosed = default(string), string timestampClosed = default(string), string tickLower = default(string), string tickUpper = default(string), string liquidityToken = default(string), string liquidityTokenType = default(string), string liquidity = default(string), string liquidityUsd = default(string), List<string> cumulativeDepositTokenAmounts = default(List<string>), string cumulativeDepositUsd = default(string), List<string> cumulativeWithdrawTokenAmounts = default(List<string>), string cumulativeWithdrawUsd = default(string), List<string> cumulativeRewardUsd = default(List<string>), int depositCount = default(int), int withdrawCount = default(int))
         {
             this.EntryTime = entryTime;
             this.RecvTime = recvTime;
             this.BlockNumber = blockNumber;
-            this.Vid = vid;
             this.Id = id;
             this.Account = account;
             this.Pool = pool;
@@ -109,12 +107,6 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <value>Number of block in which entity was recorded.</value>
         [DataMember(Name = "block_number", EmitDefaultValue = false)]
         public long BlockNumber { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Vid
-        /// </summary>
-        [DataMember(Name = "vid", EmitDefaultValue = false)]
-        public long Vid { get; set; }
 
         /// <summary>
         /// (account address)-(market address)-(count)
@@ -281,7 +273,6 @@ namespace CoinAPI.EMS.REST.V1.Model
             sb.Append("  EntryTime: ").Append(EntryTime).Append("\n");
             sb.Append("  RecvTime: ").Append(RecvTime).Append("\n");
             sb.Append("  BlockNumber: ").Append(BlockNumber).Append("\n");
-            sb.Append("  Vid: ").Append(Vid).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Account: ").Append(Account).Append("\n");
             sb.Append("  Pool: ").Append(Pool).Append("\n");
@@ -352,10 +343,6 @@ namespace CoinAPI.EMS.REST.V1.Model
                 (
                     this.BlockNumber == input.BlockNumber ||
                     this.BlockNumber.Equals(input.BlockNumber)
-                ) && 
-                (
-                    this.Vid == input.Vid ||
-                    this.Vid.Equals(input.Vid)
                 ) && 
                 (
                     this.Id == input.Id ||
@@ -488,7 +475,6 @@ namespace CoinAPI.EMS.REST.V1.Model
                     hashCode = (hashCode * 59) + this.RecvTime.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.BlockNumber.GetHashCode();
-                hashCode = (hashCode * 59) + this.Vid.GetHashCode();
                 if (this.Id != null)
                 {
                     hashCode = (hashCode * 59) + this.Id.GetHashCode();

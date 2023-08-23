@@ -11,7 +11,7 @@
 -type openapi_curve_finance_ethereum_swap_dto() ::
   [ {'entry_time', datetime() }
   | {'recv_time', datetime() }
-  | {'block_number', binary() }
+  | {'block_number', integer() }
   | {'id', binary() }
   | {'hash', binary() }
   | {'log_index', integer() }
@@ -40,7 +40,7 @@ openapi_curve_finance_ethereum_swap_dto() ->
 openapi_curve_finance_ethereum_swap_dto(Fields) ->
   Default = [ {'entry_time', datetime() }
             , {'recv_time', datetime() }
-            , {'block_number', binary() }
+            , {'block_number', integer() }
             , {'id', binary() }
             , {'hash', binary() }
             , {'log_index', integer() }

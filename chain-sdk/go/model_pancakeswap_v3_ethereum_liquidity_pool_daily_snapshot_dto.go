@@ -25,8 +25,6 @@ type PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO struct {
 	RecvTime *time.Time `json:"recv_time,omitempty"`
 	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
-	// .
-	Vid *int64 `json:"vid,omitempty"`
 	// The Ethereum block number associated with the liquidity pool daily snapshot.
 	Block *int32 `json:"block_,omitempty"`
 	// Identifier, format: (smart contract address of the pool)-(# of days since Unix epoch time).
@@ -226,38 +224,6 @@ func (o *PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO) HasBlockNumber() bo
 // SetBlockNumber gets a reference to the given int64 and assigns it to the BlockNumber field.
 func (o *PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO) SetBlockNumber(v int64) {
 	o.BlockNumber = &v
-}
-
-// GetVid returns the Vid field value if set, zero value otherwise.
-func (o *PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO) GetVid() int64 {
-	if o == nil || IsNil(o.Vid) {
-		var ret int64
-		return ret
-	}
-	return *o.Vid
-}
-
-// GetVidOk returns a tuple with the Vid field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO) GetVidOk() (*int64, bool) {
-	if o == nil || IsNil(o.Vid) {
-		return nil, false
-	}
-	return o.Vid, true
-}
-
-// HasVid returns a boolean if a field has been set.
-func (o *PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO) HasVid() bool {
-	if o != nil && !IsNil(o.Vid) {
-		return true
-	}
-
-	return false
-}
-
-// SetVid gets a reference to the given int64 and assigns it to the Vid field.
-func (o *PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO) SetVid(v int64) {
-	o.Vid = &v
 }
 
 // GetBlock returns the Block field value if set, zero value otherwise.
@@ -1857,9 +1823,6 @@ func (o PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO) ToMap() (map[string]
 	}
 	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
-	}
-	if !IsNil(o.Vid) {
-		toSerialize["vid"] = o.Vid
 	}
 	if !IsNil(o.Block) {
 		toSerialize["block_"] = o.Block

@@ -24,7 +24,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param entryTime 
  * @param recvTime 
- * @param blockNumber Block number of when this snapshot was taken/last modified.)
+ * @param blockNumber Number of block in which entity was recorded.
  * @param id ID is # of days since Unix epoch time.
  * @param day Number of days since Unix epoch time.
  * @param protocol Protocol this snapshot is associated with.
@@ -54,9 +54,9 @@ data class UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO (
     @Json(name = "recv_time")
     val recvTime: java.time.OffsetDateTime? = null,
 
-    /* Block number of when this snapshot was taken/last modified.) */
+    /* Number of block in which entity was recorded. */
     @Json(name = "block_number")
-    val blockNumber: kotlin.Int? = null,
+    val blockNumber: kotlin.Long? = null,
 
     /* ID is # of days since Unix epoch time. */
     @Json(name = "id")

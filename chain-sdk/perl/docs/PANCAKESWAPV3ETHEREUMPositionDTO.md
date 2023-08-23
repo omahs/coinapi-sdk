@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **entry_time** | **DATE_TIME** |  | [optional] 
 **recv_time** | **DATE_TIME** |  | [optional] 
 **block_number** | **int** | Number of block in which entity was recorded. | [optional] 
-**vid** | **int** |  | [optional] 
 **id** | **string** | (account address)-(market address)-(count) | [optional] 
 **account** | **string** | Account that owns this position | [optional] 
 **pool** | **string** | The liquidity pool in which this position was opened | [optional] 

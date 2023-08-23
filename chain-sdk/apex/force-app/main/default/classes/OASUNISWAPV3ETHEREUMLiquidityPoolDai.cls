@@ -33,12 +33,6 @@ public class OASUNISWAPV3ETHEREUMLiquidityPoolDai implements OAS.MappedPropertie
     public Long blockNumber { get; set; }
 
     /**
-     * .
-     * @return vid
-     */
-    public Long vid { get; set; }
-
-    /**
      * The Ethereum block number associated with the liquidity pool daily snapshot.
      * @return block
      */
@@ -2197,7 +2191,6 @@ public class OASUNISWAPV3ETHEREUMLiquidityPoolDai implements OAS.MappedPropertie
           unISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           unISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           unISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.blockNumber = 123456789L;
-          unISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.vid = 123456789L;
           unISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.block = 0;
           unISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.id = '';
           unISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.day = 0;
@@ -2250,7 +2243,6 @@ public class OASUNISWAPV3ETHEREUMLiquidityPoolDai implements OAS.MappedPropertie
             return this.entryTime == unISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.entryTime
                 && this.recvTime == unISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.recvTime
                 && this.blockNumber == unISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.blockNumber
-                && this.vid == unISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.vid
                 && this.block == unISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.block
                 && this.id == unISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.id
                 && this.day == unISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.day
@@ -2303,7 +2295,6 @@ public class OASUNISWAPV3ETHEREUMLiquidityPoolDai implements OAS.MappedPropertie
         hashCode = (17 * hashCode) + (entryTime == null ? 0 : System.hashCode(entryTime));
         hashCode = (17 * hashCode) + (recvTime == null ? 0 : System.hashCode(recvTime));
         hashCode = (17 * hashCode) + (blockNumber == null ? 0 : System.hashCode(blockNumber));
-        hashCode = (17 * hashCode) + (vid == null ? 0 : System.hashCode(vid));
         hashCode = (17 * hashCode) + (block == null ? 0 : System.hashCode(block));
         hashCode = (17 * hashCode) + (id == null ? 0 : System.hashCode(id));
         hashCode = (17 * hashCode) + (day == null ? 0 : System.hashCode(day));

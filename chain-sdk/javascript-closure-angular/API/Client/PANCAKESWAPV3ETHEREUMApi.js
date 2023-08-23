@@ -259,11 +259,10 @@ API.Client.PANCAKESWAPV3ETHEREUMApi.prototype.pANCAKESWAPV3ETHEREUMLiquidityPool
 /**
  * LiquidityPoolDailySnapshots (current)
  * Gets liquidityPoolDailySnapshots.
- * @param {!string=} opt_pool Pool this snapshot belongs to.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.PANCAKESWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO>>}
  */
-API.Client.PANCAKESWAPV3ETHEREUMApi.prototype.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent = function(opt_pool, opt_extraHttpRequestParams) {
+API.Client.PANCAKESWAPV3ETHEREUMApi.prototype.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current';
 
@@ -272,10 +271,6 @@ API.Client.PANCAKESWAPV3ETHEREUMApi.prototype.pANCAKESWAPV3ETHEREUMLiquidityPool
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_pool !== undefined) {
-    queryParameters['pool'] = opt_pool;
-  }
-
   /** @type {!Object} */
   var httpRequestParams = {
     method: 'GET',

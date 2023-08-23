@@ -13,9 +13,29 @@
 
 
 import ApiClient from "../ApiClient";
+import UNISWAPV2ETHEREUMAccountDTO from '../model/UNISWAPV2ETHEREUMAccountDTO';
+import UNISWAPV2ETHEREUMActiveAccountDTO from '../model/UNISWAPV2ETHEREUMActiveAccountDTO';
+import UNISWAPV2ETHEREUMDepositDTO from '../model/UNISWAPV2ETHEREUMDepositDTO';
+import UNISWAPV2ETHEREUMDexAmmProtocolDTO from '../model/UNISWAPV2ETHEREUMDexAmmProtocolDTO';
+import UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO from '../model/UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO';
+import UNISWAPV2ETHEREUMLiquidityPoolAmountDTO from '../model/UNISWAPV2ETHEREUMLiquidityPoolAmountDTO';
 import UNISWAPV2ETHEREUMLiquidityPoolDTO from '../model/UNISWAPV2ETHEREUMLiquidityPoolDTO';
+import UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO from '../model/UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO';
+import UNISWAPV2ETHEREUMLiquidityPoolFeeDTO from '../model/UNISWAPV2ETHEREUMLiquidityPoolFeeDTO';
+import UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO from '../model/UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO';
+import UNISWAPV2ETHEREUMMasterChefAddressToPidDTO from '../model/UNISWAPV2ETHEREUMMasterChefAddressToPidDTO';
+import UNISWAPV2ETHEREUMMasterChefDTO from '../model/UNISWAPV2ETHEREUMMasterChefDTO';
+import UNISWAPV2ETHEREUMMasterChefRewarderDTO from '../model/UNISWAPV2ETHEREUMMasterChefRewarderDTO';
+import UNISWAPV2ETHEREUMMasterChefStakingPoolDTO from '../model/UNISWAPV2ETHEREUMMasterChefStakingPoolDTO';
+import UNISWAPV2ETHEREUMRewardTokenDTO from '../model/UNISWAPV2ETHEREUMRewardTokenDTO';
+import UNISWAPV2ETHEREUMRewarderProbeDTO from '../model/UNISWAPV2ETHEREUMRewarderProbeDTO';
 import UNISWAPV2ETHEREUMSwapDTO from '../model/UNISWAPV2ETHEREUMSwapDTO';
 import UNISWAPV2ETHEREUMTokenDTO from '../model/UNISWAPV2ETHEREUMTokenDTO';
+import UNISWAPV2ETHEREUMTokenWhiteListDTO from '../model/UNISWAPV2ETHEREUMTokenWhiteListDTO';
+import UNISWAPV2ETHEREUMTransferDTO from '../model/UNISWAPV2ETHEREUMTransferDTO';
+import UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO from '../model/UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO';
+import UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO from '../model/UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO';
+import UNISWAPV2ETHEREUMWithdrawDTO from '../model/UNISWAPV2ETHEREUMWithdrawDTO';
 
 /**
 * UNISWAPV2ETHEREUM service.
@@ -37,20 +57,20 @@ export default class UNISWAPV2ETHEREUMApi {
 
 
     /**
-     * Callback function to receive the result of the uNISWAPV2ETHEREUMLiquidityPoolsCurrent operation.
-     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMLiquidityPoolsCurrentCallback
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMAccountsCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMAccountsCurrentCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/UNISWAPV2ETHEREUMLiquidityPoolDTO>} data The data returned by the service call.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMAccountDTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * LiquidityPools (current)
-     * Gets liquidityPools.
-     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMLiquidityPoolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMLiquidityPoolDTO>}
+     * Accounts (current)
+     * Gets accounts.
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMAccountsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMAccountDTO>}
      */
-    uNISWAPV2ETHEREUMLiquidityPoolsCurrent(callback) {
+    uNISWAPV2ETHEREUMAccountsCurrent(callback) {
       let postBody = null;
 
       let pathParams = {
@@ -65,9 +85,572 @@ export default class UNISWAPV2ETHEREUMApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMAccountDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/accounts/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMActiveAccountsCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMActiveAccountsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMActiveAccountDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * ActiveAccounts (current)
+     * Gets activeAccounts.
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMActiveAccountsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMActiveAccountDTO>}
+     */
+    uNISWAPV2ETHEREUMActiveAccountsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMActiveAccountDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/activeAccounts/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMDepositsCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMDepositsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMDepositDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMDepositsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMDepositDTO>}
+     */
+    uNISWAPV2ETHEREUMDepositsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMDepositDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/deposits/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMDexAmmProtocolsCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMDexAmmProtocolsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMDexAmmProtocolDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * DexAmmProtocols (current)
+     * Gets dexAmmProtocols.
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMDexAmmProtocolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMDexAmmProtocolDTO>}
+     */
+    uNISWAPV2ETHEREUMDexAmmProtocolsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMDexAmmProtocolDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/dexAmmProtocols/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * FinancialsDailySnapshots (current)
+     * Gets financialsDailySnapshots.
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO>}
+     */
+    uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/financialsDailySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMLiquidityPoolAmountDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPoolAmounts (current)
+     * Gets liquidityPoolAmounts.
+     * @param {Object} opts Optional parameters
+     * @param {String} [id] Smart contract address of the pool
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMLiquidityPoolAmountDTO>}
+     */
+    uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMLiquidityPoolAmountDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/liquidityPoolAmounts/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     * Gets liquidityPoolDailySnapshots.
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO>}
+     */
+    uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/liquidityPoolDailySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMLiquidityPoolFeesCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMLiquidityPoolFeeDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPoolFees (current)
+     * Gets liquidityPoolFees.
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMLiquidityPoolFeesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMLiquidityPoolFeeDTO>}
+     */
+    uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMLiquidityPoolFeeDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/liquidityPoolFees/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     * Gets liquidityPoolHourlySnapshots.
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO>}
+     */
+    uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/liquidityPoolHourlySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMLiquidityPoolsCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMLiquidityPoolsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMLiquidityPoolDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPools (current)
+     * Gets liquidityPools.
+     * @param {Object} opts Optional parameters
+     * @param {String} [id] Smart contract address of the pool
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMLiquidityPoolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMLiquidityPoolDTO>}
+     */
+    uNISWAPV2ETHEREUMLiquidityPoolsCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [UNISWAPV2ETHEREUMLiquidityPoolDTO];
       return this.apiClient.callApi(
         '/v1/dapps/uniswap-v2-ethereum/liquidityPools/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMMasterChefAddressToPidDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * MasterChefAddressToPids (current)
+     * Gets masterChefAddressToPids.
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMMasterChefAddressToPidDTO>}
+     */
+    uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMMasterChefAddressToPidDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/masterChefAddressToPids/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMMasterChefRewardersCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMMasterChefRewardersCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMMasterChefRewarderDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * MasterChefRewarders (current)
+     * Gets masterChefRewarders.
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMMasterChefRewardersCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMMasterChefRewarderDTO>}
+     */
+    uNISWAPV2ETHEREUMMasterChefRewardersCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMMasterChefRewarderDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/masterChefRewarders/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMMasterChefStakingPoolDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * MasterChefStakingPools (current)
+     * Gets masterChefStakingPools.
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMMasterChefStakingPoolDTO>}
+     */
+    uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMMasterChefStakingPoolDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/masterChefStakingPools/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMMasterChefsCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMMasterChefsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMMasterChefDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * MasterChefs (current)
+     * Gets masterChefs.
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMMasterChefsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMMasterChefDTO>}
+     */
+    uNISWAPV2ETHEREUMMasterChefsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMMasterChefDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/masterChefs/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMRewardTokensCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMRewardTokensCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMRewardTokenDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * RewardTokens (current)
+     * Gets rewardTokens.
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMRewardTokensCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMRewardTokenDTO>}
+     */
+    uNISWAPV2ETHEREUMRewardTokensCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMRewardTokenDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/rewardTokens/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMRewarderProbesCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMRewarderProbesCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMRewarderProbeDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * RewarderProbes (current)
+     * Gets rewarderProbes.
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMRewarderProbesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMRewarderProbeDTO>}
+     */
+    uNISWAPV2ETHEREUMRewarderProbesCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMRewarderProbeDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/rewarderProbes/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -111,6 +694,43 @@ export default class UNISWAPV2ETHEREUMApi {
     }
 
     /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMTokenWhiteListsCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMTokenWhiteListsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMTokenWhiteListDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * TokenWhiteLists (current)
+     * Gets tokenWhiteLists.
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMTokenWhiteListsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMTokenWhiteListDTO>}
+     */
+    uNISWAPV2ETHEREUMTokenWhiteListsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMTokenWhiteListDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/tokenWhiteLists/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the uNISWAPV2ETHEREUMTokensCurrent operation.
      * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMTokensCurrentCallback
      * @param {String} error Error message, if any.
@@ -142,6 +762,154 @@ export default class UNISWAPV2ETHEREUMApi {
       let returnType = [UNISWAPV2ETHEREUMTokenDTO];
       return this.apiClient.callApi(
         '/v1/dapps/uniswap-v2-ethereum/tokens/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMTransfersCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMTransfersCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMTransferDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Transfers (current)
+     * Gets transfers.
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMTransfersCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMTransferDTO>}
+     */
+    uNISWAPV2ETHEREUMTransfersCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMTransferDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/transfers/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * UsageMetricsDailySnapshots (current)
+     * Gets usageMetricsDailySnapshots.
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO>}
+     */
+    uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/usageMetricsDailySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     * Gets usageMetricsHourlySnapshots.
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO>}
+     */
+    uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/usageMetricsHourlySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uNISWAPV2ETHEREUMWithdrawsCurrent operation.
+     * @callback module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMWithdrawsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UNISWAPV2ETHEREUMWithdrawDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @param {module:api/UNISWAPV2ETHEREUMApi~uNISWAPV2ETHEREUMWithdrawsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UNISWAPV2ETHEREUMWithdrawDTO>}
+     */
+    uNISWAPV2ETHEREUMWithdrawsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [UNISWAPV2ETHEREUMWithdrawDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/uniswap-v2-ethereum/withdraws/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

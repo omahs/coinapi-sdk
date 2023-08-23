@@ -19,8 +19,6 @@ case class PositionDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /*  */
-  vid: Option[Long] = None,
   /* (account address)-(market address)-(count) */
   id: Option[String] = None,
   /* Account that owns this position */

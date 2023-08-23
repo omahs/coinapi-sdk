@@ -486,7 +486,6 @@ class PANCAKESWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * LiquidityPoolDailySnapshots (current)
      * Gets liquidityPoolDailySnapshots.
-     * @param pool Pool this snapshot belongs to. (optional)
      * @return kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -496,8 +495,8 @@ class PANCAKESWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool: kotlin.String? = null) : kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> {
-        val localVarResponse = pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(pool = pool)
+    fun pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent() : kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> {
+        val localVarResponse = pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>
@@ -517,15 +516,14 @@ class PANCAKESWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * LiquidityPoolDailySnapshots (current)
      * Gets liquidityPoolDailySnapshots.
-     * @param pool Pool this snapshot belongs to. (optional)
      * @return ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(pool: kotlin.String?) : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>?> {
-        val localVariableConfig = pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequestConfig(pool = pool)
+    fun pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>?> {
+        val localVariableConfig = pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequestConfig()
 
         return request<Unit, kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>(
             localVariableConfig
@@ -535,17 +533,11 @@ class PANCAKESWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * To obtain the request config of the operation pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
      *
-     * @param pool Pool this snapshot belongs to. (optional)
      * @return RequestConfig
      */
-    fun pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequestConfig(pool: kotlin.String?) : RequestConfig<Unit> {
+    fun pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
-            .apply {
-                if (pool != null) {
-                    put("pool", listOf(pool.toString()))
-                }
-            }
+        val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Accept"] = "application/json"
 

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entryTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **recvTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
-**blockNumber** | **kotlin.Int** | Block number of when this snapshot was taken/last modified.) |  [optional]
+**blockNumber** | **kotlin.Long** | Number of block in which entity was recorded. |  [optional]
 **id** | **kotlin.String** | ID is # of days since Unix epoch time. |  [optional]
 **day** | **kotlin.Int** | Number of days since Unix epoch time. |  [optional]
 **protocol** | **kotlin.String** | Protocol this snapshot is associated with. |  [optional]

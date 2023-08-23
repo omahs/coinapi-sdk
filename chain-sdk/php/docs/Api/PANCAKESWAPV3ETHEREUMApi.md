@@ -353,7 +353,7 @@ No authorization required
 ## `pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent()`
 
 ```php
-pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent($pool): \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[]
+pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(): \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[]
 ```
 
 LiquidityPoolDailySnapshots (current)
@@ -373,10 +373,9 @@ $apiInstance = new OpenAPI\Client\Api\PANCAKESWAPV3ETHEREUMApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$pool = 'pool_example'; // string | Pool this snapshot belongs to.
 
 try {
-    $result = $apiInstance->pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent($pool);
+    $result = $apiInstance->pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent();
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PANCAKESWAPV3ETHEREUMApi->pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent: ', $e->getMessage(), PHP_EOL;
@@ -385,9 +384,7 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pool** | **string**| Pool this snapshot belongs to. | [optional] |
+This endpoint does not need any parameter.
 
 ### Return type
 

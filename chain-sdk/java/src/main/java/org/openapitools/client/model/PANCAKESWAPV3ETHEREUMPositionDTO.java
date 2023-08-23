@@ -54,7 +54,7 @@ import org.openapitools.client.JSON;
 /**
  * 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-21T11:20:49.157876Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-23T15:16:19.303862Z[Etc/UTC]")
 public class PANCAKESWAPV3ETHEREUMPositionDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -67,10 +67,6 @@ public class PANCAKESWAPV3ETHEREUMPositionDTO {
   public static final String SERIALIZED_NAME_BLOCK_NUMBER = "block_number";
   @SerializedName(SERIALIZED_NAME_BLOCK_NUMBER)
   private Long blockNumber;
-
-  public static final String SERIALIZED_NAME_VID = "vid";
-  @SerializedName(SERIALIZED_NAME_VID)
-  private Long vid;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -223,27 +219,6 @@ public class PANCAKESWAPV3ETHEREUMPositionDTO {
 
   public void setBlockNumber(Long blockNumber) {
     this.blockNumber = blockNumber;
-  }
-
-
-  public PANCAKESWAPV3ETHEREUMPositionDTO vid(Long vid) {
-    
-    this.vid = vid;
-    return this;
-  }
-
-   /**
-   * 
-   * @return vid
-  **/
-  @javax.annotation.Nullable
-  public Long getVid() {
-    return vid;
-  }
-
-
-  public void setVid(Long vid) {
-    this.vid = vid;
   }
 
 
@@ -746,7 +721,6 @@ public class PANCAKESWAPV3ETHEREUMPositionDTO {
     return Objects.equals(this.entryTime, paNCAKESWAPV3ETHEREUMPositionDTO.entryTime) &&
         Objects.equals(this.recvTime, paNCAKESWAPV3ETHEREUMPositionDTO.recvTime) &&
         Objects.equals(this.blockNumber, paNCAKESWAPV3ETHEREUMPositionDTO.blockNumber) &&
-        Objects.equals(this.vid, paNCAKESWAPV3ETHEREUMPositionDTO.vid) &&
         Objects.equals(this.id, paNCAKESWAPV3ETHEREUMPositionDTO.id) &&
         Objects.equals(this.account, paNCAKESWAPV3ETHEREUMPositionDTO.account) &&
         Objects.equals(this.pool, paNCAKESWAPV3ETHEREUMPositionDTO.pool) &&
@@ -777,7 +751,7 @@ public class PANCAKESWAPV3ETHEREUMPositionDTO {
 
   @Override
   public int hashCode() {
-    return Objects.hash(entryTime, recvTime, blockNumber, vid, id, account, pool, hashOpened, hashClosed, blockNumberOpened, timestampOpened, blockNumberClosed, timestampClosed, tickLower, tickUpper, liquidityToken, liquidityTokenType, liquidity, liquidityUsd, cumulativeDepositTokenAmounts, cumulativeDepositUsd, cumulativeWithdrawTokenAmounts, cumulativeWithdrawUsd, cumulativeRewardUsd, depositCount, withdrawCount);
+    return Objects.hash(entryTime, recvTime, blockNumber, id, account, pool, hashOpened, hashClosed, blockNumberOpened, timestampOpened, blockNumberClosed, timestampClosed, tickLower, tickUpper, liquidityToken, liquidityTokenType, liquidity, liquidityUsd, cumulativeDepositTokenAmounts, cumulativeDepositUsd, cumulativeWithdrawTokenAmounts, cumulativeWithdrawUsd, cumulativeRewardUsd, depositCount, withdrawCount);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -794,7 +768,6 @@ public class PANCAKESWAPV3ETHEREUMPositionDTO {
     sb.append("    entryTime: ").append(toIndentedString(entryTime)).append("\n");
     sb.append("    recvTime: ").append(toIndentedString(recvTime)).append("\n");
     sb.append("    blockNumber: ").append(toIndentedString(blockNumber)).append("\n");
-    sb.append("    vid: ").append(toIndentedString(vid)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    account: ").append(toIndentedString(account)).append("\n");
     sb.append("    pool: ").append(toIndentedString(pool)).append("\n");
@@ -842,7 +815,6 @@ public class PANCAKESWAPV3ETHEREUMPositionDTO {
     openapiFields.add("entry_time");
     openapiFields.add("recv_time");
     openapiFields.add("block_number");
-    openapiFields.add("vid");
     openapiFields.add("id");
     openapiFields.add("account");
     openapiFields.add("pool");

@@ -219,12 +219,9 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    * 
    * Expected answers:
    *   code 200 : Seq[TickDailySnapshotDTO] (successful operation)
-   * 
-   * @param pool liquidity pool this tick belongs to
    */
-  def uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool: Option[String] = None): ApiRequest[Seq[TickDailySnapshotDTO]] =
+  def uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(): ApiRequest[Seq[TickDailySnapshotDTO]] =
     ApiRequest[Seq[TickDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current", "application/json")
-      .withQueryParam("pool", pool)
       .withSuccessResponse[Seq[TickDailySnapshotDTO]](200)
       
 
@@ -233,12 +230,9 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    * 
    * Expected answers:
    *   code 200 : Seq[TickHourlySnapshotDTO] (successful operation)
-   * 
-   * @param pool liquidity pool this tick belongs to
    */
-  def uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool: Option[String] = None): ApiRequest[Seq[TickHourlySnapshotDTO]] =
+  def uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(): ApiRequest[Seq[TickHourlySnapshotDTO]] =
     ApiRequest[Seq[TickHourlySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current", "application/json")
-      .withQueryParam("pool", pool)
       .withSuccessResponse[Seq[TickHourlySnapshotDTO]](200)
       
 
@@ -247,12 +241,9 @@ class UNISWAPV3ETHEREUMApi(baseUrl: String) {
    * 
    * Expected answers:
    *   code 200 : Seq[TickDTO] (successful operation)
-   * 
-   * @param pool Liquidity pool this tick belongs to
    */
-  def uNISWAPV3ETHEREUMTicksCurrent(pool: Option[String] = None): ApiRequest[Seq[TickDTO]] =
+  def uNISWAPV3ETHEREUMTicksCurrent(): ApiRequest[Seq[TickDTO]] =
     ApiRequest[Seq[TickDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v3-ethereum/ticks/current", "application/json")
-      .withQueryParam("pool", pool)
       .withSuccessResponse[Seq[TickDTO]](200)
       
 

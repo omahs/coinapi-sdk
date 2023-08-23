@@ -10,7 +10,7 @@
   {
    (ds/opt :entry_time) inst?
    (ds/opt :recv_time) inst?
-   (ds/opt :block_number) string?
+   (ds/opt :block_number) int?
    (ds/opt :id) string?
    (ds/opt :hash) string?
    (ds/opt :log_index) int?

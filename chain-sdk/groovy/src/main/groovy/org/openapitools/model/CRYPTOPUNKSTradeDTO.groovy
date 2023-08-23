@@ -11,8 +11,8 @@ class CRYPTOPUNKSTradeDTO {
     Date entryTime
     
     Date recvTime
-    /*  */
-    String blockNumber
+    /* Number of block in which entity was recorded. */
+    Long blockNumber
     /*  */
     Long vid
     /*  */

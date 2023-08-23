@@ -225,11 +225,9 @@ feature -- API Access
 			end
 		end
 
-	p_an_ca_ke_sw_ap_v3_et_he_re_um_liquidity_pool_daily_snapshots_current (pool: STRING_32): detachable LIST [PANCAKESWAP_V3_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOT_DTO]
+	p_an_ca_ke_sw_ap_v3_et_he_re_um_liquidity_pool_daily_snapshots_current : detachable LIST [PANCAKESWAP_V3_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOT_DTO]
 			-- LiquidityPoolDailySnapshots (current)
 			-- Gets liquidityPoolDailySnapshots.
-			-- 
-			-- argument: pool Pool this snapshot belongs to. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [PANCAKESWAP_V3_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOT_DTO]
@@ -243,7 +241,6 @@ feature -- API Access
 			create l_request
 			
 			l_path := "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "pool", pool));
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then

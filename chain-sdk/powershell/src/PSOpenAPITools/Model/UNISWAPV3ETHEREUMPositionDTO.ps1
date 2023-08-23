@@ -21,8 +21,6 @@ No description available.
 No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
-.PARAMETER Vid
-
 .PARAMETER Id
 (account address)-(market address)-(count)
 .PARAMETER Account
@@ -85,72 +83,69 @@ function Initialize-UNISWAPV3ETHEREUMPositionDTO {
         [System.Nullable[Int64]]
         ${BlockNumber},
         [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true)]
-        [System.Nullable[Int64]]
-        ${Vid},
-        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
-        [Parameter(Position = 5, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Account},
-        [Parameter(Position = 6, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 5, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Pool},
-        [Parameter(Position = 7, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 6, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${HashOpened},
-        [Parameter(Position = 8, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 7, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${HashClosed},
-        [Parameter(Position = 9, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 8, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${BlockNumberOpened},
-        [Parameter(Position = 10, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 9, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${TimestampOpened},
-        [Parameter(Position = 11, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 10, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${BlockNumberClosed},
-        [Parameter(Position = 12, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 11, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${TimestampClosed},
-        [Parameter(Position = 13, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 12, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${TickLower},
-        [Parameter(Position = 14, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 13, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${TickUpper},
-        [Parameter(Position = 15, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 14, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${LiquidityToken},
-        [Parameter(Position = 16, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 15, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${LiquidityTokenType},
-        [Parameter(Position = 17, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 16, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Liquidity},
-        [Parameter(Position = 18, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 17, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${LiquidityUsd},
-        [Parameter(Position = 19, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 18, ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${CumulativeDepositTokenAmounts},
-        [Parameter(Position = 20, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 19, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${CumulativeDepositUsd},
-        [Parameter(Position = 21, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 20, ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${CumulativeWithdrawTokenAmounts},
-        [Parameter(Position = 22, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 21, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${CumulativeWithdrawUsd},
-        [Parameter(Position = 23, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 22, ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${CumulativeRewardUsd},
-        [Parameter(Position = 24, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 23, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
         ${DepositCount},
-        [Parameter(Position = 25, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 24, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
         ${WithdrawCount}
     )
@@ -164,7 +159,6 @@ function Initialize-UNISWAPV3ETHEREUMPositionDTO {
             "entry_time" = ${EntryTime}
             "recv_time" = ${RecvTime}
             "block_number" = ${BlockNumber}
-            "vid" = ${Vid}
             "id" = ${Id}
             "account" = ${Account}
             "pool" = ${Pool}
@@ -224,7 +218,7 @@ function ConvertFrom-JsonToUNISWAPV3ETHEREUMPositionDTO {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in UNISWAPV3ETHEREUMPositionDTO
-        $AllProperties = ("entry_time", "recv_time", "block_number", "vid", "id", "account", "pool", "hash_opened", "hash_closed", "block_number_opened", "timestamp_opened", "block_number_closed", "timestamp_closed", "tick_lower", "tick_upper", "liquidity_token", "liquidity_token_type", "liquidity", "liquidity_usd", "cumulative_deposit_token_amounts", "cumulative_deposit_usd", "cumulative_withdraw_token_amounts", "cumulative_withdraw_usd", "cumulative_reward_usd", "deposit_count", "withdraw_count")
+        $AllProperties = ("entry_time", "recv_time", "block_number", "id", "account", "pool", "hash_opened", "hash_closed", "block_number_opened", "timestamp_opened", "block_number_closed", "timestamp_closed", "tick_lower", "tick_upper", "liquidity_token", "liquidity_token_type", "liquidity", "liquidity_usd", "cumulative_deposit_token_amounts", "cumulative_deposit_usd", "cumulative_withdraw_token_amounts", "cumulative_withdraw_usd", "cumulative_reward_usd", "deposit_count", "withdraw_count")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -247,12 +241,6 @@ function ConvertFrom-JsonToUNISWAPV3ETHEREUMPositionDTO {
             $BlockNumber = $null
         } else {
             $BlockNumber = $JsonParameters.PSobject.Properties["block_number"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "vid"))) { #optional property not found
-            $Vid = $null
-        } else {
-            $Vid = $JsonParameters.PSobject.Properties["vid"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "id"))) { #optional property not found
@@ -391,7 +379,6 @@ function ConvertFrom-JsonToUNISWAPV3ETHEREUMPositionDTO {
             "entry_time" = ${EntryTime}
             "recv_time" = ${RecvTime}
             "block_number" = ${BlockNumber}
-            "vid" = ${Vid}
             "id" = ${Id}
             "account" = ${Account}
             "pool" = ${Pool}

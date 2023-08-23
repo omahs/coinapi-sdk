@@ -551,7 +551,7 @@ No authorization required
 
 <a id="pancakeswapv3ethereumliquiditypooldailysnapshotscurrent"></a>
 # **PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**
-> List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt; PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent (string pool = null)
+> List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt; PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent ()
 
 LiquidityPoolDailySnapshots (current)
 
@@ -574,12 +574,11 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new PANCAKESWAPV3ETHEREUMApi(config);
-            var pool = "pool_example";  // string | Pool this snapshot belongs to. (optional) 
 
             try
             {
                 // LiquidityPoolDailySnapshots (current)
-                List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> result = apiInstance.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool);
+                List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> result = apiInstance.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -600,7 +599,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // LiquidityPoolDailySnapshots (current)
-    ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> response = apiInstance.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(pool);
+    ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> response = apiInstance.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -614,11 +613,7 @@ catch (ApiException e)
 ```
 
 ### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **pool** | **string** | Pool this snapshot belongs to. | [optional]  |
-
+This endpoint does not need any parameter.
 ### Return type
 
 [**List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt;**](PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md)

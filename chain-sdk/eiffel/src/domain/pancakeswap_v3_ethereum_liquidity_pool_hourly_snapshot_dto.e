@@ -25,8 +25,6 @@ feature --Access
       
  	block_number: INTEGER_64
     	 -- Number of block in which entity was recorded.
- 	vid: INTEGER_64
-    	 -- 
     id: detachable STRING_32
       -- (Smart contract address of the pool)-( # of hours since Unix epoch time)
  	hour: INTEGER_32
@@ -136,14 +134,6 @@ feature -- Change Element
         block_number := a_name
       ensure
         block_number_set: block_number = a_name
-      end
-
-    set_vid (a_name: like vid)
-        -- Set 'vid' with 'a_name'.
-      do
-        vid := a_name
-      ensure
-        vid_set: vid = a_name
       end
 
     set_id (a_name: like id)
@@ -503,11 +493,6 @@ feature -- Change Element
         if attached block_number as l_block_number then
           Result.append ("%Nblock_number:")
           Result.append (l_block_number.out)
-          Result.append ("%N")
-        end
-        if attached vid as l_vid then
-          Result.append ("%Nvid:")
-          Result.append (l_vid.out)
           Result.append ("%N")
         end
         if attached id as l_id then

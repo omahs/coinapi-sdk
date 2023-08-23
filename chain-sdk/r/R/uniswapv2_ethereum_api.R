@@ -14,16 +14,258 @@
 #'
 #' @section Methods:
 #' \describe{
+#' \strong{ UNISWAPV2ETHEREUMAccountsCurrent } \emph{ Accounts (current) }
+#' Gets accounts.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.AccountDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMAccountDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UNISWAPV2ETHEREUMActiveAccountsCurrent } \emph{ ActiveAccounts (current) }
+#' Gets activeAccounts.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.ActiveAccountDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMActiveAccountDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UNISWAPV2ETHEREUMDepositsCurrent } \emph{ Deposits (current) }
+#' Gets deposits.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.DepositDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMDepositDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UNISWAPV2ETHEREUMDexAmmProtocolsCurrent } \emph{ DexAmmProtocols (current) }
+#' Gets dexAmmProtocols.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.DexAmmProtocolDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMDexAmmProtocolDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent } \emph{ FinancialsDailySnapshots (current) }
+#' Gets financialsDailySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.FinancialsDailySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent } \emph{ LiquidityPoolAmounts (current) }
+#' Gets liquidityPoolAmounts.
+#'
+#' \itemize{
+#' \item \emph{ @param } id character
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.LiquidityPoolAmountDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMLiquidityPoolAmountDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent } \emph{ LiquidityPoolDailySnapshots (current) }
+#' Gets liquidityPoolDailySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.LiquidityPoolDailySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UNISWAPV2ETHEREUMLiquidityPoolFeesCurrent } \emph{ LiquidityPoolFees (current) }
+#' Gets liquidityPoolFees.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.LiquidityPoolFeeDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMLiquidityPoolFeeDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent } \emph{ LiquidityPoolHourlySnapshots (current) }
+#' Gets liquidityPoolHourlySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.LiquidityPoolHourlySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
 #' \strong{ UNISWAPV2ETHEREUMLiquidityPoolsCurrent } \emph{ LiquidityPools (current) }
 #' Gets liquidityPools.
 #'
 #' \itemize{
+#' \item \emph{ @param } id character
 #' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.LiquidityPoolDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
 #' \item return type : array[UNISWAPV2ETHEREUMLiquidityPoolDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent } \emph{ MasterChefAddressToPids (current) }
+#' Gets masterChefAddressToPids.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.MasterChefAddressToPidDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMMasterChefAddressToPidDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UNISWAPV2ETHEREUMMasterChefRewardersCurrent } \emph{ MasterChefRewarders (current) }
+#' Gets masterChefRewarders.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.MasterChefRewarderDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMMasterChefRewarderDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent } \emph{ MasterChefStakingPools (current) }
+#' Gets masterChefStakingPools.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.MasterChefStakingPoolDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMMasterChefStakingPoolDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UNISWAPV2ETHEREUMMasterChefsCurrent } \emph{ MasterChefs (current) }
+#' Gets masterChefs.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.MasterChefDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMMasterChefDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UNISWAPV2ETHEREUMRewardTokensCurrent } \emph{ RewardTokens (current) }
+#' Gets rewardTokens.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.RewardTokenDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMRewardTokenDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UNISWAPV2ETHEREUMRewarderProbesCurrent } \emph{ RewarderProbes (current) }
+#' Gets rewarderProbes.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.RewarderProbeDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMRewarderProbeDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -46,6 +288,22 @@
 #' }
 #' }
 #'
+#' \strong{ UNISWAPV2ETHEREUMTokenWhiteListsCurrent } \emph{ TokenWhiteLists (current) }
+#' Gets tokenWhiteLists.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.TokenWhiteListDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMTokenWhiteListDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
 #' \strong{ UNISWAPV2ETHEREUMTokensCurrent } \emph{ Tokens (current) }
 #' Gets tokens.
 #'
@@ -62,21 +320,282 @@
 #' }
 #' }
 #'
+#' \strong{ UNISWAPV2ETHEREUMTransfersCurrent } \emph{ Transfers (current) }
+#' Gets transfers.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.TransferDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMTransferDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent } \emph{ UsageMetricsDailySnapshots (current) }
+#' Gets usageMetricsDailySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.UsageMetricsDailySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent } \emph{ UsageMetricsHourlySnapshots (current) }
+#' Gets usageMetricsHourlySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.UsageMetricsHourlySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UNISWAPV2ETHEREUMWithdrawsCurrent } \emph{ Withdraws (current) }
+#' Gets withdraws.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UNISWAP_V2_ETHEREUM.WithdrawDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UNISWAPV2ETHEREUMWithdrawDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
 #' }
 #'
 #'
 #' @examples
 #' \dontrun{
+#' ####################  UNISWAPV2ETHEREUMAccountsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Accounts (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMAccountsCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMAccountsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV2ETHEREUMActiveAccountsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #ActiveAccounts (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMActiveAccountsCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMActiveAccountsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV2ETHEREUMDepositsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Deposits (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMDepositsCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMDepositsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV2ETHEREUMDexAmmProtocolsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #DexAmmProtocols (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMDexAmmProtocolsCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMDexAmmProtocolsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #FinancialsDailySnapshots (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent  ####################
+#'
+#' library(openapi)
+#' var_id <- "id_example" # character | Smart contract address of the pool (Optional)
+#'
+#' #LiquidityPoolAmounts (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent(id = var_iddata_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent(id = var_id)
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #LiquidityPoolDailySnapshots (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV2ETHEREUMLiquidityPoolFeesCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #LiquidityPoolFees (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMLiquidityPoolFeesCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMLiquidityPoolFeesCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #LiquidityPoolHourlySnapshots (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent()
+#' dput(result)
+#'
+#'
 #' ####################  UNISWAPV2ETHEREUMLiquidityPoolsCurrent  ####################
 #'
 #' library(openapi)
+#' var_id <- "id_example" # character | Smart contract address of the pool (Optional)
 #'
 #' #LiquidityPools (current)
 #' api_instance <- UNISWAPV2ETHEREUMApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$UNISWAPV2ETHEREUMLiquidityPoolsCurrent(data_file = "result.txt")
-#' result <- api_instance$UNISWAPV2ETHEREUMLiquidityPoolsCurrent()
+#' # result <- api_instance$UNISWAPV2ETHEREUMLiquidityPoolsCurrent(id = var_iddata_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMLiquidityPoolsCurrent(id = var_id)
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #MasterChefAddressToPids (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV2ETHEREUMMasterChefRewardersCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #MasterChefRewarders (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMMasterChefRewardersCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMMasterChefRewardersCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #MasterChefStakingPools (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV2ETHEREUMMasterChefsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #MasterChefs (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMMasterChefsCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMMasterChefsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV2ETHEREUMRewardTokensCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #RewardTokens (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMRewardTokensCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMRewardTokensCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV2ETHEREUMRewarderProbesCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #RewarderProbes (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMRewarderProbesCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMRewarderProbesCurrent()
 #' dput(result)
 #'
 #'
@@ -93,6 +612,19 @@
 #' dput(result)
 #'
 #'
+#' ####################  UNISWAPV2ETHEREUMTokenWhiteListsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #TokenWhiteLists (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMTokenWhiteListsCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMTokenWhiteListsCurrent()
+#' dput(result)
+#'
+#'
 #' ####################  UNISWAPV2ETHEREUMTokensCurrent  ####################
 #'
 #' library(openapi)
@@ -103,6 +635,58 @@
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$UNISWAPV2ETHEREUMTokensCurrent(data_file = "result.txt")
 #' result <- api_instance$UNISWAPV2ETHEREUMTokensCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV2ETHEREUMTransfersCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Transfers (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMTransfersCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMTransfersCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #UsageMetricsDailySnapshots (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #UsageMetricsHourlySnapshots (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  UNISWAPV2ETHEREUMWithdrawsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Withdraws (current)
+#' api_instance <- UNISWAPV2ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UNISWAPV2ETHEREUMWithdrawsCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV2ETHEREUMWithdrawsCurrent()
 #' dput(result)
 #'
 #'
@@ -128,17 +712,797 @@ UNISWAPV2ETHEREUMApi <- R6::R6Class(
         self$api_client <- ApiClient$new()
       }
     },
+    #' Accounts (current)
+    #'
+    #' @description
+    #' Accounts (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMAccountDTO]
+    #' @export
+    UNISWAPV2ETHEREUMAccountsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMAccountsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Accounts (current)
+    #'
+    #' @description
+    #' Accounts (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMAccountDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMAccountsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/accounts/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMAccountDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' ActiveAccounts (current)
+    #'
+    #' @description
+    #' ActiveAccounts (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMActiveAccountDTO]
+    #' @export
+    UNISWAPV2ETHEREUMActiveAccountsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMActiveAccountsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' ActiveAccounts (current)
+    #'
+    #' @description
+    #' ActiveAccounts (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMActiveAccountDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMActiveAccountsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/activeAccounts/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMActiveAccountDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Deposits (current)
+    #'
+    #' @description
+    #' Deposits (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMDepositDTO]
+    #' @export
+    UNISWAPV2ETHEREUMDepositsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMDepositsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Deposits (current)
+    #'
+    #' @description
+    #' Deposits (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMDepositDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMDepositsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/deposits/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMDepositDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' DexAmmProtocols (current)
+    #'
+    #' @description
+    #' DexAmmProtocols (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMDexAmmProtocolDTO]
+    #' @export
+    UNISWAPV2ETHEREUMDexAmmProtocolsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMDexAmmProtocolsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' DexAmmProtocols (current)
+    #'
+    #' @description
+    #' DexAmmProtocols (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMDexAmmProtocolDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMDexAmmProtocolsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/dexAmmProtocols/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMDexAmmProtocolDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' FinancialsDailySnapshots (current)
+    #'
+    #' @description
+    #' FinancialsDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO]
+    #' @export
+    UNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' FinancialsDailySnapshots (current)
+    #'
+    #' @description
+    #' FinancialsDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/financialsDailySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' LiquidityPoolAmounts (current)
+    #'
+    #' @description
+    #' LiquidityPoolAmounts (current)
+    #'
+    #' @param id (optional) Smart contract address of the pool
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMLiquidityPoolAmountDTO]
+    #' @export
+    UNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent = function(id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo(id, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' LiquidityPoolAmounts (current)
+    #'
+    #' @description
+    #' LiquidityPoolAmounts (current)
+    #'
+    #' @param id (optional) Smart contract address of the pool
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMLiquidityPoolAmountDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo = function(id = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+      query_params[["id"]] <- `id`
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/liquidityPoolAmounts/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMLiquidityPoolAmountDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @description
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO]
+    #' @export
+    UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @description
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/liquidityPoolDailySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' LiquidityPoolFees (current)
+    #'
+    #' @description
+    #' LiquidityPoolFees (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMLiquidityPoolFeeDTO]
+    #' @export
+    UNISWAPV2ETHEREUMLiquidityPoolFeesCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' LiquidityPoolFees (current)
+    #'
+    #' @description
+    #' LiquidityPoolFees (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMLiquidityPoolFeeDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/liquidityPoolFees/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMLiquidityPoolFeeDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' LiquidityPoolHourlySnapshots (current)
+    #'
+    #' @description
+    #' LiquidityPoolHourlySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO]
+    #' @export
+    UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' LiquidityPoolHourlySnapshots (current)
+    #'
+    #' @description
+    #' LiquidityPoolHourlySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/liquidityPoolHourlySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
     #' LiquidityPools (current)
     #'
     #' @description
     #' LiquidityPools (current)
     #'
+    #' @param id (optional) Smart contract address of the pool
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UNISWAPV2ETHEREUMLiquidityPoolDTO]
     #' @export
-    UNISWAPV2ETHEREUMLiquidityPoolsCurrent = function(data_file = NULL, ...) {
-      local_var_response <- self$UNISWAPV2ETHEREUMLiquidityPoolsCurrentWithHttpInfo(data_file = data_file, ...)
+    UNISWAPV2ETHEREUMLiquidityPoolsCurrent = function(id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMLiquidityPoolsCurrentWithHttpInfo(id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -154,11 +1518,12 @@ UNISWAPV2ETHEREUMApi <- R6::R6Class(
     #' @description
     #' LiquidityPools (current)
     #'
+    #' @param id (optional) Smart contract address of the pool
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UNISWAPV2ETHEREUMLiquidityPoolDTO]) with additional information such as HTTP status code, headers
     #' @export
-    UNISWAPV2ETHEREUMLiquidityPoolsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+    UNISWAPV2ETHEREUMLiquidityPoolsCurrentWithHttpInfo = function(id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -167,6 +1532,9 @@ UNISWAPV2ETHEREUMApi <- R6::R6Class(
       local_var_body <- NULL
       oauth_scopes <- NULL
       is_oauth <- FALSE
+
+
+      query_params[["id"]] <- `id`
 
       local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/liquidityPools/current"
 
@@ -197,6 +1565,522 @@ UNISWAPV2ETHEREUMApi <- R6::R6Class(
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMLiquidityPoolDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' MasterChefAddressToPids (current)
+    #'
+    #' @description
+    #' MasterChefAddressToPids (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMMasterChefAddressToPidDTO]
+    #' @export
+    UNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMMasterChefAddressToPidsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' MasterChefAddressToPids (current)
+    #'
+    #' @description
+    #' MasterChefAddressToPids (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMMasterChefAddressToPidDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMMasterChefAddressToPidsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/masterChefAddressToPids/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMMasterChefAddressToPidDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' MasterChefRewarders (current)
+    #'
+    #' @description
+    #' MasterChefRewarders (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMMasterChefRewarderDTO]
+    #' @export
+    UNISWAPV2ETHEREUMMasterChefRewardersCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMMasterChefRewardersCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' MasterChefRewarders (current)
+    #'
+    #' @description
+    #' MasterChefRewarders (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMMasterChefRewarderDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMMasterChefRewardersCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/masterChefRewarders/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMMasterChefRewarderDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' MasterChefStakingPools (current)
+    #'
+    #' @description
+    #' MasterChefStakingPools (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMMasterChefStakingPoolDTO]
+    #' @export
+    UNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMMasterChefStakingPoolsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' MasterChefStakingPools (current)
+    #'
+    #' @description
+    #' MasterChefStakingPools (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMMasterChefStakingPoolDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMMasterChefStakingPoolsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/masterChefStakingPools/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMMasterChefStakingPoolDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' MasterChefs (current)
+    #'
+    #' @description
+    #' MasterChefs (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMMasterChefDTO]
+    #' @export
+    UNISWAPV2ETHEREUMMasterChefsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMMasterChefsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' MasterChefs (current)
+    #'
+    #' @description
+    #' MasterChefs (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMMasterChefDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMMasterChefsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/masterChefs/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMMasterChefDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' RewardTokens (current)
+    #'
+    #' @description
+    #' RewardTokens (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMRewardTokenDTO]
+    #' @export
+    UNISWAPV2ETHEREUMRewardTokensCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMRewardTokensCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' RewardTokens (current)
+    #'
+    #' @description
+    #' RewardTokens (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMRewardTokenDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMRewardTokensCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/rewardTokens/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMRewardTokenDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' RewarderProbes (current)
+    #'
+    #' @description
+    #' RewarderProbes (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMRewarderProbeDTO]
+    #' @export
+    UNISWAPV2ETHEREUMRewarderProbesCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMRewarderProbesCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' RewarderProbes (current)
+    #'
+    #' @description
+    #' RewarderProbes (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMRewarderProbeDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMRewarderProbesCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/rewarderProbes/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMRewarderProbeDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -300,6 +2184,92 @@ UNISWAPV2ETHEREUMApi <- R6::R6Class(
         local_var_resp
       }
     },
+    #' TokenWhiteLists (current)
+    #'
+    #' @description
+    #' TokenWhiteLists (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMTokenWhiteListDTO]
+    #' @export
+    UNISWAPV2ETHEREUMTokenWhiteListsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMTokenWhiteListsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' TokenWhiteLists (current)
+    #'
+    #' @description
+    #' TokenWhiteLists (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMTokenWhiteListDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMTokenWhiteListsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/tokenWhiteLists/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMTokenWhiteListDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
     #' Tokens (current)
     #'
     #' @description
@@ -369,6 +2339,350 @@ UNISWAPV2ETHEREUMApi <- R6::R6Class(
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMTokenDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Transfers (current)
+    #'
+    #' @description
+    #' Transfers (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMTransferDTO]
+    #' @export
+    UNISWAPV2ETHEREUMTransfersCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMTransfersCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Transfers (current)
+    #'
+    #' @description
+    #' Transfers (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMTransferDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMTransfersCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/transfers/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMTransferDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' UsageMetricsDailySnapshots (current)
+    #'
+    #' @description
+    #' UsageMetricsDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO]
+    #' @export
+    UNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' UsageMetricsDailySnapshots (current)
+    #'
+    #' @description
+    #' UsageMetricsDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/usageMetricsDailySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' UsageMetricsHourlySnapshots (current)
+    #'
+    #' @description
+    #' UsageMetricsHourlySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO]
+    #' @export
+    UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' UsageMetricsHourlySnapshots (current)
+    #'
+    #' @description
+    #' UsageMetricsHourlySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/usageMetricsHourlySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Withdraws (current)
+    #'
+    #' @description
+    #' Withdraws (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UNISWAPV2ETHEREUMWithdrawDTO]
+    #' @export
+    UNISWAPV2ETHEREUMWithdrawsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV2ETHEREUMWithdrawsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Withdraws (current)
+    #'
+    #' @description
+    #' Withdraws (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UNISWAPV2ETHEREUMWithdrawDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UNISWAPV2ETHEREUMWithdrawsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/uniswap-v2-ethereum/withdraws/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UNISWAPV2ETHEREUMWithdrawDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }

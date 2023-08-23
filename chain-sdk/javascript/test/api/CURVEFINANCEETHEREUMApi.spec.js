@@ -48,10 +48,120 @@
   }
 
   describe('CURVEFINANCEETHEREUMApi', function() {
+    describe('cURVEFINANCEETHEREUMAccountsCurrent', function() {
+      it('should call cURVEFINANCEETHEREUMAccountsCurrent successfully', function(done) {
+        //uncomment below and update the code to test cURVEFINANCEETHEREUMAccountsCurrent
+        //instance.cURVEFINANCEETHEREUMAccountsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cURVEFINANCEETHEREUMActiveAccountsCurrent', function() {
+      it('should call cURVEFINANCEETHEREUMActiveAccountsCurrent successfully', function(done) {
+        //uncomment below and update the code to test cURVEFINANCEETHEREUMActiveAccountsCurrent
+        //instance.cURVEFINANCEETHEREUMActiveAccountsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cURVEFINANCEETHEREUMDepositsCurrent', function() {
+      it('should call cURVEFINANCEETHEREUMDepositsCurrent successfully', function(done) {
+        //uncomment below and update the code to test cURVEFINANCEETHEREUMDepositsCurrent
+        //instance.cURVEFINANCEETHEREUMDepositsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cURVEFINANCEETHEREUMDexAmmProtocolsCurrent', function() {
+      it('should call cURVEFINANCEETHEREUMDexAmmProtocolsCurrent successfully', function(done) {
+        //uncomment below and update the code to test cURVEFINANCEETHEREUMDexAmmProtocolsCurrent
+        //instance.cURVEFINANCEETHEREUMDexAmmProtocolsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent', function() {
+      it('should call cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent
+        //instance.cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cURVEFINANCEETHEREUMLiquidityGaugesCurrent', function() {
+      it('should call cURVEFINANCEETHEREUMLiquidityGaugesCurrent successfully', function(done) {
+        //uncomment below and update the code to test cURVEFINANCEETHEREUMLiquidityGaugesCurrent
+        //instance.cURVEFINANCEETHEREUMLiquidityGaugesCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent', function() {
+      it('should call cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent
+        //instance.cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent', function() {
+      it('should call cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent successfully', function(done) {
+        //uncomment below and update the code to test cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent
+        //instance.cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent', function() {
+      it('should call cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent
+        //instance.cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('cURVEFINANCEETHEREUMLiquidityPoolsCurrent', function() {
       it('should call cURVEFINANCEETHEREUMLiquidityPoolsCurrent successfully', function(done) {
         //uncomment below and update the code to test cURVEFINANCEETHEREUMLiquidityPoolsCurrent
         //instance.cURVEFINANCEETHEREUMLiquidityPoolsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cURVEFINANCEETHEREUMLpTokensCurrent', function() {
+      it('should call cURVEFINANCEETHEREUMLpTokensCurrent successfully', function(done) {
+        //uncomment below and update the code to test cURVEFINANCEETHEREUMLpTokensCurrent
+        //instance.cURVEFINANCEETHEREUMLpTokensCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cURVEFINANCEETHEREUMRewardTokensCurrent', function() {
+      it('should call cURVEFINANCEETHEREUMRewardTokensCurrent successfully', function(done) {
+        //uncomment below and update the code to test cURVEFINANCEETHEREUMRewardTokensCurrent
+        //instance.cURVEFINANCEETHEREUMRewardTokensCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -72,6 +182,36 @@
       it('should call cURVEFINANCEETHEREUMTokensCurrent successfully', function(done) {
         //uncomment below and update the code to test cURVEFINANCEETHEREUMTokensCurrent
         //instance.cURVEFINANCEETHEREUMTokensCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent', function() {
+      it('should call cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent
+        //instance.cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent', function() {
+      it('should call cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent
+        //instance.cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cURVEFINANCEETHEREUMWithdrawsCurrent', function() {
+      it('should call cURVEFINANCEETHEREUMWithdrawsCurrent successfully', function(done) {
+        //uncomment below and update the code to test cURVEFINANCEETHEREUMWithdrawsCurrent
+        //instance.cURVEFINANCEETHEREUMWithdrawsCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

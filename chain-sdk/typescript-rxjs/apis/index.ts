@@ -1,4 +1,4 @@
-export * from './CRYPTOPUNKSApi';
+export * from './CRYPTOPUNKSETHEREUMApi';
 export * from './CURVEFINANCEETHEREUMApi';
 export * from './MetadataApi';
 export * from './PANCAKESWAPV3ETHEREUMApi';

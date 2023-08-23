@@ -165,7 +165,7 @@ p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots_(current)(Ctx, Optional) 
 
     Method = get,
     Path = [?BASE_URL, "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current"],
-    QS = lists:flatten([])++openapi_utils:optional_params(['pool'], _OptionalParams),
+    QS = [],
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),

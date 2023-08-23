@@ -194,9 +194,7 @@ public:
     /// <remarks>
     /// Gets tickDailySnapshots.
     /// </remarks>
-    /// <param name="pool">liquidity pool this tick belongs to (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickDailySnapshotDTO>>> uNISWAPV3ETHEREUM_TickDailySnapshots__current(
-        boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
     /// TickHourlySnapshots (current)
@@ -204,9 +202,7 @@ public:
     /// <remarks>
     /// Gets tickHourlySnapshots.
     /// </remarks>
-    /// <param name="pool">liquidity pool this tick belongs to (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickHourlySnapshotDTO>>> uNISWAPV3ETHEREUM_TickHourlySnapshots__current(
-        boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
     /// Ticks (current)
@@ -214,9 +210,7 @@ public:
     /// <remarks>
     /// Gets ticks.
     /// </remarks>
-    /// <param name="pool">Liquidity pool this tick belongs to (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickDTO>>> uNISWAPV3ETHEREUM_Ticks__current(
-        boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
     /// TokenWhiteListSymbols (current)

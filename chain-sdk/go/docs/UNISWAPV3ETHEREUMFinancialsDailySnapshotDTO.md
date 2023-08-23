@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
-**BlockNumber** | Pointer to **int32** | Block number of when this snapshot was taken/last modified.) | [optional] 
+**BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
 **Id** | Pointer to **NullableString** | ID is # of days since Unix epoch time. | [optional] 
 **Day** | Pointer to **int32** | Number of days since Unix epoch time. | [optional] 
 **Protocol** | Pointer to **NullableString** | Protocol this snapshot is associated with. | [optional] 
@@ -97,20 +97,20 @@ HasRecvTime returns a boolean if a field has been set.
 
 ### GetBlockNumber
 
-`func (o *UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO) GetBlockNumber() int32`
+`func (o *UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO) GetBlockNumber() int64`
 
 GetBlockNumber returns the BlockNumber field if non-nil, zero value otherwise.
 
 ### GetBlockNumberOk
 
-`func (o *UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO) GetBlockNumberOk() (*int32, bool)`
+`func (o *UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO) GetBlockNumberOk() (*int64, bool)`
 
 GetBlockNumberOk returns a tuple with the BlockNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBlockNumber
 
-`func (o *UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO) SetBlockNumber(v int32)`
+`func (o *UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO) SetBlockNumber(v int64)`
 
 SetBlockNumber sets BlockNumber field to given value.
 

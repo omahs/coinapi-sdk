@@ -56,14 +56,136 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
+        /// Test CURVEFINANCEETHEREUMAccountsCurrent
+        /// </summary>
+        [Fact]
+        public void CURVEFINANCEETHEREUMAccountsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMAccountsCurrent();
+            //Assert.IsType<List<CURVEFINANCEETHEREUMAccountDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMActiveAccountsCurrent
+        /// </summary>
+        [Fact]
+        public void CURVEFINANCEETHEREUMActiveAccountsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMActiveAccountsCurrent();
+            //Assert.IsType<List<CURVEFINANCEETHEREUMActiveAccountDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMDepositsCurrent
+        /// </summary>
+        [Fact]
+        public void CURVEFINANCEETHEREUMDepositsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMDepositsCurrent();
+            //Assert.IsType<List<CURVEFINANCEETHEREUMDepositDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMDexAmmProtocolsCurrent
+        /// </summary>
+        [Fact]
+        public void CURVEFINANCEETHEREUMDexAmmProtocolsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMDexAmmProtocolsCurrent();
+            //Assert.IsType<List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent();
+            //Assert.IsType<List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMLiquidityGaugesCurrent
+        /// </summary>
+        [Fact]
+        public void CURVEFINANCEETHEREUMLiquidityGaugesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMLiquidityGaugesCurrent();
+            //Assert.IsType<List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent();
+            //Assert.IsType<List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent
+        /// </summary>
+        [Fact]
+        public void CURVEFINANCEETHEREUMLiquidityPoolFeesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent();
+            //Assert.IsType<List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent();
+            //Assert.IsType<List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>>(response);
+        }
+
+        /// <summary>
         /// Test CURVEFINANCEETHEREUMLiquidityPoolsCurrent
         /// </summary>
         [Fact]
         public void CURVEFINANCEETHEREUMLiquidityPoolsCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.CURVEFINANCEETHEREUMLiquidityPoolsCurrent();
+            //string id = null;
+            //var response = instance.CURVEFINANCEETHEREUMLiquidityPoolsCurrent(id);
             //Assert.IsType<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMLpTokensCurrent
+        /// </summary>
+        [Fact]
+        public void CURVEFINANCEETHEREUMLpTokensCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMLpTokensCurrent();
+            //Assert.IsType<List<CURVEFINANCEETHEREUMLpTokenDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMRewardTokensCurrent
+        /// </summary>
+        [Fact]
+        public void CURVEFINANCEETHEREUMRewardTokensCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMRewardTokensCurrent();
+            //Assert.IsType<List<CURVEFINANCEETHEREUMRewardTokenDTO>>(response);
         }
 
         /// <summary>
@@ -84,8 +206,42 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         public void CURVEFINANCEETHEREUMTokensCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.CURVEFINANCEETHEREUMTokensCurrent();
+            //string id = null;
+            //var response = instance.CURVEFINANCEETHEREUMTokensCurrent(id);
             //Assert.IsType<List<CURVEFINANCEETHEREUMTokenDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent();
+            //Assert.IsType<List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent();
+            //Assert.IsType<List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CURVEFINANCEETHEREUMWithdrawsCurrent
+        /// </summary>
+        [Fact]
+        public void CURVEFINANCEETHEREUMWithdrawsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CURVEFINANCEETHEREUMWithdrawsCurrent();
+            //Assert.IsType<List<CURVEFINANCEETHEREUMWithdrawDTO>>(response);
         }
     }
 }

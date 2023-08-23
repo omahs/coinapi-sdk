@@ -29,8 +29,6 @@ public class PANCAKESWAPV3ETHEREUMPositionDTO {
   private Date recvTime = null;
   @SerializedName("block_number")
   private Long blockNumber = null;
-  @SerializedName("vid")
-  private Long vid = null;
   @SerializedName("id")
   private String id = null;
   @SerializedName("account")
@@ -105,17 +103,6 @@ public class PANCAKESWAPV3ETHEREUMPositionDTO {
   }
   public void setBlockNumber(Long blockNumber) {
     this.blockNumber = blockNumber;
-  }
-
-  /**
-   * 
-   **/
-  @ApiModelProperty(value = "")
-  public Long getVid() {
-    return vid;
-  }
-  public void setVid(Long vid) {
-    this.vid = vid;
   }
 
   /**
@@ -373,7 +360,6 @@ public class PANCAKESWAPV3ETHEREUMPositionDTO {
     return (this.entryTime == null ? pANCAKESWAPV3ETHEREUMPositionDTO.entryTime == null : this.entryTime.equals(pANCAKESWAPV3ETHEREUMPositionDTO.entryTime)) &&
         (this.recvTime == null ? pANCAKESWAPV3ETHEREUMPositionDTO.recvTime == null : this.recvTime.equals(pANCAKESWAPV3ETHEREUMPositionDTO.recvTime)) &&
         (this.blockNumber == null ? pANCAKESWAPV3ETHEREUMPositionDTO.blockNumber == null : this.blockNumber.equals(pANCAKESWAPV3ETHEREUMPositionDTO.blockNumber)) &&
-        (this.vid == null ? pANCAKESWAPV3ETHEREUMPositionDTO.vid == null : this.vid.equals(pANCAKESWAPV3ETHEREUMPositionDTO.vid)) &&
         (this.id == null ? pANCAKESWAPV3ETHEREUMPositionDTO.id == null : this.id.equals(pANCAKESWAPV3ETHEREUMPositionDTO.id)) &&
         (this.account == null ? pANCAKESWAPV3ETHEREUMPositionDTO.account == null : this.account.equals(pANCAKESWAPV3ETHEREUMPositionDTO.account)) &&
         (this.pool == null ? pANCAKESWAPV3ETHEREUMPositionDTO.pool == null : this.pool.equals(pANCAKESWAPV3ETHEREUMPositionDTO.pool)) &&
@@ -404,7 +390,6 @@ public class PANCAKESWAPV3ETHEREUMPositionDTO {
     result = 31 * result + (this.entryTime == null ? 0: this.entryTime.hashCode());
     result = 31 * result + (this.recvTime == null ? 0: this.recvTime.hashCode());
     result = 31 * result + (this.blockNumber == null ? 0: this.blockNumber.hashCode());
-    result = 31 * result + (this.vid == null ? 0: this.vid.hashCode());
     result = 31 * result + (this.id == null ? 0: this.id.hashCode());
     result = 31 * result + (this.account == null ? 0: this.account.hashCode());
     result = 31 * result + (this.pool == null ? 0: this.pool.hashCode());
@@ -438,7 +423,6 @@ public class PANCAKESWAPV3ETHEREUMPositionDTO {
     sb.append("  entryTime: ").append(entryTime).append("\n");
     sb.append("  recvTime: ").append(recvTime).append("\n");
     sb.append("  blockNumber: ").append(blockNumber).append("\n");
-    sb.append("  vid: ").append(vid).append("\n");
     sb.append("  id: ").append(id).append("\n");
     sb.append("  account: ").append(account).append("\n");
     sb.append("  pool: ").append(pool).append("\n");

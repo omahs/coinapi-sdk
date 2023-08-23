@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **entryTime** | **Date** |  | [optional] 
 **recvTime** | **Date** |  | [optional] 
 **blockNumber** | **Number** | Number of block in which entity was recorded. | [optional] 
-**vid** | **Number** |  | [optional] 
 **id** | **String** | (Smart contract address of the pool)-( # of hours since Unix epoch time) | [optional] 
 **hour** | **Number** | Number of hours since Unix epoch time | [optional] 
 **protocol** | **String** | The protocol this snapshot belongs to | [optional] 

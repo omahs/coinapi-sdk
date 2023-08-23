@@ -10,8 +10,8 @@ defmodule OnChainDapps-RESTAPI.Api.UNISWAPV2ETHEREUM do
   import OnChainDapps-RESTAPI.RequestBuilder
 
   @doc """
-  LiquidityPools (current)
-  Gets liquidityPools.
+  Accounts (current)
+  Gets accounts.
 
   ### Parameters
 
@@ -20,21 +20,468 @@ defmodule OnChainDapps-RESTAPI.Api.UNISWAPV2ETHEREUM do
 
   ### Returns
 
+  - `{:ok, [%UniswapV2EthereumAccountDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_accounts__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumAccountDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_accounts__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/accounts/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumAccountDto{}]}
+    ])
+  end
+
+  @doc """
+  ActiveAccounts (current)
+  Gets activeAccounts.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2EthereumActiveAccountDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_active_accounts__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumActiveAccountDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_active_accounts__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/activeAccounts/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumActiveAccountDto{}]}
+    ])
+  end
+
+  @doc """
+  Deposits (current)
+  Gets deposits.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2EthereumDepositDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_deposits__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumDepositDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_deposits__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/deposits/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumDepositDto{}]}
+    ])
+  end
+
+  @doc """
+  DexAmmProtocols (current)
+  Gets dexAmmProtocols.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2EthereumDexAmmProtocolDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_dex_amm_protocols__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumDexAmmProtocolDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_dex_amm_protocols__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/dexAmmProtocols/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumDexAmmProtocolDto{}]}
+    ])
+  end
+
+  @doc """
+  FinancialsDailySnapshots (current)
+  Gets financialsDailySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2EthereumFinancialsDailySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_financials_daily_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumFinancialsDailySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_financials_daily_snapshots__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/financialsDailySnapshots/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumFinancialsDailySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  LiquidityPoolAmounts (current)
+  Gets liquidityPoolAmounts.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:id` (String.t): Smart contract address of the pool
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2EthereumLiquidityPoolAmountDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_liquidity_pool_amounts__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumLiquidityPoolAmountDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_liquidity_pool_amounts__current(connection, opts \\ []) do
+    optional_params = %{
+      :id => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/liquidityPoolAmounts/current")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumLiquidityPoolAmountDto{}]}
+    ])
+  end
+
+  @doc """
+  LiquidityPoolDailySnapshots (current)
+  Gets liquidityPoolDailySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2EthereumLiquidityPoolDailySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumLiquidityPoolDailySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/liquidityPoolDailySnapshots/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumLiquidityPoolDailySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  LiquidityPoolFees (current)
+  Gets liquidityPoolFees.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2EthereumLiquidityPoolFeeDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_liquidity_pool_fees__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumLiquidityPoolFeeDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_liquidity_pool_fees__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/liquidityPoolFees/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumLiquidityPoolFeeDto{}]}
+    ])
+  end
+
+  @doc """
+  LiquidityPoolHourlySnapshots (current)
+  Gets liquidityPoolHourlySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2EthereumLiquidityPoolHourlySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumLiquidityPoolHourlySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/liquidityPoolHourlySnapshots/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumLiquidityPoolHourlySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  LiquidityPools (current)
+  Gets liquidityPools.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:id` (String.t): Smart contract address of the pool
+
+  ### Returns
+
   - `{:ok, [%UniswapV2EthereumLiquidityPoolDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec u_niswapv2_ethereum_liquidity_pools__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumLiquidityPoolDto.t)} | {:error, Tesla.Env.t}
-  def u_niswapv2_ethereum_liquidity_pools__current(connection, _opts \\ []) do
+  def u_niswapv2_ethereum_liquidity_pools__current(connection, opts \\ []) do
+    optional_params = %{
+      :id => :query
+    }
+
     request =
       %{}
       |> method(:get)
       |> url("/v1/dapps/uniswap-v2-ethereum/liquidityPools/current")
+      |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumLiquidityPoolDto{}]}
+    ])
+  end
+
+  @doc """
+  MasterChefAddressToPids (current)
+  Gets masterChefAddressToPids.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2EthereumMasterChefAddressToPidDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_master_chef_address_to_pids__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumMasterChefAddressToPidDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_master_chef_address_to_pids__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/masterChefAddressToPids/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumMasterChefAddressToPidDto{}]}
+    ])
+  end
+
+  @doc """
+  MasterChefRewarders (current)
+  Gets masterChefRewarders.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2EthereumMasterChefRewarderDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_master_chef_rewarders__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumMasterChefRewarderDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_master_chef_rewarders__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/masterChefRewarders/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumMasterChefRewarderDto{}]}
+    ])
+  end
+
+  @doc """
+  MasterChefStakingPools (current)
+  Gets masterChefStakingPools.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2EthereumMasterChefStakingPoolDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_master_chef_staking_pools__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumMasterChefStakingPoolDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_master_chef_staking_pools__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/masterChefStakingPools/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumMasterChefStakingPoolDto{}]}
+    ])
+  end
+
+  @doc """
+  MasterChefs (current)
+  Gets masterChefs.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2EthereumMasterChefDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_master_chefs__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumMasterChefDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_master_chefs__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/masterChefs/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumMasterChefDto{}]}
+    ])
+  end
+
+  @doc """
+  RewardTokens (current)
+  Gets rewardTokens.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2EthereumRewardTokenDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_reward_tokens__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumRewardTokenDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_reward_tokens__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/rewardTokens/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumRewardTokenDto{}]}
+    ])
+  end
+
+  @doc """
+  RewarderProbes (current)
+  Gets rewarderProbes.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2EthereumRewarderProbeDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_rewarder_probes__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumRewarderProbeDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_rewarder_probes__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/rewarderProbes/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumRewarderProbeDto{}]}
     ])
   end
 
@@ -68,6 +515,35 @@ defmodule OnChainDapps-RESTAPI.Api.UNISWAPV2ETHEREUM do
   end
 
   @doc """
+  TokenWhiteLists (current)
+  Gets tokenWhiteLists.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2EthereumTokenWhiteListDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_token_white_lists__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumTokenWhiteListDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_token_white_lists__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/tokenWhiteLists/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumTokenWhiteListDto{}]}
+    ])
+  end
+
+  @doc """
   Tokens (current)
   Gets tokens.
 
@@ -93,6 +569,122 @@ defmodule OnChainDapps-RESTAPI.Api.UNISWAPV2ETHEREUM do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumTokenDto{}]}
+    ])
+  end
+
+  @doc """
+  Transfers (current)
+  Gets transfers.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2EthereumTransferDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_transfers__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumTransferDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_transfers__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/transfers/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumTransferDto{}]}
+    ])
+  end
+
+  @doc """
+  UsageMetricsDailySnapshots (current)
+  Gets usageMetricsDailySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2EthereumUsageMetricsDailySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_usage_metrics_daily_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumUsageMetricsDailySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_usage_metrics_daily_snapshots__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/usageMetricsDailySnapshots/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumUsageMetricsDailySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  UsageMetricsHourlySnapshots (current)
+  Gets usageMetricsHourlySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2EthereumUsageMetricsHourlySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumUsageMetricsHourlySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/usageMetricsHourlySnapshots/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumUsageMetricsHourlySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  Withdraws (current)
+  Gets withdraws.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2EthereumWithdrawDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec u_niswapv2_ethereum_withdraws__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV2EthereumWithdrawDto.t)} | {:error, Tesla.Env.t}
+  def u_niswapv2_ethereum_withdraws__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/uniswap-v2-ethereum/withdraws/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.UniswapV2EthereumWithdrawDto{}]}
     ])
   end
 end

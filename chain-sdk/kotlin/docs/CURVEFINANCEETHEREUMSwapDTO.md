@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entryTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **recvTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
-**blockNumber** | **kotlin.String** | Block number of this event |  [optional]
+**blockNumber** | **kotlin.Long** | Number of block in which entity was recorded. |  [optional]
 **id** | **kotlin.String** | Swap-(transaction hash)-(log index) |  [optional]
 **hash** | **kotlin.String** | Transaction hash of the transaction that emitted this event |  [optional]
 **logIndex** | **kotlin.Int** | Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0 |  [optional]

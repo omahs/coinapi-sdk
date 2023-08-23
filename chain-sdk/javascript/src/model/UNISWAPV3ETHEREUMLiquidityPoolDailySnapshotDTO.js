@@ -57,9 +57,6 @@ class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO {
             if (data.hasOwnProperty('block_number')) {
                 obj['block_number'] = ApiClient.convertToType(data['block_number'], 'Number');
             }
-            if (data.hasOwnProperty('vid')) {
-                obj['vid'] = ApiClient.convertToType(data['vid'], 'Number');
-            }
             if (data.hasOwnProperty('block_')) {
                 obj['block_'] = ApiClient.convertToType(data['block_'], 'Number');
             }
@@ -351,12 +348,6 @@ UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.prototype['recv_time'] = undefine
  * @member {Number} block_number
  */
 UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.prototype['block_number'] = undefined;
-
-/**
- * .
- * @member {Number} vid
- */
-UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.prototype['vid'] = undefined;
 
 /**
  * The Ethereum block number associated with the liquidity pool daily snapshot.

@@ -1,0 +1,278 @@
+# UNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**EntryTime** | Pointer to **time.Time** |  | [optional] 
+**RecvTime** | Pointer to **time.Time** |  | [optional] 
+**BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
+**Vid** | Pointer to **int64** | . | [optional] 
+**BlockRange** | Pointer to **NullableString** | . | [optional] 
+**Id** | Pointer to **NullableString** | Smart contract address of the pool | [optional] 
+**InputTokens** | Pointer to **[]string** | Input tokens of the pool (not input tokens of the event/transaction). E.g. WETH and USDC from a WETH-USDC pool | [optional] 
+**InputTokenBalances** | Pointer to **[]string** | Amount of input tokens in the pool. The ordering is the same as the pool&#39;s &#39;inputTokens&#39; field. | [optional] 
+
+## Methods
+
+### NewUNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+
+`func NewUNISWAPV2ETHEREUMLiquidityPoolAmountDTO() *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO`
+
+NewUNISWAPV2ETHEREUMLiquidityPoolAmountDTO instantiates a new UNISWAPV2ETHEREUMLiquidityPoolAmountDTO object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewUNISWAPV2ETHEREUMLiquidityPoolAmountDTOWithDefaults
+
+`func NewUNISWAPV2ETHEREUMLiquidityPoolAmountDTOWithDefaults() *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO`
+
+NewUNISWAPV2ETHEREUMLiquidityPoolAmountDTOWithDefaults instantiates a new UNISWAPV2ETHEREUMLiquidityPoolAmountDTO object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
+
+### GetEntryTime
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) GetEntryTime() time.Time`
+
+GetEntryTime returns the EntryTime field if non-nil, zero value otherwise.
+
+### GetEntryTimeOk
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) GetEntryTimeOk() (*time.Time, bool)`
+
+GetEntryTimeOk returns a tuple with the EntryTime field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEntryTime
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) SetEntryTime(v time.Time)`
+
+SetEntryTime sets EntryTime field to given value.
+
+### HasEntryTime
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) HasEntryTime() bool`
+
+HasEntryTime returns a boolean if a field has been set.
+
+### GetRecvTime
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) GetRecvTime() time.Time`
+
+GetRecvTime returns the RecvTime field if non-nil, zero value otherwise.
+
+### GetRecvTimeOk
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) GetRecvTimeOk() (*time.Time, bool)`
+
+GetRecvTimeOk returns a tuple with the RecvTime field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecvTime
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) SetRecvTime(v time.Time)`
+
+SetRecvTime sets RecvTime field to given value.
+
+### HasRecvTime
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) HasRecvTime() bool`
+
+HasRecvTime returns a boolean if a field has been set.
+
+### GetBlockNumber
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) GetBlockNumber() int64`
+
+GetBlockNumber returns the BlockNumber field if non-nil, zero value otherwise.
+
+### GetBlockNumberOk
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) GetBlockNumberOk() (*int64, bool)`
+
+GetBlockNumberOk returns a tuple with the BlockNumber field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBlockNumber
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) SetBlockNumber(v int64)`
+
+SetBlockNumber sets BlockNumber field to given value.
+
+### HasBlockNumber
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) HasBlockNumber() bool`
+
+HasBlockNumber returns a boolean if a field has been set.
+
+### GetVid
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) GetVid() int64`
+
+GetVid returns the Vid field if non-nil, zero value otherwise.
+
+### GetVidOk
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) GetVidOk() (*int64, bool)`
+
+GetVidOk returns a tuple with the Vid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVid
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) SetVid(v int64)`
+
+SetVid sets Vid field to given value.
+
+### HasVid
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) HasVid() bool`
+
+HasVid returns a boolean if a field has been set.
+
+### GetBlockRange
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) GetBlockRange() string`
+
+GetBlockRange returns the BlockRange field if non-nil, zero value otherwise.
+
+### GetBlockRangeOk
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) GetBlockRangeOk() (*string, bool)`
+
+GetBlockRangeOk returns a tuple with the BlockRange field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBlockRange
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) SetBlockRange(v string)`
+
+SetBlockRange sets BlockRange field to given value.
+
+### HasBlockRange
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) HasBlockRange() bool`
+
+HasBlockRange returns a boolean if a field has been set.
+
+### SetBlockRangeNil
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) SetBlockRangeNil(b bool)`
+
+ SetBlockRangeNil sets the value for BlockRange to be an explicit nil
+
+### UnsetBlockRange
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) UnsetBlockRange()`
+
+UnsetBlockRange ensures that no value is present for BlockRange, not even an explicit nil
+### GetId
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
+### SetIdNil
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) SetIdNil(b bool)`
+
+ SetIdNil sets the value for Id to be an explicit nil
+
+### UnsetId
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) UnsetId()`
+
+UnsetId ensures that no value is present for Id, not even an explicit nil
+### GetInputTokens
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) GetInputTokens() []string`
+
+GetInputTokens returns the InputTokens field if non-nil, zero value otherwise.
+
+### GetInputTokensOk
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) GetInputTokensOk() (*[]string, bool)`
+
+GetInputTokensOk returns a tuple with the InputTokens field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetInputTokens
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) SetInputTokens(v []string)`
+
+SetInputTokens sets InputTokens field to given value.
+
+### HasInputTokens
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) HasInputTokens() bool`
+
+HasInputTokens returns a boolean if a field has been set.
+
+### SetInputTokensNil
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) SetInputTokensNil(b bool)`
+
+ SetInputTokensNil sets the value for InputTokens to be an explicit nil
+
+### UnsetInputTokens
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) UnsetInputTokens()`
+
+UnsetInputTokens ensures that no value is present for InputTokens, not even an explicit nil
+### GetInputTokenBalances
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) GetInputTokenBalances() []string`
+
+GetInputTokenBalances returns the InputTokenBalances field if non-nil, zero value otherwise.
+
+### GetInputTokenBalancesOk
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) GetInputTokenBalancesOk() (*[]string, bool)`
+
+GetInputTokenBalancesOk returns a tuple with the InputTokenBalances field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetInputTokenBalances
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) SetInputTokenBalances(v []string)`
+
+SetInputTokenBalances sets InputTokenBalances field to given value.
+
+### HasInputTokenBalances
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) HasInputTokenBalances() bool`
+
+HasInputTokenBalances returns a boolean if a field has been set.
+
+### SetInputTokenBalancesNil
+
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) SetInputTokenBalancesNil(b bool)`
+
+ SetInputTokenBalancesNil sets the value for InputTokenBalances to be an explicit nil
+
+### UnsetInputTokenBalances
+`func (o *UNISWAPV2ETHEREUMLiquidityPoolAmountDTO) UnsetInputTokenBalances()`
+
+UnsetInputTokenBalances ensures that no value is present for InputTokenBalances, not even an explicit nil
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

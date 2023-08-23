@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **entryTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **recvTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **blockNumber** | **kotlin.Long** | Number of block in which entity was recorded. |  [optional]
-**vid** | **kotlin.Long** |  |  [optional]
 **id** | **kotlin.String** | (pool address)-(tick index)-(hour ID) |  [optional]
 **hourId** | **kotlin.Int** | Number of hours since Unix epoch time |  [optional]
 **tick** | **kotlin.String** | tick index |  [optional]

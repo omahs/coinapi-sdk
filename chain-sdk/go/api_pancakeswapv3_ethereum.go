@@ -630,13 +630,6 @@ func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMLiquidityPoolAmou
 type ApiPANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest struct {
 	ctx context.Context
 	ApiService *PANCAKESWAPV3ETHEREUMApiService
-	pool *string
-}
-
-// Pool this snapshot belongs to.
-func (r ApiPANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest) Pool(pool string) ApiPANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest {
-	r.pool = &pool
-	return r
 }
 
 func (r ApiPANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest) Execute() ([]PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO, *http.Response, error) {
@@ -679,9 +672,6 @@ func (a *PANCAKESWAPV3ETHEREUMApiService) PANCAKESWAPV3ETHEREUMLiquidityPoolDail
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-	if r.pool != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "pool", r.pool, "")
-	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 

@@ -32,12 +32,134 @@ describe 'CURVEFINANCEETHEREUMApi' do
     end
   end
 
+  # unit tests for c_urvefinanceethereum_accounts__current
+  # Accounts (current)
+  # Gets accounts.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CURVEFINANCEETHEREUMAccountDTO>]
+  describe 'c_urvefinanceethereum_accounts__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for c_urvefinanceethereum_active_accounts__current
+  # ActiveAccounts (current)
+  # Gets activeAccounts.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CURVEFINANCEETHEREUMActiveAccountDTO>]
+  describe 'c_urvefinanceethereum_active_accounts__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for c_urvefinanceethereum_deposits__current
+  # Deposits (current)
+  # Gets deposits.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CURVEFINANCEETHEREUMDepositDTO>]
+  describe 'c_urvefinanceethereum_deposits__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for c_urvefinanceethereum_dex_amm_protocols__current
+  # DexAmmProtocols (current)
+  # Gets dexAmmProtocols.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CURVEFINANCEETHEREUMDexAmmProtocolDTO>]
+  describe 'c_urvefinanceethereum_dex_amm_protocols__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for c_urvefinanceethereum_financials_daily_snapshots__current
+  # FinancialsDailySnapshots (current)
+  # Gets financialsDailySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>]
+  describe 'c_urvefinanceethereum_financials_daily_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for c_urvefinanceethereum_liquidity_gauges__current
+  # LiquidityGauges (current)
+  # Gets liquidityGauges.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CURVEFINANCEETHEREUMLiquidityGaugeDTO>]
+  describe 'c_urvefinanceethereum_liquidity_gauges__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for c_urvefinanceethereum_liquidity_pool_daily_snapshots__current
+  # LiquidityPoolDailySnapshots (current)
+  # Gets liquidityPoolDailySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>]
+  describe 'c_urvefinanceethereum_liquidity_pool_daily_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for c_urvefinanceethereum_liquidity_pool_fees__current
+  # LiquidityPoolFees (current)
+  # Gets liquidityPoolFees.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>]
+  describe 'c_urvefinanceethereum_liquidity_pool_fees__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for c_urvefinanceethereum_liquidity_pool_hourly_snapshots__current
+  # LiquidityPoolHourlySnapshots (current)
+  # Gets liquidityPoolHourlySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>]
+  describe 'c_urvefinanceethereum_liquidity_pool_hourly_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
   # unit tests for c_urvefinanceethereum_liquidity_pools__current
   # LiquidityPools (current)
   # Gets liquidityPools.
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :id Smart contract address of the pool
   # @return [Array<CURVEFINANCEETHEREUMLiquidityPoolDTO>]
   describe 'c_urvefinanceethereum_liquidity_pools__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for c_urvefinanceethereum_lp_tokens__current
+  # LpTokens (current)
+  # Gets lpTokens.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CURVEFINANCEETHEREUMLpTokenDTO>]
+  describe 'c_urvefinanceethereum_lp_tokens__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for c_urvefinanceethereum_reward_tokens__current
+  # RewardTokens (current)
+  # Gets rewardTokens.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CURVEFINANCEETHEREUMRewardTokenDTO>]
+  describe 'c_urvefinanceethereum_reward_tokens__current test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
@@ -58,8 +180,42 @@ describe 'CURVEFINANCEETHEREUMApi' do
   # Tokens (current)
   # Gets tokens.
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :id Smart contract address of the token
   # @return [Array<CURVEFINANCEETHEREUMTokenDTO>]
   describe 'c_urvefinanceethereum_tokens__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for c_urvefinanceethereum_usage_metrics_daily_snapshots__current
+  # UsageMetricsDailySnapshots (current)
+  # Gets usageMetricsDailySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>]
+  describe 'c_urvefinanceethereum_usage_metrics_daily_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for c_urvefinanceethereum_usage_metrics_hourly_snapshots__current
+  # UsageMetricsHourlySnapshots (current)
+  # Gets usageMetricsHourlySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>]
+  describe 'c_urvefinanceethereum_usage_metrics_hourly_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for c_urvefinanceethereum_withdraws__current
+  # Withdraws (current)
+  # Gets withdraws.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CURVEFINANCEETHEREUMWithdrawDTO>]
+  describe 'c_urvefinanceethereum_withdraws__current test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end

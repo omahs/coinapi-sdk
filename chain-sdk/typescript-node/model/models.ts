@@ -9,9 +9,23 @@ export * from './cRYPTOPUNKSMarketPlaceDTO';
 export * from './cRYPTOPUNKSMarketplaceDailySnapshotDTO';
 export * from './cRYPTOPUNKSTradeDTO';
 export * from './cRYPTOPUNKSUserDTO';
+export * from './cURVEFINANCEETHEREUMAccountDTO';
+export * from './cURVEFINANCEETHEREUMActiveAccountDTO';
+export * from './cURVEFINANCEETHEREUMDepositDTO';
+export * from './cURVEFINANCEETHEREUMDexAmmProtocolDTO';
+export * from './cURVEFINANCEETHEREUMFinancialsDailySnapshotDTO';
+export * from './cURVEFINANCEETHEREUMLiquidityGaugeDTO';
 export * from './cURVEFINANCEETHEREUMLiquidityPoolDTO';
+export * from './cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO';
+export * from './cURVEFINANCEETHEREUMLiquidityPoolFeeDTO';
+export * from './cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO';
+export * from './cURVEFINANCEETHEREUMLpTokenDTO';
+export * from './cURVEFINANCEETHEREUMRewardTokenDTO';
 export * from './cURVEFINANCEETHEREUMSwapDTO';
 export * from './cURVEFINANCEETHEREUMTokenDTO';
+export * from './cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO';
+export * from './cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO';
+export * from './cURVEFINANCEETHEREUMWithdrawDTO';
 export * from './pANCAKESWAPV3ETHEREUMAccountDTO';
 export * from './pANCAKESWAPV3ETHEREUMActiveAccountDTO';
 export * from './pANCAKESWAPV3ETHEREUMDepositDTO';
@@ -35,13 +49,53 @@ export * from './pANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO';
 export * from './pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO';
 export * from './pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO';
 export * from './pANCAKESWAPV3ETHEREUMWithdrawDTO';
+export * from './sUSHISWAPV3ETHEREUMAccountDTO';
+export * from './sUSHISWAPV3ETHEREUMActiveAccountDTO';
+export * from './sUSHISWAPV3ETHEREUMDepositDTO';
+export * from './sUSHISWAPV3ETHEREUMDexAmmProtocolDTO';
+export * from './sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO';
+export * from './sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO';
 export * from './sUSHISWAPV3ETHEREUMLiquidityPoolDTO';
+export * from './sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO';
+export * from './sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO';
+export * from './sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO';
+export * from './sUSHISWAPV3ETHEREUMPositionDTO';
+export * from './sUSHISWAPV3ETHEREUMPositionSnapshotDTO';
+export * from './sUSHISWAPV3ETHEREUMRewardTokenDTO';
 export * from './sUSHISWAPV3ETHEREUMSwapDTO';
+export * from './sUSHISWAPV3ETHEREUMTickDTO';
+export * from './sUSHISWAPV3ETHEREUMTickDailySnapshotDTO';
+export * from './sUSHISWAPV3ETHEREUMTickHourlySnapshotDTO';
 export * from './sUSHISWAPV3ETHEREUMTokenDTO';
+export * from './sUSHISWAPV3ETHEREUMTokenWhiteListDTO';
+export * from './sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO';
+export * from './sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO';
+export * from './sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO';
+export * from './sUSHISWAPV3ETHEREUMWithdrawDTO';
 export * from './transactionsETradeAggressiveSide';
+export * from './uNISWAPV2ETHEREUMAccountDTO';
+export * from './uNISWAPV2ETHEREUMActiveAccountDTO';
+export * from './uNISWAPV2ETHEREUMDepositDTO';
+export * from './uNISWAPV2ETHEREUMDexAmmProtocolDTO';
+export * from './uNISWAPV2ETHEREUMFinancialsDailySnapshotDTO';
+export * from './uNISWAPV2ETHEREUMLiquidityPoolAmountDTO';
 export * from './uNISWAPV2ETHEREUMLiquidityPoolDTO';
+export * from './uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO';
+export * from './uNISWAPV2ETHEREUMLiquidityPoolFeeDTO';
+export * from './uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO';
+export * from './uNISWAPV2ETHEREUMMasterChefAddressToPidDTO';
+export * from './uNISWAPV2ETHEREUMMasterChefDTO';
+export * from './uNISWAPV2ETHEREUMMasterChefRewarderDTO';
+export * from './uNISWAPV2ETHEREUMMasterChefStakingPoolDTO';
+export * from './uNISWAPV2ETHEREUMRewardTokenDTO';
+export * from './uNISWAPV2ETHEREUMRewarderProbeDTO';
 export * from './uNISWAPV2ETHEREUMSwapDTO';
 export * from './uNISWAPV2ETHEREUMTokenDTO';
+export * from './uNISWAPV2ETHEREUMTokenWhiteListDTO';
+export * from './uNISWAPV2ETHEREUMTransferDTO';
+export * from './uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO';
+export * from './uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO';
+export * from './uNISWAPV2ETHEREUMWithdrawDTO';
 export * from './uNISWAPV3ETHEREUMAccountDTO';
 export * from './uNISWAPV3ETHEREUMActiveAccountDTO';
 export * from './uNISWAPV3ETHEREUMDepositDTO';
@@ -88,9 +142,23 @@ import { CRYPTOPUNKSMarketPlaceDTO } from './cRYPTOPUNKSMarketPlaceDTO';
 import { CRYPTOPUNKSMarketplaceDailySnapshotDTO } from './cRYPTOPUNKSMarketplaceDailySnapshotDTO';
 import { CRYPTOPUNKSTradeDTO } from './cRYPTOPUNKSTradeDTO';
 import { CRYPTOPUNKSUserDTO } from './cRYPTOPUNKSUserDTO';
+import { CURVEFINANCEETHEREUMAccountDTO } from './cURVEFINANCEETHEREUMAccountDTO';
+import { CURVEFINANCEETHEREUMActiveAccountDTO } from './cURVEFINANCEETHEREUMActiveAccountDTO';
+import { CURVEFINANCEETHEREUMDepositDTO } from './cURVEFINANCEETHEREUMDepositDTO';
+import { CURVEFINANCEETHEREUMDexAmmProtocolDTO } from './cURVEFINANCEETHEREUMDexAmmProtocolDTO';
+import { CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO } from './cURVEFINANCEETHEREUMFinancialsDailySnapshotDTO';
+import { CURVEFINANCEETHEREUMLiquidityGaugeDTO } from './cURVEFINANCEETHEREUMLiquidityGaugeDTO';
 import { CURVEFINANCEETHEREUMLiquidityPoolDTO } from './cURVEFINANCEETHEREUMLiquidityPoolDTO';
+import { CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO } from './cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO';
+import { CURVEFINANCEETHEREUMLiquidityPoolFeeDTO } from './cURVEFINANCEETHEREUMLiquidityPoolFeeDTO';
+import { CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO } from './cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO';
+import { CURVEFINANCEETHEREUMLpTokenDTO } from './cURVEFINANCEETHEREUMLpTokenDTO';
+import { CURVEFINANCEETHEREUMRewardTokenDTO } from './cURVEFINANCEETHEREUMRewardTokenDTO';
 import { CURVEFINANCEETHEREUMSwapDTO } from './cURVEFINANCEETHEREUMSwapDTO';
 import { CURVEFINANCEETHEREUMTokenDTO } from './cURVEFINANCEETHEREUMTokenDTO';
+import { CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO } from './cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO';
+import { CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO } from './cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO';
+import { CURVEFINANCEETHEREUMWithdrawDTO } from './cURVEFINANCEETHEREUMWithdrawDTO';
 import { PANCAKESWAPV3ETHEREUMAccountDTO } from './pANCAKESWAPV3ETHEREUMAccountDTO';
 import { PANCAKESWAPV3ETHEREUMActiveAccountDTO } from './pANCAKESWAPV3ETHEREUMActiveAccountDTO';
 import { PANCAKESWAPV3ETHEREUMDepositDTO } from './pANCAKESWAPV3ETHEREUMDepositDTO';
@@ -114,13 +182,53 @@ import { PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO } from './pANCAKESWAPV3ETH
 import { PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO } from './pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO';
 import { PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO } from './pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO';
 import { PANCAKESWAPV3ETHEREUMWithdrawDTO } from './pANCAKESWAPV3ETHEREUMWithdrawDTO';
+import { SUSHISWAPV3ETHEREUMAccountDTO } from './sUSHISWAPV3ETHEREUMAccountDTO';
+import { SUSHISWAPV3ETHEREUMActiveAccountDTO } from './sUSHISWAPV3ETHEREUMActiveAccountDTO';
+import { SUSHISWAPV3ETHEREUMDepositDTO } from './sUSHISWAPV3ETHEREUMDepositDTO';
+import { SUSHISWAPV3ETHEREUMDexAmmProtocolDTO } from './sUSHISWAPV3ETHEREUMDexAmmProtocolDTO';
+import { SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO } from './sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO';
+import { SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO } from './sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO';
 import { SUSHISWAPV3ETHEREUMLiquidityPoolDTO } from './sUSHISWAPV3ETHEREUMLiquidityPoolDTO';
+import { SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO } from './sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO';
+import { SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO } from './sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO';
+import { SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO } from './sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO';
+import { SUSHISWAPV3ETHEREUMPositionDTO } from './sUSHISWAPV3ETHEREUMPositionDTO';
+import { SUSHISWAPV3ETHEREUMPositionSnapshotDTO } from './sUSHISWAPV3ETHEREUMPositionSnapshotDTO';
+import { SUSHISWAPV3ETHEREUMRewardTokenDTO } from './sUSHISWAPV3ETHEREUMRewardTokenDTO';
 import { SUSHISWAPV3ETHEREUMSwapDTO } from './sUSHISWAPV3ETHEREUMSwapDTO';
+import { SUSHISWAPV3ETHEREUMTickDTO } from './sUSHISWAPV3ETHEREUMTickDTO';
+import { SUSHISWAPV3ETHEREUMTickDailySnapshotDTO } from './sUSHISWAPV3ETHEREUMTickDailySnapshotDTO';
+import { SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO } from './sUSHISWAPV3ETHEREUMTickHourlySnapshotDTO';
 import { SUSHISWAPV3ETHEREUMTokenDTO } from './sUSHISWAPV3ETHEREUMTokenDTO';
+import { SUSHISWAPV3ETHEREUMTokenWhiteListDTO } from './sUSHISWAPV3ETHEREUMTokenWhiteListDTO';
+import { SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO } from './sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO';
+import { SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO } from './sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO';
+import { SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO } from './sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO';
+import { SUSHISWAPV3ETHEREUMWithdrawDTO } from './sUSHISWAPV3ETHEREUMWithdrawDTO';
 import { TransactionsETradeAggressiveSide } from './transactionsETradeAggressiveSide';
+import { UNISWAPV2ETHEREUMAccountDTO } from './uNISWAPV2ETHEREUMAccountDTO';
+import { UNISWAPV2ETHEREUMActiveAccountDTO } from './uNISWAPV2ETHEREUMActiveAccountDTO';
+import { UNISWAPV2ETHEREUMDepositDTO } from './uNISWAPV2ETHEREUMDepositDTO';
+import { UNISWAPV2ETHEREUMDexAmmProtocolDTO } from './uNISWAPV2ETHEREUMDexAmmProtocolDTO';
+import { UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO } from './uNISWAPV2ETHEREUMFinancialsDailySnapshotDTO';
+import { UNISWAPV2ETHEREUMLiquidityPoolAmountDTO } from './uNISWAPV2ETHEREUMLiquidityPoolAmountDTO';
 import { UNISWAPV2ETHEREUMLiquidityPoolDTO } from './uNISWAPV2ETHEREUMLiquidityPoolDTO';
+import { UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO } from './uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO';
+import { UNISWAPV2ETHEREUMLiquidityPoolFeeDTO } from './uNISWAPV2ETHEREUMLiquidityPoolFeeDTO';
+import { UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO } from './uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO';
+import { UNISWAPV2ETHEREUMMasterChefAddressToPidDTO } from './uNISWAPV2ETHEREUMMasterChefAddressToPidDTO';
+import { UNISWAPV2ETHEREUMMasterChefDTO } from './uNISWAPV2ETHEREUMMasterChefDTO';
+import { UNISWAPV2ETHEREUMMasterChefRewarderDTO } from './uNISWAPV2ETHEREUMMasterChefRewarderDTO';
+import { UNISWAPV2ETHEREUMMasterChefStakingPoolDTO } from './uNISWAPV2ETHEREUMMasterChefStakingPoolDTO';
+import { UNISWAPV2ETHEREUMRewardTokenDTO } from './uNISWAPV2ETHEREUMRewardTokenDTO';
+import { UNISWAPV2ETHEREUMRewarderProbeDTO } from './uNISWAPV2ETHEREUMRewarderProbeDTO';
 import { UNISWAPV2ETHEREUMSwapDTO } from './uNISWAPV2ETHEREUMSwapDTO';
 import { UNISWAPV2ETHEREUMTokenDTO } from './uNISWAPV2ETHEREUMTokenDTO';
+import { UNISWAPV2ETHEREUMTokenWhiteListDTO } from './uNISWAPV2ETHEREUMTokenWhiteListDTO';
+import { UNISWAPV2ETHEREUMTransferDTO } from './uNISWAPV2ETHEREUMTransferDTO';
+import { UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO } from './uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO';
+import { UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO } from './uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO';
+import { UNISWAPV2ETHEREUMWithdrawDTO } from './uNISWAPV2ETHEREUMWithdrawDTO';
 import { UNISWAPV3ETHEREUMAccountDTO } from './uNISWAPV3ETHEREUMAccountDTO';
 import { UNISWAPV3ETHEREUMActiveAccountDTO } from './uNISWAPV3ETHEREUMActiveAccountDTO';
 import { UNISWAPV3ETHEREUMDepositDTO } from './uNISWAPV3ETHEREUMDepositDTO';
@@ -171,9 +279,23 @@ let typeMap: {[index: string]: any} = {
     "CRYPTOPUNKSMarketplaceDailySnapshotDTO": CRYPTOPUNKSMarketplaceDailySnapshotDTO,
     "CRYPTOPUNKSTradeDTO": CRYPTOPUNKSTradeDTO,
     "CRYPTOPUNKSUserDTO": CRYPTOPUNKSUserDTO,
+    "CURVEFINANCEETHEREUMAccountDTO": CURVEFINANCEETHEREUMAccountDTO,
+    "CURVEFINANCEETHEREUMActiveAccountDTO": CURVEFINANCEETHEREUMActiveAccountDTO,
+    "CURVEFINANCEETHEREUMDepositDTO": CURVEFINANCEETHEREUMDepositDTO,
+    "CURVEFINANCEETHEREUMDexAmmProtocolDTO": CURVEFINANCEETHEREUMDexAmmProtocolDTO,
+    "CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO": CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO,
+    "CURVEFINANCEETHEREUMLiquidityGaugeDTO": CURVEFINANCEETHEREUMLiquidityGaugeDTO,
     "CURVEFINANCEETHEREUMLiquidityPoolDTO": CURVEFINANCEETHEREUMLiquidityPoolDTO,
+    "CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO": CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO,
+    "CURVEFINANCEETHEREUMLiquidityPoolFeeDTO": CURVEFINANCEETHEREUMLiquidityPoolFeeDTO,
+    "CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO": CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO,
+    "CURVEFINANCEETHEREUMLpTokenDTO": CURVEFINANCEETHEREUMLpTokenDTO,
+    "CURVEFINANCEETHEREUMRewardTokenDTO": CURVEFINANCEETHEREUMRewardTokenDTO,
     "CURVEFINANCEETHEREUMSwapDTO": CURVEFINANCEETHEREUMSwapDTO,
     "CURVEFINANCEETHEREUMTokenDTO": CURVEFINANCEETHEREUMTokenDTO,
+    "CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO": CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO,
+    "CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO": CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO,
+    "CURVEFINANCEETHEREUMWithdrawDTO": CURVEFINANCEETHEREUMWithdrawDTO,
     "PANCAKESWAPV3ETHEREUMAccountDTO": PANCAKESWAPV3ETHEREUMAccountDTO,
     "PANCAKESWAPV3ETHEREUMActiveAccountDTO": PANCAKESWAPV3ETHEREUMActiveAccountDTO,
     "PANCAKESWAPV3ETHEREUMDepositDTO": PANCAKESWAPV3ETHEREUMDepositDTO,
@@ -197,12 +319,52 @@ let typeMap: {[index: string]: any} = {
     "PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO": PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO,
     "PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO": PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO,
     "PANCAKESWAPV3ETHEREUMWithdrawDTO": PANCAKESWAPV3ETHEREUMWithdrawDTO,
+    "SUSHISWAPV3ETHEREUMAccountDTO": SUSHISWAPV3ETHEREUMAccountDTO,
+    "SUSHISWAPV3ETHEREUMActiveAccountDTO": SUSHISWAPV3ETHEREUMActiveAccountDTO,
+    "SUSHISWAPV3ETHEREUMDepositDTO": SUSHISWAPV3ETHEREUMDepositDTO,
+    "SUSHISWAPV3ETHEREUMDexAmmProtocolDTO": SUSHISWAPV3ETHEREUMDexAmmProtocolDTO,
+    "SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO": SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO,
+    "SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO": SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO,
     "SUSHISWAPV3ETHEREUMLiquidityPoolDTO": SUSHISWAPV3ETHEREUMLiquidityPoolDTO,
+    "SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO": SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO,
+    "SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO": SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO,
+    "SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO": SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO,
+    "SUSHISWAPV3ETHEREUMPositionDTO": SUSHISWAPV3ETHEREUMPositionDTO,
+    "SUSHISWAPV3ETHEREUMPositionSnapshotDTO": SUSHISWAPV3ETHEREUMPositionSnapshotDTO,
+    "SUSHISWAPV3ETHEREUMRewardTokenDTO": SUSHISWAPV3ETHEREUMRewardTokenDTO,
     "SUSHISWAPV3ETHEREUMSwapDTO": SUSHISWAPV3ETHEREUMSwapDTO,
+    "SUSHISWAPV3ETHEREUMTickDTO": SUSHISWAPV3ETHEREUMTickDTO,
+    "SUSHISWAPV3ETHEREUMTickDailySnapshotDTO": SUSHISWAPV3ETHEREUMTickDailySnapshotDTO,
+    "SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO": SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO,
     "SUSHISWAPV3ETHEREUMTokenDTO": SUSHISWAPV3ETHEREUMTokenDTO,
+    "SUSHISWAPV3ETHEREUMTokenWhiteListDTO": SUSHISWAPV3ETHEREUMTokenWhiteListDTO,
+    "SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO": SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO,
+    "SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO": SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO,
+    "SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO": SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO,
+    "SUSHISWAPV3ETHEREUMWithdrawDTO": SUSHISWAPV3ETHEREUMWithdrawDTO,
+    "UNISWAPV2ETHEREUMAccountDTO": UNISWAPV2ETHEREUMAccountDTO,
+    "UNISWAPV2ETHEREUMActiveAccountDTO": UNISWAPV2ETHEREUMActiveAccountDTO,
+    "UNISWAPV2ETHEREUMDepositDTO": UNISWAPV2ETHEREUMDepositDTO,
+    "UNISWAPV2ETHEREUMDexAmmProtocolDTO": UNISWAPV2ETHEREUMDexAmmProtocolDTO,
+    "UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO": UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO,
+    "UNISWAPV2ETHEREUMLiquidityPoolAmountDTO": UNISWAPV2ETHEREUMLiquidityPoolAmountDTO,
     "UNISWAPV2ETHEREUMLiquidityPoolDTO": UNISWAPV2ETHEREUMLiquidityPoolDTO,
+    "UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO": UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO,
+    "UNISWAPV2ETHEREUMLiquidityPoolFeeDTO": UNISWAPV2ETHEREUMLiquidityPoolFeeDTO,
+    "UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO": UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO,
+    "UNISWAPV2ETHEREUMMasterChefAddressToPidDTO": UNISWAPV2ETHEREUMMasterChefAddressToPidDTO,
+    "UNISWAPV2ETHEREUMMasterChefDTO": UNISWAPV2ETHEREUMMasterChefDTO,
+    "UNISWAPV2ETHEREUMMasterChefRewarderDTO": UNISWAPV2ETHEREUMMasterChefRewarderDTO,
+    "UNISWAPV2ETHEREUMMasterChefStakingPoolDTO": UNISWAPV2ETHEREUMMasterChefStakingPoolDTO,
+    "UNISWAPV2ETHEREUMRewardTokenDTO": UNISWAPV2ETHEREUMRewardTokenDTO,
+    "UNISWAPV2ETHEREUMRewarderProbeDTO": UNISWAPV2ETHEREUMRewarderProbeDTO,
     "UNISWAPV2ETHEREUMSwapDTO": UNISWAPV2ETHEREUMSwapDTO,
     "UNISWAPV2ETHEREUMTokenDTO": UNISWAPV2ETHEREUMTokenDTO,
+    "UNISWAPV2ETHEREUMTokenWhiteListDTO": UNISWAPV2ETHEREUMTokenWhiteListDTO,
+    "UNISWAPV2ETHEREUMTransferDTO": UNISWAPV2ETHEREUMTransferDTO,
+    "UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO": UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO,
+    "UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO": UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO,
+    "UNISWAPV2ETHEREUMWithdrawDTO": UNISWAPV2ETHEREUMWithdrawDTO,
     "UNISWAPV3ETHEREUMAccountDTO": UNISWAPV3ETHEREUMAccountDTO,
     "UNISWAPV3ETHEREUMActiveAccountDTO": UNISWAPV3ETHEREUMActiveAccountDTO,
     "UNISWAPV3ETHEREUMDepositDTO": UNISWAPV3ETHEREUMDepositDTO,

@@ -494,20 +494,13 @@ export class PANCAKESWAPV3ETHEREUMService {
     /**
      * LiquidityPoolDailySnapshots (current)
      * Gets liquidityPoolDailySnapshots.
-     * @param pool Pool this snapshot belongs to.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>;
-    public pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>>;
-    public pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>>;
-    public pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (pool !== undefined && pool !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>pool, 'pool');
-        }
+    public pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>;
+    public pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>>;
+    public pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>>;
+    public pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -547,7 +540,6 @@ export class PANCAKESWAPV3ETHEREUMService {
         return this.httpClient.request<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
-                params: localVarQueryParameters,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,

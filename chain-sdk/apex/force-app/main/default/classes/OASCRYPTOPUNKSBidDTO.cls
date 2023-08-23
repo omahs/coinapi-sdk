@@ -27,10 +27,10 @@ public class OASCRYPTOPUNKSBidDTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
-    public String blockNumber { get; set; }
+    public Long blockNumber { get; set; }
 
     /**
      * 
@@ -156,7 +156,7 @@ public class OASCRYPTOPUNKSBidDTO implements OAS.MappedProperties {
         OASCRYPTOPUNKSBidDTO crYPTOPUNKSBidDTO = new OASCRYPTOPUNKSBidDTO();
           crYPTOPUNKSBidDTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           crYPTOPUNKSBidDTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
-          crYPTOPUNKSBidDTO.blockNumber = '';
+          crYPTOPUNKSBidDTO.blockNumber = 123456789L;
           crYPTOPUNKSBidDTO.vid = 123456789L;
           crYPTOPUNKSBidDTO.blockRange = '';
           crYPTOPUNKSBidDTO.id = '';

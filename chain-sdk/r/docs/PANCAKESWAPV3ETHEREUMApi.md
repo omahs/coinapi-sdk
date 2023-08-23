@@ -287,7 +287,7 @@ No authorization required
 | **200** | successful operation |  -  |
 
 # **PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**
-> array[PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO] PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool = var.pool)
+> array[PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO] PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent()
 
 LiquidityPoolDailySnapshots (current)
 
@@ -299,21 +299,16 @@ library(openapi)
 
 # LiquidityPoolDailySnapshots (current)
 #
-# prepare function argument(s)
-var_pool <- "pool_example" # character | Pool this snapshot belongs to. (Optional)
 
 api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool = var_pooldata_file = "result.txt")
-result <- api_instance$PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool = var_pool)
+# result <- api_instance$PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(data_file = "result.txt")
+result <- api_instance$PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent()
 dput(result)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **character**| Pool this snapshot belongs to. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 

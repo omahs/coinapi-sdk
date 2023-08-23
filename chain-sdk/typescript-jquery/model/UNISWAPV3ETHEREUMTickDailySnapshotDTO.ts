@@ -26,11 +26,6 @@ export interface UNISWAPV3ETHEREUMTickDailySnapshotDTO {
     block_number?: number;
 
     /**
-     * 
-     */
-    vid?: number;
-
-    /**
      * Identifier, format: (pool address)-(tick index)-(day ID)
      */
     id?: string;

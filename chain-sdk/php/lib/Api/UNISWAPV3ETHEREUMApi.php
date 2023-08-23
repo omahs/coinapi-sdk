@@ -3951,16 +3951,15 @@ class UNISWAPV3ETHEREUMApi
      *
      * TickDailySnapshots (current)
      *
-     * @param  string $pool liquidity pool this tick belongs to (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uNISWAPV3ETHEREUMTickDailySnapshotsCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UNISWAPV3ETHEREUMTickDailySnapshotDTO[]
      */
-    public function uNISWAPV3ETHEREUMTickDailySnapshotsCurrent($pool = null, string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickDailySnapshotsCurrent'][0])
+    public function uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickDailySnapshotsCurrent'][0])
     {
-        list($response) = $this->uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo($pool, $contentType);
+        list($response) = $this->uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo($contentType);
         return $response;
     }
 
@@ -3969,16 +3968,15 @@ class UNISWAPV3ETHEREUMApi
      *
      * TickDailySnapshots (current)
      *
-     * @param  string $pool liquidity pool this tick belongs to (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uNISWAPV3ETHEREUMTickDailySnapshotsCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UNISWAPV3ETHEREUMTickDailySnapshotDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo($pool = null, string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickDailySnapshotsCurrent'][0])
+    public function uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo(string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickDailySnapshotsCurrent'][0])
     {
-        $request = $this->uNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest($pool, $contentType);
+        $request = $this->uNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest($contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4069,15 +4067,14 @@ class UNISWAPV3ETHEREUMApi
      *
      * TickDailySnapshots (current)
      *
-     * @param  string $pool liquidity pool this tick belongs to (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uNISWAPV3ETHEREUMTickDailySnapshotsCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uNISWAPV3ETHEREUMTickDailySnapshotsCurrentAsync($pool = null, string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickDailySnapshotsCurrent'][0])
+    public function uNISWAPV3ETHEREUMTickDailySnapshotsCurrentAsync(string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickDailySnapshotsCurrent'][0])
     {
-        return $this->uNISWAPV3ETHEREUMTickDailySnapshotsCurrentAsyncWithHttpInfo($pool, $contentType)
+        return $this->uNISWAPV3ETHEREUMTickDailySnapshotsCurrentAsyncWithHttpInfo($contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4090,16 +4087,15 @@ class UNISWAPV3ETHEREUMApi
      *
      * TickDailySnapshots (current)
      *
-     * @param  string $pool liquidity pool this tick belongs to (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uNISWAPV3ETHEREUMTickDailySnapshotsCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uNISWAPV3ETHEREUMTickDailySnapshotsCurrentAsyncWithHttpInfo($pool = null, string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickDailySnapshotsCurrent'][0])
+    public function uNISWAPV3ETHEREUMTickDailySnapshotsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickDailySnapshotsCurrent'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UNISWAPV3ETHEREUMTickDailySnapshotDTO[]';
-        $request = $this->uNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest($pool, $contentType);
+        $request = $this->uNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest($contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4140,15 +4136,13 @@ class UNISWAPV3ETHEREUMApi
     /**
      * Create request for operation 'uNISWAPV3ETHEREUMTickDailySnapshotsCurrent'
      *
-     * @param  string $pool liquidity pool this tick belongs to (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uNISWAPV3ETHEREUMTickDailySnapshotsCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest($pool = null, string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickDailySnapshotsCurrent'][0])
+    public function uNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest(string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickDailySnapshotsCurrent'][0])
     {
-
 
 
         $resourcePath = '/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current';
@@ -4158,15 +4152,6 @@ class UNISWAPV3ETHEREUMApi
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $pool,
-            'pool', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
 
 
 
@@ -4229,16 +4214,15 @@ class UNISWAPV3ETHEREUMApi
      *
      * TickHourlySnapshots (current)
      *
-     * @param  string $pool liquidity pool this tick belongs to (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UNISWAPV3ETHEREUMTickHourlySnapshotDTO[]
      */
-    public function uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent($pool = null, string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent'][0])
+    public function uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent'][0])
     {
-        list($response) = $this->uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo($pool, $contentType);
+        list($response) = $this->uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo($contentType);
         return $response;
     }
 
@@ -4247,16 +4231,15 @@ class UNISWAPV3ETHEREUMApi
      *
      * TickHourlySnapshots (current)
      *
-     * @param  string $pool liquidity pool this tick belongs to (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UNISWAPV3ETHEREUMTickHourlySnapshotDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo($pool = null, string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent'][0])
+    public function uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent'][0])
     {
-        $request = $this->uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest($pool, $contentType);
+        $request = $this->uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest($contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4347,15 +4330,14 @@ class UNISWAPV3ETHEREUMApi
      *
      * TickHourlySnapshots (current)
      *
-     * @param  string $pool liquidity pool this tick belongs to (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentAsync($pool = null, string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent'][0])
+    public function uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentAsync(string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent'][0])
     {
-        return $this->uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentAsyncWithHttpInfo($pool, $contentType)
+        return $this->uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentAsyncWithHttpInfo($contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4368,16 +4350,15 @@ class UNISWAPV3ETHEREUMApi
      *
      * TickHourlySnapshots (current)
      *
-     * @param  string $pool liquidity pool this tick belongs to (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentAsyncWithHttpInfo($pool = null, string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent'][0])
+    public function uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UNISWAPV3ETHEREUMTickHourlySnapshotDTO[]';
-        $request = $this->uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest($pool, $contentType);
+        $request = $this->uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest($contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4418,15 +4399,13 @@ class UNISWAPV3ETHEREUMApi
     /**
      * Create request for operation 'uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent'
      *
-     * @param  string $pool liquidity pool this tick belongs to (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest($pool = null, string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent'][0])
+    public function uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest(string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent'][0])
     {
-
 
 
         $resourcePath = '/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current';
@@ -4436,15 +4415,6 @@ class UNISWAPV3ETHEREUMApi
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $pool,
-            'pool', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
 
 
 
@@ -4507,16 +4477,15 @@ class UNISWAPV3ETHEREUMApi
      *
      * Ticks (current)
      *
-     * @param  string $pool Liquidity pool this tick belongs to (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uNISWAPV3ETHEREUMTicksCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UNISWAPV3ETHEREUMTickDTO[]
      */
-    public function uNISWAPV3ETHEREUMTicksCurrent($pool = null, string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTicksCurrent'][0])
+    public function uNISWAPV3ETHEREUMTicksCurrent(string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTicksCurrent'][0])
     {
-        list($response) = $this->uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo($pool, $contentType);
+        list($response) = $this->uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo($contentType);
         return $response;
     }
 
@@ -4525,16 +4494,15 @@ class UNISWAPV3ETHEREUMApi
      *
      * Ticks (current)
      *
-     * @param  string $pool Liquidity pool this tick belongs to (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uNISWAPV3ETHEREUMTicksCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UNISWAPV3ETHEREUMTickDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo($pool = null, string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTicksCurrent'][0])
+    public function uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo(string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTicksCurrent'][0])
     {
-        $request = $this->uNISWAPV3ETHEREUMTicksCurrentRequest($pool, $contentType);
+        $request = $this->uNISWAPV3ETHEREUMTicksCurrentRequest($contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4625,15 +4593,14 @@ class UNISWAPV3ETHEREUMApi
      *
      * Ticks (current)
      *
-     * @param  string $pool Liquidity pool this tick belongs to (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uNISWAPV3ETHEREUMTicksCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uNISWAPV3ETHEREUMTicksCurrentAsync($pool = null, string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTicksCurrent'][0])
+    public function uNISWAPV3ETHEREUMTicksCurrentAsync(string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTicksCurrent'][0])
     {
-        return $this->uNISWAPV3ETHEREUMTicksCurrentAsyncWithHttpInfo($pool, $contentType)
+        return $this->uNISWAPV3ETHEREUMTicksCurrentAsyncWithHttpInfo($contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4646,16 +4613,15 @@ class UNISWAPV3ETHEREUMApi
      *
      * Ticks (current)
      *
-     * @param  string $pool Liquidity pool this tick belongs to (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uNISWAPV3ETHEREUMTicksCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uNISWAPV3ETHEREUMTicksCurrentAsyncWithHttpInfo($pool = null, string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTicksCurrent'][0])
+    public function uNISWAPV3ETHEREUMTicksCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTicksCurrent'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UNISWAPV3ETHEREUMTickDTO[]';
-        $request = $this->uNISWAPV3ETHEREUMTicksCurrentRequest($pool, $contentType);
+        $request = $this->uNISWAPV3ETHEREUMTicksCurrentRequest($contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4696,15 +4662,13 @@ class UNISWAPV3ETHEREUMApi
     /**
      * Create request for operation 'uNISWAPV3ETHEREUMTicksCurrent'
      *
-     * @param  string $pool Liquidity pool this tick belongs to (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uNISWAPV3ETHEREUMTicksCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uNISWAPV3ETHEREUMTicksCurrentRequest($pool = null, string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTicksCurrent'][0])
+    public function uNISWAPV3ETHEREUMTicksCurrentRequest(string $contentType = self::contentTypes['uNISWAPV3ETHEREUMTicksCurrent'][0])
     {
-
 
 
         $resourcePath = '/v1/dapps/uniswap-v3-ethereum/ticks/current';
@@ -4714,15 +4678,6 @@ class UNISWAPV3ETHEREUMApi
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $pool,
-            'pool', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
 
 
 

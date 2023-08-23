@@ -347,16 +347,11 @@ public class OASUNISWAPV3ETHEREUMApi {
     /**
      * TickDailySnapshots (current)
      * Gets tickDailySnapshots.
-     * @param pool liquidity pool this tick belongs to (optional)
      * @return List<OASUNISWAPV3ETHEREUMTickDailySnapsho>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUNISWAPV3ETHEREUMTickDailySnapsho> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(Map<String, Object> params) {
+    public List<OASUNISWAPV3ETHEREUMTickDailySnapsho> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('pool', (String) params.get('pool')));
-
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMTickDailySnapsho>) client.invoke(
@@ -373,16 +368,11 @@ public class OASUNISWAPV3ETHEREUMApi {
     /**
      * TickHourlySnapshots (current)
      * Gets tickHourlySnapshots.
-     * @param pool liquidity pool this tick belongs to (optional)
      * @return List<OASUNISWAPV3ETHEREUMTickHourlySnapsh>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUNISWAPV3ETHEREUMTickHourlySnapsh> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(Map<String, Object> params) {
+    public List<OASUNISWAPV3ETHEREUMTickHourlySnapsh> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('pool', (String) params.get('pool')));
-
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMTickHourlySnapsh>) client.invoke(
@@ -399,16 +389,11 @@ public class OASUNISWAPV3ETHEREUMApi {
     /**
      * Ticks (current)
      * Gets ticks.
-     * @param pool Liquidity pool this tick belongs to (optional)
      * @return List<OASUNISWAPV3ETHEREUMTickDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUNISWAPV3ETHEREUMTickDTO> uNISWAPV3ETHEREUMTicksCurrent(Map<String, Object> params) {
+    public List<OASUNISWAPV3ETHEREUMTickDTO> uNISWAPV3ETHEREUMTicksCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('pool', (String) params.get('pool')));
-
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV3ETHEREUMTickDTO>) client.invoke(

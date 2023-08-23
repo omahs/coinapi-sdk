@@ -27,7 +27,7 @@ CRYPTOPUNKS_TradeDTO::CRYPTOPUNKS_TradeDTO()
     m_Entry_timeIsSet = false;
     m_Recv_time = utility::datetime();
     m_Recv_timeIsSet = false;
-    m_Block_number = utility::conversions::to_string_t("");
+    m_Block_number = 0L;
     m_Block_numberIsSet = false;
     m_Vid = 0L;
     m_VidIsSet = false;
@@ -168,7 +168,7 @@ bool CRYPTOPUNKS_TradeDTO::fromJson(const web::json::value& val)
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(U("block_number")));
         if(!fieldValue.is_null())
         {
-            utility::string_t refVal_setBlockNumber;
+            int64_t refVal_setBlockNumber;
             ok &= ModelBase::fromJson(fieldValue, refVal_setBlockNumber);
             setBlockNumber(refVal_setBlockNumber);
         }
@@ -402,7 +402,7 @@ bool CRYPTOPUNKS_TradeDTO::fromMultiPart(std::shared_ptr<MultipartFormData> mult
     }
     if(multipart->hasContent(utility::conversions::to_string_t(U("block_number"))))
     {
-        utility::string_t refVal_setBlockNumber;
+        int64_t refVal_setBlockNumber;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(U("block_number"))), refVal_setBlockNumber );
         setBlockNumber(refVal_setBlockNumber);
     }
@@ -527,12 +527,12 @@ void CRYPTOPUNKS_TradeDTO::unsetRecv_time()
 {
     m_Recv_timeIsSet = false;
 }
-utility::string_t CRYPTOPUNKS_TradeDTO::getBlockNumber() const
+int64_t CRYPTOPUNKS_TradeDTO::getBlockNumber() const
 {
     return m_Block_number;
 }
 
-void CRYPTOPUNKS_TradeDTO::setBlockNumber(const utility::string_t& value)
+void CRYPTOPUNKS_TradeDTO::setBlockNumber(int64_t value)
 {
     m_Block_number = value;
     m_Block_numberIsSet = true;

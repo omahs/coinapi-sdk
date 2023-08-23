@@ -15,8 +15,6 @@ class UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /*  */
-    Long vid
     /* (Smart contract address of the pool)-( # of hours since Unix epoch time) */
     String id
     /* Number of hours since Unix epoch time */

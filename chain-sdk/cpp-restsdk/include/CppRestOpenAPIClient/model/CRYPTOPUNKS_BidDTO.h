@@ -73,13 +73,13 @@ public:
     void setRecvTime(const utility::datetime& value);
 
     /// <summary>
-    /// 
+    /// Number of block in which entity was recorded.
     /// </summary>
-    utility::string_t getBlockNumber() const;
+    int64_t getBlockNumber() const;
     bool blockNumberIsSet() const;
     void unsetBlock_number();
 
-    void setBlockNumber(const utility::string_t& value);
+    void setBlockNumber(int64_t value);
 
     /// <summary>
     /// 
@@ -150,7 +150,7 @@ protected:
     bool m_Entry_timeIsSet;
     utility::datetime m_Recv_time;
     bool m_Recv_timeIsSet;
-    utility::string_t m_Block_number;
+    int64_t m_Block_number;
     bool m_Block_numberIsSet;
     int64_t m_Vid;
     bool m_VidIsSet;

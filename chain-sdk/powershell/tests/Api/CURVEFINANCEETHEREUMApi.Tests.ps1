@@ -7,9 +7,97 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'CURVEFINANCEETHEREUMApi' {
+    Context 'Invoke-CURVEFINANCEETHEREUMAccountsCurrent' {
+        It 'Test Invoke-CURVEFINANCEETHEREUMAccountsCurrent' {
+            #$TestResult = Invoke-CURVEFINANCEETHEREUMAccountsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-CURVEFINANCEETHEREUMActiveAccountsCurrent' {
+        It 'Test Invoke-CURVEFINANCEETHEREUMActiveAccountsCurrent' {
+            #$TestResult = Invoke-CURVEFINANCEETHEREUMActiveAccountsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-CURVEFINANCEETHEREUMDepositsCurrent' {
+        It 'Test Invoke-CURVEFINANCEETHEREUMDepositsCurrent' {
+            #$TestResult = Invoke-CURVEFINANCEETHEREUMDepositsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-CURVEFINANCEETHEREUMDexAmmProtocolsCurrent' {
+        It 'Test Invoke-CURVEFINANCEETHEREUMDexAmmProtocolsCurrent' {
+            #$TestResult = Invoke-CURVEFINANCEETHEREUMDexAmmProtocolsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent' {
+        It 'Test Invoke-CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent' {
+            #$TestResult = Invoke-CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-CURVEFINANCEETHEREUMLiquidityGaugesCurrent' {
+        It 'Test Invoke-CURVEFINANCEETHEREUMLiquidityGaugesCurrent' {
+            #$TestResult = Invoke-CURVEFINANCEETHEREUMLiquidityGaugesCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent' {
+        It 'Test Invoke-CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent' {
+            #$TestResult = Invoke-CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent' {
+        It 'Test Invoke-CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent' {
+            #$TestResult = Invoke-CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent' {
+        It 'Test Invoke-CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent' {
+            #$TestResult = Invoke-CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-CURVEFINANCEETHEREUMLiquidityPoolsCurrent' {
         It 'Test Invoke-CURVEFINANCEETHEREUMLiquidityPoolsCurrent' {
-            #$TestResult = Invoke-CURVEFINANCEETHEREUMLiquidityPoolsCurrent
+            #$TestResult = Invoke-CURVEFINANCEETHEREUMLiquidityPoolsCurrent -Id "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-CURVEFINANCEETHEREUMLpTokensCurrent' {
+        It 'Test Invoke-CURVEFINANCEETHEREUMLpTokensCurrent' {
+            #$TestResult = Invoke-CURVEFINANCEETHEREUMLpTokensCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-CURVEFINANCEETHEREUMRewardTokensCurrent' {
+        It 'Test Invoke-CURVEFINANCEETHEREUMRewardTokensCurrent' {
+            #$TestResult = Invoke-CURVEFINANCEETHEREUMRewardTokensCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -25,7 +113,31 @@ Describe -tag 'PSOpenAPITools' -name 'CURVEFINANCEETHEREUMApi' {
 
     Context 'Invoke-CURVEFINANCEETHEREUMTokensCurrent' {
         It 'Test Invoke-CURVEFINANCEETHEREUMTokensCurrent' {
-            #$TestResult = Invoke-CURVEFINANCEETHEREUMTokensCurrent
+            #$TestResult = Invoke-CURVEFINANCEETHEREUMTokensCurrent -Id "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent' {
+        It 'Test Invoke-CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent' {
+            #$TestResult = Invoke-CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent' {
+        It 'Test Invoke-CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent' {
+            #$TestResult = Invoke-CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-CURVEFINANCEETHEREUMWithdrawsCurrent' {
+        It 'Test Invoke-CURVEFINANCEETHEREUMWithdrawsCurrent' {
+            #$TestResult = Invoke-CURVEFINANCEETHEREUMWithdrawsCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

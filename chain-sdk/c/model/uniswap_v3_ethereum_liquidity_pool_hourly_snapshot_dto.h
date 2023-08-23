@@ -22,7 +22,6 @@ typedef struct uniswap_v3_ethereum_liquidity_pool_hourly_snapshot_dto_t {
     char *entry_time; //date time
     char *recv_time; //date time
     long block_number; //numeric
-    long vid; //numeric
     char *id; // string
     int hour; //numeric
     char *protocol; // string
@@ -72,7 +71,6 @@ uniswap_v3_ethereum_liquidity_pool_hourly_snapshot_dto_t *uniswap_v3_ethereum_li
     char *entry_time,
     char *recv_time,
     long block_number,
-    long vid,
     char *id,
     int hour,
     char *protocol,

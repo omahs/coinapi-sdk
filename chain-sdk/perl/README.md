@@ -235,7 +235,7 @@ cpanm --quiet --no-interactive Class::Accessor Test::Exception Test::More Log::A
 
 To load the API packages:
 ```perl
-use WWW::OpenAPIClient::CRYPTOPUNKSApi;
+use WWW::OpenAPIClient::CRYPTOPUNKSETHEREUMApi;
 use WWW::OpenAPIClient::CURVEFINANCEETHEREUMApi;
 use WWW::OpenAPIClient::MetadataApi;
 use WWW::OpenAPIClient::PANCAKESWAPV3ETHEREUMApi;
@@ -256,9 +256,23 @@ use WWW::OpenAPIClient::Object::CRYPTOPUNKSMarketPlaceDTO;
 use WWW::OpenAPIClient::Object::CRYPTOPUNKSMarketplaceDailySnapshotDTO;
 use WWW::OpenAPIClient::Object::CRYPTOPUNKSTradeDTO;
 use WWW::OpenAPIClient::Object::CRYPTOPUNKSUserDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMAccountDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMActiveAccountDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMDepositDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMDexAmmProtocolDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityGaugeDTO;
 use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityPoolDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityPoolFeeDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLpTokenDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMRewardTokenDTO;
 use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMSwapDTO;
 use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMTokenDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMWithdrawDTO;
 use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMAccountDTO;
 use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMActiveAccountDTO;
 use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMDepositDTO;
@@ -282,13 +296,53 @@ use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO;
 use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO;
 use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO;
 use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMWithdrawDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMAccountDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMActiveAccountDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMDepositDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMDexAmmProtocolDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO;
 use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMLiquidityPoolDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMPositionDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMPositionSnapshotDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMRewardTokenDTO;
 use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMSwapDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTickDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTickDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO;
 use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTokenDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTokenWhiteListDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMWithdrawDTO;
 use WWW::OpenAPIClient::Object::TransactionsETradeAggressiveSide;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMAccountDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMActiveAccountDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMDepositDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMDexAmmProtocolDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolAmountDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolFeeDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMMasterChefAddressToPidDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMMasterChefDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMMasterChefRewarderDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMMasterChefStakingPoolDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMRewardTokenDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMRewarderProbeDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMSwapDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMTokenDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMTokenWhiteListDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMTransferDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMWithdrawDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMAccountDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMActiveAccountDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMDepositDTO;
@@ -323,7 +377,7 @@ use lib 'lib';
 use strict;
 use warnings;
 # load the API package
-use WWW::OpenAPIClient::CRYPTOPUNKSApi;
+use WWW::OpenAPIClient::CRYPTOPUNKSETHEREUMApi;
 use WWW::OpenAPIClient::CURVEFINANCEETHEREUMApi;
 use WWW::OpenAPIClient::MetadataApi;
 use WWW::OpenAPIClient::PANCAKESWAPV3ETHEREUMApi;
@@ -341,9 +395,23 @@ use WWW::OpenAPIClient::Object::CRYPTOPUNKSMarketPlaceDTO;
 use WWW::OpenAPIClient::Object::CRYPTOPUNKSMarketplaceDailySnapshotDTO;
 use WWW::OpenAPIClient::Object::CRYPTOPUNKSTradeDTO;
 use WWW::OpenAPIClient::Object::CRYPTOPUNKSUserDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMAccountDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMActiveAccountDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMDepositDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMDexAmmProtocolDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityGaugeDTO;
 use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityPoolDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityPoolFeeDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLpTokenDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMRewardTokenDTO;
 use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMSwapDTO;
 use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMTokenDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO;
+use WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMWithdrawDTO;
 use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMAccountDTO;
 use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMActiveAccountDTO;
 use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMDepositDTO;
@@ -367,13 +435,53 @@ use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO;
 use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO;
 use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO;
 use WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMWithdrawDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMAccountDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMActiveAccountDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMDepositDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMDexAmmProtocolDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO;
 use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMLiquidityPoolDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMPositionDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMPositionSnapshotDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMRewardTokenDTO;
 use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMSwapDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTickDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTickDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO;
 use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTokenDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTokenWhiteListDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO;
+use WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMWithdrawDTO;
 use WWW::OpenAPIClient::Object::TransactionsETradeAggressiveSide;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMAccountDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMActiveAccountDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMDepositDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMDexAmmProtocolDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolAmountDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolFeeDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMMasterChefAddressToPidDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMMasterChefDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMMasterChefRewarderDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMMasterChefStakingPoolDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMRewardTokenDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMRewarderProbeDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMSwapDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMTokenDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMTokenWhiteListDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMTransferDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO;
+use WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMWithdrawDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMAccountDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMActiveAccountDTO;
 use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMDepositDTO;
@@ -402,16 +510,16 @@ use WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMWithdrawDTO;
 use Data::Dumper;
 
 
-my $api_instance = WWW::OpenAPIClient::CRYPTOPUNKSApi->new(
+my $api_instance = WWW::OpenAPIClient::CRYPTOPUNKSETHEREUMApi->new(
 );
 
 
 eval {
-    my $result = $api_instance->c_ryptopunks_bids__current();
+    my $result = $api_instance->c_ryptopunksethereum_bids__current();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CRYPTOPUNKSApi->c_ryptopunks_bids__current: $@\n";
+    warn "Exception when calling CRYPTOPUNKSETHEREUMApi->c_ryptopunksethereum_bids__current: $@\n";
 }
 
 ```
@@ -422,18 +530,32 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CRYPTOPUNKSApi* | [**c_ryptopunks_bids__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_bids__current) | **GET** /v1/dapps/cryptopunks/bids/current | Bids (current)
-*CRYPTOPUNKSApi* | [**c_ryptopunks_collection_daily_snapshots__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_collection_daily_snapshots__current) | **GET** /v1/dapps/cryptopunks/collectionDailySnapshots/current | CollectionDailySnapshots (current)
-*CRYPTOPUNKSApi* | [**c_ryptopunks_collections__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_collections__current) | **GET** /v1/dapps/cryptopunks/collections/current | Collections (current)
-*CRYPTOPUNKSApi* | [**c_ryptopunks_data_sources__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_data_sources__current) | **GET** /v1/dapps/cryptopunks/dataSources/current | DataSources (current)
-*CRYPTOPUNKSApi* | [**c_ryptopunks_items__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_items__current) | **GET** /v1/dapps/cryptopunks/items/current | Items (current)
-*CRYPTOPUNKSApi* | [**c_ryptopunks_market_places__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_market_places__current) | **GET** /v1/dapps/cryptopunks/marketPlaces/current | MarketPlaces (current)
-*CRYPTOPUNKSApi* | [**c_ryptopunks_marketplace_daily_snapshots__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_marketplace_daily_snapshots__current) | **GET** /v1/dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
-*CRYPTOPUNKSApi* | [**c_ryptopunks_trades__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_trades__current) | **GET** /v1/dapps/cryptopunks/trades/current | Trades (current)
-*CRYPTOPUNKSApi* | [**c_ryptopunks_users__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_users__current) | **GET** /v1/dapps/cryptopunks/users/current | Users (current)
+*CRYPTOPUNKSETHEREUMApi* | [**c_ryptopunksethereum_bids__current**](docs/CRYPTOPUNKSETHEREUMApi.md#c_ryptopunksethereum_bids__current) | **GET** /v1/dapps/cryptopunks-ethereum/bids/current | Bids (current)
+*CRYPTOPUNKSETHEREUMApi* | [**c_ryptopunksethereum_collection_daily_snapshots__current**](docs/CRYPTOPUNKSETHEREUMApi.md#c_ryptopunksethereum_collection_daily_snapshots__current) | **GET** /v1/dapps/cryptopunks-ethereum/collectionDailySnapshots/current | CollectionDailySnapshots (current)
+*CRYPTOPUNKSETHEREUMApi* | [**c_ryptopunksethereum_collections__current**](docs/CRYPTOPUNKSETHEREUMApi.md#c_ryptopunksethereum_collections__current) | **GET** /v1/dapps/cryptopunks-ethereum/collections/current | Collections (current)
+*CRYPTOPUNKSETHEREUMApi* | [**c_ryptopunksethereum_data_sources__current**](docs/CRYPTOPUNKSETHEREUMApi.md#c_ryptopunksethereum_data_sources__current) | **GET** /v1/dapps/cryptopunks-ethereum/dataSources/current | DataSources (current)
+*CRYPTOPUNKSETHEREUMApi* | [**c_ryptopunksethereum_items__current**](docs/CRYPTOPUNKSETHEREUMApi.md#c_ryptopunksethereum_items__current) | **GET** /v1/dapps/cryptopunks-ethereum/items/current | Items (current)
+*CRYPTOPUNKSETHEREUMApi* | [**c_ryptopunksethereum_market_places__current**](docs/CRYPTOPUNKSETHEREUMApi.md#c_ryptopunksethereum_market_places__current) | **GET** /v1/dapps/cryptopunks-ethereum/marketPlaces/current | MarketPlaces (current)
+*CRYPTOPUNKSETHEREUMApi* | [**c_ryptopunksethereum_marketplace_daily_snapshots__current**](docs/CRYPTOPUNKSETHEREUMApi.md#c_ryptopunksethereum_marketplace_daily_snapshots__current) | **GET** /v1/dapps/cryptopunks-ethereum/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
+*CRYPTOPUNKSETHEREUMApi* | [**c_ryptopunksethereum_trades__current**](docs/CRYPTOPUNKSETHEREUMApi.md#c_ryptopunksethereum_trades__current) | **GET** /v1/dapps/cryptopunks-ethereum/trades/current | Trades (current)
+*CRYPTOPUNKSETHEREUMApi* | [**c_ryptopunksethereum_users__current**](docs/CRYPTOPUNKSETHEREUMApi.md#c_ryptopunksethereum_users__current) | **GET** /v1/dapps/cryptopunks-ethereum/users/current | Users (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_accounts__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_accounts__current) | **GET** /v1/dapps/curve-finance-ethereum/accounts/current | Accounts (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_active_accounts__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_active_accounts__current) | **GET** /v1/dapps/curve-finance-ethereum/activeAccounts/current | ActiveAccounts (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_deposits__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_deposits__current) | **GET** /v1/dapps/curve-finance-ethereum/deposits/current | Deposits (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_dex_amm_protocols__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_dex_amm_protocols__current) | **GET** /v1/dapps/curve-finance-ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_financials_daily_snapshots__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_financials_daily_snapshots__current) | **GET** /v1/dapps/curve-finance-ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_liquidity_gauges__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_liquidity_gauges__current) | **GET** /v1/dapps/curve-finance-ethereum/liquidityGauges/current | LiquidityGauges (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_liquidity_pool_daily_snapshots__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_liquidity_pool_daily_snapshots__current) | **GET** /v1/dapps/curve-finance-ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_liquidity_pool_fees__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_liquidity_pool_fees__current) | **GET** /v1/dapps/curve-finance-ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_liquidity_pool_hourly_snapshots__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_liquidity_pool_hourly_snapshots__current) | **GET** /v1/dapps/curve-finance-ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
 *CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_liquidity_pools__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_liquidity_pools__current) | **GET** /v1/dapps/curve-finance-ethereum/liquidityPools/current | LiquidityPools (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_lp_tokens__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_lp_tokens__current) | **GET** /v1/dapps/curve-finance-ethereum/lpTokens/current | LpTokens (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_reward_tokens__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_reward_tokens__current) | **GET** /v1/dapps/curve-finance-ethereum/rewardTokens/current | RewardTokens (current)
 *CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_swaps__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_swaps__current) | **GET** /v1/dapps/curve-finance-ethereum/swaps/current | Swaps (current)
 *CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_tokens__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_tokens__current) | **GET** /v1/dapps/curve-finance-ethereum/tokens/current | Tokens (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_usage_metrics_daily_snapshots__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_usage_metrics_daily_snapshots__current) | **GET** /v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_usage_metrics_hourly_snapshots__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_usage_metrics_hourly_snapshots__current) | **GET** /v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current)
+*CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_withdraws__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_withdraws__current) | **GET** /v1/dapps/curve-finance-ethereum/withdraws/current | Withdraws (current)
 *MetadataApi* | [**metadata_chains_get**](docs/MetadataApi.md#metadata_chains_get) | **GET** /metadata/chains | List all chains.
 *MetadataApi* | [**metadata_dapps_dapp_name_get**](docs/MetadataApi.md#metadata_dapps_dapp_name_get) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
 *MetadataApi* | [**metadata_dapps_get**](docs/MetadataApi.md#metadata_dapps_get) | **GET** /metadata/dapps | List all decentralized applications.
@@ -460,12 +582,52 @@ Class | Method | HTTP request | Description
 *PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_usage_metrics_daily_snapshots__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_usage_metrics_daily_snapshots__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current)
 *PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_usage_metrics_hourly_snapshots__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_usage_metrics_hourly_snapshots__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current)
 *PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_withdraws__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_withdraws__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/withdraws/current | Withdraws (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_accounts__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_accounts__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/accounts/current | Accounts (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_active_accounts__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_active_accounts__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/activeAccounts/current | ActiveAccounts (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_deposits__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_deposits__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/deposits/current | Deposits (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_dex_amm_protocols__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_dex_amm_protocols__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_financials_daily_snapshots__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_financials_daily_snapshots__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_liquidity_pool_amounts__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_liquidity_pool_amounts__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_liquidity_pool_daily_snapshots__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_liquidity_pool_daily_snapshots__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_liquidity_pool_fees__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_liquidity_pool_fees__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_liquidity_pool_hourly_snapshots__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_liquidity_pool_hourly_snapshots__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
 *SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_liquidity_pools__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_liquidity_pools__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/liquidityPools/current | LiquidityPools (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_position_snapshots__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_position_snapshots__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/positionSnapshots/current | PositionSnapshots (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_positions__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_positions__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/positions/current | Positions (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_reward_tokens__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_reward_tokens__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/rewardTokens/current | RewardTokens (current)
 *SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_swaps__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_swaps__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/swaps/current | Swaps (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_tick_daily_snapshots__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_tick_daily_snapshots__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/tickDailySnapshots/current | TickDailySnapshots (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_tick_hourly_snapshots__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_tick_hourly_snapshots__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/tickHourlySnapshots/current | TickHourlySnapshots (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_ticks__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_ticks__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/ticks/current | Ticks (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_token_white_list_symbols__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_token_white_list_symbols__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/tokenWhiteListSymbols/current | TokenWhiteListSymbols (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_token_white_lists__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_token_white_lists__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/tokenWhiteLists/current | TokenWhiteLists (current)
 *SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_tokens__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_tokens__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/tokens/current | Tokens (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_usage_metrics_daily_snapshots__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_usage_metrics_daily_snapshots__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_usage_metrics_hourly_snapshots__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_usage_metrics_hourly_snapshots__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current)
+*SUSHISWAPV3ETHEREUMApi* | [**s_ushiswapv3_ethereum_withdraws__current**](docs/SUSHISWAPV3ETHEREUMApi.md#s_ushiswapv3_ethereum_withdraws__current) | **GET** /v1/dapps/sushiswap-v3-ethereum/withdraws/current | Withdraws (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_accounts__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_accounts__current) | **GET** /v1/dapps/uniswap-v2-ethereum/accounts/current | Accounts (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_active_accounts__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_active_accounts__current) | **GET** /v1/dapps/uniswap-v2-ethereum/activeAccounts/current | ActiveAccounts (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_deposits__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_deposits__current) | **GET** /v1/dapps/uniswap-v2-ethereum/deposits/current | Deposits (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_dex_amm_protocols__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_dex_amm_protocols__current) | **GET** /v1/dapps/uniswap-v2-ethereum/dexAmmProtocols/current | DexAmmProtocols (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_financials_daily_snapshots__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_financials_daily_snapshots__current) | **GET** /v1/dapps/uniswap-v2-ethereum/financialsDailySnapshots/current | FinancialsDailySnapshots (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_liquidity_pool_amounts__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_liquidity_pool_amounts__current) | **GET** /v1/dapps/uniswap-v2-ethereum/liquidityPoolAmounts/current | LiquidityPoolAmounts (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current) | **GET** /v1/dapps/uniswap-v2-ethereum/liquidityPoolDailySnapshots/current | LiquidityPoolDailySnapshots (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_liquidity_pool_fees__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_liquidity_pool_fees__current) | **GET** /v1/dapps/uniswap-v2-ethereum/liquidityPoolFees/current | LiquidityPoolFees (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current) | **GET** /v1/dapps/uniswap-v2-ethereum/liquidityPoolHourlySnapshots/current | LiquidityPoolHourlySnapshots (current)
 *UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_liquidity_pools__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_liquidity_pools__current) | **GET** /v1/dapps/uniswap-v2-ethereum/liquidityPools/current | LiquidityPools (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_master_chef_address_to_pids__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_master_chef_address_to_pids__current) | **GET** /v1/dapps/uniswap-v2-ethereum/masterChefAddressToPids/current | MasterChefAddressToPids (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_master_chef_rewarders__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_master_chef_rewarders__current) | **GET** /v1/dapps/uniswap-v2-ethereum/masterChefRewarders/current | MasterChefRewarders (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_master_chef_staking_pools__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_master_chef_staking_pools__current) | **GET** /v1/dapps/uniswap-v2-ethereum/masterChefStakingPools/current | MasterChefStakingPools (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_master_chefs__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_master_chefs__current) | **GET** /v1/dapps/uniswap-v2-ethereum/masterChefs/current | MasterChefs (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_reward_tokens__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_reward_tokens__current) | **GET** /v1/dapps/uniswap-v2-ethereum/rewardTokens/current | RewardTokens (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_rewarder_probes__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_rewarder_probes__current) | **GET** /v1/dapps/uniswap-v2-ethereum/rewarderProbes/current | RewarderProbes (current)
 *UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_swaps__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_swaps__current) | **GET** /v1/dapps/uniswap-v2-ethereum/swaps/current | Swaps (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_token_white_lists__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_token_white_lists__current) | **GET** /v1/dapps/uniswap-v2-ethereum/tokenWhiteLists/current | TokenWhiteLists (current)
 *UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_tokens__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_tokens__current) | **GET** /v1/dapps/uniswap-v2-ethereum/tokens/current | Tokens (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_transfers__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_transfers__current) | **GET** /v1/dapps/uniswap-v2-ethereum/transfers/current | Transfers (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_usage_metrics_daily_snapshots__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_usage_metrics_daily_snapshots__current) | **GET** /v1/dapps/uniswap-v2-ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current) | **GET** /v1/dapps/uniswap-v2-ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current)
+*UNISWAPV2ETHEREUMApi* | [**u_niswapv2_ethereum_withdraws__current**](docs/UNISWAPV2ETHEREUMApi.md#u_niswapv2_ethereum_withdraws__current) | **GET** /v1/dapps/uniswap-v2-ethereum/withdraws/current | Withdraws (current)
 *UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_accounts__current**](docs/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_accounts__current) | **GET** /v1/dapps/uniswap-v3-ethereum/accounts/current | Accounts (current)
 *UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_active_accounts__current**](docs/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_active_accounts__current) | **GET** /v1/dapps/uniswap-v3-ethereum/activeAccounts/current | ActiveAccounts (current)
 *UNISWAPV3ETHEREUMApi* | [**u_niswapv3_ethereum_deposits__current**](docs/UNISWAPV3ETHEREUMApi.md#u_niswapv3_ethereum_deposits__current) | **GET** /v1/dapps/uniswap-v3-ethereum/deposits/current | Deposits (current)
@@ -501,9 +663,23 @@ Class | Method | HTTP request | Description
  - [WWW::OpenAPIClient::Object::CRYPTOPUNKSMarketplaceDailySnapshotDTO](docs/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md)
  - [WWW::OpenAPIClient::Object::CRYPTOPUNKSTradeDTO](docs/CRYPTOPUNKSTradeDTO.md)
  - [WWW::OpenAPIClient::Object::CRYPTOPUNKSUserDTO](docs/CRYPTOPUNKSUserDTO.md)
+ - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMAccountDTO](docs/CURVEFINANCEETHEREUMAccountDTO.md)
+ - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMActiveAccountDTO](docs/CURVEFINANCEETHEREUMActiveAccountDTO.md)
+ - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMDepositDTO](docs/CURVEFINANCEETHEREUMDepositDTO.md)
+ - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMDexAmmProtocolDTO](docs/CURVEFINANCEETHEREUMDexAmmProtocolDTO.md)
+ - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO](docs/CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityGaugeDTO](docs/CURVEFINANCEETHEREUMLiquidityGaugeDTO.md)
  - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityPoolDTO](docs/CURVEFINANCEETHEREUMLiquidityPoolDTO.md)
+ - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO](docs/CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityPoolFeeDTO](docs/CURVEFINANCEETHEREUMLiquidityPoolFeeDTO.md)
+ - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO](docs/CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMLpTokenDTO](docs/CURVEFINANCEETHEREUMLpTokenDTO.md)
+ - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMRewardTokenDTO](docs/CURVEFINANCEETHEREUMRewardTokenDTO.md)
  - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMSwapDTO](docs/CURVEFINANCEETHEREUMSwapDTO.md)
  - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMTokenDTO](docs/CURVEFINANCEETHEREUMTokenDTO.md)
+ - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO](docs/CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO](docs/CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::CURVEFINANCEETHEREUMWithdrawDTO](docs/CURVEFINANCEETHEREUMWithdrawDTO.md)
  - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMAccountDTO](docs/PANCAKESWAPV3ETHEREUMAccountDTO.md)
  - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMActiveAccountDTO](docs/PANCAKESWAPV3ETHEREUMActiveAccountDTO.md)
  - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMDepositDTO](docs/PANCAKESWAPV3ETHEREUMDepositDTO.md)
@@ -527,13 +703,53 @@ Class | Method | HTTP request | Description
  - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO](docs/PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO.md)
  - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO](docs/PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.md)
  - [WWW::OpenAPIClient::Object::PANCAKESWAPV3ETHEREUMWithdrawDTO](docs/PANCAKESWAPV3ETHEREUMWithdrawDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMAccountDTO](docs/SUSHISWAPV3ETHEREUMAccountDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMActiveAccountDTO](docs/SUSHISWAPV3ETHEREUMActiveAccountDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMDepositDTO](docs/SUSHISWAPV3ETHEREUMDepositDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMDexAmmProtocolDTO](docs/SUSHISWAPV3ETHEREUMDexAmmProtocolDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO](docs/SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO](docs/SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO.md)
  - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMLiquidityPoolDTO](docs/SUSHISWAPV3ETHEREUMLiquidityPoolDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO](docs/SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO](docs/SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO](docs/SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMPositionDTO](docs/SUSHISWAPV3ETHEREUMPositionDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMPositionSnapshotDTO](docs/SUSHISWAPV3ETHEREUMPositionSnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMRewardTokenDTO](docs/SUSHISWAPV3ETHEREUMRewardTokenDTO.md)
  - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMSwapDTO](docs/SUSHISWAPV3ETHEREUMSwapDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTickDTO](docs/SUSHISWAPV3ETHEREUMTickDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTickDailySnapshotDTO](docs/SUSHISWAPV3ETHEREUMTickDailySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO](docs/SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO.md)
  - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTokenDTO](docs/SUSHISWAPV3ETHEREUMTokenDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTokenWhiteListDTO](docs/SUSHISWAPV3ETHEREUMTokenWhiteListDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO](docs/SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO](docs/SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO](docs/SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::SUSHISWAPV3ETHEREUMWithdrawDTO](docs/SUSHISWAPV3ETHEREUMWithdrawDTO.md)
  - [WWW::OpenAPIClient::Object::TransactionsETradeAggressiveSide](docs/TransactionsETradeAggressiveSide.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMAccountDTO](docs/UNISWAPV2ETHEREUMAccountDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMActiveAccountDTO](docs/UNISWAPV2ETHEREUMActiveAccountDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMDepositDTO](docs/UNISWAPV2ETHEREUMDepositDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMDexAmmProtocolDTO](docs/UNISWAPV2ETHEREUMDexAmmProtocolDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO](docs/UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolAmountDTO](docs/UNISWAPV2ETHEREUMLiquidityPoolAmountDTO.md)
  - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolDTO](docs/UNISWAPV2ETHEREUMLiquidityPoolDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO](docs/UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolFeeDTO](docs/UNISWAPV2ETHEREUMLiquidityPoolFeeDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO](docs/UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMMasterChefAddressToPidDTO](docs/UNISWAPV2ETHEREUMMasterChefAddressToPidDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMMasterChefDTO](docs/UNISWAPV2ETHEREUMMasterChefDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMMasterChefRewarderDTO](docs/UNISWAPV2ETHEREUMMasterChefRewarderDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMMasterChefStakingPoolDTO](docs/UNISWAPV2ETHEREUMMasterChefStakingPoolDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMRewardTokenDTO](docs/UNISWAPV2ETHEREUMRewardTokenDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMRewarderProbeDTO](docs/UNISWAPV2ETHEREUMRewarderProbeDTO.md)
  - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMSwapDTO](docs/UNISWAPV2ETHEREUMSwapDTO.md)
  - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMTokenDTO](docs/UNISWAPV2ETHEREUMTokenDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMTokenWhiteListDTO](docs/UNISWAPV2ETHEREUMTokenWhiteListDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMTransferDTO](docs/UNISWAPV2ETHEREUMTransferDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO](docs/UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO](docs/UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::UNISWAPV2ETHEREUMWithdrawDTO](docs/UNISWAPV2ETHEREUMWithdrawDTO.md)
  - [WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMAccountDTO](docs/UNISWAPV3ETHEREUMAccountDTO.md)
  - [WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMActiveAccountDTO](docs/UNISWAPV3ETHEREUMActiveAccountDTO.md)
  - [WWW::OpenAPIClient::Object::UNISWAPV3ETHEREUMDepositDTO](docs/UNISWAPV3ETHEREUMDepositDTO.md)

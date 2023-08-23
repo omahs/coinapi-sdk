@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Vid** | **Int64** |  | [optional] 
 **Id** | **String** | (account address)-(market address)-(count) | [optional] 
 **Account** | **String** | Account that owns this position | [optional] 
 **Pool** | **String** | The liquidity pool in which this position was opened | [optional] 
@@ -37,7 +36,6 @@ Name | Type | Description | Notes
 $PANCAKESWAPV3ETHEREUMPositionDTO = Initialize-PSOpenAPIToolsPANCAKESWAPV3ETHEREUMPositionDTO  -EntryTime null `
  -RecvTime null `
  -BlockNumber null `
- -Vid null `
  -Id null `
  -Account null `
  -Pool null `

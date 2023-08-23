@@ -424,10 +424,6 @@ private class OASUNISWAPV3ETHEREUMApiTest {
         res.setStatus('OK');
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
-        Map<String, Object> params = new Map<String, Object>{
-            'pool' => 'null'
-        };
-
         OASClient client;
         OASUNISWAPV3ETHEREUMApi api;
         List<OASUNISWAPV3ETHEREUMTickDailySnapsho> response;
@@ -440,7 +436,7 @@ private class OASUNISWAPV3ETHEREUMApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASUNISWAPV3ETHEREUMTickDailySnapsho>{OASUNISWAPV3ETHEREUMTickDailySnapsho.getExample()};
-        response = (List<OASUNISWAPV3ETHEREUMTickDailySnapsho>) api.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(params);
+        response = (List<OASUNISWAPV3ETHEREUMTickDailySnapsho>) api.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent();
         System.assertEquals(expectedResponse, response);
     }
 
@@ -456,10 +452,6 @@ private class OASUNISWAPV3ETHEREUMApiTest {
         res.setStatus('OK');
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
-        Map<String, Object> params = new Map<String, Object>{
-            'pool' => 'null'
-        };
-
         OASClient client;
         OASUNISWAPV3ETHEREUMApi api;
         List<OASUNISWAPV3ETHEREUMTickHourlySnapsh> response;
@@ -472,7 +464,7 @@ private class OASUNISWAPV3ETHEREUMApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASUNISWAPV3ETHEREUMTickHourlySnapsh>{OASUNISWAPV3ETHEREUMTickHourlySnapsh.getExample()};
-        response = (List<OASUNISWAPV3ETHEREUMTickHourlySnapsh>) api.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(params);
+        response = (List<OASUNISWAPV3ETHEREUMTickHourlySnapsh>) api.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent();
         System.assertEquals(expectedResponse, response);
     }
 
@@ -488,10 +480,6 @@ private class OASUNISWAPV3ETHEREUMApiTest {
         res.setStatus('OK');
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
-        Map<String, Object> params = new Map<String, Object>{
-            'pool' => 'null'
-        };
-
         OASClient client;
         OASUNISWAPV3ETHEREUMApi api;
         List<OASUNISWAPV3ETHEREUMTickDTO> response;
@@ -504,7 +492,7 @@ private class OASUNISWAPV3ETHEREUMApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASUNISWAPV3ETHEREUMTickDTO>{OASUNISWAPV3ETHEREUMTickDTO.getExample()};
-        response = (List<OASUNISWAPV3ETHEREUMTickDTO>) api.uNISWAPV3ETHEREUMTicksCurrent(params);
+        response = (List<OASUNISWAPV3ETHEREUMTickDTO>) api.uNISWAPV3ETHEREUMTicksCurrent();
         System.assertEquals(expectedResponse, response);
     }
 

@@ -17,8 +17,8 @@ import org.openapitools.client.core.ApiModel
 case class FinancialsDailySnapshotDTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
-  /* Block number of when this snapshot was taken/last modified.) */
-  blockNumber: Option[Int] = None,
+  /* Number of block in which entity was recorded. */
+  blockNumber: Option[Long] = None,
   /* ID is # of days since Unix epoch time. */
   id: Option[String] = None,
   /* Number of days since Unix epoch time. */

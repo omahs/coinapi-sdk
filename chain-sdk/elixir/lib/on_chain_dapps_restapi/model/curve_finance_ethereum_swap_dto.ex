@@ -35,7 +35,7 @@ defmodule OnChainDapps-RESTAPI.Model.CurveFinanceEthereumSwapDto do
   @type t :: %__MODULE__{
     :entry_time => DateTime.t | nil,
     :recv_time => DateTime.t | nil,
-    :block_number => String.t | nil,
+    :block_number => integer() | nil,
     :id => String.t | nil,
     :hash => String.t | nil,
     :log_index => integer() | nil,

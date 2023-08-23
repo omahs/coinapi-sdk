@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **entryTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **recvTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **blockNumber** | **kotlin.Long** | Number of block in which entity was recorded. |  [optional]
-**vid** | **kotlin.Long** |  |  [optional]
 **id** | **kotlin.String** | (pool address)-(tick index) |  [optional]
 **index** | **kotlin.String** | tick index |  [optional]
 **pool** | **kotlin.String** | Liquidity pool this tick belongs to |  [optional]

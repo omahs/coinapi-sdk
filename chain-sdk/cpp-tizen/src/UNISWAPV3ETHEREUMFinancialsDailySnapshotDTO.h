@@ -59,13 +59,13 @@ public:
 	/*! \brief Set 
 	 */
 	void setRecvTime(std::string  recv_time);
-	/*! \brief Get Block number of when this snapshot was taken/last modified.)
+	/*! \brief Get Number of block in which entity was recorded.
 	 */
-	int getBlockNumber();
+	long long getBlockNumber();
 
-	/*! \brief Set Block number of when this snapshot was taken/last modified.)
+	/*! \brief Set Number of block in which entity was recorded.
 	 */
-	void setBlockNumber(int  block_number);
+	void setBlockNumber(long long  block_number);
 	/*! \brief Get ID is # of days since Unix epoch time.
 	 */
 	std::string getId();
@@ -196,7 +196,7 @@ public:
 private:
 	std::string entry_time;
 	std::string recv_time;
-	int block_number;
+	long long block_number;
 	std::string id;
 	int day;
 	std::string protocol;

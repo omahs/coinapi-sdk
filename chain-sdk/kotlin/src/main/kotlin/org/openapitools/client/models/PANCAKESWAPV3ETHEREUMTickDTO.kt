@@ -25,7 +25,6 @@ import com.squareup.moshi.JsonClass
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param vid 
  * @param id (pool address)-(tick index)
  * @param index tick index
  * @param pool Liquidity pool this tick belongs to
@@ -54,10 +53,6 @@ data class PANCAKESWAPV3ETHEREUMTickDTO (
     /* Number of block in which entity was recorded. */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
-
-    /*  */
-    @Json(name = "vid")
-    val vid: kotlin.Long? = null,
 
     /* (pool address)-(tick index) */
     @Json(name = "id")

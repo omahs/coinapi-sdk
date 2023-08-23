@@ -48,10 +48,130 @@
   }
 
   describe('SUSHISWAPV3ETHEREUMApi', function() {
+    describe('sUSHISWAPV3ETHEREUMAccountsCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMAccountsCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMAccountsCurrent
+        //instance.sUSHISWAPV3ETHEREUMAccountsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sUSHISWAPV3ETHEREUMActiveAccountsCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMActiveAccountsCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMActiveAccountsCurrent
+        //instance.sUSHISWAPV3ETHEREUMActiveAccountsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sUSHISWAPV3ETHEREUMDepositsCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMDepositsCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMDepositsCurrent
+        //instance.sUSHISWAPV3ETHEREUMDepositsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent
+        //instance.sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
+        //instance.sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+        //instance.sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+        //instance.sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent
+        //instance.sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+        //instance.sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent', function() {
       it('should call sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent successfully', function(done) {
         //uncomment below and update the code to test sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent
         //instance.sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent
+        //instance.sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sUSHISWAPV3ETHEREUMPositionsCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMPositionsCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMPositionsCurrent
+        //instance.sUSHISWAPV3ETHEREUMPositionsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sUSHISWAPV3ETHEREUMRewardTokensCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMRewardTokensCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMRewardTokensCurrent
+        //instance.sUSHISWAPV3ETHEREUMRewardTokensCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -68,10 +188,90 @@
         done();
       });
     });
+    describe('sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent
+        //instance.sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent
+        //instance.sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sUSHISWAPV3ETHEREUMTicksCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMTicksCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMTicksCurrent
+        //instance.sUSHISWAPV3ETHEREUMTicksCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
+        //instance.sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent
+        //instance.sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('sUSHISWAPV3ETHEREUMTokensCurrent', function() {
       it('should call sUSHISWAPV3ETHEREUMTokensCurrent successfully', function(done) {
         //uncomment below and update the code to test sUSHISWAPV3ETHEREUMTokensCurrent
         //instance.sUSHISWAPV3ETHEREUMTokensCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
+        //instance.sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
+        //instance.sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sUSHISWAPV3ETHEREUMWithdrawsCurrent', function() {
+      it('should call sUSHISWAPV3ETHEREUMWithdrawsCurrent successfully', function(done) {
+        //uncomment below and update the code to test sUSHISWAPV3ETHEREUMWithdrawsCurrent
+        //instance.sUSHISWAPV3ETHEREUMWithdrawsCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

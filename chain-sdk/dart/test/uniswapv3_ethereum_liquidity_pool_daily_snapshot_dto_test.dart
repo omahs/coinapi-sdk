@@ -32,12 +32,6 @@ void main() {
       // TODO
     });
 
-    // .
-    // int vid
-    test('to test the property `vid`', () async {
-      // TODO
-    });
-
     // The Ethereum block number associated with the liquidity pool daily snapshot.
     // int block
     test('to test the property `block`', () async {

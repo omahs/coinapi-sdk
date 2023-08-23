@@ -159,16 +159,11 @@ public class OASPANCAKESWAPV3ETHEREUMApi {
     /**
      * LiquidityPoolDailySnapshots (current)
      * Gets liquidityPoolDailySnapshots.
-     * @param pool Pool this snapshot belongs to. (optional)
      * @return List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(Map<String, Object> params) {
+    public List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('pool', (String) params.get('pool')));
-
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo>) client.invoke(

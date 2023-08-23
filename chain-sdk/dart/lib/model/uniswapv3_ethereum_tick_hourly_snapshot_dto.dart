@@ -16,7 +16,6 @@ class UNISWAPV3ETHEREUMTickHourlySnapshotDTO {
     this.entryTime,
     this.recvTime,
     this.blockNumber,
-    this.vid,
     this.id,
     this.hourId,
     this.tick,
@@ -52,15 +51,6 @@ class UNISWAPV3ETHEREUMTickHourlySnapshotDTO {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? blockNumber;
-
-  /// 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? vid;
 
   /// (pool address)-(tick index)-(hour ID)
   String? id;
@@ -100,7 +90,6 @@ class UNISWAPV3ETHEREUMTickHourlySnapshotDTO {
      other.entryTime == entryTime &&
      other.recvTime == recvTime &&
      other.blockNumber == blockNumber &&
-     other.vid == vid &&
      other.id == id &&
      other.hourId == hourId &&
      other.tick == tick &&
@@ -117,7 +106,6 @@ class UNISWAPV3ETHEREUMTickHourlySnapshotDTO {
     (entryTime == null ? 0 : entryTime!.hashCode) +
     (recvTime == null ? 0 : recvTime!.hashCode) +
     (blockNumber == null ? 0 : blockNumber!.hashCode) +
-    (vid == null ? 0 : vid!.hashCode) +
     (id == null ? 0 : id!.hashCode) +
     (hourId == null ? 0 : hourId!.hashCode) +
     (tick == null ? 0 : tick!.hashCode) +
@@ -129,7 +117,7 @@ class UNISWAPV3ETHEREUMTickHourlySnapshotDTO {
     (timestamp == null ? 0 : timestamp!.hashCode);
 
   @override
-  String toString() => 'UNISWAPV3ETHEREUMTickHourlySnapshotDTO[entryTime=$entryTime, recvTime=$recvTime, blockNumber=$blockNumber, vid=$vid, id=$id, hourId=$hourId, tick=$tick, pool=$pool, liquidityGross=$liquidityGross, liquidityGrossUsd=$liquidityGrossUsd, liquidityNet=$liquidityNet, liquidityNetUsd=$liquidityNetUsd, timestamp=$timestamp]';
+  String toString() => 'UNISWAPV3ETHEREUMTickHourlySnapshotDTO[entryTime=$entryTime, recvTime=$recvTime, blockNumber=$blockNumber, id=$id, hourId=$hourId, tick=$tick, pool=$pool, liquidityGross=$liquidityGross, liquidityGrossUsd=$liquidityGrossUsd, liquidityNet=$liquidityNet, liquidityNetUsd=$liquidityNetUsd, timestamp=$timestamp]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -147,11 +135,6 @@ class UNISWAPV3ETHEREUMTickHourlySnapshotDTO {
       json[r'block_number'] = this.blockNumber;
     } else {
       json[r'block_number'] = null;
-    }
-    if (this.vid != null) {
-      json[r'vid'] = this.vid;
-    } else {
-      json[r'vid'] = null;
     }
     if (this.id != null) {
       json[r'id'] = this.id;
@@ -223,7 +206,6 @@ class UNISWAPV3ETHEREUMTickHourlySnapshotDTO {
         entryTime: mapDateTime(json, r'entry_time', ''),
         recvTime: mapDateTime(json, r'recv_time', ''),
         blockNumber: mapValueOfType<int>(json, r'block_number'),
-        vid: mapValueOfType<int>(json, r'vid'),
         id: mapValueOfType<String>(json, r'id'),
         hourId: mapValueOfType<int>(json, r'hour_id'),
         tick: mapValueOfType<String>(json, r'tick'),

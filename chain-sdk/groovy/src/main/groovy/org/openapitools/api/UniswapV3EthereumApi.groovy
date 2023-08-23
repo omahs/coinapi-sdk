@@ -325,7 +325,7 @@ class UniswapV3EthereumApi {
 
     }
 
-    def uNISWAPV3ETHEREUMTickDailySnapshotsCurrent ( String pool, Closure onSuccess, Closure onFailure)  {
+    def uNISWAPV3ETHEREUMTickDailySnapshotsCurrent ( Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current"
 
         // params
@@ -335,9 +335,6 @@ class UniswapV3EthereumApi {
         def contentType
 
 
-        if (pool != null) {
-            queryParams.put("pool", pool)
-        }
 
 
 
@@ -348,7 +345,7 @@ class UniswapV3EthereumApi {
 
     }
 
-    def uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent ( String pool, Closure onSuccess, Closure onFailure)  {
+    def uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent ( Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current"
 
         // params
@@ -358,9 +355,6 @@ class UniswapV3EthereumApi {
         def contentType
 
 
-        if (pool != null) {
-            queryParams.put("pool", pool)
-        }
 
 
 
@@ -371,7 +365,7 @@ class UniswapV3EthereumApi {
 
     }
 
-    def uNISWAPV3ETHEREUMTicksCurrent ( String pool, Closure onSuccess, Closure onFailure)  {
+    def uNISWAPV3ETHEREUMTicksCurrent ( Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/v1/dapps/uniswap-v3-ethereum/ticks/current"
 
         // params
@@ -381,9 +375,6 @@ class UniswapV3EthereumApi {
         def contentType
 
 
-        if (pool != null) {
-            queryParams.put("pool", pool)
-        }
 
 
 

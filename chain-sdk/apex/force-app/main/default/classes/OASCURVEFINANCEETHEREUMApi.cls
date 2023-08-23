@@ -26,13 +26,207 @@ public class OASCURVEFINANCEETHEREUMApi {
     }
 
     /**
-     * LiquidityPools (current)
-     * Gets liquidityPools.
+     * Accounts (current)
+     * Gets accounts.
+     * @return List<OASCURVEFINANCEETHEREUMAccountDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCURVEFINANCEETHEREUMAccountDTO> cURVEFINANCEETHEREUMAccountsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCURVEFINANCEETHEREUMAccountDTO>) client.invoke(
+            'GET', '/v1/dapps/curve-finance-ethereum/accounts/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCURVEFINANCEETHEREUMAccountDTO>.class
+        );
+    }
+    /**
+     * ActiveAccounts (current)
+     * Gets activeAccounts.
+     * @return List<OASCURVEFINANCEETHEREUMActiveAccount>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCURVEFINANCEETHEREUMActiveAccount> cURVEFINANCEETHEREUMActiveAccountsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCURVEFINANCEETHEREUMActiveAccount>) client.invoke(
+            'GET', '/v1/dapps/curve-finance-ethereum/activeAccounts/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCURVEFINANCEETHEREUMActiveAccount>.class
+        );
+    }
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @return List<OASCURVEFINANCEETHEREUMDepositDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCURVEFINANCEETHEREUMDepositDTO> cURVEFINANCEETHEREUMDepositsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCURVEFINANCEETHEREUMDepositDTO>) client.invoke(
+            'GET', '/v1/dapps/curve-finance-ethereum/deposits/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCURVEFINANCEETHEREUMDepositDTO>.class
+        );
+    }
+    /**
+     * DexAmmProtocols (current)
+     * Gets dexAmmProtocols.
+     * @return List<OASCURVEFINANCEETHEREUMDexAmmProtoco>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCURVEFINANCEETHEREUMDexAmmProtoco> cURVEFINANCEETHEREUMDexAmmProtocolsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCURVEFINANCEETHEREUMDexAmmProtoco>) client.invoke(
+            'GET', '/v1/dapps/curve-finance-ethereum/dexAmmProtocols/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCURVEFINANCEETHEREUMDexAmmProtoco>.class
+        );
+    }
+    /**
+     * FinancialsDailySnapshots (current)
+     * Gets financialsDailySnapshots.
+     * @return List<OASCURVEFINANCEETHEREUMFinancialsDai>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCURVEFINANCEETHEREUMFinancialsDai> cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCURVEFINANCEETHEREUMFinancialsDai>) client.invoke(
+            'GET', '/v1/dapps/curve-finance-ethereum/financialsDailySnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCURVEFINANCEETHEREUMFinancialsDai>.class
+        );
+    }
+    /**
+     * LiquidityGauges (current)
+     * Gets liquidityGauges.
+     * @return List<OASCURVEFINANCEETHEREUMLiquidityGaug>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCURVEFINANCEETHEREUMLiquidityGaug> cURVEFINANCEETHEREUMLiquidityGaugesCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCURVEFINANCEETHEREUMLiquidityGaug>) client.invoke(
+            'GET', '/v1/dapps/curve-finance-ethereum/liquidityGauges/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCURVEFINANCEETHEREUMLiquidityGaug>.class
+        );
+    }
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     * Gets liquidityPoolDailySnapshots.
      * @return List<OASCURVEFINANCEETHEREUMLiquidityPool>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASCURVEFINANCEETHEREUMLiquidityPool> cURVEFINANCEETHEREUMLiquidityPoolsCurrent() {
+    public List<OASCURVEFINANCEETHEREUMLiquidityPool> cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCURVEFINANCEETHEREUMLiquidityPool>) client.invoke(
+            'GET', '/v1/dapps/curve-finance-ethereum/liquidityPoolDailySnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCURVEFINANCEETHEREUMLiquidityPool>.class
+        );
+    }
+    /**
+     * LiquidityPoolFees (current)
+     * Gets liquidityPoolFees.
+     * @return List<OASCURVEFINANCEETHEREUMLiquidityPool>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCURVEFINANCEETHEREUMLiquidityPool> cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCURVEFINANCEETHEREUMLiquidityPool>) client.invoke(
+            'GET', '/v1/dapps/curve-finance-ethereum/liquidityPoolFees/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCURVEFINANCEETHEREUMLiquidityPool>.class
+        );
+    }
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     * Gets liquidityPoolHourlySnapshots.
+     * @return List<OASCURVEFINANCEETHEREUMLiquidityPool>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCURVEFINANCEETHEREUMLiquidityPool> cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCURVEFINANCEETHEREUMLiquidityPool>) client.invoke(
+            'GET', '/v1/dapps/curve-finance-ethereum/liquidityPoolHourlySnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCURVEFINANCEETHEREUMLiquidityPool>.class
+        );
+    }
+    /**
+     * LiquidityPools (current)
+     * Gets liquidityPools.
+     * @param id Smart contract address of the pool (optional)
+     * @return List<OASCURVEFINANCEETHEREUMLiquidityPool>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCURVEFINANCEETHEREUMLiquidityPool> cURVEFINANCEETHEREUMLiquidityPoolsCurrent(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('id', (String) params.get('id')));
+
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASCURVEFINANCEETHEREUMLiquidityPool>) client.invoke(
@@ -44,6 +238,48 @@ public class OASCURVEFINANCEETHEREUMApi {
             new List<String>(),
             new List<String>(),
             List<OASCURVEFINANCEETHEREUMLiquidityPool>.class
+        );
+    }
+    /**
+     * LpTokens (current)
+     * Gets lpTokens.
+     * @return List<OASCURVEFINANCEETHEREUMLpTokenDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCURVEFINANCEETHEREUMLpTokenDTO> cURVEFINANCEETHEREUMLpTokensCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCURVEFINANCEETHEREUMLpTokenDTO>) client.invoke(
+            'GET', '/v1/dapps/curve-finance-ethereum/lpTokens/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCURVEFINANCEETHEREUMLpTokenDTO>.class
+        );
+    }
+    /**
+     * RewardTokens (current)
+     * Gets rewardTokens.
+     * @return List<OASCURVEFINANCEETHEREUMRewardTokenDT>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCURVEFINANCEETHEREUMRewardTokenDT> cURVEFINANCEETHEREUMRewardTokensCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCURVEFINANCEETHEREUMRewardTokenDT>) client.invoke(
+            'GET', '/v1/dapps/curve-finance-ethereum/rewardTokens/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCURVEFINANCEETHEREUMRewardTokenDT>.class
         );
     }
     /**
@@ -70,11 +306,16 @@ public class OASCURVEFINANCEETHEREUMApi {
     /**
      * Tokens (current)
      * Gets tokens.
+     * @param id Smart contract address of the token (optional)
      * @return List<OASCURVEFINANCEETHEREUMTokenDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASCURVEFINANCEETHEREUMTokenDTO> cURVEFINANCEETHEREUMTokensCurrent() {
+    public List<OASCURVEFINANCEETHEREUMTokenDTO> cURVEFINANCEETHEREUMTokensCurrent(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('id', (String) params.get('id')));
+
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASCURVEFINANCEETHEREUMTokenDTO>) client.invoke(
@@ -86,6 +327,69 @@ public class OASCURVEFINANCEETHEREUMApi {
             new List<String>(),
             new List<String>(),
             List<OASCURVEFINANCEETHEREUMTokenDTO>.class
+        );
+    }
+    /**
+     * UsageMetricsDailySnapshots (current)
+     * Gets usageMetricsDailySnapshots.
+     * @return List<OASCURVEFINANCEETHEREUMUsageMetricsD>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCURVEFINANCEETHEREUMUsageMetricsD> cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCURVEFINANCEETHEREUMUsageMetricsD>) client.invoke(
+            'GET', '/v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCURVEFINANCEETHEREUMUsageMetricsD>.class
+        );
+    }
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     * Gets usageMetricsHourlySnapshots.
+     * @return List<OASCURVEFINANCEETHEREUMUsageMetricsH>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCURVEFINANCEETHEREUMUsageMetricsH> cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCURVEFINANCEETHEREUMUsageMetricsH>) client.invoke(
+            'GET', '/v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCURVEFINANCEETHEREUMUsageMetricsH>.class
+        );
+    }
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @return List<OASCURVEFINANCEETHEREUMWithdrawDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCURVEFINANCEETHEREUMWithdrawDTO> cURVEFINANCEETHEREUMWithdrawsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCURVEFINANCEETHEREUMWithdrawDTO>) client.invoke(
+            'GET', '/v1/dapps/curve-finance-ethereum/withdraws/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCURVEFINANCEETHEREUMWithdrawDTO>.class
         );
     }
 }

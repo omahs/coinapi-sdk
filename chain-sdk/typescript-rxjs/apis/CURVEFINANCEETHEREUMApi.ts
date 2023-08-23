@@ -14,12 +14,34 @@
 import type { Observable } from 'rxjs';
 import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI } from '../runtime';
-import type { OperationOpts } from '../runtime';
+import type { OperationOpts, HttpQuery } from '../runtime';
 import type {
+    CURVEFINANCEETHEREUMAccountDTO,
+    CURVEFINANCEETHEREUMActiveAccountDTO,
+    CURVEFINANCEETHEREUMDepositDTO,
+    CURVEFINANCEETHEREUMDexAmmProtocolDTO,
+    CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO,
+    CURVEFINANCEETHEREUMLiquidityGaugeDTO,
     CURVEFINANCEETHEREUMLiquidityPoolDTO,
+    CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO,
+    CURVEFINANCEETHEREUMLiquidityPoolFeeDTO,
+    CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO,
+    CURVEFINANCEETHEREUMLpTokenDTO,
+    CURVEFINANCEETHEREUMRewardTokenDTO,
     CURVEFINANCEETHEREUMSwapDTO,
     CURVEFINANCEETHEREUMTokenDTO,
+    CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO,
+    CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO,
+    CURVEFINANCEETHEREUMWithdrawDTO,
 } from '../models';
+
+export interface CURVEFINANCEETHEREUMLiquidityPoolsCurrentRequest {
+    id?: string;
+}
+
+export interface CURVEFINANCEETHEREUMTokensCurrentRequest {
+    id?: string;
+}
 
 /**
  * no description
@@ -27,14 +49,163 @@ import type {
 export class CURVEFINANCEETHEREUMApi extends BaseAPI {
 
     /**
+     * Gets accounts.
+     * Accounts (current)
+     */
+    cURVEFINANCEETHEREUMAccountsCurrent(): Observable<Array<CURVEFINANCEETHEREUMAccountDTO>>
+    cURVEFINANCEETHEREUMAccountsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CURVEFINANCEETHEREUMAccountDTO>>>
+    cURVEFINANCEETHEREUMAccountsCurrent(opts?: OperationOpts): Observable<Array<CURVEFINANCEETHEREUMAccountDTO> | AjaxResponse<Array<CURVEFINANCEETHEREUMAccountDTO>>> {
+        return this.request<Array<CURVEFINANCEETHEREUMAccountDTO>>({
+            url: '/v1/dapps/curve-finance-ethereum/accounts/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets activeAccounts.
+     * ActiveAccounts (current)
+     */
+    cURVEFINANCEETHEREUMActiveAccountsCurrent(): Observable<Array<CURVEFINANCEETHEREUMActiveAccountDTO>>
+    cURVEFINANCEETHEREUMActiveAccountsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CURVEFINANCEETHEREUMActiveAccountDTO>>>
+    cURVEFINANCEETHEREUMActiveAccountsCurrent(opts?: OperationOpts): Observable<Array<CURVEFINANCEETHEREUMActiveAccountDTO> | AjaxResponse<Array<CURVEFINANCEETHEREUMActiveAccountDTO>>> {
+        return this.request<Array<CURVEFINANCEETHEREUMActiveAccountDTO>>({
+            url: '/v1/dapps/curve-finance-ethereum/activeAccounts/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets deposits.
+     * Deposits (current)
+     */
+    cURVEFINANCEETHEREUMDepositsCurrent(): Observable<Array<CURVEFINANCEETHEREUMDepositDTO>>
+    cURVEFINANCEETHEREUMDepositsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CURVEFINANCEETHEREUMDepositDTO>>>
+    cURVEFINANCEETHEREUMDepositsCurrent(opts?: OperationOpts): Observable<Array<CURVEFINANCEETHEREUMDepositDTO> | AjaxResponse<Array<CURVEFINANCEETHEREUMDepositDTO>>> {
+        return this.request<Array<CURVEFINANCEETHEREUMDepositDTO>>({
+            url: '/v1/dapps/curve-finance-ethereum/deposits/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets dexAmmProtocols.
+     * DexAmmProtocols (current)
+     */
+    cURVEFINANCEETHEREUMDexAmmProtocolsCurrent(): Observable<Array<CURVEFINANCEETHEREUMDexAmmProtocolDTO>>
+    cURVEFINANCEETHEREUMDexAmmProtocolsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CURVEFINANCEETHEREUMDexAmmProtocolDTO>>>
+    cURVEFINANCEETHEREUMDexAmmProtocolsCurrent(opts?: OperationOpts): Observable<Array<CURVEFINANCEETHEREUMDexAmmProtocolDTO> | AjaxResponse<Array<CURVEFINANCEETHEREUMDexAmmProtocolDTO>>> {
+        return this.request<Array<CURVEFINANCEETHEREUMDexAmmProtocolDTO>>({
+            url: '/v1/dapps/curve-finance-ethereum/dexAmmProtocols/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets financialsDailySnapshots.
+     * FinancialsDailySnapshots (current)
+     */
+    cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent(): Observable<Array<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>>
+    cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>>>
+    cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent(opts?: OperationOpts): Observable<Array<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO> | AjaxResponse<Array<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>>> {
+        return this.request<Array<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>>({
+            url: '/v1/dapps/curve-finance-ethereum/financialsDailySnapshots/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets liquidityGauges.
+     * LiquidityGauges (current)
+     */
+    cURVEFINANCEETHEREUMLiquidityGaugesCurrent(): Observable<Array<CURVEFINANCEETHEREUMLiquidityGaugeDTO>>
+    cURVEFINANCEETHEREUMLiquidityGaugesCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CURVEFINANCEETHEREUMLiquidityGaugeDTO>>>
+    cURVEFINANCEETHEREUMLiquidityGaugesCurrent(opts?: OperationOpts): Observable<Array<CURVEFINANCEETHEREUMLiquidityGaugeDTO> | AjaxResponse<Array<CURVEFINANCEETHEREUMLiquidityGaugeDTO>>> {
+        return this.request<Array<CURVEFINANCEETHEREUMLiquidityGaugeDTO>>({
+            url: '/v1/dapps/curve-finance-ethereum/liquidityGauges/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets liquidityPoolDailySnapshots.
+     * LiquidityPoolDailySnapshots (current)
+     */
+    cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent(): Observable<Array<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>>
+    cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>>>
+    cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent(opts?: OperationOpts): Observable<Array<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO> | AjaxResponse<Array<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>>> {
+        return this.request<Array<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>>({
+            url: '/v1/dapps/curve-finance-ethereum/liquidityPoolDailySnapshots/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets liquidityPoolFees.
+     * LiquidityPoolFees (current)
+     */
+    cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent(): Observable<Array<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>>
+    cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>>>
+    cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent(opts?: OperationOpts): Observable<Array<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO> | AjaxResponse<Array<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>>> {
+        return this.request<Array<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>>({
+            url: '/v1/dapps/curve-finance-ethereum/liquidityPoolFees/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets liquidityPoolHourlySnapshots.
+     * LiquidityPoolHourlySnapshots (current)
+     */
+    cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent(): Observable<Array<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>>
+    cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>>>
+    cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent(opts?: OperationOpts): Observable<Array<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO> | AjaxResponse<Array<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>>> {
+        return this.request<Array<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>>({
+            url: '/v1/dapps/curve-finance-ethereum/liquidityPoolHourlySnapshots/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets liquidityPools.
      * LiquidityPools (current)
      */
-    cURVEFINANCEETHEREUMLiquidityPoolsCurrent(): Observable<Array<CURVEFINANCEETHEREUMLiquidityPoolDTO>>
-    cURVEFINANCEETHEREUMLiquidityPoolsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CURVEFINANCEETHEREUMLiquidityPoolDTO>>>
-    cURVEFINANCEETHEREUMLiquidityPoolsCurrent(opts?: OperationOpts): Observable<Array<CURVEFINANCEETHEREUMLiquidityPoolDTO> | AjaxResponse<Array<CURVEFINANCEETHEREUMLiquidityPoolDTO>>> {
+    cURVEFINANCEETHEREUMLiquidityPoolsCurrent({ id }: CURVEFINANCEETHEREUMLiquidityPoolsCurrentRequest): Observable<Array<CURVEFINANCEETHEREUMLiquidityPoolDTO>>
+    cURVEFINANCEETHEREUMLiquidityPoolsCurrent({ id }: CURVEFINANCEETHEREUMLiquidityPoolsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CURVEFINANCEETHEREUMLiquidityPoolDTO>>>
+    cURVEFINANCEETHEREUMLiquidityPoolsCurrent({ id }: CURVEFINANCEETHEREUMLiquidityPoolsCurrentRequest, opts?: OperationOpts): Observable<Array<CURVEFINANCEETHEREUMLiquidityPoolDTO> | AjaxResponse<Array<CURVEFINANCEETHEREUMLiquidityPoolDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (id != null) { query['id'] = id; }
+
         return this.request<Array<CURVEFINANCEETHEREUMLiquidityPoolDTO>>({
             url: '/v1/dapps/curve-finance-ethereum/liquidityPools/current',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets lpTokens.
+     * LpTokens (current)
+     */
+    cURVEFINANCEETHEREUMLpTokensCurrent(): Observable<Array<CURVEFINANCEETHEREUMLpTokenDTO>>
+    cURVEFINANCEETHEREUMLpTokensCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CURVEFINANCEETHEREUMLpTokenDTO>>>
+    cURVEFINANCEETHEREUMLpTokensCurrent(opts?: OperationOpts): Observable<Array<CURVEFINANCEETHEREUMLpTokenDTO> | AjaxResponse<Array<CURVEFINANCEETHEREUMLpTokenDTO>>> {
+        return this.request<Array<CURVEFINANCEETHEREUMLpTokenDTO>>({
+            url: '/v1/dapps/curve-finance-ethereum/lpTokens/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets rewardTokens.
+     * RewardTokens (current)
+     */
+    cURVEFINANCEETHEREUMRewardTokensCurrent(): Observable<Array<CURVEFINANCEETHEREUMRewardTokenDTO>>
+    cURVEFINANCEETHEREUMRewardTokensCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CURVEFINANCEETHEREUMRewardTokenDTO>>>
+    cURVEFINANCEETHEREUMRewardTokensCurrent(opts?: OperationOpts): Observable<Array<CURVEFINANCEETHEREUMRewardTokenDTO> | AjaxResponse<Array<CURVEFINANCEETHEREUMRewardTokenDTO>>> {
+        return this.request<Array<CURVEFINANCEETHEREUMRewardTokenDTO>>({
+            url: '/v1/dapps/curve-finance-ethereum/rewardTokens/current',
             method: 'GET',
         }, opts?.responseOpts);
     };
@@ -56,11 +227,56 @@ export class CURVEFINANCEETHEREUMApi extends BaseAPI {
      * Gets tokens.
      * Tokens (current)
      */
-    cURVEFINANCEETHEREUMTokensCurrent(): Observable<Array<CURVEFINANCEETHEREUMTokenDTO>>
-    cURVEFINANCEETHEREUMTokensCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CURVEFINANCEETHEREUMTokenDTO>>>
-    cURVEFINANCEETHEREUMTokensCurrent(opts?: OperationOpts): Observable<Array<CURVEFINANCEETHEREUMTokenDTO> | AjaxResponse<Array<CURVEFINANCEETHEREUMTokenDTO>>> {
+    cURVEFINANCEETHEREUMTokensCurrent({ id }: CURVEFINANCEETHEREUMTokensCurrentRequest): Observable<Array<CURVEFINANCEETHEREUMTokenDTO>>
+    cURVEFINANCEETHEREUMTokensCurrent({ id }: CURVEFINANCEETHEREUMTokensCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CURVEFINANCEETHEREUMTokenDTO>>>
+    cURVEFINANCEETHEREUMTokensCurrent({ id }: CURVEFINANCEETHEREUMTokensCurrentRequest, opts?: OperationOpts): Observable<Array<CURVEFINANCEETHEREUMTokenDTO> | AjaxResponse<Array<CURVEFINANCEETHEREUMTokenDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (id != null) { query['id'] = id; }
+
         return this.request<Array<CURVEFINANCEETHEREUMTokenDTO>>({
             url: '/v1/dapps/curve-finance-ethereum/tokens/current',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets usageMetricsDailySnapshots.
+     * UsageMetricsDailySnapshots (current)
+     */
+    cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent(): Observable<Array<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>>
+    cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>>>
+    cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent(opts?: OperationOpts): Observable<Array<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO> | AjaxResponse<Array<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>>> {
+        return this.request<Array<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>>({
+            url: '/v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets usageMetricsHourlySnapshots.
+     * UsageMetricsHourlySnapshots (current)
+     */
+    cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent(): Observable<Array<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>>
+    cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>>>
+    cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent(opts?: OperationOpts): Observable<Array<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO> | AjaxResponse<Array<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>>> {
+        return this.request<Array<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>>({
+            url: '/v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets withdraws.
+     * Withdraws (current)
+     */
+    cURVEFINANCEETHEREUMWithdrawsCurrent(): Observable<Array<CURVEFINANCEETHEREUMWithdrawDTO>>
+    cURVEFINANCEETHEREUMWithdrawsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CURVEFINANCEETHEREUMWithdrawDTO>>>
+    cURVEFINANCEETHEREUMWithdrawsCurrent(opts?: OperationOpts): Observable<Array<CURVEFINANCEETHEREUMWithdrawDTO> | AjaxResponse<Array<CURVEFINANCEETHEREUMWithdrawDTO>>> {
+        return this.request<Array<CURVEFINANCEETHEREUMWithdrawDTO>>({
+            url: '/v1/dapps/curve-finance-ethereum/withdraws/current',
             method: 'GET',
         }, opts?.responseOpts);
     };

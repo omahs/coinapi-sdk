@@ -13,8 +13,6 @@ class PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /*  */
-    Long vid
     /* Identifier, format: (pool address)-(tick index)-(day ID) */
     String id
     /* Number of days since Unix epoch time */

@@ -23,10 +23,6 @@ export class PANCAKESWAPV3ETHEREUMTickDTO {
     */
     'blockNumber'?: number;
     /**
-    * 
-    */
-    'vid'?: number;
-    /**
     * (pool address)-(tick index)
     */
     'id'?: string | null;
@@ -99,11 +95,6 @@ export class PANCAKESWAPV3ETHEREUMTickDTO {
         {
             "name": "blockNumber",
             "baseName": "block_number",
-            "type": "number"
-        },
-        {
-            "name": "vid",
-            "baseName": "vid",
             "type": "number"
         },
         {

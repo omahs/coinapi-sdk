@@ -19,7 +19,7 @@ API.Client.UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.prototype.entryTime;
 API.Client.UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.prototype.recvTime;
 
 /**
- * Block number of when this snapshot was taken/last modified.)
+ * Number of block in which entity was recorded.
  * @type {!number}
  * @export
  */

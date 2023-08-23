@@ -25,7 +25,7 @@ on_chain_dapps___rest_api_curve_finance_ethereum_swap_dto__e evaluated_aggressor
 curve_finance_ethereum_swap_dto_t *curve_finance_ethereum_swap_dto_create(
     char *entry_time,
     char *recv_time,
-    char *block_number,
+    long block_number,
     char *id,
     char *hash,
     int log_index,
@@ -89,10 +89,6 @@ void curve_finance_ethereum_swap_dto_free(curve_finance_ethereum_swap_dto_t *cur
     if (curve_finance_ethereum_swap_dto->recv_time) {
         free(curve_finance_ethereum_swap_dto->recv_time);
         curve_finance_ethereum_swap_dto->recv_time = NULL;
-    }
-    if (curve_finance_ethereum_swap_dto->block_number) {
-        free(curve_finance_ethereum_swap_dto->block_number);
-        curve_finance_ethereum_swap_dto->block_number = NULL;
     }
     if (curve_finance_ethereum_swap_dto->id) {
         free(curve_finance_ethereum_swap_dto->id);
@@ -182,8 +178,8 @@ cJSON *curve_finance_ethereum_swap_dto_convertToJSON(curve_finance_ethereum_swap
 
     // curve_finance_ethereum_swap_dto->block_number
     if(curve_finance_ethereum_swap_dto->block_number) {
-    if(cJSON_AddStringToObject(item, "block_number", curve_finance_ethereum_swap_dto->block_number) == NULL) {
-    goto fail; //String
+    if(cJSON_AddNumberToObject(item, "block_number", curve_finance_ethereum_swap_dto->block_number) == NULL) {
+    goto fail; //Numeric
     }
     }
 
@@ -380,9 +376,9 @@ curve_finance_ethereum_swap_dto_t *curve_finance_ethereum_swap_dto_parseFromJSON
     // curve_finance_ethereum_swap_dto->block_number
     cJSON *block_number = cJSON_GetObjectItemCaseSensitive(curve_finance_ethereum_swap_dtoJSON, "block_number");
     if (block_number) { 
-    if(!cJSON_IsString(block_number) && !cJSON_IsNull(block_number))
+    if(!cJSON_IsNumber(block_number))
     {
-    goto end; //String
+    goto end; //Numeric
     }
     }
 
@@ -558,7 +554,7 @@ curve_finance_ethereum_swap_dto_t *curve_finance_ethereum_swap_dto_parseFromJSON
     curve_finance_ethereum_swap_dto_local_var = curve_finance_ethereum_swap_dto_create (
         entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
         recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
-        block_number && !cJSON_IsNull(block_number) ? strdup(block_number->valuestring) : NULL,
+        block_number ? block_number->valuedouble : 0,
         id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
         hash && !cJSON_IsNull(hash) ? strdup(hash->valuestring) : NULL,
         log_index ? log_index->valuedouble : 0,

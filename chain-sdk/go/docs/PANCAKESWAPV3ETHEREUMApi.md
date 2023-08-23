@@ -403,7 +403,7 @@ No authorization required
 
 ## PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
 
-> []PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(ctx).Pool(pool).Execute()
+> []PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(ctx).Execute()
 
 LiquidityPoolDailySnapshots (current)
 
@@ -422,11 +422,10 @@ import (
 )
 
 func main() {
-    pool := "pool_example" // string | Pool this snapshot belongs to. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(context.Background()).Pool(pool).Execute()
+    resp, r, err := apiClient.PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(context.Background()).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `PANCAKESWAPV3ETHEREUMApi.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -438,16 +437,12 @@ func main() {
 
 ### Path Parameters
 
-
+This endpoint does not need any parameter.
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiPANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **string** | Pool this snapshot belongs to. | 
 
 ### Return type
 

@@ -468,7 +468,7 @@ No authorization required
 
 ## PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
 
-> List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt; PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent (string pool = null)
+> List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt; PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent ()
 
 LiquidityPoolDailySnapshots (current)
 
@@ -491,12 +491,11 @@ namespace Example
         {
             Configuration.Default.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new PANCAKESWAPV3ETHEREUMApi(Configuration.Default);
-            var pool = "pool_example";  // string | Pool this snapshot belongs to. (optional) 
 
             try
             {
                 // LiquidityPoolDailySnapshots (current)
-                List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> result = apiInstance.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool);
+                List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> result = apiInstance.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -512,10 +511,7 @@ namespace Example
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **string**| Pool this snapshot belongs to. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 

@@ -25,7 +25,7 @@ CRYPTOPUNKS.TradeDTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
-	//block_number = std::string();
+	//block_number = long(0);
 	//vid = long(0);
 	//block_range = std::string();
 	//id = std::string();
@@ -159,8 +159,8 @@ CRYPTOPUNKS.TradeDTO::fromJson(char* jsonStr)
 	if (node !=NULL) {
 	
 
-		if (isprimitive("std::string")) {
-			jsonToValue(&block_number, node, "std::string", "");
+		if (isprimitive("long long")) {
+			jsonToValue(&block_number, node, "long long", "");
 		} else {
 			
 		}
@@ -338,9 +338,9 @@ CRYPTOPUNKS.TradeDTO::toJson()
 	}
 	const gchar *recv_timeKey = "recv_time";
 	json_object_set_member(pJsonObject, recv_timeKey, node);
-	if (isprimitive("std::string")) {
-		std::string obj = getBlockNumber();
-		node = converttoJson(&obj, "std::string", "");
+	if (isprimitive("long long")) {
+		long long obj = getBlockNumber();
+		node = converttoJson(&obj, "long long", "");
 	}
 	else {
 		
@@ -496,14 +496,14 @@ CRYPTOPUNKS.TradeDTO::setRecvTime(std::string  recv_time)
 	this->recv_time = recv_time;
 }
 
-std::string
+long long
 CRYPTOPUNKS.TradeDTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-CRYPTOPUNKS.TradeDTO::setBlockNumber(std::string  block_number)
+CRYPTOPUNKS.TradeDTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }

@@ -56,6 +56,107 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMAccountsCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMAccountsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SUSHISWAPV3ETHEREUMAccountsCurrent();
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMAccountDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMActiveAccountsCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMActiveAccountsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SUSHISWAPV3ETHEREUMActiveAccountsCurrent();
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMActiveAccountDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMDepositsCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMDepositsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SUSHISWAPV3ETHEREUMDepositsCurrent();
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMDepositDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMDexAmmProtocolsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent();
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMDexAmmProtocolDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent();
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //var response = instance.SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id);
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent();
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent();
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pool = null;
+            //var response = instance.SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool);
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>(response);
+        }
+
+        /// <summary>
         /// Test SUSHISWAPV3ETHEREUMLiquidityPoolsCurrent
         /// </summary>
         [Fact]
@@ -65,6 +166,40 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //string id = null;
             //var response = instance.SUSHISWAPV3ETHEREUMLiquidityPoolsCurrent(id);
             //Assert.IsType<List<SUSHISWAPV3ETHEREUMLiquidityPoolDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMPositionSnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMPositionSnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SUSHISWAPV3ETHEREUMPositionSnapshotsCurrent();
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMPositionSnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMPositionsCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMPositionsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pool = null;
+            //var response = instance.SUSHISWAPV3ETHEREUMPositionsCurrent(pool);
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMPositionDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMRewardTokensCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMRewardTokensCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SUSHISWAPV3ETHEREUMRewardTokensCurrent();
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMRewardTokenDTO>>(response);
         }
 
         /// <summary>
@@ -79,6 +214,64 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pool = null;
+            //var response = instance.SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool);
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMTickDailySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pool = null;
+            //var response = instance.SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool);
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMTicksCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMTicksCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pool = null;
+            //var response = instance.SUSHISWAPV3ETHEREUMTicksCurrent(pool);
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMTickDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent();
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMTokenWhiteListsCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMTokenWhiteListsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SUSHISWAPV3ETHEREUMTokenWhiteListsCurrent();
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMTokenWhiteListDTO>>(response);
+        }
+
+        /// <summary>
         /// Test SUSHISWAPV3ETHEREUMTokensCurrent
         /// </summary>
         [Fact]
@@ -88,6 +281,39 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //string id = null;
             //var response = instance.SUSHISWAPV3ETHEREUMTokensCurrent(id);
             //Assert.IsType<List<SUSHISWAPV3ETHEREUMTokenDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent();
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent();
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SUSHISWAPV3ETHEREUMWithdrawsCurrent
+        /// </summary>
+        [Fact]
+        public void SUSHISWAPV3ETHEREUMWithdrawsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SUSHISWAPV3ETHEREUMWithdrawsCurrent();
+            //Assert.IsType<List<SUSHISWAPV3ETHEREUMWithdrawDTO>>(response);
         }
     }
 }

@@ -23,9 +23,6 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # 
-    attr_accessor :vid
-
     # (Smart contract address of the pool)-( # of hours since Unix epoch time)
     attr_accessor :id
 
@@ -158,7 +155,6 @@ module OpenapiClient
         :'entry_time' => :'entry_time',
         :'recv_time' => :'recv_time',
         :'block_number' => :'block_number',
-        :'vid' => :'vid',
         :'id' => :'id',
         :'hour' => :'hour',
         :'protocol' => :'protocol',
@@ -215,7 +211,6 @@ module OpenapiClient
         :'entry_time' => :'Time',
         :'recv_time' => :'Time',
         :'block_number' => :'Integer',
-        :'vid' => :'Integer',
         :'id' => :'String',
         :'hour' => :'Integer',
         :'protocol' => :'String',
@@ -324,10 +319,6 @@ module OpenapiClient
 
       if attributes.key?(:'block_number')
         self.block_number = attributes[:'block_number']
-      end
-
-      if attributes.key?(:'vid')
-        self.vid = attributes[:'vid']
       end
 
       if attributes.key?(:'id')
@@ -546,7 +537,6 @@ module OpenapiClient
           entry_time == o.entry_time &&
           recv_time == o.recv_time &&
           block_number == o.block_number &&
-          vid == o.vid &&
           id == o.id &&
           hour == o.hour &&
           protocol == o.protocol &&
@@ -600,7 +590,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [entry_time, recv_time, block_number, vid, id, hour, protocol, pool, tick, total_value_locked_usd, total_liquidity, total_liquidity_usd, active_liquidity, active_liquidity_usd, uncollected_protocol_side_token_amounts, uncollected_protocol_side_values_usd, uncollected_supply_side_token_amounts, uncollected_supply_side_values_usd, cumulative_supply_side_revenue_usd, hourly_supply_side_revenue_usd, cumulative_protocol_side_revenue_usd, hourly_protocol_side_revenue_usd, cumulative_total_revenue_usd, hourly_total_revenue_usd, cumulative_volume_usd, hourly_volume_usd, cumulative_volume_by_token_amount, hourly_volume_by_token_amount, cumulative_volume_by_token_usd, hourly_volume_by_token_usd, input_token_balances, input_token_balances_usd, input_token_weights, staked_output_token_amount, reward_token_emissions_amount, reward_token_emissions_usd, cumulative_deposit_count, hourly_deposit_count, cumulative_withdraw_count, hourly_withdraw_count, cumulative_swap_count, hourly_swap_count, position_count, open_position_count, closed_position_count, timestamp].hash
+      [entry_time, recv_time, block_number, id, hour, protocol, pool, tick, total_value_locked_usd, total_liquidity, total_liquidity_usd, active_liquidity, active_liquidity_usd, uncollected_protocol_side_token_amounts, uncollected_protocol_side_values_usd, uncollected_supply_side_token_amounts, uncollected_supply_side_values_usd, cumulative_supply_side_revenue_usd, hourly_supply_side_revenue_usd, cumulative_protocol_side_revenue_usd, hourly_protocol_side_revenue_usd, cumulative_total_revenue_usd, hourly_total_revenue_usd, cumulative_volume_usd, hourly_volume_usd, cumulative_volume_by_token_amount, hourly_volume_by_token_amount, cumulative_volume_by_token_usd, hourly_volume_by_token_usd, input_token_balances, input_token_balances_usd, input_token_weights, staked_output_token_amount, reward_token_emissions_amount, reward_token_emissions_usd, cumulative_deposit_count, hourly_deposit_count, cumulative_withdraw_count, hourly_withdraw_count, cumulative_swap_count, hourly_swap_count, position_count, open_position_count, closed_position_count, timestamp].hash
     end
 
     # Builds the object from hash

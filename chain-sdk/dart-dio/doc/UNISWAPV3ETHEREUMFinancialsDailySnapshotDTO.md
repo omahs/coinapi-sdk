@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entryTime** | [**DateTime**](DateTime.md) |  | [optional] 
 **recvTime** | [**DateTime**](DateTime.md) |  | [optional] 
-**blockNumber** | **int** | Block number of when this snapshot was taken/last modified.) | [optional] 
+**blockNumber** | **int** | Number of block in which entity was recorded. | [optional] 
 **id** | **String** | ID is # of days since Unix epoch time. | [optional] 
 **day** | **int** | Number of days since Unix epoch time. | [optional] 
 **protocol** | **String** | Protocol this snapshot is associated with. | [optional] 

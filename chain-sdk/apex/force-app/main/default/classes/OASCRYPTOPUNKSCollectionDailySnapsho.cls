@@ -27,10 +27,10 @@ public class OASCRYPTOPUNKSCollectionDailySnapsho implements OAS.MappedPropertie
     public Datetime recvTime { get; set; }
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
-    public String blockNumber { get; set; }
+    public Long blockNumber { get; set; }
 
     /**
      * 
@@ -420,7 +420,7 @@ public class OASCRYPTOPUNKSCollectionDailySnapsho implements OAS.MappedPropertie
         OASCRYPTOPUNKSCollectionDailySnapsho crYPTOPUNKSCollectionDailySnapshotDTO = new OASCRYPTOPUNKSCollectionDailySnapsho();
           crYPTOPUNKSCollectionDailySnapshotDTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           crYPTOPUNKSCollectionDailySnapshotDTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
-          crYPTOPUNKSCollectionDailySnapshotDTO.blockNumber = '';
+          crYPTOPUNKSCollectionDailySnapshotDTO.blockNumber = 123456789L;
           crYPTOPUNKSCollectionDailySnapshotDTO.vid = 123456789L;
           crYPTOPUNKSCollectionDailySnapshotDTO.blockRange = '';
           crYPTOPUNKSCollectionDailySnapshotDTO.id = '';

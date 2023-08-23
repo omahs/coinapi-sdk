@@ -20,7 +20,7 @@ module OpenapiClient
 
     attr_accessor :recv_time
 
-    # Block number of this event
+    # Number of block in which entity was recorded.
     attr_accessor :block_number
 
     # Swap-(transaction hash)-(log index)
@@ -135,7 +135,7 @@ module OpenapiClient
       {
         :'entry_time' => :'Time',
         :'recv_time' => :'Time',
-        :'block_number' => :'String',
+        :'block_number' => :'Integer',
         :'id' => :'String',
         :'hash' => :'String',
         :'log_index' => :'Integer',
@@ -161,7 +161,6 @@ module OpenapiClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
-        :'block_number',
         :'id',
         :'hash',
         :'protocol',

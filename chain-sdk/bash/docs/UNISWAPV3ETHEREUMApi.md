@@ -502,15 +502,12 @@ Gets tickDailySnapshots.
 ### Example
 
 ```bash
- uNISWAPV3ETHEREUMTickDailySnapshotsCurrent  pool=value
+ uNISWAPV3ETHEREUMTickDailySnapshotsCurrent
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **string** | liquidity pool this tick belongs to | [optional] [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -537,15 +534,12 @@ Gets tickHourlySnapshots.
 ### Example
 
 ```bash
- uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent  pool=value
+ uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **string** | liquidity pool this tick belongs to | [optional] [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -572,15 +566,12 @@ Gets ticks.
 ### Example
 
 ```bash
- uNISWAPV3ETHEREUMTicksCurrent  pool=value
+ uNISWAPV3ETHEREUMTicksCurrent
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **string** | Liquidity pool this tick belongs to | [optional] [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 

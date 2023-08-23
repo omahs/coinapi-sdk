@@ -30,11 +30,86 @@ my $api = WWW::OpenAPIClient::SUSHISWAPV3ETHEREUMApi->new();
 isa_ok($api, 'WWW::OpenAPIClient::SUSHISWAPV3ETHEREUMApi');
 
 #
+# s_ushiswapv3_ethereum_accounts__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_accounts__current_result = $api->s_ushiswapv3_ethereum_accounts__current();
+
+#
+# s_ushiswapv3_ethereum_active_accounts__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_active_accounts__current_result = $api->s_ushiswapv3_ethereum_active_accounts__current();
+
+#
+# s_ushiswapv3_ethereum_deposits__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_deposits__current_result = $api->s_ushiswapv3_ethereum_deposits__current();
+
+#
+# s_ushiswapv3_ethereum_dex_amm_protocols__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_dex_amm_protocols__current_result = $api->s_ushiswapv3_ethereum_dex_amm_protocols__current();
+
+#
+# s_ushiswapv3_ethereum_financials_daily_snapshots__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_financials_daily_snapshots__current_result = $api->s_ushiswapv3_ethereum_financials_daily_snapshots__current();
+
+#
+# s_ushiswapv3_ethereum_liquidity_pool_amounts__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_liquidity_pool_amounts__current_id = undef; # replace NULL with a proper value
+#my $s_ushiswapv3_ethereum_liquidity_pool_amounts__current_result = $api->s_ushiswapv3_ethereum_liquidity_pool_amounts__current(id => $s_ushiswapv3_ethereum_liquidity_pool_amounts__current_id);
+
+#
+# s_ushiswapv3_ethereum_liquidity_pool_daily_snapshots__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_liquidity_pool_daily_snapshots__current_result = $api->s_ushiswapv3_ethereum_liquidity_pool_daily_snapshots__current();
+
+#
+# s_ushiswapv3_ethereum_liquidity_pool_fees__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_liquidity_pool_fees__current_result = $api->s_ushiswapv3_ethereum_liquidity_pool_fees__current();
+
+#
+# s_ushiswapv3_ethereum_liquidity_pool_hourly_snapshots__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_liquidity_pool_hourly_snapshots__current_pool = undef; # replace NULL with a proper value
+#my $s_ushiswapv3_ethereum_liquidity_pool_hourly_snapshots__current_result = $api->s_ushiswapv3_ethereum_liquidity_pool_hourly_snapshots__current(pool => $s_ushiswapv3_ethereum_liquidity_pool_hourly_snapshots__current_pool);
+
+#
 # s_ushiswapv3_ethereum_liquidity_pools__current test
 #
 # uncomment below and update the test
 #my $s_ushiswapv3_ethereum_liquidity_pools__current_id = undef; # replace NULL with a proper value
 #my $s_ushiswapv3_ethereum_liquidity_pools__current_result = $api->s_ushiswapv3_ethereum_liquidity_pools__current(id => $s_ushiswapv3_ethereum_liquidity_pools__current_id);
+
+#
+# s_ushiswapv3_ethereum_position_snapshots__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_position_snapshots__current_result = $api->s_ushiswapv3_ethereum_position_snapshots__current();
+
+#
+# s_ushiswapv3_ethereum_positions__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_positions__current_pool = undef; # replace NULL with a proper value
+#my $s_ushiswapv3_ethereum_positions__current_result = $api->s_ushiswapv3_ethereum_positions__current(pool => $s_ushiswapv3_ethereum_positions__current_pool);
+
+#
+# s_ushiswapv3_ethereum_reward_tokens__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_reward_tokens__current_result = $api->s_ushiswapv3_ethereum_reward_tokens__current();
 
 #
 # s_ushiswapv3_ethereum_swaps__current test
@@ -43,9 +118,60 @@ isa_ok($api, 'WWW::OpenAPIClient::SUSHISWAPV3ETHEREUMApi');
 #my $s_ushiswapv3_ethereum_swaps__current_result = $api->s_ushiswapv3_ethereum_swaps__current();
 
 #
+# s_ushiswapv3_ethereum_tick_daily_snapshots__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_tick_daily_snapshots__current_pool = undef; # replace NULL with a proper value
+#my $s_ushiswapv3_ethereum_tick_daily_snapshots__current_result = $api->s_ushiswapv3_ethereum_tick_daily_snapshots__current(pool => $s_ushiswapv3_ethereum_tick_daily_snapshots__current_pool);
+
+#
+# s_ushiswapv3_ethereum_tick_hourly_snapshots__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_tick_hourly_snapshots__current_pool = undef; # replace NULL with a proper value
+#my $s_ushiswapv3_ethereum_tick_hourly_snapshots__current_result = $api->s_ushiswapv3_ethereum_tick_hourly_snapshots__current(pool => $s_ushiswapv3_ethereum_tick_hourly_snapshots__current_pool);
+
+#
+# s_ushiswapv3_ethereum_ticks__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_ticks__current_pool = undef; # replace NULL with a proper value
+#my $s_ushiswapv3_ethereum_ticks__current_result = $api->s_ushiswapv3_ethereum_ticks__current(pool => $s_ushiswapv3_ethereum_ticks__current_pool);
+
+#
+# s_ushiswapv3_ethereum_token_white_list_symbols__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_token_white_list_symbols__current_result = $api->s_ushiswapv3_ethereum_token_white_list_symbols__current();
+
+#
+# s_ushiswapv3_ethereum_token_white_lists__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_token_white_lists__current_result = $api->s_ushiswapv3_ethereum_token_white_lists__current();
+
+#
 # s_ushiswapv3_ethereum_tokens__current test
 #
 # uncomment below and update the test
 #my $s_ushiswapv3_ethereum_tokens__current_id = undef; # replace NULL with a proper value
 #my $s_ushiswapv3_ethereum_tokens__current_result = $api->s_ushiswapv3_ethereum_tokens__current(id => $s_ushiswapv3_ethereum_tokens__current_id);
+
+#
+# s_ushiswapv3_ethereum_usage_metrics_daily_snapshots__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_usage_metrics_daily_snapshots__current_result = $api->s_ushiswapv3_ethereum_usage_metrics_daily_snapshots__current();
+
+#
+# s_ushiswapv3_ethereum_usage_metrics_hourly_snapshots__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_usage_metrics_hourly_snapshots__current_result = $api->s_ushiswapv3_ethereum_usage_metrics_hourly_snapshots__current();
+
+#
+# s_ushiswapv3_ethereum_withdraws__current test
+#
+# uncomment below and update the test
+#my $s_ushiswapv3_ethereum_withdraws__current_result = $api->s_ushiswapv3_ethereum_withdraws__current();
 

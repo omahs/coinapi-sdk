@@ -195,7 +195,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_an_ca_ke_sw_ap_v3_et_he_re_um_liquidity_pool_daily_snapshots_current**
-> p_an_ca_ke_sw_ap_v3_et_he_re_um_liquidity_pool_daily_snapshots_current (pool:  detachable STRING_32 ): detachable LIST [PANCAKESWAP_V3_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOT_DTO]
+> p_an_ca_ke_sw_ap_v3_et_he_re_um_liquidity_pool_daily_snapshots_current : detachable LIST [PANCAKESWAP_V3_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOT_DTO]
 
 
 LiquidityPoolDailySnapshots (current)
@@ -204,10 +204,7 @@ Gets liquidityPoolDailySnapshots.
 
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **STRING_32**| Pool this snapshot belongs to. | [optional] [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 

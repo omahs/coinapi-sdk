@@ -19,9 +19,523 @@ module OpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
+    # Accounts (current)
+    # Gets accounts.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CURVEFINANCEETHEREUMAccountDTO>]
+    def c_urvefinanceethereum_accounts__current(opts = {})
+      data, _status_code, _headers = c_urvefinanceethereum_accounts__current_with_http_info(opts)
+      data
+    end
+
+    # Accounts (current)
+    # Gets accounts.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CURVEFINANCEETHEREUMAccountDTO>, Integer, Hash)>] Array<CURVEFINANCEETHEREUMAccountDTO> data, response status code and response headers
+    def c_urvefinanceethereum_accounts__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_accounts__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/curve-finance-ethereum/accounts/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CURVEFINANCEETHEREUMAccountDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_accounts__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CURVEFINANCEETHEREUMApi#c_urvefinanceethereum_accounts__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # ActiveAccounts (current)
+    # Gets activeAccounts.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CURVEFINANCEETHEREUMActiveAccountDTO>]
+    def c_urvefinanceethereum_active_accounts__current(opts = {})
+      data, _status_code, _headers = c_urvefinanceethereum_active_accounts__current_with_http_info(opts)
+      data
+    end
+
+    # ActiveAccounts (current)
+    # Gets activeAccounts.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CURVEFINANCEETHEREUMActiveAccountDTO>, Integer, Hash)>] Array<CURVEFINANCEETHEREUMActiveAccountDTO> data, response status code and response headers
+    def c_urvefinanceethereum_active_accounts__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_active_accounts__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/curve-finance-ethereum/activeAccounts/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CURVEFINANCEETHEREUMActiveAccountDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_active_accounts__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CURVEFINANCEETHEREUMApi#c_urvefinanceethereum_active_accounts__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Deposits (current)
+    # Gets deposits.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CURVEFINANCEETHEREUMDepositDTO>]
+    def c_urvefinanceethereum_deposits__current(opts = {})
+      data, _status_code, _headers = c_urvefinanceethereum_deposits__current_with_http_info(opts)
+      data
+    end
+
+    # Deposits (current)
+    # Gets deposits.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CURVEFINANCEETHEREUMDepositDTO>, Integer, Hash)>] Array<CURVEFINANCEETHEREUMDepositDTO> data, response status code and response headers
+    def c_urvefinanceethereum_deposits__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_deposits__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/curve-finance-ethereum/deposits/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CURVEFINANCEETHEREUMDepositDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_deposits__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CURVEFINANCEETHEREUMApi#c_urvefinanceethereum_deposits__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # DexAmmProtocols (current)
+    # Gets dexAmmProtocols.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CURVEFINANCEETHEREUMDexAmmProtocolDTO>]
+    def c_urvefinanceethereum_dex_amm_protocols__current(opts = {})
+      data, _status_code, _headers = c_urvefinanceethereum_dex_amm_protocols__current_with_http_info(opts)
+      data
+    end
+
+    # DexAmmProtocols (current)
+    # Gets dexAmmProtocols.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CURVEFINANCEETHEREUMDexAmmProtocolDTO>, Integer, Hash)>] Array<CURVEFINANCEETHEREUMDexAmmProtocolDTO> data, response status code and response headers
+    def c_urvefinanceethereum_dex_amm_protocols__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_dex_amm_protocols__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/curve-finance-ethereum/dexAmmProtocols/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CURVEFINANCEETHEREUMDexAmmProtocolDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_dex_amm_protocols__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CURVEFINANCEETHEREUMApi#c_urvefinanceethereum_dex_amm_protocols__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # FinancialsDailySnapshots (current)
+    # Gets financialsDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>]
+    def c_urvefinanceethereum_financials_daily_snapshots__current(opts = {})
+      data, _status_code, _headers = c_urvefinanceethereum_financials_daily_snapshots__current_with_http_info(opts)
+      data
+    end
+
+    # FinancialsDailySnapshots (current)
+    # Gets financialsDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>, Integer, Hash)>] Array<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO> data, response status code and response headers
+    def c_urvefinanceethereum_financials_daily_snapshots__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_financials_daily_snapshots__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/curve-finance-ethereum/financialsDailySnapshots/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_financials_daily_snapshots__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CURVEFINANCEETHEREUMApi#c_urvefinanceethereum_financials_daily_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # LiquidityGauges (current)
+    # Gets liquidityGauges.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CURVEFINANCEETHEREUMLiquidityGaugeDTO>]
+    def c_urvefinanceethereum_liquidity_gauges__current(opts = {})
+      data, _status_code, _headers = c_urvefinanceethereum_liquidity_gauges__current_with_http_info(opts)
+      data
+    end
+
+    # LiquidityGauges (current)
+    # Gets liquidityGauges.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CURVEFINANCEETHEREUMLiquidityGaugeDTO>, Integer, Hash)>] Array<CURVEFINANCEETHEREUMLiquidityGaugeDTO> data, response status code and response headers
+    def c_urvefinanceethereum_liquidity_gauges__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_liquidity_gauges__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/curve-finance-ethereum/liquidityGauges/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CURVEFINANCEETHEREUMLiquidityGaugeDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_liquidity_gauges__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CURVEFINANCEETHEREUMApi#c_urvefinanceethereum_liquidity_gauges__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # LiquidityPoolDailySnapshots (current)
+    # Gets liquidityPoolDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>]
+    def c_urvefinanceethereum_liquidity_pool_daily_snapshots__current(opts = {})
+      data, _status_code, _headers = c_urvefinanceethereum_liquidity_pool_daily_snapshots__current_with_http_info(opts)
+      data
+    end
+
+    # LiquidityPoolDailySnapshots (current)
+    # Gets liquidityPoolDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>, Integer, Hash)>] Array<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO> data, response status code and response headers
+    def c_urvefinanceethereum_liquidity_pool_daily_snapshots__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_liquidity_pool_daily_snapshots__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/curve-finance-ethereum/liquidityPoolDailySnapshots/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_liquidity_pool_daily_snapshots__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CURVEFINANCEETHEREUMApi#c_urvefinanceethereum_liquidity_pool_daily_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # LiquidityPoolFees (current)
+    # Gets liquidityPoolFees.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>]
+    def c_urvefinanceethereum_liquidity_pool_fees__current(opts = {})
+      data, _status_code, _headers = c_urvefinanceethereum_liquidity_pool_fees__current_with_http_info(opts)
+      data
+    end
+
+    # LiquidityPoolFees (current)
+    # Gets liquidityPoolFees.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>, Integer, Hash)>] Array<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO> data, response status code and response headers
+    def c_urvefinanceethereum_liquidity_pool_fees__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_liquidity_pool_fees__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/curve-finance-ethereum/liquidityPoolFees/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_liquidity_pool_fees__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CURVEFINANCEETHEREUMApi#c_urvefinanceethereum_liquidity_pool_fees__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # LiquidityPoolHourlySnapshots (current)
+    # Gets liquidityPoolHourlySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>]
+    def c_urvefinanceethereum_liquidity_pool_hourly_snapshots__current(opts = {})
+      data, _status_code, _headers = c_urvefinanceethereum_liquidity_pool_hourly_snapshots__current_with_http_info(opts)
+      data
+    end
+
+    # LiquidityPoolHourlySnapshots (current)
+    # Gets liquidityPoolHourlySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>, Integer, Hash)>] Array<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO> data, response status code and response headers
+    def c_urvefinanceethereum_liquidity_pool_hourly_snapshots__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_liquidity_pool_hourly_snapshots__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/curve-finance-ethereum/liquidityPoolHourlySnapshots/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_liquidity_pool_hourly_snapshots__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CURVEFINANCEETHEREUMApi#c_urvefinanceethereum_liquidity_pool_hourly_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # LiquidityPools (current)
     # Gets liquidityPools.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :id Smart contract address of the pool
     # @return [Array<CURVEFINANCEETHEREUMLiquidityPoolDTO>]
     def c_urvefinanceethereum_liquidity_pools__current(opts = {})
       data, _status_code, _headers = c_urvefinanceethereum_liquidity_pools__current_with_http_info(opts)
@@ -31,6 +545,7 @@ module OpenapiClient
     # LiquidityPools (current)
     # Gets liquidityPools.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :id Smart contract address of the pool
     # @return [Array<(Array<CURVEFINANCEETHEREUMLiquidityPoolDTO>, Integer, Hash)>] Array<CURVEFINANCEETHEREUMLiquidityPoolDTO> data, response status code and response headers
     def c_urvefinanceethereum_liquidity_pools__current_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -41,6 +556,7 @@ module OpenapiClient
 
       # query parameters
       query_params = opts[:query_params] || {}
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -72,6 +588,120 @@ module OpenapiClient
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CURVEFINANCEETHEREUMApi#c_urvefinanceethereum_liquidity_pools__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # LpTokens (current)
+    # Gets lpTokens.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CURVEFINANCEETHEREUMLpTokenDTO>]
+    def c_urvefinanceethereum_lp_tokens__current(opts = {})
+      data, _status_code, _headers = c_urvefinanceethereum_lp_tokens__current_with_http_info(opts)
+      data
+    end
+
+    # LpTokens (current)
+    # Gets lpTokens.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CURVEFINANCEETHEREUMLpTokenDTO>, Integer, Hash)>] Array<CURVEFINANCEETHEREUMLpTokenDTO> data, response status code and response headers
+    def c_urvefinanceethereum_lp_tokens__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_lp_tokens__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/curve-finance-ethereum/lpTokens/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CURVEFINANCEETHEREUMLpTokenDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_lp_tokens__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CURVEFINANCEETHEREUMApi#c_urvefinanceethereum_lp_tokens__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # RewardTokens (current)
+    # Gets rewardTokens.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CURVEFINANCEETHEREUMRewardTokenDTO>]
+    def c_urvefinanceethereum_reward_tokens__current(opts = {})
+      data, _status_code, _headers = c_urvefinanceethereum_reward_tokens__current_with_http_info(opts)
+      data
+    end
+
+    # RewardTokens (current)
+    # Gets rewardTokens.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CURVEFINANCEETHEREUMRewardTokenDTO>, Integer, Hash)>] Array<CURVEFINANCEETHEREUMRewardTokenDTO> data, response status code and response headers
+    def c_urvefinanceethereum_reward_tokens__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_reward_tokens__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/curve-finance-ethereum/rewardTokens/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CURVEFINANCEETHEREUMRewardTokenDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_reward_tokens__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CURVEFINANCEETHEREUMApi#c_urvefinanceethereum_reward_tokens__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -136,6 +766,7 @@ module OpenapiClient
     # Tokens (current)
     # Gets tokens.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :id Smart contract address of the token
     # @return [Array<CURVEFINANCEETHEREUMTokenDTO>]
     def c_urvefinanceethereum_tokens__current(opts = {})
       data, _status_code, _headers = c_urvefinanceethereum_tokens__current_with_http_info(opts)
@@ -145,6 +776,7 @@ module OpenapiClient
     # Tokens (current)
     # Gets tokens.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :id Smart contract address of the token
     # @return [Array<(Array<CURVEFINANCEETHEREUMTokenDTO>, Integer, Hash)>] Array<CURVEFINANCEETHEREUMTokenDTO> data, response status code and response headers
     def c_urvefinanceethereum_tokens__current_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -155,6 +787,7 @@ module OpenapiClient
 
       # query parameters
       query_params = opts[:query_params] || {}
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -186,6 +819,177 @@ module OpenapiClient
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CURVEFINANCEETHEREUMApi#c_urvefinanceethereum_tokens__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # UsageMetricsDailySnapshots (current)
+    # Gets usageMetricsDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>]
+    def c_urvefinanceethereum_usage_metrics_daily_snapshots__current(opts = {})
+      data, _status_code, _headers = c_urvefinanceethereum_usage_metrics_daily_snapshots__current_with_http_info(opts)
+      data
+    end
+
+    # UsageMetricsDailySnapshots (current)
+    # Gets usageMetricsDailySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>, Integer, Hash)>] Array<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO> data, response status code and response headers
+    def c_urvefinanceethereum_usage_metrics_daily_snapshots__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_usage_metrics_daily_snapshots__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_usage_metrics_daily_snapshots__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CURVEFINANCEETHEREUMApi#c_urvefinanceethereum_usage_metrics_daily_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # UsageMetricsHourlySnapshots (current)
+    # Gets usageMetricsHourlySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>]
+    def c_urvefinanceethereum_usage_metrics_hourly_snapshots__current(opts = {})
+      data, _status_code, _headers = c_urvefinanceethereum_usage_metrics_hourly_snapshots__current_with_http_info(opts)
+      data
+    end
+
+    # UsageMetricsHourlySnapshots (current)
+    # Gets usageMetricsHourlySnapshots.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>, Integer, Hash)>] Array<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO> data, response status code and response headers
+    def c_urvefinanceethereum_usage_metrics_hourly_snapshots__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_usage_metrics_hourly_snapshots__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_usage_metrics_hourly_snapshots__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CURVEFINANCEETHEREUMApi#c_urvefinanceethereum_usage_metrics_hourly_snapshots__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Withdraws (current)
+    # Gets withdraws.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CURVEFINANCEETHEREUMWithdrawDTO>]
+    def c_urvefinanceethereum_withdraws__current(opts = {})
+      data, _status_code, _headers = c_urvefinanceethereum_withdraws__current_with_http_info(opts)
+      data
+    end
+
+    # Withdraws (current)
+    # Gets withdraws.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CURVEFINANCEETHEREUMWithdrawDTO>, Integer, Hash)>] Array<CURVEFINANCEETHEREUMWithdrawDTO> data, response status code and response headers
+    def c_urvefinanceethereum_withdraws__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_withdraws__current ...'
+      end
+      # resource path
+      local_var_path = '/v1/dapps/curve-finance-ethereum/withdraws/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json', 'application/x-msgpack'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CURVEFINANCEETHEREUMWithdrawDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CURVEFINANCEETHEREUMApi.c_urvefinanceethereum_withdraws__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CURVEFINANCEETHEREUMApi#c_urvefinanceethereum_withdraws__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

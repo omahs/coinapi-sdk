@@ -7,7 +7,6 @@
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
 | **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
-| **vid** | **Integer** |  | [optional] |
 | **id** | **String** | Identifier, format: (pool address)-(tick index)-(day ID) | [optional] |
 | **day_id** | **Integer** | Number of days since Unix epoch time | [optional] |
 | **tick** | **String** | tick index | [optional] |
@@ -27,7 +26,6 @@ instance = OpenapiClient::PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.new(
   entry_time: null,
   recv_time: null,
   block_number: null,
-  vid: null,
   id: null,
   day_id: null,
   tick: null,

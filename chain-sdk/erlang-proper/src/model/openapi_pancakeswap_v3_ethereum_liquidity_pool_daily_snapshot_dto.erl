@@ -12,7 +12,6 @@
   [ {'entry_time', datetime() }
   | {'recv_time', datetime() }
   | {'block_number', integer() }
-  | {'vid', integer() }
   | {'block_', integer() }
   | {'id', binary() }
   | {'day', integer() }
@@ -66,7 +65,6 @@ openapi_pancakeswap_v3_ethereum_liquidity_pool_daily_snapshot_dto(Fields) ->
   Default = [ {'entry_time', datetime() }
             , {'recv_time', datetime() }
             , {'block_number', integer() }
-            , {'vid', integer() }
             , {'block_', integer() }
             , {'id', binary() }
             , {'day', integer() }

@@ -11,7 +11,6 @@
 |**entryTime** | **OffsetDateTime** |  |  [optional] |
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
 |**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional] |
-|**vid** | **Long** |  |  [optional] |
 |**id** | **String** | Identifier, format: (pool address)-(tick index)-(day ID) |  [optional] |
 |**dayId** | **Integer** | Number of days since Unix epoch time |  [optional] |
 |**tick** | **String** | tick index |  [optional] |

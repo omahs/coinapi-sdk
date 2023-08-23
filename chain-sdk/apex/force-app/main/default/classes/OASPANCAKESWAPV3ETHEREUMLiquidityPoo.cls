@@ -33,12 +33,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
     public Long blockNumber { get; set; }
 
     /**
-     * 
-     * @return vid
-     */
-    public Long vid { get; set; }
-
-    /**
      * (Smart contract address of the pool)-( # of hours since Unix epoch time)
      * @return id
      */
@@ -2105,7 +2099,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
           paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.blockNumber = 123456789L;
-          paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.vid = 123456789L;
           paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.id = '';
           paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hour = 0;
           paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.protocol = '';
@@ -2157,7 +2150,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
             return this.entryTime == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.entryTime
                 && this.recvTime == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.recvTime
                 && this.blockNumber == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.blockNumber
-                && this.vid == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.vid
                 && this.id == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.id
                 && this.hour == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hour
                 && this.protocol == paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.protocol
@@ -2209,7 +2201,6 @@ public class OASPANCAKESWAPV3ETHEREUMLiquidityPoo implements OAS.MappedPropertie
         hashCode = (17 * hashCode) + (entryTime == null ? 0 : System.hashCode(entryTime));
         hashCode = (17 * hashCode) + (recvTime == null ? 0 : System.hashCode(recvTime));
         hashCode = (17 * hashCode) + (blockNumber == null ? 0 : System.hashCode(blockNumber));
-        hashCode = (17 * hashCode) + (vid == null ? 0 : System.hashCode(vid));
         hashCode = (17 * hashCode) + (id == null ? 0 : System.hashCode(id));
         hashCode = (17 * hashCode) + (hour == null ? 0 : System.hashCode(hour));
         hashCode = (17 * hashCode) + (protocol == null ? 0 : System.hashCode(protocol));

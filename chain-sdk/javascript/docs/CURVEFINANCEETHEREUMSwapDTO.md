@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entryTime** | **Date** |  | [optional] 
 **recvTime** | **Date** |  | [optional] 
-**blockNumber** | **String** | Block number of this event | [optional] 
+**blockNumber** | **Number** | Number of block in which entity was recorded. | [optional] 
 **id** | **String** | Swap-(transaction hash)-(log index) | [optional] 
 **hash** | **String** | Transaction hash of the transaction that emitted this event | [optional] 
 **logIndex** | **Number** | Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0 | [optional] 

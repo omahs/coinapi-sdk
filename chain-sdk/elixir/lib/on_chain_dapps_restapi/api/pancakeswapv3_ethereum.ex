@@ -197,7 +197,6 @@ defmodule OnChainDapps-RESTAPI.Api.PANCAKESWAPV3ETHEREUM do
 
   - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
-    - `:pool` (String.t): Pool this snapshot belongs to.
 
   ### Returns
 
@@ -205,16 +204,11 @@ defmodule OnChainDapps-RESTAPI.Api.PANCAKESWAPV3ETHEREUM do
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.PancakeswapV3EthereumLiquidityPoolDailySnapshotDto.t)} | {:error, Tesla.Env.t}
-  def p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current(connection, opts \\ []) do
-    optional_params = %{
-      :pool => :query
-    }
-
+  def p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
       |> url("/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current")
-      |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection

@@ -95,7 +95,6 @@ private class OASPANCAKESWAPV3ETHEREUMTickDTOTest {
         System.assertEquals(null, paNCAKESWAPV3ETHEREUMTickDTO.entryTime);
         System.assertEquals(null, paNCAKESWAPV3ETHEREUMTickDTO.recvTime);
         System.assertEquals(null, paNCAKESWAPV3ETHEREUMTickDTO.blockNumber);
-        System.assertEquals(null, paNCAKESWAPV3ETHEREUMTickDTO.vid);
         System.assertEquals(null, paNCAKESWAPV3ETHEREUMTickDTO.id);
         System.assertEquals(null, paNCAKESWAPV3ETHEREUMTickDTO.index);
         System.assertEquals(null, paNCAKESWAPV3ETHEREUMTickDTO.pool);

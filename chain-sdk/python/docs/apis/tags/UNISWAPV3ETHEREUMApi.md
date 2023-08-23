@@ -1660,43 +1660,16 @@ with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uniswapv3_ethereum_api.UNISWAPV3ETHEREUMApi(api_client)
 
-    # example passing only optional values
-    query_params = {
-        'pool': "pool_example",
-    }
+    # example, this endpoint has no required or optional parameters
     try:
         # TickDailySnapshots (current)
-        api_response = api_instance.u_niswapv3_ethereum_tick_daily_snapshots__current(
-            query_params=query_params,
-        )
+        api_response = api_instance.u_niswapv3_ethereum_tick_daily_snapshots__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
         print("Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_tick_daily_snapshots__current: %s\n" % e)
 ```
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-query_params | RequestQueryParams | |
-accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', 'application/x-msgpack', ) | Tells the server the content type(s) that are accepted by the client
-stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
-timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
-skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
-
-### query_params
-#### RequestQueryParams
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-pool | PoolSchema | | optional
-
-
-# PoolSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-str,  | str,  |  | 
+This endpoint does not need any parameter.
 
 ### Return Types, Responses
 
@@ -1792,43 +1765,16 @@ with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uniswapv3_ethereum_api.UNISWAPV3ETHEREUMApi(api_client)
 
-    # example passing only optional values
-    query_params = {
-        'pool': "pool_example",
-    }
+    # example, this endpoint has no required or optional parameters
     try:
         # TickHourlySnapshots (current)
-        api_response = api_instance.u_niswapv3_ethereum_tick_hourly_snapshots__current(
-            query_params=query_params,
-        )
+        api_response = api_instance.u_niswapv3_ethereum_tick_hourly_snapshots__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
         print("Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_tick_hourly_snapshots__current: %s\n" % e)
 ```
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-query_params | RequestQueryParams | |
-accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', 'application/x-msgpack', ) | Tells the server the content type(s) that are accepted by the client
-stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
-timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
-skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
-
-### query_params
-#### RequestQueryParams
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-pool | PoolSchema | | optional
-
-
-# PoolSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-str,  | str,  |  | 
+This endpoint does not need any parameter.
 
 ### Return Types, Responses
 
@@ -1924,43 +1870,16 @@ with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uniswapv3_ethereum_api.UNISWAPV3ETHEREUMApi(api_client)
 
-    # example passing only optional values
-    query_params = {
-        'pool': "pool_example",
-    }
+    # example, this endpoint has no required or optional parameters
     try:
         # Ticks (current)
-        api_response = api_instance.u_niswapv3_ethereum_ticks__current(
-            query_params=query_params,
-        )
+        api_response = api_instance.u_niswapv3_ethereum_ticks__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
         print("Exception when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_ticks__current: %s\n" % e)
 ```
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-query_params | RequestQueryParams | |
-accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', 'application/x-msgpack', ) | Tells the server the content type(s) that are accepted by the client
-stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
-timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
-skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
-
-### query_params
-#### RequestQueryParams
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-pool | PoolSchema | | optional
-
-
-# PoolSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-str,  | str,  |  | 
+This endpoint does not need any parameter.
 
 ### Return Types, Responses
 

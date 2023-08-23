@@ -19,9 +19,23 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
+import org.openapitools.client.models.CURVEFINANCEETHEREUMAccountDTO
+import org.openapitools.client.models.CURVEFINANCEETHEREUMActiveAccountDTO
+import org.openapitools.client.models.CURVEFINANCEETHEREUMDepositDTO
+import org.openapitools.client.models.CURVEFINANCEETHEREUMDexAmmProtocolDTO
+import org.openapitools.client.models.CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+import org.openapitools.client.models.CURVEFINANCEETHEREUMLiquidityGaugeDTO
 import org.openapitools.client.models.CURVEFINANCEETHEREUMLiquidityPoolDTO
+import org.openapitools.client.models.CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+import org.openapitools.client.models.CURVEFINANCEETHEREUMLiquidityPoolFeeDTO
+import org.openapitools.client.models.CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+import org.openapitools.client.models.CURVEFINANCEETHEREUMLpTokenDTO
+import org.openapitools.client.models.CURVEFINANCEETHEREUMRewardTokenDTO
 import org.openapitools.client.models.CURVEFINANCEETHEREUMSwapDTO
 import org.openapitools.client.models.CURVEFINANCEETHEREUMTokenDTO
+import org.openapitools.client.models.CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+import org.openapitools.client.models.CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+import org.openapitools.client.models.CURVEFINANCEETHEREUMWithdrawDTO
 
 import com.squareup.moshi.Json
 
@@ -48,8 +62,621 @@ class CURVEFINANCEETHEREUMApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * Accounts (current)
+     * Gets accounts.
+     * @return kotlin.collections.List<CURVEFINANCEETHEREUMAccountDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun cURVEFINANCEETHEREUMAccountsCurrent() : kotlin.collections.List<CURVEFINANCEETHEREUMAccountDTO> {
+        val localVarResponse = cURVEFINANCEETHEREUMAccountsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CURVEFINANCEETHEREUMAccountDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Accounts (current)
+     * Gets accounts.
+     * @return ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMAccountDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun cURVEFINANCEETHEREUMAccountsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMAccountDTO>?> {
+        val localVariableConfig = cURVEFINANCEETHEREUMAccountsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CURVEFINANCEETHEREUMAccountDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation cURVEFINANCEETHEREUMAccountsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun cURVEFINANCEETHEREUMAccountsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/curve-finance-ethereum/accounts/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * ActiveAccounts (current)
+     * Gets activeAccounts.
+     * @return kotlin.collections.List<CURVEFINANCEETHEREUMActiveAccountDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun cURVEFINANCEETHEREUMActiveAccountsCurrent() : kotlin.collections.List<CURVEFINANCEETHEREUMActiveAccountDTO> {
+        val localVarResponse = cURVEFINANCEETHEREUMActiveAccountsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CURVEFINANCEETHEREUMActiveAccountDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * ActiveAccounts (current)
+     * Gets activeAccounts.
+     * @return ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMActiveAccountDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun cURVEFINANCEETHEREUMActiveAccountsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMActiveAccountDTO>?> {
+        val localVariableConfig = cURVEFINANCEETHEREUMActiveAccountsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CURVEFINANCEETHEREUMActiveAccountDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation cURVEFINANCEETHEREUMActiveAccountsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun cURVEFINANCEETHEREUMActiveAccountsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/curve-finance-ethereum/activeAccounts/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @return kotlin.collections.List<CURVEFINANCEETHEREUMDepositDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun cURVEFINANCEETHEREUMDepositsCurrent() : kotlin.collections.List<CURVEFINANCEETHEREUMDepositDTO> {
+        val localVarResponse = cURVEFINANCEETHEREUMDepositsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CURVEFINANCEETHEREUMDepositDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @return ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMDepositDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun cURVEFINANCEETHEREUMDepositsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMDepositDTO>?> {
+        val localVariableConfig = cURVEFINANCEETHEREUMDepositsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CURVEFINANCEETHEREUMDepositDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation cURVEFINANCEETHEREUMDepositsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun cURVEFINANCEETHEREUMDepositsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/curve-finance-ethereum/deposits/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * DexAmmProtocols (current)
+     * Gets dexAmmProtocols.
+     * @return kotlin.collections.List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun cURVEFINANCEETHEREUMDexAmmProtocolsCurrent() : kotlin.collections.List<CURVEFINANCEETHEREUMDexAmmProtocolDTO> {
+        val localVarResponse = cURVEFINANCEETHEREUMDexAmmProtocolsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * DexAmmProtocols (current)
+     * Gets dexAmmProtocols.
+     * @return ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun cURVEFINANCEETHEREUMDexAmmProtocolsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>?> {
+        val localVariableConfig = cURVEFINANCEETHEREUMDexAmmProtocolsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation cURVEFINANCEETHEREUMDexAmmProtocolsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun cURVEFINANCEETHEREUMDexAmmProtocolsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/curve-finance-ethereum/dexAmmProtocols/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * FinancialsDailySnapshots (current)
+     * Gets financialsDailySnapshots.
+     * @return kotlin.collections.List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent() : kotlin.collections.List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO> {
+        val localVarResponse = cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * FinancialsDailySnapshots (current)
+     * Gets financialsDailySnapshots.
+     * @return ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>?> {
+        val localVariableConfig = cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/curve-finance-ethereum/financialsDailySnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * LiquidityGauges (current)
+     * Gets liquidityGauges.
+     * @return kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun cURVEFINANCEETHEREUMLiquidityGaugesCurrent() : kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityGaugeDTO> {
+        val localVarResponse = cURVEFINANCEETHEREUMLiquidityGaugesCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * LiquidityGauges (current)
+     * Gets liquidityGauges.
+     * @return ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun cURVEFINANCEETHEREUMLiquidityGaugesCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>?> {
+        val localVariableConfig = cURVEFINANCEETHEREUMLiquidityGaugesCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation cURVEFINANCEETHEREUMLiquidityGaugesCurrent
+     *
+     * @return RequestConfig
+     */
+    fun cURVEFINANCEETHEREUMLiquidityGaugesCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/curve-finance-ethereum/liquidityGauges/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     * Gets liquidityPoolDailySnapshots.
+     * @return kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent() : kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO> {
+        val localVarResponse = cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     * Gets liquidityPoolDailySnapshots.
+     * @return ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>?> {
+        val localVariableConfig = cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/curve-finance-ethereum/liquidityPoolDailySnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * LiquidityPoolFees (current)
+     * Gets liquidityPoolFees.
+     * @return kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent() : kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO> {
+        val localVarResponse = cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * LiquidityPoolFees (current)
+     * Gets liquidityPoolFees.
+     * @return ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>?> {
+        val localVariableConfig = cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent
+     *
+     * @return RequestConfig
+     */
+    fun cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/curve-finance-ethereum/liquidityPoolFees/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     * Gets liquidityPoolHourlySnapshots.
+     * @return kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent() : kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO> {
+        val localVarResponse = cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     * Gets liquidityPoolHourlySnapshots.
+     * @return ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>?> {
+        val localVariableConfig = cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/curve-finance-ethereum/liquidityPoolHourlySnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * LiquidityPools (current)
      * Gets liquidityPools.
+     * @param id Smart contract address of the pool (optional)
      * @return kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -59,8 +686,8 @@ class CURVEFINANCEETHEREUMApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun cURVEFINANCEETHEREUMLiquidityPoolsCurrent() : kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolDTO> {
-        val localVarResponse = cURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo()
+    fun cURVEFINANCEETHEREUMLiquidityPoolsCurrent(id: kotlin.String? = null) : kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolDTO> {
+        val localVarResponse = cURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo(id = id)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolDTO>
@@ -80,14 +707,15 @@ class CURVEFINANCEETHEREUMApi(basePath: kotlin.String = defaultBasePath, client:
     /**
      * LiquidityPools (current)
      * Gets liquidityPools.
+     * @param id Smart contract address of the pool (optional)
      * @return ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun cURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolDTO>?> {
-        val localVariableConfig = cURVEFINANCEETHEREUMLiquidityPoolsCurrentRequestConfig()
+    fun cURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo(id: kotlin.String?) : ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolDTO>?> {
+        val localVariableConfig = cURVEFINANCEETHEREUMLiquidityPoolsCurrentRequestConfig(id = id)
 
         return request<Unit, kotlin.collections.List<CURVEFINANCEETHEREUMLiquidityPoolDTO>>(
             localVariableConfig
@@ -97,9 +725,83 @@ class CURVEFINANCEETHEREUMApi(basePath: kotlin.String = defaultBasePath, client:
     /**
      * To obtain the request config of the operation cURVEFINANCEETHEREUMLiquidityPoolsCurrent
      *
+     * @param id Smart contract address of the pool (optional)
      * @return RequestConfig
      */
-    fun cURVEFINANCEETHEREUMLiquidityPoolsCurrentRequestConfig() : RequestConfig<Unit> {
+    fun cURVEFINANCEETHEREUMLiquidityPoolsCurrentRequestConfig(id: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (id != null) {
+                    put("id", listOf(id.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/curve-finance-ethereum/liquidityPools/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * LpTokens (current)
+     * Gets lpTokens.
+     * @return kotlin.collections.List<CURVEFINANCEETHEREUMLpTokenDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun cURVEFINANCEETHEREUMLpTokensCurrent() : kotlin.collections.List<CURVEFINANCEETHEREUMLpTokenDTO> {
+        val localVarResponse = cURVEFINANCEETHEREUMLpTokensCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CURVEFINANCEETHEREUMLpTokenDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * LpTokens (current)
+     * Gets lpTokens.
+     * @return ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMLpTokenDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun cURVEFINANCEETHEREUMLpTokensCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMLpTokenDTO>?> {
+        val localVariableConfig = cURVEFINANCEETHEREUMLpTokensCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CURVEFINANCEETHEREUMLpTokenDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation cURVEFINANCEETHEREUMLpTokensCurrent
+     *
+     * @return RequestConfig
+     */
+    fun cURVEFINANCEETHEREUMLpTokensCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -107,7 +809,75 @@ class CURVEFINANCEETHEREUMApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/v1/dapps/curve-finance-ethereum/liquidityPools/current",
+            path = "/v1/dapps/curve-finance-ethereum/lpTokens/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * RewardTokens (current)
+     * Gets rewardTokens.
+     * @return kotlin.collections.List<CURVEFINANCEETHEREUMRewardTokenDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun cURVEFINANCEETHEREUMRewardTokensCurrent() : kotlin.collections.List<CURVEFINANCEETHEREUMRewardTokenDTO> {
+        val localVarResponse = cURVEFINANCEETHEREUMRewardTokensCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CURVEFINANCEETHEREUMRewardTokenDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * RewardTokens (current)
+     * Gets rewardTokens.
+     * @return ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMRewardTokenDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun cURVEFINANCEETHEREUMRewardTokensCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMRewardTokenDTO>?> {
+        val localVariableConfig = cURVEFINANCEETHEREUMRewardTokensCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CURVEFINANCEETHEREUMRewardTokenDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation cURVEFINANCEETHEREUMRewardTokensCurrent
+     *
+     * @return RequestConfig
+     */
+    fun cURVEFINANCEETHEREUMRewardTokensCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/curve-finance-ethereum/rewardTokens/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -186,6 +956,7 @@ class CURVEFINANCEETHEREUMApi(basePath: kotlin.String = defaultBasePath, client:
     /**
      * Tokens (current)
      * Gets tokens.
+     * @param id Smart contract address of the token (optional)
      * @return kotlin.collections.List<CURVEFINANCEETHEREUMTokenDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -195,8 +966,8 @@ class CURVEFINANCEETHEREUMApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun cURVEFINANCEETHEREUMTokensCurrent() : kotlin.collections.List<CURVEFINANCEETHEREUMTokenDTO> {
-        val localVarResponse = cURVEFINANCEETHEREUMTokensCurrentWithHttpInfo()
+    fun cURVEFINANCEETHEREUMTokensCurrent(id: kotlin.String? = null) : kotlin.collections.List<CURVEFINANCEETHEREUMTokenDTO> {
+        val localVarResponse = cURVEFINANCEETHEREUMTokensCurrentWithHttpInfo(id = id)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CURVEFINANCEETHEREUMTokenDTO>
@@ -216,14 +987,15 @@ class CURVEFINANCEETHEREUMApi(basePath: kotlin.String = defaultBasePath, client:
     /**
      * Tokens (current)
      * Gets tokens.
+     * @param id Smart contract address of the token (optional)
      * @return ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMTokenDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun cURVEFINANCEETHEREUMTokensCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMTokenDTO>?> {
-        val localVariableConfig = cURVEFINANCEETHEREUMTokensCurrentRequestConfig()
+    fun cURVEFINANCEETHEREUMTokensCurrentWithHttpInfo(id: kotlin.String?) : ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMTokenDTO>?> {
+        val localVariableConfig = cURVEFINANCEETHEREUMTokensCurrentRequestConfig(id = id)
 
         return request<Unit, kotlin.collections.List<CURVEFINANCEETHEREUMTokenDTO>>(
             localVariableConfig
@@ -233,9 +1005,83 @@ class CURVEFINANCEETHEREUMApi(basePath: kotlin.String = defaultBasePath, client:
     /**
      * To obtain the request config of the operation cURVEFINANCEETHEREUMTokensCurrent
      *
+     * @param id Smart contract address of the token (optional)
      * @return RequestConfig
      */
-    fun cURVEFINANCEETHEREUMTokensCurrentRequestConfig() : RequestConfig<Unit> {
+    fun cURVEFINANCEETHEREUMTokensCurrentRequestConfig(id: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (id != null) {
+                    put("id", listOf(id.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/curve-finance-ethereum/tokens/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * UsageMetricsDailySnapshots (current)
+     * Gets usageMetricsDailySnapshots.
+     * @return kotlin.collections.List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent() : kotlin.collections.List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO> {
+        val localVarResponse = cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * UsageMetricsDailySnapshots (current)
+     * Gets usageMetricsDailySnapshots.
+     * @return ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>?> {
+        val localVariableConfig = cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -243,7 +1089,143 @@ class CURVEFINANCEETHEREUMApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/v1/dapps/curve-finance-ethereum/tokens/current",
+            path = "/v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     * Gets usageMetricsHourlySnapshots.
+     * @return kotlin.collections.List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent() : kotlin.collections.List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO> {
+        val localVarResponse = cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     * Gets usageMetricsHourlySnapshots.
+     * @return ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>?> {
+        val localVariableConfig = cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = false,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @return kotlin.collections.List<CURVEFINANCEETHEREUMWithdrawDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun cURVEFINANCEETHEREUMWithdrawsCurrent() : kotlin.collections.List<CURVEFINANCEETHEREUMWithdrawDTO> {
+        val localVarResponse = cURVEFINANCEETHEREUMWithdrawsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CURVEFINANCEETHEREUMWithdrawDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @return ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMWithdrawDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun cURVEFINANCEETHEREUMWithdrawsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CURVEFINANCEETHEREUMWithdrawDTO>?> {
+        val localVariableConfig = cURVEFINANCEETHEREUMWithdrawsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CURVEFINANCEETHEREUMWithdrawDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation cURVEFINANCEETHEREUMWithdrawsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun cURVEFINANCEETHEREUMWithdrawsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/dapps/curve-finance-ethereum/withdraws/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,

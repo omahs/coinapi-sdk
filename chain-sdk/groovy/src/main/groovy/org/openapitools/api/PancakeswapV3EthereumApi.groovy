@@ -153,7 +153,7 @@ class PancakeswapV3EthereumApi {
 
     }
 
-    def pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent ( String pool, Closure onSuccess, Closure onFailure)  {
+    def pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent ( Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current"
 
         // params
@@ -163,9 +163,6 @@ class PancakeswapV3EthereumApi {
         def contentType
 
 
-        if (pool != null) {
-            queryParams.put("pool", pool)
-        }
 
 
 

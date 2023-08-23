@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entry_time** | **character** |  | [optional] 
 **recv_time** | **character** |  | [optional] 
-**block_number** | **character** | Block number of this event | [optional] 
+**block_number** | **integer** | Number of block in which entity was recorded. | [optional] 
 **id** | **character** | Swap-(transaction hash)-(log index) | [optional] 
 **hash** | **character** | Transaction hash of the transaction that emitted this event | [optional] 
 **log_index** | **integer** | Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0 | [optional] 

@@ -37,13 +37,6 @@ describe("uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto", function()
     end)
   end)
 
-  -- unit tests for the property 'vid'
-  describe("property vid test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for the property 'block_'
   describe("property block_ test", function()
     it("should work", function()

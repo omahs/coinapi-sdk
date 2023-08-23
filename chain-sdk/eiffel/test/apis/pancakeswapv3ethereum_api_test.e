@@ -98,11 +98,10 @@ feature -- Test routines
             -- Gets liquidityPoolDailySnapshots.
         local
             l_response: LIST [PANCAKESWAP_V3_ETHEREUM_LIQUIDITY_POOL_DAILY_SNAPSHOT_DTO]
-            l_pool: STRING_32
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.p_an_ca_ke_sw_ap_v3_et_he_re_um_liquidity_pool_daily_snapshots_current(l_pool)
+            -- l_response := api.p_an_ca_ke_sw_ap_v3_et_he_re_um_liquidity_pool_daily_snapshots_current
             assert ("not_implemented", False)
         end
 

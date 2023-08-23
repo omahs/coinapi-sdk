@@ -488,9 +488,8 @@ export class PANCAKESWAPV3ETHEREUMApi {
     /**
      * Gets liquidityPoolDailySnapshots.
      * @summary LiquidityPoolDailySnapshots (current)
-     * @param pool Pool this snapshot belongs to.
      */
-    public async pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent (pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>;  }> {
+    public async pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>;  }> {
         const localVarPath = this.basePath + '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -502,10 +501,6 @@ export class PANCAKESWAPV3ETHEREUMApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        if (pool !== undefined) {
-            localVarQueryParameters['pool'] = ObjectSerializer.serialize(pool, "string");
-        }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);
 

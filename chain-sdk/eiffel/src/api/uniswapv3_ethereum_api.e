@@ -501,11 +501,9 @@ feature -- API Access
 			end
 		end
 
-	u_ni_sw_ap_v3_et_he_re_um_tick_daily_snapshots_current (pool: STRING_32): detachable LIST [UNISWAP_V3_ETHEREUM_TICK_DAILY_SNAPSHOT_DTO]
+	u_ni_sw_ap_v3_et_he_re_um_tick_daily_snapshots_current : detachable LIST [UNISWAP_V3_ETHEREUM_TICK_DAILY_SNAPSHOT_DTO]
 			-- TickDailySnapshots (current)
 			-- Gets tickDailySnapshots.
-			-- 
-			-- argument: pool liquidity pool this tick belongs to (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V3_ETHEREUM_TICK_DAILY_SNAPSHOT_DTO]
@@ -519,7 +517,6 @@ feature -- API Access
 			create l_request
 			
 			l_path := "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "pool", pool));
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
@@ -537,11 +534,9 @@ feature -- API Access
 			end
 		end
 
-	u_ni_sw_ap_v3_et_he_re_um_tick_hourly_snapshots_current (pool: STRING_32): detachable LIST [UNISWAP_V3_ETHEREUM_TICK_HOURLY_SNAPSHOT_DTO]
+	u_ni_sw_ap_v3_et_he_re_um_tick_hourly_snapshots_current : detachable LIST [UNISWAP_V3_ETHEREUM_TICK_HOURLY_SNAPSHOT_DTO]
 			-- TickHourlySnapshots (current)
 			-- Gets tickHourlySnapshots.
-			-- 
-			-- argument: pool liquidity pool this tick belongs to (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V3_ETHEREUM_TICK_HOURLY_SNAPSHOT_DTO]
@@ -555,7 +550,6 @@ feature -- API Access
 			create l_request
 			
 			l_path := "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "pool", pool));
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
@@ -573,11 +567,9 @@ feature -- API Access
 			end
 		end
 
-	u_ni_sw_ap_v3_et_he_re_um_ticks_current (pool: STRING_32): detachable LIST [UNISWAP_V3_ETHEREUM_TICK_DTO]
+	u_ni_sw_ap_v3_et_he_re_um_ticks_current : detachable LIST [UNISWAP_V3_ETHEREUM_TICK_DTO]
 			-- Ticks (current)
 			-- Gets ticks.
-			-- 
-			-- argument: pool Liquidity pool this tick belongs to (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V3_ETHEREUM_TICK_DTO]
@@ -591,7 +583,6 @@ feature -- API Access
 			create l_request
 			
 			l_path := "/v1/dapps/uniswap-v3-ethereum/ticks/current"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "pool", pool));
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then

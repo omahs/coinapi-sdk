@@ -68,18 +68,32 @@ _()
     # The list of available operation in the REST service
     # It's modelled as an associative array for efficient key lookup
     declare -A operations
-    operations["cRYPTOPUNKSBidsCurrent"]=1
-    operations["cRYPTOPUNKSCollectionDailySnapshotsCurrent"]=1
-    operations["cRYPTOPUNKSCollectionsCurrent"]=1
-    operations["cRYPTOPUNKSDataSourcesCurrent"]=1
-    operations["cRYPTOPUNKSItemsCurrent"]=1
-    operations["cRYPTOPUNKSMarketPlacesCurrent"]=1
-    operations["cRYPTOPUNKSMarketplaceDailySnapshotsCurrent"]=1
-    operations["cRYPTOPUNKSTradesCurrent"]=1
-    operations["cRYPTOPUNKSUsersCurrent"]=1
+    operations["cRYPTOPUNKSETHEREUMBidsCurrent"]=1
+    operations["cRYPTOPUNKSETHEREUMCollectionDailySnapshotsCurrent"]=1
+    operations["cRYPTOPUNKSETHEREUMCollectionsCurrent"]=1
+    operations["cRYPTOPUNKSETHEREUMDataSourcesCurrent"]=1
+    operations["cRYPTOPUNKSETHEREUMItemsCurrent"]=1
+    operations["cRYPTOPUNKSETHEREUMMarketPlacesCurrent"]=1
+    operations["cRYPTOPUNKSETHEREUMMarketplaceDailySnapshotsCurrent"]=1
+    operations["cRYPTOPUNKSETHEREUMTradesCurrent"]=1
+    operations["cRYPTOPUNKSETHEREUMUsersCurrent"]=1
+    operations["cURVEFINANCEETHEREUMAccountsCurrent"]=1
+    operations["cURVEFINANCEETHEREUMActiveAccountsCurrent"]=1
+    operations["cURVEFINANCEETHEREUMDepositsCurrent"]=1
+    operations["cURVEFINANCEETHEREUMDexAmmProtocolsCurrent"]=1
+    operations["cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent"]=1
+    operations["cURVEFINANCEETHEREUMLiquidityGaugesCurrent"]=1
+    operations["cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent"]=1
+    operations["cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent"]=1
+    operations["cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent"]=1
     operations["cURVEFINANCEETHEREUMLiquidityPoolsCurrent"]=1
+    operations["cURVEFINANCEETHEREUMLpTokensCurrent"]=1
+    operations["cURVEFINANCEETHEREUMRewardTokensCurrent"]=1
     operations["cURVEFINANCEETHEREUMSwapsCurrent"]=1
     operations["cURVEFINANCEETHEREUMTokensCurrent"]=1
+    operations["cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent"]=1
+    operations["cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent"]=1
+    operations["cURVEFINANCEETHEREUMWithdrawsCurrent"]=1
     operations["metadataChainsGet"]=1
     operations["metadataDappsDappNameGet"]=1
     operations["metadataDappsGet"]=1
@@ -106,12 +120,52 @@ _()
     operations["pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent"]=1
     operations["pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent"]=1
     operations["pANCAKESWAPV3ETHEREUMWithdrawsCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMAccountsCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMActiveAccountsCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMDepositsCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent"]=1
     operations["sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMPositionsCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMRewardTokensCurrent"]=1
     operations["sUSHISWAPV3ETHEREUMSwapsCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMTicksCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent"]=1
     operations["sUSHISWAPV3ETHEREUMTokensCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent"]=1
+    operations["sUSHISWAPV3ETHEREUMWithdrawsCurrent"]=1
+    operations["uNISWAPV2ETHEREUMAccountsCurrent"]=1
+    operations["uNISWAPV2ETHEREUMActiveAccountsCurrent"]=1
+    operations["uNISWAPV2ETHEREUMDepositsCurrent"]=1
+    operations["uNISWAPV2ETHEREUMDexAmmProtocolsCurrent"]=1
+    operations["uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent"]=1
+    operations["uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent"]=1
+    operations["uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent"]=1
+    operations["uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent"]=1
+    operations["uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent"]=1
     operations["uNISWAPV2ETHEREUMLiquidityPoolsCurrent"]=1
+    operations["uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent"]=1
+    operations["uNISWAPV2ETHEREUMMasterChefRewardersCurrent"]=1
+    operations["uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent"]=1
+    operations["uNISWAPV2ETHEREUMMasterChefsCurrent"]=1
+    operations["uNISWAPV2ETHEREUMRewardTokensCurrent"]=1
+    operations["uNISWAPV2ETHEREUMRewarderProbesCurrent"]=1
     operations["uNISWAPV2ETHEREUMSwapsCurrent"]=1
+    operations["uNISWAPV2ETHEREUMTokenWhiteListsCurrent"]=1
     operations["uNISWAPV2ETHEREUMTokensCurrent"]=1
+    operations["uNISWAPV2ETHEREUMTransfersCurrent"]=1
+    operations["uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent"]=1
+    operations["uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent"]=1
+    operations["uNISWAPV2ETHEREUMWithdrawsCurrent"]=1
     operations["uNISWAPV3ETHEREUMAccountsCurrent"]=1
     operations["uNISWAPV3ETHEREUMActiveAccountsCurrent"]=1
     operations["uNISWAPV3ETHEREUMDepositsCurrent"]=1
@@ -139,18 +193,32 @@ _()
     # An associative array of operations to their parameters
     # Only include path, query and header parameters
     declare -A operation_parameters
-    operation_parameters["cRYPTOPUNKSBidsCurrent"]=""
-    operation_parameters["cRYPTOPUNKSCollectionDailySnapshotsCurrent"]=""
-    operation_parameters["cRYPTOPUNKSCollectionsCurrent"]=""
-    operation_parameters["cRYPTOPUNKSDataSourcesCurrent"]=""
-    operation_parameters["cRYPTOPUNKSItemsCurrent"]=""
-    operation_parameters["cRYPTOPUNKSMarketPlacesCurrent"]=""
-    operation_parameters["cRYPTOPUNKSMarketplaceDailySnapshotsCurrent"]=""
-    operation_parameters["cRYPTOPUNKSTradesCurrent"]=""
-    operation_parameters["cRYPTOPUNKSUsersCurrent"]=""
-    operation_parameters["cURVEFINANCEETHEREUMLiquidityPoolsCurrent"]=""
+    operation_parameters["cRYPTOPUNKSETHEREUMBidsCurrent"]=""
+    operation_parameters["cRYPTOPUNKSETHEREUMCollectionDailySnapshotsCurrent"]=""
+    operation_parameters["cRYPTOPUNKSETHEREUMCollectionsCurrent"]=""
+    operation_parameters["cRYPTOPUNKSETHEREUMDataSourcesCurrent"]=""
+    operation_parameters["cRYPTOPUNKSETHEREUMItemsCurrent"]=""
+    operation_parameters["cRYPTOPUNKSETHEREUMMarketPlacesCurrent"]=""
+    operation_parameters["cRYPTOPUNKSETHEREUMMarketplaceDailySnapshotsCurrent"]=""
+    operation_parameters["cRYPTOPUNKSETHEREUMTradesCurrent"]=""
+    operation_parameters["cRYPTOPUNKSETHEREUMUsersCurrent"]=""
+    operation_parameters["cURVEFINANCEETHEREUMAccountsCurrent"]=""
+    operation_parameters["cURVEFINANCEETHEREUMActiveAccountsCurrent"]=""
+    operation_parameters["cURVEFINANCEETHEREUMDepositsCurrent"]=""
+    operation_parameters["cURVEFINANCEETHEREUMDexAmmProtocolsCurrent"]=""
+    operation_parameters["cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent"]=""
+    operation_parameters["cURVEFINANCEETHEREUMLiquidityGaugesCurrent"]=""
+    operation_parameters["cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent"]=""
+    operation_parameters["cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent"]=""
+    operation_parameters["cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent"]=""
+    operation_parameters["cURVEFINANCEETHEREUMLiquidityPoolsCurrent"]="id= "
+    operation_parameters["cURVEFINANCEETHEREUMLpTokensCurrent"]=""
+    operation_parameters["cURVEFINANCEETHEREUMRewardTokensCurrent"]=""
     operation_parameters["cURVEFINANCEETHEREUMSwapsCurrent"]=""
-    operation_parameters["cURVEFINANCEETHEREUMTokensCurrent"]=""
+    operation_parameters["cURVEFINANCEETHEREUMTokensCurrent"]="id= "
+    operation_parameters["cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent"]=""
+    operation_parameters["cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent"]=""
+    operation_parameters["cURVEFINANCEETHEREUMWithdrawsCurrent"]=""
     operation_parameters["metadataChainsGet"]=""
     operation_parameters["metadataDappsDappNameGet"]="dappName= "
     operation_parameters["metadataDappsGet"]=""
@@ -160,7 +228,7 @@ _()
     operation_parameters["pANCAKESWAPV3ETHEREUMDexAmmProtocolsCurrent"]=""
     operation_parameters["pANCAKESWAPV3ETHEREUMFinancialsDailySnapshotsCurrent"]=""
     operation_parameters["pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent"]="id= "
-    operation_parameters["pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent"]="pool= "
+    operation_parameters["pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent"]=""
     operation_parameters["pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent"]=""
     operation_parameters["pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent"]="pool= "
     operation_parameters["pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent"]="id= "
@@ -177,12 +245,52 @@ _()
     operation_parameters["pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent"]=""
     operation_parameters["pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent"]=""
     operation_parameters["pANCAKESWAPV3ETHEREUMWithdrawsCurrent"]=""
+    operation_parameters["sUSHISWAPV3ETHEREUMAccountsCurrent"]=""
+    operation_parameters["sUSHISWAPV3ETHEREUMActiveAccountsCurrent"]=""
+    operation_parameters["sUSHISWAPV3ETHEREUMDepositsCurrent"]=""
+    operation_parameters["sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent"]=""
+    operation_parameters["sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent"]=""
+    operation_parameters["sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent"]="id= "
+    operation_parameters["sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent"]=""
+    operation_parameters["sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent"]=""
+    operation_parameters["sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent"]="pool= "
     operation_parameters["sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent"]="id= "
+    operation_parameters["sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent"]=""
+    operation_parameters["sUSHISWAPV3ETHEREUMPositionsCurrent"]="pool= "
+    operation_parameters["sUSHISWAPV3ETHEREUMRewardTokensCurrent"]=""
     operation_parameters["sUSHISWAPV3ETHEREUMSwapsCurrent"]=""
+    operation_parameters["sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent"]="pool= "
+    operation_parameters["sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent"]="pool= "
+    operation_parameters["sUSHISWAPV3ETHEREUMTicksCurrent"]="pool= "
+    operation_parameters["sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent"]=""
+    operation_parameters["sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent"]=""
     operation_parameters["sUSHISWAPV3ETHEREUMTokensCurrent"]="id= "
-    operation_parameters["uNISWAPV2ETHEREUMLiquidityPoolsCurrent"]=""
+    operation_parameters["sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent"]=""
+    operation_parameters["sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent"]=""
+    operation_parameters["sUSHISWAPV3ETHEREUMWithdrawsCurrent"]=""
+    operation_parameters["uNISWAPV2ETHEREUMAccountsCurrent"]=""
+    operation_parameters["uNISWAPV2ETHEREUMActiveAccountsCurrent"]=""
+    operation_parameters["uNISWAPV2ETHEREUMDepositsCurrent"]=""
+    operation_parameters["uNISWAPV2ETHEREUMDexAmmProtocolsCurrent"]=""
+    operation_parameters["uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent"]=""
+    operation_parameters["uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent"]="id= "
+    operation_parameters["uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent"]=""
+    operation_parameters["uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent"]=""
+    operation_parameters["uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent"]=""
+    operation_parameters["uNISWAPV2ETHEREUMLiquidityPoolsCurrent"]="id= "
+    operation_parameters["uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent"]=""
+    operation_parameters["uNISWAPV2ETHEREUMMasterChefRewardersCurrent"]=""
+    operation_parameters["uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent"]=""
+    operation_parameters["uNISWAPV2ETHEREUMMasterChefsCurrent"]=""
+    operation_parameters["uNISWAPV2ETHEREUMRewardTokensCurrent"]=""
+    operation_parameters["uNISWAPV2ETHEREUMRewarderProbesCurrent"]=""
     operation_parameters["uNISWAPV2ETHEREUMSwapsCurrent"]=""
+    operation_parameters["uNISWAPV2ETHEREUMTokenWhiteListsCurrent"]=""
     operation_parameters["uNISWAPV2ETHEREUMTokensCurrent"]=""
+    operation_parameters["uNISWAPV2ETHEREUMTransfersCurrent"]=""
+    operation_parameters["uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent"]=""
+    operation_parameters["uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent"]=""
+    operation_parameters["uNISWAPV2ETHEREUMWithdrawsCurrent"]=""
     operation_parameters["uNISWAPV3ETHEREUMAccountsCurrent"]=""
     operation_parameters["uNISWAPV3ETHEREUMActiveAccountsCurrent"]=""
     operation_parameters["uNISWAPV3ETHEREUMDepositsCurrent"]=""
@@ -197,9 +305,9 @@ _()
     operation_parameters["uNISWAPV3ETHEREUMPositionsCurrent"]="pool= "
     operation_parameters["uNISWAPV3ETHEREUMRewardTokensCurrent"]=""
     operation_parameters["uNISWAPV3ETHEREUMSwapsCurrent"]=""
-    operation_parameters["uNISWAPV3ETHEREUMTickDailySnapshotsCurrent"]="pool= "
-    operation_parameters["uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent"]="pool= "
-    operation_parameters["uNISWAPV3ETHEREUMTicksCurrent"]="pool= "
+    operation_parameters["uNISWAPV3ETHEREUMTickDailySnapshotsCurrent"]=""
+    operation_parameters["uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent"]=""
+    operation_parameters["uNISWAPV3ETHEREUMTicksCurrent"]=""
     operation_parameters["uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent"]=""
     operation_parameters["uNISWAPV3ETHEREUMTokenWhiteListsCurrent"]=""
     operation_parameters["uNISWAPV3ETHEREUMTokensCurrent"]="id= "

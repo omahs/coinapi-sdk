@@ -72,12 +72,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property vid (base name: "vid")', function() {
-      // uncomment below and update the code to test the property vid
-      //var instance = new OnChainDappsRestApi.UNISWAPV3ETHEREUMTickHourlySnapshotDTO();
-      //expect(instance).to.be();
-    });
-
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
       //var instance = new OnChainDappsRestApi.UNISWAPV3ETHEREUMTickHourlySnapshotDTO();

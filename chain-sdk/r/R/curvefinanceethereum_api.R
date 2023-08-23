@@ -14,16 +14,193 @@
 #'
 #' @section Methods:
 #' \describe{
+#' \strong{ CURVEFINANCEETHEREUMAccountsCurrent } \emph{ Accounts (current) }
+#' Gets accounts.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{CURVE_FINANCE_ETHEREUM.AccountDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CURVEFINANCEETHEREUMAccountDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CURVEFINANCEETHEREUMActiveAccountsCurrent } \emph{ ActiveAccounts (current) }
+#' Gets activeAccounts.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{CURVE_FINANCE_ETHEREUM.ActiveAccountDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CURVEFINANCEETHEREUMActiveAccountDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CURVEFINANCEETHEREUMDepositsCurrent } \emph{ Deposits (current) }
+#' Gets deposits.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{CURVE_FINANCE_ETHEREUM.DepositDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CURVEFINANCEETHEREUMDepositDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CURVEFINANCEETHEREUMDexAmmProtocolsCurrent } \emph{ DexAmmProtocols (current) }
+#' Gets dexAmmProtocols.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{CURVE_FINANCE_ETHEREUM.DexAmmProtocolDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CURVEFINANCEETHEREUMDexAmmProtocolDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent } \emph{ FinancialsDailySnapshots (current) }
+#' Gets financialsDailySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{CURVE_FINANCE_ETHEREUM.FinancialsDailySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CURVEFINANCEETHEREUMLiquidityGaugesCurrent } \emph{ LiquidityGauges (current) }
+#' Gets liquidityGauges.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{CURVE_FINANCE_ETHEREUM.LiquidityGaugeDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CURVEFINANCEETHEREUMLiquidityGaugeDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent } \emph{ LiquidityPoolDailySnapshots (current) }
+#' Gets liquidityPoolDailySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{CURVE_FINANCE_ETHEREUM.LiquidityPoolDailySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent } \emph{ LiquidityPoolFees (current) }
+#' Gets liquidityPoolFees.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{CURVE_FINANCE_ETHEREUM.LiquidityPoolFeeDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CURVEFINANCEETHEREUMLiquidityPoolFeeDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent } \emph{ LiquidityPoolHourlySnapshots (current) }
+#' Gets liquidityPoolHourlySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{CURVE_FINANCE_ETHEREUM.LiquidityPoolHourlySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
 #' \strong{ CURVEFINANCEETHEREUMLiquidityPoolsCurrent } \emph{ LiquidityPools (current) }
 #' Gets liquidityPools.
 #'
 #' \itemize{
+#' \item \emph{ @param } id character
 #' \item \emph{ @returnType } list( \link{CURVE_FINANCE_ETHEREUM.LiquidityPoolDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
 #' \item return type : array[CURVEFINANCEETHEREUMLiquidityPoolDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CURVEFINANCEETHEREUMLpTokensCurrent } \emph{ LpTokens (current) }
+#' Gets lpTokens.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{CURVE_FINANCE_ETHEREUM.LpTokenDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CURVEFINANCEETHEREUMLpTokenDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CURVEFINANCEETHEREUMRewardTokensCurrent } \emph{ RewardTokens (current) }
+#' Gets rewardTokens.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{CURVE_FINANCE_ETHEREUM.RewardTokenDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CURVEFINANCEETHEREUMRewardTokenDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -50,6 +227,7 @@
 #' Gets tokens.
 #'
 #' \itemize{
+#' \item \emph{ @param } id character
 #' \item \emph{ @returnType } list( \link{CURVE_FINANCE_ETHEREUM.TokenDTO} ) \cr
 #'
 #'
@@ -62,21 +240,213 @@
 #' }
 #' }
 #'
+#' \strong{ CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent } \emph{ UsageMetricsDailySnapshots (current) }
+#' Gets usageMetricsDailySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{CURVE_FINANCE_ETHEREUM.UsageMetricsDailySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent } \emph{ UsageMetricsHourlySnapshots (current) }
+#' Gets usageMetricsHourlySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{CURVE_FINANCE_ETHEREUM.UsageMetricsHourlySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CURVEFINANCEETHEREUMWithdrawsCurrent } \emph{ Withdraws (current) }
+#' Gets withdraws.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{CURVE_FINANCE_ETHEREUM.WithdrawDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CURVEFINANCEETHEREUMWithdrawDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
 #' }
 #'
 #'
 #' @examples
 #' \dontrun{
+#' ####################  CURVEFINANCEETHEREUMAccountsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Accounts (current)
+#' api_instance <- CURVEFINANCEETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CURVEFINANCEETHEREUMAccountsCurrent(data_file = "result.txt")
+#' result <- api_instance$CURVEFINANCEETHEREUMAccountsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  CURVEFINANCEETHEREUMActiveAccountsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #ActiveAccounts (current)
+#' api_instance <- CURVEFINANCEETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CURVEFINANCEETHEREUMActiveAccountsCurrent(data_file = "result.txt")
+#' result <- api_instance$CURVEFINANCEETHEREUMActiveAccountsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  CURVEFINANCEETHEREUMDepositsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Deposits (current)
+#' api_instance <- CURVEFINANCEETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CURVEFINANCEETHEREUMDepositsCurrent(data_file = "result.txt")
+#' result <- api_instance$CURVEFINANCEETHEREUMDepositsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  CURVEFINANCEETHEREUMDexAmmProtocolsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #DexAmmProtocols (current)
+#' api_instance <- CURVEFINANCEETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CURVEFINANCEETHEREUMDexAmmProtocolsCurrent(data_file = "result.txt")
+#' result <- api_instance$CURVEFINANCEETHEREUMDexAmmProtocolsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #FinancialsDailySnapshots (current)
+#' api_instance <- CURVEFINANCEETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  CURVEFINANCEETHEREUMLiquidityGaugesCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #LiquidityGauges (current)
+#' api_instance <- CURVEFINANCEETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CURVEFINANCEETHEREUMLiquidityGaugesCurrent(data_file = "result.txt")
+#' result <- api_instance$CURVEFINANCEETHEREUMLiquidityGaugesCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #LiquidityPoolDailySnapshots (current)
+#' api_instance <- CURVEFINANCEETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #LiquidityPoolFees (current)
+#' api_instance <- CURVEFINANCEETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent(data_file = "result.txt")
+#' result <- api_instance$CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #LiquidityPoolHourlySnapshots (current)
+#' api_instance <- CURVEFINANCEETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent()
+#' dput(result)
+#'
+#'
 #' ####################  CURVEFINANCEETHEREUMLiquidityPoolsCurrent  ####################
 #'
 #' library(openapi)
+#' var_id <- "id_example" # character | Smart contract address of the pool (Optional)
 #'
 #' #LiquidityPools (current)
 #' api_instance <- CURVEFINANCEETHEREUMApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$CURVEFINANCEETHEREUMLiquidityPoolsCurrent(data_file = "result.txt")
-#' result <- api_instance$CURVEFINANCEETHEREUMLiquidityPoolsCurrent()
+#' # result <- api_instance$CURVEFINANCEETHEREUMLiquidityPoolsCurrent(id = var_iddata_file = "result.txt")
+#' result <- api_instance$CURVEFINANCEETHEREUMLiquidityPoolsCurrent(id = var_id)
+#' dput(result)
+#'
+#'
+#' ####################  CURVEFINANCEETHEREUMLpTokensCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #LpTokens (current)
+#' api_instance <- CURVEFINANCEETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CURVEFINANCEETHEREUMLpTokensCurrent(data_file = "result.txt")
+#' result <- api_instance$CURVEFINANCEETHEREUMLpTokensCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  CURVEFINANCEETHEREUMRewardTokensCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #RewardTokens (current)
+#' api_instance <- CURVEFINANCEETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CURVEFINANCEETHEREUMRewardTokensCurrent(data_file = "result.txt")
+#' result <- api_instance$CURVEFINANCEETHEREUMRewardTokensCurrent()
 #' dput(result)
 #'
 #'
@@ -96,13 +466,53 @@
 #' ####################  CURVEFINANCEETHEREUMTokensCurrent  ####################
 #'
 #' library(openapi)
+#' var_id <- "id_example" # character | Smart contract address of the token (Optional)
 #'
 #' #Tokens (current)
 #' api_instance <- CURVEFINANCEETHEREUMApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$CURVEFINANCEETHEREUMTokensCurrent(data_file = "result.txt")
-#' result <- api_instance$CURVEFINANCEETHEREUMTokensCurrent()
+#' # result <- api_instance$CURVEFINANCEETHEREUMTokensCurrent(id = var_iddata_file = "result.txt")
+#' result <- api_instance$CURVEFINANCEETHEREUMTokensCurrent(id = var_id)
+#' dput(result)
+#'
+#'
+#' ####################  CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #UsageMetricsDailySnapshots (current)
+#' api_instance <- CURVEFINANCEETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #UsageMetricsHourlySnapshots (current)
+#' api_instance <- CURVEFINANCEETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  CURVEFINANCEETHEREUMWithdrawsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Withdraws (current)
+#' api_instance <- CURVEFINANCEETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CURVEFINANCEETHEREUMWithdrawsCurrent(data_file = "result.txt")
+#' result <- api_instance$CURVEFINANCEETHEREUMWithdrawsCurrent()
 #' dput(result)
 #'
 #'
@@ -128,17 +538,792 @@ CURVEFINANCEETHEREUMApi <- R6::R6Class(
         self$api_client <- ApiClient$new()
       }
     },
+    #' Accounts (current)
+    #'
+    #' @description
+    #' Accounts (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CURVEFINANCEETHEREUMAccountDTO]
+    #' @export
+    CURVEFINANCEETHEREUMAccountsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$CURVEFINANCEETHEREUMAccountsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Accounts (current)
+    #'
+    #' @description
+    #' Accounts (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CURVEFINANCEETHEREUMAccountDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CURVEFINANCEETHEREUMAccountsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/curve-finance-ethereum/accounts/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CURVEFINANCEETHEREUMAccountDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' ActiveAccounts (current)
+    #'
+    #' @description
+    #' ActiveAccounts (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CURVEFINANCEETHEREUMActiveAccountDTO]
+    #' @export
+    CURVEFINANCEETHEREUMActiveAccountsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$CURVEFINANCEETHEREUMActiveAccountsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' ActiveAccounts (current)
+    #'
+    #' @description
+    #' ActiveAccounts (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CURVEFINANCEETHEREUMActiveAccountDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CURVEFINANCEETHEREUMActiveAccountsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/curve-finance-ethereum/activeAccounts/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CURVEFINANCEETHEREUMActiveAccountDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Deposits (current)
+    #'
+    #' @description
+    #' Deposits (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CURVEFINANCEETHEREUMDepositDTO]
+    #' @export
+    CURVEFINANCEETHEREUMDepositsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$CURVEFINANCEETHEREUMDepositsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Deposits (current)
+    #'
+    #' @description
+    #' Deposits (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CURVEFINANCEETHEREUMDepositDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CURVEFINANCEETHEREUMDepositsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/curve-finance-ethereum/deposits/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CURVEFINANCEETHEREUMDepositDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' DexAmmProtocols (current)
+    #'
+    #' @description
+    #' DexAmmProtocols (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CURVEFINANCEETHEREUMDexAmmProtocolDTO]
+    #' @export
+    CURVEFINANCEETHEREUMDexAmmProtocolsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$CURVEFINANCEETHEREUMDexAmmProtocolsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' DexAmmProtocols (current)
+    #'
+    #' @description
+    #' DexAmmProtocols (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CURVEFINANCEETHEREUMDexAmmProtocolDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CURVEFINANCEETHEREUMDexAmmProtocolsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/curve-finance-ethereum/dexAmmProtocols/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CURVEFINANCEETHEREUMDexAmmProtocolDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' FinancialsDailySnapshots (current)
+    #'
+    #' @description
+    #' FinancialsDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO]
+    #' @export
+    CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' FinancialsDailySnapshots (current)
+    #'
+    #' @description
+    #' FinancialsDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/curve-finance-ethereum/financialsDailySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' LiquidityGauges (current)
+    #'
+    #' @description
+    #' LiquidityGauges (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CURVEFINANCEETHEREUMLiquidityGaugeDTO]
+    #' @export
+    CURVEFINANCEETHEREUMLiquidityGaugesCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$CURVEFINANCEETHEREUMLiquidityGaugesCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' LiquidityGauges (current)
+    #'
+    #' @description
+    #' LiquidityGauges (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CURVEFINANCEETHEREUMLiquidityGaugeDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CURVEFINANCEETHEREUMLiquidityGaugesCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/curve-finance-ethereum/liquidityGauges/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CURVEFINANCEETHEREUMLiquidityGaugeDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @description
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO]
+    #' @export
+    CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @description
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/curve-finance-ethereum/liquidityPoolDailySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' LiquidityPoolFees (current)
+    #'
+    #' @description
+    #' LiquidityPoolFees (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CURVEFINANCEETHEREUMLiquidityPoolFeeDTO]
+    #' @export
+    CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$CURVEFINANCEETHEREUMLiquidityPoolFeesCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' LiquidityPoolFees (current)
+    #'
+    #' @description
+    #' LiquidityPoolFees (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CURVEFINANCEETHEREUMLiquidityPoolFeeDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CURVEFINANCEETHEREUMLiquidityPoolFeesCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/curve-finance-ethereum/liquidityPoolFees/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CURVEFINANCEETHEREUMLiquidityPoolFeeDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' LiquidityPoolHourlySnapshots (current)
+    #'
+    #' @description
+    #' LiquidityPoolHourlySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO]
+    #' @export
+    CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' LiquidityPoolHourlySnapshots (current)
+    #'
+    #' @description
+    #' LiquidityPoolHourlySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/curve-finance-ethereum/liquidityPoolHourlySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
     #' LiquidityPools (current)
     #'
     #' @description
     #' LiquidityPools (current)
     #'
+    #' @param id (optional) Smart contract address of the pool
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[CURVEFINANCEETHEREUMLiquidityPoolDTO]
     #' @export
-    CURVEFINANCEETHEREUMLiquidityPoolsCurrent = function(data_file = NULL, ...) {
-      local_var_response <- self$CURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo(data_file = data_file, ...)
+    CURVEFINANCEETHEREUMLiquidityPoolsCurrent = function(id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo(id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -154,11 +1339,12 @@ CURVEFINANCEETHEREUMApi <- R6::R6Class(
     #' @description
     #' LiquidityPools (current)
     #'
+    #' @param id (optional) Smart contract address of the pool
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[CURVEFINANCEETHEREUMLiquidityPoolDTO]) with additional information such as HTTP status code, headers
     #' @export
-    CURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+    CURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo = function(id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -167,6 +1353,9 @@ CURVEFINANCEETHEREUMApi <- R6::R6Class(
       local_var_body <- NULL
       oauth_scopes <- NULL
       is_oauth <- FALSE
+
+
+      query_params[["id"]] <- `id`
 
       local_var_url_path <- "/v1/dapps/curve-finance-ethereum/liquidityPools/current"
 
@@ -197,6 +1386,178 @@ CURVEFINANCEETHEREUMApi <- R6::R6Class(
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[CURVEFINANCEETHEREUMLiquidityPoolDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' LpTokens (current)
+    #'
+    #' @description
+    #' LpTokens (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CURVEFINANCEETHEREUMLpTokenDTO]
+    #' @export
+    CURVEFINANCEETHEREUMLpTokensCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$CURVEFINANCEETHEREUMLpTokensCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' LpTokens (current)
+    #'
+    #' @description
+    #' LpTokens (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CURVEFINANCEETHEREUMLpTokenDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CURVEFINANCEETHEREUMLpTokensCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/curve-finance-ethereum/lpTokens/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CURVEFINANCEETHEREUMLpTokenDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' RewardTokens (current)
+    #'
+    #' @description
+    #' RewardTokens (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CURVEFINANCEETHEREUMRewardTokenDTO]
+    #' @export
+    CURVEFINANCEETHEREUMRewardTokensCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$CURVEFINANCEETHEREUMRewardTokensCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' RewardTokens (current)
+    #'
+    #' @description
+    #' RewardTokens (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CURVEFINANCEETHEREUMRewardTokenDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CURVEFINANCEETHEREUMRewardTokensCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/curve-finance-ethereum/rewardTokens/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CURVEFINANCEETHEREUMRewardTokenDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -305,12 +1666,13 @@ CURVEFINANCEETHEREUMApi <- R6::R6Class(
     #' @description
     #' Tokens (current)
     #'
+    #' @param id (optional) Smart contract address of the token
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[CURVEFINANCEETHEREUMTokenDTO]
     #' @export
-    CURVEFINANCEETHEREUMTokensCurrent = function(data_file = NULL, ...) {
-      local_var_response <- self$CURVEFINANCEETHEREUMTokensCurrentWithHttpInfo(data_file = data_file, ...)
+    CURVEFINANCEETHEREUMTokensCurrent = function(id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CURVEFINANCEETHEREUMTokensCurrentWithHttpInfo(id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -326,11 +1688,12 @@ CURVEFINANCEETHEREUMApi <- R6::R6Class(
     #' @description
     #' Tokens (current)
     #'
+    #' @param id (optional) Smart contract address of the token
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[CURVEFINANCEETHEREUMTokenDTO]) with additional information such as HTTP status code, headers
     #' @export
-    CURVEFINANCEETHEREUMTokensCurrentWithHttpInfo = function(data_file = NULL, ...) {
+    CURVEFINANCEETHEREUMTokensCurrentWithHttpInfo = function(id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -339,6 +1702,9 @@ CURVEFINANCEETHEREUMApi <- R6::R6Class(
       local_var_body <- NULL
       oauth_scopes <- NULL
       is_oauth <- FALSE
+
+
+      query_params[["id"]] <- `id`
 
       local_var_url_path <- "/v1/dapps/curve-finance-ethereum/tokens/current"
 
@@ -369,6 +1735,264 @@ CURVEFINANCEETHEREUMApi <- R6::R6Class(
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[CURVEFINANCEETHEREUMTokenDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' UsageMetricsDailySnapshots (current)
+    #'
+    #' @description
+    #' UsageMetricsDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO]
+    #' @export
+    CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' UsageMetricsDailySnapshots (current)
+    #'
+    #' @description
+    #' UsageMetricsDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' UsageMetricsHourlySnapshots (current)
+    #'
+    #' @description
+    #' UsageMetricsHourlySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO]
+    #' @export
+    CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' UsageMetricsHourlySnapshots (current)
+    #'
+    #' @description
+    #' UsageMetricsHourlySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Withdraws (current)
+    #'
+    #' @description
+    #' Withdraws (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CURVEFINANCEETHEREUMWithdrawDTO]
+    #' @export
+    CURVEFINANCEETHEREUMWithdrawsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$CURVEFINANCEETHEREUMWithdrawsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Withdraws (current)
+    #'
+    #' @description
+    #' Withdraws (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CURVEFINANCEETHEREUMWithdrawDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CURVEFINANCEETHEREUMWithdrawsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/curve-finance-ethereum/withdraws/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CURVEFINANCEETHEREUMWithdrawDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }

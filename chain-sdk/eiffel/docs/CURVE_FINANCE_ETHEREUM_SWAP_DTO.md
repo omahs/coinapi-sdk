@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
-**block_number** | [**STRING_32**](STRING_32.md) | Block number of this event | [optional] [default to null]
+**block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
 **id** | [**STRING_32**](STRING_32.md) | Swap-(transaction hash)-(log index) | [optional] [default to null]
 **hash** | [**STRING_32**](STRING_32.md) | Transaction hash of the transaction that emitted this event | [optional] [default to null]
 **log_index** | **INTEGER_32** | Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0 | [optional] [default to null]

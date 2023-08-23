@@ -32,12 +32,6 @@ void main() {
       // TODO
     });
 
-    // 
-    // int vid
-    test('to test the property `vid`', () async {
-      // TODO
-    });
-
     // Identifier, format: (pool address)-(tick index)-(day ID)
     // String id
     test('to test the property `id`', () async {

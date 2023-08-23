@@ -105,7 +105,6 @@ private class OASUNISWAPV3ETHEREUMPositionDTOTest {
         System.assertEquals(null, unISWAPV3ETHEREUMPositionDTO.entryTime);
         System.assertEquals(null, unISWAPV3ETHEREUMPositionDTO.recvTime);
         System.assertEquals(null, unISWAPV3ETHEREUMPositionDTO.blockNumber);
-        System.assertEquals(null, unISWAPV3ETHEREUMPositionDTO.vid);
         System.assertEquals(null, unISWAPV3ETHEREUMPositionDTO.id);
         System.assertEquals(null, unISWAPV3ETHEREUMPositionDTO.account);
         System.assertEquals(null, unISWAPV3ETHEREUMPositionDTO.pool);

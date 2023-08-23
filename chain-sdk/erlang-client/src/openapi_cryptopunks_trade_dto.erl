@@ -7,7 +7,7 @@
 -type openapi_cryptopunks_trade_dto() ::
     #{ 'entry_time' => openapi_date_time:openapi_date_time(),
        'recv_time' => openapi_date_time:openapi_date_time(),
-       'block_number' => binary(),
+       'block_number' => integer(),
        'vid' => integer(),
        'block_range' => binary(),
        'id' => binary(),

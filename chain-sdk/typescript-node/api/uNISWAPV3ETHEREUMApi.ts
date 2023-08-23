@@ -1004,9 +1004,8 @@ export class UNISWAPV3ETHEREUMApi {
     /**
      * Gets tickDailySnapshots.
      * @summary TickDailySnapshots (current)
-     * @param pool liquidity pool this tick belongs to
      */
-    public async uNISWAPV3ETHEREUMTickDailySnapshotsCurrent (pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>;  }> {
+    public async uNISWAPV3ETHEREUMTickDailySnapshotsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>;  }> {
         const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1018,10 +1017,6 @@ export class UNISWAPV3ETHEREUMApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        if (pool !== undefined) {
-            localVarQueryParameters['pool'] = ObjectSerializer.serialize(pool, "string");
-        }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
@@ -1071,9 +1066,8 @@ export class UNISWAPV3ETHEREUMApi {
     /**
      * Gets tickHourlySnapshots.
      * @summary TickHourlySnapshots (current)
-     * @param pool liquidity pool this tick belongs to
      */
-    public async uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent (pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>;  }> {
+    public async uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>;  }> {
         const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1085,10 +1079,6 @@ export class UNISWAPV3ETHEREUMApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        if (pool !== undefined) {
-            localVarQueryParameters['pool'] = ObjectSerializer.serialize(pool, "string");
-        }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
@@ -1138,9 +1128,8 @@ export class UNISWAPV3ETHEREUMApi {
     /**
      * Gets ticks.
      * @summary Ticks (current)
-     * @param pool Liquidity pool this tick belongs to
      */
-    public async uNISWAPV3ETHEREUMTicksCurrent (pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMTickDTO>;  }> {
+    public async uNISWAPV3ETHEREUMTicksCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UNISWAPV3ETHEREUMTickDTO>;  }> {
         const localVarPath = this.basePath + '/v1/dapps/uniswap-v3-ethereum/ticks/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1152,10 +1141,6 @@ export class UNISWAPV3ETHEREUMApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        if (pool !== undefined) {
-            localVarQueryParameters['pool'] = ObjectSerializer.serialize(pool, "string");
-        }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);
 

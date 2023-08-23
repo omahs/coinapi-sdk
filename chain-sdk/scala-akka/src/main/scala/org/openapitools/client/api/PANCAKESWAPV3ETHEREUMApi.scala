@@ -119,12 +119,9 @@ class PANCAKESWAPV3ETHEREUMApi(baseUrl: String) {
    * 
    * Expected answers:
    *   code 200 : Seq[LiquidityPoolDailySnapshotDTO] (successful operation)
-   * 
-   * @param pool Pool this snapshot belongs to.
    */
-  def pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool: Option[String] = None): ApiRequest[Seq[LiquidityPoolDailySnapshotDTO]] =
+  def pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(): ApiRequest[Seq[LiquidityPoolDailySnapshotDTO]] =
     ApiRequest[Seq[LiquidityPoolDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current", "application/json")
-      .withQueryParam("pool", pool)
       .withSuccessResponse[Seq[LiquidityPoolDailySnapshotDTO]](200)
       
 

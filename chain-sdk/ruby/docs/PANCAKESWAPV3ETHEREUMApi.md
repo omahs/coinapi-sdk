@@ -402,7 +402,7 @@ No authorization required
 
 ## p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current
 
-> <Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current(opts)
+> <Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current
 
 LiquidityPoolDailySnapshots (current)
 
@@ -415,13 +415,10 @@ require 'time'
 require 'openapi_client'
 
 api_instance = OpenapiClient::PANCAKESWAPV3ETHEREUMApi.new
-opts = {
-  pool: 'pool_example' # String | Pool this snapshot belongs to.
-}
 
 begin
   # LiquidityPoolDailySnapshots (current)
-  result = api_instance.p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current(opts)
+  result = api_instance.p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current
   p result
 rescue OpenapiClient::ApiError => e
   puts "Error when calling PANCAKESWAPV3ETHEREUMApi->p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current: #{e}"
@@ -432,12 +429,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>, Integer, Hash)> p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current_with_http_info(opts)
+> <Array(<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>, Integer, Hash)> p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current_with_http_info
 
 ```ruby
 begin
   # LiquidityPoolDailySnapshots (current)
-  data, status_code, headers = api_instance.p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current_with_http_info(opts)
+  data, status_code, headers = api_instance.p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>
@@ -448,9 +445,7 @@ end
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **pool** | **String** | Pool this snapshot belongs to. | [optional] |
+This endpoint does not need any parameter.
 
 ### Return type
 

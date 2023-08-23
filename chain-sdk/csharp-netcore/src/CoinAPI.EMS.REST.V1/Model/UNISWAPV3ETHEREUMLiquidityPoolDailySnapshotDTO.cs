@@ -38,7 +38,6 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
-        /// <param name="vid">..</param>
         /// <param name="block">The Ethereum block number associated with the liquidity pool daily snapshot..</param>
         /// <param name="id">Identifier, format: (smart contract address of the pool)-(# of days since Unix epoch time)..</param>
         /// <param name="day">Number of days since Unix epoch time..</param>
@@ -82,12 +81,11 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="openPositionCount">Number of open positions in this market..</param>
         /// <param name="closedPositionCount">Number of closed positions in this market..</param>
         /// <param name="timestamp">Timestamp of when this snapshot was taken/last modified (May be taken after interval has passed)..</param>
-        public UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), long vid = default(long), int block = default(int), string id = default(string), int day = default(int), string protocol = default(string), string pool = default(string), string tick = default(string), string totalValueLockedUsd = default(string), string totalLiquidity = default(string), string totalLiquidityUsd = default(string), string activeLiquidity = default(string), string activeLiquidityUsd = default(string), List<string> uncollectedProtocolSideTokenAmounts = default(List<string>), List<string> uncollectedProtocolSideValuesUsd = default(List<string>), List<string> uncollectedSupplySideTokenAmounts = default(List<string>), List<string> uncollectedSupplySideValuesUsd = default(List<string>), string cumulativeSupplySideRevenueUsd = default(string), string dailySupplySideRevenueUsd = default(string), string cumulativeProtocolSideRevenueUsd = default(string), string dailyProtocolSideRevenueUsd = default(string), string cumulativeTotalRevenueUsd = default(string), string dailyTotalRevenueUsd = default(string), string cumulativeVolumeUsd = default(string), string dailyVolumeUsd = default(string), List<string> cumulativeVolumeByTokenAmount = default(List<string>), List<string> dailyVolumeByTokenAmount = default(List<string>), List<string> cumulativeVolumeByTokenUsd = default(List<string>), List<string> dailyVolumeByTokenUsd = default(List<string>), List<string> inputTokenBalances = default(List<string>), List<string> inputTokenBalancesUsd = default(List<string>), List<string> inputTokenWeights = default(List<string>), string stakedOutputTokenAmount = default(string), List<string> rewardTokenEmissionsAmount = default(List<string>), List<string> rewardTokenEmissionsUsd = default(List<string>), int cumulativeDepositCount = default(int), int dailyDepositCount = default(int), int cumulativeWithdrawCount = default(int), int dailyWithdrawCount = default(int), int cumulativeSwapCount = default(int), int dailySwapCount = default(int), int positionCount = default(int), int openPositionCount = default(int), int closedPositionCount = default(int), string timestamp = default(string))
+        public UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), int block = default(int), string id = default(string), int day = default(int), string protocol = default(string), string pool = default(string), string tick = default(string), string totalValueLockedUsd = default(string), string totalLiquidity = default(string), string totalLiquidityUsd = default(string), string activeLiquidity = default(string), string activeLiquidityUsd = default(string), List<string> uncollectedProtocolSideTokenAmounts = default(List<string>), List<string> uncollectedProtocolSideValuesUsd = default(List<string>), List<string> uncollectedSupplySideTokenAmounts = default(List<string>), List<string> uncollectedSupplySideValuesUsd = default(List<string>), string cumulativeSupplySideRevenueUsd = default(string), string dailySupplySideRevenueUsd = default(string), string cumulativeProtocolSideRevenueUsd = default(string), string dailyProtocolSideRevenueUsd = default(string), string cumulativeTotalRevenueUsd = default(string), string dailyTotalRevenueUsd = default(string), string cumulativeVolumeUsd = default(string), string dailyVolumeUsd = default(string), List<string> cumulativeVolumeByTokenAmount = default(List<string>), List<string> dailyVolumeByTokenAmount = default(List<string>), List<string> cumulativeVolumeByTokenUsd = default(List<string>), List<string> dailyVolumeByTokenUsd = default(List<string>), List<string> inputTokenBalances = default(List<string>), List<string> inputTokenBalancesUsd = default(List<string>), List<string> inputTokenWeights = default(List<string>), string stakedOutputTokenAmount = default(string), List<string> rewardTokenEmissionsAmount = default(List<string>), List<string> rewardTokenEmissionsUsd = default(List<string>), int cumulativeDepositCount = default(int), int dailyDepositCount = default(int), int cumulativeWithdrawCount = default(int), int dailyWithdrawCount = default(int), int cumulativeSwapCount = default(int), int dailySwapCount = default(int), int positionCount = default(int), int openPositionCount = default(int), int closedPositionCount = default(int), string timestamp = default(string))
         {
             this.EntryTime = entryTime;
             this.RecvTime = recvTime;
             this.BlockNumber = blockNumber;
-            this.Vid = vid;
             this.Block = block;
             this.Id = id;
             this.Day = day;
@@ -151,13 +149,6 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <value>Number of block in which entity was recorded.</value>
         [DataMember(Name = "block_number", EmitDefaultValue = false)]
         public long BlockNumber { get; set; }
-
-        /// <summary>
-        /// .
-        /// </summary>
-        /// <value>.</value>
-        [DataMember(Name = "vid", EmitDefaultValue = false)]
-        public long Vid { get; set; }
 
         /// <summary>
         /// The Ethereum block number associated with the liquidity pool daily snapshot.
@@ -471,7 +462,6 @@ namespace CoinAPI.EMS.REST.V1.Model
             sb.Append("  EntryTime: ").Append(EntryTime).Append("\n");
             sb.Append("  RecvTime: ").Append(RecvTime).Append("\n");
             sb.Append("  BlockNumber: ").Append(BlockNumber).Append("\n");
-            sb.Append("  Vid: ").Append(Vid).Append("\n");
             sb.Append("  Block: ").Append(Block).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Day: ").Append(Day).Append("\n");
@@ -563,10 +553,6 @@ namespace CoinAPI.EMS.REST.V1.Model
                 (
                     this.BlockNumber == input.BlockNumber ||
                     this.BlockNumber.Equals(input.BlockNumber)
-                ) && 
-                (
-                    this.Vid == input.Vid ||
-                    this.Vid.Equals(input.Vid)
                 ) && 
                 (
                     this.Block == input.Block ||
@@ -805,7 +791,6 @@ namespace CoinAPI.EMS.REST.V1.Model
                     hashCode = (hashCode * 59) + this.RecvTime.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.BlockNumber.GetHashCode();
-                hashCode = (hashCode * 59) + this.Vid.GetHashCode();
                 hashCode = (hashCode * 59) + this.Block.GetHashCode();
                 if (this.Id != null)
                 {

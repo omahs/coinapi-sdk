@@ -22,11 +22,155 @@ func Test_openapi_SUSHISWAPV3ETHEREUMApiService(t *testing.T) {
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
 
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMAccountsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMAccountsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMActiveAccountsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMActiveAccountsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMDepositsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMDepositsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMLiquidityPoolsCurrent", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMLiquidityPoolsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMPositionSnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMPositionSnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMPositionsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMPositionsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMRewardTokensCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMRewardTokensCurrent(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -46,11 +190,107 @@ func Test_openapi_SUSHISWAPV3ETHEREUMApiService(t *testing.T) {
 
 	})
 
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMTicksCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMTicksCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMTokenWhiteListsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMTokenWhiteListsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMTokensCurrent", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMTokensCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test SUSHISWAPV3ETHEREUMApiService SUSHISWAPV3ETHEREUMWithdrawsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SUSHISWAPV3ETHEREUMApi.SUSHISWAPV3ETHEREUMWithdrawsCurrent(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)

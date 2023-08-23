@@ -195,7 +195,6 @@ describe 'UNISWAPV3ETHEREUMApi' do
   # TickDailySnapshots (current)
   # Gets tickDailySnapshots.
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :pool liquidity pool this tick belongs to
   # @return [Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>]
   describe 'u_niswapv3_ethereum_tick_daily_snapshots__current test' do
     it 'should work' do
@@ -207,7 +206,6 @@ describe 'UNISWAPV3ETHEREUMApi' do
   # TickHourlySnapshots (current)
   # Gets tickHourlySnapshots.
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :pool liquidity pool this tick belongs to
   # @return [Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>]
   describe 'u_niswapv3_ethereum_tick_hourly_snapshots__current test' do
     it 'should work' do
@@ -219,7 +217,6 @@ describe 'UNISWAPV3ETHEREUMApi' do
   # Ticks (current)
   # Gets ticks.
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :pool Liquidity pool this tick belongs to
   # @return [Array<UNISWAPV3ETHEREUMTickDTO>]
   describe 'u_niswapv3_ethereum_ticks__current test' do
     it 'should work' do

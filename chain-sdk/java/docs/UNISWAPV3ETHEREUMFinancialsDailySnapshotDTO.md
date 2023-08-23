@@ -10,7 +10,7 @@ Daily financial metrics for Uniswap V3.
 |------------ | ------------- | ------------- | -------------|
 |**entryTime** | **OffsetDateTime** |  |  [optional] |
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
-|**blockNumber** | **Integer** | Block number of when this snapshot was taken/last modified.) |  [optional] |
+|**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional] |
 |**id** | **String** | ID is # of days since Unix epoch time. |  [optional] |
 |**day** | **Integer** | Number of days since Unix epoch time. |  [optional] |
 |**protocol** | **String** | Protocol this snapshot is associated with. |  [optional] |

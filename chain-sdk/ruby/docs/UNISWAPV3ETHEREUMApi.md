@@ -910,7 +910,7 @@ No authorization required
 
 ## u_niswapv3_ethereum_tick_daily_snapshots__current
 
-> <Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> u_niswapv3_ethereum_tick_daily_snapshots__current(opts)
+> <Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> u_niswapv3_ethereum_tick_daily_snapshots__current
 
 TickDailySnapshots (current)
 
@@ -923,13 +923,10 @@ require 'time'
 require 'openapi_client'
 
 api_instance = OpenapiClient::UNISWAPV3ETHEREUMApi.new
-opts = {
-  pool: 'pool_example' # String | liquidity pool this tick belongs to
-}
 
 begin
   # TickDailySnapshots (current)
-  result = api_instance.u_niswapv3_ethereum_tick_daily_snapshots__current(opts)
+  result = api_instance.u_niswapv3_ethereum_tick_daily_snapshots__current
   p result
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_tick_daily_snapshots__current: #{e}"
@@ -940,12 +937,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>, Integer, Hash)> u_niswapv3_ethereum_tick_daily_snapshots__current_with_http_info(opts)
+> <Array(<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>, Integer, Hash)> u_niswapv3_ethereum_tick_daily_snapshots__current_with_http_info
 
 ```ruby
 begin
   # TickDailySnapshots (current)
-  data, status_code, headers = api_instance.u_niswapv3_ethereum_tick_daily_snapshots__current_with_http_info(opts)
+  data, status_code, headers = api_instance.u_niswapv3_ethereum_tick_daily_snapshots__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>
@@ -956,9 +953,7 @@ end
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **pool** | **String** | liquidity pool this tick belongs to | [optional] |
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -976,7 +971,7 @@ No authorization required
 
 ## u_niswapv3_ethereum_tick_hourly_snapshots__current
 
-> <Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> u_niswapv3_ethereum_tick_hourly_snapshots__current(opts)
+> <Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> u_niswapv3_ethereum_tick_hourly_snapshots__current
 
 TickHourlySnapshots (current)
 
@@ -989,13 +984,10 @@ require 'time'
 require 'openapi_client'
 
 api_instance = OpenapiClient::UNISWAPV3ETHEREUMApi.new
-opts = {
-  pool: 'pool_example' # String | liquidity pool this tick belongs to
-}
 
 begin
   # TickHourlySnapshots (current)
-  result = api_instance.u_niswapv3_ethereum_tick_hourly_snapshots__current(opts)
+  result = api_instance.u_niswapv3_ethereum_tick_hourly_snapshots__current
   p result
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_tick_hourly_snapshots__current: #{e}"
@@ -1006,12 +998,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>, Integer, Hash)> u_niswapv3_ethereum_tick_hourly_snapshots__current_with_http_info(opts)
+> <Array(<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>, Integer, Hash)> u_niswapv3_ethereum_tick_hourly_snapshots__current_with_http_info
 
 ```ruby
 begin
   # TickHourlySnapshots (current)
-  data, status_code, headers = api_instance.u_niswapv3_ethereum_tick_hourly_snapshots__current_with_http_info(opts)
+  data, status_code, headers = api_instance.u_niswapv3_ethereum_tick_hourly_snapshots__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>
@@ -1022,9 +1014,7 @@ end
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **pool** | **String** | liquidity pool this tick belongs to | [optional] |
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -1042,7 +1032,7 @@ No authorization required
 
 ## u_niswapv3_ethereum_ticks__current
 
-> <Array<UNISWAPV3ETHEREUMTickDTO>> u_niswapv3_ethereum_ticks__current(opts)
+> <Array<UNISWAPV3ETHEREUMTickDTO>> u_niswapv3_ethereum_ticks__current
 
 Ticks (current)
 
@@ -1055,13 +1045,10 @@ require 'time'
 require 'openapi_client'
 
 api_instance = OpenapiClient::UNISWAPV3ETHEREUMApi.new
-opts = {
-  pool: 'pool_example' # String | Liquidity pool this tick belongs to
-}
 
 begin
   # Ticks (current)
-  result = api_instance.u_niswapv3_ethereum_ticks__current(opts)
+  result = api_instance.u_niswapv3_ethereum_ticks__current
   p result
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UNISWAPV3ETHEREUMApi->u_niswapv3_ethereum_ticks__current: #{e}"
@@ -1072,12 +1059,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<UNISWAPV3ETHEREUMTickDTO>>, Integer, Hash)> u_niswapv3_ethereum_ticks__current_with_http_info(opts)
+> <Array(<Array<UNISWAPV3ETHEREUMTickDTO>>, Integer, Hash)> u_niswapv3_ethereum_ticks__current_with_http_info
 
 ```ruby
 begin
   # Ticks (current)
-  data, status_code, headers = api_instance.u_niswapv3_ethereum_ticks__current_with_http_info(opts)
+  data, status_code, headers = api_instance.u_niswapv3_ethereum_ticks__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<UNISWAPV3ETHEREUMTickDTO>>
@@ -1088,9 +1075,7 @@ end
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **pool** | **String** | Liquidity pool this tick belongs to | [optional] |
+This endpoint does not need any parameter.
 
 ### Return type
 

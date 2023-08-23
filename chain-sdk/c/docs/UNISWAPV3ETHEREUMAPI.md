@@ -460,14 +460,13 @@ No authorization required
 //
 // Gets tickDailySnapshots.
 //
-list_t* UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(apiClient_t *apiClient, char * pool);
+list_t* UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(apiClient_t *apiClient);
 ```
 
 ### Parameters
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**pool** | **char \*** | liquidity pool this tick belongs to | [optional] 
 
 ### Return type
 
@@ -491,14 +490,13 @@ No authorization required
 //
 // Gets tickHourlySnapshots.
 //
-list_t* UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(apiClient_t *apiClient, char * pool);
+list_t* UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(apiClient_t *apiClient);
 ```
 
 ### Parameters
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**pool** | **char \*** | liquidity pool this tick belongs to | [optional] 
 
 ### Return type
 
@@ -522,14 +520,13 @@ No authorization required
 //
 // Gets ticks.
 //
-list_t* UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTicksCurrent(apiClient_t *apiClient, char * pool);
+list_t* UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTicksCurrent(apiClient_t *apiClient);
 ```
 
 ### Parameters
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**pool** | **char \*** | Liquidity pool this tick belongs to | [optional] 
 
 ### Return type
 

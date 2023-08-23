@@ -26,13 +26,6 @@ API.Client.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.prototype.recvTime;
 API.Client.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.prototype.blockNumber;
 
 /**
- * 
- * @type {!number}
- * @export
- */
-API.Client.UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.prototype.vid;
-
-/**
  * (Smart contract address of the pool)-( # of hours since Unix epoch time)
  * @type {!string}
  * @export

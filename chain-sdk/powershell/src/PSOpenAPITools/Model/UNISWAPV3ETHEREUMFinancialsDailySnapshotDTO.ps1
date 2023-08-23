@@ -20,7 +20,7 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-Block number of when this snapshot was taken/last modified.)
+Number of block in which entity was recorded.
 .PARAMETER Id
 ID is # of days since Unix epoch time.
 .PARAMETER Day
@@ -72,7 +72,7 @@ function Initialize-UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO {
         [System.Nullable[System.DateTime]]
         ${RecvTime},
         [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true)]
-        [System.Nullable[Int32]]
+        [System.Nullable[Int64]]
         ${BlockNumber},
         [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true)]
         [String]

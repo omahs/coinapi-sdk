@@ -789,7 +789,7 @@ No authorization required
 ## `uNISWAPV3ETHEREUMTickDailySnapshotsCurrent()`
 
 ```php
-uNISWAPV3ETHEREUMTickDailySnapshotsCurrent($pool): \OpenAPI\Client\Model\UNISWAPV3ETHEREUMTickDailySnapshotDTO[]
+uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(): \OpenAPI\Client\Model\UNISWAPV3ETHEREUMTickDailySnapshotDTO[]
 ```
 
 TickDailySnapshots (current)
@@ -809,10 +809,9 @@ $apiInstance = new OpenAPI\Client\Api\UNISWAPV3ETHEREUMApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$pool = 'pool_example'; // string | liquidity pool this tick belongs to
 
 try {
-    $result = $apiInstance->uNISWAPV3ETHEREUMTickDailySnapshotsCurrent($pool);
+    $result = $apiInstance->uNISWAPV3ETHEREUMTickDailySnapshotsCurrent();
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UNISWAPV3ETHEREUMApi->uNISWAPV3ETHEREUMTickDailySnapshotsCurrent: ', $e->getMessage(), PHP_EOL;
@@ -821,9 +820,7 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pool** | **string**| liquidity pool this tick belongs to | [optional] |
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -845,7 +842,7 @@ No authorization required
 ## `uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent()`
 
 ```php
-uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent($pool): \OpenAPI\Client\Model\UNISWAPV3ETHEREUMTickHourlySnapshotDTO[]
+uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(): \OpenAPI\Client\Model\UNISWAPV3ETHEREUMTickHourlySnapshotDTO[]
 ```
 
 TickHourlySnapshots (current)
@@ -865,10 +862,9 @@ $apiInstance = new OpenAPI\Client\Api\UNISWAPV3ETHEREUMApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$pool = 'pool_example'; // string | liquidity pool this tick belongs to
 
 try {
-    $result = $apiInstance->uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent($pool);
+    $result = $apiInstance->uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent();
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UNISWAPV3ETHEREUMApi->uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent: ', $e->getMessage(), PHP_EOL;
@@ -877,9 +873,7 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pool** | **string**| liquidity pool this tick belongs to | [optional] |
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -901,7 +895,7 @@ No authorization required
 ## `uNISWAPV3ETHEREUMTicksCurrent()`
 
 ```php
-uNISWAPV3ETHEREUMTicksCurrent($pool): \OpenAPI\Client\Model\UNISWAPV3ETHEREUMTickDTO[]
+uNISWAPV3ETHEREUMTicksCurrent(): \OpenAPI\Client\Model\UNISWAPV3ETHEREUMTickDTO[]
 ```
 
 Ticks (current)
@@ -921,10 +915,9 @@ $apiInstance = new OpenAPI\Client\Api\UNISWAPV3ETHEREUMApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$pool = 'pool_example'; // string | Liquidity pool this tick belongs to
 
 try {
-    $result = $apiInstance->uNISWAPV3ETHEREUMTicksCurrent($pool);
+    $result = $apiInstance->uNISWAPV3ETHEREUMTicksCurrent();
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UNISWAPV3ETHEREUMApi->uNISWAPV3ETHEREUMTicksCurrent: ', $e->getMessage(), PHP_EOL;
@@ -933,9 +926,7 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pool** | **string**| Liquidity pool this tick belongs to | [optional] |
+This endpoint does not need any parameter.
 
 ### Return type
 

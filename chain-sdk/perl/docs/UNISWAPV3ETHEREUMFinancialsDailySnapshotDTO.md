@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entry_time** | **DATE_TIME** |  | [optional] 
 **recv_time** | **DATE_TIME** |  | [optional] 
-**block_number** | **int** | Block number of when this snapshot was taken/last modified.) | [optional] 
+**block_number** | **int** | Number of block in which entity was recorded. | [optional] 
 **id** | **string** | ID is # of days since Unix epoch time. | [optional] 
 **day** | **int** | Number of days since Unix epoch time. | [optional] 
 **protocol** | **string** | Protocol this snapshot is associated with. | [optional] 

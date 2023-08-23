@@ -1787,16 +1787,15 @@ class PANCAKESWAPV3ETHEREUMApi
      *
      * LiquidityPoolDailySnapshots (current)
      *
-     * @param  string $pool Pool this snapshot belongs to. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[]
      */
-    public function pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
     {
-        list($response) = $this->pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo($pool, $contentType);
+        list($response) = $this->pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo($contentType);
         return $response;
     }
 
@@ -1805,16 +1804,15 @@ class PANCAKESWAPV3ETHEREUMApi
      *
      * LiquidityPoolDailySnapshots (current)
      *
-     * @param  string $pool Pool this snapshot belongs to. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
     {
-        $request = $this->pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest($pool, $contentType);
+        $request = $this->pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest($contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1905,15 +1903,14 @@ class PANCAKESWAPV3ETHEREUMApi
      *
      * LiquidityPoolDailySnapshots (current)
      *
-     * @param  string $pool Pool this snapshot belongs to. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsync($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsync(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
     {
-        return $this->pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsyncWithHttpInfo($pool, $contentType)
+        return $this->pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsyncWithHttpInfo($contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1926,16 +1923,15 @@ class PANCAKESWAPV3ETHEREUMApi
      *
      * LiquidityPoolDailySnapshots (current)
      *
-     * @param  string $pool Pool this snapshot belongs to. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsyncWithHttpInfo($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
     {
         $returnType = '\OpenAPI\Client\Model\PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[]';
-        $request = $this->pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest($pool, $contentType);
+        $request = $this->pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest($contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1976,15 +1972,13 @@ class PANCAKESWAPV3ETHEREUMApi
     /**
      * Create request for operation 'pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'
      *
-     * @param  string $pool Pool this snapshot belongs to. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest($pool = null, string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
+    public function pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest(string $contentType = self::contentTypes['pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
     {
-
 
 
         $resourcePath = '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current';
@@ -1994,15 +1988,6 @@ class PANCAKESWAPV3ETHEREUMApi
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $pool,
-            'pool', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
 
 
 

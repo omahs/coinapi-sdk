@@ -64,7 +64,7 @@ library
   exposed-modules:
       OnChainDapps-REST
       OnChainDapps-REST.API
-      OnChainDapps-REST.API.CRYPTOPUNKS
+      OnChainDapps-REST.API.CRYPTOPUNKSETHEREUM
       OnChainDapps-REST.API.CURVEFINANCEETHEREUM
       OnChainDapps-REST.API.Metadata
       OnChainDapps-REST.API.PANCAKESWAPV3ETHEREUM

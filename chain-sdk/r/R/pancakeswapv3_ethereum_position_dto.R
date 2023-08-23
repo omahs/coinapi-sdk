@@ -10,7 +10,6 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field vid  integer [optional]
 #' @field id (account address)-(market address)-(count) character [optional]
 #' @field account Account that owns this position character [optional]
 #' @field pool The liquidity pool in which this position was opened character [optional]
@@ -42,7 +41,6 @@ PANCAKESWAPV3ETHEREUMPositionDTO <- R6::R6Class(
     `entry_time` = NULL,
     `recv_time` = NULL,
     `block_number` = NULL,
-    `vid` = NULL,
     `id` = NULL,
     `account` = NULL,
     `pool` = NULL,
@@ -73,7 +71,6 @@ PANCAKESWAPV3ETHEREUMPositionDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param vid 
     #' @param id (account address)-(market address)-(count)
     #' @param account Account that owns this position
     #' @param pool The liquidity pool in which this position was opened
@@ -98,7 +95,7 @@ PANCAKESWAPV3ETHEREUMPositionDTO <- R6::R6Class(
     #' @param withdraw_count Number of withdrawals related to this position
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `vid` = NULL, `id` = NULL, `account` = NULL, `pool` = NULL, `hash_opened` = NULL, `hash_closed` = NULL, `block_number_opened` = NULL, `timestamp_opened` = NULL, `block_number_closed` = NULL, `timestamp_closed` = NULL, `tick_lower` = NULL, `tick_upper` = NULL, `liquidity_token` = NULL, `liquidity_token_type` = NULL, `liquidity` = NULL, `liquidity_usd` = NULL, `cumulative_deposit_token_amounts` = NULL, `cumulative_deposit_usd` = NULL, `cumulative_withdraw_token_amounts` = NULL, `cumulative_withdraw_usd` = NULL, `cumulative_reward_usd` = NULL, `deposit_count` = NULL, `withdraw_count` = NULL, ...) {
+    initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `id` = NULL, `account` = NULL, `pool` = NULL, `hash_opened` = NULL, `hash_closed` = NULL, `block_number_opened` = NULL, `timestamp_opened` = NULL, `block_number_closed` = NULL, `timestamp_closed` = NULL, `tick_lower` = NULL, `tick_upper` = NULL, `liquidity_token` = NULL, `liquidity_token_type` = NULL, `liquidity` = NULL, `liquidity_usd` = NULL, `cumulative_deposit_token_amounts` = NULL, `cumulative_deposit_usd` = NULL, `cumulative_withdraw_token_amounts` = NULL, `cumulative_withdraw_usd` = NULL, `cumulative_reward_usd` = NULL, `deposit_count` = NULL, `withdraw_count` = NULL, ...) {
       if (!is.null(`entry_time`)) {
         if (!is.character(`entry_time`)) {
           stop(paste("Error! Invalid data for `entry_time`. Must be a string:", `entry_time`))
@@ -116,12 +113,6 @@ PANCAKESWAPV3ETHEREUMPositionDTO <- R6::R6Class(
           stop(paste("Error! Invalid data for `block_number`. Must be an integer:", `block_number`))
         }
         self$`block_number` <- `block_number`
-      }
-      if (!is.null(`vid`)) {
-        if (!(is.numeric(`vid`) && length(`vid`) == 1)) {
-          stop(paste("Error! Invalid data for `vid`. Must be an integer:", `vid`))
-        }
-        self$`vid` <- `vid`
       }
       if (!is.null(`id`)) {
         if (!(is.character(`id`) && length(`id`) == 1)) {
@@ -274,10 +265,6 @@ PANCAKESWAPV3ETHEREUMPositionDTO <- R6::R6Class(
         PANCAKESWAPV3ETHEREUMPositionDTOObject[["block_number"]] <-
           self$`block_number`
       }
-      if (!is.null(self$`vid`)) {
-        PANCAKESWAPV3ETHEREUMPositionDTOObject[["vid"]] <-
-          self$`vid`
-      }
       if (!is.null(self$`id`)) {
         PANCAKESWAPV3ETHEREUMPositionDTOObject[["id"]] <-
           self$`id`
@@ -387,9 +374,6 @@ PANCAKESWAPV3ETHEREUMPositionDTO <- R6::R6Class(
       if (!is.null(this_object$`block_number`)) {
         self$`block_number` <- this_object$`block_number`
       }
-      if (!is.null(this_object$`vid`)) {
-        self$`vid` <- this_object$`vid`
-      }
       if (!is.null(this_object$`id`)) {
         self$`id` <- this_object$`id`
       }
@@ -489,14 +473,6 @@ PANCAKESWAPV3ETHEREUMPositionDTO <- R6::R6Class(
             %d
                     ',
           self$`block_number`
-          )
-        },
-        if (!is.null(self$`vid`)) {
-          sprintf(
-          '"vid":
-            %d
-                    ',
-          self$`vid`
           )
         },
         if (!is.null(self$`id`)) {
@@ -692,7 +668,6 @@ PANCAKESWAPV3ETHEREUMPositionDTO <- R6::R6Class(
       self$`entry_time` <- this_object$`entry_time`
       self$`recv_time` <- this_object$`recv_time`
       self$`block_number` <- this_object$`block_number`
-      self$`vid` <- this_object$`vid`
       self$`id` <- this_object$`id`
       self$`account` <- this_object$`account`
       self$`pool` <- this_object$`pool`

@@ -133,7 +133,6 @@ private class OASPANCAKESWAPV3ETHEREUMLiquidityPooTest {
         System.assertEquals(null, paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.entryTime);
         System.assertEquals(null, paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.recvTime);
         System.assertEquals(null, paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.blockNumber);
-        System.assertEquals(null, paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.vid);
         System.assertEquals(null, paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.id);
         System.assertEquals(null, paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hour);
         System.assertEquals(null, paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.protocol);

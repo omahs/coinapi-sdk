@@ -284,7 +284,7 @@ No authorization required
 
 ## pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
 
-> [PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO] pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(opts)
+> [PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO] pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent()
 
 LiquidityPoolDailySnapshots (current)
 
@@ -296,10 +296,7 @@ Gets liquidityPoolDailySnapshots.
 import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
 let apiInstance = new OnChainDappsRestApi.PANCAKESWAPV3ETHEREUMApi();
-let opts = {
-  'pool': "pool_example" // String | Pool this snapshot belongs to.
-};
-apiInstance.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(opts, (error, data, response) => {
+apiInstance.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -310,10 +307,7 @@ apiInstance.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(opts, (error
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **String**| Pool this snapshot belongs to. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 

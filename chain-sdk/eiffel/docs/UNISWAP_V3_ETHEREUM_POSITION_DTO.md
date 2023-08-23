@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
-**vid** | **INTEGER_64** |  | [optional] [default to null]
 **id** | [**STRING_32**](STRING_32.md) | (account address)-(market address)-(count) | [optional] [default to null]
 **account** | [**STRING_32**](STRING_32.md) | Account that owns this position | [optional] [default to null]
 **pool** | [**STRING_32**](STRING_32.md) | The liquidity pool in which this position was opened | [optional] [default to null]

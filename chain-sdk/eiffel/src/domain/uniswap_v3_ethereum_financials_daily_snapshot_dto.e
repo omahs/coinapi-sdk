@@ -23,8 +23,8 @@ feature --Access
       
     recv_time: detachable DATE_TIME
       
- 	block_number: INTEGER_32
-    	 -- Block number of when this snapshot was taken/last modified.)
+ 	block_number: INTEGER_64
+    	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
       -- ID is # of days since Unix epoch time.
  	day: INTEGER_32

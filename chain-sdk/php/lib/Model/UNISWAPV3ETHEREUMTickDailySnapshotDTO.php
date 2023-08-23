@@ -62,7 +62,6 @@ class UNISWAPV3ETHEREUMTickDailySnapshotDTO implements ModelInterface, ArrayAcce
         'entry_time' => '\DateTime',
         'recv_time' => '\DateTime',
         'block_number' => 'int',
-        'vid' => 'int',
         'id' => 'string',
         'day_id' => 'int',
         'tick' => 'string',
@@ -85,7 +84,6 @@ class UNISWAPV3ETHEREUMTickDailySnapshotDTO implements ModelInterface, ArrayAcce
         'entry_time' => 'date-time',
         'recv_time' => 'date-time',
         'block_number' => 'int64',
-        'vid' => 'int64',
         'id' => null,
         'day_id' => 'int32',
         'tick' => null,
@@ -106,7 +104,6 @@ class UNISWAPV3ETHEREUMTickDailySnapshotDTO implements ModelInterface, ArrayAcce
         'entry_time' => false,
 		'recv_time' => false,
 		'block_number' => false,
-		'vid' => false,
 		'id' => true,
 		'day_id' => false,
 		'tick' => true,
@@ -207,7 +204,6 @@ class UNISWAPV3ETHEREUMTickDailySnapshotDTO implements ModelInterface, ArrayAcce
         'entry_time' => 'entry_time',
         'recv_time' => 'recv_time',
         'block_number' => 'block_number',
-        'vid' => 'vid',
         'id' => 'id',
         'day_id' => 'day_id',
         'tick' => 'tick',
@@ -228,7 +224,6 @@ class UNISWAPV3ETHEREUMTickDailySnapshotDTO implements ModelInterface, ArrayAcce
         'entry_time' => 'setEntryTime',
         'recv_time' => 'setRecvTime',
         'block_number' => 'setBlockNumber',
-        'vid' => 'setVid',
         'id' => 'setId',
         'day_id' => 'setDayId',
         'tick' => 'setTick',
@@ -249,7 +244,6 @@ class UNISWAPV3ETHEREUMTickDailySnapshotDTO implements ModelInterface, ArrayAcce
         'entry_time' => 'getEntryTime',
         'recv_time' => 'getRecvTime',
         'block_number' => 'getBlockNumber',
-        'vid' => 'getVid',
         'id' => 'getId',
         'day_id' => 'getDayId',
         'tick' => 'getTick',
@@ -321,7 +315,6 @@ class UNISWAPV3ETHEREUMTickDailySnapshotDTO implements ModelInterface, ArrayAcce
         $this->setIfExists('entry_time', $data ?? [], null);
         $this->setIfExists('recv_time', $data ?? [], null);
         $this->setIfExists('block_number', $data ?? [], null);
-        $this->setIfExists('vid', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('day_id', $data ?? [], null);
         $this->setIfExists('tick', $data ?? [], null);
@@ -452,33 +445,6 @@ class UNISWAPV3ETHEREUMTickDailySnapshotDTO implements ModelInterface, ArrayAcce
             throw new \InvalidArgumentException('non-nullable block_number cannot be null');
         }
         $this->container['block_number'] = $block_number;
-
-        return $this;
-    }
-
-    /**
-     * Gets vid
-     *
-     * @return int|null
-     */
-    public function getVid()
-    {
-        return $this->container['vid'];
-    }
-
-    /**
-     * Sets vid
-     *
-     * @param int|null $vid 
-     *
-     * @return self
-     */
-    public function setVid($vid)
-    {
-        if (is_null($vid)) {
-            throw new \InvalidArgumentException('non-nullable vid cannot be null');
-        }
-        $this->container['vid'] = $vid;
 
         return $this;
     }

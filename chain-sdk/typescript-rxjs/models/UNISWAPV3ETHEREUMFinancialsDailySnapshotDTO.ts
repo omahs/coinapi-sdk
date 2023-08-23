@@ -28,7 +28,7 @@ export interface UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO {
      */
     recv_time?: string;
     /**
-     * Block number of when this snapshot was taken/last modified.)
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO
      */

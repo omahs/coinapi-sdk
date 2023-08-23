@@ -835,7 +835,6 @@ module OpenapiClient
     # TickDailySnapshots (current)
     # Gets tickDailySnapshots.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :pool liquidity pool this tick belongs to
     # @return [Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>]
     def u_niswapv3_ethereum_tick_daily_snapshots__current(opts = {})
       data, _status_code, _headers = u_niswapv3_ethereum_tick_daily_snapshots__current_with_http_info(opts)
@@ -845,7 +844,6 @@ module OpenapiClient
     # TickDailySnapshots (current)
     # Gets tickDailySnapshots.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :pool liquidity pool this tick belongs to
     # @return [Array<(Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>, Integer, Hash)>] Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO> data, response status code and response headers
     def u_niswapv3_ethereum_tick_daily_snapshots__current_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -856,7 +854,6 @@ module OpenapiClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'pool'] = opts[:'pool'] if !opts[:'pool'].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -895,7 +892,6 @@ module OpenapiClient
     # TickHourlySnapshots (current)
     # Gets tickHourlySnapshots.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :pool liquidity pool this tick belongs to
     # @return [Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>]
     def u_niswapv3_ethereum_tick_hourly_snapshots__current(opts = {})
       data, _status_code, _headers = u_niswapv3_ethereum_tick_hourly_snapshots__current_with_http_info(opts)
@@ -905,7 +901,6 @@ module OpenapiClient
     # TickHourlySnapshots (current)
     # Gets tickHourlySnapshots.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :pool liquidity pool this tick belongs to
     # @return [Array<(Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>, Integer, Hash)>] Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> data, response status code and response headers
     def u_niswapv3_ethereum_tick_hourly_snapshots__current_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -916,7 +911,6 @@ module OpenapiClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'pool'] = opts[:'pool'] if !opts[:'pool'].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -955,7 +949,6 @@ module OpenapiClient
     # Ticks (current)
     # Gets ticks.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :pool Liquidity pool this tick belongs to
     # @return [Array<UNISWAPV3ETHEREUMTickDTO>]
     def u_niswapv3_ethereum_ticks__current(opts = {})
       data, _status_code, _headers = u_niswapv3_ethereum_ticks__current_with_http_info(opts)
@@ -965,7 +958,6 @@ module OpenapiClient
     # Ticks (current)
     # Gets ticks.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :pool Liquidity pool this tick belongs to
     # @return [Array<(Array<UNISWAPV3ETHEREUMTickDTO>, Integer, Hash)>] Array<UNISWAPV3ETHEREUMTickDTO> data, response status code and response headers
     def u_niswapv3_ethereum_ticks__current_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -976,7 +968,6 @@ module OpenapiClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'pool'] = opts[:'pool'] if !opts[:'pool'].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}

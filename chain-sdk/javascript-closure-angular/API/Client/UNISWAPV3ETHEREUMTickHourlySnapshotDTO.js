@@ -26,13 +26,6 @@ API.Client.UNISWAPV3ETHEREUMTickHourlySnapshotDTO.prototype.recvTime;
 API.Client.UNISWAPV3ETHEREUMTickHourlySnapshotDTO.prototype.blockNumber;
 
 /**
- * 
- * @type {!number}
- * @export
- */
-API.Client.UNISWAPV3ETHEREUMTickHourlySnapshotDTO.prototype.vid;
-
-/**
  * (pool address)-(tick index)-(hour ID)
  * @type {!string}
  * @export

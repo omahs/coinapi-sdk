@@ -87,11 +87,11 @@ export type CRYPTOPUNKSBidDTO = {
      */
     recv_time?: Date;
     /**
-     * 
-     * @type {string}
+     * Number of block in which entity was recorded.
+     * @type {number}
      * @memberof CRYPTOPUNKSBidDTO
      */
-    block_number?: string;
+    block_number?: number;
     /**
      * 
      * @type {number}
@@ -263,11 +263,11 @@ export type CRYPTOPUNKSCollectionDailySnapshotDTO = {
      */
     recv_time?: Date;
     /**
-     * 
-     * @type {string}
+     * Number of block in which entity was recorded.
+     * @type {number}
      * @memberof CRYPTOPUNKSCollectionDailySnapshotDTO
      */
-    block_number?: string;
+    block_number?: number;
     /**
      * 
      * @type {number}
@@ -730,11 +730,11 @@ export type CRYPTOPUNKSTradeDTO = {
      */
     recv_time?: Date;
     /**
-     * 
-     * @type {string}
+     * Number of block in which entity was recorded.
+     * @type {number}
      * @memberof CRYPTOPUNKSTradeDTO
      */
-    block_number?: string;
+    block_number?: number;
     /**
      * 
      * @type {number}
@@ -856,6 +856,462 @@ export type CRYPTOPUNKSUserDTO = {
      * @memberof CRYPTOPUNKSUserDTO
      */
     id?: string;
+}
+
+/**
+ * Entity to accumulate total unique users.
+ * @export
+ */
+export type CURVEFINANCEETHEREUMAccountDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMAccountDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMAccountDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMAccountDTO
+     */
+    block_number?: number;
+    /**
+     * Address of the account
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMAccountDTO
+     */
+    id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMAccountDTO
+     */
+    block_range?: string;
+}
+
+/**
+ * Entity for calculating daily/hourly active users.
+ * @export
+ */
+export type CURVEFINANCEETHEREUMActiveAccountDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMActiveAccountDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMActiveAccountDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMActiveAccountDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMActiveAccountDTO
+     */
+    block_range?: string;
+    /**
+     * Identifier, format: (daily/hourly)-(address of the account)-(days/hours since Unix epoch)
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMActiveAccountDTO
+     */
+    id?: string;
+}
+
+/**
+ * Entity represents a user action in the protocol involving the addition of funds to a liquidity pool.
+ * @export
+ */
+export type CURVEFINANCEETHEREUMDepositDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMDepositDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMDepositDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMDepositDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDepositDTO
+     */
+    block_range?: string;
+    /**
+     * deposit-(Transaction hash)-(log index)
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDepositDTO
+     */
+    id?: string;
+    /**
+     * Transaction hash of the transaction that emitted this event
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDepositDTO
+     */
+    hash?: string;
+    /**
+     * Event log index. For transactions that don\'t emit event, create arbitrary index starting from 0
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMDepositDTO
+     */
+    log_index?: number;
+    /**
+     * The protocol this transaction belongs to
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDepositDTO
+     */
+    protocol?: string;
+    /**
+     * Address that received the tokens
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDepositDTO
+     */
+    to?: string;
+    /**
+     * Address that sent the tokens
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDepositDTO
+     */
+    from?: string;
+    /**
+     * Timestamp of this event
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDepositDTO
+     */
+    timestamp?: string;
+    /**
+     * Input tokens of the pool. E.g. WETH and USDC to a WETH-USDC pool
+     * @type {Array<string>}
+     * @memberof CURVEFINANCEETHEREUMDepositDTO
+     */
+    input_tokens?: Array<string>;
+    /**
+     * Output token of the pool. E.g. the UNI-LP token
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDepositDTO
+     */
+    output_token?: string;
+    /**
+     * Amount of input tokens in the token\'s native unit
+     * @type {Array<string>}
+     * @memberof CURVEFINANCEETHEREUMDepositDTO
+     */
+    input_token_amounts?: Array<string>;
+    /**
+     * Amount of output tokens in the token\'s native unit
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDepositDTO
+     */
+    output_token_amount?: string;
+    /**
+     * USD-normalized value of the transaction of the underlying (e.g. sum of tokens deposited into a pool)
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDepositDTO
+     */
+    amount_usd?: string;
+    /**
+     * The pool involving this transaction
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDepositDTO
+     */
+    pool?: string;
+}
+
+/**
+ * Entity for calculating daily/hourly active users.
+ * @export
+ */
+export type CURVEFINANCEETHEREUMDexAmmProtocolDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMDexAmmProtocolDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMDexAmmProtocolDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMDexAmmProtocolDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDexAmmProtocolDTO
+     */
+    block_range?: string;
+    /**
+     * Smart contract address of the protocol\'s main contract (Factory, Registry, etc)
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDexAmmProtocolDTO
+     */
+    id?: string;
+    /**
+     * Name of the protocol, including version.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDexAmmProtocolDTO
+     */
+    name?: string;
+    /**
+     * Slug of protocol, including version.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDexAmmProtocolDTO
+     */
+    slug?: string;
+    /**
+     * Version of the subgraph schema, in SemVer format (e.g. 1.0.0)
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDexAmmProtocolDTO
+     */
+    schema_version?: string;
+    /**
+     * Version of the subgraph implementation, in SemVer format (e.g. 1.0.0)
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDexAmmProtocolDTO
+     */
+    subgraph_version?: string;
+    /**
+     * Version of the methodology used to compute metrics, loosely based on SemVer format (e.g. 1.0.0)
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDexAmmProtocolDTO
+     */
+    methodology_version?: string;
+    /**
+     * Current TVL (Total Value Locked) of the entire protocol
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDexAmmProtocolDTO
+     */
+    total_value_locked_usd?: string;
+    /**
+     * Current PCV (Protocol Controlled Value). Only relevant for protocols with PCV.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDexAmmProtocolDTO
+     */
+    protocol_controlled_value_usd?: string;
+    /**
+     * All historical volume in USD
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDexAmmProtocolDTO
+     */
+    cumulative_volume_usd?: string;
+    /**
+     * Revenue claimed by suppliers to the protocol. LPs on DEXs (e.g. 0.25% of the swap fee in Sushiswap). Depositors on Lending Protocols. NFT sellers on OpenSea.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDexAmmProtocolDTO
+     */
+    cumulative_supply_side_revenue_usd?: string;
+    /**
+     * Gross revenue for the protocol (revenue claimed by protocol). Examples: AMM protocol fee (Sushi’s 0.05%). OpenSea 10% sell fee.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDexAmmProtocolDTO
+     */
+    cumulative_protocol_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the protocol. e.g. 0.30% of swap fee in Sushiswap, all yield generated by Yearn.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMDexAmmProtocolDTO
+     */
+    cumulative_total_revenue_usd?: string;
+    /**
+     * Number of cumulative unique users
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMDexAmmProtocolDTO
+     */
+    cumulative_unique_users?: number;
+    /**
+     * Total number of pools
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMDexAmmProtocolDTO
+     */
+    total_pool_count?: number;
+    /**
+     * All pools that belong to this protocol
+     * @type {Array<string>}
+     * @memberof CURVEFINANCEETHEREUMDexAmmProtocolDTO
+     */
+    pool_ids?: Array<string>;
+}
+
+/**
+ * Daily financial metrics for Curve finance.
+ * @export
+ */
+export type CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+     */
+    block_range?: string;
+    /**
+     * ID is # of days since Unix epoch time
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+     */
+    id?: string;
+    /**
+     * Protocol this snapshot is associated with
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+     */
+    protocol?: string;
+    /**
+     * Current TVL (Total Value Locked) of the entire protocol
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+     */
+    total_value_locked_usd?: string;
+    /**
+     * Current PCV (Protocol Controlled Value). Only relevant for protocols with PCV.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+     */
+    protocol_controlled_value_usd?: string;
+    /**
+     * All trade volume occurred in a given day, in USD
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+     */
+    daily_volume_usd?: string;
+    /**
+     * All historical trade volume in USD
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+     */
+    cumulative_volume_usd?: string;
+    /**
+     * Revenue claimed by suppliers to the protocol. LPs on DEXs (e.g. 0.25% of the swap fee in Sushiswap). Depositors on Lending Protocols. NFT sellers on OpenSea.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+     */
+    daily_supply_side_revenue_usd?: string;
+    /**
+     * Revenue claimed by suppliers to the protocol. LPs on DEXs (e.g. 0.25% of the swap fee in Sushiswap). Depositors on Lending Protocols. NFT sellers on OpenSea.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+     */
+    cumulative_supply_side_revenue_usd?: string;
+    /**
+     * Gross revenue for the protocol (revenue claimed by protocol). Examples: AMM protocol fee (Sushi’s 0.05%). OpenSea 10% sell fee.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+     */
+    daily_protocol_side_revenue_usd?: string;
+    /**
+     * Gross revenue for the protocol (revenue claimed by protocol). Examples: AMM protocol fee (Sushi’s 0.05%). OpenSea 10% sell fee.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+     */
+    cumulative_protocol_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the protocol. e.g. 0.30% of swap fee in Sushiswap, all yield generated by Yearn.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+     */
+    daily_total_revenue_usd?: string;
+    /**
+     * All revenue generated by the protocol. e.g. 0.30% of swap fee in Sushiswap, all yield generated by Yearn.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+     */
+    cumulative_total_revenue_usd?: string;
+    /**
+     * Timestamp of this snapshot
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+     */
+    timestamp?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type CURVEFINANCEETHEREUMLiquidityGaugeDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMLiquidityGaugeDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMLiquidityGaugeDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMLiquidityGaugeDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityGaugeDTO
+     */
+    block_range?: string;
+    /**
+     * Address of the Liquidity Gauge
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityGaugeDTO
+     */
+    id?: string;
+    /**
+     * Address of the pool associated with this liquidity gauge
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityGaugeDTO
+     */
+    pool_address?: string;
 }
 
 /**
@@ -1055,6 +1511,461 @@ export type CURVEFINANCEETHEREUMLiquidityPoolDTO = {
  * 
  * @export
  */
+export type CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    block_range?: string;
+    /**
+     * Identifier, format: (smart contract address of the pool)-(# of days since Unix epoch time)
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    id?: string;
+    /**
+     * The protocol this snapshot belongs to
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    protocol?: string;
+    /**
+     * The pool this snapshot belongs to
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    pool?: string;
+    /**
+     * Timestamp of this snapshot
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    timestamp?: string;
+    /**
+     * Current TVL (Total Value Locked) of this pool
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    total_value_locked_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool, accrued to the supply side.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_supply_side_revenue_usd?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_supply_side_revenue_usd?: string;
+    /**
+     * Daily revenue generated by the liquidity pool, accrued to the supply side.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_protocol_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool, accrued to the protocol.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_protocol_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_total_revenue_usd?: string;
+    /**
+     * Daily revenue generated by the liquidity pool.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_total_revenue_usd?: string;
+    /**
+     * All trade volume occurred in a given day, in USD
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_volume_usd?: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_volume_by_token_amount?: Array<string>;
+    /**
+     * All trade volume occurred in a given day for a specific input token, in native amount. The ordering should be the same as the pool\'s \'inputTokens\' field.
+     * @type {Array<string>}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_volume_by_token_usd?: Array<string>;
+    /**
+     * All trade volume occurred in a given day for a specific input token, in USD. The ordering should be the same as the pool\'s \'inputTokens\' field.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_volume_usd?: string;
+    /**
+     * Amount of input tokens in the pool. The ordering should be the same as the pool\'s \'inputTokens\' field.
+     * @type {Array<string>}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    input_token_balances?: Array<string>;
+    /**
+     * Weights of input tokens in the liquidity pool in percentage values. For example, 50/50 for Uniswap pools, 48.2/51.8 for a Curve pool, 10/10/80 for a Balancer pool
+     * @type {Array<string>}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    input_token_weights?: Array<string>;
+    /**
+     * Total supply of output token. Note that certain DEXes don\'t have an output token (e.g. Bancor)
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    output_token_supply?: string;
+    /**
+     * Price per share of output token in USD
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    output_token_price_usd?: string;
+    /**
+     * Total supply of output tokens that are staked (usually in the MasterChef contract). Used to calculate reward APY.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    staked_output_token_amount?: string;
+    /**
+     * Per-block reward token emission as of the current block normalized to a day, in token\'s native amount. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * @type {Array<string>}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    reward_token_emissions_amount?: Array<string>;
+    /**
+     * Per-block reward token emission as of the current block normalized to a day, in USD value. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * @type {Array<string>}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    reward_token_emissions_usd?: Array<string>;
+}
+
+/**
+ * 
+ * @export
+ */
+export type CURVEFINANCEETHEREUMLiquidityPoolFeeDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolFeeDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolFeeDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolFeeDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolFeeDTO
+     */
+    block_range?: string;
+    /**
+     * (fee type)-(pool address)
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolFeeDTO
+     */
+    id?: string;
+    /**
+     * Fee as a percentage of the trade (swap) amount. Does not always apply
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolFeeDTO
+     */
+    fee_percentage?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    block_range?: string;
+    /**
+     * (smart contract address of the pool)-(# of hours since unix epoch time)
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    id?: string;
+    /**
+     * The protocol this snapshot belongs to
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    protocol?: string;
+    /**
+     * The pool this snapshot belongs to
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    pool?: string;
+    /**
+     * Timestamp of this snapshot
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    timestamp?: string;
+    /**
+     * Current TVL (Total Value Locked) of this pool
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    total_value_locked_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool, accrued to the supply side.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    cumulative_supply_side_revenue_usd?: string;
+    /**
+     * Hourly revenue generated by the liquidity pool, accrued to the supply side.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_supply_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool, accrued to the protocol.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    cumulative_protocol_side_revenue_usd?: string;
+    /**
+     * Hourly revenue generated by the liquidity pool, accrued to the protocol.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_protocol_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    cumulative_total_revenue_usd?: string;
+    /**
+     * Hourly revenue generated by the liquidity pool.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_total_revenue_usd?: string;
+    /**
+     * All trade volume occurred in a given hour, in USD
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_volume_usd?: string;
+    /**
+     * All trade volume occurred in a given hour for a specific input token, in native amount. The ordering should be the same as the pool\'s \'inputTokens\' field.
+     * @type {Array<string>}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_volume_by_token_amount?: Array<string>;
+    /**
+     * All trade volume occurred in a given hour for a specific input token, in USD. The ordering should be the same as the pool\'s \'inputTokens\' field.
+     * @type {Array<string>}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_volume_by_token_usd?: Array<string>;
+    /**
+     * All historical trade volume occurred in this pool, in USD
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    cumulative_volume_usd?: string;
+    /**
+     * Amount of input tokens in the pool. The ordering should be the same as the pool\'s \'inputTokens\' field.
+     * @type {Array<string>}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    input_token_balances?: Array<string>;
+    /**
+     * Weights of input tokens in the liquidity pool in percentage values. For example, 50/50 for Uniswap pools, 48.2/51.8 for a Curve pool, 10/10/80 for a Balancer pool
+     * @type {Array<string>}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    input_token_weights?: Array<string>;
+    /**
+     * Total supply of output token. Note that certain DEXes don\'t have an output token (e.g. Bancor)
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    output_token_supply?: string;
+    /**
+     * Price per share of output token in USD
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    output_token_price_usd?: string;
+    /**
+     * Total supply of output tokens that are staked (usually in the MasterChef contract). Used to calculate reward APY.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    staked_output_token_amount?: string;
+    /**
+     * Per-block reward token emission as of the current block normalized to a day (not hour), in token\'s native amount. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * @type {Array<string>}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    reward_token_emissions_amount?: Array<string>;
+    /**
+     * Per-block reward token emission as of the current block normalized to a day (not hour), in USD value. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * @type {Array<string>}
+     * @memberof CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    reward_token_emissions_usd?: Array<string>;
+}
+
+/**
+ * Entity for fetching the pool address from lpToken.
+ * @export
+ */
+export type CURVEFINANCEETHEREUMLpTokenDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMLpTokenDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMLpTokenDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMLpTokenDTO
+     */
+    block_number?: number;
+    /**
+     * Address of the LP Token.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLpTokenDTO
+     */
+    id?: string;
+    /**
+     * Address of the pool associated with this token.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLpTokenDTO
+     */
+    pool_address?: string;
+    /**
+     * Address of the registry associated with this token.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMLpTokenDTO
+     */
+    registry_address?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type CURVEFINANCEETHEREUMRewardTokenDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMRewardTokenDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMRewardTokenDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMRewardTokenDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMRewardTokenDTO
+     */
+    block_range?: string;
+    /**
+     * Identifier, format: (reward token type)-(smart contract address of the reward token)
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMRewardTokenDTO
+     */
+    id?: string;
+    /**
+     * Reference to the actual token.
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMRewardTokenDTO
+     */
+    token?: string;
+}
+
+/**
+ * 
+ * @export
+ */
 export type CURVEFINANCEETHEREUMSwapDTO = {
     /**
      * 
@@ -1069,11 +1980,11 @@ export type CURVEFINANCEETHEREUMSwapDTO = {
      */
     recv_time?: Date;
     /**
-     * Block number of this event
-     * @type {string}
+     * Number of block in which entity was recorded.
+     * @type {number}
      * @memberof CURVEFINANCEETHEREUMSwapDTO
      */
-    block_number?: string;
+    block_number?: number;
     /**
      * Swap-(transaction hash)-(log index)
      * @type {string}
@@ -1261,6 +2172,285 @@ export type CURVEFINANCEETHEREUMTokenDTO = {
      * @memberof CURVEFINANCEETHEREUMTokenDTO
      */
     token_symbol?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * ID is # of days since Unix epoch time
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    id?: string;
+    /**
+     * Protocol this snapshot is associated with
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    protocol?: string;
+    /**
+     * Number of unique daily active users
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    daily_active_users?: number;
+    /**
+     * Number of cumulative unique users
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    cumulative_unique_users?: number;
+    /**
+     * Total number of transactions occurred in a day. Transactions include all entities that implement the Event interface
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    daily_transaction_count?: number;
+    /**
+     * Total number of deposits (add liquidity) in a day
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    daily_deposit_count?: number;
+    /**
+     * Total number of withdrawals (remove liquidity) in a day
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    daily_withdraw_count?: number;
+    /**
+     * Total number of trades (swaps) in a day
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    daily_swap_count?: number;
+    /**
+     * Total number of pools
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    total_pool_count?: number;
+    /**
+     * Timestamp of this snapshot
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    timestamp?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    block_range?: string;
+    /**
+     * ID is # of days since Unix epoch time
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    id?: string;
+    /**
+     * Protocol this snapshot is associated with
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    protocol?: string;
+    /**
+     * Number of unique daily active users
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    hourly_active_users?: number;
+    /**
+     * Number of cumulative unique users
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    cumulative_unique_users?: number;
+    /**
+     * Total number of transactions occurred in an hour. Transactions include all entities that implement the Event interface.
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    hourly_transaction_count?: number;
+    /**
+     * Total number of deposits (add liquidity) in an hour
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    hourly_deposit_count?: number;
+    /**
+     * Total number of withdrawals (remove liquidity) in an hour
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    hourly_withdraw_count?: number;
+    /**
+     * Total number of trades (swaps) in an hour
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    hourly_swap_count?: number;
+    /**
+     * Timestamp of this snapshot
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    timestamp?: string;
+}
+
+/**
+ * Remove liquidity events.
+ * @export
+ */
+export type CURVEFINANCEETHEREUMWithdrawDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMWithdrawDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CURVEFINANCEETHEREUMWithdrawDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMWithdrawDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMWithdrawDTO
+     */
+    block_range?: string;
+    /**
+     * withdraw-(transaction hash)-(log index)
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMWithdrawDTO
+     */
+    id?: string;
+    /**
+     * Transaction hash of the transaction that emitted this event
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMWithdrawDTO
+     */
+    hash?: string;
+    /**
+     * Event log index. For transactions that don\'t emit event, create arbitrary index starting from 0
+     * @type {number}
+     * @memberof CURVEFINANCEETHEREUMWithdrawDTO
+     */
+    log_index?: number;
+    /**
+     * The protocol this transaction belongs to
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMWithdrawDTO
+     */
+    protocol?: string;
+    /**
+     * Address that received the tokens
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMWithdrawDTO
+     */
+    to?: string;
+    /**
+     * Address that sent the tokens
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMWithdrawDTO
+     */
+    from?: string;
+    /**
+     * Timestamp of this event
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMWithdrawDTO
+     */
+    timestamp?: string;
+    /**
+     * Input tokens of the pool (not input tokens of the event/transaction). E.g. WETH and USDC from a WETH-USDC pool
+     * @type {Array<string>}
+     * @memberof CURVEFINANCEETHEREUMWithdrawDTO
+     */
+    input_tokens?: Array<string>;
+    /**
+     * Output token of the pool (not output token of the event/transaction). E.g. the UNI-LP token
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMWithdrawDTO
+     */
+    output_token?: string;
+    /**
+     * Amount of input tokens in the token\'s native unit
+     * @type {Array<string>}
+     * @memberof CURVEFINANCEETHEREUMWithdrawDTO
+     */
+    input_token_amounts?: Array<string>;
+    /**
+     * Amount of output tokens in the token\'s native unit
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMWithdrawDTO
+     */
+    output_token_amount?: string;
+    /**
+     * USD-normalized value of the transaction of the underlying (e.g. sum of tokens withdrawn from a pool)
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMWithdrawDTO
+     */
+    amount_usd?: string;
+    /**
+     * The pool involving this transaction
+     * @type {string}
+     * @memberof CURVEFINANCEETHEREUMWithdrawDTO
+     */
+    pool?: string;
 }
 
 /**
@@ -2230,12 +3420,6 @@ export type PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO = {
      */
     block_number?: number;
     /**
-     * .
-     * @type {number}
-     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
-     */
-    vid?: number;
-    /**
      * The Ethereum block number associated with the liquidity pool daily snapshot.
      * @type {number}
      * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
@@ -2562,12 +3746,6 @@ export type PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO = {
      */
     block_number?: number;
     /**
-     * 
-     * @type {number}
-     * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
-     */
-    vid?: number;
-    /**
      * (Smart contract address of the pool)-( # of hours since Unix epoch time)
      * @type {string}
      * @memberof PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
@@ -2844,12 +4022,6 @@ export type PANCAKESWAPV3ETHEREUMPositionDTO = {
      * @memberof PANCAKESWAPV3ETHEREUMPositionDTO
      */
     block_number?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PANCAKESWAPV3ETHEREUMPositionDTO
-     */
-    vid?: number;
     /**
      * (account address)-(market address)-(count)
      * @type {string}
@@ -3347,12 +4519,6 @@ export type PANCAKESWAPV3ETHEREUMTickDTO = {
      */
     block_number?: number;
     /**
-     * 
-     * @type {number}
-     * @memberof PANCAKESWAPV3ETHEREUMTickDTO
-     */
-    vid?: number;
-    /**
      * (pool address)-(tick index)
      * @type {string}
      * @memberof PANCAKESWAPV3ETHEREUMTickDTO
@@ -3462,12 +4628,6 @@ export type PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO = {
      */
     block_number?: number;
     /**
-     * 
-     * @type {number}
-     * @memberof PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO
-     */
-    vid?: number;
-    /**
      * Identifier, format: (pool address)-(tick index)-(day ID)
      * @type {string}
      * @memberof PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO
@@ -3546,12 +4706,6 @@ export type PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO = {
      * @memberof PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO
      */
     block_number?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO
-     */
-    vid?: number;
     /**
      * (pool address)-(tick index)-(hour ID)
      * @type {string}
@@ -4107,6 +5261,648 @@ export type PANCAKESWAPV3ETHEREUMWithdrawDTO = {
 }
 
 /**
+ * 
+ * @export
+ */
+export type SUSHISWAPV3ETHEREUMAccountDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMAccountDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMAccountDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMAccountDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMAccountDTO
+     */
+    block_range?: string;
+    /**
+     * Account address.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMAccountDTO
+     */
+    id?: string;
+    /**
+     * Number of positions this account has.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMAccountDTO
+     */
+    position_count?: number;
+    /**
+     * Number of open positions this account has.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMAccountDTO
+     */
+    open_position_count?: number;
+    /**
+     * Number of closed positions this account has.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMAccountDTO
+     */
+    closed_position_count?: number;
+    /**
+     * Number of deposits this account made.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMAccountDTO
+     */
+    deposit_count?: number;
+    /**
+     * Number of withdrawals this account made.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMAccountDTO
+     */
+    withdraw_count?: number;
+    /**
+     * Number of times this account has traded/swapped.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMAccountDTO
+     */
+    swap_count?: number;
+}
+
+/**
+ * Entity for calculating daily/hourly active users.
+ * @export
+ */
+export type SUSHISWAPV3ETHEREUMActiveAccountDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMActiveAccountDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMActiveAccountDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMActiveAccountDTO
+     */
+    block_number?: number;
+    /**
+     * Identifier, format: (daily/hourly)-(address of the account)-(days/hours since unix epoch)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMActiveAccountDTO
+     */
+    id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMActiveAccountDTO
+     */
+    block_range?: string;
+}
+
+/**
+ * Entity represents a user action in the protocol involving the addition of funds to a liquidity pool.
+ * @export
+ */
+export type SUSHISWAPV3ETHEREUMDepositDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    block_?: number;
+    /**
+     * Identifier, format: (transaction hash)-(log index)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    id?: string;
+    /**
+     * Transaction hash of the transaction that emitted this event.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    hash?: string;
+    /**
+     * Nonce of the transaction that emitted this event.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    nonce?: string;
+    /**
+     * Event log index. For transactions that don\'t emit event, create arbitrary index starting from 0.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    log_index?: number;
+    /**
+     * Gas limit of the transaction that emitted this event.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    gas_limit?: string;
+    /**
+     * Gas used in this transaction. (Optional because not every chain will support this).
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    gas_used?: string;
+    /**
+     * Gas price of the transaction that emitted this event.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    gas_price?: string;
+    /**
+     * The protocol this transaction belongs to.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    protocol?: string;
+    /**
+     * Account that emitted this event.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    account?: string;
+    /**
+     * The user position changed by this event.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    position?: string;
+    /**
+     * The pool involving this event.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    pool?: string;
+    /**
+     * Lower tick of position.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    tick_lower?: string;
+    /**
+     * Upper tick of position.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    tick_upper?: string;
+    /**
+     * Timestamp of this event.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    timestamp?: string;
+    /**
+     * Amount of liquidity minted.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    liquidity?: string;
+    /**
+     * Input tokens of the pool. E.g. WETH and USDC to a WETH-USDC pool.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    input_tokens?: Array<string>;
+    /**
+     * Amount of input tokens in the token\'s native unit.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    input_token_amounts?: Array<string>;
+    /**
+     * Amount of input tokens in the liquidity pool.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    reserve_amounts?: Array<string>;
+    /**
+     * USD-normalized value of the transaction of the underlying (e.g. sum of tokens deposited into a pool).
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    amount_usd?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDepositDTO
+     */
+    block_range?: string;
+}
+
+/**
+ *  Decentralized exchange (Dex) automated market maker (Amm) protocol. It\'s an entity that represents a protocol involving a smart contract that use automated market makers.
+ * @export
+ */
+export type SUSHISWAPV3ETHEREUMDexAmmProtocolDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    block_range?: string;
+    /**
+     * Smart contract address of the protocol\'s main contract (Factory, Registry, etc).
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    id?: string;
+    /**
+     * Name of the protocol, including version. e.g. Uniswap v3.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    name?: string;
+    /**
+     * Slug of protocol, including version. e.g. uniswap-v3.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    slug?: string;
+    /**
+     * Version of the subgraph schema, in SemVer format (e.g. 1.0.0).
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    schema_version?: string;
+    /**
+     * Version of the subgraph implementation, in SemVer format (e.g. 1.0.0).
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    subgraph_version?: string;
+    /**
+     * Version of the methodology used to compute metrics, loosely based on SemVer format (e.g. 1.0.0).
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    methodology_version?: string;
+    /**
+     * Current TVL (Total Value Locked) of the entire protocol.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    total_value_locked_usd?: string;
+    /**
+     * The sum of all active and non-active liquidity in USD for this pool.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    total_liquidity_usd?: string;
+    /**
+     * All liquidity in USD that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pools current tick.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    active_liquidity_usd?: string;
+    /**
+     * All protocol-side value locking in USD that remains uncollected and unused in the protocol.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    uncollected_protocol_side_value_usd?: string;
+    /**
+     * All supply-side value locking in USD that remains uncollected and unused in the protocol.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    uncollected_supply_side_value_usd?: string;
+    /**
+     * Current PCV (Protocol Controlled Value). Only relevant for protocols with PCV.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    protocol_controlled_value_usd?: string;
+    /**
+     * All historical volume in USD.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    cumulative_volume_usd?: string;
+    /**
+     * Revenue claimed by suppliers to the protocol. LPs on DEXs (e.g. 0.25% of the swap fee in Sushiswap). Depositors on Lending Protocols. NFT sellers on OpenSea.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    cumulative_supply_side_revenue_usd?: string;
+    /**
+     * Gross revenue for the protocol (revenue claimed by protocol). Examples: AMM protocol fee (Sushi’s 0.05%). OpenSea 10% sell fee.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    cumulative_protocol_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the protocol. e.g. 0.30% of swap fee in Sushiswap, all yield generated by Yearn.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    cumulative_total_revenue_usd?: string;
+    /**
+     * Number of cumulative unique users.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    cumulative_unique_users?: number;
+    /**
+     * Number of cumulative liquidity providers.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    cumulative_unique_l_ps?: number;
+    /**
+     * Number of cumulative traders
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    cumulative_unique_traders?: number;
+    /**
+     * Total number of pools.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    total_pool_count?: number;
+    /**
+     * Total number of open positions.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    open_position_count?: number;
+    /**
+     * Total number of positions (open and closed).
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    cumulative_position_count?: number;
+    /**
+     * Day ID of the most recent daily snapshot.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    last_snapshot_day_id?: number;
+    /**
+     * Timestamp of the last time this entity was updated
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    last_update_timestamp?: string;
+    /**
+     * Block number of the last time this entity was updated.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    last_update_block_number?: string;
+    /**
+     * This is a boolean to indicate whether or not the pools have been instantiated the were initialized before Optimism regenesis.
+     * @type {boolean}
+     * @memberof SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+     */
+    regenesis?: boolean;
+}
+
+/**
+ * Daily financial metrics for Sushiswap V3.
+ * @export
+ */
+export type SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Block number of when this snapshot was taken/last modified.)
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * ID is # of days since Unix epoch time.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    id?: string;
+    /**
+     * Number of days since Unix epoch time.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    day?: number;
+    /**
+     * Protocol this snapshot is associated with.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    protocol?: string;
+    /**
+     * Current TVL (Total Value Locked) of the entire protocol.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    total_value_locked_usd?: string;
+    /**
+     * The sum of all active and non-active liquidity in USD for this pool.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    total_liquidity_usd?: string;
+    /**
+     * All liquidity in USD that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pool\'s current tick.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    active_liquidity_usd?: string;
+    /**
+     * All protocol-side value locking in USD that remains uncollected and unused in the protocol.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    uncollected_protocol_side_value_usd?: string;
+    /**
+     * All supply-side value locking in USD that remains uncollected and unused in the protocol.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    uncollected_supply_side_value_usd?: string;
+    /**
+     * Current PCV (Protocol Controlled Value). Only relevant for protocols with PCV.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    protocol_controlled_value_usd?: string;
+    /**
+     * All trade volume occurred in a given day, in USD
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    daily_volume_usd?: string;
+    /**
+     * All historical trade volume in USD
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    cumulative_volume_usd?: string;
+    /**
+     * Revenue claimed by suppliers to the protocol. LPs on DEXs (e.g. 0.25% of the swap fee in Sushiswap). Depositors on Lending Protocols. NFT sellers on OpenSea.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    daily_supply_side_revenue_usd?: string;
+    /**
+     * Revenue claimed by suppliers to the protocol. LPs on DEXs (e.g. 0.25% of the swap fee in Sushiswap). Depositors on Lending Protocols. NFT sellers on OpenSea.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    cumulative_supply_side_revenue_usd?: string;
+    /**
+     * Gross revenue for the protocol (revenue claimed by the protocol). Examples: AMM protocol fee (Sushi’s 0.05%). OpenSea 10% sell fee.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    daily_protocol_side_revenue_usd?: string;
+    /**
+     * Gross revenue for the protocol (revenue claimed by the protocol). Examples: AMM protocol fee (Sushi’s 0.05%). OpenSea 10% sell fee.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    cumulative_protocol_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the protocol. e.g. 0.30% of swap fee in Sushiswap, all yield generated by Yearn.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    daily_total_revenue_usd?: string;
+    /**
+     * All revenue generated by the protocol. e.g. 0.30% of swap fee in Sushiswap, all yield generated by Yearn.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    cumulative_total_revenue_usd?: string;
+    /**
+     * Timestamp of when this snapshot was taken/last modified (May be taken after the interval has passed).
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+     */
+    timestamp?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO
+     */
+    block_number?: number;
+    /**
+     * .
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO
+     */
+    vid?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO
+     */
+    block_range?: string;
+    /**
+     * Smart contract address of the pool.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO
+     */
+    id?: string;
+    /**
+     * Input tokens of the pool (not input tokens of the event/transaction). E.g. WETH and USDC from a WETH-USDC pool.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO
+     */
+    input_tokens?: Array<string>;
+    /**
+     * Amount of input tokens in the pool. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO
+     */
+    input_token_balances?: Array<string>;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO
+     */
+    token_prices?: Array<string>;
+}
+
+/**
  * Pool-level metadata.
  * @export
  */
@@ -4408,6 +6204,930 @@ export type SUSHISWAPV3ETHEREUMLiquidityPoolDTO = {
 }
 
 /**
+ * Represents a liquidity pool daily snapshot for Sushiswap V3.
+ * @export
+ */
+export type SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * The Ethereum block number associated with the liquidity pool daily snapshot.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    block_?: number;
+    /**
+     * Identifier, format: (smart contract address of the pool)-(# of days since Unix epoch time).
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    id?: string;
+    /**
+     * Number of days since Unix epoch time.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    day?: number;
+    /**
+     * Protocol associated with the liquidity pool.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    protocol?: string;
+    /**
+     * Pool this snapshot belongs to.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    pool?: string;
+    /**
+     * Current tick representing the price of token0/token1.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    tick?: string;
+    /**
+     * Current TVL (Total Value Locked) of this pool.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    total_value_locked_usd?: string;
+    /**
+     * The sum of all active and non-active liquidity for this pool.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    total_liquidity?: string;
+    /**
+     * Sum of all active and non-active liquidity in USD for this pool.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    total_liquidity_usd?: string;
+    /**
+     * All liquidity `k` that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pools current tick.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    active_liquidity?: string;
+    /**
+     * All liquidity in USD that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pools current tick.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    active_liquidity_usd?: string;
+    /**
+     * All protocol-side value locked in token amounts that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    uncollected_protocol_side_token_amounts?: Array<string>;
+    /**
+     * All protocol-side value locking in USD that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    uncollected_protocol_side_values_usd?: Array<string>;
+    /**
+     * All supply-side value locked in token amounts that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    uncollected_supply_side_token_amounts?: Array<string>;
+    /**
+     * All supply-side value locked in USD that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    uncollected_supply_side_values_usd?: Array<string>;
+    /**
+     * All revenue generated by the liquidity pool, accrued to the supply side.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_supply_side_revenue_usd?: string;
+    /**
+     * Daily revenue generated by the liquidity pool, accrued to the supply side.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_supply_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool, accrued to the protocol.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_protocol_side_revenue_usd?: string;
+    /**
+     * Daily revenue generated by the liquidity pool, accrued to the protocol.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_protocol_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_total_revenue_usd?: string;
+    /**
+     * Daily revenue generated by the liquidity pool.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_total_revenue_usd?: string;
+    /**
+     * All historical trade volume occurred in this pool, in USD.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_volume_usd?: string;
+    /**
+     * All trade volume occurred in a given day, in USD.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_volume_usd?: string;
+    /**
+     * All trade volume , in native amount. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_volume_by_token_amount?: Array<string>;
+    /**
+     * All trade volume occurred in a given day for a specific input token, in native amount. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_volume_by_token_amount?: Array<string>;
+    /**
+     * All trade volume, in USD. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_volume_by_token_usd?: Array<string>;
+    /**
+     *  All trade volume occurred in a given day for a specific input token, in USD. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_volume_by_token_usd?: Array<string>;
+    /**
+     * Amount of input tokens in the pool. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    input_token_balances?: Array<string>;
+    /**
+     * Amount of input tokens in USD in the pool. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    input_token_balances_usd?: Array<string>;
+    /**
+     * Weights of input tokens in the liquidity pool in percentage values. For example, 50/50 for Uniswap pools, 48.2/51.8 for a Curve pool, 10/10/80 for a Balancer pool.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    input_token_weights?: Array<string>;
+    /**
+     * Total supply of output tokens that are staked (usually in the MasterChef contract). Used to calculate reward APY.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    staked_output_token_amount?: string;
+    /**
+     * Per-block reward token emission as of the current block normalized to a day, in token\'s native amount. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    reward_token_emissions_amount?: Array<string>;
+    /**
+     * Per-block reward token emission as of the current block normalized to a day, in USD value. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    reward_token_emissions_usd?: Array<string>;
+    /**
+     * Total number of deposits (add liquidity).
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_deposit_count?: number;
+    /**
+     * Total number of deposits (add liquidity) in a day.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_deposit_count?: number;
+    /**
+     * Total number of withdrawals (remove liquidity).
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_withdraw_count?: number;
+    /**
+     * Total number of withdrawals (remove liquidity) in a day.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_withdraw_count?: number;
+    /**
+     * Total number of trades (swaps).
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_swap_count?: number;
+    /**
+     * Total number of trades (swaps) in a day.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_swap_count?: number;
+    /**
+     * Number of positions in this market.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    position_count?: number;
+    /**
+     * Number of open positions in this market.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    open_position_count?: number;
+    /**
+     * Number of closed positions in this market.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    closed_position_count?: number;
+    /**
+     * Timestamp of when this snapshot was taken/last modified (May be taken after interval has passed).
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    timestamp?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO
+     */
+    block_range?: string;
+    /**
+     * Identifier, format: (fee type)-(pool address)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO
+     */
+    id?: string;
+    /**
+     * Fee as a percentage of the trade (swap) amount. Does not always apply 
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO
+     */
+    fee_percentage?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * (Smart contract address of the pool)-( # of hours since Unix epoch time)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    id?: string;
+    /**
+     * Number of hours since Unix epoch time
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hour?: number;
+    /**
+     * The protocol this snapshot belongs to
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    protocol?: string;
+    /**
+     * The pool this snapshot belongs to
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    pool?: string;
+    /**
+     * Current tick representing the price of token0/token1
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    tick?: string;
+    /**
+     * Current TVL (Total Value Locked) of this pool
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    total_value_locked_usd?: string;
+    /**
+     * The sum of all active and non-active liquidity for this pool.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    total_liquidity?: string;
+    /**
+     * The sum of all active and non-active liquidity in USD for this pool.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    total_liquidity_usd?: string;
+    /**
+     * All liquidity `k` that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pool\'s current tick.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    active_liquidity?: string;
+    /**
+     * All liquidity in USD that is active. Will be equal to totalLiquidity except for in concentrated liquidity - where activeLiquidity is all liquidity positions that contain the pool\'s current tick.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    active_liquidity_usd?: string;
+    /**
+     * All protocol-side value locked in token amounts that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    uncollected_protocol_side_token_amounts?: Array<string>;
+    /**
+     * All protocol-side value locking in USD that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    uncollected_protocol_side_values_usd?: Array<string>;
+    /**
+     * All supply-side value locked in token amounts that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    uncollected_supply_side_token_amounts?: Array<string>;
+    /**
+     * All supply-side value locked in USD that remains uncollected and unused in the pool.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    uncollected_supply_side_values_usd?: Array<string>;
+    /**
+     * All revenue generated by the liquidity pool, accrued to the supply side.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    cumulative_supply_side_revenue_usd?: string;
+    /**
+     * Hourly revenue generated by the liquidity pool, accrued to the supply side.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_supply_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool, accrued to the protocol.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    cumulative_protocol_side_revenue_usd?: string;
+    /**
+     * Hourly revenue generated by the liquidity pool, accrued to the protocol.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_protocol_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    cumulative_total_revenue_usd?: string;
+    /**
+     * Hourly revenue generated by the liquidity pool.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_total_revenue_usd?: string;
+    /**
+     * All historical trade volume occurred in this pool, in USD.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    cumulative_volume_usd?: string;
+    /**
+     * All trade volume occurred in a given hour, in USD.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_volume_usd?: string;
+    /**
+     * All trade volume, in native amount. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    cumulative_volume_by_token_amount?: Array<string>;
+    /**
+     * All trade volume occurred in a given hour for a specific input token, in native amount. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_volume_by_token_amount?: Array<string>;
+    /**
+     * All trade volume, in USD. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    cumulative_volume_by_token_usd?: Array<string>;
+    /**
+     * All trade volume occurred in a given hour for a specific input token, in USD. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_volume_by_token_usd?: Array<string>;
+    /**
+     * Amount of input tokens in the pool. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    input_token_balances?: Array<string>;
+    /**
+     * Amount of input tokens in USD in the pool. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    input_token_balances_usd?: Array<string>;
+    /**
+     * Weights of input tokens in the liquidity pool in percentage values. For example, 50/50 for Uniswap pools, 48.2/51.8 for a Curve pool, 10/10/80 for a Balancer pool.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    input_token_weights?: Array<string>;
+    /**
+     * Total supply of output tokens that are staked (usually in the MasterChef contract). Used to calculate reward APY.
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    staked_output_token_amount?: string;
+    /**
+     * Per-block reward token emission as of the current block normalized to a day (not hour), in token\'s native amount. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    reward_token_emissions_amount?: Array<string>;
+    /**
+     * Per-block reward token emission as of the current block normalized to a day (not hour), in USD value. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    reward_token_emissions_usd?: Array<string>;
+    /**
+     * Total number of deposits (add liquidity)
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    cumulative_deposit_count?: number;
+    /**
+     * Total number of deposits (add liquidity) in an hour
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_deposit_count?: number;
+    /**
+     * Total number of withdrawals (remove liquidity)
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    cumulative_withdraw_count?: number;
+    /**
+     * Total number of withdrawals (remove liquidity) in an hour
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_withdraw_count?: number;
+    /**
+     * Total number of trades (swaps)
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    cumulative_swap_count?: number;
+    /**
+     * Total number of trades (swaps) in an hour
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_swap_count?: number;
+    /**
+     * Number of positions in this market
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    position_count?: number;
+    /**
+     * Number of open positions in this market
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    open_position_count?: number;
+    /**
+     * Number of closed positions in this market
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    closed_position_count?: number;
+    /**
+     * Timestamp of when this snapshot was taken/last modified (May be taken after interval has passed)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    timestamp?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type SUSHISWAPV3ETHEREUMPositionDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    block_number?: number;
+    /**
+     * (account address)-(market address)-(count)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    id?: string;
+    /**
+     * Account that owns this position
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    account?: string;
+    /**
+     * The liquidity pool in which this position was opened
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    pool?: string;
+    /**
+     * The hash of the transaction that opened this position
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    hash_opened?: string;
+    /**
+     * The hash of the transaction that closed this position
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    hash_closed?: string;
+    /**
+     * Block number of when the position was opened
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    block_number_opened?: string;
+    /**
+     * Timestamp when the position was opened
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    timestamp_opened?: string;
+    /**
+     * Block number of when the position was closed (0 if still open)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    block_number_closed?: string;
+    /**
+     * Timestamp when the position was closed (0 if still open)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    timestamp_closed?: string;
+    /**
+     * lower tick of the position
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    tick_lower?: string;
+    /**
+     * upper tick of the position
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    tick_upper?: string;
+    /**
+     * Token that is to represent ownership of liquidity
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    liquidity_token?: string;
+    /**
+     * Type of token used to track liquidity
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    liquidity_token_type?: string;
+    /**
+     * total position liquidity
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    liquidity?: string;
+    /**
+     * total position liquidity in USD
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    liquidity_usd?: string;
+    /**
+     * amount of tokens ever deposited to position
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    cumulative_deposit_token_amounts?: Array<string>;
+    /**
+     * amount of tokens in USD deposited to position
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    cumulative_deposit_usd?: string;
+    /**
+     * amount of tokens ever withdrawn from position (without fees)
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    cumulative_withdraw_token_amounts?: Array<string>;
+    /**
+     * amount of tokens in USD withdrawn from position (without fees)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    cumulative_withdraw_usd?: string;
+    /**
+     * Total reward token accumulated under this position, in USD
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    cumulative_reward_usd?: Array<string>;
+    /**
+     * Number of deposits related to this position
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    deposit_count?: number;
+    /**
+     * Number of withdrawals related to this position
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMPositionDTO
+     */
+    withdraw_count?: number;
+}
+
+/**
+ * 
+ * @export
+ */
+export type SUSHISWAPV3ETHEREUMPositionSnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    block_number?: number;
+    /**
+     *  (position id )-( transaction hash )-( log index ) 
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    id?: string;
+    /**
+     * Transaction hash of the transaction that triggered this snapshot
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    hash?: string;
+    /**
+     * Event log index. For transactions that don\'t emit event, create arbitrary index starting from 0
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    log_index?: number;
+    /**
+     * Nonce of the transaction that triggered this snapshot
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    nonce?: string;
+    /**
+     * Position of this snapshot
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    position?: string;
+    /**
+     * Type of token used to track liquidity
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    liquidity_token_type?: string;
+    /**
+     * total position liquidity
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    liquidity?: string;
+    /**
+     * total position liquidity in USD
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    liquidity_usd?: string;
+    /**
+     * amount of tokens ever deposited to position
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    cumulative_deposit_token_amounts?: Array<string>;
+    /**
+     * amount of tokens in USD deposited to position
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    cumulative_deposit_usd?: string;
+    /**
+     * amount of tokens ever withdrawn from position (without fees)
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    cumulative_withdraw_token_amounts?: Array<string>;
+    /**
+     * amount of tokens in USD withdrawn from position (without fees)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    cumulative_withdraw_usd?: string;
+    /**
+     * Total reward token accumulated under this position, in native amounts
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    cumulative_reward_token_amounts?: Array<string>;
+    /**
+     * Total reward token accumulated under this position, in USD
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    cumulative_reward_usd?: Array<string>;
+    /**
+     * Number of deposits related to this position
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    deposit_count?: number;
+    /**
+     * Number of withdrawals related to this position
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    withdraw_count?: number;
+    /**
+     * Timestamp of this snapshot
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+     */
+    timestamp?: string;
+}
+
+/**
+ * Reward tokens awarded to lenders and borrowers.
+ * @export
+ */
+export type SUSHISWAPV3ETHEREUMRewardTokenDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMRewardTokenDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMRewardTokenDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMRewardTokenDTO
+     */
+    block_number?: number;
+    /**
+     * (reward token type)-(smart contract address of the reward token)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMRewardTokenDTO
+     */
+    id?: string;
+    /**
+     * Reference to the actual token
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMRewardTokenDTO
+     */
+    token?: string;
+}
+
+/**
  * Trade (swap) event which occurred in a pool.
  * @export
  */
@@ -4583,6 +7303,273 @@ export type SUSHISWAPV3ETHEREUMSwapDTO = {
 }
 
 /**
+ * 
+ * @export
+ */
+export type SUSHISWAPV3ETHEREUMTickDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMTickDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMTickDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMTickDTO
+     */
+    block_number?: number;
+    /**
+     * (pool address)-(tick index)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickDTO
+     */
+    id?: string;
+    /**
+     * tick index
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickDTO
+     */
+    index?: string;
+    /**
+     * Liquidity pool this tick belongs to
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickDTO
+     */
+    pool?: string;
+    /**
+     * Creation timestamp
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickDTO
+     */
+    created_timestamp?: string;
+    /**
+     * Creation block number
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickDTO
+     */
+    created_block_number?: string;
+    /**
+     * calculated price of token0 of tick within this pool - constant
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMTickDTO
+     */
+    prices?: Array<string>;
+    /**
+     * total liquidity pool has as tick lower or upper
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickDTO
+     */
+    liquidity_gross?: string;
+    /**
+     * total liquidity in USD pool has as tick lower or upper
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickDTO
+     */
+    liquidity_gross_usd?: string;
+    /**
+     * how much liquidity changes when tick crossed
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickDTO
+     */
+    liquidity_net?: string;
+    /**
+     * how much liquidity in USD changes when tick crossed
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickDTO
+     */
+    liquidity_net_usd?: string;
+    /**
+     * Day ID of the most recent daily snapshot
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMTickDTO
+     */
+    last_snapshot_day_id?: number;
+    /**
+     * Hour ID of the most recent hourly snapshot
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMTickDTO
+     */
+    last_snapshot_hour_id?: number;
+    /**
+     * Timestamp of the last time this entity was updated
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickDTO
+     */
+    last_update_timestamp?: string;
+    /**
+     * Block number of the last time this entity was updated
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickDTO
+     */
+    last_update_block_number?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type SUSHISWAPV3ETHEREUMTickDailySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * Identifier, format: (pool address)-(tick index)-(day ID)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+     */
+    id?: string;
+    /**
+     * Number of days since Unix epoch time
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+     */
+    day_id?: number;
+    /**
+     * tick index
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+     */
+    tick?: string;
+    /**
+     * liquidity pool this tick belongs to
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+     */
+    pool?: string;
+    /**
+     * total liquidity pool has as tick lower or upper
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+     */
+    liquidity_gross?: string;
+    /**
+     * total liquidity in USD pool has as tick lower or upper
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+     */
+    liquidity_gross_usd?: string;
+    /**
+     * how much liquidity changes when tick crossed
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+     */
+    liquidity_net?: string;
+    /**
+     * how much liquidity in USD changes when tick crossed
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+     */
+    liquidity_net_usd?: string;
+    /**
+     * Timestamp of when this snapshot was taken/last modified (May be taken after interval has passed)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+     */
+    timestamp?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * (pool address)-(tick index)-(hour ID)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+     */
+    id?: string;
+    /**
+     * Number of hours since Unix epoch time
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+     */
+    hour_id?: number;
+    /**
+     * tick index
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+     */
+    tick?: string;
+    /**
+     * liquidity pool this tick belongs to
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+     */
+    pool?: string;
+    /**
+     * total liquidity pool has as tick lower or upper
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+     */
+    liquidity_gross?: string;
+    /**
+     * total liquidity in USD pool has as tick lower or upper
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+     */
+    liquidity_gross_usd?: string;
+    /**
+     * how much liquidity changes when tick crossed
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+     */
+    liquidity_net?: string;
+    /**
+     * how much liquidity in USD changes when tick crossed
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+     */
+    liquidity_net_usd?: string;
+    /**
+     * Timestamp of when this snapshot was taken/last modified (May be taken after interval has passed)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+     */
+    timestamp?: string;
+}
+
+/**
  * Stores aggregated information for a specific token across all pairs that token is included in.
  * @export
  */
@@ -4694,9 +7681,884 @@ export type SUSHISWAPV3ETHEREUMTokenDTO = {
 /**
  * 
  * @export
+ */
+export type SUSHISWAPV3ETHEREUMTokenWhiteListDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMTokenWhiteListDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMTokenWhiteListDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMTokenWhiteListDTO
+     */
+    block_number?: number;
+    /**
+     * Token Address
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTokenWhiteListDTO
+     */
+    id?: string;
+    /**
+     * pools token is in that are white listed for USD pricing
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMTokenWhiteListDTO
+     */
+    whitelist_pools?: Array<string>;
+}
+
+/**
+ * 
+ * @export
+ */
+export type SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO
+     */
+    block_number?: number;
+    /**
+     * Whitelist Token Symbol
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO
+     */
+    id?: string;
+    /**
+     * Whitelist Token Address
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO
+     */
+    address?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * ID is # of days since Unix epoch time
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    id?: string;
+    /**
+     * Number of days since Unix epoch time
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    day?: number;
+    /**
+     * Protocol this snapshot is associated with
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    protocol?: string;
+    /**
+     * Number of unique daily active users
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    daily_active_users?: number;
+    /**
+     * Number of cumulative unique users
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    cumulative_unique_users?: number;
+    /**
+     * Total number of transactions occurred in a day. Transactions include all entities that implement the Event interface.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    daily_transaction_count?: number;
+    /**
+     * Total number of pools
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    total_pool_count?: number;
+    /**
+     * Total number of deposits (add liquidity) in an day
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    daily_deposit_count?: number;
+    /**
+     * Total number of withdrawals (remove liquidity) in an day
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    daily_withdraw_count?: number;
+    /**
+     * Total number of trades (swaps) in an day
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    daily_swap_count?: number;
+    /**
+     * Timestamp of when this snapshot was taken/last modified (May be taken after interval has passed)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    timestamp?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * (# of hours since Unix epoch time)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    id?: string;
+    /**
+     * Number of hours since Unix epoch time
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    hour?: number;
+    /**
+     * Protocol this snapshot is associated with
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    protocol?: string;
+    /**
+     * Number of unique hourly active users
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    hourly_active_users?: number;
+    /**
+     * Number of cumulative unique users
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    cumulative_unique_users?: number;
+    /**
+     * Total number of transactions occurred in an hour. Transactions include all entities that implement the Event interface.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    hourly_transaction_count?: number;
+    /**
+     * Total number of deposits (add liquidity) in an hour
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    hourly_deposit_count?: number;
+    /**
+     * Total number of withdrawals (remove liquidity) in an hour
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    hourly_withdraw_count?: number;
+    /**
+     * Total number of trades (swaps) in an hour
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    hourly_swap_count?: number;
+    /**
+     * Timestamp of when this snapshot was taken/last modified (May be taken after interval has passed)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    timestamp?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type SUSHISWAPV3ETHEREUMWithdrawDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    block_number?: number;
+    /**
+     * (transaction hash)-(log index)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    id?: string;
+    /**
+     * Transaction hash of the transaction that emitted this event
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    hash?: string;
+    /**
+     * Nonce of the transaction that emitted this event
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    nonce?: string;
+    /**
+     * Event log index. For transactions that don\'t emit event, create arbitrary index starting from 0
+     * @type {number}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    log_index?: number;
+    /**
+     * Gas limit of the transaction that emitted this event
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    gas_limit?: string;
+    /**
+     * Gas used in this transaction. (Optional because not every chain will support this)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    gas_used?: string;
+    /**
+     * Gas price of the transaction that emitted this event
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    gas_price?: string;
+    /**
+     * The protocol this transaction belongs to
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    protocol?: string;
+    /**
+     * Account that emitted this event
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    account?: string;
+    /**
+     * The user position changed by this event
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    position?: string;
+    /**
+     * lower tick of position
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    tick_lower?: string;
+    /**
+     * upper tick of position
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    tick_upper?: string;
+    /**
+     * The pool involving this event
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    pool?: string;
+    /**
+     * Timestamp of this event
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    timestamp?: string;
+    /**
+     * Amount of liquidity burned
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    liquidity?: string;
+    /**
+     * Input tokens of the pool (not input tokens of the event/transaction). E.g. WETH and USDC from a WETH-USDC pool
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    input_tokens?: Array<string>;
+    /**
+     * Amount of input tokens in the token\'s native unit
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    input_token_amounts?: Array<string>;
+    /**
+     * Amount of input tokens in the liquidity pool
+     * @type {Array<string>}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    reserve_amounts?: Array<string>;
+    /**
+     * USD-normalized value of the transaction of the underlying (e.g. sum of tokens withdrawn from a pool)
+     * @type {string}
+     * @memberof SUSHISWAPV3ETHEREUMWithdrawDTO
+     */
+    amount_usd?: string;
+}
+
+/**
+ * 
+ * @export
  * @enum {string}
  */
 export type TransactionsETradeAggressiveSide = 'Buy' | 'Sell' | 'EstimatedBuy' | 'EstimatedSell' | 'Unknown';
+
+/**
+ * 
+ * @export
+ */
+export type UNISWAPV2ETHEREUMAccountDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMAccountDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMAccountDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMAccountDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMAccountDTO
+     */
+    block_?: number;
+    /**
+     * Account address.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMAccountDTO
+     */
+    id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMAccountDTO
+     */
+    block_range?: string;
+}
+
+/**
+ * Entity for calculating daily/hourly active users.
+ * @export
+ */
+export type UNISWAPV2ETHEREUMActiveAccountDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMActiveAccountDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMActiveAccountDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMActiveAccountDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMActiveAccountDTO
+     */
+    block_?: number;
+    /**
+     * Identifier, format: (daily/hourly)-(address of the account)-(days/hours since unix epoch)
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMActiveAccountDTO
+     */
+    id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMActiveAccountDTO
+     */
+    block_range?: string;
+}
+
+/**
+ * Entity represents a user action in the protocol involving the addition of funds to a liquidity pool.
+ * @export
+ */
+export type UNISWAPV2ETHEREUMDepositDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMDepositDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMDepositDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMDepositDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMDepositDTO
+     */
+    block_?: number;
+    /**
+     * Identifier, format: (transaction hash)-(log index)
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDepositDTO
+     */
+    id?: string;
+    /**
+     * Transaction hash of the transaction that emitted this event.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDepositDTO
+     */
+    hash?: string;
+    /**
+     * Event log index. For transactions that don\'t emit event, create arbitrary index starting from 0.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMDepositDTO
+     */
+    log_index?: number;
+    /**
+     * The protocol this transaction belongs to.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDepositDTO
+     */
+    protocol?: string;
+    /**
+     * Address that received the tokens.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDepositDTO
+     */
+    to?: string;
+    /**
+     * Address that sent the tokens
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDepositDTO
+     */
+    from?: string;
+    /**
+     * Timestamp of this event
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDepositDTO
+     */
+    timestamp?: string;
+    /**
+     * Input tokens of the pool. E.g. WETH and USDC to a WETH-USDC pool
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMDepositDTO
+     */
+    input_tokens?: Array<string>;
+    /**
+     * Output token of the pool. E.g. the UNI-LP token
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDepositDTO
+     */
+    output_token?: string;
+    /**
+     * Amount of input tokens in the token\'s native unit
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMDepositDTO
+     */
+    input_token_amounts?: Array<string>;
+    /**
+     * Amount of output tokens in the token\'s native unit
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDepositDTO
+     */
+    output_token_amount?: string;
+    /**
+     * Amount of input tokens in the liquidity pool
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMDepositDTO
+     */
+    reserve_amounts?: Array<string>;
+    /**
+     * USD-normalized value of the transaction of the underlying (e.g. sum of tokens deposited into a pool)
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDepositDTO
+     */
+    amount_usd?: string;
+    /**
+     * The pool involving this transaction
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDepositDTO
+     */
+    pool?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDepositDTO
+     */
+    block_range?: string;
+}
+
+/**
+ *  Decentralized exchange (Dex) automated market maker (Amm) protocol. It\'s an entity that represents a protocol involving a smart contract that use automated market makers.
+ * @export
+ */
+export type UNISWAPV2ETHEREUMDexAmmProtocolDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMDexAmmProtocolDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMDexAmmProtocolDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMDexAmmProtocolDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDexAmmProtocolDTO
+     */
+    block_range?: string;
+    /**
+     * Smart contract address of the protocol\'s main contract (Factory, Registry, etc)
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDexAmmProtocolDTO
+     */
+    id?: string;
+    /**
+     * Name of the protocol, including version. e.g. Uniswap v3
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDexAmmProtocolDTO
+     */
+    name?: string;
+    /**
+     * Slug of protocol, including version. e.g. uniswap-v3
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDexAmmProtocolDTO
+     */
+    slug?: string;
+    /**
+     *  Version of the subgraph schema, in SemVer format (e.g. 1.0.0)
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDexAmmProtocolDTO
+     */
+    schema_version?: string;
+    /**
+     * Version of the subgraph implementation, in SemVer format (e.g. 1.0.0)
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDexAmmProtocolDTO
+     */
+    subgraph_version?: string;
+    /**
+     * Version of the methodology used to compute metrics, loosely based on SemVer format (e.g. 1.0.0)
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDexAmmProtocolDTO
+     */
+    methodology_version?: string;
+    /**
+     * Current TVL (Total Value Locked) of the entire protocol
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDexAmmProtocolDTO
+     */
+    total_value_locked_usd?: string;
+    /**
+     * Current PCV (Protocol Controlled Value). Only relevant for protocols with PCV
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDexAmmProtocolDTO
+     */
+    protocol_controlled_value_usd?: string;
+    /**
+     * All historical volume in USD
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDexAmmProtocolDTO
+     */
+    cumulative_volume_usd?: string;
+    /**
+     * Revenue claimed by suppliers to the protocol. LPs on DEXs (e.g. 0.25% of the swap fee in Sushiswap). Depositors on Lending Protocols. NFT sellers on OpenSea.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDexAmmProtocolDTO
+     */
+    cumulative_supply_side_revenue_usd?: string;
+    /**
+     * Gross revenue for the protocol (revenue claimed by protocol). Examples: AMM protocol fee (Sushi’s 0.05%). OpenSea 10% sell fee.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDexAmmProtocolDTO
+     */
+    cumulative_protocol_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the protocol. e.g. 0.30% of swap fee in Sushiswap, all yield generated by Yearn.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMDexAmmProtocolDTO
+     */
+    cumulative_total_revenue_usd?: string;
+    /**
+     * Number of cumulative unique users
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMDexAmmProtocolDTO
+     */
+    cumulative_unique_users?: number;
+    /**
+     * Total number of pools
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMDexAmmProtocolDTO
+     */
+    total_pool_count?: number;
+}
+
+/**
+ * Daily financial metrics for Uniswap V2.
+ * @export
+ */
+export type UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+     */
+    block_range?: string;
+    /**
+     * ID is # of days since Unix epoch time
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+     */
+    id?: string;
+    /**
+     * Protocol this snapshot is associated with
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+     */
+    protocol?: string;
+    /**
+     * Current TVL (Total Value Locked) of the entire protocol
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+     */
+    total_value_locked_usd?: string;
+    /**
+     * Current PCV (Protocol Controlled Value). Only relevant for protocols with PCV.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+     */
+    protocol_controlled_value_usd?: string;
+    /**
+     * All trade volume occurred in a given day, in USD
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+     */
+    daily_volume_usd?: string;
+    /**
+     * All historical trade volume in USD
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+     */
+    cumulative_volume_usd?: string;
+    /**
+     * Revenue claimed by suppliers to the protocol. LPs on DEXs (e.g. 0.25% of the swap fee in Sushiswap). Depositors on Lending Protocols. NFT sellers on OpenSea.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+     */
+    daily_supply_side_revenue_usd?: string;
+    /**
+     * Revenue claimed by suppliers to the protocol. LPs on DEXs (e.g. 0.25% of the swap fee in Sushiswap). Depositors on Lending Protocols. NFT sellers on OpenSea.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+     */
+    cumulative_supply_side_revenue_usd?: string;
+    /**
+     * Gross revenue for the protocol (revenue claimed by protocol). Examples: AMM protocol fee (Sushi’s 0.05%). OpenSea 10% sell fee.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+     */
+    daily_protocol_side_revenue_usd?: string;
+    /**
+     * Gross revenue for the protocol (revenue claimed by protocol). Examples: AMM protocol fee (Sushi’s 0.05%). OpenSea 10% sell fee.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+     */
+    cumulative_protocol_side_revenue_usd?: string;
+    /**
+     * ll revenue generated by the protocol. e.g. 0.30% of swap fee in Sushiswap, all yield generated by Yearn.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+     */
+    daily_total_revenue_usd?: string;
+    /**
+     * All revenue generated by the protocol. e.g. 0.30% of swap fee in Sushiswap, all yield generated by Yearn.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+     */
+    cumulative_total_revenue_usd?: string;
+    /**
+     * Timestamp of this snapshot
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+     */
+    timestamp?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type UNISWAPV2ETHEREUMLiquidityPoolAmountDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+     */
+    block_number?: number;
+    /**
+     * .
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+     */
+    vid?: number;
+    /**
+     * .
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+     */
+    block_range?: string;
+    /**
+     * Smart contract address of the pool
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+     */
+    id?: string;
+    /**
+     * Input tokens of the pool (not input tokens of the event/transaction). E.g. WETH and USDC from a WETH-USDC pool
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+     */
+    input_tokens?: Array<string>;
+    /**
+     * Amount of input tokens in the pool. The ordering is the same as the pool\'s \'inputTokens\' field.
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+     */
+    input_token_balances?: Array<string>;
+}
 
 /**
  * Pool-level metadata.
@@ -4871,6 +8733,759 @@ export type UNISWAPV2ETHEREUMLiquidityPoolDTO = {
      * @memberof UNISWAPV2ETHEREUMLiquidityPoolDTO
      */
     evaluated_ask?: number;
+}
+
+/**
+ * Represents a liquidity pool daily snapshot for Uniswap V2.
+ * @export
+ */
+export type UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * .
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    block_range?: string;
+    /**
+     * (smart contract address of the pool)-(# of days since Unix epoch time)
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    id?: string;
+    /**
+     * The protocol this snapshot belongs to
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    protocol?: string;
+    /**
+     * The pool this snapshot belongs to
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    pool?: string;
+    /**
+     * Timestamp of this snapshot
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    timestamp?: string;
+    /**
+     * Current TVL (Total Value Locked) of this pool
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    total_value_locked_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool, accrued to the supply side.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_supply_side_revenue_usd?: string;
+    /**
+     * Daily revenue generated by the liquidity pool, accrued to the supply side.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_supply_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool, accrued to the protocol.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_protocol_side_revenue_usd?: string;
+    /**
+     * Daily revenue generated by the liquidity pool, accrued to the protocol.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_protocol_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_total_revenue_usd?: string;
+    /**
+     * Daily revenue generated by the liquidity pool.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_total_revenue_usd?: string;
+    /**
+     * All trade volume occurred in a given day, in USD.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_volume_usd?: string;
+    /**
+     * All trade volume occurred in a given day for a specific input token, in native amount. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_volume_by_token_amount?: Array<string>;
+    /**
+     * All trade volume occurred in a given day for a specific input token, in USD. The ordering should be the same as the pool\'s `inputTokens` field..
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    daily_volume_by_token_usd?: Array<string>;
+    /**
+     * All historical trade volume occurred in this pool, in USD.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    cumulative_volume_usd?: string;
+    /**
+     * Amount of input tokens in the pool. The ordering should be the same as the pool\'s `inputTokens` field.
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    input_token_balances?: Array<string>;
+    /**
+     * Weights of input tokens in the liquidity pool in percentage values. For example, 50/50 for Uniswap pools, 48.2/51.8 for a Curve pool, 10/10/80 for a Balancer pool.
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    input_token_weights?: Array<string>;
+    /**
+     * Total supply of output token. Note that certain DEXes don\'t have an output token (e.g. Bancor).
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    output_token_supply?: string;
+    /**
+     * Price per share of output token in USD.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    output_token_price_usd?: string;
+    /**
+     * Total supply of output tokens that are staked (usually in the MasterChef contract). Used to calculate reward APY..
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    staked_output_token_amount?: string;
+    /**
+     * Per-block reward token emission as of the current block normalized to a day, in token\'s native amount. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    reward_token_emissions_amount?: Array<string>;
+    /**
+     * Per-block reward token emission as of the current block normalized to a day, in USD value. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+     */
+    reward_token_emissions_usd?: Array<string>;
+}
+
+/**
+ * 
+ * @export
+ */
+export type UNISWAPV2ETHEREUMLiquidityPoolFeeDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolFeeDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolFeeDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolFeeDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolFeeDTO
+     */
+    block_range?: string;
+    /**
+     * (fee type)-(pool address)
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolFeeDTO
+     */
+    id?: string;
+    /**
+     * Fee as a percentage of the trade (swap) amount. Does not always apply
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolFeeDTO
+     */
+    fee_percentage?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    block_range?: string;
+    /**
+     * (smart contract address of the pool)-(# of hours since Unix epoch time)
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    id?: string;
+    /**
+     * The protocol this snapshot belongs to
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    protocol?: string;
+    /**
+     * The pool this snapshot belongs to
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    pool?: string;
+    /**
+     * Timestamp of this snapshot
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    timestamp?: string;
+    /**
+     * Current TVL (Total Value Locked) of this pool
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    total_value_locked_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool, accrued to the supply side.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    cumulative_supply_side_revenue_usd?: string;
+    /**
+     * Hourly revenue generated by the liquidity pool, accrued to the supply side.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_supply_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool, accrued to the protocol.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    cumulative_protocol_side_revenue_usd?: string;
+    /**
+     * Hourly revenue generated by the liquidity pool, accrued to the protocol.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_protocol_side_revenue_usd?: string;
+    /**
+     * All revenue generated by the liquidity pool.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    cumulative_total_revenue_usd?: string;
+    /**
+     * Hourly revenue generated by the liquidity pool.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_total_revenue_usd?: string;
+    /**
+     * All trade volume occurred in a given hour, in USD
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_volume_usd?: string;
+    /**
+     * All trade volume occurred in a given hour for a specific input token, in native amount. The ordering should be the same as the pool\'s \'inputTokens\' field.
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_volume_by_token_amount?: Array<string>;
+    /**
+     * All trade volume occurred in a given hour for a specific input token, in native amount. The ordering should be the same as the pool\'s \'inputTokens\' field.
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    hourly_volume_by_token_usd?: Array<string>;
+    /**
+     * All historical trade volume occurred in this pool, in USD
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    cumulative_volume_usd?: string;
+    /**
+     * Amount of input tokens in the pool. The ordering should be the same as the pool\'s `inputTokens` field
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    input_token_balances?: Array<string>;
+    /**
+     * Weights of input tokens in the liquidity pool in percentage values. For example, 50/50 for Uniswap pools, 48.2/51.8 for a Curve pool, 10/10/80 for a Balancer pool
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    input_token_weights?: Array<string>;
+    /**
+     * Total supply of output token. Note that certain DEXes don\'t have an output token (e.g. Bancor)
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    output_token_supply?: string;
+    /**
+     * Price per share of output token in USD
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    output_token_price_usd?: string;
+    /**
+     * Total supply of output tokens that are staked (usually in the MasterChef contract). Used to calculate reward APY.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    staked_output_token_amount?: string;
+    /**
+     * Per-block reward token emission as of the current block normalized to a day (not hour), in token\'s native amount. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    reward_token_emissions_amount?: Array<string>;
+    /**
+     * Per-block reward token emission as of the current block normalized to a day (not hour), in USD value. This should be ideally calculated as the theoretical rate instead of the realized amount.
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+     */
+    reward_token_emissions_usd?: Array<string>;
+}
+
+/**
+ * .
+ * @export
+ */
+export type UNISWAPV2ETHEREUMMasterChefAddressToPidDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMMasterChefAddressToPidDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMMasterChefAddressToPidDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMMasterChefAddressToPidDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefAddressToPidDTO
+     */
+    block_range?: string;
+    /**
+     * Identifier, format: (masterchef type) - (address of the staking pool per the masterchef pid)
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefAddressToPidDTO
+     */
+    id?: string;
+    /**
+     * Pid referenced in the MasterChef Contract
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefAddressToPidDTO
+     */
+    pid?: string;
+}
+
+/**
+ * Smart contract that is used to manage the liquidity mining program on Uniswap V2.
+ * @export
+ */
+export type UNISWAPV2ETHEREUMMasterChefDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMMasterChefDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMMasterChefDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMMasterChefDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefDTO
+     */
+    block_range?: string;
+    /**
+     * (masterChef type) - (pid referenced in the masterchef contract)
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefDTO
+     */
+    id?: string;
+    /**
+     * Address of the masterchef contract
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefDTO
+     */
+    address?: string;
+    /**
+     * Total allocation point of all staking pools
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefDTO
+     */
+    total_alloc_point?: string;
+    /**
+     * Amount of reward tokens emitted per block or timestamp
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefDTO
+     */
+    reward_token_rate?: string;
+    /**
+     * Indicates whether rewards are indicated by block or timestamp
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefDTO
+     */
+    reward_token_interval?: string;
+    /**
+     * Reward token rate given after you adjust for allocations either burned or not applicable
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefDTO
+     */
+    adjusted_reward_token_rate?: string;
+    /**
+     * Last time the adjusted reward token rate was updated
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefDTO
+     */
+    last_updated_reward_rate?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type UNISWAPV2ETHEREUMMasterChefRewarderDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMMasterChefRewarderDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMMasterChefRewarderDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMMasterChefRewarderDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefRewarderDTO
+     */
+    block_range?: string;
+    /**
+     * Address of the rewarder contract associated to some staking pool
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefRewarderDTO
+     */
+    id?: string;
+    /**
+     * Staking pool to which this rewarder is associated
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefRewarderDTO
+     */
+    pool?: string;
+    /**
+     * Address of the token given by this rewarder
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefRewarderDTO
+     */
+    reward_token?: string;
+    /**
+     * Number of tokens rewarded per second per LP staked in pool by this rewarder
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefRewarderDTO
+     */
+    token_per_sec?: string;
+    /**
+     * Timestamp from the last time tokenPerSec was calculated
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefRewarderDTO
+     */
+    rate_calculated_at?: string;
+    /**
+     * A field to keep track if there are any funds to give away in the rewarder
+     * @type {boolean}
+     * @memberof UNISWAPV2ETHEREUMMasterChefRewarderDTO
+     */
+    has_funds?: boolean;
+    /**
+     * When it was last checked that there were funds in the rewarder
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefRewarderDTO
+     */
+    has_funds_at?: string;
+    /**
+     * If true it means the rewardRate can be retrieved directly from the contract, without crazy math
+     * @type {boolean}
+     * @memberof UNISWAPV2ETHEREUMMasterChefRewarderDTO
+     */
+    can_retrieve_rate?: boolean;
+    /**
+     * Utility field to calculate the rewarder reward rate
+     * @type {boolean}
+     * @memberof UNISWAPV2ETHEREUMMasterChefRewarderDTO
+     */
+    reward_rate_calculation_in_progress?: boolean;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMMasterChefRewarderDTO
+     */
+    probes?: Array<string>;
+}
+
+/**
+ * 
+ * @export
+ */
+export type UNISWAPV2ETHEREUMMasterChefStakingPoolDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+     */
+    block_range?: string;
+    /**
+     * (masterchef type) - (pid referenced in the masterchef contract)
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+     */
+    id?: string;
+    /**
+     * Staking pool to which this rewarder is associated
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+     */
+    pool_address?: string;
+    /**
+     * Allocation point of this MasterChef Staking pool
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+     */
+    pool_alloc_point?: string;
+    /**
+     * Reward Multiplier for a given staking pool
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+     */
+    multiplier?: string;
+    /**
+     * Last block where rewards were given out
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+     */
+    last_reward_block?: string;
+    /**
+     * Optional address of a bonus rewarder, to give additional tokens on top of masterchefs
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+     */
+    rewarder?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type UNISWAPV2ETHEREUMRewardTokenDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMRewardTokenDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMRewardTokenDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMRewardTokenDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMRewardTokenDTO
+     */
+    block_range?: string;
+    /**
+     * (reward token type)-(smart contract address of the reward token)
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMRewardTokenDTO
+     */
+    id?: string;
+    /**
+     * Reference to the actual token
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMRewardTokenDTO
+     */
+    token?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type UNISWAPV2ETHEREUMRewarderProbeDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMRewarderProbeDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMRewarderProbeDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMRewarderProbeDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMRewarderProbeDTO
+     */
+    block_range?: string;
+    /**
+     * (rewarder)-(probeNum)
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMRewarderProbeDTO
+     */
+    id?: string;
+    /**
+     * The address being probed
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMRewarderProbeDTO
+     */
+    user?: string;
+    /**
+     * The value from the last probe
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMRewarderProbeDTO
+     */
+    pending?: string;
+    /**
+     * Block at which the probe was made
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMRewarderProbeDTO
+     */
+    block_num?: string;
+    /**
+     * Block timestamp at whihc the probe was taken
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMRewarderProbeDTO
+     */
+    timestamp?: string;
+    /**
+     * Total LP staked in pool at the time of the probe
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMRewarderProbeDTO
+     */
+    lp_staked?: string;
 }
 
 /**
@@ -5125,6 +9740,407 @@ export type UNISWAPV2ETHEREUMTokenDTO = {
      * @memberof UNISWAPV2ETHEREUMTokenDTO
      */
     token_symbol?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type UNISWAPV2ETHEREUMTokenWhiteListDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMTokenWhiteListDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMTokenWhiteListDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMTokenWhiteListDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMTokenWhiteListDTO
+     */
+    block_range?: string;
+    /**
+     * Token Address
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMTokenWhiteListDTO
+     */
+    id?: string;
+    /**
+     * pools token is in that are white listed for USD pricing
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMTokenWhiteListDTO
+     */
+    whitelist_pools?: Array<string>;
+}
+
+/**
+ * 
+ * @export
+ */
+export type UNISWAPV2ETHEREUMTransferDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMTransferDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMTransferDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMTransferDTO
+     */
+    block_number?: number;
+    /**
+     * Entity is used to track data from the transfer events (execution of: deposit/withdraw, mint/burn).
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMTransferDTO
+     */
+    block_range?: string;
+    /**
+     * Transaction hash.
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMTransferDTO
+     */
+    id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMTransferDTO
+     */
+    timestamp?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMTransferDTO
+     */
+    sender?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMTransferDTO
+     */
+    type?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMTransferDTO
+     */
+    liquidity?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    block_range?: string;
+    /**
+     * ID is # of days since Unix epoch time
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    id?: string;
+    /**
+     * Protocol this snapshot is associated with
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    protocol?: string;
+    /**
+     * Number of unique daily active users
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    daily_active_users?: number;
+    /**
+     * Number of cumulative unique users
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    cumulative_unique_users?: number;
+    /**
+     * Total number of transactions occurred in a day. Transactions include all entities that implement the Event interface.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    daily_transaction_count?: number;
+    /**
+     * Total number of deposits (add liquidity) in a day
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    daily_deposit_count?: number;
+    /**
+     * Total number of withdrawals (remove liquidity) in a day
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    daily_withdraw_count?: number;
+    /**
+     * Total number of trades (swaps) in a day
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    daily_swap_count?: number;
+    /**
+     * Total number of pools
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    total_pool_count?: number;
+    /**
+     * Timestamp of this snapshot
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+     */
+    timestamp?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    block_range?: string;
+    /**
+     * # of hours since Unix epoch time
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    id?: string;
+    /**
+     * Protocol this snapshot is associated with
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    protocol?: string;
+    /**
+     * Number of unique hourly active users
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    hourly_active_users?: number;
+    /**
+     * Number of cumulative unique users
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    cumulative_unique_users?: number;
+    /**
+     * Total number of transactions occurred in an hour. Transactions include all entities that implement the Event interface.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    hourly_transaction_count?: number;
+    /**
+     *  Total number of deposits (add liquidity) in an hour
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    hourly_deposit_count?: number;
+    /**
+     * Total number of withdrawals (remove liquidity) in an hour
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    hourly_withdraw_count?: number;
+    /**
+     * Total number of trades (swaps) in an hour
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    hourly_swap_count?: number;
+    /**
+     * Timestamp of this snapshot
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+     */
+    timestamp?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type UNISWAPV2ETHEREUMWithdrawDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMWithdrawDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UNISWAPV2ETHEREUMWithdrawDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMWithdrawDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMWithdrawDTO
+     */
+    block_?: number;
+    /**
+     * Withdraw-(transaction hash)-(log index)
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMWithdrawDTO
+     */
+    id?: string;
+    /**
+     * Transaction hash of the transaction that emitted this event
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMWithdrawDTO
+     */
+    hash?: string;
+    /**
+     * Event log index. For transactions that don\'t emit event, create arbitrary index starting from 0
+     * @type {number}
+     * @memberof UNISWAPV2ETHEREUMWithdrawDTO
+     */
+    log_index?: number;
+    /**
+     * The protocol this transaction belongs to
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMWithdrawDTO
+     */
+    protocol?: string;
+    /**
+     * Address that received the tokens
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMWithdrawDTO
+     */
+    to?: string;
+    /**
+     * Address that sent the tokens
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMWithdrawDTO
+     */
+    from?: string;
+    /**
+     * Timestamp of this event
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMWithdrawDTO
+     */
+    timestamp?: string;
+    /**
+     * Input tokens of the pool (not input tokens of the event/transaction). E.g. WETH and USDC from a WETH-USDC pool
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMWithdrawDTO
+     */
+    input_tokens?: Array<string>;
+    /**
+     * Output token of the pool (not output token of the event/transaction). E.g. the UNI-LP token
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMWithdrawDTO
+     */
+    output_token?: string;
+    /**
+     * Amount of input tokens in the token\'s native unit
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMWithdrawDTO
+     */
+    input_token_amounts?: Array<string>;
+    /**
+     * Amount of output tokens in the token\'s native unit
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMWithdrawDTO
+     */
+    output_token_amount?: string;
+    /**
+     * Amount of input tokens in the liquidity pool
+     * @type {Array<string>}
+     * @memberof UNISWAPV2ETHEREUMWithdrawDTO
+     */
+    reserve_amounts?: Array<string>;
+    /**
+     * USD-normalized value of the transaction of the underlying (e.g. sum of tokens withdrawn from a pool)
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMWithdrawDTO
+     */
+    amount_usd?: string;
+    /**
+     * The pool involving this transaction
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMWithdrawDTO
+     */
+    pool?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UNISWAPV2ETHEREUMWithdrawDTO
+     */
+    block_range?: string;
 }
 
 /**
@@ -5593,7 +10609,7 @@ export type UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO = {
      */
     recv_time?: Date;
     /**
-     * Block number of when this snapshot was taken/last modified.)
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO
      */
@@ -6094,12 +11110,6 @@ export type UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO = {
      */
     block_number?: number;
     /**
-     * .
-     * @type {number}
-     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
-     */
-    vid?: number;
-    /**
      * The Ethereum block number associated with the liquidity pool daily snapshot.
      * @type {number}
      * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
@@ -6426,12 +11436,6 @@ export type UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO = {
      */
     block_number?: number;
     /**
-     * 
-     * @type {number}
-     * @memberof UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
-     */
-    vid?: number;
-    /**
      * (Smart contract address of the pool)-( # of hours since Unix epoch time)
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
@@ -6708,12 +11712,6 @@ export type UNISWAPV3ETHEREUMPositionDTO = {
      * @memberof UNISWAPV3ETHEREUMPositionDTO
      */
     block_number?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof UNISWAPV3ETHEREUMPositionDTO
-     */
-    vid?: number;
     /**
      * (account address)-(market address)-(count)
      * @type {string}
@@ -7211,12 +12209,6 @@ export type UNISWAPV3ETHEREUMTickDTO = {
      */
     block_number?: number;
     /**
-     * 
-     * @type {number}
-     * @memberof UNISWAPV3ETHEREUMTickDTO
-     */
-    vid?: number;
-    /**
      * (pool address)-(tick index)
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMTickDTO
@@ -7326,12 +12318,6 @@ export type UNISWAPV3ETHEREUMTickDailySnapshotDTO = {
      */
     block_number?: number;
     /**
-     * 
-     * @type {number}
-     * @memberof UNISWAPV3ETHEREUMTickDailySnapshotDTO
-     */
-    vid?: number;
-    /**
      * Identifier, format: (pool address)-(tick index)-(day ID)
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMTickDailySnapshotDTO
@@ -7410,12 +12396,6 @@ export type UNISWAPV3ETHEREUMTickHourlySnapshotDTO = {
      * @memberof UNISWAPV3ETHEREUMTickHourlySnapshotDTO
      */
     block_number?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof UNISWAPV3ETHEREUMTickHourlySnapshotDTO
-     */
-    vid?: number;
     /**
      * (pool address)-(tick index)-(hour ID)
      * @type {string}
@@ -7973,18 +12953,18 @@ export type UNISWAPV3ETHEREUMWithdrawDTO = {
 
 
 /**
- * CRYPTOPUNKSApi - fetch parameter creator
+ * CRYPTOPUNKSETHEREUMApi - fetch parameter creator
  * @export
  */
-export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configuration) {
+export const CRYPTOPUNKSETHEREUMApiFetchParamCreator = function (configuration?: Configuration) {
     return {
         /**
          * Gets bids.
          * @summary Bids (current)
          * @throws {RequiredError}
          */
-        cRYPTOPUNKSBidsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/v1/dapps/cryptopunks/bids/current`;
+        cRYPTOPUNKSETHEREUMBidsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/cryptopunks-ethereum/bids/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -8005,8 +12985,8 @@ export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configu
          * @summary CollectionDailySnapshots (current)
          * @throws {RequiredError}
          */
-        cRYPTOPUNKSCollectionDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/v1/dapps/cryptopunks/collectionDailySnapshots/current`;
+        cRYPTOPUNKSETHEREUMCollectionDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/cryptopunks-ethereum/collectionDailySnapshots/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -8027,8 +13007,8 @@ export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configu
          * @summary Collections (current)
          * @throws {RequiredError}
          */
-        cRYPTOPUNKSCollectionsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/v1/dapps/cryptopunks/collections/current`;
+        cRYPTOPUNKSETHEREUMCollectionsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/cryptopunks-ethereum/collections/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -8049,8 +13029,8 @@ export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configu
          * @summary DataSources (current)
          * @throws {RequiredError}
          */
-        cRYPTOPUNKSDataSourcesCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/v1/dapps/cryptopunks/dataSources/current`;
+        cRYPTOPUNKSETHEREUMDataSourcesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/cryptopunks-ethereum/dataSources/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -8071,8 +13051,8 @@ export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configu
          * @summary Items (current)
          * @throws {RequiredError}
          */
-        cRYPTOPUNKSItemsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/v1/dapps/cryptopunks/items/current`;
+        cRYPTOPUNKSETHEREUMItemsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/cryptopunks-ethereum/items/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -8093,8 +13073,8 @@ export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configu
          * @summary MarketPlaces (current)
          * @throws {RequiredError}
          */
-        cRYPTOPUNKSMarketPlacesCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/v1/dapps/cryptopunks/marketPlaces/current`;
+        cRYPTOPUNKSETHEREUMMarketPlacesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/cryptopunks-ethereum/marketPlaces/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -8115,8 +13095,8 @@ export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configu
          * @summary MarketplaceDailySnapshots (current)
          * @throws {RequiredError}
          */
-        cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/v1/dapps/cryptopunks/marketplaceDailySnapshots/current`;
+        cRYPTOPUNKSETHEREUMMarketplaceDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/cryptopunks-ethereum/marketplaceDailySnapshots/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -8137,8 +13117,8 @@ export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configu
          * @summary Trades (current)
          * @throws {RequiredError}
          */
-        cRYPTOPUNKSTradesCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/v1/dapps/cryptopunks/trades/current`;
+        cRYPTOPUNKSETHEREUMTradesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/cryptopunks-ethereum/trades/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -8159,8 +13139,8 @@ export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configu
          * @summary Users (current)
          * @throws {RequiredError}
          */
-        cRYPTOPUNKSUsersCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/v1/dapps/cryptopunks/users/current`;
+        cRYPTOPUNKSETHEREUMUsersCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/cryptopunks-ethereum/users/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -8179,31 +13159,31 @@ export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configu
     }
 };
 
-export type CRYPTOPUNKSApiType = { 
-    cRYPTOPUNKSBidsCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSBidDTO>>,
+export type CRYPTOPUNKSETHEREUMApiType = { 
+    cRYPTOPUNKSETHEREUMBidsCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSBidDTO>>,
 
-    cRYPTOPUNKSCollectionDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSCollectionDailySnapshotDTO>>,
+    cRYPTOPUNKSETHEREUMCollectionDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSCollectionDailySnapshotDTO>>,
 
-    cRYPTOPUNKSCollectionsCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSCollectionDTO>>,
+    cRYPTOPUNKSETHEREUMCollectionsCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSCollectionDTO>>,
 
-    cRYPTOPUNKSDataSourcesCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSDataSourcesDTO>>,
+    cRYPTOPUNKSETHEREUMDataSourcesCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSDataSourcesDTO>>,
 
-    cRYPTOPUNKSItemsCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSItemDTO>>,
+    cRYPTOPUNKSETHEREUMItemsCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSItemDTO>>,
 
-    cRYPTOPUNKSMarketPlacesCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSMarketPlaceDTO>>,
+    cRYPTOPUNKSETHEREUMMarketPlacesCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSMarketPlaceDTO>>,
 
-    cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>,
+    cRYPTOPUNKSETHEREUMMarketplaceDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>,
 
-    cRYPTOPUNKSTradesCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSTradeDTO>>,
+    cRYPTOPUNKSETHEREUMTradesCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSTradeDTO>>,
 
-    cRYPTOPUNKSUsersCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSUserDTO>>,
+    cRYPTOPUNKSETHEREUMUsersCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSUserDTO>>,
 }
 
 /**
- * CRYPTOPUNKSApi - factory function to inject configuration 
+ * CRYPTOPUNKSETHEREUMApi - factory function to inject configuration 
  * @export
  */
-export const CRYPTOPUNKSApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): CRYPTOPUNKSApiType {
+export const CRYPTOPUNKSETHEREUMApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): CRYPTOPUNKSETHEREUMApiType {
     const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
     return {
         /**
@@ -8211,8 +13191,8 @@ export const CRYPTOPUNKSApi = function(configuration?: Configuration, fetch: Fet
          * @summary Bids (current)
          * @throws {RequiredError}
          */
-        cRYPTOPUNKSBidsCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSBidDTO>> {
-            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSBidsCurrent(options);
+        cRYPTOPUNKSETHEREUMBidsCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSBidDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSETHEREUMApiFetchParamCreator(configuration).cRYPTOPUNKSETHEREUMBidsCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -8226,8 +13206,8 @@ export const CRYPTOPUNKSApi = function(configuration?: Configuration, fetch: Fet
          * @summary CollectionDailySnapshots (current)
          * @throws {RequiredError}
          */
-        cRYPTOPUNKSCollectionDailySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSCollectionDailySnapshotDTO>> {
-            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSCollectionDailySnapshotsCurrent(options);
+        cRYPTOPUNKSETHEREUMCollectionDailySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSCollectionDailySnapshotDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSETHEREUMApiFetchParamCreator(configuration).cRYPTOPUNKSETHEREUMCollectionDailySnapshotsCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -8241,8 +13221,8 @@ export const CRYPTOPUNKSApi = function(configuration?: Configuration, fetch: Fet
          * @summary Collections (current)
          * @throws {RequiredError}
          */
-        cRYPTOPUNKSCollectionsCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSCollectionDTO>> {
-            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSCollectionsCurrent(options);
+        cRYPTOPUNKSETHEREUMCollectionsCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSCollectionDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSETHEREUMApiFetchParamCreator(configuration).cRYPTOPUNKSETHEREUMCollectionsCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -8256,8 +13236,8 @@ export const CRYPTOPUNKSApi = function(configuration?: Configuration, fetch: Fet
          * @summary DataSources (current)
          * @throws {RequiredError}
          */
-        cRYPTOPUNKSDataSourcesCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSDataSourcesDTO>> {
-            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSDataSourcesCurrent(options);
+        cRYPTOPUNKSETHEREUMDataSourcesCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSDataSourcesDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSETHEREUMApiFetchParamCreator(configuration).cRYPTOPUNKSETHEREUMDataSourcesCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -8271,8 +13251,8 @@ export const CRYPTOPUNKSApi = function(configuration?: Configuration, fetch: Fet
          * @summary Items (current)
          * @throws {RequiredError}
          */
-        cRYPTOPUNKSItemsCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSItemDTO>> {
-            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSItemsCurrent(options);
+        cRYPTOPUNKSETHEREUMItemsCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSItemDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSETHEREUMApiFetchParamCreator(configuration).cRYPTOPUNKSETHEREUMItemsCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -8286,8 +13266,8 @@ export const CRYPTOPUNKSApi = function(configuration?: Configuration, fetch: Fet
          * @summary MarketPlaces (current)
          * @throws {RequiredError}
          */
-        cRYPTOPUNKSMarketPlacesCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSMarketPlaceDTO>> {
-            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSMarketPlacesCurrent(options);
+        cRYPTOPUNKSETHEREUMMarketPlacesCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSMarketPlaceDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSETHEREUMApiFetchParamCreator(configuration).cRYPTOPUNKSETHEREUMMarketPlacesCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -8301,8 +13281,8 @@ export const CRYPTOPUNKSApi = function(configuration?: Configuration, fetch: Fet
          * @summary MarketplaceDailySnapshots (current)
          * @throws {RequiredError}
          */
-        cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO>> {
-            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(options);
+        cRYPTOPUNKSETHEREUMMarketplaceDailySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSETHEREUMApiFetchParamCreator(configuration).cRYPTOPUNKSETHEREUMMarketplaceDailySnapshotsCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -8316,8 +13296,8 @@ export const CRYPTOPUNKSApi = function(configuration?: Configuration, fetch: Fet
          * @summary Trades (current)
          * @throws {RequiredError}
          */
-        cRYPTOPUNKSTradesCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSTradeDTO>> {
-            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSTradesCurrent(options);
+        cRYPTOPUNKSETHEREUMTradesCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSTradeDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSETHEREUMApiFetchParamCreator(configuration).cRYPTOPUNKSETHEREUMTradesCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -8331,8 +13311,8 @@ export const CRYPTOPUNKSApi = function(configuration?: Configuration, fetch: Fet
          * @summary Users (current)
          * @throws {RequiredError}
          */
-        cRYPTOPUNKSUsersCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSUserDTO>> {
-            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSUsersCurrent(options);
+        cRYPTOPUNKSETHEREUMUsersCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSUserDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSETHEREUMApiFetchParamCreator(configuration).cRYPTOPUNKSETHEREUMUsersCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -8352,12 +13332,258 @@ export const CRYPTOPUNKSApi = function(configuration?: Configuration, fetch: Fet
 export const CURVEFINANCEETHEREUMApiFetchParamCreator = function (configuration?: Configuration) {
     return {
         /**
+         * Gets accounts.
+         * @summary Accounts (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMAccountsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/curve-finance-ethereum/accounts/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets activeAccounts.
+         * @summary ActiveAccounts (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMActiveAccountsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/curve-finance-ethereum/activeAccounts/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets deposits.
+         * @summary Deposits (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMDepositsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/curve-finance-ethereum/deposits/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets dexAmmProtocols.
+         * @summary DexAmmProtocols (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMDexAmmProtocolsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/curve-finance-ethereum/dexAmmProtocols/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets financialsDailySnapshots.
+         * @summary FinancialsDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/curve-finance-ethereum/financialsDailySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets liquidityGauges.
+         * @summary LiquidityGauges (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMLiquidityGaugesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/curve-finance-ethereum/liquidityGauges/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets liquidityPoolDailySnapshots.
+         * @summary LiquidityPoolDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/curve-finance-ethereum/liquidityPoolDailySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets liquidityPoolFees.
+         * @summary LiquidityPoolFees (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/curve-finance-ethereum/liquidityPoolFees/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets liquidityPoolHourlySnapshots.
+         * @summary LiquidityPoolHourlySnapshots (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/curve-finance-ethereum/liquidityPoolHourlySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Gets liquidityPools.
          * @summary LiquidityPools (current)
          * @throws {RequiredError}
          */
-        cURVEFINANCEETHEREUMLiquidityPoolsCurrent(options: RequestOptions): FetchArgs {
+        cURVEFINANCEETHEREUMLiquidityPoolsCurrent(id?: string, options: RequestOptions): FetchArgs {
             const localVarPath = `/v1/dapps/curve-finance-ethereum/liquidityPools/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets lpTokens.
+         * @summary LpTokens (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMLpTokensCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/curve-finance-ethereum/lpTokens/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets rewardTokens.
+         * @summary RewardTokens (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMRewardTokensCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/curve-finance-ethereum/rewardTokens/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -8400,8 +13626,78 @@ export const CURVEFINANCEETHEREUMApiFetchParamCreator = function (configuration?
          * @summary Tokens (current)
          * @throws {RequiredError}
          */
-        cURVEFINANCEETHEREUMTokensCurrent(options: RequestOptions): FetchArgs {
+        cURVEFINANCEETHEREUMTokensCurrent(id?: string, options: RequestOptions): FetchArgs {
             const localVarPath = `/v1/dapps/curve-finance-ethereum/tokens/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets usageMetricsDailySnapshots.
+         * @summary UsageMetricsDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets usageMetricsHourlySnapshots.
+         * @summary UsageMetricsHourlySnapshots (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets withdraws.
+         * @summary Withdraws (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMWithdrawsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/curve-finance-ethereum/withdraws/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -8421,11 +13717,39 @@ export const CURVEFINANCEETHEREUMApiFetchParamCreator = function (configuration?
 };
 
 export type CURVEFINANCEETHEREUMApiType = { 
-    cURVEFINANCEETHEREUMLiquidityPoolsCurrent(options?: RequestOptions): Promise<Array<CURVEFINANCEETHEREUMLiquidityPoolDTO>>,
+    cURVEFINANCEETHEREUMAccountsCurrent(options?: RequestOptions): Promise<Array<CURVEFINANCEETHEREUMAccountDTO>>,
+
+    cURVEFINANCEETHEREUMActiveAccountsCurrent(options?: RequestOptions): Promise<Array<CURVEFINANCEETHEREUMActiveAccountDTO>>,
+
+    cURVEFINANCEETHEREUMDepositsCurrent(options?: RequestOptions): Promise<Array<CURVEFINANCEETHEREUMDepositDTO>>,
+
+    cURVEFINANCEETHEREUMDexAmmProtocolsCurrent(options?: RequestOptions): Promise<Array<CURVEFINANCEETHEREUMDexAmmProtocolDTO>>,
+
+    cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>>,
+
+    cURVEFINANCEETHEREUMLiquidityGaugesCurrent(options?: RequestOptions): Promise<Array<CURVEFINANCEETHEREUMLiquidityGaugeDTO>>,
+
+    cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>>,
+
+    cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent(options?: RequestOptions): Promise<Array<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>>,
+
+    cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent(options?: RequestOptions): Promise<Array<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>>,
+
+    cURVEFINANCEETHEREUMLiquidityPoolsCurrent(id?: string, options?: RequestOptions): Promise<Array<CURVEFINANCEETHEREUMLiquidityPoolDTO>>,
+
+    cURVEFINANCEETHEREUMLpTokensCurrent(options?: RequestOptions): Promise<Array<CURVEFINANCEETHEREUMLpTokenDTO>>,
+
+    cURVEFINANCEETHEREUMRewardTokensCurrent(options?: RequestOptions): Promise<Array<CURVEFINANCEETHEREUMRewardTokenDTO>>,
 
     cURVEFINANCEETHEREUMSwapsCurrent(options?: RequestOptions): Promise<Array<CURVEFINANCEETHEREUMSwapDTO>>,
 
-    cURVEFINANCEETHEREUMTokensCurrent(options?: RequestOptions): Promise<Array<CURVEFINANCEETHEREUMTokenDTO>>,
+    cURVEFINANCEETHEREUMTokensCurrent(id?: string, options?: RequestOptions): Promise<Array<CURVEFINANCEETHEREUMTokenDTO>>,
+
+    cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>>,
+
+    cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent(options?: RequestOptions): Promise<Array<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>>,
+
+    cURVEFINANCEETHEREUMWithdrawsCurrent(options?: RequestOptions): Promise<Array<CURVEFINANCEETHEREUMWithdrawDTO>>,
 }
 
 /**
@@ -8436,12 +13760,177 @@ export const CURVEFINANCEETHEREUMApi = function(configuration?: Configuration, f
     const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
     return {
         /**
+         * Gets accounts.
+         * @summary Accounts (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMAccountsCurrent(options?: RequestOptions = {}): Promise<Array<CURVEFINANCEETHEREUMAccountDTO>> {
+            const localVarFetchArgs = CURVEFINANCEETHEREUMApiFetchParamCreator(configuration).cURVEFINANCEETHEREUMAccountsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets activeAccounts.
+         * @summary ActiveAccounts (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMActiveAccountsCurrent(options?: RequestOptions = {}): Promise<Array<CURVEFINANCEETHEREUMActiveAccountDTO>> {
+            const localVarFetchArgs = CURVEFINANCEETHEREUMApiFetchParamCreator(configuration).cURVEFINANCEETHEREUMActiveAccountsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets deposits.
+         * @summary Deposits (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMDepositsCurrent(options?: RequestOptions = {}): Promise<Array<CURVEFINANCEETHEREUMDepositDTO>> {
+            const localVarFetchArgs = CURVEFINANCEETHEREUMApiFetchParamCreator(configuration).cURVEFINANCEETHEREUMDepositsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets dexAmmProtocols.
+         * @summary DexAmmProtocols (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMDexAmmProtocolsCurrent(options?: RequestOptions = {}): Promise<Array<CURVEFINANCEETHEREUMDexAmmProtocolDTO>> {
+            const localVarFetchArgs = CURVEFINANCEETHEREUMApiFetchParamCreator(configuration).cURVEFINANCEETHEREUMDexAmmProtocolsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets financialsDailySnapshots.
+         * @summary FinancialsDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>> {
+            const localVarFetchArgs = CURVEFINANCEETHEREUMApiFetchParamCreator(configuration).cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityGauges.
+         * @summary LiquidityGauges (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMLiquidityGaugesCurrent(options?: RequestOptions = {}): Promise<Array<CURVEFINANCEETHEREUMLiquidityGaugeDTO>> {
+            const localVarFetchArgs = CURVEFINANCEETHEREUMApiFetchParamCreator(configuration).cURVEFINANCEETHEREUMLiquidityGaugesCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityPoolDailySnapshots.
+         * @summary LiquidityPoolDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>> {
+            const localVarFetchArgs = CURVEFINANCEETHEREUMApiFetchParamCreator(configuration).cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityPoolFees.
+         * @summary LiquidityPoolFees (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent(options?: RequestOptions = {}): Promise<Array<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>> {
+            const localVarFetchArgs = CURVEFINANCEETHEREUMApiFetchParamCreator(configuration).cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityPoolHourlySnapshots.
+         * @summary LiquidityPoolHourlySnapshots (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>> {
+            const localVarFetchArgs = CURVEFINANCEETHEREUMApiFetchParamCreator(configuration).cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
          * Gets liquidityPools.
          * @summary LiquidityPools (current)
          * @throws {RequiredError}
          */
-        cURVEFINANCEETHEREUMLiquidityPoolsCurrent(options?: RequestOptions = {}): Promise<Array<CURVEFINANCEETHEREUMLiquidityPoolDTO>> {
-            const localVarFetchArgs = CURVEFINANCEETHEREUMApiFetchParamCreator(configuration).cURVEFINANCEETHEREUMLiquidityPoolsCurrent(options);
+        cURVEFINANCEETHEREUMLiquidityPoolsCurrent(id?: string, options?: RequestOptions = {}): Promise<Array<CURVEFINANCEETHEREUMLiquidityPoolDTO>> {
+            const localVarFetchArgs = CURVEFINANCEETHEREUMApiFetchParamCreator(configuration).cURVEFINANCEETHEREUMLiquidityPoolsCurrent(id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets lpTokens.
+         * @summary LpTokens (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMLpTokensCurrent(options?: RequestOptions = {}): Promise<Array<CURVEFINANCEETHEREUMLpTokenDTO>> {
+            const localVarFetchArgs = CURVEFINANCEETHEREUMApiFetchParamCreator(configuration).cURVEFINANCEETHEREUMLpTokensCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets rewardTokens.
+         * @summary RewardTokens (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMRewardTokensCurrent(options?: RequestOptions = {}): Promise<Array<CURVEFINANCEETHEREUMRewardTokenDTO>> {
+            const localVarFetchArgs = CURVEFINANCEETHEREUMApiFetchParamCreator(configuration).cURVEFINANCEETHEREUMRewardTokensCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -8470,8 +13959,53 @@ export const CURVEFINANCEETHEREUMApi = function(configuration?: Configuration, f
          * @summary Tokens (current)
          * @throws {RequiredError}
          */
-        cURVEFINANCEETHEREUMTokensCurrent(options?: RequestOptions = {}): Promise<Array<CURVEFINANCEETHEREUMTokenDTO>> {
-            const localVarFetchArgs = CURVEFINANCEETHEREUMApiFetchParamCreator(configuration).cURVEFINANCEETHEREUMTokensCurrent(options);
+        cURVEFINANCEETHEREUMTokensCurrent(id?: string, options?: RequestOptions = {}): Promise<Array<CURVEFINANCEETHEREUMTokenDTO>> {
+            const localVarFetchArgs = CURVEFINANCEETHEREUMApiFetchParamCreator(configuration).cURVEFINANCEETHEREUMTokensCurrent(id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets usageMetricsDailySnapshots.
+         * @summary UsageMetricsDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>> {
+            const localVarFetchArgs = CURVEFINANCEETHEREUMApiFetchParamCreator(configuration).cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets usageMetricsHourlySnapshots.
+         * @summary UsageMetricsHourlySnapshots (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>> {
+            const localVarFetchArgs = CURVEFINANCEETHEREUMApiFetchParamCreator(configuration).cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets withdraws.
+         * @summary Withdraws (current)
+         * @throws {RequiredError}
+         */
+        cURVEFINANCEETHEREUMWithdrawsCurrent(options?: RequestOptions = {}): Promise<Array<CURVEFINANCEETHEREUMWithdrawDTO>> {
+            const localVarFetchArgs = CURVEFINANCEETHEREUMApiFetchParamCreator(configuration).cURVEFINANCEETHEREUMWithdrawsCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -8775,16 +14309,12 @@ export const PANCAKESWAPV3ETHEREUMApiFetchParamCreator = function (configuration
          * @summary LiquidityPoolDailySnapshots (current)
          * @throws {RequiredError}
          */
-        pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, options: RequestOptions): FetchArgs {
+        pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
             const localVarPath = `/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
-
-            if (pool !== undefined) {
-                localVarQueryParameter['pool'] = ((pool:any):string);
-            }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -9192,7 +14722,7 @@ export type PANCAKESWAPV3ETHEREUMApiType = {
 
     pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id?: string, options?: RequestOptions): Promise<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolAmountDTO>>,
 
-    pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, options?: RequestOptions): Promise<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>,
+    pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>,
 
     pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent(options?: RequestOptions): Promise<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolFeeDTO>>,
 
@@ -9329,8 +14859,8 @@ export const PANCAKESWAPV3ETHEREUMApi = function(configuration?: Configuration, 
          * @summary LiquidityPoolDailySnapshots (current)
          * @throws {RequiredError}
          */
-        pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool?: string, options?: RequestOptions = {}): Promise<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> {
-            const localVarFetchArgs = PANCAKESWAPV3ETHEREUMApiFetchParamCreator(configuration).pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool, options);
+        pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> {
+            const localVarFetchArgs = PANCAKESWAPV3ETHEREUMApiFetchParamCreator(configuration).pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -9590,6 +15120,212 @@ export const PANCAKESWAPV3ETHEREUMApi = function(configuration?: Configuration, 
 export const SUSHISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: Configuration) {
     return {
         /**
+         * Gets accounts.
+         * @summary Accounts (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMAccountsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/accounts/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets activeAccounts.
+         * @summary ActiveAccounts (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMActiveAccountsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/activeAccounts/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets deposits.
+         * @summary Deposits (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMDepositsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/deposits/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets dexAmmProtocols.
+         * @summary DexAmmProtocols (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/dexAmmProtocols/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets financialsDailySnapshots.
+         * @summary FinancialsDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/financialsDailySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets liquidityPoolAmounts.
+         * @summary LiquidityPoolAmounts (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/liquidityPoolAmounts/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets liquidityPoolDailySnapshots.
+         * @summary LiquidityPoolDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/liquidityPoolDailySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets liquidityPoolFees.
+         * @summary LiquidityPoolFees (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/liquidityPoolFees/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets liquidityPoolHourlySnapshots.
+         * @summary LiquidityPoolHourlySnapshots (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/liquidityPoolHourlySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (pool !== undefined) {
+                localVarQueryParameter['pool'] = ((pool:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Gets liquidityPools.
          * @summary LiquidityPools (current)
          * @throws {RequiredError}
@@ -9616,12 +15352,204 @@ export const SUSHISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?:
             };
         },
         /**
+         * Gets positionSnapshots.
+         * @summary PositionSnapshots (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/positionSnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets positions.
+         * @summary Positions (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMPositionsCurrent(pool?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/positions/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (pool !== undefined) {
+                localVarQueryParameter['pool'] = ((pool:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets rewardTokens.
+         * @summary RewardTokens (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMRewardTokensCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/rewardTokens/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Gets swaps.
          * @summary Swaps (current)
          * @throws {RequiredError}
          */
         sUSHISWAPV3ETHEREUMSwapsCurrent(options: RequestOptions): FetchArgs {
             const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/swaps/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tickDailySnapshots.
+         * @summary TickDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/tickDailySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (pool !== undefined) {
+                localVarQueryParameter['pool'] = ((pool:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tickHourlySnapshots.
+         * @summary TickHourlySnapshots (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/tickHourlySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (pool !== undefined) {
+                localVarQueryParameter['pool'] = ((pool:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets ticks.
+         * @summary Ticks (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMTicksCurrent(pool?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/ticks/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (pool !== undefined) {
+                localVarQueryParameter['pool'] = ((pool:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tokenWhiteListSymbols.
+         * @summary TokenWhiteListSymbols (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/tokenWhiteListSymbols/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tokenWhiteLists.
+         * @summary TokenWhiteLists (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/tokenWhiteLists/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9663,15 +15591,121 @@ export const SUSHISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?:
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * Gets usageMetricsDailySnapshots.
+         * @summary UsageMetricsDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/usageMetricsDailySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets usageMetricsHourlySnapshots.
+         * @summary UsageMetricsHourlySnapshots (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/usageMetricsHourlySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets withdraws.
+         * @summary Withdraws (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMWithdrawsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/sushiswap-v3-ethereum/withdraws/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
 export type SUSHISWAPV3ETHEREUMApiType = { 
+    sUSHISWAPV3ETHEREUMAccountsCurrent(options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMAccountDTO>>,
+
+    sUSHISWAPV3ETHEREUMActiveAccountsCurrent(options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMActiveAccountDTO>>,
+
+    sUSHISWAPV3ETHEREUMDepositsCurrent(options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMDepositDTO>>,
+
+    sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent(options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMDexAmmProtocolDTO>>,
+
+    sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO>>,
+
+    sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id?: string, options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO>>,
+
+    sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>,
+
+    sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent(options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO>>,
+
+    sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool?: string, options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>>,
+
     sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent(id?: string, options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMLiquidityPoolDTO>>,
+
+    sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent(options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMPositionSnapshotDTO>>,
+
+    sUSHISWAPV3ETHEREUMPositionsCurrent(pool?: string, options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMPositionDTO>>,
+
+    sUSHISWAPV3ETHEREUMRewardTokensCurrent(options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMRewardTokenDTO>>,
 
     sUSHISWAPV3ETHEREUMSwapsCurrent(options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMSwapDTO>>,
 
+    sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMTickDailySnapshotDTO>>,
+
+    sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO>>,
+
+    sUSHISWAPV3ETHEREUMTicksCurrent(pool?: string, options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMTickDTO>>,
+
+    sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>,
+
+    sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent(options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMTokenWhiteListDTO>>,
+
     sUSHISWAPV3ETHEREUMTokensCurrent(id?: string, options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMTokenDTO>>,
+
+    sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>>,
+
+    sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>>,
+
+    sUSHISWAPV3ETHEREUMWithdrawsCurrent(options?: RequestOptions): Promise<Array<SUSHISWAPV3ETHEREUMWithdrawDTO>>,
 }
 
 /**
@@ -9682,12 +15716,192 @@ export const SUSHISWAPV3ETHEREUMApi = function(configuration?: Configuration, fe
     const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
     return {
         /**
+         * Gets accounts.
+         * @summary Accounts (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMAccountsCurrent(options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMAccountDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMAccountsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets activeAccounts.
+         * @summary ActiveAccounts (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMActiveAccountsCurrent(options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMActiveAccountDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMActiveAccountsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets deposits.
+         * @summary Deposits (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMDepositsCurrent(options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMDepositDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMDepositsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets dexAmmProtocols.
+         * @summary DexAmmProtocols (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent(options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMDexAmmProtocolDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets financialsDailySnapshots.
+         * @summary FinancialsDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityPoolAmounts.
+         * @summary LiquidityPoolAmounts (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id?: string, options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityPoolDailySnapshots.
+         * @summary LiquidityPoolDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityPoolFees.
+         * @summary LiquidityPoolFees (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent(options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityPoolHourlySnapshots.
+         * @summary LiquidityPoolHourlySnapshots (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool?: string, options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
          * Gets liquidityPools.
          * @summary LiquidityPools (current)
          * @throws {RequiredError}
          */
         sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent(id?: string, options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMLiquidityPoolDTO>> {
             const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent(id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets positionSnapshots.
+         * @summary PositionSnapshots (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMPositionSnapshotDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets positions.
+         * @summary Positions (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMPositionsCurrent(pool?: string, options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMPositionDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMPositionsCurrent(pool, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets rewardTokens.
+         * @summary RewardTokens (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMRewardTokensCurrent(options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMRewardTokenDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMRewardTokensCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -9712,12 +15926,132 @@ export const SUSHISWAPV3ETHEREUMApi = function(configuration?: Configuration, fe
             });
         },
         /**
+         * Gets tickDailySnapshots.
+         * @summary TickDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMTickDailySnapshotDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets tickHourlySnapshots.
+         * @summary TickHourlySnapshots (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets ticks.
+         * @summary Ticks (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMTicksCurrent(pool?: string, options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMTickDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMTicksCurrent(pool, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets tokenWhiteListSymbols.
+         * @summary TokenWhiteListSymbols (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets tokenWhiteLists.
+         * @summary TokenWhiteLists (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent(options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMTokenWhiteListDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
          * Gets tokens.
          * @summary Tokens (current)
          * @throws {RequiredError}
          */
         sUSHISWAPV3ETHEREUMTokensCurrent(id?: string, options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMTokenDTO>> {
             const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMTokensCurrent(id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets usageMetricsDailySnapshots.
+         * @summary UsageMetricsDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets usageMetricsHourlySnapshots.
+         * @summary UsageMetricsHourlySnapshots (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets withdraws.
+         * @summary Withdraws (current)
+         * @throws {RequiredError}
+         */
+        sUSHISWAPV3ETHEREUMWithdrawsCurrent(options?: RequestOptions = {}): Promise<Array<SUSHISWAPV3ETHEREUMWithdrawDTO>> {
+            const localVarFetchArgs = SUSHISWAPV3ETHEREUMApiFetchParamCreator(configuration).sUSHISWAPV3ETHEREUMWithdrawsCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -9737,12 +16071,350 @@ export const SUSHISWAPV3ETHEREUMApi = function(configuration?: Configuration, fe
 export const UNISWAPV2ETHEREUMApiFetchParamCreator = function (configuration?: Configuration) {
     return {
         /**
+         * Gets accounts.
+         * @summary Accounts (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMAccountsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/accounts/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets activeAccounts.
+         * @summary ActiveAccounts (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMActiveAccountsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/activeAccounts/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets deposits.
+         * @summary Deposits (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMDepositsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/deposits/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets dexAmmProtocols.
+         * @summary DexAmmProtocols (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMDexAmmProtocolsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/dexAmmProtocols/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets financialsDailySnapshots.
+         * @summary FinancialsDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/financialsDailySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets liquidityPoolAmounts.
+         * @summary LiquidityPoolAmounts (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent(id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/liquidityPoolAmounts/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets liquidityPoolDailySnapshots.
+         * @summary LiquidityPoolDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/liquidityPoolDailySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets liquidityPoolFees.
+         * @summary LiquidityPoolFees (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/liquidityPoolFees/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets liquidityPoolHourlySnapshots.
+         * @summary LiquidityPoolHourlySnapshots (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/liquidityPoolHourlySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Gets liquidityPools.
          * @summary LiquidityPools (current)
          * @throws {RequiredError}
          */
-        uNISWAPV2ETHEREUMLiquidityPoolsCurrent(options: RequestOptions): FetchArgs {
+        uNISWAPV2ETHEREUMLiquidityPoolsCurrent(id?: string, options: RequestOptions): FetchArgs {
             const localVarPath = `/v1/dapps/uniswap-v2-ethereum/liquidityPools/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets masterChefAddressToPids.
+         * @summary MasterChefAddressToPids (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/masterChefAddressToPids/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets masterChefRewarders.
+         * @summary MasterChefRewarders (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMMasterChefRewardersCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/masterChefRewarders/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets masterChefStakingPools.
+         * @summary MasterChefStakingPools (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/masterChefStakingPools/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets masterChefs.
+         * @summary MasterChefs (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMMasterChefsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/masterChefs/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets rewardTokens.
+         * @summary RewardTokens (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMRewardTokensCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/rewardTokens/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets rewarderProbes.
+         * @summary RewarderProbes (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMRewarderProbesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/rewarderProbes/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9781,6 +16453,28 @@ export const UNISWAPV2ETHEREUMApiFetchParamCreator = function (configuration?: C
             };
         },
         /**
+         * Gets tokenWhiteLists.
+         * @summary TokenWhiteLists (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMTokenWhiteListsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/tokenWhiteLists/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Gets tokens.
          * @summary Tokens (current)
          * @throws {RequiredError}
@@ -9802,15 +16496,143 @@ export const UNISWAPV2ETHEREUMApiFetchParamCreator = function (configuration?: C
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * Gets transfers.
+         * @summary Transfers (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMTransfersCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/transfers/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets usageMetricsDailySnapshots.
+         * @summary UsageMetricsDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/usageMetricsDailySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets usageMetricsHourlySnapshots.
+         * @summary UsageMetricsHourlySnapshots (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/usageMetricsHourlySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets withdraws.
+         * @summary Withdraws (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMWithdrawsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/v1/dapps/uniswap-v2-ethereum/withdraws/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
 export type UNISWAPV2ETHEREUMApiType = { 
-    uNISWAPV2ETHEREUMLiquidityPoolsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMLiquidityPoolDTO>>,
+    uNISWAPV2ETHEREUMAccountsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMAccountDTO>>,
+
+    uNISWAPV2ETHEREUMActiveAccountsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMActiveAccountDTO>>,
+
+    uNISWAPV2ETHEREUMDepositsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMDepositDTO>>,
+
+    uNISWAPV2ETHEREUMDexAmmProtocolsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMDexAmmProtocolDTO>>,
+
+    uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO>>,
+
+    uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent(id?: string, options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMLiquidityPoolAmountDTO>>,
+
+    uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO>>,
+
+    uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMLiquidityPoolFeeDTO>>,
+
+    uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO>>,
+
+    uNISWAPV2ETHEREUMLiquidityPoolsCurrent(id?: string, options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMLiquidityPoolDTO>>,
+
+    uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMMasterChefAddressToPidDTO>>,
+
+    uNISWAPV2ETHEREUMMasterChefRewardersCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMMasterChefRewarderDTO>>,
+
+    uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMMasterChefStakingPoolDTO>>,
+
+    uNISWAPV2ETHEREUMMasterChefsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMMasterChefDTO>>,
+
+    uNISWAPV2ETHEREUMRewardTokensCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMRewardTokenDTO>>,
+
+    uNISWAPV2ETHEREUMRewarderProbesCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMRewarderProbeDTO>>,
 
     uNISWAPV2ETHEREUMSwapsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMSwapDTO>>,
 
+    uNISWAPV2ETHEREUMTokenWhiteListsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMTokenWhiteListDTO>>,
+
     uNISWAPV2ETHEREUMTokensCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMTokenDTO>>,
+
+    uNISWAPV2ETHEREUMTransfersCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMTransferDTO>>,
+
+    uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO>>,
+
+    uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO>>,
+
+    uNISWAPV2ETHEREUMWithdrawsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV2ETHEREUMWithdrawDTO>>,
 }
 
 /**
@@ -9821,12 +16643,237 @@ export const UNISWAPV2ETHEREUMApi = function(configuration?: Configuration, fetc
     const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
     return {
         /**
+         * Gets accounts.
+         * @summary Accounts (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMAccountsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMAccountDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMAccountsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets activeAccounts.
+         * @summary ActiveAccounts (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMActiveAccountsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMActiveAccountDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMActiveAccountsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets deposits.
+         * @summary Deposits (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMDepositsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMDepositDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMDepositsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets dexAmmProtocols.
+         * @summary DexAmmProtocols (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMDexAmmProtocolsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMDexAmmProtocolDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMDexAmmProtocolsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets financialsDailySnapshots.
+         * @summary FinancialsDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityPoolAmounts.
+         * @summary LiquidityPoolAmounts (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent(id?: string, options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMLiquidityPoolAmountDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent(id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityPoolDailySnapshots.
+         * @summary LiquidityPoolDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityPoolFees.
+         * @summary LiquidityPoolFees (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMLiquidityPoolFeeDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityPoolHourlySnapshots.
+         * @summary LiquidityPoolHourlySnapshots (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
          * Gets liquidityPools.
          * @summary LiquidityPools (current)
          * @throws {RequiredError}
          */
-        uNISWAPV2ETHEREUMLiquidityPoolsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMLiquidityPoolDTO>> {
-            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMLiquidityPoolsCurrent(options);
+        uNISWAPV2ETHEREUMLiquidityPoolsCurrent(id?: string, options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMLiquidityPoolDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMLiquidityPoolsCurrent(id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets masterChefAddressToPids.
+         * @summary MasterChefAddressToPids (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMMasterChefAddressToPidDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets masterChefRewarders.
+         * @summary MasterChefRewarders (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMMasterChefRewardersCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMMasterChefRewarderDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMMasterChefRewardersCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets masterChefStakingPools.
+         * @summary MasterChefStakingPools (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMMasterChefStakingPoolDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets masterChefs.
+         * @summary MasterChefs (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMMasterChefsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMMasterChefDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMMasterChefsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets rewardTokens.
+         * @summary RewardTokens (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMRewardTokensCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMRewardTokenDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMRewardTokensCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets rewarderProbes.
+         * @summary RewarderProbes (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMRewarderProbesCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMRewarderProbeDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMRewarderProbesCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -9851,12 +16898,87 @@ export const UNISWAPV2ETHEREUMApi = function(configuration?: Configuration, fetc
             });
         },
         /**
+         * Gets tokenWhiteLists.
+         * @summary TokenWhiteLists (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMTokenWhiteListsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMTokenWhiteListDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMTokenWhiteListsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
          * Gets tokens.
          * @summary Tokens (current)
          * @throws {RequiredError}
          */
         uNISWAPV2ETHEREUMTokensCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMTokenDTO>> {
             const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMTokensCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets transfers.
+         * @summary Transfers (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMTransfersCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMTransferDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMTransfersCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets usageMetricsDailySnapshots.
+         * @summary UsageMetricsDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets usageMetricsHourlySnapshots.
+         * @summary UsageMetricsHourlySnapshots (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets withdraws.
+         * @summary Withdraws (current)
+         * @throws {RequiredError}
+         */
+        uNISWAPV2ETHEREUMWithdrawsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV2ETHEREUMWithdrawDTO>> {
+            const localVarFetchArgs = UNISWAPV2ETHEREUMApiFetchParamCreator(configuration).uNISWAPV2ETHEREUMWithdrawsCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -10208,16 +17330,12 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @summary TickDailySnapshots (current)
          * @throws {RequiredError}
          */
-        uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, options: RequestOptions): FetchArgs {
+        uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
             const localVarPath = `/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
-
-            if (pool !== undefined) {
-                localVarQueryParameter['pool'] = ((pool:any):string);
-            }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -10234,16 +17352,12 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @summary TickHourlySnapshots (current)
          * @throws {RequiredError}
          */
-        uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, options: RequestOptions): FetchArgs {
+        uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(options: RequestOptions): FetchArgs {
             const localVarPath = `/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
-
-            if (pool !== undefined) {
-                localVarQueryParameter['pool'] = ((pool:any):string);
-            }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -10260,16 +17374,12 @@ export const UNISWAPV3ETHEREUMApiFetchParamCreator = function (configuration?: C
          * @summary Ticks (current)
          * @throws {RequiredError}
          */
-        uNISWAPV3ETHEREUMTicksCurrent(pool?: string, options: RequestOptions): FetchArgs {
+        uNISWAPV3ETHEREUMTicksCurrent(options: RequestOptions): FetchArgs {
             const localVarPath = `/v1/dapps/uniswap-v3-ethereum/ticks/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
-
-            if (pool !== undefined) {
-                localVarQueryParameter['pool'] = ((pool:any):string);
-            }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -10449,11 +17559,11 @@ export type UNISWAPV3ETHEREUMApiType = {
 
     uNISWAPV3ETHEREUMSwapsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMSwapDTO>>,
 
-    uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>,
+    uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>,
 
-    uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>,
+    uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>,
 
-    uNISWAPV3ETHEREUMTicksCurrent(pool?: string, options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMTickDTO>>,
+    uNISWAPV3ETHEREUMTicksCurrent(options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMTickDTO>>,
 
     uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(options?: RequestOptions): Promise<Array<UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO>>,
 
@@ -10690,8 +17800,8 @@ export const UNISWAPV3ETHEREUMApi = function(configuration?: Configuration, fetc
          * @summary TickDailySnapshots (current)
          * @throws {RequiredError}
          */
-        uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, options?: RequestOptions = {}): Promise<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> {
-            const localVarFetchArgs = UNISWAPV3ETHEREUMApiFetchParamCreator(configuration).uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool, options);
+        uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> {
+            const localVarFetchArgs = UNISWAPV3ETHEREUMApiFetchParamCreator(configuration).uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -10705,8 +17815,8 @@ export const UNISWAPV3ETHEREUMApi = function(configuration?: Configuration, fetc
          * @summary TickHourlySnapshots (current)
          * @throws {RequiredError}
          */
-        uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, options?: RequestOptions = {}): Promise<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> {
-            const localVarFetchArgs = UNISWAPV3ETHEREUMApiFetchParamCreator(configuration).uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool, options);
+        uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> {
+            const localVarFetchArgs = UNISWAPV3ETHEREUMApiFetchParamCreator(configuration).uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -10720,8 +17830,8 @@ export const UNISWAPV3ETHEREUMApi = function(configuration?: Configuration, fetc
          * @summary Ticks (current)
          * @throws {RequiredError}
          */
-        uNISWAPV3ETHEREUMTicksCurrent(pool?: string, options?: RequestOptions = {}): Promise<Array<UNISWAPV3ETHEREUMTickDTO>> {
-            const localVarFetchArgs = UNISWAPV3ETHEREUMApiFetchParamCreator(configuration).uNISWAPV3ETHEREUMTicksCurrent(pool, options);
+        uNISWAPV3ETHEREUMTicksCurrent(options?: RequestOptions = {}): Promise<Array<UNISWAPV3ETHEREUMTickDTO>> {
+            const localVarFetchArgs = UNISWAPV3ETHEREUMApiFetchParamCreator(configuration).uNISWAPV3ETHEREUMTicksCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -10825,7 +17935,7 @@ export const UNISWAPV3ETHEREUMApi = function(configuration?: Configuration, fetc
 
 
 export type ApiTypes = { 
-    CRYPTOPUNKSApi: CRYPTOPUNKSApiType,
+    CRYPTOPUNKSETHEREUMApi: CRYPTOPUNKSETHEREUMApiType,
 
     CURVEFINANCEETHEREUMApi: CURVEFINANCEETHEREUMApiType,
 

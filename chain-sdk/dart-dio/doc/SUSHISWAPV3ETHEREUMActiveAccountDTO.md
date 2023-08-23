@@ -1,0 +1,19 @@
+# openapi.model.SUSHISWAPV3ETHEREUMActiveAccountDTO
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**entryTime** | [**DateTime**](DateTime.md) |  | [optional] 
+**recvTime** | [**DateTime**](DateTime.md) |  | [optional] 
+**blockNumber** | **int** | Number of block in which entity was recorded. | [optional] 
+**id** | **String** | Identifier, format: (daily/hourly)-(address of the account)-(days/hours since unix epoch) | [optional] 
+**blockRange** | **String** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

@@ -1,0 +1,77 @@
+-module(openapi_sushiswap_v3_ethereum_withdraw_dto).
+
+-export([encode/1]).
+
+-export_type([openapi_sushiswap_v3_ethereum_withdraw_dto/0]).
+
+-type openapi_sushiswap_v3_ethereum_withdraw_dto() ::
+    #{ 'entry_time' => openapi_date_time:openapi_date_time(),
+       'recv_time' => openapi_date_time:openapi_date_time(),
+       'block_number' => integer(),
+       'id' => binary(),
+       'hash' => binary(),
+       'nonce' => binary(),
+       'log_index' => integer(),
+       'gas_limit' => binary(),
+       'gas_used' => binary(),
+       'gas_price' => binary(),
+       'protocol' => binary(),
+       'account' => binary(),
+       'position' => binary(),
+       'tick_lower' => binary(),
+       'tick_upper' => binary(),
+       'pool' => binary(),
+       'timestamp' => binary(),
+       'liquidity' => binary(),
+       'input_tokens' => list(),
+       'input_token_amounts' => list(),
+       'reserve_amounts' => list(),
+       'amount_usd' => binary()
+     }.
+
+encode(#{ 'entry_time' := EntryTime,
+          'recv_time' := RecvTime,
+          'block_number' := BlockNumber,
+          'id' := Id,
+          'hash' := Hash,
+          'nonce' := Nonce,
+          'log_index' := LogIndex,
+          'gas_limit' := GasLimit,
+          'gas_used' := GasUsed,
+          'gas_price' := GasPrice,
+          'protocol' := Protocol,
+          'account' := Account,
+          'position' := Position,
+          'tick_lower' := TickLower,
+          'tick_upper' := TickUpper,
+          'pool' := Pool,
+          'timestamp' := Timestamp,
+          'liquidity' := Liquidity,
+          'input_tokens' := InputTokens,
+          'input_token_amounts' := InputTokenAmounts,
+          'reserve_amounts' := ReserveAmounts,
+          'amount_usd' := AmountUsd
+        }) ->
+    #{ 'entry_time' => EntryTime,
+       'recv_time' => RecvTime,
+       'block_number' => BlockNumber,
+       'id' => Id,
+       'hash' => Hash,
+       'nonce' => Nonce,
+       'log_index' => LogIndex,
+       'gas_limit' => GasLimit,
+       'gas_used' => GasUsed,
+       'gas_price' => GasPrice,
+       'protocol' => Protocol,
+       'account' => Account,
+       'position' => Position,
+       'tick_lower' => TickLower,
+       'tick_upper' => TickUpper,
+       'pool' => Pool,
+       'timestamp' => Timestamp,
+       'liquidity' => Liquidity,
+       'input_tokens' => InputTokens,
+       'input_token_amounts' => InputTokenAmounts,
+       'reserve_amounts' => ReserveAmounts,
+       'amount_usd' => AmountUsd
+     }.

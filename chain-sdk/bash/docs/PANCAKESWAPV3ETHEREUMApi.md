@@ -234,15 +234,12 @@ Gets liquidityPoolDailySnapshots.
 ### Example
 
 ```bash
- pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent  pool=value
+ pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **string** | Pool this snapshot belongs to. | [optional] [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 

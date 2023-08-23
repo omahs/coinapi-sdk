@@ -77,7 +77,6 @@ test_that("PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent", {
   # base path: https://onchain.coinapi.io
   # LiquidityPoolDailySnapshots (current)
   # Gets liquidityPoolDailySnapshots.
-  # @param pool character Pool this snapshot belongs to. (optional)
   # @return [array[PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]]
 
   # uncomment below to test the operation

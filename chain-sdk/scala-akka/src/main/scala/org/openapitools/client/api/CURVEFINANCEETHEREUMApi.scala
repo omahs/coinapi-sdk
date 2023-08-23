@@ -11,9 +11,23 @@
  */
 package org.openapitools.client.api
 
+import org.openapitools.client.model.AccountDTO
+import org.openapitools.client.model.ActiveAccountDTO
+import org.openapitools.client.model.DepositDTO
+import org.openapitools.client.model.DexAmmProtocolDTO
+import org.openapitools.client.model.FinancialsDailySnapshotDTO
+import org.openapitools.client.model.LiquidityGaugeDTO
 import org.openapitools.client.model.LiquidityPoolDTO
+import org.openapitools.client.model.LiquidityPoolDailySnapshotDTO
+import org.openapitools.client.model.LiquidityPoolFeeDTO
+import org.openapitools.client.model.LiquidityPoolHourlySnapshotDTO
+import org.openapitools.client.model.LpTokenDTO
+import org.openapitools.client.model.RewardTokenDTO
 import org.openapitools.client.model.SwapDTO
 import org.openapitools.client.model.TokenDTO
+import org.openapitools.client.model.UsageMetricsDailySnapshotDTO
+import org.openapitools.client.model.UsageMetricsHourlySnapshotDTO
+import org.openapitools.client.model.WithdrawDTO
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
 import org.openapitools.client.core.ApiKeyLocations._
@@ -26,14 +40,138 @@ object CURVEFINANCEETHEREUMApi {
 class CURVEFINANCEETHEREUMApi(baseUrl: String) {
 
   /**
+   * Gets accounts.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[AccountDTO] (successful operation)
+   */
+  def cURVEFINANCEETHEREUMAccountsCurrent(): ApiRequest[Seq[AccountDTO]] =
+    ApiRequest[Seq[AccountDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/curve-finance-ethereum/accounts/current", "application/json")
+      .withSuccessResponse[Seq[AccountDTO]](200)
+      
+
+  /**
+   * Gets activeAccounts.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[ActiveAccountDTO] (successful operation)
+   */
+  def cURVEFINANCEETHEREUMActiveAccountsCurrent(): ApiRequest[Seq[ActiveAccountDTO]] =
+    ApiRequest[Seq[ActiveAccountDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/curve-finance-ethereum/activeAccounts/current", "application/json")
+      .withSuccessResponse[Seq[ActiveAccountDTO]](200)
+      
+
+  /**
+   * Gets deposits.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[DepositDTO] (successful operation)
+   */
+  def cURVEFINANCEETHEREUMDepositsCurrent(): ApiRequest[Seq[DepositDTO]] =
+    ApiRequest[Seq[DepositDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/curve-finance-ethereum/deposits/current", "application/json")
+      .withSuccessResponse[Seq[DepositDTO]](200)
+      
+
+  /**
+   * Gets dexAmmProtocols.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[DexAmmProtocolDTO] (successful operation)
+   */
+  def cURVEFINANCEETHEREUMDexAmmProtocolsCurrent(): ApiRequest[Seq[DexAmmProtocolDTO]] =
+    ApiRequest[Seq[DexAmmProtocolDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/curve-finance-ethereum/dexAmmProtocols/current", "application/json")
+      .withSuccessResponse[Seq[DexAmmProtocolDTO]](200)
+      
+
+  /**
+   * Gets financialsDailySnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[FinancialsDailySnapshotDTO] (successful operation)
+   */
+  def cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent(): ApiRequest[Seq[FinancialsDailySnapshotDTO]] =
+    ApiRequest[Seq[FinancialsDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/curve-finance-ethereum/financialsDailySnapshots/current", "application/json")
+      .withSuccessResponse[Seq[FinancialsDailySnapshotDTO]](200)
+      
+
+  /**
+   * Gets liquidityGauges.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LiquidityGaugeDTO] (successful operation)
+   */
+  def cURVEFINANCEETHEREUMLiquidityGaugesCurrent(): ApiRequest[Seq[LiquidityGaugeDTO]] =
+    ApiRequest[Seq[LiquidityGaugeDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/curve-finance-ethereum/liquidityGauges/current", "application/json")
+      .withSuccessResponse[Seq[LiquidityGaugeDTO]](200)
+      
+
+  /**
+   * Gets liquidityPoolDailySnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LiquidityPoolDailySnapshotDTO] (successful operation)
+   */
+  def cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent(): ApiRequest[Seq[LiquidityPoolDailySnapshotDTO]] =
+    ApiRequest[Seq[LiquidityPoolDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/curve-finance-ethereum/liquidityPoolDailySnapshots/current", "application/json")
+      .withSuccessResponse[Seq[LiquidityPoolDailySnapshotDTO]](200)
+      
+
+  /**
+   * Gets liquidityPoolFees.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LiquidityPoolFeeDTO] (successful operation)
+   */
+  def cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent(): ApiRequest[Seq[LiquidityPoolFeeDTO]] =
+    ApiRequest[Seq[LiquidityPoolFeeDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/curve-finance-ethereum/liquidityPoolFees/current", "application/json")
+      .withSuccessResponse[Seq[LiquidityPoolFeeDTO]](200)
+      
+
+  /**
+   * Gets liquidityPoolHourlySnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LiquidityPoolHourlySnapshotDTO] (successful operation)
+   */
+  def cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent(): ApiRequest[Seq[LiquidityPoolHourlySnapshotDTO]] =
+    ApiRequest[Seq[LiquidityPoolHourlySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/curve-finance-ethereum/liquidityPoolHourlySnapshots/current", "application/json")
+      .withSuccessResponse[Seq[LiquidityPoolHourlySnapshotDTO]](200)
+      
+
+  /**
    * Gets liquidityPools.
    * 
    * Expected answers:
    *   code 200 : Seq[LiquidityPoolDTO] (successful operation)
+   * 
+   * @param id Smart contract address of the pool
    */
-  def cURVEFINANCEETHEREUMLiquidityPoolsCurrent(): ApiRequest[Seq[LiquidityPoolDTO]] =
+  def cURVEFINANCEETHEREUMLiquidityPoolsCurrent(id: Option[String] = None): ApiRequest[Seq[LiquidityPoolDTO]] =
     ApiRequest[Seq[LiquidityPoolDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/curve-finance-ethereum/liquidityPools/current", "application/json")
+      .withQueryParam("id", id)
       .withSuccessResponse[Seq[LiquidityPoolDTO]](200)
+      
+
+  /**
+   * Gets lpTokens.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LpTokenDTO] (successful operation)
+   */
+  def cURVEFINANCEETHEREUMLpTokensCurrent(): ApiRequest[Seq[LpTokenDTO]] =
+    ApiRequest[Seq[LpTokenDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/curve-finance-ethereum/lpTokens/current", "application/json")
+      .withSuccessResponse[Seq[LpTokenDTO]](200)
+      
+
+  /**
+   * Gets rewardTokens.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[RewardTokenDTO] (successful operation)
+   */
+  def cURVEFINANCEETHEREUMRewardTokensCurrent(): ApiRequest[Seq[RewardTokenDTO]] =
+    ApiRequest[Seq[RewardTokenDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/curve-finance-ethereum/rewardTokens/current", "application/json")
+      .withSuccessResponse[Seq[RewardTokenDTO]](200)
       
 
   /**
@@ -52,10 +190,46 @@ class CURVEFINANCEETHEREUMApi(baseUrl: String) {
    * 
    * Expected answers:
    *   code 200 : Seq[TokenDTO] (successful operation)
+   * 
+   * @param id Smart contract address of the token
    */
-  def cURVEFINANCEETHEREUMTokensCurrent(): ApiRequest[Seq[TokenDTO]] =
+  def cURVEFINANCEETHEREUMTokensCurrent(id: Option[String] = None): ApiRequest[Seq[TokenDTO]] =
     ApiRequest[Seq[TokenDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/curve-finance-ethereum/tokens/current", "application/json")
+      .withQueryParam("id", id)
       .withSuccessResponse[Seq[TokenDTO]](200)
+      
+
+  /**
+   * Gets usageMetricsDailySnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[UsageMetricsDailySnapshotDTO] (successful operation)
+   */
+  def cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent(): ApiRequest[Seq[UsageMetricsDailySnapshotDTO]] =
+    ApiRequest[Seq[UsageMetricsDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current", "application/json")
+      .withSuccessResponse[Seq[UsageMetricsDailySnapshotDTO]](200)
+      
+
+  /**
+   * Gets usageMetricsHourlySnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[UsageMetricsHourlySnapshotDTO] (successful operation)
+   */
+  def cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent(): ApiRequest[Seq[UsageMetricsHourlySnapshotDTO]] =
+    ApiRequest[Seq[UsageMetricsHourlySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current", "application/json")
+      .withSuccessResponse[Seq[UsageMetricsHourlySnapshotDTO]](200)
+      
+
+  /**
+   * Gets withdraws.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[WithdrawDTO] (successful operation)
+   */
+  def cURVEFINANCEETHEREUMWithdrawsCurrent(): ApiRequest[Seq[WithdrawDTO]] =
+    ApiRequest[Seq[WithdrawDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/curve-finance-ethereum/withdraws/current", "application/json")
+      .withSuccessResponse[Seq[WithdrawDTO]](200)
       
 
 

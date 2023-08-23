@@ -25,7 +25,6 @@ import com.squareup.moshi.JsonClass
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param vid 
  * @param id (pool address)-(tick index)-(hour ID)
  * @param hourId Number of hours since Unix epoch time
  * @param tick tick index
@@ -49,10 +48,6 @@ data class PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO (
     /* Number of block in which entity was recorded. */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
-
-    /*  */
-    @Json(name = "vid")
-    val vid: kotlin.Long? = null,
 
     /* (pool address)-(tick index)-(hour ID) */
     @Json(name = "id")

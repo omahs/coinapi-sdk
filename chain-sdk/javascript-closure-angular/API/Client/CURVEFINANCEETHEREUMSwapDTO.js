@@ -19,8 +19,8 @@ API.Client.CURVEFINANCEETHEREUMSwapDTO.prototype.entryTime;
 API.Client.CURVEFINANCEETHEREUMSwapDTO.prototype.recvTime;
 
 /**
- * Block number of this event
- * @type {!string}
+ * Number of block in which entity was recorded.
+ * @type {!number}
  * @export
  */
 API.Client.CURVEFINANCEETHEREUMSwapDTO.prototype.blockNumber;

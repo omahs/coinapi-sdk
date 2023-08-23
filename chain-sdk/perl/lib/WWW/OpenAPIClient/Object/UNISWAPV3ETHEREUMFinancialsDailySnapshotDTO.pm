@@ -236,7 +236,7 @@ __PACKAGE__->method_documentation({
     'block_number' => {
         datatype => 'int',
         base_name => 'block_number',
-        description => 'Block number of when this snapshot was taken/last modified.)',
+        description => 'Number of block in which entity was recorded.',
         format => '',
         read_only => '',
             },

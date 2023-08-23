@@ -36,7 +36,6 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
-        /// <param name="vid">vid.</param>
         /// <param name="id">(pool address)-(tick index)-(hour ID).</param>
         /// <param name="hourId">Number of hours since Unix epoch time.</param>
         /// <param name="tick">tick index.</param>
@@ -46,7 +45,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="liquidityNet">how much liquidity changes when tick crossed.</param>
         /// <param name="liquidityNetUsd">how much liquidity in USD changes when tick crossed.</param>
         /// <param name="timestamp">Timestamp of when this snapshot was taken/last modified (May be taken after interval has passed).</param>
-        public PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), long vid = default(long), string id = default(string), int hourId = default(int), string tick = default(string), string pool = default(string), string liquidityGross = default(string), string liquidityGrossUsd = default(string), string liquidityNet = default(string), string liquidityNetUsd = default(string), string timestamp = default(string))
+        public PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), string id = default(string), int hourId = default(int), string tick = default(string), string pool = default(string), string liquidityGross = default(string), string liquidityGrossUsd = default(string), string liquidityNet = default(string), string liquidityNetUsd = default(string), string timestamp = default(string))
         {
             this.Id = id;
             this.Tick = tick;
@@ -59,7 +58,6 @@ namespace CoinAPI.EMS.REST.V1.Model
             this.EntryTime = entryTime;
             this.RecvTime = recvTime;
             this.BlockNumber = blockNumber;
-            this.Vid = vid;
             this.Id = id;
             this.HourId = hourId;
             this.Tick = tick;
@@ -89,12 +87,6 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <value>Number of block in which entity was recorded.</value>
         [DataMember(Name="block_number", EmitDefaultValue=false)]
         public long BlockNumber { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Vid
-        /// </summary>
-        [DataMember(Name="vid", EmitDefaultValue=false)]
-        public long Vid { get; set; }
 
         /// <summary>
         /// (pool address)-(tick index)-(hour ID)
@@ -170,7 +162,6 @@ namespace CoinAPI.EMS.REST.V1.Model
             sb.Append("  EntryTime: ").Append(EntryTime).Append("\n");
             sb.Append("  RecvTime: ").Append(RecvTime).Append("\n");
             sb.Append("  BlockNumber: ").Append(BlockNumber).Append("\n");
-            sb.Append("  Vid: ").Append(Vid).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  HourId: ").Append(HourId).Append("\n");
             sb.Append("  Tick: ").Append(Tick).Append("\n");
@@ -228,11 +219,6 @@ namespace CoinAPI.EMS.REST.V1.Model
                     this.BlockNumber == input.BlockNumber ||
                     (this.BlockNumber != null &&
                     this.BlockNumber.Equals(input.BlockNumber))
-                ) && 
-                (
-                    this.Vid == input.Vid ||
-                    (this.Vid != null &&
-                    this.Vid.Equals(input.Vid))
                 ) && 
                 (
                     this.Id == input.Id ||
@@ -296,8 +282,6 @@ namespace CoinAPI.EMS.REST.V1.Model
                     hashCode = hashCode * 59 + this.RecvTime.GetHashCode();
                 if (this.BlockNumber != null)
                     hashCode = hashCode * 59 + this.BlockNumber.GetHashCode();
-                if (this.Vid != null)
-                    hashCode = hashCode * 59 + this.Vid.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.HourId != null)

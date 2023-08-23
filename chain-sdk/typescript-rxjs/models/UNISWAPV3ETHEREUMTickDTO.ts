@@ -34,12 +34,6 @@ export interface UNISWAPV3ETHEREUMTickDTO {
      */
     block_number?: number;
     /**
-     * 
-     * @type {number}
-     * @memberof UNISWAPV3ETHEREUMTickDTO
-     */
-    vid?: number;
-    /**
      * (pool address)-(tick index)
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMTickDTO

@@ -49,12 +49,459 @@ sub new {
 
 
 #
+# c_urvefinanceethereum_accounts__current
+#
+# Accounts (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'c_urvefinanceethereum_accounts__current' } = {
+        summary => 'Accounts (current)',
+        params => $params,
+        returns => 'ARRAY[CURVEFINANCEETHEREUMAccountDTO]',
+        };
+}
+# @return ARRAY[CURVEFINANCEETHEREUMAccountDTO]
+#
+sub c_urvefinanceethereum_accounts__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/curve-finance-ethereum/accounts/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CURVEFINANCEETHEREUMAccountDTO]', $response);
+    return $_response_object;
+}
+
+#
+# c_urvefinanceethereum_active_accounts__current
+#
+# ActiveAccounts (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'c_urvefinanceethereum_active_accounts__current' } = {
+        summary => 'ActiveAccounts (current)',
+        params => $params,
+        returns => 'ARRAY[CURVEFINANCEETHEREUMActiveAccountDTO]',
+        };
+}
+# @return ARRAY[CURVEFINANCEETHEREUMActiveAccountDTO]
+#
+sub c_urvefinanceethereum_active_accounts__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/curve-finance-ethereum/activeAccounts/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CURVEFINANCEETHEREUMActiveAccountDTO]', $response);
+    return $_response_object;
+}
+
+#
+# c_urvefinanceethereum_deposits__current
+#
+# Deposits (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'c_urvefinanceethereum_deposits__current' } = {
+        summary => 'Deposits (current)',
+        params => $params,
+        returns => 'ARRAY[CURVEFINANCEETHEREUMDepositDTO]',
+        };
+}
+# @return ARRAY[CURVEFINANCEETHEREUMDepositDTO]
+#
+sub c_urvefinanceethereum_deposits__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/curve-finance-ethereum/deposits/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CURVEFINANCEETHEREUMDepositDTO]', $response);
+    return $_response_object;
+}
+
+#
+# c_urvefinanceethereum_dex_amm_protocols__current
+#
+# DexAmmProtocols (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'c_urvefinanceethereum_dex_amm_protocols__current' } = {
+        summary => 'DexAmmProtocols (current)',
+        params => $params,
+        returns => 'ARRAY[CURVEFINANCEETHEREUMDexAmmProtocolDTO]',
+        };
+}
+# @return ARRAY[CURVEFINANCEETHEREUMDexAmmProtocolDTO]
+#
+sub c_urvefinanceethereum_dex_amm_protocols__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/curve-finance-ethereum/dexAmmProtocols/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CURVEFINANCEETHEREUMDexAmmProtocolDTO]', $response);
+    return $_response_object;
+}
+
+#
+# c_urvefinanceethereum_financials_daily_snapshots__current
+#
+# FinancialsDailySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'c_urvefinanceethereum_financials_daily_snapshots__current' } = {
+        summary => 'FinancialsDailySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO]',
+        };
+}
+# @return ARRAY[CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO]
+#
+sub c_urvefinanceethereum_financials_daily_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/curve-finance-ethereum/financialsDailySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# c_urvefinanceethereum_liquidity_gauges__current
+#
+# LiquidityGauges (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'c_urvefinanceethereum_liquidity_gauges__current' } = {
+        summary => 'LiquidityGauges (current)',
+        params => $params,
+        returns => 'ARRAY[CURVEFINANCEETHEREUMLiquidityGaugeDTO]',
+        };
+}
+# @return ARRAY[CURVEFINANCEETHEREUMLiquidityGaugeDTO]
+#
+sub c_urvefinanceethereum_liquidity_gauges__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/curve-finance-ethereum/liquidityGauges/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CURVEFINANCEETHEREUMLiquidityGaugeDTO]', $response);
+    return $_response_object;
+}
+
+#
+# c_urvefinanceethereum_liquidity_pool_daily_snapshots__current
+#
+# LiquidityPoolDailySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'c_urvefinanceethereum_liquidity_pool_daily_snapshots__current' } = {
+        summary => 'LiquidityPoolDailySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO]',
+        };
+}
+# @return ARRAY[CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO]
+#
+sub c_urvefinanceethereum_liquidity_pool_daily_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/curve-finance-ethereum/liquidityPoolDailySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# c_urvefinanceethereum_liquidity_pool_fees__current
+#
+# LiquidityPoolFees (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'c_urvefinanceethereum_liquidity_pool_fees__current' } = {
+        summary => 'LiquidityPoolFees (current)',
+        params => $params,
+        returns => 'ARRAY[CURVEFINANCEETHEREUMLiquidityPoolFeeDTO]',
+        };
+}
+# @return ARRAY[CURVEFINANCEETHEREUMLiquidityPoolFeeDTO]
+#
+sub c_urvefinanceethereum_liquidity_pool_fees__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/curve-finance-ethereum/liquidityPoolFees/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CURVEFINANCEETHEREUMLiquidityPoolFeeDTO]', $response);
+    return $_response_object;
+}
+
+#
+# c_urvefinanceethereum_liquidity_pool_hourly_snapshots__current
+#
+# LiquidityPoolHourlySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'c_urvefinanceethereum_liquidity_pool_hourly_snapshots__current' } = {
+        summary => 'LiquidityPoolHourlySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO]',
+        };
+}
+# @return ARRAY[CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO]
+#
+sub c_urvefinanceethereum_liquidity_pool_hourly_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/curve-finance-ethereum/liquidityPoolHourlySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
 # c_urvefinanceethereum_liquidity_pools__current
 #
 # LiquidityPools (current)
 #
+# @param string $id Smart contract address of the pool (optional)
 {
     my $params = {
+    'id' => {
+        data_type => 'string',
+        description => 'Smart contract address of the pool',
+        required => '0',
+    },
     };
     __PACKAGE__->method_documentation->{ 'c_urvefinanceethereum_liquidity_pools__current' } = {
         summary => 'LiquidityPools (current)',
@@ -82,6 +529,11 @@ sub c_urvefinanceethereum_liquidity_pools__current {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
 
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
     my $_body_data;
     # authentication setting, if any
     my $auth_settings = [qw()];
@@ -94,6 +546,104 @@ sub c_urvefinanceethereum_liquidity_pools__current {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[CURVEFINANCEETHEREUMLiquidityPoolDTO]', $response);
+    return $_response_object;
+}
+
+#
+# c_urvefinanceethereum_lp_tokens__current
+#
+# LpTokens (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'c_urvefinanceethereum_lp_tokens__current' } = {
+        summary => 'LpTokens (current)',
+        params => $params,
+        returns => 'ARRAY[CURVEFINANCEETHEREUMLpTokenDTO]',
+        };
+}
+# @return ARRAY[CURVEFINANCEETHEREUMLpTokenDTO]
+#
+sub c_urvefinanceethereum_lp_tokens__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/curve-finance-ethereum/lpTokens/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CURVEFINANCEETHEREUMLpTokenDTO]', $response);
+    return $_response_object;
+}
+
+#
+# c_urvefinanceethereum_reward_tokens__current
+#
+# RewardTokens (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'c_urvefinanceethereum_reward_tokens__current' } = {
+        summary => 'RewardTokens (current)',
+        params => $params,
+        returns => 'ARRAY[CURVEFINANCEETHEREUMRewardTokenDTO]',
+        };
+}
+# @return ARRAY[CURVEFINANCEETHEREUMRewardTokenDTO]
+#
+sub c_urvefinanceethereum_reward_tokens__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/curve-finance-ethereum/rewardTokens/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CURVEFINANCEETHEREUMRewardTokenDTO]', $response);
     return $_response_object;
 }
 
@@ -151,8 +701,14 @@ sub c_urvefinanceethereum_swaps__current {
 #
 # Tokens (current)
 #
+# @param string $id Smart contract address of the token (optional)
 {
     my $params = {
+    'id' => {
+        data_type => 'string',
+        description => 'Smart contract address of the token',
+        required => '0',
+    },
     };
     __PACKAGE__->method_documentation->{ 'c_urvefinanceethereum_tokens__current' } = {
         summary => 'Tokens (current)',
@@ -180,6 +736,11 @@ sub c_urvefinanceethereum_tokens__current {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
 
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
     my $_body_data;
     # authentication setting, if any
     my $auth_settings = [qw()];
@@ -192,6 +753,153 @@ sub c_urvefinanceethereum_tokens__current {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[CURVEFINANCEETHEREUMTokenDTO]', $response);
+    return $_response_object;
+}
+
+#
+# c_urvefinanceethereum_usage_metrics_daily_snapshots__current
+#
+# UsageMetricsDailySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'c_urvefinanceethereum_usage_metrics_daily_snapshots__current' } = {
+        summary => 'UsageMetricsDailySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO]',
+        };
+}
+# @return ARRAY[CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO]
+#
+sub c_urvefinanceethereum_usage_metrics_daily_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# c_urvefinanceethereum_usage_metrics_hourly_snapshots__current
+#
+# UsageMetricsHourlySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'c_urvefinanceethereum_usage_metrics_hourly_snapshots__current' } = {
+        summary => 'UsageMetricsHourlySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO]',
+        };
+}
+# @return ARRAY[CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO]
+#
+sub c_urvefinanceethereum_usage_metrics_hourly_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# c_urvefinanceethereum_withdraws__current
+#
+# Withdraws (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'c_urvefinanceethereum_withdraws__current' } = {
+        summary => 'Withdraws (current)',
+        params => $params,
+        returns => 'ARRAY[CURVEFINANCEETHEREUMWithdrawDTO]',
+        };
+}
+# @return ARRAY[CURVEFINANCEETHEREUMWithdrawDTO]
+#
+sub c_urvefinanceethereum_withdraws__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/curve-finance-ethereum/withdraws/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CURVEFINANCEETHEREUMWithdrawDTO]', $response);
     return $_response_object;
 }
 

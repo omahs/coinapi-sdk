@@ -423,7 +423,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **u_ni_sw_ap_v3_et_he_re_um_tick_daily_snapshots_current**
-> u_ni_sw_ap_v3_et_he_re_um_tick_daily_snapshots_current (pool:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_ETHEREUM_TICK_DAILY_SNAPSHOT_DTO]
+> u_ni_sw_ap_v3_et_he_re_um_tick_daily_snapshots_current : detachable LIST [UNISWAP_V3_ETHEREUM_TICK_DAILY_SNAPSHOT_DTO]
 
 
 TickDailySnapshots (current)
@@ -432,10 +432,7 @@ Gets tickDailySnapshots.
 
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **STRING_32**| liquidity pool this tick belongs to | [optional] [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -453,7 +450,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **u_ni_sw_ap_v3_et_he_re_um_tick_hourly_snapshots_current**
-> u_ni_sw_ap_v3_et_he_re_um_tick_hourly_snapshots_current (pool:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_ETHEREUM_TICK_HOURLY_SNAPSHOT_DTO]
+> u_ni_sw_ap_v3_et_he_re_um_tick_hourly_snapshots_current : detachable LIST [UNISWAP_V3_ETHEREUM_TICK_HOURLY_SNAPSHOT_DTO]
 
 
 TickHourlySnapshots (current)
@@ -462,10 +459,7 @@ Gets tickHourlySnapshots.
 
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **STRING_32**| liquidity pool this tick belongs to | [optional] [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -483,7 +477,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **u_ni_sw_ap_v3_et_he_re_um_ticks_current**
-> u_ni_sw_ap_v3_et_he_re_um_ticks_current (pool:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_ETHEREUM_TICK_DTO]
+> u_ni_sw_ap_v3_et_he_re_um_ticks_current : detachable LIST [UNISWAP_V3_ETHEREUM_TICK_DTO]
 
 
 Ticks (current)
@@ -492,10 +486,7 @@ Gets ticks.
 
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **STRING_32**| Liquidity pool this tick belongs to | [optional] [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 

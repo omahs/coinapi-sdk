@@ -21,8 +21,6 @@ No description available.
 No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
-.PARAMETER Vid
-
 .PARAMETER Id
 (pool address)-(tick index)-(hour ID)
 .PARAMETER HourId
@@ -59,33 +57,30 @@ function Initialize-UNISWAPV3ETHEREUMTickHourlySnapshotDTO {
         [System.Nullable[Int64]]
         ${BlockNumber},
         [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true)]
-        [System.Nullable[Int64]]
-        ${Vid},
-        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
-        [Parameter(Position = 5, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
         ${HourId},
-        [Parameter(Position = 6, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 5, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Tick},
-        [Parameter(Position = 7, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 6, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Pool},
-        [Parameter(Position = 8, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 7, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${LiquidityGross},
-        [Parameter(Position = 9, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 8, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${LiquidityGrossUsd},
-        [Parameter(Position = 10, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 9, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${LiquidityNet},
-        [Parameter(Position = 11, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 10, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${LiquidityNetUsd},
-        [Parameter(Position = 12, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 11, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Timestamp}
     )
@@ -99,7 +94,6 @@ function Initialize-UNISWAPV3ETHEREUMTickHourlySnapshotDTO {
             "entry_time" = ${EntryTime}
             "recv_time" = ${RecvTime}
             "block_number" = ${BlockNumber}
-            "vid" = ${Vid}
             "id" = ${Id}
             "hour_id" = ${HourId}
             "tick" = ${Tick}
@@ -146,7 +140,7 @@ function ConvertFrom-JsonToUNISWAPV3ETHEREUMTickHourlySnapshotDTO {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in UNISWAPV3ETHEREUMTickHourlySnapshotDTO
-        $AllProperties = ("entry_time", "recv_time", "block_number", "vid", "id", "hour_id", "tick", "pool", "liquidity_gross", "liquidity_gross_usd", "liquidity_net", "liquidity_net_usd", "timestamp")
+        $AllProperties = ("entry_time", "recv_time", "block_number", "id", "hour_id", "tick", "pool", "liquidity_gross", "liquidity_gross_usd", "liquidity_net", "liquidity_net_usd", "timestamp")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -169,12 +163,6 @@ function ConvertFrom-JsonToUNISWAPV3ETHEREUMTickHourlySnapshotDTO {
             $BlockNumber = $null
         } else {
             $BlockNumber = $JsonParameters.PSobject.Properties["block_number"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "vid"))) { #optional property not found
-            $Vid = $null
-        } else {
-            $Vid = $JsonParameters.PSobject.Properties["vid"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "id"))) { #optional property not found
@@ -235,7 +223,6 @@ function ConvertFrom-JsonToUNISWAPV3ETHEREUMTickHourlySnapshotDTO {
             "entry_time" = ${EntryTime}
             "recv_time" = ${RecvTime}
             "block_number" = ${BlockNumber}
-            "vid" = ${Vid}
             "id" = ${Id}
             "hour_id" = ${HourId}
             "tick" = ${Tick}

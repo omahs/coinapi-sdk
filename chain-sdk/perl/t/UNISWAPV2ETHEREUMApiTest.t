@@ -30,10 +30,102 @@ my $api = WWW::OpenAPIClient::UNISWAPV2ETHEREUMApi->new();
 isa_ok($api, 'WWW::OpenAPIClient::UNISWAPV2ETHEREUMApi');
 
 #
+# u_niswapv2_ethereum_accounts__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_accounts__current_result = $api->u_niswapv2_ethereum_accounts__current();
+
+#
+# u_niswapv2_ethereum_active_accounts__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_active_accounts__current_result = $api->u_niswapv2_ethereum_active_accounts__current();
+
+#
+# u_niswapv2_ethereum_deposits__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_deposits__current_result = $api->u_niswapv2_ethereum_deposits__current();
+
+#
+# u_niswapv2_ethereum_dex_amm_protocols__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_dex_amm_protocols__current_result = $api->u_niswapv2_ethereum_dex_amm_protocols__current();
+
+#
+# u_niswapv2_ethereum_financials_daily_snapshots__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_financials_daily_snapshots__current_result = $api->u_niswapv2_ethereum_financials_daily_snapshots__current();
+
+#
+# u_niswapv2_ethereum_liquidity_pool_amounts__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_liquidity_pool_amounts__current_id = undef; # replace NULL with a proper value
+#my $u_niswapv2_ethereum_liquidity_pool_amounts__current_result = $api->u_niswapv2_ethereum_liquidity_pool_amounts__current(id => $u_niswapv2_ethereum_liquidity_pool_amounts__current_id);
+
+#
+# u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current_result = $api->u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current();
+
+#
+# u_niswapv2_ethereum_liquidity_pool_fees__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_liquidity_pool_fees__current_result = $api->u_niswapv2_ethereum_liquidity_pool_fees__current();
+
+#
+# u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current_result = $api->u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current();
+
+#
 # u_niswapv2_ethereum_liquidity_pools__current test
 #
 # uncomment below and update the test
-#my $u_niswapv2_ethereum_liquidity_pools__current_result = $api->u_niswapv2_ethereum_liquidity_pools__current();
+#my $u_niswapv2_ethereum_liquidity_pools__current_id = undef; # replace NULL with a proper value
+#my $u_niswapv2_ethereum_liquidity_pools__current_result = $api->u_niswapv2_ethereum_liquidity_pools__current(id => $u_niswapv2_ethereum_liquidity_pools__current_id);
+
+#
+# u_niswapv2_ethereum_master_chef_address_to_pids__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_master_chef_address_to_pids__current_result = $api->u_niswapv2_ethereum_master_chef_address_to_pids__current();
+
+#
+# u_niswapv2_ethereum_master_chef_rewarders__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_master_chef_rewarders__current_result = $api->u_niswapv2_ethereum_master_chef_rewarders__current();
+
+#
+# u_niswapv2_ethereum_master_chef_staking_pools__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_master_chef_staking_pools__current_result = $api->u_niswapv2_ethereum_master_chef_staking_pools__current();
+
+#
+# u_niswapv2_ethereum_master_chefs__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_master_chefs__current_result = $api->u_niswapv2_ethereum_master_chefs__current();
+
+#
+# u_niswapv2_ethereum_reward_tokens__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_reward_tokens__current_result = $api->u_niswapv2_ethereum_reward_tokens__current();
+
+#
+# u_niswapv2_ethereum_rewarder_probes__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_rewarder_probes__current_result = $api->u_niswapv2_ethereum_rewarder_probes__current();
 
 #
 # u_niswapv2_ethereum_swaps__current test
@@ -42,8 +134,38 @@ isa_ok($api, 'WWW::OpenAPIClient::UNISWAPV2ETHEREUMApi');
 #my $u_niswapv2_ethereum_swaps__current_result = $api->u_niswapv2_ethereum_swaps__current();
 
 #
+# u_niswapv2_ethereum_token_white_lists__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_token_white_lists__current_result = $api->u_niswapv2_ethereum_token_white_lists__current();
+
+#
 # u_niswapv2_ethereum_tokens__current test
 #
 # uncomment below and update the test
 #my $u_niswapv2_ethereum_tokens__current_result = $api->u_niswapv2_ethereum_tokens__current();
+
+#
+# u_niswapv2_ethereum_transfers__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_transfers__current_result = $api->u_niswapv2_ethereum_transfers__current();
+
+#
+# u_niswapv2_ethereum_usage_metrics_daily_snapshots__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_usage_metrics_daily_snapshots__current_result = $api->u_niswapv2_ethereum_usage_metrics_daily_snapshots__current();
+
+#
+# u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current_result = $api->u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current();
+
+#
+# u_niswapv2_ethereum_withdraws__current test
+#
+# uncomment below and update the test
+#my $u_niswapv2_ethereum_withdraws__current_result = $api->u_niswapv2_ethereum_withdraws__current();
 

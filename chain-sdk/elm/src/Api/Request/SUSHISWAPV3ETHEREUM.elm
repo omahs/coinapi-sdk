@@ -15,9 +15,29 @@
 
 
 module Api.Request.SUSHISWAPV3ETHEREUM exposing
-    ( sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent
+    ( sUSHISWAPV3ETHEREUMAccountsCurrent
+    , sUSHISWAPV3ETHEREUMActiveAccountsCurrent
+    , sUSHISWAPV3ETHEREUMDepositsCurrent
+    , sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent
+    , sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
+    , sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+    , sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+    , sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent
+    , sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+    , sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent
+    , sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent
+    , sUSHISWAPV3ETHEREUMPositionsCurrent
+    , sUSHISWAPV3ETHEREUMRewardTokensCurrent
     , sUSHISWAPV3ETHEREUMSwapsCurrent
+    , sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent
+    , sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent
+    , sUSHISWAPV3ETHEREUMTicksCurrent
+    , sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
+    , sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent
     , sUSHISWAPV3ETHEREUMTokensCurrent
+    , sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
+    , sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
+    , sUSHISWAPV3ETHEREUMWithdrawsCurrent
     )
 
 import Api
@@ -26,6 +46,132 @@ import Dict
 import Http
 import Json.Decode
 import Json.Encode
+
+{-| Gets accounts.
+-}
+sUSHISWAPV3ETHEREUMAccountsCurrent : Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMAccountDTO)
+sUSHISWAPV3ETHEREUMAccountsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/accounts/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMAccountDTODecoder)
+
+
+{-| Gets activeAccounts.
+-}
+sUSHISWAPV3ETHEREUMActiveAccountsCurrent : Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMActiveAccountDTO)
+sUSHISWAPV3ETHEREUMActiveAccountsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/activeAccounts/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMActiveAccountDTODecoder)
+
+
+{-| Gets deposits.
+-}
+sUSHISWAPV3ETHEREUMDepositsCurrent : Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMDepositDTO)
+sUSHISWAPV3ETHEREUMDepositsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/deposits/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMDepositDTODecoder)
+
+
+{-| Gets dexAmmProtocols.
+-}
+sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent : Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMDexAmmProtocolDTO)
+sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/dexAmmProtocols/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMDexAmmProtocolDTODecoder)
+
+
+{-| Gets financialsDailySnapshots.
+-}
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent : Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/financialsDailySnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODecoder)
+
+
+{-| Gets liquidityPoolAmounts.
+-}
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent : Maybe String -> Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO)
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent id_query =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/liquidityPoolAmounts/current"
+        []
+        [ ( "id", Maybe.map identity id_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTODecoder)
+
+
+{-| Gets liquidityPoolDailySnapshots.
+-}
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent : Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/liquidityPoolDailySnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODecoder)
+
+
+{-| Gets liquidityPoolFees.
+-}
+sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent : Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO)
+sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/liquidityPoolFees/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTODecoder)
+
+
+{-| Gets liquidityPoolHourlySnapshots.
+-}
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent : Maybe String -> Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent pool_query =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/liquidityPoolHourlySnapshots/current"
+        []
+        [ ( "pool", Maybe.map identity pool_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTODecoder)
+
 
 {-| Gets liquidityPools.
 -}
@@ -39,6 +185,48 @@ sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent id_query =
         []
         Nothing
         (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMLiquidityPoolDTODecoder)
+
+
+{-| Gets positionSnapshots.
+-}
+sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent : Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMPositionSnapshotDTO)
+sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/positionSnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMPositionSnapshotDTODecoder)
+
+
+{-| Gets positions.
+-}
+sUSHISWAPV3ETHEREUMPositionsCurrent : Maybe String -> Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMPositionDTO)
+sUSHISWAPV3ETHEREUMPositionsCurrent pool_query =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/positions/current"
+        []
+        [ ( "pool", Maybe.map identity pool_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMPositionDTODecoder)
+
+
+{-| Gets rewardTokens.
+-}
+sUSHISWAPV3ETHEREUMRewardTokensCurrent : Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMRewardTokenDTO)
+sUSHISWAPV3ETHEREUMRewardTokensCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/rewardTokens/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMRewardTokenDTODecoder)
 
 
 {-| Gets swaps.
@@ -55,6 +243,76 @@ sUSHISWAPV3ETHEREUMSwapsCurrent =
         (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMSwapDTODecoder)
 
 
+{-| Gets tickDailySnapshots.
+-}
+sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent : Maybe String -> Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMTickDailySnapshotDTO)
+sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent pool_query =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/tickDailySnapshots/current"
+        []
+        [ ( "pool", Maybe.map identity pool_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMTickDailySnapshotDTODecoder)
+
+
+{-| Gets tickHourlySnapshots.
+-}
+sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent : Maybe String -> Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO)
+sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent pool_query =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/tickHourlySnapshots/current"
+        []
+        [ ( "pool", Maybe.map identity pool_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMTickHourlySnapshotDTODecoder)
+
+
+{-| Gets ticks.
+-}
+sUSHISWAPV3ETHEREUMTicksCurrent : Maybe String -> Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMTickDTO)
+sUSHISWAPV3ETHEREUMTicksCurrent pool_query =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/ticks/current"
+        []
+        [ ( "pool", Maybe.map identity pool_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMTickDTODecoder)
+
+
+{-| Gets tokenWhiteListSymbols.
+-}
+sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent : Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO)
+sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/tokenWhiteListSymbols/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTODecoder)
+
+
+{-| Gets tokenWhiteLists.
+-}
+sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent : Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMTokenWhiteListDTO)
+sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/tokenWhiteLists/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMTokenWhiteListDTODecoder)
+
+
 {-| Gets tokens.
 -}
 sUSHISWAPV3ETHEREUMTokensCurrent : Maybe String -> Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMTokenDTO)
@@ -67,4 +325,46 @@ sUSHISWAPV3ETHEREUMTokensCurrent id_query =
         []
         Nothing
         (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMTokenDTODecoder)
+
+
+{-| Gets usageMetricsDailySnapshots.
+-}
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent : Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO)
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/usageMetricsDailySnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODecoder)
+
+
+{-| Gets usageMetricsHourlySnapshots.
+-}
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent : Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO)
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/usageMetricsHourlySnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTODecoder)
+
+
+{-| Gets withdraws.
+-}
+sUSHISWAPV3ETHEREUMWithdrawsCurrent : Api.Request (List Api.Data.SUSHISWAPV3ETHEREUMWithdrawDTO)
+sUSHISWAPV3ETHEREUMWithdrawsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/sushiswap-v3-ethereum/withdraws/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sUSHISWAPV3ETHEREUMWithdrawDTODecoder)
 

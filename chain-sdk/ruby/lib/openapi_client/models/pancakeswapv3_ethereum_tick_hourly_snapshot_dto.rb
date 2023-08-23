@@ -23,9 +23,6 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # 
-    attr_accessor :vid
-
     # (pool address)-(tick index)-(hour ID)
     attr_accessor :id
 
@@ -59,7 +56,6 @@ module OpenapiClient
         :'entry_time' => :'entry_time',
         :'recv_time' => :'recv_time',
         :'block_number' => :'block_number',
-        :'vid' => :'vid',
         :'id' => :'id',
         :'hour_id' => :'hour_id',
         :'tick' => :'tick',
@@ -83,7 +79,6 @@ module OpenapiClient
         :'entry_time' => :'Time',
         :'recv_time' => :'Time',
         :'block_number' => :'Integer',
-        :'vid' => :'Integer',
         :'id' => :'String',
         :'hour_id' => :'Integer',
         :'tick' => :'String',
@@ -135,10 +130,6 @@ module OpenapiClient
 
       if attributes.key?(:'block_number')
         self.block_number = attributes[:'block_number']
-      end
-
-      if attributes.key?(:'vid')
-        self.vid = attributes[:'vid']
       end
 
       if attributes.key?(:'id')
@@ -199,7 +190,6 @@ module OpenapiClient
           entry_time == o.entry_time &&
           recv_time == o.recv_time &&
           block_number == o.block_number &&
-          vid == o.vid &&
           id == o.id &&
           hour_id == o.hour_id &&
           tick == o.tick &&
@@ -220,7 +210,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [entry_time, recv_time, block_number, vid, id, hour_id, tick, pool, liquidity_gross, liquidity_gross_usd, liquidity_net, liquidity_net_usd, timestamp].hash
+      [entry_time, recv_time, block_number, id, hour_id, tick, pool, liquidity_gross, liquidity_gross_usd, liquidity_net, liquidity_net_usd, timestamp].hash
     end
 
     # Builds the object from hash

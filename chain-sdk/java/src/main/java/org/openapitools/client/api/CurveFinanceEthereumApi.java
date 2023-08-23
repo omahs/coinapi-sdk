@@ -27,9 +27,23 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import org.openapitools.client.model.CURVEFINANCEETHEREUMAccountDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMActiveAccountDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMDepositDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMDexAmmProtocolDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMLiquidityGaugeDTO;
 import org.openapitools.client.model.CURVEFINANCEETHEREUMLiquidityPoolDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMLiquidityPoolFeeDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMLpTokenDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMRewardTokenDTO;
 import org.openapitools.client.model.CURVEFINANCEETHEREUMSwapDTO;
 import org.openapitools.client.model.CURVEFINANCEETHEREUMTokenDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMWithdrawDTO;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -76,7 +90,7 @@ public class CurveFinanceEthereumApi {
     }
 
     /**
-     * Build call for cURVEFINANCEETHEREUMLiquidityPoolsCurrent
+     * Build call for cURVEFINANCEETHEREUMAccountsCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -86,7 +100,7 @@ public class CurveFinanceEthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call cURVEFINANCEETHEREUMLiquidityPoolsCurrentCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call cURVEFINANCEETHEREUMAccountsCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -103,7 +117,7 @@ public class CurveFinanceEthereumApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/v1/dapps/curve-finance-ethereum/liquidityPools/current";
+        String localVarPath = "/v1/dapps/curve-finance-ethereum/accounts/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -134,15 +148,15 @@ public class CurveFinanceEthereumApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call cURVEFINANCEETHEREUMLiquidityPoolsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return cURVEFINANCEETHEREUMLiquidityPoolsCurrentCall(_callback);
+    private okhttp3.Call cURVEFINANCEETHEREUMAccountsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return cURVEFINANCEETHEREUMAccountsCurrentCall(_callback);
 
     }
 
     /**
-     * LiquidityPools (current)
-     * Gets liquidityPools.
-     * @return List&lt;CURVEFINANCEETHEREUMLiquidityPoolDTO&gt;
+     * Accounts (current)
+     * Gets accounts.
+     * @return List&lt;CURVEFINANCEETHEREUMAccountDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -150,15 +164,15 @@ public class CurveFinanceEthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<CURVEFINANCEETHEREUMLiquidityPoolDTO> cURVEFINANCEETHEREUMLiquidityPoolsCurrent() throws ApiException {
-        ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>> localVarResp = cURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo();
+    public List<CURVEFINANCEETHEREUMAccountDTO> cURVEFINANCEETHEREUMAccountsCurrent() throws ApiException {
+        ApiResponse<List<CURVEFINANCEETHEREUMAccountDTO>> localVarResp = cURVEFINANCEETHEREUMAccountsCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
-     * LiquidityPools (current)
-     * Gets liquidityPools.
-     * @return ApiResponse&lt;List&lt;CURVEFINANCEETHEREUMLiquidityPoolDTO&gt;&gt;
+     * Accounts (current)
+     * Gets accounts.
+     * @return ApiResponse&lt;List&lt;CURVEFINANCEETHEREUMAccountDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -166,15 +180,15 @@ public class CurveFinanceEthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>> cURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMLiquidityPoolsCurrentValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>>(){}.getType();
+    public ApiResponse<List<CURVEFINANCEETHEREUMAccountDTO>> cURVEFINANCEETHEREUMAccountsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMAccountsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMAccountDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * LiquidityPools (current) (asynchronously)
-     * Gets liquidityPools.
+     * Accounts (current) (asynchronously)
+     * Gets accounts.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -184,10 +198,1294 @@ public class CurveFinanceEthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call cURVEFINANCEETHEREUMLiquidityPoolsCurrentAsync(final ApiCallback<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>> _callback) throws ApiException {
+    public okhttp3.Call cURVEFINANCEETHEREUMAccountsCurrentAsync(final ApiCallback<List<CURVEFINANCEETHEREUMAccountDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMLiquidityPoolsCurrentValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMAccountsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMAccountDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for cURVEFINANCEETHEREUMActiveAccountsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMActiveAccountsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/curve-finance-ethereum/activeAccounts/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call cURVEFINANCEETHEREUMActiveAccountsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return cURVEFINANCEETHEREUMActiveAccountsCurrentCall(_callback);
+
+    }
+
+    /**
+     * ActiveAccounts (current)
+     * Gets activeAccounts.
+     * @return List&lt;CURVEFINANCEETHEREUMActiveAccountDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CURVEFINANCEETHEREUMActiveAccountDTO> cURVEFINANCEETHEREUMActiveAccountsCurrent() throws ApiException {
+        ApiResponse<List<CURVEFINANCEETHEREUMActiveAccountDTO>> localVarResp = cURVEFINANCEETHEREUMActiveAccountsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * ActiveAccounts (current)
+     * Gets activeAccounts.
+     * @return ApiResponse&lt;List&lt;CURVEFINANCEETHEREUMActiveAccountDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CURVEFINANCEETHEREUMActiveAccountDTO>> cURVEFINANCEETHEREUMActiveAccountsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMActiveAccountsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMActiveAccountDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * ActiveAccounts (current) (asynchronously)
+     * Gets activeAccounts.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMActiveAccountsCurrentAsync(final ApiCallback<List<CURVEFINANCEETHEREUMActiveAccountDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMActiveAccountsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMActiveAccountDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for cURVEFINANCEETHEREUMDepositsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMDepositsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/curve-finance-ethereum/deposits/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call cURVEFINANCEETHEREUMDepositsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return cURVEFINANCEETHEREUMDepositsCurrentCall(_callback);
+
+    }
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @return List&lt;CURVEFINANCEETHEREUMDepositDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CURVEFINANCEETHEREUMDepositDTO> cURVEFINANCEETHEREUMDepositsCurrent() throws ApiException {
+        ApiResponse<List<CURVEFINANCEETHEREUMDepositDTO>> localVarResp = cURVEFINANCEETHEREUMDepositsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @return ApiResponse&lt;List&lt;CURVEFINANCEETHEREUMDepositDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CURVEFINANCEETHEREUMDepositDTO>> cURVEFINANCEETHEREUMDepositsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMDepositsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMDepositDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Deposits (current) (asynchronously)
+     * Gets deposits.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMDepositsCurrentAsync(final ApiCallback<List<CURVEFINANCEETHEREUMDepositDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMDepositsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMDepositDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for cURVEFINANCEETHEREUMDexAmmProtocolsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMDexAmmProtocolsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/curve-finance-ethereum/dexAmmProtocols/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call cURVEFINANCEETHEREUMDexAmmProtocolsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return cURVEFINANCEETHEREUMDexAmmProtocolsCurrentCall(_callback);
+
+    }
+
+    /**
+     * DexAmmProtocols (current)
+     * Gets dexAmmProtocols.
+     * @return List&lt;CURVEFINANCEETHEREUMDexAmmProtocolDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CURVEFINANCEETHEREUMDexAmmProtocolDTO> cURVEFINANCEETHEREUMDexAmmProtocolsCurrent() throws ApiException {
+        ApiResponse<List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>> localVarResp = cURVEFINANCEETHEREUMDexAmmProtocolsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * DexAmmProtocols (current)
+     * Gets dexAmmProtocols.
+     * @return ApiResponse&lt;List&lt;CURVEFINANCEETHEREUMDexAmmProtocolDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>> cURVEFINANCEETHEREUMDexAmmProtocolsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMDexAmmProtocolsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * DexAmmProtocols (current) (asynchronously)
+     * Gets dexAmmProtocols.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMDexAmmProtocolsCurrentAsync(final ApiCallback<List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMDexAmmProtocolsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/curve-finance-ethereum/financialsDailySnapshots/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentCall(_callback);
+
+    }
+
+    /**
+     * FinancialsDailySnapshots (current)
+     * Gets financialsDailySnapshots.
+     * @return List&lt;CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO> cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent() throws ApiException {
+        ApiResponse<List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>> localVarResp = cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * FinancialsDailySnapshots (current)
+     * Gets financialsDailySnapshots.
+     * @return ApiResponse&lt;List&lt;CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>> cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * FinancialsDailySnapshots (current) (asynchronously)
+     * Gets financialsDailySnapshots.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentAsync(final ApiCallback<List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for cURVEFINANCEETHEREUMLiquidityGaugesCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMLiquidityGaugesCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/curve-finance-ethereum/liquidityGauges/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call cURVEFINANCEETHEREUMLiquidityGaugesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return cURVEFINANCEETHEREUMLiquidityGaugesCurrentCall(_callback);
+
+    }
+
+    /**
+     * LiquidityGauges (current)
+     * Gets liquidityGauges.
+     * @return List&lt;CURVEFINANCEETHEREUMLiquidityGaugeDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CURVEFINANCEETHEREUMLiquidityGaugeDTO> cURVEFINANCEETHEREUMLiquidityGaugesCurrent() throws ApiException {
+        ApiResponse<List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>> localVarResp = cURVEFINANCEETHEREUMLiquidityGaugesCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * LiquidityGauges (current)
+     * Gets liquidityGauges.
+     * @return ApiResponse&lt;List&lt;CURVEFINANCEETHEREUMLiquidityGaugeDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>> cURVEFINANCEETHEREUMLiquidityGaugesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMLiquidityGaugesCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * LiquidityGauges (current) (asynchronously)
+     * Gets liquidityGauges.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMLiquidityGaugesCurrentAsync(final ApiCallback<List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMLiquidityGaugesCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/curve-finance-ethereum/liquidityPoolDailySnapshots/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentCall(_callback);
+
+    }
+
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     * Gets liquidityPoolDailySnapshots.
+     * @return List&lt;CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO> cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent() throws ApiException {
+        ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>> localVarResp = cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     * Gets liquidityPoolDailySnapshots.
+     * @return ApiResponse&lt;List&lt;CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>> cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * LiquidityPoolDailySnapshots (current) (asynchronously)
+     * Gets liquidityPoolDailySnapshots.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentAsync(final ApiCallback<List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/curve-finance-ethereum/liquidityPoolFees/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentCall(_callback);
+
+    }
+
+    /**
+     * LiquidityPoolFees (current)
+     * Gets liquidityPoolFees.
+     * @return List&lt;CURVEFINANCEETHEREUMLiquidityPoolFeeDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO> cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent() throws ApiException {
+        ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>> localVarResp = cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * LiquidityPoolFees (current)
+     * Gets liquidityPoolFees.
+     * @return ApiResponse&lt;List&lt;CURVEFINANCEETHEREUMLiquidityPoolFeeDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>> cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * LiquidityPoolFees (current) (asynchronously)
+     * Gets liquidityPoolFees.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentAsync(final ApiCallback<List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/curve-finance-ethereum/liquidityPoolHourlySnapshots/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentCall(_callback);
+
+    }
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     * Gets liquidityPoolHourlySnapshots.
+     * @return List&lt;CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO> cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent() throws ApiException {
+        ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>> localVarResp = cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     * Gets liquidityPoolHourlySnapshots.
+     * @return ApiResponse&lt;List&lt;CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>> cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * LiquidityPoolHourlySnapshots (current) (asynchronously)
+     * Gets liquidityPoolHourlySnapshots.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentAsync(final ApiCallback<List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for cURVEFINANCEETHEREUMLiquidityPoolsCurrent
+     * @param id Smart contract address of the pool (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMLiquidityPoolsCurrentCall(String id, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/curve-finance-ethereum/liquidityPools/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (id != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("id", id));
+        }
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call cURVEFINANCEETHEREUMLiquidityPoolsCurrentValidateBeforeCall(String id, final ApiCallback _callback) throws ApiException {
+        return cURVEFINANCEETHEREUMLiquidityPoolsCurrentCall(id, _callback);
+
+    }
+
+    /**
+     * LiquidityPools (current)
+     * Gets liquidityPools.
+     * @param id Smart contract address of the pool (optional)
+     * @return List&lt;CURVEFINANCEETHEREUMLiquidityPoolDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CURVEFINANCEETHEREUMLiquidityPoolDTO> cURVEFINANCEETHEREUMLiquidityPoolsCurrent(String id) throws ApiException {
+        ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>> localVarResp = cURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo(id);
+        return localVarResp.getData();
+    }
+
+    /**
+     * LiquidityPools (current)
+     * Gets liquidityPools.
+     * @param id Smart contract address of the pool (optional)
+     * @return ApiResponse&lt;List&lt;CURVEFINANCEETHEREUMLiquidityPoolDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>> cURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo(String id) throws ApiException {
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMLiquidityPoolsCurrentValidateBeforeCall(id, null);
         Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * LiquidityPools (current) (asynchronously)
+     * Gets liquidityPools.
+     * @param id Smart contract address of the pool (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMLiquidityPoolsCurrentAsync(String id, final ApiCallback<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMLiquidityPoolsCurrentValidateBeforeCall(id, _callback);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for cURVEFINANCEETHEREUMLpTokensCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMLpTokensCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/curve-finance-ethereum/lpTokens/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call cURVEFINANCEETHEREUMLpTokensCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return cURVEFINANCEETHEREUMLpTokensCurrentCall(_callback);
+
+    }
+
+    /**
+     * LpTokens (current)
+     * Gets lpTokens.
+     * @return List&lt;CURVEFINANCEETHEREUMLpTokenDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CURVEFINANCEETHEREUMLpTokenDTO> cURVEFINANCEETHEREUMLpTokensCurrent() throws ApiException {
+        ApiResponse<List<CURVEFINANCEETHEREUMLpTokenDTO>> localVarResp = cURVEFINANCEETHEREUMLpTokensCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * LpTokens (current)
+     * Gets lpTokens.
+     * @return ApiResponse&lt;List&lt;CURVEFINANCEETHEREUMLpTokenDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CURVEFINANCEETHEREUMLpTokenDTO>> cURVEFINANCEETHEREUMLpTokensCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMLpTokensCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMLpTokenDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * LpTokens (current) (asynchronously)
+     * Gets lpTokens.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMLpTokensCurrentAsync(final ApiCallback<List<CURVEFINANCEETHEREUMLpTokenDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMLpTokensCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMLpTokenDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for cURVEFINANCEETHEREUMRewardTokensCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMRewardTokensCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/curve-finance-ethereum/rewardTokens/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call cURVEFINANCEETHEREUMRewardTokensCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return cURVEFINANCEETHEREUMRewardTokensCurrentCall(_callback);
+
+    }
+
+    /**
+     * RewardTokens (current)
+     * Gets rewardTokens.
+     * @return List&lt;CURVEFINANCEETHEREUMRewardTokenDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CURVEFINANCEETHEREUMRewardTokenDTO> cURVEFINANCEETHEREUMRewardTokensCurrent() throws ApiException {
+        ApiResponse<List<CURVEFINANCEETHEREUMRewardTokenDTO>> localVarResp = cURVEFINANCEETHEREUMRewardTokensCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * RewardTokens (current)
+     * Gets rewardTokens.
+     * @return ApiResponse&lt;List&lt;CURVEFINANCEETHEREUMRewardTokenDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CURVEFINANCEETHEREUMRewardTokenDTO>> cURVEFINANCEETHEREUMRewardTokensCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMRewardTokensCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMRewardTokenDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * RewardTokens (current) (asynchronously)
+     * Gets rewardTokens.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMRewardTokensCurrentAsync(final ApiCallback<List<CURVEFINANCEETHEREUMRewardTokenDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMRewardTokensCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMRewardTokenDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -309,6 +1607,7 @@ public class CurveFinanceEthereumApi {
     }
     /**
      * Build call for cURVEFINANCEETHEREUMTokensCurrent
+     * @param id Smart contract address of the token (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -318,7 +1617,7 @@ public class CurveFinanceEthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call cURVEFINANCEETHEREUMTokensCurrentCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call cURVEFINANCEETHEREUMTokensCurrentCall(String id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -336,6 +1635,129 @@ public class CurveFinanceEthereumApi {
 
         // create path and map variables
         String localVarPath = "/v1/dapps/curve-finance-ethereum/tokens/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (id != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("id", id));
+        }
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call cURVEFINANCEETHEREUMTokensCurrentValidateBeforeCall(String id, final ApiCallback _callback) throws ApiException {
+        return cURVEFINANCEETHEREUMTokensCurrentCall(id, _callback);
+
+    }
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @param id Smart contract address of the token (optional)
+     * @return List&lt;CURVEFINANCEETHEREUMTokenDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CURVEFINANCEETHEREUMTokenDTO> cURVEFINANCEETHEREUMTokensCurrent(String id) throws ApiException {
+        ApiResponse<List<CURVEFINANCEETHEREUMTokenDTO>> localVarResp = cURVEFINANCEETHEREUMTokensCurrentWithHttpInfo(id);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @param id Smart contract address of the token (optional)
+     * @return ApiResponse&lt;List&lt;CURVEFINANCEETHEREUMTokenDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CURVEFINANCEETHEREUMTokenDTO>> cURVEFINANCEETHEREUMTokensCurrentWithHttpInfo(String id) throws ApiException {
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMTokensCurrentValidateBeforeCall(id, null);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMTokenDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Tokens (current) (asynchronously)
+     * Gets tokens.
+     * @param id Smart contract address of the token (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMTokensCurrentAsync(String id, final ApiCallback<List<CURVEFINANCEETHEREUMTokenDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMTokensCurrentValidateBeforeCall(id, _callback);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMTokenDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -366,15 +1788,15 @@ public class CurveFinanceEthereumApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call cURVEFINANCEETHEREUMTokensCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return cURVEFINANCEETHEREUMTokensCurrentCall(_callback);
+    private okhttp3.Call cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentCall(_callback);
 
     }
 
     /**
-     * Tokens (current)
-     * Gets tokens.
-     * @return List&lt;CURVEFINANCEETHEREUMTokenDTO&gt;
+     * UsageMetricsDailySnapshots (current)
+     * Gets usageMetricsDailySnapshots.
+     * @return List&lt;CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -382,15 +1804,15 @@ public class CurveFinanceEthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<CURVEFINANCEETHEREUMTokenDTO> cURVEFINANCEETHEREUMTokensCurrent() throws ApiException {
-        ApiResponse<List<CURVEFINANCEETHEREUMTokenDTO>> localVarResp = cURVEFINANCEETHEREUMTokensCurrentWithHttpInfo();
+    public List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO> cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent() throws ApiException {
+        ApiResponse<List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>> localVarResp = cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
-     * Tokens (current)
-     * Gets tokens.
-     * @return ApiResponse&lt;List&lt;CURVEFINANCEETHEREUMTokenDTO&gt;&gt;
+     * UsageMetricsDailySnapshots (current)
+     * Gets usageMetricsDailySnapshots.
+     * @return ApiResponse&lt;List&lt;CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -398,15 +1820,15 @@ public class CurveFinanceEthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<CURVEFINANCEETHEREUMTokenDTO>> cURVEFINANCEETHEREUMTokensCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMTokensCurrentValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMTokenDTO>>(){}.getType();
+    public ApiResponse<List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>> cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Tokens (current) (asynchronously)
-     * Gets tokens.
+     * UsageMetricsDailySnapshots (current) (asynchronously)
+     * Gets usageMetricsDailySnapshots.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -416,10 +1838,242 @@ public class CurveFinanceEthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call cURVEFINANCEETHEREUMTokensCurrentAsync(final ApiCallback<List<CURVEFINANCEETHEREUMTokenDTO>> _callback) throws ApiException {
+    public okhttp3.Call cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentAsync(final ApiCallback<List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMTokensCurrentValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMTokenDTO>>(){}.getType();
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentCall(_callback);
+
+    }
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     * Gets usageMetricsHourlySnapshots.
+     * @return List&lt;CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO> cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent() throws ApiException {
+        ApiResponse<List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>> localVarResp = cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     * Gets usageMetricsHourlySnapshots.
+     * @return ApiResponse&lt;List&lt;CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>> cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * UsageMetricsHourlySnapshots (current) (asynchronously)
+     * Gets usageMetricsHourlySnapshots.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentAsync(final ApiCallback<List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for cURVEFINANCEETHEREUMWithdrawsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMWithdrawsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/dapps/curve-finance-ethereum/withdraws/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call cURVEFINANCEETHEREUMWithdrawsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return cURVEFINANCEETHEREUMWithdrawsCurrentCall(_callback);
+
+    }
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @return List&lt;CURVEFINANCEETHEREUMWithdrawDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CURVEFINANCEETHEREUMWithdrawDTO> cURVEFINANCEETHEREUMWithdrawsCurrent() throws ApiException {
+        ApiResponse<List<CURVEFINANCEETHEREUMWithdrawDTO>> localVarResp = cURVEFINANCEETHEREUMWithdrawsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @return ApiResponse&lt;List&lt;CURVEFINANCEETHEREUMWithdrawDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CURVEFINANCEETHEREUMWithdrawDTO>> cURVEFINANCEETHEREUMWithdrawsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMWithdrawsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMWithdrawDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Withdraws (current) (asynchronously)
+     * Gets withdraws.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cURVEFINANCEETHEREUMWithdrawsCurrentAsync(final ApiCallback<List<CURVEFINANCEETHEREUMWithdrawDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = cURVEFINANCEETHEREUMWithdrawsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CURVEFINANCEETHEREUMWithdrawDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

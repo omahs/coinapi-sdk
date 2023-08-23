@@ -12,7 +12,6 @@
   [ {'entry_time', datetime() }
   | {'recv_time', datetime() }
   | {'block_number', integer() }
-  | {'vid', integer() }
   | {'id', binary() }
   | {'account', binary() }
   | {'pool', binary() }
@@ -45,7 +44,6 @@ openapi_uniswap_v3_ethereum_position_dto(Fields) ->
   Default = [ {'entry_time', datetime() }
             , {'recv_time', datetime() }
             , {'block_number', integer() }
-            , {'vid', integer() }
             , {'id', binary() }
             , {'account', binary() }
             , {'pool', binary() }

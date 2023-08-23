@@ -92,7 +92,7 @@ class UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO implements ModelInterface, Arr
     protected static $openAPIFormats = [
         'entry_time' => 'date-time',
         'recv_time' => 'date-time',
-        'block_number' => 'int32',
+        'block_number' => 'int64',
         'id' => null,
         'day' => 'int32',
         'protocol' => null,
@@ -498,7 +498,7 @@ class UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO implements ModelInterface, Arr
     /**
      * Sets block_number
      *
-     * @param int|null $block_number Block number of when this snapshot was taken/last modified.)
+     * @param int|null $block_number Number of block in which entity was recorded.
      *
      * @return self
      */

@@ -1201,9 +1201,9 @@ end:
 // Gets tickDailySnapshots.
 //
 list_t*
-UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(apiClient_t *apiClient, char * pool )
+UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(apiClient_t *apiClient)
 {
-    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
     list_t *localVarHeaderType = list_createList();
@@ -1217,18 +1217,6 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(apiClient_t *api
 
 
 
-
-    // query parameters
-    char *keyQuery_pool = NULL;
-    char * valueQuery_pool = NULL;
-    keyValuePair_t *keyPairQuery_pool = 0;
-    if (pool)
-    {
-        keyQuery_pool = strdup("pool");
-        valueQuery_pool = strdup((pool));
-        keyPairQuery_pool = keyValuePair_create(keyQuery_pool, valueQuery_pool);
-        list_addElement(localVarQueryParameters,keyPairQuery_pool);
-    }
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
@@ -1271,24 +1259,12 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(apiClient_t *api
         apiClient->dataReceived = NULL;
         apiClient->dataReceivedLen = 0;
     }
-    list_freeList(localVarQueryParameters);
+    
     
     
     list_freeList(localVarHeaderType);
     
     free(localVarPath);
-    if(keyQuery_pool){
-        free(keyQuery_pool);
-        keyQuery_pool = NULL;
-    }
-    if(valueQuery_pool){
-        free(valueQuery_pool);
-        valueQuery_pool = NULL;
-    }
-    if(keyPairQuery_pool){
-        keyValuePair_free(keyPairQuery_pool);
-        keyPairQuery_pool = NULL;
-    }
     return elementToReturn;
 end:
     free(localVarPath);
@@ -1301,9 +1277,9 @@ end:
 // Gets tickHourlySnapshots.
 //
 list_t*
-UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(apiClient_t *apiClient, char * pool )
+UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(apiClient_t *apiClient)
 {
-    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
     list_t *localVarHeaderType = list_createList();
@@ -1317,18 +1293,6 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(apiClient_t *ap
 
 
 
-
-    // query parameters
-    char *keyQuery_pool = NULL;
-    char * valueQuery_pool = NULL;
-    keyValuePair_t *keyPairQuery_pool = 0;
-    if (pool)
-    {
-        keyQuery_pool = strdup("pool");
-        valueQuery_pool = strdup((pool));
-        keyPairQuery_pool = keyValuePair_create(keyQuery_pool, valueQuery_pool);
-        list_addElement(localVarQueryParameters,keyPairQuery_pool);
-    }
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
@@ -1371,24 +1335,12 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(apiClient_t *ap
         apiClient->dataReceived = NULL;
         apiClient->dataReceivedLen = 0;
     }
-    list_freeList(localVarQueryParameters);
+    
     
     
     list_freeList(localVarHeaderType);
     
     free(localVarPath);
-    if(keyQuery_pool){
-        free(keyQuery_pool);
-        keyQuery_pool = NULL;
-    }
-    if(valueQuery_pool){
-        free(valueQuery_pool);
-        valueQuery_pool = NULL;
-    }
-    if(keyPairQuery_pool){
-        keyValuePair_free(keyPairQuery_pool);
-        keyPairQuery_pool = NULL;
-    }
     return elementToReturn;
 end:
     free(localVarPath);
@@ -1401,9 +1353,9 @@ end:
 // Gets ticks.
 //
 list_t*
-UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTicksCurrent(apiClient_t *apiClient, char * pool )
+UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTicksCurrent(apiClient_t *apiClient)
 {
-    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
     list_t *localVarHeaderType = list_createList();
@@ -1417,18 +1369,6 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTicksCurrent(apiClient_t *apiClient, char 
 
 
 
-
-    // query parameters
-    char *keyQuery_pool = NULL;
-    char * valueQuery_pool = NULL;
-    keyValuePair_t *keyPairQuery_pool = 0;
-    if (pool)
-    {
-        keyQuery_pool = strdup("pool");
-        valueQuery_pool = strdup((pool));
-        keyPairQuery_pool = keyValuePair_create(keyQuery_pool, valueQuery_pool);
-        list_addElement(localVarQueryParameters,keyPairQuery_pool);
-    }
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
@@ -1471,24 +1411,12 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTicksCurrent(apiClient_t *apiClient, char 
         apiClient->dataReceived = NULL;
         apiClient->dataReceivedLen = 0;
     }
-    list_freeList(localVarQueryParameters);
+    
     
     
     list_freeList(localVarHeaderType);
     
     free(localVarPath);
-    if(keyQuery_pool){
-        free(keyQuery_pool);
-        keyQuery_pool = NULL;
-    }
-    if(valueQuery_pool){
-        free(valueQuery_pool);
-        valueQuery_pool = NULL;
-    }
-    if(keyPairQuery_pool){
-        keyValuePair_free(keyPairQuery_pool);
-        keyPairQuery_pool = NULL;
-    }
     return elementToReturn;
 end:
     free(localVarPath);

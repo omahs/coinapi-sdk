@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Vid** | **Int64** |  | [optional] 
 **Id** | **String** | Identifier, format: (pool address)-(tick index)-(day ID) | [optional] 
 **DayId** | **Int32** | Number of days since Unix epoch time | [optional] 
 **Tick** | **String** | tick index | [optional] 
@@ -24,7 +23,6 @@ Name | Type | Description | Notes
 $UNISWAPV3ETHEREUMTickDailySnapshotDTO = Initialize-PSOpenAPIToolsUNISWAPV3ETHEREUMTickDailySnapshotDTO  -EntryTime null `
  -RecvTime null `
  -BlockNumber null `
- -Vid null `
  -Id null `
  -DayId null `
  -Tick null `

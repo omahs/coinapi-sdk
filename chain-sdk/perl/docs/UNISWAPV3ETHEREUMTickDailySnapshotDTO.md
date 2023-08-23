@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **entry_time** | **DATE_TIME** |  | [optional] 
 **recv_time** | **DATE_TIME** |  | [optional] 
 **block_number** | **int** | Number of block in which entity was recorded. | [optional] 
-**vid** | **int** |  | [optional] 
 **id** | **string** | Identifier, format: (pool address)-(tick index)-(day ID) | [optional] 
 **day_id** | **int** | Number of days since Unix epoch time | [optional] 
 **tick** | **string** | tick index | [optional] 

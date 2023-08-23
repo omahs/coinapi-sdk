@@ -18,8 +18,8 @@ API.Client.CRYPTOPUNKSTradeDTO.prototype.entryTime;
 API.Client.CRYPTOPUNKSTradeDTO.prototype.recvTime;
 
 /**
- * 
- * @type {!string}
+ * Number of block in which entity was recorded.
+ * @type {!number}
  * @export
  */
 API.Client.CRYPTOPUNKSTradeDTO.prototype.blockNumber;

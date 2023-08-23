@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
-**BlockNumber** | **String** |  | [optional] 
+**BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
 **Vid** | **Int64** |  | [optional] 
 **BlockRange** | **String** |  | [optional] 
 **Id** | **String** |  | [optional] 

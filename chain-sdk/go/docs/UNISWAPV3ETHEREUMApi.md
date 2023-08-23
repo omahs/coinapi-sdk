@@ -911,7 +911,7 @@ No authorization required
 
 ## UNISWAPV3ETHEREUMTickDailySnapshotsCurrent
 
-> []UNISWAPV3ETHEREUMTickDailySnapshotDTO UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(ctx).Pool(pool).Execute()
+> []UNISWAPV3ETHEREUMTickDailySnapshotDTO UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(ctx).Execute()
 
 TickDailySnapshots (current)
 
@@ -930,11 +930,10 @@ import (
 )
 
 func main() {
-    pool := "pool_example" // string | liquidity pool this tick belongs to (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(context.Background()).Pool(pool).Execute()
+    resp, r, err := apiClient.UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(context.Background()).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -946,16 +945,12 @@ func main() {
 
 ### Path Parameters
 
-
+This endpoint does not need any parameter.
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **string** | liquidity pool this tick belongs to | 
 
 ### Return type
 
@@ -977,7 +972,7 @@ No authorization required
 
 ## UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent
 
-> []UNISWAPV3ETHEREUMTickHourlySnapshotDTO UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(ctx).Pool(pool).Execute()
+> []UNISWAPV3ETHEREUMTickHourlySnapshotDTO UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(ctx).Execute()
 
 TickHourlySnapshots (current)
 
@@ -996,11 +991,10 @@ import (
 )
 
 func main() {
-    pool := "pool_example" // string | liquidity pool this tick belongs to (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(context.Background()).Pool(pool).Execute()
+    resp, r, err := apiClient.UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(context.Background()).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1012,16 +1006,12 @@ func main() {
 
 ### Path Parameters
 
-
+This endpoint does not need any parameter.
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **string** | liquidity pool this tick belongs to | 
 
 ### Return type
 
@@ -1043,7 +1033,7 @@ No authorization required
 
 ## UNISWAPV3ETHEREUMTicksCurrent
 
-> []UNISWAPV3ETHEREUMTickDTO UNISWAPV3ETHEREUMTicksCurrent(ctx).Pool(pool).Execute()
+> []UNISWAPV3ETHEREUMTickDTO UNISWAPV3ETHEREUMTicksCurrent(ctx).Execute()
 
 Ticks (current)
 
@@ -1062,11 +1052,10 @@ import (
 )
 
 func main() {
-    pool := "pool_example" // string | Liquidity pool this tick belongs to (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMTicksCurrent(context.Background()).Pool(pool).Execute()
+    resp, r, err := apiClient.UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMTicksCurrent(context.Background()).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `UNISWAPV3ETHEREUMApi.UNISWAPV3ETHEREUMTicksCurrent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1078,16 +1067,12 @@ func main() {
 
 ### Path Parameters
 
-
+This endpoint does not need any parameter.
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUNISWAPV3ETHEREUMTicksCurrentRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **string** | Liquidity pool this tick belongs to | 
 
 ### Return type
 

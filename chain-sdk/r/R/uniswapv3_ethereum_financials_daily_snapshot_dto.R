@@ -9,7 +9,7 @@
 #' @format An \code{R6Class} generator object
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
-#' @field block_number Block number of when this snapshot was taken/last modified.) integer [optional]
+#' @field block_number Number of block in which entity was recorded. integer [optional]
 #' @field id ID is # of days since Unix epoch time. character [optional]
 #' @field day Number of days since Unix epoch time. integer [optional]
 #' @field protocol Protocol this snapshot is associated with. character [optional]
@@ -62,7 +62,7 @@ UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number Block number of when this snapshot was taken/last modified.)
+    #' @param block_number Number of block in which entity was recorded.
     #' @param id ID is # of days since Unix epoch time.
     #' @param day Number of days since Unix epoch time.
     #' @param protocol Protocol this snapshot is associated with.

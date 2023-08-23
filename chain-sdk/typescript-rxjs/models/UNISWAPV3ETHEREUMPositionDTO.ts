@@ -34,12 +34,6 @@ export interface UNISWAPV3ETHEREUMPositionDTO {
      */
     block_number?: number;
     /**
-     * 
-     * @type {number}
-     * @memberof UNISWAPV3ETHEREUMPositionDTO
-     */
-    vid?: number;
-    /**
      * (account address)-(market address)-(count)
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMPositionDTO

@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 **entry_time** | **char \*** |  | [optional] 
 **recv_time** | **char \*** |  | [optional] 
 **block_number** | **long** | Number of block in which entity was recorded. | [optional] 
-**vid** | **long** |  | [optional] 
 **id** | **char \*** | (pool address)-(tick index) | [optional] 
 **index** | **char \*** | tick index | [optional] 
 **pool** | **char \*** | Liquidity pool this tick belongs to | [optional] 

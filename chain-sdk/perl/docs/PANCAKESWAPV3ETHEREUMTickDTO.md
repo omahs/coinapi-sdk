@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **entry_time** | **DATE_TIME** |  | [optional] 
 **recv_time** | **DATE_TIME** |  | [optional] 
 **block_number** | **int** | Number of block in which entity was recorded. | [optional] 
-**vid** | **int** |  | [optional] 
 **id** | **string** | (pool address)-(tick index) | [optional] 
 **index** | **string** | tick index | [optional] 
 **pool** | **string** | Liquidity pool this tick belongs to | [optional] 

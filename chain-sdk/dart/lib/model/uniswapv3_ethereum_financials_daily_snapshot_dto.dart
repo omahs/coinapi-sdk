@@ -52,7 +52,7 @@ class UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO {
   ///
   DateTime? recvTime;
 
-  /// Block number of when this snapshot was taken/last modified.)
+  /// Number of block in which entity was recorded.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

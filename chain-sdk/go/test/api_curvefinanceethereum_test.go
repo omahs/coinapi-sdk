@@ -22,11 +22,143 @@ func Test_openapi_CURVEFINANCEETHEREUMApiService(t *testing.T) {
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
 
+	t.Run("Test CURVEFINANCEETHEREUMApiService CURVEFINANCEETHEREUMAccountsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMAccountsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test CURVEFINANCEETHEREUMApiService CURVEFINANCEETHEREUMActiveAccountsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMActiveAccountsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test CURVEFINANCEETHEREUMApiService CURVEFINANCEETHEREUMDepositsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMDepositsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test CURVEFINANCEETHEREUMApiService CURVEFINANCEETHEREUMDexAmmProtocolsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMDexAmmProtocolsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test CURVEFINANCEETHEREUMApiService CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test CURVEFINANCEETHEREUMApiService CURVEFINANCEETHEREUMLiquidityGaugesCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMLiquidityGaugesCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test CURVEFINANCEETHEREUMApiService CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test CURVEFINANCEETHEREUMApiService CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test CURVEFINANCEETHEREUMApiService CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test CURVEFINANCEETHEREUMApiService CURVEFINANCEETHEREUMLiquidityPoolsCurrent", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMLiquidityPoolsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test CURVEFINANCEETHEREUMApiService CURVEFINANCEETHEREUMLpTokensCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMLpTokensCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test CURVEFINANCEETHEREUMApiService CURVEFINANCEETHEREUMRewardTokensCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMRewardTokensCurrent(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -51,6 +183,42 @@ func Test_openapi_CURVEFINANCEETHEREUMApiService(t *testing.T) {
 		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMTokensCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test CURVEFINANCEETHEREUMApiService CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test CURVEFINANCEETHEREUMApiService CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test CURVEFINANCEETHEREUMApiService CURVEFINANCEETHEREUMWithdrawsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMWithdrawsCurrent(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)

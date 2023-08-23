@@ -15,7 +15,6 @@ part 'pancakeswapv3_ethereum_position_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [vid] - 
 /// * [id] - (account address)-(market address)-(count)
 /// * [account] - Account that owns this position
 /// * [pool] - The liquidity pool in which this position was opened
@@ -49,10 +48,6 @@ abstract class PANCAKESWAPV3ETHEREUMPositionDTO implements Built<PANCAKESWAPV3ET
   /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
-
-  /// 
-  @BuiltValueField(wireName: r'vid')
-  int? get vid;
 
   /// (account address)-(market address)-(count)
   @BuiltValueField(wireName: r'id')
@@ -183,13 +178,6 @@ class _$PANCAKESWAPV3ETHEREUMPositionDTOSerializer implements PrimitiveSerialize
       yield r'block_number';
       yield serializers.serialize(
         object.blockNumber,
-        specifiedType: const FullType(int),
-      );
-    }
-    if (object.vid != null) {
-      yield r'vid';
-      yield serializers.serialize(
-        object.vid,
         specifiedType: const FullType(int),
       );
     }
@@ -390,13 +378,6 @@ class _$PANCAKESWAPV3ETHEREUMPositionDTOSerializer implements PrimitiveSerialize
             specifiedType: const FullType(int),
           ) as int;
           result.blockNumber = valueDes;
-          break;
-        case r'vid':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(int),
-          ) as int;
-          result.vid = valueDes;
           break;
         case r'id':
           final valueDes = serializers.deserialize(

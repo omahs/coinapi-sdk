@@ -245,13 +245,13 @@ uNISWAPV3ETHEREUMSwapsCurrent =
 
 {-| Gets tickDailySnapshots.
 -}
-uNISWAPV3ETHEREUMTickDailySnapshotsCurrent : Maybe String -> Api.Request (List Api.Data.UNISWAPV3ETHEREUMTickDailySnapshotDTO)
-uNISWAPV3ETHEREUMTickDailySnapshotsCurrent pool_query =
+uNISWAPV3ETHEREUMTickDailySnapshotsCurrent : Api.Request (List Api.Data.UNISWAPV3ETHEREUMTickDailySnapshotDTO)
+uNISWAPV3ETHEREUMTickDailySnapshotsCurrent =
     Api.request
         "GET"
         "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current"
         []
-        [ ( "pool", Maybe.map identity pool_query ) ]
+        []
         []
         Nothing
         (Json.Decode.list Api.Data.uNISWAPV3ETHEREUMTickDailySnapshotDTODecoder)
@@ -259,13 +259,13 @@ uNISWAPV3ETHEREUMTickDailySnapshotsCurrent pool_query =
 
 {-| Gets tickHourlySnapshots.
 -}
-uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent : Maybe String -> Api.Request (List Api.Data.UNISWAPV3ETHEREUMTickHourlySnapshotDTO)
-uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent pool_query =
+uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent : Api.Request (List Api.Data.UNISWAPV3ETHEREUMTickHourlySnapshotDTO)
+uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent =
     Api.request
         "GET"
         "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current"
         []
-        [ ( "pool", Maybe.map identity pool_query ) ]
+        []
         []
         Nothing
         (Json.Decode.list Api.Data.uNISWAPV3ETHEREUMTickHourlySnapshotDTODecoder)
@@ -273,13 +273,13 @@ uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent pool_query =
 
 {-| Gets ticks.
 -}
-uNISWAPV3ETHEREUMTicksCurrent : Maybe String -> Api.Request (List Api.Data.UNISWAPV3ETHEREUMTickDTO)
-uNISWAPV3ETHEREUMTicksCurrent pool_query =
+uNISWAPV3ETHEREUMTicksCurrent : Api.Request (List Api.Data.UNISWAPV3ETHEREUMTickDTO)
+uNISWAPV3ETHEREUMTicksCurrent =
     Api.request
         "GET"
         "/v1/dapps/uniswap-v3-ethereum/ticks/current"
         []
-        [ ( "pool", Maybe.map identity pool_query ) ]
+        []
         []
         Nothing
         (Json.Decode.list Api.Data.uNISWAPV3ETHEREUMTickDTODecoder)

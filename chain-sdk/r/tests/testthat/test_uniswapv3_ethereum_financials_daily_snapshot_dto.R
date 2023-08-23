@@ -21,7 +21,7 @@ test_that("recv_time", {
 
 test_that("block_number", {
   # tests for the property `block_number` (integer)
-  # Block number of when this snapshot was taken/last modified.)
+  # Number of block in which entity was recorded.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`block_number`, "EXPECTED_RESULT")

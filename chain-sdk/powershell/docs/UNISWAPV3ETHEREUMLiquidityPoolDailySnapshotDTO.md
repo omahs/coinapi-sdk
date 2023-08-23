@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Vid** | **Int64** | . | [optional] 
 **Block** | **Int32** | The Ethereum block number associated with the liquidity pool daily snapshot. | [optional] 
 **Id** | **String** | Identifier, format: (smart contract address of the pool)-(# of days since Unix epoch time). | [optional] 
 **Day** | **Int32** | Number of days since Unix epoch time. | [optional] 
@@ -58,7 +57,6 @@ Name | Type | Description | Notes
 $UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO = Initialize-PSOpenAPIToolsUNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO  -EntryTime null `
  -RecvTime null `
  -BlockNumber null `
- -Vid null `
  -Block null `
  -Id null `
  -Day null `

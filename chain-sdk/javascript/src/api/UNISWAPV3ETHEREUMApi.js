@@ -605,19 +605,15 @@ export default class UNISWAPV3ETHEREUMApi {
     /**
      * TickDailySnapshots (current)
      * Gets tickDailySnapshots.
-     * @param {Object} opts Optional parameters
-     * @param {String} [pool] liquidity pool this tick belongs to
      * @param {module:api/UNISWAPV3ETHEREUMApi~uNISWAPV3ETHEREUMTickDailySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UNISWAPV3ETHEREUMTickDailySnapshotDTO>}
      */
-    uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(opts, callback) {
-      opts = opts || {};
+    uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(callback) {
       let postBody = null;
 
       let pathParams = {
       };
       let queryParams = {
-        'pool': opts['pool']
       };
       let headerParams = {
       };
@@ -646,19 +642,15 @@ export default class UNISWAPV3ETHEREUMApi {
     /**
      * TickHourlySnapshots (current)
      * Gets tickHourlySnapshots.
-     * @param {Object} opts Optional parameters
-     * @param {String} [pool] liquidity pool this tick belongs to
      * @param {module:api/UNISWAPV3ETHEREUMApi~uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UNISWAPV3ETHEREUMTickHourlySnapshotDTO>}
      */
-    uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(opts, callback) {
-      opts = opts || {};
+    uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(callback) {
       let postBody = null;
 
       let pathParams = {
       };
       let queryParams = {
-        'pool': opts['pool']
       };
       let headerParams = {
       };
@@ -687,19 +679,15 @@ export default class UNISWAPV3ETHEREUMApi {
     /**
      * Ticks (current)
      * Gets ticks.
-     * @param {Object} opts Optional parameters
-     * @param {String} [pool] Liquidity pool this tick belongs to
      * @param {module:api/UNISWAPV3ETHEREUMApi~uNISWAPV3ETHEREUMTicksCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UNISWAPV3ETHEREUMTickDTO>}
      */
-    uNISWAPV3ETHEREUMTicksCurrent(opts, callback) {
-      opts = opts || {};
+    uNISWAPV3ETHEREUMTicksCurrent(callback) {
       let postBody = null;
 
       let pathParams = {
       };
       let queryParams = {
-        'pool': opts['pool']
       };
       let headerParams = {
       };

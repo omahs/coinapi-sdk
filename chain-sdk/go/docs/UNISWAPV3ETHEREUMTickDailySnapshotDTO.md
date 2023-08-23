@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
 **BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
-**Vid** | Pointer to **int64** |  | [optional] 
 **Id** | Pointer to **NullableString** | Identifier, format: (pool address)-(tick index)-(day ID) | [optional] 
 **DayId** | Pointer to **int32** | Number of days since Unix epoch time | [optional] 
 **Tick** | Pointer to **NullableString** | tick index | [optional] 
@@ -111,31 +110,6 @@ SetBlockNumber sets BlockNumber field to given value.
 `func (o *UNISWAPV3ETHEREUMTickDailySnapshotDTO) HasBlockNumber() bool`
 
 HasBlockNumber returns a boolean if a field has been set.
-
-### GetVid
-
-`func (o *UNISWAPV3ETHEREUMTickDailySnapshotDTO) GetVid() int64`
-
-GetVid returns the Vid field if non-nil, zero value otherwise.
-
-### GetVidOk
-
-`func (o *UNISWAPV3ETHEREUMTickDailySnapshotDTO) GetVidOk() (*int64, bool)`
-
-GetVidOk returns a tuple with the Vid field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVid
-
-`func (o *UNISWAPV3ETHEREUMTickDailySnapshotDTO) SetVid(v int64)`
-
-SetVid sets Vid field to given value.
-
-### HasVid
-
-`func (o *UNISWAPV3ETHEREUMTickDailySnapshotDTO) HasVid() bool`
-
-HasVid returns a boolean if a field has been set.
 
 ### GetId
 

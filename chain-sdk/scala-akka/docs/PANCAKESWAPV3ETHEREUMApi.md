@@ -510,7 +510,7 @@ No authorization required
 
 ## pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
 
-> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest): ApiRequest[Seq[LiquidityPoolDailySnapshotDTO]]
+> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(): ApiRequest[Seq[LiquidityPoolDailySnapshotDTO]]
 
 LiquidityPoolDailySnapshots (current)
 
@@ -535,10 +535,8 @@ object Example extends App {
     import system.dispatcher
 
     val apiInvoker = ApiInvoker()
-    val apiInstance = PANCAKESWAPV3ETHEREUMApi("https://onchain.coinapi.io")
-    val pool: String = pool_example // String | Pool this snapshot belongs to.
-    
-    val request = apiInstance.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool)
+    val apiInstance = PANCAKESWAPV3ETHEREUMApi("https://onchain.coinapi.io")    
+    val request = apiInstance.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -563,10 +561,7 @@ object Example extends App {
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **String**| Pool this snapshot belongs to. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 

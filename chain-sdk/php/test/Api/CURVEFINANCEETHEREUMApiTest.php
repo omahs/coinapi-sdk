@@ -73,12 +73,144 @@ class CURVEFINANCEETHEREUMApiTest extends TestCase
     }
 
     /**
+     * Test case for cURVEFINANCEETHEREUMAccountsCurrent
+     *
+     * Accounts (current).
+     *
+     */
+    public function testCURVEFINANCEETHEREUMAccountsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for cURVEFINANCEETHEREUMActiveAccountsCurrent
+     *
+     * ActiveAccounts (current).
+     *
+     */
+    public function testCURVEFINANCEETHEREUMActiveAccountsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for cURVEFINANCEETHEREUMDepositsCurrent
+     *
+     * Deposits (current).
+     *
+     */
+    public function testCURVEFINANCEETHEREUMDepositsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for cURVEFINANCEETHEREUMDexAmmProtocolsCurrent
+     *
+     * DexAmmProtocols (current).
+     *
+     */
+    public function testCURVEFINANCEETHEREUMDexAmmProtocolsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent
+     *
+     * FinancialsDailySnapshots (current).
+     *
+     */
+    public function testCURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for cURVEFINANCEETHEREUMLiquidityGaugesCurrent
+     *
+     * LiquidityGauges (current).
+     *
+     */
+    public function testCURVEFINANCEETHEREUMLiquidityGaugesCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent
+     *
+     * LiquidityPoolDailySnapshots (current).
+     *
+     */
+    public function testCURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent
+     *
+     * LiquidityPoolFees (current).
+     *
+     */
+    public function testCURVEFINANCEETHEREUMLiquidityPoolFeesCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent
+     *
+     * LiquidityPoolHourlySnapshots (current).
+     *
+     */
+    public function testCURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for cURVEFINANCEETHEREUMLiquidityPoolsCurrent
      *
      * LiquidityPools (current).
      *
      */
     public function testCURVEFINANCEETHEREUMLiquidityPoolsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for cURVEFINANCEETHEREUMLpTokensCurrent
+     *
+     * LpTokens (current).
+     *
+     */
+    public function testCURVEFINANCEETHEREUMLpTokensCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for cURVEFINANCEETHEREUMRewardTokensCurrent
+     *
+     * RewardTokens (current).
+     *
+     */
+    public function testCURVEFINANCEETHEREUMRewardTokensCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -103,6 +235,42 @@ class CURVEFINANCEETHEREUMApiTest extends TestCase
      *
      */
     public function testCURVEFINANCEETHEREUMTokensCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent
+     *
+     * UsageMetricsDailySnapshots (current).
+     *
+     */
+    public function testCURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent
+     *
+     * UsageMetricsHourlySnapshots (current).
+     *
+     */
+    public function testCURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for cURVEFINANCEETHEREUMWithdrawsCurrent
+     *
+     * Withdraws (current).
+     *
+     */
+    public function testCURVEFINANCEETHEREUMWithdrawsCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

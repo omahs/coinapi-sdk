@@ -108,15 +108,6 @@ class PANCAKESWAPV3ETHEREUMPositionDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "vid"
-     */
-    public function testPropertyVid()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "id"
      */
     public function testPropertyId()

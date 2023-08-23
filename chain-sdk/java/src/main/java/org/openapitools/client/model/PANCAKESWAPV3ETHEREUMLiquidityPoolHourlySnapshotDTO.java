@@ -54,7 +54,7 @@ import org.openapitools.client.JSON;
 /**
  * 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-21T11:20:49.157876Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-23T15:16:19.303862Z[Etc/UTC]")
 public class PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -67,10 +67,6 @@ public class PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
   public static final String SERIALIZED_NAME_BLOCK_NUMBER = "block_number";
   @SerializedName(SERIALIZED_NAME_BLOCK_NUMBER)
   private Long blockNumber;
-
-  public static final String SERIALIZED_NAME_VID = "vid";
-  @SerializedName(SERIALIZED_NAME_VID)
-  private Long vid;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -303,27 +299,6 @@ public class PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
 
   public void setBlockNumber(Long blockNumber) {
     this.blockNumber = blockNumber;
-  }
-
-
-  public PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO vid(Long vid) {
-    
-    this.vid = vid;
-    return this;
-  }
-
-   /**
-   * 
-   * @return vid
-  **/
-  @javax.annotation.Nullable
-  public Long getVid() {
-    return vid;
-  }
-
-
-  public void setVid(Long vid) {
-    this.vid = vid;
   }
 
 
@@ -1326,7 +1301,6 @@ public class PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
     return Objects.equals(this.entryTime, paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.entryTime) &&
         Objects.equals(this.recvTime, paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.recvTime) &&
         Objects.equals(this.blockNumber, paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.blockNumber) &&
-        Objects.equals(this.vid, paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.vid) &&
         Objects.equals(this.id, paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.id) &&
         Objects.equals(this.hour, paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.hour) &&
         Objects.equals(this.protocol, paNCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.protocol) &&
@@ -1377,7 +1351,7 @@ public class PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
 
   @Override
   public int hashCode() {
-    return Objects.hash(entryTime, recvTime, blockNumber, vid, id, hour, protocol, pool, tick, totalValueLockedUsd, totalLiquidity, totalLiquidityUsd, activeLiquidity, activeLiquidityUsd, uncollectedProtocolSideTokenAmounts, uncollectedProtocolSideValuesUsd, uncollectedSupplySideTokenAmounts, uncollectedSupplySideValuesUsd, cumulativeSupplySideRevenueUsd, hourlySupplySideRevenueUsd, cumulativeProtocolSideRevenueUsd, hourlyProtocolSideRevenueUsd, cumulativeTotalRevenueUsd, hourlyTotalRevenueUsd, cumulativeVolumeUsd, hourlyVolumeUsd, cumulativeVolumeByTokenAmount, hourlyVolumeByTokenAmount, cumulativeVolumeByTokenUsd, hourlyVolumeByTokenUsd, inputTokenBalances, inputTokenBalancesUsd, inputTokenWeights, stakedOutputTokenAmount, rewardTokenEmissionsAmount, rewardTokenEmissionsUsd, cumulativeDepositCount, hourlyDepositCount, cumulativeWithdrawCount, hourlyWithdrawCount, cumulativeSwapCount, hourlySwapCount, positionCount, openPositionCount, closedPositionCount, timestamp);
+    return Objects.hash(entryTime, recvTime, blockNumber, id, hour, protocol, pool, tick, totalValueLockedUsd, totalLiquidity, totalLiquidityUsd, activeLiquidity, activeLiquidityUsd, uncollectedProtocolSideTokenAmounts, uncollectedProtocolSideValuesUsd, uncollectedSupplySideTokenAmounts, uncollectedSupplySideValuesUsd, cumulativeSupplySideRevenueUsd, hourlySupplySideRevenueUsd, cumulativeProtocolSideRevenueUsd, hourlyProtocolSideRevenueUsd, cumulativeTotalRevenueUsd, hourlyTotalRevenueUsd, cumulativeVolumeUsd, hourlyVolumeUsd, cumulativeVolumeByTokenAmount, hourlyVolumeByTokenAmount, cumulativeVolumeByTokenUsd, hourlyVolumeByTokenUsd, inputTokenBalances, inputTokenBalancesUsd, inputTokenWeights, stakedOutputTokenAmount, rewardTokenEmissionsAmount, rewardTokenEmissionsUsd, cumulativeDepositCount, hourlyDepositCount, cumulativeWithdrawCount, hourlyWithdrawCount, cumulativeSwapCount, hourlySwapCount, positionCount, openPositionCount, closedPositionCount, timestamp);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1394,7 +1368,6 @@ public class PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
     sb.append("    entryTime: ").append(toIndentedString(entryTime)).append("\n");
     sb.append("    recvTime: ").append(toIndentedString(recvTime)).append("\n");
     sb.append("    blockNumber: ").append(toIndentedString(blockNumber)).append("\n");
-    sb.append("    vid: ").append(toIndentedString(vid)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    hour: ").append(toIndentedString(hour)).append("\n");
     sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
@@ -1462,7 +1435,6 @@ public class PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
     openapiFields.add("entry_time");
     openapiFields.add("recv_time");
     openapiFields.add("block_number");
-    openapiFields.add("vid");
     openapiFields.add("id");
     openapiFields.add("hour");
     openapiFields.add("protocol");

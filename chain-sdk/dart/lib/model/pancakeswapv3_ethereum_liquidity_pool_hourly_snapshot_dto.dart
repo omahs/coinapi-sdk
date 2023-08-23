@@ -16,7 +16,6 @@ class PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
     this.entryTime,
     this.recvTime,
     this.blockNumber,
-    this.vid,
     this.id,
     this.hour,
     this.protocol,
@@ -85,15 +84,6 @@ class PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? blockNumber;
-
-  /// 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? vid;
 
   /// (Smart contract address of the pool)-( # of hours since Unix epoch time)
   String? id;
@@ -286,7 +276,6 @@ class PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
      other.entryTime == entryTime &&
      other.recvTime == recvTime &&
      other.blockNumber == blockNumber &&
-     other.vid == vid &&
      other.id == id &&
      other.hour == hour &&
      other.protocol == protocol &&
@@ -336,7 +325,6 @@ class PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
     (entryTime == null ? 0 : entryTime!.hashCode) +
     (recvTime == null ? 0 : recvTime!.hashCode) +
     (blockNumber == null ? 0 : blockNumber!.hashCode) +
-    (vid == null ? 0 : vid!.hashCode) +
     (id == null ? 0 : id!.hashCode) +
     (hour == null ? 0 : hour!.hashCode) +
     (protocol == null ? 0 : protocol!.hashCode) +
@@ -381,7 +369,7 @@ class PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
     (timestamp == null ? 0 : timestamp!.hashCode);
 
   @override
-  String toString() => 'PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO[entryTime=$entryTime, recvTime=$recvTime, blockNumber=$blockNumber, vid=$vid, id=$id, hour=$hour, protocol=$protocol, pool=$pool, tick=$tick, totalValueLockedUsd=$totalValueLockedUsd, totalLiquidity=$totalLiquidity, totalLiquidityUsd=$totalLiquidityUsd, activeLiquidity=$activeLiquidity, activeLiquidityUsd=$activeLiquidityUsd, uncollectedProtocolSideTokenAmounts=$uncollectedProtocolSideTokenAmounts, uncollectedProtocolSideValuesUsd=$uncollectedProtocolSideValuesUsd, uncollectedSupplySideTokenAmounts=$uncollectedSupplySideTokenAmounts, uncollectedSupplySideValuesUsd=$uncollectedSupplySideValuesUsd, cumulativeSupplySideRevenueUsd=$cumulativeSupplySideRevenueUsd, hourlySupplySideRevenueUsd=$hourlySupplySideRevenueUsd, cumulativeProtocolSideRevenueUsd=$cumulativeProtocolSideRevenueUsd, hourlyProtocolSideRevenueUsd=$hourlyProtocolSideRevenueUsd, cumulativeTotalRevenueUsd=$cumulativeTotalRevenueUsd, hourlyTotalRevenueUsd=$hourlyTotalRevenueUsd, cumulativeVolumeUsd=$cumulativeVolumeUsd, hourlyVolumeUsd=$hourlyVolumeUsd, cumulativeVolumeByTokenAmount=$cumulativeVolumeByTokenAmount, hourlyVolumeByTokenAmount=$hourlyVolumeByTokenAmount, cumulativeVolumeByTokenUsd=$cumulativeVolumeByTokenUsd, hourlyVolumeByTokenUsd=$hourlyVolumeByTokenUsd, inputTokenBalances=$inputTokenBalances, inputTokenBalancesUsd=$inputTokenBalancesUsd, inputTokenWeights=$inputTokenWeights, stakedOutputTokenAmount=$stakedOutputTokenAmount, rewardTokenEmissionsAmount=$rewardTokenEmissionsAmount, rewardTokenEmissionsUsd=$rewardTokenEmissionsUsd, cumulativeDepositCount=$cumulativeDepositCount, hourlyDepositCount=$hourlyDepositCount, cumulativeWithdrawCount=$cumulativeWithdrawCount, hourlyWithdrawCount=$hourlyWithdrawCount, cumulativeSwapCount=$cumulativeSwapCount, hourlySwapCount=$hourlySwapCount, positionCount=$positionCount, openPositionCount=$openPositionCount, closedPositionCount=$closedPositionCount, timestamp=$timestamp]';
+  String toString() => 'PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO[entryTime=$entryTime, recvTime=$recvTime, blockNumber=$blockNumber, id=$id, hour=$hour, protocol=$protocol, pool=$pool, tick=$tick, totalValueLockedUsd=$totalValueLockedUsd, totalLiquidity=$totalLiquidity, totalLiquidityUsd=$totalLiquidityUsd, activeLiquidity=$activeLiquidity, activeLiquidityUsd=$activeLiquidityUsd, uncollectedProtocolSideTokenAmounts=$uncollectedProtocolSideTokenAmounts, uncollectedProtocolSideValuesUsd=$uncollectedProtocolSideValuesUsd, uncollectedSupplySideTokenAmounts=$uncollectedSupplySideTokenAmounts, uncollectedSupplySideValuesUsd=$uncollectedSupplySideValuesUsd, cumulativeSupplySideRevenueUsd=$cumulativeSupplySideRevenueUsd, hourlySupplySideRevenueUsd=$hourlySupplySideRevenueUsd, cumulativeProtocolSideRevenueUsd=$cumulativeProtocolSideRevenueUsd, hourlyProtocolSideRevenueUsd=$hourlyProtocolSideRevenueUsd, cumulativeTotalRevenueUsd=$cumulativeTotalRevenueUsd, hourlyTotalRevenueUsd=$hourlyTotalRevenueUsd, cumulativeVolumeUsd=$cumulativeVolumeUsd, hourlyVolumeUsd=$hourlyVolumeUsd, cumulativeVolumeByTokenAmount=$cumulativeVolumeByTokenAmount, hourlyVolumeByTokenAmount=$hourlyVolumeByTokenAmount, cumulativeVolumeByTokenUsd=$cumulativeVolumeByTokenUsd, hourlyVolumeByTokenUsd=$hourlyVolumeByTokenUsd, inputTokenBalances=$inputTokenBalances, inputTokenBalancesUsd=$inputTokenBalancesUsd, inputTokenWeights=$inputTokenWeights, stakedOutputTokenAmount=$stakedOutputTokenAmount, rewardTokenEmissionsAmount=$rewardTokenEmissionsAmount, rewardTokenEmissionsUsd=$rewardTokenEmissionsUsd, cumulativeDepositCount=$cumulativeDepositCount, hourlyDepositCount=$hourlyDepositCount, cumulativeWithdrawCount=$cumulativeWithdrawCount, hourlyWithdrawCount=$hourlyWithdrawCount, cumulativeSwapCount=$cumulativeSwapCount, hourlySwapCount=$hourlySwapCount, positionCount=$positionCount, openPositionCount=$openPositionCount, closedPositionCount=$closedPositionCount, timestamp=$timestamp]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -399,11 +387,6 @@ class PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
       json[r'block_number'] = this.blockNumber;
     } else {
       json[r'block_number'] = null;
-    }
-    if (this.vid != null) {
-      json[r'vid'] = this.vid;
-    } else {
-      json[r'vid'] = null;
     }
     if (this.id != null) {
       json[r'id'] = this.id;
@@ -640,7 +623,6 @@ class PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
         entryTime: mapDateTime(json, r'entry_time', ''),
         recvTime: mapDateTime(json, r'recv_time', ''),
         blockNumber: mapValueOfType<int>(json, r'block_number'),
-        vid: mapValueOfType<int>(json, r'vid'),
         id: mapValueOfType<String>(json, r'id'),
         hour: mapValueOfType<int>(json, r'hour'),
         protocol: mapValueOfType<String>(json, r'protocol'),

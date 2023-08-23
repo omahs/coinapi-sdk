@@ -15,8 +15,113 @@ Please update as you see appropriate
 ]]
 describe("uniswapv2_ethereum_api", function()
   local openapiclient_uniswapv2_ethereum_api = require "openapiclient.api.uniswapv2_ethereum_api"
+  -- unit tests for u_niswapv2_ethereum_accounts__current
+  describe("u_niswapv2_ethereum_accounts__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for u_niswapv2_ethereum_active_accounts__current
+  describe("u_niswapv2_ethereum_active_accounts__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for u_niswapv2_ethereum_deposits__current
+  describe("u_niswapv2_ethereum_deposits__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for u_niswapv2_ethereum_dex_amm_protocols__current
+  describe("u_niswapv2_ethereum_dex_amm_protocols__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for u_niswapv2_ethereum_financials_daily_snapshots__current
+  describe("u_niswapv2_ethereum_financials_daily_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for u_niswapv2_ethereum_liquidity_pool_amounts__current
+  describe("u_niswapv2_ethereum_liquidity_pool_amounts__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current
+  describe("u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for u_niswapv2_ethereum_liquidity_pool_fees__current
+  describe("u_niswapv2_ethereum_liquidity_pool_fees__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current
+  describe("u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for u_niswapv2_ethereum_liquidity_pools__current
   describe("u_niswapv2_ethereum_liquidity_pools__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for u_niswapv2_ethereum_master_chef_address_to_pids__current
+  describe("u_niswapv2_ethereum_master_chef_address_to_pids__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for u_niswapv2_ethereum_master_chef_rewarders__current
+  describe("u_niswapv2_ethereum_master_chef_rewarders__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for u_niswapv2_ethereum_master_chef_staking_pools__current
+  describe("u_niswapv2_ethereum_master_chef_staking_pools__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for u_niswapv2_ethereum_master_chefs__current
+  describe("u_niswapv2_ethereum_master_chefs__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for u_niswapv2_ethereum_reward_tokens__current
+  describe("u_niswapv2_ethereum_reward_tokens__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for u_niswapv2_ethereum_rewarder_probes__current
+  describe("u_niswapv2_ethereum_rewarder_probes__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -29,8 +134,43 @@ describe("uniswapv2_ethereum_api", function()
     end)
   end)
 
+  -- unit tests for u_niswapv2_ethereum_token_white_lists__current
+  describe("u_niswapv2_ethereum_token_white_lists__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for u_niswapv2_ethereum_tokens__current
   describe("u_niswapv2_ethereum_tokens__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for u_niswapv2_ethereum_transfers__current
+  describe("u_niswapv2_ethereum_transfers__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for u_niswapv2_ethereum_usage_metrics_daily_snapshots__current
+  describe("u_niswapv2_ethereum_usage_metrics_daily_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current
+  describe("u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for u_niswapv2_ethereum_withdraws__current
+  describe("u_niswapv2_ethereum_withdraws__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

@@ -23,10 +23,6 @@ export class PANCAKESWAPV3ETHEREUMPositionDTO {
     */
     'blockNumber'?: number;
     /**
-    * 
-    */
-    'vid'?: number;
-    /**
     * (account address)-(market address)-(count)
     */
     'id'?: string | null;
@@ -131,11 +127,6 @@ export class PANCAKESWAPV3ETHEREUMPositionDTO {
         {
             "name": "blockNumber",
             "baseName": "block_number",
-            "type": "number"
-        },
-        {
-            "name": "vid",
-            "baseName": "vid",
             "type": "number"
         },
         {

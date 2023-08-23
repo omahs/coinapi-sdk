@@ -29,8 +29,6 @@ public class PANCAKESWAPV3ETHEREUMTickDTO {
   private Date recvTime = null;
   @SerializedName("block_number")
   private Long blockNumber = null;
-  @SerializedName("vid")
-  private Long vid = null;
   @SerializedName("id")
   private String id = null;
   @SerializedName("index")
@@ -89,17 +87,6 @@ public class PANCAKESWAPV3ETHEREUMTickDTO {
   }
   public void setBlockNumber(Long blockNumber) {
     this.blockNumber = blockNumber;
-  }
-
-  /**
-   * 
-   **/
-  @ApiModelProperty(value = "")
-  public Long getVid() {
-    return vid;
-  }
-  public void setVid(Long vid) {
-    this.vid = vid;
   }
 
   /**
@@ -269,7 +256,6 @@ public class PANCAKESWAPV3ETHEREUMTickDTO {
     return (this.entryTime == null ? pANCAKESWAPV3ETHEREUMTickDTO.entryTime == null : this.entryTime.equals(pANCAKESWAPV3ETHEREUMTickDTO.entryTime)) &&
         (this.recvTime == null ? pANCAKESWAPV3ETHEREUMTickDTO.recvTime == null : this.recvTime.equals(pANCAKESWAPV3ETHEREUMTickDTO.recvTime)) &&
         (this.blockNumber == null ? pANCAKESWAPV3ETHEREUMTickDTO.blockNumber == null : this.blockNumber.equals(pANCAKESWAPV3ETHEREUMTickDTO.blockNumber)) &&
-        (this.vid == null ? pANCAKESWAPV3ETHEREUMTickDTO.vid == null : this.vid.equals(pANCAKESWAPV3ETHEREUMTickDTO.vid)) &&
         (this.id == null ? pANCAKESWAPV3ETHEREUMTickDTO.id == null : this.id.equals(pANCAKESWAPV3ETHEREUMTickDTO.id)) &&
         (this.index == null ? pANCAKESWAPV3ETHEREUMTickDTO.index == null : this.index.equals(pANCAKESWAPV3ETHEREUMTickDTO.index)) &&
         (this.pool == null ? pANCAKESWAPV3ETHEREUMTickDTO.pool == null : this.pool.equals(pANCAKESWAPV3ETHEREUMTickDTO.pool)) &&
@@ -292,7 +278,6 @@ public class PANCAKESWAPV3ETHEREUMTickDTO {
     result = 31 * result + (this.entryTime == null ? 0: this.entryTime.hashCode());
     result = 31 * result + (this.recvTime == null ? 0: this.recvTime.hashCode());
     result = 31 * result + (this.blockNumber == null ? 0: this.blockNumber.hashCode());
-    result = 31 * result + (this.vid == null ? 0: this.vid.hashCode());
     result = 31 * result + (this.id == null ? 0: this.id.hashCode());
     result = 31 * result + (this.index == null ? 0: this.index.hashCode());
     result = 31 * result + (this.pool == null ? 0: this.pool.hashCode());
@@ -318,7 +303,6 @@ public class PANCAKESWAPV3ETHEREUMTickDTO {
     sb.append("  entryTime: ").append(entryTime).append("\n");
     sb.append("  recvTime: ").append(recvTime).append("\n");
     sb.append("  blockNumber: ").append(blockNumber).append("\n");
-    sb.append("  vid: ").append(vid).append("\n");
     sb.append("  id: ").append(id).append("\n");
     sb.append("  index: ").append(index).append("\n");
     sb.append("  pool: ").append(pool).append("\n");

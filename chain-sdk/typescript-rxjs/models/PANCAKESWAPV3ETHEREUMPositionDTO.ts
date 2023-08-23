@@ -34,12 +34,6 @@ export interface PANCAKESWAPV3ETHEREUMPositionDTO {
      */
     block_number?: number;
     /**
-     * 
-     * @type {number}
-     * @memberof PANCAKESWAPV3ETHEREUMPositionDTO
-     */
-    vid?: number;
-    /**
      * (account address)-(market address)-(count)
      * @type {string}
      * @memberof PANCAKESWAPV3ETHEREUMPositionDTO

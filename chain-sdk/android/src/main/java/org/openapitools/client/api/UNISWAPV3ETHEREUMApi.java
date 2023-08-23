@@ -1719,10 +1719,9 @@ public class UNISWAPV3ETHEREUMApi {
   /**
   * TickDailySnapshots (current)
   * Gets tickDailySnapshots.
-   * @param pool liquidity pool this tick belongs to
    * @return List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>
   */
-  public List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent (String pool) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -1734,7 +1733,6 @@ public class UNISWAPV3ETHEREUMApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "pool", pool));
     String[] contentTypes = {
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
@@ -1777,9 +1775,9 @@ public class UNISWAPV3ETHEREUMApi {
       /**
    * TickDailySnapshots (current)
    * Gets tickDailySnapshots.
-   * @param pool liquidity pool this tick belongs to
+
   */
-  public void uNISWAPV3ETHEREUMTickDailySnapshotsCurrent (String pool, final Response.Listener<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uNISWAPV3ETHEREUMTickDailySnapshotsCurrent (final Response.Listener<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -1793,7 +1791,6 @@ public class UNISWAPV3ETHEREUMApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "pool", pool));
 
 
     String[] contentTypes = {
@@ -1838,10 +1835,9 @@ public class UNISWAPV3ETHEREUMApi {
   /**
   * TickHourlySnapshots (current)
   * Gets tickHourlySnapshots.
-   * @param pool liquidity pool this tick belongs to
    * @return List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>
   */
-  public List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent (String pool) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -1853,7 +1849,6 @@ public class UNISWAPV3ETHEREUMApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "pool", pool));
     String[] contentTypes = {
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
@@ -1896,9 +1891,9 @@ public class UNISWAPV3ETHEREUMApi {
       /**
    * TickHourlySnapshots (current)
    * Gets tickHourlySnapshots.
-   * @param pool liquidity pool this tick belongs to
+
   */
-  public void uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent (String pool, final Response.Listener<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent (final Response.Listener<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -1912,7 +1907,6 @@ public class UNISWAPV3ETHEREUMApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "pool", pool));
 
 
     String[] contentTypes = {
@@ -1957,10 +1951,9 @@ public class UNISWAPV3ETHEREUMApi {
   /**
   * Ticks (current)
   * Gets ticks.
-   * @param pool Liquidity pool this tick belongs to
    * @return List<UNISWAPV3ETHEREUMTickDTO>
   */
-  public List<UNISWAPV3ETHEREUMTickDTO> uNISWAPV3ETHEREUMTicksCurrent (String pool) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UNISWAPV3ETHEREUMTickDTO> uNISWAPV3ETHEREUMTicksCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -1972,7 +1965,6 @@ public class UNISWAPV3ETHEREUMApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "pool", pool));
     String[] contentTypes = {
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
@@ -2015,9 +2007,9 @@ public class UNISWAPV3ETHEREUMApi {
       /**
    * Ticks (current)
    * Gets ticks.
-   * @param pool Liquidity pool this tick belongs to
+
   */
-  public void uNISWAPV3ETHEREUMTicksCurrent (String pool, final Response.Listener<List<UNISWAPV3ETHEREUMTickDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uNISWAPV3ETHEREUMTicksCurrent (final Response.Listener<List<UNISWAPV3ETHEREUMTickDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -2031,7 +2023,6 @@ public class UNISWAPV3ETHEREUMApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "pool", pool));
 
 
     String[] contentTypes = {

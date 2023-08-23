@@ -26,7 +26,7 @@ void main() {
       // TODO
     });
 
-    // Block number of when this snapshot was taken/last modified.)
+    // Number of block in which entity was recorded.
     // int blockNumber
     test('to test the property `blockNumber`', () async {
       // TODO

@@ -229,8 +229,7 @@ namespace CoinAPI.EMS.REST.V1.Test
         public void UNISWAPV3ETHEREUMTickDailySnapshotsCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string pool = null;
-            //var response = instance.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool);
+            //var response = instance.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent();
             //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>), response, "response is List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>");
         }
         
@@ -241,8 +240,7 @@ namespace CoinAPI.EMS.REST.V1.Test
         public void UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string pool = null;
-            //var response = instance.UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool);
+            //var response = instance.UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent();
             //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>), response, "response is List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>");
         }
         
@@ -253,8 +251,7 @@ namespace CoinAPI.EMS.REST.V1.Test
         public void UNISWAPV3ETHEREUMTicksCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string pool = null;
-            //var response = instance.UNISWAPV3ETHEREUMTicksCurrent(pool);
+            //var response = instance.UNISWAPV3ETHEREUMTicksCurrent();
             //Assert.IsInstanceOf(typeof(List<UNISWAPV3ETHEREUMTickDTO>), response, "response is List<UNISWAPV3ETHEREUMTickDTO>");
         }
         

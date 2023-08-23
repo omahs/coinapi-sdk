@@ -9,7 +9,6 @@ pancakeswap_v3_ethereum_position_dto_t *pancakeswap_v3_ethereum_position_dto_cre
     char *entry_time,
     char *recv_time,
     long block_number,
-    long vid,
     char *id,
     char *account,
     char *pool,
@@ -40,7 +39,6 @@ pancakeswap_v3_ethereum_position_dto_t *pancakeswap_v3_ethereum_position_dto_cre
     pancakeswap_v3_ethereum_position_dto_local_var->entry_time = entry_time;
     pancakeswap_v3_ethereum_position_dto_local_var->recv_time = recv_time;
     pancakeswap_v3_ethereum_position_dto_local_var->block_number = block_number;
-    pancakeswap_v3_ethereum_position_dto_local_var->vid = vid;
     pancakeswap_v3_ethereum_position_dto_local_var->id = id;
     pancakeswap_v3_ethereum_position_dto_local_var->account = account;
     pancakeswap_v3_ethereum_position_dto_local_var->pool = pool;
@@ -195,14 +193,6 @@ cJSON *pancakeswap_v3_ethereum_position_dto_convertToJSON(pancakeswap_v3_ethereu
     // pancakeswap_v3_ethereum_position_dto->block_number
     if(pancakeswap_v3_ethereum_position_dto->block_number) {
     if(cJSON_AddNumberToObject(item, "block_number", pancakeswap_v3_ethereum_position_dto->block_number) == NULL) {
-    goto fail; //Numeric
-    }
-    }
-
-
-    // pancakeswap_v3_ethereum_position_dto->vid
-    if(pancakeswap_v3_ethereum_position_dto->vid) {
-    if(cJSON_AddNumberToObject(item, "vid", pancakeswap_v3_ethereum_position_dto->vid) == NULL) {
     goto fail; //Numeric
     }
     }
@@ -458,15 +448,6 @@ pancakeswap_v3_ethereum_position_dto_t *pancakeswap_v3_ethereum_position_dto_par
     }
     }
 
-    // pancakeswap_v3_ethereum_position_dto->vid
-    cJSON *vid = cJSON_GetObjectItemCaseSensitive(pancakeswap_v3_ethereum_position_dtoJSON, "vid");
-    if (vid) { 
-    if(!cJSON_IsNumber(vid))
-    {
-    goto end; //Numeric
-    }
-    }
-
     // pancakeswap_v3_ethereum_position_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(pancakeswap_v3_ethereum_position_dtoJSON, "id");
     if (id) { 
@@ -700,7 +681,6 @@ pancakeswap_v3_ethereum_position_dto_t *pancakeswap_v3_ethereum_position_dto_par
         entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
         recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        vid ? vid->valuedouble : 0,
         id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
         account && !cJSON_IsNull(account) ? strdup(account->valuestring) : NULL,
         pool && !cJSON_IsNull(pool) ? strdup(pool->valuestring) : NULL,

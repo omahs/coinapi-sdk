@@ -27,10 +27,10 @@ public class OASUNISWAPV3ETHEREUMFinancialsDailyS implements OAS.MappedPropertie
     public Datetime recvTime { get; set; }
 
     /**
-     * Block number of when this snapshot was taken/last modified.)
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
-    public Integer blockNumber { get; set; }
+    public Long blockNumber { get; set; }
 
     /**
      * ID is # of days since Unix epoch time.
@@ -552,7 +552,7 @@ public class OASUNISWAPV3ETHEREUMFinancialsDailyS implements OAS.MappedPropertie
         OASUNISWAPV3ETHEREUMFinancialsDailyS unISWAPV3ETHEREUMFinancialsDailySnapshotDTO = new OASUNISWAPV3ETHEREUMFinancialsDailyS();
           unISWAPV3ETHEREUMFinancialsDailySnapshotDTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           unISWAPV3ETHEREUMFinancialsDailySnapshotDTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
-          unISWAPV3ETHEREUMFinancialsDailySnapshotDTO.blockNumber = 0;
+          unISWAPV3ETHEREUMFinancialsDailySnapshotDTO.blockNumber = 123456789L;
           unISWAPV3ETHEREUMFinancialsDailySnapshotDTO.id = '';
           unISWAPV3ETHEREUMFinancialsDailySnapshotDTO.day = 0;
           unISWAPV3ETHEREUMFinancialsDailySnapshotDTO.protocol = '';

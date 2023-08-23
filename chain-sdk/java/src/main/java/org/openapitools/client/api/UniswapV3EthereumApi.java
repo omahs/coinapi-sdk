@@ -1761,7 +1761,6 @@ public class UniswapV3EthereumApi {
     }
     /**
      * Build call for uNISWAPV3ETHEREUMTickDailySnapshotsCurrent
-     * @param pool liquidity pool this tick belongs to (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1771,7 +1770,7 @@ public class UniswapV3EthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uNISWAPV3ETHEREUMTickDailySnapshotsCurrentCall(String pool, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call uNISWAPV3ETHEREUMTickDailySnapshotsCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1796,10 +1795,6 @@ public class UniswapV3EthereumApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (pool != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pool", pool));
-        }
-
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
@@ -1823,15 +1818,14 @@ public class UniswapV3EthereumApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call uNISWAPV3ETHEREUMTickDailySnapshotsCurrentValidateBeforeCall(String pool, final ApiCallback _callback) throws ApiException {
-        return uNISWAPV3ETHEREUMTickDailySnapshotsCurrentCall(pool, _callback);
+    private okhttp3.Call uNISWAPV3ETHEREUMTickDailySnapshotsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMTickDailySnapshotsCurrentCall(_callback);
 
     }
 
     /**
      * TickDailySnapshots (current)
      * Gets tickDailySnapshots.
-     * @param pool liquidity pool this tick belongs to (optional)
      * @return List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1840,15 +1834,14 @@ public class UniswapV3EthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(String pool) throws ApiException {
-        ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> localVarResp = uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo(pool);
+    public List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent() throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> localVarResp = uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * TickDailySnapshots (current)
      * Gets tickDailySnapshots.
-     * @param pool liquidity pool this tick belongs to (optional)
      * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1857,8 +1850,8 @@ public class UniswapV3EthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo(String pool) throws ApiException {
-        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTickDailySnapshotsCurrentValidateBeforeCall(pool, null);
+    public ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTickDailySnapshotsCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1866,7 +1859,6 @@ public class UniswapV3EthereumApi {
     /**
      * TickDailySnapshots (current) (asynchronously)
      * Gets tickDailySnapshots.
-     * @param pool liquidity pool this tick belongs to (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1876,16 +1868,15 @@ public class UniswapV3EthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uNISWAPV3ETHEREUMTickDailySnapshotsCurrentAsync(String pool, final ApiCallback<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> _callback) throws ApiException {
+    public okhttp3.Call uNISWAPV3ETHEREUMTickDailySnapshotsCurrentAsync(final ApiCallback<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTickDailySnapshotsCurrentValidateBeforeCall(pool, _callback);
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTickDailySnapshotsCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent
-     * @param pool liquidity pool this tick belongs to (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1895,7 +1886,7 @@ public class UniswapV3EthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentCall(String pool, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1920,10 +1911,6 @@ public class UniswapV3EthereumApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (pool != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pool", pool));
-        }
-
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
@@ -1947,15 +1934,14 @@ public class UniswapV3EthereumApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentValidateBeforeCall(String pool, final ApiCallback _callback) throws ApiException {
-        return uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentCall(pool, _callback);
+    private okhttp3.Call uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentCall(_callback);
 
     }
 
     /**
      * TickHourlySnapshots (current)
      * Gets tickHourlySnapshots.
-     * @param pool liquidity pool this tick belongs to (optional)
      * @return List&lt;UNISWAPV3ETHEREUMTickHourlySnapshotDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1964,15 +1950,14 @@ public class UniswapV3EthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(String pool) throws ApiException {
-        ApiResponse<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> localVarResp = uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(pool);
+    public List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent() throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> localVarResp = uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * TickHourlySnapshots (current)
      * Gets tickHourlySnapshots.
-     * @param pool liquidity pool this tick belongs to (optional)
      * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMTickHourlySnapshotDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1981,8 +1966,8 @@ public class UniswapV3EthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(String pool) throws ApiException {
-        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentValidateBeforeCall(pool, null);
+    public ApiResponse<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1990,7 +1975,6 @@ public class UniswapV3EthereumApi {
     /**
      * TickHourlySnapshots (current) (asynchronously)
      * Gets tickHourlySnapshots.
-     * @param pool liquidity pool this tick belongs to (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2000,16 +1984,15 @@ public class UniswapV3EthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentAsync(String pool, final ApiCallback<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> _callback) throws ApiException {
+    public okhttp3.Call uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentAsync(final ApiCallback<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentValidateBeforeCall(pool, _callback);
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for uNISWAPV3ETHEREUMTicksCurrent
-     * @param pool Liquidity pool this tick belongs to (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -2019,7 +2002,7 @@ public class UniswapV3EthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uNISWAPV3ETHEREUMTicksCurrentCall(String pool, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call uNISWAPV3ETHEREUMTicksCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2044,10 +2027,6 @@ public class UniswapV3EthereumApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (pool != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pool", pool));
-        }
-
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
@@ -2071,15 +2050,14 @@ public class UniswapV3EthereumApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call uNISWAPV3ETHEREUMTicksCurrentValidateBeforeCall(String pool, final ApiCallback _callback) throws ApiException {
-        return uNISWAPV3ETHEREUMTicksCurrentCall(pool, _callback);
+    private okhttp3.Call uNISWAPV3ETHEREUMTicksCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uNISWAPV3ETHEREUMTicksCurrentCall(_callback);
 
     }
 
     /**
      * Ticks (current)
      * Gets ticks.
-     * @param pool Liquidity pool this tick belongs to (optional)
      * @return List&lt;UNISWAPV3ETHEREUMTickDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2088,15 +2066,14 @@ public class UniswapV3EthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<UNISWAPV3ETHEREUMTickDTO> uNISWAPV3ETHEREUMTicksCurrent(String pool) throws ApiException {
-        ApiResponse<List<UNISWAPV3ETHEREUMTickDTO>> localVarResp = uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo(pool);
+    public List<UNISWAPV3ETHEREUMTickDTO> uNISWAPV3ETHEREUMTicksCurrent() throws ApiException {
+        ApiResponse<List<UNISWAPV3ETHEREUMTickDTO>> localVarResp = uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * Ticks (current)
      * Gets ticks.
-     * @param pool Liquidity pool this tick belongs to (optional)
      * @return ApiResponse&lt;List&lt;UNISWAPV3ETHEREUMTickDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2105,8 +2082,8 @@ public class UniswapV3EthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UNISWAPV3ETHEREUMTickDTO>> uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo(String pool) throws ApiException {
-        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTicksCurrentValidateBeforeCall(pool, null);
+    public ApiResponse<List<UNISWAPV3ETHEREUMTickDTO>> uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTicksCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMTickDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2114,7 +2091,6 @@ public class UniswapV3EthereumApi {
     /**
      * Ticks (current) (asynchronously)
      * Gets ticks.
-     * @param pool Liquidity pool this tick belongs to (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2124,9 +2100,9 @@ public class UniswapV3EthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uNISWAPV3ETHEREUMTicksCurrentAsync(String pool, final ApiCallback<List<UNISWAPV3ETHEREUMTickDTO>> _callback) throws ApiException {
+    public okhttp3.Call uNISWAPV3ETHEREUMTicksCurrentAsync(final ApiCallback<List<UNISWAPV3ETHEREUMTickDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTicksCurrentValidateBeforeCall(pool, _callback);
+        okhttp3.Call localVarCall = uNISWAPV3ETHEREUMTicksCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<UNISWAPV3ETHEREUMTickDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

@@ -25,7 +25,6 @@ pancakeswap_v3_ethereum_tick_daily_snapshot_dto_t* instantiate_pancakeswap_v3_et
       "2013-10-20T19:20:30+01:00",
       "2013-10-20T19:20:30+01:00",
       56,
-      56,
       "0",
       56,
       "0",
@@ -40,7 +39,6 @@ pancakeswap_v3_ethereum_tick_daily_snapshot_dto_t* instantiate_pancakeswap_v3_et
     pancakeswap_v3_ethereum_tick_daily_snapshot_dto = pancakeswap_v3_ethereum_tick_daily_snapshot_dto_create(
       "2013-10-20T19:20:30+01:00",
       "2013-10-20T19:20:30+01:00",
-      56,
       56,
       "0",
       56,

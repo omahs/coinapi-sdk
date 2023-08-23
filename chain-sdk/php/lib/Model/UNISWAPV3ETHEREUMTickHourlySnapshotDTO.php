@@ -62,7 +62,6 @@ class UNISWAPV3ETHEREUMTickHourlySnapshotDTO implements ModelInterface, ArrayAcc
         'entry_time' => '\DateTime',
         'recv_time' => '\DateTime',
         'block_number' => 'int',
-        'vid' => 'int',
         'id' => 'string',
         'hour_id' => 'int',
         'tick' => 'string',
@@ -85,7 +84,6 @@ class UNISWAPV3ETHEREUMTickHourlySnapshotDTO implements ModelInterface, ArrayAcc
         'entry_time' => 'date-time',
         'recv_time' => 'date-time',
         'block_number' => 'int64',
-        'vid' => 'int64',
         'id' => null,
         'hour_id' => 'int32',
         'tick' => null,
@@ -106,7 +104,6 @@ class UNISWAPV3ETHEREUMTickHourlySnapshotDTO implements ModelInterface, ArrayAcc
         'entry_time' => false,
 		'recv_time' => false,
 		'block_number' => false,
-		'vid' => false,
 		'id' => true,
 		'hour_id' => false,
 		'tick' => true,
@@ -207,7 +204,6 @@ class UNISWAPV3ETHEREUMTickHourlySnapshotDTO implements ModelInterface, ArrayAcc
         'entry_time' => 'entry_time',
         'recv_time' => 'recv_time',
         'block_number' => 'block_number',
-        'vid' => 'vid',
         'id' => 'id',
         'hour_id' => 'hour_id',
         'tick' => 'tick',
@@ -228,7 +224,6 @@ class UNISWAPV3ETHEREUMTickHourlySnapshotDTO implements ModelInterface, ArrayAcc
         'entry_time' => 'setEntryTime',
         'recv_time' => 'setRecvTime',
         'block_number' => 'setBlockNumber',
-        'vid' => 'setVid',
         'id' => 'setId',
         'hour_id' => 'setHourId',
         'tick' => 'setTick',
@@ -249,7 +244,6 @@ class UNISWAPV3ETHEREUMTickHourlySnapshotDTO implements ModelInterface, ArrayAcc
         'entry_time' => 'getEntryTime',
         'recv_time' => 'getRecvTime',
         'block_number' => 'getBlockNumber',
-        'vid' => 'getVid',
         'id' => 'getId',
         'hour_id' => 'getHourId',
         'tick' => 'getTick',
@@ -321,7 +315,6 @@ class UNISWAPV3ETHEREUMTickHourlySnapshotDTO implements ModelInterface, ArrayAcc
         $this->setIfExists('entry_time', $data ?? [], null);
         $this->setIfExists('recv_time', $data ?? [], null);
         $this->setIfExists('block_number', $data ?? [], null);
-        $this->setIfExists('vid', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('hour_id', $data ?? [], null);
         $this->setIfExists('tick', $data ?? [], null);
@@ -452,33 +445,6 @@ class UNISWAPV3ETHEREUMTickHourlySnapshotDTO implements ModelInterface, ArrayAcc
             throw new \InvalidArgumentException('non-nullable block_number cannot be null');
         }
         $this->container['block_number'] = $block_number;
-
-        return $this;
-    }
-
-    /**
-     * Gets vid
-     *
-     * @return int|null
-     */
-    public function getVid()
-    {
-        return $this->container['vid'];
-    }
-
-    /**
-     * Sets vid
-     *
-     * @param int|null $vid 
-     *
-     * @return self
-     */
-    public function setVid($vid)
-    {
-        if (is_null($vid)) {
-            throw new \InvalidArgumentException('non-nullable vid cannot be null');
-        }
-        $this->container['vid'] = $vid;
 
         return $this;
     }

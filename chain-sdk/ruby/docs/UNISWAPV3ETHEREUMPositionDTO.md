@@ -7,7 +7,6 @@
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
 | **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
-| **vid** | **Integer** |  | [optional] |
 | **id** | **String** | (account address)-(market address)-(count) | [optional] |
 | **account** | **String** | Account that owns this position | [optional] |
 | **pool** | **String** | The liquidity pool in which this position was opened | [optional] |
@@ -40,7 +39,6 @@ instance = OpenapiClient::UNISWAPV3ETHEREUMPositionDTO.new(
   entry_time: null,
   recv_time: null,
   block_number: null,
-  vid: null,
   id: null,
   account: null,
   pool: null,

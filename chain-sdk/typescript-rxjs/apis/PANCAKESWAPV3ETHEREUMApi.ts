@@ -45,10 +45,6 @@ export interface PANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrentRequest {
     id?: string;
 }
 
-export interface PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest {
-    pool?: string;
-}
-
 export interface PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest {
     pool?: string;
 }
@@ -170,18 +166,12 @@ export class PANCAKESWAPV3ETHEREUMApi extends BaseAPI {
      * Gets liquidityPoolDailySnapshots.
      * LiquidityPoolDailySnapshots (current)
      */
-    pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent({ pool }: PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest): Observable<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>
-    pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent({ pool }: PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>>
-    pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent({ pool }: PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentRequest, opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>> {
-
-        const query: HttpQuery = {};
-
-        if (pool != null) { query['pool'] = pool; }
-
+    pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(): Observable<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>
+    pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>>
+    pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(opts?: OperationOpts): Observable<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> | AjaxResponse<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>> {
         return this.request<Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>({
             url: '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current',
             method: 'GET',
-            query,
         }, opts?.responseOpts);
     };
 

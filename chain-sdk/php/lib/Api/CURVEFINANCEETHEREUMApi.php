@@ -72,13 +72,55 @@ class CURVEFINANCEETHEREUMApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
+        'cURVEFINANCEETHEREUMAccountsCurrent' => [
+            'application/json',
+        ],
+        'cURVEFINANCEETHEREUMActiveAccountsCurrent' => [
+            'application/json',
+        ],
+        'cURVEFINANCEETHEREUMDepositsCurrent' => [
+            'application/json',
+        ],
+        'cURVEFINANCEETHEREUMDexAmmProtocolsCurrent' => [
+            'application/json',
+        ],
+        'cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent' => [
+            'application/json',
+        ],
+        'cURVEFINANCEETHEREUMLiquidityGaugesCurrent' => [
+            'application/json',
+        ],
+        'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent' => [
+            'application/json',
+        ],
+        'cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent' => [
+            'application/json',
+        ],
+        'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent' => [
+            'application/json',
+        ],
         'cURVEFINANCEETHEREUMLiquidityPoolsCurrent' => [
+            'application/json',
+        ],
+        'cURVEFINANCEETHEREUMLpTokensCurrent' => [
+            'application/json',
+        ],
+        'cURVEFINANCEETHEREUMRewardTokensCurrent' => [
             'application/json',
         ],
         'cURVEFINANCEETHEREUMSwapsCurrent' => [
             'application/json',
         ],
         'cURVEFINANCEETHEREUMTokensCurrent' => [
+            'application/json',
+        ],
+        'cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent' => [
+            'application/json',
+        ],
+        'cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent' => [
+            'application/json',
+        ],
+        'cURVEFINANCEETHEREUMWithdrawsCurrent' => [
             'application/json',
         ],
     ];
@@ -130,19 +172,2387 @@ class CURVEFINANCEETHEREUMApi
     }
 
     /**
+     * Operation cURVEFINANCEETHEREUMAccountsCurrent
+     *
+     * Accounts (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CURVEFINANCEETHEREUMAccountDTO[]
+     */
+    public function cURVEFINANCEETHEREUMAccountsCurrent(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMAccountsCurrent'][0])
+    {
+        list($response) = $this->cURVEFINANCEETHEREUMAccountsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMAccountsCurrentWithHttpInfo
+     *
+     * Accounts (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CURVEFINANCEETHEREUMAccountDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function cURVEFINANCEETHEREUMAccountsCurrentWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMAccountsCurrent'][0])
+    {
+        $request = $this->cURVEFINANCEETHEREUMAccountsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMAccountDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMAccountDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMAccountDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMAccountDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMAccountDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMAccountsCurrentAsync
+     *
+     * Accounts (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMAccountsCurrentAsync(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMAccountsCurrent'][0])
+    {
+        return $this->cURVEFINANCEETHEREUMAccountsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMAccountsCurrentAsyncWithHttpInfo
+     *
+     * Accounts (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMAccountsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMAccountsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMAccountDTO[]';
+        $request = $this->cURVEFINANCEETHEREUMAccountsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'cURVEFINANCEETHEREUMAccountsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function cURVEFINANCEETHEREUMAccountsCurrentRequest(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMAccountsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/curve-finance-ethereum/accounts/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMActiveAccountsCurrent
+     *
+     * ActiveAccounts (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMActiveAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CURVEFINANCEETHEREUMActiveAccountDTO[]
+     */
+    public function cURVEFINANCEETHEREUMActiveAccountsCurrent(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMActiveAccountsCurrent'][0])
+    {
+        list($response) = $this->cURVEFINANCEETHEREUMActiveAccountsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMActiveAccountsCurrentWithHttpInfo
+     *
+     * ActiveAccounts (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMActiveAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CURVEFINANCEETHEREUMActiveAccountDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function cURVEFINANCEETHEREUMActiveAccountsCurrentWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMActiveAccountsCurrent'][0])
+    {
+        $request = $this->cURVEFINANCEETHEREUMActiveAccountsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMActiveAccountDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMActiveAccountDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMActiveAccountDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMActiveAccountDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMActiveAccountDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMActiveAccountsCurrentAsync
+     *
+     * ActiveAccounts (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMActiveAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMActiveAccountsCurrentAsync(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMActiveAccountsCurrent'][0])
+    {
+        return $this->cURVEFINANCEETHEREUMActiveAccountsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMActiveAccountsCurrentAsyncWithHttpInfo
+     *
+     * ActiveAccounts (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMActiveAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMActiveAccountsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMActiveAccountsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMActiveAccountDTO[]';
+        $request = $this->cURVEFINANCEETHEREUMActiveAccountsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'cURVEFINANCEETHEREUMActiveAccountsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMActiveAccountsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function cURVEFINANCEETHEREUMActiveAccountsCurrentRequest(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMActiveAccountsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/curve-finance-ethereum/activeAccounts/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMDepositsCurrent
+     *
+     * Deposits (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMDepositsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CURVEFINANCEETHEREUMDepositDTO[]
+     */
+    public function cURVEFINANCEETHEREUMDepositsCurrent(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMDepositsCurrent'][0])
+    {
+        list($response) = $this->cURVEFINANCEETHEREUMDepositsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMDepositsCurrentWithHttpInfo
+     *
+     * Deposits (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMDepositsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CURVEFINANCEETHEREUMDepositDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function cURVEFINANCEETHEREUMDepositsCurrentWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMDepositsCurrent'][0])
+    {
+        $request = $this->cURVEFINANCEETHEREUMDepositsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMDepositDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMDepositDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMDepositDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMDepositDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMDepositDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMDepositsCurrentAsync
+     *
+     * Deposits (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMDepositsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMDepositsCurrentAsync(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMDepositsCurrent'][0])
+    {
+        return $this->cURVEFINANCEETHEREUMDepositsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMDepositsCurrentAsyncWithHttpInfo
+     *
+     * Deposits (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMDepositsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMDepositsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMDepositsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMDepositDTO[]';
+        $request = $this->cURVEFINANCEETHEREUMDepositsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'cURVEFINANCEETHEREUMDepositsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMDepositsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function cURVEFINANCEETHEREUMDepositsCurrentRequest(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMDepositsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/curve-finance-ethereum/deposits/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMDexAmmProtocolsCurrent
+     *
+     * DexAmmProtocols (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMDexAmmProtocolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CURVEFINANCEETHEREUMDexAmmProtocolDTO[]
+     */
+    public function cURVEFINANCEETHEREUMDexAmmProtocolsCurrent(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMDexAmmProtocolsCurrent'][0])
+    {
+        list($response) = $this->cURVEFINANCEETHEREUMDexAmmProtocolsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMDexAmmProtocolsCurrentWithHttpInfo
+     *
+     * DexAmmProtocols (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMDexAmmProtocolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CURVEFINANCEETHEREUMDexAmmProtocolDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function cURVEFINANCEETHEREUMDexAmmProtocolsCurrentWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMDexAmmProtocolsCurrent'][0])
+    {
+        $request = $this->cURVEFINANCEETHEREUMDexAmmProtocolsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMDexAmmProtocolDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMDexAmmProtocolDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMDexAmmProtocolDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMDexAmmProtocolDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMDexAmmProtocolDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMDexAmmProtocolsCurrentAsync
+     *
+     * DexAmmProtocols (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMDexAmmProtocolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMDexAmmProtocolsCurrentAsync(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMDexAmmProtocolsCurrent'][0])
+    {
+        return $this->cURVEFINANCEETHEREUMDexAmmProtocolsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMDexAmmProtocolsCurrentAsyncWithHttpInfo
+     *
+     * DexAmmProtocols (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMDexAmmProtocolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMDexAmmProtocolsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMDexAmmProtocolsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMDexAmmProtocolDTO[]';
+        $request = $this->cURVEFINANCEETHEREUMDexAmmProtocolsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'cURVEFINANCEETHEREUMDexAmmProtocolsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMDexAmmProtocolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function cURVEFINANCEETHEREUMDexAmmProtocolsCurrentRequest(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMDexAmmProtocolsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/curve-finance-ethereum/dexAmmProtocols/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent
+     *
+     * FinancialsDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO[]
+     */
+    public function cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent'][0])
+    {
+        list($response) = $this->cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo
+     *
+     * FinancialsDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent'][0])
+    {
+        $request = $this->cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentAsync
+     *
+     * FinancialsDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentAsync(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent'][0])
+    {
+        return $this->cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentAsyncWithHttpInfo
+     *
+     * FinancialsDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO[]';
+        $request = $this->cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentRequest(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/curve-finance-ethereum/financialsDailySnapshots/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLiquidityGaugesCurrent
+     *
+     * LiquidityGauges (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityGaugesCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityGaugeDTO[]
+     */
+    public function cURVEFINANCEETHEREUMLiquidityGaugesCurrent(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityGaugesCurrent'][0])
+    {
+        list($response) = $this->cURVEFINANCEETHEREUMLiquidityGaugesCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLiquidityGaugesCurrentWithHttpInfo
+     *
+     * LiquidityGauges (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityGaugesCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityGaugeDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function cURVEFINANCEETHEREUMLiquidityGaugesCurrentWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityGaugesCurrent'][0])
+    {
+        $request = $this->cURVEFINANCEETHEREUMLiquidityGaugesCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityGaugeDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityGaugeDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityGaugeDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityGaugeDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityGaugeDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLiquidityGaugesCurrentAsync
+     *
+     * LiquidityGauges (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityGaugesCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMLiquidityGaugesCurrentAsync(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityGaugesCurrent'][0])
+    {
+        return $this->cURVEFINANCEETHEREUMLiquidityGaugesCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLiquidityGaugesCurrentAsyncWithHttpInfo
+     *
+     * LiquidityGauges (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityGaugesCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMLiquidityGaugesCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityGaugesCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityGaugeDTO[]';
+        $request = $this->cURVEFINANCEETHEREUMLiquidityGaugesCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'cURVEFINANCEETHEREUMLiquidityGaugesCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityGaugesCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function cURVEFINANCEETHEREUMLiquidityGaugesCurrentRequest(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityGaugesCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/curve-finance-ethereum/liquidityGauges/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent
+     *
+     * LiquidityPoolDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO[]
+     */
+    public function cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
+    {
+        list($response) = $this->cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo
+     *
+     * LiquidityPoolDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
+    {
+        $request = $this->cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentAsync
+     *
+     * LiquidityPoolDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentAsync(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
+    {
+        return $this->cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentAsyncWithHttpInfo
+     *
+     * LiquidityPoolDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO[]';
+        $request = $this->cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentRequest(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/curve-finance-ethereum/liquidityPoolDailySnapshots/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent
+     *
+     * LiquidityPoolFees (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolFeeDTO[]
+     */
+    public function cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent'][0])
+    {
+        list($response) = $this->cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentWithHttpInfo
+     *
+     * LiquidityPoolFees (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolFeeDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent'][0])
+    {
+        $request = $this->cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolFeeDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolFeeDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolFeeDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolFeeDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolFeeDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentAsync
+     *
+     * LiquidityPoolFees (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentAsync(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent'][0])
+    {
+        return $this->cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentAsyncWithHttpInfo
+     *
+     * LiquidityPoolFees (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolFeeDTO[]';
+        $request = $this->cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentRequest(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/curve-finance-ethereum/liquidityPoolFees/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent
+     *
+     * LiquidityPoolHourlySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO[]
+     */
+    public function cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent'][0])
+    {
+        list($response) = $this->cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo
+     *
+     * LiquidityPoolHourlySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent'][0])
+    {
+        $request = $this->cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentAsync
+     *
+     * LiquidityPoolHourlySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentAsync(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent'][0])
+    {
+        return $this->cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentAsyncWithHttpInfo
+     *
+     * LiquidityPoolHourlySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO[]';
+        $request = $this->cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/curve-finance-ethereum/liquidityPoolHourlySnapshots/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation cURVEFINANCEETHEREUMLiquidityPoolsCurrent
      *
      * LiquidityPools (current)
      *
+     * @param  string $id Smart contract address of the pool (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolsCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolDTO[]
      */
-    public function cURVEFINANCEETHEREUMLiquidityPoolsCurrent(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolsCurrent'][0])
+    public function cURVEFINANCEETHEREUMLiquidityPoolsCurrent($id = null, string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolsCurrent'][0])
     {
-        list($response) = $this->cURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo($contentType);
+        list($response) = $this->cURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo($id, $contentType);
         return $response;
     }
 
@@ -151,15 +2561,16 @@ class CURVEFINANCEETHEREUMApi
      *
      * LiquidityPools (current)
      *
+     * @param  string $id Smart contract address of the pool (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolsCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function cURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolsCurrent'][0])
+    public function cURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo($id = null, string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolsCurrent'][0])
     {
-        $request = $this->cURVEFINANCEETHEREUMLiquidityPoolsCurrentRequest($contentType);
+        $request = $this->cURVEFINANCEETHEREUMLiquidityPoolsCurrentRequest($id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -250,14 +2661,15 @@ class CURVEFINANCEETHEREUMApi
      *
      * LiquidityPools (current)
      *
+     * @param  string $id Smart contract address of the pool (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolsCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cURVEFINANCEETHEREUMLiquidityPoolsCurrentAsync(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolsCurrent'][0])
+    public function cURVEFINANCEETHEREUMLiquidityPoolsCurrentAsync($id = null, string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolsCurrent'][0])
     {
-        return $this->cURVEFINANCEETHEREUMLiquidityPoolsCurrentAsyncWithHttpInfo($contentType)
+        return $this->cURVEFINANCEETHEREUMLiquidityPoolsCurrentAsyncWithHttpInfo($id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -270,15 +2682,16 @@ class CURVEFINANCEETHEREUMApi
      *
      * LiquidityPools (current)
      *
+     * @param  string $id Smart contract address of the pool (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolsCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cURVEFINANCEETHEREUMLiquidityPoolsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolsCurrent'][0])
+    public function cURVEFINANCEETHEREUMLiquidityPoolsCurrentAsyncWithHttpInfo($id = null, string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolsCurrent'][0])
     {
         $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLiquidityPoolDTO[]';
-        $request = $this->cURVEFINANCEETHEREUMLiquidityPoolsCurrentRequest($contentType);
+        $request = $this->cURVEFINANCEETHEREUMLiquidityPoolsCurrentRequest($id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -319,16 +2732,553 @@ class CURVEFINANCEETHEREUMApi
     /**
      * Create request for operation 'cURVEFINANCEETHEREUMLiquidityPoolsCurrent'
      *
+     * @param  string $id Smart contract address of the pool (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolsCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function cURVEFINANCEETHEREUMLiquidityPoolsCurrentRequest(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolsCurrent'][0])
+    public function cURVEFINANCEETHEREUMLiquidityPoolsCurrentRequest($id = null, string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLiquidityPoolsCurrent'][0])
     {
 
 
+
         $resourcePath = '/v1/dapps/curve-finance-ethereum/liquidityPools/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLpTokensCurrent
+     *
+     * LpTokens (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLpTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CURVEFINANCEETHEREUMLpTokenDTO[]
+     */
+    public function cURVEFINANCEETHEREUMLpTokensCurrent(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLpTokensCurrent'][0])
+    {
+        list($response) = $this->cURVEFINANCEETHEREUMLpTokensCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLpTokensCurrentWithHttpInfo
+     *
+     * LpTokens (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLpTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CURVEFINANCEETHEREUMLpTokenDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function cURVEFINANCEETHEREUMLpTokensCurrentWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLpTokensCurrent'][0])
+    {
+        $request = $this->cURVEFINANCEETHEREUMLpTokensCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLpTokenDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLpTokenDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLpTokenDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLpTokenDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLpTokenDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLpTokensCurrentAsync
+     *
+     * LpTokens (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLpTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMLpTokensCurrentAsync(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLpTokensCurrent'][0])
+    {
+        return $this->cURVEFINANCEETHEREUMLpTokensCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMLpTokensCurrentAsyncWithHttpInfo
+     *
+     * LpTokens (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLpTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMLpTokensCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLpTokensCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMLpTokenDTO[]';
+        $request = $this->cURVEFINANCEETHEREUMLpTokensCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'cURVEFINANCEETHEREUMLpTokensCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMLpTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function cURVEFINANCEETHEREUMLpTokensCurrentRequest(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMLpTokensCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/curve-finance-ethereum/lpTokens/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMRewardTokensCurrent
+     *
+     * RewardTokens (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMRewardTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CURVEFINANCEETHEREUMRewardTokenDTO[]
+     */
+    public function cURVEFINANCEETHEREUMRewardTokensCurrent(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMRewardTokensCurrent'][0])
+    {
+        list($response) = $this->cURVEFINANCEETHEREUMRewardTokensCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMRewardTokensCurrentWithHttpInfo
+     *
+     * RewardTokens (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMRewardTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CURVEFINANCEETHEREUMRewardTokenDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function cURVEFINANCEETHEREUMRewardTokensCurrentWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMRewardTokensCurrent'][0])
+    {
+        $request = $this->cURVEFINANCEETHEREUMRewardTokensCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMRewardTokenDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMRewardTokenDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMRewardTokenDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMRewardTokenDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMRewardTokenDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMRewardTokensCurrentAsync
+     *
+     * RewardTokens (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMRewardTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMRewardTokensCurrentAsync(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMRewardTokensCurrent'][0])
+    {
+        return $this->cURVEFINANCEETHEREUMRewardTokensCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMRewardTokensCurrentAsyncWithHttpInfo
+     *
+     * RewardTokens (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMRewardTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMRewardTokensCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMRewardTokensCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMRewardTokenDTO[]';
+        $request = $this->cURVEFINANCEETHEREUMRewardTokensCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'cURVEFINANCEETHEREUMRewardTokensCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMRewardTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function cURVEFINANCEETHEREUMRewardTokensCurrentRequest(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMRewardTokensCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/curve-finance-ethereum/rewardTokens/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -660,15 +3610,16 @@ class CURVEFINANCEETHEREUMApi
      *
      * Tokens (current)
      *
+     * @param  string $id Smart contract address of the token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMTokensCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\CURVEFINANCEETHEREUMTokenDTO[]
      */
-    public function cURVEFINANCEETHEREUMTokensCurrent(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMTokensCurrent'][0])
+    public function cURVEFINANCEETHEREUMTokensCurrent($id = null, string $contentType = self::contentTypes['cURVEFINANCEETHEREUMTokensCurrent'][0])
     {
-        list($response) = $this->cURVEFINANCEETHEREUMTokensCurrentWithHttpInfo($contentType);
+        list($response) = $this->cURVEFINANCEETHEREUMTokensCurrentWithHttpInfo($id, $contentType);
         return $response;
     }
 
@@ -677,15 +3628,16 @@ class CURVEFINANCEETHEREUMApi
      *
      * Tokens (current)
      *
+     * @param  string $id Smart contract address of the token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMTokensCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\CURVEFINANCEETHEREUMTokenDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function cURVEFINANCEETHEREUMTokensCurrentWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMTokensCurrent'][0])
+    public function cURVEFINANCEETHEREUMTokensCurrentWithHttpInfo($id = null, string $contentType = self::contentTypes['cURVEFINANCEETHEREUMTokensCurrent'][0])
     {
-        $request = $this->cURVEFINANCEETHEREUMTokensCurrentRequest($contentType);
+        $request = $this->cURVEFINANCEETHEREUMTokensCurrentRequest($id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -776,14 +3728,15 @@ class CURVEFINANCEETHEREUMApi
      *
      * Tokens (current)
      *
+     * @param  string $id Smart contract address of the token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMTokensCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cURVEFINANCEETHEREUMTokensCurrentAsync(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMTokensCurrent'][0])
+    public function cURVEFINANCEETHEREUMTokensCurrentAsync($id = null, string $contentType = self::contentTypes['cURVEFINANCEETHEREUMTokensCurrent'][0])
     {
-        return $this->cURVEFINANCEETHEREUMTokensCurrentAsyncWithHttpInfo($contentType)
+        return $this->cURVEFINANCEETHEREUMTokensCurrentAsyncWithHttpInfo($id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -796,15 +3749,16 @@ class CURVEFINANCEETHEREUMApi
      *
      * Tokens (current)
      *
+     * @param  string $id Smart contract address of the token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMTokensCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cURVEFINANCEETHEREUMTokensCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMTokensCurrent'][0])
+    public function cURVEFINANCEETHEREUMTokensCurrentAsyncWithHttpInfo($id = null, string $contentType = self::contentTypes['cURVEFINANCEETHEREUMTokensCurrent'][0])
     {
         $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMTokenDTO[]';
-        $request = $this->cURVEFINANCEETHEREUMTokensCurrentRequest($contentType);
+        $request = $this->cURVEFINANCEETHEREUMTokensCurrentRequest($id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -845,16 +3799,816 @@ class CURVEFINANCEETHEREUMApi
     /**
      * Create request for operation 'cURVEFINANCEETHEREUMTokensCurrent'
      *
+     * @param  string $id Smart contract address of the token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMTokensCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function cURVEFINANCEETHEREUMTokensCurrentRequest(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMTokensCurrent'][0])
+    public function cURVEFINANCEETHEREUMTokensCurrentRequest($id = null, string $contentType = self::contentTypes['cURVEFINANCEETHEREUMTokensCurrent'][0])
     {
 
 
+
         $resourcePath = '/v1/dapps/curve-finance-ethereum/tokens/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent
+     *
+     * UsageMetricsDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO[]
+     */
+    public function cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent'][0])
+    {
+        list($response) = $this->cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo
+     *
+     * UsageMetricsDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent'][0])
+    {
+        $request = $this->cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentAsync
+     *
+     * UsageMetricsDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentAsync(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent'][0])
+    {
+        return $this->cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentAsyncWithHttpInfo
+     *
+     * UsageMetricsDailySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO[]';
+        $request = $this->cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentRequest(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent
+     *
+     * UsageMetricsHourlySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO[]
+     */
+    public function cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent'][0])
+    {
+        list($response) = $this->cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo
+     *
+     * UsageMetricsHourlySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent'][0])
+    {
+        $request = $this->cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentAsync
+     *
+     * UsageMetricsHourlySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentAsync(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent'][0])
+    {
+        return $this->cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentAsyncWithHttpInfo
+     *
+     * UsageMetricsHourlySnapshots (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO[]';
+        $request = $this->cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentRequest(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', 'application/x-msgpack', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMWithdrawsCurrent
+     *
+     * Withdraws (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMWithdrawsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CURVEFINANCEETHEREUMWithdrawDTO[]
+     */
+    public function cURVEFINANCEETHEREUMWithdrawsCurrent(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMWithdrawsCurrent'][0])
+    {
+        list($response) = $this->cURVEFINANCEETHEREUMWithdrawsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMWithdrawsCurrentWithHttpInfo
+     *
+     * Withdraws (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMWithdrawsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CURVEFINANCEETHEREUMWithdrawDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function cURVEFINANCEETHEREUMWithdrawsCurrentWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMWithdrawsCurrent'][0])
+    {
+        $request = $this->cURVEFINANCEETHEREUMWithdrawsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMWithdrawDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CURVEFINANCEETHEREUMWithdrawDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMWithdrawDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMWithdrawDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMWithdrawDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMWithdrawsCurrentAsync
+     *
+     * Withdraws (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMWithdrawsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMWithdrawsCurrentAsync(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMWithdrawsCurrent'][0])
+    {
+        return $this->cURVEFINANCEETHEREUMWithdrawsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation cURVEFINANCEETHEREUMWithdrawsCurrentAsyncWithHttpInfo
+     *
+     * Withdraws (current)
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMWithdrawsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function cURVEFINANCEETHEREUMWithdrawsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMWithdrawsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CURVEFINANCEETHEREUMWithdrawDTO[]';
+        $request = $this->cURVEFINANCEETHEREUMWithdrawsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'cURVEFINANCEETHEREUMWithdrawsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cURVEFINANCEETHEREUMWithdrawsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function cURVEFINANCEETHEREUMWithdrawsCurrentRequest(string $contentType = self::contentTypes['cURVEFINANCEETHEREUMWithdrawsCurrent'][0])
+    {
+
+
+        $resourcePath = '/v1/dapps/curve-finance-ethereum/withdraws/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

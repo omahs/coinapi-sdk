@@ -19,12 +19,11 @@ local function cast_pancakeswap_v3_ethereum_tick_hourly_snapshot_dto(t)
 	return setmetatable(t, pancakeswap_v3_ethereum_tick_hourly_snapshot_dto_mt)
 end
 
-local function new_pancakeswap_v3_ethereum_tick_hourly_snapshot_dto(entry_time, recv_time, block_number, vid, id, hour_id, tick, pool, liquidity_gross, liquidity_gross_usd, liquidity_net, liquidity_net_usd, timestamp)
+local function new_pancakeswap_v3_ethereum_tick_hourly_snapshot_dto(entry_time, recv_time, block_number, id, hour_id, tick, pool, liquidity_gross, liquidity_gross_usd, liquidity_net, liquidity_net_usd, timestamp)
 	return cast_pancakeswap_v3_ethereum_tick_hourly_snapshot_dto({
 		["entry_time"] = entry_time;
 		["recv_time"] = recv_time;
 		["block_number"] = block_number;
-		["vid"] = vid;
 		["id"] = id;
 		["hour_id"] = hour_id;
 		["tick"] = tick;

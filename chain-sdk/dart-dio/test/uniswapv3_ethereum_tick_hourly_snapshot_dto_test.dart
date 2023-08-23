@@ -23,12 +23,6 @@ void main() {
       // TODO
     });
 
-    // 
-    // int vid
-    test('to test the property `vid`', () async {
-      // TODO
-    });
-
     // (pool address)-(tick index)-(hour ID)
     // String id
     test('to test the property `id`', () async {

@@ -67,13 +67,6 @@ public:
 	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
-	/*! \brief Get .
-	 */
-	long long getVid();
-
-	/*! \brief Set .
-	 */
-	void setVid(long long  vid);
 	/*! \brief Get The Ethereum block number associated with the liquidity pool daily snapshot.
 	 */
 	int getBlock();
@@ -380,7 +373,6 @@ private:
 	std::string entry_time;
 	std::string recv_time;
 	long long block_number;
-	long long vid;
 	int block_;
 	std::string id;
 	int day;

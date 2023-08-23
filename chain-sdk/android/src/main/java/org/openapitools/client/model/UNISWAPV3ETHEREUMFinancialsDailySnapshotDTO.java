@@ -27,7 +27,7 @@ public class UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO {
   @SerializedName("recv_time")
   private Date recvTime = null;
   @SerializedName("block_number")
-  private Integer blockNumber = null;
+  private Long blockNumber = null;
   @SerializedName("id")
   private String id = null;
   @SerializedName("day")
@@ -86,13 +86,13 @@ public class UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO {
   }
 
   /**
-   * Block number of when this snapshot was taken/last modified.)
+   * Number of block in which entity was recorded.
    **/
-  @ApiModelProperty(value = "Block number of when this snapshot was taken/last modified.)")
-  public Integer getBlockNumber() {
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
+  public Long getBlockNumber() {
     return blockNumber;
   }
-  public void setBlockNumber(Integer blockNumber) {
+  public void setBlockNumber(Long blockNumber) {
     this.blockNumber = blockNumber;
   }
 

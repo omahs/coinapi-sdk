@@ -26,13 +26,6 @@ API.Client.UNISWAPV3ETHEREUMTickDTO.prototype.recvTime;
 API.Client.UNISWAPV3ETHEREUMTickDTO.prototype.blockNumber;
 
 /**
- * 
- * @type {!number}
- * @export
- */
-API.Client.UNISWAPV3ETHEREUMTickDTO.prototype.vid;
-
-/**
  * (pool address)-(tick index)
  * @type {!string}
  * @export

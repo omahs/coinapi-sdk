@@ -11,7 +11,6 @@ Represents a liquidity pool daily snapshot for PancakeSwap V3.
 |**entryTime** | **OffsetDateTime** |  |  [optional] |
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
 |**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional] |
-|**vid** | **Long** | . |  [optional] |
 |**block** | **Integer** | The Ethereum block number associated with the liquidity pool daily snapshot. |  [optional] |
 |**id** | **String** | Identifier, format: (smart contract address of the pool)-(# of days since Unix epoch time). |  [optional] |
 |**day** | **Integer** | Number of days since Unix epoch time. |  [optional] |

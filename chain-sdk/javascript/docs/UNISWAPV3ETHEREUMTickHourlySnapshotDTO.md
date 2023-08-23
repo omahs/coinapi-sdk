@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **entryTime** | **Date** |  | [optional] 
 **recvTime** | **Date** |  | [optional] 
 **blockNumber** | **Number** | Number of block in which entity was recorded. | [optional] 
-**vid** | **Number** |  | [optional] 
 **id** | **String** | (pool address)-(tick index)-(hour ID) | [optional] 
 **hourId** | **Number** | Number of hours since Unix epoch time | [optional] 
 **tick** | **String** | tick index | [optional] 

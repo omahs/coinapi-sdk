@@ -14,6 +14,152 @@
 #'
 #' @section Methods:
 #' \describe{
+#' \strong{ SUSHISWAPV3ETHEREUMAccountsCurrent } \emph{ Accounts (current) }
+#' Gets accounts.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.AccountDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMAccountDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SUSHISWAPV3ETHEREUMActiveAccountsCurrent } \emph{ ActiveAccounts (current) }
+#' Gets activeAccounts.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.ActiveAccountDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMActiveAccountDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SUSHISWAPV3ETHEREUMDepositsCurrent } \emph{ Deposits (current) }
+#' Gets deposits.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.DepositDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMDepositDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent } \emph{ DexAmmProtocols (current) }
+#' Gets dexAmmProtocols.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.DexAmmProtocolDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMDexAmmProtocolDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent } \emph{ FinancialsDailySnapshots (current) }
+#' Gets financialsDailySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.FinancialsDailySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent } \emph{ LiquidityPoolAmounts (current) }
+#' Gets liquidityPoolAmounts.
+#'
+#' \itemize{
+#' \item \emph{ @param } id character
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.LiquidityPoolAmountDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent } \emph{ LiquidityPoolDailySnapshots (current) }
+#' Gets liquidityPoolDailySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent } \emph{ LiquidityPoolFees (current) }
+#' Gets liquidityPoolFees.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.LiquidityPoolFeeDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent } \emph{ LiquidityPoolHourlySnapshots (current) }
+#' Gets liquidityPoolHourlySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @param } pool character
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.LiquidityPoolHourlySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
 #' \strong{ SUSHISWAPV3ETHEREUMLiquidityPoolsCurrent } \emph{ LiquidityPools (current) }
 #' Gets liquidityPools.
 #'
@@ -31,6 +177,55 @@
 #' }
 #' }
 #'
+#' \strong{ SUSHISWAPV3ETHEREUMPositionSnapshotsCurrent } \emph{ PositionSnapshots (current) }
+#' Gets positionSnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.PositionSnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMPositionSnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SUSHISWAPV3ETHEREUMPositionsCurrent } \emph{ Positions (current) }
+#' Gets positions.
+#'
+#' \itemize{
+#' \item \emph{ @param } pool character
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.PositionDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMPositionDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SUSHISWAPV3ETHEREUMRewardTokensCurrent } \emph{ RewardTokens (current) }
+#' Gets rewardTokens.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.RewardTokenDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMRewardTokenDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
 #' \strong{ SUSHISWAPV3ETHEREUMSwapsCurrent } \emph{ Swaps (current) }
 #' Gets swaps.
 #'
@@ -41,6 +236,89 @@
 #' \item status code : 200 | successful operation
 #'
 #' \item return type : array[SUSHISWAPV3ETHEREUMSwapDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent } \emph{ TickDailySnapshots (current) }
+#' Gets tickDailySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @param } pool character
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.TickDailySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMTickDailySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent } \emph{ TickHourlySnapshots (current) }
+#' Gets tickHourlySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @param } pool character
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.TickHourlySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SUSHISWAPV3ETHEREUMTicksCurrent } \emph{ Ticks (current) }
+#' Gets ticks.
+#'
+#' \itemize{
+#' \item \emph{ @param } pool character
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.TickDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMTickDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent } \emph{ TokenWhiteListSymbols (current) }
+#' Gets tokenWhiteListSymbols.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.TokenWhiteListSymbolDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SUSHISWAPV3ETHEREUMTokenWhiteListsCurrent } \emph{ TokenWhiteLists (current) }
+#' Gets tokenWhiteLists.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.TokenWhiteListDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMTokenWhiteListDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -64,11 +342,178 @@
 #' }
 #' }
 #'
+#' \strong{ SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent } \emph{ UsageMetricsDailySnapshots (current) }
+#' Gets usageMetricsDailySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.UsageMetricsDailySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent } \emph{ UsageMetricsHourlySnapshots (current) }
+#' Gets usageMetricsHourlySnapshots.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.UsageMetricsHourlySnapshotDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SUSHISWAPV3ETHEREUMWithdrawsCurrent } \emph{ Withdraws (current) }
+#' Gets withdraws.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{SUSHISWAP_V3_ETHEREUM.WithdrawDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SUSHISWAPV3ETHEREUMWithdrawDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
 #' }
 #'
 #'
 #' @examples
 #' \dontrun{
+#' ####################  SUSHISWAPV3ETHEREUMAccountsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Accounts (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMAccountsCurrent(data_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMAccountsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  SUSHISWAPV3ETHEREUMActiveAccountsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #ActiveAccounts (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMActiveAccountsCurrent(data_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMActiveAccountsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  SUSHISWAPV3ETHEREUMDepositsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Deposits (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMDepositsCurrent(data_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMDepositsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  SUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #DexAmmProtocols (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent(data_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  SUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #FinancialsDailySnapshots (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent  ####################
+#'
+#' library(openapi)
+#' var_id <- "id_example" # character | Smart contract address of the pool. (Optional)
+#'
+#' #LiquidityPoolAmounts (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id = var_iddata_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id = var_id)
+#' dput(result)
+#'
+#'
+#' ####################  SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #LiquidityPoolDailySnapshots (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  SUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #LiquidityPoolFees (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent(data_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#' var_pool <- "pool_example" # character | The pool this snapshot belongs to (Optional)
+#'
+#' #LiquidityPoolHourlySnapshots (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool = var_pooldata_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool = var_pool)
+#' dput(result)
+#'
+#'
 #' ####################  SUSHISWAPV3ETHEREUMLiquidityPoolsCurrent  ####################
 #'
 #' library(openapi)
@@ -80,6 +525,46 @@
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$SUSHISWAPV3ETHEREUMLiquidityPoolsCurrent(id = var_iddata_file = "result.txt")
 #' result <- api_instance$SUSHISWAPV3ETHEREUMLiquidityPoolsCurrent(id = var_id)
+#' dput(result)
+#'
+#'
+#' ####################  SUSHISWAPV3ETHEREUMPositionSnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #PositionSnapshots (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMPositionSnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMPositionSnapshotsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  SUSHISWAPV3ETHEREUMPositionsCurrent  ####################
+#'
+#' library(openapi)
+#' var_pool <- "pool_example" # character | The liquidity pool in which this position was opened (Optional)
+#'
+#' #Positions (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMPositionsCurrent(pool = var_pooldata_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMPositionsCurrent(pool = var_pool)
+#' dput(result)
+#'
+#'
+#' ####################  SUSHISWAPV3ETHEREUMRewardTokensCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #RewardTokens (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMRewardTokensCurrent(data_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMRewardTokensCurrent()
 #' dput(result)
 #'
 #'
@@ -96,6 +581,74 @@
 #' dput(result)
 #'
 #'
+#' ####################  SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#' var_pool <- "pool_example" # character | liquidity pool this tick belongs to (Optional)
+#'
+#' #TickDailySnapshots (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool = var_pooldata_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool = var_pool)
+#' dput(result)
+#'
+#'
+#' ####################  SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#' var_pool <- "pool_example" # character | liquidity pool this tick belongs to (Optional)
+#'
+#' #TickHourlySnapshots (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool = var_pooldata_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool = var_pool)
+#' dput(result)
+#'
+#'
+#' ####################  SUSHISWAPV3ETHEREUMTicksCurrent  ####################
+#'
+#' library(openapi)
+#' var_pool <- "pool_example" # character | Liquidity pool this tick belongs to (Optional)
+#'
+#' #Ticks (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMTicksCurrent(pool = var_pooldata_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMTicksCurrent(pool = var_pool)
+#' dput(result)
+#'
+#'
+#' ####################  SUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #TokenWhiteListSymbols (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent(data_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  SUSHISWAPV3ETHEREUMTokenWhiteListsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #TokenWhiteLists (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMTokenWhiteListsCurrent(data_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMTokenWhiteListsCurrent()
+#' dput(result)
+#'
+#'
 #' ####################  SUSHISWAPV3ETHEREUMTokensCurrent  ####################
 #'
 #' library(openapi)
@@ -107,6 +660,45 @@
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$SUSHISWAPV3ETHEREUMTokensCurrent(id = var_iddata_file = "result.txt")
 #' result <- api_instance$SUSHISWAPV3ETHEREUMTokensCurrent(id = var_id)
+#' dput(result)
+#'
+#'
+#' ####################  SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #UsageMetricsDailySnapshots (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #UsageMetricsHourlySnapshots (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  SUSHISWAPV3ETHEREUMWithdrawsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Withdraws (current)
+#' api_instance <- SUSHISWAPV3ETHEREUMApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SUSHISWAPV3ETHEREUMWithdrawsCurrent(data_file = "result.txt")
+#' result <- api_instance$SUSHISWAPV3ETHEREUMWithdrawsCurrent()
 #' dput(result)
 #'
 #'
@@ -130,6 +722,790 @@ SUSHISWAPV3ETHEREUMApi <- R6::R6Class(
         self$api_client <- api_client
       } else {
         self$api_client <- ApiClient$new()
+      }
+    },
+    #' Accounts (current)
+    #'
+    #' @description
+    #' Accounts (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMAccountDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMAccountsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMAccountsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Accounts (current)
+    #'
+    #' @description
+    #' Accounts (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMAccountDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMAccountsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/accounts/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMAccountDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' ActiveAccounts (current)
+    #'
+    #' @description
+    #' ActiveAccounts (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMActiveAccountDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMActiveAccountsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' ActiveAccounts (current)
+    #'
+    #' @description
+    #' ActiveAccounts (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMActiveAccountDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMActiveAccountsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/activeAccounts/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMActiveAccountDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Deposits (current)
+    #'
+    #' @description
+    #' Deposits (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMDepositDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMDepositsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMDepositsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Deposits (current)
+    #'
+    #' @description
+    #' Deposits (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMDepositDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMDepositsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/deposits/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMDepositDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' DexAmmProtocols (current)
+    #'
+    #' @description
+    #' DexAmmProtocols (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMDexAmmProtocolDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' DexAmmProtocols (current)
+    #'
+    #' @description
+    #' DexAmmProtocols (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMDexAmmProtocolDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMDexAmmProtocolsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/dexAmmProtocols/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMDexAmmProtocolDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' FinancialsDailySnapshots (current)
+    #'
+    #' @description
+    #' FinancialsDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' FinancialsDailySnapshots (current)
+    #'
+    #' @description
+    #' FinancialsDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/financialsDailySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' LiquidityPoolAmounts (current)
+    #'
+    #' @description
+    #' LiquidityPoolAmounts (current)
+    #'
+    #' @param id (optional) Smart contract address of the pool.
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent = function(id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo(id, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' LiquidityPoolAmounts (current)
+    #'
+    #' @description
+    #' LiquidityPoolAmounts (current)
+    #'
+    #' @param id (optional) Smart contract address of the pool.
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrentWithHttpInfo = function(id = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+      query_params[["id"]] <- `id`
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/liquidityPoolAmounts/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @description
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @description
+    #' LiquidityPoolDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/liquidityPoolDailySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' LiquidityPoolFees (current)
+    #'
+    #' @description
+    #' LiquidityPoolFees (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' LiquidityPoolFees (current)
+    #'
+    #' @description
+    #' LiquidityPoolFees (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/liquidityPoolFees/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' LiquidityPoolHourlySnapshots (current)
+    #'
+    #' @description
+    #' LiquidityPoolHourlySnapshots (current)
+    #'
+    #' @param pool (optional) The pool this snapshot belongs to
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent = function(pool = NULL, data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo(pool, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' LiquidityPoolHourlySnapshots (current)
+    #'
+    #' @description
+    #' LiquidityPoolHourlySnapshots (current)
+    #'
+    #' @param pool (optional) The pool this snapshot belongs to
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo = function(pool = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+      query_params[["pool"]] <- `pool`
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/liquidityPoolHourlySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
       }
     },
     #' LiquidityPools (current)
@@ -206,6 +1582,269 @@ SUSHISWAPV3ETHEREUMApi <- R6::R6Class(
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMLiquidityPoolDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' PositionSnapshots (current)
+    #'
+    #' @description
+    #' PositionSnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMPositionSnapshotDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMPositionSnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' PositionSnapshots (current)
+    #'
+    #' @description
+    #' PositionSnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMPositionSnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMPositionSnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/positionSnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMPositionSnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Positions (current)
+    #'
+    #' @description
+    #' Positions (current)
+    #'
+    #' @param pool (optional) The liquidity pool in which this position was opened
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMPositionDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMPositionsCurrent = function(pool = NULL, data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMPositionsCurrentWithHttpInfo(pool, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Positions (current)
+    #'
+    #' @description
+    #' Positions (current)
+    #'
+    #' @param pool (optional) The liquidity pool in which this position was opened
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMPositionDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMPositionsCurrentWithHttpInfo = function(pool = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+      query_params[["pool"]] <- `pool`
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/positions/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMPositionDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' RewardTokens (current)
+    #'
+    #' @description
+    #' RewardTokens (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMRewardTokenDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMRewardTokensCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' RewardTokens (current)
+    #'
+    #' @description
+    #' RewardTokens (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMRewardTokenDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMRewardTokensCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/rewardTokens/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMRewardTokenDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -309,6 +1948,451 @@ SUSHISWAPV3ETHEREUMApi <- R6::R6Class(
         local_var_resp
       }
     },
+    #' TickDailySnapshots (current)
+    #'
+    #' @description
+    #' TickDailySnapshots (current)
+    #'
+    #' @param pool (optional) liquidity pool this tick belongs to
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMTickDailySnapshotDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent = function(pool = NULL, data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo(pool, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' TickDailySnapshots (current)
+    #'
+    #' @description
+    #' TickDailySnapshots (current)
+    #'
+    #' @param pool (optional) liquidity pool this tick belongs to
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMTickDailySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo = function(pool = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+      query_params[["pool"]] <- `pool`
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/tickDailySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMTickDailySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' TickHourlySnapshots (current)
+    #'
+    #' @description
+    #' TickHourlySnapshots (current)
+    #'
+    #' @param pool (optional) liquidity pool this tick belongs to
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent = function(pool = NULL, data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(pool, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' TickHourlySnapshots (current)
+    #'
+    #' @description
+    #' TickHourlySnapshots (current)
+    #'
+    #' @param pool (optional) liquidity pool this tick belongs to
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo = function(pool = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+      query_params[["pool"]] <- `pool`
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/tickHourlySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Ticks (current)
+    #'
+    #' @description
+    #' Ticks (current)
+    #'
+    #' @param pool (optional) Liquidity pool this tick belongs to
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMTickDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMTicksCurrent = function(pool = NULL, data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMTicksCurrentWithHttpInfo(pool, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Ticks (current)
+    #'
+    #' @description
+    #' Ticks (current)
+    #'
+    #' @param pool (optional) Liquidity pool this tick belongs to
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMTickDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMTicksCurrentWithHttpInfo = function(pool = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+      query_params[["pool"]] <- `pool`
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/ticks/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMTickDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' TokenWhiteListSymbols (current)
+    #'
+    #' @description
+    #' TokenWhiteListSymbols (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' TokenWhiteListSymbols (current)
+    #'
+    #' @description
+    #' TokenWhiteListSymbols (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/tokenWhiteListSymbols/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' TokenWhiteLists (current)
+    #'
+    #' @description
+    #' TokenWhiteLists (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMTokenWhiteListDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMTokenWhiteListsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' TokenWhiteLists (current)
+    #'
+    #' @description
+    #' TokenWhiteLists (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMTokenWhiteListDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMTokenWhiteListsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/tokenWhiteLists/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMTokenWhiteListDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
     #' Tokens (current)
     #'
     #' @description
@@ -383,6 +2467,264 @@ SUSHISWAPV3ETHEREUMApi <- R6::R6Class(
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMTokenDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' UsageMetricsDailySnapshots (current)
+    #'
+    #' @description
+    #' UsageMetricsDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' UsageMetricsDailySnapshots (current)
+    #'
+    #' @description
+    #' UsageMetricsDailySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/usageMetricsDailySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' UsageMetricsHourlySnapshots (current)
+    #'
+    #' @description
+    #' UsageMetricsHourlySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' UsageMetricsHourlySnapshots (current)
+    #'
+    #' @description
+    #' UsageMetricsHourlySnapshots (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/usageMetricsHourlySnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Withdraws (current)
+    #'
+    #' @description
+    #' Withdraws (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SUSHISWAPV3ETHEREUMWithdrawDTO]
+    #' @export
+    SUSHISWAPV3ETHEREUMWithdrawsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$SUSHISWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Withdraws (current)
+    #'
+    #' @description
+    #' Withdraws (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SUSHISWAPV3ETHEREUMWithdrawDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SUSHISWAPV3ETHEREUMWithdrawsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/v1/dapps/sushiswap-v3-ethereum/withdraws/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json", "application/x-msgpack")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SUSHISWAPV3ETHEREUMWithdrawDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }

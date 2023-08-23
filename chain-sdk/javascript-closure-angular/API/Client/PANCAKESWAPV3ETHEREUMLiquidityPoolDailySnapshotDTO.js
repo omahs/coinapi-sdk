@@ -26,13 +26,6 @@ API.Client.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.prototype.recvTime
 API.Client.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.prototype.blockNumber;
 
 /**
- * .
- * @type {!number}
- * @export
- */
-API.Client.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.prototype.vid;
-
-/**
  * The Ethereum block number associated with the liquidity pool daily snapshot.
  * @type {!number}
  * @export

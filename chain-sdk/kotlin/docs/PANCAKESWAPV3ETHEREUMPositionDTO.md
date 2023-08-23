@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **entryTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **recvTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **blockNumber** | **kotlin.Long** | Number of block in which entity was recorded. |  [optional]
-**vid** | **kotlin.Long** |  |  [optional]
 **id** | **kotlin.String** | (account address)-(market address)-(count) |  [optional]
 **account** | **kotlin.String** | Account that owns this position |  [optional]
 **pool** | **kotlin.String** | The liquidity pool in which this position was opened |  [optional]

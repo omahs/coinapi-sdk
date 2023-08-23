@@ -409,26 +409,24 @@ bool uNISWAPV3ETHEREUMSwaps (current)Async(char * accessToken,
 /*! \brief TickDailySnapshots (current). *Synchronous*
  *
  * Gets tickDailySnapshots.
- * \param pool liquidity pool this tick belongs to
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
 bool uNISWAPV3ETHEREUMTickDailySnapshots (current)Sync(char * accessToken,
-	std::string pool, 
+	
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TickDailySnapshotDTO>, Error, void* )
 	, void* userData);
 
 /*! \brief TickDailySnapshots (current). *Asynchronous*
  *
  * Gets tickDailySnapshots.
- * \param pool liquidity pool this tick belongs to
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
 bool uNISWAPV3ETHEREUMTickDailySnapshots (current)Async(char * accessToken,
-	std::string pool, 
+	
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TickDailySnapshotDTO>, Error, void* )
 	, void* userData);
 
@@ -436,26 +434,24 @@ bool uNISWAPV3ETHEREUMTickDailySnapshots (current)Async(char * accessToken,
 /*! \brief TickHourlySnapshots (current). *Synchronous*
  *
  * Gets tickHourlySnapshots.
- * \param pool liquidity pool this tick belongs to
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
 bool uNISWAPV3ETHEREUMTickHourlySnapshots (current)Sync(char * accessToken,
-	std::string pool, 
+	
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TickHourlySnapshotDTO>, Error, void* )
 	, void* userData);
 
 /*! \brief TickHourlySnapshots (current). *Asynchronous*
  *
  * Gets tickHourlySnapshots.
- * \param pool liquidity pool this tick belongs to
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
 bool uNISWAPV3ETHEREUMTickHourlySnapshots (current)Async(char * accessToken,
-	std::string pool, 
+	
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TickHourlySnapshotDTO>, Error, void* )
 	, void* userData);
 
@@ -463,26 +459,24 @@ bool uNISWAPV3ETHEREUMTickHourlySnapshots (current)Async(char * accessToken,
 /*! \brief Ticks (current). *Synchronous*
  *
  * Gets ticks.
- * \param pool Liquidity pool this tick belongs to
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
 bool uNISWAPV3ETHEREUMTicks (current)Sync(char * accessToken,
-	std::string pool, 
+	
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TickDTO>, Error, void* )
 	, void* userData);
 
 /*! \brief Ticks (current). *Asynchronous*
  *
  * Gets ticks.
- * \param pool Liquidity pool this tick belongs to
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
 bool uNISWAPV3ETHEREUMTicks (current)Async(char * accessToken,
-	std::string pool, 
+	
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TickDTO>, Error, void* )
 	, void* userData);
 

@@ -27,14 +27,6 @@ test_that("block_number", {
   #expect_equal(model.instance$`block_number`, "EXPECTED_RESULT")
 })
 
-test_that("vid", {
-  # tests for the property `vid` (integer)
-  # .
-
-  # uncomment below to test the property
-  #expect_equal(model.instance$`vid`, "EXPECTED_RESULT")
-})
-
 test_that("block_", {
   # tests for the property `block_` (integer)
   # The Ethereum block number associated with the liquidity pool daily snapshot.

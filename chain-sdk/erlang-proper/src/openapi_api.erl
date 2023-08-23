@@ -194,9 +194,8 @@ u_niswapv3_ethereum_tick_daily_snapshots_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
   Path        = ["/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current"],
-  QueryString = [<<"pool=">>, Pool, <<"&">>],
 
-  openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
+  openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
 %% @doc TickHourlySnapshots (current)
 %% Gets tickHourlySnapshots.
@@ -206,9 +205,8 @@ u_niswapv3_ethereum_tick_hourly_snapshots_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
   Path        = ["/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current"],
-  QueryString = [<<"pool=">>, Pool, <<"&">>],
 
-  openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
+  openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
 %% @doc Ticks (current)
 %% Gets ticks.
@@ -218,9 +216,8 @@ u_niswapv3_ethereum_ticks_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
   Path        = ["/v1/dapps/uniswap-v3-ethereum/ticks/current"],
-  QueryString = [<<"pool=">>, Pool, <<"&">>],
 
-  openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
+  openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
 %% @doc TokenWhiteListSymbols (current)
 %% Gets tokenWhiteListSymbols.

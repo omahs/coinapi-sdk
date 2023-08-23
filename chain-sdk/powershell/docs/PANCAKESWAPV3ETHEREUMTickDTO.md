@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Vid** | **Int64** |  | [optional] 
 **Id** | **String** | (pool address)-(tick index) | [optional] 
 **Index** | **String** | tick index | [optional] 
 **Pool** | **String** | Liquidity pool this tick belongs to | [optional] 
@@ -29,7 +28,6 @@ Name | Type | Description | Notes
 $PANCAKESWAPV3ETHEREUMTickDTO = Initialize-PSOpenAPIToolsPANCAKESWAPV3ETHEREUMTickDTO  -EntryTime null `
  -RecvTime null `
  -BlockNumber null `
- -Vid null `
  -Id null `
  -Index null `
  -Pool null `

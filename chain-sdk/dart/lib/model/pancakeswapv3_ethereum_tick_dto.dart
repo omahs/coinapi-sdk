@@ -16,7 +16,6 @@ class PANCAKESWAPV3ETHEREUMTickDTO {
     this.entryTime,
     this.recvTime,
     this.blockNumber,
-    this.vid,
     this.id,
     this.index,
     this.pool,
@@ -57,15 +56,6 @@ class PANCAKESWAPV3ETHEREUMTickDTO {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? blockNumber;
-
-  /// 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? vid;
 
   /// (pool address)-(tick index)
   String? id;
@@ -126,7 +116,6 @@ class PANCAKESWAPV3ETHEREUMTickDTO {
      other.entryTime == entryTime &&
      other.recvTime == recvTime &&
      other.blockNumber == blockNumber &&
-     other.vid == vid &&
      other.id == id &&
      other.index == index &&
      other.pool == pool &&
@@ -148,7 +137,6 @@ class PANCAKESWAPV3ETHEREUMTickDTO {
     (entryTime == null ? 0 : entryTime!.hashCode) +
     (recvTime == null ? 0 : recvTime!.hashCode) +
     (blockNumber == null ? 0 : blockNumber!.hashCode) +
-    (vid == null ? 0 : vid!.hashCode) +
     (id == null ? 0 : id!.hashCode) +
     (index == null ? 0 : index!.hashCode) +
     (pool == null ? 0 : pool!.hashCode) +
@@ -165,7 +153,7 @@ class PANCAKESWAPV3ETHEREUMTickDTO {
     (lastUpdateBlockNumber == null ? 0 : lastUpdateBlockNumber!.hashCode);
 
   @override
-  String toString() => 'PANCAKESWAPV3ETHEREUMTickDTO[entryTime=$entryTime, recvTime=$recvTime, blockNumber=$blockNumber, vid=$vid, id=$id, index=$index, pool=$pool, createdTimestamp=$createdTimestamp, createdBlockNumber=$createdBlockNumber, prices=$prices, liquidityGross=$liquidityGross, liquidityGrossUsd=$liquidityGrossUsd, liquidityNet=$liquidityNet, liquidityNetUsd=$liquidityNetUsd, lastSnapshotDayId=$lastSnapshotDayId, lastSnapshotHourId=$lastSnapshotHourId, lastUpdateTimestamp=$lastUpdateTimestamp, lastUpdateBlockNumber=$lastUpdateBlockNumber]';
+  String toString() => 'PANCAKESWAPV3ETHEREUMTickDTO[entryTime=$entryTime, recvTime=$recvTime, blockNumber=$blockNumber, id=$id, index=$index, pool=$pool, createdTimestamp=$createdTimestamp, createdBlockNumber=$createdBlockNumber, prices=$prices, liquidityGross=$liquidityGross, liquidityGrossUsd=$liquidityGrossUsd, liquidityNet=$liquidityNet, liquidityNetUsd=$liquidityNetUsd, lastSnapshotDayId=$lastSnapshotDayId, lastSnapshotHourId=$lastSnapshotHourId, lastUpdateTimestamp=$lastUpdateTimestamp, lastUpdateBlockNumber=$lastUpdateBlockNumber]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -183,11 +171,6 @@ class PANCAKESWAPV3ETHEREUMTickDTO {
       json[r'block_number'] = this.blockNumber;
     } else {
       json[r'block_number'] = null;
-    }
-    if (this.vid != null) {
-      json[r'vid'] = this.vid;
-    } else {
-      json[r'vid'] = null;
     }
     if (this.id != null) {
       json[r'id'] = this.id;
@@ -284,7 +267,6 @@ class PANCAKESWAPV3ETHEREUMTickDTO {
         entryTime: mapDateTime(json, r'entry_time', ''),
         recvTime: mapDateTime(json, r'recv_time', ''),
         blockNumber: mapValueOfType<int>(json, r'block_number'),
-        vid: mapValueOfType<int>(json, r'vid'),
         id: mapValueOfType<String>(json, r'id'),
         index: mapValueOfType<String>(json, r'index'),
         pool: mapValueOfType<String>(json, r'pool'),

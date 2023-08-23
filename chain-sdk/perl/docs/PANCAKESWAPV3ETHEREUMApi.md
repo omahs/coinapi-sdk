@@ -291,7 +291,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current**
-> ARRAY[PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO] p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current(pool => $pool)
+> ARRAY[PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO] p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current()
 
 LiquidityPoolDailySnapshots (current)
 
@@ -304,10 +304,9 @@ use WWW::OpenAPIClient::PANCAKESWAPV3ETHEREUMApi;
 my $api_instance = WWW::OpenAPIClient::PANCAKESWAPV3ETHEREUMApi->new(
 );
 
-my $pool = "pool_example"; # string | Pool this snapshot belongs to.
 
 eval {
-    my $result = $api_instance->p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current(pool => $pool);
+    my $result = $api_instance->p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current();
     print Dumper($result);
 };
 if ($@) {
@@ -316,10 +315,7 @@ if ($@) {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **string**| Pool this snapshot belongs to. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 

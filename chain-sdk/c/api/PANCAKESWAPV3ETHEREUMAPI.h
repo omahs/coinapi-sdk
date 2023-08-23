@@ -83,7 +83,7 @@ PANCAKESWAPV3ETHEREUMAPI_pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent(apiCli
 // Gets liquidityPoolDailySnapshots.
 //
 list_t*
-PANCAKESWAPV3ETHEREUMAPI_pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(apiClient_t *apiClient, char * pool );
+PANCAKESWAPV3ETHEREUMAPI_pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(apiClient_t *apiClient);
 
 
 // LiquidityPoolFees (current)

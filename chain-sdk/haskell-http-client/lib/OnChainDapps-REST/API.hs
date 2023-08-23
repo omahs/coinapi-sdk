@@ -14,7 +14,7 @@ Module : OnChainDapps-REST.API
 -}
 
 module OnChainDapps-REST.API
-  ( module OnChainDapps-REST.API.CRYPTOPUNKS
+  ( module OnChainDapps-REST.API.CRYPTOPUNKSETHEREUM
   , module OnChainDapps-REST.API.CURVEFINANCEETHEREUM
   , module OnChainDapps-REST.API.Metadata
   , module OnChainDapps-REST.API.PANCAKESWAPV3ETHEREUM
@@ -23,7 +23,7 @@ module OnChainDapps-REST.API
   , module OnChainDapps-REST.API.UNISWAPV3ETHEREUM
   ) where
 
-import OnChainDapps-REST.API.CRYPTOPUNKS
+import OnChainDapps-REST.API.CRYPTOPUNKSETHEREUM
 import OnChainDapps-REST.API.CURVEFINANCEETHEREUM
 import OnChainDapps-REST.API.Metadata
 import OnChainDapps-REST.API.PANCAKESWAPV3ETHEREUM

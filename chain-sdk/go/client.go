@@ -50,7 +50,7 @@ type APIClient struct {
 
 	// API Services
 
-	CRYPTOPUNKSApi *CRYPTOPUNKSApiService
+	CRYPTOPUNKSETHEREUMApi *CRYPTOPUNKSETHEREUMApiService
 
 	CURVEFINANCEETHEREUMApi *CURVEFINANCEETHEREUMApiService
 
@@ -81,7 +81,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.common.client = c
 
 	// API Services
-	c.CRYPTOPUNKSApi = (*CRYPTOPUNKSApiService)(&c.common)
+	c.CRYPTOPUNKSETHEREUMApi = (*CRYPTOPUNKSETHEREUMApiService)(&c.common)
 	c.CURVEFINANCEETHEREUMApi = (*CURVEFINANCEETHEREUMApiService)(&c.common)
 	c.MetadataApi = (*MetadataApiService)(&c.common)
 	c.PANCAKESWAPV3ETHEREUMApi = (*PANCAKESWAPV3ETHEREUMApiService)(&c.common)

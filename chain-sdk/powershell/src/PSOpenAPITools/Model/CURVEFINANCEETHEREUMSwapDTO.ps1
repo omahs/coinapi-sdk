@@ -20,7 +20,7 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-Block number of this event
+Number of block in which entity was recorded.
 .PARAMETER Id
 Swap-(transaction hash)-(log index)
 .PARAMETER Hash
@@ -74,7 +74,7 @@ function Initialize-CURVEFINANCEETHEREUMSwapDTO {
         [System.Nullable[System.DateTime]]
         ${RecvTime},
         [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true)]
-        [String]
+        [System.Nullable[Int64]]
         ${BlockNumber},
         [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true)]
         [String]

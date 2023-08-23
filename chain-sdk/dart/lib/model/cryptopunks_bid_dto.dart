@@ -41,8 +41,14 @@ class CRYPTOPUNKSBidDTO {
   ///
   DateTime? recvTime;
 
-  /// 
-  String? blockNumber;
+  /// Number of block in which entity was recorded.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? blockNumber;
 
   /// 
   ///
@@ -177,7 +183,7 @@ class CRYPTOPUNKSBidDTO {
       return CRYPTOPUNKSBidDTO(
         entryTime: mapDateTime(json, r'entry_time', ''),
         recvTime: mapDateTime(json, r'recv_time', ''),
-        blockNumber: mapValueOfType<String>(json, r'block_number'),
+        blockNumber: mapValueOfType<int>(json, r'block_number'),
         vid: mapValueOfType<int>(json, r'vid'),
         blockRange: mapValueOfType<String>(json, r'block_range'),
         id: mapValueOfType<String>(json, r'id'),

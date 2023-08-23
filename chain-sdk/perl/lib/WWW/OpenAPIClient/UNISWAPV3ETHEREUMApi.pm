@@ -794,14 +794,8 @@ sub u_niswapv3_ethereum_swaps__current {
 #
 # TickDailySnapshots (current)
 #
-# @param string $pool liquidity pool this tick belongs to (optional)
 {
     my $params = {
-    'pool' => {
-        data_type => 'string',
-        description => 'liquidity pool this tick belongs to',
-        required => '0',
-    },
     };
     __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_tick_daily_snapshots__current' } = {
         summary => 'TickDailySnapshots (current)',
@@ -829,11 +823,6 @@ sub u_niswapv3_ethereum_tick_daily_snapshots__current {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
 
-    # query params
-    if ( exists $args{'pool'}) {
-        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
-    }
-
     my $_body_data;
     # authentication setting, if any
     my $auth_settings = [qw()];
@@ -854,14 +843,8 @@ sub u_niswapv3_ethereum_tick_daily_snapshots__current {
 #
 # TickHourlySnapshots (current)
 #
-# @param string $pool liquidity pool this tick belongs to (optional)
 {
     my $params = {
-    'pool' => {
-        data_type => 'string',
-        description => 'liquidity pool this tick belongs to',
-        required => '0',
-    },
     };
     __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_tick_hourly_snapshots__current' } = {
         summary => 'TickHourlySnapshots (current)',
@@ -889,11 +872,6 @@ sub u_niswapv3_ethereum_tick_hourly_snapshots__current {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
 
-    # query params
-    if ( exists $args{'pool'}) {
-        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
-    }
-
     my $_body_data;
     # authentication setting, if any
     my $auth_settings = [qw()];
@@ -914,14 +892,8 @@ sub u_niswapv3_ethereum_tick_hourly_snapshots__current {
 #
 # Ticks (current)
 #
-# @param string $pool Liquidity pool this tick belongs to (optional)
 {
     my $params = {
-    'pool' => {
-        data_type => 'string',
-        description => 'Liquidity pool this tick belongs to',
-        required => '0',
-    },
     };
     __PACKAGE__->method_documentation->{ 'u_niswapv3_ethereum_ticks__current' } = {
         summary => 'Ticks (current)',
@@ -948,11 +920,6 @@ sub u_niswapv3_ethereum_ticks__current {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'pool'}) {
-        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
-    }
 
     my $_body_data;
     # authentication setting, if any

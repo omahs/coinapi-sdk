@@ -32,6 +32,107 @@ describe 'SUSHISWAPV3ETHEREUMApi' do
     end
   end
 
+  # unit tests for s_ushiswapv3_ethereum_accounts__current
+  # Accounts (current)
+  # Gets accounts.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SUSHISWAPV3ETHEREUMAccountDTO>]
+  describe 's_ushiswapv3_ethereum_accounts__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for s_ushiswapv3_ethereum_active_accounts__current
+  # ActiveAccounts (current)
+  # Gets activeAccounts.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SUSHISWAPV3ETHEREUMActiveAccountDTO>]
+  describe 's_ushiswapv3_ethereum_active_accounts__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for s_ushiswapv3_ethereum_deposits__current
+  # Deposits (current)
+  # Gets deposits.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SUSHISWAPV3ETHEREUMDepositDTO>]
+  describe 's_ushiswapv3_ethereum_deposits__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for s_ushiswapv3_ethereum_dex_amm_protocols__current
+  # DexAmmProtocols (current)
+  # Gets dexAmmProtocols.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SUSHISWAPV3ETHEREUMDexAmmProtocolDTO>]
+  describe 's_ushiswapv3_ethereum_dex_amm_protocols__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for s_ushiswapv3_ethereum_financials_daily_snapshots__current
+  # FinancialsDailySnapshots (current)
+  # Gets financialsDailySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO>]
+  describe 's_ushiswapv3_ethereum_financials_daily_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for s_ushiswapv3_ethereum_liquidity_pool_amounts__current
+  # LiquidityPoolAmounts (current)
+  # Gets liquidityPoolAmounts.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :id Smart contract address of the pool.
+  # @return [Array<SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO>]
+  describe 's_ushiswapv3_ethereum_liquidity_pool_amounts__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for s_ushiswapv3_ethereum_liquidity_pool_daily_snapshots__current
+  # LiquidityPoolDailySnapshots (current)
+  # Gets liquidityPoolDailySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>]
+  describe 's_ushiswapv3_ethereum_liquidity_pool_daily_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for s_ushiswapv3_ethereum_liquidity_pool_fees__current
+  # LiquidityPoolFees (current)
+  # Gets liquidityPoolFees.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO>]
+  describe 's_ushiswapv3_ethereum_liquidity_pool_fees__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for s_ushiswapv3_ethereum_liquidity_pool_hourly_snapshots__current
+  # LiquidityPoolHourlySnapshots (current)
+  # Gets liquidityPoolHourlySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :pool The pool this snapshot belongs to
+  # @return [Array<SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO>]
+  describe 's_ushiswapv3_ethereum_liquidity_pool_hourly_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
   # unit tests for s_ushiswapv3_ethereum_liquidity_pools__current
   # LiquidityPools (current)
   # Gets liquidityPools.
@@ -39,6 +140,40 @@ describe 'SUSHISWAPV3ETHEREUMApi' do
   # @option opts [String] :id Smart contract address of the pool.
   # @return [Array<SUSHISWAPV3ETHEREUMLiquidityPoolDTO>]
   describe 's_ushiswapv3_ethereum_liquidity_pools__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for s_ushiswapv3_ethereum_position_snapshots__current
+  # PositionSnapshots (current)
+  # Gets positionSnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SUSHISWAPV3ETHEREUMPositionSnapshotDTO>]
+  describe 's_ushiswapv3_ethereum_position_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for s_ushiswapv3_ethereum_positions__current
+  # Positions (current)
+  # Gets positions.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :pool The liquidity pool in which this position was opened
+  # @return [Array<SUSHISWAPV3ETHEREUMPositionDTO>]
+  describe 's_ushiswapv3_ethereum_positions__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for s_ushiswapv3_ethereum_reward_tokens__current
+  # RewardTokens (current)
+  # Gets rewardTokens.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SUSHISWAPV3ETHEREUMRewardTokenDTO>]
+  describe 's_ushiswapv3_ethereum_reward_tokens__current test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
@@ -55,6 +190,64 @@ describe 'SUSHISWAPV3ETHEREUMApi' do
     end
   end
 
+  # unit tests for s_ushiswapv3_ethereum_tick_daily_snapshots__current
+  # TickDailySnapshots (current)
+  # Gets tickDailySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :pool liquidity pool this tick belongs to
+  # @return [Array<SUSHISWAPV3ETHEREUMTickDailySnapshotDTO>]
+  describe 's_ushiswapv3_ethereum_tick_daily_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for s_ushiswapv3_ethereum_tick_hourly_snapshots__current
+  # TickHourlySnapshots (current)
+  # Gets tickHourlySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :pool liquidity pool this tick belongs to
+  # @return [Array<SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO>]
+  describe 's_ushiswapv3_ethereum_tick_hourly_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for s_ushiswapv3_ethereum_ticks__current
+  # Ticks (current)
+  # Gets ticks.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :pool Liquidity pool this tick belongs to
+  # @return [Array<SUSHISWAPV3ETHEREUMTickDTO>]
+  describe 's_ushiswapv3_ethereum_ticks__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for s_ushiswapv3_ethereum_token_white_list_symbols__current
+  # TokenWhiteListSymbols (current)
+  # Gets tokenWhiteListSymbols.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO>]
+  describe 's_ushiswapv3_ethereum_token_white_list_symbols__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for s_ushiswapv3_ethereum_token_white_lists__current
+  # TokenWhiteLists (current)
+  # Gets tokenWhiteLists.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SUSHISWAPV3ETHEREUMTokenWhiteListDTO>]
+  describe 's_ushiswapv3_ethereum_token_white_lists__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
   # unit tests for s_ushiswapv3_ethereum_tokens__current
   # Tokens (current)
   # Gets tokens.
@@ -62,6 +255,39 @@ describe 'SUSHISWAPV3ETHEREUMApi' do
   # @option opts [String] :id Smart contract address of the token.
   # @return [Array<SUSHISWAPV3ETHEREUMTokenDTO>]
   describe 's_ushiswapv3_ethereum_tokens__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for s_ushiswapv3_ethereum_usage_metrics_daily_snapshots__current
+  # UsageMetricsDailySnapshots (current)
+  # Gets usageMetricsDailySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO>]
+  describe 's_ushiswapv3_ethereum_usage_metrics_daily_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for s_ushiswapv3_ethereum_usage_metrics_hourly_snapshots__current
+  # UsageMetricsHourlySnapshots (current)
+  # Gets usageMetricsHourlySnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO>]
+  describe 's_ushiswapv3_ethereum_usage_metrics_hourly_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for s_ushiswapv3_ethereum_withdraws__current
+  # Withdraws (current)
+  # Gets withdraws.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SUSHISWAPV3ETHEREUMWithdrawDTO>]
+  describe 's_ushiswapv3_ethereum_withdraws__current test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end

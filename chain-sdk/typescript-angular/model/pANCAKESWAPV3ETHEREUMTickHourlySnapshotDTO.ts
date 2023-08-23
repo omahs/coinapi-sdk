@@ -22,10 +22,6 @@ export interface PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO {
      */
     block_number?: number;
     /**
-     * 
-     */
-    vid?: number;
-    /**
      * (pool address)-(tick index)-(hour ID)
      */
     id?: string | null;

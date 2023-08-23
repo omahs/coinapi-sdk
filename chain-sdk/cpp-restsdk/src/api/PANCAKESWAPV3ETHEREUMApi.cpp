@@ -814,7 +814,7 @@ pplx::task<std::vector<std::shared_ptr<PANCAKESWAP_V3_ETHEREUM_LiquidityPoolAmou
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<PANCAKESWAP_V3_ETHEREUM_LiquidityPoolDailySnapshotDTO>>> PANCAKESWAPV3ETHEREUMApi::pANCAKESWAPV3ETHEREUM_LiquidityPoolDailySnapshots__current(boost::optional<utility::string_t> pool) const
+pplx::task<std::vector<std::shared_ptr<PANCAKESWAP_V3_ETHEREUM_LiquidityPoolDailySnapshotDTO>>> PANCAKESWAPV3ETHEREUMApi::pANCAKESWAPV3ETHEREUM_LiquidityPoolDailySnapshots__current() const
 {
 
 
@@ -858,10 +858,6 @@ pplx::task<std::vector<std::shared_ptr<PANCAKESWAP_V3_ETHEREUM_LiquidityPoolDail
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
-    if (pool)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("pool")] = ApiClient::parameterToString(*pool);
-    }
 
     std::shared_ptr<IHttpBody> localVarHttpBody;
     utility::string_t localVarRequestHttpContentType;

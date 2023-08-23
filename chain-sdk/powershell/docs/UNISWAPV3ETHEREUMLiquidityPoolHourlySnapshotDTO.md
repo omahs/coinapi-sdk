@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Vid** | **Int64** |  | [optional] 
 **Id** | **String** | (Smart contract address of the pool)-( # of hours since Unix epoch time) | [optional] 
 **Hour** | **Int32** | Number of hours since Unix epoch time | [optional] 
 **Protocol** | **String** | The protocol this snapshot belongs to | [optional] 
@@ -57,7 +56,6 @@ Name | Type | Description | Notes
 $UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO = Initialize-PSOpenAPIToolsUNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO  -EntryTime null `
  -RecvTime null `
  -BlockNumber null `
- -Vid null `
  -Id null `
  -Hour null `
  -Protocol null `

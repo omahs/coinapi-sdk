@@ -9,7 +9,7 @@
 #' @format An \code{R6Class} generator object
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
-#' @field block_number Block number of this event character [optional]
+#' @field block_number Number of block in which entity was recorded. integer [optional]
 #' @field id Swap-(transaction hash)-(log index) character [optional]
 #' @field hash Transaction hash of the transaction that emitted this event character [optional]
 #' @field log_index Event log index. For transactions that don't emit event, create arbitrary index starting from 0 integer [optional]
@@ -64,7 +64,7 @@ CURVEFINANCEETHEREUMSwapDTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number Block number of this event
+    #' @param block_number Number of block in which entity was recorded.
     #' @param id Swap-(transaction hash)-(log index)
     #' @param hash Transaction hash of the transaction that emitted this event
     #' @param log_index Event log index. For transactions that don't emit event, create arbitrary index starting from 0
@@ -100,8 +100,8 @@ CURVEFINANCEETHEREUMSwapDTO <- R6::R6Class(
         self$`recv_time` <- `recv_time`
       }
       if (!is.null(`block_number`)) {
-        if (!(is.character(`block_number`) && length(`block_number`) == 1)) {
-          stop(paste("Error! Invalid data for `block_number`. Must be a string:", `block_number`))
+        if (!(is.numeric(`block_number`) && length(`block_number`) == 1)) {
+          stop(paste("Error! Invalid data for `block_number`. Must be an integer:", `block_number`))
         }
         self$`block_number` <- `block_number`
       }
@@ -428,7 +428,7 @@ CURVEFINANCEETHEREUMSwapDTO <- R6::R6Class(
         if (!is.null(self$`block_number`)) {
           sprintf(
           '"block_number":
-            "%s"
+            %d
                     ',
           self$`block_number`
           )

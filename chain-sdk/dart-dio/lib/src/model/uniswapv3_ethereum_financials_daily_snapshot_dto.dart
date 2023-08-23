@@ -13,7 +13,7 @@ part 'uniswapv3_ethereum_financials_daily_snapshot_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - Block number of when this snapshot was taken/last modified.)
+/// * [blockNumber] - Number of block in which entity was recorded.
 /// * [id] - ID is # of days since Unix epoch time.
 /// * [day] - Number of days since Unix epoch time.
 /// * [protocol] - Protocol this snapshot is associated with.
@@ -40,7 +40,7 @@ abstract class UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO implements Built<UNIS
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// Block number of when this snapshot was taken/last modified.)
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 

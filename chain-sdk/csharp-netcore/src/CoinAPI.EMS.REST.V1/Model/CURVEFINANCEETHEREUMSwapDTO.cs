@@ -43,7 +43,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// </summary>
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
-        /// <param name="blockNumber">Block number of this event.</param>
+        /// <param name="blockNumber">Number of block in which entity was recorded..</param>
         /// <param name="id">Swap-(transaction hash)-(log index).</param>
         /// <param name="hash">Transaction hash of the transaction that emitted this event.</param>
         /// <param name="logIndex">Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0.</param>
@@ -59,7 +59,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="amountOutUsd">Amount of token withdrawn from pool in USD.</param>
         /// <param name="pool">The pool involving this transaction.</param>
         /// <param name="evaluatedAggressor">evaluatedAggressor.</param>
-        public CURVEFINANCEETHEREUMSwapDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), string blockNumber = default(string), string id = default(string), string hash = default(string), int logIndex = default(int), string protocol = default(string), string to = default(string), string from = default(string), string timestamp = default(string), string tokenIn = default(string), string amountIn = default(string), string amountInUsd = default(string), string tokenOut = default(string), string amountOut = default(string), string amountOutUsd = default(string), string pool = default(string), TransactionsETradeAggressiveSide? evaluatedAggressor = default(TransactionsETradeAggressiveSide?))
+        public CURVEFINANCEETHEREUMSwapDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), string id = default(string), string hash = default(string), int logIndex = default(int), string protocol = default(string), string to = default(string), string from = default(string), string timestamp = default(string), string tokenIn = default(string), string amountIn = default(string), string amountInUsd = default(string), string tokenOut = default(string), string amountOut = default(string), string amountOutUsd = default(string), string pool = default(string), TransactionsETradeAggressiveSide? evaluatedAggressor = default(TransactionsETradeAggressiveSide?))
         {
             this.EntryTime = entryTime;
             this.RecvTime = recvTime;
@@ -94,11 +94,11 @@ namespace CoinAPI.EMS.REST.V1.Model
         public DateTime RecvTime { get; set; }
 
         /// <summary>
-        /// Block number of this event
+        /// Number of block in which entity was recorded.
         /// </summary>
-        /// <value>Block number of this event</value>
-        [DataMember(Name = "block_number", EmitDefaultValue = true)]
-        public string BlockNumber { get; set; }
+        /// <value>Number of block in which entity was recorded.</value>
+        [DataMember(Name = "block_number", EmitDefaultValue = false)]
+        public long BlockNumber { get; set; }
 
         /// <summary>
         /// Swap-(transaction hash)-(log index)
@@ -331,8 +331,7 @@ namespace CoinAPI.EMS.REST.V1.Model
                 ) && 
                 (
                     this.BlockNumber == input.BlockNumber ||
-                    (this.BlockNumber != null &&
-                    this.BlockNumber.Equals(input.BlockNumber))
+                    this.BlockNumber.Equals(input.BlockNumber)
                 ) && 
                 (
                     this.Id == input.Id ||
@@ -444,10 +443,7 @@ namespace CoinAPI.EMS.REST.V1.Model
                 {
                     hashCode = (hashCode * 59) + this.RecvTime.GetHashCode();
                 }
-                if (this.BlockNumber != null)
-                {
-                    hashCode = (hashCode * 59) + this.BlockNumber.GetHashCode();
-                }
+                hashCode = (hashCode * 59) + this.BlockNumber.GetHashCode();
                 if (this.Id != null)
                 {
                     hashCode = (hashCode * 59) + this.Id.GetHashCode();

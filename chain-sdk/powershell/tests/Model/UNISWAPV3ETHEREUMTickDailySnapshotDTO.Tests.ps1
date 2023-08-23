@@ -10,7 +10,7 @@ Describe -tag 'PSOpenAPITools' -name 'UNISWAPV3ETHEREUMTickDailySnapshotDTO' {
     Context 'UNISWAPV3ETHEREUMTickDailySnapshotDTO' {
         It 'Initialize-UNISWAPV3ETHEREUMTickDailySnapshotDTO' {
             # a simple test to create an object
-            #$NewObject = Initialize-UNISWAPV3ETHEREUMTickDailySnapshotDTO -EntryTime "TEST_VALUE" -RecvTime "TEST_VALUE" -BlockNumber "TEST_VALUE" -Vid "TEST_VALUE" -Id "TEST_VALUE" -DayId "TEST_VALUE" -Tick "TEST_VALUE" -Pool "TEST_VALUE" -LiquidityGross "TEST_VALUE" -LiquidityGrossUsd "TEST_VALUE" -LiquidityNet "TEST_VALUE" -LiquidityNetUsd "TEST_VALUE" -Timestamp "TEST_VALUE"
+            #$NewObject = Initialize-UNISWAPV3ETHEREUMTickDailySnapshotDTO -EntryTime "TEST_VALUE" -RecvTime "TEST_VALUE" -BlockNumber "TEST_VALUE" -Id "TEST_VALUE" -DayId "TEST_VALUE" -Tick "TEST_VALUE" -Pool "TEST_VALUE" -LiquidityGross "TEST_VALUE" -LiquidityGrossUsd "TEST_VALUE" -LiquidityNet "TEST_VALUE" -LiquidityNetUsd "TEST_VALUE" -Timestamp "TEST_VALUE"
             #$NewObject | Should -BeOfType UNISWAPV3ETHEREUMTickDailySnapshotDTO
             #$NewObject.property | Should -Be 0
         }

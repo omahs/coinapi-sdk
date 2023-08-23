@@ -5,12 +5,134 @@ context("Test CURVEFINANCEETHEREUMApi")
 
 api_instance <- CURVEFINANCEETHEREUMApi$new()
 
+test_that("CURVEFINANCEETHEREUMAccountsCurrent", {
+  # tests for CURVEFINANCEETHEREUMAccountsCurrent
+  # base path: https://onchain.coinapi.io
+  # Accounts (current)
+  # Gets accounts.
+  # @return [array[CURVEFINANCEETHEREUMAccountDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("CURVEFINANCEETHEREUMActiveAccountsCurrent", {
+  # tests for CURVEFINANCEETHEREUMActiveAccountsCurrent
+  # base path: https://onchain.coinapi.io
+  # ActiveAccounts (current)
+  # Gets activeAccounts.
+  # @return [array[CURVEFINANCEETHEREUMActiveAccountDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("CURVEFINANCEETHEREUMDepositsCurrent", {
+  # tests for CURVEFINANCEETHEREUMDepositsCurrent
+  # base path: https://onchain.coinapi.io
+  # Deposits (current)
+  # Gets deposits.
+  # @return [array[CURVEFINANCEETHEREUMDepositDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("CURVEFINANCEETHEREUMDexAmmProtocolsCurrent", {
+  # tests for CURVEFINANCEETHEREUMDexAmmProtocolsCurrent
+  # base path: https://onchain.coinapi.io
+  # DexAmmProtocols (current)
+  # Gets dexAmmProtocols.
+  # @return [array[CURVEFINANCEETHEREUMDexAmmProtocolDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent", {
+  # tests for CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # FinancialsDailySnapshots (current)
+  # Gets financialsDailySnapshots.
+  # @return [array[CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("CURVEFINANCEETHEREUMLiquidityGaugesCurrent", {
+  # tests for CURVEFINANCEETHEREUMLiquidityGaugesCurrent
+  # base path: https://onchain.coinapi.io
+  # LiquidityGauges (current)
+  # Gets liquidityGauges.
+  # @return [array[CURVEFINANCEETHEREUMLiquidityGaugeDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent", {
+  # tests for CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # LiquidityPoolDailySnapshots (current)
+  # Gets liquidityPoolDailySnapshots.
+  # @return [array[CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent", {
+  # tests for CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent
+  # base path: https://onchain.coinapi.io
+  # LiquidityPoolFees (current)
+  # Gets liquidityPoolFees.
+  # @return [array[CURVEFINANCEETHEREUMLiquidityPoolFeeDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent", {
+  # tests for CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # LiquidityPoolHourlySnapshots (current)
+  # Gets liquidityPoolHourlySnapshots.
+  # @return [array[CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("CURVEFINANCEETHEREUMLiquidityPoolsCurrent", {
   # tests for CURVEFINANCEETHEREUMLiquidityPoolsCurrent
   # base path: https://onchain.coinapi.io
   # LiquidityPools (current)
   # Gets liquidityPools.
+  # @param id character Smart contract address of the pool (optional)
   # @return [array[CURVEFINANCEETHEREUMLiquidityPoolDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("CURVEFINANCEETHEREUMLpTokensCurrent", {
+  # tests for CURVEFINANCEETHEREUMLpTokensCurrent
+  # base path: https://onchain.coinapi.io
+  # LpTokens (current)
+  # Gets lpTokens.
+  # @return [array[CURVEFINANCEETHEREUMLpTokenDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("CURVEFINANCEETHEREUMRewardTokensCurrent", {
+  # tests for CURVEFINANCEETHEREUMRewardTokensCurrent
+  # base path: https://onchain.coinapi.io
+  # RewardTokens (current)
+  # Gets rewardTokens.
+  # @return [array[CURVEFINANCEETHEREUMRewardTokenDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -32,7 +154,41 @@ test_that("CURVEFINANCEETHEREUMTokensCurrent", {
   # base path: https://onchain.coinapi.io
   # Tokens (current)
   # Gets tokens.
+  # @param id character Smart contract address of the token (optional)
   # @return [array[CURVEFINANCEETHEREUMTokenDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent", {
+  # tests for CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # UsageMetricsDailySnapshots (current)
+  # Gets usageMetricsDailySnapshots.
+  # @return [array[CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent", {
+  # tests for CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # UsageMetricsHourlySnapshots (current)
+  # Gets usageMetricsHourlySnapshots.
+  # @return [array[CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("CURVEFINANCEETHEREUMWithdrawsCurrent", {
+  # tests for CURVEFINANCEETHEREUMWithdrawsCurrent
+  # base path: https://onchain.coinapi.io
+  # Withdraws (current)
+  # Gets withdraws.
+  # @return [array[CURVEFINANCEETHEREUMWithdrawDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")

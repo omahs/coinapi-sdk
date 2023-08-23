@@ -1862,7 +1862,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_SwapDTO>>> UNISWAPV3E
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickDailySnapshotDTO>>> UNISWAPV3ETHEREUMApi::uNISWAPV3ETHEREUM_TickDailySnapshots__current(boost::optional<utility::string_t> pool) const
+pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickDailySnapshotDTO>>> UNISWAPV3ETHEREUMApi::uNISWAPV3ETHEREUM_TickDailySnapshots__current() const
 {
 
 
@@ -1906,10 +1906,6 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickDailySnapshotDTO>
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
-    if (pool)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("pool")] = ApiClient::parameterToString(*pool);
-    }
 
     std::shared_ptr<IHttpBody> localVarHttpBody;
     utility::string_t localVarRequestHttpContentType;
@@ -1995,7 +1991,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickDailySnapshotDTO>
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickHourlySnapshotDTO>>> UNISWAPV3ETHEREUMApi::uNISWAPV3ETHEREUM_TickHourlySnapshots__current(boost::optional<utility::string_t> pool) const
+pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickHourlySnapshotDTO>>> UNISWAPV3ETHEREUMApi::uNISWAPV3ETHEREUM_TickHourlySnapshots__current() const
 {
 
 
@@ -2039,10 +2035,6 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickHourlySnapshotDTO
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
-    if (pool)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("pool")] = ApiClient::parameterToString(*pool);
-    }
 
     std::shared_ptr<IHttpBody> localVarHttpBody;
     utility::string_t localVarRequestHttpContentType;
@@ -2128,7 +2120,7 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickHourlySnapshotDTO
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickDTO>>> UNISWAPV3ETHEREUMApi::uNISWAPV3ETHEREUM_Ticks__current(boost::optional<utility::string_t> pool) const
+pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickDTO>>> UNISWAPV3ETHEREUMApi::uNISWAPV3ETHEREUM_Ticks__current() const
 {
 
 
@@ -2172,10 +2164,6 @@ pplx::task<std::vector<std::shared_ptr<UNISWAP_V3_ETHEREUM_TickDTO>>> UNISWAPV3E
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
-    if (pool)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("pool")] = ApiClient::parameterToString(*pool);
-    }
 
     std::shared_ptr<IHttpBody> localVarHttpBody;
     utility::string_t localVarRequestHttpContentType;

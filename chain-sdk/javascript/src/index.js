@@ -22,9 +22,23 @@ import CRYPTOPUNKSMarketPlaceDTO from './model/CRYPTOPUNKSMarketPlaceDTO';
 import CRYPTOPUNKSMarketplaceDailySnapshotDTO from './model/CRYPTOPUNKSMarketplaceDailySnapshotDTO';
 import CRYPTOPUNKSTradeDTO from './model/CRYPTOPUNKSTradeDTO';
 import CRYPTOPUNKSUserDTO from './model/CRYPTOPUNKSUserDTO';
+import CURVEFINANCEETHEREUMAccountDTO from './model/CURVEFINANCEETHEREUMAccountDTO';
+import CURVEFINANCEETHEREUMActiveAccountDTO from './model/CURVEFINANCEETHEREUMActiveAccountDTO';
+import CURVEFINANCEETHEREUMDepositDTO from './model/CURVEFINANCEETHEREUMDepositDTO';
+import CURVEFINANCEETHEREUMDexAmmProtocolDTO from './model/CURVEFINANCEETHEREUMDexAmmProtocolDTO';
+import CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO from './model/CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO';
+import CURVEFINANCEETHEREUMLiquidityGaugeDTO from './model/CURVEFINANCEETHEREUMLiquidityGaugeDTO';
 import CURVEFINANCEETHEREUMLiquidityPoolDTO from './model/CURVEFINANCEETHEREUMLiquidityPoolDTO';
+import CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO from './model/CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO';
+import CURVEFINANCEETHEREUMLiquidityPoolFeeDTO from './model/CURVEFINANCEETHEREUMLiquidityPoolFeeDTO';
+import CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO from './model/CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO';
+import CURVEFINANCEETHEREUMLpTokenDTO from './model/CURVEFINANCEETHEREUMLpTokenDTO';
+import CURVEFINANCEETHEREUMRewardTokenDTO from './model/CURVEFINANCEETHEREUMRewardTokenDTO';
 import CURVEFINANCEETHEREUMSwapDTO from './model/CURVEFINANCEETHEREUMSwapDTO';
 import CURVEFINANCEETHEREUMTokenDTO from './model/CURVEFINANCEETHEREUMTokenDTO';
+import CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO from './model/CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO';
+import CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO from './model/CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO';
+import CURVEFINANCEETHEREUMWithdrawDTO from './model/CURVEFINANCEETHEREUMWithdrawDTO';
 import PANCAKESWAPV3ETHEREUMAccountDTO from './model/PANCAKESWAPV3ETHEREUMAccountDTO';
 import PANCAKESWAPV3ETHEREUMActiveAccountDTO from './model/PANCAKESWAPV3ETHEREUMActiveAccountDTO';
 import PANCAKESWAPV3ETHEREUMDepositDTO from './model/PANCAKESWAPV3ETHEREUMDepositDTO';
@@ -48,13 +62,53 @@ import PANCAKESWAPV3ETHEREUMTokenWhiteListSymbolDTO from './model/PANCAKESWAPV3E
 import PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO from './model/PANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotDTO';
 import PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO from './model/PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO';
 import PANCAKESWAPV3ETHEREUMWithdrawDTO from './model/PANCAKESWAPV3ETHEREUMWithdrawDTO';
+import SUSHISWAPV3ETHEREUMAccountDTO from './model/SUSHISWAPV3ETHEREUMAccountDTO';
+import SUSHISWAPV3ETHEREUMActiveAccountDTO from './model/SUSHISWAPV3ETHEREUMActiveAccountDTO';
+import SUSHISWAPV3ETHEREUMDepositDTO from './model/SUSHISWAPV3ETHEREUMDepositDTO';
+import SUSHISWAPV3ETHEREUMDexAmmProtocolDTO from './model/SUSHISWAPV3ETHEREUMDexAmmProtocolDTO';
+import SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO from './model/SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO';
+import SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO from './model/SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO';
 import SUSHISWAPV3ETHEREUMLiquidityPoolDTO from './model/SUSHISWAPV3ETHEREUMLiquidityPoolDTO';
+import SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO from './model/SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO';
+import SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO from './model/SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO';
+import SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO from './model/SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO';
+import SUSHISWAPV3ETHEREUMPositionDTO from './model/SUSHISWAPV3ETHEREUMPositionDTO';
+import SUSHISWAPV3ETHEREUMPositionSnapshotDTO from './model/SUSHISWAPV3ETHEREUMPositionSnapshotDTO';
+import SUSHISWAPV3ETHEREUMRewardTokenDTO from './model/SUSHISWAPV3ETHEREUMRewardTokenDTO';
 import SUSHISWAPV3ETHEREUMSwapDTO from './model/SUSHISWAPV3ETHEREUMSwapDTO';
+import SUSHISWAPV3ETHEREUMTickDTO from './model/SUSHISWAPV3ETHEREUMTickDTO';
+import SUSHISWAPV3ETHEREUMTickDailySnapshotDTO from './model/SUSHISWAPV3ETHEREUMTickDailySnapshotDTO';
+import SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO from './model/SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO';
 import SUSHISWAPV3ETHEREUMTokenDTO from './model/SUSHISWAPV3ETHEREUMTokenDTO';
+import SUSHISWAPV3ETHEREUMTokenWhiteListDTO from './model/SUSHISWAPV3ETHEREUMTokenWhiteListDTO';
+import SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO from './model/SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO';
+import SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO from './model/SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO';
+import SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO from './model/SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO';
+import SUSHISWAPV3ETHEREUMWithdrawDTO from './model/SUSHISWAPV3ETHEREUMWithdrawDTO';
 import TransactionsETradeAggressiveSide from './model/TransactionsETradeAggressiveSide';
+import UNISWAPV2ETHEREUMAccountDTO from './model/UNISWAPV2ETHEREUMAccountDTO';
+import UNISWAPV2ETHEREUMActiveAccountDTO from './model/UNISWAPV2ETHEREUMActiveAccountDTO';
+import UNISWAPV2ETHEREUMDepositDTO from './model/UNISWAPV2ETHEREUMDepositDTO';
+import UNISWAPV2ETHEREUMDexAmmProtocolDTO from './model/UNISWAPV2ETHEREUMDexAmmProtocolDTO';
+import UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO from './model/UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO';
+import UNISWAPV2ETHEREUMLiquidityPoolAmountDTO from './model/UNISWAPV2ETHEREUMLiquidityPoolAmountDTO';
 import UNISWAPV2ETHEREUMLiquidityPoolDTO from './model/UNISWAPV2ETHEREUMLiquidityPoolDTO';
+import UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO from './model/UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO';
+import UNISWAPV2ETHEREUMLiquidityPoolFeeDTO from './model/UNISWAPV2ETHEREUMLiquidityPoolFeeDTO';
+import UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO from './model/UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO';
+import UNISWAPV2ETHEREUMMasterChefAddressToPidDTO from './model/UNISWAPV2ETHEREUMMasterChefAddressToPidDTO';
+import UNISWAPV2ETHEREUMMasterChefDTO from './model/UNISWAPV2ETHEREUMMasterChefDTO';
+import UNISWAPV2ETHEREUMMasterChefRewarderDTO from './model/UNISWAPV2ETHEREUMMasterChefRewarderDTO';
+import UNISWAPV2ETHEREUMMasterChefStakingPoolDTO from './model/UNISWAPV2ETHEREUMMasterChefStakingPoolDTO';
+import UNISWAPV2ETHEREUMRewardTokenDTO from './model/UNISWAPV2ETHEREUMRewardTokenDTO';
+import UNISWAPV2ETHEREUMRewarderProbeDTO from './model/UNISWAPV2ETHEREUMRewarderProbeDTO';
 import UNISWAPV2ETHEREUMSwapDTO from './model/UNISWAPV2ETHEREUMSwapDTO';
 import UNISWAPV2ETHEREUMTokenDTO from './model/UNISWAPV2ETHEREUMTokenDTO';
+import UNISWAPV2ETHEREUMTokenWhiteListDTO from './model/UNISWAPV2ETHEREUMTokenWhiteListDTO';
+import UNISWAPV2ETHEREUMTransferDTO from './model/UNISWAPV2ETHEREUMTransferDTO';
+import UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO from './model/UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO';
+import UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO from './model/UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO';
+import UNISWAPV2ETHEREUMWithdrawDTO from './model/UNISWAPV2ETHEREUMWithdrawDTO';
 import UNISWAPV3ETHEREUMAccountDTO from './model/UNISWAPV3ETHEREUMAccountDTO';
 import UNISWAPV3ETHEREUMActiveAccountDTO from './model/UNISWAPV3ETHEREUMActiveAccountDTO';
 import UNISWAPV3ETHEREUMDepositDTO from './model/UNISWAPV3ETHEREUMDepositDTO';
@@ -78,7 +132,7 @@ import UNISWAPV3ETHEREUMTokenWhiteListSymbolDTO from './model/UNISWAPV3ETHEREUMT
 import UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO from './model/UNISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO';
 import UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO from './model/UNISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO';
 import UNISWAPV3ETHEREUMWithdrawDTO from './model/UNISWAPV3ETHEREUMWithdrawDTO';
-import CRYPTOPUNKSApi from './api/CRYPTOPUNKSApi';
+import CRYPTOPUNKSETHEREUMApi from './api/CRYPTOPUNKSETHEREUMApi';
 import CURVEFINANCEETHEREUMApi from './api/CURVEFINANCEETHEREUMApi';
 import MetadataApi from './api/MetadataApi';
 import PANCAKESWAPV3ETHEREUMApi from './api/PANCAKESWAPV3ETHEREUMApi';
@@ -180,10 +234,76 @@ export {
     CRYPTOPUNKSUserDTO,
 
     /**
+     * The CURVEFINANCEETHEREUMAccountDTO model constructor.
+     * @property {module:model/CURVEFINANCEETHEREUMAccountDTO}
+     */
+    CURVEFINANCEETHEREUMAccountDTO,
+
+    /**
+     * The CURVEFINANCEETHEREUMActiveAccountDTO model constructor.
+     * @property {module:model/CURVEFINANCEETHEREUMActiveAccountDTO}
+     */
+    CURVEFINANCEETHEREUMActiveAccountDTO,
+
+    /**
+     * The CURVEFINANCEETHEREUMDepositDTO model constructor.
+     * @property {module:model/CURVEFINANCEETHEREUMDepositDTO}
+     */
+    CURVEFINANCEETHEREUMDepositDTO,
+
+    /**
+     * The CURVEFINANCEETHEREUMDexAmmProtocolDTO model constructor.
+     * @property {module:model/CURVEFINANCEETHEREUMDexAmmProtocolDTO}
+     */
+    CURVEFINANCEETHEREUMDexAmmProtocolDTO,
+
+    /**
+     * The CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO model constructor.
+     * @property {module:model/CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO}
+     */
+    CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO,
+
+    /**
+     * The CURVEFINANCEETHEREUMLiquidityGaugeDTO model constructor.
+     * @property {module:model/CURVEFINANCEETHEREUMLiquidityGaugeDTO}
+     */
+    CURVEFINANCEETHEREUMLiquidityGaugeDTO,
+
+    /**
      * The CURVEFINANCEETHEREUMLiquidityPoolDTO model constructor.
      * @property {module:model/CURVEFINANCEETHEREUMLiquidityPoolDTO}
      */
     CURVEFINANCEETHEREUMLiquidityPoolDTO,
+
+    /**
+     * The CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO model constructor.
+     * @property {module:model/CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO}
+     */
+    CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO,
+
+    /**
+     * The CURVEFINANCEETHEREUMLiquidityPoolFeeDTO model constructor.
+     * @property {module:model/CURVEFINANCEETHEREUMLiquidityPoolFeeDTO}
+     */
+    CURVEFINANCEETHEREUMLiquidityPoolFeeDTO,
+
+    /**
+     * The CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO model constructor.
+     * @property {module:model/CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO}
+     */
+    CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO,
+
+    /**
+     * The CURVEFINANCEETHEREUMLpTokenDTO model constructor.
+     * @property {module:model/CURVEFINANCEETHEREUMLpTokenDTO}
+     */
+    CURVEFINANCEETHEREUMLpTokenDTO,
+
+    /**
+     * The CURVEFINANCEETHEREUMRewardTokenDTO model constructor.
+     * @property {module:model/CURVEFINANCEETHEREUMRewardTokenDTO}
+     */
+    CURVEFINANCEETHEREUMRewardTokenDTO,
 
     /**
      * The CURVEFINANCEETHEREUMSwapDTO model constructor.
@@ -196,6 +316,24 @@ export {
      * @property {module:model/CURVEFINANCEETHEREUMTokenDTO}
      */
     CURVEFINANCEETHEREUMTokenDTO,
+
+    /**
+     * The CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO model constructor.
+     * @property {module:model/CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO}
+     */
+    CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO,
+
+    /**
+     * The CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO model constructor.
+     * @property {module:model/CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO}
+     */
+    CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO,
+
+    /**
+     * The CURVEFINANCEETHEREUMWithdrawDTO model constructor.
+     * @property {module:model/CURVEFINANCEETHEREUMWithdrawDTO}
+     */
+    CURVEFINANCEETHEREUMWithdrawDTO,
 
     /**
      * The PANCAKESWAPV3ETHEREUMAccountDTO model constructor.
@@ -336,10 +474,82 @@ export {
     PANCAKESWAPV3ETHEREUMWithdrawDTO,
 
     /**
+     * The SUSHISWAPV3ETHEREUMAccountDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMAccountDTO}
+     */
+    SUSHISWAPV3ETHEREUMAccountDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMActiveAccountDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMActiveAccountDTO}
+     */
+    SUSHISWAPV3ETHEREUMActiveAccountDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMDepositDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMDepositDTO}
+     */
+    SUSHISWAPV3ETHEREUMDepositDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMDexAmmProtocolDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMDexAmmProtocolDTO}
+     */
+    SUSHISWAPV3ETHEREUMDexAmmProtocolDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO}
+     */
+    SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO}
+     */
+    SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO,
+
+    /**
      * The SUSHISWAPV3ETHEREUMLiquidityPoolDTO model constructor.
      * @property {module:model/SUSHISWAPV3ETHEREUMLiquidityPoolDTO}
      */
     SUSHISWAPV3ETHEREUMLiquidityPoolDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO}
+     */
+    SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO}
+     */
+    SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO}
+     */
+    SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMPositionDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMPositionDTO}
+     */
+    SUSHISWAPV3ETHEREUMPositionDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMPositionSnapshotDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMPositionSnapshotDTO}
+     */
+    SUSHISWAPV3ETHEREUMPositionSnapshotDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMRewardTokenDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMRewardTokenDTO}
+     */
+    SUSHISWAPV3ETHEREUMRewardTokenDTO,
 
     /**
      * The SUSHISWAPV3ETHEREUMSwapDTO model constructor.
@@ -348,10 +558,58 @@ export {
     SUSHISWAPV3ETHEREUMSwapDTO,
 
     /**
+     * The SUSHISWAPV3ETHEREUMTickDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMTickDTO}
+     */
+    SUSHISWAPV3ETHEREUMTickDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMTickDailySnapshotDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMTickDailySnapshotDTO}
+     */
+    SUSHISWAPV3ETHEREUMTickDailySnapshotDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO}
+     */
+    SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO,
+
+    /**
      * The SUSHISWAPV3ETHEREUMTokenDTO model constructor.
      * @property {module:model/SUSHISWAPV3ETHEREUMTokenDTO}
      */
     SUSHISWAPV3ETHEREUMTokenDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMTokenWhiteListDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMTokenWhiteListDTO}
+     */
+    SUSHISWAPV3ETHEREUMTokenWhiteListDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO}
+     */
+    SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO}
+     */
+    SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO}
+     */
+    SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO,
+
+    /**
+     * The SUSHISWAPV3ETHEREUMWithdrawDTO model constructor.
+     * @property {module:model/SUSHISWAPV3ETHEREUMWithdrawDTO}
+     */
+    SUSHISWAPV3ETHEREUMWithdrawDTO,
 
     /**
      * The TransactionsETradeAggressiveSide model constructor.
@@ -360,10 +618,100 @@ export {
     TransactionsETradeAggressiveSide,
 
     /**
+     * The UNISWAPV2ETHEREUMAccountDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMAccountDTO}
+     */
+    UNISWAPV2ETHEREUMAccountDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMActiveAccountDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMActiveAccountDTO}
+     */
+    UNISWAPV2ETHEREUMActiveAccountDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMDepositDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMDepositDTO}
+     */
+    UNISWAPV2ETHEREUMDepositDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMDexAmmProtocolDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMDexAmmProtocolDTO}
+     */
+    UNISWAPV2ETHEREUMDexAmmProtocolDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO}
+     */
+    UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMLiquidityPoolAmountDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMLiquidityPoolAmountDTO}
+     */
+    UNISWAPV2ETHEREUMLiquidityPoolAmountDTO,
+
+    /**
      * The UNISWAPV2ETHEREUMLiquidityPoolDTO model constructor.
      * @property {module:model/UNISWAPV2ETHEREUMLiquidityPoolDTO}
      */
     UNISWAPV2ETHEREUMLiquidityPoolDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO}
+     */
+    UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMLiquidityPoolFeeDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMLiquidityPoolFeeDTO}
+     */
+    UNISWAPV2ETHEREUMLiquidityPoolFeeDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO}
+     */
+    UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMMasterChefAddressToPidDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMMasterChefAddressToPidDTO}
+     */
+    UNISWAPV2ETHEREUMMasterChefAddressToPidDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMMasterChefDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMMasterChefDTO}
+     */
+    UNISWAPV2ETHEREUMMasterChefDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMMasterChefRewarderDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMMasterChefRewarderDTO}
+     */
+    UNISWAPV2ETHEREUMMasterChefRewarderDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMMasterChefStakingPoolDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMMasterChefStakingPoolDTO}
+     */
+    UNISWAPV2ETHEREUMMasterChefStakingPoolDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMRewardTokenDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMRewardTokenDTO}
+     */
+    UNISWAPV2ETHEREUMRewardTokenDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMRewarderProbeDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMRewarderProbeDTO}
+     */
+    UNISWAPV2ETHEREUMRewarderProbeDTO,
 
     /**
      * The UNISWAPV2ETHEREUMSwapDTO model constructor.
@@ -376,6 +724,36 @@ export {
      * @property {module:model/UNISWAPV2ETHEREUMTokenDTO}
      */
     UNISWAPV2ETHEREUMTokenDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMTokenWhiteListDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMTokenWhiteListDTO}
+     */
+    UNISWAPV2ETHEREUMTokenWhiteListDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMTransferDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMTransferDTO}
+     */
+    UNISWAPV2ETHEREUMTransferDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO}
+     */
+    UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO}
+     */
+    UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO,
+
+    /**
+     * The UNISWAPV2ETHEREUMWithdrawDTO model constructor.
+     * @property {module:model/UNISWAPV2ETHEREUMWithdrawDTO}
+     */
+    UNISWAPV2ETHEREUMWithdrawDTO,
 
     /**
      * The UNISWAPV3ETHEREUMAccountDTO model constructor.
@@ -516,10 +894,10 @@ export {
     UNISWAPV3ETHEREUMWithdrawDTO,
 
     /**
-    * The CRYPTOPUNKSApi service constructor.
-    * @property {module:api/CRYPTOPUNKSApi}
+    * The CRYPTOPUNKSETHEREUMApi service constructor.
+    * @property {module:api/CRYPTOPUNKSETHEREUMApi}
     */
-    CRYPTOPUNKSApi,
+    CRYPTOPUNKSETHEREUMApi,
 
     /**
     * The CURVEFINANCEETHEREUMApi service constructor.

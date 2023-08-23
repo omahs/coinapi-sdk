@@ -24,7 +24,7 @@ cryptopunks_trade_dto_t* instantiate_cryptopunks_trade_dto(int include_optional)
     cryptopunks_trade_dto = cryptopunks_trade_dto_create(
       "2013-10-20T19:20:30+01:00",
       "2013-10-20T19:20:30+01:00",
-      "0",
+      56,
       56,
       "0",
       "0",
@@ -43,7 +43,7 @@ cryptopunks_trade_dto_t* instantiate_cryptopunks_trade_dto(int include_optional)
     cryptopunks_trade_dto = cryptopunks_trade_dto_create(
       "2013-10-20T19:20:30+01:00",
       "2013-10-20T19:20:30+01:00",
-      "0",
+      56,
       56,
       "0",
       "0",

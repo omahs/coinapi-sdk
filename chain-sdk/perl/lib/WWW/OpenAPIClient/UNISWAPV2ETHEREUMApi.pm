@@ -49,12 +49,470 @@ sub new {
 
 
 #
+# u_niswapv2_ethereum_accounts__current
+#
+# Accounts (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_accounts__current' } = {
+        summary => 'Accounts (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMAccountDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMAccountDTO]
+#
+sub u_niswapv2_ethereum_accounts__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/accounts/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMAccountDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv2_ethereum_active_accounts__current
+#
+# ActiveAccounts (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_active_accounts__current' } = {
+        summary => 'ActiveAccounts (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMActiveAccountDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMActiveAccountDTO]
+#
+sub u_niswapv2_ethereum_active_accounts__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/activeAccounts/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMActiveAccountDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv2_ethereum_deposits__current
+#
+# Deposits (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_deposits__current' } = {
+        summary => 'Deposits (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMDepositDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMDepositDTO]
+#
+sub u_niswapv2_ethereum_deposits__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/deposits/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMDepositDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv2_ethereum_dex_amm_protocols__current
+#
+# DexAmmProtocols (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_dex_amm_protocols__current' } = {
+        summary => 'DexAmmProtocols (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMDexAmmProtocolDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMDexAmmProtocolDTO]
+#
+sub u_niswapv2_ethereum_dex_amm_protocols__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/dexAmmProtocols/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMDexAmmProtocolDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv2_ethereum_financials_daily_snapshots__current
+#
+# FinancialsDailySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_financials_daily_snapshots__current' } = {
+        summary => 'FinancialsDailySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO]
+#
+sub u_niswapv2_ethereum_financials_daily_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/financialsDailySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv2_ethereum_liquidity_pool_amounts__current
+#
+# LiquidityPoolAmounts (current)
+#
+# @param string $id Smart contract address of the pool (optional)
+{
+    my $params = {
+    'id' => {
+        data_type => 'string',
+        description => 'Smart contract address of the pool',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_liquidity_pool_amounts__current' } = {
+        summary => 'LiquidityPoolAmounts (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMLiquidityPoolAmountDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMLiquidityPoolAmountDTO]
+#
+sub u_niswapv2_ethereum_liquidity_pool_amounts__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/liquidityPoolAmounts/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMLiquidityPoolAmountDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current
+#
+# LiquidityPoolDailySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current' } = {
+        summary => 'LiquidityPoolDailySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO]
+#
+sub u_niswapv2_ethereum_liquidity_pool_daily_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/liquidityPoolDailySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv2_ethereum_liquidity_pool_fees__current
+#
+# LiquidityPoolFees (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_liquidity_pool_fees__current' } = {
+        summary => 'LiquidityPoolFees (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMLiquidityPoolFeeDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMLiquidityPoolFeeDTO]
+#
+sub u_niswapv2_ethereum_liquidity_pool_fees__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/liquidityPoolFees/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMLiquidityPoolFeeDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current
+#
+# LiquidityPoolHourlySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current' } = {
+        summary => 'LiquidityPoolHourlySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO]
+#
+sub u_niswapv2_ethereum_liquidity_pool_hourly_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/liquidityPoolHourlySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
 # u_niswapv2_ethereum_liquidity_pools__current
 #
 # LiquidityPools (current)
 #
+# @param string $id Smart contract address of the pool (optional)
 {
     my $params = {
+    'id' => {
+        data_type => 'string',
+        description => 'Smart contract address of the pool',
+        required => '0',
+    },
     };
     __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_liquidity_pools__current' } = {
         summary => 'LiquidityPools (current)',
@@ -82,6 +540,11 @@ sub u_niswapv2_ethereum_liquidity_pools__current {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
 
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
     my $_body_data;
     # authentication setting, if any
     my $auth_settings = [qw()];
@@ -94,6 +557,300 @@ sub u_niswapv2_ethereum_liquidity_pools__current {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMLiquidityPoolDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv2_ethereum_master_chef_address_to_pids__current
+#
+# MasterChefAddressToPids (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_master_chef_address_to_pids__current' } = {
+        summary => 'MasterChefAddressToPids (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMMasterChefAddressToPidDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMMasterChefAddressToPidDTO]
+#
+sub u_niswapv2_ethereum_master_chef_address_to_pids__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/masterChefAddressToPids/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMMasterChefAddressToPidDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv2_ethereum_master_chef_rewarders__current
+#
+# MasterChefRewarders (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_master_chef_rewarders__current' } = {
+        summary => 'MasterChefRewarders (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMMasterChefRewarderDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMMasterChefRewarderDTO]
+#
+sub u_niswapv2_ethereum_master_chef_rewarders__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/masterChefRewarders/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMMasterChefRewarderDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv2_ethereum_master_chef_staking_pools__current
+#
+# MasterChefStakingPools (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_master_chef_staking_pools__current' } = {
+        summary => 'MasterChefStakingPools (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMMasterChefStakingPoolDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMMasterChefStakingPoolDTO]
+#
+sub u_niswapv2_ethereum_master_chef_staking_pools__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/masterChefStakingPools/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMMasterChefStakingPoolDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv2_ethereum_master_chefs__current
+#
+# MasterChefs (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_master_chefs__current' } = {
+        summary => 'MasterChefs (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMMasterChefDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMMasterChefDTO]
+#
+sub u_niswapv2_ethereum_master_chefs__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/masterChefs/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMMasterChefDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv2_ethereum_reward_tokens__current
+#
+# RewardTokens (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_reward_tokens__current' } = {
+        summary => 'RewardTokens (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMRewardTokenDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMRewardTokenDTO]
+#
+sub u_niswapv2_ethereum_reward_tokens__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/rewardTokens/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMRewardTokenDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv2_ethereum_rewarder_probes__current
+#
+# RewarderProbes (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_rewarder_probes__current' } = {
+        summary => 'RewarderProbes (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMRewarderProbeDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMRewarderProbeDTO]
+#
+sub u_niswapv2_ethereum_rewarder_probes__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/rewarderProbes/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMRewarderProbeDTO]', $response);
     return $_response_object;
 }
 
@@ -147,6 +904,55 @@ sub u_niswapv2_ethereum_swaps__current {
 }
 
 #
+# u_niswapv2_ethereum_token_white_lists__current
+#
+# TokenWhiteLists (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_token_white_lists__current' } = {
+        summary => 'TokenWhiteLists (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMTokenWhiteListDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMTokenWhiteListDTO]
+#
+sub u_niswapv2_ethereum_token_white_lists__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/tokenWhiteLists/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMTokenWhiteListDTO]', $response);
+    return $_response_object;
+}
+
+#
 # u_niswapv2_ethereum_tokens__current
 #
 # Tokens (current)
@@ -192,6 +998,202 @@ sub u_niswapv2_ethereum_tokens__current {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMTokenDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv2_ethereum_transfers__current
+#
+# Transfers (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_transfers__current' } = {
+        summary => 'Transfers (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMTransferDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMTransferDTO]
+#
+sub u_niswapv2_ethereum_transfers__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/transfers/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMTransferDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv2_ethereum_usage_metrics_daily_snapshots__current
+#
+# UsageMetricsDailySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_usage_metrics_daily_snapshots__current' } = {
+        summary => 'UsageMetricsDailySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO]
+#
+sub u_niswapv2_ethereum_usage_metrics_daily_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/usageMetricsDailySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current
+#
+# UsageMetricsHourlySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current' } = {
+        summary => 'UsageMetricsHourlySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO]
+#
+sub u_niswapv2_ethereum_usage_metrics_hourly_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/usageMetricsHourlySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# u_niswapv2_ethereum_withdraws__current
+#
+# Withdraws (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'u_niswapv2_ethereum_withdraws__current' } = {
+        summary => 'Withdraws (current)',
+        params => $params,
+        returns => 'ARRAY[UNISWAPV2ETHEREUMWithdrawDTO]',
+        };
+}
+# @return ARRAY[UNISWAPV2ETHEREUMWithdrawDTO]
+#
+sub u_niswapv2_ethereum_withdraws__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/uniswap-v2-ethereum/withdraws/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UNISWAPV2ETHEREUMWithdrawDTO]', $response);
     return $_response_object;
 }
 

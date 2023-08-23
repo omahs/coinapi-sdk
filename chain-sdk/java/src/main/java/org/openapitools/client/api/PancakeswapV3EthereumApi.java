@@ -801,7 +801,6 @@ public class PancakeswapV3EthereumApi {
     }
     /**
      * Build call for pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
-     * @param pool Pool this snapshot belongs to. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -811,7 +810,7 @@ public class PancakeswapV3EthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentCall(String pool, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -836,10 +835,6 @@ public class PancakeswapV3EthereumApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (pool != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pool", pool));
-        }
-
         final String[] localVarAccepts = {
             "text/plain",
             "application/json",
@@ -863,15 +858,14 @@ public class PancakeswapV3EthereumApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentValidateBeforeCall(String pool, final ApiCallback _callback) throws ApiException {
-        return pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentCall(pool, _callback);
+    private okhttp3.Call pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentCall(_callback);
 
     }
 
     /**
      * LiquidityPoolDailySnapshots (current)
      * Gets liquidityPoolDailySnapshots.
-     * @param pool Pool this snapshot belongs to. (optional)
      * @return List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -880,15 +874,14 @@ public class PancakeswapV3EthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(String pool) throws ApiException {
-        ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> localVarResp = pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(pool);
+    public List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent() throws ApiException {
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> localVarResp = pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * LiquidityPoolDailySnapshots (current)
      * Gets liquidityPoolDailySnapshots.
-     * @param pool Pool this snapshot belongs to. (optional)
      * @return ApiResponse&lt;List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -897,8 +890,8 @@ public class PancakeswapV3EthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(String pool) throws ApiException {
-        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentValidateBeforeCall(pool, null);
+    public ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -906,7 +899,6 @@ public class PancakeswapV3EthereumApi {
     /**
      * LiquidityPoolDailySnapshots (current) (asynchronously)
      * Gets liquidityPoolDailySnapshots.
-     * @param pool Pool this snapshot belongs to. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -916,9 +908,9 @@ public class PancakeswapV3EthereumApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsync(String pool, final ApiCallback<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> _callback) throws ApiException {
+    public okhttp3.Call pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsync(final ApiCallback<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentValidateBeforeCall(pool, _callback);
+        okhttp3.Call localVarCall = pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

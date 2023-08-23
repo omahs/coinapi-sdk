@@ -39,26 +39,7 @@ class CRYPTOPUNKSTradeDTO(
         class properties:
             entry_time = schemas.DateTimeSchema
             recv_time = schemas.DateTimeSchema
-            
-            
-            class block_number(
-                schemas.StrBase,
-                schemas.NoneBase,
-                schemas.Schema,
-                schemas.NoneStrMixin
-            ):
-            
-            
-                def __new__(
-                    cls,
-                    *_args: typing.Union[None, str, ],
-                    _configuration: typing.Optional[schemas.Configuration] = None,
-                ) -> 'block_number':
-                    return super().__new__(
-                        cls,
-                        *_args,
-                        _configuration=_configuration,
-                    )
+            block_number = schemas.Int64Schema
             vid = schemas.Int64Schema
             
             
@@ -390,7 +371,7 @@ class CRYPTOPUNKSTradeDTO(
         *_args: typing.Union[dict, frozendict.frozendict, ],
         entry_time: typing.Union[MetaOapg.properties.entry_time, str, datetime, schemas.Unset] = schemas.unset,
         recv_time: typing.Union[MetaOapg.properties.recv_time, str, datetime, schemas.Unset] = schemas.unset,
-        block_number: typing.Union[MetaOapg.properties.block_number, None, str, schemas.Unset] = schemas.unset,
+        block_number: typing.Union[MetaOapg.properties.block_number, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         vid: typing.Union[MetaOapg.properties.vid, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         block_range: typing.Union[MetaOapg.properties.block_range, None, str, schemas.Unset] = schemas.unset,
         id: typing.Union[MetaOapg.properties.id, None, str, schemas.Unset] = schemas.unset,

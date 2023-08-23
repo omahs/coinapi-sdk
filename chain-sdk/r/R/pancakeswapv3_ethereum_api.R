@@ -115,7 +115,6 @@
 #' Gets liquidityPoolDailySnapshots.
 #'
 #' \itemize{
-#' \item \emph{ @param } pool character
 #' \item \emph{ @returnType } list( \link{PANCAKESWAP_V3_ETHEREUM.LiquidityPoolDailySnapshotDTO} ) \cr
 #'
 #'
@@ -478,14 +477,13 @@
 #' ####################  PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent  ####################
 #'
 #' library(openapi)
-#' var_pool <- "pool_example" # character | Pool this snapshot belongs to. (Optional)
 #'
 #' #LiquidityPoolDailySnapshots (current)
 #' api_instance <- PANCAKESWAPV3ETHEREUMApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool = var_pooldata_file = "result.txt")
-#' result <- api_instance$PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool = var_pool)
+#' # result <- api_instance$PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent()
 #' dput(result)
 #'
 #'
@@ -1252,13 +1250,12 @@ PANCAKESWAPV3ETHEREUMApi <- R6::R6Class(
     #' @description
     #' LiquidityPoolDailySnapshots (current)
     #'
-    #' @param pool (optional) Pool this snapshot belongs to.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]
     #' @export
-    PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent = function(pool = NULL, data_file = NULL, ...) {
-      local_var_response <- self$PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(pool, data_file = data_file, ...)
+    PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1274,12 +1271,11 @@ PANCAKESWAPV3ETHEREUMApi <- R6::R6Class(
     #' @description
     #' LiquidityPoolDailySnapshots (current)
     #'
-    #' @param pool (optional) Pool this snapshot belongs to.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]) with additional information such as HTTP status code, headers
     #' @export
-    PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo = function(pool = NULL, data_file = NULL, ...) {
+    PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1288,9 +1284,6 @@ PANCAKESWAPV3ETHEREUMApi <- R6::R6Class(
       local_var_body <- NULL
       oauth_scopes <- NULL
       is_oauth <- FALSE
-
-
-      query_params[["pool"]] <- `pool`
 
       local_var_url_path <- "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current"
 

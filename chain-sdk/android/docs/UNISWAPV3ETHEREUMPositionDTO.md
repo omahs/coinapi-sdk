@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **entryTime** | [**Date**](Date.md) |  |  [optional]
 **recvTime** | [**Date**](Date.md) |  |  [optional]
 **blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional]
-**vid** | **Long** |  |  [optional]
 **id** | **String** | (account address)-(market address)-(count) |  [optional]
 **account** | **String** | Account that owns this position |  [optional]
 **pool** | **String** | The liquidity pool in which this position was opened |  [optional]

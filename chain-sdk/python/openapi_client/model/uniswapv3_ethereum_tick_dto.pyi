@@ -40,7 +40,6 @@ class UNISWAPV3ETHEREUMTickDTO(
             entry_time = schemas.DateTimeSchema
             recv_time = schemas.DateTimeSchema
             block_number = schemas.Int64Schema
-            vid = schemas.Int64Schema
             
             
             class id(
@@ -291,7 +290,6 @@ class UNISWAPV3ETHEREUMTickDTO(
                 "entry_time": entry_time,
                 "recv_time": recv_time,
                 "block_number": block_number,
-                "vid": vid,
                 "id": id,
                 "index": index,
                 "pool": pool,
@@ -317,9 +315,6 @@ class UNISWAPV3ETHEREUMTickDTO(
     
     @typing.overload
     def __getitem__(self, name: typing_extensions.Literal["block_number"]) -> MetaOapg.properties.block_number: ...
-    
-    @typing.overload
-    def __getitem__(self, name: typing_extensions.Literal["vid"]) -> MetaOapg.properties.vid: ...
     
     @typing.overload
     def __getitem__(self, name: typing_extensions.Literal["id"]) -> MetaOapg.properties.id: ...
@@ -363,7 +358,7 @@ class UNISWAPV3ETHEREUMTickDTO(
     @typing.overload
     def __getitem__(self, name: typing_extensions.Literal["last_update_block_number"]) -> MetaOapg.properties.last_update_block_number: ...
     
-    def __getitem__(self, name: typing.Union[typing_extensions.Literal["entry_time"], typing_extensions.Literal["recv_time"], typing_extensions.Literal["block_number"], typing_extensions.Literal["vid"], typing_extensions.Literal["id"], typing_extensions.Literal["index"], typing_extensions.Literal["pool"], typing_extensions.Literal["created_timestamp"], typing_extensions.Literal["created_block_number"], typing_extensions.Literal["prices"], typing_extensions.Literal["liquidity_gross"], typing_extensions.Literal["liquidity_gross_usd"], typing_extensions.Literal["liquidity_net"], typing_extensions.Literal["liquidity_net_usd"], typing_extensions.Literal["last_snapshot_day_id"], typing_extensions.Literal["last_snapshot_hour_id"], typing_extensions.Literal["last_update_timestamp"], typing_extensions.Literal["last_update_block_number"], ]):
+    def __getitem__(self, name: typing.Union[typing_extensions.Literal["entry_time"], typing_extensions.Literal["recv_time"], typing_extensions.Literal["block_number"], typing_extensions.Literal["id"], typing_extensions.Literal["index"], typing_extensions.Literal["pool"], typing_extensions.Literal["created_timestamp"], typing_extensions.Literal["created_block_number"], typing_extensions.Literal["prices"], typing_extensions.Literal["liquidity_gross"], typing_extensions.Literal["liquidity_gross_usd"], typing_extensions.Literal["liquidity_net"], typing_extensions.Literal["liquidity_net_usd"], typing_extensions.Literal["last_snapshot_day_id"], typing_extensions.Literal["last_snapshot_hour_id"], typing_extensions.Literal["last_update_timestamp"], typing_extensions.Literal["last_update_block_number"], ]):
         # dict_instance[name] accessor
         return super().__getitem__(name)
     
@@ -375,9 +370,6 @@ class UNISWAPV3ETHEREUMTickDTO(
     
     @typing.overload
     def get_item_oapg(self, name: typing_extensions.Literal["block_number"]) -> typing.Union[MetaOapg.properties.block_number, schemas.Unset]: ...
-    
-    @typing.overload
-    def get_item_oapg(self, name: typing_extensions.Literal["vid"]) -> typing.Union[MetaOapg.properties.vid, schemas.Unset]: ...
     
     @typing.overload
     def get_item_oapg(self, name: typing_extensions.Literal["id"]) -> typing.Union[MetaOapg.properties.id, schemas.Unset]: ...
@@ -421,7 +413,7 @@ class UNISWAPV3ETHEREUMTickDTO(
     @typing.overload
     def get_item_oapg(self, name: typing_extensions.Literal["last_update_block_number"]) -> typing.Union[MetaOapg.properties.last_update_block_number, schemas.Unset]: ...
     
-    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["entry_time"], typing_extensions.Literal["recv_time"], typing_extensions.Literal["block_number"], typing_extensions.Literal["vid"], typing_extensions.Literal["id"], typing_extensions.Literal["index"], typing_extensions.Literal["pool"], typing_extensions.Literal["created_timestamp"], typing_extensions.Literal["created_block_number"], typing_extensions.Literal["prices"], typing_extensions.Literal["liquidity_gross"], typing_extensions.Literal["liquidity_gross_usd"], typing_extensions.Literal["liquidity_net"], typing_extensions.Literal["liquidity_net_usd"], typing_extensions.Literal["last_snapshot_day_id"], typing_extensions.Literal["last_snapshot_hour_id"], typing_extensions.Literal["last_update_timestamp"], typing_extensions.Literal["last_update_block_number"], ]):
+    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["entry_time"], typing_extensions.Literal["recv_time"], typing_extensions.Literal["block_number"], typing_extensions.Literal["id"], typing_extensions.Literal["index"], typing_extensions.Literal["pool"], typing_extensions.Literal["created_timestamp"], typing_extensions.Literal["created_block_number"], typing_extensions.Literal["prices"], typing_extensions.Literal["liquidity_gross"], typing_extensions.Literal["liquidity_gross_usd"], typing_extensions.Literal["liquidity_net"], typing_extensions.Literal["liquidity_net_usd"], typing_extensions.Literal["last_snapshot_day_id"], typing_extensions.Literal["last_snapshot_hour_id"], typing_extensions.Literal["last_update_timestamp"], typing_extensions.Literal["last_update_block_number"], ]):
         return super().get_item_oapg(name)
 
     def __new__(
@@ -430,7 +422,6 @@ class UNISWAPV3ETHEREUMTickDTO(
         entry_time: typing.Union[MetaOapg.properties.entry_time, str, datetime, schemas.Unset] = schemas.unset,
         recv_time: typing.Union[MetaOapg.properties.recv_time, str, datetime, schemas.Unset] = schemas.unset,
         block_number: typing.Union[MetaOapg.properties.block_number, decimal.Decimal, int, schemas.Unset] = schemas.unset,
-        vid: typing.Union[MetaOapg.properties.vid, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         id: typing.Union[MetaOapg.properties.id, None, str, schemas.Unset] = schemas.unset,
         index: typing.Union[MetaOapg.properties.index, None, str, schemas.Unset] = schemas.unset,
         pool: typing.Union[MetaOapg.properties.pool, None, str, schemas.Unset] = schemas.unset,
@@ -453,7 +444,6 @@ class UNISWAPV3ETHEREUMTickDTO(
             entry_time=entry_time,
             recv_time=recv_time,
             block_number=block_number,
-            vid=vid,
             id=id,
             index=index,
             pool=pool,

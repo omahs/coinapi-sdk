@@ -23,8 +23,8 @@ var _ MappedNullable = &CURVEFINANCEETHEREUMSwapDTO{}
 type CURVEFINANCEETHEREUMSwapDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
-	// Block number of this event
-	BlockNumber NullableString `json:"block_number,omitempty"`
+	// Number of block in which entity was recorded.
+	BlockNumber *int64 `json:"block_number,omitempty"`
 	// Swap-(transaction hash)-(log index)
 	Id NullableString `json:"id,omitempty"`
 	// Transaction hash of the transaction that emitted this event
@@ -141,46 +141,36 @@ func (o *CURVEFINANCEETHEREUMSwapDTO) SetRecvTime(v time.Time) {
 	o.RecvTime = &v
 }
 
-// GetBlockNumber returns the BlockNumber field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *CURVEFINANCEETHEREUMSwapDTO) GetBlockNumber() string {
-	if o == nil || IsNil(o.BlockNumber.Get()) {
-		var ret string
+// GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
+func (o *CURVEFINANCEETHEREUMSwapDTO) GetBlockNumber() int64 {
+	if o == nil || IsNil(o.BlockNumber) {
+		var ret int64
 		return ret
 	}
-	return *o.BlockNumber.Get()
+	return *o.BlockNumber
 }
 
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *CURVEFINANCEETHEREUMSwapDTO) GetBlockNumberOk() (*string, bool) {
-	if o == nil {
+func (o *CURVEFINANCEETHEREUMSwapDTO) GetBlockNumberOk() (*int64, bool) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
-	return o.BlockNumber.Get(), o.BlockNumber.IsSet()
+	return o.BlockNumber, true
 }
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *CURVEFINANCEETHEREUMSwapDTO) HasBlockNumber() bool {
-	if o != nil && o.BlockNumber.IsSet() {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
 	return false
 }
 
-// SetBlockNumber gets a reference to the given NullableString and assigns it to the BlockNumber field.
-func (o *CURVEFINANCEETHEREUMSwapDTO) SetBlockNumber(v string) {
-	o.BlockNumber.Set(&v)
-}
-// SetBlockNumberNil sets the value for BlockNumber to be an explicit nil
-func (o *CURVEFINANCEETHEREUMSwapDTO) SetBlockNumberNil() {
-	o.BlockNumber.Set(nil)
-}
-
-// UnsetBlockNumber ensures that no value is present for BlockNumber, not even an explicit nil
-func (o *CURVEFINANCEETHEREUMSwapDTO) UnsetBlockNumber() {
-	o.BlockNumber.Unset()
+// SetBlockNumber gets a reference to the given int64 and assigns it to the BlockNumber field.
+func (o *CURVEFINANCEETHEREUMSwapDTO) SetBlockNumber(v int64) {
+	o.BlockNumber = &v
 }
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
@@ -957,8 +947,8 @@ func (o CURVEFINANCEETHEREUMSwapDTO) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if o.BlockNumber.IsSet() {
-		toSerialize["block_number"] = o.BlockNumber.Get()
+	if !IsNil(o.BlockNumber) {
+		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
 		toSerialize["id"] = o.Id.Get()

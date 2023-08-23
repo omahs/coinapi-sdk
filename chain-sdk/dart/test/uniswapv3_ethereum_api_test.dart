@@ -147,7 +147,7 @@ void main() {
     //
     // Gets tickDailySnapshots.
     //
-    //Future<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent({ String pool }) async
+    //Future<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent() async
     test('test uNISWAPV3ETHEREUMTickDailySnapshotsCurrent', () async {
       // TODO
     });
@@ -156,7 +156,7 @@ void main() {
     //
     // Gets tickHourlySnapshots.
     //
-    //Future<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent({ String pool }) async
+    //Future<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent() async
     test('test uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent', () async {
       // TODO
     });
@@ -165,7 +165,7 @@ void main() {
     //
     // Gets ticks.
     //
-    //Future<List<UNISWAPV3ETHEREUMTickDTO>> uNISWAPV3ETHEREUMTicksCurrent({ String pool }) async
+    //Future<List<UNISWAPV3ETHEREUMTickDTO>> uNISWAPV3ETHEREUMTicksCurrent() async
     test('test uNISWAPV3ETHEREUMTicksCurrent', () async {
       // TODO
     });

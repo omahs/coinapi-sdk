@@ -13,8 +13,6 @@ class PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /*  */
-    Long vid
     /* (pool address)-(tick index)-(hour ID) */
     String id
     /* Number of hours since Unix epoch time */

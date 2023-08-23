@@ -199,12 +199,40 @@ class ApiClient {
           return CRYPTOPUNKSTradeDTO.fromJson(value);
         case 'CRYPTOPUNKSUserDTO':
           return CRYPTOPUNKSUserDTO.fromJson(value);
+        case 'CURVEFINANCEETHEREUMAccountDTO':
+          return CURVEFINANCEETHEREUMAccountDTO.fromJson(value);
+        case 'CURVEFINANCEETHEREUMActiveAccountDTO':
+          return CURVEFINANCEETHEREUMActiveAccountDTO.fromJson(value);
+        case 'CURVEFINANCEETHEREUMDepositDTO':
+          return CURVEFINANCEETHEREUMDepositDTO.fromJson(value);
+        case 'CURVEFINANCEETHEREUMDexAmmProtocolDTO':
+          return CURVEFINANCEETHEREUMDexAmmProtocolDTO.fromJson(value);
+        case 'CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO':
+          return CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO.fromJson(value);
+        case 'CURVEFINANCEETHEREUMLiquidityGaugeDTO':
+          return CURVEFINANCEETHEREUMLiquidityGaugeDTO.fromJson(value);
         case 'CURVEFINANCEETHEREUMLiquidityPoolDTO':
           return CURVEFINANCEETHEREUMLiquidityPoolDTO.fromJson(value);
+        case 'CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO':
+          return CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO.fromJson(value);
+        case 'CURVEFINANCEETHEREUMLiquidityPoolFeeDTO':
+          return CURVEFINANCEETHEREUMLiquidityPoolFeeDTO.fromJson(value);
+        case 'CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO':
+          return CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO.fromJson(value);
+        case 'CURVEFINANCEETHEREUMLpTokenDTO':
+          return CURVEFINANCEETHEREUMLpTokenDTO.fromJson(value);
+        case 'CURVEFINANCEETHEREUMRewardTokenDTO':
+          return CURVEFINANCEETHEREUMRewardTokenDTO.fromJson(value);
         case 'CURVEFINANCEETHEREUMSwapDTO':
           return CURVEFINANCEETHEREUMSwapDTO.fromJson(value);
         case 'CURVEFINANCEETHEREUMTokenDTO':
           return CURVEFINANCEETHEREUMTokenDTO.fromJson(value);
+        case 'CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO':
+          return CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO.fromJson(value);
+        case 'CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO':
+          return CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO.fromJson(value);
+        case 'CURVEFINANCEETHEREUMWithdrawDTO':
+          return CURVEFINANCEETHEREUMWithdrawDTO.fromJson(value);
         case 'PANCAKESWAPV3ETHEREUMAccountDTO':
           return PANCAKESWAPV3ETHEREUMAccountDTO.fromJson(value);
         case 'PANCAKESWAPV3ETHEREUMActiveAccountDTO':
@@ -251,20 +279,100 @@ class ApiClient {
           return PANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.fromJson(value);
         case 'PANCAKESWAPV3ETHEREUMWithdrawDTO':
           return PANCAKESWAPV3ETHEREUMWithdrawDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMAccountDTO':
+          return SUSHISWAPV3ETHEREUMAccountDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMActiveAccountDTO':
+          return SUSHISWAPV3ETHEREUMActiveAccountDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMDepositDTO':
+          return SUSHISWAPV3ETHEREUMDepositDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMDexAmmProtocolDTO':
+          return SUSHISWAPV3ETHEREUMDexAmmProtocolDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO':
+          return SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO':
+          return SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO.fromJson(value);
         case 'SUSHISWAPV3ETHEREUMLiquidityPoolDTO':
           return SUSHISWAPV3ETHEREUMLiquidityPoolDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO':
+          return SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO':
+          return SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO':
+          return SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMPositionDTO':
+          return SUSHISWAPV3ETHEREUMPositionDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMPositionSnapshotDTO':
+          return SUSHISWAPV3ETHEREUMPositionSnapshotDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMRewardTokenDTO':
+          return SUSHISWAPV3ETHEREUMRewardTokenDTO.fromJson(value);
         case 'SUSHISWAPV3ETHEREUMSwapDTO':
           return SUSHISWAPV3ETHEREUMSwapDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMTickDTO':
+          return SUSHISWAPV3ETHEREUMTickDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMTickDailySnapshotDTO':
+          return SUSHISWAPV3ETHEREUMTickDailySnapshotDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO':
+          return SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO.fromJson(value);
         case 'SUSHISWAPV3ETHEREUMTokenDTO':
           return SUSHISWAPV3ETHEREUMTokenDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMTokenWhiteListDTO':
+          return SUSHISWAPV3ETHEREUMTokenWhiteListDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO':
+          return SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO':
+          return SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO':
+          return SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO.fromJson(value);
+        case 'SUSHISWAPV3ETHEREUMWithdrawDTO':
+          return SUSHISWAPV3ETHEREUMWithdrawDTO.fromJson(value);
         case 'TransactionsETradeAggressiveSide':
           return TransactionsETradeAggressiveSideTypeTransformer().decode(value);
+        case 'UNISWAPV2ETHEREUMAccountDTO':
+          return UNISWAPV2ETHEREUMAccountDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMActiveAccountDTO':
+          return UNISWAPV2ETHEREUMActiveAccountDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMDepositDTO':
+          return UNISWAPV2ETHEREUMDepositDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMDexAmmProtocolDTO':
+          return UNISWAPV2ETHEREUMDexAmmProtocolDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO':
+          return UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMLiquidityPoolAmountDTO':
+          return UNISWAPV2ETHEREUMLiquidityPoolAmountDTO.fromJson(value);
         case 'UNISWAPV2ETHEREUMLiquidityPoolDTO':
           return UNISWAPV2ETHEREUMLiquidityPoolDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO':
+          return UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMLiquidityPoolFeeDTO':
+          return UNISWAPV2ETHEREUMLiquidityPoolFeeDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO':
+          return UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMMasterChefAddressToPidDTO':
+          return UNISWAPV2ETHEREUMMasterChefAddressToPidDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMMasterChefDTO':
+          return UNISWAPV2ETHEREUMMasterChefDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMMasterChefRewarderDTO':
+          return UNISWAPV2ETHEREUMMasterChefRewarderDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMMasterChefStakingPoolDTO':
+          return UNISWAPV2ETHEREUMMasterChefStakingPoolDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMRewardTokenDTO':
+          return UNISWAPV2ETHEREUMRewardTokenDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMRewarderProbeDTO':
+          return UNISWAPV2ETHEREUMRewarderProbeDTO.fromJson(value);
         case 'UNISWAPV2ETHEREUMSwapDTO':
           return UNISWAPV2ETHEREUMSwapDTO.fromJson(value);
         case 'UNISWAPV2ETHEREUMTokenDTO':
           return UNISWAPV2ETHEREUMTokenDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMTokenWhiteListDTO':
+          return UNISWAPV2ETHEREUMTokenWhiteListDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMTransferDTO':
+          return UNISWAPV2ETHEREUMTransferDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO':
+          return UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO':
+          return UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO.fromJson(value);
+        case 'UNISWAPV2ETHEREUMWithdrawDTO':
+          return UNISWAPV2ETHEREUMWithdrawDTO.fromJson(value);
         case 'UNISWAPV3ETHEREUMAccountDTO':
           return UNISWAPV3ETHEREUMAccountDTO.fromJson(value);
         case 'UNISWAPV3ETHEREUMActiveAccountDTO':

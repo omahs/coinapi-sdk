@@ -63,9 +63,23 @@ set(SRCS
     model/cryptopunks_marketplace_daily_snapshot_dto.c
     model/cryptopunks_trade_dto.c
     model/cryptopunks_user_dto.c
+    model/curve_finance_ethereum_account_dto.c
+    model/curve_finance_ethereum_active_account_dto.c
+    model/curve_finance_ethereum_deposit_dto.c
+    model/curve_finance_ethereum_dex_amm_protocol_dto.c
+    model/curve_finance_ethereum_financials_daily_snapshot_dto.c
+    model/curve_finance_ethereum_liquidity_gauge_dto.c
+    model/curve_finance_ethereum_liquidity_pool_daily_snapshot_dto.c
     model/curve_finance_ethereum_liquidity_pool_dto.c
+    model/curve_finance_ethereum_liquidity_pool_fee_dto.c
+    model/curve_finance_ethereum_liquidity_pool_hourly_snapshot_dto.c
+    model/curve_finance_ethereum_lp_token_dto.c
+    model/curve_finance_ethereum_reward_token_dto.c
     model/curve_finance_ethereum_swap_dto.c
     model/curve_finance_ethereum_token_dto.c
+    model/curve_finance_ethereum_usage_metrics_daily_snapshot_dto.c
+    model/curve_finance_ethereum_usage_metrics_hourly_snapshot_dto.c
+    model/curve_finance_ethereum_withdraw_dto.c
     model/pancakeswap_v3_ethereum_account_dto.c
     model/pancakeswap_v3_ethereum_active_account_dto.c
     model/pancakeswap_v3_ethereum_deposit_dto.c
@@ -89,13 +103,53 @@ set(SRCS
     model/pancakeswap_v3_ethereum_usage_metrics_daily_snapshot_dto.c
     model/pancakeswap_v3_ethereum_usage_metrics_hourly_snapshot_dto.c
     model/pancakeswap_v3_ethereum_withdraw_dto.c
+    model/sushiswap_v3_ethereum_account_dto.c
+    model/sushiswap_v3_ethereum_active_account_dto.c
+    model/sushiswap_v3_ethereum_deposit_dto.c
+    model/sushiswap_v3_ethereum_dex_amm_protocol_dto.c
+    model/sushiswap_v3_ethereum_financials_daily_snapshot_dto.c
+    model/sushiswap_v3_ethereum_liquidity_pool_amount_dto.c
+    model/sushiswap_v3_ethereum_liquidity_pool_daily_snapshot_dto.c
     model/sushiswap_v3_ethereum_liquidity_pool_dto.c
+    model/sushiswap_v3_ethereum_liquidity_pool_fee_dto.c
+    model/sushiswap_v3_ethereum_liquidity_pool_hourly_snapshot_dto.c
+    model/sushiswap_v3_ethereum_position_dto.c
+    model/sushiswap_v3_ethereum_position_snapshot_dto.c
+    model/sushiswap_v3_ethereum_reward_token_dto.c
     model/sushiswap_v3_ethereum_swap_dto.c
+    model/sushiswap_v3_ethereum_tick_daily_snapshot_dto.c
+    model/sushiswap_v3_ethereum_tick_dto.c
+    model/sushiswap_v3_ethereum_tick_hourly_snapshot_dto.c
     model/sushiswap_v3_ethereum_token_dto.c
+    model/sushiswap_v3_ethereum_token_white_list_dto.c
+    model/sushiswap_v3_ethereum_token_white_list_symbol_dto.c
+    model/sushiswap_v3_ethereum_usage_metrics_daily_snapshot_dto.c
+    model/sushiswap_v3_ethereum_usage_metrics_hourly_snapshot_dto.c
+    model/sushiswap_v3_ethereum_withdraw_dto.c
     model/transactions_e_trade_aggressive_side.c
+    model/uniswap_v2_ethereum_account_dto.c
+    model/uniswap_v2_ethereum_active_account_dto.c
+    model/uniswap_v2_ethereum_deposit_dto.c
+    model/uniswap_v2_ethereum_dex_amm_protocol_dto.c
+    model/uniswap_v2_ethereum_financials_daily_snapshot_dto.c
+    model/uniswap_v2_ethereum_liquidity_pool_amount_dto.c
+    model/uniswap_v2_ethereum_liquidity_pool_daily_snapshot_dto.c
     model/uniswap_v2_ethereum_liquidity_pool_dto.c
+    model/uniswap_v2_ethereum_liquidity_pool_fee_dto.c
+    model/uniswap_v2_ethereum_liquidity_pool_hourly_snapshot_dto.c
+    model/uniswap_v2_ethereum_master_chef_address_to_pid_dto.c
+    model/uniswap_v2_ethereum_master_chef_dto.c
+    model/uniswap_v2_ethereum_master_chef_rewarder_dto.c
+    model/uniswap_v2_ethereum_master_chef_staking_pool_dto.c
+    model/uniswap_v2_ethereum_reward_token_dto.c
+    model/uniswap_v2_ethereum_rewarder_probe_dto.c
     model/uniswap_v2_ethereum_swap_dto.c
     model/uniswap_v2_ethereum_token_dto.c
+    model/uniswap_v2_ethereum_token_white_list_dto.c
+    model/uniswap_v2_ethereum_transfer_dto.c
+    model/uniswap_v2_ethereum_usage_metrics_daily_snapshot_dto.c
+    model/uniswap_v2_ethereum_usage_metrics_hourly_snapshot_dto.c
+    model/uniswap_v2_ethereum_withdraw_dto.c
     model/uniswap_v3_ethereum_account_dto.c
     model/uniswap_v3_ethereum_active_account_dto.c
     model/uniswap_v3_ethereum_deposit_dto.c
@@ -119,7 +173,7 @@ set(SRCS
     model/uniswap_v3_ethereum_usage_metrics_daily_snapshot_dto.c
     model/uniswap_v3_ethereum_usage_metrics_hourly_snapshot_dto.c
     model/uniswap_v3_ethereum_withdraw_dto.c
-    api/CRYPTOPUNKSAPI.c
+    api/CRYPTOPUNKSETHEREUMAPI.c
     api/CURVEFINANCEETHEREUMAPI.c
     api/MetadataAPI.c
     api/PANCAKESWAPV3ETHEREUMAPI.c
@@ -145,9 +199,23 @@ set(HDRS
     model/cryptopunks_marketplace_daily_snapshot_dto.h
     model/cryptopunks_trade_dto.h
     model/cryptopunks_user_dto.h
+    model/curve_finance_ethereum_account_dto.h
+    model/curve_finance_ethereum_active_account_dto.h
+    model/curve_finance_ethereum_deposit_dto.h
+    model/curve_finance_ethereum_dex_amm_protocol_dto.h
+    model/curve_finance_ethereum_financials_daily_snapshot_dto.h
+    model/curve_finance_ethereum_liquidity_gauge_dto.h
+    model/curve_finance_ethereum_liquidity_pool_daily_snapshot_dto.h
     model/curve_finance_ethereum_liquidity_pool_dto.h
+    model/curve_finance_ethereum_liquidity_pool_fee_dto.h
+    model/curve_finance_ethereum_liquidity_pool_hourly_snapshot_dto.h
+    model/curve_finance_ethereum_lp_token_dto.h
+    model/curve_finance_ethereum_reward_token_dto.h
     model/curve_finance_ethereum_swap_dto.h
     model/curve_finance_ethereum_token_dto.h
+    model/curve_finance_ethereum_usage_metrics_daily_snapshot_dto.h
+    model/curve_finance_ethereum_usage_metrics_hourly_snapshot_dto.h
+    model/curve_finance_ethereum_withdraw_dto.h
     model/pancakeswap_v3_ethereum_account_dto.h
     model/pancakeswap_v3_ethereum_active_account_dto.h
     model/pancakeswap_v3_ethereum_deposit_dto.h
@@ -171,13 +239,53 @@ set(HDRS
     model/pancakeswap_v3_ethereum_usage_metrics_daily_snapshot_dto.h
     model/pancakeswap_v3_ethereum_usage_metrics_hourly_snapshot_dto.h
     model/pancakeswap_v3_ethereum_withdraw_dto.h
+    model/sushiswap_v3_ethereum_account_dto.h
+    model/sushiswap_v3_ethereum_active_account_dto.h
+    model/sushiswap_v3_ethereum_deposit_dto.h
+    model/sushiswap_v3_ethereum_dex_amm_protocol_dto.h
+    model/sushiswap_v3_ethereum_financials_daily_snapshot_dto.h
+    model/sushiswap_v3_ethereum_liquidity_pool_amount_dto.h
+    model/sushiswap_v3_ethereum_liquidity_pool_daily_snapshot_dto.h
     model/sushiswap_v3_ethereum_liquidity_pool_dto.h
+    model/sushiswap_v3_ethereum_liquidity_pool_fee_dto.h
+    model/sushiswap_v3_ethereum_liquidity_pool_hourly_snapshot_dto.h
+    model/sushiswap_v3_ethereum_position_dto.h
+    model/sushiswap_v3_ethereum_position_snapshot_dto.h
+    model/sushiswap_v3_ethereum_reward_token_dto.h
     model/sushiswap_v3_ethereum_swap_dto.h
+    model/sushiswap_v3_ethereum_tick_daily_snapshot_dto.h
+    model/sushiswap_v3_ethereum_tick_dto.h
+    model/sushiswap_v3_ethereum_tick_hourly_snapshot_dto.h
     model/sushiswap_v3_ethereum_token_dto.h
+    model/sushiswap_v3_ethereum_token_white_list_dto.h
+    model/sushiswap_v3_ethereum_token_white_list_symbol_dto.h
+    model/sushiswap_v3_ethereum_usage_metrics_daily_snapshot_dto.h
+    model/sushiswap_v3_ethereum_usage_metrics_hourly_snapshot_dto.h
+    model/sushiswap_v3_ethereum_withdraw_dto.h
     model/transactions_e_trade_aggressive_side.h
+    model/uniswap_v2_ethereum_account_dto.h
+    model/uniswap_v2_ethereum_active_account_dto.h
+    model/uniswap_v2_ethereum_deposit_dto.h
+    model/uniswap_v2_ethereum_dex_amm_protocol_dto.h
+    model/uniswap_v2_ethereum_financials_daily_snapshot_dto.h
+    model/uniswap_v2_ethereum_liquidity_pool_amount_dto.h
+    model/uniswap_v2_ethereum_liquidity_pool_daily_snapshot_dto.h
     model/uniswap_v2_ethereum_liquidity_pool_dto.h
+    model/uniswap_v2_ethereum_liquidity_pool_fee_dto.h
+    model/uniswap_v2_ethereum_liquidity_pool_hourly_snapshot_dto.h
+    model/uniswap_v2_ethereum_master_chef_address_to_pid_dto.h
+    model/uniswap_v2_ethereum_master_chef_dto.h
+    model/uniswap_v2_ethereum_master_chef_rewarder_dto.h
+    model/uniswap_v2_ethereum_master_chef_staking_pool_dto.h
+    model/uniswap_v2_ethereum_reward_token_dto.h
+    model/uniswap_v2_ethereum_rewarder_probe_dto.h
     model/uniswap_v2_ethereum_swap_dto.h
     model/uniswap_v2_ethereum_token_dto.h
+    model/uniswap_v2_ethereum_token_white_list_dto.h
+    model/uniswap_v2_ethereum_transfer_dto.h
+    model/uniswap_v2_ethereum_usage_metrics_daily_snapshot_dto.h
+    model/uniswap_v2_ethereum_usage_metrics_hourly_snapshot_dto.h
+    model/uniswap_v2_ethereum_withdraw_dto.h
     model/uniswap_v3_ethereum_account_dto.h
     model/uniswap_v3_ethereum_active_account_dto.h
     model/uniswap_v3_ethereum_deposit_dto.h
@@ -201,7 +309,7 @@ set(HDRS
     model/uniswap_v3_ethereum_usage_metrics_daily_snapshot_dto.h
     model/uniswap_v3_ethereum_usage_metrics_hourly_snapshot_dto.h
     model/uniswap_v3_ethereum_withdraw_dto.h
-    api/CRYPTOPUNKSAPI.h
+    api/CRYPTOPUNKSETHEREUMAPI.h
     api/CURVEFINANCEETHEREUMAPI.h
     api/MetadataAPI.h
     api/PANCAKESWAPV3ETHEREUMAPI.h
@@ -289,7 +397,7 @@ set(HDRS "")
 ## This section shows how to use the above compiled library to compile the source files
 ## set source files
 #set(SRCS
-#    unit-tests/manual-CRYPTOPUNKSAPI.c
+#    unit-tests/manual-CRYPTOPUNKSETHEREUMAPI.c
 #    unit-tests/manual-CURVEFINANCEETHEREUMAPI.c
 #    unit-tests/manual-MetadataAPI.c
 #    unit-tests/manual-PANCAKESWAPV3ETHEREUMAPI.c

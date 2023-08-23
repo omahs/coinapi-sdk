@@ -24,7 +24,7 @@ public class CRYPTOPUNKSTradeDTO {
   @SerializedName("recv_time")
   private Date recvTime = null;
   @SerializedName("block_number")
-  private String blockNumber = null;
+  private Long blockNumber = null;
   @SerializedName("vid")
   private Long vid = null;
   @SerializedName("block_range")
@@ -73,13 +73,13 @@ public class CRYPTOPUNKSTradeDTO {
   }
 
   /**
-   * 
+   * Number of block in which entity was recorded.
    **/
-  @ApiModelProperty(value = "")
-  public String getBlockNumber() {
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
+  public Long getBlockNumber() {
     return blockNumber;
   }
-  public void setBlockNumber(String blockNumber) {
+  public void setBlockNumber(Long blockNumber) {
     this.blockNumber = blockNumber;
   }
 

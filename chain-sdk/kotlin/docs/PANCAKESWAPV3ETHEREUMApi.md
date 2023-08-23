@@ -293,7 +293,7 @@ No authorization required
 
 <a id="pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent"></a>
 # **pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**
-> kotlin.collections.List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt; pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool)
+> kotlin.collections.List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt; pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent()
 
 LiquidityPoolDailySnapshots (current)
 
@@ -306,9 +306,8 @@ Gets liquidityPoolDailySnapshots.
 //import org.openapitools.client.models.*
 
 val apiInstance = PANCAKESWAPV3ETHEREUMApi()
-val pool : kotlin.String = pool_example // kotlin.String | Pool this snapshot belongs to.
 try {
-    val result : kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> = apiInstance.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool)
+    val result : kotlin.collections.List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> = apiInstance.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling PANCAKESWAPV3ETHEREUMApi#pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent")
@@ -320,10 +319,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **kotlin.String**| Pool this snapshot belongs to. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 

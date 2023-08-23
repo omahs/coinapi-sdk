@@ -25,7 +25,6 @@ import com.squareup.moshi.JsonClass
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param vid .
  * @param block The Ethereum block number associated with the liquidity pool daily snapshot.
  * @param id Identifier, format: (smart contract address of the pool)-(# of days since Unix epoch time).
  * @param day Number of days since Unix epoch time.
@@ -83,10 +82,6 @@ data class PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (
     /* Number of block in which entity was recorded. */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
-
-    /* . */
-    @Json(name = "vid")
-    val vid: kotlin.Long? = null,
 
     /* The Ethereum block number associated with the liquidity pool daily snapshot. */
     @Json(name = "block_")

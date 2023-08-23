@@ -23,9 +23,907 @@ import (
 // CURVEFINANCEETHEREUMApiService CURVEFINANCEETHEREUMApi service
 type CURVEFINANCEETHEREUMApiService service
 
+type ApiCURVEFINANCEETHEREUMAccountsCurrentRequest struct {
+	ctx context.Context
+	ApiService *CURVEFINANCEETHEREUMApiService
+}
+
+func (r ApiCURVEFINANCEETHEREUMAccountsCurrentRequest) Execute() ([]CURVEFINANCEETHEREUMAccountDTO, *http.Response, error) {
+	return r.ApiService.CURVEFINANCEETHEREUMAccountsCurrentExecute(r)
+}
+
+/*
+CURVEFINANCEETHEREUMAccountsCurrent Accounts (current)
+
+Gets accounts.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCURVEFINANCEETHEREUMAccountsCurrentRequest
+*/
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMAccountsCurrent(ctx context.Context) ApiCURVEFINANCEETHEREUMAccountsCurrentRequest {
+	return ApiCURVEFINANCEETHEREUMAccountsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CURVEFINANCEETHEREUMAccountDTO
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMAccountsCurrentExecute(r ApiCURVEFINANCEETHEREUMAccountsCurrentRequest) ([]CURVEFINANCEETHEREUMAccountDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CURVEFINANCEETHEREUMAccountDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CURVEFINANCEETHEREUMApiService.CURVEFINANCEETHEREUMAccountsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/curve-finance-ethereum/accounts/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCURVEFINANCEETHEREUMActiveAccountsCurrentRequest struct {
+	ctx context.Context
+	ApiService *CURVEFINANCEETHEREUMApiService
+}
+
+func (r ApiCURVEFINANCEETHEREUMActiveAccountsCurrentRequest) Execute() ([]CURVEFINANCEETHEREUMActiveAccountDTO, *http.Response, error) {
+	return r.ApiService.CURVEFINANCEETHEREUMActiveAccountsCurrentExecute(r)
+}
+
+/*
+CURVEFINANCEETHEREUMActiveAccountsCurrent ActiveAccounts (current)
+
+Gets activeAccounts.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCURVEFINANCEETHEREUMActiveAccountsCurrentRequest
+*/
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMActiveAccountsCurrent(ctx context.Context) ApiCURVEFINANCEETHEREUMActiveAccountsCurrentRequest {
+	return ApiCURVEFINANCEETHEREUMActiveAccountsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CURVEFINANCEETHEREUMActiveAccountDTO
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMActiveAccountsCurrentExecute(r ApiCURVEFINANCEETHEREUMActiveAccountsCurrentRequest) ([]CURVEFINANCEETHEREUMActiveAccountDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CURVEFINANCEETHEREUMActiveAccountDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CURVEFINANCEETHEREUMApiService.CURVEFINANCEETHEREUMActiveAccountsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/curve-finance-ethereum/activeAccounts/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCURVEFINANCEETHEREUMDepositsCurrentRequest struct {
+	ctx context.Context
+	ApiService *CURVEFINANCEETHEREUMApiService
+}
+
+func (r ApiCURVEFINANCEETHEREUMDepositsCurrentRequest) Execute() ([]CURVEFINANCEETHEREUMDepositDTO, *http.Response, error) {
+	return r.ApiService.CURVEFINANCEETHEREUMDepositsCurrentExecute(r)
+}
+
+/*
+CURVEFINANCEETHEREUMDepositsCurrent Deposits (current)
+
+Gets deposits.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCURVEFINANCEETHEREUMDepositsCurrentRequest
+*/
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMDepositsCurrent(ctx context.Context) ApiCURVEFINANCEETHEREUMDepositsCurrentRequest {
+	return ApiCURVEFINANCEETHEREUMDepositsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CURVEFINANCEETHEREUMDepositDTO
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMDepositsCurrentExecute(r ApiCURVEFINANCEETHEREUMDepositsCurrentRequest) ([]CURVEFINANCEETHEREUMDepositDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CURVEFINANCEETHEREUMDepositDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CURVEFINANCEETHEREUMApiService.CURVEFINANCEETHEREUMDepositsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/curve-finance-ethereum/deposits/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCURVEFINANCEETHEREUMDexAmmProtocolsCurrentRequest struct {
+	ctx context.Context
+	ApiService *CURVEFINANCEETHEREUMApiService
+}
+
+func (r ApiCURVEFINANCEETHEREUMDexAmmProtocolsCurrentRequest) Execute() ([]CURVEFINANCEETHEREUMDexAmmProtocolDTO, *http.Response, error) {
+	return r.ApiService.CURVEFINANCEETHEREUMDexAmmProtocolsCurrentExecute(r)
+}
+
+/*
+CURVEFINANCEETHEREUMDexAmmProtocolsCurrent DexAmmProtocols (current)
+
+Gets dexAmmProtocols.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCURVEFINANCEETHEREUMDexAmmProtocolsCurrentRequest
+*/
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMDexAmmProtocolsCurrent(ctx context.Context) ApiCURVEFINANCEETHEREUMDexAmmProtocolsCurrentRequest {
+	return ApiCURVEFINANCEETHEREUMDexAmmProtocolsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CURVEFINANCEETHEREUMDexAmmProtocolDTO
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMDexAmmProtocolsCurrentExecute(r ApiCURVEFINANCEETHEREUMDexAmmProtocolsCurrentRequest) ([]CURVEFINANCEETHEREUMDexAmmProtocolDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CURVEFINANCEETHEREUMDexAmmProtocolDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CURVEFINANCEETHEREUMApiService.CURVEFINANCEETHEREUMDexAmmProtocolsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/curve-finance-ethereum/dexAmmProtocols/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *CURVEFINANCEETHEREUMApiService
+}
+
+func (r ApiCURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentRequest) Execute() ([]CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO, *http.Response, error) {
+	return r.ApiService.CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentExecute(r)
+}
+
+/*
+CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent FinancialsDailySnapshots (current)
+
+Gets financialsDailySnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentRequest
+*/
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent(ctx context.Context) ApiCURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentRequest {
+	return ApiCURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentExecute(r ApiCURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentRequest) ([]CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CURVEFINANCEETHEREUMApiService.CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/curve-finance-ethereum/financialsDailySnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCURVEFINANCEETHEREUMLiquidityGaugesCurrentRequest struct {
+	ctx context.Context
+	ApiService *CURVEFINANCEETHEREUMApiService
+}
+
+func (r ApiCURVEFINANCEETHEREUMLiquidityGaugesCurrentRequest) Execute() ([]CURVEFINANCEETHEREUMLiquidityGaugeDTO, *http.Response, error) {
+	return r.ApiService.CURVEFINANCEETHEREUMLiquidityGaugesCurrentExecute(r)
+}
+
+/*
+CURVEFINANCEETHEREUMLiquidityGaugesCurrent LiquidityGauges (current)
+
+Gets liquidityGauges.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCURVEFINANCEETHEREUMLiquidityGaugesCurrentRequest
+*/
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMLiquidityGaugesCurrent(ctx context.Context) ApiCURVEFINANCEETHEREUMLiquidityGaugesCurrentRequest {
+	return ApiCURVEFINANCEETHEREUMLiquidityGaugesCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CURVEFINANCEETHEREUMLiquidityGaugeDTO
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMLiquidityGaugesCurrentExecute(r ApiCURVEFINANCEETHEREUMLiquidityGaugesCurrentRequest) ([]CURVEFINANCEETHEREUMLiquidityGaugeDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CURVEFINANCEETHEREUMLiquidityGaugeDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CURVEFINANCEETHEREUMApiService.CURVEFINANCEETHEREUMLiquidityGaugesCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/curve-finance-ethereum/liquidityGauges/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *CURVEFINANCEETHEREUMApiService
+}
+
+func (r ApiCURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentRequest) Execute() ([]CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO, *http.Response, error) {
+	return r.ApiService.CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentExecute(r)
+}
+
+/*
+CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent LiquidityPoolDailySnapshots (current)
+
+Gets liquidityPoolDailySnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentRequest
+*/
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent(ctx context.Context) ApiCURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentRequest {
+	return ApiCURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentExecute(r ApiCURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentRequest) ([]CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CURVEFINANCEETHEREUMApiService.CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/curve-finance-ethereum/liquidityPoolDailySnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCURVEFINANCEETHEREUMLiquidityPoolFeesCurrentRequest struct {
+	ctx context.Context
+	ApiService *CURVEFINANCEETHEREUMApiService
+}
+
+func (r ApiCURVEFINANCEETHEREUMLiquidityPoolFeesCurrentRequest) Execute() ([]CURVEFINANCEETHEREUMLiquidityPoolFeeDTO, *http.Response, error) {
+	return r.ApiService.CURVEFINANCEETHEREUMLiquidityPoolFeesCurrentExecute(r)
+}
+
+/*
+CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent LiquidityPoolFees (current)
+
+Gets liquidityPoolFees.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCURVEFINANCEETHEREUMLiquidityPoolFeesCurrentRequest
+*/
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent(ctx context.Context) ApiCURVEFINANCEETHEREUMLiquidityPoolFeesCurrentRequest {
+	return ApiCURVEFINANCEETHEREUMLiquidityPoolFeesCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CURVEFINANCEETHEREUMLiquidityPoolFeeDTO
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMLiquidityPoolFeesCurrentExecute(r ApiCURVEFINANCEETHEREUMLiquidityPoolFeesCurrentRequest) ([]CURVEFINANCEETHEREUMLiquidityPoolFeeDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CURVEFINANCEETHEREUMLiquidityPoolFeeDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CURVEFINANCEETHEREUMApiService.CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/curve-finance-ethereum/liquidityPoolFees/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *CURVEFINANCEETHEREUMApiService
+}
+
+func (r ApiCURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest) Execute() ([]CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO, *http.Response, error) {
+	return r.ApiService.CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentExecute(r)
+}
+
+/*
+CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent LiquidityPoolHourlySnapshots (current)
+
+Gets liquidityPoolHourlySnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest
+*/
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent(ctx context.Context) ApiCURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest {
+	return ApiCURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentExecute(r ApiCURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentRequest) ([]CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CURVEFINANCEETHEREUMApiService.CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/curve-finance-ethereum/liquidityPoolHourlySnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiCURVEFINANCEETHEREUMLiquidityPoolsCurrentRequest struct {
 	ctx context.Context
 	ApiService *CURVEFINANCEETHEREUMApiService
+	id *string
+}
+
+// Smart contract address of the pool
+func (r ApiCURVEFINANCEETHEREUMLiquidityPoolsCurrentRequest) Id(id string) ApiCURVEFINANCEETHEREUMLiquidityPoolsCurrentRequest {
+	r.id = &id
+	return r
 }
 
 func (r ApiCURVEFINANCEETHEREUMLiquidityPoolsCurrentRequest) Execute() ([]CURVEFINANCEETHEREUMLiquidityPoolDTO, *http.Response, error) {
@@ -63,6 +961,207 @@ func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMLiquidityPoolsCurre
 	}
 
 	localVarPath := localBasePath + "/v1/dapps/curve-finance-ethereum/liquidityPools/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.id != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCURVEFINANCEETHEREUMLpTokensCurrentRequest struct {
+	ctx context.Context
+	ApiService *CURVEFINANCEETHEREUMApiService
+}
+
+func (r ApiCURVEFINANCEETHEREUMLpTokensCurrentRequest) Execute() ([]CURVEFINANCEETHEREUMLpTokenDTO, *http.Response, error) {
+	return r.ApiService.CURVEFINANCEETHEREUMLpTokensCurrentExecute(r)
+}
+
+/*
+CURVEFINANCEETHEREUMLpTokensCurrent LpTokens (current)
+
+Gets lpTokens.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCURVEFINANCEETHEREUMLpTokensCurrentRequest
+*/
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMLpTokensCurrent(ctx context.Context) ApiCURVEFINANCEETHEREUMLpTokensCurrentRequest {
+	return ApiCURVEFINANCEETHEREUMLpTokensCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CURVEFINANCEETHEREUMLpTokenDTO
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMLpTokensCurrentExecute(r ApiCURVEFINANCEETHEREUMLpTokensCurrentRequest) ([]CURVEFINANCEETHEREUMLpTokenDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CURVEFINANCEETHEREUMLpTokenDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CURVEFINANCEETHEREUMApiService.CURVEFINANCEETHEREUMLpTokensCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/curve-finance-ethereum/lpTokens/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCURVEFINANCEETHEREUMRewardTokensCurrentRequest struct {
+	ctx context.Context
+	ApiService *CURVEFINANCEETHEREUMApiService
+}
+
+func (r ApiCURVEFINANCEETHEREUMRewardTokensCurrentRequest) Execute() ([]CURVEFINANCEETHEREUMRewardTokenDTO, *http.Response, error) {
+	return r.ApiService.CURVEFINANCEETHEREUMRewardTokensCurrentExecute(r)
+}
+
+/*
+CURVEFINANCEETHEREUMRewardTokensCurrent RewardTokens (current)
+
+Gets rewardTokens.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCURVEFINANCEETHEREUMRewardTokensCurrentRequest
+*/
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMRewardTokensCurrent(ctx context.Context) ApiCURVEFINANCEETHEREUMRewardTokensCurrentRequest {
+	return ApiCURVEFINANCEETHEREUMRewardTokensCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CURVEFINANCEETHEREUMRewardTokenDTO
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMRewardTokensCurrentExecute(r ApiCURVEFINANCEETHEREUMRewardTokensCurrentRequest) ([]CURVEFINANCEETHEREUMRewardTokenDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CURVEFINANCEETHEREUMRewardTokenDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CURVEFINANCEETHEREUMApiService.CURVEFINANCEETHEREUMRewardTokensCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/curve-finance-ethereum/rewardTokens/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -224,6 +1323,13 @@ func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMSwapsCurrentExecute
 type ApiCURVEFINANCEETHEREUMTokensCurrentRequest struct {
 	ctx context.Context
 	ApiService *CURVEFINANCEETHEREUMApiService
+	id *string
+}
+
+// Smart contract address of the token
+func (r ApiCURVEFINANCEETHEREUMTokensCurrentRequest) Id(id string) ApiCURVEFINANCEETHEREUMTokensCurrentRequest {
+	r.id = &id
+	return r
 }
 
 func (r ApiCURVEFINANCEETHEREUMTokensCurrentRequest) Execute() ([]CURVEFINANCEETHEREUMTokenDTO, *http.Response, error) {
@@ -261,6 +1367,306 @@ func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMTokensCurrentExecut
 	}
 
 	localVarPath := localBasePath + "/v1/dapps/curve-finance-ethereum/tokens/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.id != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *CURVEFINANCEETHEREUMApiService
+}
+
+func (r ApiCURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentRequest) Execute() ([]CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO, *http.Response, error) {
+	return r.ApiService.CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentExecute(r)
+}
+
+/*
+CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent UsageMetricsDailySnapshots (current)
+
+Gets usageMetricsDailySnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentRequest
+*/
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent(ctx context.Context) ApiCURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentRequest {
+	return ApiCURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentExecute(r ApiCURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentRequest) ([]CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CURVEFINANCEETHEREUMApiService.CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *CURVEFINANCEETHEREUMApiService
+}
+
+func (r ApiCURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentRequest) Execute() ([]CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO, *http.Response, error) {
+	return r.ApiService.CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentExecute(r)
+}
+
+/*
+CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent UsageMetricsHourlySnapshots (current)
+
+Gets usageMetricsHourlySnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentRequest
+*/
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent(ctx context.Context) ApiCURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentRequest {
+	return ApiCURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentExecute(r ApiCURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentRequest) ([]CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CURVEFINANCEETHEREUMApiService.CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCURVEFINANCEETHEREUMWithdrawsCurrentRequest struct {
+	ctx context.Context
+	ApiService *CURVEFINANCEETHEREUMApiService
+}
+
+func (r ApiCURVEFINANCEETHEREUMWithdrawsCurrentRequest) Execute() ([]CURVEFINANCEETHEREUMWithdrawDTO, *http.Response, error) {
+	return r.ApiService.CURVEFINANCEETHEREUMWithdrawsCurrentExecute(r)
+}
+
+/*
+CURVEFINANCEETHEREUMWithdrawsCurrent Withdraws (current)
+
+Gets withdraws.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCURVEFINANCEETHEREUMWithdrawsCurrentRequest
+*/
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMWithdrawsCurrent(ctx context.Context) ApiCURVEFINANCEETHEREUMWithdrawsCurrentRequest {
+	return ApiCURVEFINANCEETHEREUMWithdrawsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CURVEFINANCEETHEREUMWithdrawDTO
+func (a *CURVEFINANCEETHEREUMApiService) CURVEFINANCEETHEREUMWithdrawsCurrentExecute(r ApiCURVEFINANCEETHEREUMWithdrawsCurrentRequest) ([]CURVEFINANCEETHEREUMWithdrawDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CURVEFINANCEETHEREUMWithdrawDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CURVEFINANCEETHEREUMApiService.CURVEFINANCEETHEREUMWithdrawsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/dapps/curve-finance-ethereum/withdraws/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}

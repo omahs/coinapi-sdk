@@ -16,7 +16,6 @@ class PANCAKESWAPV3ETHEREUMPositionDTO {
     this.entryTime,
     this.recvTime,
     this.blockNumber,
-    this.vid,
     this.id,
     this.account,
     this.pool,
@@ -65,15 +64,6 @@ class PANCAKESWAPV3ETHEREUMPositionDTO {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? blockNumber;
-
-  /// 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? vid;
 
   /// (account address)-(market address)-(count)
   String? id;
@@ -158,7 +148,6 @@ class PANCAKESWAPV3ETHEREUMPositionDTO {
      other.entryTime == entryTime &&
      other.recvTime == recvTime &&
      other.blockNumber == blockNumber &&
-     other.vid == vid &&
      other.id == id &&
      other.account == account &&
      other.pool == pool &&
@@ -188,7 +177,6 @@ class PANCAKESWAPV3ETHEREUMPositionDTO {
     (entryTime == null ? 0 : entryTime!.hashCode) +
     (recvTime == null ? 0 : recvTime!.hashCode) +
     (blockNumber == null ? 0 : blockNumber!.hashCode) +
-    (vid == null ? 0 : vid!.hashCode) +
     (id == null ? 0 : id!.hashCode) +
     (account == null ? 0 : account!.hashCode) +
     (pool == null ? 0 : pool!.hashCode) +
@@ -213,7 +201,7 @@ class PANCAKESWAPV3ETHEREUMPositionDTO {
     (withdrawCount == null ? 0 : withdrawCount!.hashCode);
 
   @override
-  String toString() => 'PANCAKESWAPV3ETHEREUMPositionDTO[entryTime=$entryTime, recvTime=$recvTime, blockNumber=$blockNumber, vid=$vid, id=$id, account=$account, pool=$pool, hashOpened=$hashOpened, hashClosed=$hashClosed, blockNumberOpened=$blockNumberOpened, timestampOpened=$timestampOpened, blockNumberClosed=$blockNumberClosed, timestampClosed=$timestampClosed, tickLower=$tickLower, tickUpper=$tickUpper, liquidityToken=$liquidityToken, liquidityTokenType=$liquidityTokenType, liquidity=$liquidity, liquidityUsd=$liquidityUsd, cumulativeDepositTokenAmounts=$cumulativeDepositTokenAmounts, cumulativeDepositUsd=$cumulativeDepositUsd, cumulativeWithdrawTokenAmounts=$cumulativeWithdrawTokenAmounts, cumulativeWithdrawUsd=$cumulativeWithdrawUsd, cumulativeRewardUsd=$cumulativeRewardUsd, depositCount=$depositCount, withdrawCount=$withdrawCount]';
+  String toString() => 'PANCAKESWAPV3ETHEREUMPositionDTO[entryTime=$entryTime, recvTime=$recvTime, blockNumber=$blockNumber, id=$id, account=$account, pool=$pool, hashOpened=$hashOpened, hashClosed=$hashClosed, blockNumberOpened=$blockNumberOpened, timestampOpened=$timestampOpened, blockNumberClosed=$blockNumberClosed, timestampClosed=$timestampClosed, tickLower=$tickLower, tickUpper=$tickUpper, liquidityToken=$liquidityToken, liquidityTokenType=$liquidityTokenType, liquidity=$liquidity, liquidityUsd=$liquidityUsd, cumulativeDepositTokenAmounts=$cumulativeDepositTokenAmounts, cumulativeDepositUsd=$cumulativeDepositUsd, cumulativeWithdrawTokenAmounts=$cumulativeWithdrawTokenAmounts, cumulativeWithdrawUsd=$cumulativeWithdrawUsd, cumulativeRewardUsd=$cumulativeRewardUsd, depositCount=$depositCount, withdrawCount=$withdrawCount]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -231,11 +219,6 @@ class PANCAKESWAPV3ETHEREUMPositionDTO {
       json[r'block_number'] = this.blockNumber;
     } else {
       json[r'block_number'] = null;
-    }
-    if (this.vid != null) {
-      json[r'vid'] = this.vid;
-    } else {
-      json[r'vid'] = null;
     }
     if (this.id != null) {
       json[r'id'] = this.id;
@@ -372,7 +355,6 @@ class PANCAKESWAPV3ETHEREUMPositionDTO {
         entryTime: mapDateTime(json, r'entry_time', ''),
         recvTime: mapDateTime(json, r'recv_time', ''),
         blockNumber: mapValueOfType<int>(json, r'block_number'),
-        vid: mapValueOfType<int>(json, r'vid'),
         id: mapValueOfType<String>(json, r'id'),
         account: mapValueOfType<String>(json, r'account'),
         pool: mapValueOfType<String>(json, r'pool'),

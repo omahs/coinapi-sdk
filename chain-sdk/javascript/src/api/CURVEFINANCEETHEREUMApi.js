@@ -13,9 +13,23 @@
 
 
 import ApiClient from "../ApiClient";
+import CURVEFINANCEETHEREUMAccountDTO from '../model/CURVEFINANCEETHEREUMAccountDTO';
+import CURVEFINANCEETHEREUMActiveAccountDTO from '../model/CURVEFINANCEETHEREUMActiveAccountDTO';
+import CURVEFINANCEETHEREUMDepositDTO from '../model/CURVEFINANCEETHEREUMDepositDTO';
+import CURVEFINANCEETHEREUMDexAmmProtocolDTO from '../model/CURVEFINANCEETHEREUMDexAmmProtocolDTO';
+import CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO from '../model/CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO';
+import CURVEFINANCEETHEREUMLiquidityGaugeDTO from '../model/CURVEFINANCEETHEREUMLiquidityGaugeDTO';
 import CURVEFINANCEETHEREUMLiquidityPoolDTO from '../model/CURVEFINANCEETHEREUMLiquidityPoolDTO';
+import CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO from '../model/CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO';
+import CURVEFINANCEETHEREUMLiquidityPoolFeeDTO from '../model/CURVEFINANCEETHEREUMLiquidityPoolFeeDTO';
+import CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO from '../model/CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO';
+import CURVEFINANCEETHEREUMLpTokenDTO from '../model/CURVEFINANCEETHEREUMLpTokenDTO';
+import CURVEFINANCEETHEREUMRewardTokenDTO from '../model/CURVEFINANCEETHEREUMRewardTokenDTO';
 import CURVEFINANCEETHEREUMSwapDTO from '../model/CURVEFINANCEETHEREUMSwapDTO';
 import CURVEFINANCEETHEREUMTokenDTO from '../model/CURVEFINANCEETHEREUMTokenDTO';
+import CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO from '../model/CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO';
+import CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO from '../model/CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO';
+import CURVEFINANCEETHEREUMWithdrawDTO from '../model/CURVEFINANCEETHEREUMWithdrawDTO';
 
 /**
 * CURVEFINANCEETHEREUM service.
@@ -37,20 +51,20 @@ export default class CURVEFINANCEETHEREUMApi {
 
 
     /**
-     * Callback function to receive the result of the cURVEFINANCEETHEREUMLiquidityPoolsCurrent operation.
-     * @callback module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMLiquidityPoolsCurrentCallback
+     * Callback function to receive the result of the cURVEFINANCEETHEREUMAccountsCurrent operation.
+     * @callback module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMAccountsCurrentCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CURVEFINANCEETHEREUMLiquidityPoolDTO>} data The data returned by the service call.
+     * @param {Array.<module:model/CURVEFINANCEETHEREUMAccountDTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * LiquidityPools (current)
-     * Gets liquidityPools.
-     * @param {module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMLiquidityPoolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CURVEFINANCEETHEREUMLiquidityPoolDTO>}
+     * Accounts (current)
+     * Gets accounts.
+     * @param {module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMAccountsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CURVEFINANCEETHEREUMAccountDTO>}
      */
-    cURVEFINANCEETHEREUMLiquidityPoolsCurrent(callback) {
+    cURVEFINANCEETHEREUMAccountsCurrent(callback) {
       let postBody = null;
 
       let pathParams = {
@@ -65,9 +79,420 @@ export default class CURVEFINANCEETHEREUMApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [CURVEFINANCEETHEREUMAccountDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/curve-finance-ethereum/accounts/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cURVEFINANCEETHEREUMActiveAccountsCurrent operation.
+     * @callback module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMActiveAccountsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CURVEFINANCEETHEREUMActiveAccountDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * ActiveAccounts (current)
+     * Gets activeAccounts.
+     * @param {module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMActiveAccountsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CURVEFINANCEETHEREUMActiveAccountDTO>}
+     */
+    cURVEFINANCEETHEREUMActiveAccountsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [CURVEFINANCEETHEREUMActiveAccountDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/curve-finance-ethereum/activeAccounts/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cURVEFINANCEETHEREUMDepositsCurrent operation.
+     * @callback module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMDepositsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CURVEFINANCEETHEREUMDepositDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @param {module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMDepositsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CURVEFINANCEETHEREUMDepositDTO>}
+     */
+    cURVEFINANCEETHEREUMDepositsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [CURVEFINANCEETHEREUMDepositDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/curve-finance-ethereum/deposits/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cURVEFINANCEETHEREUMDexAmmProtocolsCurrent operation.
+     * @callback module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMDexAmmProtocolsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CURVEFINANCEETHEREUMDexAmmProtocolDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * DexAmmProtocols (current)
+     * Gets dexAmmProtocols.
+     * @param {module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMDexAmmProtocolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CURVEFINANCEETHEREUMDexAmmProtocolDTO>}
+     */
+    cURVEFINANCEETHEREUMDexAmmProtocolsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [CURVEFINANCEETHEREUMDexAmmProtocolDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/curve-finance-ethereum/dexAmmProtocols/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent operation.
+     * @callback module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * FinancialsDailySnapshots (current)
+     * Gets financialsDailySnapshots.
+     * @param {module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>}
+     */
+    cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/curve-finance-ethereum/financialsDailySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cURVEFINANCEETHEREUMLiquidityGaugesCurrent operation.
+     * @callback module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMLiquidityGaugesCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CURVEFINANCEETHEREUMLiquidityGaugeDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityGauges (current)
+     * Gets liquidityGauges.
+     * @param {module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMLiquidityGaugesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CURVEFINANCEETHEREUMLiquidityGaugeDTO>}
+     */
+    cURVEFINANCEETHEREUMLiquidityGaugesCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [CURVEFINANCEETHEREUMLiquidityGaugeDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/curve-finance-ethereum/liquidityGauges/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent operation.
+     * @callback module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     * Gets liquidityPoolDailySnapshots.
+     * @param {module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>}
+     */
+    cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/curve-finance-ethereum/liquidityPoolDailySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent operation.
+     * @callback module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPoolFees (current)
+     * Gets liquidityPoolFees.
+     * @param {module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>}
+     */
+    cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [CURVEFINANCEETHEREUMLiquidityPoolFeeDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/curve-finance-ethereum/liquidityPoolFees/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent operation.
+     * @callback module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     * Gets liquidityPoolHourlySnapshots.
+     * @param {module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>}
+     */
+    cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/curve-finance-ethereum/liquidityPoolHourlySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cURVEFINANCEETHEREUMLiquidityPoolsCurrent operation.
+     * @callback module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMLiquidityPoolsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CURVEFINANCEETHEREUMLiquidityPoolDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPools (current)
+     * Gets liquidityPools.
+     * @param {Object} opts Optional parameters
+     * @param {String} [id] Smart contract address of the pool
+     * @param {module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMLiquidityPoolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CURVEFINANCEETHEREUMLiquidityPoolDTO>}
+     */
+    cURVEFINANCEETHEREUMLiquidityPoolsCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
       let returnType = [CURVEFINANCEETHEREUMLiquidityPoolDTO];
       return this.apiClient.callApi(
         '/v1/dapps/curve-finance-ethereum/liquidityPools/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cURVEFINANCEETHEREUMLpTokensCurrent operation.
+     * @callback module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMLpTokensCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CURVEFINANCEETHEREUMLpTokenDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LpTokens (current)
+     * Gets lpTokens.
+     * @param {module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMLpTokensCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CURVEFINANCEETHEREUMLpTokenDTO>}
+     */
+    cURVEFINANCEETHEREUMLpTokensCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [CURVEFINANCEETHEREUMLpTokenDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/curve-finance-ethereum/lpTokens/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cURVEFINANCEETHEREUMRewardTokensCurrent operation.
+     * @callback module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMRewardTokensCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CURVEFINANCEETHEREUMRewardTokenDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * RewardTokens (current)
+     * Gets rewardTokens.
+     * @param {module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMRewardTokensCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CURVEFINANCEETHEREUMRewardTokenDTO>}
+     */
+    cURVEFINANCEETHEREUMRewardTokensCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [CURVEFINANCEETHEREUMRewardTokenDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/curve-finance-ethereum/rewardTokens/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -121,10 +546,51 @@ export default class CURVEFINANCEETHEREUMApi {
     /**
      * Tokens (current)
      * Gets tokens.
+     * @param {Object} opts Optional parameters
+     * @param {String} [id] Smart contract address of the token
      * @param {module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMTokensCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CURVEFINANCEETHEREUMTokenDTO>}
      */
-    cURVEFINANCEETHEREUMTokensCurrent(callback) {
+    cURVEFINANCEETHEREUMTokensCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [CURVEFINANCEETHEREUMTokenDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/curve-finance-ethereum/tokens/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent operation.
+     * @callback module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * UsageMetricsDailySnapshots (current)
+     * Gets usageMetricsDailySnapshots.
+     * @param {module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>}
+     */
+    cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent(callback) {
       let postBody = null;
 
       let pathParams = {
@@ -139,9 +605,83 @@ export default class CURVEFINANCEETHEREUMApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
-      let returnType = [CURVEFINANCEETHEREUMTokenDTO];
+      let returnType = [CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO];
       return this.apiClient.callApi(
-        '/v1/dapps/curve-finance-ethereum/tokens/current', 'GET',
+        '/v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent operation.
+     * @callback module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     * Gets usageMetricsHourlySnapshots.
+     * @param {module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>}
+     */
+    cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cURVEFINANCEETHEREUMWithdrawsCurrent operation.
+     * @callback module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMWithdrawsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CURVEFINANCEETHEREUMWithdrawDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @param {module:api/CURVEFINANCEETHEREUMApi~cURVEFINANCEETHEREUMWithdrawsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CURVEFINANCEETHEREUMWithdrawDTO>}
+     */
+    cURVEFINANCEETHEREUMWithdrawsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+      let returnType = [CURVEFINANCEETHEREUMWithdrawDTO];
+      return this.apiClient.callApi(
+        '/v1/dapps/curve-finance-ethereum/withdraws/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

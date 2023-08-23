@@ -19,8 +19,6 @@ case class TickDailySnapshotDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /*  */
-  vid: Option[Long] = None,
   /* Identifier, format: (pool address)-(tick index)-(day ID) */
   id: Option[String] = None,
   /* Number of days since Unix epoch time */

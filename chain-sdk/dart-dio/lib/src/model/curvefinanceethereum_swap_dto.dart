@@ -14,7 +14,7 @@ part 'curvefinanceethereum_swap_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - Block number of this event
+/// * [blockNumber] - Number of block in which entity was recorded.
 /// * [id] - Swap-(transaction hash)-(log index)
 /// * [hash] - Transaction hash of the transaction that emitted this event
 /// * [logIndex] - Event log index. For transactions that don't emit event, create arbitrary index starting from 0
@@ -42,9 +42,9 @@ abstract class CURVEFINANCEETHEREUMSwapDTO implements Built<CURVEFINANCEETHEREUM
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// Block number of this event
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
-  String? get blockNumber;
+  int? get blockNumber;
 
   /// Swap-(transaction hash)-(log index)
   @BuiltValueField(wireName: r'id')
@@ -159,7 +159,7 @@ class _$CURVEFINANCEETHEREUMSwapDTOSerializer implements PrimitiveSerializer<CUR
       yield r'block_number';
       yield serializers.serialize(
         object.blockNumber,
-        specifiedType: const FullType.nullable(String),
+        specifiedType: const FullType(int),
       );
     }
     if (object.id != null) {
@@ -335,9 +335,8 @@ class _$CURVEFINANCEETHEREUMSwapDTOSerializer implements PrimitiveSerializer<CUR
         case r'block_number':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(int),
+          ) as int;
           result.blockNumber = valueDes;
           break;
         case r'id':

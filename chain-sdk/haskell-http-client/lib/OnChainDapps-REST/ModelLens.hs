@@ -50,7 +50,7 @@ cRYPTOPUNKSBidDTORecvTimeL f CRYPTOPUNKSBidDTO{..} = (\cRYPTOPUNKSBidDTORecvTime
 {-# INLINE cRYPTOPUNKSBidDTORecvTimeL #-}
 
 -- | 'cRYPTOPUNKSBidDTOBlockNumber' Lens
-cRYPTOPUNKSBidDTOBlockNumberL :: Lens_' CRYPTOPUNKSBidDTO (Maybe Text)
+cRYPTOPUNKSBidDTOBlockNumberL :: Lens_' CRYPTOPUNKSBidDTO (Maybe Integer)
 cRYPTOPUNKSBidDTOBlockNumberL f CRYPTOPUNKSBidDTO{..} = (\cRYPTOPUNKSBidDTOBlockNumber -> CRYPTOPUNKSBidDTO { cRYPTOPUNKSBidDTOBlockNumber, ..} ) <$> f cRYPTOPUNKSBidDTOBlockNumber
 {-# INLINE cRYPTOPUNKSBidDTOBlockNumberL #-}
 
@@ -193,7 +193,7 @@ cRYPTOPUNKSCollectionDailySnapshotDTORecvTimeL f CRYPTOPUNKSCollectionDailySnaps
 {-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTORecvTimeL #-}
 
 -- | 'cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumber' Lens
-cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumberL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumberL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe Integer)
 cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumberL f CRYPTOPUNKSCollectionDailySnapshotDTO{..} = (\cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumber -> CRYPTOPUNKSCollectionDailySnapshotDTO { cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumber, ..} ) <$> f cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumber
 {-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumberL #-}
 
@@ -573,7 +573,7 @@ cRYPTOPUNKSTradeDTORecvTimeL f CRYPTOPUNKSTradeDTO{..} = (\cRYPTOPUNKSTradeDTORe
 {-# INLINE cRYPTOPUNKSTradeDTORecvTimeL #-}
 
 -- | 'cRYPTOPUNKSTradeDTOBlockNumber' Lens
-cRYPTOPUNKSTradeDTOBlockNumberL :: Lens_' CRYPTOPUNKSTradeDTO (Maybe Text)
+cRYPTOPUNKSTradeDTOBlockNumberL :: Lens_' CRYPTOPUNKSTradeDTO (Maybe Integer)
 cRYPTOPUNKSTradeDTOBlockNumberL f CRYPTOPUNKSTradeDTO{..} = (\cRYPTOPUNKSTradeDTOBlockNumber -> CRYPTOPUNKSTradeDTO { cRYPTOPUNKSTradeDTOBlockNumber, ..} ) <$> f cRYPTOPUNKSTradeDTOBlockNumber
 {-# INLINE cRYPTOPUNKSTradeDTOBlockNumberL #-}
 
@@ -675,6 +675,375 @@ cRYPTOPUNKSUserDTOBlockRangeL f CRYPTOPUNKSUserDTO{..} = (\cRYPTOPUNKSUserDTOBlo
 cRYPTOPUNKSUserDTOIdL :: Lens_' CRYPTOPUNKSUserDTO (Maybe Text)
 cRYPTOPUNKSUserDTOIdL f CRYPTOPUNKSUserDTO{..} = (\cRYPTOPUNKSUserDTOId -> CRYPTOPUNKSUserDTO { cRYPTOPUNKSUserDTOId, ..} ) <$> f cRYPTOPUNKSUserDTOId
 {-# INLINE cRYPTOPUNKSUserDTOIdL #-}
+
+
+
+-- * CURVEFINANCEETHEREUMAccountDTO
+
+-- | 'cURVEFINANCEETHEREUMAccountDTOEntryTime' Lens
+cURVEFINANCEETHEREUMAccountDTOEntryTimeL :: Lens_' CURVEFINANCEETHEREUMAccountDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMAccountDTOEntryTimeL f CURVEFINANCEETHEREUMAccountDTO{..} = (\cURVEFINANCEETHEREUMAccountDTOEntryTime -> CURVEFINANCEETHEREUMAccountDTO { cURVEFINANCEETHEREUMAccountDTOEntryTime, ..} ) <$> f cURVEFINANCEETHEREUMAccountDTOEntryTime
+{-# INLINE cURVEFINANCEETHEREUMAccountDTOEntryTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMAccountDTORecvTime' Lens
+cURVEFINANCEETHEREUMAccountDTORecvTimeL :: Lens_' CURVEFINANCEETHEREUMAccountDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMAccountDTORecvTimeL f CURVEFINANCEETHEREUMAccountDTO{..} = (\cURVEFINANCEETHEREUMAccountDTORecvTime -> CURVEFINANCEETHEREUMAccountDTO { cURVEFINANCEETHEREUMAccountDTORecvTime, ..} ) <$> f cURVEFINANCEETHEREUMAccountDTORecvTime
+{-# INLINE cURVEFINANCEETHEREUMAccountDTORecvTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMAccountDTOBlockNumber' Lens
+cURVEFINANCEETHEREUMAccountDTOBlockNumberL :: Lens_' CURVEFINANCEETHEREUMAccountDTO (Maybe Integer)
+cURVEFINANCEETHEREUMAccountDTOBlockNumberL f CURVEFINANCEETHEREUMAccountDTO{..} = (\cURVEFINANCEETHEREUMAccountDTOBlockNumber -> CURVEFINANCEETHEREUMAccountDTO { cURVEFINANCEETHEREUMAccountDTOBlockNumber, ..} ) <$> f cURVEFINANCEETHEREUMAccountDTOBlockNumber
+{-# INLINE cURVEFINANCEETHEREUMAccountDTOBlockNumberL #-}
+
+-- | 'cURVEFINANCEETHEREUMAccountDTOId' Lens
+cURVEFINANCEETHEREUMAccountDTOIdL :: Lens_' CURVEFINANCEETHEREUMAccountDTO (Maybe Text)
+cURVEFINANCEETHEREUMAccountDTOIdL f CURVEFINANCEETHEREUMAccountDTO{..} = (\cURVEFINANCEETHEREUMAccountDTOId -> CURVEFINANCEETHEREUMAccountDTO { cURVEFINANCEETHEREUMAccountDTOId, ..} ) <$> f cURVEFINANCEETHEREUMAccountDTOId
+{-# INLINE cURVEFINANCEETHEREUMAccountDTOIdL #-}
+
+-- | 'cURVEFINANCEETHEREUMAccountDTOBlockRange' Lens
+cURVEFINANCEETHEREUMAccountDTOBlockRangeL :: Lens_' CURVEFINANCEETHEREUMAccountDTO (Maybe Text)
+cURVEFINANCEETHEREUMAccountDTOBlockRangeL f CURVEFINANCEETHEREUMAccountDTO{..} = (\cURVEFINANCEETHEREUMAccountDTOBlockRange -> CURVEFINANCEETHEREUMAccountDTO { cURVEFINANCEETHEREUMAccountDTOBlockRange, ..} ) <$> f cURVEFINANCEETHEREUMAccountDTOBlockRange
+{-# INLINE cURVEFINANCEETHEREUMAccountDTOBlockRangeL #-}
+
+
+
+-- * CURVEFINANCEETHEREUMActiveAccountDTO
+
+-- | 'cURVEFINANCEETHEREUMActiveAccountDTOEntryTime' Lens
+cURVEFINANCEETHEREUMActiveAccountDTOEntryTimeL :: Lens_' CURVEFINANCEETHEREUMActiveAccountDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMActiveAccountDTOEntryTimeL f CURVEFINANCEETHEREUMActiveAccountDTO{..} = (\cURVEFINANCEETHEREUMActiveAccountDTOEntryTime -> CURVEFINANCEETHEREUMActiveAccountDTO { cURVEFINANCEETHEREUMActiveAccountDTOEntryTime, ..} ) <$> f cURVEFINANCEETHEREUMActiveAccountDTOEntryTime
+{-# INLINE cURVEFINANCEETHEREUMActiveAccountDTOEntryTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMActiveAccountDTORecvTime' Lens
+cURVEFINANCEETHEREUMActiveAccountDTORecvTimeL :: Lens_' CURVEFINANCEETHEREUMActiveAccountDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMActiveAccountDTORecvTimeL f CURVEFINANCEETHEREUMActiveAccountDTO{..} = (\cURVEFINANCEETHEREUMActiveAccountDTORecvTime -> CURVEFINANCEETHEREUMActiveAccountDTO { cURVEFINANCEETHEREUMActiveAccountDTORecvTime, ..} ) <$> f cURVEFINANCEETHEREUMActiveAccountDTORecvTime
+{-# INLINE cURVEFINANCEETHEREUMActiveAccountDTORecvTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMActiveAccountDTOBlockNumber' Lens
+cURVEFINANCEETHEREUMActiveAccountDTOBlockNumberL :: Lens_' CURVEFINANCEETHEREUMActiveAccountDTO (Maybe Integer)
+cURVEFINANCEETHEREUMActiveAccountDTOBlockNumberL f CURVEFINANCEETHEREUMActiveAccountDTO{..} = (\cURVEFINANCEETHEREUMActiveAccountDTOBlockNumber -> CURVEFINANCEETHEREUMActiveAccountDTO { cURVEFINANCEETHEREUMActiveAccountDTOBlockNumber, ..} ) <$> f cURVEFINANCEETHEREUMActiveAccountDTOBlockNumber
+{-# INLINE cURVEFINANCEETHEREUMActiveAccountDTOBlockNumberL #-}
+
+-- | 'cURVEFINANCEETHEREUMActiveAccountDTOBlockRange' Lens
+cURVEFINANCEETHEREUMActiveAccountDTOBlockRangeL :: Lens_' CURVEFINANCEETHEREUMActiveAccountDTO (Maybe Text)
+cURVEFINANCEETHEREUMActiveAccountDTOBlockRangeL f CURVEFINANCEETHEREUMActiveAccountDTO{..} = (\cURVEFINANCEETHEREUMActiveAccountDTOBlockRange -> CURVEFINANCEETHEREUMActiveAccountDTO { cURVEFINANCEETHEREUMActiveAccountDTOBlockRange, ..} ) <$> f cURVEFINANCEETHEREUMActiveAccountDTOBlockRange
+{-# INLINE cURVEFINANCEETHEREUMActiveAccountDTOBlockRangeL #-}
+
+-- | 'cURVEFINANCEETHEREUMActiveAccountDTOId' Lens
+cURVEFINANCEETHEREUMActiveAccountDTOIdL :: Lens_' CURVEFINANCEETHEREUMActiveAccountDTO (Maybe Text)
+cURVEFINANCEETHEREUMActiveAccountDTOIdL f CURVEFINANCEETHEREUMActiveAccountDTO{..} = (\cURVEFINANCEETHEREUMActiveAccountDTOId -> CURVEFINANCEETHEREUMActiveAccountDTO { cURVEFINANCEETHEREUMActiveAccountDTOId, ..} ) <$> f cURVEFINANCEETHEREUMActiveAccountDTOId
+{-# INLINE cURVEFINANCEETHEREUMActiveAccountDTOIdL #-}
+
+
+
+-- * CURVEFINANCEETHEREUMDepositDTO
+
+-- | 'cURVEFINANCEETHEREUMDepositDTOEntryTime' Lens
+cURVEFINANCEETHEREUMDepositDTOEntryTimeL :: Lens_' CURVEFINANCEETHEREUMDepositDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMDepositDTOEntryTimeL f CURVEFINANCEETHEREUMDepositDTO{..} = (\cURVEFINANCEETHEREUMDepositDTOEntryTime -> CURVEFINANCEETHEREUMDepositDTO { cURVEFINANCEETHEREUMDepositDTOEntryTime, ..} ) <$> f cURVEFINANCEETHEREUMDepositDTOEntryTime
+{-# INLINE cURVEFINANCEETHEREUMDepositDTOEntryTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMDepositDTORecvTime' Lens
+cURVEFINANCEETHEREUMDepositDTORecvTimeL :: Lens_' CURVEFINANCEETHEREUMDepositDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMDepositDTORecvTimeL f CURVEFINANCEETHEREUMDepositDTO{..} = (\cURVEFINANCEETHEREUMDepositDTORecvTime -> CURVEFINANCEETHEREUMDepositDTO { cURVEFINANCEETHEREUMDepositDTORecvTime, ..} ) <$> f cURVEFINANCEETHEREUMDepositDTORecvTime
+{-# INLINE cURVEFINANCEETHEREUMDepositDTORecvTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMDepositDTOBlockNumber' Lens
+cURVEFINANCEETHEREUMDepositDTOBlockNumberL :: Lens_' CURVEFINANCEETHEREUMDepositDTO (Maybe Integer)
+cURVEFINANCEETHEREUMDepositDTOBlockNumberL f CURVEFINANCEETHEREUMDepositDTO{..} = (\cURVEFINANCEETHEREUMDepositDTOBlockNumber -> CURVEFINANCEETHEREUMDepositDTO { cURVEFINANCEETHEREUMDepositDTOBlockNumber, ..} ) <$> f cURVEFINANCEETHEREUMDepositDTOBlockNumber
+{-# INLINE cURVEFINANCEETHEREUMDepositDTOBlockNumberL #-}
+
+-- | 'cURVEFINANCEETHEREUMDepositDTOBlockRange' Lens
+cURVEFINANCEETHEREUMDepositDTOBlockRangeL :: Lens_' CURVEFINANCEETHEREUMDepositDTO (Maybe Text)
+cURVEFINANCEETHEREUMDepositDTOBlockRangeL f CURVEFINANCEETHEREUMDepositDTO{..} = (\cURVEFINANCEETHEREUMDepositDTOBlockRange -> CURVEFINANCEETHEREUMDepositDTO { cURVEFINANCEETHEREUMDepositDTOBlockRange, ..} ) <$> f cURVEFINANCEETHEREUMDepositDTOBlockRange
+{-# INLINE cURVEFINANCEETHEREUMDepositDTOBlockRangeL #-}
+
+-- | 'cURVEFINANCEETHEREUMDepositDTOId' Lens
+cURVEFINANCEETHEREUMDepositDTOIdL :: Lens_' CURVEFINANCEETHEREUMDepositDTO (Maybe Text)
+cURVEFINANCEETHEREUMDepositDTOIdL f CURVEFINANCEETHEREUMDepositDTO{..} = (\cURVEFINANCEETHEREUMDepositDTOId -> CURVEFINANCEETHEREUMDepositDTO { cURVEFINANCEETHEREUMDepositDTOId, ..} ) <$> f cURVEFINANCEETHEREUMDepositDTOId
+{-# INLINE cURVEFINANCEETHEREUMDepositDTOIdL #-}
+
+-- | 'cURVEFINANCEETHEREUMDepositDTOHash' Lens
+cURVEFINANCEETHEREUMDepositDTOHashL :: Lens_' CURVEFINANCEETHEREUMDepositDTO (Maybe Text)
+cURVEFINANCEETHEREUMDepositDTOHashL f CURVEFINANCEETHEREUMDepositDTO{..} = (\cURVEFINANCEETHEREUMDepositDTOHash -> CURVEFINANCEETHEREUMDepositDTO { cURVEFINANCEETHEREUMDepositDTOHash, ..} ) <$> f cURVEFINANCEETHEREUMDepositDTOHash
+{-# INLINE cURVEFINANCEETHEREUMDepositDTOHashL #-}
+
+-- | 'cURVEFINANCEETHEREUMDepositDTOLogIndex' Lens
+cURVEFINANCEETHEREUMDepositDTOLogIndexL :: Lens_' CURVEFINANCEETHEREUMDepositDTO (Maybe Int)
+cURVEFINANCEETHEREUMDepositDTOLogIndexL f CURVEFINANCEETHEREUMDepositDTO{..} = (\cURVEFINANCEETHEREUMDepositDTOLogIndex -> CURVEFINANCEETHEREUMDepositDTO { cURVEFINANCEETHEREUMDepositDTOLogIndex, ..} ) <$> f cURVEFINANCEETHEREUMDepositDTOLogIndex
+{-# INLINE cURVEFINANCEETHEREUMDepositDTOLogIndexL #-}
+
+-- | 'cURVEFINANCEETHEREUMDepositDTOProtocol' Lens
+cURVEFINANCEETHEREUMDepositDTOProtocolL :: Lens_' CURVEFINANCEETHEREUMDepositDTO (Maybe Text)
+cURVEFINANCEETHEREUMDepositDTOProtocolL f CURVEFINANCEETHEREUMDepositDTO{..} = (\cURVEFINANCEETHEREUMDepositDTOProtocol -> CURVEFINANCEETHEREUMDepositDTO { cURVEFINANCEETHEREUMDepositDTOProtocol, ..} ) <$> f cURVEFINANCEETHEREUMDepositDTOProtocol
+{-# INLINE cURVEFINANCEETHEREUMDepositDTOProtocolL #-}
+
+-- | 'cURVEFINANCEETHEREUMDepositDTOTo' Lens
+cURVEFINANCEETHEREUMDepositDTOToL :: Lens_' CURVEFINANCEETHEREUMDepositDTO (Maybe Text)
+cURVEFINANCEETHEREUMDepositDTOToL f CURVEFINANCEETHEREUMDepositDTO{..} = (\cURVEFINANCEETHEREUMDepositDTOTo -> CURVEFINANCEETHEREUMDepositDTO { cURVEFINANCEETHEREUMDepositDTOTo, ..} ) <$> f cURVEFINANCEETHEREUMDepositDTOTo
+{-# INLINE cURVEFINANCEETHEREUMDepositDTOToL #-}
+
+-- | 'cURVEFINANCEETHEREUMDepositDTOFrom' Lens
+cURVEFINANCEETHEREUMDepositDTOFromL :: Lens_' CURVEFINANCEETHEREUMDepositDTO (Maybe Text)
+cURVEFINANCEETHEREUMDepositDTOFromL f CURVEFINANCEETHEREUMDepositDTO{..} = (\cURVEFINANCEETHEREUMDepositDTOFrom -> CURVEFINANCEETHEREUMDepositDTO { cURVEFINANCEETHEREUMDepositDTOFrom, ..} ) <$> f cURVEFINANCEETHEREUMDepositDTOFrom
+{-# INLINE cURVEFINANCEETHEREUMDepositDTOFromL #-}
+
+-- | 'cURVEFINANCEETHEREUMDepositDTOTimestamp' Lens
+cURVEFINANCEETHEREUMDepositDTOTimestampL :: Lens_' CURVEFINANCEETHEREUMDepositDTO (Maybe Text)
+cURVEFINANCEETHEREUMDepositDTOTimestampL f CURVEFINANCEETHEREUMDepositDTO{..} = (\cURVEFINANCEETHEREUMDepositDTOTimestamp -> CURVEFINANCEETHEREUMDepositDTO { cURVEFINANCEETHEREUMDepositDTOTimestamp, ..} ) <$> f cURVEFINANCEETHEREUMDepositDTOTimestamp
+{-# INLINE cURVEFINANCEETHEREUMDepositDTOTimestampL #-}
+
+-- | 'cURVEFINANCEETHEREUMDepositDTOInputTokens' Lens
+cURVEFINANCEETHEREUMDepositDTOInputTokensL :: Lens_' CURVEFINANCEETHEREUMDepositDTO (Maybe [Text])
+cURVEFINANCEETHEREUMDepositDTOInputTokensL f CURVEFINANCEETHEREUMDepositDTO{..} = (\cURVEFINANCEETHEREUMDepositDTOInputTokens -> CURVEFINANCEETHEREUMDepositDTO { cURVEFINANCEETHEREUMDepositDTOInputTokens, ..} ) <$> f cURVEFINANCEETHEREUMDepositDTOInputTokens
+{-# INLINE cURVEFINANCEETHEREUMDepositDTOInputTokensL #-}
+
+-- | 'cURVEFINANCEETHEREUMDepositDTOOutputToken' Lens
+cURVEFINANCEETHEREUMDepositDTOOutputTokenL :: Lens_' CURVEFINANCEETHEREUMDepositDTO (Maybe Text)
+cURVEFINANCEETHEREUMDepositDTOOutputTokenL f CURVEFINANCEETHEREUMDepositDTO{..} = (\cURVEFINANCEETHEREUMDepositDTOOutputToken -> CURVEFINANCEETHEREUMDepositDTO { cURVEFINANCEETHEREUMDepositDTOOutputToken, ..} ) <$> f cURVEFINANCEETHEREUMDepositDTOOutputToken
+{-# INLINE cURVEFINANCEETHEREUMDepositDTOOutputTokenL #-}
+
+-- | 'cURVEFINANCEETHEREUMDepositDTOInputTokenAmounts' Lens
+cURVEFINANCEETHEREUMDepositDTOInputTokenAmountsL :: Lens_' CURVEFINANCEETHEREUMDepositDTO (Maybe [Text])
+cURVEFINANCEETHEREUMDepositDTOInputTokenAmountsL f CURVEFINANCEETHEREUMDepositDTO{..} = (\cURVEFINANCEETHEREUMDepositDTOInputTokenAmounts -> CURVEFINANCEETHEREUMDepositDTO { cURVEFINANCEETHEREUMDepositDTOInputTokenAmounts, ..} ) <$> f cURVEFINANCEETHEREUMDepositDTOInputTokenAmounts
+{-# INLINE cURVEFINANCEETHEREUMDepositDTOInputTokenAmountsL #-}
+
+-- | 'cURVEFINANCEETHEREUMDepositDTOOutputTokenAmount' Lens
+cURVEFINANCEETHEREUMDepositDTOOutputTokenAmountL :: Lens_' CURVEFINANCEETHEREUMDepositDTO (Maybe Text)
+cURVEFINANCEETHEREUMDepositDTOOutputTokenAmountL f CURVEFINANCEETHEREUMDepositDTO{..} = (\cURVEFINANCEETHEREUMDepositDTOOutputTokenAmount -> CURVEFINANCEETHEREUMDepositDTO { cURVEFINANCEETHEREUMDepositDTOOutputTokenAmount, ..} ) <$> f cURVEFINANCEETHEREUMDepositDTOOutputTokenAmount
+{-# INLINE cURVEFINANCEETHEREUMDepositDTOOutputTokenAmountL #-}
+
+-- | 'cURVEFINANCEETHEREUMDepositDTOAmountUsd' Lens
+cURVEFINANCEETHEREUMDepositDTOAmountUsdL :: Lens_' CURVEFINANCEETHEREUMDepositDTO (Maybe Text)
+cURVEFINANCEETHEREUMDepositDTOAmountUsdL f CURVEFINANCEETHEREUMDepositDTO{..} = (\cURVEFINANCEETHEREUMDepositDTOAmountUsd -> CURVEFINANCEETHEREUMDepositDTO { cURVEFINANCEETHEREUMDepositDTOAmountUsd, ..} ) <$> f cURVEFINANCEETHEREUMDepositDTOAmountUsd
+{-# INLINE cURVEFINANCEETHEREUMDepositDTOAmountUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMDepositDTOPool' Lens
+cURVEFINANCEETHEREUMDepositDTOPoolL :: Lens_' CURVEFINANCEETHEREUMDepositDTO (Maybe Text)
+cURVEFINANCEETHEREUMDepositDTOPoolL f CURVEFINANCEETHEREUMDepositDTO{..} = (\cURVEFINANCEETHEREUMDepositDTOPool -> CURVEFINANCEETHEREUMDepositDTO { cURVEFINANCEETHEREUMDepositDTOPool, ..} ) <$> f cURVEFINANCEETHEREUMDepositDTOPool
+{-# INLINE cURVEFINANCEETHEREUMDepositDTOPoolL #-}
+
+
+
+-- * CURVEFINANCEETHEREUMDexAmmProtocolDTO
+
+-- | 'cURVEFINANCEETHEREUMDexAmmProtocolDTOEntryTime' Lens
+cURVEFINANCEETHEREUMDexAmmProtocolDTOEntryTimeL :: Lens_' CURVEFINANCEETHEREUMDexAmmProtocolDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMDexAmmProtocolDTOEntryTimeL f CURVEFINANCEETHEREUMDexAmmProtocolDTO{..} = (\cURVEFINANCEETHEREUMDexAmmProtocolDTOEntryTime -> CURVEFINANCEETHEREUMDexAmmProtocolDTO { cURVEFINANCEETHEREUMDexAmmProtocolDTOEntryTime, ..} ) <$> f cURVEFINANCEETHEREUMDexAmmProtocolDTOEntryTime
+{-# INLINE cURVEFINANCEETHEREUMDexAmmProtocolDTOEntryTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMDexAmmProtocolDTORecvTime' Lens
+cURVEFINANCEETHEREUMDexAmmProtocolDTORecvTimeL :: Lens_' CURVEFINANCEETHEREUMDexAmmProtocolDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMDexAmmProtocolDTORecvTimeL f CURVEFINANCEETHEREUMDexAmmProtocolDTO{..} = (\cURVEFINANCEETHEREUMDexAmmProtocolDTORecvTime -> CURVEFINANCEETHEREUMDexAmmProtocolDTO { cURVEFINANCEETHEREUMDexAmmProtocolDTORecvTime, ..} ) <$> f cURVEFINANCEETHEREUMDexAmmProtocolDTORecvTime
+{-# INLINE cURVEFINANCEETHEREUMDexAmmProtocolDTORecvTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockNumber' Lens
+cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockNumberL :: Lens_' CURVEFINANCEETHEREUMDexAmmProtocolDTO (Maybe Integer)
+cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockNumberL f CURVEFINANCEETHEREUMDexAmmProtocolDTO{..} = (\cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockNumber -> CURVEFINANCEETHEREUMDexAmmProtocolDTO { cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockNumber, ..} ) <$> f cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockNumber
+{-# INLINE cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockNumberL #-}
+
+-- | 'cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockRange' Lens
+cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockRangeL :: Lens_' CURVEFINANCEETHEREUMDexAmmProtocolDTO (Maybe Text)
+cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockRangeL f CURVEFINANCEETHEREUMDexAmmProtocolDTO{..} = (\cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockRange -> CURVEFINANCEETHEREUMDexAmmProtocolDTO { cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockRange, ..} ) <$> f cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockRange
+{-# INLINE cURVEFINANCEETHEREUMDexAmmProtocolDTOBlockRangeL #-}
+
+-- | 'cURVEFINANCEETHEREUMDexAmmProtocolDTOId' Lens
+cURVEFINANCEETHEREUMDexAmmProtocolDTOIdL :: Lens_' CURVEFINANCEETHEREUMDexAmmProtocolDTO (Maybe Text)
+cURVEFINANCEETHEREUMDexAmmProtocolDTOIdL f CURVEFINANCEETHEREUMDexAmmProtocolDTO{..} = (\cURVEFINANCEETHEREUMDexAmmProtocolDTOId -> CURVEFINANCEETHEREUMDexAmmProtocolDTO { cURVEFINANCEETHEREUMDexAmmProtocolDTOId, ..} ) <$> f cURVEFINANCEETHEREUMDexAmmProtocolDTOId
+{-# INLINE cURVEFINANCEETHEREUMDexAmmProtocolDTOIdL #-}
+
+-- | 'cURVEFINANCEETHEREUMDexAmmProtocolDTOName' Lens
+cURVEFINANCEETHEREUMDexAmmProtocolDTONameL :: Lens_' CURVEFINANCEETHEREUMDexAmmProtocolDTO (Maybe Text)
+cURVEFINANCEETHEREUMDexAmmProtocolDTONameL f CURVEFINANCEETHEREUMDexAmmProtocolDTO{..} = (\cURVEFINANCEETHEREUMDexAmmProtocolDTOName -> CURVEFINANCEETHEREUMDexAmmProtocolDTO { cURVEFINANCEETHEREUMDexAmmProtocolDTOName, ..} ) <$> f cURVEFINANCEETHEREUMDexAmmProtocolDTOName
+{-# INLINE cURVEFINANCEETHEREUMDexAmmProtocolDTONameL #-}
+
+-- | 'cURVEFINANCEETHEREUMDexAmmProtocolDTOSlug' Lens
+cURVEFINANCEETHEREUMDexAmmProtocolDTOSlugL :: Lens_' CURVEFINANCEETHEREUMDexAmmProtocolDTO (Maybe Text)
+cURVEFINANCEETHEREUMDexAmmProtocolDTOSlugL f CURVEFINANCEETHEREUMDexAmmProtocolDTO{..} = (\cURVEFINANCEETHEREUMDexAmmProtocolDTOSlug -> CURVEFINANCEETHEREUMDexAmmProtocolDTO { cURVEFINANCEETHEREUMDexAmmProtocolDTOSlug, ..} ) <$> f cURVEFINANCEETHEREUMDexAmmProtocolDTOSlug
+{-# INLINE cURVEFINANCEETHEREUMDexAmmProtocolDTOSlugL #-}
+
+-- | 'cURVEFINANCEETHEREUMDexAmmProtocolDTOSchemaVersion' Lens
+cURVEFINANCEETHEREUMDexAmmProtocolDTOSchemaVersionL :: Lens_' CURVEFINANCEETHEREUMDexAmmProtocolDTO (Maybe Text)
+cURVEFINANCEETHEREUMDexAmmProtocolDTOSchemaVersionL f CURVEFINANCEETHEREUMDexAmmProtocolDTO{..} = (\cURVEFINANCEETHEREUMDexAmmProtocolDTOSchemaVersion -> CURVEFINANCEETHEREUMDexAmmProtocolDTO { cURVEFINANCEETHEREUMDexAmmProtocolDTOSchemaVersion, ..} ) <$> f cURVEFINANCEETHEREUMDexAmmProtocolDTOSchemaVersion
+{-# INLINE cURVEFINANCEETHEREUMDexAmmProtocolDTOSchemaVersionL #-}
+
+-- | 'cURVEFINANCEETHEREUMDexAmmProtocolDTOSubgraphVersion' Lens
+cURVEFINANCEETHEREUMDexAmmProtocolDTOSubgraphVersionL :: Lens_' CURVEFINANCEETHEREUMDexAmmProtocolDTO (Maybe Text)
+cURVEFINANCEETHEREUMDexAmmProtocolDTOSubgraphVersionL f CURVEFINANCEETHEREUMDexAmmProtocolDTO{..} = (\cURVEFINANCEETHEREUMDexAmmProtocolDTOSubgraphVersion -> CURVEFINANCEETHEREUMDexAmmProtocolDTO { cURVEFINANCEETHEREUMDexAmmProtocolDTOSubgraphVersion, ..} ) <$> f cURVEFINANCEETHEREUMDexAmmProtocolDTOSubgraphVersion
+{-# INLINE cURVEFINANCEETHEREUMDexAmmProtocolDTOSubgraphVersionL #-}
+
+-- | 'cURVEFINANCEETHEREUMDexAmmProtocolDTOMethodologyVersion' Lens
+cURVEFINANCEETHEREUMDexAmmProtocolDTOMethodologyVersionL :: Lens_' CURVEFINANCEETHEREUMDexAmmProtocolDTO (Maybe Text)
+cURVEFINANCEETHEREUMDexAmmProtocolDTOMethodologyVersionL f CURVEFINANCEETHEREUMDexAmmProtocolDTO{..} = (\cURVEFINANCEETHEREUMDexAmmProtocolDTOMethodologyVersion -> CURVEFINANCEETHEREUMDexAmmProtocolDTO { cURVEFINANCEETHEREUMDexAmmProtocolDTOMethodologyVersion, ..} ) <$> f cURVEFINANCEETHEREUMDexAmmProtocolDTOMethodologyVersion
+{-# INLINE cURVEFINANCEETHEREUMDexAmmProtocolDTOMethodologyVersionL #-}
+
+-- | 'cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalValueLockedUsd' Lens
+cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalValueLockedUsdL :: Lens_' CURVEFINANCEETHEREUMDexAmmProtocolDTO (Maybe Text)
+cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalValueLockedUsdL f CURVEFINANCEETHEREUMDexAmmProtocolDTO{..} = (\cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalValueLockedUsd -> CURVEFINANCEETHEREUMDexAmmProtocolDTO { cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalValueLockedUsd, ..} ) <$> f cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalValueLockedUsd
+{-# INLINE cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalValueLockedUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd' Lens
+cURVEFINANCEETHEREUMDexAmmProtocolDTOProtocolControlledValueUsdL :: Lens_' CURVEFINANCEETHEREUMDexAmmProtocolDTO (Maybe Text)
+cURVEFINANCEETHEREUMDexAmmProtocolDTOProtocolControlledValueUsdL f CURVEFINANCEETHEREUMDexAmmProtocolDTO{..} = (\cURVEFINANCEETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd -> CURVEFINANCEETHEREUMDexAmmProtocolDTO { cURVEFINANCEETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd, ..} ) <$> f cURVEFINANCEETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd
+{-# INLINE cURVEFINANCEETHEREUMDexAmmProtocolDTOProtocolControlledValueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd' Lens
+cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeVolumeUsdL :: Lens_' CURVEFINANCEETHEREUMDexAmmProtocolDTO (Maybe Text)
+cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeVolumeUsdL f CURVEFINANCEETHEREUMDexAmmProtocolDTO{..} = (\cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd -> CURVEFINANCEETHEREUMDexAmmProtocolDTO { cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd, ..} ) <$> f cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd
+{-# INLINE cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeVolumeUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd' Lens
+cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMDexAmmProtocolDTO (Maybe Text)
+cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsdL f CURVEFINANCEETHEREUMDexAmmProtocolDTO{..} = (\cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd -> CURVEFINANCEETHEREUMDexAmmProtocolDTO { cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd' Lens
+cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMDexAmmProtocolDTO (Maybe Text)
+cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsdL f CURVEFINANCEETHEREUMDexAmmProtocolDTO{..} = (\cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd -> CURVEFINANCEETHEREUMDexAmmProtocolDTO { cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd' Lens
+cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMDexAmmProtocolDTO (Maybe Text)
+cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsdL f CURVEFINANCEETHEREUMDexAmmProtocolDTO{..} = (\cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd -> CURVEFINANCEETHEREUMDexAmmProtocolDTO { cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers' Lens
+cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeUniqueUsersL :: Lens_' CURVEFINANCEETHEREUMDexAmmProtocolDTO (Maybe Int)
+cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeUniqueUsersL f CURVEFINANCEETHEREUMDexAmmProtocolDTO{..} = (\cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers -> CURVEFINANCEETHEREUMDexAmmProtocolDTO { cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers, ..} ) <$> f cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers
+{-# INLINE cURVEFINANCEETHEREUMDexAmmProtocolDTOCumulativeUniqueUsersL #-}
+
+-- | 'cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalPoolCount' Lens
+cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalPoolCountL :: Lens_' CURVEFINANCEETHEREUMDexAmmProtocolDTO (Maybe Int)
+cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalPoolCountL f CURVEFINANCEETHEREUMDexAmmProtocolDTO{..} = (\cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalPoolCount -> CURVEFINANCEETHEREUMDexAmmProtocolDTO { cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalPoolCount, ..} ) <$> f cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalPoolCount
+{-# INLINE cURVEFINANCEETHEREUMDexAmmProtocolDTOTotalPoolCountL #-}
+
+-- | 'cURVEFINANCEETHEREUMDexAmmProtocolDTOPoolIds' Lens
+cURVEFINANCEETHEREUMDexAmmProtocolDTOPoolIdsL :: Lens_' CURVEFINANCEETHEREUMDexAmmProtocolDTO (Maybe [Text])
+cURVEFINANCEETHEREUMDexAmmProtocolDTOPoolIdsL f CURVEFINANCEETHEREUMDexAmmProtocolDTO{..} = (\cURVEFINANCEETHEREUMDexAmmProtocolDTOPoolIds -> CURVEFINANCEETHEREUMDexAmmProtocolDTO { cURVEFINANCEETHEREUMDexAmmProtocolDTOPoolIds, ..} ) <$> f cURVEFINANCEETHEREUMDexAmmProtocolDTOPoolIds
+{-# INLINE cURVEFINANCEETHEREUMDexAmmProtocolDTOPoolIdsL #-}
+
+
+
+-- * CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO
+
+-- | 'cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOEntryTime' Lens
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOEntryTimeL :: Lens_' CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOEntryTimeL f CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOEntryTime -> CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO { cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOEntryTime, ..} ) <$> f cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOEntryTime
+{-# INLINE cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOEntryTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMFinancialsDailySnapshotDTORecvTime' Lens
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTORecvTimeL :: Lens_' CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTORecvTimeL f CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMFinancialsDailySnapshotDTORecvTime -> CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO { cURVEFINANCEETHEREUMFinancialsDailySnapshotDTORecvTime, ..} ) <$> f cURVEFINANCEETHEREUMFinancialsDailySnapshotDTORecvTime
+{-# INLINE cURVEFINANCEETHEREUMFinancialsDailySnapshotDTORecvTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockNumber' Lens
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockNumberL :: Lens_' CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO (Maybe Integer)
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockNumberL f CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockNumber -> CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO { cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockNumber, ..} ) <$> f cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockNumber
+{-# INLINE cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockNumberL #-}
+
+-- | 'cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockRange' Lens
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockRangeL :: Lens_' CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockRangeL f CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockRange -> CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO { cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockRange, ..} ) <$> f cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockRange
+{-# INLINE cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOBlockRangeL #-}
+
+-- | 'cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOId' Lens
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOIdL :: Lens_' CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOIdL f CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOId -> CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO { cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOId, ..} ) <$> f cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOId
+{-# INLINE cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOIdL #-}
+
+-- | 'cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocol' Lens
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocolL :: Lens_' CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocolL f CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocol -> CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO { cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocol, ..} ) <$> f cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocol
+{-# INLINE cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocolL #-}
+
+-- | 'cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd' Lens
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsdL :: Lens_' CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsdL f CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd -> CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO { cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd, ..} ) <$> f cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd
+{-# INLINE cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd' Lens
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsdL :: Lens_' CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsdL f CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd -> CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO { cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd, ..} ) <$> f cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd
+{-# INLINE cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd' Lens
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyVolumeUsdL :: Lens_' CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyVolumeUsdL f CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd -> CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO { cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd, ..} ) <$> f cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd
+{-# INLINE cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyVolumeUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd' Lens
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsdL :: Lens_' CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsdL f CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd -> CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO { cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd, ..} ) <$> f cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd
+{-# INLINE cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd' Lens
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsdL f CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd -> CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO { cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd' Lens
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsdL f CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd -> CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO { cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd' Lens
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsdL f CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd -> CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO { cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd' Lens
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsdL f CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd -> CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO { cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd' Lens
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsdL f CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd -> CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO { cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd' Lens
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsdL f CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd -> CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO { cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTimestamp' Lens
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTimestampL :: Lens_' CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTimestampL f CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTimestamp -> CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO { cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTimestamp, ..} ) <$> f cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTimestamp
+{-# INLINE cURVEFINANCEETHEREUMFinancialsDailySnapshotDTOTimestampL #-}
+
+
+
+-- * CURVEFINANCEETHEREUMLiquidityGaugeDTO
+
+-- | 'cURVEFINANCEETHEREUMLiquidityGaugeDTOEntryTime' Lens
+cURVEFINANCEETHEREUMLiquidityGaugeDTOEntryTimeL :: Lens_' CURVEFINANCEETHEREUMLiquidityGaugeDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMLiquidityGaugeDTOEntryTimeL f CURVEFINANCEETHEREUMLiquidityGaugeDTO{..} = (\cURVEFINANCEETHEREUMLiquidityGaugeDTOEntryTime -> CURVEFINANCEETHEREUMLiquidityGaugeDTO { cURVEFINANCEETHEREUMLiquidityGaugeDTOEntryTime, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityGaugeDTOEntryTime
+{-# INLINE cURVEFINANCEETHEREUMLiquidityGaugeDTOEntryTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityGaugeDTORecvTime' Lens
+cURVEFINANCEETHEREUMLiquidityGaugeDTORecvTimeL :: Lens_' CURVEFINANCEETHEREUMLiquidityGaugeDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMLiquidityGaugeDTORecvTimeL f CURVEFINANCEETHEREUMLiquidityGaugeDTO{..} = (\cURVEFINANCEETHEREUMLiquidityGaugeDTORecvTime -> CURVEFINANCEETHEREUMLiquidityGaugeDTO { cURVEFINANCEETHEREUMLiquidityGaugeDTORecvTime, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityGaugeDTORecvTime
+{-# INLINE cURVEFINANCEETHEREUMLiquidityGaugeDTORecvTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockNumber' Lens
+cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockNumberL :: Lens_' CURVEFINANCEETHEREUMLiquidityGaugeDTO (Maybe Integer)
+cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockNumberL f CURVEFINANCEETHEREUMLiquidityGaugeDTO{..} = (\cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockNumber -> CURVEFINANCEETHEREUMLiquidityGaugeDTO { cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockNumber, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockNumber
+{-# INLINE cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockNumberL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockRange' Lens
+cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockRangeL :: Lens_' CURVEFINANCEETHEREUMLiquidityGaugeDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockRangeL f CURVEFINANCEETHEREUMLiquidityGaugeDTO{..} = (\cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockRange -> CURVEFINANCEETHEREUMLiquidityGaugeDTO { cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockRange, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockRange
+{-# INLINE cURVEFINANCEETHEREUMLiquidityGaugeDTOBlockRangeL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityGaugeDTOId' Lens
+cURVEFINANCEETHEREUMLiquidityGaugeDTOIdL :: Lens_' CURVEFINANCEETHEREUMLiquidityGaugeDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityGaugeDTOIdL f CURVEFINANCEETHEREUMLiquidityGaugeDTO{..} = (\cURVEFINANCEETHEREUMLiquidityGaugeDTOId -> CURVEFINANCEETHEREUMLiquidityGaugeDTO { cURVEFINANCEETHEREUMLiquidityGaugeDTOId, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityGaugeDTOId
+{-# INLINE cURVEFINANCEETHEREUMLiquidityGaugeDTOIdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityGaugeDTOPoolAddress' Lens
+cURVEFINANCEETHEREUMLiquidityGaugeDTOPoolAddressL :: Lens_' CURVEFINANCEETHEREUMLiquidityGaugeDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityGaugeDTOPoolAddressL f CURVEFINANCEETHEREUMLiquidityGaugeDTO{..} = (\cURVEFINANCEETHEREUMLiquidityGaugeDTOPoolAddress -> CURVEFINANCEETHEREUMLiquidityGaugeDTO { cURVEFINANCEETHEREUMLiquidityGaugeDTOPoolAddress, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityGaugeDTOPoolAddress
+{-# INLINE cURVEFINANCEETHEREUMLiquidityGaugeDTOPoolAddressL #-}
 
 
 
@@ -837,6 +1206,376 @@ cURVEFINANCEETHEREUMLiquidityPoolDTOEvaluatedAskL f CURVEFINANCEETHEREUMLiquidit
 
 
 
+-- * CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOEntryTime' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOEntryTimeL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOEntryTimeL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOEntryTime -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOEntryTime, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOEntryTime
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOEntryTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORecvTime' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORecvTimeL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORecvTimeL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORecvTime -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORecvTime, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORecvTime
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORecvTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockNumberL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Integer)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockNumberL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockNumberL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockRange' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockRangeL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockRangeL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockRange -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockRange, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockRange
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOBlockRangeL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOId' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOIdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOIdL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOId -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOId, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOId
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOIdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOProtocol' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOProtocolL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOProtocolL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOProtocol -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOProtocol, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOProtocol
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOProtocolL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOPool' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOPoolL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOPoolL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOPool -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOPool, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOPool
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOPoolL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTimestamp' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTimestampL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTimestampL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTimestamp -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTimestamp, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTimestamp
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTimestampL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsdL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsdL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsdL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsdL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsdL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsdL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsdL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsdL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmountL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmountL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmountL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsdL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsdL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeightsL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeightsL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeightsL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupply' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupplyL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupplyL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupply -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupply, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupply
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupplyL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsdL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsd -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmountL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmountL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmountL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmountL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmountL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmountL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsdL f CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd -> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsdL #-}
+
+
+
+-- * CURVEFINANCEETHEREUMLiquidityPoolFeeDTO
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolFeeDTOEntryTime' Lens
+cURVEFINANCEETHEREUMLiquidityPoolFeeDTOEntryTimeL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolFeeDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMLiquidityPoolFeeDTOEntryTimeL f CURVEFINANCEETHEREUMLiquidityPoolFeeDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolFeeDTOEntryTime -> CURVEFINANCEETHEREUMLiquidityPoolFeeDTO { cURVEFINANCEETHEREUMLiquidityPoolFeeDTOEntryTime, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolFeeDTOEntryTime
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolFeeDTOEntryTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolFeeDTORecvTime' Lens
+cURVEFINANCEETHEREUMLiquidityPoolFeeDTORecvTimeL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolFeeDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMLiquidityPoolFeeDTORecvTimeL f CURVEFINANCEETHEREUMLiquidityPoolFeeDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolFeeDTORecvTime -> CURVEFINANCEETHEREUMLiquidityPoolFeeDTO { cURVEFINANCEETHEREUMLiquidityPoolFeeDTORecvTime, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolFeeDTORecvTime
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolFeeDTORecvTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockNumber' Lens
+cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockNumberL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolFeeDTO (Maybe Integer)
+cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockNumberL f CURVEFINANCEETHEREUMLiquidityPoolFeeDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockNumber -> CURVEFINANCEETHEREUMLiquidityPoolFeeDTO { cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockNumber, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockNumber
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockNumberL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockRange' Lens
+cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockRangeL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolFeeDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockRangeL f CURVEFINANCEETHEREUMLiquidityPoolFeeDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockRange -> CURVEFINANCEETHEREUMLiquidityPoolFeeDTO { cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockRange, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockRange
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolFeeDTOBlockRangeL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolFeeDTOId' Lens
+cURVEFINANCEETHEREUMLiquidityPoolFeeDTOIdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolFeeDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolFeeDTOIdL f CURVEFINANCEETHEREUMLiquidityPoolFeeDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolFeeDTOId -> CURVEFINANCEETHEREUMLiquidityPoolFeeDTO { cURVEFINANCEETHEREUMLiquidityPoolFeeDTOId, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolFeeDTOId
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolFeeDTOIdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolFeeDTOFeePercentage' Lens
+cURVEFINANCEETHEREUMLiquidityPoolFeeDTOFeePercentageL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolFeeDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolFeeDTOFeePercentageL f CURVEFINANCEETHEREUMLiquidityPoolFeeDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolFeeDTOFeePercentage -> CURVEFINANCEETHEREUMLiquidityPoolFeeDTO { cURVEFINANCEETHEREUMLiquidityPoolFeeDTOFeePercentage, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolFeeDTOFeePercentage
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolFeeDTOFeePercentageL #-}
+
+
+
+-- * CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOEntryTimeL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOEntryTimeL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOEntryTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORecvTime' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORecvTimeL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORecvTimeL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORecvTime -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORecvTime, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORecvTime
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORecvTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumberL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Integer)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumberL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumberL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockRange' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockRangeL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockRangeL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockRange -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockRange, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockRange
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOBlockRangeL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOId' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOIdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOIdL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOId -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOId, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOId
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOIdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOProtocol' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOProtocolL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOProtocolL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOProtocol -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOProtocol, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOProtocol
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOProtocolL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOPool' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOPoolL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOPoolL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOPool -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOPool, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOPool
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOPoolL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTimestampL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTimestampL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTimestampL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsdL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsdL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsdL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsdL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsdL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsdL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsdL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsdL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmountL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmountL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmountL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsdL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsdL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalancesL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalancesL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalancesL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeightsL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeightsL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeightsL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupply' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupplyL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupplyL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupply -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupply, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupply
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupplyL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsdL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsd -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmountL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmountL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmountL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmountL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmountL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmountL #-}
+
+-- | 'cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd' Lens
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsdL :: Lens_' CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsdL f CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd -> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO { cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd, ..} ) <$> f cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd
+{-# INLINE cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsdL #-}
+
+
+
+-- * CURVEFINANCEETHEREUMLpTokenDTO
+
+-- | 'cURVEFINANCEETHEREUMLpTokenDTOEntryTime' Lens
+cURVEFINANCEETHEREUMLpTokenDTOEntryTimeL :: Lens_' CURVEFINANCEETHEREUMLpTokenDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMLpTokenDTOEntryTimeL f CURVEFINANCEETHEREUMLpTokenDTO{..} = (\cURVEFINANCEETHEREUMLpTokenDTOEntryTime -> CURVEFINANCEETHEREUMLpTokenDTO { cURVEFINANCEETHEREUMLpTokenDTOEntryTime, ..} ) <$> f cURVEFINANCEETHEREUMLpTokenDTOEntryTime
+{-# INLINE cURVEFINANCEETHEREUMLpTokenDTOEntryTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMLpTokenDTORecvTime' Lens
+cURVEFINANCEETHEREUMLpTokenDTORecvTimeL :: Lens_' CURVEFINANCEETHEREUMLpTokenDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMLpTokenDTORecvTimeL f CURVEFINANCEETHEREUMLpTokenDTO{..} = (\cURVEFINANCEETHEREUMLpTokenDTORecvTime -> CURVEFINANCEETHEREUMLpTokenDTO { cURVEFINANCEETHEREUMLpTokenDTORecvTime, ..} ) <$> f cURVEFINANCEETHEREUMLpTokenDTORecvTime
+{-# INLINE cURVEFINANCEETHEREUMLpTokenDTORecvTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMLpTokenDTOBlockNumber' Lens
+cURVEFINANCEETHEREUMLpTokenDTOBlockNumberL :: Lens_' CURVEFINANCEETHEREUMLpTokenDTO (Maybe Integer)
+cURVEFINANCEETHEREUMLpTokenDTOBlockNumberL f CURVEFINANCEETHEREUMLpTokenDTO{..} = (\cURVEFINANCEETHEREUMLpTokenDTOBlockNumber -> CURVEFINANCEETHEREUMLpTokenDTO { cURVEFINANCEETHEREUMLpTokenDTOBlockNumber, ..} ) <$> f cURVEFINANCEETHEREUMLpTokenDTOBlockNumber
+{-# INLINE cURVEFINANCEETHEREUMLpTokenDTOBlockNumberL #-}
+
+-- | 'cURVEFINANCEETHEREUMLpTokenDTOId' Lens
+cURVEFINANCEETHEREUMLpTokenDTOIdL :: Lens_' CURVEFINANCEETHEREUMLpTokenDTO (Maybe Text)
+cURVEFINANCEETHEREUMLpTokenDTOIdL f CURVEFINANCEETHEREUMLpTokenDTO{..} = (\cURVEFINANCEETHEREUMLpTokenDTOId -> CURVEFINANCEETHEREUMLpTokenDTO { cURVEFINANCEETHEREUMLpTokenDTOId, ..} ) <$> f cURVEFINANCEETHEREUMLpTokenDTOId
+{-# INLINE cURVEFINANCEETHEREUMLpTokenDTOIdL #-}
+
+-- | 'cURVEFINANCEETHEREUMLpTokenDTOPoolAddress' Lens
+cURVEFINANCEETHEREUMLpTokenDTOPoolAddressL :: Lens_' CURVEFINANCEETHEREUMLpTokenDTO (Maybe Text)
+cURVEFINANCEETHEREUMLpTokenDTOPoolAddressL f CURVEFINANCEETHEREUMLpTokenDTO{..} = (\cURVEFINANCEETHEREUMLpTokenDTOPoolAddress -> CURVEFINANCEETHEREUMLpTokenDTO { cURVEFINANCEETHEREUMLpTokenDTOPoolAddress, ..} ) <$> f cURVEFINANCEETHEREUMLpTokenDTOPoolAddress
+{-# INLINE cURVEFINANCEETHEREUMLpTokenDTOPoolAddressL #-}
+
+-- | 'cURVEFINANCEETHEREUMLpTokenDTORegistryAddress' Lens
+cURVEFINANCEETHEREUMLpTokenDTORegistryAddressL :: Lens_' CURVEFINANCEETHEREUMLpTokenDTO (Maybe Text)
+cURVEFINANCEETHEREUMLpTokenDTORegistryAddressL f CURVEFINANCEETHEREUMLpTokenDTO{..} = (\cURVEFINANCEETHEREUMLpTokenDTORegistryAddress -> CURVEFINANCEETHEREUMLpTokenDTO { cURVEFINANCEETHEREUMLpTokenDTORegistryAddress, ..} ) <$> f cURVEFINANCEETHEREUMLpTokenDTORegistryAddress
+{-# INLINE cURVEFINANCEETHEREUMLpTokenDTORegistryAddressL #-}
+
+
+
+-- * CURVEFINANCEETHEREUMRewardTokenDTO
+
+-- | 'cURVEFINANCEETHEREUMRewardTokenDTOEntryTime' Lens
+cURVEFINANCEETHEREUMRewardTokenDTOEntryTimeL :: Lens_' CURVEFINANCEETHEREUMRewardTokenDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMRewardTokenDTOEntryTimeL f CURVEFINANCEETHEREUMRewardTokenDTO{..} = (\cURVEFINANCEETHEREUMRewardTokenDTOEntryTime -> CURVEFINANCEETHEREUMRewardTokenDTO { cURVEFINANCEETHEREUMRewardTokenDTOEntryTime, ..} ) <$> f cURVEFINANCEETHEREUMRewardTokenDTOEntryTime
+{-# INLINE cURVEFINANCEETHEREUMRewardTokenDTOEntryTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMRewardTokenDTORecvTime' Lens
+cURVEFINANCEETHEREUMRewardTokenDTORecvTimeL :: Lens_' CURVEFINANCEETHEREUMRewardTokenDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMRewardTokenDTORecvTimeL f CURVEFINANCEETHEREUMRewardTokenDTO{..} = (\cURVEFINANCEETHEREUMRewardTokenDTORecvTime -> CURVEFINANCEETHEREUMRewardTokenDTO { cURVEFINANCEETHEREUMRewardTokenDTORecvTime, ..} ) <$> f cURVEFINANCEETHEREUMRewardTokenDTORecvTime
+{-# INLINE cURVEFINANCEETHEREUMRewardTokenDTORecvTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMRewardTokenDTOBlockNumber' Lens
+cURVEFINANCEETHEREUMRewardTokenDTOBlockNumberL :: Lens_' CURVEFINANCEETHEREUMRewardTokenDTO (Maybe Integer)
+cURVEFINANCEETHEREUMRewardTokenDTOBlockNumberL f CURVEFINANCEETHEREUMRewardTokenDTO{..} = (\cURVEFINANCEETHEREUMRewardTokenDTOBlockNumber -> CURVEFINANCEETHEREUMRewardTokenDTO { cURVEFINANCEETHEREUMRewardTokenDTOBlockNumber, ..} ) <$> f cURVEFINANCEETHEREUMRewardTokenDTOBlockNumber
+{-# INLINE cURVEFINANCEETHEREUMRewardTokenDTOBlockNumberL #-}
+
+-- | 'cURVEFINANCEETHEREUMRewardTokenDTOBlockRange' Lens
+cURVEFINANCEETHEREUMRewardTokenDTOBlockRangeL :: Lens_' CURVEFINANCEETHEREUMRewardTokenDTO (Maybe Text)
+cURVEFINANCEETHEREUMRewardTokenDTOBlockRangeL f CURVEFINANCEETHEREUMRewardTokenDTO{..} = (\cURVEFINANCEETHEREUMRewardTokenDTOBlockRange -> CURVEFINANCEETHEREUMRewardTokenDTO { cURVEFINANCEETHEREUMRewardTokenDTOBlockRange, ..} ) <$> f cURVEFINANCEETHEREUMRewardTokenDTOBlockRange
+{-# INLINE cURVEFINANCEETHEREUMRewardTokenDTOBlockRangeL #-}
+
+-- | 'cURVEFINANCEETHEREUMRewardTokenDTOId' Lens
+cURVEFINANCEETHEREUMRewardTokenDTOIdL :: Lens_' CURVEFINANCEETHEREUMRewardTokenDTO (Maybe Text)
+cURVEFINANCEETHEREUMRewardTokenDTOIdL f CURVEFINANCEETHEREUMRewardTokenDTO{..} = (\cURVEFINANCEETHEREUMRewardTokenDTOId -> CURVEFINANCEETHEREUMRewardTokenDTO { cURVEFINANCEETHEREUMRewardTokenDTOId, ..} ) <$> f cURVEFINANCEETHEREUMRewardTokenDTOId
+{-# INLINE cURVEFINANCEETHEREUMRewardTokenDTOIdL #-}
+
+-- | 'cURVEFINANCEETHEREUMRewardTokenDTOToken' Lens
+cURVEFINANCEETHEREUMRewardTokenDTOTokenL :: Lens_' CURVEFINANCEETHEREUMRewardTokenDTO (Maybe Text)
+cURVEFINANCEETHEREUMRewardTokenDTOTokenL f CURVEFINANCEETHEREUMRewardTokenDTO{..} = (\cURVEFINANCEETHEREUMRewardTokenDTOToken -> CURVEFINANCEETHEREUMRewardTokenDTO { cURVEFINANCEETHEREUMRewardTokenDTOToken, ..} ) <$> f cURVEFINANCEETHEREUMRewardTokenDTOToken
+{-# INLINE cURVEFINANCEETHEREUMRewardTokenDTOTokenL #-}
+
+
+
 -- * CURVEFINANCEETHEREUMSwapDTO
 
 -- | 'cURVEFINANCEETHEREUMSwapDTOEntryTime' Lens
@@ -850,7 +1589,7 @@ cURVEFINANCEETHEREUMSwapDTORecvTimeL f CURVEFINANCEETHEREUMSwapDTO{..} = (\cURVE
 {-# INLINE cURVEFINANCEETHEREUMSwapDTORecvTimeL #-}
 
 -- | 'cURVEFINANCEETHEREUMSwapDTOBlockNumber' Lens
-cURVEFINANCEETHEREUMSwapDTOBlockNumberL :: Lens_' CURVEFINANCEETHEREUMSwapDTO (Maybe Text)
+cURVEFINANCEETHEREUMSwapDTOBlockNumberL :: Lens_' CURVEFINANCEETHEREUMSwapDTO (Maybe Integer)
 cURVEFINANCEETHEREUMSwapDTOBlockNumberL f CURVEFINANCEETHEREUMSwapDTO{..} = (\cURVEFINANCEETHEREUMSwapDTOBlockNumber -> CURVEFINANCEETHEREUMSwapDTO { cURVEFINANCEETHEREUMSwapDTOBlockNumber, ..} ) <$> f cURVEFINANCEETHEREUMSwapDTOBlockNumber
 {-# INLINE cURVEFINANCEETHEREUMSwapDTOBlockNumberL #-}
 
@@ -1007,6 +1746,233 @@ cURVEFINANCEETHEREUMTokenDTOLastPriceBlockNumberL f CURVEFINANCEETHEREUMTokenDTO
 cURVEFINANCEETHEREUMTokenDTOTokenSymbolL :: Lens_' CURVEFINANCEETHEREUMTokenDTO (Maybe Text)
 cURVEFINANCEETHEREUMTokenDTOTokenSymbolL f CURVEFINANCEETHEREUMTokenDTO{..} = (\cURVEFINANCEETHEREUMTokenDTOTokenSymbol -> CURVEFINANCEETHEREUMTokenDTO { cURVEFINANCEETHEREUMTokenDTOTokenSymbol, ..} ) <$> f cURVEFINANCEETHEREUMTokenDTOTokenSymbol
 {-# INLINE cURVEFINANCEETHEREUMTokenDTOTokenSymbolL #-}
+
+
+
+-- * CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOEntryTime' Lens
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOEntryTimeL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOEntryTimeL f CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOEntryTime -> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOEntryTime, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOEntryTime
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOEntryTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTORecvTime' Lens
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTORecvTimeL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTORecvTimeL f CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTORecvTime -> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTORecvTime, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTORecvTime
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTORecvTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOBlockNumber' Lens
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOBlockNumberL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO (Maybe Integer)
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOBlockNumberL f CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOBlockNumber -> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOBlockNumber, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOBlockNumber
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOBlockNumberL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOId' Lens
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOIdL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOIdL f CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOId -> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOId, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOId
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOIdL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOProtocol' Lens
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOProtocolL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOProtocolL f CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOProtocol -> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOProtocol, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOProtocol
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOProtocolL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers' Lens
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsersL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsersL f CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers -> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsersL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers' Lens
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsersL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsersL f CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers -> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsersL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount' Lens
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCountL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCountL f CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount -> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCountL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount' Lens
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyDepositCountL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyDepositCountL f CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount -> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyDepositCountL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount' Lens
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCountL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCountL f CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount -> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCountL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailySwapCount' Lens
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailySwapCountL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailySwapCountL f CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailySwapCount -> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailySwapCount, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailySwapCount
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODailySwapCountL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount' Lens
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCountL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCountL f CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount -> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCountL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTimestamp' Lens
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTimestampL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTimestampL f CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTimestamp -> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTimestamp, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTimestamp
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTOTimestampL #-}
+
+
+
+-- * CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOEntryTime' Lens
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOEntryTimeL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOEntryTimeL f CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOEntryTime -> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOEntryTime, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOEntryTime
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOEntryTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTORecvTime' Lens
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTORecvTimeL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTORecvTimeL f CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTORecvTime -> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTORecvTime, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTORecvTime
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTORecvTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber' Lens
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockNumberL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Integer)
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockNumberL f CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber -> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockNumberL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockRange' Lens
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockRangeL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockRangeL f CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockRange -> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockRange, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockRange
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOBlockRangeL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOId' Lens
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOIdL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOIdL f CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOId -> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOId, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOId
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOIdL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOProtocol' Lens
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOProtocolL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOProtocolL f CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOProtocol -> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOProtocol, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOProtocol
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOProtocolL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers' Lens
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsersL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Int)
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsersL f CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers -> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsersL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers' Lens
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsersL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Int)
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsersL f CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers -> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsersL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount' Lens
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCountL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Int)
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCountL f CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount -> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCountL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount' Lens
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCountL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Int)
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCountL f CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount -> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCountL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount' Lens
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCountL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Int)
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCountL f CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount -> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCountL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount' Lens
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCountL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Int)
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCountL f CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount -> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCountL #-}
+
+-- | 'cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOTimestamp' Lens
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOTimestampL :: Lens_' CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Text)
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOTimestampL f CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOTimestamp -> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO { cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOTimestamp, ..} ) <$> f cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOTimestamp
+{-# INLINE cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTOTimestampL #-}
+
+
+
+-- * CURVEFINANCEETHEREUMWithdrawDTO
+
+-- | 'cURVEFINANCEETHEREUMWithdrawDTOEntryTime' Lens
+cURVEFINANCEETHEREUMWithdrawDTOEntryTimeL :: Lens_' CURVEFINANCEETHEREUMWithdrawDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMWithdrawDTOEntryTimeL f CURVEFINANCEETHEREUMWithdrawDTO{..} = (\cURVEFINANCEETHEREUMWithdrawDTOEntryTime -> CURVEFINANCEETHEREUMWithdrawDTO { cURVEFINANCEETHEREUMWithdrawDTOEntryTime, ..} ) <$> f cURVEFINANCEETHEREUMWithdrawDTOEntryTime
+{-# INLINE cURVEFINANCEETHEREUMWithdrawDTOEntryTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMWithdrawDTORecvTime' Lens
+cURVEFINANCEETHEREUMWithdrawDTORecvTimeL :: Lens_' CURVEFINANCEETHEREUMWithdrawDTO (Maybe DateTime)
+cURVEFINANCEETHEREUMWithdrawDTORecvTimeL f CURVEFINANCEETHEREUMWithdrawDTO{..} = (\cURVEFINANCEETHEREUMWithdrawDTORecvTime -> CURVEFINANCEETHEREUMWithdrawDTO { cURVEFINANCEETHEREUMWithdrawDTORecvTime, ..} ) <$> f cURVEFINANCEETHEREUMWithdrawDTORecvTime
+{-# INLINE cURVEFINANCEETHEREUMWithdrawDTORecvTimeL #-}
+
+-- | 'cURVEFINANCEETHEREUMWithdrawDTOBlockNumber' Lens
+cURVEFINANCEETHEREUMWithdrawDTOBlockNumberL :: Lens_' CURVEFINANCEETHEREUMWithdrawDTO (Maybe Integer)
+cURVEFINANCEETHEREUMWithdrawDTOBlockNumberL f CURVEFINANCEETHEREUMWithdrawDTO{..} = (\cURVEFINANCEETHEREUMWithdrawDTOBlockNumber -> CURVEFINANCEETHEREUMWithdrawDTO { cURVEFINANCEETHEREUMWithdrawDTOBlockNumber, ..} ) <$> f cURVEFINANCEETHEREUMWithdrawDTOBlockNumber
+{-# INLINE cURVEFINANCEETHEREUMWithdrawDTOBlockNumberL #-}
+
+-- | 'cURVEFINANCEETHEREUMWithdrawDTOBlockRange' Lens
+cURVEFINANCEETHEREUMWithdrawDTOBlockRangeL :: Lens_' CURVEFINANCEETHEREUMWithdrawDTO (Maybe Text)
+cURVEFINANCEETHEREUMWithdrawDTOBlockRangeL f CURVEFINANCEETHEREUMWithdrawDTO{..} = (\cURVEFINANCEETHEREUMWithdrawDTOBlockRange -> CURVEFINANCEETHEREUMWithdrawDTO { cURVEFINANCEETHEREUMWithdrawDTOBlockRange, ..} ) <$> f cURVEFINANCEETHEREUMWithdrawDTOBlockRange
+{-# INLINE cURVEFINANCEETHEREUMWithdrawDTOBlockRangeL #-}
+
+-- | 'cURVEFINANCEETHEREUMWithdrawDTOId' Lens
+cURVEFINANCEETHEREUMWithdrawDTOIdL :: Lens_' CURVEFINANCEETHEREUMWithdrawDTO (Maybe Text)
+cURVEFINANCEETHEREUMWithdrawDTOIdL f CURVEFINANCEETHEREUMWithdrawDTO{..} = (\cURVEFINANCEETHEREUMWithdrawDTOId -> CURVEFINANCEETHEREUMWithdrawDTO { cURVEFINANCEETHEREUMWithdrawDTOId, ..} ) <$> f cURVEFINANCEETHEREUMWithdrawDTOId
+{-# INLINE cURVEFINANCEETHEREUMWithdrawDTOIdL #-}
+
+-- | 'cURVEFINANCEETHEREUMWithdrawDTOHash' Lens
+cURVEFINANCEETHEREUMWithdrawDTOHashL :: Lens_' CURVEFINANCEETHEREUMWithdrawDTO (Maybe Text)
+cURVEFINANCEETHEREUMWithdrawDTOHashL f CURVEFINANCEETHEREUMWithdrawDTO{..} = (\cURVEFINANCEETHEREUMWithdrawDTOHash -> CURVEFINANCEETHEREUMWithdrawDTO { cURVEFINANCEETHEREUMWithdrawDTOHash, ..} ) <$> f cURVEFINANCEETHEREUMWithdrawDTOHash
+{-# INLINE cURVEFINANCEETHEREUMWithdrawDTOHashL #-}
+
+-- | 'cURVEFINANCEETHEREUMWithdrawDTOLogIndex' Lens
+cURVEFINANCEETHEREUMWithdrawDTOLogIndexL :: Lens_' CURVEFINANCEETHEREUMWithdrawDTO (Maybe Int)
+cURVEFINANCEETHEREUMWithdrawDTOLogIndexL f CURVEFINANCEETHEREUMWithdrawDTO{..} = (\cURVEFINANCEETHEREUMWithdrawDTOLogIndex -> CURVEFINANCEETHEREUMWithdrawDTO { cURVEFINANCEETHEREUMWithdrawDTOLogIndex, ..} ) <$> f cURVEFINANCEETHEREUMWithdrawDTOLogIndex
+{-# INLINE cURVEFINANCEETHEREUMWithdrawDTOLogIndexL #-}
+
+-- | 'cURVEFINANCEETHEREUMWithdrawDTOProtocol' Lens
+cURVEFINANCEETHEREUMWithdrawDTOProtocolL :: Lens_' CURVEFINANCEETHEREUMWithdrawDTO (Maybe Text)
+cURVEFINANCEETHEREUMWithdrawDTOProtocolL f CURVEFINANCEETHEREUMWithdrawDTO{..} = (\cURVEFINANCEETHEREUMWithdrawDTOProtocol -> CURVEFINANCEETHEREUMWithdrawDTO { cURVEFINANCEETHEREUMWithdrawDTOProtocol, ..} ) <$> f cURVEFINANCEETHEREUMWithdrawDTOProtocol
+{-# INLINE cURVEFINANCEETHEREUMWithdrawDTOProtocolL #-}
+
+-- | 'cURVEFINANCEETHEREUMWithdrawDTOTo' Lens
+cURVEFINANCEETHEREUMWithdrawDTOToL :: Lens_' CURVEFINANCEETHEREUMWithdrawDTO (Maybe Text)
+cURVEFINANCEETHEREUMWithdrawDTOToL f CURVEFINANCEETHEREUMWithdrawDTO{..} = (\cURVEFINANCEETHEREUMWithdrawDTOTo -> CURVEFINANCEETHEREUMWithdrawDTO { cURVEFINANCEETHEREUMWithdrawDTOTo, ..} ) <$> f cURVEFINANCEETHEREUMWithdrawDTOTo
+{-# INLINE cURVEFINANCEETHEREUMWithdrawDTOToL #-}
+
+-- | 'cURVEFINANCEETHEREUMWithdrawDTOFrom' Lens
+cURVEFINANCEETHEREUMWithdrawDTOFromL :: Lens_' CURVEFINANCEETHEREUMWithdrawDTO (Maybe Text)
+cURVEFINANCEETHEREUMWithdrawDTOFromL f CURVEFINANCEETHEREUMWithdrawDTO{..} = (\cURVEFINANCEETHEREUMWithdrawDTOFrom -> CURVEFINANCEETHEREUMWithdrawDTO { cURVEFINANCEETHEREUMWithdrawDTOFrom, ..} ) <$> f cURVEFINANCEETHEREUMWithdrawDTOFrom
+{-# INLINE cURVEFINANCEETHEREUMWithdrawDTOFromL #-}
+
+-- | 'cURVEFINANCEETHEREUMWithdrawDTOTimestamp' Lens
+cURVEFINANCEETHEREUMWithdrawDTOTimestampL :: Lens_' CURVEFINANCEETHEREUMWithdrawDTO (Maybe Text)
+cURVEFINANCEETHEREUMWithdrawDTOTimestampL f CURVEFINANCEETHEREUMWithdrawDTO{..} = (\cURVEFINANCEETHEREUMWithdrawDTOTimestamp -> CURVEFINANCEETHEREUMWithdrawDTO { cURVEFINANCEETHEREUMWithdrawDTOTimestamp, ..} ) <$> f cURVEFINANCEETHEREUMWithdrawDTOTimestamp
+{-# INLINE cURVEFINANCEETHEREUMWithdrawDTOTimestampL #-}
+
+-- | 'cURVEFINANCEETHEREUMWithdrawDTOInputTokens' Lens
+cURVEFINANCEETHEREUMWithdrawDTOInputTokensL :: Lens_' CURVEFINANCEETHEREUMWithdrawDTO (Maybe [Text])
+cURVEFINANCEETHEREUMWithdrawDTOInputTokensL f CURVEFINANCEETHEREUMWithdrawDTO{..} = (\cURVEFINANCEETHEREUMWithdrawDTOInputTokens -> CURVEFINANCEETHEREUMWithdrawDTO { cURVEFINANCEETHEREUMWithdrawDTOInputTokens, ..} ) <$> f cURVEFINANCEETHEREUMWithdrawDTOInputTokens
+{-# INLINE cURVEFINANCEETHEREUMWithdrawDTOInputTokensL #-}
+
+-- | 'cURVEFINANCEETHEREUMWithdrawDTOOutputToken' Lens
+cURVEFINANCEETHEREUMWithdrawDTOOutputTokenL :: Lens_' CURVEFINANCEETHEREUMWithdrawDTO (Maybe Text)
+cURVEFINANCEETHEREUMWithdrawDTOOutputTokenL f CURVEFINANCEETHEREUMWithdrawDTO{..} = (\cURVEFINANCEETHEREUMWithdrawDTOOutputToken -> CURVEFINANCEETHEREUMWithdrawDTO { cURVEFINANCEETHEREUMWithdrawDTOOutputToken, ..} ) <$> f cURVEFINANCEETHEREUMWithdrawDTOOutputToken
+{-# INLINE cURVEFINANCEETHEREUMWithdrawDTOOutputTokenL #-}
+
+-- | 'cURVEFINANCEETHEREUMWithdrawDTOInputTokenAmounts' Lens
+cURVEFINANCEETHEREUMWithdrawDTOInputTokenAmountsL :: Lens_' CURVEFINANCEETHEREUMWithdrawDTO (Maybe [Text])
+cURVEFINANCEETHEREUMWithdrawDTOInputTokenAmountsL f CURVEFINANCEETHEREUMWithdrawDTO{..} = (\cURVEFINANCEETHEREUMWithdrawDTOInputTokenAmounts -> CURVEFINANCEETHEREUMWithdrawDTO { cURVEFINANCEETHEREUMWithdrawDTOInputTokenAmounts, ..} ) <$> f cURVEFINANCEETHEREUMWithdrawDTOInputTokenAmounts
+{-# INLINE cURVEFINANCEETHEREUMWithdrawDTOInputTokenAmountsL #-}
+
+-- | 'cURVEFINANCEETHEREUMWithdrawDTOOutputTokenAmount' Lens
+cURVEFINANCEETHEREUMWithdrawDTOOutputTokenAmountL :: Lens_' CURVEFINANCEETHEREUMWithdrawDTO (Maybe Text)
+cURVEFINANCEETHEREUMWithdrawDTOOutputTokenAmountL f CURVEFINANCEETHEREUMWithdrawDTO{..} = (\cURVEFINANCEETHEREUMWithdrawDTOOutputTokenAmount -> CURVEFINANCEETHEREUMWithdrawDTO { cURVEFINANCEETHEREUMWithdrawDTOOutputTokenAmount, ..} ) <$> f cURVEFINANCEETHEREUMWithdrawDTOOutputTokenAmount
+{-# INLINE cURVEFINANCEETHEREUMWithdrawDTOOutputTokenAmountL #-}
+
+-- | 'cURVEFINANCEETHEREUMWithdrawDTOAmountUsd' Lens
+cURVEFINANCEETHEREUMWithdrawDTOAmountUsdL :: Lens_' CURVEFINANCEETHEREUMWithdrawDTO (Maybe Text)
+cURVEFINANCEETHEREUMWithdrawDTOAmountUsdL f CURVEFINANCEETHEREUMWithdrawDTO{..} = (\cURVEFINANCEETHEREUMWithdrawDTOAmountUsd -> CURVEFINANCEETHEREUMWithdrawDTO { cURVEFINANCEETHEREUMWithdrawDTOAmountUsd, ..} ) <$> f cURVEFINANCEETHEREUMWithdrawDTOAmountUsd
+{-# INLINE cURVEFINANCEETHEREUMWithdrawDTOAmountUsdL #-}
+
+-- | 'cURVEFINANCEETHEREUMWithdrawDTOPool' Lens
+cURVEFINANCEETHEREUMWithdrawDTOPoolL :: Lens_' CURVEFINANCEETHEREUMWithdrawDTO (Maybe Text)
+cURVEFINANCEETHEREUMWithdrawDTOPoolL f CURVEFINANCEETHEREUMWithdrawDTO{..} = (\cURVEFINANCEETHEREUMWithdrawDTOPool -> CURVEFINANCEETHEREUMWithdrawDTO { cURVEFINANCEETHEREUMWithdrawDTOPool, ..} ) <$> f cURVEFINANCEETHEREUMWithdrawDTOPool
+{-# INLINE cURVEFINANCEETHEREUMWithdrawDTOPoolL #-}
 
 
 
@@ -1800,11 +2766,6 @@ pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumberL :: Lens_' PANCAKE
 pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumberL f PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber -> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber, ..} ) <$> f pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber
 {-# INLINE pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumberL #-}
 
--- | 'pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVid' Lens
-pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVidL :: Lens_' PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Integer)
-pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVidL f PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVid -> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVid, ..} ) <$> f pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVid
-{-# INLINE pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVidL #-}
-
 -- | 'pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock' Lens
 pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockL :: Lens_' PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Int)
 pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockL f PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock -> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock, ..} ) <$> f pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock
@@ -2073,11 +3034,6 @@ pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumberL :: Lens_' PANCAK
 pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumberL f PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber -> PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber, ..} ) <$> f pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber
 {-# INLINE pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumberL #-}
 
--- | 'pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVid' Lens
-pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVidL :: Lens_' PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Integer)
-pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVidL f PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVid -> PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVid, ..} ) <$> f pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVid
-{-# INLINE pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVidL #-}
-
 -- | 'pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId' Lens
 pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOIdL :: Lens_' PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
 pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOIdL f PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId -> PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId, ..} ) <$> f pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId
@@ -2306,11 +3262,6 @@ pANCAKESWAPV3ETHEREUMPositionDTORecvTimeL f PANCAKESWAPV3ETHEREUMPositionDTO{..}
 pANCAKESWAPV3ETHEREUMPositionDTOBlockNumberL :: Lens_' PANCAKESWAPV3ETHEREUMPositionDTO (Maybe Integer)
 pANCAKESWAPV3ETHEREUMPositionDTOBlockNumberL f PANCAKESWAPV3ETHEREUMPositionDTO{..} = (\pANCAKESWAPV3ETHEREUMPositionDTOBlockNumber -> PANCAKESWAPV3ETHEREUMPositionDTO { pANCAKESWAPV3ETHEREUMPositionDTOBlockNumber, ..} ) <$> f pANCAKESWAPV3ETHEREUMPositionDTOBlockNumber
 {-# INLINE pANCAKESWAPV3ETHEREUMPositionDTOBlockNumberL #-}
-
--- | 'pANCAKESWAPV3ETHEREUMPositionDTOVid' Lens
-pANCAKESWAPV3ETHEREUMPositionDTOVidL :: Lens_' PANCAKESWAPV3ETHEREUMPositionDTO (Maybe Integer)
-pANCAKESWAPV3ETHEREUMPositionDTOVidL f PANCAKESWAPV3ETHEREUMPositionDTO{..} = (\pANCAKESWAPV3ETHEREUMPositionDTOVid -> PANCAKESWAPV3ETHEREUMPositionDTO { pANCAKESWAPV3ETHEREUMPositionDTOVid, ..} ) <$> f pANCAKESWAPV3ETHEREUMPositionDTOVid
-{-# INLINE pANCAKESWAPV3ETHEREUMPositionDTOVidL #-}
 
 -- | 'pANCAKESWAPV3ETHEREUMPositionDTOId' Lens
 pANCAKESWAPV3ETHEREUMPositionDTOIdL :: Lens_' PANCAKESWAPV3ETHEREUMPositionDTO (Maybe Text)
@@ -2718,11 +3669,6 @@ pANCAKESWAPV3ETHEREUMTickDTOBlockNumberL :: Lens_' PANCAKESWAPV3ETHEREUMTickDTO 
 pANCAKESWAPV3ETHEREUMTickDTOBlockNumberL f PANCAKESWAPV3ETHEREUMTickDTO{..} = (\pANCAKESWAPV3ETHEREUMTickDTOBlockNumber -> PANCAKESWAPV3ETHEREUMTickDTO { pANCAKESWAPV3ETHEREUMTickDTOBlockNumber, ..} ) <$> f pANCAKESWAPV3ETHEREUMTickDTOBlockNumber
 {-# INLINE pANCAKESWAPV3ETHEREUMTickDTOBlockNumberL #-}
 
--- | 'pANCAKESWAPV3ETHEREUMTickDTOVid' Lens
-pANCAKESWAPV3ETHEREUMTickDTOVidL :: Lens_' PANCAKESWAPV3ETHEREUMTickDTO (Maybe Integer)
-pANCAKESWAPV3ETHEREUMTickDTOVidL f PANCAKESWAPV3ETHEREUMTickDTO{..} = (\pANCAKESWAPV3ETHEREUMTickDTOVid -> PANCAKESWAPV3ETHEREUMTickDTO { pANCAKESWAPV3ETHEREUMTickDTOVid, ..} ) <$> f pANCAKESWAPV3ETHEREUMTickDTOVid
-{-# INLINE pANCAKESWAPV3ETHEREUMTickDTOVidL #-}
-
 -- | 'pANCAKESWAPV3ETHEREUMTickDTOId' Lens
 pANCAKESWAPV3ETHEREUMTickDTOIdL :: Lens_' PANCAKESWAPV3ETHEREUMTickDTO (Maybe Text)
 pANCAKESWAPV3ETHEREUMTickDTOIdL f PANCAKESWAPV3ETHEREUMTickDTO{..} = (\pANCAKESWAPV3ETHEREUMTickDTOId -> PANCAKESWAPV3ETHEREUMTickDTO { pANCAKESWAPV3ETHEREUMTickDTOId, ..} ) <$> f pANCAKESWAPV3ETHEREUMTickDTOId
@@ -2812,11 +3758,6 @@ pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOBlockNumberL :: Lens_' PANCAKESWAPV3ETH
 pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOBlockNumberL f PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO{..} = (\pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOBlockNumber -> PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO { pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOBlockNumber, ..} ) <$> f pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOBlockNumber
 {-# INLINE pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOBlockNumberL #-}
 
--- | 'pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOVid' Lens
-pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOVidL :: Lens_' PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO (Maybe Integer)
-pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOVidL f PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO{..} = (\pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOVid -> PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO { pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOVid, ..} ) <$> f pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOVid
-{-# INLINE pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOVidL #-}
-
 -- | 'pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOId' Lens
 pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOIdL :: Lens_' PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO (Maybe Text)
 pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOIdL f PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO{..} = (\pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOId -> PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO { pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOId, ..} ) <$> f pANCAKESWAPV3ETHEREUMTickDailySnapshotDTOId
@@ -2880,11 +3821,6 @@ pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTORecvTimeL f PANCAKESWAPV3ETHEREUMTickH
 pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumberL :: Lens_' PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO (Maybe Integer)
 pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumberL f PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO{..} = (\pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumber -> PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO { pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumber, ..} ) <$> f pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumber
 {-# INLINE pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumberL #-}
-
--- | 'pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOVid' Lens
-pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOVidL :: Lens_' PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO (Maybe Integer)
-pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOVidL f PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO{..} = (\pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOVid -> PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO { pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOVid, ..} ) <$> f pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOVid
-{-# INLINE pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOVidL #-}
 
 -- | 'pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOId' Lens
 pANCAKESWAPV3ETHEREUMTickHourlySnapshotDTOIdL :: Lens_' PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO (Maybe Text)
@@ -3337,6 +4273,530 @@ pANCAKESWAPV3ETHEREUMWithdrawDTOAmountUsdL f PANCAKESWAPV3ETHEREUMWithdrawDTO{..
 
 
 
+-- * SUSHISWAPV3ETHEREUMAccountDTO
+
+-- | 'sUSHISWAPV3ETHEREUMAccountDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMAccountDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMAccountDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMAccountDTOEntryTimeL f SUSHISWAPV3ETHEREUMAccountDTO{..} = (\sUSHISWAPV3ETHEREUMAccountDTOEntryTime -> SUSHISWAPV3ETHEREUMAccountDTO { sUSHISWAPV3ETHEREUMAccountDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMAccountDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMAccountDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMAccountDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMAccountDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMAccountDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMAccountDTORecvTimeL f SUSHISWAPV3ETHEREUMAccountDTO{..} = (\sUSHISWAPV3ETHEREUMAccountDTORecvTime -> SUSHISWAPV3ETHEREUMAccountDTO { sUSHISWAPV3ETHEREUMAccountDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMAccountDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMAccountDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMAccountDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMAccountDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMAccountDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMAccountDTOBlockNumberL f SUSHISWAPV3ETHEREUMAccountDTO{..} = (\sUSHISWAPV3ETHEREUMAccountDTOBlockNumber -> SUSHISWAPV3ETHEREUMAccountDTO { sUSHISWAPV3ETHEREUMAccountDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMAccountDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMAccountDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMAccountDTOBlockRange' Lens
+sUSHISWAPV3ETHEREUMAccountDTOBlockRangeL :: Lens_' SUSHISWAPV3ETHEREUMAccountDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMAccountDTOBlockRangeL f SUSHISWAPV3ETHEREUMAccountDTO{..} = (\sUSHISWAPV3ETHEREUMAccountDTOBlockRange -> SUSHISWAPV3ETHEREUMAccountDTO { sUSHISWAPV3ETHEREUMAccountDTOBlockRange, ..} ) <$> f sUSHISWAPV3ETHEREUMAccountDTOBlockRange
+{-# INLINE sUSHISWAPV3ETHEREUMAccountDTOBlockRangeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMAccountDTOId' Lens
+sUSHISWAPV3ETHEREUMAccountDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMAccountDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMAccountDTOIdL f SUSHISWAPV3ETHEREUMAccountDTO{..} = (\sUSHISWAPV3ETHEREUMAccountDTOId -> SUSHISWAPV3ETHEREUMAccountDTO { sUSHISWAPV3ETHEREUMAccountDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMAccountDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMAccountDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMAccountDTOPositionCount' Lens
+sUSHISWAPV3ETHEREUMAccountDTOPositionCountL :: Lens_' SUSHISWAPV3ETHEREUMAccountDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMAccountDTOPositionCountL f SUSHISWAPV3ETHEREUMAccountDTO{..} = (\sUSHISWAPV3ETHEREUMAccountDTOPositionCount -> SUSHISWAPV3ETHEREUMAccountDTO { sUSHISWAPV3ETHEREUMAccountDTOPositionCount, ..} ) <$> f sUSHISWAPV3ETHEREUMAccountDTOPositionCount
+{-# INLINE sUSHISWAPV3ETHEREUMAccountDTOPositionCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMAccountDTOOpenPositionCount' Lens
+sUSHISWAPV3ETHEREUMAccountDTOOpenPositionCountL :: Lens_' SUSHISWAPV3ETHEREUMAccountDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMAccountDTOOpenPositionCountL f SUSHISWAPV3ETHEREUMAccountDTO{..} = (\sUSHISWAPV3ETHEREUMAccountDTOOpenPositionCount -> SUSHISWAPV3ETHEREUMAccountDTO { sUSHISWAPV3ETHEREUMAccountDTOOpenPositionCount, ..} ) <$> f sUSHISWAPV3ETHEREUMAccountDTOOpenPositionCount
+{-# INLINE sUSHISWAPV3ETHEREUMAccountDTOOpenPositionCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMAccountDTOClosedPositionCount' Lens
+sUSHISWAPV3ETHEREUMAccountDTOClosedPositionCountL :: Lens_' SUSHISWAPV3ETHEREUMAccountDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMAccountDTOClosedPositionCountL f SUSHISWAPV3ETHEREUMAccountDTO{..} = (\sUSHISWAPV3ETHEREUMAccountDTOClosedPositionCount -> SUSHISWAPV3ETHEREUMAccountDTO { sUSHISWAPV3ETHEREUMAccountDTOClosedPositionCount, ..} ) <$> f sUSHISWAPV3ETHEREUMAccountDTOClosedPositionCount
+{-# INLINE sUSHISWAPV3ETHEREUMAccountDTOClosedPositionCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMAccountDTODepositCount' Lens
+sUSHISWAPV3ETHEREUMAccountDTODepositCountL :: Lens_' SUSHISWAPV3ETHEREUMAccountDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMAccountDTODepositCountL f SUSHISWAPV3ETHEREUMAccountDTO{..} = (\sUSHISWAPV3ETHEREUMAccountDTODepositCount -> SUSHISWAPV3ETHEREUMAccountDTO { sUSHISWAPV3ETHEREUMAccountDTODepositCount, ..} ) <$> f sUSHISWAPV3ETHEREUMAccountDTODepositCount
+{-# INLINE sUSHISWAPV3ETHEREUMAccountDTODepositCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMAccountDTOWithdrawCount' Lens
+sUSHISWAPV3ETHEREUMAccountDTOWithdrawCountL :: Lens_' SUSHISWAPV3ETHEREUMAccountDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMAccountDTOWithdrawCountL f SUSHISWAPV3ETHEREUMAccountDTO{..} = (\sUSHISWAPV3ETHEREUMAccountDTOWithdrawCount -> SUSHISWAPV3ETHEREUMAccountDTO { sUSHISWAPV3ETHEREUMAccountDTOWithdrawCount, ..} ) <$> f sUSHISWAPV3ETHEREUMAccountDTOWithdrawCount
+{-# INLINE sUSHISWAPV3ETHEREUMAccountDTOWithdrawCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMAccountDTOSwapCount' Lens
+sUSHISWAPV3ETHEREUMAccountDTOSwapCountL :: Lens_' SUSHISWAPV3ETHEREUMAccountDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMAccountDTOSwapCountL f SUSHISWAPV3ETHEREUMAccountDTO{..} = (\sUSHISWAPV3ETHEREUMAccountDTOSwapCount -> SUSHISWAPV3ETHEREUMAccountDTO { sUSHISWAPV3ETHEREUMAccountDTOSwapCount, ..} ) <$> f sUSHISWAPV3ETHEREUMAccountDTOSwapCount
+{-# INLINE sUSHISWAPV3ETHEREUMAccountDTOSwapCountL #-}
+
+
+
+-- * SUSHISWAPV3ETHEREUMActiveAccountDTO
+
+-- | 'sUSHISWAPV3ETHEREUMActiveAccountDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMActiveAccountDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMActiveAccountDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMActiveAccountDTOEntryTimeL f SUSHISWAPV3ETHEREUMActiveAccountDTO{..} = (\sUSHISWAPV3ETHEREUMActiveAccountDTOEntryTime -> SUSHISWAPV3ETHEREUMActiveAccountDTO { sUSHISWAPV3ETHEREUMActiveAccountDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMActiveAccountDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMActiveAccountDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMActiveAccountDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMActiveAccountDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMActiveAccountDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMActiveAccountDTORecvTimeL f SUSHISWAPV3ETHEREUMActiveAccountDTO{..} = (\sUSHISWAPV3ETHEREUMActiveAccountDTORecvTime -> SUSHISWAPV3ETHEREUMActiveAccountDTO { sUSHISWAPV3ETHEREUMActiveAccountDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMActiveAccountDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMActiveAccountDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMActiveAccountDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMActiveAccountDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMActiveAccountDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMActiveAccountDTOBlockNumberL f SUSHISWAPV3ETHEREUMActiveAccountDTO{..} = (\sUSHISWAPV3ETHEREUMActiveAccountDTOBlockNumber -> SUSHISWAPV3ETHEREUMActiveAccountDTO { sUSHISWAPV3ETHEREUMActiveAccountDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMActiveAccountDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMActiveAccountDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMActiveAccountDTOId' Lens
+sUSHISWAPV3ETHEREUMActiveAccountDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMActiveAccountDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMActiveAccountDTOIdL f SUSHISWAPV3ETHEREUMActiveAccountDTO{..} = (\sUSHISWAPV3ETHEREUMActiveAccountDTOId -> SUSHISWAPV3ETHEREUMActiveAccountDTO { sUSHISWAPV3ETHEREUMActiveAccountDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMActiveAccountDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMActiveAccountDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMActiveAccountDTOBlockRange' Lens
+sUSHISWAPV3ETHEREUMActiveAccountDTOBlockRangeL :: Lens_' SUSHISWAPV3ETHEREUMActiveAccountDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMActiveAccountDTOBlockRangeL f SUSHISWAPV3ETHEREUMActiveAccountDTO{..} = (\sUSHISWAPV3ETHEREUMActiveAccountDTOBlockRange -> SUSHISWAPV3ETHEREUMActiveAccountDTO { sUSHISWAPV3ETHEREUMActiveAccountDTOBlockRange, ..} ) <$> f sUSHISWAPV3ETHEREUMActiveAccountDTOBlockRange
+{-# INLINE sUSHISWAPV3ETHEREUMActiveAccountDTOBlockRangeL #-}
+
+
+
+-- * SUSHISWAPV3ETHEREUMDepositDTO
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMDepositDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMDepositDTOEntryTimeL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOEntryTime -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMDepositDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMDepositDTORecvTimeL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTORecvTime -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMDepositDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMDepositDTOBlockNumberL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOBlockNumber -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOBlock' Lens
+sUSHISWAPV3ETHEREUMDepositDTOBlockL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMDepositDTOBlockL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOBlock -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOBlock, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOBlock
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOBlockL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOId' Lens
+sUSHISWAPV3ETHEREUMDepositDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDepositDTOIdL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOId -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOHash' Lens
+sUSHISWAPV3ETHEREUMDepositDTOHashL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDepositDTOHashL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOHash -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOHash, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOHash
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOHashL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTONonce' Lens
+sUSHISWAPV3ETHEREUMDepositDTONonceL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDepositDTONonceL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTONonce -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTONonce, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTONonce
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTONonceL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOLogIndex' Lens
+sUSHISWAPV3ETHEREUMDepositDTOLogIndexL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMDepositDTOLogIndexL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOLogIndex -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOLogIndex, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOLogIndex
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOLogIndexL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOGasLimit' Lens
+sUSHISWAPV3ETHEREUMDepositDTOGasLimitL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDepositDTOGasLimitL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOGasLimit -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOGasLimit, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOGasLimit
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOGasLimitL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOGasUsed' Lens
+sUSHISWAPV3ETHEREUMDepositDTOGasUsedL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDepositDTOGasUsedL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOGasUsed -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOGasUsed, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOGasUsed
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOGasUsedL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOGasPrice' Lens
+sUSHISWAPV3ETHEREUMDepositDTOGasPriceL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDepositDTOGasPriceL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOGasPrice -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOGasPrice, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOGasPrice
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOGasPriceL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOProtocol' Lens
+sUSHISWAPV3ETHEREUMDepositDTOProtocolL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDepositDTOProtocolL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOProtocol -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOProtocol, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOProtocol
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOProtocolL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOAccount' Lens
+sUSHISWAPV3ETHEREUMDepositDTOAccountL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDepositDTOAccountL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOAccount -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOAccount, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOAccount
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOAccountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOPosition' Lens
+sUSHISWAPV3ETHEREUMDepositDTOPositionL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDepositDTOPositionL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOPosition -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOPosition, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOPosition
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOPositionL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOPool' Lens
+sUSHISWAPV3ETHEREUMDepositDTOPoolL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDepositDTOPoolL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOPool -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOPool, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOPool
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOPoolL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOTickLower' Lens
+sUSHISWAPV3ETHEREUMDepositDTOTickLowerL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDepositDTOTickLowerL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOTickLower -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOTickLower, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOTickLower
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOTickLowerL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOTickUpper' Lens
+sUSHISWAPV3ETHEREUMDepositDTOTickUpperL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDepositDTOTickUpperL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOTickUpper -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOTickUpper, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOTickUpper
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOTickUpperL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOTimestamp' Lens
+sUSHISWAPV3ETHEREUMDepositDTOTimestampL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDepositDTOTimestampL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOTimestamp -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOTimestamp, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOTimestamp
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOTimestampL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOLiquidity' Lens
+sUSHISWAPV3ETHEREUMDepositDTOLiquidityL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDepositDTOLiquidityL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOLiquidity -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOLiquidity, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOLiquidity
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOLiquidityL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOInputTokens' Lens
+sUSHISWAPV3ETHEREUMDepositDTOInputTokensL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMDepositDTOInputTokensL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOInputTokens -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOInputTokens, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOInputTokens
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOInputTokensL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOInputTokenAmounts' Lens
+sUSHISWAPV3ETHEREUMDepositDTOInputTokenAmountsL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMDepositDTOInputTokenAmountsL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOInputTokenAmounts -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOInputTokenAmounts, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOInputTokenAmounts
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOInputTokenAmountsL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOReserveAmounts' Lens
+sUSHISWAPV3ETHEREUMDepositDTOReserveAmountsL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMDepositDTOReserveAmountsL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOReserveAmounts -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOReserveAmounts, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOReserveAmounts
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOReserveAmountsL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOAmountUsd' Lens
+sUSHISWAPV3ETHEREUMDepositDTOAmountUsdL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDepositDTOAmountUsdL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOAmountUsd -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOAmountUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOAmountUsd
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOAmountUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDepositDTOBlockRange' Lens
+sUSHISWAPV3ETHEREUMDepositDTOBlockRangeL :: Lens_' SUSHISWAPV3ETHEREUMDepositDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDepositDTOBlockRangeL f SUSHISWAPV3ETHEREUMDepositDTO{..} = (\sUSHISWAPV3ETHEREUMDepositDTOBlockRange -> SUSHISWAPV3ETHEREUMDepositDTO { sUSHISWAPV3ETHEREUMDepositDTOBlockRange, ..} ) <$> f sUSHISWAPV3ETHEREUMDepositDTOBlockRange
+{-# INLINE sUSHISWAPV3ETHEREUMDepositDTOBlockRangeL #-}
+
+
+
+-- * SUSHISWAPV3ETHEREUMDexAmmProtocolDTO
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOEntryTimeL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOEntryTime -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTORecvTimeL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTORecvTime -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockNumberL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockNumber -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockRange' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockRangeL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockRangeL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockRange -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockRange, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockRange
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOBlockRangeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOId' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOIdL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOId -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOName' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTONameL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTONameL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOName -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOName, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOName
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTONameL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSlug' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSlugL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSlugL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSlug -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSlug, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSlug
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSlugL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSchemaVersion' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSchemaVersionL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSchemaVersionL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSchemaVersion -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSchemaVersion, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSchemaVersion
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSchemaVersionL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSubgraphVersion' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSubgraphVersionL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSubgraphVersionL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSubgraphVersion -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSubgraphVersion, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSubgraphVersion
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOSubgraphVersionL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOMethodologyVersion' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOMethodologyVersionL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOMethodologyVersionL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOMethodologyVersion -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOMethodologyVersion, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOMethodologyVersion
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOMethodologyVersionL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalValueLockedUsd' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalValueLockedUsdL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalValueLockedUsdL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalValueLockedUsd -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalValueLockedUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalValueLockedUsd
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalValueLockedUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalLiquidityUsd' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalLiquidityUsdL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalLiquidityUsdL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalLiquidityUsd -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalLiquidityUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalLiquidityUsd
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalLiquidityUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOActiveLiquidityUsd' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOActiveLiquidityUsdL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOActiveLiquidityUsdL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOActiveLiquidityUsd -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOActiveLiquidityUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOActiveLiquidityUsd
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOActiveLiquidityUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedProtocolSideValueUsd' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedProtocolSideValueUsdL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedProtocolSideValueUsdL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedProtocolSideValueUsd -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedProtocolSideValueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedProtocolSideValueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedProtocolSideValueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedSupplySideValueUsd' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedSupplySideValueUsdL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedSupplySideValueUsdL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedSupplySideValueUsd -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedSupplySideValueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedSupplySideValueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOUncollectedSupplySideValueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsdL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsdL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsdL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsdL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsdL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsdL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsdL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsersL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsersL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsersL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueLps' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueLpsL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueLpsL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueLps -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueLps, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueLps
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueLpsL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueTraders' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueTradersL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueTradersL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueTraders -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueTraders, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueTraders
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativeUniqueTradersL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalPoolCount' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalPoolCountL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalPoolCountL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalPoolCount -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalPoolCount, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalPoolCount
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOTotalPoolCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOOpenPositionCount' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOOpenPositionCountL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOOpenPositionCountL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOOpenPositionCount -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOOpenPositionCount, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOOpenPositionCount
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOOpenPositionCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativePositionCount' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativePositionCountL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativePositionCountL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativePositionCount -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativePositionCount, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativePositionCount
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOCumulativePositionCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastSnapshotDayId' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastSnapshotDayIdL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastSnapshotDayIdL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastSnapshotDayId -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastSnapshotDayId, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastSnapshotDayId
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastSnapshotDayIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateTimestamp' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateTimestampL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateTimestampL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateTimestamp -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateTimestamp, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateTimestamp
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateTimestampL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateBlockNumber' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateBlockNumberL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateBlockNumber -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTOLastUpdateBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMDexAmmProtocolDTORegenesis' Lens
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTORegenesisL :: Lens_' SUSHISWAPV3ETHEREUMDexAmmProtocolDTO (Maybe Bool)
+sUSHISWAPV3ETHEREUMDexAmmProtocolDTORegenesisL f SUSHISWAPV3ETHEREUMDexAmmProtocolDTO{..} = (\sUSHISWAPV3ETHEREUMDexAmmProtocolDTORegenesis -> SUSHISWAPV3ETHEREUMDexAmmProtocolDTO { sUSHISWAPV3ETHEREUMDexAmmProtocolDTORegenesis, ..} ) <$> f sUSHISWAPV3ETHEREUMDexAmmProtocolDTORegenesis
+{-# INLINE sUSHISWAPV3ETHEREUMDexAmmProtocolDTORegenesisL #-}
+
+
+
+-- * SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOEntryTimeL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOEntryTime -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTORecvTimeL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTORecvTime -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumberL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumber -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOId' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOIdL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOId -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODay' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODayL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODayL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODay -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODay, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODay
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODayL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocol' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocolL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocolL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocol -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocol, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocol
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocolL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsdL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsdL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalLiquidityUsd' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalLiquidityUsdL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalLiquidityUsdL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalLiquidityUsd -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalLiquidityUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalLiquidityUsd
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTotalLiquidityUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOActiveLiquidityUsd' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOActiveLiquidityUsdL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOActiveLiquidityUsdL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOActiveLiquidityUsd -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOActiveLiquidityUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOActiveLiquidityUsd
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOActiveLiquidityUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedProtocolSideValueUsd' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedProtocolSideValueUsdL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedProtocolSideValueUsdL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedProtocolSideValueUsd -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedProtocolSideValueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedProtocolSideValueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedProtocolSideValueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedSupplySideValueUsd' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedSupplySideValueUsdL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedSupplySideValueUsdL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedSupplySideValueUsd -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedSupplySideValueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedSupplySideValueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOUncollectedSupplySideValueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsdL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsdL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsdL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsdL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsdL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsdL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsdL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsdL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsdL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsdL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsdL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsdL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTimestamp' Lens
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTimestampL :: Lens_' SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTimestampL f SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTimestamp -> SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO { sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTimestamp, ..} ) <$> f sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTimestamp
+{-# INLINE sUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTOTimestampL #-}
+
+
+
+-- * SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOEntryTimeL f SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOEntryTime -> SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO { sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTORecvTimeL f SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTORecvTime -> SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO { sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockNumberL f SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockNumber -> SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO { sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOVid' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOVidL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOVidL f SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOVid -> SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO { sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOVid, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOVid
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOVidL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockRange' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockRangeL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockRangeL f SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockRange -> SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO { sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockRange, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockRange
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOBlockRangeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOId' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOIdL f SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOId -> SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO { sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokens' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokensL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokensL f SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokens -> SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO { sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokens, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokens
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokensL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokenBalances' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokenBalancesL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokenBalancesL f SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokenBalances -> SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO { sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokenBalances, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokenBalances
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOInputTokenBalancesL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOTokenPrices' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOTokenPricesL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOTokenPricesL f SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOTokenPrices -> SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO { sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOTokenPrices, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOTokenPrices
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolAmountDTOTokenPricesL #-}
+
+
+
 -- * SUSHISWAPV3ETHEREUMLiquidityPoolDTO
 
 -- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDTOEntryTime' Lens
@@ -3586,6 +5046,765 @@ sUSHISWAPV3ETHEREUMLiquidityPoolDTOEvaluatedAskL f SUSHISWAPV3ETHEREUMLiquidityP
 
 
 
+-- * SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOEntryTimeL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORecvTimeL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORecvTime -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumberL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOId' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOIdL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOId -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODay' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODayL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODayL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODay -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODay, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODay
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODayL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOProtocol' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOProtocolL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOProtocolL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOProtocol -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOProtocol, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOProtocol
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOProtocolL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPool' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPoolL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPoolL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPool -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPool, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPool
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPoolL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTick' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTickL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTickL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTick -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTick, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTick
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTickL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidity' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidityL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidityL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidity -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidity, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidity
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidityL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidityUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidityUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidityUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidityUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidityUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidityUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTotalLiquidityUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidity' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidityL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidityL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidity -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidity, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidity
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidityL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidityUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidityUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidityUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidityUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidityUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidityUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOActiveLiquidityUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideTokenAmounts' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideTokenAmountsL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideTokenAmountsL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideTokenAmounts -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideTokenAmounts, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideTokenAmounts
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideTokenAmountsL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideValuesUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideValuesUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideValuesUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideValuesUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideValuesUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideValuesUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedProtocolSideValuesUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideTokenAmounts' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideTokenAmountsL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideTokenAmountsL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideTokenAmounts -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideTokenAmounts, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideTokenAmounts
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideTokenAmountsL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideValuesUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideValuesUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideValuesUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideValuesUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideValuesUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideValuesUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOUncollectedSupplySideValuesUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenAmount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenAmountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenAmountL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenAmount -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenAmount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenAmount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenAmountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmountL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeByTokenUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeightsL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeightsL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeightsL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmountL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmountL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeDepositCount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeDepositCountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeDepositCountL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeDepositCount -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeDepositCount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeDepositCount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeDepositCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyDepositCount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyDepositCountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyDepositCountL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyDepositCount -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyDepositCount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyDepositCount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyDepositCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeWithdrawCount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeWithdrawCountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeWithdrawCountL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeWithdrawCount -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeWithdrawCount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeWithdrawCount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeWithdrawCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyWithdrawCount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyWithdrawCountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyWithdrawCountL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyWithdrawCount -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyWithdrawCount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyWithdrawCount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailyWithdrawCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSwapCount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSwapCountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSwapCountL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSwapCount -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSwapCount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSwapCount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSwapCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySwapCount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySwapCountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySwapCountL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySwapCount -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySwapCount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySwapCount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODailySwapCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPositionCount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPositionCountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPositionCountL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPositionCount -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPositionCount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPositionCount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOPositionCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOOpenPositionCount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOOpenPositionCountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOOpenPositionCountL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOOpenPositionCount -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOOpenPositionCount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOOpenPositionCount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOOpenPositionCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOClosedPositionCount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOClosedPositionCountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOClosedPositionCountL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOClosedPositionCount -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOClosedPositionCount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOClosedPositionCount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOClosedPositionCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTimestamp' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTimestampL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTimestampL f SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTimestamp -> SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTimestamp, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTimestamp
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTimestampL #-}
+
+
+
+-- * SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOEntryTimeL f SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOEntryTime -> SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO { sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTORecvTimeL f SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTORecvTime -> SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO { sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockNumberL f SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockNumber -> SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO { sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockRange' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockRangeL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockRangeL f SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockRange -> SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO { sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockRange, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockRange
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOBlockRangeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOId' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOIdL f SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOId -> SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO { sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOFeePercentage' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOFeePercentageL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOFeePercentageL f SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOFeePercentage -> SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO { sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOFeePercentage, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOFeePercentage
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolFeeDTOFeePercentageL #-}
+
+
+
+-- * SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTimeL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORecvTimeL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumberL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOIdL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHour' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHour -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHour, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHour
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOProtocolL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOProtocolL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOProtocolL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPool' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPoolL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPoolL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPool -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPool, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPool
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPoolL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTick' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTickL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTickL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTick -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTick, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTick
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTickL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidity' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidityL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidityL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidity -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidity, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidity
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidityL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidityUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidityUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidityUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidityUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidityUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidityUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTotalLiquidityUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidity' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidityL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidityL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidity -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidity, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidity
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidityL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidityUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidityUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidityUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidityUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidityUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidityUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOActiveLiquidityUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideTokenAmounts' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideTokenAmountsL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideTokenAmountsL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideTokenAmounts -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideTokenAmounts, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideTokenAmounts
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideTokenAmountsL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideValuesUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideValuesUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideValuesUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideValuesUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideValuesUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideValuesUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedProtocolSideValuesUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideTokenAmounts' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideTokenAmountsL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideTokenAmountsL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideTokenAmounts -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideTokenAmounts, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideTokenAmounts
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideTokenAmountsL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideValuesUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideValuesUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideValuesUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideValuesUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideValuesUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideValuesUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOUncollectedSupplySideValuesUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenAmount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenAmountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenAmountL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenAmount -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenAmount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenAmount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenAmountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmountL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeByTokenUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalancesL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalancesL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalancesL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalancesUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalancesUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalancesUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalancesUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalancesUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalancesUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalancesUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeightsL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeightsL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeightsL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmountL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmountL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsdL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsdL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeDepositCount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeDepositCountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeDepositCountL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeDepositCount -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeDepositCount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeDepositCount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeDepositCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyDepositCount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyDepositCountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyDepositCountL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyDepositCount -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyDepositCount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyDepositCount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyDepositCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeWithdrawCount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeWithdrawCountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeWithdrawCountL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeWithdrawCount -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeWithdrawCount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeWithdrawCount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeWithdrawCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyWithdrawCount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyWithdrawCountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyWithdrawCountL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyWithdrawCount -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyWithdrawCount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyWithdrawCount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyWithdrawCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSwapCount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSwapCountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSwapCountL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSwapCount -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSwapCount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSwapCount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSwapCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySwapCount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySwapCountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySwapCountL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySwapCount -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySwapCount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySwapCount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySwapCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPositionCount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPositionCountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPositionCountL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPositionCount -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPositionCount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPositionCount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOPositionCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOOpenPositionCount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOOpenPositionCountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOOpenPositionCountL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOOpenPositionCount -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOOpenPositionCount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOOpenPositionCount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOOpenPositionCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOClosedPositionCount' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOClosedPositionCountL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOClosedPositionCountL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOClosedPositionCount -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOClosedPositionCount, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOClosedPositionCount
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOClosedPositionCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp' Lens
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTimestampL :: Lens_' SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTimestampL f SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp -> SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp, ..} ) <$> f sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp
+{-# INLINE sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTimestampL #-}
+
+
+
+-- * SUSHISWAPV3ETHEREUMPositionDTO
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMPositionDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMPositionDTOEntryTimeL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOEntryTime -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMPositionDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMPositionDTORecvTimeL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTORecvTime -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMPositionDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMPositionDTOBlockNumberL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOBlockNumber -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOId' Lens
+sUSHISWAPV3ETHEREUMPositionDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionDTOIdL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOId -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOAccount' Lens
+sUSHISWAPV3ETHEREUMPositionDTOAccountL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionDTOAccountL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOAccount -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOAccount, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOAccount
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOAccountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOPool' Lens
+sUSHISWAPV3ETHEREUMPositionDTOPoolL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionDTOPoolL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOPool -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOPool, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOPool
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOPoolL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOHashOpened' Lens
+sUSHISWAPV3ETHEREUMPositionDTOHashOpenedL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionDTOHashOpenedL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOHashOpened -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOHashOpened, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOHashOpened
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOHashOpenedL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOHashClosed' Lens
+sUSHISWAPV3ETHEREUMPositionDTOHashClosedL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionDTOHashClosedL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOHashClosed -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOHashClosed, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOHashClosed
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOHashClosedL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOBlockNumberOpened' Lens
+sUSHISWAPV3ETHEREUMPositionDTOBlockNumberOpenedL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionDTOBlockNumberOpenedL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOBlockNumberOpened -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOBlockNumberOpened, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOBlockNumberOpened
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOBlockNumberOpenedL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOTimestampOpened' Lens
+sUSHISWAPV3ETHEREUMPositionDTOTimestampOpenedL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionDTOTimestampOpenedL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOTimestampOpened -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOTimestampOpened, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOTimestampOpened
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOTimestampOpenedL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOBlockNumberClosed' Lens
+sUSHISWAPV3ETHEREUMPositionDTOBlockNumberClosedL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionDTOBlockNumberClosedL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOBlockNumberClosed -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOBlockNumberClosed, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOBlockNumberClosed
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOBlockNumberClosedL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOTimestampClosed' Lens
+sUSHISWAPV3ETHEREUMPositionDTOTimestampClosedL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionDTOTimestampClosedL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOTimestampClosed -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOTimestampClosed, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOTimestampClosed
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOTimestampClosedL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOTickLower' Lens
+sUSHISWAPV3ETHEREUMPositionDTOTickLowerL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionDTOTickLowerL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOTickLower -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOTickLower, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOTickLower
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOTickLowerL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOTickUpper' Lens
+sUSHISWAPV3ETHEREUMPositionDTOTickUpperL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionDTOTickUpperL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOTickUpper -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOTickUpper, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOTickUpper
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOTickUpperL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOLiquidityToken' Lens
+sUSHISWAPV3ETHEREUMPositionDTOLiquidityTokenL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionDTOLiquidityTokenL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOLiquidityToken -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOLiquidityToken, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOLiquidityToken
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOLiquidityTokenL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOLiquidityTokenType' Lens
+sUSHISWAPV3ETHEREUMPositionDTOLiquidityTokenTypeL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionDTOLiquidityTokenTypeL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOLiquidityTokenType -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOLiquidityTokenType, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOLiquidityTokenType
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOLiquidityTokenTypeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOLiquidity' Lens
+sUSHISWAPV3ETHEREUMPositionDTOLiquidityL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionDTOLiquidityL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOLiquidity -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOLiquidity, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOLiquidity
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOLiquidityL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOLiquidityUsd' Lens
+sUSHISWAPV3ETHEREUMPositionDTOLiquidityUsdL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionDTOLiquidityUsdL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOLiquidityUsd -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOLiquidityUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOLiquidityUsd
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOLiquidityUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositTokenAmounts' Lens
+sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositTokenAmountsL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositTokenAmountsL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositTokenAmounts -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositTokenAmounts, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositTokenAmounts
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositTokenAmountsL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositUsd' Lens
+sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositUsdL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositUsdL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositUsd -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositUsd
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOCumulativeDepositUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawTokenAmounts' Lens
+sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawTokenAmountsL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawTokenAmountsL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawTokenAmounts -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawTokenAmounts, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawTokenAmounts
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawTokenAmountsL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawUsd' Lens
+sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawUsdL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawUsdL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawUsd -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawUsd
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOCumulativeWithdrawUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOCumulativeRewardUsd' Lens
+sUSHISWAPV3ETHEREUMPositionDTOCumulativeRewardUsdL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMPositionDTOCumulativeRewardUsdL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOCumulativeRewardUsd -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOCumulativeRewardUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOCumulativeRewardUsd
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOCumulativeRewardUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTODepositCount' Lens
+sUSHISWAPV3ETHEREUMPositionDTODepositCountL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMPositionDTODepositCountL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTODepositCount -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTODepositCount, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTODepositCount
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTODepositCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionDTOWithdrawCount' Lens
+sUSHISWAPV3ETHEREUMPositionDTOWithdrawCountL :: Lens_' SUSHISWAPV3ETHEREUMPositionDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMPositionDTOWithdrawCountL f SUSHISWAPV3ETHEREUMPositionDTO{..} = (\sUSHISWAPV3ETHEREUMPositionDTOWithdrawCount -> SUSHISWAPV3ETHEREUMPositionDTO { sUSHISWAPV3ETHEREUMPositionDTOWithdrawCount, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionDTOWithdrawCount
+{-# INLINE sUSHISWAPV3ETHEREUMPositionDTOWithdrawCountL #-}
+
+
+
+-- * SUSHISWAPV3ETHEREUMPositionSnapshotDTO
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOEntryTimeL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTOEntryTime -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMPositionSnapshotDTORecvTimeL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTORecvTime -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOBlockNumberL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTOBlockNumber -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTOId' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOIdL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTOId -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTOHash' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOHashL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOHashL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTOHash -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTOHash, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTOHash
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTOHashL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTOLogIndex' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOLogIndexL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOLogIndexL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTOLogIndex -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTOLogIndex, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTOLogIndex
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTOLogIndexL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTONonce' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTONonceL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionSnapshotDTONonceL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTONonce -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTONonce, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTONonce
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTONonceL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTOPosition' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOPositionL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOPositionL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTOPosition -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTOPosition, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTOPosition
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTOPositionL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityTokenType' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityTokenTypeL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityTokenTypeL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityTokenType -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityTokenType, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityTokenType
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityTokenTypeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidity' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidity -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidity, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidity
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityUsd' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityUsdL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityUsdL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityUsd -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityUsd
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTOLiquidityUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositTokenAmounts' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositTokenAmountsL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositTokenAmountsL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositTokenAmounts -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositTokenAmounts, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositTokenAmounts
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositTokenAmountsL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositUsd' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositUsdL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositUsdL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositUsd -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositUsd
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeDepositUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawTokenAmounts' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawTokenAmountsL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawTokenAmountsL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawTokenAmounts -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawTokenAmounts, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawTokenAmounts
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawTokenAmountsL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawUsd' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawUsdL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawUsdL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawUsd -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawUsd
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeWithdrawUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardTokenAmounts' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardTokenAmountsL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardTokenAmountsL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardTokenAmounts -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardTokenAmounts, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardTokenAmounts
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardTokenAmountsL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardUsd' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardUsdL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardUsdL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardUsd -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardUsd
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTOCumulativeRewardUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTODepositCount' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTODepositCountL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMPositionSnapshotDTODepositCountL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTODepositCount -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTODepositCount, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTODepositCount
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTODepositCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTOWithdrawCount' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOWithdrawCountL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOWithdrawCountL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTOWithdrawCount -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTOWithdrawCount, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTOWithdrawCount
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTOWithdrawCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMPositionSnapshotDTOTimestamp' Lens
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOTimestampL :: Lens_' SUSHISWAPV3ETHEREUMPositionSnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMPositionSnapshotDTOTimestampL f SUSHISWAPV3ETHEREUMPositionSnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMPositionSnapshotDTOTimestamp -> SUSHISWAPV3ETHEREUMPositionSnapshotDTO { sUSHISWAPV3ETHEREUMPositionSnapshotDTOTimestamp, ..} ) <$> f sUSHISWAPV3ETHEREUMPositionSnapshotDTOTimestamp
+{-# INLINE sUSHISWAPV3ETHEREUMPositionSnapshotDTOTimestampL #-}
+
+
+
+-- * SUSHISWAPV3ETHEREUMRewardTokenDTO
+
+-- | 'sUSHISWAPV3ETHEREUMRewardTokenDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMRewardTokenDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMRewardTokenDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMRewardTokenDTOEntryTimeL f SUSHISWAPV3ETHEREUMRewardTokenDTO{..} = (\sUSHISWAPV3ETHEREUMRewardTokenDTOEntryTime -> SUSHISWAPV3ETHEREUMRewardTokenDTO { sUSHISWAPV3ETHEREUMRewardTokenDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMRewardTokenDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMRewardTokenDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMRewardTokenDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMRewardTokenDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMRewardTokenDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMRewardTokenDTORecvTimeL f SUSHISWAPV3ETHEREUMRewardTokenDTO{..} = (\sUSHISWAPV3ETHEREUMRewardTokenDTORecvTime -> SUSHISWAPV3ETHEREUMRewardTokenDTO { sUSHISWAPV3ETHEREUMRewardTokenDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMRewardTokenDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMRewardTokenDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMRewardTokenDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMRewardTokenDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMRewardTokenDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMRewardTokenDTOBlockNumberL f SUSHISWAPV3ETHEREUMRewardTokenDTO{..} = (\sUSHISWAPV3ETHEREUMRewardTokenDTOBlockNumber -> SUSHISWAPV3ETHEREUMRewardTokenDTO { sUSHISWAPV3ETHEREUMRewardTokenDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMRewardTokenDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMRewardTokenDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMRewardTokenDTOId' Lens
+sUSHISWAPV3ETHEREUMRewardTokenDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMRewardTokenDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMRewardTokenDTOIdL f SUSHISWAPV3ETHEREUMRewardTokenDTO{..} = (\sUSHISWAPV3ETHEREUMRewardTokenDTOId -> SUSHISWAPV3ETHEREUMRewardTokenDTO { sUSHISWAPV3ETHEREUMRewardTokenDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMRewardTokenDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMRewardTokenDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMRewardTokenDTOToken' Lens
+sUSHISWAPV3ETHEREUMRewardTokenDTOTokenL :: Lens_' SUSHISWAPV3ETHEREUMRewardTokenDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMRewardTokenDTOTokenL f SUSHISWAPV3ETHEREUMRewardTokenDTO{..} = (\sUSHISWAPV3ETHEREUMRewardTokenDTOToken -> SUSHISWAPV3ETHEREUMRewardTokenDTO { sUSHISWAPV3ETHEREUMRewardTokenDTOToken, ..} ) <$> f sUSHISWAPV3ETHEREUMRewardTokenDTOToken
+{-# INLINE sUSHISWAPV3ETHEREUMRewardTokenDTOTokenL #-}
+
+
+
 -- * SUSHISWAPV3ETHEREUMSwapDTO
 
 -- | 'sUSHISWAPV3ETHEREUMSwapDTOEntryTime' Lens
@@ -3730,6 +5949,223 @@ sUSHISWAPV3ETHEREUMSwapDTOEvaluatedAggressorL f SUSHISWAPV3ETHEREUMSwapDTO{..} =
 
 
 
+-- * SUSHISWAPV3ETHEREUMTickDTO
+
+-- | 'sUSHISWAPV3ETHEREUMTickDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMTickDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMTickDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMTickDTOEntryTimeL f SUSHISWAPV3ETHEREUMTickDTO{..} = (\sUSHISWAPV3ETHEREUMTickDTOEntryTime -> SUSHISWAPV3ETHEREUMTickDTO { sUSHISWAPV3ETHEREUMTickDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMTickDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMTickDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMTickDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMTickDTORecvTimeL f SUSHISWAPV3ETHEREUMTickDTO{..} = (\sUSHISWAPV3ETHEREUMTickDTORecvTime -> SUSHISWAPV3ETHEREUMTickDTO { sUSHISWAPV3ETHEREUMTickDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMTickDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMTickDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMTickDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMTickDTOBlockNumberL f SUSHISWAPV3ETHEREUMTickDTO{..} = (\sUSHISWAPV3ETHEREUMTickDTOBlockNumber -> SUSHISWAPV3ETHEREUMTickDTO { sUSHISWAPV3ETHEREUMTickDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMTickDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDTOId' Lens
+sUSHISWAPV3ETHEREUMTickDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMTickDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickDTOIdL f SUSHISWAPV3ETHEREUMTickDTO{..} = (\sUSHISWAPV3ETHEREUMTickDTOId -> SUSHISWAPV3ETHEREUMTickDTO { sUSHISWAPV3ETHEREUMTickDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMTickDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDTOIndex' Lens
+sUSHISWAPV3ETHEREUMTickDTOIndexL :: Lens_' SUSHISWAPV3ETHEREUMTickDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickDTOIndexL f SUSHISWAPV3ETHEREUMTickDTO{..} = (\sUSHISWAPV3ETHEREUMTickDTOIndex -> SUSHISWAPV3ETHEREUMTickDTO { sUSHISWAPV3ETHEREUMTickDTOIndex, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDTOIndex
+{-# INLINE sUSHISWAPV3ETHEREUMTickDTOIndexL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDTOPool' Lens
+sUSHISWAPV3ETHEREUMTickDTOPoolL :: Lens_' SUSHISWAPV3ETHEREUMTickDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickDTOPoolL f SUSHISWAPV3ETHEREUMTickDTO{..} = (\sUSHISWAPV3ETHEREUMTickDTOPool -> SUSHISWAPV3ETHEREUMTickDTO { sUSHISWAPV3ETHEREUMTickDTOPool, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDTOPool
+{-# INLINE sUSHISWAPV3ETHEREUMTickDTOPoolL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDTOCreatedTimestamp' Lens
+sUSHISWAPV3ETHEREUMTickDTOCreatedTimestampL :: Lens_' SUSHISWAPV3ETHEREUMTickDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickDTOCreatedTimestampL f SUSHISWAPV3ETHEREUMTickDTO{..} = (\sUSHISWAPV3ETHEREUMTickDTOCreatedTimestamp -> SUSHISWAPV3ETHEREUMTickDTO { sUSHISWAPV3ETHEREUMTickDTOCreatedTimestamp, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDTOCreatedTimestamp
+{-# INLINE sUSHISWAPV3ETHEREUMTickDTOCreatedTimestampL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDTOCreatedBlockNumber' Lens
+sUSHISWAPV3ETHEREUMTickDTOCreatedBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMTickDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickDTOCreatedBlockNumberL f SUSHISWAPV3ETHEREUMTickDTO{..} = (\sUSHISWAPV3ETHEREUMTickDTOCreatedBlockNumber -> SUSHISWAPV3ETHEREUMTickDTO { sUSHISWAPV3ETHEREUMTickDTOCreatedBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDTOCreatedBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMTickDTOCreatedBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDTOPrices' Lens
+sUSHISWAPV3ETHEREUMTickDTOPricesL :: Lens_' SUSHISWAPV3ETHEREUMTickDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMTickDTOPricesL f SUSHISWAPV3ETHEREUMTickDTO{..} = (\sUSHISWAPV3ETHEREUMTickDTOPrices -> SUSHISWAPV3ETHEREUMTickDTO { sUSHISWAPV3ETHEREUMTickDTOPrices, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDTOPrices
+{-# INLINE sUSHISWAPV3ETHEREUMTickDTOPricesL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDTOLiquidityGross' Lens
+sUSHISWAPV3ETHEREUMTickDTOLiquidityGrossL :: Lens_' SUSHISWAPV3ETHEREUMTickDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickDTOLiquidityGrossL f SUSHISWAPV3ETHEREUMTickDTO{..} = (\sUSHISWAPV3ETHEREUMTickDTOLiquidityGross -> SUSHISWAPV3ETHEREUMTickDTO { sUSHISWAPV3ETHEREUMTickDTOLiquidityGross, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDTOLiquidityGross
+{-# INLINE sUSHISWAPV3ETHEREUMTickDTOLiquidityGrossL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDTOLiquidityGrossUsd' Lens
+sUSHISWAPV3ETHEREUMTickDTOLiquidityGrossUsdL :: Lens_' SUSHISWAPV3ETHEREUMTickDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickDTOLiquidityGrossUsdL f SUSHISWAPV3ETHEREUMTickDTO{..} = (\sUSHISWAPV3ETHEREUMTickDTOLiquidityGrossUsd -> SUSHISWAPV3ETHEREUMTickDTO { sUSHISWAPV3ETHEREUMTickDTOLiquidityGrossUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDTOLiquidityGrossUsd
+{-# INLINE sUSHISWAPV3ETHEREUMTickDTOLiquidityGrossUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDTOLiquidityNet' Lens
+sUSHISWAPV3ETHEREUMTickDTOLiquidityNetL :: Lens_' SUSHISWAPV3ETHEREUMTickDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickDTOLiquidityNetL f SUSHISWAPV3ETHEREUMTickDTO{..} = (\sUSHISWAPV3ETHEREUMTickDTOLiquidityNet -> SUSHISWAPV3ETHEREUMTickDTO { sUSHISWAPV3ETHEREUMTickDTOLiquidityNet, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDTOLiquidityNet
+{-# INLINE sUSHISWAPV3ETHEREUMTickDTOLiquidityNetL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDTOLiquidityNetUsd' Lens
+sUSHISWAPV3ETHEREUMTickDTOLiquidityNetUsdL :: Lens_' SUSHISWAPV3ETHEREUMTickDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickDTOLiquidityNetUsdL f SUSHISWAPV3ETHEREUMTickDTO{..} = (\sUSHISWAPV3ETHEREUMTickDTOLiquidityNetUsd -> SUSHISWAPV3ETHEREUMTickDTO { sUSHISWAPV3ETHEREUMTickDTOLiquidityNetUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDTOLiquidityNetUsd
+{-# INLINE sUSHISWAPV3ETHEREUMTickDTOLiquidityNetUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDTOLastSnapshotDayId' Lens
+sUSHISWAPV3ETHEREUMTickDTOLastSnapshotDayIdL :: Lens_' SUSHISWAPV3ETHEREUMTickDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMTickDTOLastSnapshotDayIdL f SUSHISWAPV3ETHEREUMTickDTO{..} = (\sUSHISWAPV3ETHEREUMTickDTOLastSnapshotDayId -> SUSHISWAPV3ETHEREUMTickDTO { sUSHISWAPV3ETHEREUMTickDTOLastSnapshotDayId, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDTOLastSnapshotDayId
+{-# INLINE sUSHISWAPV3ETHEREUMTickDTOLastSnapshotDayIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDTOLastSnapshotHourId' Lens
+sUSHISWAPV3ETHEREUMTickDTOLastSnapshotHourIdL :: Lens_' SUSHISWAPV3ETHEREUMTickDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMTickDTOLastSnapshotHourIdL f SUSHISWAPV3ETHEREUMTickDTO{..} = (\sUSHISWAPV3ETHEREUMTickDTOLastSnapshotHourId -> SUSHISWAPV3ETHEREUMTickDTO { sUSHISWAPV3ETHEREUMTickDTOLastSnapshotHourId, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDTOLastSnapshotHourId
+{-# INLINE sUSHISWAPV3ETHEREUMTickDTOLastSnapshotHourIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDTOLastUpdateTimestamp' Lens
+sUSHISWAPV3ETHEREUMTickDTOLastUpdateTimestampL :: Lens_' SUSHISWAPV3ETHEREUMTickDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickDTOLastUpdateTimestampL f SUSHISWAPV3ETHEREUMTickDTO{..} = (\sUSHISWAPV3ETHEREUMTickDTOLastUpdateTimestamp -> SUSHISWAPV3ETHEREUMTickDTO { sUSHISWAPV3ETHEREUMTickDTOLastUpdateTimestamp, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDTOLastUpdateTimestamp
+{-# INLINE sUSHISWAPV3ETHEREUMTickDTOLastUpdateTimestampL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDTOLastUpdateBlockNumber' Lens
+sUSHISWAPV3ETHEREUMTickDTOLastUpdateBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMTickDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickDTOLastUpdateBlockNumberL f SUSHISWAPV3ETHEREUMTickDTO{..} = (\sUSHISWAPV3ETHEREUMTickDTOLastUpdateBlockNumber -> SUSHISWAPV3ETHEREUMTickDTO { sUSHISWAPV3ETHEREUMTickDTOLastUpdateBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDTOLastUpdateBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMTickDTOLastUpdateBlockNumberL #-}
+
+
+
+-- * SUSHISWAPV3ETHEREUMTickDailySnapshotDTO
+
+-- | 'sUSHISWAPV3ETHEREUMTickDailySnapshotDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMTickDailySnapshotDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOEntryTimeL f SUSHISWAPV3ETHEREUMTickDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickDailySnapshotDTOEntryTime -> SUSHISWAPV3ETHEREUMTickDailySnapshotDTO { sUSHISWAPV3ETHEREUMTickDailySnapshotDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDailySnapshotDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMTickDailySnapshotDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDailySnapshotDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMTickDailySnapshotDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTORecvTimeL f SUSHISWAPV3ETHEREUMTickDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickDailySnapshotDTORecvTime -> SUSHISWAPV3ETHEREUMTickDailySnapshotDTO { sUSHISWAPV3ETHEREUMTickDailySnapshotDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDailySnapshotDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMTickDailySnapshotDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDailySnapshotDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMTickDailySnapshotDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOBlockNumberL f SUSHISWAPV3ETHEREUMTickDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickDailySnapshotDTOBlockNumber -> SUSHISWAPV3ETHEREUMTickDailySnapshotDTO { sUSHISWAPV3ETHEREUMTickDailySnapshotDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDailySnapshotDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMTickDailySnapshotDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDailySnapshotDTOId' Lens
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMTickDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOIdL f SUSHISWAPV3ETHEREUMTickDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickDailySnapshotDTOId -> SUSHISWAPV3ETHEREUMTickDailySnapshotDTO { sUSHISWAPV3ETHEREUMTickDailySnapshotDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDailySnapshotDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMTickDailySnapshotDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDailySnapshotDTODayId' Lens
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTODayIdL :: Lens_' SUSHISWAPV3ETHEREUMTickDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTODayIdL f SUSHISWAPV3ETHEREUMTickDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickDailySnapshotDTODayId -> SUSHISWAPV3ETHEREUMTickDailySnapshotDTO { sUSHISWAPV3ETHEREUMTickDailySnapshotDTODayId, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDailySnapshotDTODayId
+{-# INLINE sUSHISWAPV3ETHEREUMTickDailySnapshotDTODayIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTick' Lens
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTickL :: Lens_' SUSHISWAPV3ETHEREUMTickDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTickL f SUSHISWAPV3ETHEREUMTickDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTick -> SUSHISWAPV3ETHEREUMTickDailySnapshotDTO { sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTick, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTick
+{-# INLINE sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTickL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDailySnapshotDTOPool' Lens
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOPoolL :: Lens_' SUSHISWAPV3ETHEREUMTickDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOPoolL f SUSHISWAPV3ETHEREUMTickDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickDailySnapshotDTOPool -> SUSHISWAPV3ETHEREUMTickDailySnapshotDTO { sUSHISWAPV3ETHEREUMTickDailySnapshotDTOPool, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDailySnapshotDTOPool
+{-# INLINE sUSHISWAPV3ETHEREUMTickDailySnapshotDTOPoolL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGross' Lens
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGrossL :: Lens_' SUSHISWAPV3ETHEREUMTickDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGrossL f SUSHISWAPV3ETHEREUMTickDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGross -> SUSHISWAPV3ETHEREUMTickDailySnapshotDTO { sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGross, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGross
+{-# INLINE sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGrossL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGrossUsd' Lens
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGrossUsdL :: Lens_' SUSHISWAPV3ETHEREUMTickDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGrossUsdL f SUSHISWAPV3ETHEREUMTickDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGrossUsd -> SUSHISWAPV3ETHEREUMTickDailySnapshotDTO { sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGrossUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGrossUsd
+{-# INLINE sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityGrossUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNet' Lens
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNetL :: Lens_' SUSHISWAPV3ETHEREUMTickDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNetL f SUSHISWAPV3ETHEREUMTickDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNet -> SUSHISWAPV3ETHEREUMTickDailySnapshotDTO { sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNet, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNet
+{-# INLINE sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNetL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNetUsd' Lens
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNetUsdL :: Lens_' SUSHISWAPV3ETHEREUMTickDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNetUsdL f SUSHISWAPV3ETHEREUMTickDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNetUsd -> SUSHISWAPV3ETHEREUMTickDailySnapshotDTO { sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNetUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNetUsd
+{-# INLINE sUSHISWAPV3ETHEREUMTickDailySnapshotDTOLiquidityNetUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTimestamp' Lens
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTimestampL :: Lens_' SUSHISWAPV3ETHEREUMTickDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTimestampL f SUSHISWAPV3ETHEREUMTickDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTimestamp -> SUSHISWAPV3ETHEREUMTickDailySnapshotDTO { sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTimestamp, ..} ) <$> f sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTimestamp
+{-# INLINE sUSHISWAPV3ETHEREUMTickDailySnapshotDTOTimestampL #-}
+
+
+
+-- * SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO
+
+-- | 'sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOEntryTimeL f SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOEntryTime -> SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO { sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickHourlySnapshotDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTORecvTimeL f SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickHourlySnapshotDTORecvTime -> SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO { sUSHISWAPV3ETHEREUMTickHourlySnapshotDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMTickHourlySnapshotDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMTickHourlySnapshotDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumberL f SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumber -> SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO { sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOId' Lens
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOIdL f SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOId -> SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO { sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOHourId' Lens
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOHourIdL :: Lens_' SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOHourIdL f SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOHourId -> SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO { sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOHourId, ..} ) <$> f sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOHourId
+{-# INLINE sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOHourIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTick' Lens
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTickL :: Lens_' SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTickL f SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTick -> SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO { sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTick, ..} ) <$> f sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTick
+{-# INLINE sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTickL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOPool' Lens
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOPoolL :: Lens_' SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOPoolL f SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOPool -> SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO { sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOPool, ..} ) <$> f sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOPool
+{-# INLINE sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOPoolL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGross' Lens
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGrossL :: Lens_' SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGrossL f SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGross -> SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO { sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGross, ..} ) <$> f sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGross
+{-# INLINE sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGrossL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGrossUsd' Lens
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGrossUsdL :: Lens_' SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGrossUsdL f SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGrossUsd -> SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO { sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGrossUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGrossUsd
+{-# INLINE sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityGrossUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNet' Lens
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNetL :: Lens_' SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNetL f SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNet -> SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO { sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNet, ..} ) <$> f sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNet
+{-# INLINE sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNetL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNetUsd' Lens
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNetUsdL :: Lens_' SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNetUsdL f SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNetUsd -> SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO { sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNetUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNetUsd
+{-# INLINE sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOLiquidityNetUsdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTimestamp' Lens
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTimestampL :: Lens_' SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTimestampL f SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTimestamp -> SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO { sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTimestamp, ..} ) <$> f sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTimestamp
+{-# INLINE sUSHISWAPV3ETHEREUMTickHourlySnapshotDTOTimestampL #-}
+
+
+
 -- * SUSHISWAPV3ETHEREUMTokenDTO
 
 -- | 'sUSHISWAPV3ETHEREUMTokenDTOEntryTime' Lens
@@ -3819,7 +6255,716 @@ sUSHISWAPV3ETHEREUMTokenDTOTokenSymbolL f SUSHISWAPV3ETHEREUMTokenDTO{..} = (\sU
 
 
 
+-- * SUSHISWAPV3ETHEREUMTokenWhiteListDTO
+
+-- | 'sUSHISWAPV3ETHEREUMTokenWhiteListDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMTokenWhiteListDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMTokenWhiteListDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMTokenWhiteListDTOEntryTimeL f SUSHISWAPV3ETHEREUMTokenWhiteListDTO{..} = (\sUSHISWAPV3ETHEREUMTokenWhiteListDTOEntryTime -> SUSHISWAPV3ETHEREUMTokenWhiteListDTO { sUSHISWAPV3ETHEREUMTokenWhiteListDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMTokenWhiteListDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMTokenWhiteListDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTokenWhiteListDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMTokenWhiteListDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMTokenWhiteListDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMTokenWhiteListDTORecvTimeL f SUSHISWAPV3ETHEREUMTokenWhiteListDTO{..} = (\sUSHISWAPV3ETHEREUMTokenWhiteListDTORecvTime -> SUSHISWAPV3ETHEREUMTokenWhiteListDTO { sUSHISWAPV3ETHEREUMTokenWhiteListDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMTokenWhiteListDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMTokenWhiteListDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTokenWhiteListDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMTokenWhiteListDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMTokenWhiteListDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMTokenWhiteListDTOBlockNumberL f SUSHISWAPV3ETHEREUMTokenWhiteListDTO{..} = (\sUSHISWAPV3ETHEREUMTokenWhiteListDTOBlockNumber -> SUSHISWAPV3ETHEREUMTokenWhiteListDTO { sUSHISWAPV3ETHEREUMTokenWhiteListDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMTokenWhiteListDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMTokenWhiteListDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTokenWhiteListDTOId' Lens
+sUSHISWAPV3ETHEREUMTokenWhiteListDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMTokenWhiteListDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTokenWhiteListDTOIdL f SUSHISWAPV3ETHEREUMTokenWhiteListDTO{..} = (\sUSHISWAPV3ETHEREUMTokenWhiteListDTOId -> SUSHISWAPV3ETHEREUMTokenWhiteListDTO { sUSHISWAPV3ETHEREUMTokenWhiteListDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMTokenWhiteListDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMTokenWhiteListDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTokenWhiteListDTOWhitelistPools' Lens
+sUSHISWAPV3ETHEREUMTokenWhiteListDTOWhitelistPoolsL :: Lens_' SUSHISWAPV3ETHEREUMTokenWhiteListDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMTokenWhiteListDTOWhitelistPoolsL f SUSHISWAPV3ETHEREUMTokenWhiteListDTO{..} = (\sUSHISWAPV3ETHEREUMTokenWhiteListDTOWhitelistPools -> SUSHISWAPV3ETHEREUMTokenWhiteListDTO { sUSHISWAPV3ETHEREUMTokenWhiteListDTOWhitelistPools, ..} ) <$> f sUSHISWAPV3ETHEREUMTokenWhiteListDTOWhitelistPools
+{-# INLINE sUSHISWAPV3ETHEREUMTokenWhiteListDTOWhitelistPoolsL #-}
+
+
+
+-- * SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO
+
+-- | 'sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOEntryTimeL f SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO{..} = (\sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOEntryTime -> SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO { sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTORecvTimeL f SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO{..} = (\sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTORecvTime -> SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO { sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOBlockNumberL f SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO{..} = (\sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOBlockNumber -> SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO { sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOId' Lens
+sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOIdL f SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO{..} = (\sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOId -> SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO { sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOAddress' Lens
+sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOAddressL :: Lens_' SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOAddressL f SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO{..} = (\sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOAddress -> SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO { sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOAddress, ..} ) <$> f sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOAddress
+{-# INLINE sUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTOAddressL #-}
+
+
+
+-- * SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOEntryTimeL f SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOEntryTime -> SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTORecvTimeL f SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTORecvTime -> SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOBlockNumberL f SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOBlockNumber -> SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOId' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOIdL f SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOId -> SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODay' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODayL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODayL f SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODay -> SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODay, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODay
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODayL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOProtocol' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOProtocolL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOProtocolL f SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOProtocol -> SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOProtocol, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOProtocol
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOProtocolL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsersL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsersL f SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers -> SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsersL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsersL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsersL f SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers -> SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsersL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCountL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCountL f SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount -> SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCountL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCountL f SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount -> SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCountL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCountL f SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount -> SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCountL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCountL f SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount -> SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailySwapCount' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailySwapCountL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailySwapCountL f SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailySwapCount -> SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailySwapCount, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailySwapCount
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTODailySwapCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTimestamp' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTimestampL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTimestampL f SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTimestamp -> SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTimestamp, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTimestamp
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTOTimestampL #-}
+
+
+
+-- * SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOEntryTimeL f SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOEntryTime -> SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTORecvTimeL f SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTORecvTime -> SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumberL f SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber -> SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOId' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOIdL f SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOId -> SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHour' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourL f SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHour -> SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHour, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHour
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOProtocol' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOProtocolL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOProtocolL f SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOProtocol -> SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOProtocol, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOProtocol
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOProtocolL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsersL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsersL f SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers -> SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsersL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsersL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsersL f SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers -> SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsersL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCountL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCountL f SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount -> SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCountL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCountL f SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount -> SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCountL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCountL f SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount -> SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCountL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCountL f SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount -> SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOTimestamp' Lens
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOTimestampL :: Lens_' SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOTimestampL f SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOTimestamp -> SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO { sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOTimestamp, ..} ) <$> f sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOTimestamp
+{-# INLINE sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTOTimestampL #-}
+
+
+
+-- * SUSHISWAPV3ETHEREUMWithdrawDTO
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOEntryTime' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOEntryTimeL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMWithdrawDTOEntryTimeL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOEntryTime -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOEntryTime, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOEntryTime
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOEntryTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTORecvTime' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTORecvTimeL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe DateTime)
+sUSHISWAPV3ETHEREUMWithdrawDTORecvTimeL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTORecvTime -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTORecvTime, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTORecvTime
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTORecvTimeL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOBlockNumber' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOBlockNumberL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe Integer)
+sUSHISWAPV3ETHEREUMWithdrawDTOBlockNumberL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOBlockNumber -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOBlockNumber, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOBlockNumber
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOBlockNumberL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOId' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOIdL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMWithdrawDTOIdL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOId -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOId, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOId
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOIdL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOHash' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOHashL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMWithdrawDTOHashL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOHash -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOHash, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOHash
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOHashL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTONonce' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTONonceL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMWithdrawDTONonceL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTONonce -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTONonce, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTONonce
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTONonceL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOLogIndex' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOLogIndexL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe Int)
+sUSHISWAPV3ETHEREUMWithdrawDTOLogIndexL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOLogIndex -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOLogIndex, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOLogIndex
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOLogIndexL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOGasLimit' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOGasLimitL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMWithdrawDTOGasLimitL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOGasLimit -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOGasLimit, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOGasLimit
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOGasLimitL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOGasUsed' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOGasUsedL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMWithdrawDTOGasUsedL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOGasUsed -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOGasUsed, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOGasUsed
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOGasUsedL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOGasPrice' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOGasPriceL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMWithdrawDTOGasPriceL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOGasPrice -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOGasPrice, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOGasPrice
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOGasPriceL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOProtocol' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOProtocolL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMWithdrawDTOProtocolL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOProtocol -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOProtocol, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOProtocol
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOProtocolL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOAccount' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOAccountL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMWithdrawDTOAccountL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOAccount -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOAccount, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOAccount
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOAccountL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOPosition' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOPositionL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMWithdrawDTOPositionL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOPosition -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOPosition, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOPosition
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOPositionL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOTickLower' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOTickLowerL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMWithdrawDTOTickLowerL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOTickLower -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOTickLower, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOTickLower
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOTickLowerL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOTickUpper' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOTickUpperL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMWithdrawDTOTickUpperL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOTickUpper -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOTickUpper, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOTickUpper
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOTickUpperL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOPool' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOPoolL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMWithdrawDTOPoolL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOPool -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOPool, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOPool
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOPoolL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOTimestamp' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOTimestampL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMWithdrawDTOTimestampL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOTimestamp -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOTimestamp, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOTimestamp
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOTimestampL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOLiquidity' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOLiquidityL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMWithdrawDTOLiquidityL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOLiquidity -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOLiquidity, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOLiquidity
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOLiquidityL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOInputTokens' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOInputTokensL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMWithdrawDTOInputTokensL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOInputTokens -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOInputTokens, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOInputTokens
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOInputTokensL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOInputTokenAmounts' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOInputTokenAmountsL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMWithdrawDTOInputTokenAmountsL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOInputTokenAmounts -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOInputTokenAmounts, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOInputTokenAmounts
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOInputTokenAmountsL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOReserveAmounts' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOReserveAmountsL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe [Text])
+sUSHISWAPV3ETHEREUMWithdrawDTOReserveAmountsL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOReserveAmounts -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOReserveAmounts, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOReserveAmounts
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOReserveAmountsL #-}
+
+-- | 'sUSHISWAPV3ETHEREUMWithdrawDTOAmountUsd' Lens
+sUSHISWAPV3ETHEREUMWithdrawDTOAmountUsdL :: Lens_' SUSHISWAPV3ETHEREUMWithdrawDTO (Maybe Text)
+sUSHISWAPV3ETHEREUMWithdrawDTOAmountUsdL f SUSHISWAPV3ETHEREUMWithdrawDTO{..} = (\sUSHISWAPV3ETHEREUMWithdrawDTOAmountUsd -> SUSHISWAPV3ETHEREUMWithdrawDTO { sUSHISWAPV3ETHEREUMWithdrawDTOAmountUsd, ..} ) <$> f sUSHISWAPV3ETHEREUMWithdrawDTOAmountUsd
+{-# INLINE sUSHISWAPV3ETHEREUMWithdrawDTOAmountUsdL #-}
+
+
+
 -- * TransactionsETradeAggressiveSide
+
+
+
+-- * UNISWAPV2ETHEREUMAccountDTO
+
+-- | 'uNISWAPV2ETHEREUMAccountDTOEntryTime' Lens
+uNISWAPV2ETHEREUMAccountDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMAccountDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMAccountDTOEntryTimeL f UNISWAPV2ETHEREUMAccountDTO{..} = (\uNISWAPV2ETHEREUMAccountDTOEntryTime -> UNISWAPV2ETHEREUMAccountDTO { uNISWAPV2ETHEREUMAccountDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMAccountDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMAccountDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMAccountDTORecvTime' Lens
+uNISWAPV2ETHEREUMAccountDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMAccountDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMAccountDTORecvTimeL f UNISWAPV2ETHEREUMAccountDTO{..} = (\uNISWAPV2ETHEREUMAccountDTORecvTime -> UNISWAPV2ETHEREUMAccountDTO { uNISWAPV2ETHEREUMAccountDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMAccountDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMAccountDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMAccountDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMAccountDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMAccountDTO (Maybe Integer)
+uNISWAPV2ETHEREUMAccountDTOBlockNumberL f UNISWAPV2ETHEREUMAccountDTO{..} = (\uNISWAPV2ETHEREUMAccountDTOBlockNumber -> UNISWAPV2ETHEREUMAccountDTO { uNISWAPV2ETHEREUMAccountDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMAccountDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMAccountDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMAccountDTOBlock' Lens
+uNISWAPV2ETHEREUMAccountDTOBlockL :: Lens_' UNISWAPV2ETHEREUMAccountDTO (Maybe Int)
+uNISWAPV2ETHEREUMAccountDTOBlockL f UNISWAPV2ETHEREUMAccountDTO{..} = (\uNISWAPV2ETHEREUMAccountDTOBlock -> UNISWAPV2ETHEREUMAccountDTO { uNISWAPV2ETHEREUMAccountDTOBlock, ..} ) <$> f uNISWAPV2ETHEREUMAccountDTOBlock
+{-# INLINE uNISWAPV2ETHEREUMAccountDTOBlockL #-}
+
+-- | 'uNISWAPV2ETHEREUMAccountDTOId' Lens
+uNISWAPV2ETHEREUMAccountDTOIdL :: Lens_' UNISWAPV2ETHEREUMAccountDTO (Maybe Text)
+uNISWAPV2ETHEREUMAccountDTOIdL f UNISWAPV2ETHEREUMAccountDTO{..} = (\uNISWAPV2ETHEREUMAccountDTOId -> UNISWAPV2ETHEREUMAccountDTO { uNISWAPV2ETHEREUMAccountDTOId, ..} ) <$> f uNISWAPV2ETHEREUMAccountDTOId
+{-# INLINE uNISWAPV2ETHEREUMAccountDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMAccountDTOBlockRange' Lens
+uNISWAPV2ETHEREUMAccountDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMAccountDTO (Maybe Text)
+uNISWAPV2ETHEREUMAccountDTOBlockRangeL f UNISWAPV2ETHEREUMAccountDTO{..} = (\uNISWAPV2ETHEREUMAccountDTOBlockRange -> UNISWAPV2ETHEREUMAccountDTO { uNISWAPV2ETHEREUMAccountDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMAccountDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMAccountDTOBlockRangeL #-}
+
+
+
+-- * UNISWAPV2ETHEREUMActiveAccountDTO
+
+-- | 'uNISWAPV2ETHEREUMActiveAccountDTOEntryTime' Lens
+uNISWAPV2ETHEREUMActiveAccountDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMActiveAccountDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMActiveAccountDTOEntryTimeL f UNISWAPV2ETHEREUMActiveAccountDTO{..} = (\uNISWAPV2ETHEREUMActiveAccountDTOEntryTime -> UNISWAPV2ETHEREUMActiveAccountDTO { uNISWAPV2ETHEREUMActiveAccountDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMActiveAccountDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMActiveAccountDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMActiveAccountDTORecvTime' Lens
+uNISWAPV2ETHEREUMActiveAccountDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMActiveAccountDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMActiveAccountDTORecvTimeL f UNISWAPV2ETHEREUMActiveAccountDTO{..} = (\uNISWAPV2ETHEREUMActiveAccountDTORecvTime -> UNISWAPV2ETHEREUMActiveAccountDTO { uNISWAPV2ETHEREUMActiveAccountDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMActiveAccountDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMActiveAccountDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMActiveAccountDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMActiveAccountDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMActiveAccountDTO (Maybe Integer)
+uNISWAPV2ETHEREUMActiveAccountDTOBlockNumberL f UNISWAPV2ETHEREUMActiveAccountDTO{..} = (\uNISWAPV2ETHEREUMActiveAccountDTOBlockNumber -> UNISWAPV2ETHEREUMActiveAccountDTO { uNISWAPV2ETHEREUMActiveAccountDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMActiveAccountDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMActiveAccountDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMActiveAccountDTOBlock' Lens
+uNISWAPV2ETHEREUMActiveAccountDTOBlockL :: Lens_' UNISWAPV2ETHEREUMActiveAccountDTO (Maybe Int)
+uNISWAPV2ETHEREUMActiveAccountDTOBlockL f UNISWAPV2ETHEREUMActiveAccountDTO{..} = (\uNISWAPV2ETHEREUMActiveAccountDTOBlock -> UNISWAPV2ETHEREUMActiveAccountDTO { uNISWAPV2ETHEREUMActiveAccountDTOBlock, ..} ) <$> f uNISWAPV2ETHEREUMActiveAccountDTOBlock
+{-# INLINE uNISWAPV2ETHEREUMActiveAccountDTOBlockL #-}
+
+-- | 'uNISWAPV2ETHEREUMActiveAccountDTOId' Lens
+uNISWAPV2ETHEREUMActiveAccountDTOIdL :: Lens_' UNISWAPV2ETHEREUMActiveAccountDTO (Maybe Text)
+uNISWAPV2ETHEREUMActiveAccountDTOIdL f UNISWAPV2ETHEREUMActiveAccountDTO{..} = (\uNISWAPV2ETHEREUMActiveAccountDTOId -> UNISWAPV2ETHEREUMActiveAccountDTO { uNISWAPV2ETHEREUMActiveAccountDTOId, ..} ) <$> f uNISWAPV2ETHEREUMActiveAccountDTOId
+{-# INLINE uNISWAPV2ETHEREUMActiveAccountDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMActiveAccountDTOBlockRange' Lens
+uNISWAPV2ETHEREUMActiveAccountDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMActiveAccountDTO (Maybe Text)
+uNISWAPV2ETHEREUMActiveAccountDTOBlockRangeL f UNISWAPV2ETHEREUMActiveAccountDTO{..} = (\uNISWAPV2ETHEREUMActiveAccountDTOBlockRange -> UNISWAPV2ETHEREUMActiveAccountDTO { uNISWAPV2ETHEREUMActiveAccountDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMActiveAccountDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMActiveAccountDTOBlockRangeL #-}
+
+
+
+-- * UNISWAPV2ETHEREUMDepositDTO
+
+-- | 'uNISWAPV2ETHEREUMDepositDTOEntryTime' Lens
+uNISWAPV2ETHEREUMDepositDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMDepositDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMDepositDTOEntryTimeL f UNISWAPV2ETHEREUMDepositDTO{..} = (\uNISWAPV2ETHEREUMDepositDTOEntryTime -> UNISWAPV2ETHEREUMDepositDTO { uNISWAPV2ETHEREUMDepositDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMDepositDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMDepositDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMDepositDTORecvTime' Lens
+uNISWAPV2ETHEREUMDepositDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMDepositDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMDepositDTORecvTimeL f UNISWAPV2ETHEREUMDepositDTO{..} = (\uNISWAPV2ETHEREUMDepositDTORecvTime -> UNISWAPV2ETHEREUMDepositDTO { uNISWAPV2ETHEREUMDepositDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMDepositDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMDepositDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMDepositDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMDepositDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMDepositDTO (Maybe Integer)
+uNISWAPV2ETHEREUMDepositDTOBlockNumberL f UNISWAPV2ETHEREUMDepositDTO{..} = (\uNISWAPV2ETHEREUMDepositDTOBlockNumber -> UNISWAPV2ETHEREUMDepositDTO { uNISWAPV2ETHEREUMDepositDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMDepositDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMDepositDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMDepositDTOBlock' Lens
+uNISWAPV2ETHEREUMDepositDTOBlockL :: Lens_' UNISWAPV2ETHEREUMDepositDTO (Maybe Int)
+uNISWAPV2ETHEREUMDepositDTOBlockL f UNISWAPV2ETHEREUMDepositDTO{..} = (\uNISWAPV2ETHEREUMDepositDTOBlock -> UNISWAPV2ETHEREUMDepositDTO { uNISWAPV2ETHEREUMDepositDTOBlock, ..} ) <$> f uNISWAPV2ETHEREUMDepositDTOBlock
+{-# INLINE uNISWAPV2ETHEREUMDepositDTOBlockL #-}
+
+-- | 'uNISWAPV2ETHEREUMDepositDTOId' Lens
+uNISWAPV2ETHEREUMDepositDTOIdL :: Lens_' UNISWAPV2ETHEREUMDepositDTO (Maybe Text)
+uNISWAPV2ETHEREUMDepositDTOIdL f UNISWAPV2ETHEREUMDepositDTO{..} = (\uNISWAPV2ETHEREUMDepositDTOId -> UNISWAPV2ETHEREUMDepositDTO { uNISWAPV2ETHEREUMDepositDTOId, ..} ) <$> f uNISWAPV2ETHEREUMDepositDTOId
+{-# INLINE uNISWAPV2ETHEREUMDepositDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMDepositDTOHash' Lens
+uNISWAPV2ETHEREUMDepositDTOHashL :: Lens_' UNISWAPV2ETHEREUMDepositDTO (Maybe Text)
+uNISWAPV2ETHEREUMDepositDTOHashL f UNISWAPV2ETHEREUMDepositDTO{..} = (\uNISWAPV2ETHEREUMDepositDTOHash -> UNISWAPV2ETHEREUMDepositDTO { uNISWAPV2ETHEREUMDepositDTOHash, ..} ) <$> f uNISWAPV2ETHEREUMDepositDTOHash
+{-# INLINE uNISWAPV2ETHEREUMDepositDTOHashL #-}
+
+-- | 'uNISWAPV2ETHEREUMDepositDTOLogIndex' Lens
+uNISWAPV2ETHEREUMDepositDTOLogIndexL :: Lens_' UNISWAPV2ETHEREUMDepositDTO (Maybe Int)
+uNISWAPV2ETHEREUMDepositDTOLogIndexL f UNISWAPV2ETHEREUMDepositDTO{..} = (\uNISWAPV2ETHEREUMDepositDTOLogIndex -> UNISWAPV2ETHEREUMDepositDTO { uNISWAPV2ETHEREUMDepositDTOLogIndex, ..} ) <$> f uNISWAPV2ETHEREUMDepositDTOLogIndex
+{-# INLINE uNISWAPV2ETHEREUMDepositDTOLogIndexL #-}
+
+-- | 'uNISWAPV2ETHEREUMDepositDTOProtocol' Lens
+uNISWAPV2ETHEREUMDepositDTOProtocolL :: Lens_' UNISWAPV2ETHEREUMDepositDTO (Maybe Text)
+uNISWAPV2ETHEREUMDepositDTOProtocolL f UNISWAPV2ETHEREUMDepositDTO{..} = (\uNISWAPV2ETHEREUMDepositDTOProtocol -> UNISWAPV2ETHEREUMDepositDTO { uNISWAPV2ETHEREUMDepositDTOProtocol, ..} ) <$> f uNISWAPV2ETHEREUMDepositDTOProtocol
+{-# INLINE uNISWAPV2ETHEREUMDepositDTOProtocolL #-}
+
+-- | 'uNISWAPV2ETHEREUMDepositDTOTo' Lens
+uNISWAPV2ETHEREUMDepositDTOToL :: Lens_' UNISWAPV2ETHEREUMDepositDTO (Maybe Text)
+uNISWAPV2ETHEREUMDepositDTOToL f UNISWAPV2ETHEREUMDepositDTO{..} = (\uNISWAPV2ETHEREUMDepositDTOTo -> UNISWAPV2ETHEREUMDepositDTO { uNISWAPV2ETHEREUMDepositDTOTo, ..} ) <$> f uNISWAPV2ETHEREUMDepositDTOTo
+{-# INLINE uNISWAPV2ETHEREUMDepositDTOToL #-}
+
+-- | 'uNISWAPV2ETHEREUMDepositDTOFrom' Lens
+uNISWAPV2ETHEREUMDepositDTOFromL :: Lens_' UNISWAPV2ETHEREUMDepositDTO (Maybe Text)
+uNISWAPV2ETHEREUMDepositDTOFromL f UNISWAPV2ETHEREUMDepositDTO{..} = (\uNISWAPV2ETHEREUMDepositDTOFrom -> UNISWAPV2ETHEREUMDepositDTO { uNISWAPV2ETHEREUMDepositDTOFrom, ..} ) <$> f uNISWAPV2ETHEREUMDepositDTOFrom
+{-# INLINE uNISWAPV2ETHEREUMDepositDTOFromL #-}
+
+-- | 'uNISWAPV2ETHEREUMDepositDTOTimestamp' Lens
+uNISWAPV2ETHEREUMDepositDTOTimestampL :: Lens_' UNISWAPV2ETHEREUMDepositDTO (Maybe Text)
+uNISWAPV2ETHEREUMDepositDTOTimestampL f UNISWAPV2ETHEREUMDepositDTO{..} = (\uNISWAPV2ETHEREUMDepositDTOTimestamp -> UNISWAPV2ETHEREUMDepositDTO { uNISWAPV2ETHEREUMDepositDTOTimestamp, ..} ) <$> f uNISWAPV2ETHEREUMDepositDTOTimestamp
+{-# INLINE uNISWAPV2ETHEREUMDepositDTOTimestampL #-}
+
+-- | 'uNISWAPV2ETHEREUMDepositDTOInputTokens' Lens
+uNISWAPV2ETHEREUMDepositDTOInputTokensL :: Lens_' UNISWAPV2ETHEREUMDepositDTO (Maybe [Text])
+uNISWAPV2ETHEREUMDepositDTOInputTokensL f UNISWAPV2ETHEREUMDepositDTO{..} = (\uNISWAPV2ETHEREUMDepositDTOInputTokens -> UNISWAPV2ETHEREUMDepositDTO { uNISWAPV2ETHEREUMDepositDTOInputTokens, ..} ) <$> f uNISWAPV2ETHEREUMDepositDTOInputTokens
+{-# INLINE uNISWAPV2ETHEREUMDepositDTOInputTokensL #-}
+
+-- | 'uNISWAPV2ETHEREUMDepositDTOOutputToken' Lens
+uNISWAPV2ETHEREUMDepositDTOOutputTokenL :: Lens_' UNISWAPV2ETHEREUMDepositDTO (Maybe Text)
+uNISWAPV2ETHEREUMDepositDTOOutputTokenL f UNISWAPV2ETHEREUMDepositDTO{..} = (\uNISWAPV2ETHEREUMDepositDTOOutputToken -> UNISWAPV2ETHEREUMDepositDTO { uNISWAPV2ETHEREUMDepositDTOOutputToken, ..} ) <$> f uNISWAPV2ETHEREUMDepositDTOOutputToken
+{-# INLINE uNISWAPV2ETHEREUMDepositDTOOutputTokenL #-}
+
+-- | 'uNISWAPV2ETHEREUMDepositDTOInputTokenAmounts' Lens
+uNISWAPV2ETHEREUMDepositDTOInputTokenAmountsL :: Lens_' UNISWAPV2ETHEREUMDepositDTO (Maybe [Text])
+uNISWAPV2ETHEREUMDepositDTOInputTokenAmountsL f UNISWAPV2ETHEREUMDepositDTO{..} = (\uNISWAPV2ETHEREUMDepositDTOInputTokenAmounts -> UNISWAPV2ETHEREUMDepositDTO { uNISWAPV2ETHEREUMDepositDTOInputTokenAmounts, ..} ) <$> f uNISWAPV2ETHEREUMDepositDTOInputTokenAmounts
+{-# INLINE uNISWAPV2ETHEREUMDepositDTOInputTokenAmountsL #-}
+
+-- | 'uNISWAPV2ETHEREUMDepositDTOOutputTokenAmount' Lens
+uNISWAPV2ETHEREUMDepositDTOOutputTokenAmountL :: Lens_' UNISWAPV2ETHEREUMDepositDTO (Maybe Text)
+uNISWAPV2ETHEREUMDepositDTOOutputTokenAmountL f UNISWAPV2ETHEREUMDepositDTO{..} = (\uNISWAPV2ETHEREUMDepositDTOOutputTokenAmount -> UNISWAPV2ETHEREUMDepositDTO { uNISWAPV2ETHEREUMDepositDTOOutputTokenAmount, ..} ) <$> f uNISWAPV2ETHEREUMDepositDTOOutputTokenAmount
+{-# INLINE uNISWAPV2ETHEREUMDepositDTOOutputTokenAmountL #-}
+
+-- | 'uNISWAPV2ETHEREUMDepositDTOReserveAmounts' Lens
+uNISWAPV2ETHEREUMDepositDTOReserveAmountsL :: Lens_' UNISWAPV2ETHEREUMDepositDTO (Maybe [Text])
+uNISWAPV2ETHEREUMDepositDTOReserveAmountsL f UNISWAPV2ETHEREUMDepositDTO{..} = (\uNISWAPV2ETHEREUMDepositDTOReserveAmounts -> UNISWAPV2ETHEREUMDepositDTO { uNISWAPV2ETHEREUMDepositDTOReserveAmounts, ..} ) <$> f uNISWAPV2ETHEREUMDepositDTOReserveAmounts
+{-# INLINE uNISWAPV2ETHEREUMDepositDTOReserveAmountsL #-}
+
+-- | 'uNISWAPV2ETHEREUMDepositDTOAmountUsd' Lens
+uNISWAPV2ETHEREUMDepositDTOAmountUsdL :: Lens_' UNISWAPV2ETHEREUMDepositDTO (Maybe Text)
+uNISWAPV2ETHEREUMDepositDTOAmountUsdL f UNISWAPV2ETHEREUMDepositDTO{..} = (\uNISWAPV2ETHEREUMDepositDTOAmountUsd -> UNISWAPV2ETHEREUMDepositDTO { uNISWAPV2ETHEREUMDepositDTOAmountUsd, ..} ) <$> f uNISWAPV2ETHEREUMDepositDTOAmountUsd
+{-# INLINE uNISWAPV2ETHEREUMDepositDTOAmountUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMDepositDTOPool' Lens
+uNISWAPV2ETHEREUMDepositDTOPoolL :: Lens_' UNISWAPV2ETHEREUMDepositDTO (Maybe Text)
+uNISWAPV2ETHEREUMDepositDTOPoolL f UNISWAPV2ETHEREUMDepositDTO{..} = (\uNISWAPV2ETHEREUMDepositDTOPool -> UNISWAPV2ETHEREUMDepositDTO { uNISWAPV2ETHEREUMDepositDTOPool, ..} ) <$> f uNISWAPV2ETHEREUMDepositDTOPool
+{-# INLINE uNISWAPV2ETHEREUMDepositDTOPoolL #-}
+
+-- | 'uNISWAPV2ETHEREUMDepositDTOBlockRange' Lens
+uNISWAPV2ETHEREUMDepositDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMDepositDTO (Maybe Text)
+uNISWAPV2ETHEREUMDepositDTOBlockRangeL f UNISWAPV2ETHEREUMDepositDTO{..} = (\uNISWAPV2ETHEREUMDepositDTOBlockRange -> UNISWAPV2ETHEREUMDepositDTO { uNISWAPV2ETHEREUMDepositDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMDepositDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMDepositDTOBlockRangeL #-}
+
+
+
+-- * UNISWAPV2ETHEREUMDexAmmProtocolDTO
+
+-- | 'uNISWAPV2ETHEREUMDexAmmProtocolDTOEntryTime' Lens
+uNISWAPV2ETHEREUMDexAmmProtocolDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMDexAmmProtocolDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMDexAmmProtocolDTOEntryTimeL f UNISWAPV2ETHEREUMDexAmmProtocolDTO{..} = (\uNISWAPV2ETHEREUMDexAmmProtocolDTOEntryTime -> UNISWAPV2ETHEREUMDexAmmProtocolDTO { uNISWAPV2ETHEREUMDexAmmProtocolDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMDexAmmProtocolDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMDexAmmProtocolDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMDexAmmProtocolDTORecvTime' Lens
+uNISWAPV2ETHEREUMDexAmmProtocolDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMDexAmmProtocolDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMDexAmmProtocolDTORecvTimeL f UNISWAPV2ETHEREUMDexAmmProtocolDTO{..} = (\uNISWAPV2ETHEREUMDexAmmProtocolDTORecvTime -> UNISWAPV2ETHEREUMDexAmmProtocolDTO { uNISWAPV2ETHEREUMDexAmmProtocolDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMDexAmmProtocolDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMDexAmmProtocolDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMDexAmmProtocolDTO (Maybe Integer)
+uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockNumberL f UNISWAPV2ETHEREUMDexAmmProtocolDTO{..} = (\uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockNumber -> UNISWAPV2ETHEREUMDexAmmProtocolDTO { uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockRange' Lens
+uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMDexAmmProtocolDTO (Maybe Text)
+uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockRangeL f UNISWAPV2ETHEREUMDexAmmProtocolDTO{..} = (\uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockRange -> UNISWAPV2ETHEREUMDexAmmProtocolDTO { uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMDexAmmProtocolDTOBlockRangeL #-}
+
+-- | 'uNISWAPV2ETHEREUMDexAmmProtocolDTOId' Lens
+uNISWAPV2ETHEREUMDexAmmProtocolDTOIdL :: Lens_' UNISWAPV2ETHEREUMDexAmmProtocolDTO (Maybe Text)
+uNISWAPV2ETHEREUMDexAmmProtocolDTOIdL f UNISWAPV2ETHEREUMDexAmmProtocolDTO{..} = (\uNISWAPV2ETHEREUMDexAmmProtocolDTOId -> UNISWAPV2ETHEREUMDexAmmProtocolDTO { uNISWAPV2ETHEREUMDexAmmProtocolDTOId, ..} ) <$> f uNISWAPV2ETHEREUMDexAmmProtocolDTOId
+{-# INLINE uNISWAPV2ETHEREUMDexAmmProtocolDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMDexAmmProtocolDTOName' Lens
+uNISWAPV2ETHEREUMDexAmmProtocolDTONameL :: Lens_' UNISWAPV2ETHEREUMDexAmmProtocolDTO (Maybe Text)
+uNISWAPV2ETHEREUMDexAmmProtocolDTONameL f UNISWAPV2ETHEREUMDexAmmProtocolDTO{..} = (\uNISWAPV2ETHEREUMDexAmmProtocolDTOName -> UNISWAPV2ETHEREUMDexAmmProtocolDTO { uNISWAPV2ETHEREUMDexAmmProtocolDTOName, ..} ) <$> f uNISWAPV2ETHEREUMDexAmmProtocolDTOName
+{-# INLINE uNISWAPV2ETHEREUMDexAmmProtocolDTONameL #-}
+
+-- | 'uNISWAPV2ETHEREUMDexAmmProtocolDTOSlug' Lens
+uNISWAPV2ETHEREUMDexAmmProtocolDTOSlugL :: Lens_' UNISWAPV2ETHEREUMDexAmmProtocolDTO (Maybe Text)
+uNISWAPV2ETHEREUMDexAmmProtocolDTOSlugL f UNISWAPV2ETHEREUMDexAmmProtocolDTO{..} = (\uNISWAPV2ETHEREUMDexAmmProtocolDTOSlug -> UNISWAPV2ETHEREUMDexAmmProtocolDTO { uNISWAPV2ETHEREUMDexAmmProtocolDTOSlug, ..} ) <$> f uNISWAPV2ETHEREUMDexAmmProtocolDTOSlug
+{-# INLINE uNISWAPV2ETHEREUMDexAmmProtocolDTOSlugL #-}
+
+-- | 'uNISWAPV2ETHEREUMDexAmmProtocolDTOSchemaVersion' Lens
+uNISWAPV2ETHEREUMDexAmmProtocolDTOSchemaVersionL :: Lens_' UNISWAPV2ETHEREUMDexAmmProtocolDTO (Maybe Text)
+uNISWAPV2ETHEREUMDexAmmProtocolDTOSchemaVersionL f UNISWAPV2ETHEREUMDexAmmProtocolDTO{..} = (\uNISWAPV2ETHEREUMDexAmmProtocolDTOSchemaVersion -> UNISWAPV2ETHEREUMDexAmmProtocolDTO { uNISWAPV2ETHEREUMDexAmmProtocolDTOSchemaVersion, ..} ) <$> f uNISWAPV2ETHEREUMDexAmmProtocolDTOSchemaVersion
+{-# INLINE uNISWAPV2ETHEREUMDexAmmProtocolDTOSchemaVersionL #-}
+
+-- | 'uNISWAPV2ETHEREUMDexAmmProtocolDTOSubgraphVersion' Lens
+uNISWAPV2ETHEREUMDexAmmProtocolDTOSubgraphVersionL :: Lens_' UNISWAPV2ETHEREUMDexAmmProtocolDTO (Maybe Text)
+uNISWAPV2ETHEREUMDexAmmProtocolDTOSubgraphVersionL f UNISWAPV2ETHEREUMDexAmmProtocolDTO{..} = (\uNISWAPV2ETHEREUMDexAmmProtocolDTOSubgraphVersion -> UNISWAPV2ETHEREUMDexAmmProtocolDTO { uNISWAPV2ETHEREUMDexAmmProtocolDTOSubgraphVersion, ..} ) <$> f uNISWAPV2ETHEREUMDexAmmProtocolDTOSubgraphVersion
+{-# INLINE uNISWAPV2ETHEREUMDexAmmProtocolDTOSubgraphVersionL #-}
+
+-- | 'uNISWAPV2ETHEREUMDexAmmProtocolDTOMethodologyVersion' Lens
+uNISWAPV2ETHEREUMDexAmmProtocolDTOMethodologyVersionL :: Lens_' UNISWAPV2ETHEREUMDexAmmProtocolDTO (Maybe Text)
+uNISWAPV2ETHEREUMDexAmmProtocolDTOMethodologyVersionL f UNISWAPV2ETHEREUMDexAmmProtocolDTO{..} = (\uNISWAPV2ETHEREUMDexAmmProtocolDTOMethodologyVersion -> UNISWAPV2ETHEREUMDexAmmProtocolDTO { uNISWAPV2ETHEREUMDexAmmProtocolDTOMethodologyVersion, ..} ) <$> f uNISWAPV2ETHEREUMDexAmmProtocolDTOMethodologyVersion
+{-# INLINE uNISWAPV2ETHEREUMDexAmmProtocolDTOMethodologyVersionL #-}
+
+-- | 'uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalValueLockedUsd' Lens
+uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalValueLockedUsdL :: Lens_' UNISWAPV2ETHEREUMDexAmmProtocolDTO (Maybe Text)
+uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalValueLockedUsdL f UNISWAPV2ETHEREUMDexAmmProtocolDTO{..} = (\uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalValueLockedUsd -> UNISWAPV2ETHEREUMDexAmmProtocolDTO { uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalValueLockedUsd, ..} ) <$> f uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalValueLockedUsd
+{-# INLINE uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalValueLockedUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd' Lens
+uNISWAPV2ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsdL :: Lens_' UNISWAPV2ETHEREUMDexAmmProtocolDTO (Maybe Text)
+uNISWAPV2ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsdL f UNISWAPV2ETHEREUMDexAmmProtocolDTO{..} = (\uNISWAPV2ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd -> UNISWAPV2ETHEREUMDexAmmProtocolDTO { uNISWAPV2ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd, ..} ) <$> f uNISWAPV2ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsd
+{-# INLINE uNISWAPV2ETHEREUMDexAmmProtocolDTOProtocolControlledValueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd' Lens
+uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsdL :: Lens_' UNISWAPV2ETHEREUMDexAmmProtocolDTO (Maybe Text)
+uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsdL f UNISWAPV2ETHEREUMDexAmmProtocolDTO{..} = (\uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd -> UNISWAPV2ETHEREUMDexAmmProtocolDTO { uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd, ..} ) <$> f uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsd
+{-# INLINE uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeVolumeUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd' Lens
+uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMDexAmmProtocolDTO (Maybe Text)
+uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsdL f UNISWAPV2ETHEREUMDexAmmProtocolDTO{..} = (\uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd -> UNISWAPV2ETHEREUMDexAmmProtocolDTO { uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeSupplySideRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd' Lens
+uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMDexAmmProtocolDTO (Maybe Text)
+uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsdL f UNISWAPV2ETHEREUMDexAmmProtocolDTO{..} = (\uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd -> UNISWAPV2ETHEREUMDexAmmProtocolDTO { uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeProtocolSideRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd' Lens
+uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMDexAmmProtocolDTO (Maybe Text)
+uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsdL f UNISWAPV2ETHEREUMDexAmmProtocolDTO{..} = (\uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd -> UNISWAPV2ETHEREUMDexAmmProtocolDTO { uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeTotalRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers' Lens
+uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsersL :: Lens_' UNISWAPV2ETHEREUMDexAmmProtocolDTO (Maybe Int)
+uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsersL f UNISWAPV2ETHEREUMDexAmmProtocolDTO{..} = (\uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers -> UNISWAPV2ETHEREUMDexAmmProtocolDTO { uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers, ..} ) <$> f uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsers
+{-# INLINE uNISWAPV2ETHEREUMDexAmmProtocolDTOCumulativeUniqueUsersL #-}
+
+-- | 'uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalPoolCount' Lens
+uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalPoolCountL :: Lens_' UNISWAPV2ETHEREUMDexAmmProtocolDTO (Maybe Int)
+uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalPoolCountL f UNISWAPV2ETHEREUMDexAmmProtocolDTO{..} = (\uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalPoolCount -> UNISWAPV2ETHEREUMDexAmmProtocolDTO { uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalPoolCount, ..} ) <$> f uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalPoolCount
+{-# INLINE uNISWAPV2ETHEREUMDexAmmProtocolDTOTotalPoolCountL #-}
+
+
+
+-- * UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO
+
+-- | 'uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOEntryTime' Lens
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOEntryTimeL f UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOEntryTime -> UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO { uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMFinancialsDailySnapshotDTORecvTime' Lens
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTORecvTimeL f UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMFinancialsDailySnapshotDTORecvTime -> UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO { uNISWAPV2ETHEREUMFinancialsDailySnapshotDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMFinancialsDailySnapshotDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMFinancialsDailySnapshotDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO (Maybe Integer)
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockNumberL f UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockNumber -> UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO { uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockRange' Lens
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockRangeL f UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockRange -> UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO { uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOBlockRangeL #-}
+
+-- | 'uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOId' Lens
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOIdL :: Lens_' UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOIdL f UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOId -> UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO { uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOId, ..} ) <$> f uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOId
+{-# INLINE uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocol' Lens
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocolL :: Lens_' UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocolL f UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocol -> UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO { uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocol, ..} ) <$> f uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocol
+{-# INLINE uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocolL #-}
+
+-- | 'uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd' Lens
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsdL :: Lens_' UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsdL f UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd -> UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO { uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd, ..} ) <$> f uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsd
+{-# INLINE uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTotalValueLockedUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd' Lens
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsdL :: Lens_' UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsdL f UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd -> UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO { uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd, ..} ) <$> f uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsd
+{-# INLINE uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOProtocolControlledValueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd' Lens
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsdL :: Lens_' UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsdL f UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd -> UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO { uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd, ..} ) <$> f uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsd
+{-# INLINE uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyVolumeUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd' Lens
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsdL :: Lens_' UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsdL f UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd -> UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO { uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd, ..} ) <$> f uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsd
+{-# INLINE uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeVolumeUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd' Lens
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsdL f UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd -> UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO { uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailySupplySideRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd' Lens
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsdL f UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd -> UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO { uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeSupplySideRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd' Lens
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsdL f UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd -> UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO { uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyProtocolSideRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd' Lens
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsdL f UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd -> UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO { uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeProtocolSideRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd' Lens
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsdL f UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd -> UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO { uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODailyTotalRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd' Lens
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsdL f UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd -> UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO { uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOCumulativeTotalRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTimestamp' Lens
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTimestampL :: Lens_' UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTimestampL f UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTimestamp -> UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO { uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTimestamp, ..} ) <$> f uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTimestamp
+{-# INLINE uNISWAPV2ETHEREUMFinancialsDailySnapshotDTOTimestampL #-}
+
+
+
+-- * UNISWAPV2ETHEREUMLiquidityPoolAmountDTO
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolAmountDTOEntryTime' Lens
+uNISWAPV2ETHEREUMLiquidityPoolAmountDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolAmountDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMLiquidityPoolAmountDTOEntryTimeL f UNISWAPV2ETHEREUMLiquidityPoolAmountDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolAmountDTOEntryTime -> UNISWAPV2ETHEREUMLiquidityPoolAmountDTO { uNISWAPV2ETHEREUMLiquidityPoolAmountDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolAmountDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolAmountDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolAmountDTORecvTime' Lens
+uNISWAPV2ETHEREUMLiquidityPoolAmountDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolAmountDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMLiquidityPoolAmountDTORecvTimeL f UNISWAPV2ETHEREUMLiquidityPoolAmountDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolAmountDTORecvTime -> UNISWAPV2ETHEREUMLiquidityPoolAmountDTO { uNISWAPV2ETHEREUMLiquidityPoolAmountDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolAmountDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolAmountDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolAmountDTO (Maybe Integer)
+uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockNumberL f UNISWAPV2ETHEREUMLiquidityPoolAmountDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockNumber -> UNISWAPV2ETHEREUMLiquidityPoolAmountDTO { uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolAmountDTOVid' Lens
+uNISWAPV2ETHEREUMLiquidityPoolAmountDTOVidL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolAmountDTO (Maybe Integer)
+uNISWAPV2ETHEREUMLiquidityPoolAmountDTOVidL f UNISWAPV2ETHEREUMLiquidityPoolAmountDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolAmountDTOVid -> UNISWAPV2ETHEREUMLiquidityPoolAmountDTO { uNISWAPV2ETHEREUMLiquidityPoolAmountDTOVid, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolAmountDTOVid
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolAmountDTOVidL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockRange' Lens
+uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolAmountDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockRangeL f UNISWAPV2ETHEREUMLiquidityPoolAmountDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockRange -> UNISWAPV2ETHEREUMLiquidityPoolAmountDTO { uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolAmountDTOBlockRangeL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolAmountDTOId' Lens
+uNISWAPV2ETHEREUMLiquidityPoolAmountDTOIdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolAmountDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolAmountDTOIdL f UNISWAPV2ETHEREUMLiquidityPoolAmountDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolAmountDTOId -> UNISWAPV2ETHEREUMLiquidityPoolAmountDTO { uNISWAPV2ETHEREUMLiquidityPoolAmountDTOId, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolAmountDTOId
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolAmountDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokens' Lens
+uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokensL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolAmountDTO (Maybe [Text])
+uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokensL f UNISWAPV2ETHEREUMLiquidityPoolAmountDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokens -> UNISWAPV2ETHEREUMLiquidityPoolAmountDTO { uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokens, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokens
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokensL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokenBalances' Lens
+uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokenBalancesL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolAmountDTO (Maybe [Text])
+uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokenBalancesL f UNISWAPV2ETHEREUMLiquidityPoolAmountDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokenBalances -> UNISWAPV2ETHEREUMLiquidityPoolAmountDTO { uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokenBalances, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokenBalances
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolAmountDTOInputTokenBalancesL #-}
 
 
 
@@ -3964,6 +7109,617 @@ uNISWAPV2ETHEREUMLiquidityPoolDTORewardTokenEmissionsUsdL f UNISWAPV2ETHEREUMLiq
 uNISWAPV2ETHEREUMLiquidityPoolDTOEvaluatedAskL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDTO (Maybe Double)
 uNISWAPV2ETHEREUMLiquidityPoolDTOEvaluatedAskL f UNISWAPV2ETHEREUMLiquidityPoolDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDTOEvaluatedAsk -> UNISWAPV2ETHEREUMLiquidityPoolDTO { uNISWAPV2ETHEREUMLiquidityPoolDTOEvaluatedAsk, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDTOEvaluatedAsk
 {-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDTOEvaluatedAskL #-}
+
+
+
+-- * UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOEntryTimeL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORecvTime' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORecvTimeL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORecvTime -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Integer)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumberL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockRange' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockRangeL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockRange -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOBlockRangeL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOId' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOIdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOIdL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOId -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOId, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOId
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOProtocol' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOProtocolL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOProtocolL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOProtocol -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOProtocol, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOProtocol
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOProtocolL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOPool' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOPoolL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOPoolL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOPool -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOPool, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOPool
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOPoolL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTimestamp' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTimestampL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTimestampL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTimestamp -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTimestamp, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTimestamp
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTimestampL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsdL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOTotalValueLockedUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsdL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeSupplySideRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsdL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailySupplySideRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsdL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeProtocolSideRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsdL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyProtocolSideRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsdL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeTotalRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsdL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyTotalRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsdL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmountL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmountL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmount
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenAmountL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsdL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODailyVolumeByTokenUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsdL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOCumulativeVolumeUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalances
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenBalancesL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeightsL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeightsL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeights
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOInputTokenWeightsL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupply' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupplyL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupplyL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupply -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupply, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupply
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenSupplyL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsdL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsd -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOOutputTokenPriceUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmountL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmountL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmount
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTOStakedOutputTokenAmountL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmountL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmountL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmount
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsAmountL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe [Text])
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsdL f UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd -> UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTORewardTokenEmissionsUsdL #-}
+
+
+
+-- * UNISWAPV2ETHEREUMLiquidityPoolFeeDTO
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolFeeDTOEntryTime' Lens
+uNISWAPV2ETHEREUMLiquidityPoolFeeDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolFeeDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMLiquidityPoolFeeDTOEntryTimeL f UNISWAPV2ETHEREUMLiquidityPoolFeeDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolFeeDTOEntryTime -> UNISWAPV2ETHEREUMLiquidityPoolFeeDTO { uNISWAPV2ETHEREUMLiquidityPoolFeeDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolFeeDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolFeeDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolFeeDTORecvTime' Lens
+uNISWAPV2ETHEREUMLiquidityPoolFeeDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolFeeDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMLiquidityPoolFeeDTORecvTimeL f UNISWAPV2ETHEREUMLiquidityPoolFeeDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolFeeDTORecvTime -> UNISWAPV2ETHEREUMLiquidityPoolFeeDTO { uNISWAPV2ETHEREUMLiquidityPoolFeeDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolFeeDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolFeeDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolFeeDTO (Maybe Integer)
+uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockNumberL f UNISWAPV2ETHEREUMLiquidityPoolFeeDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockNumber -> UNISWAPV2ETHEREUMLiquidityPoolFeeDTO { uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockRange' Lens
+uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolFeeDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockRangeL f UNISWAPV2ETHEREUMLiquidityPoolFeeDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockRange -> UNISWAPV2ETHEREUMLiquidityPoolFeeDTO { uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolFeeDTOBlockRangeL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolFeeDTOId' Lens
+uNISWAPV2ETHEREUMLiquidityPoolFeeDTOIdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolFeeDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolFeeDTOIdL f UNISWAPV2ETHEREUMLiquidityPoolFeeDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolFeeDTOId -> UNISWAPV2ETHEREUMLiquidityPoolFeeDTO { uNISWAPV2ETHEREUMLiquidityPoolFeeDTOId, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolFeeDTOId
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolFeeDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolFeeDTOFeePercentage' Lens
+uNISWAPV2ETHEREUMLiquidityPoolFeeDTOFeePercentageL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolFeeDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolFeeDTOFeePercentageL f UNISWAPV2ETHEREUMLiquidityPoolFeeDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolFeeDTOFeePercentage -> UNISWAPV2ETHEREUMLiquidityPoolFeeDTO { uNISWAPV2ETHEREUMLiquidityPoolFeeDTOFeePercentage, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolFeeDTOFeePercentage
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolFeeDTOFeePercentageL #-}
+
+
+
+-- * UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTimeL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORecvTimeL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Integer)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumberL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockRange' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockRangeL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockRange -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOBlockRangeL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOId' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOIdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOIdL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOId -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOId, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOId
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOProtocolL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOProtocolL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOProtocol
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOProtocolL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOPool' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOPoolL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOPoolL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOPool -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOPool, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOPool
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOPoolL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTimestampL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTimestampL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTimestamp
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTimestampL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsdL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOTotalValueLockedUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsdL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeSupplySideRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsdL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlySupplySideRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsdL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeProtocolSideRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsdL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyProtocolSideRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsdL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeTotalRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsdL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyTotalRevenueUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsdL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmountL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmountL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmount
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenAmountL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsdL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOHourlyVolumeByTokenUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsdL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOCumulativeVolumeUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalancesL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalancesL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalances
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenBalancesL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeightsL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeightsL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeights
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOInputTokenWeightsL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupply' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupplyL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupplyL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupply -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupply, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupply
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenSupplyL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsdL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsd -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOOutputTokenPriceUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmountL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmountL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmount
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTOStakedOutputTokenAmountL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmountL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmountL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmount
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsAmountL #-}
+
+-- | 'uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd' Lens
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsdL :: Lens_' UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe [Text])
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsdL f UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd -> UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd, ..} ) <$> f uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsd
+{-# INLINE uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTORewardTokenEmissionsUsdL #-}
+
+
+
+-- * UNISWAPV2ETHEREUMMasterChefAddressToPidDTO
+
+-- | 'uNISWAPV2ETHEREUMMasterChefAddressToPidDTOEntryTime' Lens
+uNISWAPV2ETHEREUMMasterChefAddressToPidDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMMasterChefAddressToPidDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMMasterChefAddressToPidDTOEntryTimeL f UNISWAPV2ETHEREUMMasterChefAddressToPidDTO{..} = (\uNISWAPV2ETHEREUMMasterChefAddressToPidDTOEntryTime -> UNISWAPV2ETHEREUMMasterChefAddressToPidDTO { uNISWAPV2ETHEREUMMasterChefAddressToPidDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefAddressToPidDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMMasterChefAddressToPidDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefAddressToPidDTORecvTime' Lens
+uNISWAPV2ETHEREUMMasterChefAddressToPidDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMMasterChefAddressToPidDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMMasterChefAddressToPidDTORecvTimeL f UNISWAPV2ETHEREUMMasterChefAddressToPidDTO{..} = (\uNISWAPV2ETHEREUMMasterChefAddressToPidDTORecvTime -> UNISWAPV2ETHEREUMMasterChefAddressToPidDTO { uNISWAPV2ETHEREUMMasterChefAddressToPidDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefAddressToPidDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMMasterChefAddressToPidDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMMasterChefAddressToPidDTO (Maybe Integer)
+uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockNumberL f UNISWAPV2ETHEREUMMasterChefAddressToPidDTO{..} = (\uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockNumber -> UNISWAPV2ETHEREUMMasterChefAddressToPidDTO { uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockRange' Lens
+uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMMasterChefAddressToPidDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockRangeL f UNISWAPV2ETHEREUMMasterChefAddressToPidDTO{..} = (\uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockRange -> UNISWAPV2ETHEREUMMasterChefAddressToPidDTO { uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMMasterChefAddressToPidDTOBlockRangeL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefAddressToPidDTOId' Lens
+uNISWAPV2ETHEREUMMasterChefAddressToPidDTOIdL :: Lens_' UNISWAPV2ETHEREUMMasterChefAddressToPidDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefAddressToPidDTOIdL f UNISWAPV2ETHEREUMMasterChefAddressToPidDTO{..} = (\uNISWAPV2ETHEREUMMasterChefAddressToPidDTOId -> UNISWAPV2ETHEREUMMasterChefAddressToPidDTO { uNISWAPV2ETHEREUMMasterChefAddressToPidDTOId, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefAddressToPidDTOId
+{-# INLINE uNISWAPV2ETHEREUMMasterChefAddressToPidDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefAddressToPidDTOPid' Lens
+uNISWAPV2ETHEREUMMasterChefAddressToPidDTOPidL :: Lens_' UNISWAPV2ETHEREUMMasterChefAddressToPidDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefAddressToPidDTOPidL f UNISWAPV2ETHEREUMMasterChefAddressToPidDTO{..} = (\uNISWAPV2ETHEREUMMasterChefAddressToPidDTOPid -> UNISWAPV2ETHEREUMMasterChefAddressToPidDTO { uNISWAPV2ETHEREUMMasterChefAddressToPidDTOPid, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefAddressToPidDTOPid
+{-# INLINE uNISWAPV2ETHEREUMMasterChefAddressToPidDTOPidL #-}
+
+
+
+-- * UNISWAPV2ETHEREUMMasterChefDTO
+
+-- | 'uNISWAPV2ETHEREUMMasterChefDTOEntryTime' Lens
+uNISWAPV2ETHEREUMMasterChefDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMMasterChefDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMMasterChefDTOEntryTimeL f UNISWAPV2ETHEREUMMasterChefDTO{..} = (\uNISWAPV2ETHEREUMMasterChefDTOEntryTime -> UNISWAPV2ETHEREUMMasterChefDTO { uNISWAPV2ETHEREUMMasterChefDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMMasterChefDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefDTORecvTime' Lens
+uNISWAPV2ETHEREUMMasterChefDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMMasterChefDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMMasterChefDTORecvTimeL f UNISWAPV2ETHEREUMMasterChefDTO{..} = (\uNISWAPV2ETHEREUMMasterChefDTORecvTime -> UNISWAPV2ETHEREUMMasterChefDTO { uNISWAPV2ETHEREUMMasterChefDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMMasterChefDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMMasterChefDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMMasterChefDTO (Maybe Integer)
+uNISWAPV2ETHEREUMMasterChefDTOBlockNumberL f UNISWAPV2ETHEREUMMasterChefDTO{..} = (\uNISWAPV2ETHEREUMMasterChefDTOBlockNumber -> UNISWAPV2ETHEREUMMasterChefDTO { uNISWAPV2ETHEREUMMasterChefDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMMasterChefDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefDTOBlockRange' Lens
+uNISWAPV2ETHEREUMMasterChefDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMMasterChefDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefDTOBlockRangeL f UNISWAPV2ETHEREUMMasterChefDTO{..} = (\uNISWAPV2ETHEREUMMasterChefDTOBlockRange -> UNISWAPV2ETHEREUMMasterChefDTO { uNISWAPV2ETHEREUMMasterChefDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMMasterChefDTOBlockRangeL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefDTOId' Lens
+uNISWAPV2ETHEREUMMasterChefDTOIdL :: Lens_' UNISWAPV2ETHEREUMMasterChefDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefDTOIdL f UNISWAPV2ETHEREUMMasterChefDTO{..} = (\uNISWAPV2ETHEREUMMasterChefDTOId -> UNISWAPV2ETHEREUMMasterChefDTO { uNISWAPV2ETHEREUMMasterChefDTOId, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefDTOId
+{-# INLINE uNISWAPV2ETHEREUMMasterChefDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefDTOAddress' Lens
+uNISWAPV2ETHEREUMMasterChefDTOAddressL :: Lens_' UNISWAPV2ETHEREUMMasterChefDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefDTOAddressL f UNISWAPV2ETHEREUMMasterChefDTO{..} = (\uNISWAPV2ETHEREUMMasterChefDTOAddress -> UNISWAPV2ETHEREUMMasterChefDTO { uNISWAPV2ETHEREUMMasterChefDTOAddress, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefDTOAddress
+{-# INLINE uNISWAPV2ETHEREUMMasterChefDTOAddressL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefDTOTotalAllocPoint' Lens
+uNISWAPV2ETHEREUMMasterChefDTOTotalAllocPointL :: Lens_' UNISWAPV2ETHEREUMMasterChefDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefDTOTotalAllocPointL f UNISWAPV2ETHEREUMMasterChefDTO{..} = (\uNISWAPV2ETHEREUMMasterChefDTOTotalAllocPoint -> UNISWAPV2ETHEREUMMasterChefDTO { uNISWAPV2ETHEREUMMasterChefDTOTotalAllocPoint, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefDTOTotalAllocPoint
+{-# INLINE uNISWAPV2ETHEREUMMasterChefDTOTotalAllocPointL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefDTORewardTokenRate' Lens
+uNISWAPV2ETHEREUMMasterChefDTORewardTokenRateL :: Lens_' UNISWAPV2ETHEREUMMasterChefDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefDTORewardTokenRateL f UNISWAPV2ETHEREUMMasterChefDTO{..} = (\uNISWAPV2ETHEREUMMasterChefDTORewardTokenRate -> UNISWAPV2ETHEREUMMasterChefDTO { uNISWAPV2ETHEREUMMasterChefDTORewardTokenRate, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefDTORewardTokenRate
+{-# INLINE uNISWAPV2ETHEREUMMasterChefDTORewardTokenRateL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefDTORewardTokenInterval' Lens
+uNISWAPV2ETHEREUMMasterChefDTORewardTokenIntervalL :: Lens_' UNISWAPV2ETHEREUMMasterChefDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefDTORewardTokenIntervalL f UNISWAPV2ETHEREUMMasterChefDTO{..} = (\uNISWAPV2ETHEREUMMasterChefDTORewardTokenInterval -> UNISWAPV2ETHEREUMMasterChefDTO { uNISWAPV2ETHEREUMMasterChefDTORewardTokenInterval, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefDTORewardTokenInterval
+{-# INLINE uNISWAPV2ETHEREUMMasterChefDTORewardTokenIntervalL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefDTOAdjustedRewardTokenRate' Lens
+uNISWAPV2ETHEREUMMasterChefDTOAdjustedRewardTokenRateL :: Lens_' UNISWAPV2ETHEREUMMasterChefDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefDTOAdjustedRewardTokenRateL f UNISWAPV2ETHEREUMMasterChefDTO{..} = (\uNISWAPV2ETHEREUMMasterChefDTOAdjustedRewardTokenRate -> UNISWAPV2ETHEREUMMasterChefDTO { uNISWAPV2ETHEREUMMasterChefDTOAdjustedRewardTokenRate, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefDTOAdjustedRewardTokenRate
+{-# INLINE uNISWAPV2ETHEREUMMasterChefDTOAdjustedRewardTokenRateL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefDTOLastUpdatedRewardRate' Lens
+uNISWAPV2ETHEREUMMasterChefDTOLastUpdatedRewardRateL :: Lens_' UNISWAPV2ETHEREUMMasterChefDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefDTOLastUpdatedRewardRateL f UNISWAPV2ETHEREUMMasterChefDTO{..} = (\uNISWAPV2ETHEREUMMasterChefDTOLastUpdatedRewardRate -> UNISWAPV2ETHEREUMMasterChefDTO { uNISWAPV2ETHEREUMMasterChefDTOLastUpdatedRewardRate, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefDTOLastUpdatedRewardRate
+{-# INLINE uNISWAPV2ETHEREUMMasterChefDTOLastUpdatedRewardRateL #-}
+
+
+
+-- * UNISWAPV2ETHEREUMMasterChefRewarderDTO
+
+-- | 'uNISWAPV2ETHEREUMMasterChefRewarderDTOEntryTime' Lens
+uNISWAPV2ETHEREUMMasterChefRewarderDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMMasterChefRewarderDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMMasterChefRewarderDTOEntryTimeL f UNISWAPV2ETHEREUMMasterChefRewarderDTO{..} = (\uNISWAPV2ETHEREUMMasterChefRewarderDTOEntryTime -> UNISWAPV2ETHEREUMMasterChefRewarderDTO { uNISWAPV2ETHEREUMMasterChefRewarderDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefRewarderDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMMasterChefRewarderDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefRewarderDTORecvTime' Lens
+uNISWAPV2ETHEREUMMasterChefRewarderDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMMasterChefRewarderDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMMasterChefRewarderDTORecvTimeL f UNISWAPV2ETHEREUMMasterChefRewarderDTO{..} = (\uNISWAPV2ETHEREUMMasterChefRewarderDTORecvTime -> UNISWAPV2ETHEREUMMasterChefRewarderDTO { uNISWAPV2ETHEREUMMasterChefRewarderDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefRewarderDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMMasterChefRewarderDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMMasterChefRewarderDTO (Maybe Integer)
+uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockNumberL f UNISWAPV2ETHEREUMMasterChefRewarderDTO{..} = (\uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockNumber -> UNISWAPV2ETHEREUMMasterChefRewarderDTO { uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockRange' Lens
+uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMMasterChefRewarderDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockRangeL f UNISWAPV2ETHEREUMMasterChefRewarderDTO{..} = (\uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockRange -> UNISWAPV2ETHEREUMMasterChefRewarderDTO { uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMMasterChefRewarderDTOBlockRangeL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefRewarderDTOId' Lens
+uNISWAPV2ETHEREUMMasterChefRewarderDTOIdL :: Lens_' UNISWAPV2ETHEREUMMasterChefRewarderDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefRewarderDTOIdL f UNISWAPV2ETHEREUMMasterChefRewarderDTO{..} = (\uNISWAPV2ETHEREUMMasterChefRewarderDTOId -> UNISWAPV2ETHEREUMMasterChefRewarderDTO { uNISWAPV2ETHEREUMMasterChefRewarderDTOId, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefRewarderDTOId
+{-# INLINE uNISWAPV2ETHEREUMMasterChefRewarderDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefRewarderDTOPool' Lens
+uNISWAPV2ETHEREUMMasterChefRewarderDTOPoolL :: Lens_' UNISWAPV2ETHEREUMMasterChefRewarderDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefRewarderDTOPoolL f UNISWAPV2ETHEREUMMasterChefRewarderDTO{..} = (\uNISWAPV2ETHEREUMMasterChefRewarderDTOPool -> UNISWAPV2ETHEREUMMasterChefRewarderDTO { uNISWAPV2ETHEREUMMasterChefRewarderDTOPool, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefRewarderDTOPool
+{-# INLINE uNISWAPV2ETHEREUMMasterChefRewarderDTOPoolL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefRewarderDTORewardToken' Lens
+uNISWAPV2ETHEREUMMasterChefRewarderDTORewardTokenL :: Lens_' UNISWAPV2ETHEREUMMasterChefRewarderDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefRewarderDTORewardTokenL f UNISWAPV2ETHEREUMMasterChefRewarderDTO{..} = (\uNISWAPV2ETHEREUMMasterChefRewarderDTORewardToken -> UNISWAPV2ETHEREUMMasterChefRewarderDTO { uNISWAPV2ETHEREUMMasterChefRewarderDTORewardToken, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefRewarderDTORewardToken
+{-# INLINE uNISWAPV2ETHEREUMMasterChefRewarderDTORewardTokenL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefRewarderDTOTokenPerSec' Lens
+uNISWAPV2ETHEREUMMasterChefRewarderDTOTokenPerSecL :: Lens_' UNISWAPV2ETHEREUMMasterChefRewarderDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefRewarderDTOTokenPerSecL f UNISWAPV2ETHEREUMMasterChefRewarderDTO{..} = (\uNISWAPV2ETHEREUMMasterChefRewarderDTOTokenPerSec -> UNISWAPV2ETHEREUMMasterChefRewarderDTO { uNISWAPV2ETHEREUMMasterChefRewarderDTOTokenPerSec, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefRewarderDTOTokenPerSec
+{-# INLINE uNISWAPV2ETHEREUMMasterChefRewarderDTOTokenPerSecL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefRewarderDTORateCalculatedAt' Lens
+uNISWAPV2ETHEREUMMasterChefRewarderDTORateCalculatedAtL :: Lens_' UNISWAPV2ETHEREUMMasterChefRewarderDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefRewarderDTORateCalculatedAtL f UNISWAPV2ETHEREUMMasterChefRewarderDTO{..} = (\uNISWAPV2ETHEREUMMasterChefRewarderDTORateCalculatedAt -> UNISWAPV2ETHEREUMMasterChefRewarderDTO { uNISWAPV2ETHEREUMMasterChefRewarderDTORateCalculatedAt, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefRewarderDTORateCalculatedAt
+{-# INLINE uNISWAPV2ETHEREUMMasterChefRewarderDTORateCalculatedAtL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFunds' Lens
+uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFundsL :: Lens_' UNISWAPV2ETHEREUMMasterChefRewarderDTO (Maybe Bool)
+uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFundsL f UNISWAPV2ETHEREUMMasterChefRewarderDTO{..} = (\uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFunds -> UNISWAPV2ETHEREUMMasterChefRewarderDTO { uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFunds, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFunds
+{-# INLINE uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFundsL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFundsAt' Lens
+uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFundsAtL :: Lens_' UNISWAPV2ETHEREUMMasterChefRewarderDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFundsAtL f UNISWAPV2ETHEREUMMasterChefRewarderDTO{..} = (\uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFundsAt -> UNISWAPV2ETHEREUMMasterChefRewarderDTO { uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFundsAt, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFundsAt
+{-# INLINE uNISWAPV2ETHEREUMMasterChefRewarderDTOHasFundsAtL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefRewarderDTOCanRetrieveRate' Lens
+uNISWAPV2ETHEREUMMasterChefRewarderDTOCanRetrieveRateL :: Lens_' UNISWAPV2ETHEREUMMasterChefRewarderDTO (Maybe Bool)
+uNISWAPV2ETHEREUMMasterChefRewarderDTOCanRetrieveRateL f UNISWAPV2ETHEREUMMasterChefRewarderDTO{..} = (\uNISWAPV2ETHEREUMMasterChefRewarderDTOCanRetrieveRate -> UNISWAPV2ETHEREUMMasterChefRewarderDTO { uNISWAPV2ETHEREUMMasterChefRewarderDTOCanRetrieveRate, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefRewarderDTOCanRetrieveRate
+{-# INLINE uNISWAPV2ETHEREUMMasterChefRewarderDTOCanRetrieveRateL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefRewarderDTORewardRateCalculationInProgress' Lens
+uNISWAPV2ETHEREUMMasterChefRewarderDTORewardRateCalculationInProgressL :: Lens_' UNISWAPV2ETHEREUMMasterChefRewarderDTO (Maybe Bool)
+uNISWAPV2ETHEREUMMasterChefRewarderDTORewardRateCalculationInProgressL f UNISWAPV2ETHEREUMMasterChefRewarderDTO{..} = (\uNISWAPV2ETHEREUMMasterChefRewarderDTORewardRateCalculationInProgress -> UNISWAPV2ETHEREUMMasterChefRewarderDTO { uNISWAPV2ETHEREUMMasterChefRewarderDTORewardRateCalculationInProgress, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefRewarderDTORewardRateCalculationInProgress
+{-# INLINE uNISWAPV2ETHEREUMMasterChefRewarderDTORewardRateCalculationInProgressL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefRewarderDTOProbes' Lens
+uNISWAPV2ETHEREUMMasterChefRewarderDTOProbesL :: Lens_' UNISWAPV2ETHEREUMMasterChefRewarderDTO (Maybe [Text])
+uNISWAPV2ETHEREUMMasterChefRewarderDTOProbesL f UNISWAPV2ETHEREUMMasterChefRewarderDTO{..} = (\uNISWAPV2ETHEREUMMasterChefRewarderDTOProbes -> UNISWAPV2ETHEREUMMasterChefRewarderDTO { uNISWAPV2ETHEREUMMasterChefRewarderDTOProbes, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefRewarderDTOProbes
+{-# INLINE uNISWAPV2ETHEREUMMasterChefRewarderDTOProbesL #-}
+
+
+
+-- * UNISWAPV2ETHEREUMMasterChefStakingPoolDTO
+
+-- | 'uNISWAPV2ETHEREUMMasterChefStakingPoolDTOEntryTime' Lens
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMMasterChefStakingPoolDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTOEntryTimeL f UNISWAPV2ETHEREUMMasterChefStakingPoolDTO{..} = (\uNISWAPV2ETHEREUMMasterChefStakingPoolDTOEntryTime -> UNISWAPV2ETHEREUMMasterChefStakingPoolDTO { uNISWAPV2ETHEREUMMasterChefStakingPoolDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefStakingPoolDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMMasterChefStakingPoolDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefStakingPoolDTORecvTime' Lens
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMMasterChefStakingPoolDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTORecvTimeL f UNISWAPV2ETHEREUMMasterChefStakingPoolDTO{..} = (\uNISWAPV2ETHEREUMMasterChefStakingPoolDTORecvTime -> UNISWAPV2ETHEREUMMasterChefStakingPoolDTO { uNISWAPV2ETHEREUMMasterChefStakingPoolDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefStakingPoolDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMMasterChefStakingPoolDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMMasterChefStakingPoolDTO (Maybe Integer)
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockNumberL f UNISWAPV2ETHEREUMMasterChefStakingPoolDTO{..} = (\uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockNumber -> UNISWAPV2ETHEREUMMasterChefStakingPoolDTO { uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockRange' Lens
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMMasterChefStakingPoolDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockRangeL f UNISWAPV2ETHEREUMMasterChefStakingPoolDTO{..} = (\uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockRange -> UNISWAPV2ETHEREUMMasterChefStakingPoolDTO { uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMMasterChefStakingPoolDTOBlockRangeL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefStakingPoolDTOId' Lens
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTOIdL :: Lens_' UNISWAPV2ETHEREUMMasterChefStakingPoolDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTOIdL f UNISWAPV2ETHEREUMMasterChefStakingPoolDTO{..} = (\uNISWAPV2ETHEREUMMasterChefStakingPoolDTOId -> UNISWAPV2ETHEREUMMasterChefStakingPoolDTO { uNISWAPV2ETHEREUMMasterChefStakingPoolDTOId, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefStakingPoolDTOId
+{-# INLINE uNISWAPV2ETHEREUMMasterChefStakingPoolDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAddress' Lens
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAddressL :: Lens_' UNISWAPV2ETHEREUMMasterChefStakingPoolDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAddressL f UNISWAPV2ETHEREUMMasterChefStakingPoolDTO{..} = (\uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAddress -> UNISWAPV2ETHEREUMMasterChefStakingPoolDTO { uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAddress, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAddress
+{-# INLINE uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAddressL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAllocPoint' Lens
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAllocPointL :: Lens_' UNISWAPV2ETHEREUMMasterChefStakingPoolDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAllocPointL f UNISWAPV2ETHEREUMMasterChefStakingPoolDTO{..} = (\uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAllocPoint -> UNISWAPV2ETHEREUMMasterChefStakingPoolDTO { uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAllocPoint, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAllocPoint
+{-# INLINE uNISWAPV2ETHEREUMMasterChefStakingPoolDTOPoolAllocPointL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefStakingPoolDTOMultiplier' Lens
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTOMultiplierL :: Lens_' UNISWAPV2ETHEREUMMasterChefStakingPoolDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTOMultiplierL f UNISWAPV2ETHEREUMMasterChefStakingPoolDTO{..} = (\uNISWAPV2ETHEREUMMasterChefStakingPoolDTOMultiplier -> UNISWAPV2ETHEREUMMasterChefStakingPoolDTO { uNISWAPV2ETHEREUMMasterChefStakingPoolDTOMultiplier, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefStakingPoolDTOMultiplier
+{-# INLINE uNISWAPV2ETHEREUMMasterChefStakingPoolDTOMultiplierL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefStakingPoolDTOLastRewardBlock' Lens
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTOLastRewardBlockL :: Lens_' UNISWAPV2ETHEREUMMasterChefStakingPoolDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTOLastRewardBlockL f UNISWAPV2ETHEREUMMasterChefStakingPoolDTO{..} = (\uNISWAPV2ETHEREUMMasterChefStakingPoolDTOLastRewardBlock -> UNISWAPV2ETHEREUMMasterChefStakingPoolDTO { uNISWAPV2ETHEREUMMasterChefStakingPoolDTOLastRewardBlock, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefStakingPoolDTOLastRewardBlock
+{-# INLINE uNISWAPV2ETHEREUMMasterChefStakingPoolDTOLastRewardBlockL #-}
+
+-- | 'uNISWAPV2ETHEREUMMasterChefStakingPoolDTORewarder' Lens
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTORewarderL :: Lens_' UNISWAPV2ETHEREUMMasterChefStakingPoolDTO (Maybe Text)
+uNISWAPV2ETHEREUMMasterChefStakingPoolDTORewarderL f UNISWAPV2ETHEREUMMasterChefStakingPoolDTO{..} = (\uNISWAPV2ETHEREUMMasterChefStakingPoolDTORewarder -> UNISWAPV2ETHEREUMMasterChefStakingPoolDTO { uNISWAPV2ETHEREUMMasterChefStakingPoolDTORewarder, ..} ) <$> f uNISWAPV2ETHEREUMMasterChefStakingPoolDTORewarder
+{-# INLINE uNISWAPV2ETHEREUMMasterChefStakingPoolDTORewarderL #-}
+
+
+
+-- * UNISWAPV2ETHEREUMRewardTokenDTO
+
+-- | 'uNISWAPV2ETHEREUMRewardTokenDTOEntryTime' Lens
+uNISWAPV2ETHEREUMRewardTokenDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMRewardTokenDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMRewardTokenDTOEntryTimeL f UNISWAPV2ETHEREUMRewardTokenDTO{..} = (\uNISWAPV2ETHEREUMRewardTokenDTOEntryTime -> UNISWAPV2ETHEREUMRewardTokenDTO { uNISWAPV2ETHEREUMRewardTokenDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMRewardTokenDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMRewardTokenDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMRewardTokenDTORecvTime' Lens
+uNISWAPV2ETHEREUMRewardTokenDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMRewardTokenDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMRewardTokenDTORecvTimeL f UNISWAPV2ETHEREUMRewardTokenDTO{..} = (\uNISWAPV2ETHEREUMRewardTokenDTORecvTime -> UNISWAPV2ETHEREUMRewardTokenDTO { uNISWAPV2ETHEREUMRewardTokenDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMRewardTokenDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMRewardTokenDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMRewardTokenDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMRewardTokenDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMRewardTokenDTO (Maybe Integer)
+uNISWAPV2ETHEREUMRewardTokenDTOBlockNumberL f UNISWAPV2ETHEREUMRewardTokenDTO{..} = (\uNISWAPV2ETHEREUMRewardTokenDTOBlockNumber -> UNISWAPV2ETHEREUMRewardTokenDTO { uNISWAPV2ETHEREUMRewardTokenDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMRewardTokenDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMRewardTokenDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMRewardTokenDTOBlockRange' Lens
+uNISWAPV2ETHEREUMRewardTokenDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMRewardTokenDTO (Maybe Text)
+uNISWAPV2ETHEREUMRewardTokenDTOBlockRangeL f UNISWAPV2ETHEREUMRewardTokenDTO{..} = (\uNISWAPV2ETHEREUMRewardTokenDTOBlockRange -> UNISWAPV2ETHEREUMRewardTokenDTO { uNISWAPV2ETHEREUMRewardTokenDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMRewardTokenDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMRewardTokenDTOBlockRangeL #-}
+
+-- | 'uNISWAPV2ETHEREUMRewardTokenDTOId' Lens
+uNISWAPV2ETHEREUMRewardTokenDTOIdL :: Lens_' UNISWAPV2ETHEREUMRewardTokenDTO (Maybe Text)
+uNISWAPV2ETHEREUMRewardTokenDTOIdL f UNISWAPV2ETHEREUMRewardTokenDTO{..} = (\uNISWAPV2ETHEREUMRewardTokenDTOId -> UNISWAPV2ETHEREUMRewardTokenDTO { uNISWAPV2ETHEREUMRewardTokenDTOId, ..} ) <$> f uNISWAPV2ETHEREUMRewardTokenDTOId
+{-# INLINE uNISWAPV2ETHEREUMRewardTokenDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMRewardTokenDTOToken' Lens
+uNISWAPV2ETHEREUMRewardTokenDTOTokenL :: Lens_' UNISWAPV2ETHEREUMRewardTokenDTO (Maybe Text)
+uNISWAPV2ETHEREUMRewardTokenDTOTokenL f UNISWAPV2ETHEREUMRewardTokenDTO{..} = (\uNISWAPV2ETHEREUMRewardTokenDTOToken -> UNISWAPV2ETHEREUMRewardTokenDTO { uNISWAPV2ETHEREUMRewardTokenDTOToken, ..} ) <$> f uNISWAPV2ETHEREUMRewardTokenDTOToken
+{-# INLINE uNISWAPV2ETHEREUMRewardTokenDTOTokenL #-}
+
+
+
+-- * UNISWAPV2ETHEREUMRewarderProbeDTO
+
+-- | 'uNISWAPV2ETHEREUMRewarderProbeDTOEntryTime' Lens
+uNISWAPV2ETHEREUMRewarderProbeDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMRewarderProbeDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMRewarderProbeDTOEntryTimeL f UNISWAPV2ETHEREUMRewarderProbeDTO{..} = (\uNISWAPV2ETHEREUMRewarderProbeDTOEntryTime -> UNISWAPV2ETHEREUMRewarderProbeDTO { uNISWAPV2ETHEREUMRewarderProbeDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMRewarderProbeDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMRewarderProbeDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMRewarderProbeDTORecvTime' Lens
+uNISWAPV2ETHEREUMRewarderProbeDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMRewarderProbeDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMRewarderProbeDTORecvTimeL f UNISWAPV2ETHEREUMRewarderProbeDTO{..} = (\uNISWAPV2ETHEREUMRewarderProbeDTORecvTime -> UNISWAPV2ETHEREUMRewarderProbeDTO { uNISWAPV2ETHEREUMRewarderProbeDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMRewarderProbeDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMRewarderProbeDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMRewarderProbeDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMRewarderProbeDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMRewarderProbeDTO (Maybe Integer)
+uNISWAPV2ETHEREUMRewarderProbeDTOBlockNumberL f UNISWAPV2ETHEREUMRewarderProbeDTO{..} = (\uNISWAPV2ETHEREUMRewarderProbeDTOBlockNumber -> UNISWAPV2ETHEREUMRewarderProbeDTO { uNISWAPV2ETHEREUMRewarderProbeDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMRewarderProbeDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMRewarderProbeDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMRewarderProbeDTOBlockRange' Lens
+uNISWAPV2ETHEREUMRewarderProbeDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMRewarderProbeDTO (Maybe Text)
+uNISWAPV2ETHEREUMRewarderProbeDTOBlockRangeL f UNISWAPV2ETHEREUMRewarderProbeDTO{..} = (\uNISWAPV2ETHEREUMRewarderProbeDTOBlockRange -> UNISWAPV2ETHEREUMRewarderProbeDTO { uNISWAPV2ETHEREUMRewarderProbeDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMRewarderProbeDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMRewarderProbeDTOBlockRangeL #-}
+
+-- | 'uNISWAPV2ETHEREUMRewarderProbeDTOId' Lens
+uNISWAPV2ETHEREUMRewarderProbeDTOIdL :: Lens_' UNISWAPV2ETHEREUMRewarderProbeDTO (Maybe Text)
+uNISWAPV2ETHEREUMRewarderProbeDTOIdL f UNISWAPV2ETHEREUMRewarderProbeDTO{..} = (\uNISWAPV2ETHEREUMRewarderProbeDTOId -> UNISWAPV2ETHEREUMRewarderProbeDTO { uNISWAPV2ETHEREUMRewarderProbeDTOId, ..} ) <$> f uNISWAPV2ETHEREUMRewarderProbeDTOId
+{-# INLINE uNISWAPV2ETHEREUMRewarderProbeDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMRewarderProbeDTOUser' Lens
+uNISWAPV2ETHEREUMRewarderProbeDTOUserL :: Lens_' UNISWAPV2ETHEREUMRewarderProbeDTO (Maybe Text)
+uNISWAPV2ETHEREUMRewarderProbeDTOUserL f UNISWAPV2ETHEREUMRewarderProbeDTO{..} = (\uNISWAPV2ETHEREUMRewarderProbeDTOUser -> UNISWAPV2ETHEREUMRewarderProbeDTO { uNISWAPV2ETHEREUMRewarderProbeDTOUser, ..} ) <$> f uNISWAPV2ETHEREUMRewarderProbeDTOUser
+{-# INLINE uNISWAPV2ETHEREUMRewarderProbeDTOUserL #-}
+
+-- | 'uNISWAPV2ETHEREUMRewarderProbeDTOPending' Lens
+uNISWAPV2ETHEREUMRewarderProbeDTOPendingL :: Lens_' UNISWAPV2ETHEREUMRewarderProbeDTO (Maybe Text)
+uNISWAPV2ETHEREUMRewarderProbeDTOPendingL f UNISWAPV2ETHEREUMRewarderProbeDTO{..} = (\uNISWAPV2ETHEREUMRewarderProbeDTOPending -> UNISWAPV2ETHEREUMRewarderProbeDTO { uNISWAPV2ETHEREUMRewarderProbeDTOPending, ..} ) <$> f uNISWAPV2ETHEREUMRewarderProbeDTOPending
+{-# INLINE uNISWAPV2ETHEREUMRewarderProbeDTOPendingL #-}
+
+-- | 'uNISWAPV2ETHEREUMRewarderProbeDTOBlockNum' Lens
+uNISWAPV2ETHEREUMRewarderProbeDTOBlockNumL :: Lens_' UNISWAPV2ETHEREUMRewarderProbeDTO (Maybe Text)
+uNISWAPV2ETHEREUMRewarderProbeDTOBlockNumL f UNISWAPV2ETHEREUMRewarderProbeDTO{..} = (\uNISWAPV2ETHEREUMRewarderProbeDTOBlockNum -> UNISWAPV2ETHEREUMRewarderProbeDTO { uNISWAPV2ETHEREUMRewarderProbeDTOBlockNum, ..} ) <$> f uNISWAPV2ETHEREUMRewarderProbeDTOBlockNum
+{-# INLINE uNISWAPV2ETHEREUMRewarderProbeDTOBlockNumL #-}
+
+-- | 'uNISWAPV2ETHEREUMRewarderProbeDTOTimestamp' Lens
+uNISWAPV2ETHEREUMRewarderProbeDTOTimestampL :: Lens_' UNISWAPV2ETHEREUMRewarderProbeDTO (Maybe Text)
+uNISWAPV2ETHEREUMRewarderProbeDTOTimestampL f UNISWAPV2ETHEREUMRewarderProbeDTO{..} = (\uNISWAPV2ETHEREUMRewarderProbeDTOTimestamp -> UNISWAPV2ETHEREUMRewarderProbeDTO { uNISWAPV2ETHEREUMRewarderProbeDTOTimestamp, ..} ) <$> f uNISWAPV2ETHEREUMRewarderProbeDTOTimestamp
+{-# INLINE uNISWAPV2ETHEREUMRewarderProbeDTOTimestampL #-}
+
+-- | 'uNISWAPV2ETHEREUMRewarderProbeDTOLpStaked' Lens
+uNISWAPV2ETHEREUMRewarderProbeDTOLpStakedL :: Lens_' UNISWAPV2ETHEREUMRewarderProbeDTO (Maybe Text)
+uNISWAPV2ETHEREUMRewarderProbeDTOLpStakedL f UNISWAPV2ETHEREUMRewarderProbeDTO{..} = (\uNISWAPV2ETHEREUMRewarderProbeDTOLpStaked -> UNISWAPV2ETHEREUMRewarderProbeDTO { uNISWAPV2ETHEREUMRewarderProbeDTOLpStaked, ..} ) <$> f uNISWAPV2ETHEREUMRewarderProbeDTOLpStaked
+{-# INLINE uNISWAPV2ETHEREUMRewarderProbeDTOLpStakedL #-}
 
 
 
@@ -4172,6 +7928,331 @@ uNISWAPV2ETHEREUMTokenDTOLargeTvlImpactBufferL f UNISWAPV2ETHEREUMTokenDTO{..} =
 uNISWAPV2ETHEREUMTokenDTOTokenSymbolL :: Lens_' UNISWAPV2ETHEREUMTokenDTO (Maybe Text)
 uNISWAPV2ETHEREUMTokenDTOTokenSymbolL f UNISWAPV2ETHEREUMTokenDTO{..} = (\uNISWAPV2ETHEREUMTokenDTOTokenSymbol -> UNISWAPV2ETHEREUMTokenDTO { uNISWAPV2ETHEREUMTokenDTOTokenSymbol, ..} ) <$> f uNISWAPV2ETHEREUMTokenDTOTokenSymbol
 {-# INLINE uNISWAPV2ETHEREUMTokenDTOTokenSymbolL #-}
+
+
+
+-- * UNISWAPV2ETHEREUMTokenWhiteListDTO
+
+-- | 'uNISWAPV2ETHEREUMTokenWhiteListDTOEntryTime' Lens
+uNISWAPV2ETHEREUMTokenWhiteListDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMTokenWhiteListDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMTokenWhiteListDTOEntryTimeL f UNISWAPV2ETHEREUMTokenWhiteListDTO{..} = (\uNISWAPV2ETHEREUMTokenWhiteListDTOEntryTime -> UNISWAPV2ETHEREUMTokenWhiteListDTO { uNISWAPV2ETHEREUMTokenWhiteListDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMTokenWhiteListDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMTokenWhiteListDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMTokenWhiteListDTORecvTime' Lens
+uNISWAPV2ETHEREUMTokenWhiteListDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMTokenWhiteListDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMTokenWhiteListDTORecvTimeL f UNISWAPV2ETHEREUMTokenWhiteListDTO{..} = (\uNISWAPV2ETHEREUMTokenWhiteListDTORecvTime -> UNISWAPV2ETHEREUMTokenWhiteListDTO { uNISWAPV2ETHEREUMTokenWhiteListDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMTokenWhiteListDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMTokenWhiteListDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMTokenWhiteListDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMTokenWhiteListDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMTokenWhiteListDTO (Maybe Integer)
+uNISWAPV2ETHEREUMTokenWhiteListDTOBlockNumberL f UNISWAPV2ETHEREUMTokenWhiteListDTO{..} = (\uNISWAPV2ETHEREUMTokenWhiteListDTOBlockNumber -> UNISWAPV2ETHEREUMTokenWhiteListDTO { uNISWAPV2ETHEREUMTokenWhiteListDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMTokenWhiteListDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMTokenWhiteListDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMTokenWhiteListDTOBlockRange' Lens
+uNISWAPV2ETHEREUMTokenWhiteListDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMTokenWhiteListDTO (Maybe Text)
+uNISWAPV2ETHEREUMTokenWhiteListDTOBlockRangeL f UNISWAPV2ETHEREUMTokenWhiteListDTO{..} = (\uNISWAPV2ETHEREUMTokenWhiteListDTOBlockRange -> UNISWAPV2ETHEREUMTokenWhiteListDTO { uNISWAPV2ETHEREUMTokenWhiteListDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMTokenWhiteListDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMTokenWhiteListDTOBlockRangeL #-}
+
+-- | 'uNISWAPV2ETHEREUMTokenWhiteListDTOId' Lens
+uNISWAPV2ETHEREUMTokenWhiteListDTOIdL :: Lens_' UNISWAPV2ETHEREUMTokenWhiteListDTO (Maybe Text)
+uNISWAPV2ETHEREUMTokenWhiteListDTOIdL f UNISWAPV2ETHEREUMTokenWhiteListDTO{..} = (\uNISWAPV2ETHEREUMTokenWhiteListDTOId -> UNISWAPV2ETHEREUMTokenWhiteListDTO { uNISWAPV2ETHEREUMTokenWhiteListDTOId, ..} ) <$> f uNISWAPV2ETHEREUMTokenWhiteListDTOId
+{-# INLINE uNISWAPV2ETHEREUMTokenWhiteListDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMTokenWhiteListDTOWhitelistPools' Lens
+uNISWAPV2ETHEREUMTokenWhiteListDTOWhitelistPoolsL :: Lens_' UNISWAPV2ETHEREUMTokenWhiteListDTO (Maybe [Text])
+uNISWAPV2ETHEREUMTokenWhiteListDTOWhitelistPoolsL f UNISWAPV2ETHEREUMTokenWhiteListDTO{..} = (\uNISWAPV2ETHEREUMTokenWhiteListDTOWhitelistPools -> UNISWAPV2ETHEREUMTokenWhiteListDTO { uNISWAPV2ETHEREUMTokenWhiteListDTOWhitelistPools, ..} ) <$> f uNISWAPV2ETHEREUMTokenWhiteListDTOWhitelistPools
+{-# INLINE uNISWAPV2ETHEREUMTokenWhiteListDTOWhitelistPoolsL #-}
+
+
+
+-- * UNISWAPV2ETHEREUMTransferDTO
+
+-- | 'uNISWAPV2ETHEREUMTransferDTOEntryTime' Lens
+uNISWAPV2ETHEREUMTransferDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMTransferDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMTransferDTOEntryTimeL f UNISWAPV2ETHEREUMTransferDTO{..} = (\uNISWAPV2ETHEREUMTransferDTOEntryTime -> UNISWAPV2ETHEREUMTransferDTO { uNISWAPV2ETHEREUMTransferDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMTransferDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMTransferDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMTransferDTORecvTime' Lens
+uNISWAPV2ETHEREUMTransferDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMTransferDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMTransferDTORecvTimeL f UNISWAPV2ETHEREUMTransferDTO{..} = (\uNISWAPV2ETHEREUMTransferDTORecvTime -> UNISWAPV2ETHEREUMTransferDTO { uNISWAPV2ETHEREUMTransferDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMTransferDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMTransferDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMTransferDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMTransferDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMTransferDTO (Maybe Integer)
+uNISWAPV2ETHEREUMTransferDTOBlockNumberL f UNISWAPV2ETHEREUMTransferDTO{..} = (\uNISWAPV2ETHEREUMTransferDTOBlockNumber -> UNISWAPV2ETHEREUMTransferDTO { uNISWAPV2ETHEREUMTransferDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMTransferDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMTransferDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMTransferDTOBlockRange' Lens
+uNISWAPV2ETHEREUMTransferDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMTransferDTO (Maybe Text)
+uNISWAPV2ETHEREUMTransferDTOBlockRangeL f UNISWAPV2ETHEREUMTransferDTO{..} = (\uNISWAPV2ETHEREUMTransferDTOBlockRange -> UNISWAPV2ETHEREUMTransferDTO { uNISWAPV2ETHEREUMTransferDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMTransferDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMTransferDTOBlockRangeL #-}
+
+-- | 'uNISWAPV2ETHEREUMTransferDTOId' Lens
+uNISWAPV2ETHEREUMTransferDTOIdL :: Lens_' UNISWAPV2ETHEREUMTransferDTO (Maybe Text)
+uNISWAPV2ETHEREUMTransferDTOIdL f UNISWAPV2ETHEREUMTransferDTO{..} = (\uNISWAPV2ETHEREUMTransferDTOId -> UNISWAPV2ETHEREUMTransferDTO { uNISWAPV2ETHEREUMTransferDTOId, ..} ) <$> f uNISWAPV2ETHEREUMTransferDTOId
+{-# INLINE uNISWAPV2ETHEREUMTransferDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMTransferDTOTimestamp' Lens
+uNISWAPV2ETHEREUMTransferDTOTimestampL :: Lens_' UNISWAPV2ETHEREUMTransferDTO (Maybe Text)
+uNISWAPV2ETHEREUMTransferDTOTimestampL f UNISWAPV2ETHEREUMTransferDTO{..} = (\uNISWAPV2ETHEREUMTransferDTOTimestamp -> UNISWAPV2ETHEREUMTransferDTO { uNISWAPV2ETHEREUMTransferDTOTimestamp, ..} ) <$> f uNISWAPV2ETHEREUMTransferDTOTimestamp
+{-# INLINE uNISWAPV2ETHEREUMTransferDTOTimestampL #-}
+
+-- | 'uNISWAPV2ETHEREUMTransferDTOSender' Lens
+uNISWAPV2ETHEREUMTransferDTOSenderL :: Lens_' UNISWAPV2ETHEREUMTransferDTO (Maybe Text)
+uNISWAPV2ETHEREUMTransferDTOSenderL f UNISWAPV2ETHEREUMTransferDTO{..} = (\uNISWAPV2ETHEREUMTransferDTOSender -> UNISWAPV2ETHEREUMTransferDTO { uNISWAPV2ETHEREUMTransferDTOSender, ..} ) <$> f uNISWAPV2ETHEREUMTransferDTOSender
+{-# INLINE uNISWAPV2ETHEREUMTransferDTOSenderL #-}
+
+-- | 'uNISWAPV2ETHEREUMTransferDTOType' Lens
+uNISWAPV2ETHEREUMTransferDTOTypeL :: Lens_' UNISWAPV2ETHEREUMTransferDTO (Maybe Text)
+uNISWAPV2ETHEREUMTransferDTOTypeL f UNISWAPV2ETHEREUMTransferDTO{..} = (\uNISWAPV2ETHEREUMTransferDTOType -> UNISWAPV2ETHEREUMTransferDTO { uNISWAPV2ETHEREUMTransferDTOType, ..} ) <$> f uNISWAPV2ETHEREUMTransferDTOType
+{-# INLINE uNISWAPV2ETHEREUMTransferDTOTypeL #-}
+
+-- | 'uNISWAPV2ETHEREUMTransferDTOLiquidity' Lens
+uNISWAPV2ETHEREUMTransferDTOLiquidityL :: Lens_' UNISWAPV2ETHEREUMTransferDTO (Maybe Text)
+uNISWAPV2ETHEREUMTransferDTOLiquidityL f UNISWAPV2ETHEREUMTransferDTO{..} = (\uNISWAPV2ETHEREUMTransferDTOLiquidity -> UNISWAPV2ETHEREUMTransferDTO { uNISWAPV2ETHEREUMTransferDTOLiquidity, ..} ) <$> f uNISWAPV2ETHEREUMTransferDTOLiquidity
+{-# INLINE uNISWAPV2ETHEREUMTransferDTOLiquidityL #-}
+
+
+
+-- * UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOEntryTime' Lens
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOEntryTimeL f UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOEntryTime -> UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTORecvTime' Lens
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTORecvTimeL f UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTORecvTime -> UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Integer)
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockNumberL f UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockNumber -> UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockRange' Lens
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockRangeL f UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockRange -> UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOBlockRangeL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOId' Lens
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOIdL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOIdL f UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOId -> UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOId, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOId
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOProtocol' Lens
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOProtocolL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOProtocolL f UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOProtocol -> UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOProtocol, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOProtocol
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOProtocolL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers' Lens
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsersL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsersL f UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers -> UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsers
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyActiveUsersL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers' Lens
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsersL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsersL f UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers -> UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsers
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOCumulativeUniqueUsersL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount' Lens
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCountL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCountL f UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount -> UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCount
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyTransactionCountL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount' Lens
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCountL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCountL f UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount -> UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCount
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyDepositCountL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount' Lens
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCountL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCountL f UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount -> UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCount
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailyWithdrawCountL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailySwapCount' Lens
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailySwapCountL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailySwapCountL f UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailySwapCount -> UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailySwapCount, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailySwapCount
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODailySwapCountL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount' Lens
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCountL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Int)
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCountL f UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount -> UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCount
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTotalPoolCountL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTimestamp' Lens
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTimestampL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTimestampL f UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTimestamp -> UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTimestamp, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTimestamp
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTOTimestampL #-}
+
+
+
+-- * UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOEntryTime' Lens
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOEntryTimeL f UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOEntryTime -> UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTORecvTime' Lens
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTORecvTimeL f UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTORecvTime -> UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Integer)
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumberL f UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber -> UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockRange' Lens
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockRangeL f UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockRange -> UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOBlockRangeL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOId' Lens
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOIdL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOIdL f UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOId -> UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOId, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOId
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOProtocol' Lens
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOProtocolL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOProtocolL f UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOProtocol -> UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOProtocol, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOProtocol
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOProtocolL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers' Lens
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsersL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Int)
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsersL f UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers -> UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsers
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyActiveUsersL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers' Lens
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsersL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Int)
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsersL f UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers -> UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsers
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOCumulativeUniqueUsersL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount' Lens
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCountL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Int)
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCountL f UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount -> UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCount
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyTransactionCountL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount' Lens
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCountL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Int)
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCountL f UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount -> UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCount
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyDepositCountL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount' Lens
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCountL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Int)
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCountL f UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount -> UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCount
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlyWithdrawCountL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount' Lens
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCountL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Int)
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCountL f UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount -> UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCount
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOHourlySwapCountL #-}
+
+-- | 'uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOTimestamp' Lens
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOTimestampL :: Lens_' UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO (Maybe Text)
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOTimestampL f UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO{..} = (\uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOTimestamp -> UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO { uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOTimestamp, ..} ) <$> f uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOTimestamp
+{-# INLINE uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTOTimestampL #-}
+
+
+
+-- * UNISWAPV2ETHEREUMWithdrawDTO
+
+-- | 'uNISWAPV2ETHEREUMWithdrawDTOEntryTime' Lens
+uNISWAPV2ETHEREUMWithdrawDTOEntryTimeL :: Lens_' UNISWAPV2ETHEREUMWithdrawDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMWithdrawDTOEntryTimeL f UNISWAPV2ETHEREUMWithdrawDTO{..} = (\uNISWAPV2ETHEREUMWithdrawDTOEntryTime -> UNISWAPV2ETHEREUMWithdrawDTO { uNISWAPV2ETHEREUMWithdrawDTOEntryTime, ..} ) <$> f uNISWAPV2ETHEREUMWithdrawDTOEntryTime
+{-# INLINE uNISWAPV2ETHEREUMWithdrawDTOEntryTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMWithdrawDTORecvTime' Lens
+uNISWAPV2ETHEREUMWithdrawDTORecvTimeL :: Lens_' UNISWAPV2ETHEREUMWithdrawDTO (Maybe DateTime)
+uNISWAPV2ETHEREUMWithdrawDTORecvTimeL f UNISWAPV2ETHEREUMWithdrawDTO{..} = (\uNISWAPV2ETHEREUMWithdrawDTORecvTime -> UNISWAPV2ETHEREUMWithdrawDTO { uNISWAPV2ETHEREUMWithdrawDTORecvTime, ..} ) <$> f uNISWAPV2ETHEREUMWithdrawDTORecvTime
+{-# INLINE uNISWAPV2ETHEREUMWithdrawDTORecvTimeL #-}
+
+-- | 'uNISWAPV2ETHEREUMWithdrawDTOBlockNumber' Lens
+uNISWAPV2ETHEREUMWithdrawDTOBlockNumberL :: Lens_' UNISWAPV2ETHEREUMWithdrawDTO (Maybe Integer)
+uNISWAPV2ETHEREUMWithdrawDTOBlockNumberL f UNISWAPV2ETHEREUMWithdrawDTO{..} = (\uNISWAPV2ETHEREUMWithdrawDTOBlockNumber -> UNISWAPV2ETHEREUMWithdrawDTO { uNISWAPV2ETHEREUMWithdrawDTOBlockNumber, ..} ) <$> f uNISWAPV2ETHEREUMWithdrawDTOBlockNumber
+{-# INLINE uNISWAPV2ETHEREUMWithdrawDTOBlockNumberL #-}
+
+-- | 'uNISWAPV2ETHEREUMWithdrawDTOBlock' Lens
+uNISWAPV2ETHEREUMWithdrawDTOBlockL :: Lens_' UNISWAPV2ETHEREUMWithdrawDTO (Maybe Int)
+uNISWAPV2ETHEREUMWithdrawDTOBlockL f UNISWAPV2ETHEREUMWithdrawDTO{..} = (\uNISWAPV2ETHEREUMWithdrawDTOBlock -> UNISWAPV2ETHEREUMWithdrawDTO { uNISWAPV2ETHEREUMWithdrawDTOBlock, ..} ) <$> f uNISWAPV2ETHEREUMWithdrawDTOBlock
+{-# INLINE uNISWAPV2ETHEREUMWithdrawDTOBlockL #-}
+
+-- | 'uNISWAPV2ETHEREUMWithdrawDTOId' Lens
+uNISWAPV2ETHEREUMWithdrawDTOIdL :: Lens_' UNISWAPV2ETHEREUMWithdrawDTO (Maybe Text)
+uNISWAPV2ETHEREUMWithdrawDTOIdL f UNISWAPV2ETHEREUMWithdrawDTO{..} = (\uNISWAPV2ETHEREUMWithdrawDTOId -> UNISWAPV2ETHEREUMWithdrawDTO { uNISWAPV2ETHEREUMWithdrawDTOId, ..} ) <$> f uNISWAPV2ETHEREUMWithdrawDTOId
+{-# INLINE uNISWAPV2ETHEREUMWithdrawDTOIdL #-}
+
+-- | 'uNISWAPV2ETHEREUMWithdrawDTOHash' Lens
+uNISWAPV2ETHEREUMWithdrawDTOHashL :: Lens_' UNISWAPV2ETHEREUMWithdrawDTO (Maybe Text)
+uNISWAPV2ETHEREUMWithdrawDTOHashL f UNISWAPV2ETHEREUMWithdrawDTO{..} = (\uNISWAPV2ETHEREUMWithdrawDTOHash -> UNISWAPV2ETHEREUMWithdrawDTO { uNISWAPV2ETHEREUMWithdrawDTOHash, ..} ) <$> f uNISWAPV2ETHEREUMWithdrawDTOHash
+{-# INLINE uNISWAPV2ETHEREUMWithdrawDTOHashL #-}
+
+-- | 'uNISWAPV2ETHEREUMWithdrawDTOLogIndex' Lens
+uNISWAPV2ETHEREUMWithdrawDTOLogIndexL :: Lens_' UNISWAPV2ETHEREUMWithdrawDTO (Maybe Int)
+uNISWAPV2ETHEREUMWithdrawDTOLogIndexL f UNISWAPV2ETHEREUMWithdrawDTO{..} = (\uNISWAPV2ETHEREUMWithdrawDTOLogIndex -> UNISWAPV2ETHEREUMWithdrawDTO { uNISWAPV2ETHEREUMWithdrawDTOLogIndex, ..} ) <$> f uNISWAPV2ETHEREUMWithdrawDTOLogIndex
+{-# INLINE uNISWAPV2ETHEREUMWithdrawDTOLogIndexL #-}
+
+-- | 'uNISWAPV2ETHEREUMWithdrawDTOProtocol' Lens
+uNISWAPV2ETHEREUMWithdrawDTOProtocolL :: Lens_' UNISWAPV2ETHEREUMWithdrawDTO (Maybe Text)
+uNISWAPV2ETHEREUMWithdrawDTOProtocolL f UNISWAPV2ETHEREUMWithdrawDTO{..} = (\uNISWAPV2ETHEREUMWithdrawDTOProtocol -> UNISWAPV2ETHEREUMWithdrawDTO { uNISWAPV2ETHEREUMWithdrawDTOProtocol, ..} ) <$> f uNISWAPV2ETHEREUMWithdrawDTOProtocol
+{-# INLINE uNISWAPV2ETHEREUMWithdrawDTOProtocolL #-}
+
+-- | 'uNISWAPV2ETHEREUMWithdrawDTOTo' Lens
+uNISWAPV2ETHEREUMWithdrawDTOToL :: Lens_' UNISWAPV2ETHEREUMWithdrawDTO (Maybe Text)
+uNISWAPV2ETHEREUMWithdrawDTOToL f UNISWAPV2ETHEREUMWithdrawDTO{..} = (\uNISWAPV2ETHEREUMWithdrawDTOTo -> UNISWAPV2ETHEREUMWithdrawDTO { uNISWAPV2ETHEREUMWithdrawDTOTo, ..} ) <$> f uNISWAPV2ETHEREUMWithdrawDTOTo
+{-# INLINE uNISWAPV2ETHEREUMWithdrawDTOToL #-}
+
+-- | 'uNISWAPV2ETHEREUMWithdrawDTOFrom' Lens
+uNISWAPV2ETHEREUMWithdrawDTOFromL :: Lens_' UNISWAPV2ETHEREUMWithdrawDTO (Maybe Text)
+uNISWAPV2ETHEREUMWithdrawDTOFromL f UNISWAPV2ETHEREUMWithdrawDTO{..} = (\uNISWAPV2ETHEREUMWithdrawDTOFrom -> UNISWAPV2ETHEREUMWithdrawDTO { uNISWAPV2ETHEREUMWithdrawDTOFrom, ..} ) <$> f uNISWAPV2ETHEREUMWithdrawDTOFrom
+{-# INLINE uNISWAPV2ETHEREUMWithdrawDTOFromL #-}
+
+-- | 'uNISWAPV2ETHEREUMWithdrawDTOTimestamp' Lens
+uNISWAPV2ETHEREUMWithdrawDTOTimestampL :: Lens_' UNISWAPV2ETHEREUMWithdrawDTO (Maybe Text)
+uNISWAPV2ETHEREUMWithdrawDTOTimestampL f UNISWAPV2ETHEREUMWithdrawDTO{..} = (\uNISWAPV2ETHEREUMWithdrawDTOTimestamp -> UNISWAPV2ETHEREUMWithdrawDTO { uNISWAPV2ETHEREUMWithdrawDTOTimestamp, ..} ) <$> f uNISWAPV2ETHEREUMWithdrawDTOTimestamp
+{-# INLINE uNISWAPV2ETHEREUMWithdrawDTOTimestampL #-}
+
+-- | 'uNISWAPV2ETHEREUMWithdrawDTOInputTokens' Lens
+uNISWAPV2ETHEREUMWithdrawDTOInputTokensL :: Lens_' UNISWAPV2ETHEREUMWithdrawDTO (Maybe [Text])
+uNISWAPV2ETHEREUMWithdrawDTOInputTokensL f UNISWAPV2ETHEREUMWithdrawDTO{..} = (\uNISWAPV2ETHEREUMWithdrawDTOInputTokens -> UNISWAPV2ETHEREUMWithdrawDTO { uNISWAPV2ETHEREUMWithdrawDTOInputTokens, ..} ) <$> f uNISWAPV2ETHEREUMWithdrawDTOInputTokens
+{-# INLINE uNISWAPV2ETHEREUMWithdrawDTOInputTokensL #-}
+
+-- | 'uNISWAPV2ETHEREUMWithdrawDTOOutputToken' Lens
+uNISWAPV2ETHEREUMWithdrawDTOOutputTokenL :: Lens_' UNISWAPV2ETHEREUMWithdrawDTO (Maybe Text)
+uNISWAPV2ETHEREUMWithdrawDTOOutputTokenL f UNISWAPV2ETHEREUMWithdrawDTO{..} = (\uNISWAPV2ETHEREUMWithdrawDTOOutputToken -> UNISWAPV2ETHEREUMWithdrawDTO { uNISWAPV2ETHEREUMWithdrawDTOOutputToken, ..} ) <$> f uNISWAPV2ETHEREUMWithdrawDTOOutputToken
+{-# INLINE uNISWAPV2ETHEREUMWithdrawDTOOutputTokenL #-}
+
+-- | 'uNISWAPV2ETHEREUMWithdrawDTOInputTokenAmounts' Lens
+uNISWAPV2ETHEREUMWithdrawDTOInputTokenAmountsL :: Lens_' UNISWAPV2ETHEREUMWithdrawDTO (Maybe [Text])
+uNISWAPV2ETHEREUMWithdrawDTOInputTokenAmountsL f UNISWAPV2ETHEREUMWithdrawDTO{..} = (\uNISWAPV2ETHEREUMWithdrawDTOInputTokenAmounts -> UNISWAPV2ETHEREUMWithdrawDTO { uNISWAPV2ETHEREUMWithdrawDTOInputTokenAmounts, ..} ) <$> f uNISWAPV2ETHEREUMWithdrawDTOInputTokenAmounts
+{-# INLINE uNISWAPV2ETHEREUMWithdrawDTOInputTokenAmountsL #-}
+
+-- | 'uNISWAPV2ETHEREUMWithdrawDTOOutputTokenAmount' Lens
+uNISWAPV2ETHEREUMWithdrawDTOOutputTokenAmountL :: Lens_' UNISWAPV2ETHEREUMWithdrawDTO (Maybe Text)
+uNISWAPV2ETHEREUMWithdrawDTOOutputTokenAmountL f UNISWAPV2ETHEREUMWithdrawDTO{..} = (\uNISWAPV2ETHEREUMWithdrawDTOOutputTokenAmount -> UNISWAPV2ETHEREUMWithdrawDTO { uNISWAPV2ETHEREUMWithdrawDTOOutputTokenAmount, ..} ) <$> f uNISWAPV2ETHEREUMWithdrawDTOOutputTokenAmount
+{-# INLINE uNISWAPV2ETHEREUMWithdrawDTOOutputTokenAmountL #-}
+
+-- | 'uNISWAPV2ETHEREUMWithdrawDTOReserveAmounts' Lens
+uNISWAPV2ETHEREUMWithdrawDTOReserveAmountsL :: Lens_' UNISWAPV2ETHEREUMWithdrawDTO (Maybe [Text])
+uNISWAPV2ETHEREUMWithdrawDTOReserveAmountsL f UNISWAPV2ETHEREUMWithdrawDTO{..} = (\uNISWAPV2ETHEREUMWithdrawDTOReserveAmounts -> UNISWAPV2ETHEREUMWithdrawDTO { uNISWAPV2ETHEREUMWithdrawDTOReserveAmounts, ..} ) <$> f uNISWAPV2ETHEREUMWithdrawDTOReserveAmounts
+{-# INLINE uNISWAPV2ETHEREUMWithdrawDTOReserveAmountsL #-}
+
+-- | 'uNISWAPV2ETHEREUMWithdrawDTOAmountUsd' Lens
+uNISWAPV2ETHEREUMWithdrawDTOAmountUsdL :: Lens_' UNISWAPV2ETHEREUMWithdrawDTO (Maybe Text)
+uNISWAPV2ETHEREUMWithdrawDTOAmountUsdL f UNISWAPV2ETHEREUMWithdrawDTO{..} = (\uNISWAPV2ETHEREUMWithdrawDTOAmountUsd -> UNISWAPV2ETHEREUMWithdrawDTO { uNISWAPV2ETHEREUMWithdrawDTOAmountUsd, ..} ) <$> f uNISWAPV2ETHEREUMWithdrawDTOAmountUsd
+{-# INLINE uNISWAPV2ETHEREUMWithdrawDTOAmountUsdL #-}
+
+-- | 'uNISWAPV2ETHEREUMWithdrawDTOPool' Lens
+uNISWAPV2ETHEREUMWithdrawDTOPoolL :: Lens_' UNISWAPV2ETHEREUMWithdrawDTO (Maybe Text)
+uNISWAPV2ETHEREUMWithdrawDTOPoolL f UNISWAPV2ETHEREUMWithdrawDTO{..} = (\uNISWAPV2ETHEREUMWithdrawDTOPool -> UNISWAPV2ETHEREUMWithdrawDTO { uNISWAPV2ETHEREUMWithdrawDTOPool, ..} ) <$> f uNISWAPV2ETHEREUMWithdrawDTOPool
+{-# INLINE uNISWAPV2ETHEREUMWithdrawDTOPoolL #-}
+
+-- | 'uNISWAPV2ETHEREUMWithdrawDTOBlockRange' Lens
+uNISWAPV2ETHEREUMWithdrawDTOBlockRangeL :: Lens_' UNISWAPV2ETHEREUMWithdrawDTO (Maybe Text)
+uNISWAPV2ETHEREUMWithdrawDTOBlockRangeL f UNISWAPV2ETHEREUMWithdrawDTO{..} = (\uNISWAPV2ETHEREUMWithdrawDTOBlockRange -> UNISWAPV2ETHEREUMWithdrawDTO { uNISWAPV2ETHEREUMWithdrawDTOBlockRange, ..} ) <$> f uNISWAPV2ETHEREUMWithdrawDTOBlockRange
+{-# INLINE uNISWAPV2ETHEREUMWithdrawDTOBlockRangeL #-}
 
 
 
@@ -4554,7 +8635,7 @@ uNISWAPV3ETHEREUMFinancialsDailySnapshotDTORecvTimeL f UNISWAPV3ETHEREUMFinancia
 {-# INLINE uNISWAPV3ETHEREUMFinancialsDailySnapshotDTORecvTimeL #-}
 
 -- | 'uNISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumber' Lens
-uNISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumberL :: Lens_' UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Int)
+uNISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumberL :: Lens_' UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO (Maybe Integer)
 uNISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumberL f UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO{..} = (\uNISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumber -> UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO { uNISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumber, ..} ) <$> f uNISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumber
 {-# INLINE uNISWAPV3ETHEREUMFinancialsDailySnapshotDTOBlockNumberL #-}
 
@@ -4965,11 +9046,6 @@ uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumberL :: Lens_' UNISWAPV3ET
 uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumberL f UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber -> UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber, ..} ) <$> f uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumber
 {-# INLINE uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockNumberL #-}
 
--- | 'uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVid' Lens
-uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVidL :: Lens_' UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Integer)
-uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVidL f UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVid -> UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVid, ..} ) <$> f uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVid
-{-# INLINE uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOVidL #-}
-
 -- | 'uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock' Lens
 uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockL :: Lens_' UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO (Maybe Int)
 uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlockL f UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO{..} = (\uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock -> UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO { uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock, ..} ) <$> f uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOBlock
@@ -5238,11 +9314,6 @@ uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumberL :: Lens_' UNISWAPV3E
 uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumberL f UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber -> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber, ..} ) <$> f uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumber
 {-# INLINE uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOBlockNumberL #-}
 
--- | 'uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVid' Lens
-uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVidL :: Lens_' UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Integer)
-uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVidL f UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVid -> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVid, ..} ) <$> f uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVid
-{-# INLINE uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOVidL #-}
-
 -- | 'uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId' Lens
 uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOIdL :: Lens_' UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO (Maybe Text)
 uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOIdL f UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO{..} = (\uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId -> UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO { uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId, ..} ) <$> f uNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOId
@@ -5471,11 +9542,6 @@ uNISWAPV3ETHEREUMPositionDTORecvTimeL f UNISWAPV3ETHEREUMPositionDTO{..} = (\uNI
 uNISWAPV3ETHEREUMPositionDTOBlockNumberL :: Lens_' UNISWAPV3ETHEREUMPositionDTO (Maybe Integer)
 uNISWAPV3ETHEREUMPositionDTOBlockNumberL f UNISWAPV3ETHEREUMPositionDTO{..} = (\uNISWAPV3ETHEREUMPositionDTOBlockNumber -> UNISWAPV3ETHEREUMPositionDTO { uNISWAPV3ETHEREUMPositionDTOBlockNumber, ..} ) <$> f uNISWAPV3ETHEREUMPositionDTOBlockNumber
 {-# INLINE uNISWAPV3ETHEREUMPositionDTOBlockNumberL #-}
-
--- | 'uNISWAPV3ETHEREUMPositionDTOVid' Lens
-uNISWAPV3ETHEREUMPositionDTOVidL :: Lens_' UNISWAPV3ETHEREUMPositionDTO (Maybe Integer)
-uNISWAPV3ETHEREUMPositionDTOVidL f UNISWAPV3ETHEREUMPositionDTO{..} = (\uNISWAPV3ETHEREUMPositionDTOVid -> UNISWAPV3ETHEREUMPositionDTO { uNISWAPV3ETHEREUMPositionDTOVid, ..} ) <$> f uNISWAPV3ETHEREUMPositionDTOVid
-{-# INLINE uNISWAPV3ETHEREUMPositionDTOVidL #-}
 
 -- | 'uNISWAPV3ETHEREUMPositionDTOId' Lens
 uNISWAPV3ETHEREUMPositionDTOIdL :: Lens_' UNISWAPV3ETHEREUMPositionDTO (Maybe Text)
@@ -5883,11 +9949,6 @@ uNISWAPV3ETHEREUMTickDTOBlockNumberL :: Lens_' UNISWAPV3ETHEREUMTickDTO (Maybe I
 uNISWAPV3ETHEREUMTickDTOBlockNumberL f UNISWAPV3ETHEREUMTickDTO{..} = (\uNISWAPV3ETHEREUMTickDTOBlockNumber -> UNISWAPV3ETHEREUMTickDTO { uNISWAPV3ETHEREUMTickDTOBlockNumber, ..} ) <$> f uNISWAPV3ETHEREUMTickDTOBlockNumber
 {-# INLINE uNISWAPV3ETHEREUMTickDTOBlockNumberL #-}
 
--- | 'uNISWAPV3ETHEREUMTickDTOVid' Lens
-uNISWAPV3ETHEREUMTickDTOVidL :: Lens_' UNISWAPV3ETHEREUMTickDTO (Maybe Integer)
-uNISWAPV3ETHEREUMTickDTOVidL f UNISWAPV3ETHEREUMTickDTO{..} = (\uNISWAPV3ETHEREUMTickDTOVid -> UNISWAPV3ETHEREUMTickDTO { uNISWAPV3ETHEREUMTickDTOVid, ..} ) <$> f uNISWAPV3ETHEREUMTickDTOVid
-{-# INLINE uNISWAPV3ETHEREUMTickDTOVidL #-}
-
 -- | 'uNISWAPV3ETHEREUMTickDTOId' Lens
 uNISWAPV3ETHEREUMTickDTOIdL :: Lens_' UNISWAPV3ETHEREUMTickDTO (Maybe Text)
 uNISWAPV3ETHEREUMTickDTOIdL f UNISWAPV3ETHEREUMTickDTO{..} = (\uNISWAPV3ETHEREUMTickDTOId -> UNISWAPV3ETHEREUMTickDTO { uNISWAPV3ETHEREUMTickDTOId, ..} ) <$> f uNISWAPV3ETHEREUMTickDTOId
@@ -5977,11 +10038,6 @@ uNISWAPV3ETHEREUMTickDailySnapshotDTOBlockNumberL :: Lens_' UNISWAPV3ETHEREUMTic
 uNISWAPV3ETHEREUMTickDailySnapshotDTOBlockNumberL f UNISWAPV3ETHEREUMTickDailySnapshotDTO{..} = (\uNISWAPV3ETHEREUMTickDailySnapshotDTOBlockNumber -> UNISWAPV3ETHEREUMTickDailySnapshotDTO { uNISWAPV3ETHEREUMTickDailySnapshotDTOBlockNumber, ..} ) <$> f uNISWAPV3ETHEREUMTickDailySnapshotDTOBlockNumber
 {-# INLINE uNISWAPV3ETHEREUMTickDailySnapshotDTOBlockNumberL #-}
 
--- | 'uNISWAPV3ETHEREUMTickDailySnapshotDTOVid' Lens
-uNISWAPV3ETHEREUMTickDailySnapshotDTOVidL :: Lens_' UNISWAPV3ETHEREUMTickDailySnapshotDTO (Maybe Integer)
-uNISWAPV3ETHEREUMTickDailySnapshotDTOVidL f UNISWAPV3ETHEREUMTickDailySnapshotDTO{..} = (\uNISWAPV3ETHEREUMTickDailySnapshotDTOVid -> UNISWAPV3ETHEREUMTickDailySnapshotDTO { uNISWAPV3ETHEREUMTickDailySnapshotDTOVid, ..} ) <$> f uNISWAPV3ETHEREUMTickDailySnapshotDTOVid
-{-# INLINE uNISWAPV3ETHEREUMTickDailySnapshotDTOVidL #-}
-
 -- | 'uNISWAPV3ETHEREUMTickDailySnapshotDTOId' Lens
 uNISWAPV3ETHEREUMTickDailySnapshotDTOIdL :: Lens_' UNISWAPV3ETHEREUMTickDailySnapshotDTO (Maybe Text)
 uNISWAPV3ETHEREUMTickDailySnapshotDTOIdL f UNISWAPV3ETHEREUMTickDailySnapshotDTO{..} = (\uNISWAPV3ETHEREUMTickDailySnapshotDTOId -> UNISWAPV3ETHEREUMTickDailySnapshotDTO { uNISWAPV3ETHEREUMTickDailySnapshotDTOId, ..} ) <$> f uNISWAPV3ETHEREUMTickDailySnapshotDTOId
@@ -6045,11 +10101,6 @@ uNISWAPV3ETHEREUMTickHourlySnapshotDTORecvTimeL f UNISWAPV3ETHEREUMTickHourlySna
 uNISWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumberL :: Lens_' UNISWAPV3ETHEREUMTickHourlySnapshotDTO (Maybe Integer)
 uNISWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumberL f UNISWAPV3ETHEREUMTickHourlySnapshotDTO{..} = (\uNISWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumber -> UNISWAPV3ETHEREUMTickHourlySnapshotDTO { uNISWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumber, ..} ) <$> f uNISWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumber
 {-# INLINE uNISWAPV3ETHEREUMTickHourlySnapshotDTOBlockNumberL #-}
-
--- | 'uNISWAPV3ETHEREUMTickHourlySnapshotDTOVid' Lens
-uNISWAPV3ETHEREUMTickHourlySnapshotDTOVidL :: Lens_' UNISWAPV3ETHEREUMTickHourlySnapshotDTO (Maybe Integer)
-uNISWAPV3ETHEREUMTickHourlySnapshotDTOVidL f UNISWAPV3ETHEREUMTickHourlySnapshotDTO{..} = (\uNISWAPV3ETHEREUMTickHourlySnapshotDTOVid -> UNISWAPV3ETHEREUMTickHourlySnapshotDTO { uNISWAPV3ETHEREUMTickHourlySnapshotDTOVid, ..} ) <$> f uNISWAPV3ETHEREUMTickHourlySnapshotDTOVid
-{-# INLINE uNISWAPV3ETHEREUMTickHourlySnapshotDTOVidL #-}
 
 -- | 'uNISWAPV3ETHEREUMTickHourlySnapshotDTOId' Lens
 uNISWAPV3ETHEREUMTickHourlySnapshotDTOIdL :: Lens_' UNISWAPV3ETHEREUMTickHourlySnapshotDTO (Maybe Text)

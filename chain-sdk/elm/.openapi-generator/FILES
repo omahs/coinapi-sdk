@@ -4,7 +4,7 @@ README.md
 elm.json
 src/Api.elm
 src/Api/Data.elm
-src/Api/Request/CRYPTOPUNKS.elm
+src/Api/Request/CRYPTOPUNKSETHEREUM.elm
 src/Api/Request/CURVEFINANCEETHEREUM.elm
 src/Api/Request/Metadata.elm
 src/Api/Request/PANCAKESWAPV3ETHEREUM.elm

@@ -14,9 +14,23 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMAccountDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMActiveAccountDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMDepositDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMDexAmmProtocolDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMLiquidityGaugeDTO;
 import org.openapitools.client.model.CURVEFINANCEETHEREUMLiquidityPoolDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMLiquidityPoolFeeDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMLpTokenDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMRewardTokenDTO;
 import org.openapitools.client.model.CURVEFINANCEETHEREUMSwapDTO;
 import org.openapitools.client.model.CURVEFINANCEETHEREUMTokenDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO;
+import org.openapitools.client.model.CURVEFINANCEETHEREUMWithdrawDTO;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -34,6 +48,123 @@ public class CurveFinanceEthereumApiTest {
     private final CurveFinanceEthereumApi api = new CurveFinanceEthereumApi();
 
     /**
+     * Accounts (current)
+     *
+     * Gets accounts.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cURVEFINANCEETHEREUMAccountsCurrentTest() throws ApiException {
+        List<CURVEFINANCEETHEREUMAccountDTO> response = api.cURVEFINANCEETHEREUMAccountsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * ActiveAccounts (current)
+     *
+     * Gets activeAccounts.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cURVEFINANCEETHEREUMActiveAccountsCurrentTest() throws ApiException {
+        List<CURVEFINANCEETHEREUMActiveAccountDTO> response = api.cURVEFINANCEETHEREUMActiveAccountsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Deposits (current)
+     *
+     * Gets deposits.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cURVEFINANCEETHEREUMDepositsCurrentTest() throws ApiException {
+        List<CURVEFINANCEETHEREUMDepositDTO> response = api.cURVEFINANCEETHEREUMDepositsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * DexAmmProtocols (current)
+     *
+     * Gets dexAmmProtocols.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cURVEFINANCEETHEREUMDexAmmProtocolsCurrentTest() throws ApiException {
+        List<CURVEFINANCEETHEREUMDexAmmProtocolDTO> response = api.cURVEFINANCEETHEREUMDexAmmProtocolsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * FinancialsDailySnapshots (current)
+     *
+     * Gets financialsDailySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentTest() throws ApiException {
+        List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO> response = api.cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * LiquidityGauges (current)
+     *
+     * Gets liquidityGauges.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cURVEFINANCEETHEREUMLiquidityGaugesCurrentTest() throws ApiException {
+        List<CURVEFINANCEETHEREUMLiquidityGaugeDTO> response = api.cURVEFINANCEETHEREUMLiquidityGaugesCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     *
+     * Gets liquidityPoolDailySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentTest() throws ApiException {
+        List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO> response = api.cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * LiquidityPoolFees (current)
+     *
+     * Gets liquidityPoolFees.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cURVEFINANCEETHEREUMLiquidityPoolFeesCurrentTest() throws ApiException {
+        List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO> response = api.cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     *
+     * Gets liquidityPoolHourlySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentTest() throws ApiException {
+        List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO> response = api.cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
      * LiquidityPools (current)
      *
      * Gets liquidityPools.
@@ -42,7 +173,34 @@ public class CurveFinanceEthereumApiTest {
      */
     @Test
     public void cURVEFINANCEETHEREUMLiquidityPoolsCurrentTest() throws ApiException {
-        List<CURVEFINANCEETHEREUMLiquidityPoolDTO> response = api.cURVEFINANCEETHEREUMLiquidityPoolsCurrent();
+        String id = null;
+        List<CURVEFINANCEETHEREUMLiquidityPoolDTO> response = api.cURVEFINANCEETHEREUMLiquidityPoolsCurrent(id);
+        // TODO: test validations
+    }
+
+    /**
+     * LpTokens (current)
+     *
+     * Gets lpTokens.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cURVEFINANCEETHEREUMLpTokensCurrentTest() throws ApiException {
+        List<CURVEFINANCEETHEREUMLpTokenDTO> response = api.cURVEFINANCEETHEREUMLpTokensCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * RewardTokens (current)
+     *
+     * Gets rewardTokens.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cURVEFINANCEETHEREUMRewardTokensCurrentTest() throws ApiException {
+        List<CURVEFINANCEETHEREUMRewardTokenDTO> response = api.cURVEFINANCEETHEREUMRewardTokensCurrent();
         // TODO: test validations
     }
 
@@ -68,7 +226,47 @@ public class CurveFinanceEthereumApiTest {
      */
     @Test
     public void cURVEFINANCEETHEREUMTokensCurrentTest() throws ApiException {
-        List<CURVEFINANCEETHEREUMTokenDTO> response = api.cURVEFINANCEETHEREUMTokensCurrent();
+        String id = null;
+        List<CURVEFINANCEETHEREUMTokenDTO> response = api.cURVEFINANCEETHEREUMTokensCurrent(id);
+        // TODO: test validations
+    }
+
+    /**
+     * UsageMetricsDailySnapshots (current)
+     *
+     * Gets usageMetricsDailySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentTest() throws ApiException {
+        List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO> response = api.cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     *
+     * Gets usageMetricsHourlySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentTest() throws ApiException {
+        List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO> response = api.cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Withdraws (current)
+     *
+     * Gets withdraws.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cURVEFINANCEETHEREUMWithdrawsCurrentTest() throws ApiException {
+        List<CURVEFINANCEETHEREUMWithdrawDTO> response = api.cURVEFINANCEETHEREUMWithdrawsCurrent();
         // TODO: test validations
     }
 

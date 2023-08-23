@@ -1130,7 +1130,7 @@ No authorization required
 
 ## uNISWAPV3ETHEREUMTickDailySnapshotsCurrent
 
-> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(uNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest): ApiRequest[Seq[TickDailySnapshotDTO]]
+> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(): ApiRequest[Seq[TickDailySnapshotDTO]]
 
 TickDailySnapshots (current)
 
@@ -1155,10 +1155,8 @@ object Example extends App {
     import system.dispatcher
 
     val apiInvoker = ApiInvoker()
-    val apiInstance = UNISWAPV3ETHEREUMApi("https://onchain.coinapi.io")
-    val pool: String = pool_example // String | liquidity pool this tick belongs to
-    
-    val request = apiInstance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool)
+    val apiInstance = UNISWAPV3ETHEREUMApi("https://onchain.coinapi.io")    
+    val request = apiInstance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1183,10 +1181,7 @@ object Example extends App {
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **String**| liquidity pool this tick belongs to | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -1210,7 +1205,7 @@ No authorization required
 
 ## uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent
 
-> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest): ApiRequest[Seq[TickHourlySnapshotDTO]]
+> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(): ApiRequest[Seq[TickHourlySnapshotDTO]]
 
 TickHourlySnapshots (current)
 
@@ -1235,10 +1230,8 @@ object Example extends App {
     import system.dispatcher
 
     val apiInvoker = ApiInvoker()
-    val apiInstance = UNISWAPV3ETHEREUMApi("https://onchain.coinapi.io")
-    val pool: String = pool_example // String | liquidity pool this tick belongs to
-    
-    val request = apiInstance.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool)
+    val apiInstance = UNISWAPV3ETHEREUMApi("https://onchain.coinapi.io")    
+    val request = apiInstance.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1263,10 +1256,7 @@ object Example extends App {
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **String**| liquidity pool this tick belongs to | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -1290,7 +1280,7 @@ No authorization required
 
 ## uNISWAPV3ETHEREUMTicksCurrent
 
-> uNISWAPV3ETHEREUMTicksCurrent(uNISWAPV3ETHEREUMTicksCurrentRequest): ApiRequest[Seq[TickDTO]]
+> uNISWAPV3ETHEREUMTicksCurrent(): ApiRequest[Seq[TickDTO]]
 
 Ticks (current)
 
@@ -1315,10 +1305,8 @@ object Example extends App {
     import system.dispatcher
 
     val apiInvoker = ApiInvoker()
-    val apiInstance = UNISWAPV3ETHEREUMApi("https://onchain.coinapi.io")
-    val pool: String = pool_example // String | Liquidity pool this tick belongs to
-    
-    val request = apiInstance.uNISWAPV3ETHEREUMTicksCurrent(pool)
+    val apiInstance = UNISWAPV3ETHEREUMApi("https://onchain.coinapi.io")    
+    val request = apiInstance.uNISWAPV3ETHEREUMTicksCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1343,10 +1331,7 @@ object Example extends App {
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **String**| Liquidity pool this tick belongs to | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 

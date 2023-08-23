@@ -448,11 +448,6 @@ uNISWAPV3ETHEREUMTickDailySnapshotsCurrent  _ =
   _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current"]
 
 data UNISWAPV3ETHEREUMTickDailySnapshotsCurrent  
-
--- | /Optional Param/ "pool" - liquidity pool this tick belongs to
-instance HasOptionalParam UNISWAPV3ETHEREUMTickDailySnapshotsCurrent Pool where
-  applyOptionalParam req (Pool xs) =
-    req `addQuery` toQuery ("pool", Just xs)
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMTickDailySnapshotsCurrent MimeJSON
 -- | @application/x-msgpack@
@@ -478,11 +473,6 @@ uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent  _ =
   _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current"]
 
 data UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent  
-
--- | /Optional Param/ "pool" - liquidity pool this tick belongs to
-instance HasOptionalParam UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent Pool where
-  applyOptionalParam req (Pool xs) =
-    req `addQuery` toQuery ("pool", Just xs)
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent MimeJSON
 -- | @application/x-msgpack@
@@ -508,11 +498,6 @@ uNISWAPV3ETHEREUMTicksCurrent  _ =
   _mkRequest "GET" ["/v1/dapps/uniswap-v3-ethereum/ticks/current"]
 
 data UNISWAPV3ETHEREUMTicksCurrent  
-
--- | /Optional Param/ "pool" - Liquidity pool this tick belongs to
-instance HasOptionalParam UNISWAPV3ETHEREUMTicksCurrent Pool where
-  applyOptionalParam req (Pool xs) =
-    req `addQuery` toQuery ("pool", Just xs)
 -- | @application/json@
 instance Produces UNISWAPV3ETHEREUMTicksCurrent MimeJSON
 -- | @application/x-msgpack@

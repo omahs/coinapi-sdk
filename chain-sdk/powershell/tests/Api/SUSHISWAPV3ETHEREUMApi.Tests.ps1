@@ -7,9 +7,105 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'SUSHISWAPV3ETHEREUMApi' {
+    Context 'Invoke-SUSHISWAPV3ETHEREUMAccountsCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMAccountsCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMAccountsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SUSHISWAPV3ETHEREUMActiveAccountsCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMActiveAccountsCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMActiveAccountsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SUSHISWAPV3ETHEREUMDepositsCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMDepositsCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMDepositsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent -Id "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent -Pool "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-SUSHISWAPV3ETHEREUMLiquidityPoolsCurrent' {
         It 'Test Invoke-SUSHISWAPV3ETHEREUMLiquidityPoolsCurrent' {
             #$TestResult = Invoke-SUSHISWAPV3ETHEREUMLiquidityPoolsCurrent -Id "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SUSHISWAPV3ETHEREUMPositionSnapshotsCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMPositionSnapshotsCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMPositionSnapshotsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SUSHISWAPV3ETHEREUMPositionsCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMPositionsCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMPositionsCurrent -Pool "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SUSHISWAPV3ETHEREUMRewardTokensCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMRewardTokensCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMRewardTokensCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -23,9 +119,73 @@ Describe -tag 'PSOpenAPITools' -name 'SUSHISWAPV3ETHEREUMApi' {
         }
     }
 
+    Context 'Invoke-SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent -Pool "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent -Pool "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SUSHISWAPV3ETHEREUMTicksCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMTicksCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMTicksCurrent -Pool "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SUSHISWAPV3ETHEREUMTokenWhiteListsCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMTokenWhiteListsCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMTokenWhiteListsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-SUSHISWAPV3ETHEREUMTokensCurrent' {
         It 'Test Invoke-SUSHISWAPV3ETHEREUMTokensCurrent' {
             #$TestResult = Invoke-SUSHISWAPV3ETHEREUMTokensCurrent -Id "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SUSHISWAPV3ETHEREUMWithdrawsCurrent' {
+        It 'Test Invoke-SUSHISWAPV3ETHEREUMWithdrawsCurrent' {
+            #$TestResult = Invoke-SUSHISWAPV3ETHEREUMWithdrawsCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

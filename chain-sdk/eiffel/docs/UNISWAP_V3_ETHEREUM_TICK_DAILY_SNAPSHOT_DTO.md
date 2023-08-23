@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
-**vid** | **INTEGER_64** |  | [optional] [default to null]
 **id** | [**STRING_32**](STRING_32.md) | Identifier, format: (pool address)-(tick index)-(day ID) | [optional] [default to null]
 **day_id** | **INTEGER_32** | Number of days since Unix epoch time | [optional] [default to null]
 **tick** | [**STRING_32**](STRING_32.md) | tick index | [optional] [default to null]

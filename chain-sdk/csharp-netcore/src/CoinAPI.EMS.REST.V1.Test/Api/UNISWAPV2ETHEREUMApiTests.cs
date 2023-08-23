@@ -56,14 +56,181 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
+        /// Test UNISWAPV2ETHEREUMAccountsCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMAccountsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV2ETHEREUMAccountsCurrent();
+            //Assert.IsType<List<UNISWAPV2ETHEREUMAccountDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV2ETHEREUMActiveAccountsCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMActiveAccountsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV2ETHEREUMActiveAccountsCurrent();
+            //Assert.IsType<List<UNISWAPV2ETHEREUMActiveAccountDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV2ETHEREUMDepositsCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMDepositsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV2ETHEREUMDepositsCurrent();
+            //Assert.IsType<List<UNISWAPV2ETHEREUMDepositDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV2ETHEREUMDexAmmProtocolsCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMDexAmmProtocolsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV2ETHEREUMDexAmmProtocolsCurrent();
+            //Assert.IsType<List<UNISWAPV2ETHEREUMDexAmmProtocolDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent();
+            //Assert.IsType<List<UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMLiquidityPoolAmountsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //var response = instance.UNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent(id);
+            //Assert.IsType<List<UNISWAPV2ETHEREUMLiquidityPoolAmountDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent();
+            //Assert.IsType<List<UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV2ETHEREUMLiquidityPoolFeesCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMLiquidityPoolFeesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV2ETHEREUMLiquidityPoolFeesCurrent();
+            //Assert.IsType<List<UNISWAPV2ETHEREUMLiquidityPoolFeeDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent();
+            //Assert.IsType<List<UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO>>(response);
+        }
+
+        /// <summary>
         /// Test UNISWAPV2ETHEREUMLiquidityPoolsCurrent
         /// </summary>
         [Fact]
         public void UNISWAPV2ETHEREUMLiquidityPoolsCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.UNISWAPV2ETHEREUMLiquidityPoolsCurrent();
+            //string id = null;
+            //var response = instance.UNISWAPV2ETHEREUMLiquidityPoolsCurrent(id);
             //Assert.IsType<List<UNISWAPV2ETHEREUMLiquidityPoolDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMMasterChefAddressToPidsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent();
+            //Assert.IsType<List<UNISWAPV2ETHEREUMMasterChefAddressToPidDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV2ETHEREUMMasterChefRewardersCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMMasterChefRewardersCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV2ETHEREUMMasterChefRewardersCurrent();
+            //Assert.IsType<List<UNISWAPV2ETHEREUMMasterChefRewarderDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMMasterChefStakingPoolsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent();
+            //Assert.IsType<List<UNISWAPV2ETHEREUMMasterChefStakingPoolDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV2ETHEREUMMasterChefsCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMMasterChefsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV2ETHEREUMMasterChefsCurrent();
+            //Assert.IsType<List<UNISWAPV2ETHEREUMMasterChefDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV2ETHEREUMRewardTokensCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMRewardTokensCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV2ETHEREUMRewardTokensCurrent();
+            //Assert.IsType<List<UNISWAPV2ETHEREUMRewardTokenDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV2ETHEREUMRewarderProbesCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMRewarderProbesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV2ETHEREUMRewarderProbesCurrent();
+            //Assert.IsType<List<UNISWAPV2ETHEREUMRewarderProbeDTO>>(response);
         }
 
         /// <summary>
@@ -78,6 +245,17 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
+        /// Test UNISWAPV2ETHEREUMTokenWhiteListsCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMTokenWhiteListsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV2ETHEREUMTokenWhiteListsCurrent();
+            //Assert.IsType<List<UNISWAPV2ETHEREUMTokenWhiteListDTO>>(response);
+        }
+
+        /// <summary>
         /// Test UNISWAPV2ETHEREUMTokensCurrent
         /// </summary>
         [Fact]
@@ -86,6 +264,50 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.UNISWAPV2ETHEREUMTokensCurrent();
             //Assert.IsType<List<UNISWAPV2ETHEREUMTokenDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV2ETHEREUMTransfersCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMTransfersCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV2ETHEREUMTransfersCurrent();
+            //Assert.IsType<List<UNISWAPV2ETHEREUMTransferDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent();
+            //Assert.IsType<List<UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent();
+            //Assert.IsType<List<UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UNISWAPV2ETHEREUMWithdrawsCurrent
+        /// </summary>
+        [Fact]
+        public void UNISWAPV2ETHEREUMWithdrawsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UNISWAPV2ETHEREUMWithdrawsCurrent();
+            //Assert.IsType<List<UNISWAPV2ETHEREUMWithdrawDTO>>(response);
         }
     }
 }

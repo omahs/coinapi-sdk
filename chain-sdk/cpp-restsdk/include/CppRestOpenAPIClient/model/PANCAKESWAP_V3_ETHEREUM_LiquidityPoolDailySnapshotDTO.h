@@ -83,15 +83,6 @@ public:
     void setBlockNumber(int64_t value);
 
     /// <summary>
-    /// .
-    /// </summary>
-    int64_t getVid() const;
-    bool vidIsSet() const;
-    void unsetVid();
-
-    void setVid(int64_t value);
-
-    /// <summary>
     /// The Ethereum block number associated with the liquidity pool daily snapshot.
     /// </summary>
     int32_t getBlock() const;
@@ -486,8 +477,6 @@ protected:
     bool m_Recv_timeIsSet;
     int64_t m_Block_number;
     bool m_Block_numberIsSet;
-    int64_t m_Vid;
-    bool m_VidIsSet;
     int32_t m_Block_;
     bool m_Block_IsSet;
     utility::string_t m_Id;

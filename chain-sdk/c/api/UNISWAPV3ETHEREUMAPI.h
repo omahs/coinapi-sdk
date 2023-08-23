@@ -147,7 +147,7 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMSwapsCurrent(apiClient_t *apiClient);
 // Gets tickDailySnapshots.
 //
 list_t*
-UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(apiClient_t *apiClient, char * pool );
+UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(apiClient_t *apiClient);
 
 
 // TickHourlySnapshots (current)
@@ -155,7 +155,7 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(apiClient_t *api
 // Gets tickHourlySnapshots.
 //
 list_t*
-UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(apiClient_t *apiClient, char * pool );
+UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(apiClient_t *apiClient);
 
 
 // Ticks (current)
@@ -163,7 +163,7 @@ UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(apiClient_t *ap
 // Gets ticks.
 //
 list_t*
-UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTicksCurrent(apiClient_t *apiClient, char * pool );
+UNISWAPV3ETHEREUMAPI_uNISWAPV3ETHEREUMTicksCurrent(apiClient_t *apiClient);
 
 
 // TokenWhiteListSymbols (current)

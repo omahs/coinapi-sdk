@@ -15,8 +15,6 @@ class UNISWAPV3ETHEREUMTickDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /*  */
-    Long vid
     /* (pool address)-(tick index) */
     String id
     /* tick index */

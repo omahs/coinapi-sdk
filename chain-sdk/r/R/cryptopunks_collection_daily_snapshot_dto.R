@@ -9,7 +9,7 @@
 #' @format An \code{R6Class} generator object
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
-#' @field block_number  character [optional]
+#' @field block_number Number of block in which entity was recorded. integer [optional]
 #' @field vid  integer [optional]
 #' @field block_range  character [optional]
 #' @field id  character [optional]
@@ -56,7 +56,7 @@ CRYPTOPUNKSCollectionDailySnapshotDTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number 
+    #' @param block_number Number of block in which entity was recorded.
     #' @param vid 
     #' @param block_range 
     #' @param id 
@@ -88,8 +88,8 @@ CRYPTOPUNKSCollectionDailySnapshotDTO <- R6::R6Class(
         self$`recv_time` <- `recv_time`
       }
       if (!is.null(`block_number`)) {
-        if (!(is.character(`block_number`) && length(`block_number`) == 1)) {
-          stop(paste("Error! Invalid data for `block_number`. Must be a string:", `block_number`))
+        if (!(is.numeric(`block_number`) && length(`block_number`) == 1)) {
+          stop(paste("Error! Invalid data for `block_number`. Must be an integer:", `block_number`))
         }
         self$`block_number` <- `block_number`
       }
@@ -361,7 +361,7 @@ CRYPTOPUNKSCollectionDailySnapshotDTO <- R6::R6Class(
         if (!is.null(self$`block_number`)) {
           sprintf(
           '"block_number":
-            "%s"
+            %d
                     ',
           self$`block_number`
           )

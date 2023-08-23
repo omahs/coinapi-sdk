@@ -27,10 +27,10 @@ public class OASCURVEFINANCEETHEREUMSwapDTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * Block number of this event
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
-    public String blockNumber { get; set; }
+    public Long blockNumber { get; set; }
 
     /**
      * Swap-(transaction hash)-(log index)
@@ -518,7 +518,7 @@ public class OASCURVEFINANCEETHEREUMSwapDTO implements OAS.MappedProperties {
         OASCURVEFINANCEETHEREUMSwapDTO cuRVEFINANCEETHEREUMSwapDTO = new OASCURVEFINANCEETHEREUMSwapDTO();
           cuRVEFINANCEETHEREUMSwapDTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           cuRVEFINANCEETHEREUMSwapDTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
-          cuRVEFINANCEETHEREUMSwapDTO.blockNumber = '';
+          cuRVEFINANCEETHEREUMSwapDTO.blockNumber = 123456789L;
           cuRVEFINANCEETHEREUMSwapDTO.id = '';
           cuRVEFINANCEETHEREUMSwapDTO.hash = '';
           cuRVEFINANCEETHEREUMSwapDTO.logIndex = 0;

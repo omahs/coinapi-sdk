@@ -34,12 +34,6 @@ export interface UNISWAPV3ETHEREUMTickDailySnapshotDTO {
      */
     block_number?: number;
     /**
-     * 
-     * @type {number}
-     * @memberof UNISWAPV3ETHEREUMTickDailySnapshotDTO
-     */
-    vid?: number;
-    /**
      * Identifier, format: (pool address)-(tick index)-(day ID)
      * @type {string}
      * @memberof UNISWAPV3ETHEREUMTickDailySnapshotDTO

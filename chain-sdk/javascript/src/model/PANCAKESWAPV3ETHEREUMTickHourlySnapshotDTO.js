@@ -57,9 +57,6 @@ class PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO {
             if (data.hasOwnProperty('block_number')) {
                 obj['block_number'] = ApiClient.convertToType(data['block_number'], 'Number');
             }
-            if (data.hasOwnProperty('vid')) {
-                obj['vid'] = ApiClient.convertToType(data['vid'], 'Number');
-            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -153,12 +150,6 @@ PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO.prototype['recv_time'] = undefined;
  * @member {Number} block_number
  */
 PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO.prototype['block_number'] = undefined;
-
-/**
- * 
- * @member {Number} vid
- */
-PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO.prototype['vid'] = undefined;
 
 /**
  * (pool address)-(tick index)-(hour ID)

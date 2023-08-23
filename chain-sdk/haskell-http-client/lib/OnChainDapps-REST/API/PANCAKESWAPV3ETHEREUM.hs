@@ -228,11 +228,6 @@ pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent  _ =
   _mkRequest "GET" ["/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current"]
 
 data PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent  
-
--- | /Optional Param/ "pool" - Pool this snapshot belongs to.
-instance HasOptionalParam PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent Pool where
-  applyOptionalParam req (Pool xs) =
-    req `addQuery` toQuery ("pool", Just xs)
 -- | @application/json@
 instance Produces PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent MimeJSON
 -- | @application/x-msgpack@

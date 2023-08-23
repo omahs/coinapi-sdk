@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **EntryTime** | **DateTime** |  | [optional] 
 **RecvTime** | **DateTime** |  | [optional] 
 **BlockNumber** | **long** | Number of block in which entity was recorded. | [optional] 
-**Vid** | **long** |  | [optional] 
 **Id** | **string** | Identifier, format: (pool address)-(tick index)-(day ID) | [optional] 
 **DayId** | **int** | Number of days since Unix epoch time | [optional] 
 **Tick** | **string** | tick index | [optional] 

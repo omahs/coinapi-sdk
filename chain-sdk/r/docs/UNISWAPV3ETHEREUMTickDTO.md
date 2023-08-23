@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **entry_time** | **character** |  | [optional] 
 **recv_time** | **character** |  | [optional] 
 **block_number** | **integer** | Number of block in which entity was recorded. | [optional] 
-**vid** | **integer** |  | [optional] 
 **id** | **character** | (pool address)-(tick index) | [optional] 
 **index** | **character** | tick index | [optional] 
 **pool** | **character** | Liquidity pool this tick belongs to | [optional] 

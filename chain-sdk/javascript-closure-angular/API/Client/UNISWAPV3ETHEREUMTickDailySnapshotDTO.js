@@ -26,13 +26,6 @@ API.Client.UNISWAPV3ETHEREUMTickDailySnapshotDTO.prototype.recvTime;
 API.Client.UNISWAPV3ETHEREUMTickDailySnapshotDTO.prototype.blockNumber;
 
 /**
- * 
- * @type {!number}
- * @export
- */
-API.Client.UNISWAPV3ETHEREUMTickDailySnapshotDTO.prototype.vid;
-
-/**
  * Identifier, format: (pool address)-(tick index)-(day ID)
  * @type {!string}
  * @export

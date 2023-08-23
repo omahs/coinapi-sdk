@@ -59,13 +59,13 @@ public:
 	/*! \brief Set 
 	 */
 	void setRecvTime(std::string  recv_time);
-	/*! \brief Get 
+	/*! \brief Get Number of block in which entity was recorded.
 	 */
-	std::string getBlockNumber();
+	long long getBlockNumber();
 
-	/*! \brief Set 
+	/*! \brief Set Number of block in which entity was recorded.
 	 */
-	void setBlockNumber(std::string  block_number);
+	void setBlockNumber(long long  block_number);
 	/*! \brief Get 
 	 */
 	long long getVid();
@@ -161,7 +161,7 @@ public:
 private:
 	std::string entry_time;
 	std::string recv_time;
-	std::string block_number;
+	long long block_number;
 	long long vid;
 	std::string block_range;
 	std::string id;

@@ -25,7 +25,6 @@ import com.squareup.moshi.JsonClass
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param vid 
  * @param id (account address)-(market address)-(count)
  * @param account Account that owns this position
  * @param pool The liquidity pool in which this position was opened
@@ -62,10 +61,6 @@ data class PANCAKESWAPV3ETHEREUMPositionDTO (
     /* Number of block in which entity was recorded. */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
-
-    /*  */
-    @Json(name = "vid")
-    val vid: kotlin.Long? = null,
 
     /* (account address)-(market address)-(count) */
     @Json(name = "id")

@@ -7,7 +7,6 @@
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
 | **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
-| **vid** | **Integer** | . | [optional] |
 | **block_** | **Integer** | The Ethereum block number associated with the liquidity pool daily snapshot. | [optional] |
 | **id** | **String** | Identifier, format: (smart contract address of the pool)-(# of days since Unix epoch time). | [optional] |
 | **day** | **Integer** | Number of days since Unix epoch time. | [optional] |
@@ -61,7 +60,6 @@ instance = OpenapiClient::UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.new(
   entry_time: null,
   recv_time: null,
   block_number: null,
-  vid: null,
   block_: null,
   id: null,
   day: null,

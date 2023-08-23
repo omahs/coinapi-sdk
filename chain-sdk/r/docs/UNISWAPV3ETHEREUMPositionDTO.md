@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **entry_time** | **character** |  | [optional] 
 **recv_time** | **character** |  | [optional] 
 **block_number** | **integer** | Number of block in which entity was recorded. | [optional] 
-**vid** | **integer** |  | [optional] 
 **id** | **character** | (account address)-(market address)-(count) | [optional] 
 **account** | **character** | Account that owns this position | [optional] 
 **pool** | **character** | The liquidity pool in which this position was opened | [optional] 

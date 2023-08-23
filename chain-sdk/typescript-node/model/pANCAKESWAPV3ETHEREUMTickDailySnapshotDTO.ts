@@ -23,10 +23,6 @@ export class PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO {
     */
     'blockNumber'?: number;
     /**
-    * 
-    */
-    'vid'?: number;
-    /**
     * Identifier, format: (pool address)-(tick index)-(day ID)
     */
     'id'?: string | null;
@@ -79,11 +75,6 @@ export class PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO {
         {
             "name": "blockNumber",
             "baseName": "block_number",
-            "type": "number"
-        },
-        {
-            "name": "vid",
-            "baseName": "vid",
             "type": "number"
         },
         {

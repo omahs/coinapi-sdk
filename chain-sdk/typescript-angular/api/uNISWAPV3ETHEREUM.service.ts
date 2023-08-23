@@ -990,20 +990,13 @@ export class UNISWAPV3ETHEREUMService {
     /**
      * TickDailySnapshots (current)
      * Gets tickDailySnapshots.
-     * @param pool liquidity pool this tick belongs to
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>;
-    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (pool !== undefined && pool !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>pool, 'pool');
-        }
+    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>;
+    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -1043,7 +1036,6 @@ export class UNISWAPV3ETHEREUMService {
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
-                params: localVarQueryParameters,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,
@@ -1056,20 +1048,13 @@ export class UNISWAPV3ETHEREUMService {
     /**
      * TickHourlySnapshots (current)
      * Gets tickHourlySnapshots.
-     * @param pool liquidity pool this tick belongs to
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>;
-    public uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>>;
-    public uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (pool !== undefined && pool !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>pool, 'pool');
-        }
+    public uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>;
+    public uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>>;
+    public uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -1109,7 +1094,6 @@ export class UNISWAPV3ETHEREUMService {
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
-                params: localVarQueryParameters,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,
@@ -1122,20 +1106,13 @@ export class UNISWAPV3ETHEREUMService {
     /**
      * Ticks (current)
      * Gets ticks.
-     * @param pool Liquidity pool this tick belongs to
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uNISWAPV3ETHEREUMTicksCurrent(pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMTickDTO>>;
-    public uNISWAPV3ETHEREUMTicksCurrent(pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMTickDTO>>>;
-    public uNISWAPV3ETHEREUMTicksCurrent(pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMTickDTO>>>;
-    public uNISWAPV3ETHEREUMTicksCurrent(pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (pool !== undefined && pool !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>pool, 'pool');
-        }
+    public uNISWAPV3ETHEREUMTicksCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<Array<UNISWAPV3ETHEREUMTickDTO>>;
+    public uNISWAPV3ETHEREUMTicksCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpResponse<Array<UNISWAPV3ETHEREUMTickDTO>>>;
+    public uNISWAPV3ETHEREUMTicksCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<HttpEvent<Array<UNISWAPV3ETHEREUMTickDTO>>>;
+    public uNISWAPV3ETHEREUMTicksCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -1175,7 +1152,6 @@ export class UNISWAPV3ETHEREUMService {
         return this.httpClient.request<Array<UNISWAPV3ETHEREUMTickDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
-                params: localVarQueryParameters,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,

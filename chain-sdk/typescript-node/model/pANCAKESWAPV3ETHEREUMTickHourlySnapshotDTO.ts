@@ -23,10 +23,6 @@ export class PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO {
     */
     'blockNumber'?: number;
     /**
-    * 
-    */
-    'vid'?: number;
-    /**
     * (pool address)-(tick index)-(hour ID)
     */
     'id'?: string | null;
@@ -79,11 +75,6 @@ export class PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO {
         {
             "name": "blockNumber",
             "baseName": "block_number",
-            "type": "number"
-        },
-        {
-            "name": "vid",
-            "baseName": "vid",
             "type": "number"
         },
         {

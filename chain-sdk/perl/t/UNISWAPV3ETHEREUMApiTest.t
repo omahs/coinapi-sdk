@@ -122,22 +122,19 @@ isa_ok($api, 'WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi');
 # u_niswapv3_ethereum_tick_daily_snapshots__current test
 #
 # uncomment below and update the test
-#my $u_niswapv3_ethereum_tick_daily_snapshots__current_pool = undef; # replace NULL with a proper value
-#my $u_niswapv3_ethereum_tick_daily_snapshots__current_result = $api->u_niswapv3_ethereum_tick_daily_snapshots__current(pool => $u_niswapv3_ethereum_tick_daily_snapshots__current_pool);
+#my $u_niswapv3_ethereum_tick_daily_snapshots__current_result = $api->u_niswapv3_ethereum_tick_daily_snapshots__current();
 
 #
 # u_niswapv3_ethereum_tick_hourly_snapshots__current test
 #
 # uncomment below and update the test
-#my $u_niswapv3_ethereum_tick_hourly_snapshots__current_pool = undef; # replace NULL with a proper value
-#my $u_niswapv3_ethereum_tick_hourly_snapshots__current_result = $api->u_niswapv3_ethereum_tick_hourly_snapshots__current(pool => $u_niswapv3_ethereum_tick_hourly_snapshots__current_pool);
+#my $u_niswapv3_ethereum_tick_hourly_snapshots__current_result = $api->u_niswapv3_ethereum_tick_hourly_snapshots__current();
 
 #
 # u_niswapv3_ethereum_ticks__current test
 #
 # uncomment below and update the test
-#my $u_niswapv3_ethereum_ticks__current_pool = undef; # replace NULL with a proper value
-#my $u_niswapv3_ethereum_ticks__current_result = $api->u_niswapv3_ethereum_ticks__current(pool => $u_niswapv3_ethereum_ticks__current_pool);
+#my $u_niswapv3_ethereum_ticks__current_result = $api->u_niswapv3_ethereum_ticks__current();
 
 #
 # u_niswapv3_ethereum_token_white_list_symbols__current test

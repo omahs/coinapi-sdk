@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **entry_time** | **DATE_TIME** |  | [optional] 
 **recv_time** | **DATE_TIME** |  | [optional] 
 **block_number** | **int** | Number of block in which entity was recorded. | [optional] 
-**vid** | **int** | . | [optional] 
 **block_** | **int** | The Ethereum block number associated with the liquidity pool daily snapshot. | [optional] 
 **id** | **string** | Identifier, format: (smart contract address of the pool)-(# of days since Unix epoch time). | [optional] 
 **day** | **int** | Number of days since Unix epoch time. | [optional] 

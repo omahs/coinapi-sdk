@@ -57,7 +57,7 @@ Describe -tag 'PSOpenAPITools' -name 'PANCAKESWAPV3ETHEREUMApi' {
 
     Context 'Invoke-PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent' {
         It 'Test Invoke-PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent' {
-            #$TestResult = Invoke-PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent -Pool "TEST_VALUE"
+            #$TestResult = Invoke-PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

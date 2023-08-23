@@ -169,7 +169,6 @@ test_that("UNISWAPV3ETHEREUMTickDailySnapshotsCurrent", {
   # base path: https://onchain.coinapi.io
   # TickDailySnapshots (current)
   # Gets tickDailySnapshots.
-  # @param pool character liquidity pool this tick belongs to (optional)
   # @return [array[UNISWAPV3ETHEREUMTickDailySnapshotDTO]]
 
   # uncomment below to test the operation
@@ -181,7 +180,6 @@ test_that("UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent", {
   # base path: https://onchain.coinapi.io
   # TickHourlySnapshots (current)
   # Gets tickHourlySnapshots.
-  # @param pool character liquidity pool this tick belongs to (optional)
   # @return [array[UNISWAPV3ETHEREUMTickHourlySnapshotDTO]]
 
   # uncomment below to test the operation
@@ -193,7 +191,6 @@ test_that("UNISWAPV3ETHEREUMTicksCurrent", {
   # base path: https://onchain.coinapi.io
   # Ticks (current)
   # Gets ticks.
-  # @param pool character Liquidity pool this tick belongs to (optional)
   # @return [array[UNISWAPV3ETHEREUMTickDTO]]
 
   # uncomment below to test the operation

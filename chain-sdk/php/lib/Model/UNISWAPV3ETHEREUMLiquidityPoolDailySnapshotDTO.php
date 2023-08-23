@@ -62,7 +62,6 @@ class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO implements ModelInterface, 
         'entry_time' => '\DateTime',
         'recv_time' => '\DateTime',
         'block_number' => 'int',
-        'vid' => 'int',
         'block_' => 'int',
         'id' => 'string',
         'day' => 'int',
@@ -119,7 +118,6 @@ class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO implements ModelInterface, 
         'entry_time' => 'date-time',
         'recv_time' => 'date-time',
         'block_number' => 'int64',
-        'vid' => 'int64',
         'block_' => 'int32',
         'id' => null,
         'day' => 'int32',
@@ -174,7 +172,6 @@ class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO implements ModelInterface, 
         'entry_time' => false,
 		'recv_time' => false,
 		'block_number' => false,
-		'vid' => false,
 		'block_' => false,
 		'id' => true,
 		'day' => false,
@@ -309,7 +306,6 @@ class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO implements ModelInterface, 
         'entry_time' => 'entry_time',
         'recv_time' => 'recv_time',
         'block_number' => 'block_number',
-        'vid' => 'vid',
         'block_' => 'block_',
         'id' => 'id',
         'day' => 'day',
@@ -364,7 +360,6 @@ class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO implements ModelInterface, 
         'entry_time' => 'setEntryTime',
         'recv_time' => 'setRecvTime',
         'block_number' => 'setBlockNumber',
-        'vid' => 'setVid',
         'block_' => 'setBlock',
         'id' => 'setId',
         'day' => 'setDay',
@@ -419,7 +414,6 @@ class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO implements ModelInterface, 
         'entry_time' => 'getEntryTime',
         'recv_time' => 'getRecvTime',
         'block_number' => 'getBlockNumber',
-        'vid' => 'getVid',
         'block_' => 'getBlock',
         'id' => 'getId',
         'day' => 'getDay',
@@ -525,7 +519,6 @@ class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO implements ModelInterface, 
         $this->setIfExists('entry_time', $data ?? [], null);
         $this->setIfExists('recv_time', $data ?? [], null);
         $this->setIfExists('block_number', $data ?? [], null);
-        $this->setIfExists('vid', $data ?? [], null);
         $this->setIfExists('block_', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('day', $data ?? [], null);
@@ -690,33 +683,6 @@ class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO implements ModelInterface, 
             throw new \InvalidArgumentException('non-nullable block_number cannot be null');
         }
         $this->container['block_number'] = $block_number;
-
-        return $this;
-    }
-
-    /**
-     * Gets vid
-     *
-     * @return int|null
-     */
-    public function getVid()
-    {
-        return $this->container['vid'];
-    }
-
-    /**
-     * Sets vid
-     *
-     * @param int|null $vid .
-     *
-     * @return self
-     */
-    public function setVid($vid)
-    {
-        if (is_null($vid)) {
-            throw new \InvalidArgumentException('non-nullable vid cannot be null');
-        }
-        $this->container['vid'] = $vid;
 
         return $this;
     }

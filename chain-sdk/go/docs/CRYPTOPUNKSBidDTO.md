@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
-**BlockNumber** | Pointer to **NullableString** |  | [optional] 
+**BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
 **Vid** | Pointer to **int64** |  | [optional] 
 **BlockRange** | Pointer to **NullableString** |  | [optional] 
 **Id** | Pointer to **NullableString** |  | [optional] 
@@ -86,20 +86,20 @@ HasRecvTime returns a boolean if a field has been set.
 
 ### GetBlockNumber
 
-`func (o *CRYPTOPUNKSBidDTO) GetBlockNumber() string`
+`func (o *CRYPTOPUNKSBidDTO) GetBlockNumber() int64`
 
 GetBlockNumber returns the BlockNumber field if non-nil, zero value otherwise.
 
 ### GetBlockNumberOk
 
-`func (o *CRYPTOPUNKSBidDTO) GetBlockNumberOk() (*string, bool)`
+`func (o *CRYPTOPUNKSBidDTO) GetBlockNumberOk() (*int64, bool)`
 
 GetBlockNumberOk returns a tuple with the BlockNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBlockNumber
 
-`func (o *CRYPTOPUNKSBidDTO) SetBlockNumber(v string)`
+`func (o *CRYPTOPUNKSBidDTO) SetBlockNumber(v int64)`
 
 SetBlockNumber sets BlockNumber field to given value.
 
@@ -109,16 +109,6 @@ SetBlockNumber sets BlockNumber field to given value.
 
 HasBlockNumber returns a boolean if a field has been set.
 
-### SetBlockNumberNil
-
-`func (o *CRYPTOPUNKSBidDTO) SetBlockNumberNil(b bool)`
-
- SetBlockNumberNil sets the value for BlockNumber to be an explicit nil
-
-### UnsetBlockNumber
-`func (o *CRYPTOPUNKSBidDTO) UnsetBlockNumber()`
-
-UnsetBlockNumber ensures that no value is present for BlockNumber, not even an explicit nil
 ### GetVid
 
 `func (o *CRYPTOPUNKSBidDTO) GetVid() int64`

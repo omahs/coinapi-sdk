@@ -22,11 +22,191 @@ func Test_openapi_UNISWAPV2ETHEREUMApiService(t *testing.T) {
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
 
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMAccountsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMAccountsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMActiveAccountsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMActiveAccountsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMDepositsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMDepositsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMDexAmmProtocolsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMDexAmmProtocolsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMLiquidityPoolFeesCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMLiquidityPoolFeesCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMLiquidityPoolsCurrent", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMLiquidityPoolsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMMasterChefRewardersCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMMasterChefRewardersCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMMasterChefsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMMasterChefsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMRewardTokensCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMRewardTokensCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMRewarderProbesCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMRewarderProbesCurrent(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -46,11 +226,71 @@ func Test_openapi_UNISWAPV2ETHEREUMApiService(t *testing.T) {
 
 	})
 
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMTokenWhiteListsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMTokenWhiteListsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMTokensCurrent", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMTokensCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMTransfersCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMTransfersCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test UNISWAPV2ETHEREUMApiService UNISWAPV2ETHEREUMWithdrawsCurrent", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.UNISWAPV2ETHEREUMApi.UNISWAPV2ETHEREUMWithdrawsCurrent(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)

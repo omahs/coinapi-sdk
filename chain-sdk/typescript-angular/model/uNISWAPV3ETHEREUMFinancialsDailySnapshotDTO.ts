@@ -18,7 +18,7 @@ export interface UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO {
     entry_time?: string;
     recv_time?: string;
     /**
-     * Block number of when this snapshot was taken/last modified.)
+     * Number of block in which entity was recorded.
      */
     block_number?: number;
     /**

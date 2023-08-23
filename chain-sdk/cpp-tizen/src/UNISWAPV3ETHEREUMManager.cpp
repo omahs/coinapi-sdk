@@ -2063,7 +2063,7 @@ static bool uNISWAPV3ETHEREUMTickDailySnapshots (current)Processor(MemoryStruct_
 }
 
 static bool uNISWAPV3ETHEREUMTickDailySnapshots (current)Helper(char * accessToken,
-	std::string pool, 
+	
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TickDailySnapshotDTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -2080,13 +2080,6 @@ static bool uNISWAPV3ETHEREUMTickDailySnapshots (current)Helper(char * accessTok
 	map <string, string> queryParams;
 	string itemAtq;
 	
-
-	itemAtq = stringify(&pool, "std::string");
-	queryParams.insert(pair<string, string>("pool", itemAtq));
-	if( itemAtq.empty()==true){
-		queryParams.erase("pool");
-	}
-
 	string mBody = "";
 	JsonNode* node;
 	JsonArray* json_array;
@@ -2141,22 +2134,22 @@ static bool uNISWAPV3ETHEREUMTickDailySnapshots (current)Helper(char * accessTok
 
 
 bool UNISWAPV3ETHEREUMManager::uNISWAPV3ETHEREUMTickDailySnapshots (current)Async(char * accessToken,
-	std::string pool, 
+	
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TickDailySnapshotDTO>, Error, void* )
 	, void* userData)
 {
 	return uNISWAPV3ETHEREUMTickDailySnapshots (current)Helper(accessToken,
-	pool, 
+	
 	handler, userData, true);
 }
 
 bool UNISWAPV3ETHEREUMManager::uNISWAPV3ETHEREUMTickDailySnapshots (current)Sync(char * accessToken,
-	std::string pool, 
+	
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TickDailySnapshotDTO>, Error, void* )
 	, void* userData)
 {
 	return uNISWAPV3ETHEREUMTickDailySnapshots (current)Helper(accessToken,
-	pool, 
+	
 	handler, userData, false);
 }
 
@@ -2208,7 +2201,7 @@ static bool uNISWAPV3ETHEREUMTickHourlySnapshots (current)Processor(MemoryStruct
 }
 
 static bool uNISWAPV3ETHEREUMTickHourlySnapshots (current)Helper(char * accessToken,
-	std::string pool, 
+	
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TickHourlySnapshotDTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -2225,13 +2218,6 @@ static bool uNISWAPV3ETHEREUMTickHourlySnapshots (current)Helper(char * accessTo
 	map <string, string> queryParams;
 	string itemAtq;
 	
-
-	itemAtq = stringify(&pool, "std::string");
-	queryParams.insert(pair<string, string>("pool", itemAtq));
-	if( itemAtq.empty()==true){
-		queryParams.erase("pool");
-	}
-
 	string mBody = "";
 	JsonNode* node;
 	JsonArray* json_array;
@@ -2286,22 +2272,22 @@ static bool uNISWAPV3ETHEREUMTickHourlySnapshots (current)Helper(char * accessTo
 
 
 bool UNISWAPV3ETHEREUMManager::uNISWAPV3ETHEREUMTickHourlySnapshots (current)Async(char * accessToken,
-	std::string pool, 
+	
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TickHourlySnapshotDTO>, Error, void* )
 	, void* userData)
 {
 	return uNISWAPV3ETHEREUMTickHourlySnapshots (current)Helper(accessToken,
-	pool, 
+	
 	handler, userData, true);
 }
 
 bool UNISWAPV3ETHEREUMManager::uNISWAPV3ETHEREUMTickHourlySnapshots (current)Sync(char * accessToken,
-	std::string pool, 
+	
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TickHourlySnapshotDTO>, Error, void* )
 	, void* userData)
 {
 	return uNISWAPV3ETHEREUMTickHourlySnapshots (current)Helper(accessToken,
-	pool, 
+	
 	handler, userData, false);
 }
 
@@ -2353,7 +2339,7 @@ static bool uNISWAPV3ETHEREUMTicks (current)Processor(MemoryStruct_s p_chunk, lo
 }
 
 static bool uNISWAPV3ETHEREUMTicks (current)Helper(char * accessToken,
-	std::string pool, 
+	
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TickDTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -2370,13 +2356,6 @@ static bool uNISWAPV3ETHEREUMTicks (current)Helper(char * accessToken,
 	map <string, string> queryParams;
 	string itemAtq;
 	
-
-	itemAtq = stringify(&pool, "std::string");
-	queryParams.insert(pair<string, string>("pool", itemAtq));
-	if( itemAtq.empty()==true){
-		queryParams.erase("pool");
-	}
-
 	string mBody = "";
 	JsonNode* node;
 	JsonArray* json_array;
@@ -2431,22 +2410,22 @@ static bool uNISWAPV3ETHEREUMTicks (current)Helper(char * accessToken,
 
 
 bool UNISWAPV3ETHEREUMManager::uNISWAPV3ETHEREUMTicks (current)Async(char * accessToken,
-	std::string pool, 
+	
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TickDTO>, Error, void* )
 	, void* userData)
 {
 	return uNISWAPV3ETHEREUMTicks (current)Helper(accessToken,
-	pool, 
+	
 	handler, userData, true);
 }
 
 bool UNISWAPV3ETHEREUMManager::uNISWAPV3ETHEREUMTicks (current)Sync(char * accessToken,
-	std::string pool, 
+	
 	void(* handler)(std::list<UNISWAP_V3_ETHEREUM.TickDTO>, Error, void* )
 	, void* userData)
 {
 	return uNISWAPV3ETHEREUMTicks (current)Helper(accessToken,
-	pool, 
+	
 	handler, userData, false);
 }
 

@@ -34,12 +34,6 @@ export interface UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO {
      */
     block_number?: number;
     /**
-     * .
-     * @type {number}
-     * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO
-     */
-    vid?: number;
-    /**
      * The Ethereum block number associated with the liquidity pool daily snapshot.
      * @type {number}
      * @memberof UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO

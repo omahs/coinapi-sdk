@@ -15,9 +15,23 @@
 
 
 module Api.Request.CURVEFINANCEETHEREUM exposing
-    ( cURVEFINANCEETHEREUMLiquidityPoolsCurrent
+    ( cURVEFINANCEETHEREUMAccountsCurrent
+    , cURVEFINANCEETHEREUMActiveAccountsCurrent
+    , cURVEFINANCEETHEREUMDepositsCurrent
+    , cURVEFINANCEETHEREUMDexAmmProtocolsCurrent
+    , cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent
+    , cURVEFINANCEETHEREUMLiquidityGaugesCurrent
+    , cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent
+    , cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent
+    , cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent
+    , cURVEFINANCEETHEREUMLiquidityPoolsCurrent
+    , cURVEFINANCEETHEREUMLpTokensCurrent
+    , cURVEFINANCEETHEREUMRewardTokensCurrent
     , cURVEFINANCEETHEREUMSwapsCurrent
     , cURVEFINANCEETHEREUMTokensCurrent
+    , cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent
+    , cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent
+    , cURVEFINANCEETHEREUMWithdrawsCurrent
     )
 
 import Api
@@ -27,18 +41,172 @@ import Http
 import Json.Decode
 import Json.Encode
 
-{-| Gets liquidityPools.
+{-| Gets accounts.
 -}
-cURVEFINANCEETHEREUMLiquidityPoolsCurrent : Api.Request (List Api.Data.CURVEFINANCEETHEREUMLiquidityPoolDTO)
-cURVEFINANCEETHEREUMLiquidityPoolsCurrent =
+cURVEFINANCEETHEREUMAccountsCurrent : Api.Request (List Api.Data.CURVEFINANCEETHEREUMAccountDTO)
+cURVEFINANCEETHEREUMAccountsCurrent =
     Api.request
         "GET"
-        "/v1/dapps/curve-finance-ethereum/liquidityPools/current"
+        "/v1/dapps/curve-finance-ethereum/accounts/current"
         []
         []
         []
         Nothing
+        (Json.Decode.list Api.Data.cURVEFINANCEETHEREUMAccountDTODecoder)
+
+
+{-| Gets activeAccounts.
+-}
+cURVEFINANCEETHEREUMActiveAccountsCurrent : Api.Request (List Api.Data.CURVEFINANCEETHEREUMActiveAccountDTO)
+cURVEFINANCEETHEREUMActiveAccountsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/curve-finance-ethereum/activeAccounts/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.cURVEFINANCEETHEREUMActiveAccountDTODecoder)
+
+
+{-| Gets deposits.
+-}
+cURVEFINANCEETHEREUMDepositsCurrent : Api.Request (List Api.Data.CURVEFINANCEETHEREUMDepositDTO)
+cURVEFINANCEETHEREUMDepositsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/curve-finance-ethereum/deposits/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.cURVEFINANCEETHEREUMDepositDTODecoder)
+
+
+{-| Gets dexAmmProtocols.
+-}
+cURVEFINANCEETHEREUMDexAmmProtocolsCurrent : Api.Request (List Api.Data.CURVEFINANCEETHEREUMDexAmmProtocolDTO)
+cURVEFINANCEETHEREUMDexAmmProtocolsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/curve-finance-ethereum/dexAmmProtocols/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.cURVEFINANCEETHEREUMDexAmmProtocolDTODecoder)
+
+
+{-| Gets financialsDailySnapshots.
+-}
+cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent : Api.Request (List Api.Data.CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO)
+cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/curve-finance-ethereum/financialsDailySnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.cURVEFINANCEETHEREUMFinancialsDailySnapshotDTODecoder)
+
+
+{-| Gets liquidityGauges.
+-}
+cURVEFINANCEETHEREUMLiquidityGaugesCurrent : Api.Request (List Api.Data.CURVEFINANCEETHEREUMLiquidityGaugeDTO)
+cURVEFINANCEETHEREUMLiquidityGaugesCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/curve-finance-ethereum/liquidityGauges/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.cURVEFINANCEETHEREUMLiquidityGaugeDTODecoder)
+
+
+{-| Gets liquidityPoolDailySnapshots.
+-}
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent : Api.Request (List Api.Data.CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO)
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/curve-finance-ethereum/liquidityPoolDailySnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTODecoder)
+
+
+{-| Gets liquidityPoolFees.
+-}
+cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent : Api.Request (List Api.Data.CURVEFINANCEETHEREUMLiquidityPoolFeeDTO)
+cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/curve-finance-ethereum/liquidityPoolFees/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.cURVEFINANCEETHEREUMLiquidityPoolFeeDTODecoder)
+
+
+{-| Gets liquidityPoolHourlySnapshots.
+-}
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent : Api.Request (List Api.Data.CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO)
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/curve-finance-ethereum/liquidityPoolHourlySnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTODecoder)
+
+
+{-| Gets liquidityPools.
+-}
+cURVEFINANCEETHEREUMLiquidityPoolsCurrent : Maybe String -> Api.Request (List Api.Data.CURVEFINANCEETHEREUMLiquidityPoolDTO)
+cURVEFINANCEETHEREUMLiquidityPoolsCurrent id_query =
+    Api.request
+        "GET"
+        "/v1/dapps/curve-finance-ethereum/liquidityPools/current"
+        []
+        [ ( "id", Maybe.map identity id_query ) ]
+        []
+        Nothing
         (Json.Decode.list Api.Data.cURVEFINANCEETHEREUMLiquidityPoolDTODecoder)
+
+
+{-| Gets lpTokens.
+-}
+cURVEFINANCEETHEREUMLpTokensCurrent : Api.Request (List Api.Data.CURVEFINANCEETHEREUMLpTokenDTO)
+cURVEFINANCEETHEREUMLpTokensCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/curve-finance-ethereum/lpTokens/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.cURVEFINANCEETHEREUMLpTokenDTODecoder)
+
+
+{-| Gets rewardTokens.
+-}
+cURVEFINANCEETHEREUMRewardTokensCurrent : Api.Request (List Api.Data.CURVEFINANCEETHEREUMRewardTokenDTO)
+cURVEFINANCEETHEREUMRewardTokensCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/curve-finance-ethereum/rewardTokens/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.cURVEFINANCEETHEREUMRewardTokenDTODecoder)
 
 
 {-| Gets swaps.
@@ -57,14 +225,56 @@ cURVEFINANCEETHEREUMSwapsCurrent =
 
 {-| Gets tokens.
 -}
-cURVEFINANCEETHEREUMTokensCurrent : Api.Request (List Api.Data.CURVEFINANCEETHEREUMTokenDTO)
-cURVEFINANCEETHEREUMTokensCurrent =
+cURVEFINANCEETHEREUMTokensCurrent : Maybe String -> Api.Request (List Api.Data.CURVEFINANCEETHEREUMTokenDTO)
+cURVEFINANCEETHEREUMTokensCurrent id_query =
     Api.request
         "GET"
         "/v1/dapps/curve-finance-ethereum/tokens/current"
         []
-        []
+        [ ( "id", Maybe.map identity id_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.cURVEFINANCEETHEREUMTokenDTODecoder)
+
+
+{-| Gets usageMetricsDailySnapshots.
+-}
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent : Api.Request (List Api.Data.CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO)
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.cURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTODecoder)
+
+
+{-| Gets usageMetricsHourlySnapshots.
+-}
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent : Api.Request (List Api.Data.CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO)
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTODecoder)
+
+
+{-| Gets withdraws.
+-}
+cURVEFINANCEETHEREUMWithdrawsCurrent : Api.Request (List Api.Data.CURVEFINANCEETHEREUMWithdrawDTO)
+cURVEFINANCEETHEREUMWithdrawsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/curve-finance-ethereum/withdraws/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.cURVEFINANCEETHEREUMWithdrawDTODecoder)
 

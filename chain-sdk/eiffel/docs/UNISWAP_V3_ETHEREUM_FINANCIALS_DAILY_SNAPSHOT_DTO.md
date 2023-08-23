@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
-**block_number** | **INTEGER_32** | Block number of when this snapshot was taken/last modified.) | [optional] [default to null]
+**block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
 **id** | [**STRING_32**](STRING_32.md) | ID is # of days since Unix epoch time. | [optional] [default to null]
 **day** | **INTEGER_32** | Number of days since Unix epoch time. | [optional] [default to null]
 **protocol** | [**STRING_32**](STRING_32.md) | Protocol this snapshot is associated with. | [optional] [default to null]

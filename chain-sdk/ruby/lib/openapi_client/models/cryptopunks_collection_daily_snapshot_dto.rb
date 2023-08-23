@@ -19,7 +19,7 @@ module OpenapiClient
 
     attr_accessor :recv_time
 
-    # 
+    # Number of block in which entity was recorded.
     attr_accessor :block_number
 
     # 
@@ -101,7 +101,7 @@ module OpenapiClient
       {
         :'entry_time' => :'Time',
         :'recv_time' => :'Time',
-        :'block_number' => :'String',
+        :'block_number' => :'Integer',
         :'vid' => :'Integer',
         :'block_range' => :'String',
         :'id' => :'String',
@@ -123,7 +123,6 @@ module OpenapiClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
-        :'block_number',
         :'block_range',
         :'id',
         :'collection',

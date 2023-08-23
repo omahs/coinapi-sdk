@@ -25,7 +25,6 @@ pancakeswap_v3_ethereum_position_dto_t* instantiate_pancakeswap_v3_ethereum_posi
       "2013-10-20T19:20:30+01:00",
       "2013-10-20T19:20:30+01:00",
       56,
-      56,
       "0",
       "0",
       "0",
@@ -53,7 +52,6 @@ pancakeswap_v3_ethereum_position_dto_t* instantiate_pancakeswap_v3_ethereum_posi
     pancakeswap_v3_ethereum_position_dto = pancakeswap_v3_ethereum_position_dto_create(
       "2013-10-20T19:20:30+01:00",
       "2013-10-20T19:20:30+01:00",
-      56,
       56,
       "0",
       "0",

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entryTime** | [**DateTime**](DateTime.md) |  | [optional] 
 **recvTime** | [**DateTime**](DateTime.md) |  | [optional] 
-**blockNumber** | **String** |  | [optional] 
+**blockNumber** | **int** | Number of block in which entity was recorded. | [optional] 
 **vid** | **int** |  | [optional] 
 **blockRange** | **String** |  | [optional] 
 **id** | **String** |  | [optional] 

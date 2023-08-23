@@ -360,13 +360,13 @@ function pancakeswapv3_ethereum_api:p_ancakeswapv3_ethereum_liquidity_pool_amoun
 	end
 end
 
-function pancakeswapv3_ethereum_api:p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current(pool)
+function pancakeswapv3_ethereum_api:p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current?pool=%s",
-			self.basePath, http_util.encodeURIComponent(pool));
+		path = string.format("%s/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current",
+			self.basePath);
 	})
 
 	-- set HTTP verb

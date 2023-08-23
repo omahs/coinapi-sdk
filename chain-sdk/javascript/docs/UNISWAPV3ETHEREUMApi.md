@@ -636,7 +636,7 @@ No authorization required
 
 ## uNISWAPV3ETHEREUMTickDailySnapshotsCurrent
 
-> [UNISWAPV3ETHEREUMTickDailySnapshotDTO] uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(opts)
+> [UNISWAPV3ETHEREUMTickDailySnapshotDTO] uNISWAPV3ETHEREUMTickDailySnapshotsCurrent()
 
 TickDailySnapshots (current)
 
@@ -648,10 +648,7 @@ Gets tickDailySnapshots.
 import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
 let apiInstance = new OnChainDappsRestApi.UNISWAPV3ETHEREUMApi();
-let opts = {
-  'pool': "pool_example" // String | liquidity pool this tick belongs to
-};
-apiInstance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(opts, (error, data, response) => {
+apiInstance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -662,10 +659,7 @@ apiInstance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(opts, (error, data, respo
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **String**| liquidity pool this tick belongs to | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -683,7 +677,7 @@ No authorization required
 
 ## uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent
 
-> [UNISWAPV3ETHEREUMTickHourlySnapshotDTO] uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(opts)
+> [UNISWAPV3ETHEREUMTickHourlySnapshotDTO] uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent()
 
 TickHourlySnapshots (current)
 
@@ -695,10 +689,7 @@ Gets tickHourlySnapshots.
 import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
 let apiInstance = new OnChainDappsRestApi.UNISWAPV3ETHEREUMApi();
-let opts = {
-  'pool': "pool_example" // String | liquidity pool this tick belongs to
-};
-apiInstance.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(opts, (error, data, response) => {
+apiInstance.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -709,10 +700,7 @@ apiInstance.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(opts, (error, data, resp
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **String**| liquidity pool this tick belongs to | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -730,7 +718,7 @@ No authorization required
 
 ## uNISWAPV3ETHEREUMTicksCurrent
 
-> [UNISWAPV3ETHEREUMTickDTO] uNISWAPV3ETHEREUMTicksCurrent(opts)
+> [UNISWAPV3ETHEREUMTickDTO] uNISWAPV3ETHEREUMTicksCurrent()
 
 Ticks (current)
 
@@ -742,10 +730,7 @@ Gets ticks.
 import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
 let apiInstance = new OnChainDappsRestApi.UNISWAPV3ETHEREUMApi();
-let opts = {
-  'pool': "pool_example" // String | Liquidity pool this tick belongs to
-};
-apiInstance.uNISWAPV3ETHEREUMTicksCurrent(opts, (error, data, response) => {
+apiInstance.uNISWAPV3ETHEREUMTicksCurrent((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -756,10 +741,7 @@ apiInstance.uNISWAPV3ETHEREUMTicksCurrent(opts, (error, data, response) => {
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **String**| Liquidity pool this tick belongs to | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 

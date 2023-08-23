@@ -30,10 +30,77 @@ my $api = WWW::OpenAPIClient::CURVEFINANCEETHEREUMApi->new();
 isa_ok($api, 'WWW::OpenAPIClient::CURVEFINANCEETHEREUMApi');
 
 #
+# c_urvefinanceethereum_accounts__current test
+#
+# uncomment below and update the test
+#my $c_urvefinanceethereum_accounts__current_result = $api->c_urvefinanceethereum_accounts__current();
+
+#
+# c_urvefinanceethereum_active_accounts__current test
+#
+# uncomment below and update the test
+#my $c_urvefinanceethereum_active_accounts__current_result = $api->c_urvefinanceethereum_active_accounts__current();
+
+#
+# c_urvefinanceethereum_deposits__current test
+#
+# uncomment below and update the test
+#my $c_urvefinanceethereum_deposits__current_result = $api->c_urvefinanceethereum_deposits__current();
+
+#
+# c_urvefinanceethereum_dex_amm_protocols__current test
+#
+# uncomment below and update the test
+#my $c_urvefinanceethereum_dex_amm_protocols__current_result = $api->c_urvefinanceethereum_dex_amm_protocols__current();
+
+#
+# c_urvefinanceethereum_financials_daily_snapshots__current test
+#
+# uncomment below and update the test
+#my $c_urvefinanceethereum_financials_daily_snapshots__current_result = $api->c_urvefinanceethereum_financials_daily_snapshots__current();
+
+#
+# c_urvefinanceethereum_liquidity_gauges__current test
+#
+# uncomment below and update the test
+#my $c_urvefinanceethereum_liquidity_gauges__current_result = $api->c_urvefinanceethereum_liquidity_gauges__current();
+
+#
+# c_urvefinanceethereum_liquidity_pool_daily_snapshots__current test
+#
+# uncomment below and update the test
+#my $c_urvefinanceethereum_liquidity_pool_daily_snapshots__current_result = $api->c_urvefinanceethereum_liquidity_pool_daily_snapshots__current();
+
+#
+# c_urvefinanceethereum_liquidity_pool_fees__current test
+#
+# uncomment below and update the test
+#my $c_urvefinanceethereum_liquidity_pool_fees__current_result = $api->c_urvefinanceethereum_liquidity_pool_fees__current();
+
+#
+# c_urvefinanceethereum_liquidity_pool_hourly_snapshots__current test
+#
+# uncomment below and update the test
+#my $c_urvefinanceethereum_liquidity_pool_hourly_snapshots__current_result = $api->c_urvefinanceethereum_liquidity_pool_hourly_snapshots__current();
+
+#
 # c_urvefinanceethereum_liquidity_pools__current test
 #
 # uncomment below and update the test
-#my $c_urvefinanceethereum_liquidity_pools__current_result = $api->c_urvefinanceethereum_liquidity_pools__current();
+#my $c_urvefinanceethereum_liquidity_pools__current_id = undef; # replace NULL with a proper value
+#my $c_urvefinanceethereum_liquidity_pools__current_result = $api->c_urvefinanceethereum_liquidity_pools__current(id => $c_urvefinanceethereum_liquidity_pools__current_id);
+
+#
+# c_urvefinanceethereum_lp_tokens__current test
+#
+# uncomment below and update the test
+#my $c_urvefinanceethereum_lp_tokens__current_result = $api->c_urvefinanceethereum_lp_tokens__current();
+
+#
+# c_urvefinanceethereum_reward_tokens__current test
+#
+# uncomment below and update the test
+#my $c_urvefinanceethereum_reward_tokens__current_result = $api->c_urvefinanceethereum_reward_tokens__current();
 
 #
 # c_urvefinanceethereum_swaps__current test
@@ -45,5 +112,24 @@ isa_ok($api, 'WWW::OpenAPIClient::CURVEFINANCEETHEREUMApi');
 # c_urvefinanceethereum_tokens__current test
 #
 # uncomment below and update the test
-#my $c_urvefinanceethereum_tokens__current_result = $api->c_urvefinanceethereum_tokens__current();
+#my $c_urvefinanceethereum_tokens__current_id = undef; # replace NULL with a proper value
+#my $c_urvefinanceethereum_tokens__current_result = $api->c_urvefinanceethereum_tokens__current(id => $c_urvefinanceethereum_tokens__current_id);
+
+#
+# c_urvefinanceethereum_usage_metrics_daily_snapshots__current test
+#
+# uncomment below and update the test
+#my $c_urvefinanceethereum_usage_metrics_daily_snapshots__current_result = $api->c_urvefinanceethereum_usage_metrics_daily_snapshots__current();
+
+#
+# c_urvefinanceethereum_usage_metrics_hourly_snapshots__current test
+#
+# uncomment below and update the test
+#my $c_urvefinanceethereum_usage_metrics_hourly_snapshots__current_result = $api->c_urvefinanceethereum_usage_metrics_hourly_snapshots__current();
+
+#
+# c_urvefinanceethereum_withdraws__current test
+#
+# uncomment below and update the test
+#my $c_urvefinanceethereum_withdraws__current_result = $api->c_urvefinanceethereum_withdraws__current();
 

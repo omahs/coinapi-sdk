@@ -37,7 +37,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// </summary>
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
-        /// <param name="blockNumber">blockNumber.</param>
+        /// <param name="blockNumber">Number of block in which entity was recorded..</param>
         /// <param name="vid">vid.</param>
         /// <param name="blockRange">blockRange.</param>
         /// <param name="id">id.</param>
@@ -51,7 +51,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="priceEth">priceEth.</param>
         /// <param name="buyer">buyer.</param>
         /// <param name="seller">seller.</param>
-        public CRYPTOPUNKSTradeDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), string blockNumber = default(string), long vid = default(long), string blockRange = default(string), string id = default(string), string transactionHash = default(string), int logIndex = default(int), string timestamp = default(string), bool isBundle = default(bool), string collection = default(string), string tokenId = default(string), string amount = default(string), string priceEth = default(string), string buyer = default(string), string seller = default(string))
+        public CRYPTOPUNKSTradeDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), long vid = default(long), string blockRange = default(string), string id = default(string), string transactionHash = default(string), int logIndex = default(int), string timestamp = default(string), bool isBundle = default(bool), string collection = default(string), string tokenId = default(string), string amount = default(string), string priceEth = default(string), string buyer = default(string), string seller = default(string))
         {
             this.EntryTime = entryTime;
             this.RecvTime = recvTime;
@@ -84,10 +84,11 @@ namespace CoinAPI.EMS.REST.V1.Model
         public DateTime RecvTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets BlockNumber
+        /// Number of block in which entity was recorded.
         /// </summary>
-        [DataMember(Name = "block_number", EmitDefaultValue = true)]
-        public string BlockNumber { get; set; }
+        /// <value>Number of block in which entity was recorded.</value>
+        [DataMember(Name = "block_number", EmitDefaultValue = false)]
+        public long BlockNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets Vid
@@ -238,8 +239,7 @@ namespace CoinAPI.EMS.REST.V1.Model
                 ) && 
                 (
                     this.BlockNumber == input.BlockNumber ||
-                    (this.BlockNumber != null &&
-                    this.BlockNumber.Equals(input.BlockNumber))
+                    this.BlockNumber.Equals(input.BlockNumber)
                 ) && 
                 (
                     this.Vid == input.Vid ||
@@ -322,10 +322,7 @@ namespace CoinAPI.EMS.REST.V1.Model
                 {
                     hashCode = (hashCode * 59) + this.RecvTime.GetHashCode();
                 }
-                if (this.BlockNumber != null)
-                {
-                    hashCode = (hashCode * 59) + this.BlockNumber.GetHashCode();
-                }
+                hashCode = (hashCode * 59) + this.BlockNumber.GetHashCode();
                 hashCode = (hashCode * 59) + this.Vid.GetHashCode();
                 if (this.BlockRange != null)
                 {

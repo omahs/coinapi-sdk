@@ -142,7 +142,6 @@ package .Models is
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
-       Vid : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
        Hour_Id : Swagger.Nullable_Integer;
        Tick : Swagger.Nullable_UString;
@@ -182,7 +181,6 @@ package .Models is
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
-       Vid : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
        Index : Swagger.Nullable_UString;
        Pool : Swagger.Nullable_UString;
@@ -259,7 +257,6 @@ package .Models is
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
-       Vid : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
        Account : Swagger.Nullable_UString;
        Pool : Swagger.Nullable_UString;
@@ -420,7 +417,7 @@ package .Models is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
-       Block_Number : Swagger.Nullable_Integer;
+       Block_Number : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
        Day : Swagger.Nullable_Integer;
        Protocol : Swagger.Nullable_UString;
@@ -553,6 +550,455 @@ package .Models is
 
 
 
+   type UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Protocol : Swagger.Nullable_UString;
+       Hourly_Active_Users : Swagger.Nullable_Integer;
+       Cumulative_Unique_Users : Swagger.Nullable_Integer;
+       Hourly_Transaction_Count : Swagger.Nullable_Integer;
+       Hourly_Deposit_Count : Swagger.Nullable_Integer;
+       Hourly_Withdraw_Count : Swagger.Nullable_Integer;
+       Hourly_Swap_Count : Swagger.Nullable_Integer;
+       Timestamp : Swagger.Nullable_UString;
+     end record;
+
+   package UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMTransferDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+       Sender : Swagger.Nullable_UString;
+       P_Type : Swagger.Nullable_UString;
+       Liquidity : Swagger.Nullable_UString;
+     end record;
+
+   package UNISWAPV2ETHEREUMTransferDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMTransferDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMTransferDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMTransferDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMTransferDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMTransferDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMTokenDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Vid : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Name : Swagger.Nullable_UString;
+       Symbol : Swagger.Nullable_UString;
+       Decimals : Swagger.Nullable_Integer;
+       Last_Price_Usd : Swagger.Nullable_UString;
+       Last_Price_Block_Number : Swagger.Nullable_UString;
+       Total_Supply : Swagger.Nullable_UString;
+       Total_Value_Locked_Usd : Swagger.Nullable_UString;
+       Large_Price_Change_Buffer : Swagger.Nullable_Integer;
+       Large_Tvl_Impact_Buffer : Swagger.Nullable_Integer;
+       Token_Symbol : Swagger.Nullable_UString;
+     end record;
+
+   package UNISWAPV2ETHEREUMTokenDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMTokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMTokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMTokenDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMTokenDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMTokenDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMRewarderProbeDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       User : Swagger.Nullable_UString;
+       Pending : Swagger.Nullable_UString;
+       Block_Num : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+       Lp_Staked : Swagger.Nullable_UString;
+     end record;
+
+   package UNISWAPV2ETHEREUMRewarderProbeDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMRewarderProbeDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMRewarderProbeDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMRewarderProbeDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMRewarderProbeDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMRewarderProbeDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMMasterChefStakingPoolDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Pool_Address : Swagger.Nullable_UString;
+       Pool_Alloc_Point : Swagger.Nullable_UString;
+       Multiplier : Swagger.Nullable_UString;
+       Last_Reward_Block : Swagger.Nullable_UString;
+       Rewarder : Swagger.Nullable_UString;
+     end record;
+
+   package UNISWAPV2ETHEREUMMasterChefStakingPoolDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMMasterChefStakingPoolDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMMasterChefStakingPoolDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMMasterChefStakingPoolDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMMasterChefStakingPoolDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMMasterChefStakingPoolDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMMasterChefDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Address : Swagger.Nullable_UString;
+       Total_Alloc_Point : Swagger.Nullable_UString;
+       Reward_Token_Rate : Swagger.Nullable_UString;
+       Reward_Token_Interval : Swagger.Nullable_UString;
+       Adjusted_Reward_Token_Rate : Swagger.Nullable_UString;
+       Last_Updated_Reward_Rate : Swagger.Nullable_UString;
+     end record;
+
+   package UNISWAPV2ETHEREUMMasterChefDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMMasterChefDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMMasterChefDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMMasterChefDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMMasterChefDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMMasterChefDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Protocol : Swagger.Nullable_UString;
+       Pool : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+       Total_Value_Locked_Usd : Swagger.Nullable_UString;
+       Cumulative_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Hourly_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Hourly_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Hourly_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Hourly_Volume_Usd : Swagger.Nullable_UString;
+       Hourly_Volume_By_Token_Amount : Swagger.UString_Vectors.Vector;
+       Hourly_Volume_By_Token_Usd : Swagger.UString_Vectors.Vector;
+       Cumulative_Volume_Usd : Swagger.Nullable_UString;
+       Input_Token_Balances : Swagger.UString_Vectors.Vector;
+       Input_Token_Weights : Swagger.UString_Vectors.Vector;
+       Output_Token_Supply : Swagger.Nullable_UString;
+       Output_Token_Price_Usd : Swagger.Nullable_UString;
+       Staked_Output_Token_Amount : Swagger.Nullable_UString;
+       Reward_Token_Emissions_Amount : Swagger.UString_Vectors.Vector;
+       Reward_Token_Emissions_Usd : Swagger.UString_Vectors.Vector;
+     end record;
+
+   package UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Protocol : Swagger.Nullable_UString;
+       Pool : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+       Total_Value_Locked_Usd : Swagger.Nullable_UString;
+       Cumulative_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Volume_Usd : Swagger.Nullable_UString;
+       Daily_Volume_By_Token_Amount : Swagger.UString_Vectors.Vector;
+       Daily_Volume_By_Token_Usd : Swagger.UString_Vectors.Vector;
+       Cumulative_Volume_Usd : Swagger.Nullable_UString;
+       Input_Token_Balances : Swagger.UString_Vectors.Vector;
+       Input_Token_Weights : Swagger.UString_Vectors.Vector;
+       Output_Token_Supply : Swagger.Nullable_UString;
+       Output_Token_Price_Usd : Swagger.Nullable_UString;
+       Staked_Output_Token_Amount : Swagger.Nullable_UString;
+       Reward_Token_Emissions_Amount : Swagger.UString_Vectors.Vector;
+       Reward_Token_Emissions_Usd : Swagger.UString_Vectors.Vector;
+     end record;
+
+   package UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMLiquidityPoolAmountDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Vid : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Input_Tokens : Swagger.UString_Vectors.Vector;
+       Input_Token_Balances : Swagger.UString_Vectors.Vector;
+     end record;
+
+   package UNISWAPV2ETHEREUMLiquidityPoolAmountDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMLiquidityPoolAmountDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMLiquidityPoolAmountDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMLiquidityPoolAmountDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMLiquidityPoolAmountDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMLiquidityPoolAmountDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMDexAmmProtocolDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Name : Swagger.Nullable_UString;
+       Slug : Swagger.Nullable_UString;
+       Schema_Version : Swagger.Nullable_UString;
+       Subgraph_Version : Swagger.Nullable_UString;
+       Methodology_Version : Swagger.Nullable_UString;
+       Total_Value_Locked_Usd : Swagger.Nullable_UString;
+       Protocol_Controlled_Value_Usd : Swagger.Nullable_UString;
+       Cumulative_Volume_Usd : Swagger.Nullable_UString;
+       Cumulative_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Unique_Users : Swagger.Nullable_Integer;
+       Total_Pool_Count : Swagger.Nullable_Integer;
+     end record;
+
+   package UNISWAPV2ETHEREUMDexAmmProtocolDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMDexAmmProtocolDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMDexAmmProtocolDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMDexAmmProtocolDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMDexAmmProtocolDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMDexAmmProtocolDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMActiveAccountDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_ : Swagger.Nullable_Integer;
+       Id : Swagger.Nullable_UString;
+       Block_Range : Swagger.Nullable_UString;
+     end record;
+
+   package UNISWAPV2ETHEREUMActiveAccountDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMActiveAccountDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMActiveAccountDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMActiveAccountDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMActiveAccountDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMActiveAccountDTO_Type_Vectors.Vector);
+
+
+
+
    type TransactionsETradeAggressiveSide_Type is
      record
      end record;
@@ -576,58 +1022,6 @@ package .Models is
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
                           Value : out TransactionsETradeAggressiveSide_Type_Vectors.Vector);
-
-
-
-
-   type UNISWAPV2ETHEREUMSwapDTO_Type is
-     record
-       Entry_Time : Swagger.Nullable_Date;
-       Recv_Time : Swagger.Nullable_Date;
-       Block_Number : Swagger.Nullable_Long;
-       Block_ : Swagger.Nullable_Integer;
-       Id : Swagger.Nullable_UString;
-       Hash : Swagger.Nullable_UString;
-       Log_Index : Swagger.Nullable_Integer;
-       Protocol : Swagger.Nullable_UString;
-       To : Swagger.Nullable_UString;
-       From : Swagger.Nullable_UString;
-       Timestamp : Swagger.Nullable_UString;
-       Token_In : Swagger.Nullable_UString;
-       Amount_In : Swagger.Nullable_UString;
-       Amount_In_Usd : Swagger.Nullable_UString;
-       Token_Out : Swagger.Nullable_UString;
-       Amount_Out : Swagger.Nullable_UString;
-       Amount_Out_Usd : Swagger.Nullable_UString;
-       Reserve_Amounts : Swagger.UString_Vectors.Vector;
-       Pool : Swagger.Nullable_UString;
-       Block_Range : Swagger.Nullable_UString;
-       Pool_Id : Swagger.Nullable_UString;
-       Transaction_Id : Swagger.Nullable_UString;
-       Evaluated_Price : double;
-       Evaluated_Amount : double;
-       Evaluated_Aggressor : .Models.TransactionsETradeAggressiveSide_Type;
-     end record;
-
-   package UNISWAPV2ETHEREUMSwapDTO_Type_Vectors is
-      new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UNISWAPV2ETHEREUMSwapDTO_Type);
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in UNISWAPV2ETHEREUMSwapDTO_Type);
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in UNISWAPV2ETHEREUMSwapDTO_Type_Vectors.Vector);
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out UNISWAPV2ETHEREUMSwapDTO_Type);
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out UNISWAPV2ETHEREUMSwapDTO_Type_Vectors.Vector);
 
 
 
@@ -746,7 +1140,7 @@ package .Models is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
-       Block_Number : Swagger.Nullable_UString;
+       Block_Number : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
        Hash : Swagger.Nullable_UString;
        Log_Index : Swagger.Nullable_Integer;
@@ -787,6 +1181,58 @@ package .Models is
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
                           Value : out CURVEFINANCEETHEREUMSwapDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMSwapDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_ : Swagger.Nullable_Integer;
+       Id : Swagger.Nullable_UString;
+       Hash : Swagger.Nullable_UString;
+       Log_Index : Swagger.Nullable_Integer;
+       Protocol : Swagger.Nullable_UString;
+       To : Swagger.Nullable_UString;
+       From : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+       Token_In : Swagger.Nullable_UString;
+       Amount_In : Swagger.Nullable_UString;
+       Amount_In_Usd : Swagger.Nullable_UString;
+       Token_Out : Swagger.Nullable_UString;
+       Amount_Out : Swagger.Nullable_UString;
+       Amount_Out_Usd : Swagger.Nullable_UString;
+       Reserve_Amounts : Swagger.UString_Vectors.Vector;
+       Pool : Swagger.Nullable_UString;
+       Block_Range : Swagger.Nullable_UString;
+       Pool_Id : Swagger.Nullable_UString;
+       Transaction_Id : Swagger.Nullable_UString;
+       Evaluated_Price : double;
+       Evaluated_Amount : double;
+       Evaluated_Aggressor : .Models.TransactionsETradeAggressiveSide_Type;
+     end record;
+
+   package UNISWAPV2ETHEREUMSwapDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMSwapDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMSwapDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMSwapDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMSwapDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMSwapDTO_Type_Vectors.Vector);
 
 
 
@@ -842,6 +1288,478 @@ package .Models is
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
                           Value : out UNISWAPV3ETHEREUMSwapDTO_Type_Vectors.Vector);
+
+
+
+
+   type SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Hour : Swagger.Nullable_Integer;
+       Protocol : Swagger.Nullable_UString;
+       Hourly_Active_Users : Swagger.Nullable_Integer;
+       Cumulative_Unique_Users : Swagger.Nullable_Integer;
+       Hourly_Transaction_Count : Swagger.Nullable_Integer;
+       Hourly_Deposit_Count : Swagger.Nullable_Integer;
+       Hourly_Withdraw_Count : Swagger.Nullable_Integer;
+       Hourly_Swap_Count : Swagger.Nullable_Integer;
+       Timestamp : Swagger.Nullable_UString;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO_Type_Vectors.Vector);
+
+
+
+
+   type SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Address : Swagger.Nullable_UString;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO_Type_Vectors.Vector);
+
+
+
+
+   type SUSHISWAPV3ETHEREUMTokenDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Vid : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Name : Swagger.Nullable_UString;
+       Symbol : Swagger.Nullable_UString;
+       Decimals : Swagger.Nullable_Integer;
+       Last_Price_Usd : Swagger.Nullable_UString;
+       Last_Price_Block_Number : Swagger.Nullable_UString;
+       Last_Price_Pool : Swagger.Nullable_UString;
+       Total_Supply : Swagger.Nullable_UString;
+       Total_Value_Locked_Usd : Swagger.Nullable_UString;
+       Large_Price_Change_Buffer : Swagger.Nullable_Integer;
+       Large_Tvl_Impact_Buffer : Swagger.Nullable_Integer;
+       Token_Symbol : Swagger.Nullable_UString;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMTokenDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMTokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMTokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMTokenDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMTokenDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMTokenDTO_Type_Vectors.Vector);
+
+
+
+
+   type SUSHISWAPV3ETHEREUMTickDailySnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Day_Id : Swagger.Nullable_Integer;
+       Tick : Swagger.Nullable_UString;
+       Pool : Swagger.Nullable_UString;
+       Liquidity_Gross : Swagger.Nullable_UString;
+       Liquidity_Gross_Usd : Swagger.Nullable_UString;
+       Liquidity_Net : Swagger.Nullable_UString;
+       Liquidity_Net_Usd : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMTickDailySnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMTickDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMTickDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMTickDailySnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMTickDailySnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMTickDailySnapshotDTO_Type_Vectors.Vector);
+
+
+
+
+   type SUSHISWAPV3ETHEREUMPositionSnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Hash : Swagger.Nullable_UString;
+       Log_Index : Swagger.Nullable_Integer;
+       Nonce : Swagger.Nullable_UString;
+       Position : Swagger.Nullable_UString;
+       Liquidity_Token_Type : Swagger.Nullable_UString;
+       Liquidity : Swagger.Nullable_UString;
+       Liquidity_Usd : Swagger.Nullable_UString;
+       Cumulative_Deposit_Token_Amounts : Swagger.UString_Vectors.Vector;
+       Cumulative_Deposit_Usd : Swagger.Nullable_UString;
+       Cumulative_Withdraw_Token_Amounts : Swagger.UString_Vectors.Vector;
+       Cumulative_Withdraw_Usd : Swagger.Nullable_UString;
+       Cumulative_Reward_Token_Amounts : Swagger.UString_Vectors.Vector;
+       Cumulative_Reward_Usd : Swagger.UString_Vectors.Vector;
+       Deposit_Count : Swagger.Nullable_Integer;
+       Withdraw_Count : Swagger.Nullable_Integer;
+       Timestamp : Swagger.Nullable_UString;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMPositionSnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMPositionSnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMPositionSnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMPositionSnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMPositionSnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMPositionSnapshotDTO_Type_Vectors.Vector);
+
+
+
+
+   type SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Hour : Swagger.Nullable_Integer;
+       Protocol : Swagger.Nullable_UString;
+       Pool : Swagger.Nullable_UString;
+       Tick : Swagger.Nullable_UString;
+       Total_Value_Locked_Usd : Swagger.Nullable_UString;
+       Total_Liquidity : Swagger.Nullable_UString;
+       Total_Liquidity_Usd : Swagger.Nullable_UString;
+       Active_Liquidity : Swagger.Nullable_UString;
+       Active_Liquidity_Usd : Swagger.Nullable_UString;
+       Uncollected_Protocol_Side_Token_Amounts : Swagger.UString_Vectors.Vector;
+       Uncollected_Protocol_Side_Values_Usd : Swagger.UString_Vectors.Vector;
+       Uncollected_Supply_Side_Token_Amounts : Swagger.UString_Vectors.Vector;
+       Uncollected_Supply_Side_Values_Usd : Swagger.UString_Vectors.Vector;
+       Cumulative_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Hourly_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Hourly_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Hourly_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Volume_Usd : Swagger.Nullable_UString;
+       Hourly_Volume_Usd : Swagger.Nullable_UString;
+       Cumulative_Volume_By_Token_Amount : Swagger.UString_Vectors.Vector;
+       Hourly_Volume_By_Token_Amount : Swagger.UString_Vectors.Vector;
+       Cumulative_Volume_By_Token_Usd : Swagger.UString_Vectors.Vector;
+       Hourly_Volume_By_Token_Usd : Swagger.UString_Vectors.Vector;
+       Input_Token_Balances : Swagger.UString_Vectors.Vector;
+       Input_Token_Balances_Usd : Swagger.UString_Vectors.Vector;
+       Input_Token_Weights : Swagger.UString_Vectors.Vector;
+       Staked_Output_Token_Amount : Swagger.Nullable_UString;
+       Reward_Token_Emissions_Amount : Swagger.UString_Vectors.Vector;
+       Reward_Token_Emissions_Usd : Swagger.UString_Vectors.Vector;
+       Cumulative_Deposit_Count : Swagger.Nullable_Integer;
+       Hourly_Deposit_Count : Swagger.Nullable_Integer;
+       Cumulative_Withdraw_Count : Swagger.Nullable_Integer;
+       Hourly_Withdraw_Count : Swagger.Nullable_Integer;
+       Cumulative_Swap_Count : Swagger.Nullable_Integer;
+       Hourly_Swap_Count : Swagger.Nullable_Integer;
+       Position_Count : Swagger.Nullable_Integer;
+       Open_Position_Count : Swagger.Nullable_Integer;
+       Closed_Position_Count : Swagger.Nullable_Integer;
+       Timestamp : Swagger.Nullable_UString;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO_Type_Vectors.Vector);
+
+
+
+
+   type SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_ : Swagger.Nullable_Integer;
+       Id : Swagger.Nullable_UString;
+       Day : Swagger.Nullable_Integer;
+       Protocol : Swagger.Nullable_UString;
+       Pool : Swagger.Nullable_UString;
+       Tick : Swagger.Nullable_UString;
+       Total_Value_Locked_Usd : Swagger.Nullable_UString;
+       Total_Liquidity : Swagger.Nullable_UString;
+       Total_Liquidity_Usd : Swagger.Nullable_UString;
+       Active_Liquidity : Swagger.Nullable_UString;
+       Active_Liquidity_Usd : Swagger.Nullable_UString;
+       Uncollected_Protocol_Side_Token_Amounts : Swagger.UString_Vectors.Vector;
+       Uncollected_Protocol_Side_Values_Usd : Swagger.UString_Vectors.Vector;
+       Uncollected_Supply_Side_Token_Amounts : Swagger.UString_Vectors.Vector;
+       Uncollected_Supply_Side_Values_Usd : Swagger.UString_Vectors.Vector;
+       Cumulative_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Volume_Usd : Swagger.Nullable_UString;
+       Daily_Volume_Usd : Swagger.Nullable_UString;
+       Cumulative_Volume_By_Token_Amount : Swagger.UString_Vectors.Vector;
+       Daily_Volume_By_Token_Amount : Swagger.UString_Vectors.Vector;
+       Cumulative_Volume_By_Token_Usd : Swagger.UString_Vectors.Vector;
+       Daily_Volume_By_Token_Usd : Swagger.UString_Vectors.Vector;
+       Input_Token_Balances : Swagger.UString_Vectors.Vector;
+       Input_Token_Balances_Usd : Swagger.UString_Vectors.Vector;
+       Input_Token_Weights : Swagger.UString_Vectors.Vector;
+       Staked_Output_Token_Amount : Swagger.Nullable_UString;
+       Reward_Token_Emissions_Amount : Swagger.UString_Vectors.Vector;
+       Reward_Token_Emissions_Usd : Swagger.UString_Vectors.Vector;
+       Cumulative_Deposit_Count : Swagger.Nullable_Integer;
+       Daily_Deposit_Count : Swagger.Nullable_Integer;
+       Cumulative_Withdraw_Count : Swagger.Nullable_Integer;
+       Daily_Withdraw_Count : Swagger.Nullable_Integer;
+       Cumulative_Swap_Count : Swagger.Nullable_Integer;
+       Daily_Swap_Count : Swagger.Nullable_Integer;
+       Position_Count : Swagger.Nullable_Integer;
+       Open_Position_Count : Swagger.Nullable_Integer;
+       Closed_Position_Count : Swagger.Nullable_Integer;
+       Timestamp : Swagger.Nullable_UString;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO_Type_Vectors.Vector);
+
+
+
+
+   type SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Vid : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Input_Tokens : Swagger.UString_Vectors.Vector;
+       Input_Token_Balances : Swagger.UString_Vectors.Vector;
+       Token_Prices : Swagger.UString_Vectors.Vector;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO_Type_Vectors.Vector);
+
+
+
+
+   type SUSHISWAPV3ETHEREUMDexAmmProtocolDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Name : Swagger.Nullable_UString;
+       Slug : Swagger.Nullable_UString;
+       Schema_Version : Swagger.Nullable_UString;
+       Subgraph_Version : Swagger.Nullable_UString;
+       Methodology_Version : Swagger.Nullable_UString;
+       Total_Value_Locked_Usd : Swagger.Nullable_UString;
+       Total_Liquidity_Usd : Swagger.Nullable_UString;
+       Active_Liquidity_Usd : Swagger.Nullable_UString;
+       Uncollected_Protocol_Side_Value_Usd : Swagger.Nullable_UString;
+       Uncollected_Supply_Side_Value_Usd : Swagger.Nullable_UString;
+       Protocol_Controlled_Value_Usd : Swagger.Nullable_UString;
+       Cumulative_Volume_Usd : Swagger.Nullable_UString;
+       Cumulative_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Unique_Users : Swagger.Nullable_Integer;
+       Cumulative_Unique_L_Ps : Swagger.Nullable_Integer;
+       Cumulative_Unique_Traders : Swagger.Nullable_Integer;
+       Total_Pool_Count : Swagger.Nullable_Integer;
+       Open_Position_Count : Swagger.Nullable_Integer;
+       Cumulative_Position_Count : Swagger.Nullable_Integer;
+       Last_Snapshot_Day_Id : Swagger.Nullable_Integer;
+       Last_Update_Timestamp : Swagger.Nullable_UString;
+       Last_Update_Block_Number : Swagger.Nullable_UString;
+       Regenesis : Swagger.Nullable_Boolean;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMDexAmmProtocolDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMDexAmmProtocolDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMDexAmmProtocolDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMDexAmmProtocolDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMDexAmmProtocolDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMDexAmmProtocolDTO_Type_Vectors.Vector);
+
+
+
+
+   type SUSHISWAPV3ETHEREUMActiveAccountDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Block_Range : Swagger.Nullable_UString;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMActiveAccountDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMActiveAccountDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMActiveAccountDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMActiveAccountDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMActiveAccountDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMActiveAccountDTO_Type_Vectors.Vector);
 
 
 
@@ -973,7 +1891,6 @@ package .Models is
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
-       Vid : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
        Hour_Id : Swagger.Nullable_Integer;
        Tick : Swagger.Nullable_UString;
@@ -1013,7 +1930,6 @@ package .Models is
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
-       Vid : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
        Index : Swagger.Nullable_UString;
        Pool : Swagger.Nullable_UString;
@@ -1090,7 +2006,6 @@ package .Models is
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
-       Vid : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
        Account : Swagger.Nullable_UString;
        Pool : Swagger.Nullable_UString;
@@ -1384,6 +2299,334 @@ package .Models is
 
 
 
+   type CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Protocol : Swagger.Nullable_UString;
+       Hourly_Active_Users : Swagger.Nullable_Integer;
+       Cumulative_Unique_Users : Swagger.Nullable_Integer;
+       Hourly_Transaction_Count : Swagger.Nullable_Integer;
+       Hourly_Deposit_Count : Swagger.Nullable_Integer;
+       Hourly_Withdraw_Count : Swagger.Nullable_Integer;
+       Hourly_Swap_Count : Swagger.Nullable_Integer;
+       Timestamp : Swagger.Nullable_UString;
+     end record;
+
+   package CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO_Type_Vectors.Vector);
+
+
+
+
+   type CURVEFINANCEETHEREUMTokenDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Vid : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Name : Swagger.Nullable_UString;
+       Symbol : Swagger.Nullable_UString;
+       Decimals : Swagger.Nullable_Integer;
+       Last_Price_Usd : Swagger.Nullable_UString;
+       Last_Price_Block_Number : Swagger.Nullable_UString;
+       Token_Symbol : Swagger.Nullable_UString;
+     end record;
+
+   package CURVEFINANCEETHEREUMTokenDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => CURVEFINANCEETHEREUMTokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMTokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMTokenDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMTokenDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMTokenDTO_Type_Vectors.Vector);
+
+
+
+
+   type CURVEFINANCEETHEREUMRewardTokenDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Token : Swagger.Nullable_UString;
+     end record;
+
+   package CURVEFINANCEETHEREUMRewardTokenDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => CURVEFINANCEETHEREUMRewardTokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMRewardTokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMRewardTokenDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMRewardTokenDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMRewardTokenDTO_Type_Vectors.Vector);
+
+
+
+
+   type CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Protocol : Swagger.Nullable_UString;
+       Pool : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+       Total_Value_Locked_Usd : Swagger.Nullable_UString;
+       Cumulative_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Hourly_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Hourly_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Hourly_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Hourly_Volume_Usd : Swagger.Nullable_UString;
+       Hourly_Volume_By_Token_Amount : Swagger.UString_Vectors.Vector;
+       Hourly_Volume_By_Token_Usd : Swagger.UString_Vectors.Vector;
+       Cumulative_Volume_Usd : Swagger.Nullable_UString;
+       Input_Token_Balances : Swagger.UString_Vectors.Vector;
+       Input_Token_Weights : Swagger.UString_Vectors.Vector;
+       Output_Token_Supply : Swagger.Nullable_UString;
+       Output_Token_Price_Usd : Swagger.Nullable_UString;
+       Staked_Output_Token_Amount : Swagger.Nullable_UString;
+       Reward_Token_Emissions_Amount : Swagger.UString_Vectors.Vector;
+       Reward_Token_Emissions_Usd : Swagger.UString_Vectors.Vector;
+     end record;
+
+   package CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO_Type_Vectors.Vector);
+
+
+
+
+   type CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Protocol : Swagger.Nullable_UString;
+       Pool : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+       Total_Value_Locked_Usd : Swagger.Nullable_UString;
+       Cumulative_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Volume_Usd : Swagger.Nullable_UString;
+       Daily_Volume_By_Token_Amount : Swagger.UString_Vectors.Vector;
+       Daily_Volume_By_Token_Usd : Swagger.UString_Vectors.Vector;
+       Cumulative_Volume_Usd : Swagger.Nullable_UString;
+       Input_Token_Balances : Swagger.UString_Vectors.Vector;
+       Input_Token_Weights : Swagger.UString_Vectors.Vector;
+       Output_Token_Supply : Swagger.Nullable_UString;
+       Output_Token_Price_Usd : Swagger.Nullable_UString;
+       Staked_Output_Token_Amount : Swagger.Nullable_UString;
+       Reward_Token_Emissions_Amount : Swagger.UString_Vectors.Vector;
+       Reward_Token_Emissions_Usd : Swagger.UString_Vectors.Vector;
+     end record;
+
+   package CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO_Type_Vectors.Vector);
+
+
+
+
+   type CURVEFINANCEETHEREUMLiquidityGaugeDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Pool_Address : Swagger.Nullable_UString;
+     end record;
+
+   package CURVEFINANCEETHEREUMLiquidityGaugeDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => CURVEFINANCEETHEREUMLiquidityGaugeDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMLiquidityGaugeDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMLiquidityGaugeDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMLiquidityGaugeDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMLiquidityGaugeDTO_Type_Vectors.Vector);
+
+
+
+
+   type CURVEFINANCEETHEREUMDexAmmProtocolDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Name : Swagger.Nullable_UString;
+       Slug : Swagger.Nullable_UString;
+       Schema_Version : Swagger.Nullable_UString;
+       Subgraph_Version : Swagger.Nullable_UString;
+       Methodology_Version : Swagger.Nullable_UString;
+       Total_Value_Locked_Usd : Swagger.Nullable_UString;
+       Protocol_Controlled_Value_Usd : Swagger.Nullable_UString;
+       Cumulative_Volume_Usd : Swagger.Nullable_UString;
+       Cumulative_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Unique_Users : Swagger.Nullable_Integer;
+       Total_Pool_Count : Swagger.Nullable_Integer;
+       Pool_Ids : Swagger.UString_Vectors.Vector;
+     end record;
+
+   package CURVEFINANCEETHEREUMDexAmmProtocolDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => CURVEFINANCEETHEREUMDexAmmProtocolDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMDexAmmProtocolDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMDexAmmProtocolDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMDexAmmProtocolDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMDexAmmProtocolDTO_Type_Vectors.Vector);
+
+
+
+
+   type CURVEFINANCEETHEREUMActiveAccountDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+     end record;
+
+   package CURVEFINANCEETHEREUMActiveAccountDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => CURVEFINANCEETHEREUMActiveAccountDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMActiveAccountDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMActiveAccountDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMActiveAccountDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMActiveAccountDTO_Type_Vectors.Vector);
+
+
+
+
    type CRYPTOPUNKSUserDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
@@ -1499,7 +2742,7 @@ package .Models is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
-       Block_Number : Swagger.Nullable_UString;
+       Block_Number : Swagger.Nullable_Long;
        Vid : Swagger.Nullable_Long;
        Block_Range : Swagger.Nullable_UString;
        Id : Swagger.Nullable_UString;
@@ -1544,7 +2787,7 @@ package .Models is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
-       Block_Number : Swagger.Nullable_UString;
+       Block_Number : Swagger.Nullable_Long;
        Vid : Swagger.Nullable_Long;
        Block_Range : Swagger.Nullable_UString;
        Id : Swagger.Nullable_UString;
@@ -1709,7 +2952,7 @@ package .Models is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
-       Block_Number : Swagger.Nullable_UString;
+       Block_Number : Swagger.Nullable_Long;
        Vid : Swagger.Nullable_Long;
        Block_Range : Swagger.Nullable_UString;
        Id : Swagger.Nullable_UString;
@@ -1744,6 +2987,126 @@ package .Models is
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
                           Value : out CRYPTOPUNKSTradeDTO_Type_Vectors.Vector);
+
+
+
+
+   type CURVEFINANCEETHEREUMAccountDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Block_Range : Swagger.Nullable_UString;
+     end record;
+
+   package CURVEFINANCEETHEREUMAccountDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => CURVEFINANCEETHEREUMAccountDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMAccountDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMAccountDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMAccountDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMAccountDTO_Type_Vectors.Vector);
+
+
+
+
+   type CURVEFINANCEETHEREUMDepositDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Hash : Swagger.Nullable_UString;
+       Log_Index : Swagger.Nullable_Integer;
+       Protocol : Swagger.Nullable_UString;
+       To : Swagger.Nullable_UString;
+       From : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+       Input_Tokens : Swagger.UString_Vectors.Vector;
+       Output_Token : Swagger.Nullable_UString;
+       Input_Token_Amounts : Swagger.UString_Vectors.Vector;
+       Output_Token_Amount : Swagger.Nullable_UString;
+       Amount_Usd : Swagger.Nullable_UString;
+       Pool : Swagger.Nullable_UString;
+     end record;
+
+   package CURVEFINANCEETHEREUMDepositDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => CURVEFINANCEETHEREUMDepositDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMDepositDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMDepositDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMDepositDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMDepositDTO_Type_Vectors.Vector);
+
+
+
+
+   type CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Protocol : Swagger.Nullable_UString;
+       Total_Value_Locked_Usd : Swagger.Nullable_UString;
+       Protocol_Controlled_Value_Usd : Swagger.Nullable_UString;
+       Daily_Volume_Usd : Swagger.Nullable_UString;
+       Cumulative_Volume_Usd : Swagger.Nullable_UString;
+       Daily_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+     end record;
+
+   package CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO_Type_Vectors.Vector);
 
 
 
@@ -1806,40 +3169,152 @@ package .Models is
 
 
 
-   type CURVEFINANCEETHEREUMTokenDTO_Type is
+   type CURVEFINANCEETHEREUMLiquidityPoolFeeDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
-       Vid : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
        Id : Swagger.Nullable_UString;
-       Name : Swagger.Nullable_UString;
-       Symbol : Swagger.Nullable_UString;
-       Decimals : Swagger.Nullable_Integer;
-       Last_Price_Usd : Swagger.Nullable_UString;
-       Last_Price_Block_Number : Swagger.Nullable_UString;
-       Token_Symbol : Swagger.Nullable_UString;
+       Fee_Percentage : Swagger.Nullable_UString;
      end record;
 
-   package CURVEFINANCEETHEREUMTokenDTO_Type_Vectors is
+   package CURVEFINANCEETHEREUMLiquidityPoolFeeDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => CURVEFINANCEETHEREUMTokenDTO_Type);
+                                  Element_Type => CURVEFINANCEETHEREUMLiquidityPoolFeeDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in CURVEFINANCEETHEREUMTokenDTO_Type);
+                        Value : in CURVEFINANCEETHEREUMLiquidityPoolFeeDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in CURVEFINANCEETHEREUMTokenDTO_Type_Vectors.Vector);
+                        Value : in CURVEFINANCEETHEREUMLiquidityPoolFeeDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out CURVEFINANCEETHEREUMTokenDTO_Type);
+                          Value : out CURVEFINANCEETHEREUMLiquidityPoolFeeDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out CURVEFINANCEETHEREUMTokenDTO_Type_Vectors.Vector);
+                          Value : out CURVEFINANCEETHEREUMLiquidityPoolFeeDTO_Type_Vectors.Vector);
+
+
+
+
+   type CURVEFINANCEETHEREUMLpTokenDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Pool_Address : Swagger.Nullable_UString;
+       Registry_Address : Swagger.Nullable_UString;
+     end record;
+
+   package CURVEFINANCEETHEREUMLpTokenDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => CURVEFINANCEETHEREUMLpTokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMLpTokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMLpTokenDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMLpTokenDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMLpTokenDTO_Type_Vectors.Vector);
+
+
+
+
+   type CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Protocol : Swagger.Nullable_UString;
+       Daily_Active_Users : Swagger.Nullable_Integer;
+       Cumulative_Unique_Users : Swagger.Nullable_Integer;
+       Daily_Transaction_Count : Swagger.Nullable_Integer;
+       Daily_Deposit_Count : Swagger.Nullable_Integer;
+       Daily_Withdraw_Count : Swagger.Nullable_Integer;
+       Daily_Swap_Count : Swagger.Nullable_Integer;
+       Total_Pool_Count : Swagger.Nullable_Integer;
+       Timestamp : Swagger.Nullable_UString;
+     end record;
+
+   package CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO_Type_Vectors.Vector);
+
+
+
+
+   type CURVEFINANCEETHEREUMWithdrawDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Hash : Swagger.Nullable_UString;
+       Log_Index : Swagger.Nullable_Integer;
+       Protocol : Swagger.Nullable_UString;
+       To : Swagger.Nullable_UString;
+       From : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+       Input_Tokens : Swagger.UString_Vectors.Vector;
+       Output_Token : Swagger.Nullable_UString;
+       Input_Token_Amounts : Swagger.UString_Vectors.Vector;
+       Output_Token_Amount : Swagger.Nullable_UString;
+       Amount_Usd : Swagger.Nullable_UString;
+       Pool : Swagger.Nullable_UString;
+     end record;
+
+   package CURVEFINANCEETHEREUMWithdrawDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => CURVEFINANCEETHEREUMWithdrawDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMWithdrawDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in CURVEFINANCEETHEREUMWithdrawDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMWithdrawDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out CURVEFINANCEETHEREUMWithdrawDTO_Type_Vectors.Vector);
 
 
 
@@ -1974,7 +3449,6 @@ package .Models is
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
-       Vid : Swagger.Nullable_Long;
        Block_ : Swagger.Nullable_Integer;
        Id : Swagger.Nullable_UString;
        Day : Swagger.Nullable_Integer;
@@ -2048,7 +3522,6 @@ package .Models is
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
-       Vid : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
        Hour : Swagger.Nullable_Integer;
        Protocol : Swagger.Nullable_UString;
@@ -2168,7 +3641,6 @@ package .Models is
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
-       Vid : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
        Day_Id : Swagger.Nullable_Integer;
        Tick : Swagger.Nullable_UString;
@@ -2319,6 +3791,143 @@ package .Models is
 
 
 
+   type SUSHISWAPV3ETHEREUMAccountDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Position_Count : Swagger.Nullable_Integer;
+       Open_Position_Count : Swagger.Nullable_Integer;
+       Closed_Position_Count : Swagger.Nullable_Integer;
+       Deposit_Count : Swagger.Nullable_Integer;
+       Withdraw_Count : Swagger.Nullable_Integer;
+       Swap_Count : Swagger.Nullable_Integer;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMAccountDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMAccountDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMAccountDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMAccountDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMAccountDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMAccountDTO_Type_Vectors.Vector);
+
+
+
+
+   type SUSHISWAPV3ETHEREUMDepositDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_ : Swagger.Nullable_Integer;
+       Id : Swagger.Nullable_UString;
+       Hash : Swagger.Nullable_UString;
+       Nonce : Swagger.Nullable_UString;
+       Log_Index : Swagger.Nullable_Integer;
+       Gas_Limit : Swagger.Nullable_UString;
+       Gas_Used : Swagger.Nullable_UString;
+       Gas_Price : Swagger.Nullable_UString;
+       Protocol : Swagger.Nullable_UString;
+       Account : Swagger.Nullable_UString;
+       Position : Swagger.Nullable_UString;
+       Pool : Swagger.Nullable_UString;
+       Tick_Lower : Swagger.Nullable_UString;
+       Tick_Upper : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+       Liquidity : Swagger.Nullable_UString;
+       Input_Tokens : Swagger.UString_Vectors.Vector;
+       Input_Token_Amounts : Swagger.UString_Vectors.Vector;
+       Reserve_Amounts : Swagger.UString_Vectors.Vector;
+       Amount_Usd : Swagger.Nullable_UString;
+       Block_Range : Swagger.Nullable_UString;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMDepositDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMDepositDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMDepositDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMDepositDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMDepositDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMDepositDTO_Type_Vectors.Vector);
+
+
+
+
+   type SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Integer;
+       Id : Swagger.Nullable_UString;
+       Day : Swagger.Nullable_Integer;
+       Protocol : Swagger.Nullable_UString;
+       Total_Value_Locked_Usd : Swagger.Nullable_UString;
+       Total_Liquidity_Usd : Swagger.Nullable_UString;
+       Active_Liquidity_Usd : Swagger.Nullable_UString;
+       Uncollected_Protocol_Side_Value_Usd : Swagger.Nullable_UString;
+       Uncollected_Supply_Side_Value_Usd : Swagger.Nullable_UString;
+       Protocol_Controlled_Value_Usd : Swagger.Nullable_UString;
+       Daily_Volume_Usd : Swagger.Nullable_UString;
+       Cumulative_Volume_Usd : Swagger.Nullable_UString;
+       Daily_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO_Type_Vectors.Vector);
+
+
+
+
    type SUSHISWAPV3ETHEREUMLiquidityPoolDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
@@ -2395,46 +4004,447 @@ package .Models is
 
 
 
-   type SUSHISWAPV3ETHEREUMTokenDTO_Type is
+   type SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
-       Vid : Swagger.Nullable_Long;
        Block_Range : Swagger.Nullable_UString;
        Id : Swagger.Nullable_UString;
-       Name : Swagger.Nullable_UString;
-       Symbol : Swagger.Nullable_UString;
-       Decimals : Swagger.Nullable_Integer;
-       Last_Price_Usd : Swagger.Nullable_UString;
-       Last_Price_Block_Number : Swagger.Nullable_UString;
-       Last_Price_Pool : Swagger.Nullable_UString;
-       Total_Supply : Swagger.Nullable_UString;
-       Total_Value_Locked_Usd : Swagger.Nullable_UString;
-       Large_Price_Change_Buffer : Swagger.Nullable_Integer;
-       Large_Tvl_Impact_Buffer : Swagger.Nullable_Integer;
-       Token_Symbol : Swagger.Nullable_UString;
+       Fee_Percentage : Swagger.Nullable_UString;
      end record;
 
-   package SUSHISWAPV3ETHEREUMTokenDTO_Type_Vectors is
+   package SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => SUSHISWAPV3ETHEREUMTokenDTO_Type);
+                                  Element_Type => SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SUSHISWAPV3ETHEREUMTokenDTO_Type);
+                        Value : in SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SUSHISWAPV3ETHEREUMTokenDTO_Type_Vectors.Vector);
+                        Value : in SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SUSHISWAPV3ETHEREUMTokenDTO_Type);
+                          Value : out SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SUSHISWAPV3ETHEREUMTokenDTO_Type_Vectors.Vector);
+                          Value : out SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO_Type_Vectors.Vector);
+
+
+
+
+   type SUSHISWAPV3ETHEREUMPositionDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Account : Swagger.Nullable_UString;
+       Pool : Swagger.Nullable_UString;
+       Hash_Opened : Swagger.Nullable_UString;
+       Hash_Closed : Swagger.Nullable_UString;
+       Block_Number_Opened : Swagger.Nullable_UString;
+       Timestamp_Opened : Swagger.Nullable_UString;
+       Block_Number_Closed : Swagger.Nullable_UString;
+       Timestamp_Closed : Swagger.Nullable_UString;
+       Tick_Lower : Swagger.Nullable_UString;
+       Tick_Upper : Swagger.Nullable_UString;
+       Liquidity_Token : Swagger.Nullable_UString;
+       Liquidity_Token_Type : Swagger.Nullable_UString;
+       Liquidity : Swagger.Nullable_UString;
+       Liquidity_Usd : Swagger.Nullable_UString;
+       Cumulative_Deposit_Token_Amounts : Swagger.UString_Vectors.Vector;
+       Cumulative_Deposit_Usd : Swagger.Nullable_UString;
+       Cumulative_Withdraw_Token_Amounts : Swagger.UString_Vectors.Vector;
+       Cumulative_Withdraw_Usd : Swagger.Nullable_UString;
+       Cumulative_Reward_Usd : Swagger.UString_Vectors.Vector;
+       Deposit_Count : Swagger.Nullable_Integer;
+       Withdraw_Count : Swagger.Nullable_Integer;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMPositionDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMPositionDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMPositionDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMPositionDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMPositionDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMPositionDTO_Type_Vectors.Vector);
+
+
+
+
+   type SUSHISWAPV3ETHEREUMRewardTokenDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Token : Swagger.Nullable_UString;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMRewardTokenDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMRewardTokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMRewardTokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMRewardTokenDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMRewardTokenDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMRewardTokenDTO_Type_Vectors.Vector);
+
+
+
+
+   type SUSHISWAPV3ETHEREUMTickDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Index : Swagger.Nullable_UString;
+       Pool : Swagger.Nullable_UString;
+       Created_Timestamp : Swagger.Nullable_UString;
+       Created_Block_Number : Swagger.Nullable_UString;
+       Prices : Swagger.UString_Vectors.Vector;
+       Liquidity_Gross : Swagger.Nullable_UString;
+       Liquidity_Gross_Usd : Swagger.Nullable_UString;
+       Liquidity_Net : Swagger.Nullable_UString;
+       Liquidity_Net_Usd : Swagger.Nullable_UString;
+       Last_Snapshot_Day_Id : Swagger.Nullable_Integer;
+       Last_Snapshot_Hour_Id : Swagger.Nullable_Integer;
+       Last_Update_Timestamp : Swagger.Nullable_UString;
+       Last_Update_Block_Number : Swagger.Nullable_UString;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMTickDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMTickDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMTickDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMTickDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMTickDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMTickDTO_Type_Vectors.Vector);
+
+
+
+
+   type SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Hour_Id : Swagger.Nullable_Integer;
+       Tick : Swagger.Nullable_UString;
+       Pool : Swagger.Nullable_UString;
+       Liquidity_Gross : Swagger.Nullable_UString;
+       Liquidity_Gross_Usd : Swagger.Nullable_UString;
+       Liquidity_Net : Swagger.Nullable_UString;
+       Liquidity_Net_Usd : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO_Type_Vectors.Vector);
+
+
+
+
+   type SUSHISWAPV3ETHEREUMTokenWhiteListDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Whitelist_Pools : Swagger.UString_Vectors.Vector;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMTokenWhiteListDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMTokenWhiteListDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMTokenWhiteListDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMTokenWhiteListDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMTokenWhiteListDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMTokenWhiteListDTO_Type_Vectors.Vector);
+
+
+
+
+   type SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Day : Swagger.Nullable_Integer;
+       Protocol : Swagger.Nullable_UString;
+       Daily_Active_Users : Swagger.Nullable_Integer;
+       Cumulative_Unique_Users : Swagger.Nullable_Integer;
+       Daily_Transaction_Count : Swagger.Nullable_Integer;
+       Total_Pool_Count : Swagger.Nullable_Integer;
+       Daily_Deposit_Count : Swagger.Nullable_Integer;
+       Daily_Withdraw_Count : Swagger.Nullable_Integer;
+       Daily_Swap_Count : Swagger.Nullable_Integer;
+       Timestamp : Swagger.Nullable_UString;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO_Type_Vectors.Vector);
+
+
+
+
+   type SUSHISWAPV3ETHEREUMWithdrawDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Hash : Swagger.Nullable_UString;
+       Nonce : Swagger.Nullable_UString;
+       Log_Index : Swagger.Nullable_Integer;
+       Gas_Limit : Swagger.Nullable_UString;
+       Gas_Used : Swagger.Nullable_UString;
+       Gas_Price : Swagger.Nullable_UString;
+       Protocol : Swagger.Nullable_UString;
+       Account : Swagger.Nullable_UString;
+       Position : Swagger.Nullable_UString;
+       Tick_Lower : Swagger.Nullable_UString;
+       Tick_Upper : Swagger.Nullable_UString;
+       Pool : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+       Liquidity : Swagger.Nullable_UString;
+       Input_Tokens : Swagger.UString_Vectors.Vector;
+       Input_Token_Amounts : Swagger.UString_Vectors.Vector;
+       Reserve_Amounts : Swagger.UString_Vectors.Vector;
+       Amount_Usd : Swagger.Nullable_UString;
+     end record;
+
+   package SUSHISWAPV3ETHEREUMWithdrawDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SUSHISWAPV3ETHEREUMWithdrawDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMWithdrawDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SUSHISWAPV3ETHEREUMWithdrawDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMWithdrawDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SUSHISWAPV3ETHEREUMWithdrawDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMAccountDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_ : Swagger.Nullable_Integer;
+       Id : Swagger.Nullable_UString;
+       Block_Range : Swagger.Nullable_UString;
+     end record;
+
+   package UNISWAPV2ETHEREUMAccountDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMAccountDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMAccountDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMAccountDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMAccountDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMAccountDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMDepositDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_ : Swagger.Nullable_Integer;
+       Id : Swagger.Nullable_UString;
+       Hash : Swagger.Nullable_UString;
+       Log_Index : Swagger.Nullable_Integer;
+       Protocol : Swagger.Nullable_UString;
+       To : Swagger.Nullable_UString;
+       From : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+       Input_Tokens : Swagger.UString_Vectors.Vector;
+       Output_Token : Swagger.Nullable_UString;
+       Input_Token_Amounts : Swagger.UString_Vectors.Vector;
+       Output_Token_Amount : Swagger.Nullable_UString;
+       Reserve_Amounts : Swagger.UString_Vectors.Vector;
+       Amount_Usd : Swagger.Nullable_UString;
+       Pool : Swagger.Nullable_UString;
+       Block_Range : Swagger.Nullable_UString;
+     end record;
+
+   package UNISWAPV2ETHEREUMDepositDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMDepositDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMDepositDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMDepositDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMDepositDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMDepositDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Protocol : Swagger.Nullable_UString;
+       Total_Value_Locked_Usd : Swagger.Nullable_UString;
+       Protocol_Controlled_Value_Usd : Swagger.Nullable_UString;
+       Daily_Volume_Usd : Swagger.Nullable_UString;
+       Cumulative_Volume_Usd : Swagger.Nullable_UString;
+       Daily_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Supply_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Protocol_Side_Revenue_Usd : Swagger.Nullable_UString;
+       Daily_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Cumulative_Total_Revenue_Usd : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+     end record;
+
+   package UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO_Type_Vectors.Vector);
 
 
 
@@ -2494,44 +4504,262 @@ package .Models is
 
 
 
-   type UNISWAPV2ETHEREUMTokenDTO_Type is
+   type UNISWAPV2ETHEREUMLiquidityPoolFeeDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
-       Vid : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
        Id : Swagger.Nullable_UString;
-       Name : Swagger.Nullable_UString;
-       Symbol : Swagger.Nullable_UString;
-       Decimals : Swagger.Nullable_Integer;
-       Last_Price_Usd : Swagger.Nullable_UString;
-       Last_Price_Block_Number : Swagger.Nullable_UString;
-       Total_Supply : Swagger.Nullable_UString;
-       Total_Value_Locked_Usd : Swagger.Nullable_UString;
-       Large_Price_Change_Buffer : Swagger.Nullable_Integer;
-       Large_Tvl_Impact_Buffer : Swagger.Nullable_Integer;
-       Token_Symbol : Swagger.Nullable_UString;
+       Fee_Percentage : Swagger.Nullable_UString;
      end record;
 
-   package UNISWAPV2ETHEREUMTokenDTO_Type_Vectors is
+   package UNISWAPV2ETHEREUMLiquidityPoolFeeDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UNISWAPV2ETHEREUMTokenDTO_Type);
+                                  Element_Type => UNISWAPV2ETHEREUMLiquidityPoolFeeDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UNISWAPV2ETHEREUMTokenDTO_Type);
+                        Value : in UNISWAPV2ETHEREUMLiquidityPoolFeeDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UNISWAPV2ETHEREUMTokenDTO_Type_Vectors.Vector);
+                        Value : in UNISWAPV2ETHEREUMLiquidityPoolFeeDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UNISWAPV2ETHEREUMTokenDTO_Type);
+                          Value : out UNISWAPV2ETHEREUMLiquidityPoolFeeDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UNISWAPV2ETHEREUMTokenDTO_Type_Vectors.Vector);
+                          Value : out UNISWAPV2ETHEREUMLiquidityPoolFeeDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMMasterChefAddressToPidDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Pid : Swagger.Nullable_UString;
+     end record;
+
+   package UNISWAPV2ETHEREUMMasterChefAddressToPidDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMMasterChefAddressToPidDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMMasterChefAddressToPidDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMMasterChefAddressToPidDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMMasterChefAddressToPidDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMMasterChefAddressToPidDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMMasterChefRewarderDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Pool : Swagger.Nullable_UString;
+       Reward_Token : Swagger.Nullable_UString;
+       Token_Per_Sec : Swagger.Nullable_UString;
+       Rate_Calculated_At : Swagger.Nullable_UString;
+       Has_Funds : Swagger.Nullable_Boolean;
+       Has_Funds_At : Swagger.Nullable_UString;
+       Can_Retrieve_Rate : Swagger.Nullable_Boolean;
+       Reward_Rate_Calculation_In_Progress : Swagger.Nullable_Boolean;
+       Probes : Swagger.UString_Vectors.Vector;
+     end record;
+
+   package UNISWAPV2ETHEREUMMasterChefRewarderDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMMasterChefRewarderDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMMasterChefRewarderDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMMasterChefRewarderDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMMasterChefRewarderDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMMasterChefRewarderDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMRewardTokenDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Token : Swagger.Nullable_UString;
+     end record;
+
+   package UNISWAPV2ETHEREUMRewardTokenDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMRewardTokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMRewardTokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMRewardTokenDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMRewardTokenDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMRewardTokenDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMTokenWhiteListDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Whitelist_Pools : Swagger.UString_Vectors.Vector;
+     end record;
+
+   package UNISWAPV2ETHEREUMTokenWhiteListDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMTokenWhiteListDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMTokenWhiteListDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMTokenWhiteListDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMTokenWhiteListDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMTokenWhiteListDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
+       Id : Swagger.Nullable_UString;
+       Protocol : Swagger.Nullable_UString;
+       Daily_Active_Users : Swagger.Nullable_Integer;
+       Cumulative_Unique_Users : Swagger.Nullable_Integer;
+       Daily_Transaction_Count : Swagger.Nullable_Integer;
+       Daily_Deposit_Count : Swagger.Nullable_Integer;
+       Daily_Withdraw_Count : Swagger.Nullable_Integer;
+       Daily_Swap_Count : Swagger.Nullable_Integer;
+       Total_Pool_Count : Swagger.Nullable_Integer;
+       Timestamp : Swagger.Nullable_UString;
+     end record;
+
+   package UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO_Type_Vectors.Vector);
+
+
+
+
+   type UNISWAPV2ETHEREUMWithdrawDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Block_ : Swagger.Nullable_Integer;
+       Id : Swagger.Nullable_UString;
+       Hash : Swagger.Nullable_UString;
+       Log_Index : Swagger.Nullable_Integer;
+       Protocol : Swagger.Nullable_UString;
+       To : Swagger.Nullable_UString;
+       From : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+       Input_Tokens : Swagger.UString_Vectors.Vector;
+       Output_Token : Swagger.Nullable_UString;
+       Input_Token_Amounts : Swagger.UString_Vectors.Vector;
+       Output_Token_Amount : Swagger.Nullable_UString;
+       Reserve_Amounts : Swagger.UString_Vectors.Vector;
+       Amount_Usd : Swagger.Nullable_UString;
+       Pool : Swagger.Nullable_UString;
+       Block_Range : Swagger.Nullable_UString;
+     end record;
+
+   package UNISWAPV2ETHEREUMWithdrawDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UNISWAPV2ETHEREUMWithdrawDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMWithdrawDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UNISWAPV2ETHEREUMWithdrawDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMWithdrawDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UNISWAPV2ETHEREUMWithdrawDTO_Type_Vectors.Vector);
 
 
 
@@ -2666,7 +4894,6 @@ package .Models is
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
-       Vid : Swagger.Nullable_Long;
        Block_ : Swagger.Nullable_Integer;
        Id : Swagger.Nullable_UString;
        Day : Swagger.Nullable_Integer;
@@ -2740,7 +4967,6 @@ package .Models is
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
-       Vid : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
        Hour : Swagger.Nullable_Integer;
        Protocol : Swagger.Nullable_UString;
@@ -2860,7 +5086,6 @@ package .Models is
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
-       Vid : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
        Day_Id : Swagger.Nullable_Integer;
        Tick : Swagger.Nullable_UString;

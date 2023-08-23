@@ -60,7 +60,7 @@ class CRYPTOPUNKSTradeDTO implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPITypes = [
         'entry_time' => '\DateTime',
         'recv_time' => '\DateTime',
-        'block_number' => 'string',
+        'block_number' => 'int',
         'vid' => 'int',
         'block_range' => 'string',
         'id' => 'string',
@@ -86,7 +86,7 @@ class CRYPTOPUNKSTradeDTO implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPIFormats = [
         'entry_time' => 'date-time',
         'recv_time' => 'date-time',
-        'block_number' => null,
+        'block_number' => 'int64',
         'vid' => 'int64',
         'block_range' => null,
         'id' => null,
@@ -110,7 +110,7 @@ class CRYPTOPUNKSTradeDTO implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static array $openAPINullables = [
         'entry_time' => false,
 		'recv_time' => false,
-		'block_number' => true,
+		'block_number' => false,
 		'vid' => false,
 		'block_range' => true,
 		'id' => true,
@@ -452,7 +452,7 @@ class CRYPTOPUNKSTradeDTO implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets block_number
      *
-     * @return string|null
+     * @return int|null
      */
     public function getBlockNumber()
     {
@@ -462,21 +462,14 @@ class CRYPTOPUNKSTradeDTO implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets block_number
      *
-     * @param string|null $block_number 
+     * @param int|null $block_number Number of block in which entity was recorded.
      *
      * @return self
      */
     public function setBlockNumber($block_number)
     {
         if (is_null($block_number)) {
-            array_push($this->openAPINullablesSetToNull, 'block_number');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('block_number', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable block_number cannot be null');
         }
         $this->container['block_number'] = $block_number;
 

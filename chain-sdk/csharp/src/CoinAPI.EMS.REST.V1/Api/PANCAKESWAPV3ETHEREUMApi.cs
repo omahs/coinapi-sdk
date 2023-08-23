@@ -148,9 +148,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPoolDailySnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
         /// <returns>List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO></returns>
-        List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent (string pool = default(string));
+        List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent ();
 
         /// <summary>
         /// LiquidityPoolDailySnapshots (current)
@@ -159,9 +158,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPoolDailySnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
         /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO></returns>
-        ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo (string pool = default(string));
+        ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo ();
         /// <summary>
         /// LiquidityPoolFees (current)
         /// </summary>
@@ -617,10 +615,9 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPoolDailySnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO></returns>
-        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// LiquidityPoolDailySnapshots (current)
@@ -629,10 +626,9 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPoolDailySnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// LiquidityPoolFees (current)
         /// </summary>
@@ -1878,11 +1874,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPoolDailySnapshots (current) Gets liquidityPoolDailySnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
         /// <returns>List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO></returns>
-        public List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent (string pool = default(string))
+        public List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent ()
         {
-             ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(pool);
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> localVarResponse = PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -1890,9 +1885,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPoolDailySnapshots (current) Gets liquidityPoolDailySnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
         /// <returns>ApiResponse of List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO></returns>
-        public ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo (string pool = default(string))
+        public ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo ()
         {
 
             var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current";
@@ -1919,7 +1913,6 @@ namespace CoinAPI.EMS.REST.V1.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
 
 
             // make the HTTP request
@@ -1944,12 +1937,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPoolDailySnapshots (current) Gets liquidityPoolDailySnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO></returns>
-        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfoAsync(pool, cancellationToken);
+             ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> localVarResponse = await PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfoAsync(cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1958,10 +1950,9 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPoolDailySnapshots (current) Gets liquidityPoolDailySnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pool">Pool this snapshot belongs to. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>> PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current";
@@ -1988,7 +1979,6 @@ namespace CoinAPI.EMS.REST.V1.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
 
 
             // make the HTTP request

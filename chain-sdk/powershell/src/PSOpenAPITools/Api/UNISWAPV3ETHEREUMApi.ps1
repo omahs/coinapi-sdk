@@ -1115,9 +1115,6 @@ TickDailySnapshots (current)
 
 No description available.
 
-.PARAMETER Pool
-liquidity pool this tick belongs to
-
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
@@ -1133,9 +1130,6 @@ UNISWAPV3ETHEREUMTickDailySnapshotDTO[]
 function Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent {
     [CmdletBinding()]
     Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [String]
-        ${Pool},
         [String]
         [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
@@ -1167,10 +1161,6 @@ function Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent {
 
         $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current'
 
-        if ($Pool) {
-            $LocalVarQueryParameters['pool'] = $Pool
-        }
-
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
                                 -Accepts $LocalVarAccepts `
@@ -1200,9 +1190,6 @@ TickHourlySnapshots (current)
 
 No description available.
 
-.PARAMETER Pool
-liquidity pool this tick belongs to
-
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
@@ -1218,9 +1205,6 @@ UNISWAPV3ETHEREUMTickHourlySnapshotDTO[]
 function Invoke-UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent {
     [CmdletBinding()]
     Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [String]
-        ${Pool},
         [String]
         [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
@@ -1252,10 +1236,6 @@ function Invoke-UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent {
 
         $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current'
 
-        if ($Pool) {
-            $LocalVarQueryParameters['pool'] = $Pool
-        }
-
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
                                 -Accepts $LocalVarAccepts `
@@ -1285,9 +1265,6 @@ Ticks (current)
 
 No description available.
 
-.PARAMETER Pool
-Liquidity pool this tick belongs to
-
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
@@ -1303,9 +1280,6 @@ UNISWAPV3ETHEREUMTickDTO[]
 function Invoke-UNISWAPV3ETHEREUMTicksCurrent {
     [CmdletBinding()]
     Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [String]
-        ${Pool},
         [String]
         [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
@@ -1336,10 +1310,6 @@ function Invoke-UNISWAPV3ETHEREUMTicksCurrent {
         }
 
         $LocalVarUri = '/v1/dapps/uniswap-v3-ethereum/ticks/current'
-
-        if ($Pool) {
-            $LocalVarQueryParameters['pool'] = $Pool
-        }
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `

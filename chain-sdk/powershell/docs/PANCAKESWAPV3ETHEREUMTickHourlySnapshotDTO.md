@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Vid** | **Int64** |  | [optional] 
 **Id** | **String** | (pool address)-(tick index)-(hour ID) | [optional] 
 **HourId** | **Int32** | Number of hours since Unix epoch time | [optional] 
 **Tick** | **String** | tick index | [optional] 
@@ -24,7 +23,6 @@ Name | Type | Description | Notes
 $PANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO = Initialize-PSOpenAPIToolsPANCAKESWAPV3ETHEREUMTickHourlySnapshotDTO  -EntryTime null `
  -RecvTime null `
  -BlockNumber null `
- -Vid null `
  -Id null `
  -HourId null `
  -Tick null `

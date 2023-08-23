@@ -11,7 +11,6 @@
 |**entryTime** | **OffsetDateTime** |  |  [optional] |
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
 |**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional] |
-|**vid** | **Long** |  |  [optional] |
 |**id** | **String** | (pool address)-(tick index) |  [optional] |
 |**index** | **String** | tick index |  [optional] |
 |**pool** | **String** | Liquidity pool this tick belongs to |  [optional] |

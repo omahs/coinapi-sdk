@@ -19,12 +19,11 @@ local function cast_uniswap_v3_ethereum_position_dto(t)
 	return setmetatable(t, uniswap_v3_ethereum_position_dto_mt)
 end
 
-local function new_uniswap_v3_ethereum_position_dto(entry_time, recv_time, block_number, vid, id, account, pool, hash_opened, hash_closed, block_number_opened, timestamp_opened, block_number_closed, timestamp_closed, tick_lower, tick_upper, liquidity_token, liquidity_token_type, liquidity, liquidity_usd, cumulative_deposit_token_amounts, cumulative_deposit_usd, cumulative_withdraw_token_amounts, cumulative_withdraw_usd, cumulative_reward_usd, deposit_count, withdraw_count)
+local function new_uniswap_v3_ethereum_position_dto(entry_time, recv_time, block_number, id, account, pool, hash_opened, hash_closed, block_number_opened, timestamp_opened, block_number_closed, timestamp_closed, tick_lower, tick_upper, liquidity_token, liquidity_token_type, liquidity, liquidity_usd, cumulative_deposit_token_amounts, cumulative_deposit_usd, cumulative_withdraw_token_amounts, cumulative_withdraw_usd, cumulative_reward_usd, deposit_count, withdraw_count)
 	return cast_uniswap_v3_ethereum_position_dto({
 		["entry_time"] = entry_time;
 		["recv_time"] = recv_time;
 		["block_number"] = block_number;
-		["vid"] = vid;
 		["id"] = id;
 		["account"] = account;
 		["pool"] = pool;

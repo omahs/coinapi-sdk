@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Daily financial metrics for Uniswap V3.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-21T11:20:49.157876Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-23T15:16:19.303862Z[Etc/UTC]")
 public class UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -64,7 +64,7 @@ public class UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO {
 
   public static final String SERIALIZED_NAME_BLOCK_NUMBER = "block_number";
   @SerializedName(SERIALIZED_NAME_BLOCK_NUMBER)
-  private Integer blockNumber;
+  private Long blockNumber;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -183,23 +183,23 @@ public class UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO {
   }
 
 
-  public UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO blockNumber(Integer blockNumber) {
+  public UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO blockNumber(Long blockNumber) {
     
     this.blockNumber = blockNumber;
     return this;
   }
 
    /**
-   * Block number of when this snapshot was taken/last modified.)
+   * Number of block in which entity was recorded.
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  public Integer getBlockNumber() {
+  public Long getBlockNumber() {
     return blockNumber;
   }
 
 
-  public void setBlockNumber(Integer blockNumber) {
+  public void setBlockNumber(Long blockNumber) {
     this.blockNumber = blockNumber;
   }
 

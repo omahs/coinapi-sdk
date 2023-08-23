@@ -8,7 +8,7 @@
 uniswap_v3_ethereum_financials_daily_snapshot_dto_t *uniswap_v3_ethereum_financials_daily_snapshot_dto_create(
     char *entry_time,
     char *recv_time,
-    int block_number,
+    long block_number,
     char *id,
     int day,
     char *protocol,

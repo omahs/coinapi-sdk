@@ -25,7 +25,7 @@ CURVE_FINANCE_ETHEREUM.SwapDTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
-	//block_number = std::string();
+	//block_number = long(0);
 	//id = std::string();
 	//hash = std::string();
 	//log_index = int(0);
@@ -195,8 +195,8 @@ CURVE_FINANCE_ETHEREUM.SwapDTO::fromJson(char* jsonStr)
 	if (node !=NULL) {
 	
 
-		if (isprimitive("std::string")) {
-			jsonToValue(&block_number, node, "std::string", "");
+		if (isprimitive("long long")) {
+			jsonToValue(&block_number, node, "long long", "");
 		} else {
 			
 		}
@@ -443,9 +443,9 @@ CURVE_FINANCE_ETHEREUM.SwapDTO::toJson()
 	}
 	const gchar *recv_timeKey = "recv_time";
 	json_object_set_member(pJsonObject, recv_timeKey, node);
-	if (isprimitive("std::string")) {
-		std::string obj = getBlockNumber();
-		node = converttoJson(&obj, "std::string", "");
+	if (isprimitive("long long")) {
+		long long obj = getBlockNumber();
+		node = converttoJson(&obj, "long long", "");
 	}
 	else {
 		
@@ -660,14 +660,14 @@ CURVE_FINANCE_ETHEREUM.SwapDTO::setRecvTime(std::string  recv_time)
 	this->recv_time = recv_time;
 }
 
-std::string
+long long
 CURVE_FINANCE_ETHEREUM.SwapDTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-CURVE_FINANCE_ETHEREUM.SwapDTO::setBlockNumber(std::string  block_number)
+CURVE_FINANCE_ETHEREUM.SwapDTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }

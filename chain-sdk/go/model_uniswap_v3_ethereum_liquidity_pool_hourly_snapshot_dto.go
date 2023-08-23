@@ -25,8 +25,6 @@ type UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO struct {
 	RecvTime *time.Time `json:"recv_time,omitempty"`
 	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
-	// 
-	Vid *int64 `json:"vid,omitempty"`
 	// (Smart contract address of the pool)-( # of hours since Unix epoch time)
 	Id NullableString `json:"id,omitempty"`
 	// Number of hours since Unix epoch time
@@ -224,38 +222,6 @@ func (o *UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO) HasBlockNumber() bool 
 // SetBlockNumber gets a reference to the given int64 and assigns it to the BlockNumber field.
 func (o *UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO) SetBlockNumber(v int64) {
 	o.BlockNumber = &v
-}
-
-// GetVid returns the Vid field value if set, zero value otherwise.
-func (o *UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO) GetVid() int64 {
-	if o == nil || IsNil(o.Vid) {
-		var ret int64
-		return ret
-	}
-	return *o.Vid
-}
-
-// GetVidOk returns a tuple with the Vid field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO) GetVidOk() (*int64, bool) {
-	if o == nil || IsNil(o.Vid) {
-		return nil, false
-	}
-	return o.Vid, true
-}
-
-// HasVid returns a boolean if a field has been set.
-func (o *UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO) HasVid() bool {
-	if o != nil && !IsNil(o.Vid) {
-		return true
-	}
-
-	return false
-}
-
-// SetVid gets a reference to the given int64 and assigns it to the Vid field.
-func (o *UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO) SetVid(v int64) {
-	o.Vid = &v
 }
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
@@ -1823,9 +1789,6 @@ func (o UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO) ToMap() (map[string]int
 	}
 	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
-	}
-	if !IsNil(o.Vid) {
-		toSerialize["vid"] = o.Vid
 	}
 	if o.Id.IsSet() {
 		toSerialize["id"] = o.Id.Get()

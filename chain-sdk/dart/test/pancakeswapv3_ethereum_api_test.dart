@@ -75,7 +75,7 @@ void main() {
     //
     // Gets liquidityPoolDailySnapshots.
     //
-    //Future<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent({ String pool }) async
+    //Future<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent() async
     test('test pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent', () async {
       // TODO
     });

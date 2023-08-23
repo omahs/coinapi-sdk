@@ -62,7 +62,6 @@ class UNISWAPV3ETHEREUMTickDTO implements ModelInterface, ArrayAccess, \JsonSeri
         'entry_time' => '\DateTime',
         'recv_time' => '\DateTime',
         'block_number' => 'int',
-        'vid' => 'int',
         'id' => 'string',
         'index' => 'string',
         'pool' => 'string',
@@ -90,7 +89,6 @@ class UNISWAPV3ETHEREUMTickDTO implements ModelInterface, ArrayAccess, \JsonSeri
         'entry_time' => 'date-time',
         'recv_time' => 'date-time',
         'block_number' => 'int64',
-        'vid' => 'int64',
         'id' => null,
         'index' => null,
         'pool' => null,
@@ -116,7 +114,6 @@ class UNISWAPV3ETHEREUMTickDTO implements ModelInterface, ArrayAccess, \JsonSeri
         'entry_time' => false,
 		'recv_time' => false,
 		'block_number' => false,
-		'vid' => false,
 		'id' => true,
 		'index' => true,
 		'pool' => true,
@@ -222,7 +219,6 @@ class UNISWAPV3ETHEREUMTickDTO implements ModelInterface, ArrayAccess, \JsonSeri
         'entry_time' => 'entry_time',
         'recv_time' => 'recv_time',
         'block_number' => 'block_number',
-        'vid' => 'vid',
         'id' => 'id',
         'index' => 'index',
         'pool' => 'pool',
@@ -248,7 +244,6 @@ class UNISWAPV3ETHEREUMTickDTO implements ModelInterface, ArrayAccess, \JsonSeri
         'entry_time' => 'setEntryTime',
         'recv_time' => 'setRecvTime',
         'block_number' => 'setBlockNumber',
-        'vid' => 'setVid',
         'id' => 'setId',
         'index' => 'setIndex',
         'pool' => 'setPool',
@@ -274,7 +269,6 @@ class UNISWAPV3ETHEREUMTickDTO implements ModelInterface, ArrayAccess, \JsonSeri
         'entry_time' => 'getEntryTime',
         'recv_time' => 'getRecvTime',
         'block_number' => 'getBlockNumber',
-        'vid' => 'getVid',
         'id' => 'getId',
         'index' => 'getIndex',
         'pool' => 'getPool',
@@ -351,7 +345,6 @@ class UNISWAPV3ETHEREUMTickDTO implements ModelInterface, ArrayAccess, \JsonSeri
         $this->setIfExists('entry_time', $data ?? [], null);
         $this->setIfExists('recv_time', $data ?? [], null);
         $this->setIfExists('block_number', $data ?? [], null);
-        $this->setIfExists('vid', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('index', $data ?? [], null);
         $this->setIfExists('pool', $data ?? [], null);
@@ -487,33 +480,6 @@ class UNISWAPV3ETHEREUMTickDTO implements ModelInterface, ArrayAccess, \JsonSeri
             throw new \InvalidArgumentException('non-nullable block_number cannot be null');
         }
         $this->container['block_number'] = $block_number;
-
-        return $this;
-    }
-
-    /**
-     * Gets vid
-     *
-     * @return int|null
-     */
-    public function getVid()
-    {
-        return $this->container['vid'];
-    }
-
-    /**
-     * Sets vid
-     *
-     * @param int|null $vid 
-     *
-     * @return self
-     */
-    public function setVid($vid)
-    {
-        if (is_null($vid)) {
-            throw new \InvalidArgumentException('non-nullable vid cannot be null');
-        }
-        $this->container['vid'] = $vid;
 
         return $this;
     }

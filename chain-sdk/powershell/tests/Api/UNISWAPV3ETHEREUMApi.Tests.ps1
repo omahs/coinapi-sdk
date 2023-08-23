@@ -121,7 +121,7 @@ Describe -tag 'PSOpenAPITools' -name 'UNISWAPV3ETHEREUMApi' {
 
     Context 'Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent' {
         It 'Test Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent' {
-            #$TestResult = Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent -Pool "TEST_VALUE"
+            #$TestResult = Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -129,7 +129,7 @@ Describe -tag 'PSOpenAPITools' -name 'UNISWAPV3ETHEREUMApi' {
 
     Context 'Invoke-UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent' {
         It 'Test Invoke-UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent' {
-            #$TestResult = Invoke-UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent -Pool "TEST_VALUE"
+            #$TestResult = Invoke-UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -137,7 +137,7 @@ Describe -tag 'PSOpenAPITools' -name 'UNISWAPV3ETHEREUMApi' {
 
     Context 'Invoke-UNISWAPV3ETHEREUMTicksCurrent' {
         It 'Test Invoke-UNISWAPV3ETHEREUMTicksCurrent' {
-            #$TestResult = Invoke-UNISWAPV3ETHEREUMTicksCurrent -Pool "TEST_VALUE"
+            #$TestResult = Invoke-UNISWAPV3ETHEREUMTicksCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

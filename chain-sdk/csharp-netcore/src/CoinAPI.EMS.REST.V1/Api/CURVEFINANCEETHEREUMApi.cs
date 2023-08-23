@@ -28,15 +28,205 @@ namespace CoinAPI.EMS.REST.V1.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Accounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets accounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMAccountDTO&gt;</returns>
+        List<CURVEFINANCEETHEREUMAccountDTO> CURVEFINANCEETHEREUMAccountsCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// Accounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets accounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMAccountDTO&gt;</returns>
+        ApiResponse<List<CURVEFINANCEETHEREUMAccountDTO>> CURVEFINANCEETHEREUMAccountsCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// ActiveAccounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets activeAccounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMActiveAccountDTO&gt;</returns>
+        List<CURVEFINANCEETHEREUMActiveAccountDTO> CURVEFINANCEETHEREUMActiveAccountsCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// ActiveAccounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets activeAccounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMActiveAccountDTO&gt;</returns>
+        ApiResponse<List<CURVEFINANCEETHEREUMActiveAccountDTO>> CURVEFINANCEETHEREUMActiveAccountsCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// Deposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets deposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMDepositDTO&gt;</returns>
+        List<CURVEFINANCEETHEREUMDepositDTO> CURVEFINANCEETHEREUMDepositsCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// Deposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets deposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMDepositDTO&gt;</returns>
+        ApiResponse<List<CURVEFINANCEETHEREUMDepositDTO>> CURVEFINANCEETHEREUMDepositsCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// DexAmmProtocols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dexAmmProtocols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMDexAmmProtocolDTO&gt;</returns>
+        List<CURVEFINANCEETHEREUMDexAmmProtocolDTO> CURVEFINANCEETHEREUMDexAmmProtocolsCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// DexAmmProtocols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dexAmmProtocols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMDexAmmProtocolDTO&gt;</returns>
+        ApiResponse<List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>> CURVEFINANCEETHEREUMDexAmmProtocolsCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// FinancialsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets financialsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO&gt;</returns>
+        List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO> CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// FinancialsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets financialsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO&gt;</returns>
+        ApiResponse<List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>> CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// LiquidityGauges (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityGauges.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMLiquidityGaugeDTO&gt;</returns>
+        List<CURVEFINANCEETHEREUMLiquidityGaugeDTO> CURVEFINANCEETHEREUMLiquidityGaugesCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// LiquidityGauges (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityGauges.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMLiquidityGaugeDTO&gt;</returns>
+        ApiResponse<List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>> CURVEFINANCEETHEREUMLiquidityGaugesCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO&gt;</returns>
+        List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO&gt;</returns>
+        ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// LiquidityPoolFees (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolFees.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMLiquidityPoolFeeDTO&gt;</returns>
+        List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO> CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// LiquidityPoolFees (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolFees.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMLiquidityPoolFeeDTO&gt;</returns>
+        ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>> CURVEFINANCEETHEREUMLiquidityPoolFeesCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO&gt;</returns>
+        List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO&gt;</returns>
+        ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
         /// LiquidityPools (current)
         /// </summary>
         /// <remarks>
         /// Gets liquidityPools.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;CURVEFINANCEETHEREUMLiquidityPoolDTO&gt;</returns>
-        List<CURVEFINANCEETHEREUMLiquidityPoolDTO> CURVEFINANCEETHEREUMLiquidityPoolsCurrent(int operationIndex = 0);
+        List<CURVEFINANCEETHEREUMLiquidityPoolDTO> CURVEFINANCEETHEREUMLiquidityPoolsCurrent(string id = default(string), int operationIndex = 0);
 
         /// <summary>
         /// LiquidityPools (current)
@@ -45,9 +235,52 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPools.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMLiquidityPoolDTO&gt;</returns>
-        ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>> CURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo(int operationIndex = 0);
+        ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>> CURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo(string id = default(string), int operationIndex = 0);
+        /// <summary>
+        /// LpTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets lpTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMLpTokenDTO&gt;</returns>
+        List<CURVEFINANCEETHEREUMLpTokenDTO> CURVEFINANCEETHEREUMLpTokensCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// LpTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets lpTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMLpTokenDTO&gt;</returns>
+        ApiResponse<List<CURVEFINANCEETHEREUMLpTokenDTO>> CURVEFINANCEETHEREUMLpTokensCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// RewardTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets rewardTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMRewardTokenDTO&gt;</returns>
+        List<CURVEFINANCEETHEREUMRewardTokenDTO> CURVEFINANCEETHEREUMRewardTokensCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// RewardTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets rewardTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMRewardTokenDTO&gt;</returns>
+        ApiResponse<List<CURVEFINANCEETHEREUMRewardTokenDTO>> CURVEFINANCEETHEREUMRewardTokensCurrentWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// Swaps (current)
         /// </summary>
@@ -76,9 +309,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets tokens.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;CURVEFINANCEETHEREUMTokenDTO&gt;</returns>
-        List<CURVEFINANCEETHEREUMTokenDTO> CURVEFINANCEETHEREUMTokensCurrent(int operationIndex = 0);
+        List<CURVEFINANCEETHEREUMTokenDTO> CURVEFINANCEETHEREUMTokensCurrent(string id = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Tokens (current)
@@ -87,9 +321,73 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets tokens.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMTokenDTO&gt;</returns>
-        ApiResponse<List<CURVEFINANCEETHEREUMTokenDTO>> CURVEFINANCEETHEREUMTokensCurrentWithHttpInfo(int operationIndex = 0);
+        ApiResponse<List<CURVEFINANCEETHEREUMTokenDTO>> CURVEFINANCEETHEREUMTokensCurrentWithHttpInfo(string id = default(string), int operationIndex = 0);
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO&gt;</returns>
+        List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO&gt;</returns>
+        ApiResponse<List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO&gt;</returns>
+        List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO&gt;</returns>
+        ApiResponse<List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// Withdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMWithdrawDTO&gt;</returns>
+        List<CURVEFINANCEETHEREUMWithdrawDTO> CURVEFINANCEETHEREUMWithdrawsCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// Withdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMWithdrawDTO&gt;</returns>
+        ApiResponse<List<CURVEFINANCEETHEREUMWithdrawDTO>> CURVEFINANCEETHEREUMWithdrawsCurrentWithHttpInfo(int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -100,16 +398,224 @@ namespace CoinAPI.EMS.REST.V1.Api
     {
         #region Asynchronous Operations
         /// <summary>
+        /// Accounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets accounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMAccountDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMAccountDTO>> CURVEFINANCEETHEREUMAccountsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Accounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets accounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMAccountDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CURVEFINANCEETHEREUMAccountDTO>>> CURVEFINANCEETHEREUMAccountsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// ActiveAccounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets activeAccounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMActiveAccountDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMActiveAccountDTO>> CURVEFINANCEETHEREUMActiveAccountsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// ActiveAccounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets activeAccounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMActiveAccountDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CURVEFINANCEETHEREUMActiveAccountDTO>>> CURVEFINANCEETHEREUMActiveAccountsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Deposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets deposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMDepositDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMDepositDTO>> CURVEFINANCEETHEREUMDepositsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Deposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets deposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMDepositDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CURVEFINANCEETHEREUMDepositDTO>>> CURVEFINANCEETHEREUMDepositsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// DexAmmProtocols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dexAmmProtocols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMDexAmmProtocolDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>> CURVEFINANCEETHEREUMDexAmmProtocolsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// DexAmmProtocols (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dexAmmProtocols.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMDexAmmProtocolDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>>> CURVEFINANCEETHEREUMDexAmmProtocolsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// FinancialsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets financialsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>> CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// FinancialsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets financialsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>>> CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// LiquidityGauges (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityGauges.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMLiquidityGaugeDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>> CURVEFINANCEETHEREUMLiquidityGaugesCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// LiquidityGauges (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityGauges.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMLiquidityGaugeDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>>> CURVEFINANCEETHEREUMLiquidityGaugesCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>>> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// LiquidityPoolFees (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolFees.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMLiquidityPoolFeeDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>> CURVEFINANCEETHEREUMLiquidityPoolFeesCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// LiquidityPoolFees (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolFees.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMLiquidityPoolFeeDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>>> CURVEFINANCEETHEREUMLiquidityPoolFeesCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPoolHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>>> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// LiquidityPools (current)
         /// </summary>
         /// <remarks>
         /// Gets liquidityPools.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;CURVEFINANCEETHEREUMLiquidityPoolDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>> CURVEFINANCEETHEREUMLiquidityPoolsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>> CURVEFINANCEETHEREUMLiquidityPoolsCurrentAsync(string id = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// LiquidityPools (current)
@@ -118,10 +624,57 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPools.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMLiquidityPoolDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>>> CURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>>> CURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfoAsync(string id = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// LpTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets lpTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMLpTokenDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMLpTokenDTO>> CURVEFINANCEETHEREUMLpTokensCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// LpTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets lpTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMLpTokenDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CURVEFINANCEETHEREUMLpTokenDTO>>> CURVEFINANCEETHEREUMLpTokensCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// RewardTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets rewardTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMRewardTokenDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMRewardTokenDTO>> CURVEFINANCEETHEREUMRewardTokensCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// RewardTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets rewardTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMRewardTokenDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CURVEFINANCEETHEREUMRewardTokenDTO>>> CURVEFINANCEETHEREUMRewardTokensCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Swaps (current)
         /// </summary>
@@ -152,10 +705,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets tokens.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;CURVEFINANCEETHEREUMTokenDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMTokenDTO>> CURVEFINANCEETHEREUMTokensCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMTokenDTO>> CURVEFINANCEETHEREUMTokensCurrentAsync(string id = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Tokens (current)
@@ -164,10 +718,80 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets tokens.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMTokenDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<CURVEFINANCEETHEREUMTokenDTO>>> CURVEFINANCEETHEREUMTokensCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<CURVEFINANCEETHEREUMTokenDTO>>> CURVEFINANCEETHEREUMTokensCurrentWithHttpInfoAsync(string id = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsDailySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>>> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets usageMetricsHourlySnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>>> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Withdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMWithdrawDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMWithdrawDTO>> CURVEFINANCEETHEREUMWithdrawsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Withdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMWithdrawDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CURVEFINANCEETHEREUMWithdrawDTO>>> CURVEFINANCEETHEREUMWithdrawsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -289,24 +913,24 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LiquidityPools (current) Gets liquidityPools.
+        /// Accounts (current) Gets accounts.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;CURVEFINANCEETHEREUMLiquidityPoolDTO&gt;</returns>
-        public List<CURVEFINANCEETHEREUMLiquidityPoolDTO> CURVEFINANCEETHEREUMLiquidityPoolsCurrent(int operationIndex = 0)
+        /// <returns>List&lt;CURVEFINANCEETHEREUMAccountDTO&gt;</returns>
+        public List<CURVEFINANCEETHEREUMAccountDTO> CURVEFINANCEETHEREUMAccountsCurrent(int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>> localVarResponse = CURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo();
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMAccountDTO>> localVarResponse = CURVEFINANCEETHEREUMAccountsCurrentWithHttpInfo();
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// LiquidityPools (current) Gets liquidityPools.
+        /// Accounts (current) Gets accounts.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMLiquidityPoolDTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>> CURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo(int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMAccountDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMAccountDTO>> CURVEFINANCEETHEREUMAccountsCurrentWithHttpInfo(int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -333,6 +957,1200 @@ namespace CoinAPI.EMS.REST.V1.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMAccountsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<CURVEFINANCEETHEREUMAccountDTO>>("/v1/dapps/curve-finance-ethereum/accounts/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMAccountsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Accounts (current) Gets accounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMAccountDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMAccountDTO>> CURVEFINANCEETHEREUMAccountsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMAccountDTO>> localVarResponse = await CURVEFINANCEETHEREUMAccountsCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Accounts (current) Gets accounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMAccountDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMAccountDTO>>> CURVEFINANCEETHEREUMAccountsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMAccountsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CURVEFINANCEETHEREUMAccountDTO>>("/v1/dapps/curve-finance-ethereum/accounts/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMAccountsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// ActiveAccounts (current) Gets activeAccounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMActiveAccountDTO&gt;</returns>
+        public List<CURVEFINANCEETHEREUMActiveAccountDTO> CURVEFINANCEETHEREUMActiveAccountsCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMActiveAccountDTO>> localVarResponse = CURVEFINANCEETHEREUMActiveAccountsCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// ActiveAccounts (current) Gets activeAccounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMActiveAccountDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMActiveAccountDTO>> CURVEFINANCEETHEREUMActiveAccountsCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMActiveAccountsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<CURVEFINANCEETHEREUMActiveAccountDTO>>("/v1/dapps/curve-finance-ethereum/activeAccounts/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMActiveAccountsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// ActiveAccounts (current) Gets activeAccounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMActiveAccountDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMActiveAccountDTO>> CURVEFINANCEETHEREUMActiveAccountsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMActiveAccountDTO>> localVarResponse = await CURVEFINANCEETHEREUMActiveAccountsCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// ActiveAccounts (current) Gets activeAccounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMActiveAccountDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMActiveAccountDTO>>> CURVEFINANCEETHEREUMActiveAccountsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMActiveAccountsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CURVEFINANCEETHEREUMActiveAccountDTO>>("/v1/dapps/curve-finance-ethereum/activeAccounts/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMActiveAccountsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Deposits (current) Gets deposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMDepositDTO&gt;</returns>
+        public List<CURVEFINANCEETHEREUMDepositDTO> CURVEFINANCEETHEREUMDepositsCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMDepositDTO>> localVarResponse = CURVEFINANCEETHEREUMDepositsCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Deposits (current) Gets deposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMDepositDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMDepositDTO>> CURVEFINANCEETHEREUMDepositsCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMDepositsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<CURVEFINANCEETHEREUMDepositDTO>>("/v1/dapps/curve-finance-ethereum/deposits/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMDepositsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Deposits (current) Gets deposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMDepositDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMDepositDTO>> CURVEFINANCEETHEREUMDepositsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMDepositDTO>> localVarResponse = await CURVEFINANCEETHEREUMDepositsCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Deposits (current) Gets deposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMDepositDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMDepositDTO>>> CURVEFINANCEETHEREUMDepositsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMDepositsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CURVEFINANCEETHEREUMDepositDTO>>("/v1/dapps/curve-finance-ethereum/deposits/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMDepositsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// DexAmmProtocols (current) Gets dexAmmProtocols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMDexAmmProtocolDTO&gt;</returns>
+        public List<CURVEFINANCEETHEREUMDexAmmProtocolDTO> CURVEFINANCEETHEREUMDexAmmProtocolsCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>> localVarResponse = CURVEFINANCEETHEREUMDexAmmProtocolsCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// DexAmmProtocols (current) Gets dexAmmProtocols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMDexAmmProtocolDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>> CURVEFINANCEETHEREUMDexAmmProtocolsCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMDexAmmProtocolsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>>("/v1/dapps/curve-finance-ethereum/dexAmmProtocols/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMDexAmmProtocolsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// DexAmmProtocols (current) Gets dexAmmProtocols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMDexAmmProtocolDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>> CURVEFINANCEETHEREUMDexAmmProtocolsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>> localVarResponse = await CURVEFINANCEETHEREUMDexAmmProtocolsCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// DexAmmProtocols (current) Gets dexAmmProtocols.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMDexAmmProtocolDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>>> CURVEFINANCEETHEREUMDexAmmProtocolsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMDexAmmProtocolsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CURVEFINANCEETHEREUMDexAmmProtocolDTO>>("/v1/dapps/curve-finance-ethereum/dexAmmProtocols/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMDexAmmProtocolsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// FinancialsDailySnapshots (current) Gets financialsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO&gt;</returns>
+        public List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO> CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>> localVarResponse = CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// FinancialsDailySnapshots (current) Gets financialsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>> CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>>("/v1/dapps/curve-finance-ethereum/financialsDailySnapshots/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// FinancialsDailySnapshots (current) Gets financialsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>> CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>> localVarResponse = await CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// FinancialsDailySnapshots (current) Gets financialsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>>> CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO>>("/v1/dapps/curve-finance-ethereum/financialsDailySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// LiquidityGauges (current) Gets liquidityGauges.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMLiquidityGaugeDTO&gt;</returns>
+        public List<CURVEFINANCEETHEREUMLiquidityGaugeDTO> CURVEFINANCEETHEREUMLiquidityGaugesCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>> localVarResponse = CURVEFINANCEETHEREUMLiquidityGaugesCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityGauges (current) Gets liquidityGauges.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMLiquidityGaugeDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>> CURVEFINANCEETHEREUMLiquidityGaugesCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMLiquidityGaugesCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>>("/v1/dapps/curve-finance-ethereum/liquidityGauges/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMLiquidityGaugesCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// LiquidityGauges (current) Gets liquidityGauges.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMLiquidityGaugeDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>> CURVEFINANCEETHEREUMLiquidityGaugesCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>> localVarResponse = await CURVEFINANCEETHEREUMLiquidityGaugesCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityGauges (current) Gets liquidityGauges.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMLiquidityGaugeDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>>> CURVEFINANCEETHEREUMLiquidityGaugesCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMLiquidityGaugesCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CURVEFINANCEETHEREUMLiquidityGaugeDTO>>("/v1/dapps/curve-finance-ethereum/liquidityGauges/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMLiquidityGaugesCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current) Gets liquidityPoolDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO&gt;</returns>
+        public List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>> localVarResponse = CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current) Gets liquidityPoolDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>>("/v1/dapps/curve-finance-ethereum/liquidityPoolDailySnapshots/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current) Gets liquidityPoolDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>> localVarResponse = await CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPoolDailySnapshots (current) Gets liquidityPoolDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>>> CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO>>("/v1/dapps/curve-finance-ethereum/liquidityPoolDailySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// LiquidityPoolFees (current) Gets liquidityPoolFees.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMLiquidityPoolFeeDTO&gt;</returns>
+        public List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO> CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>> localVarResponse = CURVEFINANCEETHEREUMLiquidityPoolFeesCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPoolFees (current) Gets liquidityPoolFees.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMLiquidityPoolFeeDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>> CURVEFINANCEETHEREUMLiquidityPoolFeesCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>>("/v1/dapps/curve-finance-ethereum/liquidityPoolFees/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// LiquidityPoolFees (current) Gets liquidityPoolFees.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMLiquidityPoolFeeDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>> CURVEFINANCEETHEREUMLiquidityPoolFeesCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>> localVarResponse = await CURVEFINANCEETHEREUMLiquidityPoolFeesCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPoolFees (current) Gets liquidityPoolFees.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMLiquidityPoolFeeDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>>> CURVEFINANCEETHEREUMLiquidityPoolFeesCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CURVEFINANCEETHEREUMLiquidityPoolFeeDTO>>("/v1/dapps/curve-finance-ethereum/liquidityPoolFees/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current) Gets liquidityPoolHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO&gt;</returns>
+        public List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>> localVarResponse = CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current) Gets liquidityPoolHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>>("/v1/dapps/curve-finance-ethereum/liquidityPoolHourlySnapshots/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current) Gets liquidityPoolHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>> localVarResponse = await CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPoolHourlySnapshots (current) Gets liquidityPoolHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>>> CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO>>("/v1/dapps/curve-finance-ethereum/liquidityPoolHourlySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// LiquidityPools (current) Gets liquidityPools.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMLiquidityPoolDTO&gt;</returns>
+        public List<CURVEFINANCEETHEREUMLiquidityPoolDTO> CURVEFINANCEETHEREUMLiquidityPoolsCurrent(string id = default(string), int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>> localVarResponse = CURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo(id);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPools (current) Gets liquidityPools.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMLiquidityPoolDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>> CURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfo(string id = default(string), int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (id != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CoinAPI.EMS.REST.V1.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            }
 
             localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMLiquidityPoolsCurrent";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -356,12 +2174,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPools (current) Gets liquidityPools.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;CURVEFINANCEETHEREUMLiquidityPoolDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>> CURVEFINANCEETHEREUMLiquidityPoolsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>> CURVEFINANCEETHEREUMLiquidityPoolsCurrentAsync(string id = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>> localVarResponse = await CURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>> localVarResponse = await CURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -369,10 +2188,147 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPools (current) Gets liquidityPools.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the pool (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMLiquidityPoolDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>>> CURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>>> CURVEFINANCEETHEREUMLiquidityPoolsCurrentWithHttpInfoAsync(string id = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (id != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CoinAPI.EMS.REST.V1.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            }
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMLiquidityPoolsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>>("/v1/dapps/curve-finance-ethereum/liquidityPools/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMLiquidityPoolsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// LpTokens (current) Gets lpTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMLpTokenDTO&gt;</returns>
+        public List<CURVEFINANCEETHEREUMLpTokenDTO> CURVEFINANCEETHEREUMLpTokensCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLpTokenDTO>> localVarResponse = CURVEFINANCEETHEREUMLpTokensCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LpTokens (current) Gets lpTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMLpTokenDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLpTokenDTO>> CURVEFINANCEETHEREUMLpTokensCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMLpTokensCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<CURVEFINANCEETHEREUMLpTokenDTO>>("/v1/dapps/curve-finance-ethereum/lpTokens/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMLpTokensCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// LpTokens (current) Gets lpTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMLpTokenDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMLpTokenDTO>> CURVEFINANCEETHEREUMLpTokensCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLpTokenDTO>> localVarResponse = await CURVEFINANCEETHEREUMLpTokensCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LpTokens (current) Gets lpTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMLpTokenDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMLpTokenDTO>>> CURVEFINANCEETHEREUMLpTokensCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -401,16 +2357,148 @@ namespace CoinAPI.EMS.REST.V1.Api
             }
 
 
-            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMLiquidityPoolsCurrent";
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMLpTokensCurrent";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CURVEFINANCEETHEREUMLiquidityPoolDTO>>("/v1/dapps/curve-finance-ethereum/liquidityPools/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CURVEFINANCEETHEREUMLpTokenDTO>>("/v1/dapps/curve-finance-ethereum/lpTokens/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMLiquidityPoolsCurrent", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMLpTokensCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// RewardTokens (current) Gets rewardTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMRewardTokenDTO&gt;</returns>
+        public List<CURVEFINANCEETHEREUMRewardTokenDTO> CURVEFINANCEETHEREUMRewardTokensCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMRewardTokenDTO>> localVarResponse = CURVEFINANCEETHEREUMRewardTokensCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// RewardTokens (current) Gets rewardTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMRewardTokenDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMRewardTokenDTO>> CURVEFINANCEETHEREUMRewardTokensCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMRewardTokensCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<CURVEFINANCEETHEREUMRewardTokenDTO>>("/v1/dapps/curve-finance-ethereum/rewardTokens/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMRewardTokensCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// RewardTokens (current) Gets rewardTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMRewardTokenDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMRewardTokenDTO>> CURVEFINANCEETHEREUMRewardTokensCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMRewardTokenDTO>> localVarResponse = await CURVEFINANCEETHEREUMRewardTokensCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// RewardTokens (current) Gets rewardTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMRewardTokenDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMRewardTokenDTO>>> CURVEFINANCEETHEREUMRewardTokensCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMRewardTokensCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CURVEFINANCEETHEREUMRewardTokenDTO>>("/v1/dapps/curve-finance-ethereum/rewardTokens/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMRewardTokensCurrent", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -556,11 +2644,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Tokens (current) Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;CURVEFINANCEETHEREUMTokenDTO&gt;</returns>
-        public List<CURVEFINANCEETHEREUMTokenDTO> CURVEFINANCEETHEREUMTokensCurrent(int operationIndex = 0)
+        public List<CURVEFINANCEETHEREUMTokenDTO> CURVEFINANCEETHEREUMTokensCurrent(string id = default(string), int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMTokenDTO>> localVarResponse = CURVEFINANCEETHEREUMTokensCurrentWithHttpInfo();
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMTokenDTO>> localVarResponse = CURVEFINANCEETHEREUMTokensCurrentWithHttpInfo(id);
             return localVarResponse.Data;
         }
 
@@ -568,9 +2657,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Tokens (current) Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMTokenDTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMTokenDTO>> CURVEFINANCEETHEREUMTokensCurrentWithHttpInfo(int operationIndex = 0)
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMTokenDTO>> CURVEFINANCEETHEREUMTokensCurrentWithHttpInfo(string id = default(string), int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -597,6 +2687,10 @@ namespace CoinAPI.EMS.REST.V1.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (id != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CoinAPI.EMS.REST.V1.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            }
 
             localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMTokensCurrent";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -620,12 +2714,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Tokens (current) Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;CURVEFINANCEETHEREUMTokenDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMTokenDTO>> CURVEFINANCEETHEREUMTokensCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMTokenDTO>> CURVEFINANCEETHEREUMTokensCurrentAsync(string id = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMTokenDTO>> localVarResponse = await CURVEFINANCEETHEREUMTokensCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMTokenDTO>> localVarResponse = await CURVEFINANCEETHEREUMTokensCurrentWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -633,10 +2728,147 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Tokens (current) Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Smart contract address of the token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMTokenDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMTokenDTO>>> CURVEFINANCEETHEREUMTokensCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMTokenDTO>>> CURVEFINANCEETHEREUMTokensCurrentWithHttpInfoAsync(string id = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (id != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CoinAPI.EMS.REST.V1.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            }
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMTokensCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CURVEFINANCEETHEREUMTokenDTO>>("/v1/dapps/curve-finance-ethereum/tokens/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMTokensCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current) Gets usageMetricsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO&gt;</returns>
+        public List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>> localVarResponse = CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current) Gets usageMetricsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>>("/v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current) Gets usageMetricsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>> localVarResponse = await CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// UsageMetricsDailySnapshots (current) Gets usageMetricsDailySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>>> CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -665,16 +2897,280 @@ namespace CoinAPI.EMS.REST.V1.Api
             }
 
 
-            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMTokensCurrent";
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CURVEFINANCEETHEREUMTokenDTO>>("/v1/dapps/curve-finance-ethereum/tokens/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO>>("/v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMTokensCurrent", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current) Gets usageMetricsHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO&gt;</returns>
+        public List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>> localVarResponse = CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current) Gets usageMetricsHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>>("/v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current) Gets usageMetricsHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>> localVarResponse = await CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// UsageMetricsHourlySnapshots (current) Gets usageMetricsHourlySnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>>> CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO>>("/v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Withdraws (current) Gets withdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;CURVEFINANCEETHEREUMWithdrawDTO&gt;</returns>
+        public List<CURVEFINANCEETHEREUMWithdrawDTO> CURVEFINANCEETHEREUMWithdrawsCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMWithdrawDTO>> localVarResponse = CURVEFINANCEETHEREUMWithdrawsCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Withdraws (current) Gets withdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;CURVEFINANCEETHEREUMWithdrawDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMWithdrawDTO>> CURVEFINANCEETHEREUMWithdrawsCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMWithdrawsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<CURVEFINANCEETHEREUMWithdrawDTO>>("/v1/dapps/curve-finance-ethereum/withdraws/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMWithdrawsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Withdraws (current) Gets withdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CURVEFINANCEETHEREUMWithdrawDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CURVEFINANCEETHEREUMWithdrawDTO>> CURVEFINANCEETHEREUMWithdrawsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMWithdrawDTO>> localVarResponse = await CURVEFINANCEETHEREUMWithdrawsCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Withdraws (current) Gets withdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CURVEFINANCEETHEREUMWithdrawDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CURVEFINANCEETHEREUMWithdrawDTO>>> CURVEFINANCEETHEREUMWithdrawsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json",
+                "application/x-msgpack"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CURVEFINANCEETHEREUMApi.CURVEFINANCEETHEREUMWithdrawsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CURVEFINANCEETHEREUMWithdrawDTO>>("/v1/dapps/curve-finance-ethereum/withdraws/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CURVEFINANCEETHEREUMWithdrawsCurrent", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

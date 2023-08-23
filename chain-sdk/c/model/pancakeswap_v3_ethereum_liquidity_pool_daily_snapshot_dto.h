@@ -22,7 +22,6 @@ typedef struct pancakeswap_v3_ethereum_liquidity_pool_daily_snapshot_dto_t {
     char *entry_time; //date time
     char *recv_time; //date time
     long block_number; //numeric
-    long vid; //numeric
     int block_; //numeric
     char *id; // string
     int day; //numeric
@@ -73,7 +72,6 @@ pancakeswap_v3_ethereum_liquidity_pool_daily_snapshot_dto_t *pancakeswap_v3_ethe
     char *entry_time,
     char *recv_time,
     long block_number,
-    long vid,
     int block_,
     char *id,
     int day,

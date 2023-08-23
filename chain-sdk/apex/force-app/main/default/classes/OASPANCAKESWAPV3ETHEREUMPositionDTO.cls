@@ -33,12 +33,6 @@ public class OASPANCAKESWAPV3ETHEREUMPositionDTO implements OAS.MappedProperties
     public Long blockNumber { get; set; }
 
     /**
-     * 
-     * @return vid
-     */
-    public Long vid { get; set; }
-
-    /**
      * (account address)-(market address)-(count)
      * @return id
      */
@@ -769,7 +763,6 @@ public class OASPANCAKESWAPV3ETHEREUMPositionDTO implements OAS.MappedProperties
           paNCAKESWAPV3ETHEREUMPositionDTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           paNCAKESWAPV3ETHEREUMPositionDTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           paNCAKESWAPV3ETHEREUMPositionDTO.blockNumber = 123456789L;
-          paNCAKESWAPV3ETHEREUMPositionDTO.vid = 123456789L;
           paNCAKESWAPV3ETHEREUMPositionDTO.id = '';
           paNCAKESWAPV3ETHEREUMPositionDTO.account = '';
           paNCAKESWAPV3ETHEREUMPositionDTO.pool = '';
@@ -801,7 +794,6 @@ public class OASPANCAKESWAPV3ETHEREUMPositionDTO implements OAS.MappedProperties
             return this.entryTime == paNCAKESWAPV3ETHEREUMPositionDTO.entryTime
                 && this.recvTime == paNCAKESWAPV3ETHEREUMPositionDTO.recvTime
                 && this.blockNumber == paNCAKESWAPV3ETHEREUMPositionDTO.blockNumber
-                && this.vid == paNCAKESWAPV3ETHEREUMPositionDTO.vid
                 && this.id == paNCAKESWAPV3ETHEREUMPositionDTO.id
                 && this.account == paNCAKESWAPV3ETHEREUMPositionDTO.account
                 && this.pool == paNCAKESWAPV3ETHEREUMPositionDTO.pool
@@ -833,7 +825,6 @@ public class OASPANCAKESWAPV3ETHEREUMPositionDTO implements OAS.MappedProperties
         hashCode = (17 * hashCode) + (entryTime == null ? 0 : System.hashCode(entryTime));
         hashCode = (17 * hashCode) + (recvTime == null ? 0 : System.hashCode(recvTime));
         hashCode = (17 * hashCode) + (blockNumber == null ? 0 : System.hashCode(blockNumber));
-        hashCode = (17 * hashCode) + (vid == null ? 0 : System.hashCode(vid));
         hashCode = (17 * hashCode) + (id == null ? 0 : System.hashCode(id));
         hashCode = (17 * hashCode) + (account == null ? 0 : System.hashCode(account));
         hashCode = (17 * hashCode) + (pool == null ? 0 : System.hashCode(pool));

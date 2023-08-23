@@ -293,19 +293,15 @@ export default class PANCAKESWAPV3ETHEREUMApi {
     /**
      * LiquidityPoolDailySnapshots (current)
      * Gets liquidityPoolDailySnapshots.
-     * @param {Object} opts Optional parameters
-     * @param {String} [pool] Pool this snapshot belongs to.
      * @param {module:api/PANCAKESWAPV3ETHEREUMApi~pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>}
      */
-    pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(opts, callback) {
-      opts = opts || {};
+    pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(callback) {
       let postBody = null;
 
       let pathParams = {
       };
       let queryParams = {
-        'pool': opts['pool']
       };
       let headerParams = {
       };

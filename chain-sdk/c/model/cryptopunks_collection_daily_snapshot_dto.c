@@ -8,7 +8,7 @@
 cryptopunks_collection_daily_snapshot_dto_t *cryptopunks_collection_daily_snapshot_dto_create(
     char *entry_time,
     char *recv_time,
-    char *block_number,
+    long block_number,
     long vid,
     char *block_range,
     char *id,
@@ -64,10 +64,6 @@ void cryptopunks_collection_daily_snapshot_dto_free(cryptopunks_collection_daily
     if (cryptopunks_collection_daily_snapshot_dto->recv_time) {
         free(cryptopunks_collection_daily_snapshot_dto->recv_time);
         cryptopunks_collection_daily_snapshot_dto->recv_time = NULL;
-    }
-    if (cryptopunks_collection_daily_snapshot_dto->block_number) {
-        free(cryptopunks_collection_daily_snapshot_dto->block_number);
-        cryptopunks_collection_daily_snapshot_dto->block_number = NULL;
     }
     if (cryptopunks_collection_daily_snapshot_dto->block_range) {
         free(cryptopunks_collection_daily_snapshot_dto->block_range);
@@ -141,8 +137,8 @@ cJSON *cryptopunks_collection_daily_snapshot_dto_convertToJSON(cryptopunks_colle
 
     // cryptopunks_collection_daily_snapshot_dto->block_number
     if(cryptopunks_collection_daily_snapshot_dto->block_number) {
-    if(cJSON_AddStringToObject(item, "block_number", cryptopunks_collection_daily_snapshot_dto->block_number) == NULL) {
-    goto fail; //String
+    if(cJSON_AddNumberToObject(item, "block_number", cryptopunks_collection_daily_snapshot_dto->block_number) == NULL) {
+    goto fail; //Numeric
     }
     }
 
@@ -299,9 +295,9 @@ cryptopunks_collection_daily_snapshot_dto_t *cryptopunks_collection_daily_snapsh
     // cryptopunks_collection_daily_snapshot_dto->block_number
     cJSON *block_number = cJSON_GetObjectItemCaseSensitive(cryptopunks_collection_daily_snapshot_dtoJSON, "block_number");
     if (block_number) { 
-    if(!cJSON_IsString(block_number) && !cJSON_IsNull(block_number))
+    if(!cJSON_IsNumber(block_number))
     {
-    goto end; //String
+    goto end; //Numeric
     }
     }
 
@@ -444,7 +440,7 @@ cryptopunks_collection_daily_snapshot_dto_t *cryptopunks_collection_daily_snapsh
     cryptopunks_collection_daily_snapshot_dto_local_var = cryptopunks_collection_daily_snapshot_dto_create (
         entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
         recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
-        block_number && !cJSON_IsNull(block_number) ? strdup(block_number->valuestring) : NULL,
+        block_number ? block_number->valuedouble : 0,
         vid ? vid->valuedouble : 0,
         block_range && !cJSON_IsNull(block_range) ? strdup(block_range->valuestring) : NULL,
         id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,

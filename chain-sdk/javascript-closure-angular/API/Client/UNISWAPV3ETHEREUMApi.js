@@ -527,11 +527,10 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMSwapsCurrent = functi
 /**
  * TickDailySnapshots (current)
  * Gets tickDailySnapshots.
- * @param {!string=} opt_pool liquidity pool this tick belongs to
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V3_ETHEREUM.TickDailySnapshotDTO>>}
  */
-API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent = function(opt_pool, opt_extraHttpRequestParams) {
+API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current';
 
@@ -540,10 +539,6 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTickDailySnapshotsCur
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_pool !== undefined) {
-    queryParameters['pool'] = opt_pool;
-  }
-
   /** @type {!Object} */
   var httpRequestParams = {
     method: 'GET',
@@ -563,11 +558,10 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTickDailySnapshotsCur
 /**
  * TickHourlySnapshots (current)
  * Gets tickHourlySnapshots.
- * @param {!string=} opt_pool liquidity pool this tick belongs to
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V3_ETHEREUM.TickHourlySnapshotDTO>>}
  */
-API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent = function(opt_pool, opt_extraHttpRequestParams) {
+API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current';
 
@@ -576,10 +570,6 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTickHourlySnapshotsCu
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_pool !== undefined) {
-    queryParameters['pool'] = opt_pool;
-  }
-
   /** @type {!Object} */
   var httpRequestParams = {
     method: 'GET',
@@ -599,11 +589,10 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTickHourlySnapshotsCu
 /**
  * Ticks (current)
  * Gets ticks.
- * @param {!string=} opt_pool Liquidity pool this tick belongs to
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V3_ETHEREUM.TickDTO>>}
  */
-API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTicksCurrent = function(opt_pool, opt_extraHttpRequestParams) {
+API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTicksCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/v1/dapps/uniswap-v3-ethereum/ticks/current';
 
@@ -612,10 +601,6 @@ API.Client.UNISWAPV3ETHEREUMApi.prototype.uNISWAPV3ETHEREUMTicksCurrent = functi
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_pool !== undefined) {
-    queryParameters['pool'] = opt_pool;
-  }
-
   /** @type {!Object} */
   var httpRequestParams = {
     method: 'GET',

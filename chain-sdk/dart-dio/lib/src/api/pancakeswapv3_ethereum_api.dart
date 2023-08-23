@@ -490,7 +490,6 @@ class PANCAKESWAPV3ETHEREUMApi {
   /// Gets liquidityPoolDailySnapshots.
   ///
   /// Parameters:
-  /// * [pool] - Pool this snapshot belongs to.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -501,7 +500,6 @@ class PANCAKESWAPV3ETHEREUMApi {
   /// Returns a [Future] containing a [Response] with a [BuiltList<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>>> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent({ 
-    String? pool,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -522,14 +520,9 @@ class PANCAKESWAPV3ETHEREUMApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{
-      if (pool != null) r'pool': encodeQueryParameter(_serializers, pool, const FullType(String)),
-    };
-
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,

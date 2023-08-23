@@ -1259,7 +1259,7 @@ No authorization required
 
 <a id="uniswapv3ethereumtickdailysnapshotscurrent"></a>
 # **UNISWAPV3ETHEREUMTickDailySnapshotsCurrent**
-> List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt; UNISWAPV3ETHEREUMTickDailySnapshotsCurrent (string pool = null)
+> List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt; UNISWAPV3ETHEREUMTickDailySnapshotsCurrent ()
 
 TickDailySnapshots (current)
 
@@ -1282,12 +1282,11 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new UNISWAPV3ETHEREUMApi(config);
-            var pool = "pool_example";  // string | liquidity pool this tick belongs to (optional) 
 
             try
             {
                 // TickDailySnapshots (current)
-                List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> result = apiInstance.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool);
+                List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> result = apiInstance.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1308,7 +1307,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // TickDailySnapshots (current)
-    ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> response = apiInstance.UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo(pool);
+    ApiResponse<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>> response = apiInstance.UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1322,11 +1321,7 @@ catch (ApiException e)
 ```
 
 ### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **pool** | **string** | liquidity pool this tick belongs to | [optional]  |
-
+This endpoint does not need any parameter.
 ### Return type
 
 [**List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt;**](UNISWAPV3ETHEREUMTickDailySnapshotDTO.md)
@@ -1350,7 +1345,7 @@ No authorization required
 
 <a id="uniswapv3ethereumtickhourlysnapshotscurrent"></a>
 # **UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent**
-> List&lt;UNISWAPV3ETHEREUMTickHourlySnapshotDTO&gt; UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent (string pool = null)
+> List&lt;UNISWAPV3ETHEREUMTickHourlySnapshotDTO&gt; UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent ()
 
 TickHourlySnapshots (current)
 
@@ -1373,12 +1368,11 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new UNISWAPV3ETHEREUMApi(config);
-            var pool = "pool_example";  // string | liquidity pool this tick belongs to (optional) 
 
             try
             {
                 // TickHourlySnapshots (current)
-                List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> result = apiInstance.UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool);
+                List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> result = apiInstance.UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1399,7 +1393,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // TickHourlySnapshots (current)
-    ApiResponse<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> response = apiInstance.UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(pool);
+    ApiResponse<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>> response = apiInstance.UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1413,11 +1407,7 @@ catch (ApiException e)
 ```
 
 ### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **pool** | **string** | liquidity pool this tick belongs to | [optional]  |
-
+This endpoint does not need any parameter.
 ### Return type
 
 [**List&lt;UNISWAPV3ETHEREUMTickHourlySnapshotDTO&gt;**](UNISWAPV3ETHEREUMTickHourlySnapshotDTO.md)
@@ -1441,7 +1431,7 @@ No authorization required
 
 <a id="uniswapv3ethereumtickscurrent"></a>
 # **UNISWAPV3ETHEREUMTicksCurrent**
-> List&lt;UNISWAPV3ETHEREUMTickDTO&gt; UNISWAPV3ETHEREUMTicksCurrent (string pool = null)
+> List&lt;UNISWAPV3ETHEREUMTickDTO&gt; UNISWAPV3ETHEREUMTicksCurrent ()
 
 Ticks (current)
 
@@ -1464,12 +1454,11 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new UNISWAPV3ETHEREUMApi(config);
-            var pool = "pool_example";  // string | Liquidity pool this tick belongs to (optional) 
 
             try
             {
                 // Ticks (current)
-                List<UNISWAPV3ETHEREUMTickDTO> result = apiInstance.UNISWAPV3ETHEREUMTicksCurrent(pool);
+                List<UNISWAPV3ETHEREUMTickDTO> result = apiInstance.UNISWAPV3ETHEREUMTicksCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1490,7 +1479,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Ticks (current)
-    ApiResponse<List<UNISWAPV3ETHEREUMTickDTO>> response = apiInstance.UNISWAPV3ETHEREUMTicksCurrentWithHttpInfo(pool);
+    ApiResponse<List<UNISWAPV3ETHEREUMTickDTO>> response = apiInstance.UNISWAPV3ETHEREUMTicksCurrentWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1504,11 +1493,7 @@ catch (ApiException e)
 ```
 
 ### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **pool** | **string** | Liquidity pool this tick belongs to | [optional]  |
-
+This endpoint does not need any parameter.
 ### Return type
 
 [**List&lt;UNISWAPV3ETHEREUMTickDTO&gt;**](UNISWAPV3ETHEREUMTickDTO.md)

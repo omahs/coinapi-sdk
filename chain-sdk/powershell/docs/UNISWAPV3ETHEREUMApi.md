@@ -589,7 +589,6 @@ No authorization required
 <a id="Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent"></a>
 # **Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent**
 > UNISWAPV3ETHEREUMTickDailySnapshotDTO[] Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pool] <String><br>
 
 TickDailySnapshots (current)
 
@@ -597,11 +596,10 @@ Gets tickDailySnapshots.
 
 ### Example
 ```powershell
-$Pool = "MyPool" # String | liquidity pool this tick belongs to (optional)
 
 # TickDailySnapshots (current)
 try {
-    $Result = Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent -Pool $Pool
+    $Result = Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent
 } catch {
     Write-Host ("Exception occurred when calling Invoke-UNISWAPV3ETHEREUMTickDailySnapshotsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -609,10 +607,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **Pool** | **String**| liquidity pool this tick belongs to | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -632,7 +627,6 @@ No authorization required
 <a id="Invoke-UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent"></a>
 # **Invoke-UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent**
 > UNISWAPV3ETHEREUMTickHourlySnapshotDTO[] Invoke-UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pool] <String><br>
 
 TickHourlySnapshots (current)
 
@@ -640,11 +634,10 @@ Gets tickHourlySnapshots.
 
 ### Example
 ```powershell
-$Pool = "MyPool" # String | liquidity pool this tick belongs to (optional)
 
 # TickHourlySnapshots (current)
 try {
-    $Result = Invoke-UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent -Pool $Pool
+    $Result = Invoke-UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent
 } catch {
     Write-Host ("Exception occurred when calling Invoke-UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -652,10 +645,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **Pool** | **String**| liquidity pool this tick belongs to | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -675,7 +665,6 @@ No authorization required
 <a id="Invoke-UNISWAPV3ETHEREUMTicksCurrent"></a>
 # **Invoke-UNISWAPV3ETHEREUMTicksCurrent**
 > UNISWAPV3ETHEREUMTickDTO[] Invoke-UNISWAPV3ETHEREUMTicksCurrent<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pool] <String><br>
 
 Ticks (current)
 
@@ -683,11 +672,10 @@ Gets ticks.
 
 ### Example
 ```powershell
-$Pool = "MyPool" # String | Liquidity pool this tick belongs to (optional)
 
 # Ticks (current)
 try {
-    $Result = Invoke-UNISWAPV3ETHEREUMTicksCurrent -Pool $Pool
+    $Result = Invoke-UNISWAPV3ETHEREUMTicksCurrent
 } catch {
     Write-Host ("Exception occurred when calling Invoke-UNISWAPV3ETHEREUMTicksCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -695,10 +683,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **Pool** | **String**| Liquidity pool this tick belongs to | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 

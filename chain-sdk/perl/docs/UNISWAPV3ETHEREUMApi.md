@@ -643,7 +643,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **u_niswapv3_ethereum_tick_daily_snapshots__current**
-> ARRAY[UNISWAPV3ETHEREUMTickDailySnapshotDTO] u_niswapv3_ethereum_tick_daily_snapshots__current(pool => $pool)
+> ARRAY[UNISWAPV3ETHEREUMTickDailySnapshotDTO] u_niswapv3_ethereum_tick_daily_snapshots__current()
 
 TickDailySnapshots (current)
 
@@ -656,10 +656,9 @@ use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
 my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
 );
 
-my $pool = "pool_example"; # string | liquidity pool this tick belongs to
 
 eval {
-    my $result = $api_instance->u_niswapv3_ethereum_tick_daily_snapshots__current(pool => $pool);
+    my $result = $api_instance->u_niswapv3_ethereum_tick_daily_snapshots__current();
     print Dumper($result);
 };
 if ($@) {
@@ -668,10 +667,7 @@ if ($@) {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **string**| liquidity pool this tick belongs to | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -689,7 +685,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **u_niswapv3_ethereum_tick_hourly_snapshots__current**
-> ARRAY[UNISWAPV3ETHEREUMTickHourlySnapshotDTO] u_niswapv3_ethereum_tick_hourly_snapshots__current(pool => $pool)
+> ARRAY[UNISWAPV3ETHEREUMTickHourlySnapshotDTO] u_niswapv3_ethereum_tick_hourly_snapshots__current()
 
 TickHourlySnapshots (current)
 
@@ -702,10 +698,9 @@ use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
 my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
 );
 
-my $pool = "pool_example"; # string | liquidity pool this tick belongs to
 
 eval {
-    my $result = $api_instance->u_niswapv3_ethereum_tick_hourly_snapshots__current(pool => $pool);
+    my $result = $api_instance->u_niswapv3_ethereum_tick_hourly_snapshots__current();
     print Dumper($result);
 };
 if ($@) {
@@ -714,10 +709,7 @@ if ($@) {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **string**| liquidity pool this tick belongs to | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -735,7 +727,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **u_niswapv3_ethereum_ticks__current**
-> ARRAY[UNISWAPV3ETHEREUMTickDTO] u_niswapv3_ethereum_ticks__current(pool => $pool)
+> ARRAY[UNISWAPV3ETHEREUMTickDTO] u_niswapv3_ethereum_ticks__current()
 
 Ticks (current)
 
@@ -748,10 +740,9 @@ use WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi;
 my $api_instance = WWW::OpenAPIClient::UNISWAPV3ETHEREUMApi->new(
 );
 
-my $pool = "pool_example"; # string | Liquidity pool this tick belongs to
 
 eval {
-    my $result = $api_instance->u_niswapv3_ethereum_ticks__current(pool => $pool);
+    my $result = $api_instance->u_niswapv3_ethereum_ticks__current();
     print Dumper($result);
 };
 if ($@) {
@@ -760,10 +751,7 @@ if ($@) {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **string**| Liquidity pool this tick belongs to | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 

@@ -32,11 +32,11 @@ export interface CURVEFINANCEETHEREUMSwapDTO {
      */
     recv_time?: string;
     /**
-     * Block number of this event
-     * @type {string}
+     * Number of block in which entity was recorded.
+     * @type {number}
      * @memberof CURVEFINANCEETHEREUMSwapDTO
      */
-    block_number?: string | null;
+    block_number?: number;
     /**
      * Swap-(transaction hash)-(log index)
      * @type {string}

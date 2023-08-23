@@ -133,13 +133,13 @@ pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent id_query =
 
 {-| Gets liquidityPoolDailySnapshots.
 -}
-pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent : Maybe String -> Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO)
-pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent pool_query =
+pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent : Api.Request (List Api.Data.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO)
+pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent =
     Api.request
         "GET"
         "/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current"
         []
-        [ ( "pool", Maybe.map identity pool_query ) ]
+        []
         []
         Nothing
         (Json.Decode.list Api.Data.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTODecoder)

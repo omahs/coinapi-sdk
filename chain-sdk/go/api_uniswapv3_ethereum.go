@@ -1462,13 +1462,6 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMSwapsCurrentExecute(r Api
 type ApiUNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest struct {
 	ctx context.Context
 	ApiService *UNISWAPV3ETHEREUMApiService
-	pool *string
-}
-
-// liquidity pool this tick belongs to
-func (r ApiUNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest) Pool(pool string) ApiUNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest {
-	r.pool = &pool
-	return r
 }
 
 func (r ApiUNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMTickDailySnapshotDTO, *http.Response, error) {
@@ -1511,9 +1504,6 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTickDailySnapshotsCurrent
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-	if r.pool != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "pool", r.pool, "")
-	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -1571,13 +1561,6 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTickDailySnapshotsCurrent
 type ApiUNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest struct {
 	ctx context.Context
 	ApiService *UNISWAPV3ETHEREUMApiService
-	pool *string
-}
-
-// liquidity pool this tick belongs to
-func (r ApiUNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest) Pool(pool string) ApiUNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest {
-	r.pool = &pool
-	return r
 }
 
 func (r ApiUNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMTickHourlySnapshotDTO, *http.Response, error) {
@@ -1620,9 +1603,6 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTickHourlySnapshotsCurren
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-	if r.pool != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "pool", r.pool, "")
-	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -1680,13 +1660,6 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTickHourlySnapshotsCurren
 type ApiUNISWAPV3ETHEREUMTicksCurrentRequest struct {
 	ctx context.Context
 	ApiService *UNISWAPV3ETHEREUMApiService
-	pool *string
-}
-
-// Liquidity pool this tick belongs to
-func (r ApiUNISWAPV3ETHEREUMTicksCurrentRequest) Pool(pool string) ApiUNISWAPV3ETHEREUMTicksCurrentRequest {
-	r.pool = &pool
-	return r
 }
 
 func (r ApiUNISWAPV3ETHEREUMTicksCurrentRequest) Execute() ([]UNISWAPV3ETHEREUMTickDTO, *http.Response, error) {
@@ -1729,9 +1702,6 @@ func (a *UNISWAPV3ETHEREUMApiService) UNISWAPV3ETHEREUMTicksCurrentExecute(r Api
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-	if r.pool != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "pool", r.pool, "")
-	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 

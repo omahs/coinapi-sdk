@@ -1060,7 +1060,7 @@ No authorization required
 
 ## UNISWAPV3ETHEREUMTickDailySnapshotsCurrent
 
-> List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt; UNISWAPV3ETHEREUMTickDailySnapshotsCurrent (string pool = null)
+> List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt; UNISWAPV3ETHEREUMTickDailySnapshotsCurrent ()
 
 TickDailySnapshots (current)
 
@@ -1083,12 +1083,11 @@ namespace Example
         {
             Configuration.Default.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new UNISWAPV3ETHEREUMApi(Configuration.Default);
-            var pool = "pool_example";  // string | liquidity pool this tick belongs to (optional) 
 
             try
             {
                 // TickDailySnapshots (current)
-                List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> result = apiInstance.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool);
+                List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> result = apiInstance.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1104,10 +1103,7 @@ namespace Example
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **string**| liquidity pool this tick belongs to | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -1136,7 +1132,7 @@ No authorization required
 
 ## UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent
 
-> List&lt;UNISWAPV3ETHEREUMTickHourlySnapshotDTO&gt; UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent (string pool = null)
+> List&lt;UNISWAPV3ETHEREUMTickHourlySnapshotDTO&gt; UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent ()
 
 TickHourlySnapshots (current)
 
@@ -1159,12 +1155,11 @@ namespace Example
         {
             Configuration.Default.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new UNISWAPV3ETHEREUMApi(Configuration.Default);
-            var pool = "pool_example";  // string | liquidity pool this tick belongs to (optional) 
 
             try
             {
                 // TickHourlySnapshots (current)
-                List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> result = apiInstance.UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool);
+                List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> result = apiInstance.UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1180,10 +1175,7 @@ namespace Example
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **string**| liquidity pool this tick belongs to | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -1212,7 +1204,7 @@ No authorization required
 
 ## UNISWAPV3ETHEREUMTicksCurrent
 
-> List&lt;UNISWAPV3ETHEREUMTickDTO&gt; UNISWAPV3ETHEREUMTicksCurrent (string pool = null)
+> List&lt;UNISWAPV3ETHEREUMTickDTO&gt; UNISWAPV3ETHEREUMTicksCurrent ()
 
 Ticks (current)
 
@@ -1235,12 +1227,11 @@ namespace Example
         {
             Configuration.Default.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new UNISWAPV3ETHEREUMApi(Configuration.Default);
-            var pool = "pool_example";  // string | Liquidity pool this tick belongs to (optional) 
 
             try
             {
                 // Ticks (current)
-                List<UNISWAPV3ETHEREUMTickDTO> result = apiInstance.UNISWAPV3ETHEREUMTicksCurrent(pool);
+                List<UNISWAPV3ETHEREUMTickDTO> result = apiInstance.UNISWAPV3ETHEREUMTicksCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1256,10 +1247,7 @@ namespace Example
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **string**| Liquidity pool this tick belongs to | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 

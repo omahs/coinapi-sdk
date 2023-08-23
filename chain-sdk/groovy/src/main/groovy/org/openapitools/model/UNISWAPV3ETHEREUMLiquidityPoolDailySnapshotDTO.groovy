@@ -15,8 +15,6 @@ class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /* . */
-    Long vid
     /* The Ethereum block number associated with the liquidity pool daily snapshot. */
     Integer block
     /* Identifier, format: (smart contract address of the pool)-(# of days since Unix epoch time). */

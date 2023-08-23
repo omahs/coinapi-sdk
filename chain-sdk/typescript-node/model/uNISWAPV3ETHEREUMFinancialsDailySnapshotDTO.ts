@@ -19,7 +19,7 @@ export class UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
     /**
-    * Block number of when this snapshot was taken/last modified.)
+    * Number of block in which entity was recorded.
     */
     'blockNumber'?: number;
     /**

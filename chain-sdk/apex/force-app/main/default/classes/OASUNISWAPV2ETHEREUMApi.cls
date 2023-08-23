@@ -26,13 +26,212 @@ public class OASUNISWAPV2ETHEREUMApi {
     }
 
     /**
+     * Accounts (current)
+     * Gets accounts.
+     * @return List<OASUNISWAPV2ETHEREUMAccountDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMAccountDTO> uNISWAPV2ETHEREUMAccountsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMAccountDTO>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/accounts/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMAccountDTO>.class
+        );
+    }
+    /**
+     * ActiveAccounts (current)
+     * Gets activeAccounts.
+     * @return List<OASUNISWAPV2ETHEREUMActiveAccountDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMActiveAccountDTO> uNISWAPV2ETHEREUMActiveAccountsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMActiveAccountDTO>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/activeAccounts/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMActiveAccountDTO>.class
+        );
+    }
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @return List<OASUNISWAPV2ETHEREUMDepositDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMDepositDTO> uNISWAPV2ETHEREUMDepositsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMDepositDTO>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/deposits/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMDepositDTO>.class
+        );
+    }
+    /**
+     * DexAmmProtocols (current)
+     * Gets dexAmmProtocols.
+     * @return List<OASUNISWAPV2ETHEREUMDexAmmProtocolDT>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMDexAmmProtocolDT> uNISWAPV2ETHEREUMDexAmmProtocolsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMDexAmmProtocolDT>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/dexAmmProtocols/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMDexAmmProtocolDT>.class
+        );
+    }
+    /**
+     * FinancialsDailySnapshots (current)
+     * Gets financialsDailySnapshots.
+     * @return List<OASUNISWAPV2ETHEREUMFinancialsDailyS>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMFinancialsDailyS> uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMFinancialsDailyS>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/financialsDailySnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMFinancialsDailyS>.class
+        );
+    }
+    /**
+     * LiquidityPoolAmounts (current)
+     * Gets liquidityPoolAmounts.
+     * @param id Smart contract address of the pool (optional)
+     * @return List<OASUNISWAPV2ETHEREUMLiquidityPoolAmo>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMLiquidityPoolAmo> uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('id', (String) params.get('id')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMLiquidityPoolAmo>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/liquidityPoolAmounts/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMLiquidityPoolAmo>.class
+        );
+    }
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     * Gets liquidityPoolDailySnapshots.
+     * @return List<OASUNISWAPV2ETHEREUMLiquidityPoolDai>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMLiquidityPoolDai> uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMLiquidityPoolDai>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/liquidityPoolDailySnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMLiquidityPoolDai>.class
+        );
+    }
+    /**
+     * LiquidityPoolFees (current)
+     * Gets liquidityPoolFees.
+     * @return List<OASUNISWAPV2ETHEREUMLiquidityPoolFee>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMLiquidityPoolFee> uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMLiquidityPoolFee>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/liquidityPoolFees/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMLiquidityPoolFee>.class
+        );
+    }
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     * Gets liquidityPoolHourlySnapshots.
+     * @return List<OASUNISWAPV2ETHEREUMLiquidityPoolHou>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMLiquidityPoolHou> uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMLiquidityPoolHou>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/liquidityPoolHourlySnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMLiquidityPoolHou>.class
+        );
+    }
+    /**
      * LiquidityPools (current)
      * Gets liquidityPools.
+     * @param id Smart contract address of the pool (optional)
      * @return List<OASUNISWAPV2ETHEREUMLiquidityPoolDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUNISWAPV2ETHEREUMLiquidityPoolDTO> uNISWAPV2ETHEREUMLiquidityPoolsCurrent() {
+    public List<OASUNISWAPV2ETHEREUMLiquidityPoolDTO> uNISWAPV2ETHEREUMLiquidityPoolsCurrent(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('id', (String) params.get('id')));
+
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUNISWAPV2ETHEREUMLiquidityPoolDTO>) client.invoke(
@@ -44,6 +243,132 @@ public class OASUNISWAPV2ETHEREUMApi {
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV2ETHEREUMLiquidityPoolDTO>.class
+        );
+    }
+    /**
+     * MasterChefAddressToPids (current)
+     * Gets masterChefAddressToPids.
+     * @return List<OASUNISWAPV2ETHEREUMMasterChefAddres>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMMasterChefAddres> uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMMasterChefAddres>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/masterChefAddressToPids/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMMasterChefAddres>.class
+        );
+    }
+    /**
+     * MasterChefRewarders (current)
+     * Gets masterChefRewarders.
+     * @return List<OASUNISWAPV2ETHEREUMMasterChefReward>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMMasterChefReward> uNISWAPV2ETHEREUMMasterChefRewardersCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMMasterChefReward>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/masterChefRewarders/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMMasterChefReward>.class
+        );
+    }
+    /**
+     * MasterChefStakingPools (current)
+     * Gets masterChefStakingPools.
+     * @return List<OASUNISWAPV2ETHEREUMMasterChefStakin>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMMasterChefStakin> uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMMasterChefStakin>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/masterChefStakingPools/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMMasterChefStakin>.class
+        );
+    }
+    /**
+     * MasterChefs (current)
+     * Gets masterChefs.
+     * @return List<OASUNISWAPV2ETHEREUMMasterChefDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMMasterChefDTO> uNISWAPV2ETHEREUMMasterChefsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMMasterChefDTO>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/masterChefs/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMMasterChefDTO>.class
+        );
+    }
+    /**
+     * RewardTokens (current)
+     * Gets rewardTokens.
+     * @return List<OASUNISWAPV2ETHEREUMRewardTokenDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMRewardTokenDTO> uNISWAPV2ETHEREUMRewardTokensCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMRewardTokenDTO>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/rewardTokens/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMRewardTokenDTO>.class
+        );
+    }
+    /**
+     * RewarderProbes (current)
+     * Gets rewarderProbes.
+     * @return List<OASUNISWAPV2ETHEREUMRewarderProbeDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMRewarderProbeDTO> uNISWAPV2ETHEREUMRewarderProbesCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMRewarderProbeDTO>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/rewarderProbes/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMRewarderProbeDTO>.class
         );
     }
     /**
@@ -68,6 +393,27 @@ public class OASUNISWAPV2ETHEREUMApi {
         );
     }
     /**
+     * TokenWhiteLists (current)
+     * Gets tokenWhiteLists.
+     * @return List<OASUNISWAPV2ETHEREUMTokenWhiteListDT>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMTokenWhiteListDT> uNISWAPV2ETHEREUMTokenWhiteListsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMTokenWhiteListDT>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/tokenWhiteLists/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMTokenWhiteListDT>.class
+        );
+    }
+    /**
      * Tokens (current)
      * Gets tokens.
      * @return List<OASUNISWAPV2ETHEREUMTokenDTO>
@@ -86,6 +432,90 @@ public class OASUNISWAPV2ETHEREUMApi {
             new List<String>(),
             new List<String>(),
             List<OASUNISWAPV2ETHEREUMTokenDTO>.class
+        );
+    }
+    /**
+     * Transfers (current)
+     * Gets transfers.
+     * @return List<OASUNISWAPV2ETHEREUMTransferDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMTransferDTO> uNISWAPV2ETHEREUMTransfersCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMTransferDTO>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/transfers/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMTransferDTO>.class
+        );
+    }
+    /**
+     * UsageMetricsDailySnapshots (current)
+     * Gets usageMetricsDailySnapshots.
+     * @return List<OASUNISWAPV2ETHEREUMUsageMetricsDail>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMUsageMetricsDail> uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMUsageMetricsDail>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/usageMetricsDailySnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMUsageMetricsDail>.class
+        );
+    }
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     * Gets usageMetricsHourlySnapshots.
+     * @return List<OASUNISWAPV2ETHEREUMUsageMetricsHour>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMUsageMetricsHour> uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMUsageMetricsHour>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/usageMetricsHourlySnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMUsageMetricsHour>.class
+        );
+    }
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @return List<OASUNISWAPV2ETHEREUMWithdrawDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUNISWAPV2ETHEREUMWithdrawDTO> uNISWAPV2ETHEREUMWithdrawsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUNISWAPV2ETHEREUMWithdrawDTO>) client.invoke(
+            'GET', '/v1/dapps/uniswap-v2-ethereum/withdraws/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUNISWAPV2ETHEREUMWithdrawDTO>.class
         );
     }
 }

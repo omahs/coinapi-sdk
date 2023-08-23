@@ -247,7 +247,6 @@
 #' Gets tickDailySnapshots.
 #'
 #' \itemize{
-#' \item \emph{ @param } pool character
 #' \item \emph{ @returnType } list( \link{UNISWAP_V3_ETHEREUM.TickDailySnapshotDTO} ) \cr
 #'
 #'
@@ -264,7 +263,6 @@
 #' Gets tickHourlySnapshots.
 #'
 #' \itemize{
-#' \item \emph{ @param } pool character
 #' \item \emph{ @returnType } list( \link{UNISWAP_V3_ETHEREUM.TickHourlySnapshotDTO} ) \cr
 #'
 #'
@@ -281,7 +279,6 @@
 #' Gets ticks.
 #'
 #' \itemize{
-#' \item \emph{ @param } pool character
 #' \item \emph{ @returnType } list( \link{UNISWAP_V3_ETHEREUM.TickDTO} ) \cr
 #'
 #'
@@ -586,42 +583,39 @@
 #' ####################  UNISWAPV3ETHEREUMTickDailySnapshotsCurrent  ####################
 #'
 #' library(openapi)
-#' var_pool <- "pool_example" # character | liquidity pool this tick belongs to (Optional)
 #'
 #' #TickDailySnapshots (current)
 #' api_instance <- UNISWAPV3ETHEREUMApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool = var_pooldata_file = "result.txt")
-#' result <- api_instance$UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool = var_pool)
+#' # result <- api_instance$UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV3ETHEREUMTickDailySnapshotsCurrent()
 #' dput(result)
 #'
 #'
 #' ####################  UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent  ####################
 #'
 #' library(openapi)
-#' var_pool <- "pool_example" # character | liquidity pool this tick belongs to (Optional)
 #'
 #' #TickHourlySnapshots (current)
 #' api_instance <- UNISWAPV3ETHEREUMApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool = var_pooldata_file = "result.txt")
-#' result <- api_instance$UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool = var_pool)
+#' # result <- api_instance$UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent()
 #' dput(result)
 #'
 #'
 #' ####################  UNISWAPV3ETHEREUMTicksCurrent  ####################
 #'
 #' library(openapi)
-#' var_pool <- "pool_example" # character | Liquidity pool this tick belongs to (Optional)
 #'
 #' #Ticks (current)
 #' api_instance <- UNISWAPV3ETHEREUMApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$UNISWAPV3ETHEREUMTicksCurrent(pool = var_pooldata_file = "result.txt")
-#' result <- api_instance$UNISWAPV3ETHEREUMTicksCurrent(pool = var_pool)
+#' # result <- api_instance$UNISWAPV3ETHEREUMTicksCurrent(data_file = "result.txt")
+#' result <- api_instance$UNISWAPV3ETHEREUMTicksCurrent()
 #' dput(result)
 #'
 #'
@@ -1960,13 +1954,12 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
     #' @description
     #' TickDailySnapshots (current)
     #'
-    #' @param pool (optional) liquidity pool this tick belongs to
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UNISWAPV3ETHEREUMTickDailySnapshotDTO]
     #' @export
-    UNISWAPV3ETHEREUMTickDailySnapshotsCurrent = function(pool = NULL, data_file = NULL, ...) {
-      local_var_response <- self$UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo(pool, data_file = data_file, ...)
+    UNISWAPV3ETHEREUMTickDailySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1982,12 +1975,11 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
     #' @description
     #' TickDailySnapshots (current)
     #'
-    #' @param pool (optional) liquidity pool this tick belongs to
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UNISWAPV3ETHEREUMTickDailySnapshotDTO]) with additional information such as HTTP status code, headers
     #' @export
-    UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo = function(pool = NULL, data_file = NULL, ...) {
+    UNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1996,9 +1988,6 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       local_var_body <- NULL
       oauth_scopes <- NULL
       is_oauth <- FALSE
-
-
-      query_params[["pool"]] <- `pool`
 
       local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current"
 
@@ -2051,13 +2040,12 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
     #' @description
     #' TickHourlySnapshots (current)
     #'
-    #' @param pool (optional) liquidity pool this tick belongs to
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UNISWAPV3ETHEREUMTickHourlySnapshotDTO]
     #' @export
-    UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent = function(pool = NULL, data_file = NULL, ...) {
-      local_var_response <- self$UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(pool, data_file = data_file, ...)
+    UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -2073,12 +2061,11 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
     #' @description
     #' TickHourlySnapshots (current)
     #'
-    #' @param pool (optional) liquidity pool this tick belongs to
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UNISWAPV3ETHEREUMTickHourlySnapshotDTO]) with additional information such as HTTP status code, headers
     #' @export
-    UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo = function(pool = NULL, data_file = NULL, ...) {
+    UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2087,9 +2074,6 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       local_var_body <- NULL
       oauth_scopes <- NULL
       is_oauth <- FALSE
-
-
-      query_params[["pool"]] <- `pool`
 
       local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current"
 
@@ -2142,13 +2126,12 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
     #' @description
     #' Ticks (current)
     #'
-    #' @param pool (optional) Liquidity pool this tick belongs to
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UNISWAPV3ETHEREUMTickDTO]
     #' @export
-    UNISWAPV3ETHEREUMTicksCurrent = function(pool = NULL, data_file = NULL, ...) {
-      local_var_response <- self$UNISWAPV3ETHEREUMTicksCurrentWithHttpInfo(pool, data_file = data_file, ...)
+    UNISWAPV3ETHEREUMTicksCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UNISWAPV3ETHEREUMTicksCurrentWithHttpInfo(data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -2164,12 +2147,11 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
     #' @description
     #' Ticks (current)
     #'
-    #' @param pool (optional) Liquidity pool this tick belongs to
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UNISWAPV3ETHEREUMTickDTO]) with additional information such as HTTP status code, headers
     #' @export
-    UNISWAPV3ETHEREUMTicksCurrentWithHttpInfo = function(pool = NULL, data_file = NULL, ...) {
+    UNISWAPV3ETHEREUMTicksCurrentWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2178,9 +2160,6 @@ UNISWAPV3ETHEREUMApi <- R6::R6Class(
       local_var_body <- NULL
       oauth_scopes <- NULL
       is_oauth <- FALSE
-
-
-      query_params[["pool"]] <- `pool`
 
       local_var_url_path <- "/v1/dapps/uniswap-v3-ethereum/ticks/current"
 

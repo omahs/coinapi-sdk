@@ -5,6 +5,107 @@ context("Test SUSHISWAPV3ETHEREUMApi")
 
 api_instance <- SUSHISWAPV3ETHEREUMApi$new()
 
+test_that("SUSHISWAPV3ETHEREUMAccountsCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMAccountsCurrent
+  # base path: https://onchain.coinapi.io
+  # Accounts (current)
+  # Gets accounts.
+  # @return [array[SUSHISWAPV3ETHEREUMAccountDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SUSHISWAPV3ETHEREUMActiveAccountsCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMActiveAccountsCurrent
+  # base path: https://onchain.coinapi.io
+  # ActiveAccounts (current)
+  # Gets activeAccounts.
+  # @return [array[SUSHISWAPV3ETHEREUMActiveAccountDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SUSHISWAPV3ETHEREUMDepositsCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMDepositsCurrent
+  # base path: https://onchain.coinapi.io
+  # Deposits (current)
+  # Gets deposits.
+  # @return [array[SUSHISWAPV3ETHEREUMDepositDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent
+  # base path: https://onchain.coinapi.io
+  # DexAmmProtocols (current)
+  # Gets dexAmmProtocols.
+  # @return [array[SUSHISWAPV3ETHEREUMDexAmmProtocolDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # FinancialsDailySnapshots (current)
+  # Gets financialsDailySnapshots.
+  # @return [array[SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent
+  # base path: https://onchain.coinapi.io
+  # LiquidityPoolAmounts (current)
+  # Gets liquidityPoolAmounts.
+  # @param id character Smart contract address of the pool. (optional)
+  # @return [array[SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # LiquidityPoolDailySnapshots (current)
+  # Gets liquidityPoolDailySnapshots.
+  # @return [array[SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent
+  # base path: https://onchain.coinapi.io
+  # LiquidityPoolFees (current)
+  # Gets liquidityPoolFees.
+  # @return [array[SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # LiquidityPoolHourlySnapshots (current)
+  # Gets liquidityPoolHourlySnapshots.
+  # @param pool character The pool this snapshot belongs to (optional)
+  # @return [array[SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("SUSHISWAPV3ETHEREUMLiquidityPoolsCurrent", {
   # tests for SUSHISWAPV3ETHEREUMLiquidityPoolsCurrent
   # base path: https://onchain.coinapi.io
@@ -12,6 +113,40 @@ test_that("SUSHISWAPV3ETHEREUMLiquidityPoolsCurrent", {
   # Gets liquidityPools.
   # @param id character Smart contract address of the pool. (optional)
   # @return [array[SUSHISWAPV3ETHEREUMLiquidityPoolDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SUSHISWAPV3ETHEREUMPositionSnapshotsCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMPositionSnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # PositionSnapshots (current)
+  # Gets positionSnapshots.
+  # @return [array[SUSHISWAPV3ETHEREUMPositionSnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SUSHISWAPV3ETHEREUMPositionsCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMPositionsCurrent
+  # base path: https://onchain.coinapi.io
+  # Positions (current)
+  # Gets positions.
+  # @param pool character The liquidity pool in which this position was opened (optional)
+  # @return [array[SUSHISWAPV3ETHEREUMPositionDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SUSHISWAPV3ETHEREUMRewardTokensCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMRewardTokensCurrent
+  # base path: https://onchain.coinapi.io
+  # RewardTokens (current)
+  # Gets rewardTokens.
+  # @return [array[SUSHISWAPV3ETHEREUMRewardTokenDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -28,6 +163,64 @@ test_that("SUSHISWAPV3ETHEREUMSwapsCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
+test_that("SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # TickDailySnapshots (current)
+  # Gets tickDailySnapshots.
+  # @param pool character liquidity pool this tick belongs to (optional)
+  # @return [array[SUSHISWAPV3ETHEREUMTickDailySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # TickHourlySnapshots (current)
+  # Gets tickHourlySnapshots.
+  # @param pool character liquidity pool this tick belongs to (optional)
+  # @return [array[SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SUSHISWAPV3ETHEREUMTicksCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMTicksCurrent
+  # base path: https://onchain.coinapi.io
+  # Ticks (current)
+  # Gets ticks.
+  # @param pool character Liquidity pool this tick belongs to (optional)
+  # @return [array[SUSHISWAPV3ETHEREUMTickDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent
+  # base path: https://onchain.coinapi.io
+  # TokenWhiteListSymbols (current)
+  # Gets tokenWhiteListSymbols.
+  # @return [array[SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SUSHISWAPV3ETHEREUMTokenWhiteListsCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMTokenWhiteListsCurrent
+  # base path: https://onchain.coinapi.io
+  # TokenWhiteLists (current)
+  # Gets tokenWhiteLists.
+  # @return [array[SUSHISWAPV3ETHEREUMTokenWhiteListDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("SUSHISWAPV3ETHEREUMTokensCurrent", {
   # tests for SUSHISWAPV3ETHEREUMTokensCurrent
   # base path: https://onchain.coinapi.io
@@ -35,6 +228,39 @@ test_that("SUSHISWAPV3ETHEREUMTokensCurrent", {
   # Gets tokens.
   # @param id character Smart contract address of the token. (optional)
   # @return [array[SUSHISWAPV3ETHEREUMTokenDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # UsageMetricsDailySnapshots (current)
+  # Gets usageMetricsDailySnapshots.
+  # @return [array[SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # UsageMetricsHourlySnapshots (current)
+  # Gets usageMetricsHourlySnapshots.
+  # @return [array[SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SUSHISWAPV3ETHEREUMWithdrawsCurrent", {
+  # tests for SUSHISWAPV3ETHEREUMWithdrawsCurrent
+  # base path: https://onchain.coinapi.io
+  # Withdraws (current)
+  # Gets withdraws.
+  # @return [array[SUSHISWAPV3ETHEREUMWithdrawDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")

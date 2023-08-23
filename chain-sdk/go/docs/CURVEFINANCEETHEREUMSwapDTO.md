@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
-**BlockNumber** | Pointer to **NullableString** | Block number of this event | [optional] 
+**BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
 **Id** | Pointer to **NullableString** | Swap-(transaction hash)-(log index) | [optional] 
 **Hash** | Pointer to **NullableString** | Transaction hash of the transaction that emitted this event | [optional] 
 **LogIndex** | Pointer to **int32** | Event log index. For transactions that don&#39;t emit event, create arbitrary index starting from 0 | [optional] 
@@ -98,20 +98,20 @@ HasRecvTime returns a boolean if a field has been set.
 
 ### GetBlockNumber
 
-`func (o *CURVEFINANCEETHEREUMSwapDTO) GetBlockNumber() string`
+`func (o *CURVEFINANCEETHEREUMSwapDTO) GetBlockNumber() int64`
 
 GetBlockNumber returns the BlockNumber field if non-nil, zero value otherwise.
 
 ### GetBlockNumberOk
 
-`func (o *CURVEFINANCEETHEREUMSwapDTO) GetBlockNumberOk() (*string, bool)`
+`func (o *CURVEFINANCEETHEREUMSwapDTO) GetBlockNumberOk() (*int64, bool)`
 
 GetBlockNumberOk returns a tuple with the BlockNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBlockNumber
 
-`func (o *CURVEFINANCEETHEREUMSwapDTO) SetBlockNumber(v string)`
+`func (o *CURVEFINANCEETHEREUMSwapDTO) SetBlockNumber(v int64)`
 
 SetBlockNumber sets BlockNumber field to given value.
 
@@ -121,16 +121,6 @@ SetBlockNumber sets BlockNumber field to given value.
 
 HasBlockNumber returns a boolean if a field has been set.
 
-### SetBlockNumberNil
-
-`func (o *CURVEFINANCEETHEREUMSwapDTO) SetBlockNumberNil(b bool)`
-
- SetBlockNumberNil sets the value for BlockNumber to be an explicit nil
-
-### UnsetBlockNumber
-`func (o *CURVEFINANCEETHEREUMSwapDTO) UnsetBlockNumber()`
-
-UnsetBlockNumber ensures that no value is present for BlockNumber, not even an explicit nil
 ### GetId
 
 `func (o *CURVEFINANCEETHEREUMSwapDTO) GetId() string`

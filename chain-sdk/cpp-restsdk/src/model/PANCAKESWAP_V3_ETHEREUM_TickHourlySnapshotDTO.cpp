@@ -29,8 +29,6 @@ PANCAKESWAP_V3_ETHEREUM_TickHourlySnapshotDTO::PANCAKESWAP_V3_ETHEREUM_TickHourl
     m_Recv_timeIsSet = false;
     m_Block_number = 0L;
     m_Block_numberIsSet = false;
-    m_Vid = 0L;
-    m_VidIsSet = false;
     m_Id = utility::conversions::to_string_t("");
     m_IdIsSet = false;
     m_Hour_id = 0;
@@ -76,10 +74,6 @@ web::json::value PANCAKESWAP_V3_ETHEREUM_TickHourlySnapshotDTO::toJson() const
     if(m_Block_numberIsSet)
     {
         val[utility::conversions::to_string_t(U("block_number"))] = ModelBase::toJson(m_Block_number);
-    }
-    if(m_VidIsSet)
-    {
-        val[utility::conversions::to_string_t(U("vid"))] = ModelBase::toJson(m_Vid);
     }
     if(m_IdIsSet)
     {
@@ -153,16 +147,6 @@ bool PANCAKESWAP_V3_ETHEREUM_TickHourlySnapshotDTO::fromJson(const web::json::va
             int64_t refVal_setBlockNumber;
             ok &= ModelBase::fromJson(fieldValue, refVal_setBlockNumber);
             setBlockNumber(refVal_setBlockNumber);
-        }
-    }
-    if(val.has_field(utility::conversions::to_string_t(U("vid"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(U("vid")));
-        if(!fieldValue.is_null())
-        {
-            int64_t refVal_setVid;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setVid);
-            setVid(refVal_setVid);
         }
     }
     if(val.has_field(utility::conversions::to_string_t(U("id"))))
@@ -277,10 +261,6 @@ void PANCAKESWAP_V3_ETHEREUM_TickHourlySnapshotDTO::toMultipart(std::shared_ptr<
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(U("block_number")), m_Block_number));
     }
-    if(m_VidIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(U("vid")), m_Vid));
-    }
     if(m_IdIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(U("id")), m_Id));
@@ -345,12 +325,6 @@ bool PANCAKESWAP_V3_ETHEREUM_TickHourlySnapshotDTO::fromMultiPart(std::shared_pt
         int64_t refVal_setBlockNumber;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(U("block_number"))), refVal_setBlockNumber );
         setBlockNumber(refVal_setBlockNumber);
-    }
-    if(multipart->hasContent(utility::conversions::to_string_t(U("vid"))))
-    {
-        int64_t refVal_setVid;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(U("vid"))), refVal_setVid );
-        setVid(refVal_setVid);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(U("id"))))
     {
@@ -468,26 +442,6 @@ bool PANCAKESWAP_V3_ETHEREUM_TickHourlySnapshotDTO::blockNumberIsSet() const
 void PANCAKESWAP_V3_ETHEREUM_TickHourlySnapshotDTO::unsetBlock_number()
 {
     m_Block_numberIsSet = false;
-}
-int64_t PANCAKESWAP_V3_ETHEREUM_TickHourlySnapshotDTO::getVid() const
-{
-    return m_Vid;
-}
-
-void PANCAKESWAP_V3_ETHEREUM_TickHourlySnapshotDTO::setVid(int64_t value)
-{
-    m_Vid = value;
-    m_VidIsSet = true;
-}
-
-bool PANCAKESWAP_V3_ETHEREUM_TickHourlySnapshotDTO::vidIsSet() const
-{
-    return m_VidIsSet;
-}
-
-void PANCAKESWAP_V3_ETHEREUM_TickHourlySnapshotDTO::unsetVid()
-{
-    m_VidIsSet = false;
 }
 utility::string_t PANCAKESWAP_V3_ETHEREUM_TickHourlySnapshotDTO::getId() const
 {

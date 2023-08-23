@@ -15,9 +15,29 @@
 
 
 module Api.Request.UNISWAPV2ETHEREUM exposing
-    ( uNISWAPV2ETHEREUMLiquidityPoolsCurrent
+    ( uNISWAPV2ETHEREUMAccountsCurrent
+    , uNISWAPV2ETHEREUMActiveAccountsCurrent
+    , uNISWAPV2ETHEREUMDepositsCurrent
+    , uNISWAPV2ETHEREUMDexAmmProtocolsCurrent
+    , uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent
+    , uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent
+    , uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent
+    , uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent
+    , uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+    , uNISWAPV2ETHEREUMLiquidityPoolsCurrent
+    , uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent
+    , uNISWAPV2ETHEREUMMasterChefRewardersCurrent
+    , uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent
+    , uNISWAPV2ETHEREUMMasterChefsCurrent
+    , uNISWAPV2ETHEREUMRewardTokensCurrent
+    , uNISWAPV2ETHEREUMRewarderProbesCurrent
     , uNISWAPV2ETHEREUMSwapsCurrent
+    , uNISWAPV2ETHEREUMTokenWhiteListsCurrent
     , uNISWAPV2ETHEREUMTokensCurrent
+    , uNISWAPV2ETHEREUMTransfersCurrent
+    , uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent
+    , uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent
+    , uNISWAPV2ETHEREUMWithdrawsCurrent
     )
 
 import Api
@@ -27,18 +47,228 @@ import Http
 import Json.Decode
 import Json.Encode
 
-{-| Gets liquidityPools.
+{-| Gets accounts.
 -}
-uNISWAPV2ETHEREUMLiquidityPoolsCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMLiquidityPoolDTO)
-uNISWAPV2ETHEREUMLiquidityPoolsCurrent =
+uNISWAPV2ETHEREUMAccountsCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMAccountDTO)
+uNISWAPV2ETHEREUMAccountsCurrent =
     Api.request
         "GET"
-        "/v1/dapps/uniswap-v2-ethereum/liquidityPools/current"
+        "/v1/dapps/uniswap-v2-ethereum/accounts/current"
         []
         []
         []
         Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMAccountDTODecoder)
+
+
+{-| Gets activeAccounts.
+-}
+uNISWAPV2ETHEREUMActiveAccountsCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMActiveAccountDTO)
+uNISWAPV2ETHEREUMActiveAccountsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/activeAccounts/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMActiveAccountDTODecoder)
+
+
+{-| Gets deposits.
+-}
+uNISWAPV2ETHEREUMDepositsCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMDepositDTO)
+uNISWAPV2ETHEREUMDepositsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/deposits/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMDepositDTODecoder)
+
+
+{-| Gets dexAmmProtocols.
+-}
+uNISWAPV2ETHEREUMDexAmmProtocolsCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMDexAmmProtocolDTO)
+uNISWAPV2ETHEREUMDexAmmProtocolsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/dexAmmProtocols/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMDexAmmProtocolDTODecoder)
+
+
+{-| Gets financialsDailySnapshots.
+-}
+uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO)
+uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/financialsDailySnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMFinancialsDailySnapshotDTODecoder)
+
+
+{-| Gets liquidityPoolAmounts.
+-}
+uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent : Maybe String -> Api.Request (List Api.Data.UNISWAPV2ETHEREUMLiquidityPoolAmountDTO)
+uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent id_query =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/liquidityPoolAmounts/current"
+        []
+        [ ( "id", Maybe.map identity id_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMLiquidityPoolAmountDTODecoder)
+
+
+{-| Gets liquidityPoolDailySnapshots.
+-}
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO)
+uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/liquidityPoolDailySnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTODecoder)
+
+
+{-| Gets liquidityPoolFees.
+-}
+uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMLiquidityPoolFeeDTO)
+uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/liquidityPoolFees/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMLiquidityPoolFeeDTODecoder)
+
+
+{-| Gets liquidityPoolHourlySnapshots.
+-}
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO)
+uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/liquidityPoolHourlySnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTODecoder)
+
+
+{-| Gets liquidityPools.
+-}
+uNISWAPV2ETHEREUMLiquidityPoolsCurrent : Maybe String -> Api.Request (List Api.Data.UNISWAPV2ETHEREUMLiquidityPoolDTO)
+uNISWAPV2ETHEREUMLiquidityPoolsCurrent id_query =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/liquidityPools/current"
+        []
+        [ ( "id", Maybe.map identity id_query ) ]
+        []
+        Nothing
         (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMLiquidityPoolDTODecoder)
+
+
+{-| Gets masterChefAddressToPids.
+-}
+uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMMasterChefAddressToPidDTO)
+uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/masterChefAddressToPids/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMMasterChefAddressToPidDTODecoder)
+
+
+{-| Gets masterChefRewarders.
+-}
+uNISWAPV2ETHEREUMMasterChefRewardersCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMMasterChefRewarderDTO)
+uNISWAPV2ETHEREUMMasterChefRewardersCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/masterChefRewarders/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMMasterChefRewarderDTODecoder)
+
+
+{-| Gets masterChefStakingPools.
+-}
+uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMMasterChefStakingPoolDTO)
+uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/masterChefStakingPools/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMMasterChefStakingPoolDTODecoder)
+
+
+{-| Gets masterChefs.
+-}
+uNISWAPV2ETHEREUMMasterChefsCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMMasterChefDTO)
+uNISWAPV2ETHEREUMMasterChefsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/masterChefs/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMMasterChefDTODecoder)
+
+
+{-| Gets rewardTokens.
+-}
+uNISWAPV2ETHEREUMRewardTokensCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMRewardTokenDTO)
+uNISWAPV2ETHEREUMRewardTokensCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/rewardTokens/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMRewardTokenDTODecoder)
+
+
+{-| Gets rewarderProbes.
+-}
+uNISWAPV2ETHEREUMRewarderProbesCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMRewarderProbeDTO)
+uNISWAPV2ETHEREUMRewarderProbesCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/rewarderProbes/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMRewarderProbeDTODecoder)
 
 
 {-| Gets swaps.
@@ -55,6 +285,20 @@ uNISWAPV2ETHEREUMSwapsCurrent =
         (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMSwapDTODecoder)
 
 
+{-| Gets tokenWhiteLists.
+-}
+uNISWAPV2ETHEREUMTokenWhiteListsCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMTokenWhiteListDTO)
+uNISWAPV2ETHEREUMTokenWhiteListsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/tokenWhiteLists/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMTokenWhiteListDTODecoder)
+
+
 {-| Gets tokens.
 -}
 uNISWAPV2ETHEREUMTokensCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMTokenDTO)
@@ -67,4 +311,60 @@ uNISWAPV2ETHEREUMTokensCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMTokenDTODecoder)
+
+
+{-| Gets transfers.
+-}
+uNISWAPV2ETHEREUMTransfersCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMTransferDTO)
+uNISWAPV2ETHEREUMTransfersCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/transfers/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMTransferDTODecoder)
+
+
+{-| Gets usageMetricsDailySnapshots.
+-}
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO)
+uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/usageMetricsDailySnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTODecoder)
+
+
+{-| Gets usageMetricsHourlySnapshots.
+-}
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO)
+uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/usageMetricsHourlySnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTODecoder)
+
+
+{-| Gets withdraws.
+-}
+uNISWAPV2ETHEREUMWithdrawsCurrent : Api.Request (List Api.Data.UNISWAPV2ETHEREUMWithdrawDTO)
+uNISWAPV2ETHEREUMWithdrawsCurrent =
+    Api.request
+        "GET"
+        "/v1/dapps/uniswap-v2-ethereum/withdraws/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uNISWAPV2ETHEREUMWithdrawDTODecoder)
 

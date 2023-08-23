@@ -57,9 +57,6 @@ class UNISWAPV3ETHEREUMPositionDTO {
             if (data.hasOwnProperty('block_number')) {
                 obj['block_number'] = ApiClient.convertToType(data['block_number'], 'Number');
             }
-            if (data.hasOwnProperty('vid')) {
-                obj['vid'] = ApiClient.convertToType(data['vid'], 'Number');
-            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -240,12 +237,6 @@ UNISWAPV3ETHEREUMPositionDTO.prototype['recv_time'] = undefined;
  * @member {Number} block_number
  */
 UNISWAPV3ETHEREUMPositionDTO.prototype['block_number'] = undefined;
-
-/**
- * 
- * @member {Number} vid
- */
-UNISWAPV3ETHEREUMPositionDTO.prototype['vid'] = undefined;
 
 /**
  * (account address)-(market address)-(count)

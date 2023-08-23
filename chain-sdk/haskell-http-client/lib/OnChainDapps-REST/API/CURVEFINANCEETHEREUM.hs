@@ -58,6 +58,231 @@ import qualified Prelude as P
 
 -- ** CURVEFINANCEETHEREUM
 
+-- *** cURVEFINANCEETHEREUMAccountsCurrent
+
+-- | @GET \/v1\/dapps\/curve-finance-ethereum\/accounts\/current@
+-- 
+-- Accounts (current)
+-- 
+-- Gets accounts.
+-- 
+cURVEFINANCEETHEREUMAccountsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainDapps-RESTRequest CURVEFINANCEETHEREUMAccountsCurrent MimeNoContent [CURVEFINANCEETHEREUMAccountDTO] accept
+cURVEFINANCEETHEREUMAccountsCurrent  _ =
+  _mkRequest "GET" ["/v1/dapps/curve-finance-ethereum/accounts/current"]
+
+data CURVEFINANCEETHEREUMAccountsCurrent  
+-- | @application/json@
+instance Produces CURVEFINANCEETHEREUMAccountsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CURVEFINANCEETHEREUMAccountsCurrent MimeXMsgpack
+-- | @text/json@
+instance Produces CURVEFINANCEETHEREUMAccountsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CURVEFINANCEETHEREUMAccountsCurrent MimePlainText
+
+
+-- *** cURVEFINANCEETHEREUMActiveAccountsCurrent
+
+-- | @GET \/v1\/dapps\/curve-finance-ethereum\/activeAccounts\/current@
+-- 
+-- ActiveAccounts (current)
+-- 
+-- Gets activeAccounts.
+-- 
+cURVEFINANCEETHEREUMActiveAccountsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainDapps-RESTRequest CURVEFINANCEETHEREUMActiveAccountsCurrent MimeNoContent [CURVEFINANCEETHEREUMActiveAccountDTO] accept
+cURVEFINANCEETHEREUMActiveAccountsCurrent  _ =
+  _mkRequest "GET" ["/v1/dapps/curve-finance-ethereum/activeAccounts/current"]
+
+data CURVEFINANCEETHEREUMActiveAccountsCurrent  
+-- | @application/json@
+instance Produces CURVEFINANCEETHEREUMActiveAccountsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CURVEFINANCEETHEREUMActiveAccountsCurrent MimeXMsgpack
+-- | @text/json@
+instance Produces CURVEFINANCEETHEREUMActiveAccountsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CURVEFINANCEETHEREUMActiveAccountsCurrent MimePlainText
+
+
+-- *** cURVEFINANCEETHEREUMDepositsCurrent
+
+-- | @GET \/v1\/dapps\/curve-finance-ethereum\/deposits\/current@
+-- 
+-- Deposits (current)
+-- 
+-- Gets deposits.
+-- 
+cURVEFINANCEETHEREUMDepositsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainDapps-RESTRequest CURVEFINANCEETHEREUMDepositsCurrent MimeNoContent [CURVEFINANCEETHEREUMDepositDTO] accept
+cURVEFINANCEETHEREUMDepositsCurrent  _ =
+  _mkRequest "GET" ["/v1/dapps/curve-finance-ethereum/deposits/current"]
+
+data CURVEFINANCEETHEREUMDepositsCurrent  
+-- | @application/json@
+instance Produces CURVEFINANCEETHEREUMDepositsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CURVEFINANCEETHEREUMDepositsCurrent MimeXMsgpack
+-- | @text/json@
+instance Produces CURVEFINANCEETHEREUMDepositsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CURVEFINANCEETHEREUMDepositsCurrent MimePlainText
+
+
+-- *** cURVEFINANCEETHEREUMDexAmmProtocolsCurrent
+
+-- | @GET \/v1\/dapps\/curve-finance-ethereum\/dexAmmProtocols\/current@
+-- 
+-- DexAmmProtocols (current)
+-- 
+-- Gets dexAmmProtocols.
+-- 
+cURVEFINANCEETHEREUMDexAmmProtocolsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainDapps-RESTRequest CURVEFINANCEETHEREUMDexAmmProtocolsCurrent MimeNoContent [CURVEFINANCEETHEREUMDexAmmProtocolDTO] accept
+cURVEFINANCEETHEREUMDexAmmProtocolsCurrent  _ =
+  _mkRequest "GET" ["/v1/dapps/curve-finance-ethereum/dexAmmProtocols/current"]
+
+data CURVEFINANCEETHEREUMDexAmmProtocolsCurrent  
+-- | @application/json@
+instance Produces CURVEFINANCEETHEREUMDexAmmProtocolsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CURVEFINANCEETHEREUMDexAmmProtocolsCurrent MimeXMsgpack
+-- | @text/json@
+instance Produces CURVEFINANCEETHEREUMDexAmmProtocolsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CURVEFINANCEETHEREUMDexAmmProtocolsCurrent MimePlainText
+
+
+-- *** cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent
+
+-- | @GET \/v1\/dapps\/curve-finance-ethereum\/financialsDailySnapshots\/current@
+-- 
+-- FinancialsDailySnapshots (current)
+-- 
+-- Gets financialsDailySnapshots.
+-- 
+cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainDapps-RESTRequest CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent MimeNoContent [CURVEFINANCEETHEREUMFinancialsDailySnapshotDTO] accept
+cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent  _ =
+  _mkRequest "GET" ["/v1/dapps/curve-finance-ethereum/financialsDailySnapshots/current"]
+
+data CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent  
+-- | @application/json@
+instance Produces CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent MimeXMsgpack
+-- | @text/json@
+instance Produces CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent MimePlainText
+
+
+-- *** cURVEFINANCEETHEREUMLiquidityGaugesCurrent
+
+-- | @GET \/v1\/dapps\/curve-finance-ethereum\/liquidityGauges\/current@
+-- 
+-- LiquidityGauges (current)
+-- 
+-- Gets liquidityGauges.
+-- 
+cURVEFINANCEETHEREUMLiquidityGaugesCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainDapps-RESTRequest CURVEFINANCEETHEREUMLiquidityGaugesCurrent MimeNoContent [CURVEFINANCEETHEREUMLiquidityGaugeDTO] accept
+cURVEFINANCEETHEREUMLiquidityGaugesCurrent  _ =
+  _mkRequest "GET" ["/v1/dapps/curve-finance-ethereum/liquidityGauges/current"]
+
+data CURVEFINANCEETHEREUMLiquidityGaugesCurrent  
+-- | @application/json@
+instance Produces CURVEFINANCEETHEREUMLiquidityGaugesCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CURVEFINANCEETHEREUMLiquidityGaugesCurrent MimeXMsgpack
+-- | @text/json@
+instance Produces CURVEFINANCEETHEREUMLiquidityGaugesCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CURVEFINANCEETHEREUMLiquidityGaugesCurrent MimePlainText
+
+
+-- *** cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent
+
+-- | @GET \/v1\/dapps\/curve-finance-ethereum\/liquidityPoolDailySnapshots\/current@
+-- 
+-- LiquidityPoolDailySnapshots (current)
+-- 
+-- Gets liquidityPoolDailySnapshots.
+-- 
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainDapps-RESTRequest CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent MimeNoContent [CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotDTO] accept
+cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent  _ =
+  _mkRequest "GET" ["/v1/dapps/curve-finance-ethereum/liquidityPoolDailySnapshots/current"]
+
+data CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent  
+-- | @application/json@
+instance Produces CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent MimeXMsgpack
+-- | @text/json@
+instance Produces CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent MimePlainText
+
+
+-- *** cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent
+
+-- | @GET \/v1\/dapps\/curve-finance-ethereum\/liquidityPoolFees\/current@
+-- 
+-- LiquidityPoolFees (current)
+-- 
+-- Gets liquidityPoolFees.
+-- 
+cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainDapps-RESTRequest CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent MimeNoContent [CURVEFINANCEETHEREUMLiquidityPoolFeeDTO] accept
+cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent  _ =
+  _mkRequest "GET" ["/v1/dapps/curve-finance-ethereum/liquidityPoolFees/current"]
+
+data CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent  
+-- | @application/json@
+instance Produces CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent MimeXMsgpack
+-- | @text/json@
+instance Produces CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CURVEFINANCEETHEREUMLiquidityPoolFeesCurrent MimePlainText
+
+
+-- *** cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent
+
+-- | @GET \/v1\/dapps\/curve-finance-ethereum\/liquidityPoolHourlySnapshots\/current@
+-- 
+-- LiquidityPoolHourlySnapshots (current)
+-- 
+-- Gets liquidityPoolHourlySnapshots.
+-- 
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainDapps-RESTRequest CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent MimeNoContent [CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotDTO] accept
+cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent  _ =
+  _mkRequest "GET" ["/v1/dapps/curve-finance-ethereum/liquidityPoolHourlySnapshots/current"]
+
+data CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent  
+-- | @application/json@
+instance Produces CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent MimeXMsgpack
+-- | @text/json@
+instance Produces CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent MimePlainText
+
+
 -- *** cURVEFINANCEETHEREUMLiquidityPoolsCurrent
 
 -- | @GET \/v1\/dapps\/curve-finance-ethereum\/liquidityPools\/current@
@@ -73,6 +298,11 @@ cURVEFINANCEETHEREUMLiquidityPoolsCurrent  _ =
   _mkRequest "GET" ["/v1/dapps/curve-finance-ethereum/liquidityPools/current"]
 
 data CURVEFINANCEETHEREUMLiquidityPoolsCurrent  
+
+-- | /Optional Param/ "id" - Smart contract address of the pool
+instance HasOptionalParam CURVEFINANCEETHEREUMLiquidityPoolsCurrent Id where
+  applyOptionalParam req (Id xs) =
+    req `addQuery` toQuery ("id", Just xs)
 -- | @application/json@
 instance Produces CURVEFINANCEETHEREUMLiquidityPoolsCurrent MimeJSON
 -- | @application/x-msgpack@
@@ -81,6 +311,56 @@ instance Produces CURVEFINANCEETHEREUMLiquidityPoolsCurrent MimeXMsgpack
 instance Produces CURVEFINANCEETHEREUMLiquidityPoolsCurrent MimeTextJson
 -- | @text/plain@
 instance Produces CURVEFINANCEETHEREUMLiquidityPoolsCurrent MimePlainText
+
+
+-- *** cURVEFINANCEETHEREUMLpTokensCurrent
+
+-- | @GET \/v1\/dapps\/curve-finance-ethereum\/lpTokens\/current@
+-- 
+-- LpTokens (current)
+-- 
+-- Gets lpTokens.
+-- 
+cURVEFINANCEETHEREUMLpTokensCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainDapps-RESTRequest CURVEFINANCEETHEREUMLpTokensCurrent MimeNoContent [CURVEFINANCEETHEREUMLpTokenDTO] accept
+cURVEFINANCEETHEREUMLpTokensCurrent  _ =
+  _mkRequest "GET" ["/v1/dapps/curve-finance-ethereum/lpTokens/current"]
+
+data CURVEFINANCEETHEREUMLpTokensCurrent  
+-- | @application/json@
+instance Produces CURVEFINANCEETHEREUMLpTokensCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CURVEFINANCEETHEREUMLpTokensCurrent MimeXMsgpack
+-- | @text/json@
+instance Produces CURVEFINANCEETHEREUMLpTokensCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CURVEFINANCEETHEREUMLpTokensCurrent MimePlainText
+
+
+-- *** cURVEFINANCEETHEREUMRewardTokensCurrent
+
+-- | @GET \/v1\/dapps\/curve-finance-ethereum\/rewardTokens\/current@
+-- 
+-- RewardTokens (current)
+-- 
+-- Gets rewardTokens.
+-- 
+cURVEFINANCEETHEREUMRewardTokensCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainDapps-RESTRequest CURVEFINANCEETHEREUMRewardTokensCurrent MimeNoContent [CURVEFINANCEETHEREUMRewardTokenDTO] accept
+cURVEFINANCEETHEREUMRewardTokensCurrent  _ =
+  _mkRequest "GET" ["/v1/dapps/curve-finance-ethereum/rewardTokens/current"]
+
+data CURVEFINANCEETHEREUMRewardTokensCurrent  
+-- | @application/json@
+instance Produces CURVEFINANCEETHEREUMRewardTokensCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CURVEFINANCEETHEREUMRewardTokensCurrent MimeXMsgpack
+-- | @text/json@
+instance Produces CURVEFINANCEETHEREUMRewardTokensCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CURVEFINANCEETHEREUMRewardTokensCurrent MimePlainText
 
 
 -- *** cURVEFINANCEETHEREUMSwapsCurrent
@@ -123,6 +403,11 @@ cURVEFINANCEETHEREUMTokensCurrent  _ =
   _mkRequest "GET" ["/v1/dapps/curve-finance-ethereum/tokens/current"]
 
 data CURVEFINANCEETHEREUMTokensCurrent  
+
+-- | /Optional Param/ "id" - Smart contract address of the token
+instance HasOptionalParam CURVEFINANCEETHEREUMTokensCurrent Id where
+  applyOptionalParam req (Id xs) =
+    req `addQuery` toQuery ("id", Just xs)
 -- | @application/json@
 instance Produces CURVEFINANCEETHEREUMTokensCurrent MimeJSON
 -- | @application/x-msgpack@
@@ -131,4 +416,79 @@ instance Produces CURVEFINANCEETHEREUMTokensCurrent MimeXMsgpack
 instance Produces CURVEFINANCEETHEREUMTokensCurrent MimeTextJson
 -- | @text/plain@
 instance Produces CURVEFINANCEETHEREUMTokensCurrent MimePlainText
+
+
+-- *** cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent
+
+-- | @GET \/v1\/dapps\/curve-finance-ethereum\/usageMetricsDailySnapshots\/current@
+-- 
+-- UsageMetricsDailySnapshots (current)
+-- 
+-- Gets usageMetricsDailySnapshots.
+-- 
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainDapps-RESTRequest CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent MimeNoContent [CURVEFINANCEETHEREUMUsageMetricsDailySnapshotDTO] accept
+cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent  _ =
+  _mkRequest "GET" ["/v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current"]
+
+data CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent  
+-- | @application/json@
+instance Produces CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent MimeXMsgpack
+-- | @text/json@
+instance Produces CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent MimePlainText
+
+
+-- *** cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent
+
+-- | @GET \/v1\/dapps\/curve-finance-ethereum\/usageMetricsHourlySnapshots\/current@
+-- 
+-- UsageMetricsHourlySnapshots (current)
+-- 
+-- Gets usageMetricsHourlySnapshots.
+-- 
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainDapps-RESTRequest CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent MimeNoContent [CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO] accept
+cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent  _ =
+  _mkRequest "GET" ["/v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current"]
+
+data CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent  
+-- | @application/json@
+instance Produces CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent MimeXMsgpack
+-- | @text/json@
+instance Produces CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent MimePlainText
+
+
+-- *** cURVEFINANCEETHEREUMWithdrawsCurrent
+
+-- | @GET \/v1\/dapps\/curve-finance-ethereum\/withdraws\/current@
+-- 
+-- Withdraws (current)
+-- 
+-- Gets withdraws.
+-- 
+cURVEFINANCEETHEREUMWithdrawsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainDapps-RESTRequest CURVEFINANCEETHEREUMWithdrawsCurrent MimeNoContent [CURVEFINANCEETHEREUMWithdrawDTO] accept
+cURVEFINANCEETHEREUMWithdrawsCurrent  _ =
+  _mkRequest "GET" ["/v1/dapps/curve-finance-ethereum/withdraws/current"]
+
+data CURVEFINANCEETHEREUMWithdrawsCurrent  
+-- | @application/json@
+instance Produces CURVEFINANCEETHEREUMWithdrawsCurrent MimeJSON
+-- | @application/x-msgpack@
+instance Produces CURVEFINANCEETHEREUMWithdrawsCurrent MimeXMsgpack
+-- | @text/json@
+instance Produces CURVEFINANCEETHEREUMWithdrawsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CURVEFINANCEETHEREUMWithdrawsCurrent MimePlainText
 

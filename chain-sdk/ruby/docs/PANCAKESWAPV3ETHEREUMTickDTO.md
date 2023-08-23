@@ -7,7 +7,6 @@
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
 | **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
-| **vid** | **Integer** |  | [optional] |
 | **id** | **String** | (pool address)-(tick index) | [optional] |
 | **index** | **String** | tick index | [optional] |
 | **pool** | **String** | Liquidity pool this tick belongs to | [optional] |
@@ -32,7 +31,6 @@ instance = OpenapiClient::PANCAKESWAPV3ETHEREUMTickDTO.new(
   entry_time: null,
   recv_time: null,
   block_number: null,
-  vid: null,
   id: null,
   index: null,
   pool: null,

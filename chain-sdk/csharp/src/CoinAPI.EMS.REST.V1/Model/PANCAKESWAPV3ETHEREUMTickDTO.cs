@@ -36,7 +36,6 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
-        /// <param name="vid">vid.</param>
         /// <param name="id">(pool address)-(tick index).</param>
         /// <param name="index">tick index.</param>
         /// <param name="pool">Liquidity pool this tick belongs to.</param>
@@ -51,7 +50,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="lastSnapshotHourId">Hour ID of the most recent hourly snapshot.</param>
         /// <param name="lastUpdateTimestamp">Timestamp of the last time this entity was updated.</param>
         /// <param name="lastUpdateBlockNumber">Block number of the last time this entity was updated.</param>
-        public PANCAKESWAPV3ETHEREUMTickDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), long vid = default(long), string id = default(string), string index = default(string), string pool = default(string), string createdTimestamp = default(string), string createdBlockNumber = default(string), List<string> prices = default(List<string>), string liquidityGross = default(string), string liquidityGrossUsd = default(string), string liquidityNet = default(string), string liquidityNetUsd = default(string), int lastSnapshotDayId = default(int), int lastSnapshotHourId = default(int), string lastUpdateTimestamp = default(string), string lastUpdateBlockNumber = default(string))
+        public PANCAKESWAPV3ETHEREUMTickDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), string id = default(string), string index = default(string), string pool = default(string), string createdTimestamp = default(string), string createdBlockNumber = default(string), List<string> prices = default(List<string>), string liquidityGross = default(string), string liquidityGrossUsd = default(string), string liquidityNet = default(string), string liquidityNetUsd = default(string), int lastSnapshotDayId = default(int), int lastSnapshotHourId = default(int), string lastUpdateTimestamp = default(string), string lastUpdateBlockNumber = default(string))
         {
             this.Id = id;
             this.Index = index;
@@ -68,7 +67,6 @@ namespace CoinAPI.EMS.REST.V1.Model
             this.EntryTime = entryTime;
             this.RecvTime = recvTime;
             this.BlockNumber = blockNumber;
-            this.Vid = vid;
             this.Id = id;
             this.Index = index;
             this.Pool = pool;
@@ -103,12 +101,6 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <value>Number of block in which entity was recorded.</value>
         [DataMember(Name="block_number", EmitDefaultValue=false)]
         public long BlockNumber { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Vid
-        /// </summary>
-        [DataMember(Name="vid", EmitDefaultValue=false)]
-        public long Vid { get; set; }
 
         /// <summary>
         /// (pool address)-(tick index)
@@ -219,7 +211,6 @@ namespace CoinAPI.EMS.REST.V1.Model
             sb.Append("  EntryTime: ").Append(EntryTime).Append("\n");
             sb.Append("  RecvTime: ").Append(RecvTime).Append("\n");
             sb.Append("  BlockNumber: ").Append(BlockNumber).Append("\n");
-            sb.Append("  Vid: ").Append(Vid).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Index: ").Append(Index).Append("\n");
             sb.Append("  Pool: ").Append(Pool).Append("\n");
@@ -282,11 +273,6 @@ namespace CoinAPI.EMS.REST.V1.Model
                     this.BlockNumber == input.BlockNumber ||
                     (this.BlockNumber != null &&
                     this.BlockNumber.Equals(input.BlockNumber))
-                ) && 
-                (
-                    this.Vid == input.Vid ||
-                    (this.Vid != null &&
-                    this.Vid.Equals(input.Vid))
                 ) && 
                 (
                     this.Id == input.Id ||
@@ -376,8 +362,6 @@ namespace CoinAPI.EMS.REST.V1.Model
                     hashCode = hashCode * 59 + this.RecvTime.GetHashCode();
                 if (this.BlockNumber != null)
                     hashCode = hashCode * 59 + this.BlockNumber.GetHashCode();
-                if (this.Vid != null)
-                    hashCode = hashCode * 59 + this.Vid.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Index != null)

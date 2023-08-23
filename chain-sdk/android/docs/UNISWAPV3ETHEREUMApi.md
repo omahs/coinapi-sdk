@@ -640,7 +640,7 @@ No authorization required
 
 ## uNISWAPV3ETHEREUMTickDailySnapshotsCurrent
 
-> List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt; uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool)
+> List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt; uNISWAPV3ETHEREUMTickDailySnapshotsCurrent()
 
 TickDailySnapshots (current)
 
@@ -653,9 +653,8 @@ Gets tickDailySnapshots.
 //import org.openapitools.client.api.UNISWAPV3ETHEREUMApi;
 
 UNISWAPV3ETHEREUMApi apiInstance = new UNISWAPV3ETHEREUMApi();
-String pool = null; // String | liquidity pool this tick belongs to
 try {
-    List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> result = apiInstance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool);
+    List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> result = apiInstance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UNISWAPV3ETHEREUMApi#uNISWAPV3ETHEREUMTickDailySnapshotsCurrent");
@@ -665,10 +664,7 @@ try {
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **String**| liquidity pool this tick belongs to | [optional] [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -686,7 +682,7 @@ No authorization required
 
 ## uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent
 
-> List&lt;UNISWAPV3ETHEREUMTickHourlySnapshotDTO&gt; uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool)
+> List&lt;UNISWAPV3ETHEREUMTickHourlySnapshotDTO&gt; uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent()
 
 TickHourlySnapshots (current)
 
@@ -699,9 +695,8 @@ Gets tickHourlySnapshots.
 //import org.openapitools.client.api.UNISWAPV3ETHEREUMApi;
 
 UNISWAPV3ETHEREUMApi apiInstance = new UNISWAPV3ETHEREUMApi();
-String pool = null; // String | liquidity pool this tick belongs to
 try {
-    List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> result = apiInstance.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool);
+    List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> result = apiInstance.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UNISWAPV3ETHEREUMApi#uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent");
@@ -711,10 +706,7 @@ try {
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **String**| liquidity pool this tick belongs to | [optional] [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -732,7 +724,7 @@ No authorization required
 
 ## uNISWAPV3ETHEREUMTicksCurrent
 
-> List&lt;UNISWAPV3ETHEREUMTickDTO&gt; uNISWAPV3ETHEREUMTicksCurrent(pool)
+> List&lt;UNISWAPV3ETHEREUMTickDTO&gt; uNISWAPV3ETHEREUMTicksCurrent()
 
 Ticks (current)
 
@@ -745,9 +737,8 @@ Gets ticks.
 //import org.openapitools.client.api.UNISWAPV3ETHEREUMApi;
 
 UNISWAPV3ETHEREUMApi apiInstance = new UNISWAPV3ETHEREUMApi();
-String pool = null; // String | Liquidity pool this tick belongs to
 try {
-    List<UNISWAPV3ETHEREUMTickDTO> result = apiInstance.uNISWAPV3ETHEREUMTicksCurrent(pool);
+    List<UNISWAPV3ETHEREUMTickDTO> result = apiInstance.uNISWAPV3ETHEREUMTicksCurrent();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UNISWAPV3ETHEREUMApi#uNISWAPV3ETHEREUMTicksCurrent");
@@ -757,10 +748,7 @@ try {
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **String**| Liquidity pool this tick belongs to | [optional] [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 

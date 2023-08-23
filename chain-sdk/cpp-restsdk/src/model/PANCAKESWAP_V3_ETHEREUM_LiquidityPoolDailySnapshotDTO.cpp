@@ -29,8 +29,6 @@ PANCAKESWAP_V3_ETHEREUM_LiquidityPoolDailySnapshotDTO::PANCAKESWAP_V3_ETHEREUM_L
     m_Recv_timeIsSet = false;
     m_Block_number = 0L;
     m_Block_numberIsSet = false;
-    m_Vid = 0L;
-    m_VidIsSet = false;
     m_Block_ = 0;
     m_Block_IsSet = false;
     m_Id = utility::conversions::to_string_t("");
@@ -131,10 +129,6 @@ web::json::value PANCAKESWAP_V3_ETHEREUM_LiquidityPoolDailySnapshotDTO::toJson()
     if(m_Block_numberIsSet)
     {
         val[utility::conversions::to_string_t(U("block_number"))] = ModelBase::toJson(m_Block_number);
-    }
-    if(m_VidIsSet)
-    {
-        val[utility::conversions::to_string_t(U("vid"))] = ModelBase::toJson(m_Vid);
     }
     if(m_Block_IsSet)
     {
@@ -344,16 +338,6 @@ bool PANCAKESWAP_V3_ETHEREUM_LiquidityPoolDailySnapshotDTO::fromJson(const web::
             int64_t refVal_setBlockNumber;
             ok &= ModelBase::fromJson(fieldValue, refVal_setBlockNumber);
             setBlockNumber(refVal_setBlockNumber);
-        }
-    }
-    if(val.has_field(utility::conversions::to_string_t(U("vid"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(U("vid")));
-        if(!fieldValue.is_null())
-        {
-            int64_t refVal_setVid;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setVid);
-            setVid(refVal_setVid);
         }
     }
     if(val.has_field(utility::conversions::to_string_t(U("block_"))))
@@ -808,10 +792,6 @@ void PANCAKESWAP_V3_ETHEREUM_LiquidityPoolDailySnapshotDTO::toMultipart(std::sha
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(U("block_number")), m_Block_number));
     }
-    if(m_VidIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(U("vid")), m_Vid));
-    }
     if(m_Block_IsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(U("block_")), m_Block_));
@@ -1012,12 +992,6 @@ bool PANCAKESWAP_V3_ETHEREUM_LiquidityPoolDailySnapshotDTO::fromMultiPart(std::s
         int64_t refVal_setBlockNumber;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(U("block_number"))), refVal_setBlockNumber );
         setBlockNumber(refVal_setBlockNumber);
-    }
-    if(multipart->hasContent(utility::conversions::to_string_t(U("vid"))))
-    {
-        int64_t refVal_setVid;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(U("vid"))), refVal_setVid );
-        setVid(refVal_setVid);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(U("block_"))))
     {
@@ -1339,26 +1313,6 @@ bool PANCAKESWAP_V3_ETHEREUM_LiquidityPoolDailySnapshotDTO::blockNumberIsSet() c
 void PANCAKESWAP_V3_ETHEREUM_LiquidityPoolDailySnapshotDTO::unsetBlock_number()
 {
     m_Block_numberIsSet = false;
-}
-int64_t PANCAKESWAP_V3_ETHEREUM_LiquidityPoolDailySnapshotDTO::getVid() const
-{
-    return m_Vid;
-}
-
-void PANCAKESWAP_V3_ETHEREUM_LiquidityPoolDailySnapshotDTO::setVid(int64_t value)
-{
-    m_Vid = value;
-    m_VidIsSet = true;
-}
-
-bool PANCAKESWAP_V3_ETHEREUM_LiquidityPoolDailySnapshotDTO::vidIsSet() const
-{
-    return m_VidIsSet;
-}
-
-void PANCAKESWAP_V3_ETHEREUM_LiquidityPoolDailySnapshotDTO::unsetVid()
-{
-    m_VidIsSet = false;
 }
 int32_t PANCAKESWAP_V3_ETHEREUM_LiquidityPoolDailySnapshotDTO::getBlock() const
 {

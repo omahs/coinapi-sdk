@@ -383,7 +383,7 @@ No authorization required
 
 <a id="pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent"></a>
 # **pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**
-> List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt; pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool)
+> List&lt;PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO&gt; pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent()
 
 LiquidityPoolDailySnapshots (current)
 
@@ -404,9 +404,8 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     PancakeswapV3EthereumApi apiInstance = new PancakeswapV3EthereumApi(defaultClient);
-    String pool = "pool_example"; // String | Pool this snapshot belongs to.
     try {
-      List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> result = apiInstance.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool);
+      List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> result = apiInstance.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling PancakeswapV3EthereumApi#pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent");
@@ -420,10 +419,7 @@ public class Example {
 ```
 
 ### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pool** | **String**| Pool this snapshot belongs to. | [optional] |
+This endpoint does not need any parameter.
 
 ### Return type
 

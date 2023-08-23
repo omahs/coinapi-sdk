@@ -20,7 +20,7 @@ module OpenapiClient
 
     attr_accessor :recv_time
 
-    # Block number of when this snapshot was taken/last modified.)
+    # Number of block in which entity was recorded.
     attr_accessor :block_number
 
     # ID is # of days since Unix epoch time.

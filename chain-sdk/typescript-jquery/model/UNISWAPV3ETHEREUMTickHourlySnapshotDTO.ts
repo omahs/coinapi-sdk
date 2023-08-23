@@ -26,11 +26,6 @@ export interface UNISWAPV3ETHEREUMTickHourlySnapshotDTO {
     block_number?: number;
 
     /**
-     * 
-     */
-    vid?: number;
-
-    /**
      * (pool address)-(tick index)-(hour ID)
      */
     id?: string;

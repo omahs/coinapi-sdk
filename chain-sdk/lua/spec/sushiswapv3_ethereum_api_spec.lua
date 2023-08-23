@@ -15,8 +15,92 @@ Please update as you see appropriate
 ]]
 describe("sushiswapv3_ethereum_api", function()
   local openapiclient_sushiswapv3_ethereum_api = require "openapiclient.api.sushiswapv3_ethereum_api"
+  -- unit tests for s_ushiswapv3_ethereum_accounts__current
+  describe("s_ushiswapv3_ethereum_accounts__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for s_ushiswapv3_ethereum_active_accounts__current
+  describe("s_ushiswapv3_ethereum_active_accounts__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for s_ushiswapv3_ethereum_deposits__current
+  describe("s_ushiswapv3_ethereum_deposits__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for s_ushiswapv3_ethereum_dex_amm_protocols__current
+  describe("s_ushiswapv3_ethereum_dex_amm_protocols__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for s_ushiswapv3_ethereum_financials_daily_snapshots__current
+  describe("s_ushiswapv3_ethereum_financials_daily_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for s_ushiswapv3_ethereum_liquidity_pool_amounts__current
+  describe("s_ushiswapv3_ethereum_liquidity_pool_amounts__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for s_ushiswapv3_ethereum_liquidity_pool_daily_snapshots__current
+  describe("s_ushiswapv3_ethereum_liquidity_pool_daily_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for s_ushiswapv3_ethereum_liquidity_pool_fees__current
+  describe("s_ushiswapv3_ethereum_liquidity_pool_fees__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for s_ushiswapv3_ethereum_liquidity_pool_hourly_snapshots__current
+  describe("s_ushiswapv3_ethereum_liquidity_pool_hourly_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for s_ushiswapv3_ethereum_liquidity_pools__current
   describe("s_ushiswapv3_ethereum_liquidity_pools__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for s_ushiswapv3_ethereum_position_snapshots__current
+  describe("s_ushiswapv3_ethereum_position_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for s_ushiswapv3_ethereum_positions__current
+  describe("s_ushiswapv3_ethereum_positions__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for s_ushiswapv3_ethereum_reward_tokens__current
+  describe("s_ushiswapv3_ethereum_reward_tokens__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -29,8 +113,64 @@ describe("sushiswapv3_ethereum_api", function()
     end)
   end)
 
+  -- unit tests for s_ushiswapv3_ethereum_tick_daily_snapshots__current
+  describe("s_ushiswapv3_ethereum_tick_daily_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for s_ushiswapv3_ethereum_tick_hourly_snapshots__current
+  describe("s_ushiswapv3_ethereum_tick_hourly_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for s_ushiswapv3_ethereum_ticks__current
+  describe("s_ushiswapv3_ethereum_ticks__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for s_ushiswapv3_ethereum_token_white_list_symbols__current
+  describe("s_ushiswapv3_ethereum_token_white_list_symbols__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for s_ushiswapv3_ethereum_token_white_lists__current
+  describe("s_ushiswapv3_ethereum_token_white_lists__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for s_ushiswapv3_ethereum_tokens__current
   describe("s_ushiswapv3_ethereum_tokens__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for s_ushiswapv3_ethereum_usage_metrics_daily_snapshots__current
+  describe("s_ushiswapv3_ethereum_usage_metrics_daily_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for s_ushiswapv3_ethereum_usage_metrics_hourly_snapshots__current
+  describe("s_ushiswapv3_ethereum_usage_metrics_hourly_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for s_ushiswapv3_ethereum_withdraws__current
+  describe("s_ushiswapv3_ethereum_withdraws__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

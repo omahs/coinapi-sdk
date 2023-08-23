@@ -7,7 +7,7 @@
 -type openapi_curve_finance_ethereum_swap_dto() ::
     #{ 'entry_time' => openapi_date_time:openapi_date_time(),
        'recv_time' => openapi_date_time:openapi_date_time(),
-       'block_number' => binary(),
+       'block_number' => integer(),
        'id' => binary(),
        'hash' => binary(),
        'log_index' => integer(),

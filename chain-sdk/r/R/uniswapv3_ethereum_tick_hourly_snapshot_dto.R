@@ -10,7 +10,6 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field vid  integer [optional]
 #' @field id (pool address)-(tick index)-(hour ID) character [optional]
 #' @field hour_id Number of hours since Unix epoch time integer [optional]
 #' @field tick tick index character [optional]
@@ -29,7 +28,6 @@ UNISWAPV3ETHEREUMTickHourlySnapshotDTO <- R6::R6Class(
     `entry_time` = NULL,
     `recv_time` = NULL,
     `block_number` = NULL,
-    `vid` = NULL,
     `id` = NULL,
     `hour_id` = NULL,
     `tick` = NULL,
@@ -47,7 +45,6 @@ UNISWAPV3ETHEREUMTickHourlySnapshotDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param vid 
     #' @param id (pool address)-(tick index)-(hour ID)
     #' @param hour_id Number of hours since Unix epoch time
     #' @param tick tick index
@@ -59,7 +56,7 @@ UNISWAPV3ETHEREUMTickHourlySnapshotDTO <- R6::R6Class(
     #' @param timestamp Timestamp of when this snapshot was taken/last modified (May be taken after interval has passed)
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `vid` = NULL, `id` = NULL, `hour_id` = NULL, `tick` = NULL, `pool` = NULL, `liquidity_gross` = NULL, `liquidity_gross_usd` = NULL, `liquidity_net` = NULL, `liquidity_net_usd` = NULL, `timestamp` = NULL, ...) {
+    initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `id` = NULL, `hour_id` = NULL, `tick` = NULL, `pool` = NULL, `liquidity_gross` = NULL, `liquidity_gross_usd` = NULL, `liquidity_net` = NULL, `liquidity_net_usd` = NULL, `timestamp` = NULL, ...) {
       if (!is.null(`entry_time`)) {
         if (!is.character(`entry_time`)) {
           stop(paste("Error! Invalid data for `entry_time`. Must be a string:", `entry_time`))
@@ -77,12 +74,6 @@ UNISWAPV3ETHEREUMTickHourlySnapshotDTO <- R6::R6Class(
           stop(paste("Error! Invalid data for `block_number`. Must be an integer:", `block_number`))
         }
         self$`block_number` <- `block_number`
-      }
-      if (!is.null(`vid`)) {
-        if (!(is.numeric(`vid`) && length(`vid`) == 1)) {
-          stop(paste("Error! Invalid data for `vid`. Must be an integer:", `vid`))
-        }
-        self$`vid` <- `vid`
       }
       if (!is.null(`id`)) {
         if (!(is.character(`id`) && length(`id`) == 1)) {
@@ -160,10 +151,6 @@ UNISWAPV3ETHEREUMTickHourlySnapshotDTO <- R6::R6Class(
         UNISWAPV3ETHEREUMTickHourlySnapshotDTOObject[["block_number"]] <-
           self$`block_number`
       }
-      if (!is.null(self$`vid`)) {
-        UNISWAPV3ETHEREUMTickHourlySnapshotDTOObject[["vid"]] <-
-          self$`vid`
-      }
       if (!is.null(self$`id`)) {
         UNISWAPV3ETHEREUMTickHourlySnapshotDTOObject[["id"]] <-
           self$`id`
@@ -220,9 +207,6 @@ UNISWAPV3ETHEREUMTickHourlySnapshotDTO <- R6::R6Class(
       }
       if (!is.null(this_object$`block_number`)) {
         self$`block_number` <- this_object$`block_number`
-      }
-      if (!is.null(this_object$`vid`)) {
-        self$`vid` <- this_object$`vid`
       }
       if (!is.null(this_object$`id`)) {
         self$`id` <- this_object$`id`
@@ -284,14 +268,6 @@ UNISWAPV3ETHEREUMTickHourlySnapshotDTO <- R6::R6Class(
             %d
                     ',
           self$`block_number`
-          )
-        },
-        if (!is.null(self$`vid`)) {
-          sprintf(
-          '"vid":
-            %d
-                    ',
-          self$`vid`
           )
         },
         if (!is.null(self$`id`)) {
@@ -383,7 +359,6 @@ UNISWAPV3ETHEREUMTickHourlySnapshotDTO <- R6::R6Class(
       self$`entry_time` <- this_object$`entry_time`
       self$`recv_time` <- this_object$`recv_time`
       self$`block_number` <- this_object$`block_number`
-      self$`vid` <- this_object$`vid`
       self$`id` <- this_object$`id`
       self$`hour_id` <- this_object$`hour_id`
       self$`tick` <- this_object$`tick`

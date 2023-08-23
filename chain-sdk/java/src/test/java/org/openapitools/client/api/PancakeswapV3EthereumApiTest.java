@@ -141,8 +141,7 @@ public class PancakeswapV3EthereumApiTest {
      */
     @Test
     public void pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentTest() throws ApiException {
-        String pool = null;
-        List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> response = api.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool);
+        List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> response = api.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent();
         // TODO: test validations
     }
 

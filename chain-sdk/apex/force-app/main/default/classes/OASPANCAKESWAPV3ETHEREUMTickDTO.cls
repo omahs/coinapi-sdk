@@ -33,12 +33,6 @@ public class OASPANCAKESWAPV3ETHEREUMTickDTO implements OAS.MappedProperties {
     public Long blockNumber { get; set; }
 
     /**
-     * 
-     * @return vid
-     */
-    public Long vid { get; set; }
-
-    /**
      * (pool address)-(tick index)
      * @return id
      */
@@ -391,7 +385,6 @@ public class OASPANCAKESWAPV3ETHEREUMTickDTO implements OAS.MappedProperties {
           paNCAKESWAPV3ETHEREUMTickDTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           paNCAKESWAPV3ETHEREUMTickDTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           paNCAKESWAPV3ETHEREUMTickDTO.blockNumber = 123456789L;
-          paNCAKESWAPV3ETHEREUMTickDTO.vid = 123456789L;
           paNCAKESWAPV3ETHEREUMTickDTO.id = '';
           paNCAKESWAPV3ETHEREUMTickDTO.index = '';
           paNCAKESWAPV3ETHEREUMTickDTO.pool = '';
@@ -415,7 +408,6 @@ public class OASPANCAKESWAPV3ETHEREUMTickDTO implements OAS.MappedProperties {
             return this.entryTime == paNCAKESWAPV3ETHEREUMTickDTO.entryTime
                 && this.recvTime == paNCAKESWAPV3ETHEREUMTickDTO.recvTime
                 && this.blockNumber == paNCAKESWAPV3ETHEREUMTickDTO.blockNumber
-                && this.vid == paNCAKESWAPV3ETHEREUMTickDTO.vid
                 && this.id == paNCAKESWAPV3ETHEREUMTickDTO.id
                 && this.index == paNCAKESWAPV3ETHEREUMTickDTO.index
                 && this.pool == paNCAKESWAPV3ETHEREUMTickDTO.pool
@@ -439,7 +431,6 @@ public class OASPANCAKESWAPV3ETHEREUMTickDTO implements OAS.MappedProperties {
         hashCode = (17 * hashCode) + (entryTime == null ? 0 : System.hashCode(entryTime));
         hashCode = (17 * hashCode) + (recvTime == null ? 0 : System.hashCode(recvTime));
         hashCode = (17 * hashCode) + (blockNumber == null ? 0 : System.hashCode(blockNumber));
-        hashCode = (17 * hashCode) + (vid == null ? 0 : System.hashCode(vid));
         hashCode = (17 * hashCode) + (id == null ? 0 : System.hashCode(id));
         hashCode = (17 * hashCode) + (index == null ? 0 : System.hashCode(index));
         hashCode = (17 * hashCode) + (pool == null ? 0 : System.hashCode(pool));

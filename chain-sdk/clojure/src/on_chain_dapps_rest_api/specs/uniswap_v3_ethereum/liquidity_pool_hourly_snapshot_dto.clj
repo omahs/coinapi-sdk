@@ -10,7 +10,6 @@
    (ds/opt :entry_time) inst?
    (ds/opt :recv_time) inst?
    (ds/opt :block_number) int?
-   (ds/opt :vid) int?
    (ds/opt :id) string?
    (ds/opt :hour) int?
    (ds/opt :protocol) string?

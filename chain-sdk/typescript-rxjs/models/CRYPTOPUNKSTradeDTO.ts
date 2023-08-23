@@ -27,11 +27,11 @@ export interface CRYPTOPUNKSTradeDTO {
      */
     recv_time?: string;
     /**
-     * 
-     * @type {string}
+     * Number of block in which entity was recorded.
+     * @type {number}
      * @memberof CRYPTOPUNKSTradeDTO
      */
-    block_number?: string | null;
+    block_number?: number;
     /**
      * 
      * @type {number}

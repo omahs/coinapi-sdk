@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
-**BlockNumber** | **Int32** | Block number of when this snapshot was taken/last modified.) | [optional] 
+**BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
 **Id** | **String** | ID is # of days since Unix epoch time. | [optional] 
 **Day** | **Int32** | Number of days since Unix epoch time. | [optional] 
 **Protocol** | **String** | Protocol this snapshot is associated with. | [optional] 

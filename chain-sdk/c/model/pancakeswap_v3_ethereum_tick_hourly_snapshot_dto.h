@@ -22,7 +22,6 @@ typedef struct pancakeswap_v3_ethereum_tick_hourly_snapshot_dto_t {
     char *entry_time; //date time
     char *recv_time; //date time
     long block_number; //numeric
-    long vid; //numeric
     char *id; // string
     int hour_id; //numeric
     char *tick; // string
@@ -39,7 +38,6 @@ pancakeswap_v3_ethereum_tick_hourly_snapshot_dto_t *pancakeswap_v3_ethereum_tick
     char *entry_time,
     char *recv_time,
     long block_number,
-    long vid,
     char *id,
     int hour_id,
     char *tick,

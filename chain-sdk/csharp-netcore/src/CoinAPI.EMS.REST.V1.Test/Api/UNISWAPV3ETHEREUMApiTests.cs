@@ -221,8 +221,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         public void UNISWAPV3ETHEREUMTickDailySnapshotsCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string pool = null;
-            //var response = instance.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool);
+            //var response = instance.UNISWAPV3ETHEREUMTickDailySnapshotsCurrent();
             //Assert.IsType<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>(response);
         }
 
@@ -233,8 +232,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         public void UNISWAPV3ETHEREUMTickHourlySnapshotsCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string pool = null;
-            //var response = instance.UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool);
+            //var response = instance.UNISWAPV3ETHEREUMTickHourlySnapshotsCurrent();
             //Assert.IsType<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>(response);
         }
 
@@ -245,8 +243,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         public void UNISWAPV3ETHEREUMTicksCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string pool = null;
-            //var response = instance.UNISWAPV3ETHEREUMTicksCurrent(pool);
+            //var response = instance.UNISWAPV3ETHEREUMTicksCurrent();
             //Assert.IsType<List<UNISWAPV3ETHEREUMTickDTO>>(response);
         }
 

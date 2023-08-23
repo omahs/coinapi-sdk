@@ -1,0 +1,21 @@
+# OnChainDappsRestApi.CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotDTO
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**entryTime** | **Date** |  | [optional] 
+**recvTime** | **Date** |  | [optional] 
+**blockNumber** | **Number** | Number of block in which entity was recorded. | [optional] 
+**blockRange** | **String** |  | [optional] 
+**id** | **String** | ID is # of days since Unix epoch time | [optional] 
+**protocol** | **String** | Protocol this snapshot is associated with | [optional] 
+**hourlyActiveUsers** | **Number** | Number of unique daily active users | [optional] 
+**cumulativeUniqueUsers** | **Number** | Number of cumulative unique users | [optional] 
+**hourlyTransactionCount** | **Number** | Total number of transactions occurred in an hour. Transactions include all entities that implement the Event interface. | [optional] 
+**hourlyDepositCount** | **Number** | Total number of deposits (add liquidity) in an hour | [optional] 
+**hourlyWithdrawCount** | **Number** | Total number of withdrawals (remove liquidity) in an hour | [optional] 
+**hourlySwapCount** | **Number** | Total number of trades (swaps) in an hour | [optional] 
+**timestamp** | **String** | Timestamp of this snapshot | [optional] 
+
+

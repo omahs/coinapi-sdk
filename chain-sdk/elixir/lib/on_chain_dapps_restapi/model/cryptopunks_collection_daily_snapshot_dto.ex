@@ -31,7 +31,7 @@ defmodule OnChainDapps-RESTAPI.Model.CryptopunksCollectionDailySnapshotDto do
   @type t :: %__MODULE__{
     :entry_time => DateTime.t | nil,
     :recv_time => DateTime.t | nil,
-    :block_number => String.t | nil,
+    :block_number => integer() | nil,
     :vid => integer() | nil,
     :block_range => String.t | nil,
     :id => String.t | nil,

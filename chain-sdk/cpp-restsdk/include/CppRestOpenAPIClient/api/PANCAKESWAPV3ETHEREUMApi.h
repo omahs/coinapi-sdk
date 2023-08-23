@@ -122,9 +122,7 @@ public:
     /// <remarks>
     /// Gets liquidityPoolDailySnapshots.
     /// </remarks>
-    /// <param name="pool">Pool this snapshot belongs to. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<PANCAKESWAP_V3_ETHEREUM_LiquidityPoolDailySnapshotDTO>>> pANCAKESWAPV3ETHEREUM_LiquidityPoolDailySnapshots__current(
-        boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
     /// LiquidityPoolFees (current)

@@ -249,8 +249,7 @@ public class UniswapV3EthereumApiTest {
      */
     @Test
     public void uNISWAPV3ETHEREUMTickDailySnapshotsCurrentTest() throws ApiException {
-        String pool = null;
-        List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> response = api.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool);
+        List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> response = api.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent();
         // TODO: test validations
     }
 
@@ -263,8 +262,7 @@ public class UniswapV3EthereumApiTest {
      */
     @Test
     public void uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentTest() throws ApiException {
-        String pool = null;
-        List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> response = api.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool);
+        List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> response = api.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent();
         // TODO: test validations
     }
 
@@ -277,8 +275,7 @@ public class UniswapV3EthereumApiTest {
      */
     @Test
     public void uNISWAPV3ETHEREUMTicksCurrentTest() throws ApiException {
-        String pool = null;
-        List<UNISWAPV3ETHEREUMTickDTO> response = api.uNISWAPV3ETHEREUMTicksCurrent(pool);
+        List<UNISWAPV3ETHEREUMTickDTO> response = api.uNISWAPV3ETHEREUMTicksCurrent();
         // TODO: test validations
     }
 

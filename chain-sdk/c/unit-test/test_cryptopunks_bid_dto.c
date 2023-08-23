@@ -24,7 +24,7 @@ cryptopunks_bid_dto_t* instantiate_cryptopunks_bid_dto(int include_optional) {
     cryptopunks_bid_dto = cryptopunks_bid_dto_create(
       "2013-10-20T19:20:30+01:00",
       "2013-10-20T19:20:30+01:00",
-      "0",
+      56,
       56,
       "0",
       "0",
@@ -37,7 +37,7 @@ cryptopunks_bid_dto_t* instantiate_cryptopunks_bid_dto(int include_optional) {
     cryptopunks_bid_dto = cryptopunks_bid_dto_create(
       "2013-10-20T19:20:30+01:00",
       "2013-10-20T19:20:30+01:00",
-      "0",
+      56,
       56,
       "0",
       "0",

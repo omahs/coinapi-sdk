@@ -11,7 +11,6 @@ Key | Input Type | Accessed Type | Description | Notes
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
-**vid** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 64 bit integer
 **id** | None, str,  | NoneClass, str,  | (pool address)-(tick index) | [optional] 
 **index** | None, str,  | NoneClass, str,  | tick index | [optional] 
 **pool** | None, str,  | NoneClass, str,  | Liquidity pool this tick belongs to | [optional] 

@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entryUnderscoretime** | **string** |  | [optional] [default to null]
 **recvUnderscoretime** | **string** |  | [optional] [default to null]
-**blockUnderscorenumber** | **string** |  | [optional] [default to null]
+**blockUnderscorenumber** | **integer** |  | [optional] [default to null]
 **id** | **string** |  | [optional] [default to null]
 **hash** | **string** |  | [optional] [default to null]
 **logUnderscoreindex** | **integer** |  | [optional] [default to null]

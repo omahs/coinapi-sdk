@@ -26,13 +26,6 @@ API.Client.PANCAKESWAPV3ETHEREUMPositionDTO.prototype.recvTime;
 API.Client.PANCAKESWAPV3ETHEREUMPositionDTO.prototype.blockNumber;
 
 /**
- * 
- * @type {!number}
- * @export
- */
-API.Client.PANCAKESWAPV3ETHEREUMPositionDTO.prototype.vid;
-
-/**
  * (account address)-(market address)-(count)
  * @type {!string}
  * @export

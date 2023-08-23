@@ -70,8 +70,7 @@ isa_ok($api, 'WWW::OpenAPIClient::PANCAKESWAPV3ETHEREUMApi');
 # p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current test
 #
 # uncomment below and update the test
-#my $p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current_pool = undef; # replace NULL with a proper value
-#my $p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current_result = $api->p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current(pool => $p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current_pool);
+#my $p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current_result = $api->p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current();
 
 #
 # p_ancakeswapv3_ethereum_liquidity_pool_fees__current test

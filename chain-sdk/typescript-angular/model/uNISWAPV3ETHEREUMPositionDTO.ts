@@ -22,10 +22,6 @@ export interface UNISWAPV3ETHEREUMPositionDTO {
      */
     block_number?: number;
     /**
-     * 
-     */
-    vid?: number;
-    /**
      * (account address)-(market address)-(count)
      */
     id?: string | null;

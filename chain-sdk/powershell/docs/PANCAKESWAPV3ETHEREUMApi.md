@@ -265,7 +265,6 @@ No authorization required
 <a id="Invoke-PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent"></a>
 # **Invoke-PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent**
 > PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[] Invoke-PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pool] <String><br>
 
 LiquidityPoolDailySnapshots (current)
 
@@ -273,11 +272,10 @@ Gets liquidityPoolDailySnapshots.
 
 ### Example
 ```powershell
-$Pool = "MyPool" # String | Pool this snapshot belongs to. (optional)
 
 # LiquidityPoolDailySnapshots (current)
 try {
-    $Result = Invoke-PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent -Pool $Pool
+    $Result = Invoke-PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
 } catch {
     Write-Host ("Exception occurred when calling Invoke-PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -285,10 +283,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **Pool** | **String**| Pool this snapshot belongs to. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 

@@ -24,7 +24,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param entryTime 
  * @param recvTime 
- * @param blockNumber 
+ * @param blockNumber Number of block in which entity was recorded.
  * @param vid 
  * @param blockRange 
  * @param id 
@@ -49,9 +49,9 @@ data class CRYPTOPUNKSTradeDTO (
     @Json(name = "recv_time")
     val recvTime: java.time.OffsetDateTime? = null,
 
-    /*  */
+    /* Number of block in which entity was recorded. */
     @Json(name = "block_number")
-    val blockNumber: kotlin.String? = null,
+    val blockNumber: kotlin.Long? = null,
 
     /*  */
     @Json(name = "vid")

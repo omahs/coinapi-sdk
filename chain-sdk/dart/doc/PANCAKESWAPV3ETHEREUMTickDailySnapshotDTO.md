@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **entryTime** | [**DateTime**](DateTime.md) |  | [optional] 
 **recvTime** | [**DateTime**](DateTime.md) |  | [optional] 
 **blockNumber** | **int** | Number of block in which entity was recorded. | [optional] 
-**vid** | **int** |  | [optional] 
 **id** | **String** | Identifier, format: (pool address)-(tick index)-(day ID) | [optional] 
 **dayId** | **int** | Number of days since Unix epoch time | [optional] 
 **tick** | **String** | tick index | [optional] 

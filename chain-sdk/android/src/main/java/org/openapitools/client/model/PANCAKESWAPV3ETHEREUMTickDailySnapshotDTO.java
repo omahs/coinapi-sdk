@@ -28,8 +28,6 @@ public class PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO {
   private Date recvTime = null;
   @SerializedName("block_number")
   private Long blockNumber = null;
-  @SerializedName("vid")
-  private Long vid = null;
   @SerializedName("id")
   private String id = null;
   @SerializedName("day_id")
@@ -78,17 +76,6 @@ public class PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO {
   }
   public void setBlockNumber(Long blockNumber) {
     this.blockNumber = blockNumber;
-  }
-
-  /**
-   * 
-   **/
-  @ApiModelProperty(value = "")
-  public Long getVid() {
-    return vid;
-  }
-  public void setVid(Long vid) {
-    this.vid = vid;
   }
 
   /**
@@ -203,7 +190,6 @@ public class PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO {
     return (this.entryTime == null ? pANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.entryTime == null : this.entryTime.equals(pANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.entryTime)) &&
         (this.recvTime == null ? pANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.recvTime == null : this.recvTime.equals(pANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.recvTime)) &&
         (this.blockNumber == null ? pANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.blockNumber == null : this.blockNumber.equals(pANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.blockNumber)) &&
-        (this.vid == null ? pANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.vid == null : this.vid.equals(pANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.vid)) &&
         (this.id == null ? pANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.id == null : this.id.equals(pANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.id)) &&
         (this.dayId == null ? pANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.dayId == null : this.dayId.equals(pANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.dayId)) &&
         (this.tick == null ? pANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.tick == null : this.tick.equals(pANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.tick)) &&
@@ -221,7 +207,6 @@ public class PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO {
     result = 31 * result + (this.entryTime == null ? 0: this.entryTime.hashCode());
     result = 31 * result + (this.recvTime == null ? 0: this.recvTime.hashCode());
     result = 31 * result + (this.blockNumber == null ? 0: this.blockNumber.hashCode());
-    result = 31 * result + (this.vid == null ? 0: this.vid.hashCode());
     result = 31 * result + (this.id == null ? 0: this.id.hashCode());
     result = 31 * result + (this.dayId == null ? 0: this.dayId.hashCode());
     result = 31 * result + (this.tick == null ? 0: this.tick.hashCode());
@@ -242,7 +227,6 @@ public class PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO {
     sb.append("  entryTime: ").append(entryTime).append("\n");
     sb.append("  recvTime: ").append(recvTime).append("\n");
     sb.append("  blockNumber: ").append(blockNumber).append("\n");
-    sb.append("  vid: ").append(vid).append("\n");
     sb.append("  id: ").append(id).append("\n");
     sb.append("  dayId: ").append(dayId).append("\n");
     sb.append("  tick: ").append(tick).append("\n");

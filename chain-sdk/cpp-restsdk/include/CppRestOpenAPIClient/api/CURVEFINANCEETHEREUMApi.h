@@ -23,9 +23,24 @@
 
 #include "CppRestOpenAPIClient/ApiClient.h"
 
+#include "CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_AccountDTO.h"
+#include "CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_ActiveAccountDTO.h"
+#include "CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_DepositDTO.h"
+#include "CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_DexAmmProtocolDTO.h"
+#include "CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_FinancialsDailySnapshotDTO.h"
+#include "CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_LiquidityGaugeDTO.h"
 #include "CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_LiquidityPoolDTO.h"
+#include "CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_LiquidityPoolDailySnapshotDTO.h"
+#include "CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_LiquidityPoolFeeDTO.h"
+#include "CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_LiquidityPoolHourlySnapshotDTO.h"
+#include "CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_LpTokenDTO.h"
+#include "CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_RewardTokenDTO.h"
 #include "CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_SwapDTO.h"
 #include "CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_TokenDTO.h"
+#include "CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_UsageMetricsDailySnapshotDTO.h"
+#include "CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_UsageMetricsHourlySnapshotDTO.h"
+#include "CppRestOpenAPIClient/model/CURVE_FINANCE_ETHEREUM_WithdrawDTO.h"
+#include <cpprest/details/basic_types.h>
 #include <boost/optional.hpp>
 
 namespace org {
@@ -46,12 +61,102 @@ public:
     virtual ~CURVEFINANCEETHEREUMApi();
 
     /// <summary>
+    /// Accounts (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets accounts.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<CURVE_FINANCE_ETHEREUM_AccountDTO>>> cURVEFINANCEETHEREUM_Accounts__current(
+    ) const;
+    /// <summary>
+    /// ActiveAccounts (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets activeAccounts.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<CURVE_FINANCE_ETHEREUM_ActiveAccountDTO>>> cURVEFINANCEETHEREUM_ActiveAccounts__current(
+    ) const;
+    /// <summary>
+    /// Deposits (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets deposits.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<CURVE_FINANCE_ETHEREUM_DepositDTO>>> cURVEFINANCEETHEREUM_Deposits__current(
+    ) const;
+    /// <summary>
+    /// DexAmmProtocols (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets dexAmmProtocols.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<CURVE_FINANCE_ETHEREUM_DexAmmProtocolDTO>>> cURVEFINANCEETHEREUM_DexAmmProtocols__current(
+    ) const;
+    /// <summary>
+    /// FinancialsDailySnapshots (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets financialsDailySnapshots.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<CURVE_FINANCE_ETHEREUM_FinancialsDailySnapshotDTO>>> cURVEFINANCEETHEREUM_FinancialsDailySnapshots__current(
+    ) const;
+    /// <summary>
+    /// LiquidityGauges (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets liquidityGauges.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<CURVE_FINANCE_ETHEREUM_LiquidityGaugeDTO>>> cURVEFINANCEETHEREUM_LiquidityGauges__current(
+    ) const;
+    /// <summary>
+    /// LiquidityPoolDailySnapshots (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets liquidityPoolDailySnapshots.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<CURVE_FINANCE_ETHEREUM_LiquidityPoolDailySnapshotDTO>>> cURVEFINANCEETHEREUM_LiquidityPoolDailySnapshots__current(
+    ) const;
+    /// <summary>
+    /// LiquidityPoolFees (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets liquidityPoolFees.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<CURVE_FINANCE_ETHEREUM_LiquidityPoolFeeDTO>>> cURVEFINANCEETHEREUM_LiquidityPoolFees__current(
+    ) const;
+    /// <summary>
+    /// LiquidityPoolHourlySnapshots (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets liquidityPoolHourlySnapshots.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<CURVE_FINANCE_ETHEREUM_LiquidityPoolHourlySnapshotDTO>>> cURVEFINANCEETHEREUM_LiquidityPoolHourlySnapshots__current(
+    ) const;
+    /// <summary>
     /// LiquidityPools (current)
     /// </summary>
     /// <remarks>
     /// Gets liquidityPools.
     /// </remarks>
+    /// <param name="id">Smart contract address of the pool (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<CURVE_FINANCE_ETHEREUM_LiquidityPoolDTO>>> cURVEFINANCEETHEREUM_LiquidityPools__current(
+        boost::optional<utility::string_t> id
+    ) const;
+    /// <summary>
+    /// LpTokens (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets lpTokens.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<CURVE_FINANCE_ETHEREUM_LpTokenDTO>>> cURVEFINANCEETHEREUM_LpTokens__current(
+    ) const;
+    /// <summary>
+    /// RewardTokens (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets rewardTokens.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<CURVE_FINANCE_ETHEREUM_RewardTokenDTO>>> cURVEFINANCEETHEREUM_RewardTokens__current(
     ) const;
     /// <summary>
     /// Swaps (current)
@@ -67,7 +172,33 @@ public:
     /// <remarks>
     /// Gets tokens.
     /// </remarks>
+    /// <param name="id">Smart contract address of the token (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<CURVE_FINANCE_ETHEREUM_TokenDTO>>> cURVEFINANCEETHEREUM_Tokens__current(
+        boost::optional<utility::string_t> id
+    ) const;
+    /// <summary>
+    /// UsageMetricsDailySnapshots (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets usageMetricsDailySnapshots.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<CURVE_FINANCE_ETHEREUM_UsageMetricsDailySnapshotDTO>>> cURVEFINANCEETHEREUM_UsageMetricsDailySnapshots__current(
+    ) const;
+    /// <summary>
+    /// UsageMetricsHourlySnapshots (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets usageMetricsHourlySnapshots.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<CURVE_FINANCE_ETHEREUM_UsageMetricsHourlySnapshotDTO>>> cURVEFINANCEETHEREUM_UsageMetricsHourlySnapshots__current(
+    ) const;
+    /// <summary>
+    /// Withdraws (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets withdraws.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<CURVE_FINANCE_ETHEREUM_WithdrawDTO>>> cURVEFINANCEETHEREUM_Withdraws__current(
     ) const;
 
 protected:

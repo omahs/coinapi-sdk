@@ -9,7 +9,6 @@ uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto_t *uniswap_v3_ethereum_liq
     char *entry_time,
     char *recv_time,
     long block_number,
-    long vid,
     int block_,
     char *id,
     int day,
@@ -61,7 +60,6 @@ uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto_t *uniswap_v3_ethereum_liq
     uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto_local_var->entry_time = entry_time;
     uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto_local_var->recv_time = recv_time;
     uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto_local_var->block_number = block_number;
-    uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto_local_var->vid = vid;
     uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto_local_var->block_ = block_;
     uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto_local_var->id = id;
     uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto_local_var->day = day;
@@ -315,14 +313,6 @@ cJSON *uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto_convertToJSON(unisw
     // uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto->block_number
     if(uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto->block_number) {
     if(cJSON_AddNumberToObject(item, "block_number", uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto->block_number) == NULL) {
-    goto fail; //Numeric
-    }
-    }
-
-
-    // uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto->vid
-    if(uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto->vid) {
-    if(cJSON_AddNumberToObject(item, "vid", uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto->vid) == NULL) {
     goto fail; //Numeric
     }
     }
@@ -866,15 +856,6 @@ uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto_t *uniswap_v3_ethereum_liq
     }
     }
 
-    // uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto->vid
-    cJSON *vid = cJSON_GetObjectItemCaseSensitive(uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dtoJSON, "vid");
-    if (vid) { 
-    if(!cJSON_IsNumber(vid))
-    {
-    goto end; //Numeric
-    }
-    }
-
     // uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto->block_
     cJSON *block_ = cJSON_GetObjectItemCaseSensitive(uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dtoJSON, "block_");
     if (block_) { 
@@ -1397,7 +1378,6 @@ uniswap_v3_ethereum_liquidity_pool_daily_snapshot_dto_t *uniswap_v3_ethereum_liq
         entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
         recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        vid ? vid->valuedouble : 0,
         block_ ? block_->valuedouble : 0,
         id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
         day ? day->valuedouble : 0,

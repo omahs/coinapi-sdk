@@ -23,8 +23,8 @@ var _ MappedNullable = &UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO{}
 type UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
-	// Block number of when this snapshot was taken/last modified.)
-	BlockNumber *int32 `json:"block_number,omitempty"`
+	// Number of block in which entity was recorded.
+	BlockNumber *int64 `json:"block_number,omitempty"`
 	// ID is # of days since Unix epoch time.
 	Id NullableString `json:"id,omitempty"`
 	// Number of days since Unix epoch time.
@@ -145,9 +145,9 @@ func (o *UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO) SetRecvTime(v time.Time) {
 }
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
-func (o *UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO) GetBlockNumber() int32 {
+func (o *UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO) GetBlockNumber() int64 {
 	if o == nil || IsNil(o.BlockNumber) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.BlockNumber
@@ -155,7 +155,7 @@ func (o *UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO) GetBlockNumber() int32 {
 
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO) GetBlockNumberOk() (*int32, bool) {
+func (o *UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
@@ -171,8 +171,8 @@ func (o *UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO) HasBlockNumber() bool {
 	return false
 }
 
-// SetBlockNumber gets a reference to the given int32 and assigns it to the BlockNumber field.
-func (o *UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO) SetBlockNumber(v int32) {
+// SetBlockNumber gets a reference to the given int64 and assigns it to the BlockNumber field.
+func (o *UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO) SetBlockNumber(v int64) {
 	o.BlockNumber = &v
 }
 

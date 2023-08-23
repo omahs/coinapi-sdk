@@ -19,8 +19,6 @@ case class TickDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /*  */
-  vid: Option[Long] = None,
   /* (pool address)-(tick index) */
   id: Option[String] = None,
   /* tick index */

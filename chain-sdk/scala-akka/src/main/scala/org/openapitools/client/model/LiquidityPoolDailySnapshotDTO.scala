@@ -19,8 +19,6 @@ case class LiquidityPoolDailySnapshotDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* . */
-  vid: Option[Long] = None,
   /* The Ethereum block number associated with the liquidity pool daily snapshot. */
   block: Option[Int] = None,
   /* Identifier, format: (smart contract address of the pool)-(# of days since Unix epoch time). */

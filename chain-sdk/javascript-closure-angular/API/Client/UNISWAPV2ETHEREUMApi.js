@@ -14,9 +14,29 @@
 
 goog.provide('API.Client.UNISWAPV2ETHEREUMApi');
 
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.AccountDTO');
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.ActiveAccountDTO');
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.DepositDTO');
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.DexAmmProtocolDTO');
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.FinancialsDailySnapshotDTO');
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.LiquidityPoolAmountDTO');
 goog.require('API.Client.UNISWAP_V2_ETHEREUM.LiquidityPoolDTO');
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.LiquidityPoolDailySnapshotDTO');
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.LiquidityPoolFeeDTO');
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.LiquidityPoolHourlySnapshotDTO');
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.MasterChefAddressToPidDTO');
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.MasterChefDTO');
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.MasterChefRewarderDTO');
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.MasterChefStakingPoolDTO');
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.RewardTokenDTO');
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.RewarderProbeDTO');
 goog.require('API.Client.UNISWAP_V2_ETHEREUM.SwapDTO');
 goog.require('API.Client.UNISWAP_V2_ETHEREUM.TokenDTO');
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.TokenWhiteListDTO');
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.TransferDTO');
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.UsageMetricsDailySnapshotDTO');
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.UsageMetricsHourlySnapshotDTO');
+goog.require('API.Client.UNISWAP_V2_ETHEREUM.WithdrawDTO');
 
 /**
  * @constructor
@@ -46,14 +66,489 @@ API.Client.UNISWAPV2ETHEREUMApi = function($http, $httpParamSerializer, $injecto
 API.Client.UNISWAPV2ETHEREUMApi.$inject = ['$http', '$httpParamSerializer', '$injector'];
 
 /**
+ * Accounts (current)
+ * Gets accounts.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.AccountDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMAccountsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/accounts/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * ActiveAccounts (current)
+ * Gets activeAccounts.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.ActiveAccountDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMActiveAccountsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/activeAccounts/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Deposits (current)
+ * Gets deposits.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.DepositDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMDepositsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/deposits/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * DexAmmProtocols (current)
+ * Gets dexAmmProtocols.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.DexAmmProtocolDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMDexAmmProtocolsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/dexAmmProtocols/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * FinancialsDailySnapshots (current)
+ * Gets financialsDailySnapshots.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.FinancialsDailySnapshotDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/financialsDailySnapshots/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * LiquidityPoolAmounts (current)
+ * Gets liquidityPoolAmounts.
+ * @param {!string=} opt_id Smart contract address of the pool
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.LiquidityPoolAmountDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent = function(opt_id, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/liquidityPoolAmounts/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_id !== undefined) {
+    queryParameters['id'] = opt_id;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * LiquidityPoolDailySnapshots (current)
+ * Gets liquidityPoolDailySnapshots.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.LiquidityPoolDailySnapshotDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/liquidityPoolDailySnapshots/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * LiquidityPoolFees (current)
+ * Gets liquidityPoolFees.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.LiquidityPoolFeeDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/liquidityPoolFees/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * LiquidityPoolHourlySnapshots (current)
+ * Gets liquidityPoolHourlySnapshots.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.LiquidityPoolHourlySnapshotDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/liquidityPoolHourlySnapshots/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
  * LiquidityPools (current)
  * Gets liquidityPools.
+ * @param {!string=} opt_id Smart contract address of the pool
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.LiquidityPoolDTO>>}
  */
-API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMLiquidityPoolsCurrent = function(opt_extraHttpRequestParams) {
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMLiquidityPoolsCurrent = function(opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/liquidityPools/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_id !== undefined) {
+    queryParameters['id'] = opt_id;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * MasterChefAddressToPids (current)
+ * Gets masterChefAddressToPids.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.MasterChefAddressToPidDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/masterChefAddressToPids/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * MasterChefRewarders (current)
+ * Gets masterChefRewarders.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.MasterChefRewarderDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMMasterChefRewardersCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/masterChefRewarders/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * MasterChefStakingPools (current)
+ * Gets masterChefStakingPools.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.MasterChefStakingPoolDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/masterChefStakingPools/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * MasterChefs (current)
+ * Gets masterChefs.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.MasterChefDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMMasterChefsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/masterChefs/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * RewardTokens (current)
+ * Gets rewardTokens.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.RewardTokenDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMRewardTokensCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/rewardTokens/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * RewarderProbes (current)
+ * Gets rewarderProbes.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.RewarderProbeDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMRewarderProbesCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/rewarderProbes/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -108,6 +603,37 @@ API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMSwapsCurrent = functi
 }
 
 /**
+ * TokenWhiteLists (current)
+ * Gets tokenWhiteLists.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.TokenWhiteListDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMTokenWhiteListsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/tokenWhiteLists/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
  * Tokens (current)
  * Gets tokens.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
@@ -116,6 +642,130 @@ API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMSwapsCurrent = functi
 API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMTokensCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/tokens/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Transfers (current)
+ * Gets transfers.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.TransferDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMTransfersCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/transfers/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * UsageMetricsDailySnapshots (current)
+ * Gets usageMetricsDailySnapshots.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.UsageMetricsDailySnapshotDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/usageMetricsDailySnapshots/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * UsageMetricsHourlySnapshots (current)
+ * Gets usageMetricsHourlySnapshots.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.UsageMetricsHourlySnapshotDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/usageMetricsHourlySnapshots/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Withdraws (current)
+ * Gets withdraws.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UNISWAP_V2_ETHEREUM.WithdrawDTO>>}
+ */
+API.Client.UNISWAPV2ETHEREUMApi.prototype.uNISWAPV2ETHEREUMWithdrawsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/v1/dapps/uniswap-v2-ethereum/withdraws/current';
 
   /** @type {!Object} */
   var queryParameters = {};

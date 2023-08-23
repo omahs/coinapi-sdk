@@ -14,9 +14,29 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMAccountDTO;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMActiveAccountDTO;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMDepositDTO;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMDexAmmProtocolDTO;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO;
 import org.openapitools.client.model.SUSHISWAPV3ETHEREUMLiquidityPoolDTO;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMPositionDTO;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMPositionSnapshotDTO;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMRewardTokenDTO;
 import org.openapitools.client.model.SUSHISWAPV3ETHEREUMSwapDTO;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMTickDTO;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMTickDailySnapshotDTO;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO;
 import org.openapitools.client.model.SUSHISWAPV3ETHEREUMTokenDTO;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMTokenWhiteListDTO;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO;
+import org.openapitools.client.model.SUSHISWAPV3ETHEREUMWithdrawDTO;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -34,6 +54,125 @@ public class SushiswapV3EthereumApiTest {
     private final SushiswapV3EthereumApi api = new SushiswapV3EthereumApi();
 
     /**
+     * Accounts (current)
+     *
+     * Gets accounts.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMAccountsCurrentTest() throws ApiException {
+        List<SUSHISWAPV3ETHEREUMAccountDTO> response = api.sUSHISWAPV3ETHEREUMAccountsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * ActiveAccounts (current)
+     *
+     * Gets activeAccounts.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMActiveAccountsCurrentTest() throws ApiException {
+        List<SUSHISWAPV3ETHEREUMActiveAccountDTO> response = api.sUSHISWAPV3ETHEREUMActiveAccountsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Deposits (current)
+     *
+     * Gets deposits.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMDepositsCurrentTest() throws ApiException {
+        List<SUSHISWAPV3ETHEREUMDepositDTO> response = api.sUSHISWAPV3ETHEREUMDepositsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * DexAmmProtocols (current)
+     *
+     * Gets dexAmmProtocols.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrentTest() throws ApiException {
+        List<SUSHISWAPV3ETHEREUMDexAmmProtocolDTO> response = api.sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * FinancialsDailySnapshots (current)
+     *
+     * Gets financialsDailySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrentTest() throws ApiException {
+        List<SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO> response = api.sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * LiquidityPoolAmounts (current)
+     *
+     * Gets liquidityPoolAmounts.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrentTest() throws ApiException {
+        String id = null;
+        List<SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO> response = api.sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent(id);
+        // TODO: test validations
+    }
+
+    /**
+     * LiquidityPoolDailySnapshots (current)
+     *
+     * Gets liquidityPoolDailySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentTest() throws ApiException {
+        List<SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> response = api.sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * LiquidityPoolFees (current)
+     *
+     * Gets liquidityPoolFees.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrentTest() throws ApiException {
+        List<SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO> response = api.sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * LiquidityPoolHourlySnapshots (current)
+     *
+     * Gets liquidityPoolHourlySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrentTest() throws ApiException {
+        String pool = null;
+        List<SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO> response = api.sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent(pool);
+        // TODO: test validations
+    }
+
+    /**
      * LiquidityPools (current)
      *
      * Gets liquidityPools.
@@ -44,6 +183,46 @@ public class SushiswapV3EthereumApiTest {
     public void sUSHISWAPV3ETHEREUMLiquidityPoolsCurrentTest() throws ApiException {
         String id = null;
         List<SUSHISWAPV3ETHEREUMLiquidityPoolDTO> response = api.sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent(id);
+        // TODO: test validations
+    }
+
+    /**
+     * PositionSnapshots (current)
+     *
+     * Gets positionSnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMPositionSnapshotsCurrentTest() throws ApiException {
+        List<SUSHISWAPV3ETHEREUMPositionSnapshotDTO> response = api.sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Positions (current)
+     *
+     * Gets positions.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMPositionsCurrentTest() throws ApiException {
+        String pool = null;
+        List<SUSHISWAPV3ETHEREUMPositionDTO> response = api.sUSHISWAPV3ETHEREUMPositionsCurrent(pool);
+        // TODO: test validations
+    }
+
+    /**
+     * RewardTokens (current)
+     *
+     * Gets rewardTokens.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMRewardTokensCurrentTest() throws ApiException {
+        List<SUSHISWAPV3ETHEREUMRewardTokenDTO> response = api.sUSHISWAPV3ETHEREUMRewardTokensCurrent();
         // TODO: test validations
     }
 
@@ -61,6 +240,74 @@ public class SushiswapV3EthereumApiTest {
     }
 
     /**
+     * TickDailySnapshots (current)
+     *
+     * Gets tickDailySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrentTest() throws ApiException {
+        String pool = null;
+        List<SUSHISWAPV3ETHEREUMTickDailySnapshotDTO> response = api.sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool);
+        // TODO: test validations
+    }
+
+    /**
+     * TickHourlySnapshots (current)
+     *
+     * Gets tickHourlySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrentTest() throws ApiException {
+        String pool = null;
+        List<SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO> response = api.sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool);
+        // TODO: test validations
+    }
+
+    /**
+     * Ticks (current)
+     *
+     * Gets ticks.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMTicksCurrentTest() throws ApiException {
+        String pool = null;
+        List<SUSHISWAPV3ETHEREUMTickDTO> response = api.sUSHISWAPV3ETHEREUMTicksCurrent(pool);
+        // TODO: test validations
+    }
+
+    /**
+     * TokenWhiteListSymbols (current)
+     *
+     * Gets tokenWhiteListSymbols.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrentTest() throws ApiException {
+        List<SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO> response = api.sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * TokenWhiteLists (current)
+     *
+     * Gets tokenWhiteLists.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMTokenWhiteListsCurrentTest() throws ApiException {
+        List<SUSHISWAPV3ETHEREUMTokenWhiteListDTO> response = api.sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent();
+        // TODO: test validations
+    }
+
+    /**
      * Tokens (current)
      *
      * Gets tokens.
@@ -71,6 +318,45 @@ public class SushiswapV3EthereumApiTest {
     public void sUSHISWAPV3ETHEREUMTokensCurrentTest() throws ApiException {
         String id = null;
         List<SUSHISWAPV3ETHEREUMTokenDTO> response = api.sUSHISWAPV3ETHEREUMTokensCurrent(id);
+        // TODO: test validations
+    }
+
+    /**
+     * UsageMetricsDailySnapshots (current)
+     *
+     * Gets usageMetricsDailySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrentTest() throws ApiException {
+        List<SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO> response = api.sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * UsageMetricsHourlySnapshots (current)
+     *
+     * Gets usageMetricsHourlySnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrentTest() throws ApiException {
+        List<SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO> response = api.sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Withdraws (current)
+     *
+     * Gets withdraws.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sUSHISWAPV3ETHEREUMWithdrawsCurrentTest() throws ApiException {
+        List<SUSHISWAPV3ETHEREUMWithdrawDTO> response = api.sUSHISWAPV3ETHEREUMWithdrawsCurrent();
         // TODO: test validations
     }
 

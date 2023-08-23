@@ -779,10 +779,9 @@ public class PANCAKESWAPV3ETHEREUMApi {
   /**
   * LiquidityPoolDailySnapshots (current)
   * Gets liquidityPoolDailySnapshots.
-   * @param pool Pool this snapshot belongs to.
    * @return List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>
   */
-  public List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent (String pool) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -794,7 +793,6 @@ public class PANCAKESWAPV3ETHEREUMApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "pool", pool));
     String[] contentTypes = {
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
@@ -837,9 +835,9 @@ public class PANCAKESWAPV3ETHEREUMApi {
       /**
    * LiquidityPoolDailySnapshots (current)
    * Gets liquidityPoolDailySnapshots.
-   * @param pool Pool this snapshot belongs to.
+
   */
-  public void pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent (String pool, final Response.Listener<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent (final Response.Listener<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -853,7 +851,6 @@ public class PANCAKESWAPV3ETHEREUMApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "pool", pool));
 
 
     String[] contentTypes = {

@@ -21,7 +21,7 @@ typedef struct cryptopunks_collection_daily_snapshot_dto_t cryptopunks_collectio
 typedef struct cryptopunks_collection_daily_snapshot_dto_t {
     char *entry_time; //date time
     char *recv_time; //date time
-    char *block_number; // string
+    long block_number; //numeric
     long vid; //numeric
     char *block_range; // string
     char *id; // string
@@ -43,7 +43,7 @@ typedef struct cryptopunks_collection_daily_snapshot_dto_t {
 cryptopunks_collection_daily_snapshot_dto_t *cryptopunks_collection_daily_snapshot_dto_create(
     char *entry_time,
     char *recv_time,
-    char *block_number,
+    long block_number,
     long vid,
     char *block_range,
     char *id,

@@ -475,9 +475,6 @@ LiquidityPoolDailySnapshots (current)
 
 No description available.
 
-.PARAMETER Pool
-Pool this snapshot belongs to.
-
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json, text/json, application/x-msgpack
@@ -493,9 +490,6 @@ PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[]
 function Invoke-PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent {
     [CmdletBinding()]
     Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [String]
-        ${Pool},
         [String]
         [ValidateSet("text/plain", "application/json", "text/json", "application/x-msgpack")]
         $ReturnType,
@@ -526,10 +520,6 @@ function Invoke-PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent {
         }
 
         $LocalVarUri = '/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current'
-
-        if ($Pool) {
-            $LocalVarQueryParameters['pool'] = $Pool
-        }
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `

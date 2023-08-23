@@ -28,7 +28,7 @@ public class CURVEFINANCEETHEREUMSwapDTO {
   @SerializedName("recv_time")
   private Date recvTime = null;
   @SerializedName("block_number")
-  private String blockNumber = null;
+  private Long blockNumber = null;
   @SerializedName("id")
   private String id = null;
   @SerializedName("hash")
@@ -89,13 +89,13 @@ public class CURVEFINANCEETHEREUMSwapDTO {
   }
 
   /**
-   * Block number of this event
+   * Number of block in which entity was recorded.
    **/
-  @ApiModelProperty(value = "Block number of this event")
-  public String getBlockNumber() {
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
+  public Long getBlockNumber() {
     return blockNumber;
   }
-  public void setBlockNumber(String blockNumber) {
+  public void setBlockNumber(Long blockNumber) {
     this.blockNumber = blockNumber;
   }
 

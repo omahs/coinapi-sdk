@@ -137,8 +137,7 @@ namespace CoinAPI.EMS.REST.V1.Test
         public void PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string pool = null;
-            //var response = instance.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(pool);
+            //var response = instance.PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent();
             //Assert.IsInstanceOf(typeof(List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>), response, "response is List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>");
         }
         

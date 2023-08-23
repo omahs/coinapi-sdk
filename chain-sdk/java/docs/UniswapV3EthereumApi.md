@@ -863,7 +863,7 @@ No authorization required
 
 <a id="uNISWAPV3ETHEREUMTickDailySnapshotsCurrent"></a>
 # **uNISWAPV3ETHEREUMTickDailySnapshotsCurrent**
-> List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt; uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool)
+> List&lt;UNISWAPV3ETHEREUMTickDailySnapshotDTO&gt; uNISWAPV3ETHEREUMTickDailySnapshotsCurrent()
 
 TickDailySnapshots (current)
 
@@ -884,9 +884,8 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     UniswapV3EthereumApi apiInstance = new UniswapV3EthereumApi(defaultClient);
-    String pool = "pool_example"; // String | liquidity pool this tick belongs to
     try {
-      List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> result = apiInstance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool);
+      List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> result = apiInstance.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UniswapV3EthereumApi#uNISWAPV3ETHEREUMTickDailySnapshotsCurrent");
@@ -900,10 +899,7 @@ public class Example {
 ```
 
 ### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pool** | **String**| liquidity pool this tick belongs to | [optional] |
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -925,7 +921,7 @@ No authorization required
 
 <a id="uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent"></a>
 # **uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent**
-> List&lt;UNISWAPV3ETHEREUMTickHourlySnapshotDTO&gt; uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool)
+> List&lt;UNISWAPV3ETHEREUMTickHourlySnapshotDTO&gt; uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent()
 
 TickHourlySnapshots (current)
 
@@ -946,9 +942,8 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     UniswapV3EthereumApi apiInstance = new UniswapV3EthereumApi(defaultClient);
-    String pool = "pool_example"; // String | liquidity pool this tick belongs to
     try {
-      List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> result = apiInstance.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool);
+      List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> result = apiInstance.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UniswapV3EthereumApi#uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent");
@@ -962,10 +957,7 @@ public class Example {
 ```
 
 ### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pool** | **String**| liquidity pool this tick belongs to | [optional] |
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -987,7 +979,7 @@ No authorization required
 
 <a id="uNISWAPV3ETHEREUMTicksCurrent"></a>
 # **uNISWAPV3ETHEREUMTicksCurrent**
-> List&lt;UNISWAPV3ETHEREUMTickDTO&gt; uNISWAPV3ETHEREUMTicksCurrent(pool)
+> List&lt;UNISWAPV3ETHEREUMTickDTO&gt; uNISWAPV3ETHEREUMTicksCurrent()
 
 Ticks (current)
 
@@ -1008,9 +1000,8 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     UniswapV3EthereumApi apiInstance = new UniswapV3EthereumApi(defaultClient);
-    String pool = "pool_example"; // String | Liquidity pool this tick belongs to
     try {
-      List<UNISWAPV3ETHEREUMTickDTO> result = apiInstance.uNISWAPV3ETHEREUMTicksCurrent(pool);
+      List<UNISWAPV3ETHEREUMTickDTO> result = apiInstance.uNISWAPV3ETHEREUMTicksCurrent();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UniswapV3EthereumApi#uNISWAPV3ETHEREUMTicksCurrent");
@@ -1024,10 +1015,7 @@ public class Example {
 ```
 
 ### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pool** | **String**| Liquidity pool this tick belongs to | [optional] |
+This endpoint does not need any parameter.
 
 ### Return type
 

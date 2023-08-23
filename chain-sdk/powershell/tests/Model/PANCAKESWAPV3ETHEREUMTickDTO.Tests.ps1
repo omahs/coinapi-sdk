@@ -10,7 +10,7 @@ Describe -tag 'PSOpenAPITools' -name 'PANCAKESWAPV3ETHEREUMTickDTO' {
     Context 'PANCAKESWAPV3ETHEREUMTickDTO' {
         It 'Initialize-PANCAKESWAPV3ETHEREUMTickDTO' {
             # a simple test to create an object
-            #$NewObject = Initialize-PANCAKESWAPV3ETHEREUMTickDTO -EntryTime "TEST_VALUE" -RecvTime "TEST_VALUE" -BlockNumber "TEST_VALUE" -Vid "TEST_VALUE" -Id "TEST_VALUE" -Index "TEST_VALUE" -Pool "TEST_VALUE" -CreatedTimestamp "TEST_VALUE" -CreatedBlockNumber "TEST_VALUE" -Prices "TEST_VALUE" -LiquidityGross "TEST_VALUE" -LiquidityGrossUsd "TEST_VALUE" -LiquidityNet "TEST_VALUE" -LiquidityNetUsd "TEST_VALUE" -LastSnapshotDayId "TEST_VALUE" -LastSnapshotHourId "TEST_VALUE" -LastUpdateTimestamp "TEST_VALUE" -LastUpdateBlockNumber "TEST_VALUE"
+            #$NewObject = Initialize-PANCAKESWAPV3ETHEREUMTickDTO -EntryTime "TEST_VALUE" -RecvTime "TEST_VALUE" -BlockNumber "TEST_VALUE" -Id "TEST_VALUE" -Index "TEST_VALUE" -Pool "TEST_VALUE" -CreatedTimestamp "TEST_VALUE" -CreatedBlockNumber "TEST_VALUE" -Prices "TEST_VALUE" -LiquidityGross "TEST_VALUE" -LiquidityGrossUsd "TEST_VALUE" -LiquidityNet "TEST_VALUE" -LiquidityNetUsd "TEST_VALUE" -LastSnapshotDayId "TEST_VALUE" -LastSnapshotHourId "TEST_VALUE" -LastUpdateTimestamp "TEST_VALUE" -LastUpdateBlockNumber "TEST_VALUE"
             #$NewObject | Should -BeOfType PANCAKESWAPV3ETHEREUMTickDTO
             #$NewObject.property | Should -Be 0
         }

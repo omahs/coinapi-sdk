@@ -367,7 +367,6 @@ module OpenapiClient
     # LiquidityPoolDailySnapshots (current)
     # Gets liquidityPoolDailySnapshots.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :pool Pool this snapshot belongs to.
     # @return [Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>]
     def p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current(opts = {})
       data, _status_code, _headers = p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current_with_http_info(opts)
@@ -377,7 +376,6 @@ module OpenapiClient
     # LiquidityPoolDailySnapshots (current)
     # Gets liquidityPoolDailySnapshots.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :pool Pool this snapshot belongs to.
     # @return [Array<(Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>, Integer, Hash)>] Array<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO> data, response status code and response headers
     def p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -388,7 +386,6 @@ module OpenapiClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'pool'] = opts[:'pool'] if !opts[:'pool'].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}

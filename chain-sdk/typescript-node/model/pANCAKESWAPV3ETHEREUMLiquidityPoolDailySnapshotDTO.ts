@@ -23,10 +23,6 @@ export class PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO {
     */
     'blockNumber'?: number;
     /**
-    * .
-    */
-    'vid'?: number;
-    /**
     * The Ethereum block number associated with the liquidity pool daily snapshot.
     */
     'block'?: number;
@@ -215,11 +211,6 @@ export class PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO {
         {
             "name": "blockNumber",
             "baseName": "block_number",
-            "type": "number"
-        },
-        {
-            "name": "vid",
-            "baseName": "vid",
             "type": "number"
         },
         {

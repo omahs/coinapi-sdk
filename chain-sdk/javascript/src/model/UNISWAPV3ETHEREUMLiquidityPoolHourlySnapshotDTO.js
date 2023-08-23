@@ -57,9 +57,6 @@ class UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
             if (data.hasOwnProperty('block_number')) {
                 obj['block_number'] = ApiClient.convertToType(data['block_number'], 'Number');
             }
-            if (data.hasOwnProperty('vid')) {
-                obj['vid'] = ApiClient.convertToType(data['vid'], 'Number');
-            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -348,12 +345,6 @@ UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.prototype['recv_time'] = undefin
  * @member {Number} block_number
  */
 UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.prototype['block_number'] = undefined;
-
-/**
- * 
- * @member {Number} vid
- */
-UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.prototype['vid'] = undefined;
 
 /**
  * (Smart contract address of the pool)-( # of hours since Unix epoch time)

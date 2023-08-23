@@ -184,10 +184,6 @@ private class OASPANCAKESWAPV3ETHEREUMApiTest {
         res.setStatus('OK');
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
-        Map<String, Object> params = new Map<String, Object>{
-            'pool' => 'null'
-        };
-
         OASClient client;
         OASPANCAKESWAPV3ETHEREUMApi api;
         List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo> response;
@@ -200,7 +196,7 @@ private class OASPANCAKESWAPV3ETHEREUMApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo>{OASPANCAKESWAPV3ETHEREUMLiquidityPoo.getExample()};
-        response = (List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo>) api.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(params);
+        response = (List<OASPANCAKESWAPV3ETHEREUMLiquidityPoo>) api.pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent();
         System.assertEquals(expectedResponse, response);
     }
 

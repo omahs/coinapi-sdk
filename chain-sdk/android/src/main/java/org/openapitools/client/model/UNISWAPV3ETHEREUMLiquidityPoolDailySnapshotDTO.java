@@ -29,8 +29,6 @@ public class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO {
   private Date recvTime = null;
   @SerializedName("block_number")
   private Long blockNumber = null;
-  @SerializedName("vid")
-  private Long vid = null;
   @SerializedName("block_")
   private Integer block = null;
   @SerializedName("id")
@@ -147,17 +145,6 @@ public class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO {
   }
   public void setBlockNumber(Long blockNumber) {
     this.blockNumber = blockNumber;
-  }
-
-  /**
-   * .
-   **/
-  @ApiModelProperty(value = ".")
-  public Long getVid() {
-    return vid;
-  }
-  public void setVid(Long vid) {
-    this.vid = vid;
   }
 
   /**
@@ -646,7 +633,6 @@ public class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO {
     return (this.entryTime == null ? uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.entryTime == null : this.entryTime.equals(uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.entryTime)) &&
         (this.recvTime == null ? uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.recvTime == null : this.recvTime.equals(uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.recvTime)) &&
         (this.blockNumber == null ? uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.blockNumber == null : this.blockNumber.equals(uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.blockNumber)) &&
-        (this.vid == null ? uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.vid == null : this.vid.equals(uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.vid)) &&
         (this.block == null ? uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.block == null : this.block.equals(uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.block)) &&
         (this.id == null ? uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.id == null : this.id.equals(uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.id)) &&
         (this.day == null ? uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.day == null : this.day.equals(uNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO.day)) &&
@@ -698,7 +684,6 @@ public class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO {
     result = 31 * result + (this.entryTime == null ? 0: this.entryTime.hashCode());
     result = 31 * result + (this.recvTime == null ? 0: this.recvTime.hashCode());
     result = 31 * result + (this.blockNumber == null ? 0: this.blockNumber.hashCode());
-    result = 31 * result + (this.vid == null ? 0: this.vid.hashCode());
     result = 31 * result + (this.block == null ? 0: this.block.hashCode());
     result = 31 * result + (this.id == null ? 0: this.id.hashCode());
     result = 31 * result + (this.day == null ? 0: this.day.hashCode());
@@ -753,7 +738,6 @@ public class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO {
     sb.append("  entryTime: ").append(entryTime).append("\n");
     sb.append("  recvTime: ").append(recvTime).append("\n");
     sb.append("  blockNumber: ").append(blockNumber).append("\n");
-    sb.append("  vid: ").append(vid).append("\n");
     sb.append("  block: ").append(block).append("\n");
     sb.append("  id: ").append(id).append("\n");
     sb.append("  day: ").append(day).append("\n");

@@ -26,13 +26,6 @@ API.Client.PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.prototype.recvTim
 API.Client.PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.prototype.blockNumber;
 
 /**
- * 
- * @type {!number}
- * @export
- */
-API.Client.PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO.prototype.vid;
-
-/**
  * (Smart contract address of the pool)-( # of hours since Unix epoch time)
  * @type {!string}
  * @export

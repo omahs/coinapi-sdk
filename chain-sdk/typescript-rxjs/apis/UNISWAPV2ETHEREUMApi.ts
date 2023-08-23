@@ -14,12 +14,40 @@
 import type { Observable } from 'rxjs';
 import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI } from '../runtime';
-import type { OperationOpts } from '../runtime';
+import type { OperationOpts, HttpQuery } from '../runtime';
 import type {
+    UNISWAPV2ETHEREUMAccountDTO,
+    UNISWAPV2ETHEREUMActiveAccountDTO,
+    UNISWAPV2ETHEREUMDepositDTO,
+    UNISWAPV2ETHEREUMDexAmmProtocolDTO,
+    UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO,
+    UNISWAPV2ETHEREUMLiquidityPoolAmountDTO,
     UNISWAPV2ETHEREUMLiquidityPoolDTO,
+    UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO,
+    UNISWAPV2ETHEREUMLiquidityPoolFeeDTO,
+    UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO,
+    UNISWAPV2ETHEREUMMasterChefAddressToPidDTO,
+    UNISWAPV2ETHEREUMMasterChefDTO,
+    UNISWAPV2ETHEREUMMasterChefRewarderDTO,
+    UNISWAPV2ETHEREUMMasterChefStakingPoolDTO,
+    UNISWAPV2ETHEREUMRewardTokenDTO,
+    UNISWAPV2ETHEREUMRewarderProbeDTO,
     UNISWAPV2ETHEREUMSwapDTO,
     UNISWAPV2ETHEREUMTokenDTO,
+    UNISWAPV2ETHEREUMTokenWhiteListDTO,
+    UNISWAPV2ETHEREUMTransferDTO,
+    UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO,
+    UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO,
+    UNISWAPV2ETHEREUMWithdrawDTO,
 } from '../models';
+
+export interface UNISWAPV2ETHEREUMLiquidityPoolAmountsCurrentRequest {
+    id?: string;
+}
+
+export interface UNISWAPV2ETHEREUMLiquidityPoolsCurrentRequest {
+    id?: string;
+}
 
 /**
  * no description
@@ -27,14 +55,221 @@ import type {
 export class UNISWAPV2ETHEREUMApi extends BaseAPI {
 
     /**
+     * Gets accounts.
+     * Accounts (current)
+     */
+    uNISWAPV2ETHEREUMAccountsCurrent(): Observable<Array<UNISWAPV2ETHEREUMAccountDTO>>
+    uNISWAPV2ETHEREUMAccountsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMAccountDTO>>>
+    uNISWAPV2ETHEREUMAccountsCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMAccountDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMAccountDTO>>> {
+        return this.request<Array<UNISWAPV2ETHEREUMAccountDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/accounts/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets activeAccounts.
+     * ActiveAccounts (current)
+     */
+    uNISWAPV2ETHEREUMActiveAccountsCurrent(): Observable<Array<UNISWAPV2ETHEREUMActiveAccountDTO>>
+    uNISWAPV2ETHEREUMActiveAccountsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMActiveAccountDTO>>>
+    uNISWAPV2ETHEREUMActiveAccountsCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMActiveAccountDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMActiveAccountDTO>>> {
+        return this.request<Array<UNISWAPV2ETHEREUMActiveAccountDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/activeAccounts/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets deposits.
+     * Deposits (current)
+     */
+    uNISWAPV2ETHEREUMDepositsCurrent(): Observable<Array<UNISWAPV2ETHEREUMDepositDTO>>
+    uNISWAPV2ETHEREUMDepositsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMDepositDTO>>>
+    uNISWAPV2ETHEREUMDepositsCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMDepositDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMDepositDTO>>> {
+        return this.request<Array<UNISWAPV2ETHEREUMDepositDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/deposits/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets dexAmmProtocols.
+     * DexAmmProtocols (current)
+     */
+    uNISWAPV2ETHEREUMDexAmmProtocolsCurrent(): Observable<Array<UNISWAPV2ETHEREUMDexAmmProtocolDTO>>
+    uNISWAPV2ETHEREUMDexAmmProtocolsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMDexAmmProtocolDTO>>>
+    uNISWAPV2ETHEREUMDexAmmProtocolsCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMDexAmmProtocolDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMDexAmmProtocolDTO>>> {
+        return this.request<Array<UNISWAPV2ETHEREUMDexAmmProtocolDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/dexAmmProtocols/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets financialsDailySnapshots.
+     * FinancialsDailySnapshots (current)
+     */
+    uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent(): Observable<Array<UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO>>
+    uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO>>>
+    uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO>>> {
+        return this.request<Array<UNISWAPV2ETHEREUMFinancialsDailySnapshotDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/financialsDailySnapshots/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets liquidityPoolAmounts.
+     * LiquidityPoolAmounts (current)
+     */
+    uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent({ id }: UNISWAPV2ETHEREUMLiquidityPoolAmountsCurrentRequest): Observable<Array<UNISWAPV2ETHEREUMLiquidityPoolAmountDTO>>
+    uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent({ id }: UNISWAPV2ETHEREUMLiquidityPoolAmountsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMLiquidityPoolAmountDTO>>>
+    uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent({ id }: UNISWAPV2ETHEREUMLiquidityPoolAmountsCurrentRequest, opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMLiquidityPoolAmountDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMLiquidityPoolAmountDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (id != null) { query['id'] = id; }
+
+        return this.request<Array<UNISWAPV2ETHEREUMLiquidityPoolAmountDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/liquidityPoolAmounts/current',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets liquidityPoolDailySnapshots.
+     * LiquidityPoolDailySnapshots (current)
+     */
+    uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent(): Observable<Array<UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO>>
+    uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO>>>
+    uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO>>> {
+        return this.request<Array<UNISWAPV2ETHEREUMLiquidityPoolDailySnapshotDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/liquidityPoolDailySnapshots/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets liquidityPoolFees.
+     * LiquidityPoolFees (current)
+     */
+    uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent(): Observable<Array<UNISWAPV2ETHEREUMLiquidityPoolFeeDTO>>
+    uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMLiquidityPoolFeeDTO>>>
+    uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMLiquidityPoolFeeDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMLiquidityPoolFeeDTO>>> {
+        return this.request<Array<UNISWAPV2ETHEREUMLiquidityPoolFeeDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/liquidityPoolFees/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets liquidityPoolHourlySnapshots.
+     * LiquidityPoolHourlySnapshots (current)
+     */
+    uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent(): Observable<Array<UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO>>
+    uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO>>>
+    uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO>>> {
+        return this.request<Array<UNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/liquidityPoolHourlySnapshots/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets liquidityPools.
      * LiquidityPools (current)
      */
-    uNISWAPV2ETHEREUMLiquidityPoolsCurrent(): Observable<Array<UNISWAPV2ETHEREUMLiquidityPoolDTO>>
-    uNISWAPV2ETHEREUMLiquidityPoolsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMLiquidityPoolDTO>>>
-    uNISWAPV2ETHEREUMLiquidityPoolsCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMLiquidityPoolDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMLiquidityPoolDTO>>> {
+    uNISWAPV2ETHEREUMLiquidityPoolsCurrent({ id }: UNISWAPV2ETHEREUMLiquidityPoolsCurrentRequest): Observable<Array<UNISWAPV2ETHEREUMLiquidityPoolDTO>>
+    uNISWAPV2ETHEREUMLiquidityPoolsCurrent({ id }: UNISWAPV2ETHEREUMLiquidityPoolsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMLiquidityPoolDTO>>>
+    uNISWAPV2ETHEREUMLiquidityPoolsCurrent({ id }: UNISWAPV2ETHEREUMLiquidityPoolsCurrentRequest, opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMLiquidityPoolDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMLiquidityPoolDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (id != null) { query['id'] = id; }
+
         return this.request<Array<UNISWAPV2ETHEREUMLiquidityPoolDTO>>({
             url: '/v1/dapps/uniswap-v2-ethereum/liquidityPools/current',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets masterChefAddressToPids.
+     * MasterChefAddressToPids (current)
+     */
+    uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent(): Observable<Array<UNISWAPV2ETHEREUMMasterChefAddressToPidDTO>>
+    uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMMasterChefAddressToPidDTO>>>
+    uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMMasterChefAddressToPidDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMMasterChefAddressToPidDTO>>> {
+        return this.request<Array<UNISWAPV2ETHEREUMMasterChefAddressToPidDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/masterChefAddressToPids/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets masterChefRewarders.
+     * MasterChefRewarders (current)
+     */
+    uNISWAPV2ETHEREUMMasterChefRewardersCurrent(): Observable<Array<UNISWAPV2ETHEREUMMasterChefRewarderDTO>>
+    uNISWAPV2ETHEREUMMasterChefRewardersCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMMasterChefRewarderDTO>>>
+    uNISWAPV2ETHEREUMMasterChefRewardersCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMMasterChefRewarderDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMMasterChefRewarderDTO>>> {
+        return this.request<Array<UNISWAPV2ETHEREUMMasterChefRewarderDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/masterChefRewarders/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets masterChefStakingPools.
+     * MasterChefStakingPools (current)
+     */
+    uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent(): Observable<Array<UNISWAPV2ETHEREUMMasterChefStakingPoolDTO>>
+    uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMMasterChefStakingPoolDTO>>>
+    uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMMasterChefStakingPoolDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMMasterChefStakingPoolDTO>>> {
+        return this.request<Array<UNISWAPV2ETHEREUMMasterChefStakingPoolDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/masterChefStakingPools/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets masterChefs.
+     * MasterChefs (current)
+     */
+    uNISWAPV2ETHEREUMMasterChefsCurrent(): Observable<Array<UNISWAPV2ETHEREUMMasterChefDTO>>
+    uNISWAPV2ETHEREUMMasterChefsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMMasterChefDTO>>>
+    uNISWAPV2ETHEREUMMasterChefsCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMMasterChefDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMMasterChefDTO>>> {
+        return this.request<Array<UNISWAPV2ETHEREUMMasterChefDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/masterChefs/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets rewardTokens.
+     * RewardTokens (current)
+     */
+    uNISWAPV2ETHEREUMRewardTokensCurrent(): Observable<Array<UNISWAPV2ETHEREUMRewardTokenDTO>>
+    uNISWAPV2ETHEREUMRewardTokensCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMRewardTokenDTO>>>
+    uNISWAPV2ETHEREUMRewardTokensCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMRewardTokenDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMRewardTokenDTO>>> {
+        return this.request<Array<UNISWAPV2ETHEREUMRewardTokenDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/rewardTokens/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets rewarderProbes.
+     * RewarderProbes (current)
+     */
+    uNISWAPV2ETHEREUMRewarderProbesCurrent(): Observable<Array<UNISWAPV2ETHEREUMRewarderProbeDTO>>
+    uNISWAPV2ETHEREUMRewarderProbesCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMRewarderProbeDTO>>>
+    uNISWAPV2ETHEREUMRewarderProbesCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMRewarderProbeDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMRewarderProbeDTO>>> {
+        return this.request<Array<UNISWAPV2ETHEREUMRewarderProbeDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/rewarderProbes/current',
             method: 'GET',
         }, opts?.responseOpts);
     };
@@ -53,6 +288,19 @@ export class UNISWAPV2ETHEREUMApi extends BaseAPI {
     };
 
     /**
+     * Gets tokenWhiteLists.
+     * TokenWhiteLists (current)
+     */
+    uNISWAPV2ETHEREUMTokenWhiteListsCurrent(): Observable<Array<UNISWAPV2ETHEREUMTokenWhiteListDTO>>
+    uNISWAPV2ETHEREUMTokenWhiteListsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMTokenWhiteListDTO>>>
+    uNISWAPV2ETHEREUMTokenWhiteListsCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMTokenWhiteListDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMTokenWhiteListDTO>>> {
+        return this.request<Array<UNISWAPV2ETHEREUMTokenWhiteListDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/tokenWhiteLists/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets tokens.
      * Tokens (current)
      */
@@ -61,6 +309,58 @@ export class UNISWAPV2ETHEREUMApi extends BaseAPI {
     uNISWAPV2ETHEREUMTokensCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMTokenDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMTokenDTO>>> {
         return this.request<Array<UNISWAPV2ETHEREUMTokenDTO>>({
             url: '/v1/dapps/uniswap-v2-ethereum/tokens/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets transfers.
+     * Transfers (current)
+     */
+    uNISWAPV2ETHEREUMTransfersCurrent(): Observable<Array<UNISWAPV2ETHEREUMTransferDTO>>
+    uNISWAPV2ETHEREUMTransfersCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMTransferDTO>>>
+    uNISWAPV2ETHEREUMTransfersCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMTransferDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMTransferDTO>>> {
+        return this.request<Array<UNISWAPV2ETHEREUMTransferDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/transfers/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets usageMetricsDailySnapshots.
+     * UsageMetricsDailySnapshots (current)
+     */
+    uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent(): Observable<Array<UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO>>
+    uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO>>>
+    uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO>>> {
+        return this.request<Array<UNISWAPV2ETHEREUMUsageMetricsDailySnapshotDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/usageMetricsDailySnapshots/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets usageMetricsHourlySnapshots.
+     * UsageMetricsHourlySnapshots (current)
+     */
+    uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent(): Observable<Array<UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO>>
+    uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO>>>
+    uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO>>> {
+        return this.request<Array<UNISWAPV2ETHEREUMUsageMetricsHourlySnapshotDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/usageMetricsHourlySnapshots/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets withdraws.
+     * Withdraws (current)
+     */
+    uNISWAPV2ETHEREUMWithdrawsCurrent(): Observable<Array<UNISWAPV2ETHEREUMWithdrawDTO>>
+    uNISWAPV2ETHEREUMWithdrawsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UNISWAPV2ETHEREUMWithdrawDTO>>>
+    uNISWAPV2ETHEREUMWithdrawsCurrent(opts?: OperationOpts): Observable<Array<UNISWAPV2ETHEREUMWithdrawDTO> | AjaxResponse<Array<UNISWAPV2ETHEREUMWithdrawDTO>>> {
+        return this.request<Array<UNISWAPV2ETHEREUMWithdrawDTO>>({
+            url: '/v1/dapps/uniswap-v2-ethereum/withdraws/current',
             method: 'GET',
         }, opts?.responseOpts);
     };

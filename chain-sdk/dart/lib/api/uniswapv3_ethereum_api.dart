@@ -805,12 +805,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Gets tickDailySnapshots.
   ///
   /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [String] pool:
-  ///   liquidity pool this tick belongs to
-  Future<Response> uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo({ String? pool, }) async {
+  Future<Response> uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
     final path = r'/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current';
 
@@ -820,10 +815,6 @@ class UNISWAPV3ETHEREUMApi {
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
-
-    if (pool != null) {
-      queryParams.addAll(_queryParams('', 'pool', pool));
-    }
 
     const contentTypes = <String>[];
 
@@ -842,13 +833,8 @@ class UNISWAPV3ETHEREUMApi {
   /// TickDailySnapshots (current)
   ///
   /// Gets tickDailySnapshots.
-  ///
-  /// Parameters:
-  ///
-  /// * [String] pool:
-  ///   liquidity pool this tick belongs to
-  Future<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>?> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent({ String? pool, }) async {
-    final response = await uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo( pool: pool, );
+  Future<List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>?> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent() async {
+    final response = await uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -870,12 +856,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Gets tickHourlySnapshots.
   ///
   /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [String] pool:
-  ///   liquidity pool this tick belongs to
-  Future<Response> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo({ String? pool, }) async {
+  Future<Response> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
     final path = r'/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current';
 
@@ -885,10 +866,6 @@ class UNISWAPV3ETHEREUMApi {
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
-
-    if (pool != null) {
-      queryParams.addAll(_queryParams('', 'pool', pool));
-    }
 
     const contentTypes = <String>[];
 
@@ -907,13 +884,8 @@ class UNISWAPV3ETHEREUMApi {
   /// TickHourlySnapshots (current)
   ///
   /// Gets tickHourlySnapshots.
-  ///
-  /// Parameters:
-  ///
-  /// * [String] pool:
-  ///   liquidity pool this tick belongs to
-  Future<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>?> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent({ String? pool, }) async {
-    final response = await uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo( pool: pool, );
+  Future<List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>?> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent() async {
+    final response = await uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -935,12 +907,7 @@ class UNISWAPV3ETHEREUMApi {
   /// Gets ticks.
   ///
   /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [String] pool:
-  ///   Liquidity pool this tick belongs to
-  Future<Response> uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo({ String? pool, }) async {
+  Future<Response> uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
     final path = r'/v1/dapps/uniswap-v3-ethereum/ticks/current';
 
@@ -950,10 +917,6 @@ class UNISWAPV3ETHEREUMApi {
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
-
-    if (pool != null) {
-      queryParams.addAll(_queryParams('', 'pool', pool));
-    }
 
     const contentTypes = <String>[];
 
@@ -972,13 +935,8 @@ class UNISWAPV3ETHEREUMApi {
   /// Ticks (current)
   ///
   /// Gets ticks.
-  ///
-  /// Parameters:
-  ///
-  /// * [String] pool:
-  ///   Liquidity pool this tick belongs to
-  Future<List<UNISWAPV3ETHEREUMTickDTO>?> uNISWAPV3ETHEREUMTicksCurrent({ String? pool, }) async {
-    final response = await uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo( pool: pool, );
+  Future<List<UNISWAPV3ETHEREUMTickDTO>?> uNISWAPV3ETHEREUMTicksCurrent() async {
+    final response = await uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

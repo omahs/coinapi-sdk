@@ -21,8 +21,6 @@ No description available.
 No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
-.PARAMETER Vid
-
 .PARAMETER Id
 (pool address)-(tick index)
 .PARAMETER Index
@@ -69,48 +67,45 @@ function Initialize-PANCAKESWAPV3ETHEREUMTickDTO {
         [System.Nullable[Int64]]
         ${BlockNumber},
         [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true)]
-        [System.Nullable[Int64]]
-        ${Vid},
-        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
-        [Parameter(Position = 5, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Index},
-        [Parameter(Position = 6, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 5, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Pool},
-        [Parameter(Position = 7, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 6, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${CreatedTimestamp},
-        [Parameter(Position = 8, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 7, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${CreatedBlockNumber},
-        [Parameter(Position = 9, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 8, ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${Prices},
-        [Parameter(Position = 10, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 9, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${LiquidityGross},
-        [Parameter(Position = 11, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 10, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${LiquidityGrossUsd},
-        [Parameter(Position = 12, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 11, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${LiquidityNet},
-        [Parameter(Position = 13, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 12, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${LiquidityNetUsd},
-        [Parameter(Position = 14, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 13, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
         ${LastSnapshotDayId},
-        [Parameter(Position = 15, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 14, ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
         ${LastSnapshotHourId},
-        [Parameter(Position = 16, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 15, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${LastUpdateTimestamp},
-        [Parameter(Position = 17, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Position = 16, ValueFromPipelineByPropertyName = $true)]
         [String]
         ${LastUpdateBlockNumber}
     )
@@ -124,7 +119,6 @@ function Initialize-PANCAKESWAPV3ETHEREUMTickDTO {
             "entry_time" = ${EntryTime}
             "recv_time" = ${RecvTime}
             "block_number" = ${BlockNumber}
-            "vid" = ${Vid}
             "id" = ${Id}
             "index" = ${Index}
             "pool" = ${Pool}
@@ -176,7 +170,7 @@ function ConvertFrom-JsonToPANCAKESWAPV3ETHEREUMTickDTO {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in PANCAKESWAPV3ETHEREUMTickDTO
-        $AllProperties = ("entry_time", "recv_time", "block_number", "vid", "id", "index", "pool", "created_timestamp", "created_block_number", "prices", "liquidity_gross", "liquidity_gross_usd", "liquidity_net", "liquidity_net_usd", "last_snapshot_day_id", "last_snapshot_hour_id", "last_update_timestamp", "last_update_block_number")
+        $AllProperties = ("entry_time", "recv_time", "block_number", "id", "index", "pool", "created_timestamp", "created_block_number", "prices", "liquidity_gross", "liquidity_gross_usd", "liquidity_net", "liquidity_net_usd", "last_snapshot_day_id", "last_snapshot_hour_id", "last_update_timestamp", "last_update_block_number")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -199,12 +193,6 @@ function ConvertFrom-JsonToPANCAKESWAPV3ETHEREUMTickDTO {
             $BlockNumber = $null
         } else {
             $BlockNumber = $JsonParameters.PSobject.Properties["block_number"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "vid"))) { #optional property not found
-            $Vid = $null
-        } else {
-            $Vid = $JsonParameters.PSobject.Properties["vid"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "id"))) { #optional property not found
@@ -295,7 +283,6 @@ function ConvertFrom-JsonToPANCAKESWAPV3ETHEREUMTickDTO {
             "entry_time" = ${EntryTime}
             "recv_time" = ${RecvTime}
             "block_number" = ${BlockNumber}
-            "vid" = ${Vid}
             "id" = ${Id}
             "index" = ${Index}
             "pool" = ${Pool}

@@ -296,17 +296,31 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-            "cRYPTOPUNKSBidsCurrent[Bids (current)]" \
-            "cRYPTOPUNKSCollectionDailySnapshotsCurrent[CollectionDailySnapshots (current)]" \
-            "cRYPTOPUNKSCollectionsCurrent[Collections (current)]" \
-            "cRYPTOPUNKSDataSourcesCurrent[DataSources (current)]" \
-            "cRYPTOPUNKSItemsCurrent[Items (current)]" \
-            "cRYPTOPUNKSMarketPlacesCurrent[MarketPlaces (current)]" \
-            "cRYPTOPUNKSMarketplaceDailySnapshotsCurrent[MarketplaceDailySnapshots (current)]" \
-            "cRYPTOPUNKSTradesCurrent[Trades (current)]" \
-            "cRYPTOPUNKSUsersCurrent[Users (current)]"             "cURVEFINANCEETHEREUMLiquidityPoolsCurrent[LiquidityPools (current)]" \
+            "cRYPTOPUNKSETHEREUMBidsCurrent[Bids (current)]" \
+            "cRYPTOPUNKSETHEREUMCollectionDailySnapshotsCurrent[CollectionDailySnapshots (current)]" \
+            "cRYPTOPUNKSETHEREUMCollectionsCurrent[Collections (current)]" \
+            "cRYPTOPUNKSETHEREUMDataSourcesCurrent[DataSources (current)]" \
+            "cRYPTOPUNKSETHEREUMItemsCurrent[Items (current)]" \
+            "cRYPTOPUNKSETHEREUMMarketPlacesCurrent[MarketPlaces (current)]" \
+            "cRYPTOPUNKSETHEREUMMarketplaceDailySnapshotsCurrent[MarketplaceDailySnapshots (current)]" \
+            "cRYPTOPUNKSETHEREUMTradesCurrent[Trades (current)]" \
+            "cRYPTOPUNKSETHEREUMUsersCurrent[Users (current)]"             "cURVEFINANCEETHEREUMAccountsCurrent[Accounts (current)]" \
+            "cURVEFINANCEETHEREUMActiveAccountsCurrent[ActiveAccounts (current)]" \
+            "cURVEFINANCEETHEREUMDepositsCurrent[Deposits (current)]" \
+            "cURVEFINANCEETHEREUMDexAmmProtocolsCurrent[DexAmmProtocols (current)]" \
+            "cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent[FinancialsDailySnapshots (current)]" \
+            "cURVEFINANCEETHEREUMLiquidityGaugesCurrent[LiquidityGauges (current)]" \
+            "cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent[LiquidityPoolDailySnapshots (current)]" \
+            "cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent[LiquidityPoolFees (current)]" \
+            "cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent[LiquidityPoolHourlySnapshots (current)]" \
+            "cURVEFINANCEETHEREUMLiquidityPoolsCurrent[LiquidityPools (current)]" \
+            "cURVEFINANCEETHEREUMLpTokensCurrent[LpTokens (current)]" \
+            "cURVEFINANCEETHEREUMRewardTokensCurrent[RewardTokens (current)]" \
             "cURVEFINANCEETHEREUMSwapsCurrent[Swaps (current)]" \
-            "cURVEFINANCEETHEREUMTokensCurrent[Tokens (current)]"             "metadataChainsGet[List all chains.]" \
+            "cURVEFINANCEETHEREUMTokensCurrent[Tokens (current)]" \
+            "cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent[UsageMetricsDailySnapshots (current)]" \
+            "cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent[UsageMetricsHourlySnapshots (current)]" \
+            "cURVEFINANCEETHEREUMWithdrawsCurrent[Withdraws (current)]"             "metadataChainsGet[List all chains.]" \
             "metadataDappsDappNameGet[Gets dapp by name.]" \
             "metadataDappsGet[List all decentralized applications.]"             "pANCAKESWAPV3ETHEREUMAccountsCurrent[Accounts (current)]" \
             "pANCAKESWAPV3ETHEREUMActiveAccountsCurrent[ActiveAccounts (current)]" \
@@ -330,11 +344,51 @@ case $state in
             "pANCAKESWAPV3ETHEREUMTokensCurrent[Tokens (current)]" \
             "pANCAKESWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent[UsageMetricsDailySnapshots (current)]" \
             "pANCAKESWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent[UsageMetricsHourlySnapshots (current)]" \
-            "pANCAKESWAPV3ETHEREUMWithdrawsCurrent[Withdraws (current)]"             "sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent[LiquidityPools (current)]" \
+            "pANCAKESWAPV3ETHEREUMWithdrawsCurrent[Withdraws (current)]"             "sUSHISWAPV3ETHEREUMAccountsCurrent[Accounts (current)]" \
+            "sUSHISWAPV3ETHEREUMActiveAccountsCurrent[ActiveAccounts (current)]" \
+            "sUSHISWAPV3ETHEREUMDepositsCurrent[Deposits (current)]" \
+            "sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent[DexAmmProtocols (current)]" \
+            "sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent[FinancialsDailySnapshots (current)]" \
+            "sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent[LiquidityPoolAmounts (current)]" \
+            "sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent[LiquidityPoolDailySnapshots (current)]" \
+            "sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent[LiquidityPoolFees (current)]" \
+            "sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent[LiquidityPoolHourlySnapshots (current)]" \
+            "sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent[LiquidityPools (current)]" \
+            "sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent[PositionSnapshots (current)]" \
+            "sUSHISWAPV3ETHEREUMPositionsCurrent[Positions (current)]" \
+            "sUSHISWAPV3ETHEREUMRewardTokensCurrent[RewardTokens (current)]" \
             "sUSHISWAPV3ETHEREUMSwapsCurrent[Swaps (current)]" \
-            "sUSHISWAPV3ETHEREUMTokensCurrent[Tokens (current)]"             "uNISWAPV2ETHEREUMLiquidityPoolsCurrent[LiquidityPools (current)]" \
+            "sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent[TickDailySnapshots (current)]" \
+            "sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent[TickHourlySnapshots (current)]" \
+            "sUSHISWAPV3ETHEREUMTicksCurrent[Ticks (current)]" \
+            "sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent[TokenWhiteListSymbols (current)]" \
+            "sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent[TokenWhiteLists (current)]" \
+            "sUSHISWAPV3ETHEREUMTokensCurrent[Tokens (current)]" \
+            "sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent[UsageMetricsDailySnapshots (current)]" \
+            "sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent[UsageMetricsHourlySnapshots (current)]" \
+            "sUSHISWAPV3ETHEREUMWithdrawsCurrent[Withdraws (current)]"             "uNISWAPV2ETHEREUMAccountsCurrent[Accounts (current)]" \
+            "uNISWAPV2ETHEREUMActiveAccountsCurrent[ActiveAccounts (current)]" \
+            "uNISWAPV2ETHEREUMDepositsCurrent[Deposits (current)]" \
+            "uNISWAPV2ETHEREUMDexAmmProtocolsCurrent[DexAmmProtocols (current)]" \
+            "uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent[FinancialsDailySnapshots (current)]" \
+            "uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent[LiquidityPoolAmounts (current)]" \
+            "uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent[LiquidityPoolDailySnapshots (current)]" \
+            "uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent[LiquidityPoolFees (current)]" \
+            "uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent[LiquidityPoolHourlySnapshots (current)]" \
+            "uNISWAPV2ETHEREUMLiquidityPoolsCurrent[LiquidityPools (current)]" \
+            "uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent[MasterChefAddressToPids (current)]" \
+            "uNISWAPV2ETHEREUMMasterChefRewardersCurrent[MasterChefRewarders (current)]" \
+            "uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent[MasterChefStakingPools (current)]" \
+            "uNISWAPV2ETHEREUMMasterChefsCurrent[MasterChefs (current)]" \
+            "uNISWAPV2ETHEREUMRewardTokensCurrent[RewardTokens (current)]" \
+            "uNISWAPV2ETHEREUMRewarderProbesCurrent[RewarderProbes (current)]" \
             "uNISWAPV2ETHEREUMSwapsCurrent[Swaps (current)]" \
-            "uNISWAPV2ETHEREUMTokensCurrent[Tokens (current)]"             "uNISWAPV3ETHEREUMAccountsCurrent[Accounts (current)]" \
+            "uNISWAPV2ETHEREUMTokenWhiteListsCurrent[TokenWhiteLists (current)]" \
+            "uNISWAPV2ETHEREUMTokensCurrent[Tokens (current)]" \
+            "uNISWAPV2ETHEREUMTransfersCurrent[Transfers (current)]" \
+            "uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent[UsageMetricsDailySnapshots (current)]" \
+            "uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent[UsageMetricsHourlySnapshots (current)]" \
+            "uNISWAPV2ETHEREUMWithdrawsCurrent[Withdraws (current)]"             "uNISWAPV3ETHEREUMAccountsCurrent[Accounts (current)]" \
             "uNISWAPV3ETHEREUMActiveAccountsCurrent[ActiveAccounts (current)]" \
             "uNISWAPV3ETHEREUMDepositsCurrent[Deposits (current)]" \
             "uNISWAPV3ETHEREUMDexAmmProtocolsCurrent[DexAmmProtocols (current)]" \
@@ -364,61 +418,128 @@ case $state in
     ;;
   args)
     case $line[1] in
-      cRYPTOPUNKSBidsCurrent)
+      cRYPTOPUNKSETHEREUMBidsCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      cRYPTOPUNKSCollectionDailySnapshotsCurrent)
+      cRYPTOPUNKSETHEREUMCollectionDailySnapshotsCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      cRYPTOPUNKSCollectionsCurrent)
+      cRYPTOPUNKSETHEREUMCollectionsCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      cRYPTOPUNKSDataSourcesCurrent)
+      cRYPTOPUNKSETHEREUMDataSourcesCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      cRYPTOPUNKSItemsCurrent)
+      cRYPTOPUNKSETHEREUMItemsCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      cRYPTOPUNKSMarketPlacesCurrent)
+      cRYPTOPUNKSETHEREUMMarketPlacesCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      cRYPTOPUNKSMarketplaceDailySnapshotsCurrent)
+      cRYPTOPUNKSETHEREUMMarketplaceDailySnapshotsCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      cRYPTOPUNKSTradesCurrent)
+      cRYPTOPUNKSETHEREUMTradesCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      cRYPTOPUNKSUsersCurrent)
+      cRYPTOPUNKSETHEREUMUsersCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cURVEFINANCEETHEREUMAccountsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cURVEFINANCEETHEREUMActiveAccountsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cURVEFINANCEETHEREUMDepositsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cURVEFINANCEETHEREUMDexAmmProtocolsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cURVEFINANCEETHEREUMFinancialsDailySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cURVEFINANCEETHEREUMLiquidityGaugesCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cURVEFINANCEETHEREUMLiquidityPoolDailySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cURVEFINANCEETHEREUMLiquidityPoolFeesCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cURVEFINANCEETHEREUMLiquidityPoolHourlySnapshotsCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       cURVEFINANCEETHEREUMLiquidityPoolsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "id=:[QUERY] Smart contract address of the pool"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cURVEFINANCEETHEREUMLpTokensCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cURVEFINANCEETHEREUMRewardTokensCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -431,6 +552,25 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       cURVEFINANCEETHEREUMTokensCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "id=:[QUERY] Smart contract address of the token"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cURVEFINANCEETHEREUMWithdrawsCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -495,8 +635,7 @@ case $state in
       pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent)
         local -a _op_arguments
         _op_arguments=(
-                    "pool=:[QUERY] Pool this snapshot belongs to."
-          )
+                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       pANCAKESWAPV3ETHEREUMLiquidityPoolFeesCurrent)
@@ -602,6 +741,62 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      sUSHISWAPV3ETHEREUMAccountsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sUSHISWAPV3ETHEREUMActiveAccountsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sUSHISWAPV3ETHEREUMDepositsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sUSHISWAPV3ETHEREUMDexAmmProtocolsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sUSHISWAPV3ETHEREUMFinancialsDailySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sUSHISWAPV3ETHEREUMLiquidityPoolAmountsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "id=:[QUERY] Smart contract address of the pool."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sUSHISWAPV3ETHEREUMLiquidityPoolFeesCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "pool=:[QUERY] The pool this snapshot belongs to"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       sUSHISWAPV3ETHEREUMLiquidityPoolsCurrent)
         local -a _op_arguments
         _op_arguments=(
@@ -609,7 +804,59 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      sUSHISWAPV3ETHEREUMPositionSnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sUSHISWAPV3ETHEREUMPositionsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "pool=:[QUERY] The liquidity pool in which this position was opened"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sUSHISWAPV3ETHEREUMRewardTokensCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       sUSHISWAPV3ETHEREUMSwapsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sUSHISWAPV3ETHEREUMTickDailySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "pool=:[QUERY] liquidity pool this tick belongs to"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sUSHISWAPV3ETHEREUMTickHourlySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "pool=:[QUERY] liquidity pool this tick belongs to"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sUSHISWAPV3ETHEREUMTicksCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "pool=:[QUERY] Liquidity pool this tick belongs to"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sUSHISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sUSHISWAPV3ETHEREUMTokenWhiteListsCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -622,7 +869,117 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      sUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sUSHISWAPV3ETHEREUMWithdrawsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMAccountsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMActiveAccountsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMDepositsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMDexAmmProtocolsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "id=:[QUERY] Smart contract address of the pool"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       uNISWAPV2ETHEREUMLiquidityPoolsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "id=:[QUERY] Smart contract address of the pool"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMMasterChefRewardersCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMMasterChefsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMRewardTokensCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMRewarderProbesCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -634,7 +991,37 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      uNISWAPV2ETHEREUMTokenWhiteListsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       uNISWAPV2ETHEREUMTokensCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMTransfersCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uNISWAPV2ETHEREUMWithdrawsCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -732,22 +1119,19 @@ case $state in
       uNISWAPV3ETHEREUMTickDailySnapshotsCurrent)
         local -a _op_arguments
         _op_arguments=(
-                    "pool=:[QUERY] liquidity pool this tick belongs to"
-          )
+                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent)
         local -a _op_arguments
         _op_arguments=(
-                    "pool=:[QUERY] liquidity pool this tick belongs to"
-          )
+                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       uNISWAPV3ETHEREUMTicksCurrent)
         local -a _op_arguments
         _op_arguments=(
-                    "pool=:[QUERY] Liquidity pool this tick belongs to"
-          )
+                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       uNISWAPV3ETHEREUMTokenWhiteListSymbolsCurrent)

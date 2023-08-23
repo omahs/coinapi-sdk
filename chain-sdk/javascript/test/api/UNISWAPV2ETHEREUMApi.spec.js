@@ -48,10 +48,160 @@
   }
 
   describe('UNISWAPV2ETHEREUMApi', function() {
+    describe('uNISWAPV2ETHEREUMAccountsCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMAccountsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMAccountsCurrent
+        //instance.uNISWAPV2ETHEREUMAccountsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uNISWAPV2ETHEREUMActiveAccountsCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMActiveAccountsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMActiveAccountsCurrent
+        //instance.uNISWAPV2ETHEREUMActiveAccountsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uNISWAPV2ETHEREUMDepositsCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMDepositsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMDepositsCurrent
+        //instance.uNISWAPV2ETHEREUMDepositsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uNISWAPV2ETHEREUMDexAmmProtocolsCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMDexAmmProtocolsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMDexAmmProtocolsCurrent
+        //instance.uNISWAPV2ETHEREUMDexAmmProtocolsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent
+        //instance.uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent
+        //instance.uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent
+        //instance.uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent
+        //instance.uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent
+        //instance.uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('uNISWAPV2ETHEREUMLiquidityPoolsCurrent', function() {
       it('should call uNISWAPV2ETHEREUMLiquidityPoolsCurrent successfully', function(done) {
         //uncomment below and update the code to test uNISWAPV2ETHEREUMLiquidityPoolsCurrent
         //instance.uNISWAPV2ETHEREUMLiquidityPoolsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent
+        //instance.uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uNISWAPV2ETHEREUMMasterChefRewardersCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMMasterChefRewardersCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMMasterChefRewardersCurrent
+        //instance.uNISWAPV2ETHEREUMMasterChefRewardersCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent
+        //instance.uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uNISWAPV2ETHEREUMMasterChefsCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMMasterChefsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMMasterChefsCurrent
+        //instance.uNISWAPV2ETHEREUMMasterChefsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uNISWAPV2ETHEREUMRewardTokensCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMRewardTokensCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMRewardTokensCurrent
+        //instance.uNISWAPV2ETHEREUMRewardTokensCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uNISWAPV2ETHEREUMRewarderProbesCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMRewarderProbesCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMRewarderProbesCurrent
+        //instance.uNISWAPV2ETHEREUMRewarderProbesCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -68,10 +218,60 @@
         done();
       });
     });
+    describe('uNISWAPV2ETHEREUMTokenWhiteListsCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMTokenWhiteListsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMTokenWhiteListsCurrent
+        //instance.uNISWAPV2ETHEREUMTokenWhiteListsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('uNISWAPV2ETHEREUMTokensCurrent', function() {
       it('should call uNISWAPV2ETHEREUMTokensCurrent successfully', function(done) {
         //uncomment below and update the code to test uNISWAPV2ETHEREUMTokensCurrent
         //instance.uNISWAPV2ETHEREUMTokensCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uNISWAPV2ETHEREUMTransfersCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMTransfersCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMTransfersCurrent
+        //instance.uNISWAPV2ETHEREUMTransfersCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent
+        //instance.uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent
+        //instance.uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uNISWAPV2ETHEREUMWithdrawsCurrent', function() {
+      it('should call uNISWAPV2ETHEREUMWithdrawsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uNISWAPV2ETHEREUMWithdrawsCurrent
+        //instance.uNISWAPV2ETHEREUMWithdrawsCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

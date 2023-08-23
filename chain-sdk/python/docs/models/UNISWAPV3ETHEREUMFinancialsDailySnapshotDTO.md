@@ -12,7 +12,7 @@ Key | Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | ------------- | -------------
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
-**block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Block number of when this snapshot was taken/last modified.) | [optional] value must be a 32 bit integer
+**block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
 **id** | None, str,  | NoneClass, str,  | ID is # of days since Unix epoch time. | [optional] 
 **day** | decimal.Decimal, int,  | decimal.Decimal,  | Number of days since Unix epoch time. | [optional] value must be a 32 bit integer
 **protocol** | None, str,  | NoneClass, str,  | Protocol this snapshot is associated with. | [optional] 

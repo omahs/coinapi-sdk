@@ -15,8 +15,6 @@ class PANCAKESWAPV3ETHEREUMPositionDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /*  */
-    Long vid
     /* (account address)-(market address)-(count) */
     String id
     /* Account that owns this position */

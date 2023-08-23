@@ -1062,7 +1062,6 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
     /**
      * TickDailySnapshots (current)
      * Gets tickDailySnapshots.
-     * @param pool liquidity pool this tick belongs to (optional)
      * @return kotlin.collections.List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1072,8 +1071,8 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool: kotlin.String? = null) : kotlin.collections.List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> {
-        val localVarResponse = uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo(pool = pool)
+    fun uNISWAPV3ETHEREUMTickDailySnapshotsCurrent() : kotlin.collections.List<UNISWAPV3ETHEREUMTickDailySnapshotDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>
@@ -1093,15 +1092,14 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
     /**
      * TickDailySnapshots (current)
      * Gets tickDailySnapshots.
-     * @param pool liquidity pool this tick belongs to (optional)
      * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo(pool: kotlin.String?) : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>?> {
-        val localVariableConfig = uNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequestConfig(pool = pool)
+    fun uNISWAPV3ETHEREUMTickDailySnapshotsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequestConfig()
 
         return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>(
             localVariableConfig
@@ -1111,17 +1109,11 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
     /**
      * To obtain the request config of the operation uNISWAPV3ETHEREUMTickDailySnapshotsCurrent
      *
-     * @param pool liquidity pool this tick belongs to (optional)
      * @return RequestConfig
      */
-    fun uNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequestConfig(pool: kotlin.String?) : RequestConfig<Unit> {
+    fun uNISWAPV3ETHEREUMTickDailySnapshotsCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
-            .apply {
-                if (pool != null) {
-                    put("pool", listOf(pool.toString()))
-                }
-            }
+        val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Accept"] = "application/json"
 
@@ -1138,7 +1130,6 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
     /**
      * TickHourlySnapshots (current)
      * Gets tickHourlySnapshots.
-     * @param pool liquidity pool this tick belongs to (optional)
      * @return kotlin.collections.List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1148,8 +1139,8 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool: kotlin.String? = null) : kotlin.collections.List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> {
-        val localVarResponse = uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(pool = pool)
+    fun uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent() : kotlin.collections.List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>
@@ -1169,15 +1160,14 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
     /**
      * TickHourlySnapshots (current)
      * Gets tickHourlySnapshots.
-     * @param pool liquidity pool this tick belongs to (optional)
      * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo(pool: kotlin.String?) : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>?> {
-        val localVariableConfig = uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequestConfig(pool = pool)
+    fun uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequestConfig()
 
         return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>(
             localVariableConfig
@@ -1187,17 +1177,11 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
     /**
      * To obtain the request config of the operation uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent
      *
-     * @param pool liquidity pool this tick belongs to (optional)
      * @return RequestConfig
      */
-    fun uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequestConfig(pool: kotlin.String?) : RequestConfig<Unit> {
+    fun uNISWAPV3ETHEREUMTickHourlySnapshotsCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
-            .apply {
-                if (pool != null) {
-                    put("pool", listOf(pool.toString()))
-                }
-            }
+        val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Accept"] = "application/json"
 
@@ -1214,7 +1198,6 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
     /**
      * Ticks (current)
      * Gets ticks.
-     * @param pool Liquidity pool this tick belongs to (optional)
      * @return kotlin.collections.List<UNISWAPV3ETHEREUMTickDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1224,8 +1207,8 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun uNISWAPV3ETHEREUMTicksCurrent(pool: kotlin.String? = null) : kotlin.collections.List<UNISWAPV3ETHEREUMTickDTO> {
-        val localVarResponse = uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo(pool = pool)
+    fun uNISWAPV3ETHEREUMTicksCurrent() : kotlin.collections.List<UNISWAPV3ETHEREUMTickDTO> {
+        val localVarResponse = uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UNISWAPV3ETHEREUMTickDTO>
@@ -1245,15 +1228,14 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
     /**
      * Ticks (current)
      * Gets ticks.
-     * @param pool Liquidity pool this tick belongs to (optional)
      * @return ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMTickDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo(pool: kotlin.String?) : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMTickDTO>?> {
-        val localVariableConfig = uNISWAPV3ETHEREUMTicksCurrentRequestConfig(pool = pool)
+    fun uNISWAPV3ETHEREUMTicksCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UNISWAPV3ETHEREUMTickDTO>?> {
+        val localVariableConfig = uNISWAPV3ETHEREUMTicksCurrentRequestConfig()
 
         return request<Unit, kotlin.collections.List<UNISWAPV3ETHEREUMTickDTO>>(
             localVariableConfig
@@ -1263,17 +1245,11 @@ class UNISWAPV3ETHEREUMApi(basePath: kotlin.String = defaultBasePath, client: Ok
     /**
      * To obtain the request config of the operation uNISWAPV3ETHEREUMTicksCurrent
      *
-     * @param pool Liquidity pool this tick belongs to (optional)
      * @return RequestConfig
      */
-    fun uNISWAPV3ETHEREUMTicksCurrentRequestConfig(pool: kotlin.String?) : RequestConfig<Unit> {
+    fun uNISWAPV3ETHEREUMTicksCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
-            .apply {
-                if (pool != null) {
-                    put("pool", listOf(pool.toString()))
-                }
-            }
+        val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Accept"] = "application/json"
 

@@ -27,10 +27,10 @@ public class OASCRYPTOPUNKSTradeDTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
-    public String blockNumber { get; set; }
+    public Long blockNumber { get; set; }
 
     /**
      * 
@@ -258,7 +258,7 @@ public class OASCRYPTOPUNKSTradeDTO implements OAS.MappedProperties {
         OASCRYPTOPUNKSTradeDTO crYPTOPUNKSTradeDTO = new OASCRYPTOPUNKSTradeDTO();
           crYPTOPUNKSTradeDTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
           crYPTOPUNKSTradeDTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
-          crYPTOPUNKSTradeDTO.blockNumber = '';
+          crYPTOPUNKSTradeDTO.blockNumber = 123456789L;
           crYPTOPUNKSTradeDTO.vid = 123456789L;
           crYPTOPUNKSTradeDTO.blockRange = '';
           crYPTOPUNKSTradeDTO.id = '';

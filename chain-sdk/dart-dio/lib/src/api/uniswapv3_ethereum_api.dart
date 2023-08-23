@@ -1102,7 +1102,6 @@ class UNISWAPV3ETHEREUMApi {
   /// Gets tickDailySnapshots.
   ///
   /// Parameters:
-  /// * [pool] - liquidity pool this tick belongs to
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1113,7 +1112,6 @@ class UNISWAPV3ETHEREUMApi {
   /// Returns a [Future] containing a [Response] with a [BuiltList<UNISWAPV3ETHEREUMTickDailySnapshotDTO>] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<UNISWAPV3ETHEREUMTickDailySnapshotDTO>>> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent({ 
-    String? pool,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1134,14 +1132,9 @@ class UNISWAPV3ETHEREUMApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{
-      if (pool != null) r'pool': encodeQueryParameter(_serializers, pool, const FullType(String)),
-    };
-
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -1182,7 +1175,6 @@ class UNISWAPV3ETHEREUMApi {
   /// Gets tickHourlySnapshots.
   ///
   /// Parameters:
-  /// * [pool] - liquidity pool this tick belongs to
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1193,7 +1185,6 @@ class UNISWAPV3ETHEREUMApi {
   /// Returns a [Future] containing a [Response] with a [BuiltList<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<UNISWAPV3ETHEREUMTickHourlySnapshotDTO>>> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent({ 
-    String? pool,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1214,14 +1205,9 @@ class UNISWAPV3ETHEREUMApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{
-      if (pool != null) r'pool': encodeQueryParameter(_serializers, pool, const FullType(String)),
-    };
-
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -1262,7 +1248,6 @@ class UNISWAPV3ETHEREUMApi {
   /// Gets ticks.
   ///
   /// Parameters:
-  /// * [pool] - Liquidity pool this tick belongs to
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1273,7 +1258,6 @@ class UNISWAPV3ETHEREUMApi {
   /// Returns a [Future] containing a [Response] with a [BuiltList<UNISWAPV3ETHEREUMTickDTO>] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<UNISWAPV3ETHEREUMTickDTO>>> uNISWAPV3ETHEREUMTicksCurrent({ 
-    String? pool,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1294,14 +1278,9 @@ class UNISWAPV3ETHEREUMApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{
-      if (pool != null) r'pool': encodeQueryParameter(_serializers, pool, const FullType(String)),
-    };
-
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,

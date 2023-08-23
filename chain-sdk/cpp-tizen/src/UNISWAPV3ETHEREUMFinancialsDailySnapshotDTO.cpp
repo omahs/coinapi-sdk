@@ -25,7 +25,7 @@ UNISWAP_V3_ETHEREUM.FinancialsDailySnapshotDTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
-	//block_number = int(0);
+	//block_number = long(0);
 	//id = std::string();
 	//day = int(0);
 	//protocol = std::string();
@@ -189,8 +189,8 @@ UNISWAP_V3_ETHEREUM.FinancialsDailySnapshotDTO::fromJson(char* jsonStr)
 	if (node !=NULL) {
 	
 
-		if (isprimitive("int")) {
-			jsonToValue(&block_number, node, "int", "");
+		if (isprimitive("long long")) {
+			jsonToValue(&block_number, node, "long long", "");
 		} else {
 			
 		}
@@ -423,9 +423,9 @@ UNISWAP_V3_ETHEREUM.FinancialsDailySnapshotDTO::toJson()
 	}
 	const gchar *recv_timeKey = "recv_time";
 	json_object_set_member(pJsonObject, recv_timeKey, node);
-	if (isprimitive("int")) {
-		int obj = getBlockNumber();
-		node = converttoJson(&obj, "int", "");
+	if (isprimitive("long long")) {
+		long long obj = getBlockNumber();
+		node = converttoJson(&obj, "long long", "");
 	}
 	else {
 		
@@ -626,14 +626,14 @@ UNISWAP_V3_ETHEREUM.FinancialsDailySnapshotDTO::setRecvTime(std::string  recv_ti
 	this->recv_time = recv_time;
 }
 
-int
+long long
 UNISWAP_V3_ETHEREUM.FinancialsDailySnapshotDTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-UNISWAP_V3_ETHEREUM.FinancialsDailySnapshotDTO::setBlockNumber(int  block_number)
+UNISWAP_V3_ETHEREUM.FinancialsDailySnapshotDTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }

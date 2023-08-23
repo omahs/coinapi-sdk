@@ -497,9 +497,9 @@ end:
 // Gets liquidityPoolDailySnapshots.
 //
 list_t*
-PANCAKESWAPV3ETHEREUMAPI_pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(apiClient_t *apiClient, char * pool )
+PANCAKESWAPV3ETHEREUMAPI_pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent(apiClient_t *apiClient)
 {
-    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
     list_t *localVarHeaderType = list_createList();
@@ -513,18 +513,6 @@ PANCAKESWAPV3ETHEREUMAPI_pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
 
 
 
-
-    // query parameters
-    char *keyQuery_pool = NULL;
-    char * valueQuery_pool = NULL;
-    keyValuePair_t *keyPairQuery_pool = 0;
-    if (pool)
-    {
-        keyQuery_pool = strdup("pool");
-        valueQuery_pool = strdup((pool));
-        keyPairQuery_pool = keyValuePair_create(keyQuery_pool, valueQuery_pool);
-        list_addElement(localVarQueryParameters,keyPairQuery_pool);
-    }
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
@@ -567,24 +555,12 @@ PANCAKESWAPV3ETHEREUMAPI_pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent
         apiClient->dataReceived = NULL;
         apiClient->dataReceivedLen = 0;
     }
-    list_freeList(localVarQueryParameters);
+    
     
     
     list_freeList(localVarHeaderType);
     
     free(localVarPath);
-    if(keyQuery_pool){
-        free(keyQuery_pool);
-        keyQuery_pool = NULL;
-    }
-    if(valueQuery_pool){
-        free(valueQuery_pool);
-        valueQuery_pool = NULL;
-    }
-    if(keyPairQuery_pool){
-        keyValuePair_free(keyPairQuery_pool);
-        keyPairQuery_pool = NULL;
-    }
     return elementToReturn;
 end:
     free(localVarPath);

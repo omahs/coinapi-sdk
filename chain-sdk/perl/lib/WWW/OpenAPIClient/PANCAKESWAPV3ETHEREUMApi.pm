@@ -358,14 +358,8 @@ sub p_ancakeswapv3_ethereum_liquidity_pool_amounts__current {
 #
 # LiquidityPoolDailySnapshots (current)
 #
-# @param string $pool Pool this snapshot belongs to. (optional)
 {
     my $params = {
-    'pool' => {
-        data_type => 'string',
-        description => 'Pool this snapshot belongs to.',
-        required => '0',
-    },
     };
     __PACKAGE__->method_documentation->{ 'p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current' } = {
         summary => 'LiquidityPoolDailySnapshots (current)',
@@ -392,11 +386,6 @@ sub p_ancakeswapv3_ethereum_liquidity_pool_daily_snapshots__current {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'pool'}) {
-        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
-    }
 
     my $_body_data;
     # authentication setting, if any

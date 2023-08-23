@@ -20,9 +20,9 @@ export class CURVEFINANCEETHEREUMSwapDTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
     /**
-    * Block number of this event
+    * Number of block in which entity was recorded.
     */
-    'blockNumber'?: string | null;
+    'blockNumber'?: number;
     /**
     * Swap-(transaction hash)-(log index)
     */
@@ -101,7 +101,7 @@ export class CURVEFINANCEETHEREUMSwapDTO {
         {
             "name": "blockNumber",
             "baseName": "block_number",
-            "type": "string"
+            "type": "number"
         },
         {
             "name": "id",

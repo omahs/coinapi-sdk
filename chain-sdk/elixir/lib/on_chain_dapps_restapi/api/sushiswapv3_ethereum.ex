@@ -10,6 +10,279 @@ defmodule OnChainDapps-RESTAPI.Api.SUSHISWAPV3ETHEREUM do
   import OnChainDapps-RESTAPI.RequestBuilder
 
   @doc """
+  Accounts (current)
+  Gets accounts.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumAccountDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_accounts__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumAccountDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_accounts__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/accounts/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumAccountDto{}]}
+    ])
+  end
+
+  @doc """
+  ActiveAccounts (current)
+  Gets activeAccounts.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumActiveAccountDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_active_accounts__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumActiveAccountDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_active_accounts__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/activeAccounts/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumActiveAccountDto{}]}
+    ])
+  end
+
+  @doc """
+  Deposits (current)
+  Gets deposits.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumDepositDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_deposits__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumDepositDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_deposits__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/deposits/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumDepositDto{}]}
+    ])
+  end
+
+  @doc """
+  DexAmmProtocols (current)
+  Gets dexAmmProtocols.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumDexAmmProtocolDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_dex_amm_protocols__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumDexAmmProtocolDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_dex_amm_protocols__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/dexAmmProtocols/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumDexAmmProtocolDto{}]}
+    ])
+  end
+
+  @doc """
+  FinancialsDailySnapshots (current)
+  Gets financialsDailySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumFinancialsDailySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_financials_daily_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumFinancialsDailySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_financials_daily_snapshots__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/financialsDailySnapshots/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumFinancialsDailySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  LiquidityPoolAmounts (current)
+  Gets liquidityPoolAmounts.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:id` (String.t): Smart contract address of the pool.
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumLiquidityPoolAmountDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_liquidity_pool_amounts__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumLiquidityPoolAmountDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_liquidity_pool_amounts__current(connection, opts \\ []) do
+    optional_params = %{
+      :id => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/liquidityPoolAmounts/current")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumLiquidityPoolAmountDto{}]}
+    ])
+  end
+
+  @doc """
+  LiquidityPoolDailySnapshots (current)
+  Gets liquidityPoolDailySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumLiquidityPoolDailySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_liquidity_pool_daily_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumLiquidityPoolDailySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_liquidity_pool_daily_snapshots__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/liquidityPoolDailySnapshots/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumLiquidityPoolDailySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  LiquidityPoolFees (current)
+  Gets liquidityPoolFees.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumLiquidityPoolFeeDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_liquidity_pool_fees__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumLiquidityPoolFeeDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_liquidity_pool_fees__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/liquidityPoolFees/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumLiquidityPoolFeeDto{}]}
+    ])
+  end
+
+  @doc """
+  LiquidityPoolHourlySnapshots (current)
+  Gets liquidityPoolHourlySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:pool` (String.t): The pool this snapshot belongs to
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumLiquidityPoolHourlySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_liquidity_pool_hourly_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumLiquidityPoolHourlySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_liquidity_pool_hourly_snapshots__current(connection, opts \\ []) do
+    optional_params = %{
+      :pool => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/liquidityPoolHourlySnapshots/current")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumLiquidityPoolHourlySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
   LiquidityPools (current)
   Gets liquidityPools.
 
@@ -45,6 +318,99 @@ defmodule OnChainDapps-RESTAPI.Api.SUSHISWAPV3ETHEREUM do
   end
 
   @doc """
+  PositionSnapshots (current)
+  Gets positionSnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumPositionSnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_position_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumPositionSnapshotDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_position_snapshots__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/positionSnapshots/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumPositionSnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  Positions (current)
+  Gets positions.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:pool` (String.t): The liquidity pool in which this position was opened
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumPositionDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_positions__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumPositionDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_positions__current(connection, opts \\ []) do
+    optional_params = %{
+      :pool => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/positions/current")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumPositionDto{}]}
+    ])
+  end
+
+  @doc """
+  RewardTokens (current)
+  Gets rewardTokens.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumRewardTokenDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_reward_tokens__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumRewardTokenDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_reward_tokens__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/rewardTokens/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumRewardTokenDto{}]}
+    ])
+  end
+
+  @doc """
   Swaps (current)
   Gets swaps.
 
@@ -70,6 +436,169 @@ defmodule OnChainDapps-RESTAPI.Api.SUSHISWAPV3ETHEREUM do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumSwapDto{}]}
+    ])
+  end
+
+  @doc """
+  TickDailySnapshots (current)
+  Gets tickDailySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:pool` (String.t): liquidity pool this tick belongs to
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumTickDailySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_tick_daily_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumTickDailySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_tick_daily_snapshots__current(connection, opts \\ []) do
+    optional_params = %{
+      :pool => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/tickDailySnapshots/current")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumTickDailySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  TickHourlySnapshots (current)
+  Gets tickHourlySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:pool` (String.t): liquidity pool this tick belongs to
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumTickHourlySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_tick_hourly_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumTickHourlySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_tick_hourly_snapshots__current(connection, opts \\ []) do
+    optional_params = %{
+      :pool => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/tickHourlySnapshots/current")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumTickHourlySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  Ticks (current)
+  Gets ticks.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:pool` (String.t): Liquidity pool this tick belongs to
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumTickDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_ticks__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumTickDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_ticks__current(connection, opts \\ []) do
+    optional_params = %{
+      :pool => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/ticks/current")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumTickDto{}]}
+    ])
+  end
+
+  @doc """
+  TokenWhiteListSymbols (current)
+  Gets tokenWhiteListSymbols.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumTokenWhiteListSymbolDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_token_white_list_symbols__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumTokenWhiteListSymbolDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_token_white_list_symbols__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/tokenWhiteListSymbols/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumTokenWhiteListSymbolDto{}]}
+    ])
+  end
+
+  @doc """
+  TokenWhiteLists (current)
+  Gets tokenWhiteLists.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumTokenWhiteListDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_token_white_lists__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumTokenWhiteListDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_token_white_lists__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/tokenWhiteLists/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumTokenWhiteListDto{}]}
     ])
   end
 
@@ -105,6 +634,93 @@ defmodule OnChainDapps-RESTAPI.Api.SUSHISWAPV3ETHEREUM do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumTokenDto{}]}
+    ])
+  end
+
+  @doc """
+  UsageMetricsDailySnapshots (current)
+  Gets usageMetricsDailySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumUsageMetricsDailySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_usage_metrics_daily_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumUsageMetricsDailySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_usage_metrics_daily_snapshots__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/usageMetricsDailySnapshots/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumUsageMetricsDailySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  UsageMetricsHourlySnapshots (current)
+  Gets usageMetricsHourlySnapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumUsageMetricsHourlySnapshotDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_usage_metrics_hourly_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumUsageMetricsHourlySnapshotDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_usage_metrics_hourly_snapshots__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/usageMetricsHourlySnapshots/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumUsageMetricsHourlySnapshotDto{}]}
+    ])
+  end
+
+  @doc """
+  Withdraws (current)
+  Gets withdraws.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%SushiswapV3EthereumWithdrawDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec s_ushiswapv3_ethereum_withdraws__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.SushiswapV3EthereumWithdrawDto.t)} | {:error, Tesla.Env.t}
+  def s_ushiswapv3_ethereum_withdraws__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/v1/dapps/sushiswap-v3-ethereum/withdraws/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainDapps-RESTAPI.Model.SushiswapV3EthereumWithdrawDto{}]}
     ])
   end
 end

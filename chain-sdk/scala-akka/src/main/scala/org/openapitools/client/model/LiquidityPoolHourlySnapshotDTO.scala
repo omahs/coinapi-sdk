@@ -19,8 +19,6 @@ case class LiquidityPoolHourlySnapshotDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /*  */
-  vid: Option[Long] = None,
   /* (Smart contract address of the pool)-( # of hours since Unix epoch time) */
   id: Option[String] = None,
   /* Number of hours since Unix epoch time */

@@ -11,8 +11,8 @@ class UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO {
     Date entryTime
     
     Date recvTime
-    /* Block number of when this snapshot was taken/last modified.) */
-    Integer blockNumber
+    /* Number of block in which entity was recorded. */
+    Long blockNumber
     /* ID is # of days since Unix epoch time. */
     String id
     /* Number of days since Unix epoch time. */

@@ -206,11 +206,10 @@ feature -- Test routines
             -- Gets tickDailySnapshots.
         local
             l_response: LIST [UNISWAP_V3_ETHEREUM_TICK_DAILY_SNAPSHOT_DTO]
-            l_pool: STRING_32
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.u_ni_sw_ap_v3_et_he_re_um_tick_daily_snapshots_current(l_pool)
+            -- l_response := api.u_ni_sw_ap_v3_et_he_re_um_tick_daily_snapshots_current
             assert ("not_implemented", False)
         end
 
@@ -220,11 +219,10 @@ feature -- Test routines
             -- Gets tickHourlySnapshots.
         local
             l_response: LIST [UNISWAP_V3_ETHEREUM_TICK_HOURLY_SNAPSHOT_DTO]
-            l_pool: STRING_32
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.u_ni_sw_ap_v3_et_he_re_um_tick_hourly_snapshots_current(l_pool)
+            -- l_response := api.u_ni_sw_ap_v3_et_he_re_um_tick_hourly_snapshots_current
             assert ("not_implemented", False)
         end
 
@@ -234,11 +232,10 @@ feature -- Test routines
             -- Gets ticks.
         local
             l_response: LIST [UNISWAP_V3_ETHEREUM_TICK_DTO]
-            l_pool: STRING_32
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.u_ni_sw_ap_v3_et_he_re_um_ticks_current(l_pool)
+            -- l_response := api.u_ni_sw_ap_v3_et_he_re_um_ticks_current
             assert ("not_implemented", False)
         end
 

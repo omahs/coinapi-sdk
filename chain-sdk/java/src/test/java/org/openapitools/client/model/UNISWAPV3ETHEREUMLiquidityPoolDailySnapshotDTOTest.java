@@ -66,14 +66,6 @@ public class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTOTest {
     }
 
     /**
-     * Test the property 'vid'
-     */
-    @Test
-    public void vidTest() {
-        // TODO: test vid
-    }
-
-    /**
      * Test the property 'block'
      */
     @Test

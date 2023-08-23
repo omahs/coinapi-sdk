@@ -26,13 +26,6 @@ API.Client.PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.prototype.recvTime;
 API.Client.PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.prototype.blockNumber;
 
 /**
- * 
- * @type {!number}
- * @export
- */
-API.Client.PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO.prototype.vid;
-
-/**
  * Identifier, format: (pool address)-(tick index)-(day ID)
  * @type {!string}
  * @export

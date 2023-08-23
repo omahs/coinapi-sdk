@@ -16,7 +16,6 @@ class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO {
     this.entryTime,
     this.recvTime,
     this.blockNumber,
-    this.vid,
     this.block,
     this.id,
     this.day,
@@ -86,15 +85,6 @@ class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? blockNumber;
-
-  /// .
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? vid;
 
   /// The Ethereum block number associated with the liquidity pool daily snapshot.
   ///
@@ -296,7 +286,6 @@ class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO {
      other.entryTime == entryTime &&
      other.recvTime == recvTime &&
      other.blockNumber == blockNumber &&
-     other.vid == vid &&
      other.block == block &&
      other.id == id &&
      other.day == day &&
@@ -347,7 +336,6 @@ class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO {
     (entryTime == null ? 0 : entryTime!.hashCode) +
     (recvTime == null ? 0 : recvTime!.hashCode) +
     (blockNumber == null ? 0 : blockNumber!.hashCode) +
-    (vid == null ? 0 : vid!.hashCode) +
     (block == null ? 0 : block!.hashCode) +
     (id == null ? 0 : id!.hashCode) +
     (day == null ? 0 : day!.hashCode) +
@@ -393,7 +381,7 @@ class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO {
     (timestamp == null ? 0 : timestamp!.hashCode);
 
   @override
-  String toString() => 'UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[entryTime=$entryTime, recvTime=$recvTime, blockNumber=$blockNumber, vid=$vid, block=$block, id=$id, day=$day, protocol=$protocol, pool=$pool, tick=$tick, totalValueLockedUsd=$totalValueLockedUsd, totalLiquidity=$totalLiquidity, totalLiquidityUsd=$totalLiquidityUsd, activeLiquidity=$activeLiquidity, activeLiquidityUsd=$activeLiquidityUsd, uncollectedProtocolSideTokenAmounts=$uncollectedProtocolSideTokenAmounts, uncollectedProtocolSideValuesUsd=$uncollectedProtocolSideValuesUsd, uncollectedSupplySideTokenAmounts=$uncollectedSupplySideTokenAmounts, uncollectedSupplySideValuesUsd=$uncollectedSupplySideValuesUsd, cumulativeSupplySideRevenueUsd=$cumulativeSupplySideRevenueUsd, dailySupplySideRevenueUsd=$dailySupplySideRevenueUsd, cumulativeProtocolSideRevenueUsd=$cumulativeProtocolSideRevenueUsd, dailyProtocolSideRevenueUsd=$dailyProtocolSideRevenueUsd, cumulativeTotalRevenueUsd=$cumulativeTotalRevenueUsd, dailyTotalRevenueUsd=$dailyTotalRevenueUsd, cumulativeVolumeUsd=$cumulativeVolumeUsd, dailyVolumeUsd=$dailyVolumeUsd, cumulativeVolumeByTokenAmount=$cumulativeVolumeByTokenAmount, dailyVolumeByTokenAmount=$dailyVolumeByTokenAmount, cumulativeVolumeByTokenUsd=$cumulativeVolumeByTokenUsd, dailyVolumeByTokenUsd=$dailyVolumeByTokenUsd, inputTokenBalances=$inputTokenBalances, inputTokenBalancesUsd=$inputTokenBalancesUsd, inputTokenWeights=$inputTokenWeights, stakedOutputTokenAmount=$stakedOutputTokenAmount, rewardTokenEmissionsAmount=$rewardTokenEmissionsAmount, rewardTokenEmissionsUsd=$rewardTokenEmissionsUsd, cumulativeDepositCount=$cumulativeDepositCount, dailyDepositCount=$dailyDepositCount, cumulativeWithdrawCount=$cumulativeWithdrawCount, dailyWithdrawCount=$dailyWithdrawCount, cumulativeSwapCount=$cumulativeSwapCount, dailySwapCount=$dailySwapCount, positionCount=$positionCount, openPositionCount=$openPositionCount, closedPositionCount=$closedPositionCount, timestamp=$timestamp]';
+  String toString() => 'UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO[entryTime=$entryTime, recvTime=$recvTime, blockNumber=$blockNumber, block=$block, id=$id, day=$day, protocol=$protocol, pool=$pool, tick=$tick, totalValueLockedUsd=$totalValueLockedUsd, totalLiquidity=$totalLiquidity, totalLiquidityUsd=$totalLiquidityUsd, activeLiquidity=$activeLiquidity, activeLiquidityUsd=$activeLiquidityUsd, uncollectedProtocolSideTokenAmounts=$uncollectedProtocolSideTokenAmounts, uncollectedProtocolSideValuesUsd=$uncollectedProtocolSideValuesUsd, uncollectedSupplySideTokenAmounts=$uncollectedSupplySideTokenAmounts, uncollectedSupplySideValuesUsd=$uncollectedSupplySideValuesUsd, cumulativeSupplySideRevenueUsd=$cumulativeSupplySideRevenueUsd, dailySupplySideRevenueUsd=$dailySupplySideRevenueUsd, cumulativeProtocolSideRevenueUsd=$cumulativeProtocolSideRevenueUsd, dailyProtocolSideRevenueUsd=$dailyProtocolSideRevenueUsd, cumulativeTotalRevenueUsd=$cumulativeTotalRevenueUsd, dailyTotalRevenueUsd=$dailyTotalRevenueUsd, cumulativeVolumeUsd=$cumulativeVolumeUsd, dailyVolumeUsd=$dailyVolumeUsd, cumulativeVolumeByTokenAmount=$cumulativeVolumeByTokenAmount, dailyVolumeByTokenAmount=$dailyVolumeByTokenAmount, cumulativeVolumeByTokenUsd=$cumulativeVolumeByTokenUsd, dailyVolumeByTokenUsd=$dailyVolumeByTokenUsd, inputTokenBalances=$inputTokenBalances, inputTokenBalancesUsd=$inputTokenBalancesUsd, inputTokenWeights=$inputTokenWeights, stakedOutputTokenAmount=$stakedOutputTokenAmount, rewardTokenEmissionsAmount=$rewardTokenEmissionsAmount, rewardTokenEmissionsUsd=$rewardTokenEmissionsUsd, cumulativeDepositCount=$cumulativeDepositCount, dailyDepositCount=$dailyDepositCount, cumulativeWithdrawCount=$cumulativeWithdrawCount, dailyWithdrawCount=$dailyWithdrawCount, cumulativeSwapCount=$cumulativeSwapCount, dailySwapCount=$dailySwapCount, positionCount=$positionCount, openPositionCount=$openPositionCount, closedPositionCount=$closedPositionCount, timestamp=$timestamp]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -411,11 +399,6 @@ class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO {
       json[r'block_number'] = this.blockNumber;
     } else {
       json[r'block_number'] = null;
-    }
-    if (this.vid != null) {
-      json[r'vid'] = this.vid;
-    } else {
-      json[r'vid'] = null;
     }
     if (this.block != null) {
       json[r'block_'] = this.block;
@@ -657,7 +640,6 @@ class UNISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO {
         entryTime: mapDateTime(json, r'entry_time', ''),
         recvTime: mapDateTime(json, r'recv_time', ''),
         blockNumber: mapValueOfType<int>(json, r'block_number'),
-        vid: mapValueOfType<int>(json, r'vid'),
         block: mapValueOfType<int>(json, r'block_'),
         id: mapValueOfType<String>(json, r'id'),
         day: mapValueOfType<int>(json, r'day'),

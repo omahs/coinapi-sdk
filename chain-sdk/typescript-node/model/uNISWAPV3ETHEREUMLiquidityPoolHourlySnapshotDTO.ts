@@ -23,10 +23,6 @@ export class UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
     */
     'blockNumber'?: number;
     /**
-    * 
-    */
-    'vid'?: number;
-    /**
     * (Smart contract address of the pool)-( # of hours since Unix epoch time)
     */
     'id'?: string | null;
@@ -211,11 +207,6 @@ export class UNISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO {
         {
             "name": "blockNumber",
             "baseName": "block_number",
-            "type": "number"
-        },
-        {
-            "name": "vid",
-            "baseName": "vid",
             "type": "number"
         },
         {

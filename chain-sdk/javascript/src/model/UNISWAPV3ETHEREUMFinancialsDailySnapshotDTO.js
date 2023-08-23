@@ -209,7 +209,7 @@ UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.prototype['entry_time'] = undefined;
 UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.prototype['recv_time'] = undefined;
 
 /**
- * Block number of when this snapshot was taken/last modified.)
+ * Number of block in which entity was recorded.
  * @member {Number} block_number
  */
 UNISWAPV3ETHEREUMFinancialsDailySnapshotDTO.prototype['block_number'] = undefined;

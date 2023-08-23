@@ -14,7 +14,6 @@ part 'uniswapv3_ethereum_tick_hourly_snapshot_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [vid] - 
 /// * [id] - (pool address)-(tick index)-(hour ID)
 /// * [hourId] - Number of hours since Unix epoch time
 /// * [tick] - tick index
@@ -35,10 +34,6 @@ abstract class UNISWAPV3ETHEREUMTickHourlySnapshotDTO implements Built<UNISWAPV3
   /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
-
-  /// 
-  @BuiltValueField(wireName: r'vid')
-  int? get vid;
 
   /// (pool address)-(tick index)-(hour ID)
   @BuiltValueField(wireName: r'id')
@@ -117,13 +112,6 @@ class _$UNISWAPV3ETHEREUMTickHourlySnapshotDTOSerializer implements PrimitiveSer
       yield r'block_number';
       yield serializers.serialize(
         object.blockNumber,
-        specifiedType: const FullType(int),
-      );
-    }
-    if (object.vid != null) {
-      yield r'vid';
-      yield serializers.serialize(
-        object.vid,
         specifiedType: const FullType(int),
       );
     }
@@ -233,13 +221,6 @@ class _$UNISWAPV3ETHEREUMTickHourlySnapshotDTOSerializer implements PrimitiveSer
             specifiedType: const FullType(int),
           ) as int;
           result.blockNumber = valueDes;
-          break;
-        case r'vid':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(int),
-          ) as int;
-          result.vid = valueDes;
           break;
         case r'id':
           final valueDes = serializers.deserialize(

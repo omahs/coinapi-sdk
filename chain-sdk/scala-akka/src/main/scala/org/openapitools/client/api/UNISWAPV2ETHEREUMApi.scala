@@ -11,9 +11,29 @@
  */
 package org.openapitools.client.api
 
+import org.openapitools.client.model.AccountDTO
+import org.openapitools.client.model.ActiveAccountDTO
+import org.openapitools.client.model.DepositDTO
+import org.openapitools.client.model.DexAmmProtocolDTO
+import org.openapitools.client.model.FinancialsDailySnapshotDTO
+import org.openapitools.client.model.LiquidityPoolAmountDTO
 import org.openapitools.client.model.LiquidityPoolDTO
+import org.openapitools.client.model.LiquidityPoolDailySnapshotDTO
+import org.openapitools.client.model.LiquidityPoolFeeDTO
+import org.openapitools.client.model.LiquidityPoolHourlySnapshotDTO
+import org.openapitools.client.model.MasterChefAddressToPidDTO
+import org.openapitools.client.model.MasterChefDTO
+import org.openapitools.client.model.MasterChefRewarderDTO
+import org.openapitools.client.model.MasterChefStakingPoolDTO
+import org.openapitools.client.model.RewardTokenDTO
+import org.openapitools.client.model.RewarderProbeDTO
 import org.openapitools.client.model.SwapDTO
 import org.openapitools.client.model.TokenDTO
+import org.openapitools.client.model.TokenWhiteListDTO
+import org.openapitools.client.model.TransferDTO
+import org.openapitools.client.model.UsageMetricsDailySnapshotDTO
+import org.openapitools.client.model.UsageMetricsHourlySnapshotDTO
+import org.openapitools.client.model.WithdrawDTO
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
 import org.openapitools.client.core.ApiKeyLocations._
@@ -26,14 +46,185 @@ object UNISWAPV2ETHEREUMApi {
 class UNISWAPV2ETHEREUMApi(baseUrl: String) {
 
   /**
+   * Gets accounts.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[AccountDTO] (successful operation)
+   */
+  def uNISWAPV2ETHEREUMAccountsCurrent(): ApiRequest[Seq[AccountDTO]] =
+    ApiRequest[Seq[AccountDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/accounts/current", "application/json")
+      .withSuccessResponse[Seq[AccountDTO]](200)
+      
+
+  /**
+   * Gets activeAccounts.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[ActiveAccountDTO] (successful operation)
+   */
+  def uNISWAPV2ETHEREUMActiveAccountsCurrent(): ApiRequest[Seq[ActiveAccountDTO]] =
+    ApiRequest[Seq[ActiveAccountDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/activeAccounts/current", "application/json")
+      .withSuccessResponse[Seq[ActiveAccountDTO]](200)
+      
+
+  /**
+   * Gets deposits.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[DepositDTO] (successful operation)
+   */
+  def uNISWAPV2ETHEREUMDepositsCurrent(): ApiRequest[Seq[DepositDTO]] =
+    ApiRequest[Seq[DepositDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/deposits/current", "application/json")
+      .withSuccessResponse[Seq[DepositDTO]](200)
+      
+
+  /**
+   * Gets dexAmmProtocols.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[DexAmmProtocolDTO] (successful operation)
+   */
+  def uNISWAPV2ETHEREUMDexAmmProtocolsCurrent(): ApiRequest[Seq[DexAmmProtocolDTO]] =
+    ApiRequest[Seq[DexAmmProtocolDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/dexAmmProtocols/current", "application/json")
+      .withSuccessResponse[Seq[DexAmmProtocolDTO]](200)
+      
+
+  /**
+   * Gets financialsDailySnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[FinancialsDailySnapshotDTO] (successful operation)
+   */
+  def uNISWAPV2ETHEREUMFinancialsDailySnapshotsCurrent(): ApiRequest[Seq[FinancialsDailySnapshotDTO]] =
+    ApiRequest[Seq[FinancialsDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/financialsDailySnapshots/current", "application/json")
+      .withSuccessResponse[Seq[FinancialsDailySnapshotDTO]](200)
+      
+
+  /**
+   * Gets liquidityPoolAmounts.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LiquidityPoolAmountDTO] (successful operation)
+   * 
+   * @param id Smart contract address of the pool
+   */
+  def uNISWAPV2ETHEREUMLiquidityPoolAmountsCurrent(id: Option[String] = None): ApiRequest[Seq[LiquidityPoolAmountDTO]] =
+    ApiRequest[Seq[LiquidityPoolAmountDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/liquidityPoolAmounts/current", "application/json")
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[LiquidityPoolAmountDTO]](200)
+      
+
+  /**
+   * Gets liquidityPoolDailySnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LiquidityPoolDailySnapshotDTO] (successful operation)
+   */
+  def uNISWAPV2ETHEREUMLiquidityPoolDailySnapshotsCurrent(): ApiRequest[Seq[LiquidityPoolDailySnapshotDTO]] =
+    ApiRequest[Seq[LiquidityPoolDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/liquidityPoolDailySnapshots/current", "application/json")
+      .withSuccessResponse[Seq[LiquidityPoolDailySnapshotDTO]](200)
+      
+
+  /**
+   * Gets liquidityPoolFees.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LiquidityPoolFeeDTO] (successful operation)
+   */
+  def uNISWAPV2ETHEREUMLiquidityPoolFeesCurrent(): ApiRequest[Seq[LiquidityPoolFeeDTO]] =
+    ApiRequest[Seq[LiquidityPoolFeeDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/liquidityPoolFees/current", "application/json")
+      .withSuccessResponse[Seq[LiquidityPoolFeeDTO]](200)
+      
+
+  /**
+   * Gets liquidityPoolHourlySnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LiquidityPoolHourlySnapshotDTO] (successful operation)
+   */
+  def uNISWAPV2ETHEREUMLiquidityPoolHourlySnapshotsCurrent(): ApiRequest[Seq[LiquidityPoolHourlySnapshotDTO]] =
+    ApiRequest[Seq[LiquidityPoolHourlySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/liquidityPoolHourlySnapshots/current", "application/json")
+      .withSuccessResponse[Seq[LiquidityPoolHourlySnapshotDTO]](200)
+      
+
+  /**
    * Gets liquidityPools.
    * 
    * Expected answers:
    *   code 200 : Seq[LiquidityPoolDTO] (successful operation)
+   * 
+   * @param id Smart contract address of the pool
    */
-  def uNISWAPV2ETHEREUMLiquidityPoolsCurrent(): ApiRequest[Seq[LiquidityPoolDTO]] =
+  def uNISWAPV2ETHEREUMLiquidityPoolsCurrent(id: Option[String] = None): ApiRequest[Seq[LiquidityPoolDTO]] =
     ApiRequest[Seq[LiquidityPoolDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/liquidityPools/current", "application/json")
+      .withQueryParam("id", id)
       .withSuccessResponse[Seq[LiquidityPoolDTO]](200)
+      
+
+  /**
+   * Gets masterChefAddressToPids.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[MasterChefAddressToPidDTO] (successful operation)
+   */
+  def uNISWAPV2ETHEREUMMasterChefAddressToPidsCurrent(): ApiRequest[Seq[MasterChefAddressToPidDTO]] =
+    ApiRequest[Seq[MasterChefAddressToPidDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/masterChefAddressToPids/current", "application/json")
+      .withSuccessResponse[Seq[MasterChefAddressToPidDTO]](200)
+      
+
+  /**
+   * Gets masterChefRewarders.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[MasterChefRewarderDTO] (successful operation)
+   */
+  def uNISWAPV2ETHEREUMMasterChefRewardersCurrent(): ApiRequest[Seq[MasterChefRewarderDTO]] =
+    ApiRequest[Seq[MasterChefRewarderDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/masterChefRewarders/current", "application/json")
+      .withSuccessResponse[Seq[MasterChefRewarderDTO]](200)
+      
+
+  /**
+   * Gets masterChefStakingPools.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[MasterChefStakingPoolDTO] (successful operation)
+   */
+  def uNISWAPV2ETHEREUMMasterChefStakingPoolsCurrent(): ApiRequest[Seq[MasterChefStakingPoolDTO]] =
+    ApiRequest[Seq[MasterChefStakingPoolDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/masterChefStakingPools/current", "application/json")
+      .withSuccessResponse[Seq[MasterChefStakingPoolDTO]](200)
+      
+
+  /**
+   * Gets masterChefs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[MasterChefDTO] (successful operation)
+   */
+  def uNISWAPV2ETHEREUMMasterChefsCurrent(): ApiRequest[Seq[MasterChefDTO]] =
+    ApiRequest[Seq[MasterChefDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/masterChefs/current", "application/json")
+      .withSuccessResponse[Seq[MasterChefDTO]](200)
+      
+
+  /**
+   * Gets rewardTokens.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[RewardTokenDTO] (successful operation)
+   */
+  def uNISWAPV2ETHEREUMRewardTokensCurrent(): ApiRequest[Seq[RewardTokenDTO]] =
+    ApiRequest[Seq[RewardTokenDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/rewardTokens/current", "application/json")
+      .withSuccessResponse[Seq[RewardTokenDTO]](200)
+      
+
+  /**
+   * Gets rewarderProbes.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[RewarderProbeDTO] (successful operation)
+   */
+  def uNISWAPV2ETHEREUMRewarderProbesCurrent(): ApiRequest[Seq[RewarderProbeDTO]] =
+    ApiRequest[Seq[RewarderProbeDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/rewarderProbes/current", "application/json")
+      .withSuccessResponse[Seq[RewarderProbeDTO]](200)
       
 
   /**
@@ -48,6 +239,17 @@ class UNISWAPV2ETHEREUMApi(baseUrl: String) {
       
 
   /**
+   * Gets tokenWhiteLists.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TokenWhiteListDTO] (successful operation)
+   */
+  def uNISWAPV2ETHEREUMTokenWhiteListsCurrent(): ApiRequest[Seq[TokenWhiteListDTO]] =
+    ApiRequest[Seq[TokenWhiteListDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/tokenWhiteLists/current", "application/json")
+      .withSuccessResponse[Seq[TokenWhiteListDTO]](200)
+      
+
+  /**
    * Gets tokens.
    * 
    * Expected answers:
@@ -56,6 +258,50 @@ class UNISWAPV2ETHEREUMApi(baseUrl: String) {
   def uNISWAPV2ETHEREUMTokensCurrent(): ApiRequest[Seq[TokenDTO]] =
     ApiRequest[Seq[TokenDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/tokens/current", "application/json")
       .withSuccessResponse[Seq[TokenDTO]](200)
+      
+
+  /**
+   * Gets transfers.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TransferDTO] (successful operation)
+   */
+  def uNISWAPV2ETHEREUMTransfersCurrent(): ApiRequest[Seq[TransferDTO]] =
+    ApiRequest[Seq[TransferDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/transfers/current", "application/json")
+      .withSuccessResponse[Seq[TransferDTO]](200)
+      
+
+  /**
+   * Gets usageMetricsDailySnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[UsageMetricsDailySnapshotDTO] (successful operation)
+   */
+  def uNISWAPV2ETHEREUMUsageMetricsDailySnapshotsCurrent(): ApiRequest[Seq[UsageMetricsDailySnapshotDTO]] =
+    ApiRequest[Seq[UsageMetricsDailySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/usageMetricsDailySnapshots/current", "application/json")
+      .withSuccessResponse[Seq[UsageMetricsDailySnapshotDTO]](200)
+      
+
+  /**
+   * Gets usageMetricsHourlySnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[UsageMetricsHourlySnapshotDTO] (successful operation)
+   */
+  def uNISWAPV2ETHEREUMUsageMetricsHourlySnapshotsCurrent(): ApiRequest[Seq[UsageMetricsHourlySnapshotDTO]] =
+    ApiRequest[Seq[UsageMetricsHourlySnapshotDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/usageMetricsHourlySnapshots/current", "application/json")
+      .withSuccessResponse[Seq[UsageMetricsHourlySnapshotDTO]](200)
+      
+
+  /**
+   * Gets withdraws.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[WithdrawDTO] (successful operation)
+   */
+  def uNISWAPV2ETHEREUMWithdrawsCurrent(): ApiRequest[Seq[WithdrawDTO]] =
+    ApiRequest[Seq[WithdrawDTO]](ApiMethods.GET, baseUrl, "/v1/dapps/uniswap-v2-ethereum/withdraws/current", "application/json")
+      .withSuccessResponse[Seq[WithdrawDTO]](200)
       
 
 

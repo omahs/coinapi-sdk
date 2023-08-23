@@ -34,12 +34,6 @@ export interface PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO {
      */
     block_number?: number;
     /**
-     * 
-     * @type {number}
-     * @memberof PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO
-     */
-    vid?: number;
-    /**
      * Identifier, format: (pool address)-(tick index)-(day ID)
      * @type {string}
      * @memberof PANCAKESWAPV3ETHEREUMTickDailySnapshotDTO

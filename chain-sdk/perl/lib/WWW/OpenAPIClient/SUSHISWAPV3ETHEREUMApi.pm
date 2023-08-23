@@ -49,6 +49,469 @@ sub new {
 
 
 #
+# s_ushiswapv3_ethereum_accounts__current
+#
+# Accounts (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_accounts__current' } = {
+        summary => 'Accounts (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMAccountDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMAccountDTO]
+#
+sub s_ushiswapv3_ethereum_accounts__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/accounts/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMAccountDTO]', $response);
+    return $_response_object;
+}
+
+#
+# s_ushiswapv3_ethereum_active_accounts__current
+#
+# ActiveAccounts (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_active_accounts__current' } = {
+        summary => 'ActiveAccounts (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMActiveAccountDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMActiveAccountDTO]
+#
+sub s_ushiswapv3_ethereum_active_accounts__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/activeAccounts/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMActiveAccountDTO]', $response);
+    return $_response_object;
+}
+
+#
+# s_ushiswapv3_ethereum_deposits__current
+#
+# Deposits (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_deposits__current' } = {
+        summary => 'Deposits (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMDepositDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMDepositDTO]
+#
+sub s_ushiswapv3_ethereum_deposits__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/deposits/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMDepositDTO]', $response);
+    return $_response_object;
+}
+
+#
+# s_ushiswapv3_ethereum_dex_amm_protocols__current
+#
+# DexAmmProtocols (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_dex_amm_protocols__current' } = {
+        summary => 'DexAmmProtocols (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMDexAmmProtocolDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMDexAmmProtocolDTO]
+#
+sub s_ushiswapv3_ethereum_dex_amm_protocols__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/dexAmmProtocols/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMDexAmmProtocolDTO]', $response);
+    return $_response_object;
+}
+
+#
+# s_ushiswapv3_ethereum_financials_daily_snapshots__current
+#
+# FinancialsDailySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_financials_daily_snapshots__current' } = {
+        summary => 'FinancialsDailySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO]
+#
+sub s_ushiswapv3_ethereum_financials_daily_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/financialsDailySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMFinancialsDailySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# s_ushiswapv3_ethereum_liquidity_pool_amounts__current
+#
+# LiquidityPoolAmounts (current)
+#
+# @param string $id Smart contract address of the pool. (optional)
+{
+    my $params = {
+    'id' => {
+        data_type => 'string',
+        description => 'Smart contract address of the pool.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_liquidity_pool_amounts__current' } = {
+        summary => 'LiquidityPoolAmounts (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO]
+#
+sub s_ushiswapv3_ethereum_liquidity_pool_amounts__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/liquidityPoolAmounts/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMLiquidityPoolAmountDTO]', $response);
+    return $_response_object;
+}
+
+#
+# s_ushiswapv3_ethereum_liquidity_pool_daily_snapshots__current
+#
+# LiquidityPoolDailySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_liquidity_pool_daily_snapshots__current' } = {
+        summary => 'LiquidityPoolDailySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]
+#
+sub s_ushiswapv3_ethereum_liquidity_pool_daily_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/liquidityPoolDailySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# s_ushiswapv3_ethereum_liquidity_pool_fees__current
+#
+# LiquidityPoolFees (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_liquidity_pool_fees__current' } = {
+        summary => 'LiquidityPoolFees (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO]
+#
+sub s_ushiswapv3_ethereum_liquidity_pool_fees__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/liquidityPoolFees/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMLiquidityPoolFeeDTO]', $response);
+    return $_response_object;
+}
+
+#
+# s_ushiswapv3_ethereum_liquidity_pool_hourly_snapshots__current
+#
+# LiquidityPoolHourlySnapshots (current)
+#
+# @param string $pool The pool this snapshot belongs to (optional)
+{
+    my $params = {
+    'pool' => {
+        data_type => 'string',
+        description => 'The pool this snapshot belongs to',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_liquidity_pool_hourly_snapshots__current' } = {
+        summary => 'LiquidityPoolHourlySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]
+#
+sub s_ushiswapv3_ethereum_liquidity_pool_hourly_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/liquidityPoolHourlySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
 # s_ushiswapv3_ethereum_liquidity_pools__current
 #
 # LiquidityPools (current)
@@ -109,6 +572,164 @@ sub s_ushiswapv3_ethereum_liquidity_pools__current {
 }
 
 #
+# s_ushiswapv3_ethereum_position_snapshots__current
+#
+# PositionSnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_position_snapshots__current' } = {
+        summary => 'PositionSnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMPositionSnapshotDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMPositionSnapshotDTO]
+#
+sub s_ushiswapv3_ethereum_position_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/positionSnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMPositionSnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# s_ushiswapv3_ethereum_positions__current
+#
+# Positions (current)
+#
+# @param string $pool The liquidity pool in which this position was opened (optional)
+{
+    my $params = {
+    'pool' => {
+        data_type => 'string',
+        description => 'The liquidity pool in which this position was opened',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_positions__current' } = {
+        summary => 'Positions (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMPositionDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMPositionDTO]
+#
+sub s_ushiswapv3_ethereum_positions__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/positions/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMPositionDTO]', $response);
+    return $_response_object;
+}
+
+#
+# s_ushiswapv3_ethereum_reward_tokens__current
+#
+# RewardTokens (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_reward_tokens__current' } = {
+        summary => 'RewardTokens (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMRewardTokenDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMRewardTokenDTO]
+#
+sub s_ushiswapv3_ethereum_reward_tokens__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/rewardTokens/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMRewardTokenDTO]', $response);
+    return $_response_object;
+}
+
+#
 # s_ushiswapv3_ethereum_swaps__current
 #
 # Swaps (current)
@@ -154,6 +775,284 @@ sub s_ushiswapv3_ethereum_swaps__current {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMSwapDTO]', $response);
+    return $_response_object;
+}
+
+#
+# s_ushiswapv3_ethereum_tick_daily_snapshots__current
+#
+# TickDailySnapshots (current)
+#
+# @param string $pool liquidity pool this tick belongs to (optional)
+{
+    my $params = {
+    'pool' => {
+        data_type => 'string',
+        description => 'liquidity pool this tick belongs to',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_tick_daily_snapshots__current' } = {
+        summary => 'TickDailySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMTickDailySnapshotDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMTickDailySnapshotDTO]
+#
+sub s_ushiswapv3_ethereum_tick_daily_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/tickDailySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMTickDailySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# s_ushiswapv3_ethereum_tick_hourly_snapshots__current
+#
+# TickHourlySnapshots (current)
+#
+# @param string $pool liquidity pool this tick belongs to (optional)
+{
+    my $params = {
+    'pool' => {
+        data_type => 'string',
+        description => 'liquidity pool this tick belongs to',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_tick_hourly_snapshots__current' } = {
+        summary => 'TickHourlySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO]
+#
+sub s_ushiswapv3_ethereum_tick_hourly_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/tickHourlySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMTickHourlySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# s_ushiswapv3_ethereum_ticks__current
+#
+# Ticks (current)
+#
+# @param string $pool Liquidity pool this tick belongs to (optional)
+{
+    my $params = {
+    'pool' => {
+        data_type => 'string',
+        description => 'Liquidity pool this tick belongs to',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_ticks__current' } = {
+        summary => 'Ticks (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMTickDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMTickDTO]
+#
+sub s_ushiswapv3_ethereum_ticks__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/ticks/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMTickDTO]', $response);
+    return $_response_object;
+}
+
+#
+# s_ushiswapv3_ethereum_token_white_list_symbols__current
+#
+# TokenWhiteListSymbols (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_token_white_list_symbols__current' } = {
+        summary => 'TokenWhiteListSymbols (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO]
+#
+sub s_ushiswapv3_ethereum_token_white_list_symbols__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/tokenWhiteListSymbols/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMTokenWhiteListSymbolDTO]', $response);
+    return $_response_object;
+}
+
+#
+# s_ushiswapv3_ethereum_token_white_lists__current
+#
+# TokenWhiteLists (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_token_white_lists__current' } = {
+        summary => 'TokenWhiteLists (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMTokenWhiteListDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMTokenWhiteListDTO]
+#
+sub s_ushiswapv3_ethereum_token_white_lists__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/tokenWhiteLists/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMTokenWhiteListDTO]', $response);
     return $_response_object;
 }
 
@@ -214,6 +1113,153 @@ sub s_ushiswapv3_ethereum_tokens__current {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMTokenDTO]', $response);
+    return $_response_object;
+}
+
+#
+# s_ushiswapv3_ethereum_usage_metrics_daily_snapshots__current
+#
+# UsageMetricsDailySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_usage_metrics_daily_snapshots__current' } = {
+        summary => 'UsageMetricsDailySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]
+#
+sub s_ushiswapv3_ethereum_usage_metrics_daily_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/usageMetricsDailySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMUsageMetricsDailySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# s_ushiswapv3_ethereum_usage_metrics_hourly_snapshots__current
+#
+# UsageMetricsHourlySnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_usage_metrics_hourly_snapshots__current' } = {
+        summary => 'UsageMetricsHourlySnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]
+#
+sub s_ushiswapv3_ethereum_usage_metrics_hourly_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/usageMetricsHourlySnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMUsageMetricsHourlySnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# s_ushiswapv3_ethereum_withdraws__current
+#
+# Withdraws (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 's_ushiswapv3_ethereum_withdraws__current' } = {
+        summary => 'Withdraws (current)',
+        params => $params,
+        returns => 'ARRAY[SUSHISWAPV3ETHEREUMWithdrawDTO]',
+        };
+}
+# @return ARRAY[SUSHISWAPV3ETHEREUMWithdrawDTO]
+#
+sub s_ushiswapv3_ethereum_withdraws__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/v1/dapps/sushiswap-v3-ethereum/withdraws/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json', 'application/x-msgpack');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SUSHISWAPV3ETHEREUMWithdrawDTO]', $response);
     return $_response_object;
 }
 

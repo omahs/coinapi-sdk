@@ -333,7 +333,7 @@ u_niswapv3_ethereum_tick_daily_snapshots_(current)(Ctx, Optional) ->
 
     Method = get,
     Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current"],
-    QS = lists:flatten([])++openapi_utils:optional_params(['pool'], _OptionalParams),
+    QS = [],
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
@@ -354,7 +354,7 @@ u_niswapv3_ethereum_tick_hourly_snapshots_(current)(Ctx, Optional) ->
 
     Method = get,
     Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current"],
-    QS = lists:flatten([])++openapi_utils:optional_params(['pool'], _OptionalParams),
+    QS = [],
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
@@ -375,7 +375,7 @@ u_niswapv3_ethereum_ticks_(current)(Ctx, Optional) ->
 
     Method = get,
     Path = [?BASE_URL, "/v1/dapps/uniswap-v3-ethereum/ticks/current"],
-    QS = lists:flatten([])++openapi_utils:optional_params(['pool'], _OptionalParams),
+    QS = [],
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),

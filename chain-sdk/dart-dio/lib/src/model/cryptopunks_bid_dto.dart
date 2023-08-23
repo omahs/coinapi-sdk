@@ -13,7 +13,7 @@ part 'cryptopunks_bid_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
 /// * [vid] - 
 /// * [blockRange] - 
 /// * [id] - 
@@ -29,9 +29,9 @@ abstract class CRYPTOPUNKSBidDTO implements Built<CRYPTOPUNKSBidDTO, CRYPTOPUNKS
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
-  String? get blockNumber;
+  int? get blockNumber;
 
   /// 
   @BuiltValueField(wireName: r'vid')
@@ -102,7 +102,7 @@ class _$CRYPTOPUNKSBidDTOSerializer implements PrimitiveSerializer<CRYPTOPUNKSBi
       yield r'block_number';
       yield serializers.serialize(
         object.blockNumber,
-        specifiedType: const FullType.nullable(String),
+        specifiedType: const FullType(int),
       );
     }
     if (object.vid != null) {
@@ -194,9 +194,8 @@ class _$CRYPTOPUNKSBidDTOSerializer implements PrimitiveSerializer<CRYPTOPUNKSBi
         case r'block_number':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(int),
+          ) as int;
           result.blockNumber = valueDes;
           break;
         case r'vid':

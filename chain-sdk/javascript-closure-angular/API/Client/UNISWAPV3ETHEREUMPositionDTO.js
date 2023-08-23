@@ -26,13 +26,6 @@ API.Client.UNISWAPV3ETHEREUMPositionDTO.prototype.recvTime;
 API.Client.UNISWAPV3ETHEREUMPositionDTO.prototype.blockNumber;
 
 /**
- * 
- * @type {!number}
- * @export
- */
-API.Client.UNISWAPV3ETHEREUMPositionDTO.prototype.vid;
-
-/**
  * (account address)-(market address)-(count)
  * @type {!string}
  * @export

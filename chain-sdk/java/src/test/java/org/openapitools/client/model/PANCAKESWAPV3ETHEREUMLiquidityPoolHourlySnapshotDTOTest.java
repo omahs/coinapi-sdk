@@ -66,14 +66,6 @@ public class PANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotDTOTest {
     }
 
     /**
-     * Test the property 'vid'
-     */
-    @Test
-    public void vidTest() {
-        // TODO: test vid
-    }
-
-    /**
      * Test the property 'id'
      */
     @Test

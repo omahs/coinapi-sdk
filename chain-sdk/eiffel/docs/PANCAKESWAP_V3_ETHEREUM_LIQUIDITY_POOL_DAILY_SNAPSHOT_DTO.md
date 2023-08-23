@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
-**vid** | **INTEGER_64** | . | [optional] [default to null]
 **block_** | **INTEGER_32** | The Ethereum block number associated with the liquidity pool daily snapshot. | [optional] [default to null]
 **id** | [**STRING_32**](STRING_32.md) | Identifier, format: (smart contract address of the pool)-(# of days since Unix epoch time). | [optional] [default to null]
 **day** | **INTEGER_32** | Number of days since Unix epoch time. | [optional] [default to null]

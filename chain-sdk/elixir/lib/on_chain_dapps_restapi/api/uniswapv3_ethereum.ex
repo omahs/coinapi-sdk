@@ -453,7 +453,6 @@ defmodule OnChainDapps-RESTAPI.Api.UNISWAPV3ETHEREUM do
 
   - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
-    - `:pool` (String.t): liquidity pool this tick belongs to
 
   ### Returns
 
@@ -461,16 +460,11 @@ defmodule OnChainDapps-RESTAPI.Api.UNISWAPV3ETHEREUM do
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec u_niswapv3_ethereum_tick_daily_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV3EthereumTickDailySnapshotDto.t)} | {:error, Tesla.Env.t}
-  def u_niswapv3_ethereum_tick_daily_snapshots__current(connection, opts \\ []) do
-    optional_params = %{
-      :pool => :query
-    }
-
+  def u_niswapv3_ethereum_tick_daily_snapshots__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
       |> url("/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current")
-      |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection
@@ -488,7 +482,6 @@ defmodule OnChainDapps-RESTAPI.Api.UNISWAPV3ETHEREUM do
 
   - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
-    - `:pool` (String.t): liquidity pool this tick belongs to
 
   ### Returns
 
@@ -496,16 +489,11 @@ defmodule OnChainDapps-RESTAPI.Api.UNISWAPV3ETHEREUM do
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec u_niswapv3_ethereum_tick_hourly_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV3EthereumTickHourlySnapshotDto.t)} | {:error, Tesla.Env.t}
-  def u_niswapv3_ethereum_tick_hourly_snapshots__current(connection, opts \\ []) do
-    optional_params = %{
-      :pool => :query
-    }
-
+  def u_niswapv3_ethereum_tick_hourly_snapshots__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
       |> url("/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current")
-      |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection
@@ -523,7 +511,6 @@ defmodule OnChainDapps-RESTAPI.Api.UNISWAPV3ETHEREUM do
 
   - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
-    - `:pool` (String.t): Liquidity pool this tick belongs to
 
   ### Returns
 
@@ -531,16 +518,11 @@ defmodule OnChainDapps-RESTAPI.Api.UNISWAPV3ETHEREUM do
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec u_niswapv3_ethereum_ticks__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainDapps-RESTAPI.Model.UniswapV3EthereumTickDto.t)} | {:error, Tesla.Env.t}
-  def u_niswapv3_ethereum_ticks__current(connection, opts \\ []) do
-    optional_params = %{
-      :pool => :query
-    }
-
+  def u_niswapv3_ethereum_ticks__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
       |> url("/v1/dapps/uniswap-v3-ethereum/ticks/current")
-      |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection

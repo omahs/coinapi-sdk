@@ -752,13 +752,13 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_swaps__current()
 	end
 end
 
-function uniswapv3_ethereum_api:u_niswapv3_ethereum_tick_daily_snapshots__current(pool)
+function uniswapv3_ethereum_api:u_niswapv3_ethereum_tick_daily_snapshots__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current?pool=%s",
-			self.basePath, http_util.encodeURIComponent(pool));
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/tickDailySnapshots/current",
+			self.basePath);
 	})
 
 	-- set HTTP verb
@@ -801,13 +801,13 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_tick_daily_snapshots__curren
 	end
 end
 
-function uniswapv3_ethereum_api:u_niswapv3_ethereum_tick_hourly_snapshots__current(pool)
+function uniswapv3_ethereum_api:u_niswapv3_ethereum_tick_hourly_snapshots__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current?pool=%s",
-			self.basePath, http_util.encodeURIComponent(pool));
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/tickHourlySnapshots/current",
+			self.basePath);
 	})
 
 	-- set HTTP verb
@@ -850,13 +850,13 @@ function uniswapv3_ethereum_api:u_niswapv3_ethereum_tick_hourly_snapshots__curre
 	end
 end
 
-function uniswapv3_ethereum_api:u_niswapv3_ethereum_ticks__current(pool)
+function uniswapv3_ethereum_api:u_niswapv3_ethereum_ticks__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/ticks/current?pool=%s",
-			self.basePath, http_util.encodeURIComponent(pool));
+		path = string.format("%s/v1/dapps/uniswap-v3-ethereum/ticks/current",
+			self.basePath);
 	})
 
 	-- set HTTP verb

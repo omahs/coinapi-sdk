@@ -19,8 +19,6 @@ case class TickHourlySnapshotDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /*  */
-  vid: Option[Long] = None,
   /* (pool address)-(tick index)-(hour ID) */
   id: Option[String] = None,
   /* Number of hours since Unix epoch time */

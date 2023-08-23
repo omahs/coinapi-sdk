@@ -601,7 +601,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **uNISWAPV3ETHEREUMTickDailySnapshotsCurrent**
-> BuiltList<UNISWAPV3ETHEREUMTickDailySnapshotDTO> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool)
+> BuiltList<UNISWAPV3ETHEREUMTickDailySnapshotDTO> uNISWAPV3ETHEREUMTickDailySnapshotsCurrent()
 
 TickDailySnapshots (current)
 
@@ -612,10 +612,9 @@ Gets tickDailySnapshots.
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUNISWAPV3ETHEREUMApi();
-final String pool = pool_example; // String | liquidity pool this tick belongs to
 
 try {
-    final response = api.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent(pool);
+    final response = api.uNISWAPV3ETHEREUMTickDailySnapshotsCurrent();
     print(response);
 } catch on DioError (e) {
     print('Exception when calling UNISWAPV3ETHEREUMApi->uNISWAPV3ETHEREUMTickDailySnapshotsCurrent: $e\n');
@@ -623,10 +622,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **String**| liquidity pool this tick belongs to | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -644,7 +640,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent**
-> BuiltList<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool)
+> BuiltList<UNISWAPV3ETHEREUMTickHourlySnapshotDTO> uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent()
 
 TickHourlySnapshots (current)
 
@@ -655,10 +651,9 @@ Gets tickHourlySnapshots.
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUNISWAPV3ETHEREUMApi();
-final String pool = pool_example; // String | liquidity pool this tick belongs to
 
 try {
-    final response = api.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent(pool);
+    final response = api.uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent();
     print(response);
 } catch on DioError (e) {
     print('Exception when calling UNISWAPV3ETHEREUMApi->uNISWAPV3ETHEREUMTickHourlySnapshotsCurrent: $e\n');
@@ -666,10 +661,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **String**| liquidity pool this tick belongs to | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -687,7 +679,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **uNISWAPV3ETHEREUMTicksCurrent**
-> BuiltList<UNISWAPV3ETHEREUMTickDTO> uNISWAPV3ETHEREUMTicksCurrent(pool)
+> BuiltList<UNISWAPV3ETHEREUMTickDTO> uNISWAPV3ETHEREUMTicksCurrent()
 
 Ticks (current)
 
@@ -698,10 +690,9 @@ Gets ticks.
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUNISWAPV3ETHEREUMApi();
-final String pool = pool_example; // String | Liquidity pool this tick belongs to
 
 try {
-    final response = api.uNISWAPV3ETHEREUMTicksCurrent(pool);
+    final response = api.uNISWAPV3ETHEREUMTicksCurrent();
     print(response);
 } catch on DioError (e) {
     print('Exception when calling UNISWAPV3ETHEREUMApi->uNISWAPV3ETHEREUMTicksCurrent: $e\n');
@@ -709,10 +700,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pool** | **String**| Liquidity pool this tick belongs to | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 

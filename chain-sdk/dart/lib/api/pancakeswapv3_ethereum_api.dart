@@ -341,12 +341,7 @@ class PANCAKESWAPV3ETHEREUMApi {
   /// Gets liquidityPoolDailySnapshots.
   ///
   /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [String] pool:
-  ///   Pool this snapshot belongs to.
-  Future<Response> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo({ String? pool, }) async {
+  Future<Response> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
     final path = r'/v1/dapps/pancakeswap-v3-ethereum/liquidityPoolDailySnapshots/current';
 
@@ -356,10 +351,6 @@ class PANCAKESWAPV3ETHEREUMApi {
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
-
-    if (pool != null) {
-      queryParams.addAll(_queryParams('', 'pool', pool));
-    }
 
     const contentTypes = <String>[];
 
@@ -378,13 +369,8 @@ class PANCAKESWAPV3ETHEREUMApi {
   /// LiquidityPoolDailySnapshots (current)
   ///
   /// Gets liquidityPoolDailySnapshots.
-  ///
-  /// Parameters:
-  ///
-  /// * [String] pool:
-  ///   Pool this snapshot belongs to.
-  Future<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>?> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent({ String? pool, }) async {
-    final response = await pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo( pool: pool, );
+  Future<List<PANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotDTO>?> pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrent() async {
+    final response = await pANCAKESWAPV3ETHEREUMLiquidityPoolDailySnapshotsCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

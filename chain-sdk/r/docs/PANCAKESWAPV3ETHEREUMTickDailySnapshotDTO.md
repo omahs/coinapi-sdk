@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **entry_time** | **character** |  | [optional] 
 **recv_time** | **character** |  | [optional] 
 **block_number** | **integer** | Number of block in which entity was recorded. | [optional] 
-**vid** | **integer** |  | [optional] 
 **id** | **character** | Identifier, format: (pool address)-(tick index)-(day ID) | [optional] 
 **day_id** | **integer** | Number of days since Unix epoch time | [optional] 
 **tick** | **character** | tick index | [optional] 
