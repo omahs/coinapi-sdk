@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Stores aggregated information for a specific token across all pairs that token is included in.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-23T15:18:53.663612Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-23T15:20:45.865001Z[Etc/UTC]")
 public class PANCAKESWAPV3ETHEREUMTokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
