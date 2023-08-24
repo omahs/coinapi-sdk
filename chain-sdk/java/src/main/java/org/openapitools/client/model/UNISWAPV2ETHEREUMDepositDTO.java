@@ -54,7 +54,7 @@ import org.openapitools.client.JSON;
 /**
  * Entity represents a user action in the protocol involving the addition of funds to a liquidity pool.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-24T12:57:58.978232Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-24T13:11:47.716902Z[Etc/UTC]")
 public class UNISWAPV2ETHEREUMDepositDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
