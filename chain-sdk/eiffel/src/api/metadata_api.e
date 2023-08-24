@@ -24,6 +24,37 @@ inherit
 feature -- API Access
 
 
+	metadata_chains_chain_id_get (chain_id: STRING_32)
+			-- Gets chain by chainId.
+			-- 
+			-- 
+			-- argument: chain_id  (required)
+			-- 
+			-- 
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/metadata/chains/{chainId}"
+			l_path.replace_substring_all ("{"+"chainId"+"}", api_client.url_encode (chain_id.out))
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			if l_response.has_error then
+				last_error := l_response.error
+			end
+		end
+
 	metadata_chains_get 
 			-- List all chains.
 			-- 
@@ -52,11 +83,11 @@ feature -- API Access
 			end
 		end
 
-	metadata_dapps_dapp_name_get (dapp_name: STRING_32)
-			-- Gets dapp by name.
+	metadata_dapps_dapp_id_get (dapp_id: STRING_32)
+			-- Gets dapp by id.
 			-- 
 			-- 
-			-- argument: dapp_name  (required)
+			-- argument: dapp_id  (required)
 			-- 
 			-- 
 		require
@@ -68,8 +99,8 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/metadata/dapps/{dappName}"
-			l_path.replace_substring_all ("{"+"dappName"+"}", api_client.url_encode (dapp_name.out))
+			l_path := "/metadata/dapps/{dappId}"
+			l_path.replace_substring_all ("{"+"dappId"+"}", api_client.url_encode (dapp_id.out))
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then

@@ -55,6 +55,129 @@ public class MetadataApi {
   }
 
   /**
+  * Gets chain by chainId.
+  * 
+   * @param chainId 
+   * @return void
+  */
+  public void metadataChainsChainIdGet (String chainId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'chainId' is set
+    if (chainId == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling metadataChainsChainIdGet",
+        new ApiException(400, "Missing the required parameter 'chainId' when calling metadataChainsChainIdGet"));
+    }
+
+    // create path and map variables
+    String path = "/metadata/chains/{chainId}".replaceAll("\\{" + "chainId" + "\\}", apiInvoker.escapeString(chainId.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Gets chain by chainId.
+   * 
+   * @param chainId 
+  */
+  public void metadataChainsChainIdGet (String chainId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'chainId' is set
+    if (chainId == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling metadataChainsChainIdGet",
+        new ApiException(400, "Missing the required parameter 'chainId' when calling metadataChainsChainIdGet"));
+    }
+
+    // create path and map variables
+    String path = "/metadata/chains/{chainId}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chainId" + "\\}", apiInvoker.escapeString(chainId.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * List all chains.
   * 
    * @return void
@@ -167,21 +290,21 @@ public class MetadataApi {
     }
   }
   /**
-  * Gets dapp by name.
+  * Gets dapp by id.
   * 
-   * @param dappName 
+   * @param dappId 
    * @return void
   */
-  public void metadataDappsDappNameGet (String dappName) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public void metadataDappsDappIdGet (String dappId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'dappName' is set
-    if (dappName == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'dappName' when calling metadataDappsDappNameGet",
-        new ApiException(400, "Missing the required parameter 'dappName' when calling metadataDappsDappNameGet"));
+    // verify the required parameter 'dappId' is set
+    if (dappId == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'dappId' when calling metadataDappsDappIdGet",
+        new ApiException(400, "Missing the required parameter 'dappId' when calling metadataDappsDappIdGet"));
     }
 
     // create path and map variables
-    String path = "/metadata/dapps/{dappName}".replaceAll("\\{" + "dappName" + "\\}", apiInvoker.escapeString(dappName.toString()));
+    String path = "/metadata/dapps/{dappId}".replaceAll("\\{" + "dappId" + "\\}", apiInvoker.escapeString(dappId.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -229,21 +352,21 @@ public class MetadataApi {
   }
 
       /**
-   * Gets dapp by name.
+   * Gets dapp by id.
    * 
-   * @param dappName 
+   * @param dappId 
   */
-  public void metadataDappsDappNameGet (String dappName, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void metadataDappsDappIdGet (String dappId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'dappName' is set
-    if (dappName == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'dappName' when calling metadataDappsDappNameGet",
-        new ApiException(400, "Missing the required parameter 'dappName' when calling metadataDappsDappNameGet"));
+    // verify the required parameter 'dappId' is set
+    if (dappId == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'dappId' when calling metadataDappsDappIdGet",
+        new ApiException(400, "Missing the required parameter 'dappId' when calling metadataDappsDappIdGet"));
     }
 
     // create path and map variables
-    String path = "/metadata/dapps/{dappName}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "dappName" + "\\}", apiInvoker.escapeString(dappName.toString()));
+    String path = "/metadata/dapps/{dappId}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "dappId" + "\\}", apiInvoker.escapeString(dappId.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

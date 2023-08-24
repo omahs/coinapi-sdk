@@ -15,8 +15,9 @@
 
 
 module Api.Request.Metadata exposing
-    ( metadataChainsGet
-    , metadataDappsDappNameGet
+    ( metadataChainsChainIdGet
+    , metadataChainsGet
+    , metadataDappsDappIdGet
     , metadataDappsGet
     )
 
@@ -26,6 +27,18 @@ import Dict
 import Http
 import Json.Decode
 import Json.Encode
+
+metadataChainsChainIdGet : String -> Api.Request ()
+metadataChainsChainIdGet chainId_path =
+    Api.request
+        "GET"
+        "/metadata/chains/{chainId}"
+        [ ( "chainId", identity chainId_path ) ]
+        []
+        []
+        Nothing
+        (Json.Decode.succeed ())
+
 
 metadataChainsGet : Api.Request ()
 metadataChainsGet =
@@ -39,12 +52,12 @@ metadataChainsGet =
         (Json.Decode.succeed ())
 
 
-metadataDappsDappNameGet : String -> Api.Request ()
-metadataDappsDappNameGet dappName_path =
+metadataDappsDappIdGet : String -> Api.Request ()
+metadataDappsDappIdGet dappId_path =
     Api.request
         "GET"
-        "/metadata/dapps/{dappName}"
-        [ ( "dappName", identity dappName_path ) ]
+        "/metadata/dapps/{dappId}"
+        [ ( "dappId", identity dappId_path ) ]
         []
         []
         Nothing

@@ -31,6 +31,18 @@ public class MetadataApiTest {
     private final MetadataApi api = new MetadataApi();
 
     /**
+     * Gets chain by chainId.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void metadataChainsChainIdGetTest() throws ApiException {
+        String chainId = null;
+        api.metadataChainsChainIdGet(chainId);
+        // TODO: test validations
+    }
+
+    /**
      * List all chains.
      *
      * @throws ApiException if the Api call fails
@@ -42,14 +54,14 @@ public class MetadataApiTest {
     }
 
     /**
-     * Gets dapp by name.
+     * Gets dapp by id.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void metadataDappsDappNameGetTest() throws ApiException {
-        String dappName = null;
-        api.metadataDappsDappNameGet(dappName);
+    public void metadataDappsDappIdGetTest() throws ApiException {
+        String dappId = null;
+        api.metadataDappsDappIdGet(dappId);
         // TODO: test validations
     }
 

@@ -48,6 +48,136 @@ static gpointer __MetadataManagerthreadFunc(gpointer data)
 }
 
 
+static bool metadataChainsChainIdGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	
+	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+		handler(error, userData);
+		return true;
+
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		handler(error, userData);
+		return false;
+	}
+}
+
+static bool metadataChainsChainIdGetHelper(char * accessToken,
+	std::string chainId, 
+	
+	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/metadata/chains/{chainId}");
+	int pos;
+
+	string s_chainId("{");
+	s_chainId.append("chainId");
+	s_chainId.append("}");
+	pos = url.find(s_chainId);
+	url.erase(pos, s_chainId.length());
+	url.insert(pos, stringify(&chainId, "std::string"));
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(MetadataManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = metadataChainsChainIdGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (MetadataManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), metadataChainsChainIdGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __MetadataManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool MetadataManager::metadataChainsChainIdGetAsync(char * accessToken,
+	std::string chainId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return metadataChainsChainIdGetHelper(accessToken,
+	chainId, 
+	handler, userData, true);
+}
+
+bool MetadataManager::metadataChainsChainIdGetSync(char * accessToken,
+	std::string chainId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return metadataChainsChainIdGetHelper(accessToken,
+	chainId, 
+	handler, userData, false);
+}
+
 static bool metadataChainsGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
@@ -172,7 +302,7 @@ bool MetadataManager::metadataChainsGetSync(char * accessToken,
 	handler, userData, false);
 }
 
-static bool metadataDappsDappNameGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool metadataDappsDappIdGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	
@@ -205,8 +335,8 @@ static bool metadataDappsDappNameGetProcessor(MemoryStruct_s p_chunk, long code,
 	}
 }
 
-static bool metadataDappsDappNameGetHelper(char * accessToken,
-	std::string dappName, 
+static bool metadataDappsDappIdGetHelper(char * accessToken,
+	std::string dappId, 
 	
 	void(* handler)(Error, void* ) , void* userData, bool isAsync)
 {
@@ -227,15 +357,15 @@ static bool metadataDappsDappNameGetHelper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/metadata/dapps/{dappName}");
+	string url("/metadata/dapps/{dappId}");
 	int pos;
 
-	string s_dappName("{");
-	s_dappName.append("dappName");
-	s_dappName.append("}");
-	pos = url.find(s_dappName);
-	url.erase(pos, s_dappName.length());
-	url.insert(pos, stringify(&dappName, "std::string"));
+	string s_dappId("{");
+	s_dappId.append("dappId");
+	s_dappId.append("}");
+	pos = url.find(s_dappId);
+	url.erase(pos, s_dappId.length());
+	url.insert(pos, stringify(&dappId, "std::string"));
 
 	//TODO: free memory of errormsg, memorystruct
 	MemoryStruct_s* p_chunk = new MemoryStruct_s();
@@ -252,7 +382,7 @@ static bool metadataDappsDappNameGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(MetadataManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = metadataDappsDappNameGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = metadataDappsDappIdGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -270,7 +400,7 @@ static bool metadataDappsDappNameGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (MetadataManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), metadataDappsDappNameGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), metadataDappsDappIdGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -282,23 +412,23 @@ static bool metadataDappsDappNameGetHelper(char * accessToken,
 
 
 
-bool MetadataManager::metadataDappsDappNameGetAsync(char * accessToken,
-	std::string dappName, 
+bool MetadataManager::metadataDappsDappIdGetAsync(char * accessToken,
+	std::string dappId, 
 	
 	void(* handler)(Error, void* ) , void* userData)
 {
-	return metadataDappsDappNameGetHelper(accessToken,
-	dappName, 
+	return metadataDappsDappIdGetHelper(accessToken,
+	dappId, 
 	handler, userData, true);
 }
 
-bool MetadataManager::metadataDappsDappNameGetSync(char * accessToken,
-	std::string dappName, 
+bool MetadataManager::metadataDappsDappIdGetSync(char * accessToken,
+	std::string dappId, 
 	
 	void(* handler)(Error, void* ) , void* userData)
 {
-	return metadataDappsDappNameGetHelper(accessToken,
-	dappName, 
+	return metadataDappsDappIdGetHelper(accessToken,
+	dappId, 
 	handler, userData, false);
 }
 

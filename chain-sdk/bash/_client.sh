@@ -320,8 +320,9 @@ case $state in
             "cURVEFINANCEETHEREUMTokensCurrent[Tokens (current)]" \
             "cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent[UsageMetricsDailySnapshots (current)]" \
             "cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent[UsageMetricsHourlySnapshots (current)]" \
-            "cURVEFINANCEETHEREUMWithdrawsCurrent[Withdraws (current)]"             "metadataChainsGet[List all chains.]" \
-            "metadataDappsDappNameGet[Gets dapp by name.]" \
+            "cURVEFINANCEETHEREUMWithdrawsCurrent[Withdraws (current)]"             "metadataChainsChainIdGet[Gets chain by chainId.]" \
+            "metadataChainsGet[List all chains.]" \
+            "metadataDappsDappIdGet[Gets dapp by id.]" \
             "metadataDappsGet[List all decentralized applications.]"             "pANCAKESWAPV3ETHEREUMAccountsCurrent[Accounts (current)]" \
             "pANCAKESWAPV3ETHEREUMActiveAccountsCurrent[ActiveAccounts (current)]" \
             "pANCAKESWAPV3ETHEREUMDepositsCurrent[Deposits (current)]" \
@@ -576,16 +577,23 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      metadataChainsChainIdGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chainId=:[PATH] "
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       metadataChainsGet)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      metadataDappsDappNameGet)
+      metadataDappsDappIdGet)
         local -a _op_arguments
         _op_arguments=(
-          "dappName=:[PATH] "
+          "dappId=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;

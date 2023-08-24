@@ -13,6 +13,20 @@ inherit
 feature -- Test routines
 
 
+    test_metadata_chains_chain_id_get
+            -- Gets chain by chainId.
+            --
+            -- 
+        local
+            l_chain_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+            -- l_chain_id
+
+            -- api.metadata_chains_chain_id_get(l_chain_id)
+            assert ("not_implemented", False)
+        end
+
     test_metadata_chains_get
             -- List all chains.
             --
@@ -25,17 +39,17 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_metadata_dapps_dapp_name_get
-            -- Gets dapp by name.
+    test_metadata_dapps_dapp_id_get
+            -- Gets dapp by id.
             --
             -- 
         local
-            l_dapp_name: STRING_32
+            l_dapp_id: STRING_32
         do
             -- TODO: Initialize required params.
-            -- l_dapp_name
+            -- l_dapp_id
 
-            -- api.metadata_dapps_dapp_name_get(l_dapp_name)
+            -- api.metadata_dapps_dapp_id_get(l_dapp_id)
             assert ("not_implemented", False)
         end
 

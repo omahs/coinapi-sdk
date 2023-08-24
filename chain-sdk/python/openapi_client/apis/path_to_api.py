@@ -2,6 +2,7 @@ import typing_extensions
 
 from openapi_client.paths import PathValues
 from openapi_client.apis.paths.metadata_chains import MetadataChains
+from openapi_client.apis.paths.metadata_chains_chain_id import MetadataChainsChainId
 from openapi_client.apis.paths.v1_dapps_cryptopunks_ethereum_bids_current import V1DappsCryptopunksEthereumBidsCurrent
 from openapi_client.apis.paths.v1_dapps_cryptopunks_ethereum_collection_daily_snapshots_current import V1DappsCryptopunksEthereumCollectionDailySnapshotsCurrent
 from openapi_client.apis.paths.v1_dapps_cryptopunks_ethereum_collections_current import V1DappsCryptopunksEthereumCollectionsCurrent
@@ -29,7 +30,7 @@ from openapi_client.apis.paths.v1_dapps_curve_finance_ethereum_usage_metrics_dai
 from openapi_client.apis.paths.v1_dapps_curve_finance_ethereum_usage_metrics_hourly_snapshots_current import V1DappsCurveFinanceEthereumUsageMetricsHourlySnapshotsCurrent
 from openapi_client.apis.paths.v1_dapps_curve_finance_ethereum_withdraws_current import V1DappsCurveFinanceEthereumWithdrawsCurrent
 from openapi_client.apis.paths.metadata_dapps import MetadataDapps
-from openapi_client.apis.paths.metadata_dapps_dapp_name import MetadataDappsDappName
+from openapi_client.apis.paths.metadata_dapps_dapp_id import MetadataDappsDappId
 from openapi_client.apis.paths.v1_dapps_pancakeswap_v3_ethereum_accounts_current import V1DappsPancakeswapV3EthereumAccountsCurrent
 from openapi_client.apis.paths.v1_dapps_pancakeswap_v3_ethereum_active_accounts_current import V1DappsPancakeswapV3EthereumActiveAccountsCurrent
 from openapi_client.apis.paths.v1_dapps_pancakeswap_v3_ethereum_deposits_current import V1DappsPancakeswapV3EthereumDepositsCurrent
@@ -127,6 +128,7 @@ PathToApi = typing_extensions.TypedDict(
     'PathToApi',
     {
         PathValues.METADATA_CHAINS: MetadataChains,
+        PathValues.METADATA_CHAINS_CHAIN_ID: MetadataChainsChainId,
         PathValues.V1_DAPPS_CRYPTOPUNKSETHEREUM_BIDS_CURRENT: V1DappsCryptopunksEthereumBidsCurrent,
         PathValues.V1_DAPPS_CRYPTOPUNKSETHEREUM_COLLECTION_DAILY_SNAPSHOTS_CURRENT: V1DappsCryptopunksEthereumCollectionDailySnapshotsCurrent,
         PathValues.V1_DAPPS_CRYPTOPUNKSETHEREUM_COLLECTIONS_CURRENT: V1DappsCryptopunksEthereumCollectionsCurrent,
@@ -154,7 +156,7 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.V1_DAPPS_CURVEFINANCEETHEREUM_USAGE_METRICS_HOURLY_SNAPSHOTS_CURRENT: V1DappsCurveFinanceEthereumUsageMetricsHourlySnapshotsCurrent,
         PathValues.V1_DAPPS_CURVEFINANCEETHEREUM_WITHDRAWS_CURRENT: V1DappsCurveFinanceEthereumWithdrawsCurrent,
         PathValues.METADATA_DAPPS: MetadataDapps,
-        PathValues.METADATA_DAPPS_DAPP_NAME: MetadataDappsDappName,
+        PathValues.METADATA_DAPPS_DAPP_ID: MetadataDappsDappId,
         PathValues.V1_DAPPS_PANCAKESWAPV3ETHEREUM_ACCOUNTS_CURRENT: V1DappsPancakeswapV3EthereumAccountsCurrent,
         PathValues.V1_DAPPS_PANCAKESWAPV3ETHEREUM_ACTIVE_ACCOUNTS_CURRENT: V1DappsPancakeswapV3EthereumActiveAccountsCurrent,
         PathValues.V1_DAPPS_PANCAKESWAPV3ETHEREUM_DEPOSITS_CURRENT: V1DappsPancakeswapV3EthereumDepositsCurrent,
@@ -253,6 +255,7 @@ PathToApi = typing_extensions.TypedDict(
 path_to_api = PathToApi(
     {
         PathValues.METADATA_CHAINS: MetadataChains,
+        PathValues.METADATA_CHAINS_CHAIN_ID: MetadataChainsChainId,
         PathValues.V1_DAPPS_CRYPTOPUNKSETHEREUM_BIDS_CURRENT: V1DappsCryptopunksEthereumBidsCurrent,
         PathValues.V1_DAPPS_CRYPTOPUNKSETHEREUM_COLLECTION_DAILY_SNAPSHOTS_CURRENT: V1DappsCryptopunksEthereumCollectionDailySnapshotsCurrent,
         PathValues.V1_DAPPS_CRYPTOPUNKSETHEREUM_COLLECTIONS_CURRENT: V1DappsCryptopunksEthereumCollectionsCurrent,
@@ -280,7 +283,7 @@ path_to_api = PathToApi(
         PathValues.V1_DAPPS_CURVEFINANCEETHEREUM_USAGE_METRICS_HOURLY_SNAPSHOTS_CURRENT: V1DappsCurveFinanceEthereumUsageMetricsHourlySnapshotsCurrent,
         PathValues.V1_DAPPS_CURVEFINANCEETHEREUM_WITHDRAWS_CURRENT: V1DappsCurveFinanceEthereumWithdrawsCurrent,
         PathValues.METADATA_DAPPS: MetadataDapps,
-        PathValues.METADATA_DAPPS_DAPP_NAME: MetadataDappsDappName,
+        PathValues.METADATA_DAPPS_DAPP_ID: MetadataDappsDappId,
         PathValues.V1_DAPPS_PANCAKESWAPV3ETHEREUM_ACCOUNTS_CURRENT: V1DappsPancakeswapV3EthereumAccountsCurrent,
         PathValues.V1_DAPPS_PANCAKESWAPV3ETHEREUM_ACTIVE_ACCOUNTS_CURRENT: V1DappsPancakeswapV3EthereumActiveAccountsCurrent,
         PathValues.V1_DAPPS_PANCAKESWAPV3ETHEREUM_DEPOSITS_CURRENT: V1DappsPancakeswapV3EthereumDepositsCurrent,

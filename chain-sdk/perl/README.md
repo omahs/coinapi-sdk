@@ -556,8 +556,9 @@ Class | Method | HTTP request | Description
 *CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_usage_metrics_daily_snapshots__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_usage_metrics_daily_snapshots__current) | **GET** /v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current)
 *CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_usage_metrics_hourly_snapshots__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_usage_metrics_hourly_snapshots__current) | **GET** /v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current)
 *CURVEFINANCEETHEREUMApi* | [**c_urvefinanceethereum_withdraws__current**](docs/CURVEFINANCEETHEREUMApi.md#c_urvefinanceethereum_withdraws__current) | **GET** /v1/dapps/curve-finance-ethereum/withdraws/current | Withdraws (current)
+*MetadataApi* | [**metadata_chains_chain_id_get**](docs/MetadataApi.md#metadata_chains_chain_id_get) | **GET** /metadata/chains/{chainId} | Gets chain by chainId.
 *MetadataApi* | [**metadata_chains_get**](docs/MetadataApi.md#metadata_chains_get) | **GET** /metadata/chains | List all chains.
-*MetadataApi* | [**metadata_dapps_dapp_name_get**](docs/MetadataApi.md#metadata_dapps_dapp_name_get) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
+*MetadataApi* | [**metadata_dapps_dapp_id_get**](docs/MetadataApi.md#metadata_dapps_dapp_id_get) | **GET** /metadata/dapps/{dappId} | Gets dapp by id.
 *MetadataApi* | [**metadata_dapps_get**](docs/MetadataApi.md#metadata_dapps_get) | **GET** /metadata/dapps | List all decentralized applications.
 *PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_accounts__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_accounts__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/accounts/current | Accounts (current)
 *PANCAKESWAPV3ETHEREUMApi* | [**p_ancakeswapv3_ethereum_active_accounts__current**](docs/PANCAKESWAPV3ETHEREUMApi.md#p_ancakeswapv3_ethereum_active_accounts__current) | **GET** /v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current | ActiveAccounts (current)

@@ -48,6 +48,16 @@
   }
 
   describe('MetadataApi', function() {
+    describe('metadataChainsChainIdGet', function() {
+      it('should call metadataChainsChainIdGet successfully', function(done) {
+        //uncomment below and update the code to test metadataChainsChainIdGet
+        //instance.metadataChainsChainIdGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('metadataChainsGet', function() {
       it('should call metadataChainsGet successfully', function(done) {
         //uncomment below and update the code to test metadataChainsGet
@@ -58,10 +68,10 @@
         done();
       });
     });
-    describe('metadataDappsDappNameGet', function() {
-      it('should call metadataDappsDappNameGet successfully', function(done) {
-        //uncomment below and update the code to test metadataDappsDappNameGet
-        //instance.metadataDappsDappNameGet(function(error) {
+    describe('metadataDappsDappIdGet', function() {
+      it('should call metadataDappsDappIdGet successfully', function(done) {
+        //uncomment below and update the code to test metadataDappsDappIdGet
+        //instance.metadataDappsDappIdGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

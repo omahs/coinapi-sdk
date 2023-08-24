@@ -43,6 +43,37 @@ local function new_metadata_api(authority, basePath, schemes)
 	}, metadata_api_mt)
 end
 
+function metadata_api:metadata_chains_chain_id_get(chain_id)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/metadata/chains/%s",
+			self.basePath, chain_id);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		return nil, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
 function metadata_api:metadata_chains_get()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
@@ -74,13 +105,13 @@ function metadata_api:metadata_chains_get()
 	end
 end
 
-function metadata_api:metadata_dapps_dapp_name_get(dapp_name)
+function metadata_api:metadata_dapps_dapp_id_get(dapp_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
 		path = string.format("%s/metadata/dapps/%s",
-			self.basePath, dapp_name);
+			self.basePath, dapp_id);
 	})
 
 	-- set HTTP verb

@@ -73,6 +73,18 @@ class MetadataApiTest extends TestCase
     }
 
     /**
+     * Test case for metadataChainsChainIdGet
+     *
+     * Gets chain by chainId..
+     *
+     */
+    public function testMetadataChainsChainIdGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for metadataChainsGet
      *
      * List all chains..
@@ -85,12 +97,12 @@ class MetadataApiTest extends TestCase
     }
 
     /**
-     * Test case for metadataDappsDappNameGet
+     * Test case for metadataDappsDappIdGet
      *
-     * Gets dapp by name..
+     * Gets dapp by id..
      *
      */
-    public function testMetadataDappsDappNameGet()
+    public function testMetadataDappsDappIdGet()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

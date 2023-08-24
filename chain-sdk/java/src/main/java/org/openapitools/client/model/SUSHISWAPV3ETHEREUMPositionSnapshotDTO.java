@@ -54,7 +54,7 @@ import org.openapitools.client.JSON;
 /**
  * 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-23T15:20:45.865001Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-24T12:57:58.978232Z[Etc/UTC]")
 public class SUSHISWAPV3ETHEREUMPositionSnapshotDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)

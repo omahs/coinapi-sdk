@@ -73,6 +73,124 @@ public class MetadataApi {
     }
 
     /**
+     * Build call for metadataChainsChainIdGet
+     * @param chainId  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call metadataChainsChainIdGetCall(String chainId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/metadata/chains/{chainId}"
+            .replace("{" + "chainId" + "}", localVarApiClient.escapeString(chainId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call metadataChainsChainIdGetValidateBeforeCall(String chainId, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'chainId' is set
+        if (chainId == null) {
+            throw new ApiException("Missing the required parameter 'chainId' when calling metadataChainsChainIdGet(Async)");
+        }
+
+        return metadataChainsChainIdGetCall(chainId, _callback);
+
+    }
+
+    /**
+     * Gets chain by chainId.
+     * 
+     * @param chainId  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public void metadataChainsChainIdGet(String chainId) throws ApiException {
+        metadataChainsChainIdGetWithHttpInfo(chainId);
+    }
+
+    /**
+     * Gets chain by chainId.
+     * 
+     * @param chainId  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Void> metadataChainsChainIdGetWithHttpInfo(String chainId) throws ApiException {
+        okhttp3.Call localVarCall = metadataChainsChainIdGetValidateBeforeCall(chainId, null);
+        return localVarApiClient.execute(localVarCall);
+    }
+
+    /**
+     * Gets chain by chainId. (asynchronously)
+     * 
+     * @param chainId  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call metadataChainsChainIdGetAsync(String chainId, final ApiCallback<Void> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = metadataChainsChainIdGetValidateBeforeCall(chainId, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for metadataChainsGet
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -181,8 +299,8 @@ public class MetadataApi {
         return localVarCall;
     }
     /**
-     * Build call for metadataDappsDappNameGet
-     * @param dappName  (required)
+     * Build call for metadataDappsDappIdGet
+     * @param dappId  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -192,7 +310,7 @@ public class MetadataApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call metadataDappsDappNameGetCall(String dappName, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call metadataDappsDappIdGetCall(String dappId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -209,8 +327,8 @@ public class MetadataApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/metadata/dapps/{dappName}"
-            .replace("{" + "dappName" + "}", localVarApiClient.escapeString(dappName.toString()));
+        String localVarPath = "/metadata/dapps/{dappId}"
+            .replace("{" + "dappId" + "}", localVarApiClient.escapeString(dappId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -237,20 +355,20 @@ public class MetadataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call metadataDappsDappNameGetValidateBeforeCall(String dappName, final ApiCallback _callback) throws ApiException {
-        // verify the required parameter 'dappName' is set
-        if (dappName == null) {
-            throw new ApiException("Missing the required parameter 'dappName' when calling metadataDappsDappNameGet(Async)");
+    private okhttp3.Call metadataDappsDappIdGetValidateBeforeCall(String dappId, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'dappId' is set
+        if (dappId == null) {
+            throw new ApiException("Missing the required parameter 'dappId' when calling metadataDappsDappIdGet(Async)");
         }
 
-        return metadataDappsDappNameGetCall(dappName, _callback);
+        return metadataDappsDappIdGetCall(dappId, _callback);
 
     }
 
     /**
-     * Gets dapp by name.
+     * Gets dapp by id.
      * 
-     * @param dappName  (required)
+     * @param dappId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -258,14 +376,14 @@ public class MetadataApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public void metadataDappsDappNameGet(String dappName) throws ApiException {
-        metadataDappsDappNameGetWithHttpInfo(dappName);
+    public void metadataDappsDappIdGet(String dappId) throws ApiException {
+        metadataDappsDappIdGetWithHttpInfo(dappId);
     }
 
     /**
-     * Gets dapp by name.
+     * Gets dapp by id.
      * 
-     * @param dappName  (required)
+     * @param dappId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -274,15 +392,15 @@ public class MetadataApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> metadataDappsDappNameGetWithHttpInfo(String dappName) throws ApiException {
-        okhttp3.Call localVarCall = metadataDappsDappNameGetValidateBeforeCall(dappName, null);
+    public ApiResponse<Void> metadataDappsDappIdGetWithHttpInfo(String dappId) throws ApiException {
+        okhttp3.Call localVarCall = metadataDappsDappIdGetValidateBeforeCall(dappId, null);
         return localVarApiClient.execute(localVarCall);
     }
 
     /**
-     * Gets dapp by name. (asynchronously)
+     * Gets dapp by id. (asynchronously)
      * 
-     * @param dappName  (required)
+     * @param dappId  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -292,9 +410,9 @@ public class MetadataApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call metadataDappsDappNameGetAsync(String dappName, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call metadataDappsDappIdGetAsync(String dappId, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = metadataDappsDappNameGetValidateBeforeCall(dappName, _callback);
+        okhttp3.Call localVarCall = metadataDappsDappIdGetValidateBeforeCall(dappId, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }

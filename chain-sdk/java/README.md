@@ -2,7 +2,7 @@
 
 On Chain Dapps - REST API
 - API version: v1
-  - Build date: 2023-08-23T15:20:45.865001Z[Etc/UTC]
+  - Build date: 2023-08-24T12:57:58.978232Z[Etc/UTC]
 
 
 This section will provide necessary information about the `OnChain API` protocol. 
@@ -144,8 +144,9 @@ Class | Method | HTTP request | Description
 *CurveFinanceEthereumApi* | [**cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent**](docs/CurveFinanceEthereumApi.md#cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent) | **GET** /v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current)
 *CurveFinanceEthereumApi* | [**cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent**](docs/CurveFinanceEthereumApi.md#cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent) | **GET** /v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current)
 *CurveFinanceEthereumApi* | [**cURVEFINANCEETHEREUMWithdrawsCurrent**](docs/CurveFinanceEthereumApi.md#cURVEFINANCEETHEREUMWithdrawsCurrent) | **GET** /v1/dapps/curve-finance-ethereum/withdraws/current | Withdraws (current)
+*MetadataApi* | [**metadataChainsChainIdGet**](docs/MetadataApi.md#metadataChainsChainIdGet) | **GET** /metadata/chains/{chainId} | Gets chain by chainId.
 *MetadataApi* | [**metadataChainsGet**](docs/MetadataApi.md#metadataChainsGet) | **GET** /metadata/chains | List all chains.
-*MetadataApi* | [**metadataDappsDappNameGet**](docs/MetadataApi.md#metadataDappsDappNameGet) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
+*MetadataApi* | [**metadataDappsDappIdGet**](docs/MetadataApi.md#metadataDappsDappIdGet) | **GET** /metadata/dapps/{dappId} | Gets dapp by id.
 *MetadataApi* | [**metadataDappsGet**](docs/MetadataApi.md#metadataDappsGet) | **GET** /metadata/dapps | List all decentralized applications.
 *PancakeswapV3EthereumApi* | [**pANCAKESWAPV3ETHEREUMAccountsCurrent**](docs/PancakeswapV3EthereumApi.md#pANCAKESWAPV3ETHEREUMAccountsCurrent) | **GET** /v1/dapps/pancakeswap-v3-ethereum/accounts/current | Accounts (current)
 *PancakeswapV3EthereumApi* | [**pANCAKESWAPV3ETHEREUMActiveAccountsCurrent**](docs/PancakeswapV3EthereumApi.md#pANCAKESWAPV3ETHEREUMActiveAccountsCurrent) | **GET** /v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current | ActiveAccounts (current)

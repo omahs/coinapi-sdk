@@ -102,8 +102,9 @@ Class | Method | HTTP request | Description
 *CURVEFINANCEETHEREUMApi* | [**cURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent**](docs/Api/CURVEFINANCEETHEREUMApi.md#curvefinanceethereumusagemetricsdailysnapshotscurrent) | **GET** /v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current)
 *CURVEFINANCEETHEREUMApi* | [**cURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent**](docs/Api/CURVEFINANCEETHEREUMApi.md#curvefinanceethereumusagemetricshourlysnapshotscurrent) | **GET** /v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current)
 *CURVEFINANCEETHEREUMApi* | [**cURVEFINANCEETHEREUMWithdrawsCurrent**](docs/Api/CURVEFINANCEETHEREUMApi.md#curvefinanceethereumwithdrawscurrent) | **GET** /v1/dapps/curve-finance-ethereum/withdraws/current | Withdraws (current)
+*MetadataApi* | [**metadataChainsChainIdGet**](docs/Api/MetadataApi.md#metadatachainschainidget) | **GET** /metadata/chains/{chainId} | Gets chain by chainId.
 *MetadataApi* | [**metadataChainsGet**](docs/Api/MetadataApi.md#metadatachainsget) | **GET** /metadata/chains | List all chains.
-*MetadataApi* | [**metadataDappsDappNameGet**](docs/Api/MetadataApi.md#metadatadappsdappnameget) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
+*MetadataApi* | [**metadataDappsDappIdGet**](docs/Api/MetadataApi.md#metadatadappsdappidget) | **GET** /metadata/dapps/{dappId} | Gets dapp by id.
 *MetadataApi* | [**metadataDappsGet**](docs/Api/MetadataApi.md#metadatadappsget) | **GET** /metadata/dapps | List all decentralized applications.
 *PANCAKESWAPV3ETHEREUMApi* | [**pANCAKESWAPV3ETHEREUMAccountsCurrent**](docs/Api/PANCAKESWAPV3ETHEREUMApi.md#pancakeswapv3ethereumaccountscurrent) | **GET** /v1/dapps/pancakeswap-v3-ethereum/accounts/current | Accounts (current)
 *PANCAKESWAPV3ETHEREUMApi* | [**pANCAKESWAPV3ETHEREUMActiveAccountsCurrent**](docs/Api/PANCAKESWAPV3ETHEREUMApi.md#pancakeswapv3ethereumactiveaccountscurrent) | **GET** /v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current | ActiveAccounts (current)

@@ -108,8 +108,9 @@ Class | Method | HTTP request | Description
 *CURVEFINANCEETHEREUMApi* | [**CURVEFINANCEETHEREUMUsageMetricsDailySnapshotsCurrent**](docs/CURVEFINANCEETHEREUMApi.md#curvefinanceethereumusagemetricsdailysnapshotscurrent) | **Get** /v1/dapps/curve-finance-ethereum/usageMetricsDailySnapshots/current | UsageMetricsDailySnapshots (current)
 *CURVEFINANCEETHEREUMApi* | [**CURVEFINANCEETHEREUMUsageMetricsHourlySnapshotsCurrent**](docs/CURVEFINANCEETHEREUMApi.md#curvefinanceethereumusagemetricshourlysnapshotscurrent) | **Get** /v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current | UsageMetricsHourlySnapshots (current)
 *CURVEFINANCEETHEREUMApi* | [**CURVEFINANCEETHEREUMWithdrawsCurrent**](docs/CURVEFINANCEETHEREUMApi.md#curvefinanceethereumwithdrawscurrent) | **Get** /v1/dapps/curve-finance-ethereum/withdraws/current | Withdraws (current)
+*MetadataApi* | [**MetadataChainsChainIdGet**](docs/MetadataApi.md#metadatachainschainidget) | **Get** /metadata/chains/{chainId} | Gets chain by chainId.
 *MetadataApi* | [**MetadataChainsGet**](docs/MetadataApi.md#metadatachainsget) | **Get** /metadata/chains | List all chains.
-*MetadataApi* | [**MetadataDappsDappNameGet**](docs/MetadataApi.md#metadatadappsdappnameget) | **Get** /metadata/dapps/{dappName} | Gets dapp by name.
+*MetadataApi* | [**MetadataDappsDappIdGet**](docs/MetadataApi.md#metadatadappsdappidget) | **Get** /metadata/dapps/{dappId} | Gets dapp by id.
 *MetadataApi* | [**MetadataDappsGet**](docs/MetadataApi.md#metadatadappsget) | **Get** /metadata/dapps | List all decentralized applications.
 *PANCAKESWAPV3ETHEREUMApi* | [**PANCAKESWAPV3ETHEREUMAccountsCurrent**](docs/PANCAKESWAPV3ETHEREUMApi.md#pancakeswapv3ethereumaccountscurrent) | **Get** /v1/dapps/pancakeswap-v3-ethereum/accounts/current | Accounts (current)
 *PANCAKESWAPV3ETHEREUMApi* | [**PANCAKESWAPV3ETHEREUMActiveAccountsCurrent**](docs/PANCAKESWAPV3ETHEREUMApi.md#pancakeswapv3ethereumactiveaccountscurrent) | **Get** /v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current | ActiveAccounts (current)

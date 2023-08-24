@@ -7,16 +7,22 @@
 #include "../include/binary.h"
 
 
+// Gets chain by chainId.
+//
+void
+MetadataAPI_metadataChainsChainIdGet(apiClient_t *apiClient, char * chainId );
+
+
 // List all chains.
 //
 void
 MetadataAPI_metadataChainsGet(apiClient_t *apiClient);
 
 
-// Gets dapp by name.
+// Gets dapp by id.
 //
 void
-MetadataAPI_metadataDappsDappNameGet(apiClient_t *apiClient, char * dappName );
+MetadataAPI_metadataDappsDappIdGet(apiClient_t *apiClient, char * dappId );
 
 
 // List all decentralized applications.

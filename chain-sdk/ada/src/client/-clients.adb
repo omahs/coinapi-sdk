@@ -485,6 +485,19 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end C_URVEFINANCEETHEREUM_Withdraws__current;
 
+   --  Gets chain by chainId.
+   procedure Metadata_Chains_Chain_Id_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Set_Path ("/metadata/chains/{chainId}");
+      URI.Set_Path_Param ("chainId", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Metadata_Chains_Chain_Id_Get;
+
    --  List all chains.
    procedure Metadata_Chains_Get
       (Client : in out Client_Type) is
@@ -496,18 +509,18 @@ package body .Clients is
       Client.Call (Swagger.Clients.GET, URI);
    end Metadata_Chains_Get;
 
-   --  Gets dapp by name.
-   procedure Metadata_Dapps_Dapp_Name_Get
+   --  Gets dapp by id.
+   procedure Metadata_Dapps_Dapp_Id_Get
       (Client : in out Client_Type;
-       Dapp_Name : in Swagger.UString) is
+       Dapp_Id : in Swagger.UString) is
       URI   : Swagger.Clients.URI_Type;
    begin
 
 
-      URI.Set_Path ("/metadata/dapps/{dappName}");
-      URI.Set_Path_Param ("dappName", Dapp_Name);
+      URI.Set_Path ("/metadata/dapps/{dappId}");
+      URI.Set_Path_Param ("dappId", Dapp_Id);
       Client.Call (Swagger.Clients.GET, URI);
-   end Metadata_Dapps_Dapp_Name_Get;
+   end Metadata_Dapps_Dapp_Id_Get;
 
    --  List all decentralized applications.
    procedure Metadata_Dapps_Get

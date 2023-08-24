@@ -44,6 +44,16 @@ public:
     virtual ~MetadataApi();
 
     /// <summary>
+    /// Gets chain by chainId.
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="chainId"></param>
+    pplx::task<void> metadataChainsChainIdGet(
+        utility::string_t chainId
+    ) const;
+    /// <summary>
     /// List all chains.
     /// </summary>
     /// <remarks>
@@ -52,14 +62,14 @@ public:
     pplx::task<void> metadataChainsGet(
     ) const;
     /// <summary>
-    /// Gets dapp by name.
+    /// Gets dapp by id.
     /// </summary>
     /// <remarks>
     /// 
     /// </remarks>
-    /// <param name="dappName"></param>
-    pplx::task<void> metadataDappsDappNameGet(
-        utility::string_t dappName
+    /// <param name="dappId"></param>
+    pplx::task<void> metadataDappsDappIdGet(
+        utility::string_t dappId
     ) const;
     /// <summary>
     /// List all decentralized applications.

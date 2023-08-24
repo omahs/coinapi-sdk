@@ -58,6 +58,22 @@ import qualified Prelude as P
 
 -- ** Metadata
 
+-- *** metadataChainsChainIdGet
+
+-- | @GET \/metadata\/chains\/{chainId}@
+-- 
+-- Gets chain by chainId.
+-- 
+metadataChainsChainIdGet
+  :: ChainId -- ^ "chainId"
+  -> OnChainDapps-RESTRequest MetadataChainsChainIdGet MimeNoContent NoContent MimeNoContent
+metadataChainsChainIdGet (ChainId chainId) =
+  _mkRequest "GET" ["/metadata/chains/",toPath chainId]
+
+data MetadataChainsChainIdGet  
+instance Produces MetadataChainsChainIdGet MimeNoContent
+
+
 -- *** metadataChainsGet
 
 -- | @GET \/metadata\/chains@
@@ -73,20 +89,20 @@ data MetadataChainsGet
 instance Produces MetadataChainsGet MimeNoContent
 
 
--- *** metadataDappsDappNameGet
+-- *** metadataDappsDappIdGet
 
--- | @GET \/metadata\/dapps\/{dappName}@
+-- | @GET \/metadata\/dapps\/{dappId}@
 -- 
--- Gets dapp by name.
+-- Gets dapp by id.
 -- 
-metadataDappsDappNameGet
-  :: DappName -- ^ "dappName" -  
-  -> OnChainDapps-RESTRequest MetadataDappsDappNameGet MimeNoContent NoContent MimeNoContent
-metadataDappsDappNameGet (DappName dappName) =
-  _mkRequest "GET" ["/metadata/dapps/",toPath dappName]
+metadataDappsDappIdGet
+  :: DappId -- ^ "dappId" -  
+  -> OnChainDapps-RESTRequest MetadataDappsDappIdGet MimeNoContent NoContent MimeNoContent
+metadataDappsDappIdGet (DappId dappId) =
+  _mkRequest "GET" ["/metadata/dapps/",toPath dappId]
 
-data MetadataDappsDappNameGet  
-instance Produces MetadataDappsDappNameGet MimeNoContent
+data MetadataDappsDappIdGet  
+instance Produces MetadataDappsDappIdGet MimeNoContent
 
 
 -- *** metadataDappsGet

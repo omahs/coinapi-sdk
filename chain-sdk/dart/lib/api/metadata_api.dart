@@ -16,6 +16,51 @@ class MetadataApi {
 
   final ApiClient apiClient;
 
+  /// Gets chain by chainId.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [String] chainId (required):
+  Future<Response> metadataChainsChainIdGetWithHttpInfo(String chainId,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/metadata/chains/{chainId}'
+      .replaceAll('{chainId}', chainId);
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Gets chain by chainId.
+  ///
+  /// Parameters:
+  ///
+  /// * [String] chainId (required):
+  Future<void> metadataChainsChainIdGet(String chainId,) async {
+    final response = await metadataChainsChainIdGetWithHttpInfo(chainId,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
   /// List all chains.
   ///
   /// Note: This method returns the HTTP [Response].
@@ -52,18 +97,18 @@ class MetadataApi {
     }
   }
 
-  /// Gets dapp by name.
+  /// Gets dapp by id.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
   ///
-  /// * [String] dappName (required):
+  /// * [String] dappId (required):
   ///   
-  Future<Response> metadataDappsDappNameGetWithHttpInfo(String dappName,) async {
+  Future<Response> metadataDappsDappIdGetWithHttpInfo(String dappId,) async {
     // ignore: prefer_const_declarations
-    final path = r'/metadata/dapps/{dappName}'
-      .replaceAll('{dappName}', dappName);
+    final path = r'/metadata/dapps/{dappId}'
+      .replaceAll('{dappId}', dappId);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -86,14 +131,14 @@ class MetadataApi {
     );
   }
 
-  /// Gets dapp by name.
+  /// Gets dapp by id.
   ///
   /// Parameters:
   ///
-  /// * [String] dappName (required):
+  /// * [String] dappId (required):
   ///   
-  Future<void> metadataDappsDappNameGet(String dappName,) async {
-    final response = await metadataDappsDappNameGetWithHttpInfo(dappName,);
+  Future<void> metadataDappsDappIdGet(String dappId,) async {
+    final response = await metadataDappsDappIdGetWithHttpInfo(dappId,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

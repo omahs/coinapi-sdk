@@ -4,10 +4,44 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**metadataChainsChainIdGet**](MetadataApi.md#metadataChainsChainIdGet) | **GET** /metadata/chains/{chainId} | Gets chain by chainId.
 [**metadataChainsGet**](MetadataApi.md#metadataChainsGet) | **GET** /metadata/chains | List all chains.
-[**metadataDappsDappNameGet**](MetadataApi.md#metadataDappsDappNameGet) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
+[**metadataDappsDappIdGet**](MetadataApi.md#metadataDappsDappIdGet) | **GET** /metadata/dapps/{dappId} | Gets dapp by id.
 [**metadataDappsGet**](MetadataApi.md#metadataDappsGet) | **GET** /metadata/dapps | List all decentralized applications.
 
+
+
+## metadataChainsChainIdGet
+
+Gets chain by chainId.
+
+### Example
+
+```bash
+ metadataChainsChainIdGet chainId=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **chainId** | **string** |  | [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
 ## metadataChainsGet
@@ -40,14 +74,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## metadataDappsDappNameGet
+## metadataDappsDappIdGet
 
-Gets dapp by name.
+Gets dapp by id.
 
 ### Example
 
 ```bash
- metadataDappsDappNameGet dappName=value
+ metadataDappsDappIdGet dappId=value
 ```
 
 ### Parameters
@@ -55,7 +89,7 @@ Gets dapp by name.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dappName** | **string** |  | [default to null]
+ **dappId** | **string** |  | [default to null]
 
 ### Return type
 

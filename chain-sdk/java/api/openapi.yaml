@@ -46,6 +46,23 @@ paths:
       tags:
       - Metadata
       x-accepts: application/json
+  /metadata/chains/{chainId}:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chainId
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          description: Success
+      summary: Gets chain by chainId.
+      tags:
+      - Metadata
+      x-accepts: application/json
   /v1/dapps/cryptopunks-ethereum/bids/current:
     get:
       description: Gets bids.
@@ -905,13 +922,13 @@ paths:
       tags:
       - Metadata
       x-accepts: application/json
-  /metadata/dapps/{dappName}:
+  /metadata/dapps/{dappId}:
     get:
       parameters:
       - description: ""
         explode: false
         in: path
-        name: dappName
+        name: dappId
         required: true
         schema:
           type: string
@@ -919,7 +936,7 @@ paths:
       responses:
         "200":
           description: Success
-      summary: Gets dapp by name.
+      summary: Gets dapp by id.
       tags:
       - Metadata
       x-accepts: application/json

@@ -4,10 +4,39 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Feature | HTTP request | Description
 ------------- | ------------- | -------------
+[**metadata_chains_chain_id_get**](METADATA_API.md#metadata_chains_chain_id_get) | **Get** /metadata/chains/{chainId} | Gets chain by chainId.
 [**metadata_chains_get**](METADATA_API.md#metadata_chains_get) | **Get** /metadata/chains | List all chains.
-[**metadata_dapps_dapp_name_get**](METADATA_API.md#metadata_dapps_dapp_name_get) | **Get** /metadata/dapps/{dappName} | Gets dapp by name.
+[**metadata_dapps_dapp_id_get**](METADATA_API.md#metadata_dapps_dapp_id_get) | **Get** /metadata/dapps/{dappId} | Gets dapp by id.
 [**metadata_dapps_get**](METADATA_API.md#metadata_dapps_get) | **Get** /metadata/dapps | List all decentralized applications.
 
+
+# **metadata_chains_chain_id_get**
+> metadata_chains_chain_id_get (chain_id: STRING_32 )
+
+
+Gets chain by chainId.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **chain_id** | **STRING_32**|  | [default to null]
+
+### Return type
+
+{empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **metadata_chains_get**
 > metadata_chains_get 
@@ -34,18 +63,18 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **metadata_dapps_dapp_name_get**
-> metadata_dapps_dapp_name_get (dapp_name: STRING_32 )
+# **metadata_dapps_dapp_id_get**
+> metadata_dapps_dapp_id_get (dapp_id: STRING_32 )
 
 
-Gets dapp by name.
+Gets dapp by id.
 
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dapp_name** | **STRING_32**|  | [default to null]
+ **dapp_id** | **STRING_32**|  | [default to null]
 
 ### Return type
 

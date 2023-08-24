@@ -5,6 +5,17 @@ context("Test MetadataApi")
 
 api_instance <- MetadataApi$new()
 
+test_that("MetadataChainsChainIdGet", {
+  # tests for MetadataChainsChainIdGet
+  # base path: https://onchain.coinapi.io
+  # Gets chain by chainId.
+  # @param chain_id character 
+  # @return [Void]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("MetadataChainsGet", {
   # tests for MetadataChainsGet
   # base path: https://onchain.coinapi.io
@@ -15,11 +26,11 @@ test_that("MetadataChainsGet", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("MetadataDappsDappNameGet", {
-  # tests for MetadataDappsDappNameGet
+test_that("MetadataDappsDappIdGet", {
+  # tests for MetadataDappsDappIdGet
   # base path: https://onchain.coinapi.io
-  # Gets dapp by name.
-  # @param dapp_name character 
+  # Gets dapp by id.
+  # @param dapp_id character 
   # @return [Void]
 
   # uncomment below to test the operation

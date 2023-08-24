@@ -43,6 +43,43 @@ API.Client.MetadataApi = function($http, $httpParamSerializer, $injector) {
 API.Client.MetadataApi.$inject = ['$http', '$httpParamSerializer', '$injector'];
 
 /**
+ * Gets chain by chainId.
+ * 
+ * @param {!string} chainId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.MetadataApi.prototype.metadataChainsChainIdGet = function(chainId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/metadata/chains/{chainId}'
+      .replace('{' + 'chainId' + '}', String(chainId));
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  // verify required parameter 'chainId' is set
+  if (!chainId) {
+    throw new Error('Missing required parameter chainId when calling metadataChainsChainIdGet');
+  }
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
  * List all chains.
  * 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
@@ -74,25 +111,25 @@ API.Client.MetadataApi.prototype.metadataChainsGet = function(opt_extraHttpReque
 }
 
 /**
- * Gets dapp by name.
+ * Gets dapp by id.
  * 
- * @param {!string} dappName 
+ * @param {!string} dappId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise}
  */
-API.Client.MetadataApi.prototype.metadataDappsDappNameGet = function(dappName, opt_extraHttpRequestParams) {
+API.Client.MetadataApi.prototype.metadataDappsDappIdGet = function(dappId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/metadata/dapps/{dappName}'
-      .replace('{' + 'dappName' + '}', String(dappName));
+  var path = this.basePath_ + '/metadata/dapps/{dappId}'
+      .replace('{' + 'dappId' + '}', String(dappId));
 
   /** @type {!Object} */
   var queryParameters = {};
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'dappName' is set
-  if (!dappName) {
-    throw new Error('Missing required parameter dappName when calling metadataDappsDappNameGet');
+  // verify required parameter 'dappId' is set
+  if (!dappId) {
+    throw new Error('Missing required parameter dappId when calling metadataDappsDappIdGet');
   }
   /** @type {!Object} */
   var httpRequestParams = {

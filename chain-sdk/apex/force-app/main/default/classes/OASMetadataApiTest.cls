@@ -1,6 +1,31 @@
 @isTest
 private class OASMetadataApiTest {
     /**
+     * Gets chain by chainId.
+     *
+     * 
+     */
+    @isTest
+    private static void metadataChainsChainIdGetTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'chainId' => 'null'
+        };
+
+        OASClient client;
+        OASMetadataApi api;
+        String js = '';
+
+        api = new OASMetadataApi(new OASClient());
+
+        api.metadataChainsChainIdGet(params);
+    }
+
+    /**
      * List all chains.
      *
      * 
@@ -22,19 +47,19 @@ private class OASMetadataApiTest {
     }
 
     /**
-     * Gets dapp by name.
+     * Gets dapp by id.
      *
      * 
      */
     @isTest
-    private static void metadataDappsDappNameGetTest() {
+    private static void metadataDappsDappIdGetTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
         Map<String, Object> params = new Map<String, Object>{
-            'dappName' => 'null'
+            'dappId' => 'null'
         };
 
         OASClient client;
@@ -43,7 +68,7 @@ private class OASMetadataApiTest {
 
         api = new OASMetadataApi(new OASClient());
 
-        api.metadataDappsDappNameGet(params);
+        api.metadataDappsDappIdGet(params);
     }
 
     /**

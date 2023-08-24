@@ -4,10 +4,53 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**MetadataChainsChainIdGet**](MetadataApi.md#MetadataChainsChainIdGet) | **GET** /metadata/chains/{chainId} | Gets chain by chainId.
 [**MetadataChainsGet**](MetadataApi.md#MetadataChainsGet) | **GET** /metadata/chains | List all chains.
-[**MetadataDappsDappNameGet**](MetadataApi.md#MetadataDappsDappNameGet) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
+[**MetadataDappsDappIdGet**](MetadataApi.md#MetadataDappsDappIdGet) | **GET** /metadata/dapps/{dappId} | Gets dapp by id.
 [**MetadataDappsGet**](MetadataApi.md#MetadataDappsGet) | **GET** /metadata/dapps | List all decentralized applications.
 
+
+# **MetadataChainsChainIdGet**
+> MetadataChainsChainIdGet(chain_id)
+
+Gets chain by chainId.
+
+### Example
+```R
+library(openapi)
+
+# Gets chain by chainId.
+#
+# prepare function argument(s)
+var_chain_id <- "chain_id_example" # character | 
+
+api_instance <- MetadataApi$new()
+api_instance$MetadataChainsChainIdGet(var_chain_id)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **chain_id** | **character**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
 
 # **MetadataChainsGet**
 > MetadataChainsGet()
@@ -46,29 +89,29 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
 
-# **MetadataDappsDappNameGet**
-> MetadataDappsDappNameGet(dapp_name)
+# **MetadataDappsDappIdGet**
+> MetadataDappsDappIdGet(dapp_id)
 
-Gets dapp by name.
+Gets dapp by id.
 
 ### Example
 ```R
 library(openapi)
 
-# Gets dapp by name.
+# Gets dapp by id.
 #
 # prepare function argument(s)
-var_dapp_name <- "dapp_name_example" # character | 
+var_dapp_id <- "dapp_id_example" # character | 
 
 api_instance <- MetadataApi$new()
-api_instance$MetadataDappsDappNameGet(var_dapp_name)
+api_instance$MetadataDappsDappIdGet(var_dapp_id)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dapp_name** | **character**|  | 
+ **dapp_id** | **character**|  | 
 
 ### Return type
 

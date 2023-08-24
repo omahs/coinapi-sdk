@@ -15,6 +15,13 @@ Please update as you see appropriate
 ]]
 describe("metadata_api", function()
   local openapiclient_metadata_api = require "openapiclient.api.metadata_api"
+  -- unit tests for metadata_chains_chain_id_get
+  describe("metadata_chains_chain_id_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for metadata_chains_get
   describe("metadata_chains_get test", function()
     it("should work", function()
@@ -22,8 +29,8 @@ describe("metadata_api", function()
     end)
   end)
 
-  -- unit tests for metadata_dapps_dapp_name_get
-  describe("metadata_dapps_dapp_name_get test", function()
+  -- unit tests for metadata_dapps_dapp_id_get
+  describe("metadata_dapps_dapp_id_get test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

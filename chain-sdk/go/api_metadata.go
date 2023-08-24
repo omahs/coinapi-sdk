@@ -24,6 +24,96 @@ import (
 // MetadataApiService MetadataApi service
 type MetadataApiService service
 
+type ApiMetadataChainsChainIdGetRequest struct {
+	ctx context.Context
+	ApiService *MetadataApiService
+	chainId string
+}
+
+func (r ApiMetadataChainsChainIdGetRequest) Execute() (*http.Response, error) {
+	return r.ApiService.MetadataChainsChainIdGetExecute(r)
+}
+
+/*
+MetadataChainsChainIdGet Gets chain by chainId.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param chainId
+ @return ApiMetadataChainsChainIdGetRequest
+*/
+func (a *MetadataApiService) MetadataChainsChainIdGet(ctx context.Context, chainId string) ApiMetadataChainsChainIdGetRequest {
+	return ApiMetadataChainsChainIdGetRequest{
+		ApiService: a,
+		ctx: ctx,
+		chainId: chainId,
+	}
+}
+
+// Execute executes the request
+func (a *MetadataApiService) MetadataChainsChainIdGetExecute(r ApiMetadataChainsChainIdGetRequest) (*http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MetadataApiService.MetadataChainsChainIdGet")
+	if err != nil {
+		return nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/metadata/chains/{chainId}"
+	localVarPath = strings.Replace(localVarPath, "{"+"chainId"+"}", url.PathEscape(parameterValueToString(r.chainId, "chainId")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarHTTPResponse, newErr
+	}
+
+	return localVarHTTPResponse, nil
+}
+
 type ApiMetadataChainsGetRequest struct {
 	ctx context.Context
 	ApiService *MetadataApiService
@@ -110,46 +200,46 @@ func (a *MetadataApiService) MetadataChainsGetExecute(r ApiMetadataChainsGetRequ
 	return localVarHTTPResponse, nil
 }
 
-type ApiMetadataDappsDappNameGetRequest struct {
+type ApiMetadataDappsDappIdGetRequest struct {
 	ctx context.Context
 	ApiService *MetadataApiService
-	dappName string
+	dappId string
 }
 
-func (r ApiMetadataDappsDappNameGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.MetadataDappsDappNameGetExecute(r)
+func (r ApiMetadataDappsDappIdGetRequest) Execute() (*http.Response, error) {
+	return r.ApiService.MetadataDappsDappIdGetExecute(r)
 }
 
 /*
-MetadataDappsDappNameGet Gets dapp by name.
+MetadataDappsDappIdGet Gets dapp by id.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param dappName 
- @return ApiMetadataDappsDappNameGetRequest
+ @param dappId 
+ @return ApiMetadataDappsDappIdGetRequest
 */
-func (a *MetadataApiService) MetadataDappsDappNameGet(ctx context.Context, dappName string) ApiMetadataDappsDappNameGetRequest {
-	return ApiMetadataDappsDappNameGetRequest{
+func (a *MetadataApiService) MetadataDappsDappIdGet(ctx context.Context, dappId string) ApiMetadataDappsDappIdGetRequest {
+	return ApiMetadataDappsDappIdGetRequest{
 		ApiService: a,
 		ctx: ctx,
-		dappName: dappName,
+		dappId: dappId,
 	}
 }
 
 // Execute executes the request
-func (a *MetadataApiService) MetadataDappsDappNameGetExecute(r ApiMetadataDappsDappNameGetRequest) (*http.Response, error) {
+func (a *MetadataApiService) MetadataDappsDappIdGetExecute(r ApiMetadataDappsDappIdGetRequest) (*http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MetadataApiService.MetadataDappsDappNameGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MetadataApiService.MetadataDappsDappIdGet")
 	if err != nil {
 		return nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/metadata/dapps/{dappName}"
-	localVarPath = strings.Replace(localVarPath, "{"+"dappName"+"}", url.PathEscape(parameterValueToString(r.dappName, "dappName")), -1)
+	localVarPath := localBasePath + "/metadata/dapps/{dappId}"
+	localVarPath = strings.Replace(localVarPath, "{"+"dappId"+"}", url.PathEscape(parameterValueToString(r.dappId, "dappId")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}

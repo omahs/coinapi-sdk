@@ -14,6 +14,21 @@
 #'
 #' @section Methods:
 #' \describe{
+#' \strong{ MetadataChainsChainIdGet } \emph{ Gets chain by chainId. }
+#'
+#' \itemize{
+#' \item \emph{ @param } chain_id character
+#'
+#'
+#' \item status code : 200 | Success
+#'
+#'
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
 #' \strong{ MetadataChainsGet } \emph{ List all chains. }
 #'
 #' \itemize{
@@ -28,10 +43,10 @@
 #' }
 #' }
 #'
-#' \strong{ MetadataDappsDappNameGet } \emph{ Gets dapp by name. }
+#' \strong{ MetadataDappsDappIdGet } \emph{ Gets dapp by id. }
 #'
 #' \itemize{
-#' \item \emph{ @param } dapp_name character
+#' \item \emph{ @param } dapp_id character
 #'
 #'
 #' \item status code : 200 | Success
@@ -62,6 +77,17 @@
 #'
 #' @examples
 #' \dontrun{
+#' ####################  MetadataChainsChainIdGet  ####################
+#'
+#' library(openapi)
+#' var_chain_id <- "chain_id_example" # character | 
+#'
+#' #Gets chain by chainId.
+#' api_instance <- MetadataApi$new()
+#'
+#' api_instance$MetadataChainsChainIdGet(var_chain_id)
+#'
+#'
 #' ####################  MetadataChainsGet  ####################
 #'
 #' library(openapi)
@@ -72,15 +98,15 @@
 #' api_instance$MetadataChainsGet()
 #'
 #'
-#' ####################  MetadataDappsDappNameGet  ####################
+#' ####################  MetadataDappsDappIdGet  ####################
 #'
 #' library(openapi)
-#' var_dapp_name <- "dapp_name_example" # character | 
+#' var_dapp_id <- "dapp_id_example" # character | 
 #'
-#' #Gets dapp by name.
+#' #Gets dapp by id.
 #' api_instance <- MetadataApi$new()
 #'
-#' api_instance$MetadataDappsDappNameGet(var_dapp_name)
+#' api_instance$MetadataDappsDappIdGet(var_dapp_id)
 #'
 #'
 #' ####################  MetadataDappsGet  ####################
@@ -113,6 +139,90 @@ MetadataApi <- R6::R6Class(
         self$api_client <- api_client
       } else {
         self$api_client <- ApiClient$new()
+      }
+    },
+    #' Gets chain by chainId.
+    #'
+    #' @description
+    #' Gets chain by chainId.
+    #'
+    #' @param chain_id 
+    #' @param ... Other optional arguments
+    #' @return void
+    #' @export
+    MetadataChainsChainIdGet = function(chain_id, ...) {
+      local_var_response <- self$MetadataChainsChainIdGetWithHttpInfo(chain_id, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Gets chain by chainId.
+    #'
+    #' @description
+    #' Gets chain by chainId.
+    #'
+    #' @param chain_id 
+    #' @param ... Other optional arguments
+    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @export
+    MetadataChainsChainIdGetWithHttpInfo = function(chain_id, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      if (missing(`chain_id`)) {
+        stop("Missing required parameter `chain_id`.")
+      }
+
+
+      local_var_url_path <- "/metadata/chains/{chainId}"
+      if (!missing(`chain_id`)) {
+        local_var_url_path <- gsub("\\{chainId\\}", URLencode(as.character(`chain_id`), reserved = TRUE), local_var_url_path)
+      }
+
+
+      # The Accept request HTTP header
+      local_var_accepts <- list()
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        local_var_resp$content <- NULL
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
       }
     },
     #' List all chains.
@@ -188,17 +298,17 @@ MetadataApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Gets dapp by name.
+    #' Gets dapp by id.
     #'
     #' @description
-    #' Gets dapp by name.
+    #' Gets dapp by id.
     #'
-    #' @param dapp_name 
+    #' @param dapp_id 
     #' @param ... Other optional arguments
     #' @return void
     #' @export
-    MetadataDappsDappNameGet = function(dapp_name, ...) {
-      local_var_response <- self$MetadataDappsDappNameGetWithHttpInfo(dapp_name, ...)
+    MetadataDappsDappIdGet = function(dapp_id, ...) {
+      local_var_response <- self$MetadataDappsDappIdGetWithHttpInfo(dapp_id, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -209,16 +319,16 @@ MetadataApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Gets dapp by name.
+    #' Gets dapp by id.
     #'
     #' @description
-    #' Gets dapp by name.
+    #' Gets dapp by id.
     #'
-    #' @param dapp_name 
+    #' @param dapp_id 
     #' @param ... Other optional arguments
     #' @return API response (void) with additional information such as HTTP status code, headers
     #' @export
-    MetadataDappsDappNameGetWithHttpInfo = function(dapp_name, ...) {
+    MetadataDappsDappIdGetWithHttpInfo = function(dapp_id, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -228,14 +338,14 @@ MetadataApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      if (missing(`dapp_name`)) {
-        stop("Missing required parameter `dapp_name`.")
+      if (missing(`dapp_id`)) {
+        stop("Missing required parameter `dapp_id`.")
       }
 
 
-      local_var_url_path <- "/metadata/dapps/{dappName}"
-      if (!missing(`dapp_name`)) {
-        local_var_url_path <- gsub("\\{dappName\\}", URLencode(as.character(`dapp_name`), reserved = TRUE), local_var_url_path)
+      local_var_url_path <- "/metadata/dapps/{dappId}"
+      if (!missing(`dapp_id`)) {
+        local_var_url_path <- gsub("\\{dappId\\}", URLencode(as.character(`dapp_id`), reserved = TRUE), local_var_url_path)
       }
 
 

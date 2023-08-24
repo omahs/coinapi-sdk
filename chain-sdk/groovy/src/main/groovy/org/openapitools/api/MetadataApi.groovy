@@ -7,6 +7,30 @@ class MetadataApi {
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 
+    def metadataChainsChainIdGet ( String chainId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/metadata/chains/${chainId}"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+        // verify required params are set
+        if (chainId == null) {
+            throw new RuntimeException("missing required params chainId")
+        }
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
     def metadataChainsGet ( Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/metadata/chains"
 
@@ -27,8 +51,8 @@ class MetadataApi {
 
     }
 
-    def metadataDappsDappNameGet ( String dappName, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/metadata/dapps/${dappName}"
+    def metadataDappsDappIdGet ( String dappId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/metadata/dapps/${dappId}"
 
         // params
         def queryParams = [:]
@@ -37,8 +61,8 @@ class MetadataApi {
         def contentType
 
         // verify required params are set
-        if (dappName == null) {
-            throw new RuntimeException("missing required params dappName")
+        if (dappId == null) {
+            throw new RuntimeException("missing required params dappId")
         }
 
 

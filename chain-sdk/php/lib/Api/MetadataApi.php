@@ -72,10 +72,13 @@ class MetadataApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
+        'metadataChainsChainIdGet' => [
+            'application/json',
+        ],
         'metadataChainsGet' => [
             'application/json',
         ],
-        'metadataDappsDappNameGet' => [
+        'metadataDappsDappIdGet' => [
             'application/json',
         ],
         'metadataDappsGet' => [
@@ -127,6 +130,235 @@ class MetadataApi
     public function getConfig()
     {
         return $this->config;
+    }
+
+    /**
+     * Operation metadataChainsChainIdGet
+     *
+     * Gets chain by chainId.
+     *
+     * @param  string $chain_id chain_id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataChainsChainIdGet'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function metadataChainsChainIdGet($chain_id, string $contentType = self::contentTypes['metadataChainsChainIdGet'][0])
+    {
+        $this->metadataChainsChainIdGetWithHttpInfo($chain_id, $contentType);
+    }
+
+    /**
+     * Operation metadataChainsChainIdGetWithHttpInfo
+     *
+     * Gets chain by chainId.
+     *
+     * @param  string $chain_id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataChainsChainIdGet'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function metadataChainsChainIdGetWithHttpInfo($chain_id, string $contentType = self::contentTypes['metadataChainsChainIdGet'][0])
+    {
+        $request = $this->metadataChainsChainIdGetRequest($chain_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation metadataChainsChainIdGetAsync
+     *
+     * Gets chain by chainId.
+     *
+     * @param  string $chain_id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataChainsChainIdGet'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function metadataChainsChainIdGetAsync($chain_id, string $contentType = self::contentTypes['metadataChainsChainIdGet'][0])
+    {
+        return $this->metadataChainsChainIdGetAsyncWithHttpInfo($chain_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation metadataChainsChainIdGetAsyncWithHttpInfo
+     *
+     * Gets chain by chainId.
+     *
+     * @param  string $chain_id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataChainsChainIdGet'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function metadataChainsChainIdGetAsyncWithHttpInfo($chain_id, string $contentType = self::contentTypes['metadataChainsChainIdGet'][0])
+    {
+        $returnType = '';
+        $request = $this->metadataChainsChainIdGetRequest($chain_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'metadataChainsChainIdGet'
+     *
+     * @param  string $chain_id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataChainsChainIdGet'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function metadataChainsChainIdGetRequest($chain_id, string $contentType = self::contentTypes['metadataChainsChainIdGet'][0])
+    {
+
+        // verify the required parameter 'chain_id' is set
+        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $chain_id when calling metadataChainsChainIdGet'
+            );
+        }
+
+
+        $resourcePath = '/metadata/chains/{chainId}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($chain_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'chainId' . '}',
+                ObjectSerializer::toPathValue($chain_id),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            [],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
     }
 
     /**
@@ -339,37 +571,37 @@ class MetadataApi
     }
 
     /**
-     * Operation metadataDappsDappNameGet
+     * Operation metadataDappsDappIdGet
      *
-     * Gets dapp by name.
+     * Gets dapp by id.
      *
-     * @param  string $dapp_name  (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataDappsDappNameGet'] to see the possible values for this operation
+     * @param  string $dapp_id  (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataDappsDappIdGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function metadataDappsDappNameGet($dapp_name, string $contentType = self::contentTypes['metadataDappsDappNameGet'][0])
+    public function metadataDappsDappIdGet($dapp_id, string $contentType = self::contentTypes['metadataDappsDappIdGet'][0])
     {
-        $this->metadataDappsDappNameGetWithHttpInfo($dapp_name, $contentType);
+        $this->metadataDappsDappIdGetWithHttpInfo($dapp_id, $contentType);
     }
 
     /**
-     * Operation metadataDappsDappNameGetWithHttpInfo
+     * Operation metadataDappsDappIdGetWithHttpInfo
      *
-     * Gets dapp by name.
+     * Gets dapp by id.
      *
-     * @param  string $dapp_name  (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataDappsDappNameGet'] to see the possible values for this operation
+     * @param  string $dapp_id  (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataDappsDappIdGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function metadataDappsDappNameGetWithHttpInfo($dapp_name, string $contentType = self::contentTypes['metadataDappsDappNameGet'][0])
+    public function metadataDappsDappIdGetWithHttpInfo($dapp_id, string $contentType = self::contentTypes['metadataDappsDappIdGet'][0])
     {
-        $request = $this->metadataDappsDappNameGetRequest($dapp_name, $contentType);
+        $request = $this->metadataDappsDappIdGetRequest($dapp_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -416,19 +648,19 @@ class MetadataApi
     }
 
     /**
-     * Operation metadataDappsDappNameGetAsync
+     * Operation metadataDappsDappIdGetAsync
      *
-     * Gets dapp by name.
+     * Gets dapp by id.
      *
-     * @param  string $dapp_name  (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataDappsDappNameGet'] to see the possible values for this operation
+     * @param  string $dapp_id  (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataDappsDappIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function metadataDappsDappNameGetAsync($dapp_name, string $contentType = self::contentTypes['metadataDappsDappNameGet'][0])
+    public function metadataDappsDappIdGetAsync($dapp_id, string $contentType = self::contentTypes['metadataDappsDappIdGet'][0])
     {
-        return $this->metadataDappsDappNameGetAsyncWithHttpInfo($dapp_name, $contentType)
+        return $this->metadataDappsDappIdGetAsyncWithHttpInfo($dapp_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -437,20 +669,20 @@ class MetadataApi
     }
 
     /**
-     * Operation metadataDappsDappNameGetAsyncWithHttpInfo
+     * Operation metadataDappsDappIdGetAsyncWithHttpInfo
      *
-     * Gets dapp by name.
+     * Gets dapp by id.
      *
-     * @param  string $dapp_name  (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataDappsDappNameGet'] to see the possible values for this operation
+     * @param  string $dapp_id  (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataDappsDappIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function metadataDappsDappNameGetAsyncWithHttpInfo($dapp_name, string $contentType = self::contentTypes['metadataDappsDappNameGet'][0])
+    public function metadataDappsDappIdGetAsyncWithHttpInfo($dapp_id, string $contentType = self::contentTypes['metadataDappsDappIdGet'][0])
     {
         $returnType = '';
-        $request = $this->metadataDappsDappNameGetRequest($dapp_name, $contentType);
+        $request = $this->metadataDappsDappIdGetRequest($dapp_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -476,26 +708,26 @@ class MetadataApi
     }
 
     /**
-     * Create request for operation 'metadataDappsDappNameGet'
+     * Create request for operation 'metadataDappsDappIdGet'
      *
-     * @param  string $dapp_name  (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataDappsDappNameGet'] to see the possible values for this operation
+     * @param  string $dapp_id  (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataDappsDappIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function metadataDappsDappNameGetRequest($dapp_name, string $contentType = self::contentTypes['metadataDappsDappNameGet'][0])
+    public function metadataDappsDappIdGetRequest($dapp_id, string $contentType = self::contentTypes['metadataDappsDappIdGet'][0])
     {
 
-        // verify the required parameter 'dapp_name' is set
-        if ($dapp_name === null || (is_array($dapp_name) && count($dapp_name) === 0)) {
+        // verify the required parameter 'dapp_id' is set
+        if ($dapp_id === null || (is_array($dapp_id) && count($dapp_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $dapp_name when calling metadataDappsDappNameGet'
+                'Missing the required parameter $dapp_id when calling metadataDappsDappIdGet'
             );
         }
 
 
-        $resourcePath = '/metadata/dapps/{dappName}';
+        $resourcePath = '/metadata/dapps/{dappId}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -505,10 +737,10 @@ class MetadataApi
 
 
         // path params
-        if ($dapp_name !== null) {
+        if ($dapp_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'dappName' . '}',
-                ObjectSerializer::toPathValue($dapp_name),
+                '{' . 'dappId' . '}',
+                ObjectSerializer::toPathValue($dapp_id),
                 $resourcePath
             );
         }

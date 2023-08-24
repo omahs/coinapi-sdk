@@ -17,6 +17,13 @@ void main() {
   // final instance = MetadataApi();
 
   group('tests for MetadataApi', () {
+    // Gets chain by chainId.
+    //
+    //Future metadataChainsChainIdGet(String chainId) async
+    test('test metadataChainsChainIdGet', () async {
+      // TODO
+    });
+
     // List all chains.
     //
     //Future metadataChainsGet() async
@@ -24,10 +31,10 @@ void main() {
       // TODO
     });
 
-    // Gets dapp by name.
+    // Gets dapp by id.
     //
-    //Future metadataDappsDappNameGet(String dappName) async
-    test('test metadataDappsDappNameGet', () async {
+    //Future metadataDappsDappIdGet(String dappId) async
+    test('test metadataDappsDappIdGet', () async {
       // TODO
     });
 

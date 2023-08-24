@@ -19,6 +19,65 @@ module OpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
+    # Gets chain by chainId.
+    # @param chain_id [String] 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def metadata_chains_chain_id_get(chain_id, opts = {})
+      metadata_chains_chain_id_get_with_http_info(chain_id, opts)
+      nil
+    end
+
+    # Gets chain by chainId.
+    # @param chain_id [String] 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
+    def metadata_chains_chain_id_get_with_http_info(chain_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: MetadataApi.metadata_chains_chain_id_get ...'
+      end
+      # verify the required parameter 'chain_id' is set
+      if @api_client.config.client_side_validation && chain_id.nil?
+        fail ArgumentError, "Missing the required parameter 'chain_id' when calling MetadataApi.metadata_chains_chain_id_get"
+      end
+      # resource path
+      local_var_path = '/metadata/chains/{chainId}'.sub('{' + 'chainId' + '}', CGI.escape(chain_id.to_s))
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type]
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"MetadataApi.metadata_chains_chain_id_get",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: MetadataApi#metadata_chains_chain_id_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # List all chains.
     # @param [Hash] opts the optional parameters
     # @return [nil]
@@ -72,29 +131,29 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Gets dapp by name.
-    # @param dapp_name [String] 
+    # Gets dapp by id.
+    # @param dapp_id [String] 
     # @param [Hash] opts the optional parameters
     # @return [nil]
-    def metadata_dapps_dapp_name_get(dapp_name, opts = {})
-      metadata_dapps_dapp_name_get_with_http_info(dapp_name, opts)
+    def metadata_dapps_dapp_id_get(dapp_id, opts = {})
+      metadata_dapps_dapp_id_get_with_http_info(dapp_id, opts)
       nil
     end
 
-    # Gets dapp by name.
-    # @param dapp_name [String] 
+    # Gets dapp by id.
+    # @param dapp_id [String] 
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def metadata_dapps_dapp_name_get_with_http_info(dapp_name, opts = {})
+    def metadata_dapps_dapp_id_get_with_http_info(dapp_id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: MetadataApi.metadata_dapps_dapp_name_get ...'
+        @api_client.config.logger.debug 'Calling API: MetadataApi.metadata_dapps_dapp_id_get ...'
       end
-      # verify the required parameter 'dapp_name' is set
-      if @api_client.config.client_side_validation && dapp_name.nil?
-        fail ArgumentError, "Missing the required parameter 'dapp_name' when calling MetadataApi.metadata_dapps_dapp_name_get"
+      # verify the required parameter 'dapp_id' is set
+      if @api_client.config.client_side_validation && dapp_id.nil?
+        fail ArgumentError, "Missing the required parameter 'dapp_id' when calling MetadataApi.metadata_dapps_dapp_id_get"
       end
       # resource path
-      local_var_path = '/metadata/dapps/{dappName}'.sub('{' + 'dappName' + '}', CGI.escape(dapp_name.to_s))
+      local_var_path = '/metadata/dapps/{dappId}'.sub('{' + 'dappId' + '}', CGI.escape(dapp_id.to_s))
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -115,7 +174,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"MetadataApi.metadata_dapps_dapp_name_get",
+        :operation => :"MetadataApi.metadata_dapps_dapp_id_get",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -126,7 +185,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: MetadataApi#metadata_dapps_dapp_name_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: MetadataApi#metadata_dapps_dapp_id_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

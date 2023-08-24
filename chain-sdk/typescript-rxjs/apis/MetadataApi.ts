@@ -16,14 +16,32 @@ import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI, throwIfNullOrUndefined, encodeURI } from '../runtime';
 import type { OperationOpts } from '../runtime';
 
-export interface MetadataDappsDappNameGetRequest {
-    dappName: string;
+export interface MetadataChainsChainIdGetRequest {
+    chainId: string;
+}
+
+export interface MetadataDappsDappIdGetRequest {
+    dappId: string;
 }
 
 /**
  * no description
  */
 export class MetadataApi extends BaseAPI {
+
+    /**
+     * Gets chain by chainId.
+     */
+    metadataChainsChainIdGet({ chainId }: MetadataChainsChainIdGetRequest): Observable<void>
+    metadataChainsChainIdGet({ chainId }: MetadataChainsChainIdGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    metadataChainsChainIdGet({ chainId }: MetadataChainsChainIdGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+        throwIfNullOrUndefined(chainId, 'chainId', 'metadataChainsChainIdGet');
+
+        return this.request<void>({
+            url: '/metadata/chains/{chainId}'.replace('{chainId}', encodeURI(chainId)),
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
 
     /**
      * List all chains.
@@ -38,15 +56,15 @@ export class MetadataApi extends BaseAPI {
     };
 
     /**
-     * Gets dapp by name.
+     * Gets dapp by id.
      */
-    metadataDappsDappNameGet({ dappName }: MetadataDappsDappNameGetRequest): Observable<void>
-    metadataDappsDappNameGet({ dappName }: MetadataDappsDappNameGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    metadataDappsDappNameGet({ dappName }: MetadataDappsDappNameGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
-        throwIfNullOrUndefined(dappName, 'dappName', 'metadataDappsDappNameGet');
+    metadataDappsDappIdGet({ dappId }: MetadataDappsDappIdGetRequest): Observable<void>
+    metadataDappsDappIdGet({ dappId }: MetadataDappsDappIdGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    metadataDappsDappIdGet({ dappId }: MetadataDappsDappIdGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+        throwIfNullOrUndefined(dappId, 'dappId', 'metadataDappsDappIdGet');
 
         return this.request<void>({
-            url: '/metadata/dapps/{dappName}'.replace('{dappName}', encodeURI(dappName)),
+            url: '/metadata/dapps/{dappId}'.replace('{dappId}', encodeURI(dappId)),
             method: 'GET',
         }, opts?.responseOpts);
     };

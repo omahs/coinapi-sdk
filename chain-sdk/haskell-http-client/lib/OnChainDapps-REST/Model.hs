@@ -67,8 +67,11 @@ import qualified Prelude as P
 -- * Parameter newtypes
 
 
--- ** DappName
-newtype DappName = DappName { unDappName :: Text } deriving (P.Eq, P.Show)
+-- ** ChainId
+newtype ChainId = ChainId { unChainId :: Text } deriving (P.Eq, P.Show)
+
+-- ** DappId
+newtype DappId = DappId { unDappId :: Text } deriving (P.Eq, P.Show)
 
 -- ** Id
 newtype Id = Id { unId :: Text } deriving (P.Eq, P.Show)

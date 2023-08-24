@@ -4,9 +4,71 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
+| [**metadata_chains_chain_id_get**](MetadataApi.md#metadata_chains_chain_id_get) | **GET** /metadata/chains/{chainId} | Gets chain by chainId. |
 | [**metadata_chains_get**](MetadataApi.md#metadata_chains_get) | **GET** /metadata/chains | List all chains. |
-| [**metadata_dapps_dapp_name_get**](MetadataApi.md#metadata_dapps_dapp_name_get) | **GET** /metadata/dapps/{dappName} | Gets dapp by name. |
+| [**metadata_dapps_dapp_id_get**](MetadataApi.md#metadata_dapps_dapp_id_get) | **GET** /metadata/dapps/{dappId} | Gets dapp by id. |
 | [**metadata_dapps_get**](MetadataApi.md#metadata_dapps_get) | **GET** /metadata/dapps | List all decentralized applications. |
+
+
+## metadata_chains_chain_id_get
+
+> metadata_chains_chain_id_get(chain_id)
+
+Gets chain by chainId.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::MetadataApi.new
+chain_id = 'chain_id_example' # String | 
+
+begin
+  # Gets chain by chainId.
+  api_instance.metadata_chains_chain_id_get(chain_id)
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling MetadataApi->metadata_chains_chain_id_get: #{e}"
+end
+```
+
+#### Using the metadata_chains_chain_id_get_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> metadata_chains_chain_id_get_with_http_info(chain_id)
+
+```ruby
+begin
+  # Gets chain by chainId.
+  data, status_code, headers = api_instance.metadata_chains_chain_id_get_with_http_info(chain_id)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling MetadataApi->metadata_chains_chain_id_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **chain_id** | **String** |  |  |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 
 ## metadata_chains_get
@@ -67,11 +129,11 @@ No authorization required
 - **Accept**: Not defined
 
 
-## metadata_dapps_dapp_name_get
+## metadata_dapps_dapp_id_get
 
-> metadata_dapps_dapp_name_get(dapp_name)
+> metadata_dapps_dapp_id_get(dapp_id)
 
-Gets dapp by name.
+Gets dapp by id.
 
 ### Examples
 
@@ -80,31 +142,31 @@ require 'time'
 require 'openapi_client'
 
 api_instance = OpenapiClient::MetadataApi.new
-dapp_name = 'dapp_name_example' # String | 
+dapp_id = 'dapp_id_example' # String | 
 
 begin
-  # Gets dapp by name.
-  api_instance.metadata_dapps_dapp_name_get(dapp_name)
+  # Gets dapp by id.
+  api_instance.metadata_dapps_dapp_id_get(dapp_id)
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling MetadataApi->metadata_dapps_dapp_name_get: #{e}"
+  puts "Error when calling MetadataApi->metadata_dapps_dapp_id_get: #{e}"
 end
 ```
 
-#### Using the metadata_dapps_dapp_name_get_with_http_info variant
+#### Using the metadata_dapps_dapp_id_get_with_http_info variant
 
 This returns an Array which contains the response data (`nil` in this case), status code and headers.
 
-> <Array(nil, Integer, Hash)> metadata_dapps_dapp_name_get_with_http_info(dapp_name)
+> <Array(nil, Integer, Hash)> metadata_dapps_dapp_id_get_with_http_info(dapp_id)
 
 ```ruby
 begin
-  # Gets dapp by name.
-  data, status_code, headers = api_instance.metadata_dapps_dapp_name_get_with_http_info(dapp_name)
+  # Gets dapp by id.
+  data, status_code, headers = api_instance.metadata_dapps_dapp_id_get_with_http_info(dapp_id)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling MetadataApi->metadata_dapps_dapp_name_get_with_http_info: #{e}"
+  puts "Error when calling MetadataApi->metadata_dapps_dapp_id_get_with_http_info: #{e}"
 end
 ```
 
@@ -112,7 +174,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **dapp_name** | **String** |  |  |
+| **dapp_id** | **String** |  |  |
 
 ### Return type
 

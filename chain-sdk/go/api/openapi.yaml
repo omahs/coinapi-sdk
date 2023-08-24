@@ -45,6 +45,22 @@ paths:
       summary: List all chains.
       tags:
       - Metadata
+  /metadata/chains/{chainId}:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chainId
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          description: Success
+      summary: Gets chain by chainId.
+      tags:
+      - Metadata
   /v1/dapps/cryptopunks-ethereum/bids/current:
     get:
       description: Gets bids.
@@ -877,13 +893,13 @@ paths:
       summary: List all decentralized applications.
       tags:
       - Metadata
-  /metadata/dapps/{dappName}:
+  /metadata/dapps/{dappId}:
     get:
       parameters:
       - description: ""
         explode: false
         in: path
-        name: dappName
+        name: dappId
         required: true
         schema:
           type: string
@@ -891,7 +907,7 @@ paths:
       responses:
         "200":
           description: Success
-      summary: Gets dapp by name.
+      summary: Gets dapp by id.
       tags:
       - Metadata
   /v1/dapps/pancakeswap-v3-ethereum/accounts/current:

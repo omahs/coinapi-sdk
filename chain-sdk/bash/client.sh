@@ -97,7 +97,8 @@ declare -a result_color_table=( "$WHITE" "$WHITE" "$GREEN" "$YELLOW" "$WHITE" "$
 declare -A operation_parameters_minimum_occurrences
 operation_parameters_minimum_occurrences["cURVEFINANCEETHEREUMLiquidityPoolsCurrent:::id"]=0
 operation_parameters_minimum_occurrences["cURVEFINANCEETHEREUMTokensCurrent:::id"]=0
-operation_parameters_minimum_occurrences["metadataDappsDappNameGet:::dappName"]=1
+operation_parameters_minimum_occurrences["metadataChainsChainIdGet:::chainId"]=1
+operation_parameters_minimum_occurrences["metadataDappsDappIdGet:::dappId"]=1
 operation_parameters_minimum_occurrences["pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent:::id"]=0
 operation_parameters_minimum_occurrences["pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent:::pool"]=0
 operation_parameters_minimum_occurrences["pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent:::id"]=0
@@ -132,7 +133,8 @@ operation_parameters_minimum_occurrences["uNISWAPV3ETHEREUMTokensCurrent:::id"]=
 declare -A operation_parameters_maximum_occurrences
 operation_parameters_maximum_occurrences["cURVEFINANCEETHEREUMLiquidityPoolsCurrent:::id"]=0
 operation_parameters_maximum_occurrences["cURVEFINANCEETHEREUMTokensCurrent:::id"]=0
-operation_parameters_maximum_occurrences["metadataDappsDappNameGet:::dappName"]=0
+operation_parameters_maximum_occurrences["metadataChainsChainIdGet:::chainId"]=0
+operation_parameters_maximum_occurrences["metadataDappsDappIdGet:::dappId"]=0
 operation_parameters_maximum_occurrences["pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent:::id"]=0
 operation_parameters_maximum_occurrences["pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent:::pool"]=0
 operation_parameters_maximum_occurrences["pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent:::id"]=0
@@ -164,7 +166,8 @@ operation_parameters_maximum_occurrences["uNISWAPV3ETHEREUMTokensCurrent:::id"]=
 declare -A operation_parameters_collection_type
 operation_parameters_collection_type["cURVEFINANCEETHEREUMLiquidityPoolsCurrent:::id"]=""
 operation_parameters_collection_type["cURVEFINANCEETHEREUMTokensCurrent:::id"]=""
-operation_parameters_collection_type["metadataDappsDappNameGet:::dappName"]=""
+operation_parameters_collection_type["metadataChainsChainIdGet:::chainId"]=""
+operation_parameters_collection_type["metadataDappsDappIdGet:::dappId"]=""
 operation_parameters_collection_type["pANCAKESWAPV3ETHEREUMLiquidityPoolAmountsCurrent:::id"]=""
 operation_parameters_collection_type["pANCAKESWAPV3ETHEREUMLiquidityPoolHourlySnapshotsCurrent:::pool"]=""
 operation_parameters_collection_type["pANCAKESWAPV3ETHEREUMLiquidityPoolsCurrent:::id"]=""
@@ -609,8 +612,9 @@ echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[metadata]${OFF}"
 read -r -d '' ops <<EOF
+  ${CYAN}metadataChainsChainIdGet${OFF};Gets chain by chainId.
   ${CYAN}metadataChainsGet${OFF};List all chains.
-  ${CYAN}metadataDappsDappNameGet${OFF};Gets dapp by name.
+  ${CYAN}metadataDappsDappIdGet${OFF};Gets dapp by id.
   ${CYAN}metadataDappsGet${OFF};List all decentralized applications.
 EOF
 echo "  $ops" | column -t -s ';'
@@ -1203,6 +1207,22 @@ print_cURVEFINANCEETHEREUMWithdrawsCurrent_help() {
 }
 ##############################################################################
 #
+# Print help for metadataChainsChainIdGet operation
+#
+##############################################################################
+print_metadataChainsChainIdGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}metadataChainsChainIdGet - Gets chain by chainId.${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chainId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chainId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for metadataChainsGet operation
 #
 ##############################################################################
@@ -1217,15 +1237,15 @@ print_metadataChainsGet_help() {
 }
 ##############################################################################
 #
-# Print help for metadataDappsDappNameGet operation
+# Print help for metadataDappsDappIdGet operation
 #
 ##############################################################################
-print_metadataDappsDappNameGet_help() {
+print_metadataDappsDappIdGet_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}metadataDappsDappNameGet - Gets dapp by name.${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}metadataDappsDappIdGet - Gets dapp by id.${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}dappName${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: dappName=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}dappId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: dappId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -3729,6 +3749,42 @@ call_cURVEFINANCEETHEREUMWithdrawsCurrent() {
 
 ##############################################################################
 #
+# Call metadataChainsChainIdGet operation
+#
+##############################################################################
+call_metadataChainsChainIdGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chainId)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/metadata/chains/{chainId}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call metadataChainsGet operation
 #
 ##############################################################################
@@ -3765,19 +3821,19 @@ call_metadataChainsGet() {
 
 ##############################################################################
 #
-# Call metadataDappsDappNameGet operation
+# Call metadataDappsDappIdGet operation
 #
 ##############################################################################
-call_metadataDappsDappNameGet() {
+call_metadataDappsDappIdGet() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local path_parameter_names=(dappName)
+    local path_parameter_names=(dappId)
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/metadata/dapps/{dappName}" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/metadata/dapps/{dappId}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -7322,11 +7378,14 @@ case $key in
     cURVEFINANCEETHEREUMWithdrawsCurrent)
     operation="cURVEFINANCEETHEREUMWithdrawsCurrent"
     ;;
+    metadataChainsChainIdGet)
+    operation="metadataChainsChainIdGet"
+    ;;
     metadataChainsGet)
     operation="metadataChainsGet"
     ;;
-    metadataDappsDappNameGet)
-    operation="metadataDappsDappNameGet"
+    metadataDappsDappIdGet)
+    operation="metadataDappsDappIdGet"
     ;;
     metadataDappsGet)
     operation="metadataDappsGet"
@@ -7762,11 +7821,14 @@ case $operation in
     cURVEFINANCEETHEREUMWithdrawsCurrent)
     call_cURVEFINANCEETHEREUMWithdrawsCurrent
     ;;
+    metadataChainsChainIdGet)
+    call_metadataChainsChainIdGet
+    ;;
     metadataChainsGet)
     call_metadataChainsGet
     ;;
-    metadataDappsDappNameGet)
-    call_metadataDappsDappNameGet
+    metadataDappsDappIdGet)
+    call_metadataDappsDappIdGet
     ;;
     metadataDappsGet)
     call_metadataDappsGet

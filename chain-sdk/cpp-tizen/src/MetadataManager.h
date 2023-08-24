@@ -23,6 +23,33 @@ public:
 	MetadataManager();
 	virtual ~MetadataManager();
 
+/*! \brief Gets chain by chainId.. *Synchronous*
+ *
+ * 
+ * \param chainId  *Required*
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool metadataChainsChainIdGetSync(char * accessToken,
+	std::string chainId, 
+	
+	void(* handler)(Error, void* ) , void* userData);
+
+/*! \brief Gets chain by chainId.. *Asynchronous*
+ *
+ * 
+ * \param chainId  *Required*
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool metadataChainsChainIdGetAsync(char * accessToken,
+	std::string chainId, 
+	
+	void(* handler)(Error, void* ) , void* userData);
+
+
 /*! \brief List all chains.. *Synchronous*
  *
  * 
@@ -48,29 +75,29 @@ bool metadataChainsGetAsync(char * accessToken,
 	void(* handler)(Error, void* ) , void* userData);
 
 
-/*! \brief Gets dapp by name.. *Synchronous*
+/*! \brief Gets dapp by id.. *Synchronous*
  *
  * 
- * \param dappName  *Required*
+ * \param dappId  *Required*
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool metadataDappsDappNameGetSync(char * accessToken,
-	std::string dappName, 
+bool metadataDappsDappIdGetSync(char * accessToken,
+	std::string dappId, 
 	
 	void(* handler)(Error, void* ) , void* userData);
 
-/*! \brief Gets dapp by name.. *Asynchronous*
+/*! \brief Gets dapp by id.. *Asynchronous*
  *
  * 
- * \param dappName  *Required*
+ * \param dappId  *Required*
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool metadataDappsDappNameGetAsync(char * accessToken,
-	std::string dappName, 
+bool metadataDappsDappIdGetAsync(char * accessToken,
+	std::string dappId, 
 	
 	void(* handler)(Error, void* ) , void* userData);
 

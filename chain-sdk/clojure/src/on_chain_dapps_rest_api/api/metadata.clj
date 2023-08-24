@@ -126,6 +126,28 @@
   (:import (java.io File)))
 
 
+(defn-spec metadata-chains-chain-id-get-with-http-info any?
+  "Gets chain by chainId."
+  [chainId string?]
+  (check-required-params chainId)
+  (call-api "/metadata/chains/{chainId}" :get
+            {:path-params   {"chainId" chainId }
+             :header-params {}
+             :query-params  {}
+             :form-params   {}
+             :content-types []
+             :accepts       []
+             :auth-names    []}))
+
+(defn-spec metadata-chains-chain-id-get any?
+  "Gets chain by chainId."
+  [chainId string?]
+  (let [res (:data (metadata-chains-chain-id-get-with-http-info chainId))]
+    (if (:decode-models *api-context*)
+       (st/decode any? res st/string-transformer)
+       res)))
+
+
 (defn-spec metadata-chains-get-with-http-info any?
   "List all chains."
   []
@@ -147,12 +169,12 @@
        res)))
 
 
-(defn-spec metadata-dapps-dapp-name-get-with-http-info any?
-  "Gets dapp by name."
-  [dappName string?]
-  (check-required-params dappName)
-  (call-api "/metadata/dapps/{dappName}" :get
-            {:path-params   {"dappName" dappName }
+(defn-spec metadata-dapps-dapp-id-get-with-http-info any?
+  "Gets dapp by id."
+  [dappId string?]
+  (check-required-params dappId)
+  (call-api "/metadata/dapps/{dappId}" :get
+            {:path-params   {"dappId" dappId }
              :header-params {}
              :query-params  {}
              :form-params   {}
@@ -160,10 +182,10 @@
              :accepts       []
              :auth-names    []}))
 
-(defn-spec metadata-dapps-dapp-name-get any?
-  "Gets dapp by name."
-  [dappName string?]
-  (let [res (:data (metadata-dapps-dapp-name-get-with-http-info dappName))]
+(defn-spec metadata-dapps-dapp-id-get any?
+  "Gets dapp by id."
+  [dappId string?]
+  (let [res (:data (metadata-dapps-dapp-id-get-with-http-info dappId))]
     (if (:decode-models *api-context*)
        (st/decode any? res st/string-transformer)
        res)))

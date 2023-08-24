@@ -1,10 +1,32 @@
 -module(openapi_metadata_api).
 
--export([metadata_chains_get/1, metadata_chains_get/2,
-         metadata_dapps_dapp_name_get/2, metadata_dapps_dapp_name_get/3,
+-export([metadata_chains_chain_id_get/2, metadata_chains_chain_id_get/3,
+         metadata_chains_get/1, metadata_chains_get/2,
+         metadata_dapps_dapp_id_get/2, metadata_dapps_dapp_id_get/3,
          metadata_dapps_get/1, metadata_dapps_get/2]).
 
 -define(BASE_URL, <<"">>).
+
+%% @doc Gets chain by chainId.
+%% 
+-spec metadata_chains_chain_id_get(ctx:ctx(), binary()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+metadata_chains_chain_id_get(Ctx, ChainId) ->
+    metadata_chains_chain_id_get(Ctx, ChainId, #{}).
+
+-spec metadata_chains_chain_id_get(ctx:ctx(), binary(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+metadata_chains_chain_id_get(Ctx, ChainId, Optional) ->
+    _OptionalParams = maps:get(params, Optional, #{}),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
+
+    Method = get,
+    Path = [?BASE_URL, "/metadata/chains/", ChainId, ""],
+    QS = [],
+    Headers = [],
+    Body1 = [],
+    ContentTypeHeader = openapi_utils:select_header_content_type([]),
+    Opts = maps:get(hackney_opts, Optional, []),
+
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc List all chains.
 %% 
@@ -27,19 +49,19 @@ metadata_chains_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Gets dapp by name.
+%% @doc Gets dapp by id.
 %% 
--spec metadata_dapps_dapp_name_get(ctx:ctx(), binary()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-metadata_dapps_dapp_name_get(Ctx, DappName) ->
-    metadata_dapps_dapp_name_get(Ctx, DappName, #{}).
+-spec metadata_dapps_dapp_id_get(ctx:ctx(), binary()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+metadata_dapps_dapp_id_get(Ctx, DappId) ->
+    metadata_dapps_dapp_id_get(Ctx, DappId, #{}).
 
--spec metadata_dapps_dapp_name_get(ctx:ctx(), binary(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-metadata_dapps_dapp_name_get(Ctx, DappName, Optional) ->
+-spec metadata_dapps_dapp_id_get(ctx:ctx(), binary(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+metadata_dapps_dapp_id_get(Ctx, DappId, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [?BASE_URL, "/metadata/dapps/", DappName, ""],
+    Path = [?BASE_URL, "/metadata/dapps/", DappId, ""],
     QS = [],
     Headers = [],
     Body1 = [],

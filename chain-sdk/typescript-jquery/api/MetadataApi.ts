@@ -48,6 +48,67 @@ export class MetadataApi {
 
     /**
      * 
+     * @summary Gets chain by chainId.
+     * @param chainId 
+     */
+    public metadataChainsChainIdGet(chainId: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body?: any;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/metadata/chains/{chainId}'.replace('{' + 'chainId' + '}', encodeURIComponent(String(chainId)));
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        // verify required parameter 'chainId' is not null or undefined
+        if (chainId === null || chainId === undefined) {
+            throw new Error('Required parameter chainId was null or undefined when calling metadataChainsChainIdGet.');
+        }
+
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body?: any;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: any, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * 
      * @summary List all chains.
      */
     public metadataChainsGet(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
@@ -103,20 +164,20 @@ export class MetadataApi {
 
     /**
      * 
-     * @summary Gets dapp by name.
-     * @param dappName 
+     * @summary Gets dapp by id.
+     * @param dappId 
      */
-    public metadataDappsDappNameGet(dappName: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public metadataDappsDappIdGet(dappId: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body?: any;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/metadata/dapps/{dappName}'.replace('{' + 'dappName' + '}', encodeURIComponent(String(dappName)));
+        let localVarPath = this.basePath + '/metadata/dapps/{dappId}'.replace('{' + 'dappId' + '}', encodeURIComponent(String(dappId)));
 
         let queryParameters: any = {};
         let headerParams: any = {};
-        // verify required parameter 'dappName' is not null or undefined
-        if (dappName === null || dappName === undefined) {
-            throw new Error('Required parameter dappName was null or undefined when calling metadataDappsDappNameGet.');
+        // verify required parameter 'dappId' is not null or undefined
+        if (dappId === null || dappId === undefined) {
+            throw new Error('Required parameter dappId was null or undefined when calling metadataDappsDappIdGet.');
         }
 
 

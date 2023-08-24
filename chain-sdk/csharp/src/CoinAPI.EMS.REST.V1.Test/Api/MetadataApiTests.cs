@@ -63,6 +63,18 @@ namespace CoinAPI.EMS.REST.V1.Test
 
         
         /// <summary>
+        /// Test MetadataChainsChainIdGet
+        /// </summary>
+        [Test]
+        public void MetadataChainsChainIdGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string chainId = null;
+            //instance.MetadataChainsChainIdGet(chainId);
+            
+        }
+        
+        /// <summary>
         /// Test MetadataChainsGet
         /// </summary>
         [Test]
@@ -74,14 +86,14 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test MetadataDappsDappNameGet
+        /// Test MetadataDappsDappIdGet
         /// </summary>
         [Test]
-        public void MetadataDappsDappNameGetTest()
+        public void MetadataDappsDappIdGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string dappName = null;
-            //instance.MetadataDappsDappNameGet(dappName);
+            //string dappId = null;
+            //instance.MetadataDappsDappIdGet(dappId);
             
         }
         

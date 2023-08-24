@@ -27,11 +27,11 @@ from openapi_client import schemas  # noqa: F401
 from . import path
 
 # Path params
-DappNameSchema = schemas.StrSchema
+DappIdSchema = schemas.StrSchema
 RequestRequiredPathParams = typing_extensions.TypedDict(
     'RequestRequiredPathParams',
     {
-        'dappName': typing.Union[DappNameSchema, str, ],
+        'dappId': typing.Union[DappIdSchema, str, ],
     }
 )
 RequestOptionalPathParams = typing_extensions.TypedDict(
@@ -46,10 +46,10 @@ class RequestPathParams(RequestRequiredPathParams, RequestOptionalPathParams):
     pass
 
 
-request_path_dapp_name = api_client.PathParameter(
-    name="dappName",
+request_path_dapp_id = api_client.PathParameter(
+    name="dappId",
     style=api_client.ParameterStyle.SIMPLE,
-    schema=DappNameSchema,
+    schema=DappIdSchema,
     required=True,
 )
 
@@ -71,7 +71,7 @@ _status_code_to_response = {
 
 class BaseApi(api_client.Api):
     @typing.overload
-    def _metadata_dapps_dapp_name_get_oapg(
+    def _metadata_dapps_dapp_id_get_oapg(
         self,
         path_params: RequestPathParams = frozendict.frozendict(),
         stream: bool = False,
@@ -82,7 +82,7 @@ class BaseApi(api_client.Api):
     ]: ...
 
     @typing.overload
-    def _metadata_dapps_dapp_name_get_oapg(
+    def _metadata_dapps_dapp_id_get_oapg(
         self,
         skip_deserialization: typing_extensions.Literal[True],
         path_params: RequestPathParams = frozendict.frozendict(),
@@ -91,7 +91,7 @@ class BaseApi(api_client.Api):
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def _metadata_dapps_dapp_name_get_oapg(
+    def _metadata_dapps_dapp_id_get_oapg(
         self,
         path_params: RequestPathParams = frozendict.frozendict(),
         stream: bool = False,
@@ -102,7 +102,7 @@ class BaseApi(api_client.Api):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def _metadata_dapps_dapp_name_get_oapg(
+    def _metadata_dapps_dapp_id_get_oapg(
         self,
         path_params: RequestPathParams = frozendict.frozendict(),
         stream: bool = False,
@@ -110,7 +110,7 @@ class BaseApi(api_client.Api):
         skip_deserialization: bool = False,
     ):
         """
-        Gets dapp by name.
+        Gets dapp by id.
         :param skip_deserialization: If true then api_response.response will be set but
             api_response.body and api_response.headers will not be deserialized into schema
             class instances
@@ -120,7 +120,7 @@ class BaseApi(api_client.Api):
 
         _path_params = {}
         for parameter in (
-            request_path_dapp_name,
+            request_path_dapp_id,
         ):
             parameter_data = path_params.get(parameter.name, schemas.unset)
             if parameter_data is schemas.unset:
@@ -158,11 +158,11 @@ class BaseApi(api_client.Api):
         return api_response
 
 
-class MetadataDappsDappNameGet(BaseApi):
+class MetadataDappsDappIdGet(BaseApi):
     # this class is used by api classes that refer to endpoints with operationId fn names
 
     @typing.overload
-    def metadata_dapps_dapp_name_get(
+    def metadata_dapps_dapp_id_get(
         self,
         path_params: RequestPathParams = frozendict.frozendict(),
         stream: bool = False,
@@ -173,7 +173,7 @@ class MetadataDappsDappNameGet(BaseApi):
     ]: ...
 
     @typing.overload
-    def metadata_dapps_dapp_name_get(
+    def metadata_dapps_dapp_id_get(
         self,
         skip_deserialization: typing_extensions.Literal[True],
         path_params: RequestPathParams = frozendict.frozendict(),
@@ -182,7 +182,7 @@ class MetadataDappsDappNameGet(BaseApi):
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def metadata_dapps_dapp_name_get(
+    def metadata_dapps_dapp_id_get(
         self,
         path_params: RequestPathParams = frozendict.frozendict(),
         stream: bool = False,
@@ -193,14 +193,14 @@ class MetadataDappsDappNameGet(BaseApi):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def metadata_dapps_dapp_name_get(
+    def metadata_dapps_dapp_id_get(
         self,
         path_params: RequestPathParams = frozendict.frozendict(),
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._metadata_dapps_dapp_name_get_oapg(
+        return self._metadata_dapps_dapp_id_get_oapg(
             path_params=path_params,
             stream=stream,
             timeout=timeout,
@@ -250,7 +250,7 @@ class ApiForget(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._metadata_dapps_dapp_name_get_oapg(
+        return self._metadata_dapps_dapp_id_get_oapg(
             path_params=path_params,
             stream=stream,
             timeout=timeout,

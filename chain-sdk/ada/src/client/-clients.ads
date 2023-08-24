@@ -173,14 +173,19 @@ package .Clients is
       (Client : in out Client_Type;
        Result : out .Models.CURVEFINANCEETHEREUMWithdrawDTO_Type_Vectors.Vector);
 
+   --  Gets chain by chainId.
+   procedure Metadata_Chains_Chain_Id_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString);
+
    --  List all chains.
    procedure Metadata_Chains_Get
       (Client : in out Client_Type);
 
-   --  Gets dapp by name.
-   procedure Metadata_Dapps_Dapp_Name_Get
+   --  Gets dapp by id.
+   procedure Metadata_Dapps_Dapp_Id_Get
       (Client : in out Client_Type;
-       Dapp_Name : in Swagger.UString);
+       Dapp_Id : in Swagger.UString);
 
    --  List all decentralized applications.
    procedure Metadata_Dapps_Get

@@ -25,6 +25,18 @@ class MetadataApi(baseUrl: String) {
   /**
    * Expected answers:
    *   code 200 :  (Success)
+   * 
+   * @param chainId 
+   */
+  def metadataChainsChainIdGet(chainId: String): ApiRequest[Unit] =
+    ApiRequest[Unit](ApiMethods.GET, baseUrl, "/metadata/chains/{chainId}", "application/json")
+      .withPathParam("chainId", chainId)
+      .withSuccessResponse[Unit](200)
+      
+
+  /**
+   * Expected answers:
+   *   code 200 :  (Success)
    */
   def metadataChainsGet(): ApiRequest[Unit] =
     ApiRequest[Unit](ApiMethods.GET, baseUrl, "/metadata/chains", "application/json")
@@ -35,11 +47,11 @@ class MetadataApi(baseUrl: String) {
    * Expected answers:
    *   code 200 :  (Success)
    * 
-   * @param dappName 
+   * @param dappId 
    */
-  def metadataDappsDappNameGet(dappName: String): ApiRequest[Unit] =
-    ApiRequest[Unit](ApiMethods.GET, baseUrl, "/metadata/dapps/{dappName}", "application/json")
-      .withPathParam("dappName", dappName)
+  def metadataDappsDappIdGet(dappId: String): ApiRequest[Unit] =
+    ApiRequest[Unit](ApiMethods.GET, baseUrl, "/metadata/dapps/{dappId}", "application/json")
+      .withPathParam("dappId", dappId)
       .withSuccessResponse[Unit](200)
       
 

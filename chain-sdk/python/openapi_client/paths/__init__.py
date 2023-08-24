@@ -7,6 +7,7 @@ import enum
 
 class PathValues(str, enum.Enum):
     METADATA_CHAINS = "/metadata/chains"
+    METADATA_CHAINS_CHAIN_ID = "/metadata/chains/{chainId}"
     V1_DAPPS_CRYPTOPUNKSETHEREUM_BIDS_CURRENT = "/v1/dapps/cryptopunks-ethereum/bids/current"
     V1_DAPPS_CRYPTOPUNKSETHEREUM_COLLECTION_DAILY_SNAPSHOTS_CURRENT = "/v1/dapps/cryptopunks-ethereum/collectionDailySnapshots/current"
     V1_DAPPS_CRYPTOPUNKSETHEREUM_COLLECTIONS_CURRENT = "/v1/dapps/cryptopunks-ethereum/collections/current"
@@ -34,7 +35,7 @@ class PathValues(str, enum.Enum):
     V1_DAPPS_CURVEFINANCEETHEREUM_USAGE_METRICS_HOURLY_SNAPSHOTS_CURRENT = "/v1/dapps/curve-finance-ethereum/usageMetricsHourlySnapshots/current"
     V1_DAPPS_CURVEFINANCEETHEREUM_WITHDRAWS_CURRENT = "/v1/dapps/curve-finance-ethereum/withdraws/current"
     METADATA_DAPPS = "/metadata/dapps"
-    METADATA_DAPPS_DAPP_NAME = "/metadata/dapps/{dappName}"
+    METADATA_DAPPS_DAPP_ID = "/metadata/dapps/{dappId}"
     V1_DAPPS_PANCAKESWAPV3ETHEREUM_ACCOUNTS_CURRENT = "/v1/dapps/pancakeswap-v3-ethereum/accounts/current"
     V1_DAPPS_PANCAKESWAPV3ETHEREUM_ACTIVE_ACCOUNTS_CURRENT = "/v1/dapps/pancakeswap-v3-ethereum/activeAccounts/current"
     V1_DAPPS_PANCAKESWAPV3ETHEREUM_DEPOSITS_CURRENT = "/v1/dapps/pancakeswap-v3-ethereum/deposits/current"

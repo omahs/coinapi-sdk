@@ -32,6 +32,17 @@ describe 'MetadataApi' do
     end
   end
 
+  # unit tests for metadata_chains_chain_id_get
+  # Gets chain by chainId.
+  # @param chain_id 
+  # @param [Hash] opts the optional parameters
+  # @return [nil]
+  describe 'metadata_chains_chain_id_get test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
   # unit tests for metadata_chains_get
   # List all chains.
   # @param [Hash] opts the optional parameters
@@ -42,12 +53,12 @@ describe 'MetadataApi' do
     end
   end
 
-  # unit tests for metadata_dapps_dapp_name_get
-  # Gets dapp by name.
-  # @param dapp_name 
+  # unit tests for metadata_dapps_dapp_id_get
+  # Gets dapp by id.
+  # @param dapp_id 
   # @param [Hash] opts the optional parameters
   # @return [nil]
-  describe 'metadata_dapps_dapp_name_get test' do
+  describe 'metadata_dapps_dapp_id_get test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end

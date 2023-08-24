@@ -26,6 +26,30 @@ public class OASMetadataApi {
     }
 
     /**
+     * Gets chain by chainId.
+     * 
+     * @param chainId  (required)
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public void metadataChainsChainIdGet(Map<String, Object> params) {
+        client.assertNotNull(params.get('chainId'), 'chainId');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        client.invoke(
+            'GET', '/metadata/chains/{chainId}', '',
+            query, form,
+            new Map<String, Object>{
+                'chainId' => (String) params.get('chainId')
+            },
+            new Map<String, Object>(),
+            new List<String>(),
+            new List<String>(),
+            new List<String>(),
+            null
+        );
+    }
+    /**
      * List all chains.
      * 
      * @throws OAS.ApiException if fails to make API call
@@ -46,21 +70,21 @@ public class OASMetadataApi {
         );
     }
     /**
-     * Gets dapp by name.
+     * Gets dapp by id.
      * 
-     * @param dappName  (required)
+     * @param dappId  (required)
      * @throws OAS.ApiException if fails to make API call
      */
-    public void metadataDappsDappNameGet(Map<String, Object> params) {
-        client.assertNotNull(params.get('dappName'), 'dappName');
+    public void metadataDappsDappIdGet(Map<String, Object> params) {
+        client.assertNotNull(params.get('dappId'), 'dappId');
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
         client.invoke(
-            'GET', '/metadata/dapps/{dappName}', '',
+            'GET', '/metadata/dapps/{dappId}', '',
             query, form,
             new Map<String, Object>{
-                'dappName' => (String) params.get('dappName')
+                'dappId' => (String) params.get('dappId')
             },
             new Map<String, Object>(),
             new List<String>(),

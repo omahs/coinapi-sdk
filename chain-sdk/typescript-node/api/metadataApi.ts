@@ -87,6 +87,67 @@ export class MetadataApi {
 
     /**
      * 
+     * @summary Gets chain by chainId.
+     * @param chainId 
+     */
+    public async metadataChainsChainIdGet (chainId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+        const localVarPath = this.basePath + '/metadata/chains/{chainId}'
+            .replace('{' + 'chainId' + '}', encodeURIComponent(String(chainId)));
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'chainId' is not null or undefined
+        if (chainId === null || chainId === undefined) {
+            throw new Error('Required parameter chainId was null or undefined when calling metadataChainsChainIdGet.');
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * 
      * @summary List all chains.
      */
     public async metadataChainsGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
@@ -141,19 +202,19 @@ export class MetadataApi {
     }
     /**
      * 
-     * @summary Gets dapp by name.
-     * @param dappName 
+     * @summary Gets dapp by id.
+     * @param dappId 
      */
-    public async metadataDappsDappNameGet (dappName: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
-        const localVarPath = this.basePath + '/metadata/dapps/{dappName}'
-            .replace('{' + 'dappName' + '}', encodeURIComponent(String(dappName)));
+    public async metadataDappsDappIdGet (dappId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+        const localVarPath = this.basePath + '/metadata/dapps/{dappId}'
+            .replace('{' + 'dappId' + '}', encodeURIComponent(String(dappId)));
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         let localVarFormParams: any = {};
 
-        // verify required parameter 'dappName' is not null or undefined
-        if (dappName === null || dappName === undefined) {
-            throw new Error('Required parameter dappName was null or undefined when calling metadataDappsDappNameGet.');
+        // verify required parameter 'dappId' is not null or undefined
+        if (dappId === null || dappId === undefined) {
+            throw new Error('Required parameter dappId was null or undefined when calling metadataDappsDappIdGet.');
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);

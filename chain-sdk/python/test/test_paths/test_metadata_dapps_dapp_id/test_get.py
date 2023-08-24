@@ -12,16 +12,16 @@ from unittest.mock import patch
 import urllib3
 
 import openapi_client
-from openapi_client.paths.metadata_dapps_dapp_name import get  # noqa: E501
+from openapi_client.paths.metadata_dapps_dapp_id import get  # noqa: E501
 from openapi_client import configuration, schemas, api_client
 
 from .. import ApiTestMixin
 
 
-class TestMetadataDappsDappName(ApiTestMixin, unittest.TestCase):
+class TestMetadataDappsDappId(ApiTestMixin, unittest.TestCase):
     """
-    MetadataDappsDappName unit test stubs
-        Gets dapp by name.  # noqa: E501
+    MetadataDappsDappId unit test stubs
+        Gets dapp by id.  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

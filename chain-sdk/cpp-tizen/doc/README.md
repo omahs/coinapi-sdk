@@ -104,10 +104,12 @@ Method | HTTP request | Description
 ### MetadataManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+*metadataChainsChainIdGetSync* | *GET* /metadata/chains/{chainId} | Gets chain by chainId..
+*metadataChainsChainIdGetASync* | *GET* /metadata/chains/{chainId} | Gets chain by chainId..
 *metadataChainsGetSync* | *GET* /metadata/chains | List all chains..
 *metadataChainsGetASync* | *GET* /metadata/chains | List all chains..
-*metadataDappsDappNameGetSync* | *GET* /metadata/dapps/{dappName} | Gets dapp by name..
-*metadataDappsDappNameGetASync* | *GET* /metadata/dapps/{dappName} | Gets dapp by name..
+*metadataDappsDappIdGetSync* | *GET* /metadata/dapps/{dappId} | Gets dapp by id..
+*metadataDappsDappIdGetASync* | *GET* /metadata/dapps/{dappId} | Gets dapp by id..
 *metadataDappsGetSync* | *GET* /metadata/dapps | List all decentralized applications..
 *metadataDappsGetASync* | *GET* /metadata/dapps | List all decentralized applications..
 

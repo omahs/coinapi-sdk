@@ -10,6 +10,35 @@ defmodule OnChainDapps-RESTAPI.Api.Metadata do
   import OnChainDapps-RESTAPI.RequestBuilder
 
   @doc """
+  Gets chain by chainId.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `chain_id` (String.t): 
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, nil}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec metadata_chains_chain_id_get(Tesla.Env.client, String.t, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
+  def metadata_chains_chain_id_get(connection, chain_id, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/metadata/chains/#{chain_id}")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, false}
+    ])
+  end
+
+  @doc """
   List all chains.
 
   ### Parameters
@@ -38,12 +67,12 @@ defmodule OnChainDapps-RESTAPI.Api.Metadata do
   end
 
   @doc """
-  Gets dapp by name.
+  Gets dapp by id.
 
   ### Parameters
 
   - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
-  - `dapp_name` (String.t): 
+  - `dapp_id` (String.t): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -51,12 +80,12 @@ defmodule OnChainDapps-RESTAPI.Api.Metadata do
   - `{:ok, nil}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec metadata_dapps_dapp_name_get(Tesla.Env.client, String.t, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def metadata_dapps_dapp_name_get(connection, dapp_name, _opts \\ []) do
+  @spec metadata_dapps_dapp_id_get(Tesla.Env.client, String.t, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
+  def metadata_dapps_dapp_id_get(connection, dapp_id, _opts \\ []) do
     request =
       %{}
       |> method(:get)
-      |> url("/metadata/dapps/#{dapp_name}")
+      |> url("/metadata/dapps/#{dapp_id}")
       |> Enum.into([])
 
     connection

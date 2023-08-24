@@ -12,6 +12,66 @@
 }while(0)
 
 
+// Gets chain by chainId.
+//
+void
+MetadataAPI_metadataChainsChainIdGet(apiClient_t *apiClient, char * chainId )
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = NULL;
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/metadata/chains/{chainId}")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/metadata/chains/{chainId}");
+
+
+    // Path Params
+    long sizeOfPathParams_chainId = strlen(chainId)+3 + strlen("{ chainId }");
+    if(chainId == NULL) {
+        goto end;
+    }
+    char* localVarToReplace_chainId = malloc(sizeOfPathParams_chainId);
+    sprintf(localVarToReplace_chainId, "{%s}", "chainId");
+
+    localVarPath = strReplace(localVarPath, localVarToReplace_chainId, chainId);
+
+
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","Success");
+    //}
+    //No return type
+end:
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    
+    
+    free(localVarPath);
+    free(localVarToReplace_chainId);
+
+}
+
 // List all chains.
 //
 void
@@ -61,10 +121,10 @@ end:
 
 }
 
-// Gets dapp by name.
+// Gets dapp by id.
 //
 void
-MetadataAPI_metadataDappsDappNameGet(apiClient_t *apiClient, char * dappName )
+MetadataAPI_metadataDappsDappIdGet(apiClient_t *apiClient, char * dappId )
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -74,20 +134,20 @@ MetadataAPI_metadataDappsDappNameGet(apiClient_t *apiClient, char * dappName )
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/metadata/dapps/{dappName}")+1;
+    long sizeOfPath = strlen("/metadata/dapps/{dappId}")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/metadata/dapps/{dappName}");
+    snprintf(localVarPath, sizeOfPath, "/metadata/dapps/{dappId}");
 
 
     // Path Params
-    long sizeOfPathParams_dappName = strlen(dappName)+3 + strlen("{ dappName }");
-    if(dappName == NULL) {
+    long sizeOfPathParams_dappId = strlen(dappId)+3 + strlen("{ dappId }");
+    if(dappId == NULL) {
         goto end;
     }
-    char* localVarToReplace_dappName = malloc(sizeOfPathParams_dappName);
-    sprintf(localVarToReplace_dappName, "{%s}", "dappName");
+    char* localVarToReplace_dappId = malloc(sizeOfPathParams_dappId);
+    sprintf(localVarToReplace_dappId, "{%s}", "dappId");
 
-    localVarPath = strReplace(localVarPath, localVarToReplace_dappName, dappName);
+    localVarPath = strReplace(localVarPath, localVarToReplace_dappId, dappId);
 
 
     apiClient_invoke(apiClient,
@@ -117,7 +177,7 @@ end:
     
     
     free(localVarPath);
-    free(localVarToReplace_dappName);
+    free(localVarToReplace_dappId);
 
 }
 

@@ -49,6 +49,69 @@ sub new {
 
 
 #
+# metadata_chains_chain_id_get
+#
+# Gets chain by chainId.
+#
+# @param string $chain_id  (required)
+{
+    my $params = {
+    'chain_id' => {
+        data_type => 'string',
+        description => '',
+        required => '1',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'metadata_chains_chain_id_get' } = {
+        summary => 'Gets chain by chainId.',
+        params => $params,
+        returns => undef,
+        };
+}
+# @return void
+#
+sub metadata_chains_chain_id_get {
+    my ($self, %args) = @_;
+
+    # verify the required parameter 'chain_id' is set
+    unless (exists $args{'chain_id'}) {
+      croak("Missing the required parameter 'chain_id' when calling metadata_chains_chain_id_get");
+    }
+
+    # parse inputs
+    my $_resource_path = '/metadata/chains/{chainId}';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept();
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # path params
+    if ( exists $args{'chain_id'}) {
+        my $_base_variable = "{" . "chainId" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'chain_id'});
+        $_resource_path =~ s/$_base_variable/$_base_value/g;
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    return;
+}
+
+#
 # metadata_chains_get
 #
 # List all chains.
@@ -94,37 +157,37 @@ sub metadata_chains_get {
 }
 
 #
-# metadata_dapps_dapp_name_get
+# metadata_dapps_dapp_id_get
 #
-# Gets dapp by name.
+# Gets dapp by id.
 #
-# @param string $dapp_name  (required)
+# @param string $dapp_id  (required)
 {
     my $params = {
-    'dapp_name' => {
+    'dapp_id' => {
         data_type => 'string',
         description => '',
         required => '1',
     },
     };
-    __PACKAGE__->method_documentation->{ 'metadata_dapps_dapp_name_get' } = {
-        summary => 'Gets dapp by name.',
+    __PACKAGE__->method_documentation->{ 'metadata_dapps_dapp_id_get' } = {
+        summary => 'Gets dapp by id.',
         params => $params,
         returns => undef,
         };
 }
 # @return void
 #
-sub metadata_dapps_dapp_name_get {
+sub metadata_dapps_dapp_id_get {
     my ($self, %args) = @_;
 
-    # verify the required parameter 'dapp_name' is set
-    unless (exists $args{'dapp_name'}) {
-      croak("Missing the required parameter 'dapp_name' when calling metadata_dapps_dapp_name_get");
+    # verify the required parameter 'dapp_id' is set
+    unless (exists $args{'dapp_id'}) {
+      croak("Missing the required parameter 'dapp_id' when calling metadata_dapps_dapp_id_get");
     }
 
     # parse inputs
-    my $_resource_path = '/metadata/dapps/{dappName}';
+    my $_resource_path = '/metadata/dapps/{dappId}';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -139,9 +202,9 @@ sub metadata_dapps_dapp_name_get {
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
 
     # path params
-    if ( exists $args{'dapp_name'}) {
-        my $_base_variable = "{" . "dappName" . "}";
-        my $_base_value = $self->{api_client}->to_path_value($args{'dapp_name'});
+    if ( exists $args{'dapp_id'}) {
+        my $_base_variable = "{" . "dappId" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'dapp_id'});
         $_resource_path =~ s/$_base_variable/$_base_value/g;
     }
 

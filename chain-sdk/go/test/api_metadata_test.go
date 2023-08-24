@@ -22,6 +22,19 @@ func Test_openapi_MetadataApiService(t *testing.T) {
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
 
+	t.Run("Test MetadataApiService MetadataChainsChainIdGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		var chainId string
+
+		httpRes, err := apiClient.MetadataApi.MetadataChainsChainIdGet(context.Background(), chainId).Execute()
+
+		require.Nil(t, err)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test MetadataApiService MetadataChainsGet", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
@@ -33,13 +46,13 @@ func Test_openapi_MetadataApiService(t *testing.T) {
 
 	})
 
-	t.Run("Test MetadataApiService MetadataDappsDappNameGet", func(t *testing.T) {
+	t.Run("Test MetadataApiService MetadataDappsDappIdGet", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		var dappName string
+		var dappId string
 
-		httpRes, err := apiClient.MetadataApi.MetadataDappsDappNameGet(context.Background(), dappName).Execute()
+		httpRes, err := apiClient.MetadataApi.MetadataDappsDappIdGet(context.Background(), dappId).Execute()
 
 		require.Nil(t, err)
 		assert.Equal(t, 200, httpRes.StatusCode)
