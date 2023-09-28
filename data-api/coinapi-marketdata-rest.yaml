@@ -2894,6 +2894,12 @@ components:
           description: The size precision.
           format: double
           nullable: true
+        raw_kvp:
+          type: object
+          additionalProperties:
+            type: string
+          description: Not normalized raw kvp data.
+          nullable: true
       additionalProperties: false
       description: Represents a symbol data model.
     v1.SymbolMapping:
