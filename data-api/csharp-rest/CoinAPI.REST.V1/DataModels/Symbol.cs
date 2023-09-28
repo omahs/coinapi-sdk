@@ -37,5 +37,6 @@ namespace CoinAPI.REST.V1 {
         public DateTime? data_orderbook_end { get; set; }
         public DateTime? data_trade_start { get; set; }
         public DateTime? data_trade_end { get; set; }
+        public Dictionary<string, string> raw_kvp { get; set; }
     }
 }
