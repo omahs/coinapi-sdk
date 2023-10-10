@@ -57,7 +57,7 @@ paths:
     get:
       tags:
         - Metadata
-      summary: Retrieves asset information for a specific asset ID.
+      summary: List all assets by asset ID
       parameters:
         - name: asset_id
           in: path
@@ -130,20 +130,20 @@ paths:
   '/v1/exchangerate/{asset_id_base}/{asset_id_quote}':
     get:
       tags:
-        - ExchangeRate
-      summary: Get specific rate
+        - Exchange Rates
+      summary: '[exchange rates] Get specific rate'
       description: "Retrieves the exchange rate for a specific base and quote asset at a given time or the current rate.\r\n            \r\n:::info\r\nIf you are using an exchange rate for mission-critical operations, then for best reliability, you should measure the difference between current time and the time returned from the response to ensure that value of the difference between those meets your internal requirements.\r\n:::"
       operationId: Get specific rate
       parameters:
         - name: asset_id_base
           in: path
-          description: 'Requested exchange rate base asset identifier. Full list available here M:BBXT.CoinAPI.API.REST.Controllers.coinapi.v1.AssetsController.GetAll(System.String,System.Boolean)'
+          description: Requested exchange rate base asset identifier
           required: true
           schema:
             type: string
         - name: asset_id_quote
           in: path
-          description: 'equested exchange rate quote asset identifier. Full list available here M:BBXT.CoinAPI.API.REST.Controllers.coinapi.v1.AssetsController.GetAll(System.String,System.Boolean)'
+          description: Requested exchange rate quote asset identifier
           required: true
           schema:
             type: string
@@ -179,25 +179,30 @@ paths:
   '/v1/exchangerate/{asset_id_base}':
     get:
       tags:
-        - ExchangeRate
-      operationId: Get all current rates
+        - Exchange Rates
+      summary: '[exchange rates] Get all current rates'
+      description: "Get the current exchange rate between requested asset and all other assets.\r\n            \r\n:::info\r\nIf you are using an exchange rate for mission-critical operations, then for best reliability, you should measure the difference between current time and the time returned from the response to ensure that value of the difference between those meets your internal requirements.\r\n:::\r\n            \r\n:::info\r\nYou can invert the rates by using Y = 1 / X equation, for example BTC/USD = 1 / (USD/BTC);\r\n:::"
       parameters:
         - name: asset_id_base
           in: path
+          description: Requested exchange rates base asset identifier
           required: true
           schema:
             type: string
         - name: filter_asset_id
           in: query
+          description: Comma or semicolon delimited asset identifiers used to filter response (optional)
           schema:
             type: string
         - name: invert
           in: query
+          description: 'True will invert all the rates (optional, if true then rates will be calculated as `rate = 1 / actual_rate` eg. `USD/BTC` as `BTC/USD`)'
           schema:
             type: boolean
             default: false
         - name: time
           in: query
+          description: Time for historical rates (optional)
           schema:
             type: string
       responses:
@@ -227,8 +232,8 @@ paths:
   /v1/exchangerate/history/periods:
     get:
       tags:
-        - ExchangeRate
-      summary: Timeseries periods
+        - Exchange Rates
+      summary: '[exchange rates] Timeseries periods'
       description: "You can also obtain historical exchange rates of any asset pair, grouped into time periods.\r\nGet full list of supported time periods available for requesting exchange rates historical timeseries data.\r\n            \r\n## Timeseries periods\r\nTime unit |\tPeriod identifiers\r\n--- | ---\r\nSecond | 1SEC, 2SEC, 3SEC, 4SEC, 5SEC, 6SEC, 10SEC, 15SEC, 20SEC, 30SEC\r\nMinute | 1MIN, 2MIN, 3MIN, 4MIN, 5MIN, 6MIN, 10MIN, 15MIN, 20MIN, 30MIN\r\nHour | 1HRS, 2HRS, 3HRS, 4HRS, 6HRS, 8HRS, 12HRS\r\nDay | 1DAY, 2DAY, 3DAY, 5DAY, 7DAY, 10DAY"
       responses:
         '200':
@@ -257,25 +262,25 @@ paths:
   '/v1/exchangerate/{assetBase}/{assetQuote}/history':
     get:
       tags:
-        - ExchangeRate
-      summary: Timeseries data
+        - Exchange Rates
+      summary: '[exchange rates] Timeseries data'
       description: Get the historical exchange rates between two assets in the form of the timeseries.
       parameters:
         - name: assetBase
           in: path
-          description: Requested exchange rates base asset identifier. Full list available here
+          description: Requested exchange rates base asset identifier
           required: true
           schema:
             type: string
         - name: assetQuote
           in: path
-          description: Requested exchange rates base asset identifier. Full list available
+          description: Requested exchange rates base asset identifier
           required: true
           schema:
             type: string
         - name: period_id
           in: query
-          description: 'Identifier of requested timeseries period (required, e.g. `5SEC` or `1HRS`, full list here)'
+          description: 'Identifier of requested timeseries period (required, e.g. `5SEC` or `1HRS`)'
           schema:
             type: string
         - name: time_start
@@ -358,8 +363,8 @@ paths:
   '/v1/exchanges/{exchange_id}':
     get:
       tags:
-        - Exchanges
-      summary: Retrieves symbols for a specific exchange.
+        - Metadata
+      summary: List all exchanges by exchange_id
       parameters:
         - name: exchange_id
           in: path
@@ -394,8 +399,8 @@ paths:
   '/v1/exchanges/icons/{size}':
     get:
       tags:
-        - Exchanges
-      summary: Retrieves icons for all exchanges with the specified size.
+        - Metadata
+      summary: List of icons for the exchanges
       parameters:
         - name: size
           in: path
@@ -428,11 +433,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/v1.Icon'
-  /v1/exchanges/test:
+  /v1/metadata:
     get:
       tags:
-        - Exchanges
-      summary: Test endpoint for the exchanges controller.
+        - Metadata
       responses:
         '200':
           description: Success
@@ -466,15 +470,21 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/v1.Metric'
-  '/v1/metrics/by-exchange/{exchange_id}':
+  /v1/metrics/exchange/listing:
     get:
       tags:
         - Metrics
-      summary: Get all data metrics.
+      summary: Get listing of all supported exchange metrics
+      description: Get data metrics for exchange.
       parameters:
+        - name: metric_id
+          in: query
+          description: The metric id.
+          schema:
+            type: string
         - name: exchange_id
-          in: path
-          required: true
+          in: query
+          description: The symbol id.
           schema:
             type: string
       responses:
@@ -485,32 +495,153 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/v1.Metric'
+                  $ref: '#/components/schemas/v1.ListingItem'
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/v1.Metric'
+                  $ref: '#/components/schemas/v1.ListingItem'
             text/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/v1.Metric'
+                  $ref: '#/components/schemas/v1.ListingItem'
             application/x-msgpack:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/v1.Metric'
-  '/v1/metrics/exchange/{exchange_id}/current':
+                  $ref: '#/components/schemas/v1.ListingItem'
+  /v1/metrics/exchange/current:
     get:
       tags:
         - Metrics
-      summary: Exchange current metrics
+      summary: Current metrics for given symbol
+      description: Get current exchange metrics.
       parameters:
+        - name: metric_id
+          in: query
+          description: The metric id.
+          schema:
+            type: string
         - name: exchange_id
-          in: path
+          in: query
+          description: The symbol id.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            text/plain:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.GeneralData'
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.GeneralData'
+            text/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.GeneralData'
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.GeneralData'
+  /v1/metrics/exchange/history:
+    get:
+      tags:
+        - Metrics
+      summary: Historical metrics for exchange
+      description: Get history.
+      parameters:
+        - name: metric_id
+          in: query
+          description: Metric identifier (required)
+          schema:
+            type: string
+        - name: exchange_id
+          in: query
+          description: Symbol identifier (required)
+          schema:
+            type: string
+        - name: time_start
+          in: query
+          description: Starting time in ISO 8601
+          schema:
+            type: string
+            format: date-time
+        - name: time_end
+          in: query
+          description: Ending time in ISO 8601
+          schema:
+            type: string
+            format: date-time
+        - name: time_format
+          in: query
+          description: 'If set, returned values will be in unix timestamp format (valid values: unix_sec, unix_millisec, unix_microsec, unix_nanosec)'
+          schema:
+            type: string
+        - name: period_id
+          in: query
+          description: 'Identifier of requested timeseries period (e.g. `5SEC` or `2MTH`), default value is `1SEC`'
+          schema:
+            type: string
+        - name: limit
+          in: query
+          description: 'Amount of items to return (optional, mininum is 1, maximum is 100000, default value is 100, if the parameter is used then every 100 output items are counted as one request)'
+          schema:
+            type: integer
+            format: int32
+            default: 100
+      responses:
+        '200':
+          description: successful operation
+          content:
+            text/plain:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.MetricData'
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.MetricData'
+            text/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.MetricData'
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.MetricData'
+  /v1/metrics/symbol/listing:
+    get:
+      tags:
+        - Metrics
+      summary: Get listing of all supported metrics for symbol
+      description: Get data metrics for symbol.
+      parameters:
+        - name: metric_id
+          in: query
+          description: The metric id.
+          schema:
+            type: string
+        - name: exchange_id
+          in: query
           description: The exchange id.
-          required: true
+          schema:
+            type: string
+        - name: symbol_id
+          in: query
+          description: The symbol id.
           schema:
             type: string
       responses:
@@ -521,70 +652,42 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/v1.GeneralData'
+                  $ref: '#/components/schemas/v1.ListingItem'
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/v1.GeneralData'
+                  $ref: '#/components/schemas/v1.ListingItem'
             text/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/v1.GeneralData'
+                  $ref: '#/components/schemas/v1.ListingItem'
             application/x-msgpack:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/v1.GeneralData'
-  '/v1/metrics/asset/{asset_id}/current':
-    get:
-      tags:
-        - Metrics
-      summary: Current metrics for given asset
-      description: Get current asset.
-      parameters:
-        - name: asset_id
-          in: path
-          description: The asset id.
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: successful operation
-          content:
-            text/plain:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.GeneralData'
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.GeneralData'
-            text/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.GeneralData'
-            application/x-msgpack:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.GeneralData'
-  '/v1/metrics/symbol/{symbol_id}/current':
+                  $ref: '#/components/schemas/v1.ListingItem'
+  /v1/metrics/symbol/current:
     get:
       tags:
         - Metrics
       summary: Current metrics for given symbol
       description: Get current symbol.
       parameters:
+        - name: metric_id
+          in: query
+          description: The metric id.
+          schema:
+            type: string
         - name: symbol_id
-          in: path
+          in: query
           description: The symbol id.
-          required: true
+          schema:
+            type: string
+        - name: exchange_id
+          in: query
+          description: The exchange id.
           schema:
             type: string
       responses:
@@ -611,11 +714,11 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/v1.GeneralData'
-  /v1/metrics/history:
+  /v1/metrics/symbol/history:
     get:
       tags:
         - Metrics
-      summary: Historical metrics
+      summary: Historical metrics for symbol
       description: Get history.
       parameters:
         - name: metric_id
@@ -625,17 +728,7 @@ paths:
             type: string
         - name: symbol_id
           in: query
-          description: Symbol identifier (required if no asset_id or exchange_id is provided)
-          schema:
-            type: string
-        - name: asset_id
-          in: query
-          description: Asset identifier (required if no symbol_id or exchange_id is provided)
-          schema:
-            type: string
-        - name: exchange_id
-          in: query
-          description: Exchange identifier (required if no symbol_id or asset_id is provided)
+          description: Symbol identifier (required)
           schema:
             type: string
         - name: time_start
@@ -657,7 +750,7 @@ paths:
             type: string
         - name: period_id
           in: query
-          description: 'Identifier of requested timeseries period (e.g. `5SEC` or `2MTH`, full list here), default value is `1SEC`'
+          description: 'Identifier of requested timeseries period (e.g. `5SEC` or `2MTH`), default value is `1SEC`'
           schema:
             type: string
         - name: limit
@@ -691,36 +784,143 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/v1.MetricData'
-  /v1/metrics/group:
+  /v1/metrics/asset/listing:
     get:
       tags:
         - Metrics
-      summary: Historical grouped metrics represented in day intervals
-      description: Get grouped data.
+      summary: Get listing of all supported metrics for asset
+      description: Get data metrics for asset.
+      parameters:
+        - name: metric_id
+          in: query
+          description: The metric id.
+          schema:
+            type: string
+        - name: exchange_id
+          in: query
+          description: The exchange id.
+          schema:
+            type: string
+        - name: chain_id
+          in: query
+          description: The chain id.
+          schema:
+            type: string
+        - name: network_id
+          in: query
+          description: The network id.
+          schema:
+            type: string
+        - name: asset_id
+          in: query
+          description: The asset id.
+          schema:
+            type: string
+        - name: asset_id_external
+          in: query
+          description: The asset external id.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            text/plain:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.ListingItem'
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.ListingItem'
+            text/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.ListingItem'
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.ListingItem'
+  /v1/metrics/asset/current:
+    get:
+      tags:
+        - Metrics
+      summary: Current metrics for given asset
+      description: Get current symbol.
+      parameters:
+        - name: metric_id
+          in: query
+          description: The metric id.
+          schema:
+            type: string
+        - name: asset_id
+          in: query
+          description: Asset identifier (required if no asset_id_external provided)
+          schema:
+            type: string
+        - name: asset_id_external
+          in: query
+          description: Exchange asset identifier (required if no asset_id provided)
+          schema:
+            type: string
+        - name: exchange_id
+          in: query
+          description: The exchange id.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            text/plain:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.GeneralData'
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.GeneralData'
+            text/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.GeneralData'
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.GeneralData'
+  /v1/metrics/asset/history:
+    get:
+      tags:
+        - Metrics
+      summary: Historical metrics for asset
+      description: Get history.
       parameters:
         - name: metric_id
           in: query
           description: Metric identifier (required)
           schema:
             type: string
-        - name: exchange_id
-          in: query
-          description: Exchange identifier (required if no symbol_id or asset_id is provided)
-          schema:
-            type: string
-        - name: symbol_id
-          in: query
-          description: Symbol identifier (required if no asset_id or exchange_id is provided)
-          schema:
-            type: string
         - name: asset_id
           in: query
-          description: Asset identifier (required if no symbol_id or exchange_id is provided)
+          description: Asset identifier (required if no asset_id_external provided)
           schema:
             type: string
-        - name: groupby
+        - name: asset_id_external
           in: query
-          description: 'Grouping filter value (required, valid values: symbol_id, asset_id, exchange_id, metric_id)'
+          description: Exchange asset identifier (required if no asset_id provided)
+          schema:
+            type: string
+        - name: exchange_id
+          in: query
+          description: The exchange id. (required)
           schema:
             type: string
         - name: time_start
@@ -758,21 +958,29 @@ paths:
           content:
             text/plain:
               schema:
-                $ref: '#/components/schemas/v1.MetricGroupData'
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.MetricData'
             application/json:
               schema:
-                $ref: '#/components/schemas/v1.MetricGroupData'
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.MetricData'
             text/json:
               schema:
-                $ref: '#/components/schemas/v1.MetricGroupData'
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.MetricData'
             application/x-msgpack:
               schema:
-                $ref: '#/components/schemas/v1.MetricGroupData'
+                type: array
+                items:
+                  $ref: '#/components/schemas/v1.MetricData'
   '/v1/orderbooks/{symbol_id}/depth/current':
     get:
       tags:
-        - OrderBooks
-      summary: Get current depth of the order book
+        - Order Book
+      summary: '[order book] Current depth of the order book'
       description: Retrieves the current depth of the order book for the specified symbol.
       parameters:
         - name: symbol_id
@@ -806,13 +1014,13 @@ paths:
   '/v1/orderbooks/{symbol_id}/history':
     get:
       tags:
-        - OrderBooks
-      summary: Historical data
+        - Order Book
+      summary: '[order book] Historical data'
       description: "Get historical order book snapshots for a specific symbol within time range, returned in time ascending order.\r\n            \r\n:::info\r\nThe historical order book data via the REST API is currently limited by a number of updates and to the maximum number of 20 levels.\r\n:::"
       parameters:
         - name: symbol_id
           in: path
-          description: Symbol identifier for requested timeseries (full list available here)
+          description: Symbol identifier for requested timeseries
           required: true
           schema:
             type: string
@@ -866,13 +1074,13 @@ paths:
   '/v1/orderbooks/{symbol_id}/latest':
     get:
       tags:
-        - OrderBooks
-      summary: Latest data
+        - Order Book
+      summary: '[order book] Latest data'
       description: "Get latest order book snapshots for a specific symbol, returned in time descending order.\r\n            \r\n:::info\r\nThe historical order book data via the REST API is currently limited by a number of updates and to the maximum number of 20 levels.\r\n:::"
       parameters:
         - name: symbol_id
           in: path
-          description: Symbol identifier of requested timeseries (full list available here)
+          description: Symbol identifier of requested timeseries
           required: true
           schema:
             type: string
@@ -913,87 +1121,11 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/v1.OrderBook'
-  /v1/orderbooks/current:
-    get:
-      tags:
-        - OrderBooks
-      summary: Retrieves the current order books for all or a specific symbol.
-      parameters:
-        - name: filter_symbol_id
-          in: query
-          description: Comma or semicolon delimited parts of symbol identifier used to filter the response.
-          schema:
-            type: string
-        - name: limit_levels
-          in: query
-          description: The maximum number of levels to include in the response.
-          schema:
-            type: integer
-            format: int32
-      responses:
-        '200':
-          description: successful operation
-          content:
-            text/plain:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.OrderBookBase'
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.OrderBookBase'
-            text/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.OrderBookBase'
-            application/x-msgpack:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.OrderBookBase'
-  '/v1/orderbooks/{symbol_id}/current':
-    get:
-      tags:
-        - OrderBooks
-      summary: Get current order book
-      description: Retrieves the current order book for the specified symbol.
-      parameters:
-        - name: symbol_id
-          in: path
-          description: The symbol ID.
-          required: true
-          schema:
-            type: string
-        - name: limit_levels
-          in: query
-          description: The maximum number of levels to include in the response.
-          schema:
-            type: integer
-            format: int32
-      responses:
-        '200':
-          description: successful operation
-          content:
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/v1.OrderBookBase'
-            application/json:
-              schema:
-                $ref: '#/components/schemas/v1.OrderBookBase'
-            text/json:
-              schema:
-                $ref: '#/components/schemas/v1.OrderBookBase'
-            application/x-msgpack:
-              schema:
-                $ref: '#/components/schemas/v1.OrderBookBase'
   /v1/orderbooks3/current:
     get:
       tags:
-        - OrderBooks3
-      summary: Retrieves the current order books for all or a specific symbol.
+        - Order Book L3
+      summary: '[order book l3] Current order books'
       parameters:
         - name: filter_symbol_id
           in: query
@@ -1033,84 +1165,8 @@ paths:
   '/v1/orderbooks3/{symbol_id}/current':
     get:
       tags:
-        - OrderBooks3
-      summary: Get current order book
-      description: Retrieves the current order book for the specified symbol.
-      parameters:
-        - name: symbol_id
-          in: path
-          description: The symbol ID.
-          required: true
-          schema:
-            type: string
-        - name: limit_levels
-          in: query
-          description: The maximum number of levels to include in the response.
-          schema:
-            type: integer
-            format: int32
-      responses:
-        '200':
-          description: successful operation
-          content:
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/v1.OrderBookBase'
-            application/json:
-              schema:
-                $ref: '#/components/schemas/v1.OrderBookBase'
-            text/json:
-              schema:
-                $ref: '#/components/schemas/v1.OrderBookBase'
-            application/x-msgpack:
-              schema:
-                $ref: '#/components/schemas/v1.OrderBookBase'
-  /current:
-    get:
-      tags:
-        - OrderBooksBase
-      summary: Retrieves the current order books for all or a specific symbol.
-      parameters:
-        - name: filter_symbol_id
-          in: query
-          description: Comma or semicolon delimited parts of symbol identifier used to filter the response.
-          schema:
-            type: string
-        - name: limit_levels
-          in: query
-          description: The maximum number of levels to include in the response.
-          schema:
-            type: integer
-            format: int32
-      responses:
-        '200':
-          description: successful operation
-          content:
-            text/plain:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.OrderBookBase'
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.OrderBookBase'
-            text/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.OrderBookBase'
-            application/x-msgpack:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.OrderBookBase'
-  '/{symbol_id}/current':
-    get:
-      tags:
-        - OrderBooksBase
-      summary: Get current order book
+        - Order Book L3
+      summary: '[order book l3] Current order book by symbol_id'
       description: Retrieves the current order book for the specified symbol.
       parameters:
         - name: symbol_id
@@ -1145,12 +1201,12 @@ paths:
     get:
       tags:
         - Quotes
-      summary: Historical data
+      summary: '[quotes] Historical data'
       description: 'Get historical quote updates within requested time range, returned in time ascending order.'
       parameters:
         - name: symbol_id
           in: path
-          description: Symbol identifier for requested timeseries (full list available here)
+          description: Symbol identifier for requested timeseries
           required: true
           schema:
             type: string
@@ -1199,12 +1255,12 @@ paths:
     get:
       tags:
         - Quotes
-      summary: Current data
+      summary: '[quotes] Current data'
       description: "Get current quotes for all symbols or for a specific symbol.\r\n            \r\n:::info\r\nWhen requesting current data for a specific symbol, output is not encapsulated into JSON array as only one item is returned.\r\n:::"
       parameters:
         - name: filter_symbol_id
           in: query
-          description: 'Comma or semicolon delimited parts of symbol identifier used to filter response. (optional, full list available here)'
+          description: Comma or semicolon delimited parts of symbol identifier used to filter response. (optional)
           schema:
             type: string
       responses:
@@ -1235,7 +1291,7 @@ paths:
     get:
       tags:
         - Quotes
-      summary: Retrieve current quotes for a specific symbol.
+      summary: '[quotes] Current quotes for a specific symbol'
       parameters:
         - name: symbol_id
           in: path
@@ -1263,12 +1319,12 @@ paths:
     get:
       tags:
         - Quotes
-      summary: Latest data
+      summary: '[quotes] Latest data'
       description: Get latest updates of the quotes up to 1 minute ago. Latest data is always returned in time descending order.
       parameters:
         - name: filter_symbol_id
           in: query
-          description: 'Comma or semicolon delimited parts of symbol identifier used to filter response. (optional, full list available here)'
+          description: Comma or semicolon delimited parts of symbol identifier used to filter response. (optional)
           schema:
             type: string
         - name: limit
@@ -1306,11 +1362,11 @@ paths:
     get:
       tags:
         - Quotes
-      summary: Retrieve the latest quote updates for a specific symbol.
+      summary: '[quotes] Latest quote updates for a specific symbol'
       parameters:
         - name: symbol_id
           in: path
-          description: Symbol identifier of requested timeseries (full list available here)
+          description: Symbol identifier of requested timeseries
           required: true
           schema:
             type: string
@@ -1394,8 +1450,8 @@ paths:
   '/v1/symbols/map/{exchange_id}':
     get:
       tags:
-        - Symbols
-      summary: Retrieves symbol mapping for a specific exchange.
+        - Metadata
+      summary: List symbol mapping for the exchange
       parameters:
         - name: exchange_id
           in: path
@@ -1430,8 +1486,8 @@ paths:
   '/v1/symbols/{exchange_id}':
     get:
       tags:
-        - Symbols
-      summary: Retrieves symbols for a specific exchange with optional filtering.
+        - Metadata
+      summary: List of symbols for the exchange
       parameters:
         - name: exchange_id
           in: path
@@ -1477,7 +1533,7 @@ paths:
     get:
       tags:
         - Ohlcv
-      summary: List all periods
+      summary: '[ohlcv] List all periods'
       description: "Get full list of supported time periods available for requesting OHLCV timeseries data.\r\n            \r\n### Available periods\r\n            \r\nTime unit | Period identifiers\r\n--------- | -----------\r\nSecond | 1SEC, 2SEC, 3SEC, 4SEC, 5SEC, 6SEC, 10SEC, 15SEC, 20SEC, 30SEC\r\nMinute | 1MIN, 2MIN, 3MIN, 4MIN, 5MIN, 6MIN, 10MIN, 15MIN, 20MIN, 30MIN\r\nHour | 1HRS, 2HRS, 3HRS, 4HRS, 6HRS, 8HRS, 12HRS\r\nDay | 1DAY, 2DAY, 3DAY, 5DAY, 7DAY, 10DAY\r\nMonth | 1MTH, 2MTH, 3MTH, 4MTH, 6MTH\r\nYear | 1YRS, 2YRS, 3YRS, 4YRS, 5YRS\r\n            \r\n:::tip\r\nYou can assume that we will not remove any periods from this response, however, we may add new ones.\r\n:::"
       responses:
         '200':
@@ -1507,7 +1563,7 @@ paths:
     get:
       tags:
         - Ohlcv
-      summary: Historical data
+      summary: '[ohlcv] Historical data'
       description: "Get OHLCV timeseries data returned in time ascending order. Data can be requested by the period and for the specific symbol eg `BITSTAMP_SPOT_BTC_USD`, if you need to query timeseries by asset pairs eg. `BTC/USD`, then please reffer to the Exchange Rates Timeseries data\r\n            \r\n:::info\r\nThe OHLCV Historical endpoint data can be delayed a few seconds. Use OHLCV Latest endpoint to get real-time data without delay.\r\n:::"
       parameters:
         - name: symbol_id
@@ -1572,7 +1628,7 @@ paths:
     get:
       tags:
         - Ohlcv
-      summary: Latest data
+      summary: '[ohlcv] Latest data'
       description: "Get OHLCV latest timeseries data returned in time descending order. Data can be requested by the period and for the specific symbol eg `BITSTAMP_SPOT_BTC_USD`, if you need to query timeseries by asset pairs eg. `BTC/USD`, then please reffer to the Exchange Rates Timeseries data\r\n            \r\n:::info\r\nOHLCV Latest endpoint is providing real-time data without delay. The OHLCV Historical endpoint data can be delayed a few seconds.\r\n:::"
       parameters:
         - name: symbol_id
@@ -1627,12 +1683,12 @@ paths:
     get:
       tags:
         - Trades
-      summary: Historical data
+      summary: '[trades] Historical data'
       description: 'Get history transactions from specific symbol, returned in time ascending order.'
       parameters:
         - name: symbol_id
           in: path
-          description: Symbol identifier for requested timeseries (full list available here)
+          description: Symbol identifier for requested timeseries
           required: true
           schema:
             type: string
@@ -1687,12 +1743,12 @@ paths:
     get:
       tags:
         - Trades
-      summary: Latest data
+      summary: '[trades] Latest data by symbol_id'
       description: Get latest trades executed up to 1 minute ago. Latest data is always returned in time descending order.
       parameters:
         - name: symbol_id
           in: path
-          description: Symbol identifier for requested timeseries (full list available here)
+          description: Symbol identifier for requested timeseries
           required: true
           schema:
             type: string
@@ -1737,12 +1793,12 @@ paths:
     get:
       tags:
         - Trades
-      summary: Latest data
+      summary: '[trades] Latest data'
       description: Get latest trades executed up to 1 minute ago. Latest data is always returned in time descending order.
       parameters:
         - name: filter_symbol_id
           in: query
-          description: 'Comma or semicolon delimited parts of symbol identifier used to filter response. (optional, full list available here)'
+          description: Comma or semicolon delimited parts of symbol identifier used to filter response. (optional)
           schema:
             type: string
         - name: include_id
@@ -2175,6 +2231,43 @@ components:
           nullable: true
       additionalProperties: false
       description: Represents the last executed transaction.
+    v1.ListingItem:
+      type: object
+      properties:
+        metric_id:
+          type: string
+          description: Gets or sets the metric ID.
+          nullable: true
+        symbol_id:
+          type: string
+          description: Gets or sets the symbol ID.
+          nullable: true
+        symbol_id_external:
+          type: string
+          description: Gets or sets the symbol ID from the exchange.
+          nullable: true
+        exchange_id:
+          type: string
+          description: Gets or sets the exchange ID.
+          nullable: true
+        asset_id:
+          type: string
+          description: Gets or sets the asset ID.
+          nullable: true
+        asset_id_external:
+          type: string
+          description: Gets or sets the asset ID from the exchange.
+          nullable: true
+        chain_id:
+          type: string
+          description: Gets or sets the chain id.
+          nullable: true
+        network_id:
+          type: string
+          description: Gets or sets the network id.
+          nullable: true
+      additionalProperties: false
+      description: Represents a listing item.
     v1.Metric:
       type: object
       properties:
@@ -2205,24 +2298,6 @@ components:
           format: double
       additionalProperties: false
       description: Represents a data model for metric data.
-    v1.MetricGroupData:
-      type: object
-      properties:
-        series_label:
-          type: array
-          items:
-            type: string
-          description: Gets or sets the labels for the series in the group. This property can be null if the metric group data does not have any series labels.
-          nullable: true
-        rows:
-          type: array
-          items:
-            type: array
-            items: { }
-          description: Gets or sets the rows of data in the group. Each object array in the list represents a row of data in the group.
-          nullable: true
-      additionalProperties: false
-      description: Represents a group of metric data in the system.
     v1.OrderBook:
       type: object
       properties:
@@ -2757,15 +2832,29 @@ components:
 security:
   - ApiKey: [ ]
 tags:
-  - name: ExchangeRate
-    description: "\r\nExchange rate is defined as (VWAP-24H) last 24 hour (rolling window over time) Volume Weighted Average Price across multiple data sources listed on our platform. We are selecting and managing the data sources that are used in the calculation based on multiple factors to provide data of highest quality. \r\n\r\nAlgorithm is described below:\r\n\r\n  1. Exchange rates are produced from quotes, trades, and metadata datasets.\r\n  1. Symbols that are not data_type = \"SPOT\" are excluded from the calculation.\r\n  1. Symbols from the data sources that were marked by us as not legitimate are excluded from the calculation.\r\n  1. Quotes data where the spread is outside the range of ```<0$; 67%>``` are discarded. `spreadPrc = (ask - bid) / ((ask + bid) / 2)`\r\n  1. The midpoint from the quote data is used as a pricing reference and it's weighted by the passive cumulative volume resting on the best prices.\r\n  1. Volume from the trades is used to weight the midpoint prices in the VWAP24 algorithm.\r\n  1. Midpoint data that has not been updated in the last 5 minutes and 1 second is discarded.\r\n  1. The last 24-hour volume for each symbol is updated every 4 hours when approximately 20% of the data in the sliding window changes (also, the list of eligible markets is updated at the same time).\r\n  1. Everywhere in the algorithm below, we are using asset pairs only from exchanges that have the highest legitimacy rank, and the rest of the exchanges are discarded. As we establish the highest-ranking exchanges that have this data for each asset pair, we ensure that the highest quality data is used for each of them. The rank used for asset pairing is carried over to the following steps.\r\n  1. Every 1 second, we update VWAP24 data for every asset pair across all data sources.\r\n  1. For each asset pair, we also discard data that is outside the 3 sigma range if there are at least 3 exchanges for this asset pair.\r\n  1. From the VWAP24 data, we are creating a tree structure where node/vertex = asset and edge = rate.\r\n  1. By traversing the tree structure using the BFS algorithm and our secret sauce, we are able to establish the final exchange rates.\r\n    "
+  - name: Exchange Rates
+    description: "\r\n<span data-status-page=\"28924\"></span>\r\nExchange rate is defined as (VWAP-24H) last 24 hour (rolling window over time) Volume Weighted Average Price across multiple data sources listed on our platform. We are selecting and managing the data sources that are used in the calculation based on multiple factors to provide data of highest quality. \r\n\r\nAlgorithm is described below:\r\n\r\n  1. Exchange rates are produced from quotes, trades, and metadata datasets.\r\n  1. Symbols that are not data_type = \"SPOT\" are excluded from the calculation.\r\n  1. Symbols from the data sources that were marked by us as not legitimate are excluded from the calculation.\r\n  1. Quotes data where the spread is outside the range of ```<0$; 67%>``` are discarded. `spreadPrc = (ask - bid) / ((ask + bid) / 2)`\r\n  1. The midpoint from the quote data is used as a pricing reference and it's weighted by the passive cumulative volume resting on the best prices.\r\n  1. Volume from the trades is used to weight the midpoint prices in the VWAP24 algorithm.\r\n  1. Midpoint data that has not been updated in the last 5 minutes and 1 second is discarded.\r\n  1. The last 24-hour volume for each symbol is updated every 4 hours when approximately 20% of the data in the sliding window changes (also, the list of eligible markets is updated at the same time).\r\n  1. Everywhere in the algorithm below, we are using asset pairs only from exchanges that have the highest legitimacy rank, and the rest of the exchanges are discarded. As we establish the highest-ranking exchanges that have this data for each asset pair, we ensure that the highest quality data is used for each of them. The rank used for asset pairing is carried over to the following steps.\r\n  1. Every 1 second, we update VWAP24 data for every asset pair across all data sources.\r\n  1. For each asset pair, we also discard data that is outside the 3 sigma range if there are at least 3 exchanges for this asset pair.\r\n  1. From the VWAP24 data, we are creating a tree structure where node/vertex = asset and edge = rate.\r\n  1. By traversing the tree structure using the BFS algorithm and our secret sauce, we are able to establish the final exchange rates.\r\n    "
+  - name: Metadata
+    description: <span data-status-page="28923"></span>
+  - name: Order Book L3
+    description: "\n<span data-status-page=\"28929\"></span>\nThis section describes calls related to order book data, also known as books or passive level 3 data."
+  - name: Order Book
+    description: "\n<span data-status-page=\"28929\"></span>\nThis section describes calls related to order book data, also known as books or passive level 2 data.\n\n:::info\nWhen requesting current data for a specific symbol, output is not encapsulated into JSON array as only one item is returned.\n:::\n\n:::info\nGET `/v1/orderbooks/current` endpoint is charged one request per 100 data points returned after applying a filter defined by filter_symbol_id parameter. If filter symbols target more than one exchange, error is returned.\n:::\n\n:::info\nWhen requesting current order book data limited to a single level, then quotes are actually used. This information is important from the perspective that quotes data could be faster than order book data (behavior is dependent solely one the data source) and they can have the size equal to 0 when the size is unknown. Some data sources publish order books and separately quote data (without the sizes) at a higher frequency. In that case, we will merge the order book feed with quotes feed to make sure that our updates are as fast as possible. The quotes will have the size equal to 0 as the value is unknown and the customer can decide if these higher frequency updates without the sizes are valuable or if not then can discard them or ask for at least 2 order book levels (in case of a REST API call). For the data sources that publish order books only or order books and quotes with the sizes then this will not happen.\n:::"
+  - name: Ohlcv
+    description: "\n<span data-status-page=\"28926\"></span>\n\nAPI calls described in this section are related to downloading OHLCV *(Open, High, Low, Close, Volume)* timeseries data.\nEach data point of this timeseries represents several indicators calculated from transactions activity inside a time range (period).\n\n:::info\nOHLCV data primary purpose is to present an overview of the market in human readable form. \nIt's often used to visualize market data on charts, websites, and various kinds of reports.\n:::\n\n:::tip\nCoinAPI expanded the standard OHLCV timeseries by including time of first and last trade and amount of trades executed inside period.\n:::\n    "
+  - name: Assets
+    description: Controller for accessing asset information.
   - name: Metrics
-    description: "\nMetrics are quantitative measurements used to evaluate the performance and activity of cryptocurrency exchanges. These metrics include:\n\n1. Trading Volume: The total amount of cryptocurrency traded on an exchange within a specific time period, indicating liquidity and activity.\n1. Market Depth: The level of buy and sell orders at different price levels, providing insights into liquidity and potential price impact.\n1. Order Book: A record of outstanding buy and sell orders for a cryptocurrency, reflecting supply and demand dynamics.\n1. Spread: The difference between the highest bid and lowest ask prices, indicating liquidity and trading costs.\n1. Price Charts: Visual representations of cryptocurrency price movements over time, helping identify trends and inform trading decisions.\n1. Market Cap: The total value of a cryptocurrency calculated by its price multiplied by circulating supply, reflecting relative size and value.\n1. Trading Pairs: Combinations of cryptocurrencies available for trading, including volume, price, and spread for each pair.\n1. User Metrics: Data on active users, new registrations, user retention, and engagement, indicating platform popularity and growth.\n1. Trading Fees: Fees charged for executing trades, including fee structure, discounts, and revenue generated by the exchange.\n1. Security Metrics: Measures assessing the security of an exchange, such as past incidents, user fund protection, and security audits.\n\nThese metrics assist traders and investors in evaluating market activity, liquidity, and the reliability of crypto exchanges for informed decision-making.\n    "
+    description: "<span data-status-page=\"28933\"></span>\r\nMetrics are quantitative measurements used to evaluate the performance and activity of cryptocurrency exchanges. These metrics include:\r\n\r\n1. Trading Volume: The total amount of cryptocurrency traded on an exchange within a specific time period, indicating liquidity and activity.\r\n1. Market Depth: The level of buy and sell orders at different price levels, providing insights into liquidity and potential price impact.\r\n1. Order Book: A record of outstanding buy and sell orders for a cryptocurrency, reflecting supply and demand dynamics.\r\n1. Spread: The difference between the highest bid and lowest ask prices, indicating liquidity and trading costs.\r\n1. Price Charts: Visual representations of cryptocurrency price movements over time, helping identify trends and inform trading decisions.\r\n1. Market Cap: The total value of a cryptocurrency calculated by its price multiplied by circulating supply, reflecting relative size and value.\r\n1. Trading Pairs: Combinations of cryptocurrencies available for trading, including volume, price, and spread for each pair.\r\n1. User Metrics: Data on active users, new registrations, user retention, and engagement, indicating platform popularity and growth.\r\n1. Trading Fees: Fees charged for executing trades, including fee structure, discounts, and revenue generated by the exchange.\r\n1. Security Metrics: Measures assessing the security of an exchange, such as past incidents, user fund protection, and security audits.\r\n\r\nThese metrics assist traders and investors in evaluating market activity, liquidity, and the reliability of crypto exchanges for informed decision-making."
   - name: OrderBooks3
-    description: 'This section describes calls related to order book data, also known as books or passive level 3 data.'
+    description: Controller for managing order book L3 data.
   - name: OrderBooks
-    description: "\nThis section describes calls related to order book data, also known as books or passive level 2 data.\n\n:::info\nWhen requesting current data for a specific symbol, output is not encapsulated into JSON array as only one item is returned.\n:::\n\n:::info\nGET `/v1/orderbooks/current` endpoint is charged one request per 100 data points returned after applying a filter defined by filter_symbol_id parameter. If filter symbols target more than one exchange, error is returned.\n:::\n\n:::info\nWhen requesting current order book data limited to a single level, then quotes are actually used. This information is important from the perspective that quotes data could be faster than order book data (behavior is dependent solely one the data source) and they can have the size equal to 0 when the size is unknown. Some data sources publish order books and separately quote data (without the sizes) at a higher frequency. In that case, we will merge the order book feed with quotes feed to make sure that our updates are as fast as possible. The quotes will have the size equal to 0 as the value is unknown and the customer can decide if these higher frequency updates without the sizes are valuable or if not then can discard them or ask for at least 2 order book levels (in case of a REST API call). For the data sources that publish order books only or order books and quotes with the sizes then this will not happen.\n:::\n    "
+    description: Controller for managing order book data.
   - name: Quotes
-    description: 'This section describes calls related to quotes data, also known as quotes or passive level 1 data.'
+    description: 'Controller for retrieving quotes data, also known as quotes or passive level 1 data.'
+  - name: Symbols
+    description: Controller for retrieving symbol information.
+  - name: TimeSeries
+    description: 'Controller for retrieving OHLCV (Open, High, Low, Close, Volume) timeseries data.'
   - name: Trades
-    description: "\nThis section describes calls related to executed transactions data, also known as matched orders data or active data.\n\n## Possible `taker_side` values\n\nIf exchange has not reported who was aggressor side of transaction, we will classify who most probably was based on current market view.\n\n`taker_side` | Description\n--------- | -----------\n`BUY` | Exchange has reported that transaction aggressor was buying\n`SELL` | Exchange has reported that transaction aggressor was selling\n`BUY_ESTIMATED` | Exchange has not reported transaction aggressor, we estimated that more likely it was buying\n`SELL_ESTIMATED` | Exchange has not reported transaction aggressor, we estimated that more likely it was selling\n`UNKNOWN` | Exchange has not reported transaction aggressor and we have not estimated who it was\n\n:::tip\nTo classify who the aggressor of the transaction was, we use a proprietary algorithm that extends the method described in the paper, \\\"Inferring trade direction from intraday data (1991) by Lee and Ready\\\"\n:::\n\n## Current data \n\nTo get current last trade for all symbols, use *Quotes current data* as it includes last trade information.\n    "
+    description: Controller for retrieving trade data related to executed transactions.
