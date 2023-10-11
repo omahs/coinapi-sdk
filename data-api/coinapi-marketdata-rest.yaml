@@ -158,24 +158,76 @@ paths:
           content:
             text/plain:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.ExchangeRate'
+                $ref: '#/components/schemas/v1.ExchangeRate'
+              examples:
+                Current rate:
+                  value: {
+  "time": "2023-10-11T10:46:35.9374938Z",
+  "asset_id_base": "BTC",
+  "asset_id_quote": "USD",
+  "rate": 10000.0
+}
+                Historical rate:
+                  value: {
+  "time": "2023-10-10T10:46:35.9822974Z",
+  "asset_id_base": "BTC",
+  "asset_id_quote": "USD",
+  "rate": 10000.0
+}
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.ExchangeRate'
+                $ref: '#/components/schemas/v1.ExchangeRate'
+              examples:
+                Current rate:
+                  value: {
+  "time": "2023-10-11T10:46:35.9374938Z",
+  "asset_id_base": "BTC",
+  "asset_id_quote": "USD",
+  "rate": 10000.0
+}
+                Historical rate:
+                  value: {
+  "time": "2023-10-10T10:46:35.9822974Z",
+  "asset_id_base": "BTC",
+  "asset_id_quote": "USD",
+  "rate": 10000.0
+}
             text/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.ExchangeRate'
+                $ref: '#/components/schemas/v1.ExchangeRate'
+              examples:
+                Current rate:
+                  value: {
+  "time": "2023-10-11T10:46:35.9374938Z",
+  "asset_id_base": "BTC",
+  "asset_id_quote": "USD",
+  "rate": 10000.0
+}
+                Historical rate:
+                  value: {
+  "time": "2023-10-10T10:46:35.9822974Z",
+  "asset_id_base": "BTC",
+  "asset_id_quote": "USD",
+  "rate": 10000.0
+}
             application/x-msgpack:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/v1.ExchangeRate'
+                $ref: '#/components/schemas/v1.ExchangeRate'
+              examples:
+                Current rate:
+                  value: {
+  "time": "2023-10-11T10:46:35.9374938Z",
+  "asset_id_base": "BTC",
+  "asset_id_quote": "USD",
+  "rate": 10000.0
+}
+                Historical rate:
+                  value: {
+  "time": "2023-10-10T10:46:35.9822974Z",
+  "asset_id_base": "BTC",
+  "asset_id_quote": "USD",
+  "rate": 10000.0
+}
   '/v1/exchangerate/{asset_id_base}':
     get:
       tags:
