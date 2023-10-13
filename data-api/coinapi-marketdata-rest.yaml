@@ -162,14 +162,14 @@ paths:
               examples:
                 Current rate:
                   value: {
-  "time": "2023-10-12T13:26:58.5026591Z",
+  "time": "2023-10-13T07:12:40.6225402Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
 }
                 Historical rate:
                   value: {
-  "time": "2023-10-11T13:26:58.5507909Z",
+  "time": "2023-10-12T07:12:40.6673390Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
@@ -180,14 +180,14 @@ paths:
               examples:
                 Current rate:
                   value: {
-  "time": "2023-10-12T13:26:58.5026591Z",
+  "time": "2023-10-13T07:12:40.6225402Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
 }
                 Historical rate:
                   value: {
-  "time": "2023-10-11T13:26:58.5507909Z",
+  "time": "2023-10-12T07:12:40.6673390Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
@@ -198,14 +198,14 @@ paths:
               examples:
                 Current rate:
                   value: {
-  "time": "2023-10-12T13:26:58.5026591Z",
+  "time": "2023-10-13T07:12:40.6225402Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
 }
                 Historical rate:
                   value: {
-  "time": "2023-10-11T13:26:58.5507909Z",
+  "time": "2023-10-12T07:12:40.6673390Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
@@ -216,14 +216,14 @@ paths:
               examples:
                 Current rate:
                   value: {
-  "time": "2023-10-12T13:26:58.5026591Z",
+  "time": "2023-10-13T07:12:40.6225402Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
 }
                 Historical rate:
                   value: {
-  "time": "2023-10-11T13:26:58.5507909Z",
+  "time": "2023-10-12T07:12:40.6673390Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
@@ -496,7 +496,7 @@ paths:
     get:
       tags:
         - Metrics
-      summary: Get listing of all supported metrics by CoinAPI
+      summary: Listing of all supported metrics by CoinAPI
       description: Get all data metrics.
       responses:
         '200':
@@ -526,17 +526,17 @@ paths:
     get:
       tags:
         - Metrics
-      summary: Get listing of all supported exchange metrics
+      summary: Listing of all supported exchange metrics
       description: Get data metrics for exchange.
       parameters:
         - name: metric_id
           in: query
-          description: The metric id.
+          description: The metric identifier
           schema:
             type: string
         - name: exchange_id
           in: query
-          description: The symbol id.
+          description: The exchange identifier
           required: true
           schema:
             type: string
@@ -568,17 +568,17 @@ paths:
     get:
       tags:
         - Metrics
-      summary: Current metrics for given symbol
+      summary: Current metrics for given exchange
       description: Get current exchange metrics values.
       parameters:
         - name: metric_id
           in: query
-          description: The metric id.
+          description: The metric identifier
           schema:
             type: string
         - name: exchange_id
           in: query
-          description: The symbol id.
+          description: The exchange identifier
           required: true
           schema:
             type: string
@@ -610,18 +610,18 @@ paths:
     get:
       tags:
         - Metrics
-      summary: Historical metrics for exchange
+      summary: Historical metrics for the exchange
       description: Get exchange metrics history.
       parameters:
         - name: metric_id
           in: query
-          description: Metric identifier (required)
+          description: Metric identifier
           required: true
           schema:
             type: string
         - name: exchange_id
           in: query
-          description: Symbol identifier (required)
+          description: Exchange identifier
           required: true
           schema:
             type: string
@@ -687,17 +687,17 @@ paths:
       parameters:
         - name: metric_id
           in: query
-          description: The metric id.
+          description: Metric identifier
           schema:
             type: string
         - name: exchange_id
           in: query
-          description: The exchange id.
+          description: Exchange identifier
           schema:
             type: string
         - name: symbol_id
           in: query
-          description: The symbol id.
+          description: Symbol identifier
           schema:
             type: string
       responses:
@@ -733,17 +733,17 @@ paths:
       parameters:
         - name: metric_id
           in: query
-          description: The metric id.
+          description: Metric identifier
           schema:
             type: string
         - name: symbol_id
           in: query
-          description: The symbol id.
+          description: Symbol identifier
           schema:
             type: string
         - name: exchange_id
           in: query
-          description: The exchange id.
+          description: Exchange id.
           schema:
             type: string
       responses:
@@ -775,7 +775,7 @@ paths:
       tags:
         - Metrics
       summary: Historical metrics for symbol
-      description: Get symbol history metrics.
+      description: Get symbol metrics history.
       parameters:
         - name: metric_id
           in: query
@@ -846,37 +846,37 @@ paths:
     get:
       tags:
         - Metrics
-      summary: Get listing of all supported metrics for asset
+      summary: Listing of all supported metrics for asset
       description: Get data metrics for asset.
       parameters:
         - name: metric_id
           in: query
-          description: The metric id.
+          description: Metric identifier
           schema:
             type: string
         - name: exchange_id
           in: query
-          description: The exchange id.
+          description: Exchange identifier
           schema:
             type: string
         - name: chain_id
           in: query
-          description: The chain id.
+          description: Chain identifier
           schema:
             type: string
         - name: network_id
           in: query
-          description: The network id.
+          description: Network identifier
           schema:
             type: string
         - name: asset_id
           in: query
-          description: The asset id.
+          description: Asset identifier
           schema:
             type: string
         - name: asset_id_external
           in: query
-          description: The asset external id.
+          description: The asset external identifier
           schema:
             type: string
       responses:
@@ -908,26 +908,26 @@ paths:
       tags:
         - Metrics
       summary: Current metrics for given asset
-      description: Get current symbol.
+      description: Get current asset metrics.
       parameters:
         - name: metric_id
           in: query
-          description: The metric id.
+          description: Metric identifier
           schema:
             type: string
         - name: asset_id
           in: query
-          description: Asset identifier (required if no asset_id_external provided)
+          description: Asset identifier
           schema:
             type: string
         - name: asset_id_external
           in: query
-          description: Exchange asset identifier (required if no asset_id provided)
+          description: Exchange asset identifier
           schema:
             type: string
         - name: exchange_id
           in: query
-          description: The exchange id.
+          description: Exchange identifier
           schema:
             type: string
       responses:
@@ -959,27 +959,27 @@ paths:
       tags:
         - Metrics
       summary: Historical metrics for asset
-      description: Get history.
+      description: Get asset metrics history.
       parameters:
         - name: metric_id
           in: query
-          description: Metric identifier (required)
+          description: Metric identifier
           required: true
           schema:
             type: string
         - name: asset_id
           in: query
-          description: Asset identifier (required if no asset_id_external provided)
+          description: Asset identifier
           schema:
             type: string
         - name: asset_id_external
           in: query
-          description: Exchange asset identifier (required if no asset_id provided)
+          description: Exchange asset identifier
           schema:
             type: string
         - name: exchange_id
           in: query
-          description: The exchange id. (required)
+          description: Exchange identifier
           required: true
           schema:
             type: string
