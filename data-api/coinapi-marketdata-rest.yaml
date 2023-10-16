@@ -162,14 +162,14 @@ paths:
               examples:
                 Current rate:
                   value: {
-  "time": "2023-10-16T11:08:50.9213790Z",
+  "time": "2023-10-16T11:22:31.1269215Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
 }
                 Historical rate:
                   value: {
-  "time": "2023-10-15T11:08:50.9758784Z",
+  "time": "2023-10-15T11:22:31.1706482Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
@@ -180,14 +180,14 @@ paths:
               examples:
                 Current rate:
                   value: {
-  "time": "2023-10-16T11:08:50.9213790Z",
+  "time": "2023-10-16T11:22:31.1269215Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
 }
                 Historical rate:
                   value: {
-  "time": "2023-10-15T11:08:50.9758784Z",
+  "time": "2023-10-15T11:22:31.1706482Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
@@ -198,14 +198,14 @@ paths:
               examples:
                 Current rate:
                   value: {
-  "time": "2023-10-16T11:08:50.9213790Z",
+  "time": "2023-10-16T11:22:31.1269215Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
 }
                 Historical rate:
                   value: {
-  "time": "2023-10-15T11:08:50.9758784Z",
+  "time": "2023-10-15T11:22:31.1706482Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
@@ -216,14 +216,14 @@ paths:
               examples:
                 Current rate:
                   value: {
-  "time": "2023-10-16T11:08:50.9213790Z",
+  "time": "2023-10-16T11:22:31.1269215Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
 }
                 Historical rate:
                   value: {
-  "time": "2023-10-15T11:08:50.9758784Z",
+  "time": "2023-10-15T11:22:31.1706482Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
@@ -682,7 +682,7 @@ paths:
     get:
       tags:
         - Metrics
-      summary: Get listing of all supported metrics for symbol
+      summary: Listing of all supported metrics for symbol
       description: Get data metrics for symbol.
       parameters:
         - name: metric_id
