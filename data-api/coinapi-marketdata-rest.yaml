@@ -162,14 +162,14 @@ paths:
               examples:
                 Current rate:
                   value: {
-  "time": "2023-10-16T10:52:36.1186595Z",
+  "time": "2023-10-16T11:08:50.9213790Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
 }
                 Historical rate:
                   value: {
-  "time": "2023-10-15T10:52:36.1642907Z",
+  "time": "2023-10-15T11:08:50.9758784Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
@@ -180,14 +180,14 @@ paths:
               examples:
                 Current rate:
                   value: {
-  "time": "2023-10-16T10:52:36.1186595Z",
+  "time": "2023-10-16T11:08:50.9213790Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
 }
                 Historical rate:
                   value: {
-  "time": "2023-10-15T10:52:36.1642907Z",
+  "time": "2023-10-15T11:08:50.9758784Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
@@ -198,14 +198,14 @@ paths:
               examples:
                 Current rate:
                   value: {
-  "time": "2023-10-16T10:52:36.1186595Z",
+  "time": "2023-10-16T11:08:50.9213790Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
 }
                 Historical rate:
                   value: {
-  "time": "2023-10-15T10:52:36.1642907Z",
+  "time": "2023-10-15T11:08:50.9758784Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
@@ -216,14 +216,14 @@ paths:
               examples:
                 Current rate:
                   value: {
-  "time": "2023-10-16T10:52:36.1186595Z",
+  "time": "2023-10-16T11:08:50.9213790Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
 }
                 Historical rate:
                   value: {
-  "time": "2023-10-15T10:52:36.1642907Z",
+  "time": "2023-10-15T11:08:50.9758784Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
