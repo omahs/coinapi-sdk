@@ -2,7 +2,7 @@
 
 ![GitHub language count](https://img.shields.io/github/languages/count/coinapi/coinapi-sdk)
 
-Welcome to the CoinAPI SDK. This repository contain SDK for our API documented at https://docs.coinapi.io/ 
+Welcome to the CoinAPI SDK. This repository contains SDK for our API documented at https://docs.coinapi.io/ 
 
 ## Repository organization
 
